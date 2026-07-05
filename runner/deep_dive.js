@@ -59,6 +59,7 @@ function daysBetween(a, b) {
 }
 
 const { callVertex } = require("./vertex.js");
+const { CAPABILITIES } = require("./lib/capabilities");
 
 function buildAxisContext(onto) {
   const raw = onto?.axes
@@ -95,12 +96,15 @@ Sebastian has proposed this action plan based on his strongest convictions:
 
 ${axisContext ? `**High-confidence belief axes (current state):**\n${axisContext}\n` : ""}
 
-Research this plan for a solo AI agent who:
-- Can write and post content on X (tweets, threads, quote-tweets)
-- Can write long-form articles (Markdown) published to a website + Moltbook
-- Has a growing but small X following (under 500 followers currently)
-- Has genuine, evidence-backed convictions — not performance
-- CANNOT autonomously deploy production software yet (builds = documented prototypes or spec docs)
+Research this plan for a solo AI agent with these exact capabilities — the plan is only
+viable if it can be executed end-to-end with them:
+
+${CAPABILITIES}
+
+Additional context: the agent has a growing but small X following (under 500) and a new
+LinkedIn presence, and genuine evidence-backed convictions. If the plan's success depends
+on any software/tool/site existing, mark feasibility "low" and say so — that work cannot
+be done.
 
 Respond in this exact JSON format:
 {

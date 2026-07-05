@@ -31,6 +31,7 @@ const STATE = path.join(ROOT, "state");
 
 const { callVertex }  = require("../vertex.js");
 const { loadSprintDb } = require("../lib/db_backend");
+const { CAPABILITIES } = require("../lib/capabilities");
 const sprintDb         = loadSprintDb();
 
 // ── Helpers ───────────────────────────────────────────────────────────────────
@@ -246,23 +247,22 @@ ${recentDigest || "(empty)"}
 ## SPRINT OBSERVATIONS (what you have actually found so far)
 ${sprintObservations}
 
-## YOUR CAPABILITIES
-- Post tweets, threads, and quote-tweets on X
-- Write long-form articles (Markdown) published to your website + Moltbook
-- Browse and observe X discourse every 30 minutes
-- Track and update belief axes from evidence
-- CANNOT deploy production software autonomously
+${CAPABILITIES}
 
 ## TASK
 Create a detailed 4-week sprint plan. For each week, define:
 1. A clear weekly goal (what "done" looks like)
 2. 3-6 specific tasks with type, priority, and (where applicable) a concrete artifact
 
+Every task must be executable with the tools above and produce a published/engagement
+output. NEVER generate a task to build, set up, prototype, or spec a tool/app/site — if
+the plan implies one, re-cast the task as content to publish or discourse to drive.
+
 Task types (use the most specific type — do NOT default to "research"):
 - "research" — external information gathering ONLY: browsing X, searching sources, reading new posts
-- "write" — drafting content (article, thread, manifesto)
-- "publish" — posting to X, website, or Moltbook
-- "engage" — replying, quote-tweeting, community interaction
+- "write" — drafting content (article, thread, LinkedIn post, manifesto)
+- "publish" — posting to X, the website, Moltbook, or LinkedIn
+- "engage" — replying, quote-tweeting, liking, or commenting on X and LinkedIn
 - "reflect" — ANY internal synthesis task: collating past findings, reviewing existing notes/journals,
   summarising accumulated data, reviewing progress, adjusting approach. Use "reflect" whenever the
   task works with data already collected, not with new external sources.
@@ -350,15 +350,19 @@ ${recentDigest || "(empty)"}
 ## SPRINT OBSERVATIONS (what you've actually found in this sprint)
 ${sprintObservations}
 
+${CAPABILITIES}
+
 ## TASK
 Plan Week ${nextWeek}. Learn from what worked and what didn't.
 Adjust course if needed — the plan serves your compulsion, not the other way around.
+Every task must be executable with the tools above and produce a published/engagement
+output — never a task to build, set up, prototype, or spec a tool/app/site.
 
 Task types (pick the most specific — do NOT default to "research"):
 - "research" — external only: browsing X, searching new sources
-- "write" — drafting content
-- "publish" — posting to X or website
-- "engage" — replying, quote-tweeting
+- "write" — drafting content (article, thread, LinkedIn post)
+- "publish" — posting to X, the website, Moltbook, or LinkedIn
+- "engage" — replying, quote-tweeting, liking, commenting (X + LinkedIn)
 - "reflect" — internal synthesis: collating past notes, reviewing existing findings, summarising accumulated data, adjusting approach
 
 ## CRITICAL RULES

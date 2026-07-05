@@ -52,6 +52,7 @@ function today() {
 }
 
 const { callVertex } = require("./vertex.js");
+const { CAPABILITIES_SHORT } = require("./lib/capabilities");
 
 function buildDecisionPrompt(plans, vocation) {
   const planSummaries = plans.map((p, i) => {
@@ -86,7 +87,10 @@ Sebastian can focus on only one plan at a time. Choose using:
 1. Raw value: (impact_score × feasibility_score) / effort_score
 2. Alignment with vocation
 3. Whether the plan builds toward something lasting vs. one-off
-4. Whether it can start meaningfully within a week with existing tools (tweets, threads, articles)
+4. Whether it is executable with existing tools only. ${CAPABILITIES_SHORT}
+   REJECT any plan whose success depends on building/deploying software, a tool, a
+   dashboard, a visualization, or a website — even a "prototype". The first_actions you
+   write MUST each be a concrete publish/engage/verify/research action, never "build X".
 
 Respond in this exact JSON format:
 {

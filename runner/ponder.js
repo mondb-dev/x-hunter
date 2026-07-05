@@ -25,6 +25,7 @@
 const fs   = require("fs");
 const path = require("path");
 const https = require("https");
+const { CAPABILITIES, VALID_ACTION_TYPES } = require("./lib/capabilities");
 
 const ROOT          = path.resolve(__dirname, "..");
 const STATE         = path.join(ROOT, "state");
@@ -218,17 +219,7 @@ ${handleList}
 
 ---
 
-## YOUR AVAILABLE TOOLS (proposals must use ONLY these)
-
-- Post a tweet or multi-tweet thread on X → action_type: "thread_series"
-- Write and publish a long-form article (website + Moltbook) → action_type: "article_series"
-- Verify specific claims via the verification pipeline, post results → action_type: "verification_campaign"
-- Engage directly with X discourse (proactive replies, quote-tweets) → action_type: "engage_campaign"
-- Direct research toward a specific topic for N browse cycles → action_type: "research_sprint"
-
-DO NOT propose: building products, deploying software, creating repositories, launching
-websites, or any action that requires tools outside the list above. Every proposal must
-be executable by the existing browse / post / verify pipeline with no new code needed.
+${CAPABILITIES}
 
 ---
 
@@ -255,7 +246,7 @@ Respond in this exact JSON format:
       "title": "...",
       "compulsion": "...",
       "belief_axes": ["axis_id_1", "axis_id_2"],
-      "action_type": "thread_series|article_series|verification_campaign|engage_campaign|research_sprint",
+      "action_type": "${VALID_ACTION_TYPES.join("|")}",
       "brief": "...",
       "success_30d": "..."
     }
