@@ -77,13 +77,14 @@ function preTweet({ cycle, today, now }) {
 
   // ── 3. Browse-failed guard ────────────────────────────────────────────
   if (browseNotes.length < 80) {
-    log('Browse notes empty or browser-failure cycle — skipping tweet (writing SKIP)');
+    log(`Browse notes too short (${browseNotes.length} chars < 80) — skipping tweet (writing SKIP)`);
     fs.writeFileSync(config.TWEET_DRAFT_PATH, 'SKIP\n');
     return false;
   }
 
-  if (FAILURE_PATTERNS.some(p => p.test(browseNotes))) {
-    log('Browse notes empty or browser-failure cycle — skipping tweet (writing SKIP)');
+  const failureMatch = FAILURE_PATTERNS.map(p => browseNotes.match(p)).find(Boolean);
+  if (failureMatch) {
+    log(`Browse notes contain failure phrase ("${failureMatch[0]}") — skipping tweet (writing SKIP)`);
     fs.writeFileSync(config.TWEET_DRAFT_PATH, 'SKIP\n');
     return false;
   }

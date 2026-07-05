@@ -74,14 +74,18 @@ class X {
     }
   }
 
-  async sessionOk() {
-    try {
-      const cookies = await this.c.getCookies(this.tab);
-      const names = cookies.map((k) => k.name);
-      return names.includes("auth_token") && names.includes("ct0");
-    } catch {
-      return false;
+  async sessionOk({ attempts = 3 } = {}) {
+    // A freshly-opened (esp. dedicated) tab can race the cookie read — retry
+    // before declaring the session absent, or consumers spuriously exit.
+    for (let i = 0; i < attempts; i++) {
+      try {
+        const cookies = await this.c.getCookies(this.tab);
+        const names = cookies.map((k) => k.name);
+        if (names.includes("auth_token") && names.includes("ct0")) return true;
+      } catch {}
+      if (i < attempts - 1) await sleep(2000);
     }
+    return false;
   }
 
   async gotoHome() {
@@ -482,44 +486,58 @@ class X {
 
   // ── Browse (mechanical timeline read) ───────────────────────────────────────
   /**
-   * Scrape the home timeline. Stamps each tweet article with data-hs-idx.
+   * Scrape the home timeline, accumulating across scroll steps — X virtualizes
+   * the feed aggressively, so a single scrape after scrolling only sees the
+   * last viewport (~5 posts). Articles are stamped with a page-lifetime unique
+   * data-hs-idx (window.__hsIdx counter) so likeByIdx targets stay valid across
+   * passes; posts scrolled out of the DOM simply fail their like gracefully.
    * @returns {Promise<Array<{idx:number, handle:string, text:string, tweetId:string, url:string, liked:boolean}>>}
    */
-  async scrapeTimeline({ limit = 15 } = {}) {
+  async scrapeTimeline({ limit = 15, scrolls = 3 } = {}) {
     await this.gotoHome();
-    for (let i = 0; i < 3; i++) {
+    const seen = new Map();
+    const grab = async () => {
+      const raw = await this.c.evalFn(this.tab, (max) => {
+        const arts = [].slice.call(document.querySelectorAll("article[data-testid=tweet]"));
+        window.__hsIdx = window.__hsIdx || 0;
+        const out = [];
+        for (let i = 0; i < arts.length && out.length < max; i++) {
+          const a = arts[i];
+          const statusHref = [].slice.call(a.querySelectorAll('a[href*="/status/"]'))
+            .map((x) => x.getAttribute("href")).find((h) => /\/status\/\d+$/.test(h) || /\/status\/\d+/.test(h));
+          if (!statusHref) continue;
+          const m = statusHref.match(/^\/([^/]+)\/status\/(\d+)/);
+          if (!m) continue;
+          if (!a.hasAttribute("data-hs-idx")) a.setAttribute("data-hs-idx", String(window.__hsIdx++));
+          const textEl = a.querySelector("[data-testid=tweetText]");
+          out.push({
+            idx: parseInt(a.getAttribute("data-hs-idx"), 10),
+            handle: m[1],
+            tweetId: m[2],
+            url: `https://x.com/${m[1]}/status/${m[2]}`,
+            text: (textEl ? textEl.innerText : "").slice(0, 600),
+            liked: !!a.querySelector("[data-testid=unlike]"),
+          });
+        }
+        return JSON.stringify(out);
+      }, limit);
+      let parsed = [];
+      try { parsed = JSON.parse(raw || "[]"); } catch { parsed = []; }
+      for (const p of parsed) if (!seen.has(p.tweetId)) seen.set(p.tweetId, p);
+    };
+
+    await grab();
+    let dry = 0;
+    for (let i = 0; i < scrolls * 3 && seen.size < limit && dry < 2; i++) {
+      const before = seen.size;
       await this.c.evaluate(this.tab, "window.scrollBy(0, window.innerHeight*1.5)").catch(() => {});
       await sleep(1500);
+      await grab();
+      dry = seen.size === before ? dry + 1 : 0;
     }
-    await this.c.evaluate(this.tab, "window.scrollTo(0,0)").catch(() => {});
-    await sleep(800);
-
-    const raw = await this.c.evalFn(this.tab, (max) => {
-      const arts = [].slice.call(document.querySelectorAll("article[data-testid=tweet]"));
-      const out = [];
-      for (let i = 0; i < arts.length && out.length < max; i++) {
-        const a = arts[i];
-        const statusHref = [].slice.call(a.querySelectorAll('a[href*="/status/"]'))
-          .map((x) => x.getAttribute("href")).find((h) => /\/status\/\d+$/.test(h) || /\/status\/\d+/.test(h));
-        if (!statusHref) continue;
-        const m = statusHref.match(/^\/([^/]+)\/status\/(\d+)/);
-        if (!m) continue;
-        a.setAttribute("data-hs-idx", String(out.length));
-        const textEl = a.querySelector("[data-testid=tweetText]");
-        out.push({
-          idx: out.length,
-          handle: m[1],
-          tweetId: m[2],
-          url: `https://x.com/${m[1]}/status/${m[2]}`,
-          text: (textEl ? textEl.innerText : "").slice(0, 600),
-          liked: !!a.querySelector("[data-testid=unlike]"),
-        });
-      }
-      return JSON.stringify(out);
-    }, limit);
-    let parsed = [];
-    try { parsed = JSON.parse(raw || "[]"); } catch { parsed = []; }
-    return parsed.filter((p) => (p.handle || "").toLowerCase() !== this.handle.toLowerCase());
+    return Array.from(seen.values())
+      .filter((p) => (p.handle || "").toLowerCase() !== this.handle.toLowerCase())
+      .slice(0, limit);
   }
 
   /**
@@ -601,14 +619,31 @@ class X {
     try { return JSON.parse(raw || "[]"); } catch { return []; }
   }
 
-  /** Home timeline, full fields. */
+  /**
+   * Home timeline, full fields. Accumulates across scroll steps (deduped by
+   * tweet id) — X virtualizes the feed, so scraping once after scrolling only
+   * sees the last viewport (~5 posts). Scrolls up to 3× the requested count,
+   * stopping early when the limit is reached or two consecutive scrolls yield
+   * nothing new.
+   */
   async scrapeTimelineFull({ limit = 30, scrolls = 3 } = {}) {
     await this.gotoHome();
-    for (let i = 0; i < scrolls; i++) {
+    const seen = new Map();
+    const grab = async () => {
+      for (const p of await this._scrapeArticles(limit)) {
+        if (p.id && !seen.has(p.id)) seen.set(p.id, p);
+      }
+    };
+    await grab();
+    let dry = 0;
+    for (let i = 0; i < scrolls * 3 && seen.size < limit && dry < 2; i++) {
+      const before = seen.size;
       await this.c.evaluate(this.tab, "window.scrollBy(0, 1200)").catch(() => {});
       await sleep(1200);
+      await grab();
+      dry = seen.size === before ? dry + 1 : 0;
     }
-    return this._scrapeArticles(limit);
+    return Array.from(seen.values());
   }
 
   /**

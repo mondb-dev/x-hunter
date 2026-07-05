@@ -207,7 +207,9 @@ function postRegularTweet({ today, hour, cycle }) {
   if (exists(DRAFT_PATH)) {
     const draft = readFile(DRAFT_PATH).trim();
     if (draft === 'SKIP') {
-      log('Agent chose to skip tweet this cycle (self-check failed)');
+      // SKIP is written either by the agent's own self-check or by the
+      // pre-tweet browse-notes guard — the [run] line above says which.
+      log('tweet_draft is SKIP — skipping post this cycle');
       return { attempted: false, posted: false, rejected: false, skipped: true, suppressed: true, suppressionReason: 'self_check_skip', tweetUrl: null };
     }
 

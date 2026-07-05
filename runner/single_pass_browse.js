@@ -252,6 +252,31 @@ async function main() {
   } catch (e) { log(`journal write failed: ${e.message}`); return 1; }
 
   try { writeDelta(data); } catch (e) { log(`delta write failed: ${e.message}`); }
+
+  // Leave browse notes for the TWEET cycle. The old agentic browse
+  // (gemini_agent.js) wrote browse_notes.md via its write tool; this
+  // single-pass path never did, so the file stayed empty and pre_tweet's
+  // browse-failed guard SKIP'd every tweet cycle.
+  try {
+    const lines = [];
+    if (data.synthesis) {
+      lines.push(...String(data.synthesis).split(/\n+/)
+        .map(s => s.trim()).filter(Boolean).map(s => `- ${s}`));
+    }
+    if (data.tensions) {
+      lines.push(`- Tension: ${String(data.tensions).replace(/\s+/g, ' ').trim()}`);
+    }
+    for (const f of (data.footnotes || [])) {
+      if (f && f.note) lines.push(`- ${f.handle ? `@${f.handle}: ` : ''}${f.note}${f.url ? ` (${f.url})` : ''}`);
+    }
+    if (lines.length) {
+      let existing = '';
+      try { existing = fs.readFileSync(config.BROWSE_NOTES_PATH, 'utf-8'); } catch {}
+      const next = (existing + `\n── browse ${today} ${hour}:00 ──\n` + lines.join('\n') + '\n').slice(-20000);
+      fs.writeFileSync(config.BROWSE_NOTES_PATH, next);
+      log(`browse_notes.md updated (+${lines.length} line(s), ${next.length} chars total)`);
+    }
+  } catch (e) { log(`browse_notes write failed: ${e.message}`); }
   return 0;
 }
 
