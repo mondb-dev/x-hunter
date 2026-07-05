@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-05T03:23:16.867Z",
+  "generated_at": "2026-07-05T05:34:40.106Z",
   "windows": [
     "1d",
     "3d",
@@ -156,42 +156,42 @@
     },
     "axis_media_integrity_v1": {
       "current": {
-        "score": 0.5922,
+        "score": 0.5896,
         "confidence": 0.98
       },
       "1d": {
-        "score_delta": 0.0006,
+        "score_delta": -0.002,
         "conf_delta": 0.002,
         "direction": "→"
       },
       "3d": {
-        "score_delta": 0.0006,
+        "score_delta": -0.002,
         "conf_delta": 0,
         "direction": "→"
       },
       "7d": {
-        "score_delta": 0.0047,
+        "score_delta": 0.0021,
         "conf_delta": 0,
         "direction": "→"
       }
     },
     "axis_geopolitical_rhetoric_v1": {
       "current": {
-        "score": 0.1247,
+        "score": 0.124,
         "confidence": 0.98
       },
       "1d": {
-        "score_delta": 0.0011,
+        "score_delta": 0.0004,
         "conf_delta": 0.002,
         "direction": "→"
       },
       "3d": {
-        "score_delta": 0.0011,
+        "score_delta": 0.0004,
         "conf_delta": 0,
         "direction": "→"
       },
       "7d": {
-        "score_delta": 0.0027,
+        "score_delta": 0.002,
         "conf_delta": 0,
         "direction": "→"
       }
@@ -220,21 +220,21 @@
     "axis_public_trust_safety_crisis_v1": {
       "current": {
         "score": 0.2297,
-        "confidence": 0.98
+        "confidence": 0.978
       },
       "1d": {
-        "score_delta": -0.0106,
-        "conf_delta": 0.076,
-        "direction": "→"
-      },
-      "3d": {
         "score_delta": -0.0106,
         "conf_delta": 0.074,
         "direction": "→"
       },
+      "3d": {
+        "score_delta": -0.0106,
+        "conf_delta": 0.072,
+        "direction": "→"
+      },
       "7d": {
         "score_delta": -0.0106,
-        "conf_delta": 0.068,
+        "conf_delta": 0.066,
         "direction": "→"
       }
     },
@@ -884,6 +884,15 @@
       "7d": null
     },
     "axis_public_integrity_diversion_v1": {
+      "current": {
+        "score": 0,
+        "confidence": 0
+      },
+      "1d": null,
+      "3d": null,
+      "7d": null
+    },
+    "axis_humanitarian_crisis_response": {
       "current": {
         "score": 0,
         "confidence": 0
