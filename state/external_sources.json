@@ -1,8 +1,8 @@
 {
   "schema_version": "1.0",
-  "generated_at": "2026-07-05T20:15:05.918Z",
+  "generated_at": "2026-07-05T22:44:36.611Z",
   "method": "mechanical_registry_v1",
-  "profiled_at": "2026-07-05T20:15:11.398Z",
+  "profiled_at": "2026-07-05T22:45:01.349Z",
   "sources": [
     {
       "domain": "ojp.gov",
@@ -389,9 +389,9 @@
       "entity": "Theguardian",
       "kind": "news",
       "first_seen_at": "2026-03-27T23:17:00Z",
-      "last_seen_at": "2026-07-05T17:16:32.118Z",
+      "last_seen_at": "2026-07-05T20:16:22.179Z",
       "discovery": {
-        "distinct_urls": 242,
+        "distinct_urls": 246,
         "example_urls": [
           "https://www.theguardian.com/us-news/2026/jun/23/trump-immigration-courthouse-arrest-policy",
           "https://www.theguardian.com/us-news/2026/jun/28/ice-minnesota-defending-democracy",
@@ -400,9 +400,9 @@
           "https://www.theguardian.com/global-development/2026/jun/26/woman-sadia-moalim-ali-three-year-jail-sentence-somalia-online-comments-governement"
         ],
         "origin_counts": {
-          "ontology_evidence": 27,
-          "reading_queue": 223,
-          "journals": 57
+          "ontology_evidence": 28,
+          "reading_queue": 226,
+          "journals": 59
         },
         "distinct_referring_accounts": 0,
         "sample_referring_accounts": [],
@@ -443,7 +443,7 @@
         "breadth": {
           "score": 0.8799999999999999,
           "basis": [
-            "distinct_urls:242",
+            "distinct_urls:246",
             "distinct_axes:10",
             "origin_types:3"
           ]
@@ -482,7 +482,7 @@
           "basis": [
             "newsroom_domain_pattern",
             "article_path_seen",
-            "distinct_urls:242",
+            "distinct_urls:246",
             "distinct_axes:10",
             "origin_types:3",
             "referring_accounts:0",
@@ -528,7 +528,7 @@
       "entity": "Aljazeera",
       "kind": "news",
       "first_seen_at": "2026-06-22T02:45:00Z",
-      "last_seen_at": "2026-07-05T19:15:44.497Z",
+      "last_seen_at": "2026-07-05T20:16:22.179Z",
       "discovery": {
         "distinct_urls": 165,
         "example_urls": [
@@ -539,9 +539,9 @@
           "https://www.aljazeera.com/video/newsfeed/2026/7/1/why-is-maga-in-meltdown-over-the-supreme-court-birthright-ruling-2?traffic_source=rss"
         ],
         "origin_counts": {
-          "ontology_evidence": 108,
+          "ontology_evidence": 109,
           "reading_queue": 5,
-          "journals": 254
+          "journals": 256
         },
         "distinct_referring_accounts": 0,
         "sample_referring_accounts": [],
@@ -669,7 +669,7 @@
       "first_seen_at": "2026-06-22T00:15:00Z",
       "last_seen_at": "2026-07-05T16:15:56.834Z",
       "discovery": {
-        "distinct_urls": 155,
+        "distinct_urls": 156,
         "example_urls": [
           "https://www.nytimes.com/2026/06/19/world/canada/frank-stronach-trial-guilty-sex-charges.html",
           "https://www.nytimes.com/2026/06/27/world/americas/mexican-officials-us-informants.html",
@@ -679,7 +679,7 @@
         ],
         "origin_counts": {
           "ontology_evidence": 7,
-          "reading_queue": 154,
+          "reading_queue": 155,
           "journals": 12
         },
         "distinct_referring_accounts": 0,
@@ -716,7 +716,7 @@
         "breadth": {
           "score": 0.8216666666666665,
           "basis": [
-            "distinct_urls:155",
+            "distinct_urls:156",
             "distinct_axes:5",
             "origin_types:3"
           ]
@@ -755,7 +755,7 @@
           "basis": [
             "newsroom_domain_pattern",
             "article_path_seen",
-            "distinct_urls:155",
+            "distinct_urls:156",
             "distinct_axes:5",
             "origin_types:3",
             "referring_accounts:0",
@@ -3167,9 +3167,9 @@
       "entity": "T Co",
       "kind": "unknown",
       "first_seen_at": "2016-05-05T18:57:30.000Z",
-      "last_seen_at": "2026-07-05T13:40:57.000Z",
+      "last_seen_at": "2026-07-05T20:31:25.000Z",
       "discovery": {
-        "distinct_urls": 6598,
+        "distinct_urls": 6599,
         "example_urls": [
           "https://t.co/pJSE124ec4",
           "https://t.co/Soz8BXPWaa",
@@ -3178,7 +3178,7 @@
           "https://t.co/cYaqYDRp08"
         ],
         "origin_counts": {
-          "feed_buffer": 3876,
+          "feed_buffer": 3877,
           "feed_buffer_reply": 4287
         },
         "distinct_referring_accounts": 2118,
@@ -3220,7 +3220,7 @@
         "breadth": {
           "score": 0.47,
           "basis": [
-            "distinct_urls:6598",
+            "distinct_urls:6599",
             "distinct_axes:0",
             "origin_types:2"
           ]
@@ -3259,7 +3259,7 @@
           "basis": [
             "unknown_domain_pattern",
             "doi_or_identifier_path_seen",
-            "distinct_urls:6598",
+            "distinct_urls:6599",
             "distinct_axes:0",
             "origin_types:2",
             "referring_accounts:2118",
@@ -29936,7 +29936,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-30T19:07:13.484Z",
+        "fetched_at": "2026-07-05T20:44:32.721Z",
         "homepage_url": "https://coderabbit.ai/",
         "example_url": "https://www.coderabbit.ai/agent?utm_source=twitter&utm_medium=cpc&utm_campaign=brandawareness_slack&twclid=25ohyy1nnhx1vb6p888i79f380",
         "homepage_status": 200,
@@ -30060,12 +30060,12 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-07-02T09:08:02.905Z",
+        "fetched_at": "2026-07-05T20:44:35.351Z",
         "homepage_url": "https://dell.com/",
         "example_url": "https://www.dell.com/en-us/shop/dell-laptops/xps-14-laptop/spd/xps-da14260-laptop?twclid=2b95mzwodix16nm7kii2sz7zvh",
         "homepage_status": 200,
         "example_status": 200,
-        "homepage_final_url": "https://www.dell.com/en-us",
+        "homepage_final_url": "https://www.dell.com/en-ph",
         "example_final_url": "https://www.dell.com/en-us/shop/dell-laptops/xps-14-laptop/spd/xps-da14260-laptop?twclid=2b95mzwodix16nm7kii2sz7zvh",
         "homepage_content_type": "text/html; charset=utf-8",
         "example_content_type": "text/html; charset=utf-8",
@@ -30182,7 +30182,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-29T15:06:44.699Z",
+        "fetched_at": "2026-07-05T20:44:36.763Z",
         "homepage_url": "https://rice.edu/",
         "example_url": "https://news.rice.edu/news/2026/more-dangerous-and-unpredictable-experts-discuss-ongoing-iran-conflict",
         "homepage_status": null,
@@ -30283,7 +30283,7 @@
             "about:false",
             "contact:false",
             "corrections:false",
-            "outbound_links:12",
+            "outbound_links:13",
             "opinion_marker:false"
           ]
         },
@@ -30304,7 +30304,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-29T19:36:50.375Z",
+        "fetched_at": "2026-07-05T20:44:39.508Z",
         "homepage_url": "https://moderndiplomacy.eu/",
         "example_url": "https://moderndiplomacy.eu/2026/03/06/alone-under-fire-irans-partners-step-back-as-war-intensifies/",
         "homepage_status": 200,
@@ -30330,7 +30330,7 @@
           "has_about_link": false,
           "has_contact_link": false,
           "has_corrections_link": false,
-          "outbound_links_count": 12,
+          "outbound_links_count": 13,
           "opinion_marker": false
         }
       }
@@ -30426,7 +30426,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-29T22:36:54.488Z",
+        "fetched_at": "2026-07-05T21:14:36.896Z",
         "homepage_url": "https://vt.edu/",
         "example_url": "https://news.vt.edu/articles/2026/03/Iran-Israel-Trump-gas-LNG-prices-Strait-Hormuz-economic-impact.html",
         "homepage_status": 200,
@@ -30548,7 +30548,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-29T09:06:39.993Z",
+        "fetched_at": "2026-07-05T21:14:36.914Z",
         "homepage_url": "https://x.m/",
         "example_url": "https://x.m/mjfree/status/2067065470641983623",
         "homepage_status": null,
@@ -30670,7 +30670,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-07-01T09:07:41.974Z",
+        "fetched_at": "2026-07-05T21:14:47.455Z",
         "homepage_url": "https://guardian.com/",
         "example_url": "https://www.guardian.com/business/2026/jun/28/ocado-boss-tim-steiner-payouts",
         "homepage_status": null,
@@ -30792,7 +30792,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-30T22:37:18.476Z",
+        "fetched_at": "2026-07-05T21:14:48.934Z",
         "homepage_url": "https://joerogan.com/",
         "example_url": "https://joerogan.com/clip/2026/06/30/income-tax-ngo-claims",
         "homepage_status": 200,
@@ -30915,7 +30915,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-07-01T00:37:52.951Z",
+        "fetched_at": "2026-07-05T21:44:37.324Z",
         "homepage_url": "https://edicek.com/",
         "example_url": "https://edicek.com/?twclid=2468k4sxfdut4hmixz8sdmcieh",
         "homepage_status": 200,
@@ -31038,7 +31038,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-07-02T04:07:53.025Z",
+        "fetched_at": "2026-07-05T21:44:38.170Z",
         "homepage_url": "https://opopop.com/",
         "example_url": "https://opopop.com/pages/flavor-bundle-7b?tw_source=twitter&tw_campaign=40962686&tw_adsetid=54299667&utm_term=54299667&twclid=2323kb4gq8oge7g0dcmynbxsqx",
         "homepage_status": 200,
@@ -31141,7 +31141,7 @@
             "about:true",
             "contact:true",
             "corrections:false",
-            "outbound_links:16",
+            "outbound_links:17",
             "opinion_marker:false"
           ]
         },
@@ -31161,7 +31161,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-30T03:37:49.565Z",
+        "fetched_at": "2026-07-05T21:44:46.388Z",
         "homepage_url": "https://arkayzeroproof.com/",
         "example_url": "https://arkayzeroproof.com/invest-in-arkay/?twclid=2an9mhmxuedo5myzer72kvy89c",
         "homepage_status": 200,
@@ -31177,7 +31177,7 @@
           "has_about_link": true,
           "has_contact_link": true,
           "has_corrections_link": false,
-          "outbound_links_count": 8,
+          "outbound_links_count": 10,
           "opinion_marker": false
         },
         "example": {
@@ -31187,7 +31187,7 @@
           "has_about_link": true,
           "has_contact_link": true,
           "has_corrections_link": false,
-          "outbound_links_count": 16,
+          "outbound_links_count": 17,
           "opinion_marker": false
         }
       }
@@ -31284,7 +31284,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-07-01T00:37:54.004Z",
+        "fetched_at": "2026-07-05T21:44:48.255Z",
         "homepage_url": "https://rexshares.com/",
         "example_url": "https://www.rexshares.com/t-rex-leveraged-etfs/?twclid=29y2s8ykvzrl4imsooxujrypoa",
         "homepage_status": 200,
@@ -31407,7 +31407,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-07-01T00:37:54.475Z",
+        "fetched_at": "2026-07-05T22:14:36.581Z",
         "homepage_url": "https://degenidle.com/",
         "example_url": "https://degenidle.com/?twclid=2cjpeg7bzynm31yynzfte1vs7q",
         "homepage_status": 200,
@@ -31530,7 +31530,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-07-02T04:07:53.282Z",
+        "fetched_at": "2026-07-05T22:14:37.200Z",
         "homepage_url": "https://cointracker.io/",
         "example_url": "https://www.cointracker.io/?utm_source=x&utm_medium=paid_social&utm_campaign=PDM_PaidSocial_X_Awareness_Reach&twclid=2db4ytuyg7wyekq6zcdaap0vjo",
         "homepage_status": 403,
@@ -31653,7 +31653,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-07-02T04:07:53.923Z",
+        "fetched_at": "2026-07-05T22:14:38.758Z",
         "homepage_url": "https://executionos.app/",
         "example_url": "https://executionos.app/?twclid=21y98qnc3fpcspd69ruatoqb5k",
         "homepage_status": 200,
@@ -31776,7 +31776,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-07-02T04:07:54.658Z",
+        "fetched_at": "2026-07-05T22:14:40.516Z",
         "homepage_url": "https://stanford.edu/",
         "example_url": "https://setr.stanford.edu/?utm_source=paid-social&utm_medium=x&utm_campaign=consideration&utm_term=nationwide&utm_content=general_image&twclid=24yi2v8i7akrj8uxvbrlymn90n",
         "homepage_status": 200,
@@ -31899,7 +31899,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-07-02T04:37:54.271Z",
+        "fetched_at": "2026-07-05T22:44:38.001Z",
         "homepage_url": "https://spotandtango.com/",
         "example_url": "https://www.spotandtango.com/unkibble?discount=XUNKIBBLE&utm_medium=cpc&utm_campaign=X_Convert_2026&utm_source=twitter&twclid=2adust2nkwc5tq5qj4fqfz0vb8",
         "homepage_status": 200,
@@ -32022,7 +32022,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-30T01:37:14.526Z",
+        "fetched_at": "2026-07-05T22:44:58.010Z",
         "homepage_url": "https://kfc.com/",
         "example_url": "https://www.kfc.com/menu?utm_source=twitter&utm_medium=social&utm_campaign=kfcvaluefeast&utm_creative=9box&twclid=250lznofqwrkd2iq53t7qffgxo",
         "homepage_status": null,
@@ -32145,7 +32145,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-30T03:07:03.777Z",
+        "fetched_at": "2026-07-05T22:44:59.729Z",
         "homepage_url": "https://3c.wiki/",
         "example_url": "https://3c.wiki/3PtZuMY?twclid=2bz0sgqd5e9nj510697vwg5ap7",
         "homepage_status": 200,
@@ -32268,7 +32268,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-30T04:07:01.102Z",
+        "fetched_at": "2026-07-05T22:45:01.349Z",
         "homepage_url": "https://lumalabs.ai/",
         "example_url": "https://lumalabs.ai/app?utm_source=x&utm_medium=paid_social&utm_campaign=prospectingX&twclid=27jcpv8qkd9yiwma3uys0cthqd",
         "homepage_status": 200,
