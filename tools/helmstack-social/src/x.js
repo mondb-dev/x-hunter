@@ -90,27 +90,36 @@ class X {
     await sleep(2500);
   }
 
+  /** Close the current tab and open a fresh one at `url` (reuses an exact-URL match). */
+  async _freshTab(url) {
+    await this.c.closeTab(this.tab).catch(() => {});
+    const esc = url.replace(/[?#].*$/, "").toLowerCase().replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
+    this.tab = await this.c.ensureTab(new RegExp(`^${esc}`, "i"), url);
+  }
+
   /**
    * Navigate to `url` and verify the tab actually lands there. A long-lived X
-   * tab can wedge — every navigation errors and snaps back to /home while a
-   * fresh tab in the same session navigates fine — so on a landing mismatch
-   * the tab is closed and reopened at `url`. Returns false if even the fresh
-   * tab doesn't land.
+   * tab can wedge — navigations error and snap back to /home (and CDP input
+   * stops registering) while a fresh tab in the same session works fine — so
+   * on a landing mismatch OR an error-status tab it is closed and reopened at
+   * `url`. Returns false if even the fresh tab doesn't land.
    */
   async _gotoChecked(url) {
     const target = url.replace(/[?#].*$/, "").toLowerCase();
     const landed = async () => {
       await this.c.waitReady(this.tab, { tag: "x", attempts: 15 }).catch(() => {});
       await sleep(1500);
-      const at = await this.c.tabUrl(this.tab).catch(() => "");
-      return at.replace(/[?#].*$/, "").toLowerCase() === target;
+      const tabs = await this.c.listTabs().catch(() => []);
+      const t = tabs.find((tb) => tb.id === this.tab);
+      // An error-status tab has demonstrated a failed load — treat as wedged
+      // even if the URL matches (its CDP input is typically dead too).
+      if (!t || t.status === "error") return false;
+      return (t.url || "").replace(/[?#].*$/, "").toLowerCase() === target;
     };
     await this.c.navigate(this.tab, url).catch(() => {});
     if (await landed()) return true;
     this.log(`nav to ${url} did not land — recycling wedged tab`);
-    await this.c.closeTab(this.tab).catch(() => {});
-    const esc = target.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
-    this.tab = await this.c.ensureTab(new RegExp(`^${esc}`, "i"), url);
+    await this._freshTab(url);
     return landed();
   }
 
@@ -375,6 +384,19 @@ class X {
    */
   async reply(tweetUrl, text, { dryRun = false } = {}) {
     if (!(await this._gotoChecked(tweetUrl))) return { ok: false, reason: "navigation_failed" };
+    let res = await this._replyOnPage(tweetUrl, text, { dryRun });
+    const retryable = ["reply_button_not_found", "compose_box_not_found", "text_insert_failed"];
+    if (!res.ok && !res.dryRun && retryable.includes(res.reason)) {
+      this.log(`reply attempt failed (${res.reason}) — recycling tab and retrying once`);
+      await this._freshTab(tweetUrl);
+      if (!(await this._gotoChecked(tweetUrl))) return { ok: false, reason: "navigation_failed" };
+      res = await this._replyOnPage(tweetUrl, text, { dryRun });
+    }
+    return res;
+  }
+
+  /** One compose-and-post attempt on the already-loaded permalink page. */
+  async _replyOnPage(tweetUrl, text, { dryRun = false } = {}) {
     await sleep(3000);
     // Click the reply affordance on the tweet matching the target status id.
     // On a reply's permalink X renders ancestor tweets ABOVE the focused one,
@@ -586,6 +608,18 @@ class X {
       await this.c.evaluate(this.tab, "window.scrollBy(0, 1200)").catch(() => {});
       await sleep(1200);
     }
+    return this._scrapeArticles(limit);
+  }
+
+  /**
+   * The conversation visible on a tweet permalink, in DOM order: ancestor
+   * tweets first, then the focused tweet, then replies below. Unlike
+   * scrapeThreadReplies() nothing is dropped — callers that need "what came
+   * before this tweet" (e.g. mention-reply context) slice it themselves.
+   */
+  async scrapeConversation(tweetUrl, { limit = 6 } = {}) {
+    if (!(await this._gotoChecked(tweetUrl))) return [];
+    await sleep(1500);
     return this._scrapeArticles(limit);
   }
 
