@@ -1,0 +1,23 @@
+{
+  "name": "helmstack-social",
+  "version": "0.1.0",
+  "description": "Drive social platforms (LinkedIn posting + feed engagement) through a HelmStack browser session. Zero runtime dependencies; app logic injected via hooks.",
+  "main": "src/index.js",
+  "bin": {
+    "helmstack-social": "bin/helmstack-social.js"
+  },
+  "scripts": {
+    "smoke": "node bin/helmstack-social.js health"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "files": [
+    "src",
+    "bin",
+    "README.md",
+    ".env.example"
+  ],
+  "license": "MIT",
+  "dependencies": {}
+}
