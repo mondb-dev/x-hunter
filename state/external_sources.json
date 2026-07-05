@@ -1,8 +1,8 @@
 {
   "schema_version": "1.0",
-  "generated_at": "2026-07-04T20:07:49.445Z",
+  "generated_at": "2026-07-05T02:21:48.983Z",
   "method": "mechanical_registry_v1",
-  "profiled_at": "2026-07-04T20:07:55.327Z",
+  "profiled_at": "2026-07-05T02:22:04.303Z",
   "sources": [
     {
       "domain": "ojp.gov",
@@ -391,7 +391,7 @@
       "first_seen_at": "2026-03-27T23:17:00Z",
       "last_seen_at": "2026-07-04T17:09:17.513Z",
       "discovery": {
-        "distinct_urls": 228,
+        "distinct_urls": 230,
         "example_urls": [
           "https://www.theguardian.com/us-news/2026/jun/23/trump-immigration-courthouse-arrest-policy",
           "https://www.theguardian.com/us-news/2026/jun/28/ice-minnesota-defending-democracy",
@@ -401,7 +401,7 @@
         ],
         "origin_counts": {
           "ontology_evidence": 25,
-          "reading_queue": 209,
+          "reading_queue": 211,
           "journals": 53
         },
         "distinct_referring_accounts": 0,
@@ -442,7 +442,7 @@
         "breadth": {
           "score": 0.8799999999999999,
           "basis": [
-            "distinct_urls:228",
+            "distinct_urls:230",
             "distinct_axes:9",
             "origin_types:3"
           ]
@@ -481,7 +481,7 @@
           "basis": [
             "newsroom_domain_pattern",
             "article_path_seen",
-            "distinct_urls:228",
+            "distinct_urls:230",
             "distinct_axes:9",
             "origin_types:3",
             "referring_accounts:0",
@@ -791,7 +791,7 @@
       "first_seen_at": "2026-06-22T00:15:00Z",
       "last_seen_at": "2026-07-01T06:14:34.244Z",
       "discovery": {
-        "distinct_urls": 149,
+        "distinct_urls": 150,
         "example_urls": [
           "https://www.nytimes.com/2026/06/19/world/canada/frank-stronach-trial-guilty-sex-charges.html",
           "https://www.nytimes.com/2026/06/27/world/americas/mexican-officials-us-informants.html",
@@ -801,7 +801,7 @@
         ],
         "origin_counts": {
           "ontology_evidence": 6,
-          "reading_queue": 148,
+          "reading_queue": 149,
           "journals": 10
         },
         "distinct_referring_accounts": 0,
@@ -837,7 +837,7 @@
         "breadth": {
           "score": 0.7633333333333332,
           "basis": [
-            "distinct_urls:149",
+            "distinct_urls:150",
             "distinct_axes:4",
             "origin_types:3"
           ]
@@ -876,7 +876,7 @@
           "basis": [
             "newsroom_domain_pattern",
             "article_path_seen",
-            "distinct_urls:149",
+            "distinct_urls:150",
             "distinct_axes:4",
             "origin_types:3",
             "referring_accounts:0",
@@ -1166,7 +1166,7 @@
       "first_seen_at": "2026-06-26T07:05:00Z",
       "last_seen_at": "2026-07-01T06:14:34.242Z",
       "discovery": {
-        "distinct_urls": 110,
+        "distinct_urls": 111,
         "example_urls": [
           "https://www.bbc.co.uk/news/articles/cn8qxz6qypyo",
           "https://www.bbc.co.uk/news/articles/cn075j04pnyo?at_medium=RSS&amp;at_campaign=rss",
@@ -1176,7 +1176,7 @@
         ],
         "origin_counts": {
           "ontology_evidence": 4,
-          "reading_queue": 111,
+          "reading_queue": 112,
           "journals": 7
         },
         "distinct_referring_accounts": 0,
@@ -1210,7 +1210,7 @@
         "breadth": {
           "score": 0.7049999999999998,
           "basis": [
-            "distinct_urls:110",
+            "distinct_urls:111",
             "distinct_axes:3",
             "origin_types:3"
           ]
@@ -1248,7 +1248,7 @@
           "method": "mechanical_v1",
           "basis": [
             "newsroom_domain_pattern",
-            "distinct_urls:110",
+            "distinct_urls:111",
             "distinct_axes:3",
             "origin_types:3",
             "referring_accounts:0",
@@ -2230,9 +2230,9 @@
       "entity": "Inquirer",
       "kind": "unknown",
       "first_seen_at": "2026-05-09T10:15:15.053Z",
-      "last_seen_at": "2026-07-04T06:40:15.355Z",
+      "last_seen_at": "2026-07-05T00:35:51.222Z",
       "discovery": {
-        "distinct_urls": 77,
+        "distinct_urls": 78,
         "example_urls": [
           "https://www.inquirer.net/capiz-broadcaster-shooting-probe-widens-as-cops-form-task-force",
           "https://newsinfo.inquirer.net/2251519/chr-carries-out-motu-proprio-probe-into-tacloban-cavite-school-incidents",
@@ -2241,8 +2241,8 @@
           "https://newsinfo.inquirer.net/2252742/fwd-defense-lawyer-poa-says-being-listed-as-the-prosecs-witness-not-a-problem"
         ],
         "origin_counts": {
-          "ontology_evidence": 43,
-          "journals": 134,
+          "ontology_evidence": 44,
+          "journals": 136,
           "articles": 1
         },
         "distinct_referring_accounts": 0,
@@ -2250,6 +2250,7 @@
         "distinct_axes": [
           "axis_authoritarian_self_determination_v1",
           "axis_collective_voice",
+          "axis_geopolitical_rhetoric_v1",
           "axis_media_integrity_v1",
           "axis_national_sovereignty_v_intl_law_v1",
           "axis_political_trust_corruption_v1",
@@ -2279,8 +2280,8 @@
         "breadth": {
           "score": 0.8799999999999999,
           "basis": [
-            "distinct_urls:77",
-            "distinct_axes:6",
+            "distinct_urls:78",
+            "distinct_axes:7",
             "origin_types:3"
           ]
         },
@@ -2317,8 +2318,8 @@
           "method": "mechanical_v1",
           "basis": [
             "unknown_domain_pattern",
-            "distinct_urls:77",
-            "distinct_axes:6",
+            "distinct_urls:78",
+            "distinct_axes:7",
             "origin_types:3",
             "referring_accounts:0",
             "origin_types:3",
@@ -2363,9 +2364,9 @@
       "entity": "Rappler",
       "kind": "unknown",
       "first_seen_at": "2026-06-22T04:04:30.428Z",
-      "last_seen_at": "2026-07-04T09:40:10.905Z",
+      "last_seen_at": "2026-07-05T00:35:51.222Z",
       "discovery": {
-        "distinct_urls": 54,
+        "distinct_urls": 55,
         "example_urls": [
           "https://www.rappler.com/fact-check-no-arrest-warrant-issued-vs-marcoleta",
           "https://www.rappler.com/technology/decoded-tacloban-school-shooting-disinformation-kiko-barzaga-discussions-juvenile-justice-law/",
@@ -2374,8 +2375,8 @@
           "https://www.rappler.com/philippines/barmm-minories-demand-genuine-representation-parliamentary-elections/"
         ],
         "origin_counts": {
-          "ontology_evidence": 38,
-          "journals": 77,
+          "ontology_evidence": 39,
+          "journals": 79,
           "articles": 1
         },
         "distinct_referring_accounts": 0,
@@ -2413,7 +2414,7 @@
         "breadth": {
           "score": 0.8799999999999999,
           "basis": [
-            "distinct_urls:54",
+            "distinct_urls:55",
             "distinct_axes:7",
             "origin_types:3"
           ]
@@ -2451,7 +2452,7 @@
           "method": "mechanical_v1",
           "basis": [
             "unknown_domain_pattern",
-            "distinct_urls:54",
+            "distinct_urls:55",
             "distinct_axes:7",
             "origin_types:3",
             "referring_accounts:0",
@@ -2840,7 +2841,7 @@
             "about:false",
             "contact:false",
             "corrections:false",
-            "outbound_links:32",
+            "outbound_links:42",
             "opinion_marker:false"
           ]
         },
@@ -2861,7 +2862,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-07-02T00:07:52.208Z",
+        "fetched_at": "2026-07-05T00:34:30.805Z",
         "homepage_url": "https://philstar.com/",
         "example_url": "https://www.philstar.com/headlines/2026/06/24/2537506/mike-defensor-face-trafficking-complaint-over-pasig-ktv-bar-raid",
         "homepage_status": 200,
@@ -2877,7 +2878,7 @@
           "has_about_link": false,
           "has_contact_link": false,
           "has_corrections_link": false,
-          "outbound_links_count": 74,
+          "outbound_links_count": 72,
           "opinion_marker": false
         },
         "example": {
@@ -2887,7 +2888,7 @@
           "has_about_link": false,
           "has_contact_link": false,
           "has_corrections_link": false,
-          "outbound_links_count": 32,
+          "outbound_links_count": 42,
           "opinion_marker": false
         }
       }
@@ -2994,7 +2995,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-07-02T00:07:52.433Z",
+        "fetched_at": "2026-07-05T00:34:32.279Z",
         "homepage_url": "https://techcrunch.com/",
         "example_url": "https://techcrunch.com/2026/06/22/shareholders-sue-ubers-board-over-sexual-assaults-other-incidents/",
         "homepage_status": 200,
@@ -3030,9 +3031,9 @@
       "entity": "Bit Ly",
       "kind": "unknown",
       "first_seen_at": "2026-04-06T16:33:36.000Z",
-      "last_seen_at": "2026-07-04T15:18:57.000Z",
+      "last_seen_at": "2026-07-04T22:28:51.000Z",
       "discovery": {
-        "distinct_urls": 16,
+        "distinct_urls": 17,
         "example_urls": [
           "https://bit.ly/4rFUGm4?twclid=2cxu7o43bx4p37y7v84zudvy2q",
           "https://bit.ly/4rFUGm4?twclid=2bcgwzcedehb1ong389c8zjnsb",
@@ -3041,7 +3042,7 @@
           "https://bit.ly/4rFUGm4?twclid=2b8lhq1wz1w3mmj16v2ox64o67"
         ],
         "origin_counts": {
-          "feed_buffer_reply": 13,
+          "feed_buffer_reply": 14,
           "feed_buffer": 2,
           "journals": 10
         },
@@ -3080,7 +3081,7 @@
         "breadth": {
           "score": 0.53,
           "basis": [
-            "distinct_urls:16",
+            "distinct_urls:17",
             "distinct_axes:0",
             "origin_types:3"
           ]
@@ -3118,7 +3119,7 @@
           "method": "mechanical_v1",
           "basis": [
             "unknown_domain_pattern",
-            "distinct_urls:16",
+            "distinct_urls:17",
             "distinct_axes:0",
             "origin_types:3",
             "referring_accounts:7",
@@ -3164,9 +3165,9 @@
       "entity": "T Co",
       "kind": "unknown",
       "first_seen_at": "2016-05-05T18:57:30.000Z",
-      "last_seen_at": "2026-07-04T18:20:23.000Z",
+      "last_seen_at": "2026-07-04T23:16:23.000Z",
       "discovery": {
-        "distinct_urls": 6561,
+        "distinct_urls": 6567,
         "example_urls": [
           "https://t.co/pJSE124ec4",
           "https://t.co/Soz8BXPWaa",
@@ -3175,10 +3176,10 @@
           "https://t.co/cYaqYDRp08"
         ],
         "origin_counts": {
-          "feed_buffer": 3851,
-          "feed_buffer_reply": 4260
+          "feed_buffer": 3852,
+          "feed_buffer_reply": 4265
         },
-        "distinct_referring_accounts": 2099,
+        "distinct_referring_accounts": 2103,
         "sample_referring_accounts": [
           "0808iveta",
           "09abracadabra",
@@ -3217,7 +3218,7 @@
         "breadth": {
           "score": 0.47,
           "basis": [
-            "distinct_urls:6561",
+            "distinct_urls:6567",
             "distinct_axes:0",
             "origin_types:2"
           ]
@@ -3225,7 +3226,7 @@
         "corroboration": {
           "score": 0.825,
           "basis": [
-            "referring_accounts:2099",
+            "referring_accounts:2103",
             "origin_types:2"
           ]
         },
@@ -3256,10 +3257,10 @@
           "basis": [
             "unknown_domain_pattern",
             "doi_or_identifier_path_seen",
-            "distinct_urls:6561",
+            "distinct_urls:6567",
             "distinct_axes:0",
             "origin_types:2",
-            "referring_accounts:2099",
+            "referring_accounts:2103",
             "origin_types:2",
             "track_record_unavailable"
           ]
@@ -3526,7 +3527,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-07-01T22:07:47.771Z",
+        "fetched_at": "2026-07-05T00:34:33.881Z",
         "homepage_url": "https://brobible.com/",
         "example_url": "https://brobible.com/culture/paige-ostroushko-savanah-hernandez-anti-ice-protest-arrest/",
         "homepage_status": 200,
@@ -4188,7 +4189,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-07-01T20:37:56.555Z",
+        "fetched_at": "2026-07-05T00:34:44.137Z",
         "homepage_url": "https://doubleclick.net/",
         "example_url": "https://ad.doubleclick.net/ddm/trackclk/N117602.5126432X/B34540950.438517562;dc_trk_aid=631787244;dc_trk_cid=249093288;dc_dbm_token=$%7BDC_DBM_TOKEN%7D;dc_lat=;dc_rdid=;tag_for_child_directed_treatment=;tfua=;gdpr=$%7BGDPR%7D;gdpr_consent=$%7BGDPR_CONSENT_755%7D;gpp=$%7BGPP_STRING_755%7D;gpp_sid=$%7BGPP_SID%7D;ltd=;dc_tdv=1?twclid=292cdwzoayexun1iu6o4fsk10z",
         "homepage_status": 200,
@@ -4962,7 +4963,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-07-01T22:07:49.129Z",
+        "fetched_at": "2026-07-05T01:04:27.065Z",
         "homepage_url": "https://youtu.be/",
         "example_url": "https://youtu.be/m7jAReMF2c8?si=AtT5ue3VPnmZq5V6",
         "homepage_status": 200,
@@ -5571,12 +5572,12 @@
           ]
         },
         "profile": {
-          "score": 0.1,
+          "score": 0,
           "confidence": 0.55,
           "basis": [
             "meta_author:false",
             "published_time:false",
-            "canonical:true",
+            "canonical:false",
             "about:false",
             "contact:false",
             "corrections:false",
@@ -5600,19 +5601,19 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-07-01T22:07:49.337Z",
+        "fetched_at": "2026-07-05T01:04:27.455Z",
         "homepage_url": "https://ro.co/",
         "example_url": "https://ro.co/lp/weight-loss/quiz/?utm_medium=paid_social&utm_source=Twitter&utm_campaign=41158458&utm_term=54579155&utm_content=Ad2&twclid=2bv3rduaz2ypp78vahy5e6wspd",
-        "homepage_status": 200,
-        "example_status": 200,
+        "homepage_status": 403,
+        "example_status": 403,
         "homepage_final_url": "https://ro.co/",
         "example_final_url": "https://ro.co/lp/weight-loss/quiz/?utm_medium=paid_social&utm_source=Twitter&utm_campaign=41158458&utm_term=54579155&utm_content=Ad2&twclid=2bv3rduaz2ypp78vahy5e6wspd",
-        "homepage_content_type": "text/html; charset=utf-8",
-        "example_content_type": "text/html; charset=utf-8",
+        "homepage_content_type": "text/html; charset=UTF-8",
+        "example_content_type": "text/html; charset=UTF-8",
         "homepage": {
           "has_meta_author": false,
           "has_published_time": false,
-          "has_canonical": true,
+          "has_canonical": false,
           "has_about_link": false,
           "has_contact_link": false,
           "has_corrections_link": false,
@@ -5622,7 +5623,7 @@
         "example": {
           "has_meta_author": false,
           "has_published_time": false,
-          "has_canonical": true,
+          "has_canonical": false,
           "has_about_link": false,
           "has_contact_link": false,
           "has_corrections_link": false,
@@ -8016,7 +8017,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-07-02T01:07:51.311Z",
+        "fetched_at": "2026-07-05T01:51:50.628Z",
         "homepage_url": "https://aramco.com/",
         "example_url": "https://www.aramco.com/en/what-we-do/energy-innovation/innovation-ecosystem/aramco-fifa-partnership?utm_source=x&utm_medium=cpm&utm_term=en_vid_cpm_inf-ftbl_na_football-fans&utm_content=en_4x5_vid_6s_global_fifa-whatif_na_m3&twclid=2f1bxdfhmr1if32n1ssvcc3xtc",
         "homepage_status": 200,
@@ -9657,7 +9658,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-07-01T22:07:49.828Z",
+        "fetched_at": "2026-07-05T01:04:27.939Z",
         "homepage_url": "https://babbily.com/",
         "example_url": "https://platform.babbily.com/?twclid=28ntbg85b8teebnlu9ilz4yxht",
         "homepage_status": 200,
@@ -11049,7 +11050,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-07-01T20:37:56.670Z",
+        "fetched_at": "2026-07-05T01:04:28.128Z",
         "homepage_url": "https://ridge.com/",
         "example_url": "https://ridge.com/collections/fday-rings-3rlp?utm_source=social&utm_medium=twitter&utm_campaign=TW+%7C+ACQ+%7C+RINGS+%7C+PCH+%7C+FDAY26+%28IO%29&utm_term=5.17+-+PCH+-+FDAY+-+IMGs+-+FDAY-RINGS-3RLP&utm_content=05250b_GIFT_FDAY_JEWELRY_WEDDING-RINGS_MIX-COLOR_OFFER-%25OFF_The-gift-your-man-actually-wants-%28we-asked%29_RINGS-FDAY-Branded__META_NN_IH_DR__FDAY-RINGS-3RLP_5-12-26%3Fnb_platform%3Dtwitter&twclid=2cpbcoko2qkg7u5nrw2y5g1wdo",
         "homepage_status": 403,
@@ -11175,7 +11176,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-07-01T23:37:51.271Z",
+        "fetched_at": "2026-07-05T01:51:52.204Z",
         "homepage_url": "https://makofy.com/",
         "example_url": "https://makofy.com/openclaw?twclid=217okoej56crajhkd22b6nsfzf",
         "homepage_status": 200,
@@ -11455,6 +11456,135 @@
           "has_contact_link": false,
           "has_corrections_link": false,
           "outbound_links_count": 0,
+          "opinion_marker": false
+        }
+      }
+    },
+    {
+      "domain": "github.com",
+      "entity": "Github",
+      "kind": "unknown",
+      "first_seen_at": "2026-04-14T15:03:17.000Z",
+      "last_seen_at": "2026-07-04T16:00:02.000Z",
+      "discovery": {
+        "distinct_urls": 6,
+        "example_urls": [
+          "https://github.com/BlockRunAI/ClawRouter/?twclid=2bnr8zsvp3b72fbw0yuil7yilw",
+          "https://github.com/BlockRunAI/ClawRouter/?twclid=2bqo24qepc22zczc4xxnytdhfl",
+          "https://github.com/nattergabriel/reseed?twclid=2dsn1vz4tqvpxv8ewg0nmayxdq",
+          "https://github.com/nattergabriel/reseed?twclid=214tahk5vxa8hb5thwmqod29oc",
+          "https://github.com/votal-ai-hq/wb-red-team?twclid=21qqbdcwkkmhie2aavs0xry7lj"
+        ],
+        "origin_counts": {
+          "feed_buffer_reply": 6
+        },
+        "distinct_referring_accounts": 4,
+        "sample_referring_accounts": [
+          "blockrunai",
+          "eterdev",
+          "heyputer",
+          "sundi133"
+        ],
+        "distinct_axes": []
+      },
+      "claims": {
+        "total": 0,
+        "supported": 0,
+        "refuted": 0,
+        "contested": 0,
+        "unverified": 0,
+        "resolved_count": 0
+      },
+      "structural_features": {
+        "has_search_paths": false,
+        "has_article_paths": false,
+        "has_doi_paths": false
+      },
+      "ratings": {
+        "provenance": {
+          "score": 0.45,
+          "basis": [
+            "unknown_domain_pattern"
+          ]
+        },
+        "breadth": {
+          "score": 0.235,
+          "basis": [
+            "distinct_urls:6",
+            "distinct_axes:0",
+            "origin_types:1"
+          ]
+        },
+        "corroboration": {
+          "score": 0.5208333333333334,
+          "basis": [
+            "referring_accounts:4",
+            "origin_types:1"
+          ]
+        },
+        "track_record": {
+          "score": null,
+          "basis": [
+            "no_resolved_claims_observed"
+          ]
+        },
+        "profile": {
+          "score": 0.19999999999999998,
+          "confidence": 0.65,
+          "basis": [
+            "meta_author:true",
+            "published_time:false",
+            "canonical:false",
+            "about:false",
+            "contact:false",
+            "corrections:false",
+            "outbound_links:2",
+            "opinion_marker:false"
+          ]
+        },
+        "overall": {
+          "score": 0.409609375,
+          "confidence": 0.321225,
+          "method": "mechanical_v1",
+          "basis": [
+            "unknown_domain_pattern",
+            "distinct_urls:6",
+            "distinct_axes:0",
+            "origin_types:1",
+            "referring_accounts:4",
+            "origin_types:1",
+            "track_record_unavailable"
+          ]
+        }
+      },
+      "profile": {
+        "fetched_at": "2026-07-04T09:39:00.691Z",
+        "homepage_url": "https://github.com/",
+        "example_url": "https://github.com/BlockRunAI/ClawRouter/?twclid=2bnr8zsvp3b72fbw0yuil7yilw",
+        "homepage_status": 200,
+        "example_status": 200,
+        "homepage_final_url": "https://github.com/",
+        "example_final_url": "https://github.com/BlockRunAI/ClawRouter/?twclid=2bnr8zsvp3b72fbw0yuil7yilw",
+        "homepage_content_type": "text/html; charset=utf-8",
+        "example_content_type": "text/html; charset=utf-8",
+        "homepage": {
+          "has_meta_author": false,
+          "has_published_time": false,
+          "has_canonical": true,
+          "has_about_link": false,
+          "has_contact_link": false,
+          "has_corrections_link": false,
+          "outbound_links_count": 2,
+          "opinion_marker": false
+        },
+        "example": {
+          "has_meta_author": true,
+          "has_published_time": false,
+          "has_canonical": false,
+          "has_about_link": false,
+          "has_contact_link": false,
+          "has_corrections_link": false,
+          "outbound_links_count": 2,
           "opinion_marker": false
         }
       }
@@ -11806,7 +11936,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-07-02T02:07:50.543Z",
+        "fetched_at": "2026-07-05T02:21:51.201Z",
         "homepage_url": "https://wptgold.com/",
         "example_url": "https://wptgold.com/subscription-3?twclid=26ckzizem3j5r9q8uf2y0hd1k6",
         "homepage_status": 200,
@@ -13324,19 +13454,19 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-07-01T20:37:57.896Z",
+        "fetched_at": "2026-07-05T01:51:53.637Z",
         "homepage_url": "https://temu.com/",
         "example_url": "https://www.temu.com/kuiper/un1.html?subj=feed-un&_bg_fs=1&_p_mat1_type=1&_p_jump_id=725&_x_vst_scene=adg&gids=538325&_p_rfs=1&_x_ads_channel=twitter&twclid=29gpd1jhyu86nybj5gna95l3tw",
         "homepage_status": 200,
         "example_status": 200,
         "homepage_final_url": "https://www.temu.com/",
         "example_final_url": "https://www.temu.com/kuiper/un1.html?subj=feed-un&_bg_fs=1&_p_mat1_type=1&_p_jump_id=725&_x_vst_scene=adg&gids=538325&_p_rfs=1&_x_ads_channel=twitter&twclid=29gpd1jhyu86nybj5gna95l3tw",
-        "homepage_content_type": "text/html; charset=UTF-8",
-        "example_content_type": "text/html; charset=UTF-8",
+        "homepage_content_type": "text/html",
+        "example_content_type": "text/html",
         "homepage": {
           "has_meta_author": false,
           "has_published_time": false,
-          "has_canonical": true,
+          "has_canonical": false,
           "has_about_link": false,
           "has_contact_link": false,
           "has_corrections_link": false,
@@ -13737,134 +13867,6 @@
       }
     },
     {
-      "domain": "github.com",
-      "entity": "Github",
-      "kind": "unknown",
-      "first_seen_at": "2026-04-14T15:03:17.000Z",
-      "last_seen_at": "2026-05-28T08:23:35.000Z",
-      "discovery": {
-        "distinct_urls": 5,
-        "example_urls": [
-          "https://github.com/BlockRunAI/ClawRouter/?twclid=2bnr8zsvp3b72fbw0yuil7yilw",
-          "https://github.com/BlockRunAI/ClawRouter/?twclid=2bqo24qepc22zczc4xxnytdhfl",
-          "https://github.com/nattergabriel/reseed?twclid=2dsn1vz4tqvpxv8ewg0nmayxdq",
-          "https://github.com/nattergabriel/reseed?twclid=214tahk5vxa8hb5thwmqod29oc",
-          "https://github.com/votal-ai-hq/wb-red-team?twclid=21qqbdcwkkmhie2aavs0xry7lj"
-        ],
-        "origin_counts": {
-          "feed_buffer_reply": 5
-        },
-        "distinct_referring_accounts": 3,
-        "sample_referring_accounts": [
-          "blockrunai",
-          "eterdev",
-          "sundi133"
-        ],
-        "distinct_axes": []
-      },
-      "claims": {
-        "total": 0,
-        "supported": 0,
-        "refuted": 0,
-        "contested": 0,
-        "unverified": 0,
-        "resolved_count": 0
-      },
-      "structural_features": {
-        "has_search_paths": false,
-        "has_article_paths": false,
-        "has_doi_paths": false
-      },
-      "ratings": {
-        "provenance": {
-          "score": 0.45,
-          "basis": [
-            "unknown_domain_pattern"
-          ]
-        },
-        "breadth": {
-          "score": 0.20583333333333334,
-          "basis": [
-            "distinct_urls:5",
-            "distinct_axes:0",
-            "origin_types:1"
-          ]
-        },
-        "corroboration": {
-          "score": 0.4125,
-          "basis": [
-            "referring_accounts:3",
-            "origin_types:1"
-          ]
-        },
-        "track_record": {
-          "score": null,
-          "basis": [
-            "no_resolved_claims_observed"
-          ]
-        },
-        "profile": {
-          "score": 0.19999999999999998,
-          "confidence": 0.65,
-          "basis": [
-            "meta_author:true",
-            "published_time:false",
-            "canonical:false",
-            "about:false",
-            "contact:false",
-            "corrections:false",
-            "outbound_links:2",
-            "opinion_marker:false"
-          ]
-        },
-        "overall": {
-          "score": 0.39307291666666666,
-          "confidence": 0.26035,
-          "method": "mechanical_v1",
-          "basis": [
-            "unknown_domain_pattern",
-            "distinct_urls:5",
-            "distinct_axes:0",
-            "origin_types:1",
-            "referring_accounts:3",
-            "origin_types:1",
-            "track_record_unavailable"
-          ]
-        }
-      },
-      "profile": {
-        "fetched_at": "2026-07-04T09:39:00.691Z",
-        "homepage_url": "https://github.com/",
-        "example_url": "https://github.com/BlockRunAI/ClawRouter/?twclid=2bnr8zsvp3b72fbw0yuil7yilw",
-        "homepage_status": 200,
-        "example_status": 200,
-        "homepage_final_url": "https://github.com/",
-        "example_final_url": "https://github.com/BlockRunAI/ClawRouter/?twclid=2bnr8zsvp3b72fbw0yuil7yilw",
-        "homepage_content_type": "text/html; charset=utf-8",
-        "example_content_type": "text/html; charset=utf-8",
-        "homepage": {
-          "has_meta_author": false,
-          "has_published_time": false,
-          "has_canonical": true,
-          "has_about_link": false,
-          "has_contact_link": false,
-          "has_corrections_link": false,
-          "outbound_links_count": 2,
-          "opinion_marker": false
-        },
-        "example": {
-          "has_meta_author": true,
-          "has_published_time": false,
-          "has_canonical": false,
-          "has_about_link": false,
-          "has_contact_link": false,
-          "has_corrections_link": false,
-          "outbound_links_count": 2,
-          "opinion_marker": false
-        }
-      }
-    },
-    {
       "domain": "celsius.com",
       "entity": "Celsius",
       "kind": "unknown",
@@ -13961,7 +13963,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-07-02T00:38:20.132Z",
+        "fetched_at": "2026-07-05T01:51:55.277Z",
         "homepage_url": "https://celsius.com/",
         "example_url": "https://www.celsius.com/buy-locate/?utm_medium=paidsocial&utm_campaign=pillars&utm_content=musicfestival&twclid=2ejkfis7fdkuksuqyzg68f5wfq",
         "homepage_status": 200,
@@ -14591,7 +14593,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-07-02T01:37:50.777Z",
+        "fetched_at": "2026-07-05T02:21:51.968Z",
         "homepage_url": "https://peppermint.com/",
         "example_url": "https://peppermint.com/landing-page?utm_source=twitter_landing&utm_medium=paid_social&utm_campaign=ai-memory-x&utm_content=ag1-peppermint-remembers&twclid=24xl0c5ogt12h51rk4eehxo4ge",
         "homepage_status": 200,
@@ -15219,7 +15221,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-07-01T20:38:09.586Z",
+        "fetched_at": "2026-07-05T02:22:04.106Z",
         "homepage_url": "https://onnicotine.com/",
         "example_url": "https://www.onnicotine.com/?twclid=230cc01l01rnnwfflnn397ispz",
         "homepage_status": null,
@@ -16353,7 +16355,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-07-01T21:07:44.683Z",
+        "fetched_at": "2026-07-05T02:22:04.303Z",
         "homepage_url": "https://huggies.com/",
         "example_url": "https://www.huggies.com/en-us/diapers/little-movers?twclid=21yw19hs9bynwsphlmw5vod8rj",
         "homepage_status": 403,
@@ -29838,6 +29840,85 @@
       }
     },
     {
+      "domain": "rockstargames.com",
+      "entity": "Rockstargames",
+      "kind": "unknown",
+      "first_seen_at": "2026-07-03T06:18:16.000Z",
+      "last_seen_at": "2026-07-04T23:16:23.000Z",
+      "discovery": {
+        "distinct_urls": 3,
+        "example_urls": [
+          "https://www.rockstargames.com/gta-online?utm_source=Twitter&utm_medium=p_social&utm_campaign=506-kch-pre-release-gift-20260702&utm_content=uk-eng&twclid=21k9dspaz1uqc236nsfftz24wo",
+          "https://www.rockstargames.com/gta-online?utm_source=Twitter&utm_medium=p_social&utm_campaign=506-kch-pre-release-gift-20260702&utm_content=uk-eng&twclid=24zf1prqkfwogffgypqu8suw2o",
+          "https://www.rockstargames.com/gta-online?utm_source=Twitter&utm_medium=p_social&utm_campaign=506-kch-pre-release-gift-20260702&utm_content=uk-eng&twclid=2dxs60lrovlpjh0xhg8m1bqst5"
+        ],
+        "origin_counts": {
+          "feed_buffer_reply": 3
+        },
+        "distinct_referring_accounts": 1,
+        "sample_referring_accounts": [
+          "rockstargames"
+        ],
+        "distinct_axes": []
+      },
+      "claims": {
+        "total": 0,
+        "supported": 0,
+        "refuted": 0,
+        "contested": 0,
+        "unverified": 0,
+        "resolved_count": 0
+      },
+      "structural_features": {
+        "has_search_paths": false,
+        "has_article_paths": false,
+        "has_doi_paths": false
+      },
+      "ratings": {
+        "provenance": {
+          "score": 0.45,
+          "basis": [
+            "unknown_domain_pattern"
+          ]
+        },
+        "breadth": {
+          "score": 0.1475,
+          "basis": [
+            "distinct_urls:3",
+            "distinct_axes:0",
+            "origin_types:1"
+          ]
+        },
+        "corroboration": {
+          "score": 0.19583333333333333,
+          "basis": [
+            "referring_accounts:1",
+            "origin_types:1"
+          ]
+        },
+        "track_record": {
+          "score": null,
+          "basis": [
+            "no_resolved_claims_observed"
+          ]
+        },
+        "overall": {
+          "score": 0.36000000000000004,
+          "confidence": 0.1386,
+          "method": "mechanical_v1",
+          "basis": [
+            "unknown_domain_pattern",
+            "distinct_urls:3",
+            "distinct_axes:0",
+            "origin_types:1",
+            "referring_accounts:1",
+            "origin_types:1",
+            "track_record_unavailable"
+          ]
+        }
+      }
+    },
+    {
       "domain": "rice.edu",
       "entity": "Rice",
       "kind": "unknown",
@@ -37844,84 +37925,6 @@
         "distinct_referring_accounts": 1,
         "sample_referring_accounts": [
           "bcgame"
-        ],
-        "distinct_axes": []
-      },
-      "claims": {
-        "total": 0,
-        "supported": 0,
-        "refuted": 0,
-        "contested": 0,
-        "unverified": 0,
-        "resolved_count": 0
-      },
-      "structural_features": {
-        "has_search_paths": false,
-        "has_article_paths": false,
-        "has_doi_paths": false
-      },
-      "ratings": {
-        "provenance": {
-          "score": 0.45,
-          "basis": [
-            "unknown_domain_pattern"
-          ]
-        },
-        "breadth": {
-          "score": 0.11833333333333332,
-          "basis": [
-            "distinct_urls:2",
-            "distinct_axes:0",
-            "origin_types:1"
-          ]
-        },
-        "corroboration": {
-          "score": 0.19583333333333333,
-          "basis": [
-            "referring_accounts:1",
-            "origin_types:1"
-          ]
-        },
-        "track_record": {
-          "score": null,
-          "basis": [
-            "no_resolved_claims_observed"
-          ]
-        },
-        "overall": {
-          "score": 0.3536197916666667,
-          "confidence": 0.10997499999999999,
-          "method": "mechanical_v1",
-          "basis": [
-            "unknown_domain_pattern",
-            "distinct_urls:2",
-            "distinct_axes:0",
-            "origin_types:1",
-            "referring_accounts:1",
-            "origin_types:1",
-            "track_record_unavailable"
-          ]
-        }
-      }
-    },
-    {
-      "domain": "rockstargames.com",
-      "entity": "Rockstargames",
-      "kind": "unknown",
-      "first_seen_at": "2026-07-03T06:18:16.000Z",
-      "last_seen_at": "2026-07-04T01:19:59.000Z",
-      "discovery": {
-        "distinct_urls": 2,
-        "example_urls": [
-          "https://www.rockstargames.com/gta-online?utm_source=Twitter&utm_medium=p_social&utm_campaign=506-kch-pre-release-gift-20260702&utm_content=uk-eng&twclid=21k9dspaz1uqc236nsfftz24wo",
-          "https://www.rockstargames.com/gta-online?utm_source=Twitter&utm_medium=p_social&utm_campaign=506-kch-pre-release-gift-20260702&utm_content=uk-eng&twclid=24zf1prqkfwogffgypqu8suw2o"
-        ],
-        "origin_counts": {
-          "feed_buffer_reply": 2
-        },
-        "distinct_referring_accounts": 1,
-        "sample_referring_accounts": [
-          "rockstargames"
         ],
         "distinct_axes": []
       },
