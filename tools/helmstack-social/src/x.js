@@ -350,8 +350,11 @@ class X {
 
     const posts = await this.scrapeTimeline({ limit: scrapeLimit });
     this.log(`scraped ${posts.length} timeline post(s)`);
-    const ranked = posts
-      .map((p) => ({ ...p, key: keyOf(p), score: score(p) }))
+    // score() may be sync or async (e.g. an LLM relevance scorer) — await either.
+    const scored = await Promise.all(
+      posts.map(async (p) => ({ ...p, key: keyOf(p), score: await score(p) }))
+    );
+    const ranked = scored
       .filter((p) => !seen.has(p.key) && p.score >= minScore)
       .sort((a, b) => b.score - a.score);
     this.log(`${ranked.length} relevant, un-engaged post(s) (min score ${minScore})`);

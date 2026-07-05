@@ -36,8 +36,9 @@ function writeLog(log) {
 /**
  * Append a tweet entry. Skips if a tweet entry with the same content already exists.
  */
-function logTweet({ content, tweet_url, date, cycle }) {
+function logTweet({ content, tweet_url, date, cycle, type, reply_to }) {
   const log = readLog();
+  const kind = type || "tweet";
   // Avoid duplicate: same content already logged (agent may write with type "observation"/"question")
   const dup = log.posts.find(p => p.content === content);
   if (dup) {
@@ -47,24 +48,26 @@ function logTweet({ content, tweet_url, date, cycle }) {
       writeLog(log);
       console.log("[posts_log] patched existing entry with URL");
     }
-    // Normalize type to "tweet" if runner is calling logTweet
-    if (dup.type !== "tweet") {
-      dup.type = "tweet";
+    // Normalize a bare agent-authored type to the posted kind, but preserve
+    // meaningful posted types (thread, thread_reply) passed by the runner.
+    if (dup.type !== kind && (!dup.type || dup.type === "observation" || dup.type === "question")) {
+      dup.type = kind;
       writeLog(log);
-      console.log("[posts_log] normalized entry type to tweet");
+      console.log(`[posts_log] normalized entry type to ${kind}`);
     }
     return;
   }
   log.posts.push({
-    type: "tweet",
+    type: kind,
     content,
     tweet_url: tweet_url || "",
+    ...(reply_to ? { reply_to } : {}),
     date: date || new Date().toISOString().slice(0, 10),
     cycle: cycle || null,
     posted_at: new Date().toISOString(),
   });
   writeLog(log);
-  console.log(`[posts_log] logged tweet (${content.length} chars)`);
+  console.log(`[posts_log] logged ${kind} (${content.length} chars)`);
 }
 
 /**

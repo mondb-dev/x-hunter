@@ -30,7 +30,9 @@ const CYCLE = Number.parseInt(process.env.CYCLE_NUMBER || "", 10) || null;
 const DRY_RUN = process.env.HELMSTACK_DRY_RUN === "1";
 const MAX_LIKES = Number.parseInt(process.env.X_MAX_LIKES || "3", 10);
 const MAX_REPLIES = Number.parseInt(process.env.X_MAX_REPLIES || "1", 10);
-const RELEVANCE_MIN = Number.parseInt(process.env.X_RELEVANCE_MIN || "1", 10);
+// Scores are now a 0-3 LLM relevance rating (not keyword-hit counts), so the
+// floor is 2 ("relevant") — tangential (1) and irrelevant (0) posts don't qualify.
+const RELEVANCE_MIN = Number.parseInt(process.env.X_RELEVANCE_MIN || "2", 10);
 const OWN_HANDLE = "SebastianHunts";
 const tag = "x_engage";
 const log = (m) => console.log(`[${tag}] ${m}`);
@@ -74,14 +76,38 @@ function loadAxisKeywords() {
     return [...new Set(kw)];
   } catch { return []; }
 }
+// Relevance scoring is LLM-driven (local qwen), not keyword-substring matching.
+// The old scorer built a vocabulary from abstract axis labels ("accountability",
+// "institutions") that virtually never appear verbatim in real tweets, so every
+// cycle scored 0 relevant. A small local model judges topical relevance far more
+// robustly. Keyword hits survive only as a cheap tie-breaker.
 function makeScorer(keywords) {
-  return (post) => {
-    const text = post.text || "";
+  const { generate: llmGenerate } = require("./llm");
+  return async (post) => {
+    const text = (post.text || "").trim();
+    if (!text) return -1;
     if (isSensitiveContent(text) || isSatireOrJoke(text)) return -1; // hard-skip
+
     const lower = text.toLowerCase();
     let hits = 0;
     for (const kw of keywords) if (lower.includes(kw)) hits++;
-    return hits;
+
+    let rel = 0;
+    try {
+      const raw = await llmGenerate(
+        `You rate posts for Sebastian Hunter, who analyzes how narratives are constructed in public discourse: political messaging, media framing, propaganda, spin, institutional accountability, manipulation of public opinion.\n\n` +
+        `Rate ONLY the substantive relevance to those themes. Greetings, blessings, motivational quotes, personal life, jokes, ads, and sports = 0 even if they mention people. A post must actually engage with power, politics, media, or truth-claims to score 2-3.\n\n` +
+        `Answer with a SINGLE digit:\n0 = irrelevant, 1 = tangential mention, 2 = relevant, 3 = squarely on-topic.\n\n` +
+        `POST: "${text.slice(0, 400)}"\n\nDigit:`,
+        { temperature: 0, maxTokens: 5, timeoutMs: 30_000 }
+      );
+      const m = String(raw).match(/[0-3]/);
+      rel = m ? Number(m[0]) : 0;
+    } catch {
+      rel = hits > 0 ? 1 : 0; // LLM down → fall back to lexical signal
+    }
+    // Relevance dominates; keyword hits only break ties between equal-relevance posts.
+    return rel + Math.min(hits, 2) * 0.1;
   };
 }
 

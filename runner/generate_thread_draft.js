@@ -115,12 +115,12 @@ function todayArticleExcerpt() {
   const buildThreadPrompt = require('./lib/prompts/thread');
   const prompt = buildThreadPrompt(ctx);
 
-  console.log('[thread_draft] calling Gemini...');
+  console.log('[thread_draft] calling LLM...');
   let raw;
   try {
     raw = await callVertex(prompt, 4096, { thinkingBudget: 2048 });
   } catch (e) {
-    console.error('[thread_draft] Gemini call failed:', e.message);
+    console.error('[thread_draft] LLM call failed:', e.message);
     process.exit(1);
   }
 

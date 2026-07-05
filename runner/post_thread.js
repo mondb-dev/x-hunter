@@ -15,6 +15,7 @@ const { connectBrowser, getXPage } = require('./cdp');
 const { logTweet } = require('./posts_log');
 const { HANDLE, isConfirmedStatusUrl } = require('./post_result');
 const { check: voiceCheck } = require('./lib/voice_filter');
+const { refine } = require('./lib/refine');
 
 const config = require('./lib/config');
 
@@ -156,6 +157,39 @@ async function main() {
       console.error(`[thread] voice rejects ${key}: ${errors.join('; ')}`);
       process.exit(1);
     }
+  }
+
+  // Coherence gate (local): refine each tweet, then judge the assembled thread
+  // as ONE argument. This runs BEFORE any tweet is posted, so an incoherent
+  // thread (two unrelated ideas welded together) never ships even a lone tweet1.
+  try {
+    const result = await refine(
+      { text: draft.topic || '' },
+      {
+        surface: 'thread',
+        goal: `A focused X thread on: ${draft.topic || 'one observation'}. Every tweet must serve ONE argument.`,
+        parts: tweets.map((k) => ({ text: draft[k] })),
+        reassemble: (parts) => parts.join('\n\n'),
+        useRecall: true,
+        log: (m) => console.log(m),
+      }
+    );
+    if (result.verdict === 'reject') {
+      console.error(`[thread] coherence gate REJECT — not posting. ${result.issues.join('; ')}`);
+      process.exit(1);
+    }
+    // Apply any per-tweet revisions the gate produced.
+    if (Array.isArray(result.parts)) {
+      result.parts.forEach((r, i) => {
+        if (r && r.text && r.verdict === 'revised') {
+          console.log(`[thread] ${tweets[i]} revised by gate`);
+          draft[tweets[i]] = r.text;
+        }
+      });
+    }
+    console.log(`[thread] coherence gate: ${result.verdict}`);
+  } catch (e) {
+    console.log(`[thread] coherence gate unavailable (${e.message}) — proceeding`);
   }
 
   console.log(`[thread] topic: ${draft.topic || '(none)'}`);

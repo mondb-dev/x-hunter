@@ -206,16 +206,16 @@ async function main() {
     postRef    = `journal: ${journal.name} | tweet: ${currentPost.tweet_url || currentPost.id || "?"}`;
   }
 
-  console.log(`[critique] evaluating coherence (gemini-flash) — ${cycleLabel}...`);
+  console.log(`[critique] evaluating coherence (local LLM) — ${cycleLabel}...`);
 
   let result;
   try {
     result = await callGemini(prompt);
   } catch (err) {
     if (err.name === "AbortError") {
-      console.log("[critique] Gemini timed out (90s) — skipping");
+      console.log("[critique] LLM timed out (90s) — skipping");
     } else {
-      console.log(`[critique] Gemini unavailable: ${err.message} — skipping`);
+      console.log(`[critique] LLM unavailable: ${err.message} — skipping`);
     }
     return;
   }

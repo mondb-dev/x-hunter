@@ -71,6 +71,30 @@ Write ONE original LinkedIn post following the strategy above. Return ONLY the p
     const raw = await callVertex(prompt, 1000, { model: "gemini-2.5-flash", thinkingBudget: 0 });
     const text = (raw || "").trim().replace(/^["']|["']$/g, "");
     if (!text || text.length < 120) { log("generation too short — skipping"); process.exit(0); }
+
+    // Coherence gate (local): a LinkedIn post may cite several examples but must
+    // advance ONE argument — reject a grab-bag that jams unrelated stories together.
+    try {
+      const { refine } = require("./lib/refine");
+      const result = await refine(
+        { text },
+        {
+          surface: "LinkedIn post",
+          goal: "One coherent argument about narrative construction. It may cite multiple examples, but they must all serve the same single thesis — not a grab-bag of unrelated stories.",
+          minSpecificity: 2,
+          useRecall: true,
+          log: (m) => console.log(m),
+        }
+      );
+      if (result.verdict === "reject") {
+        log(`coherence gate REJECT — not writing draft. ${result.issues.join("; ")}`);
+        process.exit(0);
+      }
+      log(`coherence gate: ${result.verdict}`);
+    } catch (e) {
+      log(`coherence gate unavailable (${e.message}) — proceeding`);
+    }
+
     fs.writeFileSync(DRAFT, text);
     log(`wrote draft (${text.length} chars)`);
     process.exit(0);

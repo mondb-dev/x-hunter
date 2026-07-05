@@ -29,7 +29,33 @@ try { interactionsDb = require('./lib/db_backend').loadInteractionsDb(); } catch
 const ROOT = path.resolve(__dirname, '..');
 const STATE_FILE = path.join(config.STATE_DIR, 'proactive_reply_state.json');
 const INTERACTIONS = path.join(config.STATE_DIR, 'interactions.json');
+const SKIP_LEDGER = path.join(config.STATE_DIR, 'x_reply_skips.json');
+const SKIP_TTL_MS = 48 * 60 * 60 * 1000; // re-consider a skipped post after 2 days
 const OWN_HANDLE = 'SebastianHunts';
+
+// ── Skip ledger ──────────────────────────────────────────────────────────────
+// Without this, a candidate the LLM SKIPs (or that fails verification/fact-check)
+// is re-selected as fresh[0] every single cycle forever, burning the cycle and
+// starving newer candidates. We remember recent skips (with a TTL) and exclude
+// them from selection so the candidate pool actually rotates.
+function loadSkips() {
+  try {
+    const raw = JSON.parse(fs.readFileSync(SKIP_LEDGER, 'utf-8'));
+    const now = Date.now();
+    const kept = {};
+    for (const [url, ts] of Object.entries(raw)) if (now - ts < SKIP_TTL_MS) kept[url] = ts;
+    return kept;
+  } catch { return {}; }
+}
+function recordSkip(url, reason) {
+  if (!url) return;
+  try {
+    const skips = loadSkips();
+    skips[url] = Date.now();
+    fs.writeFileSync(SKIP_LEDGER, JSON.stringify(skips, null, 2));
+    log(`skip-ledger: recorded @${url.split('/status/')[0].split('/').pop()} (${reason})`);
+  } catch (e) { log(`skip-ledger write failed: ${e.message}`); }
+}
 
 const MAX_PER_DAY = 8;
 const MIN_GAP_MS  = 30 * 60 * 1000;
@@ -503,9 +529,10 @@ async function main() {
   const relevant = candidates.filter(c => isAxisRelevant(c.text, keywords));
   const pool = relevant.length > 0 ? relevant : candidates.slice(0, 3);
 
-  const fresh = pool.filter(c => !alreadyEngaged(c.url));
+  const skips = loadSkips();
+  const fresh = pool.filter(c => !alreadyEngaged(c.url) && !skips[c.url]);
   if (fresh.length === 0) {
-    log('all candidates already engaged');
+    log('all candidates already engaged or recently skipped');
     return;
   }
 
@@ -532,13 +559,15 @@ async function main() {
   if (verification && verification.status === 'unverified' && verification.confidence < 0.4) {
     log('verification too weak to engage (' + verification.verdict_label + ' at ' +
       (verification.confidence * 100).toFixed(0) + '%) — risk of hallucinated correction');
+    recordSkip(target.url, 'verification too weak');
     return;
   }
 
   // Draft reply with verification context
   const draft = await draftReply(target, verification);
   if (!draft) {
-    log('Gemini returned SKIP or empty — no reply this cycle');
+    log('LLM returned SKIP or empty — no reply this cycle');
+    recordSkip(target.url, 'LLM SKIP');
     return;
   }
 
@@ -551,6 +580,7 @@ async function main() {
       draft.text = factCheck.corrected;
     } else {
       log('fact-check: no correctable version — skipping reply this cycle');
+      recordSkip(target.url, 'fact-check failed');
       return;
     }
   }
