@@ -28,11 +28,17 @@ class X {
    * @param {object} [opts]
    * @param {string} [opts.ownHandle] The account's own handle (no @), used to
    *   confirm posts from the profile and skip own posts. Default "SebastianHunts".
+   * @param {boolean} [opts.dedicatedTab] Open a private tab instead of adopting
+   *   an existing x.com tab. REQUIRED for flows that navigate away from home or
+   *   hold a composer open (reply, follow) — concurrent consumers (collect.js
+   *   ticks every 10 min) adopt and navigate the shared tab mid-flow otherwise.
+   *   Call close() when done.
    * @param {(msg:string)=>void} [opts.log]
    */
-  constructor(client, { ownHandle = "SebastianHunts", log } = {}) {
+  constructor(client, { ownHandle = "SebastianHunts", dedicatedTab = false, log } = {}) {
     this.c = client;
     this.handle = ownHandle;
+    this.dedicated = dedicatedTab;
     this.log = log || ((m) => console.log(`[x] ${m}`));
     this.tab = null;
   }
@@ -43,11 +49,29 @@ class X {
 
   // ── Session / tab ───────────────────────────────────────────────────────────
   async ensureTab() {
-    this.tab = await this.c.ensureTab(/https:\/\/(www\.)?(x|twitter)\.com/, HOME_URL);
+    if (this.dedicated) {
+      if (!this.tab) {
+        const before = new Set((await this.c.listTabs()).map((t) => t.id));
+        const after = await this.c.openTab(HOME_URL);
+        const created = (after || []).find((t) => !before.has(t.id));
+        if (!created) throw new Error("could not open dedicated X tab");
+        this.tab = created.id;
+      }
+    } else {
+      this.tab = await this.c.ensureTab(/https:\/\/(www\.)?(x|twitter)\.com/, HOME_URL);
+    }
     // A freshly-opened tab may not have its session cookies readable yet; wait
     // for it to settle so sessionOk() doesn't get a false negative.
     await this.c.waitReady(this.tab, { tag: "x", attempts: 15 }).catch(() => {});
     return this.tab;
+  }
+
+  /** Close the engine's tab (dedicated-tab flows should call this when done). */
+  async close() {
+    if (this.tab) {
+      await this.c.closeTab(this.tab).catch(() => {});
+      this.tab = null;
+    }
   }
 
   async sessionOk() {
@@ -66,49 +90,152 @@ class X {
     await sleep(2500);
   }
 
+  /** Close the current tab and open a fresh one at `url` (reuses an exact-URL match). */
+  async _freshTab(url) {
+    await this.c.closeTab(this.tab).catch(() => {});
+    const esc = url.replace(/[?#].*$/, "").toLowerCase().replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
+    this.tab = await this.c.ensureTab(new RegExp(`^${esc}`, "i"), url);
+  }
+
   /**
    * Navigate to `url` and verify the tab actually lands there. A long-lived X
-   * tab can wedge — every navigation errors and snaps back to /home while a
-   * fresh tab in the same session navigates fine — so on a landing mismatch
-   * the tab is closed and reopened at `url`. Returns false if even the fresh
-   * tab doesn't land.
+   * tab can wedge — navigations error and snap back to /home (and CDP input
+   * stops registering) while a fresh tab in the same session works fine — so
+   * on a landing mismatch OR an error-status tab it is closed and reopened at
+   * `url`. Returns false if even the fresh tab doesn't land.
    */
   async _gotoChecked(url) {
     const target = url.replace(/[?#].*$/, "").toLowerCase();
     const landed = async () => {
       await this.c.waitReady(this.tab, { tag: "x", attempts: 15 }).catch(() => {});
       await sleep(1500);
-      const at = await this.c.tabUrl(this.tab).catch(() => "");
-      return at.replace(/[?#].*$/, "").toLowerCase() === target;
+      const tabs = await this.c.listTabs().catch(() => []);
+      const t = tabs.find((tb) => tb.id === this.tab);
+      // An error-status tab has demonstrated a failed load — treat as wedged
+      // even if the URL matches (its CDP input is typically dead too).
+      if (!t || t.status === "error") return false;
+      return (t.url || "").replace(/[?#].*$/, "").toLowerCase() === target;
     };
     await this.c.navigate(this.tab, url).catch(() => {});
     if (await landed()) return true;
     this.log(`nav to ${url} did not land — recycling wedged tab`);
-    await this.c.closeTab(this.tab).catch(() => {});
-    const esc = target.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
-    this.tab = await this.c.ensureTab(new RegExp(`^${esc}`, "i"), url);
+    await this._freshTab(url);
     return landed();
   }
 
   // ── Composer helpers (top-frame) ────────────────────────────────────────────
-  /** Insert text into the (already-open) composer and verify an exact match. */
-  async _insertVerified(text) {
+  /**
+   * Focus the composer with a real browser-level click. element.focus() alone
+   * does not reliably move CDP input focus in a freshly-opened reply modal —
+   * the first Input.insertText after it lands nowhere.
+   */
+  async _focusComposer() {
+    const raw = await this.c.evalFn(this.tab, (sel) => {
+      const e = document.querySelector(sel);
+      if (!e) return null;
+      e.scrollIntoView({ block: "center" });
+      const r = e.getBoundingClientRect();
+      if (!r.width || !r.height) return null;
+      return JSON.stringify({ x: Math.round(r.x + Math.min(r.width / 2, 200)), y: Math.round(r.y + Math.min(r.height / 2, 20)) });
+    }, COMPOSE_BOX).catch(() => null);
+    let pt = null;
+    try { pt = JSON.parse(raw); } catch {}
+    if (pt) await this.c.clickAt(this.tab, pt.x, pt.y).catch(() => {});
     await this.c.evalFn(this.tab, (sel) => { const e = document.querySelector(sel); if (e) { e.click(); e.focus(); } }, COMPOSE_BOX);
-    await humanDelay(1500, 3000);
-    for (let attempt = 1; attempt <= 2; attempt++) {
+  }
+
+  /**
+   * Empty the composer, verifying it actually emptied. execCommand
+   * selectAll/delete stops working once the composer contains a linkified
+   * URL — fall back to a browser-level Cmd+A + Backspace.
+   */
+  async _clearComposer() {
+    const isEmpty = () => this.c.evalFn(this.tab, (sel) => {
+      const e = document.querySelector(sel);
+      return !e || e.innerText.trim().length === 0;
+    }, COMPOSE_BOX);
+    for (let t = 0; t < 3; t++) {
       await this.c.evalFn(this.tab, (sel) => { const e = document.querySelector(sel); if (e) { e.focus(); document.execCommand("selectAll"); document.execCommand("delete"); } }, COMPOSE_BOX);
       await sleep(400);
-      await this.c.evalFn(this.tab, (sel) => { const e = document.querySelector(sel); if (e) { e.click(); e.focus(); } }, COMPOSE_BOX);
+      if (await isEmpty()) return true;
+      await this._focusComposer();
+      await this.c.pressKey(this.tab, { key: "a", code: "KeyA", keyCode: 65, modifiers: 4 }).catch(() => {});
+      await sleep(200);
+      await this.c.pressKey(this.tab, { key: "Backspace", code: "Backspace", keyCode: 8 }).catch(() => {});
+      await sleep(400);
+      if (await isEmpty()) return true;
+    }
+    return isEmpty();
+  }
+
+  /**
+   * Insert text into the (already-open) composer and verify it matches.
+   * Input.insertText quirks (all empirically observed against X's composer):
+   * - a payload containing "scheme://" is dropped ENTIRELY — URLs must be
+   *   inserted in pieces split at the scheme boundary;
+   * - a payload containing "\n" is dropped ENTIRELY — lines are inserted
+   *   separately with a real Enter keypress between them;
+   * - the first insert into a fresh modal/block can be silently buffered,
+   *   flushing (doubled) with the next call — per-line verify + full-text
+   *   verify + clear-and-retry converge on the exact text.
+   */
+  async _insertVerified(text) {
+    await this._focusComposer();
+    await humanDelay(1500, 3000);
+    // Warm up the input channel: the first insertText into a fresh modal is
+    // silently buffered (it flushes, doubled, with a later call). Poke with a
+    // probe char until something visibly registers, then clear it.
+    for (let t = 0; t < 4; t++) {
+      await this.c.insertText(this.tab, ".").catch(() => {});
+      await sleep(400);
+      const seen = await this.c.evalFn(this.tab, (sel) => { const e = document.querySelector(sel); return e ? e.innerText.trim().length > 0 : false; }, COMPOSE_BOX);
+      if (seen) break;
+    }
+    await this._clearComposer();
+    for (let attempt = 1; attempt <= 3; attempt++) {
+      await this._focusComposer();
       await sleep(300);
       try {
-        await this.c.insertText(this.tab, text);
+        const lines = text.split("\n");
+        let ok = true;
+        for (let li = 0; li < lines.length && ok; li++) {
+          if (lines[li]) {
+            // Split at URL scheme boundaries, keeping the preceding space with
+            // the scheme (a trailing space before a URL gets swallowed):
+            // "see https://a/b" → ["see", " https:", "//a/b"]
+            const pieces = lines[li].split(/(\s?https?:)(?=\/\/)/).filter(Boolean);
+            for (const piece of pieces) {
+              await this.c.insertText(this.tab, piece);
+              await sleep(300);
+              // The LAST character of each insert is held in a buffer that only
+              // flushes on the next input event — send a harmless End keypress
+              // so it flushes in place instead of after later text.
+              await this.c.pressKey(this.tab, { key: "End", code: "End", keyCode: 35 }).catch(() => {});
+              await sleep(300);
+            }
+            // insertText commits asynchronously — poll until the FULL line is
+            // visible before pressing Enter, or the keypress jumps the commit
+            // queue and stray tail characters flush after the next line.
+            ok = false;
+            for (let t = 0; t < 6 && !ok; t++) {
+              const sofar = await this.c.evalFn(this.tab, (sel) => { const e = document.querySelector(sel); return e ? e.innerText : ""; }, COMPOSE_BOX);
+              ok = norm(sofar).endsWith(norm(lines[li]));
+              if (!ok) await sleep(500);
+            }
+            if (!ok) break; // line didn't fully commit — bail with composer intact
+          }
+          // Only reached with the line's text verified present — so focus is
+          // proven to be in the composer and Enter can't activate a button.
+          if (li < lines.length - 1) await this.c.pressKey(this.tab, { key: "Enter", code: "Enter", keyCode: 13, text: "\r" });
+        }
       } catch {
         await this.c.evalFn(this.tab, (t, sel) => { const e = document.querySelector(sel); if (e) { e.focus(); document.execCommand("selectAll"); document.execCommand("delete"); document.execCommand("insertText", false, t); } }, text, COMPOSE_BOX);
       }
       await sleep(1500);
-      const got = await this.c.evalFn(this.tab, (sel) => { const e = document.querySelector(sel); return e ? e.innerText.trim() : ""; }, COMPOSE_BOX);
-      if (got === text.trim()) return true;
-      this.log(`text verify miss ${attempt}/2 (${got.length}/${text.length})`);
+      const got = await this.c.evalFn(this.tab, (sel) => { const e = document.querySelector(sel); return e ? e.innerText : ""; }, COMPOSE_BOX);
+      if (norm(got) === norm(text)) return true;
+      this.log(`text verify miss ${attempt}/3 (${(got || "").trim().length}/${text.length})`);
+      await this._clearComposer();
     }
     return false;
   }
@@ -250,19 +377,38 @@ class X {
   }
 
   /**
-   * Reply to a tweet.
+   * Reply to a tweet. If the compose/insert sequence fails (a wedged tab kills
+   * CDP input even when the URL check passes — e.g. after idling through slow
+   * LLM work), the tab is recycled and the sequence retried once.
    * @param {string} tweetUrl  the target status URL
    */
   async reply(tweetUrl, text, { dryRun = false } = {}) {
     if (!(await this._gotoChecked(tweetUrl))) return { ok: false, reason: "navigation_failed" };
+    let res = await this._replyOnPage(tweetUrl, text, { dryRun });
+    const retryable = ["reply_button_not_found", "compose_box_not_found", "text_insert_failed"];
+    if (!res.ok && !res.dryRun && retryable.includes(res.reason)) {
+      this.log(`reply attempt failed (${res.reason}) — recycling tab and retrying once`);
+      await this._freshTab(tweetUrl);
+      if (!(await this._gotoChecked(tweetUrl))) return { ok: false, reason: "navigation_failed" };
+      res = await this._replyOnPage(tweetUrl, text, { dryRun });
+    }
+    return res;
+  }
+
+  /** One compose-and-post attempt on the already-loaded permalink page. */
+  async _replyOnPage(tweetUrl, text, { dryRun = false } = {}) {
     await sleep(3000);
-    // Click the reply affordance on the focused (first) tweet
-    const clicked = await this.c.evalFn(this.tab, () => {
-      const a = document.querySelector("article");
-      const b = a && a.querySelector('[data-testid="reply"]');
+    // Click the reply affordance on the tweet matching the target status id.
+    // On a reply's permalink X renders ancestor tweets ABOVE the focused one,
+    // so "first article" would thread the reply onto the wrong tweet.
+    const targetId = (tweetUrl.match(/\/status\/(\d+)/) || [])[1] || "";
+    const clicked = await this.c.evalFn(this.tab, (id) => {
+      const arts = Array.from(document.querySelectorAll("article"));
+      const target = (id && arts.find((a) => a.querySelector(`a[href*="/status/${id}"]`))) || arts[0];
+      const b = target && target.querySelector('[data-testid="reply"]');
       if (b) { b.click(); return true; }
       return false;
-    });
+    }, targetId);
     if (!clicked) return { ok: false, reason: "reply_button_not_found" };
     await sleep(2000);
     try {
@@ -462,6 +608,18 @@ class X {
       await this.c.evaluate(this.tab, "window.scrollBy(0, 1200)").catch(() => {});
       await sleep(1200);
     }
+    return this._scrapeArticles(limit);
+  }
+
+  /**
+   * The conversation visible on a tweet permalink, in DOM order: ancestor
+   * tweets first, then the focused tweet, then replies below. Unlike
+   * scrapeThreadReplies() nothing is dropped — callers that need "what came
+   * before this tweet" (e.g. mention-reply context) slice it themselves.
+   */
+  async scrapeConversation(tweetUrl, { limit = 6 } = {}) {
+    if (!(await this._gotoChecked(tweetUrl))) return [];
+    await sleep(1500);
     return this._scrapeArticles(limit);
   }
 

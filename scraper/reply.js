@@ -4,22 +4,23 @@
  *
  * For each pending mention, the pipeline is:
  *   1. Algorithmic spam pre-filter  (free — no API)
- *   2. Fetch thread context         (CDP — reads conversation before this mention)
+ *   2. Fetch thread context         (HelmStack — reads conversation before this mention)
  *   3. Memory recall                (SQLite FTS5 — retrieves relevant past thinking)
  *   4. Gemini classify + draft      (enriched prompt: thread + memory + mention)
- *   5. Post reply                   (CDP — page already on tweet, no re-navigation)
+ *   5. Post reply                   (HelmStack X engine reply())
  *   6. Log to state/interactions.json
  *
  * Rate limits: max 3 replies per run, 5 min between posts, 10 per day cap.
  *
  * Usage: node scraper/reply.js
  * Env:   GOOGLE_APPLICATION_CREDENTIALS (service account for Vertex AI)
- *        CDP browser on http://127.0.0.1:18801
+ *        HelmStack browser API on http://127.0.0.1:7070 (HELMSTACK_AUTH_TOKEN);
+ *        HELMSTACK_DRY_RUN=1 drafts + verifies the composer without posting.
  */
 
 "use strict";
 
-const { connectBrowser, getXPage } = require("../runner/cdp");
+const { HelmStackClient, X } = require("../tools/helmstack-social/src");
 const { isXSuppressed, suppressionReason } = require("../runner/lib/x_control");
 const fs   = require("fs");
 const path = require("path");
@@ -50,7 +51,9 @@ const MAX_PER_RUN  = 3;
 const MIN_GAP_MS   = 5 * 60 * 1000;  // 5 minutes between replies
 const MAX_PER_DAY  = 10;
 const MAX_AGE_MS   = 48 * 60 * 60 * 1000;  // ignore mentions older than 48h
-const OWN_USERNAME = "SebHunts_AI";  // skip self-mentions
+// Skip self-mentions. Lowercased for comparison — the old constant
+// ("SebHunts_AI", mixed case, stale handle) could never match.
+const OWN_USERNAME = (process.env.X_USERNAME || "SebastianHunts").toLowerCase();
 
 if (isXSuppressed("reply")) {
   console.log(`[reply] X reply suppression active — skipping (${suppressionReason("reply")})`);
@@ -108,46 +111,25 @@ function isSpam(item) {
   return { spam: false };
 }
 
-// ── 2. Fetch thread context via CDP ───────────────────────────────────────────
+// ── 2. Fetch thread context via HelmStack ─────────────────────────────────────
 /**
- * Navigate to the tweet page and extract the visible conversation thread.
- * Returns up to 6 tweet snippets (ancestor tweets + the mention itself).
- * Leaves the page on the tweet URL so postReply can skip re-navigation.
+ * Extract the visible conversation on the mention's permalink, DOM order:
+ * ancestor tweets first, then the mention itself. Returns up to 6
+ * `{user, text}` snippets (quoted tweets folded into the text).
  */
-async function fetchThreadContext(page, item) {
+async function fetchThreadContext(x, item) {
   const tweetUrl = `https://x.com/${item.from_username}/status/${item.id}`;
   try {
-    await page.goto(tweetUrl, { waitUntil: "domcontentloaded", timeout: 30_000 });
-    await page.waitForSelector('article[data-testid="tweet"]', { timeout: 12_000 });
-    await new Promise(r => setTimeout(r, 1_500));
-
-    const articles = await page.$$eval('article[data-testid="tweet"]', els =>
-      els.slice(0, 6).map(a => {
-        const userEl   = a.querySelector('[data-testid="User-Name"]');
-        const textEls  = a.querySelectorAll('[data-testid="tweetText"]');
-        const mainText = (textEls[0]?.innerText || "").trim();
-        // Quoted tweet embedded inside this article
-        const quotedTextEl  = textEls[1] || null;
-        const allUserEls    = a.querySelectorAll('[data-testid="User-Name"]');
-        const quotedUserEl  = allUserEls[1] || null;
-        let text = mainText;
-        if (quotedTextEl) {
-          const quotedUser = (quotedUserEl?.innerText || "").split("\n")[0].trim() || "?";
-          const quotedText = (quotedTextEl.innerText || "").trim();
-          if (quotedText) text += `\n[quoting @${quotedUser}: "${quotedText.slice(0, 200)}"]`;
-        }
-        return {
-          user: (userEl?.innerText || "").split("\n")[0].trim(),
-          text,
-        };
-      }).filter(a => a.text.length > 0)
-    );
-
-    return articles;
+    const articles = await x.scrapeConversation(tweetUrl, { limit: 6 });
+    return articles.map(a => {
+      let text = (a.text || "").trim();
+      if (a.quotedText) {
+        text += `\n[quoting @${a.quotedUsername || "?"}: "${a.quotedText.slice(0, 200)}"]`;
+      }
+      return { user: a.username || a.displayName || "?", text };
+    }).filter(a => a.text.length > 0);
   } catch (err) {
     console.warn(`[reply] thread context fetch failed: ${err.message}`);
-    // Navigate anyway so we end up on the right page for posting
-    try { await page.goto(tweetUrl, { waitUntil: "domcontentloaded", timeout: 30_000 }); } catch {}
     return [];
   }
 }
@@ -383,106 +365,21 @@ or
   return parsed;
 }
 
-// ── 5. Post reply via CDP browser ────────────────────────────────────────────
-const COMPOSE_BOX  = '[data-testid="tweetTextarea_0"]';
-const POST_BUTTON  = '[data-testid="tweetButton"], [data-testid="tweetButtonInline"]';
-
-async function sleep(ms) { return new Promise(r => setTimeout(r, ms)); }
-async function humanDelay(min, max) { return sleep(min + Math.random() * (max - min)); }
-
-async function poll(page, label, selector, { attempts = 12, interval = 1_000 } = {}) {
-  for (let i = 0; i < attempts; i++) {
-    const found = await page.evaluate((sel) => !!document.querySelector(sel), selector);
-    if (found) return true;
-    if (i < attempts - 1) await sleep(interval);
-  }
-  throw new Error(`poll timeout waiting for ${label}`);
-}
-
-async function postReply(page, item, replyText) {
-  console.log(`[reply] posting reply to @${item.from_username} via CDP`);
-
+// ── 5. Post reply via HelmStack X engine ──────────────────────────────────────
+/**
+ * Delegates to X.reply(): navigate (wedge-checked), click reply on the article
+ * matching this status id, exact-match verified insert, toast check, submit.
+ * Throws on any non-posted outcome so the caller's error handling records it.
+ * Returns the engine result (`{ok, reason?, dryRun?}`).
+ */
+async function postReply(x, item, replyText, dryRun) {
+  console.log(`[reply] posting reply to @${item.from_username} via HelmStack`);
   const tweetUrl = `https://x.com/${item.from_username}/status/${item.id}`;
-
-  // Navigate to the tweet (fetchThreadContext may have already done this, but ensure we're there)
-  const currentUrl = page.url();
-  if (!currentUrl.includes(item.id)) {
-    await page.goto(tweetUrl, { waitUntil: "domcontentloaded", timeout: 30_000 });
-    await page.waitForSelector('article[data-testid="tweet"]', { timeout: 12_000 });
-  }
-  await humanDelay(1_000, 2_000);
-
-  // Click the reply button on the first article (the target tweet)
-  const clicked = await page.evaluate(() => {
-    const articles = document.querySelectorAll('article[data-testid="tweet"]');
-    for (const article of articles) {
-      const btn = article.querySelector('[data-testid="reply"]');
-      if (btn) { btn.click(); return true; }
-    }
-    return false;
-  });
-  if (!clicked) throw new Error("reply button not found");
-
-  // Wait for compose box to appear
-  await poll(page, "reply compose box", COMPOSE_BOX, { attempts: 15, interval: 1_000 });
-  await humanDelay(1_500, 3_000);
-
-  // Focus, clear any pre-filled content (e.g. X pre-fills @username), then insert our text.
-  // We always include @from_username in replyText so clearing is safe.
-  await page.evaluate((sel) => { const el = document.querySelector(sel); if (el) el.click(); }, COMPOSE_BOX);
-  await page.evaluate((sel) => { document.querySelector(sel)?.focus(); }, COMPOSE_BOX);
-  await sleep(500);
-  // Clear via keyboard (Ctrl+A, Delete) — fires events React handles
-  await page.keyboard.down("Control");
-  await page.keyboard.press("a");
-  await page.keyboard.up("Control");
-  await sleep(200);
-  await page.keyboard.press("Delete");
-  await sleep(400);
-  // Insert via CDP Input.insertText — Chrome 136+ broke execCommand for React contenteditable
-  const _cdpIns = await page.createCDPSession();
-  await _cdpIns.send("Input.insertText", { text: replyText });
-  await _cdpIns.detach();
-  await sleep(1_000);
-
-  // Verify insertion — require an EXACT match (length-only checks let spliced
-  // wrapper text from a stale draft pass and post garbage).
-  const inserted = await page.evaluate((sel) => document.querySelector(sel)?.innerText.trim() || "", COMPOSE_BOX);
-  if (inserted !== replyText.trim()) {
-    // Fallback to keyboard.type
-    await page.evaluate((sel) => {
-      const el = document.querySelector(sel);
-      if (el) { el.focus(); document.execCommand("selectAll"); document.execCommand("delete"); }
-    }, COMPOSE_BOX);
-    await sleep(500);
-    await page.keyboard.type(replyText, { delay: 30 });
-    await sleep(1_000);
-    const retry = await page.evaluate((sel) => document.querySelector(sel)?.innerText.trim() || "", COMPOSE_BOX);
-    if (retry !== replyText.trim()) {
-      throw new Error(`reply text insertion failed after retry: got ${retry.length}/${replyText.length} chars — aborting to avoid spliced post`);
-    }
-  }
-
-  // Submit
-  const submitted = await page.evaluate((sel) => {
-    const btn = document.querySelector(sel);
-    if (btn && !btn.disabled) { btn.click(); return true; }
-    return false;
-  }, POST_BUTTON);
-  if (!submitted) throw new Error("reply submit button not found or disabled");
-
-  await sleep(2_000);
-
-  // Try to extract the posted reply URL from the page
-  let replyUrl = `https://x.com/${item.from_username}/status/${item.id}`;
-  try {
-    const newUrl = page.url();
-    if (newUrl && newUrl.includes("/status/") && !newUrl.includes(item.id)) {
-      replyUrl = newUrl;
-    }
-  } catch {}
-
-  console.log(`[reply] posted reply to @${item.from_username}: ${replyUrl}`);
+  const res = await x.reply(tweetUrl, replyText, { dryRun });
+  if (res.dryRun) return res;
+  if (!res.ok) throw new Error(res.reason || "reply failed");
+  console.log(`[reply] posted reply to @${item.from_username} on ${tweetUrl}`);
+  return res;
 }
 
 // ── Interactions log ──────────────────────────────────────────────────────────
@@ -600,22 +497,21 @@ function logInteraction(data, item, replyText, memoryHints) {
 
   if (pending.length === 0) { console.log("[reply] nothing to process."); process.exit(0); }
 
-  // Connect to browser
-  let browser;
+  // Connect to the HelmStack browser
+  const dryRun = process.env.HELMSTACK_DRY_RUN === "1";
+  let x;
   try {
-    browser = await connectBrowser();
+    x = new X(new HelmStackClient(), {
+      ownHandle: (process.env.X_USERNAME || "SebastianHunts"),
+      dedicatedTab: true, // collect.js adopts+navigates the shared tab mid-flow
+      log: (m) => console.log(`[reply] ${m}`),
+    });
+    await x.ensureTab();
+    if (!(await x.sessionOk())) {
+      throw new Error("X session not present in HelmStack (auth_token/ct0 missing)");
+    }
   } catch (err) {
-    console.error(`[reply] could not connect to CDP: ${err.message}`);
-    process.exit(1);
-  }
-
-  // Open a dedicated tab — avoids CDP session conflicts with the runner
-  let page;
-  try {
-    page = await browser.newPage();
-  } catch (err) {
-    console.error(`[reply] could not open new tab: ${err.message}`);
-    browser.disconnect();
+    console.error(`[reply] could not connect to HelmStack: ${err.message}`);
     process.exit(1);
   }
 
@@ -638,7 +534,7 @@ function logInteraction(data, item, replyText, memoryHints) {
 
     // ── Step 2: Fetch thread context (navigate to tweet) ──────────────────
     console.log(`[reply] fetching thread context...`);
-    const threadContext = await fetchThreadContext(page, item);
+    const threadContext = await fetchThreadContext(x, item);
     console.log(`[reply] thread: ${threadContext.length} tweet(s) in view`);
 
     // ── Step 3: Memory recall + account lookup ────────────────────────────
@@ -748,9 +644,14 @@ function logInteraction(data, item, replyText, memoryHints) {
       }
     }
 
-    // ── Step 5: Post reply (page already on tweet URL) ────────────────────
+    // ── Step 5: Post reply ────────────────────────────────────────────────
     try {
-      await postReply(page, item, replyText);
+      const res = await postReply(x, item, replyText, dryRun);
+      if (res.dryRun) {
+        console.log(`[reply] DRY RUN — composer verified for @${item.from_username}, item left pending. Draft: "${replyText.slice(0, 100)}"`);
+        repliedThisRun++;
+        continue;
+      }
       item.status    = "done";
       item.our_reply = replyText;
       item.replied_at = new Date().toISOString();
@@ -772,7 +673,6 @@ function logInteraction(data, item, replyText, memoryHints) {
   writeQueue(queue);
 
   console.log(`[reply] done. replied ${repliedThisRun} time(s) this run.`);
-  await page.close().catch(() => {});
-  browser.disconnect();
+  await x.close();
   process.exit(0);
 })();

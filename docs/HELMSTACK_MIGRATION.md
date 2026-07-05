@@ -12,9 +12,9 @@ timed out` (Chrome memory bloat, ~5.4 GB / 45 procs), which silently dropped
 posts, replies, and browse cycles. HelmStack manages its own browser and exposes
 a stable HTTP API, so it doesn't hit that failure class.
 
-**As of 2026-07-05 the orchestrator cycle is CDP-free and the two biggest
-scraper consumers (`collect.js`, `follows.js`) are migrated. One scraper script
-(`reply.js`) + some occasional posting/utility scripts remain on CDP.**
+**As of 2026-07-05 the orchestrator cycle is CDP-free and ALL THREE scraper
+loops (`collect.js`, `follows.js`, `reply.js`) are migrated. Only occasional
+posting/utility scripts remain on CDP.**
 
 ## Migration status
 
@@ -26,16 +26,17 @@ scraper consumers (`collect.js`, `follows.js`) are migrated. One scraper script
 | tweet / quote posting | on post | ✅ HelmStack | `POST_BACKEND=helmstack` → `post_x_helmstack.js` |
 | LinkedIn post/engage | pipeline | ✅ HelmStack | `linkedin_*.js` |
 | **`scraper/collect.js`** (feed_digest producer) | every 10 min | ✅ **HelmStack** (2026-07-05) | the big one; see below |
-| `scraper/reply.js` (mention replies) | every 30 min | ❌ **CDP** | HARDEST — raw `createCDPSession` + `Input.insertText`; ~778 lines |
-| `scraper/follows.js` | every 3h | ✅ **HelmStack** (2026-07-05) | via new `X.follow()`; honors `HELMSTACK_DRY_RUN=1` |
+| `scraper/reply.js` (mention replies) | every 30 min | ✅ **HelmStack** (2026-07-05) | via `X.reply()` + `scrapeConversation()`; dedicated tab; `HELMSTACK_DRY_RUN=1` |
+| `scraper/follows.js` | every 3h | ✅ **HelmStack** (2026-07-05) | via new `X.follow()`; dedicated tab; honors `HELMSTACK_DRY_RUN=1` |
 | `runner/post_thread.js` | occasional | ❌ CDP-only | threads still post via CDP even though tweets/quotes are on HelmStack |
 | `post_claims_thread.js`, `post_article.js`, `post_and_pin.js`, `delete_tweet.js`, `delete_and_repost_quote.js`, `update_bio.js`, `check_notifs.js` | manual/occasional | ❌ CDP-only | no HelmStack branch |
 | `runner/lib/gemini_agent.js` (agentic browse) | — | 💤 DEAD | not used while `useLocal()` (local qwen) → `single_pass_browse.js` runs instead |
 
 ### Recommended next steps (in order)
-1. **Let `follows.js` bake** — runs every 3h; watch `scraper/scraper.log` for `[follows]` lines. `collect.js` (every 10 min) is confirmed healthy as of 2026-07-05 evening (`downloading images` marker present, `collect ok` ticks).
-2. **`scraper/reply.js`** — the hardest. Uses a raw `page.createCDPSession()` + `Input.insertText` to defeat X's React contenteditable. HelmStack already solves this: `client.insertText(tabId, text)` is a browser-level CDP `Input.insertText` that reaches cross-origin frames. The X engine (`tools/helmstack-social/src/x.js`) already has a working `reply()` — reuse it. NOTE: `x_engage.js` now covers *proactive* replies on HelmStack; `scraper/reply.js` covers *inbound mention* replies. Confirm whether both are still needed before porting (they may be consolidatable).
-3. **`post_thread.js`** — for posting consistency; the X engine supports post + chained replies, so a thread = `post()` then N × `reply()`.
+1. **Let `follows.js` + `reply.js` bake** — watch `scraper/scraper.log` for `[follows]`/`[reply]` lines (3h / 30min cadence). `collect.js` is confirmed healthy as of 2026-07-05 evening.
+2. **Adopt `dedicatedTab: true` in `x_engage.js`** — it still shares the collect.js tab; its replies are exposed to the same mid-flow tab-stealing (see "Tab sharing" below). One-line change + `await x.close()`.
+3. **`post_thread.js`** — for posting consistency; the X engine supports post + chained replies, so a thread = `post()` then N × `reply()`. The engine's insertText quirks (URLs, newlines) are now handled inside `_insertVerified`, which threads rely on heavily.
+4. Consolidation question (resolved 2026-07-05): `scraper/reply.js` (inbound mentions: queue, thread context, user history, claim verification) and `x_engage.js` (proactive: timeline scrape + scoring) share only the engine mechanics — both stay as separate consumers.
 
 ## How the migration is done (the pattern)
 
@@ -48,10 +49,15 @@ The HelmStack client lives at `tools/helmstack-social/src/client.js` (wrapper:
 (browser-level CDP — reach cross-origin iframes).
 
 The **X engine** (`tools/helmstack-social/src/x.js`, class `X`) wraps a client
-with X-specific helpers: `ensureTab()`, `sessionOk()` (checks auth_token/ct0
-cookies), `gotoHome()`, `post()`, `quote()`, `reply()`, `like()`, `engage()`,
-and the scrapers added for collect.js:
+with X-specific helpers: `ensureTab()` (pass `dedicatedTab: true` to the
+constructor for private-tab flows + `close()` when done), `sessionOk()` (checks
+auth_token/ct0 cookies), `gotoHome()`, `post()`, `quote()`, `reply()` (targets
+the article matching the status id — NOT the first article, which is an
+ancestor on reply permalinks), `like()`, `follow()`, `engage()`, and the
+scrapers:
 - `scrapeTimelineFull({limit,scrolls})` — home timeline, full fields.
+- `scrapeConversation(url,{limit})` — permalink page in DOM order (ancestors →
+  focused tweet → replies), nothing dropped; used for mention thread context.
 - `scrapeThreadReplies(url,{limit})` — replies under a permalink (drops root).
 - `scrapeMentions({limit})` — notifications/mentions page.
 - `_scrapeArticles(max)` — the shared extractor (ported verbatim from the old
@@ -81,10 +87,42 @@ back to `/home`** (tab shows `status: "error"`, `statusMessage: "Failed to load
 …"`), while a *fresh tab in the same session* navigates fine. This is invisible
 to `collect.js` (it only scrapes home) but silently breaks anything that
 navigates cross-page (reply, follow, profile-confirm). The engine now guards
-this with `X._gotoChecked(url)` — navigate, verify `tabUrl` actually landed,
-and on mismatch close + reopen the tab at the target URL. Used by `reply()`,
-`follow()`, `scrapeThreadReplies()`, `scrapeMentions()`, `_confirmFromProfile()`.
-Use it for any new cross-page navigation in the engine.
+this with `X._gotoChecked(url)` — navigate, verify the tab actually landed
+(URL match AND `status !== "error"`), and on mismatch close + reopen the tab
+at the target URL. Used by `reply()`, `follow()`, `scrapeThreadReplies()`,
+`scrapeMentions()`, `scrapeConversation()`, `_confirmFromProfile()`. Use it for
+any new cross-page navigation in the engine. Empirically the second cross-page
+navigation in a tab reliably fails in the current HelmStack build — upstream
+fix belongs in `~/Documents/Projects/OpenVisual` (tab-manager navigation).
+
+### Tab sharing between consumers (discovered 2026-07-05)
+`X.ensureTab()` by default ADOPTS any existing x.com tab — so `collect.js`
+(every 10 min), `x_engage.js`, `reply.js`, `follows.js` all fight over ONE tab.
+collect.js will navigate it home mid-reply (killing the composer — this
+masqueraded as flaky insert failures), and a reply flow parked on a permalink
+makes collect scrape 0 posts. Flows that navigate away from home or hold a
+composer open must pass `dedicatedTab: true` to the `X` constructor (opens a
+private tab; call `await x.close()` when done). `reply.js` and `follows.js` do
+this; `x_engage.js` should too (next step 2).
+
+### insertText quirks against X's composer (all handled in `_insertVerified`)
+Empirically observed; don't fight these again:
+- A payload containing `scheme://` is dropped ENTIRELY → URLs are inserted in
+  pieces split at the scheme boundary (`"see https://a"` → `"see"`, `" https:"`,
+  `"//a"`).
+- A payload containing `\n` is dropped ENTIRELY → lines inserted separately
+  with a real Enter keypress between them (only after verifying the line
+  committed — a keypress while focus is on a button would activate it).
+- The LAST character of each insert is buffered and only flushes on the next
+  input event (arriving at wherever the caret is by then; also the cause of
+  doubled text) → a harmless End keypress after each piece flushes it in place.
+- The first insert into a fresh modal can land nowhere → warmup probe char
+  loop before the real insertion, then `_clearComposer()`.
+- `execCommand selectAll/delete` stops clearing once the composer contains a
+  linkified URL → `_clearComposer()` falls back to browser-level Cmd+A +
+  Backspace, and verifies emptiness.
+- Final verification compares whitespace-normalized text (the composer renders
+  block breaks with slight whitespace differences).
 
 ## Testing / validation (important gotchas)
 
