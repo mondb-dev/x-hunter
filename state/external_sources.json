@@ -1,8 +1,8 @@
 {
   "schema_version": "1.0",
-  "generated_at": "2026-07-05T08:31:15.921Z",
+  "generated_at": "2026-07-05T11:24:22.991Z",
   "method": "mechanical_registry_v1",
-  "profiled_at": "2026-07-05T08:31:20.811Z",
+  "profiled_at": "2026-07-05T11:24:27.057Z",
   "sources": [
     {
       "domain": "ojp.gov",
@@ -391,7 +391,7 @@
       "first_seen_at": "2026-03-27T23:17:00Z",
       "last_seen_at": "2026-07-04T17:09:17.513Z",
       "discovery": {
-        "distinct_urls": 233,
+        "distinct_urls": 235,
         "example_urls": [
           "https://www.theguardian.com/us-news/2026/jun/23/trump-immigration-courthouse-arrest-policy",
           "https://www.theguardian.com/us-news/2026/jun/28/ice-minnesota-defending-democracy",
@@ -401,7 +401,7 @@
         ],
         "origin_counts": {
           "ontology_evidence": 25,
-          "reading_queue": 214,
+          "reading_queue": 216,
           "journals": 53
         },
         "distinct_referring_accounts": 0,
@@ -442,7 +442,7 @@
         "breadth": {
           "score": 0.8799999999999999,
           "basis": [
-            "distinct_urls:233",
+            "distinct_urls:235",
             "distinct_axes:9",
             "origin_types:3"
           ]
@@ -470,7 +470,7 @@
             "about:false",
             "contact:false",
             "corrections:true",
-            "outbound_links:13",
+            "outbound_links:12",
             "opinion_marker:false"
           ]
         },
@@ -481,7 +481,7 @@
           "basis": [
             "newsroom_domain_pattern",
             "article_path_seen",
-            "distinct_urls:233",
+            "distinct_urls:235",
             "distinct_axes:9",
             "origin_types:3",
             "referring_accounts:0",
@@ -491,12 +491,12 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-07-02T08:37:59.419Z",
+        "fetched_at": "2026-07-05T09:31:17.677Z",
         "homepage_url": "https://theguardian.com/",
         "example_url": "https://www.theguardian.com/us-news/2026/jun/23/trump-immigration-courthouse-arrest-policy",
         "homepage_status": 200,
         "example_status": 200,
-        "homepage_final_url": "https://www.theguardian.com/us",
+        "homepage_final_url": "https://www.theguardian.com/international",
         "example_final_url": "https://www.theguardian.com/us-news/2026/jun/23/trump-immigration-courthouse-arrest-policy",
         "homepage_content_type": "text/html; charset=UTF-8",
         "example_content_type": "text/html; charset=UTF-8",
@@ -515,9 +515,9 @@
           "has_published_time": true,
           "has_canonical": true,
           "has_about_link": true,
-          "has_contact_link": true,
+          "has_contact_link": false,
           "has_corrections_link": true,
-          "outbound_links_count": 13,
+          "outbound_links_count": 12,
           "opinion_marker": false
         }
       }
@@ -527,9 +527,9 @@
       "entity": "Aljazeera",
       "kind": "news",
       "first_seen_at": "2026-06-22T02:45:00Z",
-      "last_seen_at": "2026-07-05T05:04:21.931Z",
+      "last_seen_at": "2026-07-05T11:04:25.863Z",
       "discovery": {
-        "distinct_urls": 157,
+        "distinct_urls": 160,
         "example_urls": [
           "https://www.aljazeera.com/opinions/2026/6/24/south-africas-crises-will-not-be-solved-by-blaming-migrants",
           "https://www.aljazeera.com/video/newsfeed/2026/6/27/newly-released-video-exposes-henry-nowak-killers-lies?traffic_source=rss",
@@ -540,7 +540,7 @@
         "origin_counts": {
           "ontology_evidence": 104,
           "reading_queue": 5,
-          "journals": 238
+          "journals": 244
         },
         "distinct_referring_accounts": 0,
         "sample_referring_accounts": [],
@@ -581,7 +581,7 @@
         "breadth": {
           "score": 0.8799999999999999,
           "basis": [
-            "distinct_urls:157",
+            "distinct_urls:160",
             "distinct_axes:10",
             "origin_types:3"
           ]
@@ -620,7 +620,7 @@
           "basis": [
             "newsroom_domain_pattern",
             "article_path_seen",
-            "distinct_urls:157",
+            "distinct_urls:160",
             "distinct_axes:10",
             "origin_types:3",
             "referring_accounts:0",
@@ -791,7 +791,7 @@
       "first_seen_at": "2026-06-22T00:15:00Z",
       "last_seen_at": "2026-07-01T06:14:34.244Z",
       "discovery": {
-        "distinct_urls": 151,
+        "distinct_urls": 153,
         "example_urls": [
           "https://www.nytimes.com/2026/06/19/world/canada/frank-stronach-trial-guilty-sex-charges.html",
           "https://www.nytimes.com/2026/06/27/world/americas/mexican-officials-us-informants.html",
@@ -801,7 +801,7 @@
         ],
         "origin_counts": {
           "ontology_evidence": 6,
-          "reading_queue": 150,
+          "reading_queue": 152,
           "journals": 10
         },
         "distinct_referring_accounts": 0,
@@ -837,7 +837,7 @@
         "breadth": {
           "score": 0.7633333333333332,
           "basis": [
-            "distinct_urls:151",
+            "distinct_urls:153",
             "distinct_axes:4",
             "origin_types:3"
           ]
@@ -876,7 +876,7 @@
           "basis": [
             "newsroom_domain_pattern",
             "article_path_seen",
-            "distinct_urls:151",
+            "distinct_urls:153",
             "distinct_axes:4",
             "origin_types:3",
             "referring_accounts:0",
@@ -1007,7 +1007,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-07-02T08:37:59.683Z",
+        "fetched_at": "2026-07-05T09:31:18.766Z",
         "homepage_url": "https://house.gov/",
         "example_url": "https://www.house.gov/",
         "homepage_status": 200,
@@ -1166,7 +1166,7 @@
       "first_seen_at": "2026-06-26T07:05:00Z",
       "last_seen_at": "2026-07-01T06:14:34.242Z",
       "discovery": {
-        "distinct_urls": 113,
+        "distinct_urls": 114,
         "example_urls": [
           "https://www.bbc.co.uk/news/articles/cn8qxz6qypyo",
           "https://www.bbc.co.uk/news/articles/cn075j04pnyo?at_medium=RSS&amp;at_campaign=rss",
@@ -1176,7 +1176,7 @@
         ],
         "origin_counts": {
           "ontology_evidence": 4,
-          "reading_queue": 115,
+          "reading_queue": 116,
           "journals": 7
         },
         "distinct_referring_accounts": 0,
@@ -1210,7 +1210,7 @@
         "breadth": {
           "score": 0.7049999999999998,
           "basis": [
-            "distinct_urls:113",
+            "distinct_urls:114",
             "distinct_axes:3",
             "origin_types:3"
           ]
@@ -1248,7 +1248,7 @@
           "method": "mechanical_v1",
           "basis": [
             "newsroom_domain_pattern",
-            "distinct_urls:113",
+            "distinct_urls:114",
             "distinct_axes:3",
             "origin_types:3",
             "referring_accounts:0",
@@ -1258,7 +1258,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-07-02T10:08:01.057Z",
+        "fetched_at": "2026-07-05T11:01:20.213Z",
         "homepage_url": "https://bbc.co.uk/",
         "example_url": "https://www.bbc.co.uk/news/articles/cn8qxz6qypyo",
         "homepage_status": 200,
@@ -1926,7 +1926,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-07-02T08:37:59.928Z",
+        "fetched_at": "2026-07-05T09:31:19.264Z",
         "homepage_url": "https://apnews.com/",
         "example_url": "https://apnews.com/hub/iran",
         "homepage_status": 200,
@@ -2632,7 +2632,7 @@
       "entity": "Amnesty",
       "kind": "unknown",
       "first_seen_at": "2026-03-31T12:16:18.459Z",
-      "last_seen_at": "2026-07-03T16:31:35.143Z",
+      "last_seen_at": "2026-07-05T11:04:25.863Z",
       "discovery": {
         "distinct_urls": 30,
         "example_urls": [
@@ -2644,8 +2644,8 @@
         ],
         "origin_counts": {
           "ontology_evidence": 27,
-          "reading_queue": 10,
-          "journals": 31
+          "reading_queue": 11,
+          "journals": 33
         },
         "distinct_referring_accounts": 0,
         "sample_referring_accounts": [],
@@ -3165,9 +3165,9 @@
       "entity": "T Co",
       "kind": "unknown",
       "first_seen_at": "2016-05-05T18:57:30.000Z",
-      "last_seen_at": "2026-07-05T06:59:25.000Z",
+      "last_seen_at": "2026-07-05T09:28:47.000Z",
       "discovery": {
-        "distinct_urls": 6584,
+        "distinct_urls": 6593,
         "example_urls": [
           "https://t.co/pJSE124ec4",
           "https://t.co/Soz8BXPWaa",
@@ -3176,10 +3176,10 @@
           "https://t.co/cYaqYDRp08"
         ],
         "origin_counts": {
-          "feed_buffer": 3862,
-          "feed_buffer_reply": 4277
+          "feed_buffer": 3872,
+          "feed_buffer_reply": 4283
         },
-        "distinct_referring_accounts": 2111,
+        "distinct_referring_accounts": 2116,
         "sample_referring_accounts": [
           "0808iveta",
           "09abracadabra",
@@ -3218,7 +3218,7 @@
         "breadth": {
           "score": 0.47,
           "basis": [
-            "distinct_urls:6584",
+            "distinct_urls:6593",
             "distinct_axes:0",
             "origin_types:2"
           ]
@@ -3226,7 +3226,7 @@
         "corroboration": {
           "score": 0.825,
           "basis": [
-            "referring_accounts:2111",
+            "referring_accounts:2116",
             "origin_types:2"
           ]
         },
@@ -3257,21 +3257,21 @@
           "basis": [
             "unknown_domain_pattern",
             "doi_or_identifier_path_seen",
-            "distinct_urls:6584",
+            "distinct_urls:6593",
             "distinct_axes:0",
             "origin_types:2",
-            "referring_accounts:2111",
+            "referring_accounts:2116",
             "origin_types:2",
             "track_record_unavailable"
           ]
         }
       },
       "profile": {
-        "fetched_at": "2026-07-02T08:38:04.464Z",
+        "fetched_at": "2026-07-05T09:31:20.475Z",
         "homepage_url": "https://t.co/",
         "example_url": "https://t.co/pJSE124ec4",
         "homepage_status": 200,
-        "example_status": 403,
+        "example_status": 200,
         "homepage_final_url": "https://t.co/",
         "example_final_url": "https://twitter.com/SageTeamjewels/status/2038670431050252616/photo/1",
         "homepage_content_type": "text/html; charset=utf-8",
@@ -3818,9 +3818,9 @@
       "entity": "Grok",
       "kind": "unknown",
       "first_seen_at": "2026-04-03T01:20:27.000Z",
-      "last_seen_at": "2026-07-04T03:04:45.000Z",
+      "last_seen_at": "2026-07-04T22:44:00.000Z",
       "discovery": {
-        "distinct_urls": 478,
+        "distinct_urls": 479,
         "example_urls": [
           "https://grok.com/imagine/post/9b92ff60-ec59-45db-8a35-8e1b743e5339",
           "https://grok.com/imagine/post/42c16172-4296-42be-b3d0-aa45ad7b6b97",
@@ -3829,10 +3829,10 @@
           "https://grok.com/imagine/post/3289422f-50b2-4655-8527-e2b1c950ce5e"
         ],
         "origin_counts": {
-          "feed_buffer_reply": 429,
+          "feed_buffer_reply": 430,
           "feed_buffer": 81
         },
-        "distinct_referring_accounts": 296,
+        "distinct_referring_accounts": 297,
         "sample_referring_accounts": [
           "100ohiostate",
           "1livinginca",
@@ -3870,7 +3870,7 @@
         "breadth": {
           "score": 0.47,
           "basis": [
-            "distinct_urls:478",
+            "distinct_urls:479",
             "distinct_axes:0",
             "origin_types:2"
           ]
@@ -3878,7 +3878,7 @@
         "corroboration": {
           "score": 0.825,
           "basis": [
-            "referring_accounts:296",
+            "referring_accounts:297",
             "origin_types:2"
           ]
         },
@@ -3908,17 +3908,17 @@
           "method": "mechanical_v1",
           "basis": [
             "unknown_domain_pattern",
-            "distinct_urls:478",
+            "distinct_urls:479",
             "distinct_axes:0",
             "origin_types:2",
-            "referring_accounts:296",
+            "referring_accounts:297",
             "origin_types:2",
             "track_record_unavailable"
           ]
         }
       },
       "profile": {
-        "fetched_at": "2026-07-02T10:08:01.737Z",
+        "fetched_at": "2026-07-05T11:01:22.235Z",
         "homepage_url": "https://grok.com/",
         "example_url": "https://grok.com/imagine/post/9b92ff60-ec59-45db-8a35-8e1b743e5339",
         "homepage_status": 200,
@@ -5221,7 +5221,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-07-02T10:08:02.386Z",
+        "fetched_at": "2026-07-05T11:01:23.786Z",
         "homepage_url": "https://theepochtimes.com/",
         "example_url": "https://www.theepochtimes.com/china/former-chinese-military-doctor-leaks-ccp-plan-to-use-taiwanese-troops-as-organ-bank-5871639?utm_medium=DigitalMkt&utm_source=twitter&utm_campaign=content_FormerChineseMilitary-karen-20250827&utm_content=img-2_FormerChineseMilitary&utm_term=new-pagevisitor&gl=reg&twclid=2387x75uji9nq8gmjpy9cer691",
         "homepage_status": 200,
@@ -5341,7 +5341,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-07-02T10:08:02.929Z",
+        "fetched_at": "2026-07-05T11:01:24.695Z",
         "homepage_url": "https://wikipedia.org/",
         "example_url": "https://en.wikipedia.org/wiki/2026_Iran_war",
         "homepage_status": 200,
@@ -18896,6 +18896,132 @@
       }
     },
     {
+      "domain": "rockstargames.com",
+      "entity": "Rockstargames",
+      "kind": "unknown",
+      "first_seen_at": "2026-07-03T03:19:47.000Z",
+      "last_seen_at": "2026-07-04T23:16:23.000Z",
+      "discovery": {
+        "distinct_urls": 6,
+        "example_urls": [
+          "https://www.rockstargames.com/gta-online?utm_source=Twitter&utm_medium=p_social&utm_campaign=506-kch-pre-release-gift-20260702&utm_content=uk-eng&twclid=21k9dspaz1uqc236nsfftz24wo",
+          "https://www.rockstargames.com/gta-online?utm_source=Twitter&utm_medium=p_social&utm_campaign=506-kch-pre-release-gift-20260702&utm_content=uk-eng&twclid=24zf1prqkfwogffgypqu8suw2o",
+          "https://www.rockstargames.com/gta-online?utm_source=Twitter&utm_medium=p_social&utm_campaign=506-kch-pre-release-gift-20260702&utm_content=uk-eng&twclid=2dxs60lrovlpjh0xhg8m1bqst5",
+          "https://www.rockstargames.com/gta-online?utm_source=Twitter&utm_medium=p_social&utm_campaign=506-kch-pre-release-gift-20260702&utm_content=uk-eng&twclid=26gxtgtfplymcvq1g8wzz1uil4",
+          "https://www.rockstargames.com/gta-online?utm_source=Twitter&utm_medium=p_social&utm_campaign=506-kch-pre-release-gift-20260702&utm_content=uk-eng&twclid=246opkxj40317id4rb25pwqkmc"
+        ],
+        "origin_counts": {
+          "feed_buffer_reply": 6
+        },
+        "distinct_referring_accounts": 1,
+        "sample_referring_accounts": [
+          "rockstargames"
+        ],
+        "distinct_axes": []
+      },
+      "claims": {
+        "total": 0,
+        "supported": 0,
+        "refuted": 0,
+        "contested": 0,
+        "unverified": 0,
+        "resolved_count": 0
+      },
+      "structural_features": {
+        "has_search_paths": false,
+        "has_article_paths": false,
+        "has_doi_paths": false
+      },
+      "ratings": {
+        "provenance": {
+          "score": 0.45,
+          "basis": [
+            "unknown_domain_pattern"
+          ]
+        },
+        "breadth": {
+          "score": 0.235,
+          "basis": [
+            "distinct_urls:6",
+            "distinct_axes:0",
+            "origin_types:1"
+          ]
+        },
+        "corroboration": {
+          "score": 0.19583333333333333,
+          "basis": [
+            "referring_accounts:1",
+            "origin_types:1"
+          ]
+        },
+        "track_record": {
+          "score": null,
+          "basis": [
+            "no_resolved_claims_observed"
+          ]
+        },
+        "profile": {
+          "score": 0.28,
+          "confidence": 0.65,
+          "basis": [
+            "meta_author:true",
+            "published_time:false",
+            "canonical:true",
+            "about:false",
+            "contact:false",
+            "corrections:false",
+            "outbound_links:0",
+            "opinion_marker:false"
+          ]
+        },
+        "overall": {
+          "score": 0.379140625,
+          "confidence": 0.22447499999999998,
+          "method": "mechanical_v1",
+          "basis": [
+            "unknown_domain_pattern",
+            "distinct_urls:6",
+            "distinct_axes:0",
+            "origin_types:1",
+            "referring_accounts:1",
+            "origin_types:1",
+            "track_record_unavailable"
+          ]
+        }
+      },
+      "profile": {
+        "fetched_at": "2026-07-05T10:01:18.490Z",
+        "homepage_url": "https://rockstargames.com/",
+        "example_url": "https://www.rockstargames.com/gta-online?utm_source=Twitter&utm_medium=p_social&utm_campaign=506-kch-pre-release-gift-20260702&utm_content=uk-eng&twclid=21k9dspaz1uqc236nsfftz24wo",
+        "homepage_status": 200,
+        "example_status": 200,
+        "homepage_final_url": "https://www.rockstargames.com/",
+        "example_final_url": "https://www.rockstargames.com/gta-online?utm_source=Twitter&utm_medium=p_social&utm_campaign=506-kch-pre-release-gift-20260702&utm_content=uk-eng&twclid=21k9dspaz1uqc236nsfftz24wo",
+        "homepage_content_type": "text/html; charset=UTF-8",
+        "example_content_type": "text/html; charset=UTF-8",
+        "homepage": {
+          "has_meta_author": true,
+          "has_published_time": false,
+          "has_canonical": true,
+          "has_about_link": false,
+          "has_contact_link": false,
+          "has_corrections_link": false,
+          "outbound_links_count": 0,
+          "opinion_marker": false
+        },
+        "example": {
+          "has_meta_author": true,
+          "has_published_time": false,
+          "has_canonical": true,
+          "has_about_link": false,
+          "has_contact_link": false,
+          "has_corrections_link": false,
+          "outbound_links_count": 0,
+          "opinion_marker": false
+        }
+      }
+    },
+    {
       "domain": "understandingwar.org",
       "entity": "Understandingwar",
       "kind": "unknown",
@@ -21845,7 +21971,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-07-02T09:07:59.709Z",
+        "fetched_at": "2026-07-05T10:01:22.897Z",
         "homepage_url": "https://govee.com/",
         "example_url": "https://us.govee.com/pages/govee-houseofthedragon?utm_source=twitter&utm_medium=paid_social&utm_campaign=hotd&utm_term=cpe&twclid=29b1vkgpwftpnrvrqi4d3zdxhg",
         "homepage_status": 200,
@@ -22097,7 +22223,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-07-01T01:07:25.533Z",
+        "fetched_at": "2026-07-05T10:01:24.782Z",
         "homepage_url": "https://moxt.ai/",
         "example_url": "https://moxt.ai/?utm_source=x&utm_medium=paid_social&utm_campaign=x-brand-build-your-ai-team&utm_content=video-49s&utm_term=en-desktop&twclid=24fse5wprkux1ktw6we6w27x5c",
         "homepage_status": 200,
@@ -22223,7 +22349,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-07-01T22:37:46.359Z",
+        "fetched_at": "2026-07-05T10:01:26.422Z",
         "homepage_url": "https://usekeel.io/",
         "example_url": "https://usekeel.io/run?twclid=2bgfmx5me1bzmqklq02dv94p1e",
         "homepage_status": 200,
@@ -22349,7 +22475,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-07-01T21:07:49.339Z",
+        "fetched_at": "2026-07-05T11:24:25.322Z",
         "homepage_url": "https://codenewsletter.ai/",
         "example_url": "https://codenewsletter.ai/subscribe?utm_source=twitter_ads_flal_1_claude_code_v2&twclid=2efow5tezir2vqfxf73rgau0vh",
         "homepage_status": 200,
@@ -22475,7 +22601,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-07-01T22:37:46.561Z",
+        "fetched_at": "2026-07-05T11:24:25.860Z",
         "homepage_url": "https://buildordie.ai/",
         "example_url": "https://buildordie.ai/?twclid=2dk5bzhoclutd1xq1e7jd5z6rq",
         "homepage_status": 530,
@@ -22601,7 +22727,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-07-01T22:37:47.040Z",
+        "fetched_at": "2026-07-05T11:24:26.571Z",
         "homepage_url": "https://constella.app/",
         "example_url": "https://constella.app/?twclid=27y7gzef47njy1aqk6w8xg9x6q",
         "homepage_status": 200,
@@ -22727,7 +22853,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-07-01T22:37:47.188Z",
+        "fetched_at": "2026-07-05T11:24:27.056Z",
         "homepage_url": "https://karma.domains/",
         "example_url": "https://karma.domains/app/?utm_source=x.com&utm_medium=cpc&utm_campaign=targeting&utm_content=interests_seo",
         "homepage_status": 403,
@@ -23511,87 +23637,6 @@
           "has_corrections_link": false,
           "outbound_links_count": 5,
           "opinion_marker": false
-        }
-      }
-    },
-    {
-      "domain": "rockstargames.com",
-      "entity": "Rockstargames",
-      "kind": "unknown",
-      "first_seen_at": "2026-07-03T03:19:47.000Z",
-      "last_seen_at": "2026-07-04T23:16:23.000Z",
-      "discovery": {
-        "distinct_urls": 5,
-        "example_urls": [
-          "https://www.rockstargames.com/gta-online?utm_source=Twitter&utm_medium=p_social&utm_campaign=506-kch-pre-release-gift-20260702&utm_content=uk-eng&twclid=21k9dspaz1uqc236nsfftz24wo",
-          "https://www.rockstargames.com/gta-online?utm_source=Twitter&utm_medium=p_social&utm_campaign=506-kch-pre-release-gift-20260702&utm_content=uk-eng&twclid=24zf1prqkfwogffgypqu8suw2o",
-          "https://www.rockstargames.com/gta-online?utm_source=Twitter&utm_medium=p_social&utm_campaign=506-kch-pre-release-gift-20260702&utm_content=uk-eng&twclid=2dxs60lrovlpjh0xhg8m1bqst5",
-          "https://www.rockstargames.com/gta-online?utm_source=Twitter&utm_medium=p_social&utm_campaign=506-kch-pre-release-gift-20260702&utm_content=uk-eng&twclid=26gxtgtfplymcvq1g8wzz1uil4",
-          "https://www.rockstargames.com/gta-online?utm_source=Twitter&utm_medium=p_social&utm_campaign=506-kch-pre-release-gift-20260702&utm_content=uk-eng&twclid=246opkxj40317id4rb25pwqkmc"
-        ],
-        "origin_counts": {
-          "feed_buffer_reply": 5
-        },
-        "distinct_referring_accounts": 1,
-        "sample_referring_accounts": [
-          "rockstargames"
-        ],
-        "distinct_axes": []
-      },
-      "claims": {
-        "total": 0,
-        "supported": 0,
-        "refuted": 0,
-        "contested": 0,
-        "unverified": 0,
-        "resolved_count": 0
-      },
-      "structural_features": {
-        "has_search_paths": false,
-        "has_article_paths": false,
-        "has_doi_paths": false
-      },
-      "ratings": {
-        "provenance": {
-          "score": 0.45,
-          "basis": [
-            "unknown_domain_pattern"
-          ]
-        },
-        "breadth": {
-          "score": 0.20583333333333334,
-          "basis": [
-            "distinct_urls:5",
-            "distinct_axes:0",
-            "origin_types:1"
-          ]
-        },
-        "corroboration": {
-          "score": 0.19583333333333333,
-          "basis": [
-            "referring_accounts:1",
-            "origin_types:1"
-          ]
-        },
-        "track_record": {
-          "score": null,
-          "basis": [
-            "no_resolved_claims_observed"
-          ]
-        },
-        "overall": {
-          "score": 0.37276041666666665,
-          "confidence": 0.19585000000000002,
-          "method": "mechanical_v1",
-          "basis": [
-            "unknown_domain_pattern",
-            "distinct_urls:5",
-            "distinct_axes:0",
-            "origin_types:1",
-            "referring_accounts:1",
-            "origin_types:1",
-            "track_record_unavailable"
-          ]
         }
       }
     },
@@ -64681,6 +64726,237 @@
         "distinct_referring_accounts": 1,
         "sample_referring_accounts": [
           "amro_asia"
+        ],
+        "distinct_axes": []
+      },
+      "claims": {
+        "total": 0,
+        "supported": 0,
+        "refuted": 0,
+        "contested": 0,
+        "unverified": 0,
+        "resolved_count": 0
+      },
+      "structural_features": {
+        "has_search_paths": false,
+        "has_article_paths": false,
+        "has_doi_paths": false
+      },
+      "ratings": {
+        "provenance": {
+          "score": 0.45,
+          "basis": [
+            "unknown_domain_pattern"
+          ]
+        },
+        "breadth": {
+          "score": 0.08916666666666666,
+          "basis": [
+            "distinct_urls:1",
+            "distinct_axes:0",
+            "origin_types:1"
+          ]
+        },
+        "corroboration": {
+          "score": 0.19583333333333333,
+          "basis": [
+            "referring_accounts:1",
+            "origin_types:1"
+          ]
+        },
+        "track_record": {
+          "score": null,
+          "basis": [
+            "no_resolved_claims_observed"
+          ]
+        },
+        "overall": {
+          "score": 0.3472395833333333,
+          "confidence": 0.08135,
+          "method": "mechanical_v1",
+          "basis": [
+            "unknown_domain_pattern",
+            "distinct_urls:1",
+            "distinct_axes:0",
+            "origin_types:1",
+            "referring_accounts:1",
+            "origin_types:1",
+            "track_record_unavailable"
+          ]
+        }
+      }
+    },
+    {
+      "domain": "myblockchainweek.com",
+      "entity": "Myblockchainweek",
+      "kind": "unknown",
+      "first_seen_at": "2026-07-04T16:30:00.000Z",
+      "last_seen_at": "2026-07-04T16:30:00.000Z",
+      "discovery": {
+        "distinct_urls": 1,
+        "example_urls": [
+          "https://myblockchainweek.com/buy-ticket?twclid=21nicpg0ek4tfxn16u0mxc14r1"
+        ],
+        "origin_counts": {
+          "feed_buffer_reply": 1
+        },
+        "distinct_referring_accounts": 1,
+        "sample_referring_accounts": [
+          "malaysiabcw"
+        ],
+        "distinct_axes": []
+      },
+      "claims": {
+        "total": 0,
+        "supported": 0,
+        "refuted": 0,
+        "contested": 0,
+        "unverified": 0,
+        "resolved_count": 0
+      },
+      "structural_features": {
+        "has_search_paths": false,
+        "has_article_paths": false,
+        "has_doi_paths": false
+      },
+      "ratings": {
+        "provenance": {
+          "score": 0.45,
+          "basis": [
+            "unknown_domain_pattern"
+          ]
+        },
+        "breadth": {
+          "score": 0.08916666666666666,
+          "basis": [
+            "distinct_urls:1",
+            "distinct_axes:0",
+            "origin_types:1"
+          ]
+        },
+        "corroboration": {
+          "score": 0.19583333333333333,
+          "basis": [
+            "referring_accounts:1",
+            "origin_types:1"
+          ]
+        },
+        "track_record": {
+          "score": null,
+          "basis": [
+            "no_resolved_claims_observed"
+          ]
+        },
+        "overall": {
+          "score": 0.3472395833333333,
+          "confidence": 0.08135,
+          "method": "mechanical_v1",
+          "basis": [
+            "unknown_domain_pattern",
+            "distinct_urls:1",
+            "distinct_axes:0",
+            "origin_types:1",
+            "referring_accounts:1",
+            "origin_types:1",
+            "track_record_unavailable"
+          ]
+        }
+      }
+    },
+    {
+      "domain": "maventrading.com",
+      "entity": "Maventrading",
+      "kind": "unknown",
+      "first_seen_at": "2026-07-04T21:13:31.000Z",
+      "last_seen_at": "2026-07-04T21:13:31.000Z",
+      "discovery": {
+        "distinct_urls": 1,
+        "example_urls": [
+          "https://maventrading.com/lp/choose-your-challenge?twt_id=54608379&twclid=24irm75xuuvw6vkz1dgb8ui0sz"
+        ],
+        "origin_counts": {
+          "feed_buffer_reply": 1
+        },
+        "distinct_referring_accounts": 1,
+        "sample_referring_accounts": [
+          "maventrading"
+        ],
+        "distinct_axes": []
+      },
+      "claims": {
+        "total": 0,
+        "supported": 0,
+        "refuted": 0,
+        "contested": 0,
+        "unverified": 0,
+        "resolved_count": 0
+      },
+      "structural_features": {
+        "has_search_paths": false,
+        "has_article_paths": false,
+        "has_doi_paths": false
+      },
+      "ratings": {
+        "provenance": {
+          "score": 0.45,
+          "basis": [
+            "unknown_domain_pattern"
+          ]
+        },
+        "breadth": {
+          "score": 0.08916666666666666,
+          "basis": [
+            "distinct_urls:1",
+            "distinct_axes:0",
+            "origin_types:1"
+          ]
+        },
+        "corroboration": {
+          "score": 0.19583333333333333,
+          "basis": [
+            "referring_accounts:1",
+            "origin_types:1"
+          ]
+        },
+        "track_record": {
+          "score": null,
+          "basis": [
+            "no_resolved_claims_observed"
+          ]
+        },
+        "overall": {
+          "score": 0.3472395833333333,
+          "confidence": 0.08135,
+          "method": "mechanical_v1",
+          "basis": [
+            "unknown_domain_pattern",
+            "distinct_urls:1",
+            "distinct_axes:0",
+            "origin_types:1",
+            "referring_accounts:1",
+            "origin_types:1",
+            "track_record_unavailable"
+          ]
+        }
+      }
+    },
+    {
+      "domain": "gastechevent.com",
+      "entity": "Gastechevent",
+      "kind": "unknown",
+      "first_seen_at": "2026-07-04T23:18:32.000Z",
+      "last_seen_at": "2026-07-04T23:18:32.000Z",
+      "discovery": {
+        "distinct_urls": 1,
+        "example_urls": [
+          "https://www.gastechevent.com/visit/visitor-registration/?utm_source=X&utm_medium=cpc&utm_campaign=Gastech%2BVisprom%2BElectrification%2BTraffic%2BP1%2BX%2B2026&twclid=25c7n2tffmzu4y35y7ba8rbphq"
+        ],
+        "origin_counts": {
+          "feed_buffer_reply": 1
+        },
+        "distinct_referring_accounts": 1,
+        "sample_referring_accounts": [
+          "gastechevent"
         ],
         "distinct_axes": []
       },
