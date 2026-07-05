@@ -51,6 +51,7 @@ class HelmStackClient {
   health()          { return this.request("GET", "/api/health", undefined, { timeout: 5000 }); }
   listTabs()        { return this.request("GET", "/api/tabs"); }
   openTab(url)      { return this.request("POST", "/api/tabs", { url }); }
+  closeTab(id)      { return this.request("DELETE", `/api/tabs/${id}`); }
   navigate(id, url) { return this.request("POST", `/api/tabs/${id}/navigate`, { url }, { timeout: 90000 }); }
   getCookies(id)    { return this.request("GET", `/api/tabs/${id}/cookies`); }
   setCookie(id, c)  { return this.request("POST", `/api/tabs/${id}/cookies`, c); }

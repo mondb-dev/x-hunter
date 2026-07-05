@@ -45,6 +45,9 @@ class LinkedIn {
   // ── Session / tab ───────────────────────────────────────────────────────────
   async ensureTab() {
     this.tab = await this.c.ensureTab(/https:\/\/(www\.)?linkedin\.com/, FEED_URL);
+    // A freshly-opened tab may not have its session cookies readable yet; wait
+    // for it to settle so sessionOk() doesn't get a false negative.
+    await this.c.waitReady(this.tab, { tag: "linkedin", attempts: 15 }).catch(() => {});
     return this.tab;
   }
 
