@@ -15,7 +15,6 @@
 
 const fs   = require("fs");
 const path = require("path");
-const { connectBrowser, getXPage } = require("./cdp");
 try { require("dotenv").config({ path: path.join(__dirname, "..", ".env") }); } catch {}
 
 const ROOT        = path.resolve(__dirname, "..");
@@ -130,84 +129,22 @@ function classifySource(url) {
     console.log(`[prefetch] could not read directive: ${e.message} — navigating to home`);
   }
 
-  let browser;
-  try {
-    browser = await connectBrowser(5_000);
-  } catch (err) {
-    console.log(`[prefetch] Chrome not available (${err.message}) — skipping prefetch`);
-    writeSource("none", targetUrl);
-    process.exit(0);
-  }
-
-  try {
-    const page = await getXPage(browser);
-
-    console.log(`[prefetch] navigating to ${targetUrl}`);
-    try {
-      await page.goto(targetUrl, { waitUntil: "domcontentloaded", timeout: TIMEOUT });
-    } catch (gotoErr) {
-      // X.com SPA replaces the main frame during navigation — puppeteer loses the
-      // original frame reference and throws "detached Frame". The navigation still
-      // completes; ignore this specific error and continue.
-      if (!gotoErr.message.includes('detached Frame') && !gotoErr.message.includes('detached frame')) {
-        throw gotoErr;
-      }
-    }
-    await sleep(2_500);
-
-    let currentUrl = "";
-    try { currentUrl = page.url(); } catch {}
-
-    // Detect X search degradation (suspended account: feed works, search doesn't)
-    if (!isLoginRedirectUrl(currentUrl) && /x\.com\/search/.test(currentUrl)) {
-      try {
-        const bodyText = await page.evaluate(() => document.body?.innerText?.substring(0, 500) || "");
-        if (/Something went wrong|Try reloading/i.test(bodyText)) {
-          console.log("[prefetch] X search degraded (suspended account) — agent should use web_search");
-          // Navigate back to home feed (which still works) so the agent has live content
-          await page.goto(HOME_URL, { waitUntil: "domcontentloaded", timeout: TIMEOUT }).catch(() => {});
-          await sleep(2_500);
-          writeSource("x_search_degraded", currentUrl);
-          console.log(`[prefetch] done — source: x_search_degraded (browser on home feed)`);
-        } else {
-          writeSource("x", currentUrl);
-          console.log(`[prefetch] done — source: x at ${currentUrl}`);
-        }
-      } catch {
-        writeSource("x", currentUrl);
-        console.log(`[prefetch] done — source: x at ${currentUrl}`);
-      }
-    } else if (isLoginRedirectUrl(currentUrl)) {
-      console.log("[prefetch] X login redirect — switching to fallback source");
-
-      let fallbackUrl;
-      if (targetType === "deep_dive") {
-        fallbackUrl = toScholarlyUrl(targetUrl, readingUrlText);
-        console.log(`[prefetch] deep dive fallback (scholarly): ${fallbackUrl}`);
-      } else if (targetType === "curiosity") {
-        fallbackUrl = toRedditUrl(targetUrl, directiveText);
-        console.log(`[prefetch] curiosity fallback (reddit): ${fallbackUrl}`);
-      } else {
-        fallbackUrl = "https://www.newsguardtech.com/reports/";
-        console.log(`[prefetch] home fallback (newsguard): ${fallbackUrl}`);
-      }
-
-      await page.goto(fallbackUrl, { waitUntil: "domcontentloaded", timeout: TIMEOUT });
-      await sleep(2_500);
-      const source = classifySource(page.url());
-      writeSource(source, page.url());
-      console.log(`[prefetch] fallback ready — source: ${source} at ${page.url()}`);
-    } else {
-      const source = classifySource(currentUrl || targetUrl);
-      writeSource(source, currentUrl || targetUrl);
-      console.log(`[prefetch] done — source: ${source} at ${currentUrl || targetUrl}`);
-    }
-  } catch (err) {
-    console.log(`[prefetch] navigation error: ${err.message}`);
-    writeSource("none", targetUrl);
-  } finally {
-    browser.disconnect();
-  }
-
+  // Browser drive removed (CDP → retired). This script used to park the legacy
+  // CDP Chrome (:18801) on targetUrl, but nothing downstream reads that page:
+  // single_pass_browse builds its context from feed_digest (scraper loop) + notes,
+  // and posting/engagement run on HelmStack. The only consumed output is the
+  // source *label* in prefetch_source.txt, which feeds a hint into the browse
+  // prompt — and classifySource() derives that from the URL alone. Dropping the
+  // navigation eliminates the recurring "Network.enable timed out" stalls the
+  // browse cycle hit on the memory-bloated CDP Chrome.
+  //
+  // Note: the old X login-redirect / search-degradation probe measured the CDP
+  // Chrome's X session (the scraper's browser); it isn't reconstructable from
+  // HelmStack (a different browser), and feed freshness is now the scraper
+  // loop's concern. If X-degradation signalling is wanted again, add it where
+  // the scraper produces feed_digest, not here.
+  const source = classifySource(targetUrl);
+  writeSource(source, targetUrl);
+  console.log(`[prefetch] source: ${source} at ${targetUrl} (${targetType}; no browser drive — CDP retired)`);
   process.exit(0);
 })();
