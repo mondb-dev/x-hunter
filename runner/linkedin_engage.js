@@ -117,7 +117,7 @@ Return ONLY the comment text.`;
     dryRun: DRY_RUN,
   });
 
-  saveLedger(seen);
+  if (!DRY_RUN) saveLedger(seen); // dry-runs must not mark posts as engaged
   log(`done — ${result.likes} like(s), ${result.comments} comment(s)${DRY_RUN ? " (dry run)" : ""}`);
   process.exit(0);
 })().catch((err) => { log(`fatal: ${err.message}`); process.exit(0); });

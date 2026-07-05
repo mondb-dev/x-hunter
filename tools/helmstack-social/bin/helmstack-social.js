@@ -16,7 +16,7 @@
 
 const fs = require("fs");
 const { execFileSync } = require("child_process");
-const { HelmStackClient, LinkedIn, session } = require("../src");
+const { HelmStackClient, LinkedIn, X, session } = require("../src");
 
 function arg(flags, def) {
   const argv = process.argv;
@@ -111,7 +111,52 @@ async function main() {
     throw new Error(`unknown linkedin subcommand: ${sub}`);
   }
 
-  console.error("usage: helmstack-social <health|bootstrap|linkedin post|linkedin engage> [options]");
+  if (cmd === "x") {
+    const x = new X(client, { ownHandle: arg("--own-handle", "SebastianHunts") });
+    await x.ensureTab();
+    if (!(await x.sessionOk())) throw new Error("X session not present (no auth_token/ct0 cookie)");
+    const dryRun = has("--dry-run");
+
+    if (sub === "post") {
+      let text = arg("--text");
+      const file = arg("--file");
+      if (file && file !== true) text = fs.readFileSync(file, "utf-8").trim();
+      if (!text || text === true) throw new Error("x post requires --text or --file");
+      const res = await x.post(text, { dryRun });
+      console.log(JSON.stringify(res));
+      process.exit(res.posted || res.dryRun ? 0 : 1);
+    }
+
+    if (sub === "engage") {
+      const score = keywordScorer(arg("--keywords"));
+      const replyCmd = arg("--reply-command");
+      const seenFile = arg("--seen");
+      const seen = new Set(seenFile && seenFile !== true && fs.existsSync(seenFile)
+        ? JSON.parse(fs.readFileSync(seenFile, "utf-8")) : []);
+      const generateReply = replyCmd && replyCmd !== true
+        ? async (post) => {
+            try {
+              const out = execFileSync("/bin/sh", ["-c", replyCmd], { input: JSON.stringify(post), encoding: "utf-8" }).trim();
+              return out && out !== "SKIP" ? out : null;
+            } catch { return null; }
+          }
+        : null;
+      const r = await x.engage({
+        score, generateReply, seen,
+        maxLikes: Number(arg("--max-likes", 3)),
+        maxReplies: Number(arg("--max-replies", 1)),
+        minScore: Number(arg("--min-score", 1)),
+        dryRun,
+      });
+      if (seenFile && seenFile !== true) fs.writeFileSync(seenFile, JSON.stringify([...seen].slice(-500), null, 2));
+      console.log(JSON.stringify(r));
+      return;
+    }
+
+    throw new Error(`unknown x subcommand: ${sub}`);
+  }
+
+  console.error("usage: helmstack-social <health|bootstrap|linkedin post|linkedin engage|x post|x engage> [options]");
   process.exit(2);
 }
 

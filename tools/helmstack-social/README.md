@@ -1,8 +1,9 @@
 # helmstack-social
 
 Drive social platforms through a [HelmStack](https://github.com/mondb-dev/helmstack)
-browser session. Ships **LinkedIn** posting and feed engagement (like / comment)
-today, structured so other platforms slot in the same way.
+browser session. Ships **LinkedIn** (post + like/comment) and **X/Twitter**
+(browse + post/quote + like/reply), structured so other platforms slot in the
+same way.
 
 - **Zero runtime dependencies** — uses the Node 18+ global `fetch`.
 - **Proper separation** — the engine knows *how* to drive LinkedIn; it never
@@ -11,13 +12,18 @@ today, structured so other platforms slot in the same way.
 
 ## How it works (the non-obvious parts)
 
-- **Posting** goes through LinkedIn's own content-creation API via a same-origin
-  `fetch` from the logged-in page (CSRF token from the `JSESSIONID` cookie), not
-  the share composer — LinkedIn isolates the composer in cross-origin
-  anti-automation iframes that UI automation can't reliably drive.
-- **Engagement** is DOM automation in the top frame. LinkedIn ships hashed class
-  names and no `data-urn`, so posts are found by role/aria-label/text and stamped
-  with `data-hs-idx` during a scrape so later actions target them reliably.
+- **LinkedIn posting** goes through LinkedIn's own content-creation API via a
+  same-origin `fetch` from the logged-in page (CSRF token from the `JSESSIONID`
+  cookie), not the share composer — LinkedIn isolates the composer in
+  cross-origin anti-automation iframes that UI automation can't reliably drive.
+- **LinkedIn engagement** is DOM automation in the top frame. Hashed class names
+  and no `data-urn`, so posts are found by role/aria-label/text and stamped with
+  `data-hs-idx` during a scrape so later actions target them reliably.
+- **X** is all top-frame DOM automation with stable `data-testid` selectors, so
+  the composer/feed drive reliably via UI (no API needed): text is inserted with
+  the CDP insert-text endpoint and posts are confirmed by scanning the author's
+  profile for the new status URL. Each engine picks whatever mechanism is robust
+  for its platform behind the same class shape.
 
 ## Requirements
 
@@ -81,10 +87,18 @@ helmstack-social linkedin engage \
   --comment-command 'my-llm-comment-generator'
 ```
 
+```bash
+# X / Twitter — same shape as LinkedIn
+helmstack-social x post --text "…"                       # or --file draft.txt [--dry-run]
+helmstack-social x engage --keywords topics.txt \
+  --max-likes 3 --max-replies 1 --seen x_ledger.json \
+  --reply-command 'my-llm-reply-generator'
+```
+
 ## Library API
 
 ```js
-const { HelmStackClient, LinkedIn } = require("helmstack-social");
+const { HelmStackClient, LinkedIn, X } = require("helmstack-social");
 
 const client = new HelmStackClient();                 // env HELMSTACK_URL / _AUTH_TOKEN
 const li = new LinkedIn(client, { ownHandleHint: "sebastian hunter" });
@@ -117,6 +131,19 @@ await li.engage({
 | `like(idx, {dryRun})` | Like a scraped post by index. |
 | `comment(idx, text, {dryRun})` | Comment on a scraped post → `{ok, reason}`. |
 | `engage(hooks)` | Orchestrate scrape → score → like → comment. |
+
+### `X` methods
+
+| method | description |
+| --- | --- |
+| `ensureTab()` | Find/open an X tab; sets `this.tab`. |
+| `sessionOk()` | True if the `auth_token` + `ct0` cookies are present. |
+| `scrapeTimeline({limit})` | Browse the home timeline → `[{idx, handle, text, tweetId, url, liked}]`. |
+| `post(text, {dryRun})` | Publish a tweet → `{posted, url, reason}`. |
+| `quote(sourceUrl, text, {dryRun, skipIfMentions})` | Quote-tweet with commentary. |
+| `reply(tweetUrl, text, {dryRun})` | Reply to a tweet → `{ok, reason}`. |
+| `likeByIdx(idx, {dryRun})` | Like a scraped tweet by index. |
+| `engage(hooks)` | Orchestrate scrape → score → like → reply. |
 
 ## HelmStack endpoints used
 

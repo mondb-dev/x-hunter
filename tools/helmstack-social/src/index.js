@@ -12,6 +12,14 @@
 
 const { HelmStackClient } = require("./client");
 const { LinkedIn, FEED_URL } = require("./linkedin");
+const { X, X_HOME_URL } = require("./x");
 const session = require("./session");
 
-module.exports = { HelmStackClient, LinkedIn, session, LINKEDIN_FEED_URL: FEED_URL };
+module.exports = {
+  HelmStackClient,
+  LinkedIn,
+  X,
+  session,
+  LINKEDIN_FEED_URL: FEED_URL,
+  X_HOME_URL,
+};
