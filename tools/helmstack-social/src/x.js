@@ -611,21 +611,10 @@ class X {
     return this._scrapeArticles(limit);
   }
 
-  /**
-   * The conversation visible on a tweet permalink, in DOM order: ancestor
-   * tweets first, then the focused tweet, then replies below. Unlike
-   * scrapeThreadReplies() nothing is dropped — callers that need "what came
-   * before this tweet" (e.g. mention-reply context) slice it themselves.
-   */
-  async scrapeConversation(tweetUrl, { limit = 6 } = {}) {
-    if (!(await this._gotoChecked(tweetUrl))) return [];
-    await sleep(1500);
-    return this._scrapeArticles(limit);
-  }
-
   /** Top replies under a tweet permalink (drops the root tweet). */
   async scrapeThreadReplies(tweetUrl, { limit = 10 } = {}) {
-    if (!(await this._gotoChecked(tweetUrl))) return [];
+    await this.c.navigate(this.tab, tweetUrl);
+    await this.c.waitReady(this.tab, { tag: "x", attempts: 10 }).catch(() => {});
     await sleep(1500);
     const all = await this._scrapeArticles(limit + 3);
     return all.slice(1); // caller filters/sorts/slices
@@ -633,7 +622,8 @@ class X {
 
   /** Mentions from the notifications page. */
   async scrapeMentions({ limit = 20 } = {}) {
-    await this._gotoChecked("https://x.com/notifications/mentions");
+    await this.c.navigate(this.tab, "https://x.com/notifications/mentions");
+    await this.c.waitReady(this.tab, { tag: "x", attempts: 10 }).catch(() => {});
     await sleep(2000);
     const url = await this.c.tabUrl(this.tab).catch(() => "");
     if (url && !/notifications/.test(url)) return [];
