@@ -1,8 +1,8 @@
 {
   "schema_version": "1.0",
-  "generated_at": "2026-07-05T13:44:27.946Z",
+  "generated_at": "2026-07-05T17:15:07.578Z",
   "method": "mechanical_registry_v1",
-  "profiled_at": "2026-07-05T13:44:32.934Z",
+  "profiled_at": "2026-07-05T17:15:13.945Z",
   "sources": [
     {
       "domain": "ojp.gov",
@@ -389,9 +389,9 @@
       "entity": "Theguardian",
       "kind": "news",
       "first_seen_at": "2026-03-27T23:17:00Z",
-      "last_seen_at": "2026-07-04T17:09:17.513Z",
+      "last_seen_at": "2026-07-05T16:15:56.834Z",
       "discovery": {
-        "distinct_urls": 236,
+        "distinct_urls": 240,
         "example_urls": [
           "https://www.theguardian.com/us-news/2026/jun/23/trump-immigration-courthouse-arrest-policy",
           "https://www.theguardian.com/us-news/2026/jun/28/ice-minnesota-defending-democracy",
@@ -400,14 +400,15 @@
           "https://www.theguardian.com/global-development/2026/jun/26/woman-sadia-moalim-ali-three-year-jail-sentence-somalia-online-comments-governement"
         ],
         "origin_counts": {
-          "ontology_evidence": 25,
-          "reading_queue": 218,
-          "journals": 53
+          "ontology_evidence": 26,
+          "reading_queue": 221,
+          "journals": 55
         },
         "distinct_referring_accounts": 0,
         "sample_referring_accounts": [],
         "distinct_axes": [
           "axis_authoritarian_self_determination_v1",
+          "axis_economic_indicators_reliability_v1",
           "axis_geopolitical_rhetoric_v1",
           "axis_global_economic_stability_v1",
           "axis_global_power_realignments_v1",
@@ -442,8 +443,8 @@
         "breadth": {
           "score": 0.8799999999999999,
           "basis": [
-            "distinct_urls:236",
-            "distinct_axes:9",
+            "distinct_urls:240",
+            "distinct_axes:10",
             "origin_types:3"
           ]
         },
@@ -481,8 +482,8 @@
           "basis": [
             "newsroom_domain_pattern",
             "article_path_seen",
-            "distinct_urls:236",
-            "distinct_axes:9",
+            "distinct_urls:240",
+            "distinct_axes:10",
             "origin_types:3",
             "referring_accounts:0",
             "origin_types:3",
@@ -527,7 +528,7 @@
       "entity": "Aljazeera",
       "kind": "news",
       "first_seen_at": "2026-06-22T02:45:00Z",
-      "last_seen_at": "2026-07-05T13:15:34.013Z",
+      "last_seen_at": "2026-07-05T14:13:00.713Z",
       "discovery": {
         "distinct_urls": 162,
         "example_urls": [
@@ -662,6 +663,140 @@
       }
     },
     {
+      "domain": "nytimes.com",
+      "entity": "Nytimes",
+      "kind": "news",
+      "first_seen_at": "2026-06-22T00:15:00Z",
+      "last_seen_at": "2026-07-05T16:15:56.834Z",
+      "discovery": {
+        "distinct_urls": 154,
+        "example_urls": [
+          "https://www.nytimes.com/2026/06/19/world/canada/frank-stronach-trial-guilty-sex-charges.html",
+          "https://www.nytimes.com/2026/06/27/world/americas/mexican-officials-us-informants.html",
+          "https://www.nytimes.com/2026/06/28/world/americas/venezuela-quake-relief-rodriguez.html",
+          "https://www.nytimes.com/2026/07/05/world/middleeast/iran-grand-mosalla-khamenei.html",
+          "https://www.nytimes.com/2026/06/26/world/asia/world-cup-myanmar-junta.html"
+        ],
+        "origin_counts": {
+          "ontology_evidence": 7,
+          "reading_queue": 153,
+          "journals": 12
+        },
+        "distinct_referring_accounts": 0,
+        "sample_referring_accounts": [],
+        "distinct_axes": [
+          "axis_authoritarian_self_determination_v1",
+          "axis_geopolitical_rhetoric_v1",
+          "axis_global_power_realignments_v1",
+          "axis_human_rights_exploitation_v1",
+          "axis_power_accountability"
+        ]
+      },
+      "claims": {
+        "total": 0,
+        "supported": 0,
+        "refuted": 0,
+        "contested": 0,
+        "unverified": 0,
+        "resolved_count": 0
+      },
+      "structural_features": {
+        "has_search_paths": false,
+        "has_article_paths": true,
+        "has_doi_paths": false
+      },
+      "ratings": {
+        "provenance": {
+          "score": 0.75,
+          "basis": [
+            "newsroom_domain_pattern",
+            "article_path_seen"
+          ]
+        },
+        "breadth": {
+          "score": 0.8216666666666665,
+          "basis": [
+            "distinct_urls:154",
+            "distinct_axes:5",
+            "origin_types:3"
+          ]
+        },
+        "corroboration": {
+          "score": 0.26249999999999996,
+          "basis": [
+            "referring_accounts:0",
+            "origin_types:3"
+          ]
+        },
+        "track_record": {
+          "score": null,
+          "basis": [
+            "no_resolved_claims_observed"
+          ]
+        },
+        "profile": {
+          "score": 0,
+          "confidence": 0.55,
+          "basis": [
+            "meta_author:false",
+            "published_time:false",
+            "canonical:false",
+            "about:false",
+            "contact:false",
+            "corrections:false",
+            "outbound_links:0",
+            "opinion_marker:false"
+          ]
+        },
+        "overall": {
+          "score": 0.7199739583333333,
+          "confidence": 0.6461749999999999,
+          "method": "mechanical_v1",
+          "basis": [
+            "newsroom_domain_pattern",
+            "article_path_seen",
+            "distinct_urls:154",
+            "distinct_axes:5",
+            "origin_types:3",
+            "referring_accounts:0",
+            "origin_types:3",
+            "track_record_unavailable"
+          ]
+        }
+      },
+      "profile": {
+        "fetched_at": "2026-07-03T16:30:20.377Z",
+        "homepage_url": "https://nytimes.com/",
+        "example_url": "https://www.nytimes.com/2026/06/19/world/canada/frank-stronach-trial-guilty-sex-charges.html",
+        "homepage_status": 200,
+        "example_status": 403,
+        "homepage_final_url": "https://www.nytimes.com/",
+        "example_final_url": "https://www.nytimes.com/2026/06/19/world/canada/frank-stronach-trial-guilty-sex-charges.html",
+        "homepage_content_type": "text/html; charset=utf-8",
+        "example_content_type": "text/html;charset=utf-8",
+        "homepage": {
+          "has_meta_author": false,
+          "has_published_time": false,
+          "has_canonical": true,
+          "has_about_link": false,
+          "has_contact_link": false,
+          "has_corrections_link": false,
+          "outbound_links_count": 0,
+          "opinion_marker": true
+        },
+        "example": {
+          "has_meta_author": false,
+          "has_published_time": false,
+          "has_canonical": false,
+          "has_about_link": false,
+          "has_contact_link": false,
+          "has_corrections_link": false,
+          "outbound_links_count": 0,
+          "opinion_marker": false
+        }
+      }
+    },
+    {
       "domain": "census.gov",
       "entity": "Census",
       "kind": "official",
@@ -780,139 +915,6 @@
           "has_contact_link": true,
           "has_corrections_link": false,
           "outbound_links_count": 9,
-          "opinion_marker": false
-        }
-      }
-    },
-    {
-      "domain": "nytimes.com",
-      "entity": "Nytimes",
-      "kind": "news",
-      "first_seen_at": "2026-06-22T00:15:00Z",
-      "last_seen_at": "2026-07-01T06:14:34.244Z",
-      "discovery": {
-        "distinct_urls": 153,
-        "example_urls": [
-          "https://www.nytimes.com/2026/06/19/world/canada/frank-stronach-trial-guilty-sex-charges.html",
-          "https://www.nytimes.com/2026/06/27/world/americas/mexican-officials-us-informants.html",
-          "https://www.nytimes.com/2026/06/28/world/americas/venezuela-quake-relief-rodriguez.html",
-          "https://www.nytimes.com/2026/06/26/world/asia/world-cup-myanmar-junta.html",
-          "https://www.nytimes.com/2026/06/28/world/europe/iran-us-strait-of-hormuz-peace-talks.html"
-        ],
-        "origin_counts": {
-          "ontology_evidence": 6,
-          "reading_queue": 152,
-          "journals": 10
-        },
-        "distinct_referring_accounts": 0,
-        "sample_referring_accounts": [],
-        "distinct_axes": [
-          "axis_authoritarian_self_determination_v1",
-          "axis_global_power_realignments_v1",
-          "axis_human_rights_exploitation_v1",
-          "axis_power_accountability"
-        ]
-      },
-      "claims": {
-        "total": 0,
-        "supported": 0,
-        "refuted": 0,
-        "contested": 0,
-        "unverified": 0,
-        "resolved_count": 0
-      },
-      "structural_features": {
-        "has_search_paths": false,
-        "has_article_paths": true,
-        "has_doi_paths": false
-      },
-      "ratings": {
-        "provenance": {
-          "score": 0.75,
-          "basis": [
-            "newsroom_domain_pattern",
-            "article_path_seen"
-          ]
-        },
-        "breadth": {
-          "score": 0.7633333333333332,
-          "basis": [
-            "distinct_urls:153",
-            "distinct_axes:4",
-            "origin_types:3"
-          ]
-        },
-        "corroboration": {
-          "score": 0.26249999999999996,
-          "basis": [
-            "referring_accounts:0",
-            "origin_types:3"
-          ]
-        },
-        "track_record": {
-          "score": null,
-          "basis": [
-            "no_resolved_claims_observed"
-          ]
-        },
-        "profile": {
-          "score": 0,
-          "confidence": 0.55,
-          "basis": [
-            "meta_author:false",
-            "published_time:false",
-            "canonical:false",
-            "about:false",
-            "contact:false",
-            "corrections:false",
-            "outbound_links:0",
-            "opinion_marker:false"
-          ]
-        },
-        "overall": {
-          "score": 0.7072135416666666,
-          "confidence": 0.633925,
-          "method": "mechanical_v1",
-          "basis": [
-            "newsroom_domain_pattern",
-            "article_path_seen",
-            "distinct_urls:153",
-            "distinct_axes:4",
-            "origin_types:3",
-            "referring_accounts:0",
-            "origin_types:3",
-            "track_record_unavailable"
-          ]
-        }
-      },
-      "profile": {
-        "fetched_at": "2026-07-03T16:30:20.377Z",
-        "homepage_url": "https://nytimes.com/",
-        "example_url": "https://www.nytimes.com/2026/06/19/world/canada/frank-stronach-trial-guilty-sex-charges.html",
-        "homepage_status": 200,
-        "example_status": 403,
-        "homepage_final_url": "https://www.nytimes.com/",
-        "example_final_url": "https://www.nytimes.com/2026/06/19/world/canada/frank-stronach-trial-guilty-sex-charges.html",
-        "homepage_content_type": "text/html; charset=utf-8",
-        "example_content_type": "text/html;charset=utf-8",
-        "homepage": {
-          "has_meta_author": false,
-          "has_published_time": false,
-          "has_canonical": true,
-          "has_about_link": false,
-          "has_contact_link": false,
-          "has_corrections_link": false,
-          "outbound_links_count": 0,
-          "opinion_marker": true
-        },
-        "example": {
-          "has_meta_author": false,
-          "has_published_time": false,
-          "has_canonical": false,
-          "has_about_link": false,
-          "has_contact_link": false,
-          "has_corrections_link": false,
-          "outbound_links_count": 0,
           "opinion_marker": false
         }
       }
@@ -1166,7 +1168,7 @@
       "first_seen_at": "2026-06-26T07:05:00Z",
       "last_seen_at": "2026-07-01T06:14:34.242Z",
       "discovery": {
-        "distinct_urls": 115,
+        "distinct_urls": 117,
         "example_urls": [
           "https://www.bbc.co.uk/news/articles/cn8qxz6qypyo",
           "https://www.bbc.co.uk/news/articles/cn075j04pnyo?at_medium=RSS&amp;at_campaign=rss",
@@ -1176,7 +1178,7 @@
         ],
         "origin_counts": {
           "ontology_evidence": 4,
-          "reading_queue": 118,
+          "reading_queue": 120,
           "journals": 7
         },
         "distinct_referring_accounts": 0,
@@ -1210,7 +1212,7 @@
         "breadth": {
           "score": 0.7049999999999998,
           "basis": [
-            "distinct_urls:115",
+            "distinct_urls:117",
             "distinct_axes:3",
             "origin_types:3"
           ]
@@ -1248,7 +1250,7 @@
           "method": "mechanical_v1",
           "basis": [
             "newsroom_domain_pattern",
-            "distinct_urls:115",
+            "distinct_urls:117",
             "distinct_axes:3",
             "origin_types:3",
             "referring_accounts:0",
@@ -2230,9 +2232,9 @@
       "entity": "Inquirer",
       "kind": "unknown",
       "first_seen_at": "2026-05-09T10:15:15.053Z",
-      "last_seen_at": "2026-07-05T08:04:17.565Z",
+      "last_seen_at": "2026-07-05T14:45:45.543Z",
       "discovery": {
-        "distinct_urls": 80,
+        "distinct_urls": 82,
         "example_urls": [
           "https://www.inquirer.net/capiz-broadcaster-shooting-probe-widens-as-cops-form-task-force",
           "https://newsinfo.inquirer.net/2251519/chr-carries-out-motu-proprio-probe-into-tacloban-cavite-school-incidents",
@@ -2242,7 +2244,7 @@
         ],
         "origin_counts": {
           "ontology_evidence": 45,
-          "journals": 140,
+          "journals": 144,
           "articles": 1
         },
         "distinct_referring_accounts": 0,
@@ -2280,7 +2282,7 @@
         "breadth": {
           "score": 0.8799999999999999,
           "basis": [
-            "distinct_urls:80",
+            "distinct_urls:82",
             "distinct_axes:7",
             "origin_types:3"
           ]
@@ -2318,7 +2320,7 @@
           "method": "mechanical_v1",
           "basis": [
             "unknown_domain_pattern",
-            "distinct_urls:80",
+            "distinct_urls:82",
             "distinct_axes:7",
             "origin_types:3",
             "referring_accounts:0",
@@ -2364,7 +2366,7 @@
       "entity": "Rappler",
       "kind": "unknown",
       "first_seen_at": "2026-06-22T04:04:30.428Z",
-      "last_seen_at": "2026-07-05T13:15:34.013Z",
+      "last_seen_at": "2026-07-05T14:13:00.713Z",
       "discovery": {
         "distinct_urls": 56,
         "example_urls": [
@@ -3165,9 +3167,9 @@
       "entity": "T Co",
       "kind": "unknown",
       "first_seen_at": "2016-05-05T18:57:30.000Z",
-      "last_seen_at": "2026-07-05T11:30:00.000Z",
+      "last_seen_at": "2026-07-05T13:40:57.000Z",
       "discovery": {
-        "distinct_urls": 6596,
+        "distinct_urls": 6598,
         "example_urls": [
           "https://t.co/pJSE124ec4",
           "https://t.co/Soz8BXPWaa",
@@ -3176,7 +3178,7 @@
           "https://t.co/cYaqYDRp08"
         ],
         "origin_counts": {
-          "feed_buffer": 3873,
+          "feed_buffer": 3876,
           "feed_buffer_reply": 4287
         },
         "distinct_referring_accounts": 2118,
@@ -3218,7 +3220,7 @@
         "breadth": {
           "score": 0.47,
           "basis": [
-            "distinct_urls:6596",
+            "distinct_urls:6598",
             "distinct_axes:0",
             "origin_types:2"
           ]
@@ -3257,7 +3259,7 @@
           "basis": [
             "unknown_domain_pattern",
             "doi_or_identifier_path_seen",
-            "distinct_urls:6596",
+            "distinct_urls:6598",
             "distinct_axes:0",
             "origin_types:2",
             "referring_accounts:2118",
@@ -8178,6 +8180,133 @@
       }
     },
     {
+      "domain": "bet88.ph",
+      "entity": "Bet88 Ph",
+      "kind": "unknown",
+      "first_seen_at": "2026-07-03T16:00:02.000Z",
+      "last_seen_at": "2026-07-05T14:52:30.910Z",
+      "discovery": {
+        "distinct_urls": 9,
+        "example_urls": [
+          "https://bet88.ph/en/?type=registration&modal=user&ref=xa027&twclid=27gurqyk8ekpo92oqcm3aeuing",
+          "https://bet88.ph/en/?type=registration&modal=user&ref=xa023&twclid=25wrsnnpnc7378nutxmyo1v6kj",
+          "https://bet88.ph/en/?type=registration&modal=user&ref=xa021&twclid=2arxttwqhjqdg7ax5tp1p5kvqy",
+          "https://bet88.ph/en/?type=registration&modal=user&ref=xa025&twclid=23a16hu9me4t6fci2bfjqkx6a8",
+          "https://bet88.ph/en/?type=registration&modal=user&ref=xa024&twclid=2463n370x0ryr7dm2eovirlg7t"
+        ],
+        "origin_counts": {
+          "feed_buffer_reply": 3,
+          "feed_buffer": 6
+        },
+        "distinct_referring_accounts": 1,
+        "sample_referring_accounts": [
+          "bet88ph"
+        ],
+        "distinct_axes": []
+      },
+      "claims": {
+        "total": 0,
+        "supported": 0,
+        "refuted": 0,
+        "contested": 0,
+        "unverified": 0,
+        "resolved_count": 0
+      },
+      "structural_features": {
+        "has_search_paths": false,
+        "has_article_paths": false,
+        "has_doi_paths": false
+      },
+      "ratings": {
+        "provenance": {
+          "score": 0.45,
+          "basis": [
+            "unknown_domain_pattern"
+          ]
+        },
+        "breadth": {
+          "score": 0.38249999999999995,
+          "basis": [
+            "distinct_urls:9",
+            "distinct_axes:0",
+            "origin_types:2"
+          ]
+        },
+        "corroboration": {
+          "score": 0.2833333333333333,
+          "basis": [
+            "referring_accounts:1",
+            "origin_types:2"
+          ]
+        },
+        "track_record": {
+          "score": null,
+          "basis": [
+            "no_resolved_claims_observed"
+          ]
+        },
+        "profile": {
+          "score": 0,
+          "confidence": 0.55,
+          "basis": [
+            "meta_author:false",
+            "published_time:false",
+            "canonical:false",
+            "about:false",
+            "contact:false",
+            "corrections:false",
+            "outbound_links:0",
+            "opinion_marker:false"
+          ]
+        },
+        "overall": {
+          "score": 0.419609375,
+          "confidence": 0.330825,
+          "method": "mechanical_v1",
+          "basis": [
+            "unknown_domain_pattern",
+            "distinct_urls:9",
+            "distinct_axes:0",
+            "origin_types:2",
+            "referring_accounts:1",
+            "origin_types:2",
+            "track_record_unavailable"
+          ]
+        }
+      },
+      "profile": {
+        "fetched_at": "2026-07-04T11:34:33.415Z",
+        "homepage_url": "https://bet88.ph/",
+        "example_url": "https://bet88.ph/en/?type=registration&modal=user&ref=xa027&twclid=27gurqyk8ekpo92oqcm3aeuing",
+        "homepage_status": 200,
+        "example_status": 200,
+        "homepage_final_url": "https://bet88.ph/",
+        "example_final_url": "https://bet88.ph/en/?type=registration&modal=user&ref=xa027&twclid=27gurqyk8ekpo92oqcm3aeuing",
+        "homepage_content_type": "text/html",
+        "example_content_type": "text/html",
+        "homepage": {
+          "has_meta_author": false,
+          "has_published_time": false,
+          "has_canonical": false,
+          "has_about_link": false,
+          "has_contact_link": false,
+          "has_corrections_link": false,
+          "outbound_links_count": 0,
+          "opinion_marker": false
+        },
+        "example": {
+          "has_meta_author": false,
+          "has_published_time": false,
+          "has_canonical": false,
+          "has_about_link": false,
+          "has_contact_link": false,
+          "has_corrections_link": false,
+          "outbound_links_count": 0,
+          "opinion_marker": false
+        }
+      }
+    },
+    {
       "domain": "byteplus.com",
       "entity": "Byteplus",
       "kind": "unknown",
@@ -10825,133 +10954,6 @@
           "has_contact_link": false,
           "has_corrections_link": false,
           "outbound_links_count": 9,
-          "opinion_marker": false
-        }
-      }
-    },
-    {
-      "domain": "bet88.ph",
-      "entity": "Bet88 Ph",
-      "kind": "unknown",
-      "first_seen_at": "2026-07-03T16:00:02.000Z",
-      "last_seen_at": "2026-07-05T12:32:27.795Z",
-      "discovery": {
-        "distinct_urls": 8,
-        "example_urls": [
-          "https://bet88.ph/en/?type=registration&modal=user&ref=xa027&twclid=27gurqyk8ekpo92oqcm3aeuing",
-          "https://bet88.ph/en/?type=registration&modal=user&ref=xa023&twclid=25wrsnnpnc7378nutxmyo1v6kj",
-          "https://bet88.ph/en/?type=registration&modal=user&ref=xa021&twclid=2arxttwqhjqdg7ax5tp1p5kvqy",
-          "https://bet88.ph/en/?type=registration&modal=user&ref=xa025&twclid=23a16hu9me4t6fci2bfjqkx6a8",
-          "https://bet88.ph/en/?type=registration&modal=user&ref=xa024&twclid=2463n370x0ryr7dm2eovirlg7t"
-        ],
-        "origin_counts": {
-          "feed_buffer_reply": 3,
-          "feed_buffer": 5
-        },
-        "distinct_referring_accounts": 1,
-        "sample_referring_accounts": [
-          "bet88ph"
-        ],
-        "distinct_axes": []
-      },
-      "claims": {
-        "total": 0,
-        "supported": 0,
-        "refuted": 0,
-        "contested": 0,
-        "unverified": 0,
-        "resolved_count": 0
-      },
-      "structural_features": {
-        "has_search_paths": false,
-        "has_article_paths": false,
-        "has_doi_paths": false
-      },
-      "ratings": {
-        "provenance": {
-          "score": 0.45,
-          "basis": [
-            "unknown_domain_pattern"
-          ]
-        },
-        "breadth": {
-          "score": 0.3533333333333333,
-          "basis": [
-            "distinct_urls:8",
-            "distinct_axes:0",
-            "origin_types:2"
-          ]
-        },
-        "corroboration": {
-          "score": 0.2833333333333333,
-          "basis": [
-            "referring_accounts:1",
-            "origin_types:2"
-          ]
-        },
-        "track_record": {
-          "score": null,
-          "basis": [
-            "no_resolved_claims_observed"
-          ]
-        },
-        "profile": {
-          "score": 0,
-          "confidence": 0.55,
-          "basis": [
-            "meta_author:false",
-            "published_time:false",
-            "canonical:false",
-            "about:false",
-            "contact:false",
-            "corrections:false",
-            "outbound_links:0",
-            "opinion_marker:false"
-          ]
-        },
-        "overall": {
-          "score": 0.41322916666666665,
-          "confidence": 0.30219999999999997,
-          "method": "mechanical_v1",
-          "basis": [
-            "unknown_domain_pattern",
-            "distinct_urls:8",
-            "distinct_axes:0",
-            "origin_types:2",
-            "referring_accounts:1",
-            "origin_types:2",
-            "track_record_unavailable"
-          ]
-        }
-      },
-      "profile": {
-        "fetched_at": "2026-07-04T11:34:33.415Z",
-        "homepage_url": "https://bet88.ph/",
-        "example_url": "https://bet88.ph/en/?type=registration&modal=user&ref=xa027&twclid=27gurqyk8ekpo92oqcm3aeuing",
-        "homepage_status": 200,
-        "example_status": 200,
-        "homepage_final_url": "https://bet88.ph/",
-        "example_final_url": "https://bet88.ph/en/?type=registration&modal=user&ref=xa027&twclid=27gurqyk8ekpo92oqcm3aeuing",
-        "homepage_content_type": "text/html",
-        "example_content_type": "text/html",
-        "homepage": {
-          "has_meta_author": false,
-          "has_published_time": false,
-          "has_canonical": false,
-          "has_about_link": false,
-          "has_contact_link": false,
-          "has_corrections_link": false,
-          "outbound_links_count": 0,
-          "opinion_marker": false
-        },
-        "example": {
-          "has_meta_author": false,
-          "has_published_time": false,
-          "has_canonical": false,
-          "has_about_link": false,
-          "has_contact_link": false,
-          "has_corrections_link": false,
-          "outbound_links_count": 0,
           "opinion_marker": false
         }
       }
@@ -17104,7 +17106,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-07-02T14:31:52.323Z",
+        "fetched_at": "2026-07-05T14:44:31.986Z",
         "homepage_url": "https://pixelsuite.ai/",
         "example_url": "https://www.pixelsuite.ai/?twclid=21t2mc2zkr7fbld6fej146r5rz",
         "homepage_status": 200,
@@ -17229,7 +17231,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-07-02T14:31:55.871Z",
+        "fetched_at": "2026-07-05T14:44:34.454Z",
         "homepage_url": "https://theograce.com/",
         "example_url": "https://www.theograce.com/products/terry-diamond-heart-necklace-with-engraved-names-in-gold-plating?utm_term=Guitar&utm_id=41178982&utm_medium=cpc&utm_campaign=US_ALL_twitter_cpc_Display_MD26_M4W_Still&utm_source=twitter&utm_content=MD26&twclid=2dnpihgths0rs7qj2dk5rkgxbo",
         "homepage_status": 200,
@@ -17730,7 +17732,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-07-02T14:31:56.585Z",
+        "fetched_at": "2026-07-05T14:44:35.144Z",
         "homepage_url": "https://openinfer.io/",
         "example_url": "https://openinfer.io/news/2026-06-02-nvidia-dynamo-proved-inference-needs-a-control-plane/?twclid=27dzvvpluhv8xln5kqrwwhmmra",
         "homepage_status": 200,
@@ -17856,13 +17858,13 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-07-02T14:32:00.550Z",
+        "fetched_at": "2026-07-05T14:44:37.416Z",
         "homepage_url": "https://zite.com/",
         "example_url": "https://try.zite.com/ad-integrations-1?twclid=22vk5745ty6qkvlrboi0g1qhow",
         "homepage_status": 200,
         "example_status": 200,
         "homepage_final_url": "https://www.zite.com/",
-        "example_final_url": "https://www.zite.com/?utm_source=twitter&utm_medium=cpc&utm_campaign=xcred&utm_term=integrations&dub_id=MTWBM8LhP2Pz6ZGe&twclid=22vk5745ty6qkvlrboi0g1qhow",
+        "example_final_url": "https://www.zite.com/?utm_source=twitter&utm_medium=cpc&utm_campaign=xcred&utm_term=integrations&dub_id=comwhRU2Kom6TvZv&twclid=22vk5745ty6qkvlrboi0g1qhow",
         "homepage_content_type": "text/html; charset=utf-8",
         "example_content_type": "text/html; charset=utf-8",
         "homepage": {
@@ -22065,20 +22067,6 @@
             "no_resolved_claims_observed"
           ]
         },
-        "overall": {
-          "score": 0.37494791666666666,
-          "confidence": 0.13045,
-          "method": "mechanical_v1",
-          "basis": [
-            "unknown_domain_pattern",
-            "distinct_urls:2",
-            "distinct_axes:0",
-            "origin_types:2",
-            "referring_accounts:1",
-            "origin_types:2",
-            "track_record_unavailable"
-          ]
-        },
         "profile": {
           "score": 0.38,
           "confidence": 0.65,
@@ -22091,6 +22079,20 @@
             "corrections:false",
             "outbound_links:2",
             "opinion_marker:false"
+          ]
+        },
+        "overall": {
+          "score": 0.37494791666666666,
+          "confidence": 0.13045,
+          "method": "mechanical_v1",
+          "basis": [
+            "unknown_domain_pattern",
+            "distinct_urls:2",
+            "distinct_axes:0",
+            "origin_types:2",
+            "referring_accounts:1",
+            "origin_types:2",
+            "track_record_unavailable"
           ]
         }
       },
@@ -24442,16 +24444,16 @@
           ]
         },
         "profile": {
-          "score": 0.48,
-          "confidence": 0.65,
+          "score": 0,
+          "confidence": 0.55,
           "basis": [
             "meta_author:false",
             "published_time:false",
-            "canonical:true",
-            "about:true",
-            "contact:true",
+            "canonical:false",
+            "about:false",
+            "contact:false",
             "corrections:false",
-            "outbound_links:13",
+            "outbound_links:0",
             "opinion_marker:false"
           ]
         },
@@ -24471,33 +24473,33 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-30T18:07:13.316Z",
+        "fetched_at": "2026-07-05T15:14:30.851Z",
         "homepage_url": "https://icc-cpi.int/",
         "example_url": "https://icc-cpi.int/news/icc-concludes-confirmation-charges-hearing-el-hishri-case",
-        "homepage_status": 200,
-        "example_status": 200,
+        "homepage_status": 403,
+        "example_status": 403,
         "homepage_final_url": "https://www.icc-cpi.int/",
         "example_final_url": "https://www.icc-cpi.int/news/icc-concludes-confirmation-charges-hearing-el-hishri-case",
         "homepage_content_type": "text/html; charset=UTF-8",
         "example_content_type": "text/html; charset=UTF-8",
         "homepage": {
           "has_meta_author": false,
-          "has_published_time": true,
-          "has_canonical": true,
-          "has_about_link": true,
-          "has_contact_link": true,
+          "has_published_time": false,
+          "has_canonical": false,
+          "has_about_link": false,
+          "has_contact_link": false,
           "has_corrections_link": false,
-          "outbound_links_count": 12,
+          "outbound_links_count": 0,
           "opinion_marker": false
         },
         "example": {
           "has_meta_author": false,
           "has_published_time": false,
-          "has_canonical": true,
-          "has_about_link": true,
-          "has_contact_link": true,
+          "has_canonical": false,
+          "has_about_link": false,
+          "has_contact_link": false,
           "has_corrections_link": false,
-          "outbound_links_count": 13,
+          "outbound_links_count": 0,
           "opinion_marker": false
         }
       }
@@ -24595,7 +24597,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-30T18:07:13.655Z",
+        "fetched_at": "2026-07-05T15:14:31.109Z",
         "homepage_url": "https://abs-cbn.com/",
         "example_url": "https://news.abs-cbn.com/news/2026/06/09/nbi-dismisses-kickback-claims-as-hearsay",
         "homepage_status": 403,
@@ -24720,7 +24722,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-30T14:37:12.197Z",
+        "fetched_at": "2026-07-05T15:14:31.735Z",
         "homepage_url": "https://co.jp/",
         "example_url": "https://audition-en.anycolor.co.jp/?twclid=2bmm2ufti869142c85xr0ucr6a",
         "homepage_status": null,
@@ -24844,7 +24846,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-07-02T06:08:01.853Z",
+        "fetched_at": "2026-07-05T15:14:32.521Z",
         "homepage_url": "https://abscbn.news/",
         "example_url": "https://abscbn.news/4cXfLnd",
         "homepage_status": 403,
@@ -24968,7 +24970,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-29T13:36:45.862Z",
+        "fetched_at": "2026-07-05T15:44:31.766Z",
         "homepage_url": "https://gmanetwork.com/",
         "example_url": "https://gmanetwork.com/news/topstories/nation/987975/pnp-on-alert-as-senate-may-convene-as-impeachment-court",
         "homepage_status": 200,
@@ -25092,7 +25094,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-29T18:06:46.107Z",
+        "fetched_at": "2026-07-05T15:44:33.581Z",
         "homepage_url": "https://thedispatch.com/",
         "example_url": "https://thedispatch.com/article/slavery-christianity-judaism/?twclid=224n5l3gu5l6wy53cctpntxjmr",
         "homepage_status": 200,
@@ -25216,7 +25218,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-07-02T00:07:54.972Z",
+        "fetched_at": "2026-07-05T15:44:34.498Z",
         "homepage_url": "https://scienceandculture.com/",
         "example_url": "https://scienceandculture.com/2026/04/cosmic-orphans-no-more-stephen-meyer-on-the-meaning-of-the-artemis-ii-mission/?twclid=2rnhdm9vyiuko1egq7pyr6uby",
         "homepage_status": 200,
@@ -25340,7 +25342,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-07-02T00:38:20.927Z",
+        "fetched_at": "2026-07-05T15:44:37.132Z",
         "homepage_url": "https://19fortyfive.com/",
         "example_url": "https://www.19fortyfive.com/2026/04/we-touched-the-super-guppy-nasas-whale-shaped-cargo-plane-has-a-25-foot-wide-internal-diameter-swallowed-apollo-rocket-stages-whole-and-only-one-still-flies/?twclid=23xrrcgqxanqbvkiqbsyzs1ox8",
         "homepage_status": 200,
@@ -25464,7 +25466,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-07-02T00:38:21.106Z",
+        "fetched_at": "2026-07-05T16:14:31.304Z",
         "homepage_url": "https://usatoday.com/",
         "example_url": "https://www.usatoday.com/story/sponsor-story/collegium-pharmaceutical/2026/05/05/paris-hilton-on-adhd-advocacy-and-support-in-the-workplace/89244166007/?twclid=28p40ybg70zs0nzujyc1b1b5mt",
         "homepage_status": 200,
@@ -25588,7 +25590,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-07-02T00:38:21.464Z",
+        "fetched_at": "2026-07-05T16:14:31.553Z",
         "homepage_url": "https://axios.com/",
         "example_url": "https://www.axios.com/2026/04/21/axios-event-future-of-health-summit-2026?twclid=26ijftyq8roj3woqxoi4hprufc",
         "homepage_status": 403,
@@ -25712,7 +25714,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-07-02T09:08:01.114Z",
+        "fetched_at": "2026-07-05T16:14:35.255Z",
         "homepage_url": "https://trendmicro.com/",
         "example_url": "https://newsroom.trendmicro.com/2026-03-23-Trend-Micros-Enterprise-Business-is-now-TrendAI-TM?utm_source=twitter_paid&utm_medium=social&utm_campaign=ent_corporate_aw_gl_int_rebrand&utm_content=carouse&twclid=2cmz9tfo72r6gek4sy5lql8osu",
         "homepage_status": 200,
@@ -25836,7 +25838,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-29T13:36:47.106Z",
+        "fetched_at": "2026-07-05T16:14:36.651Z",
         "homepage_url": "https://nigerianobservernews.com/",
         "example_url": "https://nigerianobservernews.com/2026/06/igbinedion-university-stuns-world-clinches-huawei-ict-global-crown-women-in-tech-award/",
         "homepage_status": 200,
@@ -25961,7 +25963,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-29T19:06:48.102Z",
+        "fetched_at": "2026-07-05T16:44:33.024Z",
         "homepage_url": "https://manduka.com/",
         "example_url": "https://www.manduka.com/products/manduka-pro-yoga-mat?utm_source=twitter&utm_medium=cpc&utm_campaign=xconvert&utm_content=PRO+Mat+-+Rooibos+1x1&twclid=2c1i50hvb8z81u6asprj4f4oqt",
         "homepage_status": 200,
@@ -26057,16 +26059,16 @@
           ]
         },
         "profile": {
-          "score": 0.24,
+          "score": 0.12,
           "confidence": 0.55,
           "basis": [
             "meta_author:false",
             "published_time:false",
-            "canonical:true",
+            "canonical:false",
             "about:false",
             "contact:true",
             "corrections:false",
-            "outbound_links:2",
+            "outbound_links:0",
             "opinion_marker:false"
           ]
         },
@@ -26086,15 +26088,15 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-07-01T03:38:04.061Z",
+        "fetched_at": "2026-07-05T16:44:45.332Z",
         "homepage_url": "https://tickerscores.ai/",
         "example_url": "https://tickerscores.ai/?twclid=29mi9nru582fdb9vf7t1d5r9yf",
         "homepage_status": 200,
-        "example_status": 200,
+        "example_status": null,
         "homepage_final_url": "https://tickerscores.ai/",
         "example_final_url": "https://tickerscores.ai/?twclid=29mi9nru582fdb9vf7t1d5r9yf",
         "homepage_content_type": "text/html; charset=UTF-8",
-        "example_content_type": "text/html; charset=UTF-8",
+        "example_content_type": "",
         "homepage": {
           "has_meta_author": false,
           "has_published_time": false,
@@ -26108,11 +26110,11 @@
         "example": {
           "has_meta_author": false,
           "has_published_time": false,
-          "has_canonical": true,
+          "has_canonical": false,
           "has_about_link": false,
-          "has_contact_link": true,
+          "has_contact_link": false,
           "has_corrections_link": false,
-          "outbound_links_count": 2,
+          "outbound_links_count": 0,
           "opinion_marker": false
         }
       }
@@ -26211,7 +26213,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-29T22:36:52.868Z",
+        "fetched_at": "2026-07-05T16:44:47.957Z",
         "homepage_url": "https://eclincher.com/",
         "example_url": "https://www.eclincher.com/ai-social-media-agent?twclid=22gdnmarextv0i2rs5d53x1dzn",
         "homepage_status": 200,
@@ -26336,7 +26338,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-07-02T01:07:51.924Z",
+        "fetched_at": "2026-07-05T16:44:48.588Z",
         "homepage_url": "https://tcgsherpa.com/",
         "example_url": "https://www.tcgsherpa.com/?utm_source=x&utm_medium=paid_social&utm_campaign=tcg-sherpa-launch-apr26&utm_content=What_Does_static&twclid=2c6bdjexgck8vqk1pzn57lvtb7",
         "homepage_status": 200,
@@ -26461,12 +26463,12 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-07-02T01:07:52.136Z",
+        "fetched_at": "2026-07-05T17:15:08.130Z",
         "homepage_url": "https://doordash.com/",
         "example_url": "https://www.doordash.com/browse/list/7e5f3a06-8f84-4d8f-b1f9-dd2f7871459a?twclid=2expxmm8nilk7hhcpg2qwpcu7n",
         "homepage_status": 403,
         "example_status": 403,
-        "homepage_final_url": "https://www.doordash.com/",
+        "homepage_final_url": "https://doordash.com/",
         "example_final_url": "https://www.doordash.com/browse/list/7e5f3a06-8f84-4d8f-b1f9-dd2f7871459a?twclid=2expxmm8nilk7hhcpg2qwpcu7n",
         "homepage_content_type": "text/html; charset=UTF-8",
         "example_content_type": "text/html; charset=UTF-8",
@@ -26586,13 +26588,13 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-07-02T09:08:02.192Z",
+        "fetched_at": "2026-07-05T17:15:10.576Z",
         "homepage_url": "https://angel.com/",
         "example_url": "https://www.angel.com/tickets/young-washington?twclid=27mi12v89i7upcqxfvv5wwjfcz",
         "homepage_status": 200,
         "example_status": 200,
         "homepage_final_url": "https://www.angel.com/",
-        "example_final_url": "https://www.angel.com/tickets/young-washington?twclid=27mi12v89i7upcqxfvv5wwjfcz",
+        "example_final_url": "https://www.angel.com/tickets/young-washington/ph?twclid=27mi12v89i7upcqxfvv5wwjfcz",
         "homepage_content_type": "text/html; charset=utf-8",
         "example_content_type": "text/html; charset=utf-8",
         "homepage": {
@@ -26711,7 +26713,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-30T02:06:53.907Z",
+        "fetched_at": "2026-07-05T17:15:11.377Z",
         "homepage_url": "https://gopuff.com/",
         "example_url": "https://www.gopuff.com/go/ai?twclid=2df5moz835ertdpa0tqci700x9",
         "homepage_status": 403,
@@ -26836,7 +26838,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-29T19:06:51.929Z",
+        "fetched_at": "2026-07-05T17:15:13.945Z",
         "homepage_url": "https://lend.xyz/",
         "example_url": "https://app.lend.xyz/op/3?twclid=238nk3jmrq3apwjk6xspl8fcb8",
         "homepage_status": 200,
