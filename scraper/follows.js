@@ -319,7 +319,6 @@ function logFollow(trustGraph, username, item, classification) {
   try {
     x = new X(new HelmStackClient(), {
       ownHandle: (process.env.X_USERNAME || "SebastianHunts"),
-      dedicatedTab: true, // collect.js adopts+navigates the shared tab mid-flow
       log: (m) => console.log(`[follows] ${m}`),
     });
     await x.ensureTab();
@@ -373,6 +372,5 @@ function logFollow(trustGraph, username, item, classification) {
   saveJson(TRUST_GRAPH, trustGraph);
 
   console.log(`[follows] done. followed ${followedThisRun} account(s) this run (today: ${countTodayFollows(queue)}/${MAX_PER_DAY}).`);
-  await x.close();
   process.exit(0);
 })();
