@@ -163,6 +163,52 @@ function readFileSafe(fp) {
   try { return fs.readFileSync(fp, 'utf-8'); } catch { return ''; }
 }
 
+/**
+ * Interval gate for periodic side-tasks. Returns true (and stamps the run) if at
+ * least `intervalMs` has elapsed since the last stamped run for `name`. Timestamp
+ * lives in state/<name>_last_run.txt (same pattern as the META gate).
+ */
+function dueForRun(name, intervalMs) {
+  const stamp = path.join(config.STATE_DIR, `${name}_last_run.txt`);
+  try {
+    const last = new Date(fs.readFileSync(stamp, 'utf-8').trim()).getTime();
+    if (last && Date.now() - last < intervalMs) return false;
+  } catch { /* missing/unparseable = due */ }
+  try { fs.writeFileSync(stamp, new Date().toISOString()); } catch {}
+  return true;
+}
+
+const HOUR = 60 * 60 * 1000;
+
+/**
+ * Social pipeline (HelmStack): LinkedIn + X activity, run only on BROWSE cycles
+ * (posting cycles already drive HelmStack — this avoids browser contention) and
+ * interval-gated per task. Every call is failure-isolated by runScriptLog, so a
+ * broken social task can never take down the core loop.
+ */
+function runSocialPipeline() {
+  if (!process.env.HELMSTACK_AUTH_TOKEN) return; // module not configured
+
+  // X likes (replies stay with proactive_reply, so cap replies at 0 here)
+  if (dueForRun('x_engage', 3 * HOUR)) {
+    log('social: X engagement (likes)');
+    runScriptLog(path.join(PROJECT_ROOT, 'runner/x_engage.js'), '', { X_MAX_REPLIES: '0' });
+  }
+
+  // LinkedIn engagement (like + comment)
+  if (dueForRun('linkedin_engage', 4 * HOUR)) {
+    log('social: LinkedIn engagement');
+    runScriptLog(path.join(PROJECT_ROOT, 'runner/linkedin_engage.js'));
+  }
+
+  // LinkedIn post — generate a draft then publish (twice a day)
+  if (dueForRun('linkedin_post', 12 * HOUR)) {
+    log('social: LinkedIn draft + post');
+    runScriptLog(path.join(PROJECT_ROOT, 'runner/linkedin_draft.js'));
+    runScriptLog(path.join(PROJECT_ROOT, 'runner/linkedin_post.js'));
+  }
+}
+
 // ── Signal handlers (critical — bash traps don't survive exec) ──────────────
 
 function cleanup() {
@@ -923,6 +969,11 @@ function runOneCycle() {
     today,
     vercelDeployHook: process.env.VERCEL_DEPLOY_HOOK || '',
   });
+
+  // ── Social pipeline (LinkedIn + X via HelmStack) — BROWSE cycles only ──
+  if (cycleType === 'BROWSE') {
+    try { runSocialPipeline(); } catch (e) { log(`social pipeline error: ${e.message}`); }
+  }
 
   // ── Health check watchdog ──────────────────────────────────────────────
   runScriptLog(path.join(PROJECT_ROOT, 'runner/watchdog.js'), '', {
