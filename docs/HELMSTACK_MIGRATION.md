@@ -12,9 +12,9 @@ timed out` (Chrome memory bloat, ~5.4 GB / 45 procs), which silently dropped
 posts, replies, and browse cycles. HelmStack manages its own browser and exposes
 a stable HTTP API, so it doesn't hit that failure class.
 
-**As of 2026-07-05 the orchestrator cycle is CDP-free and the biggest scraper
-consumer (`collect.js`) is migrated. Two scraper scripts + some occasional
-posting/utility scripts remain on CDP.**
+**As of 2026-07-05 the orchestrator cycle is CDP-free and the two biggest
+scraper consumers (`collect.js`, `follows.js`) are migrated. One scraper script
+(`reply.js`) + some occasional posting/utility scripts remain on CDP.**
 
 ## Migration status
 
@@ -27,16 +27,15 @@ posting/utility scripts remain on CDP.**
 | LinkedIn post/engage | pipeline | ✅ HelmStack | `linkedin_*.js` |
 | **`scraper/collect.js`** (feed_digest producer) | every 10 min | ✅ **HelmStack** (2026-07-05) | the big one; see below |
 | `scraper/reply.js` (mention replies) | every 30 min | ❌ **CDP** | HARDEST — raw `createCDPSession` + `Input.insertText`; ~778 lines |
-| `scraper/follows.js` | every 3h | ❌ CDP | ~384 lines, ~16 page-ops |
+| `scraper/follows.js` | every 3h | ✅ **HelmStack** (2026-07-05) | via new `X.follow()`; honors `HELMSTACK_DRY_RUN=1` |
 | `runner/post_thread.js` | occasional | ❌ CDP-only | threads still post via CDP even though tweets/quotes are on HelmStack |
 | `post_claims_thread.js`, `post_article.js`, `post_and_pin.js`, `delete_tweet.js`, `delete_and_repost_quote.js`, `update_bio.js`, `check_notifs.js` | manual/occasional | ❌ CDP-only | no HelmStack branch |
 | `runner/lib/gemini_agent.js` (agentic browse) | — | 💤 DEAD | not used while `useLocal()` (local qwen) → `single_pass_browse.js` runs instead |
 
 ### Recommended next steps (in order)
-1. **Let `collect.js` bake** — it's the highest-traffic path (every 10 min); watch `scraper/scraper.log` for `downloading images` (new-code marker) and confirm posts keep landing in `feed_digest`.
-2. **`scraper/follows.js`** — smaller, lower-risk; good warm-up.
-3. **`scraper/reply.js`** — the hardest. Uses a raw `page.createCDPSession()` + `Input.insertText` to defeat X's React contenteditable. HelmStack already solves this: `client.insertText(tabId, text)` is a browser-level CDP `Input.insertText` that reaches cross-origin frames. The X engine (`tools/helmstack-social/src/x.js`) already has a working `reply()` — reuse it. NOTE: `x_engage.js` now covers *proactive* replies on HelmStack; `scraper/reply.js` covers *inbound mention* replies. Confirm whether both are still needed before porting (they may be consolidatable).
-4. **`post_thread.js`** — for posting consistency; the X engine supports post + chained replies, so a thread = `post()` then N × `reply()`.
+1. **Let `follows.js` bake** — runs every 3h; watch `scraper/scraper.log` for `[follows]` lines. `collect.js` (every 10 min) is confirmed healthy as of 2026-07-05 evening (`downloading images` marker present, `collect ok` ticks).
+2. **`scraper/reply.js`** — the hardest. Uses a raw `page.createCDPSession()` + `Input.insertText` to defeat X's React contenteditable. HelmStack already solves this: `client.insertText(tabId, text)` is a browser-level CDP `Input.insertText` that reaches cross-origin frames. The X engine (`tools/helmstack-social/src/x.js`) already has a working `reply()` — reuse it. NOTE: `x_engage.js` now covers *proactive* replies on HelmStack; `scraper/reply.js` covers *inbound mention* replies. Confirm whether both are still needed before porting (they may be consolidatable).
+3. **`post_thread.js`** — for posting consistency; the X engine supports post + chained replies, so a thread = `post()` then N × `reply()`.
 
 ## How the migration is done (the pattern)
 
@@ -75,6 +74,17 @@ scrape and downloading it directly (`fetchImageBase64` in collect.js — X media
 pbs.twimg.com is public, no auth). If you need element screenshots elsewhere:
 whole-tab screenshot + crop by `getBoundingClientRect`, or navigate to the media
 URL and full-screenshot.
+
+### Wedged-tab gotcha (discovered 2026-07-05, fixed in the engine)
+A long-lived X tab in HelmStack can wedge: **every navigation errors and snaps
+back to `/home`** (tab shows `status: "error"`, `statusMessage: "Failed to load
+…"`), while a *fresh tab in the same session* navigates fine. This is invisible
+to `collect.js` (it only scrapes home) but silently breaks anything that
+navigates cross-page (reply, follow, profile-confirm). The engine now guards
+this with `X._gotoChecked(url)` — navigate, verify `tabUrl` actually landed,
+and on mismatch close + reopen the tab at the target URL. Used by `reply()`,
+`follow()`, `scrapeThreadReplies()`, `scrapeMentions()`, `_confirmFromProfile()`.
+Use it for any new cross-page navigation in the engine.
 
 ## Testing / validation (important gotchas)
 

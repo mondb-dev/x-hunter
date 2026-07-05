@@ -66,6 +66,30 @@ class X {
     await sleep(2500);
   }
 
+  /**
+   * Navigate to `url` and verify the tab actually lands there. A long-lived X
+   * tab can wedge — every navigation errors and snaps back to /home while a
+   * fresh tab in the same session navigates fine — so on a landing mismatch
+   * the tab is closed and reopened at `url`. Returns false if even the fresh
+   * tab doesn't land.
+   */
+  async _gotoChecked(url) {
+    const target = url.replace(/[?#].*$/, "").toLowerCase();
+    const landed = async () => {
+      await this.c.waitReady(this.tab, { tag: "x", attempts: 15 }).catch(() => {});
+      await sleep(1500);
+      const at = await this.c.tabUrl(this.tab).catch(() => "");
+      return at.replace(/[?#].*$/, "").toLowerCase() === target;
+    };
+    await this.c.navigate(this.tab, url).catch(() => {});
+    if (await landed()) return true;
+    this.log(`nav to ${url} did not land — recycling wedged tab`);
+    await this.c.closeTab(this.tab).catch(() => {});
+    const esc = target.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
+    this.tab = await this.c.ensureTab(new RegExp(`^${esc}`, "i"), url);
+    return landed();
+  }
+
   // ── Composer helpers (top-frame) ────────────────────────────────────────────
   /** Insert text into the (already-open) composer and verify an exact match. */
   async _insertVerified(text) {
@@ -112,8 +136,7 @@ class X {
   /** Scan the author's profile for a status URL matching `text`; returns URL or null. */
   async _confirmFromProfile(text, attempts = 5, delayMs = 4000) {
     const needle = norm(text).toLowerCase().slice(0, 50);
-    await this.c.navigate(this.tab, `https://x.com/${this.handle}`);
-    await this.c.waitReady(this.tab, { tag: "x" });
+    await this._gotoChecked(`https://x.com/${this.handle}`);
     await sleep(3000);
     for (let i = 1; i <= attempts; i++) {
       await sleep(delayMs);
@@ -231,8 +254,7 @@ class X {
    * @param {string} tweetUrl  the target status URL
    */
   async reply(tweetUrl, text, { dryRun = false } = {}) {
-    await this.c.navigate(this.tab, tweetUrl);
-    await this.c.waitReady(this.tab, { tag: "x" });
+    if (!(await this._gotoChecked(tweetUrl))) return { ok: false, reason: "navigation_failed" };
     await sleep(3000);
     // Click the reply affordance on the focused (first) tweet
     const clicked = await this.c.evalFn(this.tab, () => {
@@ -264,6 +286,51 @@ class X {
     await sleep(4000);
     const post2 = await this._toast();
     if (post2) return { ok: false, reason: `anti_automation:${post2}` };
+    return { ok: true };
+  }
+
+  /**
+   * Follow a user from their profile page.
+   * @param {string} username Handle without @.
+   * @returns {Promise<{ok:boolean, reason?:string, dryRun?:boolean}>}
+   *   reason: "profile_not_loaded" | "already_following" |
+   *   "follow_button_not_found" | "anti_automation:*" | "dry_run"
+   */
+  async follow(username, { dryRun = false } = {}) {
+    if (!(await this._gotoChecked(`https://x.com/${username}`))) {
+      return { ok: false, reason: "navigation_failed" };
+    }
+    try {
+      await this.c.pollFn(this.tab, "profile column", () => !!document.querySelector('[data-testid="primaryColumn"]'), { attempts: 12, interval: 1000, tag: "x" });
+    } catch {
+      return { ok: false, reason: "profile_not_loaded" };
+    }
+    await sleep(2000);
+    const state = await this.c.evalFn(this.tab, (u, dry) => {
+      if (document.querySelector('[data-testid$="-unfollow"], [aria-label^="Following @"]')) return "already";
+      const btn =
+        document.querySelector(`[aria-label="Follow @${u}"]`) ||
+        document.querySelector('[data-testid="placementTracking"] [aria-label*="Follow"]') ||
+        document.querySelector('[data-testid="userActions"] [aria-label*="Follow"]') ||
+        document.querySelector('[data-testid$="-follow"]');
+      if (!btn) return "missing";
+      if (dry) return "would_click";
+      btn.click();
+      return "clicked";
+    }, username, dryRun);
+    if (state === "already") return { ok: false, reason: "already_following" };
+    if (state === "missing") return { ok: false, reason: "follow_button_not_found" };
+    if (state === "would_click") {
+      this.log(`DRY RUN — would follow @${username}`);
+      return { ok: false, reason: "dry_run", dryRun: true };
+    }
+    await sleep(2000);
+    const toast = await this._toast();
+    if (toast) return { ok: false, reason: `anti_automation:${toast}` };
+    const confirmed = await this.c.evalFn(this.tab, () =>
+      !!document.querySelector('[data-testid$="-unfollow"], [aria-label^="Following @"]')
+    ).catch(() => false);
+    if (!confirmed) this.log(`follow @${username}: click registered but Following state not visible yet`);
     return { ok: true };
   }
 
@@ -400,8 +467,7 @@ class X {
 
   /** Top replies under a tweet permalink (drops the root tweet). */
   async scrapeThreadReplies(tweetUrl, { limit = 10 } = {}) {
-    await this.c.navigate(this.tab, tweetUrl);
-    await this.c.waitReady(this.tab, { tag: "x", attempts: 10 }).catch(() => {});
+    if (!(await this._gotoChecked(tweetUrl))) return [];
     await sleep(1500);
     const all = await this._scrapeArticles(limit + 3);
     return all.slice(1); // caller filters/sorts/slices
@@ -409,8 +475,7 @@ class X {
 
   /** Mentions from the notifications page. */
   async scrapeMentions({ limit = 20 } = {}) {
-    await this.c.navigate(this.tab, "https://x.com/notifications/mentions");
-    await this.c.waitReady(this.tab, { tag: "x", attempts: 10 }).catch(() => {});
+    await this._gotoChecked("https://x.com/notifications/mentions");
     await sleep(2000);
     const url = await this.c.tabUrl(this.tab).catch(() => "");
     if (url && !/notifications/.test(url)) return [];

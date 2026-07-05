@@ -18,12 +18,16 @@
  * Rate limits: max 3 follows/run, 10/day cap, 1 min between follows
  *
  * Usage: node scraper/follows.js
- * Env:   CDP browser on http://127.0.0.1:18801
+ * Env:   HelmStack browser API on http://127.0.0.1:7070 (HELMSTACK_AUTH_TOKEN);
+ *        HELMSTACK_DRY_RUN=1 verifies the Follow button without clicking.
  */
 
 "use strict";
 
-const { connectBrowser, getXPage } = require("../runner/cdp");
+const dotenv = (() => {
+  try { return require("dotenv"); } catch { return null; }
+})();
+const { HelmStackClient, X } = require("../tools/helmstack-social/src");
 const fs   = require("fs");
 const path = require("path");
 const db   = require("./db");
@@ -31,6 +35,7 @@ const { callVertex } = require("../runner/vertex.js");
 
 // ── Paths ─────────────────────────────────────────────────────────────────────
 const ROOT          = path.resolve(__dirname, "..");
+if (dotenv) dotenv.config({ path: path.join(ROOT, ".env") });
 const FOLLOW_QUEUE  = path.join(ROOT, "state", "follow_queue.jsonl");
 const TRUST_GRAPH   = path.join(ROOT, "state", "trust_graph.json");
 const ONTOLOGY      = path.join(ROOT, "state", "ontology.json");
@@ -153,40 +158,24 @@ function populateQueue(queue, candidates) {
   return { added: toAdd.length, queue };
 }
 
-// ── CDP: follow a user ────────────────────────────────────────────────────────
+// ── HelmStack: follow a user ──────────────────────────────────────────────────
 
 /**
- * Navigate to a user's profile and click the Follow button.
- * Throws if the Follow button is not found (already followed, or private).
+ * Follow a user via the X engine. Throws on any non-followed outcome so the
+ * caller's skip logic records the reason (already following, button missing,
+ * anti-automation toast).
  *
- * @param {import('playwright').Page} page
+ * @param {import('../tools/helmstack-social/src/x')} x
  * @param {string} username
+ * @param {boolean} dryRun
  */
-async function followUser(page, username) {
-  const profileUrl = `https://x.com/${username}`;
-  console.log(`[follows] navigating to ${profileUrl}`);
-
-  await page.goto(profileUrl, { waitUntil: "domcontentloaded", timeout: 20_000 });
-  await page.waitForSelector('[data-testid="primaryColumn"]', { timeout: 12_000 });
-  await new Promise(r => setTimeout(r, 2_000));
-
-  // X renders the follow button with aria-label="Follow @username"
-  // Try multiple selectors for robustness
-  let followBtn =
-    await page.$(`[aria-label="Follow @${username}"]`) ||
-    await page.$(`[data-testid="placementTracking"] [aria-label*="Follow"]`) ||
-    await page.$(`[data-testid="userActions"] [aria-label*="Follow"]`);
-
-  if (!followBtn) {
-    // Check if we're already following them
-    const alreadyFollowing = await page.$('[aria-label*="Following"]');
-    if (alreadyFollowing) throw new Error(`already following @${username}`);
-    throw new Error(`Follow button not found for @${username}`);
-  }
-
-  await followBtn.click();
-  await new Promise(r => setTimeout(r, 2_000));
+async function followUser(x, username, dryRun) {
+  console.log(`[follows] navigating to https://x.com/${username}`);
+  const res = await x.follow(username, { dryRun });
+  if (res.dryRun) return res;
+  if (!res.ok) throw new Error(res.reason || "follow failed");
   console.log(`[follows] followed @${username}`);
+  return res;
 }
 
 // ── LLM-based cluster + reason generation ────────────────────────────────────
@@ -324,21 +313,20 @@ function logFollow(trustGraph, username, item, classification) {
     process.exit(0);
   }
 
-  // 5. Connect to browser via CDP
-  let browser;
+  // 5. Connect to the HelmStack browser
+  const dryRun = process.env.HELMSTACK_DRY_RUN === "1";
+  let x;
   try {
-    browser = await connectBrowser();
+    x = new X(new HelmStackClient(), {
+      ownHandle: (process.env.X_USERNAME || "SebastianHunts"),
+      log: (m) => console.log(`[follows] ${m}`),
+    });
+    await x.ensureTab();
+    if (!(await x.sessionOk())) {
+      throw new Error("X session not present in HelmStack (auth_token/ct0 missing)");
+    }
   } catch (err) {
-    console.error(`[follows] could not connect to CDP: ${err.message}`);
-    process.exit(1);
-  }
-
-  let page;
-  try {
-    page = await getXPage(browser);
-  } catch (err) {
-    console.error(`[follows] could not get page: ${err.message}`);
-    browser.disconnect();
+    console.error(`[follows] could not connect to HelmStack: ${err.message}`);
     process.exit(1);
   }
 
@@ -352,7 +340,12 @@ function logFollow(trustGraph, username, item, classification) {
     console.log(`[follows] attempting @${item.username} (follow_score=${item.follow_score?.toFixed(1)}, topics=[${item.top_keywords}])`);
 
     try {
-      await followUser(page, item.username);
+      const res = await followUser(x, item.username, dryRun);
+      if (res.dryRun) {
+        console.log(`[follows] DRY RUN — @${item.username} left pending`);
+        followedThisRun++;
+        continue;
+      }
 
       item.status      = "done";
       item.followed_at = new Date().toISOString();
@@ -379,6 +372,5 @@ function logFollow(trustGraph, username, item, classification) {
   saveJson(TRUST_GRAPH, trustGraph);
 
   console.log(`[follows] done. followed ${followedThisRun} account(s) this run (today: ${countTodayFollows(queue)}/${MAX_PER_DAY}).`);
-  browser.disconnect();
   process.exit(0);
 })();
