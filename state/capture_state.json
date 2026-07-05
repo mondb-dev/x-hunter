@@ -1,59 +1,147 @@
 {
-  "checked_at": "2026-07-04T02:38:42.437Z",
-  "evidence_24h": 1,
-  "unique_sources": 1,
-  "status": "captured",
+  "checked_at": "2026-07-05T03:38:37.152Z",
+  "evidence_24h": 20,
+  "unique_sources": 12,
+  "status": "warning",
   "alerts": [
     {
       "type": "source_dominance",
-      "severity": "high",
-      "detail": "@unknown accounts for 100% of today's evidence (1/1)",
+      "severity": "moderate",
+      "detail": "@unknown accounts for 40% of today's evidence (8/20)",
       "username": "unknown",
-      "share": 1
-    },
-    {
-      "type": "pole_skew",
-      "severity": "high",
-      "detail": "100% of evidence pushes \"left\" — risk of one-sided belief drift",
-      "dominant_pole": "left",
-      "share": 1
+      "share": 0.4
     },
     {
       "type": "axis_concentration",
-      "severity": "high",
-      "detail": "\"Power, Institutions, and Rule of Law\" received 100% of today's evidence (1/1)",
+      "severity": "moderate",
+      "detail": "\"Power, Institutions, and Rule of Law\" received 70% of today's evidence (14/20)",
       "axis_id": "axis_power_accountability",
-      "share": 1
+      "share": 0.7
     }
   ],
-  "summary": "3 capture alert(s) detected:\n[HIGH] @unknown accounts for 100% of today's evidence (1/1)\n[HIGH] 100% of evidence pushes \"left\" — risk of one-sided belief drift\n[HIGH] \"Power, Institutions, and Rule of Law\" received 100% of today's evidence (1/1)",
+  "summary": "2 capture alert(s) detected:\n[MODERATE] @unknown accounts for 40% of today's evidence (8/20)\n[MODERATE] \"Power, Institutions, and Rule of Law\" received 70% of today's evidence (14/20)",
   "source_concentration": {
     "unknown": {
       "username": "unknown",
+      "count": 8,
+      "share": 0.4
+    },
+    "wallstreetapes": {
+      "username": "wallstreetapes",
+      "count": 2,
+      "share": 0.1
+    },
+    "browire_": {
+      "username": "browire_",
       "count": 1,
-      "share": 1
+      "share": 0.05
+    },
+    "jamalthetenth": {
+      "username": "jamalthetenth",
+      "count": 1,
+      "share": 0.05
+    },
+    "ethanlevins2": {
+      "username": "ethanlevins2",
+      "count": 1,
+      "share": 0.05
+    },
+    "iranobserver0": {
+      "username": "iranobserver0",
+      "count": 1,
+      "share": 0.05
+    },
+    "xisraelexposedx": {
+      "username": "xisraelexposedx",
+      "count": 1,
+      "share": 0.05
+    },
+    "news5ph": {
+      "username": "news5ph",
+      "count": 1,
+      "share": 0.05
+    },
+    "rt_com": {
+      "username": "rt_com",
+      "count": 1,
+      "share": 0.05
+    },
+    "foxnews": {
+      "username": "foxnews",
+      "count": 1,
+      "share": 0.05
     }
   },
   "axis_concentration": {
     "axis_power_accountability": {
       "axis_id": "axis_power_accountability",
       "label": "Power, Institutions, and Rule of Law",
+      "count": 14,
+      "share": 0.7
+    },
+    "axis_geopolitical_rhetoric_v1": {
+      "axis_id": "axis_geopolitical_rhetoric_v1",
+      "label": "Geopolitical Rhetoric vs. Humanitarian Concerns",
+      "count": 2,
+      "share": 0.1
+    },
+    "axis_media_integrity_v1": {
+      "axis_id": "axis_media_integrity_v1",
+      "label": "Integrity of Information and Social Media Manipulation",
       "count": 1,
-      "share": 1
+      "share": 0.05
+    },
+    "axis_public_trust_safety_crisis_v1": {
+      "axis_id": "axis_public_trust_safety_crisis_v1",
+      "label": "Public Trust in Safety and Crisis Communication",
+      "count": 1,
+      "share": 0.05
+    },
+    "axis_national_sovereignty_v_intl_law_v1": {
+      "axis_id": "axis_national_sovereignty_v_intl_law_v1",
+      "label": "National Sovereignty vs. International Law",
+      "count": 1,
+      "share": 0.05
+    },
+    "axis_immigration_policy_v_national_control_v1": {
+      "axis_id": "axis_immigration_policy_v_national_control_v1",
+      "label": "Immigration Policy: Open Borders vs. National Control and Cultural Preservation",
+      "count": 1,
+      "share": 0.05
     }
   },
   "cluster_concentration": {
     "unknown": {
       "cluster": "unknown",
+      "count": 14,
+      "share": 0.7
+    },
+    "geopolitics": {
+      "cluster": "geopolitics",
+      "count": 2,
+      "share": 0.1
+    },
+    "middle_east": {
+      "cluster": "middle_east",
       "count": 1,
-      "share": 1
+      "share": 0.05
+    },
+    "accountability_journalism": {
+      "cluster": "accountability_journalism",
+      "count": 1,
+      "share": 0.05
+    },
+    "disinformation": {
+      "cluster": "disinformation",
+      "count": 1,
+      "share": 0.05
     }
   },
   "pole_balance": {
-    "left": 1,
-    "right": 0,
+    "left": 14,
+    "right": 6,
     "neutral": 0,
-    "left_share": 1,
-    "right_share": 0
+    "left_share": 0.7,
+    "right_share": 0.3
   }
 }
