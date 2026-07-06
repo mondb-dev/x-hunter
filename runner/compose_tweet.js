@@ -80,12 +80,16 @@ function dayNumberFrom(today) {
   // no tools, no files, no JSON — just the tweet body (or SKIP).
   const prompt = buildTweetPrompt(ctx) +
     '\n───────────────────────────────────────────────────\n' +
-    'OUTPUT MODE (overrides the file-writing steps above): Do NOT write any files, ' +
-    'do NOT emit JSON, do NOT call any tools. Apply steps 1-3 as your thinking, then ' +
-    'output ONLY the final tweet body as a SINGLE line (max 230 characters), honoring ' +
-    'every voice / specificity / grounding / language rule above. Do not include the ' +
-    'journal URL, quotes around the tweet, or any label. If the requirements cannot be ' +
-    'met from THIS cycle\'s browse notes, output exactly: SKIP';
+    'OUTPUT MODE (overrides the file-writing steps AND the "fresh THIS cycle" gate 4d above):\n' +
+    'You are composing ONE tweet from the ACCUMULATED browse notes, discourse, and belief axes\n' +
+    'shown above — you do NOT need brand-new material from this exact cycle; recurring or ongoing\n' +
+    'stories are valid. Pick the single strongest, most specific story or tension in the notes and\n' +
+    'write it as a sharp, grounded tweet that names a specific actor / claim / number / event (tag\n' +
+    'the @handle when the notes provide one). Honor every voice / specificity / lede / language\n' +
+    'rule above (Taglish for Philippine topics). Do NOT write files, emit JSON, or call tools.\n' +
+    'Output ONLY the final tweet body as a SINGLE line (max 230 characters) — no journal URL, no\n' +
+    'surrounding quotes, no label. Output exactly SKIP only if the notes contain NO specific,\n' +
+    'nameable material at all (empty/unavailable feed).';
 
   let raw;
   try {
@@ -94,8 +98,10 @@ function dayNumberFrom(today) {
 
   const line1 = (raw || '').split('\n').map(s => s.trim()).filter(Boolean)[0] || '';
   const clean = line1.replace(/^["']|["']$/g, '').trim();
-  if (!clean || clean.toUpperCase() === 'SKIP') { log('compose returned SKIP/empty — no draft'); process.exit(0); }
-  if (clean.length > 240) { log(`compose too long (${clean.length} chars) — no draft`); process.exit(0); }
+  // Write an explicit SKIP (mirrors the agent's contract; postRegularTweet skips
+  // on draft==='SKIP') so a deliberate no-tweet is a decision, not a missing file.
+  if (!clean || clean.toUpperCase() === 'SKIP') { log('compose returned SKIP/empty'); fs.writeFileSync(DRAFT_PATH, 'SKIP\n'); process.exit(0); }
+  if (clean.length > 240) { log(`compose too long (${clean.length} chars) — SKIP`); fs.writeFileSync(DRAFT_PATH, 'SKIP\n'); process.exit(0); }
 
   const journalUrl = `https://sebastianhunter.fun/journal/${today}/${hour}`;
   fs.writeFileSync(DRAFT_PATH, `${clean}\n${journalUrl}\n`);

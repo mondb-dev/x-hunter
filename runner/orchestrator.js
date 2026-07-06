@@ -36,6 +36,7 @@ const { commitAndPush, triggerVercelDeploy } = require('./lib/git');
 const { runDaily } = require('./lib/daily');
 const notify = require('./lib/notify');
 const { isXSuppressed, suppressionReason } = require('./lib/x_control');
+const { useClaudeCompose } = require('./lib/compose');
 
 const loadContext = require('./lib/prompts/context');
 const buildBrowsePrompt = require('./lib/prompts/browse');
@@ -881,27 +882,41 @@ function runOneCycle() {
       try { fs.unlinkSync(path.join(config.STATE_DIR, 'tweet_result.txt')); } catch {}
       try { fs.unlinkSync(path.join(config.STATE_DIR, 'tweet_attempt.json')); } catch {}
 
-      const tweetExit = agentRun({ agent: 'x-hunter-tweet', message: prompt, thinking: 'low', verbose: 'on', model: POST_MODEL });
-      metrics.agentExitCodes.push(tweetExit);
+      const composeEnv = {
+        CYCLE_NUMBER: String(cycle), TODAY: today, NOW: now, HOUR: hour, DAY_NUMBER: String(dayNumber),
+      };
 
-      // Retry if tweet_draft.txt missing
-      if (!fileExists(config.TWEET_DRAFT_PATH)) {
-        log('tweet_draft.txt missing after agent run — retrying once (no thinking)');
-        sleepSec(5);
-        const retryExit = agentRun({ agent: 'x-hunter-tweet', message: prompt, verbose: 'on', model: POST_MODEL });
-        metrics.agentExitCodes.push(retryExit);
+      // PRIMARY composition: when the Claude compose backend is on, compose the
+      // tweet directly (reliable single-shot from the same file-only context)
+      // instead of the agentic local-model loop, which routinely finishes without
+      // emitting the draft. compose_tweet.js writes the tweet OR an explicit SKIP,
+      // so a resulting draft file (either way) means Claude decided — skip the agent.
+      let composed = false;
+      if (useClaudeCompose()) {
+        log('composing tweet via Claude (compose_tweet.js, primary)');
+        runScriptLog(path.join(PROJECT_ROOT, 'runner/compose_tweet.js'), '', composeEnv);
+        composed = fileExists(config.TWEET_DRAFT_PATH);
       }
 
-      // Fallback: the agentic loop on the local model frequently completes
-      // without emitting the draft file (no_draft). Compose the tweet directly
-      // from the same file-only context — via Claude when COMPOSE_BACKEND=claude
-      // — so posting doesn't stall. No-op if a draft already exists. Pass the
-      // orchestrator's own clock so it matches the browse-notes timestamps.
-      if (!fileExists(config.TWEET_DRAFT_PATH)) {
-        log('tweet_draft.txt still missing — composing directly (compose_tweet.js)');
-        runScriptLog(path.join(PROJECT_ROOT, 'runner/compose_tweet.js'), '', {
-          CYCLE_NUMBER: String(cycle), TODAY: today, NOW: now, HOUR: hour, DAY_NUMBER: String(dayNumber),
-        });
+      // Agentic path — primary when Claude is off (or compose errored without a
+      // draft); also the writer of ontology_delta / sprint_tweet_flag.
+      if (!composed) {
+        const tweetExit = agentRun({ agent: 'x-hunter-tweet', message: prompt, thinking: 'low', verbose: 'on', model: POST_MODEL });
+        metrics.agentExitCodes.push(tweetExit);
+
+        // Retry if tweet_draft.txt missing
+        if (!fileExists(config.TWEET_DRAFT_PATH)) {
+          log('tweet_draft.txt missing after agent run — retrying once (no thinking)');
+          sleepSec(5);
+          const retryExit = agentRun({ agent: 'x-hunter-tweet', message: prompt, verbose: 'on', model: POST_MODEL });
+          metrics.agentExitCodes.push(retryExit);
+        }
+
+        // Last-resort fallback: agent still produced nothing — compose directly.
+        if (!fileExists(config.TWEET_DRAFT_PATH)) {
+          log('tweet_draft.txt still missing — composing directly (compose_tweet.js)');
+          runScriptLog(path.join(PROJECT_ROOT, 'runner/compose_tweet.js'), '', composeEnv);
+        }
       }
     }
 
