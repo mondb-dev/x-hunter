@@ -30,8 +30,9 @@ const META      = path.join(STATE_DIR, 'verification_meta.json');
 const POSTS_LOG = path.join(STATE_DIR, 'posts_log.json');
 
 const HOUR_UTC  = new Date().getUTCHours();
-const TWEET_START = 7;
-const TWEET_END   = 23;
+// Honor the shared posting window (env-overridable via TWEET_START/TWEET_END,
+// e.g. 0/24 to post around the clock) instead of hardcoding 7–23.
+const { TWEET_START, TWEET_END } = require('./lib/config');
 const MAX_CLAIM_TEXT_CHARS  = 120;
 const MAX_SUMMARY_CHARS     = 180;
 

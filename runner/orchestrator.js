@@ -891,6 +891,18 @@ function runOneCycle() {
         const retryExit = agentRun({ agent: 'x-hunter-tweet', message: prompt, verbose: 'on', model: POST_MODEL });
         metrics.agentExitCodes.push(retryExit);
       }
+
+      // Fallback: the agentic loop on the local model frequently completes
+      // without emitting the draft file (no_draft). Compose the tweet directly
+      // from the same file-only context — via Claude when COMPOSE_BACKEND=claude
+      // — so posting doesn't stall. No-op if a draft already exists. Pass the
+      // orchestrator's own clock so it matches the browse-notes timestamps.
+      if (!fileExists(config.TWEET_DRAFT_PATH)) {
+        log('tweet_draft.txt still missing — composing directly (compose_tweet.js)');
+        runScriptLog(path.join(PROJECT_ROOT, 'runner/compose_tweet.js'), '', {
+          CYCLE_NUMBER: String(cycle), TODAY: today, NOW: now, HOUR: hour, DAY_NUMBER: String(dayNumber),
+        });
+      }
     }
 
     // Close excess tabs (always, even if skipped)
