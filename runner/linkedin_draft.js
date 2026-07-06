@@ -56,11 +56,26 @@ const LINKEDIN_STRATEGY = `LINKEDIN PLACEMENT STRATEGY — how to shape this con
   if (!pack.text.trim()) { log("no source material — skipping"); process.exit(0); }
 
   const { compose } = require("./lib/compose");
+
+  // Ground the post in Sebastian's actual belief structure + prior synthesis,
+  // not just the raw signal pack (which only used the top axis label as a
+  // web-search seed). Both best-effort.
+  let axesBlock = "";
+  try { axesBlock = require("./lib/prompts/context").formatTopAxes(); } catch {}
+  let recallBlock = "";
+  try { recallBlock = await require("./lib/recall").recallText(pack.query, { maxChars: 1200 }); } catch {}
+
   const prompt =
 `You are Sebastian Hunter writing a LinkedIn post. Your vocation and voice:
 ${vocation}
 
 ${LINKEDIN_STRATEGY}
+
+YOUR CURRENT BELIEF AXES (your mapped positions — the post must argue consistently with these; lean on the highest-confidence axis that fits the theme):
+${axesBlock || "(unavailable)"}
+
+RELEVANT MEMORY (your prior synthesis / observations on this theme — build on it, do not contradict or repeat it verbatim):
+${recallBlock || "(none)"}
 
 SOURCE MATERIAL (draw the theme from across these — cite specifics):
 ${pack.text}
@@ -69,8 +84,24 @@ Write ONE original LinkedIn post following the strategy above. Return ONLY the p
 
   try {
     const raw = await compose(prompt, { maxTokens: 1000, model: "gemini-2.5-flash", thinkingBudget: 0, tag: "linkedin_draft" });
-    const text = (raw || "").trim().replace(/^["']|["']$/g, "");
+    let text = (raw || "").trim().replace(/^["']|["']$/g, "");
     if (!text || text.length < 120) { log("generation too short — skipping"); process.exit(0); }
+
+    // Verification pass: LinkedIn posts had no fact-check (unlike X replies).
+    // Catch verifiably wrong facts (stale officeholder titles, datable claims).
+    try {
+      const today = new Date().toISOString().slice(0, 10);
+      const fcRaw = await compose(
+        `Today is ${today}. Review this LinkedIn post for verifiably wrong facts — wrong current officeholder titles, or datable facts clearly wrong given today. Do NOT flag opinion, analysis, or uncertain claims. Reply JSON only: {"pass":true} or {"pass":false,"corrected":"full corrected post text, or null if not fixable"}.\n\nPOST:\n"""\n${text}\n"""`,
+        { maxTokens: 1200, tag: "linkedin_factcheck" }
+      );
+      const m = String(fcRaw).replace(/^```[a-z]*\n?/i, "").replace(/\n?```$/i, "").match(/\{[\s\S]*\}/);
+      const res = m ? JSON.parse(m[0]) : { pass: true };
+      if (res.pass === false) {
+        if (res.corrected && res.corrected.trim().length >= 120) { text = res.corrected.trim(); log("fact-check corrected the draft"); }
+        else { log("fact-check flagged an unfixable factual issue — skipping"); process.exit(0); }
+      } else { log("fact-check: pass"); }
+    } catch (e) { log(`fact-check unavailable (${e.message}) — proceeding`); }
 
     // Coherence gate (local): a LinkedIn post may cite several examples but must
     // advance ONE argument — reject a grab-bag that jams unrelated stories together.
