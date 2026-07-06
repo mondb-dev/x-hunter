@@ -1,12 +1,12 @@
 {
-  "generated_at": "2026-07-06T04:41:08.459Z",
+  "generated_at": "2026-07-06T05:15:37.082Z",
   "stats": {
     "total": 868,
-    "supported": 189,
-    "refuted": 124,
+    "supported": 191,
+    "refuted": 125,
     "contested": 10,
     "unverified": 74,
-    "expired": 471
+    "expired": 468
   },
   "claims": [
     {
@@ -951,6 +951,54 @@
       "dissenting_sources": [],
       "framing_analysis": "The claim is framed factually and is directly supported by news reports of the event.",
       "web_search_summary": "International Yoga Day programs were held in Kolkata on June 21, 2026, with Prime Minister Narendra Modi leading the main event at Red Road. The city saw large-scale celebrations, including events on floating platforms along the Ganga and at various landmarks.",
+      "investigation_depth": "quick"
+    },
+    {
+      "claim_id": "claim_105",
+      "claim_text": "Solar farm reduced to toxic debris by bad weather, highlighting fragility of solar technology",
+      "status": "supported",
+      "confidence_score": 0.69,
+      "display_score": 0.44,
+      "scoring_breakdown": {
+        "source_tier": 0.5,
+        "newsguard": 0.5,
+        "corroboration": 0.9,
+        "evidence_quality": 0.9,
+        "cross_source": 0.5,
+        "web_search": 1
+      },
+      "source_handle": "wideawake_media",
+      "source_tier": null,
+      "evidence_urls": [
+        "https://www.sciencedirect.com/science/article/pii/S2352484724008813",
+        "https://eiscouncil.org/ceo/solar-panel-vulnerabilities-to-natural-hazards/",
+        "https://www.skynews.com.au/business/hail-cripples-massive-solar-farm-in-texas-sparking-resident-concern-over-vulnerable-green-tech-chemical-leaks/news-story/2f3328bd02c6532959f66fc3ef2491d8",
+        "https://www.pv-magazine.com/2024/04/17/hail-damage-and-toxicity-risks-in-solar-plants/",
+        "https://factually.co/fact-checks/environment/solar-farm-damage-hail-tornado-hazardous-waste-risk-57a123"
+      ],
+      "tweet_url": null,
+      "category": null,
+      "related_axis_id": "axis_environmental_policy_v_economic_v1",
+      "verification_count": 2,
+      "verified_at": "2026-07-06T05:15:36.984Z",
+      "created_at": "2026-04-17T12:32:31.985Z",
+      "original_source": "Factually.co",
+      "claim_date": null,
+      "supporting_sources": [
+        {
+          "name": "Sky News",
+          "excerpt": "A severe hailstorm has destroyed large parts of a massive solar farm, highlighting the perils of swapping traditional power sources for vulnerable green alternatives.",
+          "url": null
+        },
+        {
+          "name": "PV Magazine",
+          "excerpt": "US news outlets have reported resident concerns about leaked toxins from solar facilities in Texas that were damaged by a hailstorm.",
+          "url": null
+        }
+      ],
+      "dissenting_sources": [],
+      "framing_analysis": "The claim is framed validly as it highlights the potential environmental risks associated with solar farms during severe weather events, supported by multiple sources reporting similar incidents.",
+      "web_search_summary": "The claim is supported by multiple sources which report hail damage to solar farms, resulting in toxic debris concerns.",
       "investigation_depth": "quick"
     },
     {
@@ -7517,6 +7565,54 @@
       ],
       "framing_analysis": "The claim is framed as a personal opinion or 'hill you'll die on,' but it aligns with established psychological and parenting research on child development and accountability.",
       "web_search_summary": "Research indicates that parents apologizing to their children models accountability, fosters emotional intelligence, builds trust, and teaches children how to take responsibility for their own actions. Children learn by observing their parents' behavior, so when parents apologize, they demonstrate that everyone makes mistakes and that taking ownership of those mistakes is a strength, not a weakness. This process helps children develop into adults who are more likely to accept accountability.",
+      "investigation_depth": "quick"
+    },
+    {
+      "claim_id": "claim_104",
+      "claim_text": "Two young men killed by Basij and Revolutionary Guards forces at checkpoints in Iran",
+      "status": "supported",
+      "confidence_score": 0.62,
+      "display_score": 0.419,
+      "scoring_breakdown": {
+        "source_tier": 0.5,
+        "newsguard": 0.5,
+        "corroboration": 0.7,
+        "evidence_quality": 0.7,
+        "cross_source": 0.5,
+        "web_search": 1
+      },
+      "source_handle": "iranintl_en",
+      "source_tier": null,
+      "evidence_urls": [
+        "https://www.iranintl.com/en/202604173601",
+        "https://www.jfeed.com/news-world/iran-basij-shooting-protests",
+        "https://www.iranintl.com/en/202507038087",
+        "https://iranwire.com/en/features/145538-basij-forces-kill-civilians-at-checkpoints-in-iran/",
+        "https://www.ncr-iran.org/en/ncri-statements/statement-iran-protest/iran-hamedan-youth-protest-the-killing-of-two-young-men-by-basij-forces-with-defiant-slogans/"
+      ],
+      "tweet_url": null,
+      "category": null,
+      "related_axis_id": "axis_eje_accountability_v1",
+      "verification_count": 2,
+      "verified_at": "2026-07-06T05:15:36.978Z",
+      "created_at": "2026-04-17T12:32:31.975Z",
+      "original_source": "Iran International",
+      "claim_date": "2025-07-01 or around 2025-04 depending on the specific incident mentioned in sources",
+      "supporting_sources": [
+        {
+          "name": "Iran International",
+          "excerpt": "At least two young men have been killed by Basij and Revolutionary Guards forces at checkpoints in Iran in recent weeks.",
+          "url": null
+        },
+        {
+          "name": "NCR-Iran",
+          "excerpt": "Mourners in western city of Hamedan demanded justice Thursday at the funeral of two young men shot dead by Islamic Republic forces, chanting “Death to the oppressor” and turning the …",
+          "url": null
+        }
+      ],
+      "dissenting_sources": [],
+      "framing_analysis": "The claim is framed validly, referencing multiple verified incidents of killings by security forces that have sparked public outrage and protests.",
+      "web_search_summary": "The claim is confirmed based on multiple sources reporting similar incidents involving the killing of two young men by Basij and Revolutionary Guards forces at checkpoints in Iran, particularly around July 2025.",
       "investigation_depth": "quick"
     },
     {
@@ -16241,6 +16337,49 @@
       ],
       "framing_analysis": "The claim is framed as a factual event, but it appears to be a piece of misinformation or propaganda, especially given the lack of official confirmation and the refutation of the video evidence. The timing coincides with heightened tensions and a US naval blockade in the Strait of Hormuz.",
       "web_search_summary": "Claims circulating on social media on April 13-14, 2026, suggest the Iranian Navy attacked and sank a US vessel near Bandar Abbas. However, these claims lack official confirmation from either Iranian authorities or the United States military. Misbar's analysis indicates that a video circulated as evidence of the attack is outdated and actually depicts a US strike on an Iranian vessel in March 2026.",
+      "investigation_depth": "quick"
+    },
+    {
+      "claim_id": "claim_107",
+      "claim_text": "Images from the Epstein Files implicate Trump in pedophilia.",
+      "status": "refuted",
+      "confidence_score": 0.375,
+      "display_score": 0.346,
+      "scoring_breakdown": {
+        "source_tier": 0.5,
+        "newsguard": 0.5,
+        "corroboration": 0,
+        "evidence_quality": 0,
+        "cross_source": 0.5,
+        "web_search": -1
+      },
+      "source_handle": "itx_soulsync",
+      "source_tier": null,
+      "evidence_urls": [
+        "https://nymag.com/intelligencer/article/trump-epstein-files-explained-timeline.html",
+        "https://people.com/every-photo-epstein-estate-file-release-trump-clinton-others-11868027",
+        "https://www.pbs.org/newshour/politics/see-photos-and-documents-from-the-latest-epstein-file-release",
+        "https://www.independent.co.uk/news/world/americas/donald-trump-jeffrey-epstein-documents-b2475210.html",
+        "https://nypost.com/2025/12/12/us-news/unredacted-trump-photos-from-epstein-files-dump-reveal-glamorous-adult-women/"
+      ],
+      "tweet_url": null,
+      "category": null,
+      "related_axis_id": "axis_epistemic_integrity",
+      "verification_count": 2,
+      "verified_at": "2026-07-06T05:15:36.989Z",
+      "created_at": "2026-04-17T13:03:25.425Z",
+      "original_source": null,
+      "claim_date": null,
+      "supporting_sources": [
+        {
+          "name": "The New York Times",
+          "excerpt": "Some of the tips include accusations of sexual abuse by Mr. Trump and Mr. Epstein.",
+          "url": null
+        }
+      ],
+      "dissenting_sources": [],
+      "framing_analysis": "The claim is framed misleadingly as it suggests concrete evidence implicating Trump in pedophilia through images, but the search results show that such evidence does not exist; instead, there are uncorroborated accusations compiled by F.B.I. officials.",
+      "web_search_summary": "The search results do not provide any direct evidence that images from the Epstein Files implicate Trump in pedophilia. The New York Times reported tips including accusations of sexual abuse by Mr. Trump and Mr. Epstein, but these were compiled by F.B.I. officials as summaries rather than photos or documents directly involving Epstein's crimes.",
       "investigation_depth": "quick"
     },
     {
@@ -25269,7 +25408,7 @@
       "claim_text": "4 Chinese cargo planes allegedly switched off their transponders and landed in Iran carrying arms and ammunition.",
       "status": "expired",
       "confidence_score": 0.36,
-      "display_score": 0.491,
+      "display_score": 0.508,
       "scoring_breakdown": {
         "source_tier": 0.6,
         "newsguard": 0.5329999999999999,
@@ -25290,8 +25429,8 @@
       "tweet_url": null,
       "category": null,
       "related_axis_id": "axis_geopolitical_rhetoric_v1",
-      "verification_count": 2,
-      "verified_at": "2026-07-06T04:41:08.372Z",
+      "verification_count": 3,
+      "verified_at": "2026-07-06T05:15:36.976Z",
       "created_at": "2026-04-17T09:33:57.338Z",
       "original_source": null,
       "claim_date": null,
@@ -25321,8 +25460,8 @@
       "tweet_url": null,
       "category": null,
       "related_axis_id": "axis_geopolitical_rhetoric_v1",
-      "verification_count": 128,
-      "verified_at": "2026-07-06T04:41:08.346Z",
+      "verification_count": 129,
+      "verified_at": "2026-07-06T05:15:36.975Z",
       "created_at": "2026-04-16T10:01:17.347Z",
       "original_source": "Social media and news reports following incidents in Gaza, particularly the Rafah tent camp strike in May 2024 and the Al-Aqsa Hospital strike in October 2024.",
       "claim_date": "2024-05-01",
@@ -25403,8 +25542,8 @@
       "tweet_url": null,
       "category": null,
       "related_axis_id": "axis_geopolitical_rhetoric_v1",
-      "verification_count": 127,
-      "verified_at": "2026-07-06T04:41:08.346Z",
+      "verification_count": 128,
+      "verified_at": "2026-07-06T05:15:36.975Z",
       "created_at": "2026-04-16T10:01:17.354Z",
       "original_source": "Not specified in the claim, appears to be a general statement.",
       "claim_date": null,
@@ -25933,8 +26072,8 @@
       "tweet_url": null,
       "category": null,
       "related_axis_id": "axis_epistemic_integrity",
-      "verification_count": 128,
-      "verified_at": "2026-07-06T04:41:08.344Z",
+      "verification_count": 129,
+      "verified_at": "2026-07-06T05:15:36.972Z",
       "created_at": "2026-04-16T05:31:55.237Z",
       "original_source": "YouTube (Leather Apron Club)",
       "claim_date": "2026-05-01",
@@ -25956,11 +26095,48 @@
       "investigation_depth": "quick"
     },
     {
+      "claim_id": "claim_103",
+      "claim_text": "EU President Ursula Von Der Leyen states EU protects freedom of speech, yet a man is arrested for speaking out against her",
+      "status": "expired",
+      "confidence_score": 0.325,
+      "display_score": 0.331,
+      "scoring_breakdown": {
+        "source_tier": 0.5,
+        "newsguard": 0.5,
+        "corroboration": 0,
+        "evidence_quality": 0,
+        "cross_source": 0.5,
+        "web_search": 0.5
+      },
+      "source_handle": "basilthegreat",
+      "source_tier": null,
+      "evidence_urls": [
+        "https://www.alainguillot.com/ursula-free-speech-irony/",
+        "https://londondaily.com/eu-president-ursula-von-der-leyen-says-the-eu-protects-freedom-of-speech",
+        "https://x.com/i/trending/1997337699598942572",
+        "https://www.facebook.com/ChristinaAguayoNews/photos/news-fast-fact-eu-president-ursula-von-der-leyen-says-the-eu-protects-freedom-of/1380138243484452/",
+        "https://www.dailysquib.co.uk/entertainment/65009-beyond-satire-man-arrested-for-protesting-during-von-der-leyen-eu-free-speech-declaration.html"
+      ],
+      "tweet_url": null,
+      "category": null,
+      "related_axis_id": "axis_power_accountability",
+      "verification_count": 2,
+      "verified_at": "2026-07-06T05:15:36.977Z",
+      "created_at": "2026-04-17T12:32:31.966Z",
+      "original_source": null,
+      "claim_date": null,
+      "supporting_sources": [],
+      "dissenting_sources": [],
+      "framing_analysis": null,
+      "web_search_summary": "{\"verdict\":\"confirmed\",\n\"summary\":\"The claim is confirmed as multiple sources report that while Ursula von der Leyen was promoting freedom of speech, a man was arrested mid-protest.\",\n\"supporting_sources\":[{\"name\":\"alainguillot.com\",\"excerpt\":\"EU President Ursula von der Leyen praised Europe’s freedom of speech — just as police arrested a protester mid-speech.\"},{\"name\":\"londondaily.com\",\"excerpt\":\"She told a crowd protesting against her they should feel lucky they're in the EU where you can pro",
+      "investigation_depth": "quick"
+    },
+    {
       "claim_id": "claim_102",
       "claim_text": "Black family celebrates after the daughter gets approved for food stamps",
       "status": "expired",
       "confidence_score": 0.325,
-      "display_score": 0.331,
+      "display_score": 0.348,
       "scoring_breakdown": {
         "source_tier": 0.5,
         "newsguard": 0.5,
@@ -25981,8 +26157,8 @@
       "tweet_url": null,
       "category": null,
       "related_axis_id": "axis_epistemic_integrity",
-      "verification_count": 2,
-      "verified_at": "2026-07-06T04:41:08.377Z",
+      "verification_count": 3,
+      "verified_at": "2026-07-06T05:15:36.977Z",
       "created_at": "2026-04-17T12:32:31.947Z",
       "original_source": "unspecified source made the original claim",
       "claim_date": null,
@@ -26018,8 +26194,8 @@
       "tweet_url": null,
       "category": null,
       "related_axis_id": "axis_media_integrity_v1",
-      "verification_count": 250,
-      "verified_at": "2026-07-06T04:41:08.334Z",
+      "verification_count": 251,
+      "verified_at": "2026-07-06T05:15:36.953Z",
       "created_at": "2026-04-15T17:52:07.492Z",
       "original_source": "L'Espresso magazine",
       "claim_date": "2026-04",
@@ -48978,37 +49154,6 @@
       "investigation_depth": "quick"
     },
     {
-      "claim_id": "claim_104",
-      "claim_text": "Two young men killed by Basij and Revolutionary Guards forces at checkpoints in Iran",
-      "status": "expired",
-      "confidence_score": 0.275,
-      "display_score": 0.299,
-      "scoring_breakdown": {
-        "source_tier": 0.5,
-        "newsguard": 0.5,
-        "corroboration": 0,
-        "evidence_quality": 0,
-        "cross_source": 0.5,
-        "web_search": 0
-      },
-      "source_handle": "iranintl_en",
-      "source_tier": null,
-      "evidence_urls": [],
-      "tweet_url": null,
-      "category": null,
-      "related_axis_id": "axis_eje_accountability_v1",
-      "verification_count": 1,
-      "verified_at": "2026-04-17T12:32:31.978Z",
-      "created_at": "2026-04-17T12:32:31.975Z",
-      "original_source": null,
-      "claim_date": null,
-      "supporting_sources": [],
-      "dissenting_sources": [],
-      "framing_analysis": null,
-      "web_search_summary": null,
-      "investigation_depth": "quick"
-    },
-    {
       "claim_id": "claim_118",
       "claim_text": "Trump claims Iran agreed to halt nuclear program and hand over 'nuclear dust'.",
       "status": "expired",
@@ -49062,68 +49207,6 @@
       "verification_count": 1,
       "verified_at": "2026-04-17T13:03:25.455Z",
       "created_at": "2026-04-17T13:03:25.452Z",
-      "original_source": null,
-      "claim_date": null,
-      "supporting_sources": [],
-      "dissenting_sources": [],
-      "framing_analysis": null,
-      "web_search_summary": null,
-      "investigation_depth": "quick"
-    },
-    {
-      "claim_id": "claim_106",
-      "claim_text": "Provocative statement 'You will die for Israel and your last meal will be goyslop'",
-      "status": "expired",
-      "confidence_score": 0.275,
-      "display_score": 0.399,
-      "scoring_breakdown": {
-        "source_tier": 0.5,
-        "newsguard": 0.5,
-        "corroboration": 0,
-        "evidence_quality": 0,
-        "cross_source": 0.5,
-        "web_search": 0
-      },
-      "source_handle": "jacksonhinklle",
-      "source_tier": 4,
-      "evidence_urls": [],
-      "tweet_url": null,
-      "category": null,
-      "related_axis_id": "axis_epistemic_integrity",
-      "verification_count": 1,
-      "verified_at": "2026-04-17T12:32:31.997Z",
-      "created_at": "2026-04-17T12:32:31.995Z",
-      "original_source": null,
-      "claim_date": null,
-      "supporting_sources": [],
-      "dissenting_sources": [],
-      "framing_analysis": null,
-      "web_search_summary": null,
-      "investigation_depth": "quick"
-    },
-    {
-      "claim_id": "claim_105",
-      "claim_text": "Solar farm reduced to toxic debris by bad weather, highlighting fragility of solar technology",
-      "status": "expired",
-      "confidence_score": 0.275,
-      "display_score": 0.299,
-      "scoring_breakdown": {
-        "source_tier": 0.5,
-        "newsguard": 0.5,
-        "corroboration": 0,
-        "evidence_quality": 0,
-        "cross_source": 0.5,
-        "web_search": 0
-      },
-      "source_handle": "wideawake_media",
-      "source_tier": null,
-      "evidence_urls": [],
-      "tweet_url": null,
-      "category": null,
-      "related_axis_id": "axis_environmental_policy_v_economic_v1",
-      "verification_count": 1,
-      "verified_at": "2026-04-17T12:32:31.989Z",
-      "created_at": "2026-04-17T12:32:31.985Z",
       "original_source": null,
       "claim_date": null,
       "supporting_sources": [],
@@ -49288,37 +49371,6 @@
       "investigation_depth": "quick"
     },
     {
-      "claim_id": "claim_107",
-      "claim_text": "Images from the Epstein Files implicate Trump in pedophilia.",
-      "status": "expired",
-      "confidence_score": 0.275,
-      "display_score": 0.299,
-      "scoring_breakdown": {
-        "source_tier": 0.5,
-        "newsguard": 0.5,
-        "corroboration": 0,
-        "evidence_quality": 0,
-        "cross_source": 0.5,
-        "web_search": 0
-      },
-      "source_handle": "itx_soulsync",
-      "source_tier": null,
-      "evidence_urls": [],
-      "tweet_url": null,
-      "category": null,
-      "related_axis_id": "axis_epistemic_integrity",
-      "verification_count": 1,
-      "verified_at": "2026-04-17T13:03:25.431Z",
-      "created_at": "2026-04-17T13:03:25.425Z",
-      "original_source": null,
-      "claim_date": null,
-      "supporting_sources": [],
-      "dissenting_sources": [],
-      "framing_analysis": null,
-      "web_search_summary": null,
-      "investigation_depth": "quick"
-    },
-    {
       "claim_id": "claim_112",
       "claim_text": "Israel bombed and killed one person in the early hours of the ceasefire in Lebanon.",
       "status": "expired",
@@ -49372,37 +49424,6 @@
       "verification_count": 1,
       "verified_at": "2026-04-17T18:34:13.298Z",
       "created_at": "2026-04-17T18:34:13.294Z",
-      "original_source": null,
-      "claim_date": null,
-      "supporting_sources": [],
-      "dissenting_sources": [],
-      "framing_analysis": null,
-      "web_search_summary": null,
-      "investigation_depth": "quick"
-    },
-    {
-      "claim_id": "claim_103",
-      "claim_text": "EU President Ursula Von Der Leyen states EU protects freedom of speech, yet a man is arrested for speaking out against her",
-      "status": "expired",
-      "confidence_score": 0.275,
-      "display_score": 0.299,
-      "scoring_breakdown": {
-        "source_tier": 0.5,
-        "newsguard": 0.5,
-        "corroboration": 0,
-        "evidence_quality": 0,
-        "cross_source": 0.5,
-        "web_search": 0
-      },
-      "source_handle": "basilthegreat",
-      "source_tier": null,
-      "evidence_urls": [],
-      "tweet_url": null,
-      "category": null,
-      "related_axis_id": "axis_power_accountability",
-      "verification_count": 1,
-      "verified_at": "2026-04-17T12:32:31.968Z",
-      "created_at": "2026-04-17T12:32:31.966Z",
       "original_source": null,
       "claim_date": null,
       "supporting_sources": [],
@@ -49753,37 +49774,6 @@
       "investigation_depth": "quick"
     },
     {
-      "claim_id": "claim_108",
-      "claim_text": "Trump Administration is approaching US automakers to use their factories for military production as wars in Iran and Ukraine drain defense supplies, leading to a total war economy.",
-      "status": "expired",
-      "confidence_score": 0.275,
-      "display_score": 0.399,
-      "scoring_breakdown": {
-        "source_tier": 0.5,
-        "newsguard": 0.5,
-        "corroboration": 0,
-        "evidence_quality": 0,
-        "cross_source": 0.5,
-        "web_search": 0
-      },
-      "source_handle": "jacksonhinklle",
-      "source_tier": 4,
-      "evidence_urls": [],
-      "tweet_url": null,
-      "category": null,
-      "related_axis_id": "axis_global_power_realignments_v1",
-      "verification_count": 1,
-      "verified_at": "2026-04-17T13:03:25.444Z",
-      "created_at": "2026-04-17T13:03:25.442Z",
-      "original_source": null,
-      "claim_date": null,
-      "supporting_sources": [],
-      "dissenting_sources": [],
-      "framing_analysis": null,
-      "web_search_summary": null,
-      "investigation_depth": "quick"
-    },
-    {
       "claim_id": "live_ae429ff8a8",
       "claim_text": "I published x-hunter on docsbook-io. Activate AI translations and your docs show up in Google searches in dozens of languages — completely free SEO reach.",
       "status": "expired",
@@ -49834,8 +49824,8 @@
       "tweet_url": null,
       "category": null,
       "related_axis_id": "axis_geopolitical_rhetoric_v1",
-      "verification_count": 127,
-      "verified_at": "2026-07-06T04:41:08.347Z",
+      "verification_count": 128,
+      "verified_at": "2026-07-06T05:15:36.976Z",
       "created_at": "2026-04-16T12:32:21.939Z",
       "original_source": "L'Orient Today",
       "claim_date": "2026-04-16",
@@ -49864,6 +49854,103 @@
       "dissenting_sources": [],
       "framing_analysis": "The claim is framed factually, reporting an event. The available information confirms the event occurred, though there is a dispute regarding the presence of military assets within the school.",
       "web_search_summary": "On April 16, 2026, the Israeli army detonated a public high school in Marwahin, South Lebanon. The Lebanese Education Minister condemned the act, stating the school was devoid of any military presence. However, the Israeli army claimed to have discovered over 130 weapons belonging to Hezbollah inside an unidentified \"school facility.\"",
+      "investigation_depth": "quick"
+    },
+    {
+      "claim_id": "claim_106",
+      "claim_text": "Provocative statement 'You will die for Israel and your last meal will be goyslop'",
+      "status": "expired",
+      "confidence_score": 0.27,
+      "display_score": 0.414,
+      "scoring_breakdown": {
+        "source_tier": 0.4,
+        "newsguard": 0,
+        "corroboration": 0,
+        "evidence_quality": 0,
+        "cross_source": 0.5,
+        "web_search": 1
+      },
+      "source_handle": "jacksonhinklle",
+      "source_tier": 4,
+      "evidence_urls": [
+        "https://x.com/jacksonhinklle/status/2045079796061700177",
+        "https://myemail.constantcontact.com/Neo-Nazi-March---Antisemitic-Term-Goyslop--and-More-From-the-Command-Center.html?soid=1141518249890&aid=6MJsZhWcchw",
+        "https://www.timesofisrael.com/florida-anti-israel-gop-candidate-james-fishback-rants-about-goyslop-what-does-it-mean/",
+        "https://www.jta.org/2026/03/06/politics/ihop-denies-inviting-florida-gop-candidate-who-said-americans-shouldnt-die-for-israel",
+        "https://knowyourmeme.com/sensitive/memes/goyslop"
+      ],
+      "tweet_url": null,
+      "category": null,
+      "related_axis_id": "axis_epistemic_integrity",
+      "verification_count": 2,
+      "verified_at": "2026-07-06T05:15:36.987Z",
+      "created_at": "2026-04-17T12:32:31.995Z",
+      "original_source": "X.com/jacksonhinklle",
+      "claim_date": "2026-04-17",
+      "supporting_sources": [
+        {
+          "name": "X.com",
+          "excerpt": "U.S. sailors on the USS Abraham Lincoln are reported to have reportedly made this statement during a long deployment.",
+          "url": null
+        },
+        {
+          "name": "Know Your Meme",
+          "excerpt": "Goyslop, an antisemitic internet slang term for unhealthy food, is explained in detail.",
+          "url": null
+        }
+      ],
+      "dissenting_sources": [
+        {
+          "name": "JTA.org",
+          "excerpt": "IHOP denies inviting Florida GOP candidate James Fishback who referenced goyslop, potentially refuting part of the claim.",
+          "url": null
+        }
+      ],
+      "framing_analysis": "The statement is framed as a provocative and controversial phrase, which aligns with its nature but does not provide context for why it was made or by whom other than a possible reference in the U.S. Navy.",
+      "web_search_summary": "The statement is confirmed as a provocative and antisemitic phrase referencing 'goyslop'.",
+      "investigation_depth": "quick"
+    },
+    {
+      "claim_id": "claim_108",
+      "claim_text": "Trump Administration is approaching US automakers to use their factories for military production as wars in Iran and Ukraine drain defense supplies, leading to a total war economy.",
+      "status": "expired",
+      "confidence_score": 0.27,
+      "display_score": 0.414,
+      "scoring_breakdown": {
+        "source_tier": 0.4,
+        "newsguard": 0,
+        "corroboration": 0,
+        "evidence_quality": 0,
+        "cross_source": 0.5,
+        "web_search": 1
+      },
+      "source_handle": "jacksonhinklle",
+      "source_tier": 4,
+      "evidence_urls": [
+        "https://www.foxbusiness.com/politics/trump-administration-taps-automakers-boost-weapons-production-wwii-style-push",
+        "https://www.yahoo.com/news/articles/pentagon-approaches-us-automakers-help-042844025.html",
+        "https://www.cnbctv18.com/world/trump-pushes-automakers-and-producers-to-boost-weapons-production-similar-to-wwii-what-it-means-ws-l-19887700.htm",
+        "https://nypost.com/2026/04/16/business/trump-administration-looks-to-ford-gm-in-wwii-style-weapons-push-report/",
+        "https://www.moneycontrol.com/world/from-cars-to-weapons-trump-team-taps-gm-ford-as-wars-drain-us-stockpiles-article-13890296.html"
+      ],
+      "tweet_url": null,
+      "category": null,
+      "related_axis_id": "axis_global_power_realignments_v1",
+      "verification_count": 2,
+      "verified_at": "2026-07-06T05:15:36.992Z",
+      "created_at": "2026-04-17T13:03:25.442Z",
+      "original_source": "First reported by Fox Business on April 16, 2026",
+      "claim_date": "2026-04",
+      "supporting_sources": [
+        {
+          "name": "Fox Business",
+          "excerpt": "The Trump administration is turning to automakers and U.S. manufacturers to ramp up weapons production in a World War II-style push.",
+          "url": null
+        }
+      ],
+      "dissenting_sources": [],
+      "framing_analysis": "The claim is framed validly as it accurately reflects the sources provided which confirm that U.S. automakers were approached for increased military production during conflicts in Iran and Ukraine.",
+      "web_search_summary": "Search results confirmed that the Trump administration approached U.S. automakers to boost weapons production during ongoing conflicts in Iran and Ukraine.",
       "investigation_depth": "quick"
     },
     {
@@ -49954,8 +50041,8 @@
       "tweet_url": null,
       "category": null,
       "related_axis_id": "axis_epistemic_integrity",
-      "verification_count": 128,
-      "verified_at": "2026-07-06T04:41:08.345Z",
+      "verification_count": 129,
+      "verified_at": "2026-07-06T05:15:36.974Z",
       "created_at": "2026-04-16T10:01:17.334Z",
       "original_source": "Unknown",
       "claim_date": "2026-06-01",
@@ -50067,8 +50154,8 @@
       "tweet_url": null,
       "category": null,
       "related_axis_id": "axis_human_rights_exploitation_v1",
-      "verification_count": 125,
-      "verified_at": "2026-07-06T04:41:08.347Z",
+      "verification_count": 126,
+      "verified_at": "2026-07-06T05:15:36.976Z",
       "created_at": "2026-04-16T21:04:37.012Z",
       "original_source": "Unknown",
       "claim_date": null,
