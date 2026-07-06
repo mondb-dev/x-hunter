@@ -468,6 +468,43 @@ class X {
   }
 
   /**
+   * Update the account bio via x.com/settings/profile. The bio field is a plain
+   * (React-controlled) textarea — set its value with the native setter + input
+   * event, then click Save. Not the tweet composer, so no insert-text quirks.
+   * @returns {Promise<{ok:boolean, reason?:string, dryRun?:boolean}>}
+   */
+  async setBio(text, { dryRun = false } = {}) {
+    if (!(await this._gotoChecked("https://x.com/settings/profile"))) return { ok: false, reason: "navigation_failed" };
+    await sleep(2500);
+    const SEL = 'textarea[name="description"], [data-testid="ocfEnterTextTextInput"]';
+    const found = await this.c.evalFn(this.tab, (s) => !!document.querySelector(s), SEL);
+    if (!found) return { ok: false, reason: "bio_field_not_found" };
+    if (dryRun) { this.log("DRY RUN — bio field located, not saving"); return { ok: false, reason: "dry_run", dryRun: true }; }
+
+    const set = await this.c.evalFn(this.tab, (a) => {
+      const el = document.querySelector(a.s);
+      if (!el) return false;
+      const setter = Object.getOwnPropertyDescriptor(Object.getPrototypeOf(el), "value").set;
+      setter.call(el, a.t);
+      el.dispatchEvent(new Event("input", { bubbles: true }));
+      el.dispatchEvent(new Event("change", { bubbles: true }));
+      return true;
+    }, { s: SEL, t: text });
+    if (!set) return { ok: false, reason: "bio_set_failed" };
+    await sleep(800);
+
+    const saved = await this.c.evalFn(this.tab, () => {
+      const btns = Array.from(document.querySelectorAll("[data-testid='Profile_Save_Button'], button"));
+      const b = btns.find((x) => x.getAttribute("data-testid") === "Profile_Save_Button" || (x.textContent || "").trim() === "Save");
+      if (b && !b.disabled) { b.click(); return true; }
+      return false;
+    });
+    if (!saved) return { ok: false, reason: "save_button_not_found" };
+    await sleep(3000);
+    return { ok: true };
+  }
+
+  /**
    * Follow a user from their profile page.
    * @param {string} username Handle without @.
    * @returns {Promise<{ok:boolean, reason?:string, dryRun?:boolean}>}

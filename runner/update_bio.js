@@ -124,6 +124,27 @@ async function generateBio(vocation) {
  * Navigate to x.com/settings/profile and update the bio field.
  */
 async function updateBioOnX(newBio) {
+  // HelmStack backend: update the bio via the X engine (same substrate as all
+  // other X actions) instead of the legacy CDP Chrome.
+  if ((process.env.POST_BACKEND || "").toLowerCase() === "helmstack") {
+    try {
+      const { HelmStackClient, X } = require("../tools/helmstack-social/src");
+      const { HANDLE } = require("./post_result");
+      const x = new X(new HelmStackClient(), { ownHandle: HANDLE, log: (m) => console.log(`[update_bio.hs] ${m}`) });
+      await x.c.health();
+      await x.ensureTab();
+      const res = await x.setBio(newBio, { dryRun: process.env.HELMSTACK_DRY_RUN === "1" });
+      await x.c.navigate(x.tab, "https://x.com/home").catch(() => {});
+      if (res.dryRun) { console.log("[update_bio] dry run — not saved"); return false; }
+      if (!res.ok) { console.error(`[update_bio] helmstack bio update failed: ${res.reason}`); return false; }
+      console.log("[update_bio] bio updated via HelmStack");
+      return true;
+    } catch (err) {
+      console.error(`[update_bio] helmstack error: ${err.message}`);
+      return false;
+    }
+  }
+
   const browser = await connectBrowser();
   let page;
   try {
