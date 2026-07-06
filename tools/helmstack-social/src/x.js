@@ -158,15 +158,25 @@ class X {
       const e = document.querySelector(sel);
       return !e || e.innerText.trim().length === 0;
     }, COMPOSE_BOX);
-    for (let t = 0; t < 3; t++) {
+    for (let t = 0; t < 4; t++) {
+      // execCommand path — works when there's no link chip in the composer.
       await this.c.evalFn(this.tab, (sel) => { const e = document.querySelector(sel); if (e) { e.focus(); document.execCommand("selectAll"); document.execCommand("delete"); } }, COMPOSE_BOX);
-      await sleep(400);
+      await sleep(350);
       if (await isEmpty()) return true;
+      // Key path — needed once a link chip is present (execCommand breaks then).
+      // Select-all (Cmd+A on macOS), then several Backspaces AND a Delete, since
+      // a link chip can survive a single deletion.
       await this._focusComposer();
       await this.c.pressKey(this.tab, { key: "a", code: "KeyA", keyCode: 65, modifiers: 4 }).catch(() => {});
       await sleep(200);
-      await this.c.pressKey(this.tab, { key: "Backspace", code: "Backspace", keyCode: 8 }).catch(() => {});
-      await sleep(400);
+      for (let b = 0; b < 4; b++) {
+        await this.c.pressKey(this.tab, { key: "Backspace", code: "Backspace", keyCode: 8 }).catch(() => {});
+        await sleep(150);
+      }
+      await this.c.pressKey(this.tab, { key: "a", code: "KeyA", keyCode: 65, modifiers: 4 }).catch(() => {});
+      await sleep(150);
+      await this.c.pressKey(this.tab, { key: "Delete", code: "Delete", keyCode: 46 }).catch(() => {});
+      await sleep(350);
       if (await isEmpty()) return true;
     }
     return isEmpty();
@@ -195,7 +205,9 @@ class X {
       const seen = await this.c.evalFn(this.tab, (sel) => { const e = document.querySelector(sel); return e ? e.innerText.trim().length > 0 : false; }, COMPOSE_BOX);
       if (seen) break;
     }
-    await this._clearComposer();
+    // Never insert into a non-empty composer — leftover text makes insertText
+    // APPEND, stacking duplicate copies (the "…fact.EU announces…" ×4 bug).
+    if (!(await this._clearComposer())) { this.log("composer would not clear before insert — aborting (avoids duplication)"); return false; }
     for (let attempt = 1; attempt <= 3; attempt++) {
       await this._focusComposer();
       await sleep(300);
@@ -239,7 +251,9 @@ class X {
       const got = await this.c.evalFn(this.tab, (sel) => { const e = document.querySelector(sel); return e ? e.innerText : ""; }, COMPOSE_BOX);
       if (norm(got) === norm(text)) return true;
       this.log(`text verify miss ${attempt}/3 (${(got || "").trim().length}/${text.length})`);
-      await this._clearComposer();
+      // Must fully clear before retrying, or the next insert appends onto the
+      // miss and compounds into duplicated text. If it won't clear, abort.
+      if (!(await this._clearComposer())) { this.log("composer would not clear after miss — aborting (avoids duplication)"); return false; }
     }
     return false;
   }
