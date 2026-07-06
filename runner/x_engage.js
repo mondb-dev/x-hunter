@@ -132,8 +132,8 @@ async function generateReply(post) {
     } catch (e) { log(`verify failed (${e.message}) — proceeding`); }
   }
 
-  const { callVertex } = require("./vertex");
   const { compose } = require("./lib/compose");
+  const { passOutbound } = require("./lib/outbound_gates");
   let persona = "";
   try {
     const { buildPersona, buildCoreContext } = require("./lib/sebastian_respond");
@@ -150,23 +150,10 @@ async function generateReply(post) {
     // Compose the reply on the Claude terminal when enabled (COMPOSE_BACKEND=claude),
     // else on the local/Vertex brain. Persona/voice is carried in `prompt`.
     const raw = await compose(prompt, { maxTokens: 400, model: "gemini-2.5-flash", thinkingBudget: 0, tag: "x_reply" });
-    let text = (raw || "").trim().replace(/^["']|["']$/g, "");
-    if (!text || text === "SKIP" || text.length > 270) return null;
-
-    // Fact-check pass for stale officeholder/date claims
-    const fc = await callVertex(
-      `Today is ${new Date().toISOString().slice(0, 10)}. Review this X reply for verifiably wrong facts (wrong current officeholder titles, datable facts clearly wrong given today). Reply JSON only: {"pass":true} or {"pass":false,"corrected":"fixed text or null"}.\n\nDRAFT:\n"${text}"`,
-      300, { model: "gemini-2.5-flash", thinkingBudget: 0 }
-    ).catch(() => '{"pass":true}');
-    try {
-      const m = fc.replace(/^```[a-z]*\n?/i, "").replace(/\n?```$/i, "").match(/\{[\s\S]*?\}/);
-      const res = m ? JSON.parse(m[0]) : { pass: true };
-      if (res.pass === false) {
-        if (res.corrected && res.corrected.length <= 270) text = res.corrected;
-        else return null;
-      }
-    } catch { /* unparseable = let through */ }
-    return text;
+    // Shared outbound gate: voice_filter (was missing on replies) + fact-check.
+    const gated = await passOutbound(raw, { gates: ["voice", "factcheck"], maxLen: 270, tag: "x_reply" });
+    if (!gated.ok) { log(`reply gate rejected: ${gated.reason}`); return null; }
+    return gated.text;
   } catch (err) { log(`reply generation failed: ${err.message}`); return null; }
 }
 

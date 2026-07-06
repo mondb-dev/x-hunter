@@ -38,6 +38,7 @@ if (fs.existsSync(path.join(ROOT, '.env'))) {
 const loadContext     = require('./lib/prompts/context');
 const buildTweetPrompt = require('./lib/prompts/tweet');
 const { compose }     = require('./lib/compose');
+const { passOutbound } = require('./lib/outbound_gates');
 
 const DRAFT_PATH = config.TWEET_DRAFT_PATH || path.join(config.STATE_DIR, 'tweet_draft.txt');
 const log = (m) => console.log(`[compose_tweet] ${m}`);
@@ -103,8 +104,13 @@ function dayNumberFrom(today) {
   if (!clean || clean.toUpperCase() === 'SKIP') { log('compose returned SKIP/empty'); fs.writeFileSync(DRAFT_PATH, 'SKIP\n'); process.exit(0); }
   if (clean.length > 240) { log(`compose too long (${clean.length} chars) — SKIP`); fs.writeFileSync(DRAFT_PATH, 'SKIP\n'); process.exit(0); }
 
+  // Shared fact-check gate (voice_filter + critique_tweet run downstream in post.js).
+  const gated = await passOutbound(clean, { gates: ['factcheck'], maxLen: 240, tag: 'tweet' });
+  if (!gated.ok) { log(`gate rejected: ${gated.reason} — SKIP`); fs.writeFileSync(DRAFT_PATH, 'SKIP\n'); process.exit(0); }
+  const finalText = gated.text;
+
   const journalUrl = `https://sebastianhunter.fun/journal/${today}/${hour}`;
-  fs.writeFileSync(DRAFT_PATH, `${clean}\n${journalUrl}\n`);
-  log(`wrote draft (${clean.length} chars): ${clean.slice(0, 60)}...`);
+  fs.writeFileSync(DRAFT_PATH, `${finalText}\n${journalUrl}\n`);
+  log(`wrote draft (${finalText.length} chars): ${finalText.slice(0, 60)}...`);
   process.exit(0);
 })();

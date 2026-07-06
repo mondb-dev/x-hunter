@@ -87,21 +87,14 @@ Write ONE original LinkedIn post following the strategy above. Return ONLY the p
     let text = (raw || "").trim().replace(/^["']|["']$/g, "");
     if (!text || text.length < 120) { log("generation too short — skipping"); process.exit(0); }
 
-    // Verification pass: LinkedIn posts had no fact-check (unlike X replies).
-    // Catch verifiably wrong facts (stale officeholder titles, datable claims).
-    try {
-      const today = new Date().toISOString().slice(0, 10);
-      const fcRaw = await compose(
-        `Today is ${today}. Review this LinkedIn post for verifiably wrong facts — wrong current officeholder titles, or datable facts clearly wrong given today. Do NOT flag opinion, analysis, or uncertain claims. Reply JSON only: {"pass":true} or {"pass":false,"corrected":"full corrected post text, or null if not fixable"}.\n\nPOST:\n"""\n${text}\n"""`,
-        { maxTokens: 1200, tag: "linkedin_factcheck" }
-      );
-      const m = String(fcRaw).replace(/^```[a-z]*\n?/i, "").replace(/\n?```$/i, "").match(/\{[\s\S]*\}/);
-      const res = m ? JSON.parse(m[0]) : { pass: true };
-      if (res.pass === false) {
-        if (res.corrected && res.corrected.trim().length >= 120) { text = res.corrected.trim(); log("fact-check corrected the draft"); }
-        else { log("fact-check flagged an unfixable factual issue — skipping"); process.exit(0); }
-      } else { log("fact-check: pass"); }
-    } catch (e) { log(`fact-check unavailable (${e.message}) — proceeding`); }
+    // Shared outbound gate: voice_filter (was missing on LinkedIn posts) +
+    // fact-check (stale officeholder titles / datable claims → correct or skip).
+    const { passOutbound } = require("./lib/outbound_gates");
+    const gated = await passOutbound(text, { gates: ["voice", "factcheck"], tag: "linkedin_draft" });
+    if (!gated.ok) { log(`outbound gate rejected: ${gated.reason} — skipping`); process.exit(0); }
+    if (gated.text.length < 120) { log("post too short after gating — skipping"); process.exit(0); }
+    text = gated.text;
+    log("outbound gate: pass");
 
     // Coherence gate (local): a LinkedIn post may cite several examples but must
     // advance ONE argument — reject a grab-bag that jams unrelated stories together.

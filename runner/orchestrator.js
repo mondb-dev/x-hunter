@@ -820,8 +820,29 @@ function runOneCycle() {
     try { fs.unlinkSync(path.join(config.STATE_DIR, 'quote_result.txt')); } catch {}
     try { fs.unlinkSync(path.join(config.STATE_DIR, 'quote_attempt.json')); } catch {}
 
-    const quoteExit = agentRun({ agent: 'x-hunter', message: prompt, thinking: 'low', verbose: 'on', model: POST_MODEL });
-    metrics.agentExitCodes.push(quoteExit);
+    const quoteComposeEnv = {
+      CYCLE_NUMBER: String(cycle), TODAY: today, NOW: now, HOUR: hour, DAY_NUMBER: String(dayNumber),
+    };
+
+    // PRIMARY composition: compose the quote via Claude (from the feed digest)
+    // when the backend is on — same rationale as tweets; the agentic local loop
+    // routinely emits no draft. compose_quote writes the draft OR an explicit SKIP.
+    let quoteComposed = false;
+    if (useClaudeCompose()) {
+      log('composing quote via Claude (compose_quote.js, primary)');
+      runScriptLog(path.join(PROJECT_ROOT, 'runner/compose_quote.js'), '', quoteComposeEnv);
+      quoteComposed = fileExists(config.QUOTE_DRAFT_PATH);
+    }
+
+    if (!quoteComposed) {
+      const quoteExit = agentRun({ agent: 'x-hunter', message: prompt, thinking: 'low', verbose: 'on', model: POST_MODEL });
+      metrics.agentExitCodes.push(quoteExit);
+      // Last-resort fallback: agent produced nothing — compose directly.
+      if (!fileExists(config.QUOTE_DRAFT_PATH)) {
+        log('quote_draft.txt still missing — composing directly (compose_quote.js)');
+        runScriptLog(path.join(PROJECT_ROOT, 'runner/compose_quote.js'), '', quoteComposeEnv);
+      }
+    }
 
     // Restore state
     chmodPostsLog('644');
