@@ -440,6 +440,34 @@ class X {
   }
 
   /**
+   * Post a thread: tweet[0] as an original, each subsequent tweet as a reply to
+   * the previous one (self-thread). Confirms each tweet's URL from the profile so
+   * the next reply chains to it — the same mechanism post() uses.
+   * @param {string[]} tweets  ordered tweet bodies (>=1)
+   * @returns {Promise<{ok:boolean, urls:(string|null)[], reason?:string, dryRun?:boolean}>}
+   */
+  async postThread(tweets, { dryRun = false } = {}) {
+    const urls = [];
+    const first = await this.post(tweets[0], { dryRun });
+    if (dryRun) return { ok: false, dryRun: true, urls };
+    if (!first.posted) return { ok: false, reason: `tweet1:${first.reason || "failed"}`, urls };
+    urls.push(first.url || null);
+
+    // Chain replies to the last confirmed URL. If tweet1's URL wasn't captured,
+    // try once more to recover it — without a root URL we can't thread.
+    let prev = first.url || (await this._confirmFromProfile(tweets[0]).catch(() => null));
+    for (let i = 1; i < tweets.length; i++) {
+      if (!prev) { this.log(`thread: no URL to chain tweet${i + 1} onto — stopping (tweet1 is live)`); urls.push(null); break; }
+      const r = await this.reply(prev, tweets[i], { dryRun });
+      if (!r.ok) { this.log(`thread: tweet${i + 1} reply failed (${r.reason})`); urls.push(null); continue; }
+      const u = await this._confirmFromProfile(tweets[i]).catch(() => null);
+      urls.push(u || null);
+      if (u) prev = u; // chain the next reply to this one; else keep the last good URL
+    }
+    return { ok: true, urls };
+  }
+
+  /**
    * Follow a user from their profile page.
    * @param {string} username Handle without @.
    * @returns {Promise<{ok:boolean, reason?:string, dryRun?:boolean}>}

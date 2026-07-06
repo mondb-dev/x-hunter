@@ -157,4 +157,42 @@ async function runQuote({ draftFile, resultFile, attemptFile, cycle }) {
   return 0;
 }
 
-module.exports = { runTweet, runQuote };
+// ── runThread ─────────────────────────────────────────────────────────────────
+// Posts an already-gated ordered list of tweets as a self-thread via the engine.
+// Gating (voice_filter + coherence) stays in post_thread.js; this only posts.
+// Returns { ok, tweet1Url, urls } — tweet1Url null means tweet1 itself failed.
+async function runThread(tweets, { cycle } = {}) {
+  const tag = "post_thread.hs";
+  if (!Array.isArray(tweets) || !tweets.length) return { ok: false, reason: "no_tweets" };
+
+  const x = await makeEngine(tag, null, "thread", cycle);
+  if (!x) return { ok: false, reason: "helmstack_connect_failed" };
+
+  let res;
+  try {
+    res = await x.postThread(tweets, { dryRun: DRY_RUN });
+  } catch (err) {
+    console.error(`[${tag}] error: ${err.message}`);
+    return { ok: false, reason: "exception", error: err.message };
+  }
+
+  if (res.dryRun) { console.log(`[${tag}] dry run — not posted`); return { ok: false, dryRun: true }; }
+  if (!res.ok) { console.error(`[${tag}] thread failed: ${res.reason}`); return { ok: false, reason: res.reason }; }
+
+  const urls = res.urls || [];
+  const tweet1Url = urls[0] && isConfirmedStatusUrl(urls[0]) ? urls[0] : (urls[0] || null);
+  if (!tweet1Url) return { ok: false, reason: "tweet1_unconfirmed" };
+
+  // Log tweet1 + each confirmed reply, mirroring the CDP path's posts_log shape.
+  logTweet({ type: "thread", content: tweets[0], tweet_url: tweet1Url, cycle });
+  let replyTo = tweet1Url;
+  for (let i = 1; i < tweets.length; i++) {
+    const u = urls[i];
+    if (u) { logTweet({ type: "thread_reply", content: tweets[i], tweet_url: u, reply_to: replyTo, cycle }); replyTo = u; }
+    else console.log(`[${tag}] tweet${i + 1} not confirmed`);
+  }
+  await x.c.navigate(x.tab, "https://x.com/home").catch(() => {});
+  return { ok: true, tweet1Url, urls };
+}
+
+module.exports = { runTweet, runQuote, runThread };

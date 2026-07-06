@@ -197,6 +197,24 @@ async function main() {
     console.log(`[thread] ${key} (${draft[key].length}c): ${draft[key].slice(0, 70)}…`);
   }
 
+  // HelmStack backend: post the (gated) thread via the X engine — same substrate
+  // as tweets/quotes/replies. Gating above is unchanged; only posting differs.
+  if ((process.env.POST_BACKEND || '').toLowerCase() === 'helmstack') {
+    const { runThread } = require('./lib/post_x_helmstack');
+    const ordered = tweets.map((k) => draft[k]);
+    const res = await runThread(ordered, { cycle: Number.parseInt(process.env.CYCLE_NUMBER || '', 10) || null });
+    if (res.dryRun) { console.log('[thread] dry run — leaving draft'); process.exit(0); }
+    if (!res.ok) { console.error(`[thread] helmstack post failed: ${res.reason}`); process.exit(1); }
+    fs.writeFileSync(STATE_PATH, JSON.stringify({
+      last_posted: new Date().toISOString().slice(0, 10),
+      topic: draft.topic || null,
+      tweet1_url: res.tweet1Url,
+    }, null, 2));
+    try { fs.unlinkSync(DRAFT_PATH); } catch {}
+    console.log('[thread] done (helmstack)');
+    process.exit(0);
+  }
+
   const browser = await connectBrowser();
   const page = await getXPage(browser);
   const today = new Date().toISOString().slice(0, 10);
