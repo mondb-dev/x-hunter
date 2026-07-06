@@ -1,8 +1,8 @@
 {
   "schema_version": "1.0",
-  "generated_at": "2026-07-05T22:44:36.611Z",
+  "generated_at": "2026-07-06T01:06:44.673Z",
   "method": "mechanical_registry_v1",
-  "profiled_at": "2026-07-05T22:45:01.349Z",
+  "profiled_at": "2026-07-06T01:06:50.840Z",
   "sources": [
     {
       "domain": "ojp.gov",
@@ -389,9 +389,9 @@
       "entity": "Theguardian",
       "kind": "news",
       "first_seen_at": "2026-03-27T23:17:00Z",
-      "last_seen_at": "2026-07-05T20:16:22.179Z",
+      "last_seen_at": "2026-07-06T00:15:16.644Z",
       "discovery": {
-        "distinct_urls": 246,
+        "distinct_urls": 248,
         "example_urls": [
           "https://www.theguardian.com/us-news/2026/jun/23/trump-immigration-courthouse-arrest-policy",
           "https://www.theguardian.com/us-news/2026/jun/28/ice-minnesota-defending-democracy",
@@ -401,8 +401,8 @@
         ],
         "origin_counts": {
           "ontology_evidence": 28,
-          "reading_queue": 226,
-          "journals": 59
+          "reading_queue": 227,
+          "journals": 63
         },
         "distinct_referring_accounts": 0,
         "sample_referring_accounts": [],
@@ -443,7 +443,7 @@
         "breadth": {
           "score": 0.8799999999999999,
           "basis": [
-            "distinct_urls:246",
+            "distinct_urls:248",
             "distinct_axes:10",
             "origin_types:3"
           ]
@@ -482,7 +482,7 @@
           "basis": [
             "newsroom_domain_pattern",
             "article_path_seen",
-            "distinct_urls:246",
+            "distinct_urls:248",
             "distinct_axes:10",
             "origin_types:3",
             "referring_accounts:0",
@@ -669,7 +669,7 @@
       "first_seen_at": "2026-06-22T00:15:00Z",
       "last_seen_at": "2026-07-05T16:15:56.834Z",
       "discovery": {
-        "distinct_urls": 156,
+        "distinct_urls": 157,
         "example_urls": [
           "https://www.nytimes.com/2026/06/19/world/canada/frank-stronach-trial-guilty-sex-charges.html",
           "https://www.nytimes.com/2026/06/27/world/americas/mexican-officials-us-informants.html",
@@ -679,7 +679,7 @@
         ],
         "origin_counts": {
           "ontology_evidence": 7,
-          "reading_queue": 155,
+          "reading_queue": 156,
           "journals": 12
         },
         "distinct_referring_accounts": 0,
@@ -716,7 +716,7 @@
         "breadth": {
           "score": 0.8216666666666665,
           "basis": [
-            "distinct_urls:156",
+            "distinct_urls:157",
             "distinct_axes:5",
             "origin_types:3"
           ]
@@ -755,7 +755,7 @@
           "basis": [
             "newsroom_domain_pattern",
             "article_path_seen",
-            "distinct_urls:156",
+            "distinct_urls:157",
             "distinct_axes:5",
             "origin_types:3",
             "referring_accounts:0",
@@ -1168,7 +1168,7 @@
       "first_seen_at": "2026-06-26T07:05:00Z",
       "last_seen_at": "2026-07-05T19:15:44.455Z",
       "discovery": {
-        "distinct_urls": 120,
+        "distinct_urls": 121,
         "example_urls": [
           "https://www.bbc.co.uk/news/articles/cn8qxz6qypyo",
           "https://www.bbc.co.uk/news/articles/cn075j04pnyo?at_medium=RSS&amp;at_campaign=rss",
@@ -1178,7 +1178,7 @@
         ],
         "origin_counts": {
           "ontology_evidence": 4,
-          "reading_queue": 122,
+          "reading_queue": 123,
           "journals": 9
         },
         "distinct_referring_accounts": 0,
@@ -1212,7 +1212,7 @@
         "breadth": {
           "score": 0.7049999999999998,
           "basis": [
-            "distinct_urls:120",
+            "distinct_urls:121",
             "distinct_axes:3",
             "origin_types:3"
           ]
@@ -1250,7 +1250,7 @@
           "method": "mechanical_v1",
           "basis": [
             "newsroom_domain_pattern",
-            "distinct_urls:120",
+            "distinct_urls:121",
             "distinct_axes:3",
             "origin_types:3",
             "referring_accounts:0",
@@ -2232,9 +2232,9 @@
       "entity": "Inquirer",
       "kind": "unknown",
       "first_seen_at": "2026-05-09T10:15:15.053Z",
-      "last_seen_at": "2026-07-05T14:45:45.543Z",
+      "last_seen_at": "2026-07-06T00:15:16.704Z",
       "discovery": {
-        "distinct_urls": 82,
+        "distinct_urls": 83,
         "example_urls": [
           "https://www.inquirer.net/capiz-broadcaster-shooting-probe-widens-as-cops-form-task-force",
           "https://newsinfo.inquirer.net/2251519/chr-carries-out-motu-proprio-probe-into-tacloban-cavite-school-incidents",
@@ -2243,8 +2243,8 @@
           "https://newsinfo.inquirer.net/2252742/fwd-defense-lawyer-poa-says-being-listed-as-the-prosecs-witness-not-a-problem"
         ],
         "origin_counts": {
-          "ontology_evidence": 45,
-          "journals": 144,
+          "ontology_evidence": 46,
+          "journals": 148,
           "articles": 1
         },
         "distinct_referring_accounts": 0,
@@ -2282,7 +2282,7 @@
         "breadth": {
           "score": 0.8799999999999999,
           "basis": [
-            "distinct_urls:82",
+            "distinct_urls:83",
             "distinct_axes:7",
             "origin_types:3"
           ]
@@ -2320,7 +2320,7 @@
           "method": "mechanical_v1",
           "basis": [
             "unknown_domain_pattern",
-            "distinct_urls:82",
+            "distinct_urls:83",
             "distinct_axes:7",
             "origin_types:3",
             "referring_accounts:0",
@@ -3167,9 +3167,9 @@
       "entity": "T Co",
       "kind": "unknown",
       "first_seen_at": "2016-05-05T18:57:30.000Z",
-      "last_seen_at": "2026-07-05T20:31:25.000Z",
+      "last_seen_at": "2026-07-05T23:35:02.000Z",
       "discovery": {
-        "distinct_urls": 6599,
+        "distinct_urls": 6601,
         "example_urls": [
           "https://t.co/pJSE124ec4",
           "https://t.co/Soz8BXPWaa",
@@ -3178,7 +3178,7 @@
           "https://t.co/cYaqYDRp08"
         ],
         "origin_counts": {
-          "feed_buffer": 3877,
+          "feed_buffer": 3880,
           "feed_buffer_reply": 4287
         },
         "distinct_referring_accounts": 2118,
@@ -3220,7 +3220,7 @@
         "breadth": {
           "score": 0.47,
           "basis": [
-            "distinct_urls:6599",
+            "distinct_urls:6601",
             "distinct_axes:0",
             "origin_types:2"
           ]
@@ -3259,7 +3259,7 @@
           "basis": [
             "unknown_domain_pattern",
             "doi_or_identifier_path_seen",
-            "distinct_urls:6599",
+            "distinct_urls:6601",
             "distinct_axes:0",
             "origin_types:2",
             "referring_accounts:2118",
@@ -32391,7 +32391,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-29T15:06:56.559Z",
+        "fetched_at": "2026-07-05T23:44:51.512Z",
         "homepage_url": "https://statefreedomcaucus.org/",
         "example_url": "https://www.statefreedomcaucus.org/15-strong/?twclid=2epfodwob5z2m8xe9l0e1w4xfa",
         "homepage_status": null,
@@ -32514,7 +32514,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-29T22:36:54.825Z",
+        "fetched_at": "2026-07-05T23:44:54.129Z",
         "homepage_url": "https://gamedaymath.com/",
         "example_url": "https://www.gamedaymath.com/pricing?twclid=22wv0ellx5eqlyjtmchr7w8rag",
         "homepage_status": 200,
@@ -32637,7 +32637,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-30T19:07:13.827Z",
+        "fetched_at": "2026-07-05T23:44:55.256Z",
         "homepage_url": "https://monadicdna.com/",
         "example_url": "https://explorer.monadicdna.com/?twclid=23v8cbj938nxfoq8gmro6dqa1l",
         "homepage_status": 200,
@@ -32760,7 +32760,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-07-01T03:38:05.528Z",
+        "fetched_at": "2026-07-05T23:44:56.378Z",
         "homepage_url": "https://any.run/",
         "example_url": "https://any.run/cybersecurity-blog/anyrun-macos-sandbox/?utm_source=twitter&utm_medium=post&utm_campaign=macos_ad&utm_content=linktoblog&utm_term=300326&twclid=23x4x734jui85kqg60evobo3x3",
         "homepage_status": 200,
@@ -32883,7 +32883,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-30T19:07:14.821Z",
+        "fetched_at": "2026-07-06T00:14:03.692Z",
         "homepage_url": "https://alphacapital.pro/",
         "example_url": "https://alphacapital.pro/pages/performance/?utm_source=twitter&utm_medium=ad1&utm_campaign=ac&twclid=2b8weeqkz95cs1xc59f8v2j7ob",
         "homepage_status": 200,
@@ -32977,14 +32977,14 @@
           ]
         },
         "profile": {
-          "score": 0.23,
+          "score": 0.11,
           "confidence": 0.55,
           "basis": [
             "meta_author:false",
             "published_time:false",
             "canonical:true",
             "about:false",
-            "contact:true",
+            "contact:false",
             "corrections:false",
             "outbound_links:1",
             "opinion_marker:false"
@@ -33006,7 +33006,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-30T19:07:15.075Z",
+        "fetched_at": "2026-07-06T00:14:04.369Z",
         "homepage_url": "https://willowvoice.com/",
         "example_url": "https://willowvoice.com/developers?twclid=2ebuy7l735ljqyo9xotbgwpmp0",
         "homepage_status": 200,
@@ -33020,7 +33020,7 @@
           "has_published_time": false,
           "has_canonical": true,
           "has_about_link": false,
-          "has_contact_link": true,
+          "has_contact_link": false,
           "has_corrections_link": false,
           "outbound_links_count": 1,
           "opinion_marker": false
@@ -33030,7 +33030,7 @@
           "has_published_time": false,
           "has_canonical": true,
           "has_about_link": false,
-          "has_contact_link": true,
+          "has_contact_link": false,
           "has_corrections_link": false,
           "outbound_links_count": 1,
           "opinion_marker": false
@@ -33129,7 +33129,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-07-02T04:37:54.546Z",
+        "fetched_at": "2026-07-06T00:14:05.656Z",
         "homepage_url": "https://stevescalise.com/",
         "example_url": "https://engage.stevescalise.com/mls-ads-x/?utm_campaign=20260415_FO-LD.103478_t1871229-1756&ex_tid=20260415_FO-LD.103478_t1871229-1756&twclid=27uu57vt2m519pyykk1overmut",
         "homepage_status": 200,
@@ -33252,7 +33252,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-07-02T04:37:54.969Z",
+        "fetched_at": "2026-07-06T00:14:05.810Z",
         "homepage_url": "https://bcgame-bet.com/",
         "example_url": "https://bcall-global.bcgame-bet.com/dispatch-v6?i=45zn3497p&utm_medium=twitter&utm_content=%7B%7Bad_name%7D%7D&p=%2Flogin%2Fregist&ch=twitter&pixel_id=or72z&register=tw-or72z-or738&purchase=tw-or72z-or736&twclid=2cjhb3kupxi19emmjqo3fks82g",
         "homepage_status": null,
@@ -33375,7 +33375,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-07-02T05:07:56.037Z",
+        "fetched_at": "2026-07-06T00:36:46.641Z",
         "homepage_url": "https://redflagspress.org/",
         "example_url": "https://redflagspress.org/socialism-says?utm_campaign=x&utm_medium=social&utm_source=xengfort&twclid=26kfgc1so24ghbzohvicr84d3e",
         "homepage_status": 200,
@@ -33498,7 +33498,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-29T23:36:53.065Z",
+        "fetched_at": "2026-07-06T00:36:48.942Z",
         "homepage_url": "https://qodo.ai/",
         "example_url": "https://www.qodo.ai/qodo-lp-ticket-integrations?utm_source=x&utm_medium=paid-social&utm_campaign=feature-ticket-context&utm_content=ad00-jira-context&twclid=26dl4v15r8qnhxeh30sqq0a16f",
         "homepage_status": 200,
@@ -33514,7 +33514,7 @@
           "has_about_link": true,
           "has_contact_link": true,
           "has_corrections_link": false,
-          "outbound_links_count": 9,
+          "outbound_links_count": 8,
           "opinion_marker": false
         },
         "example": {
@@ -33621,7 +33621,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-07-02T05:07:57.163Z",
+        "fetched_at": "2026-07-06T00:36:50.645Z",
         "homepage_url": "https://tolt.io/",
         "example_url": "https://tolt.io/?twclid=237p9185xj3uh642g9nl6h9env",
         "homepage_status": 200,
@@ -33744,7 +33744,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-07-02T05:38:02.987Z",
+        "fetched_at": "2026-07-06T00:36:51.507Z",
         "homepage_url": "https://keak.com/",
         "example_url": "https://keak.com/?utm_source=openus5&twclid=29uhrfg3hnwkr19ne3n46t1gr2",
         "homepage_status": 200,
@@ -33867,7 +33867,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-07-02T05:38:03.703Z",
+        "fetched_at": "2026-07-06T01:06:46.750Z",
         "homepage_url": "https://tosso.app/",
         "example_url": "https://tosso.app/?twclid=2cvvvss1n13fvd1weioaoinc1",
         "homepage_status": 200,
@@ -33990,7 +33990,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-07-02T05:38:04.004Z",
+        "fetched_at": "2026-07-06T01:06:49.207Z",
         "homepage_url": "https://lunazultequila.com/",
         "example_url": "https://lunazultequila.com/?twclid=25655dk265tpvvyjnscalst7y",
         "homepage_status": 200,
@@ -34113,7 +34113,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-30T19:37:19.545Z",
+        "fetched_at": "2026-07-06T01:06:50.579Z",
         "homepage_url": "https://genesissystems.com/",
         "example_url": "https://www.genesissystems.com/contact?utm_source=x&utm_campaign=genericwebtrafficdavead4-4-26&twclid=2av31c1xlvmnruxepagyndsvf6",
         "homepage_status": 200,
@@ -34236,7 +34236,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-07-02T06:08:02.344Z",
+        "fetched_at": "2026-07-06T01:06:50.840Z",
         "homepage_url": "https://vibespace.build/",
         "example_url": "https://vibespace.build/?twclid=29xq7i3v7v3uomihgdn4fscjca",
         "homepage_status": 200,
