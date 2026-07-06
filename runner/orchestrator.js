@@ -198,6 +198,13 @@ function runSocialPipeline() {
     runScriptLog(path.join(PROJECT_ROOT, 'runner/x_engage.js'), '', { X_MAX_REPLIES: '1' });
   }
 
+  // LinkedIn collect — scrape the feed into feed_digest so the BROWSE cycle
+  // absorbs LinkedIn into beliefs/ontology/journal, the same way X does.
+  if (dueForRun('linkedin_collect', 2 * HOUR)) {
+    log('social: LinkedIn collect (feed → beliefs)');
+    runScriptLog(path.join(PROJECT_ROOT, 'runner/linkedin_collect.js'));
+  }
+
   // LinkedIn engagement (like + comment)
   if (dueForRun('linkedin_engage', 4 * HOUR)) {
     log('social: LinkedIn engagement');
