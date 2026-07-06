@@ -29,6 +29,24 @@ async function main() {
   if (!tweetText) { console.error("Usage: node post_and_pin.js \"tweet text\""); process.exit(1); }
   console.log(`[post_pin] tweet (${tweetText.length} chars): ${tweetText.slice(0, 80)}...`);
 
+  // HelmStack path (default) — post via the engine, then pin by URL.
+  if ((process.env.POST_BACKEND || "").toLowerCase() === "helmstack") {
+    const { HelmStackClient, X } = require("../tools/helmstack-social/src");
+    const { HANDLE } = require("./post_result");
+    const dry = process.env.HELMSTACK_DRY_RUN === "1";
+    const x = new X(new HelmStackClient(), { ownHandle: HANDLE, log: (m) => console.log(`[post_pin.hs] ${m}`) });
+    await x.c.health();
+    await x.ensureTab();
+    const posted = await x.post(tweetText, { dryRun: dry });
+    if (dry) { console.log("[post_pin] dry run — not posted/pinned"); process.exit(0); }
+    if (!posted.posted || !posted.url) { console.error(`[post_pin] post failed or URL uncaptured: ${posted.reason || "no_url"}`); process.exit(1); }
+    console.log(`[post_pin] posted: ${posted.url}`);
+    const pinned = await x.pinTweet(posted.url);
+    await x.c.navigate(x.tab, "https://x.com/home").catch(() => {});
+    console.log(`[post_pin] ${pinned.ok ? "pinned" : `pin failed: ${pinned.reason}`}`);
+    process.exit(pinned.ok ? 0 : 1);
+  }
+
   const browser = await connectBrowser();
   const page    = await browser.newPage();
 

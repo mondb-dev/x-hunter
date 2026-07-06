@@ -505,6 +505,106 @@ class X {
   }
 
   /**
+   * Open a tweet's ⋯ menu and click the item whose label includes `labelIncludes`
+   * (e.g. "delete", "pin"), then confirm. Targets the article matching the status
+   * id so it doesn't act on an ancestor tweet on a permalink page.
+   * dryRun stops after locating the menu item (before clicking it) — safe.
+   */
+  async _tweetMenuAction(tweetUrl, labelIncludes, { dryRun = false } = {}) {
+    if (!(await this._gotoChecked(tweetUrl))) return { ok: false, reason: "navigation_failed" };
+    await sleep(2500);
+    const id = (tweetUrl.match(/\/status\/(\d+)/) || [])[1] || "";
+    const opened = await this.c.evalFn(this.tab, (i) => {
+      const arts = Array.from(document.querySelectorAll("article"));
+      const target = (i && arts.find((a) => a.querySelector(`a[href*="/status/${i}"]`))) || arts[0];
+      const caret = target && target.querySelector("[data-testid='caret']");
+      if (caret) { caret.click(); return true; }
+      return false;
+    }, id);
+    if (!opened) return { ok: false, reason: "menu_not_found" };
+    await sleep(1000);
+    const hasItem = await this.c.evalFn(this.tab, (lbl) =>
+      Array.from(document.querySelectorAll("[role='menuitem']")).some((m) => (m.innerText || "").toLowerCase().includes(lbl)), labelIncludes);
+    if (!hasItem) return { ok: false, reason: "menu_item_not_found" };
+    if (dryRun) { this.log(`DRY RUN — '${labelIncludes}' menu item located, not clicking`); return { ok: false, reason: "dry_run", dryRun: true }; }
+    await this.c.evalFn(this.tab, (lbl) => {
+      const it = Array.from(document.querySelectorAll("[role='menuitem']")).find((m) => (m.innerText || "").toLowerCase().includes(lbl));
+      if (it) it.click();
+    }, labelIncludes);
+    await sleep(900);
+    const confirmed = await this.c.evalFn(this.tab, (lbl) => {
+      const b = document.querySelector("[data-testid='confirmationSheetConfirm']");
+      if (b) { b.click(); return true; }
+      const alt = Array.from(document.querySelectorAll("button")).find((x) => (x.innerText || "").trim().toLowerCase().includes(lbl));
+      if (alt) { alt.click(); return true; }
+      return false;
+    }, labelIncludes);
+    await sleep(2000);
+    return { ok: true, confirmed: !!confirmed };
+  }
+
+  /** Delete one of our tweets by URL. */
+  async deleteTweet(tweetUrl, opts = {}) { return this._tweetMenuAction(tweetUrl, "delete", opts); }
+
+  /** Pin one of our tweets to the profile by URL. */
+  async pinTweet(tweetUrl, opts = {}) { return this._tweetMenuAction(tweetUrl, "pin", opts); }
+
+  /** Find one of our own tweets on the profile whose text contains `fragment`; returns its status URL or null. */
+  async findOwnTweetUrl(fragment, { limit = 20 } = {}) {
+    if (!(await this._gotoChecked(`https://x.com/${this.ownHandle}`))) return null;
+    await sleep(3000);
+    return this.c.evalFn(this.tab, (a) => {
+      const arts = Array.from(document.querySelectorAll("article")).slice(0, a.limit);
+      for (const art of arts) {
+        if (art.innerText && art.innerText.includes(a.frag)) {
+          const link = art.querySelector("a[href*='/status/']");
+          if (link) return "https://x.com" + link.getAttribute("href").split("?")[0];
+        }
+      }
+      return null;
+    }, { frag: fragment, limit });
+  }
+
+  /**
+   * Publish a native X Article (long-form) via the x.com/i/article editor.
+   * Best-effort field discovery (title = first textbox, body = second) — the
+   * editor DOM is not as stable as the composer. dryRun stops after locating the
+   * editor. Returns { ok, url } (url best-effort from the profile).
+   */
+  async postArticle({ title, body }, { dryRun = false } = {}) {
+    if (!(await this._gotoChecked("https://x.com/i/article"))) return { ok: false, reason: "navigation_failed" };
+    await sleep(4000);
+    const boxes = await this.c.evalFn(this.tab, () =>
+      document.querySelectorAll('[role="textbox"], [contenteditable="true"]').length);
+    if (!boxes) return { ok: false, reason: "editor_not_found" };
+    if (dryRun) { this.log(`DRY RUN — article editor located (${boxes} field(s)), not publishing`); return { ok: false, reason: "dry_run", dryRun: true }; }
+
+    // Title → first textbox; body → second (or first if only one).
+    const focusBox = (idx) => this.c.evalFn(this.tab, (i) => {
+      const els = Array.from(document.querySelectorAll('[role="textbox"], [contenteditable="true"]'));
+      const el = els[i] || els[0]; if (el) { el.focus(); return true; } return false;
+    }, idx);
+    if (title) { await focusBox(0); await this.c.insertText(this.tab, title); await sleep(600); }
+    await focusBox(boxes > 1 ? 1 : 0);
+    // Chunk the body — long single inserts are unreliable.
+    for (let i = 0; i < body.length; i += 400) { await this.c.insertText(this.tab, body.slice(i, i + 400)); await sleep(120); }
+    await sleep(1000);
+
+    const published = await this.c.evalFn(this.tab, () => {
+      for (const sel of ['[data-testid="publishButton"]', '[data-testid="articlePublishButton"]', '[data-testid*="ublish"]']) {
+        const b = document.querySelector(sel); if (b && !b.disabled) { b.click(); return true; }
+      }
+      const b2 = Array.from(document.querySelectorAll("button, [role='button']")).find((x) => ["publish", "post"].includes((x.innerText || "").trim().toLowerCase()) && !x.disabled);
+      if (b2) { b2.click(); return true; }
+      return false;
+    });
+    if (!published) return { ok: false, reason: "publish_button_not_found" };
+    await sleep(5000);
+    const url = await this._confirmFromProfile((title || body).slice(0, 40)).catch(() => null);
+    return { ok: true, url: url || null };
+  }
+
+  /**
    * Follow a user from their profile page.
    * @param {string} username Handle without @.
    * @returns {Promise<{ok:boolean, reason?:string, dryRun?:boolean}>}

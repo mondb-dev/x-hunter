@@ -365,6 +365,23 @@ if (require.main === module) {
     console.log(`[post_article] title: "${title}"`);
     console.log(`[post_article] body: ${body.length} chars`);
 
+    // HelmStack path (default) — publish via the engine's article editor.
+    if ((process.env.POST_BACKEND || "").toLowerCase() === "helmstack") {
+      const { HelmStackClient, X } = require("../tools/helmstack-social/src");
+      const { HANDLE } = require("./post_result");
+      const x = new X(new HelmStackClient(), { ownHandle: HANDLE, log: (m) => console.log(`[post_article.hs] ${m}`) });
+      await x.c.health();
+      await x.ensureTab();
+      const res = await x.postArticle({ title, body }, { dryRun: process.env.HELMSTACK_DRY_RUN === "1" });
+      await x.c.navigate(x.tab, "https://x.com/home").catch(() => {});
+      if (res.dryRun) { console.log("[post_article] dry run — not published"); process.exit(0); }
+      if (!res.ok) { console.error(`[post_article] helmstack publish failed: ${res.reason}`); process.exit(1); }
+      fs.writeFileSync(RESULT_FILE, `${res.url || "published"}\n${title}\n`);
+      logArticle({ title, content: body, article_url: res.url || "" });
+      console.log("[post_article] done (helmstack).");
+      process.exit(0);
+    }
+
     let browser;
     try {
       browser = await connectBrowser();

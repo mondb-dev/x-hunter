@@ -192,6 +192,17 @@ async function main() {
   console.log('[claims_thread] posting tweet1 (' + tweet1.length + ' chars)');
   console.log('[claims_thread] draft tweet2 (' + tweet2.length + ' chars)');
 
+  // HelmStack path (default) — post the 2-tweet claims thread via the engine.
+  if ((process.env.POST_BACKEND || '').toLowerCase() === 'helmstack') {
+    const { runThread } = require('./lib/post_x_helmstack');
+    const res = await runThread([tweet1, tweet2], { cycle: Number.parseInt(process.env.CYCLE_NUMBER || '', 10) || null });
+    if (res.dryRun) { console.log('[claims_thread] dry run — leaving draft'); process.exit(0); }
+    if (!res.ok) { console.error(`[claims_thread] helmstack post failed: ${res.reason}`); process.exit(1); }
+    try { fs.unlinkSync(DRAFT_PATH); } catch {}
+    console.log('[claims_thread] done (helmstack): ' + res.tweet1Url);
+    process.exit(0);
+  }
+
   const browser = await connectBrowser();
   const page = await getXPage(browser);
 

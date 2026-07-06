@@ -73,6 +73,28 @@ Respond with ONLY the commentary sentence. Nothing else.`;
 
 // ── Main ─────────────────────────────────────────────────────────────────────
 async function main() {
+  // HelmStack path (default) — delete broken tweets by fragment, then repost the quote.
+  if ((process.env.POST_BACKEND || "").toLowerCase() === "helmstack") {
+    const { HelmStackClient, X } = require("../tools/helmstack-social/src");
+    const { HANDLE } = require("./post_result");
+    const dry = process.env.HELMSTACK_DRY_RUN === "1";
+    const x = new X(new HelmStackClient(), { ownHandle: HANDLE, log: (m) => console.log(`[delete_repost.hs] ${m}`) });
+    await x.c.health();
+    await x.ensureTab();
+    for (const fragment of BROKEN_FRAGMENTS) {
+      const url = await x.findOwnTweetUrl(fragment);
+      if (!url) { console.log(`[delete_repost] "${fragment}" not on profile — skipping`); continue; }
+      const del = await x.deleteTweet(url, { dryRun: dry });
+      console.log(`[delete_repost] ${fragment}: ${del.ok ? "deleted" : del.reason} (${url})`);
+    }
+    const commentary = (await regenerateQuote()).trim().replace(/^["']|["']$/g, "");
+    console.log(`[delete_repost] regenerated (${commentary.length} chars): ${commentary}`);
+    const q = await x.quote(SOURCE_URL, commentary, { dryRun: dry });
+    await x.c.navigate(x.tab, "https://x.com/home").catch(() => {});
+    console.log(`[delete_repost] ${q.posted ? `reposted: ${q.url}` : `repost ${dry ? "dry-run" : "failed: " + q.reason}`}`);
+    process.exit(0);
+  }
+
   console.log("[delete_repost] connecting to browser...");
   const browser = await connectBrowser();
   const page    = await browser.newPage();

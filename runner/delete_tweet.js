@@ -17,6 +17,20 @@ async function main() {
   }
 
   console.log(`[delete_tweet] deleting: ${tweetUrl}`);
+
+  // HelmStack path (default) — retire the legacy CDP Chrome.
+  if ((process.env.POST_BACKEND || "").toLowerCase() === "helmstack") {
+    const { HelmStackClient, X } = require("../tools/helmstack-social/src");
+    const { HANDLE } = require("./post_result");
+    const x = new X(new HelmStackClient(), { ownHandle: HANDLE, log: (m) => console.log(`[delete_tweet.hs] ${m}`) });
+    await x.c.health();
+    await x.ensureTab();
+    const res = await x.deleteTweet(tweetUrl, { dryRun: process.env.HELMSTACK_DRY_RUN === "1" });
+    await x.c.navigate(x.tab, "https://x.com/home").catch(() => {});
+    console.log(`[delete_tweet] ${res.ok ? `deleted (confirmed=${res.confirmed})` : `not deleted: ${res.reason}`} — ${tweetUrl}`);
+    process.exit(res.ok ? 0 : 1);
+  }
+
   const browser = await connectBrowser();
   const page    = await getXPage(browser);
 
