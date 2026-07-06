@@ -28,6 +28,7 @@ const db = loadScraperDb();
 const { synthesizeCase, renderSynthesisForPrompt } = require("./lib/synthesize_case.js");
 const { buildConvictions } = require("./lib/convictions.js");
 const { callVertex } = require("./vertex");
+const { compose } = require("./lib/compose");
 
 // ── Env ───────────────────────────────────────────────────────────────────────
 if (fs.existsSync(path.join(ROOT, ".env"))) {
@@ -244,7 +245,9 @@ Output ONLY the TITLE line followed by the article. No preamble.`;
         console.log("[article] retry attempt " + attempt + " with " + composeModel + "...");
         await new Promise(r => setTimeout(r, delaySec * 1000));
       }
-      article = await callVertex(prompt, 8192, { model: composeModel, thinkingBudget: 0 });
+      // Compose on the Claude terminal when enabled (opus for long-form); the
+      // gemini composeModel is the fallback model on the local/Vertex path.
+      article = await compose(prompt, { maxTokens: 8192, model: composeModel, thinkingBudget: 0, claudeModel: process.env.CLAUDE_ARTICLE_MODEL || "opus", tag: "article" });
       if (article && article.length >= 200) break;
       console.error("[article] attempt " + (attempt + 1) + " response too short (" + (article||"").length + " chars)");
     } catch (e) {

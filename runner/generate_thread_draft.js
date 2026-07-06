@@ -118,7 +118,8 @@ function todayArticleExcerpt() {
   console.log('[thread_draft] calling LLM...');
   let raw;
   try {
-    raw = await callVertex(prompt, 4096, { thinkingBudget: 2048 });
+    const { compose } = require('./lib/compose');
+    raw = await compose(prompt, { maxTokens: 4096, thinkingBudget: 2048, tag: 'thread_draft' });
   } catch (e) {
     console.error('[thread_draft] LLM call failed:', e.message);
     process.exit(1);

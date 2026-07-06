@@ -103,8 +103,8 @@ CYCLE=0
 BROWSE_INTERVAL=1800  # 30 minutes in seconds
 TWEET_EVERY=6         # tweet on cycles 6, 12, 18, ... (every 2 hours)
 QUOTE_OFFSET=3        # quote-tweet on cycles 3, 9, 15, ... (midpoint between tweets)
-TWEET_START=7         # earliest hour to post original tweets (0-23 UTC)
-TWEET_END=23          # latest hour exclusive
+export TWEET_START="${TWEET_START:-7}"   # earliest hour to post original tweets (0-23 UTC); .env overrides
+export TWEET_END="${TWEET_END:-23}"      # latest hour exclusive; .env overrides (set 0/24 to disable window)
 CURIOSITY_EVERY=12    # refresh curiosity directive every ~4h (was 4)
 CDP_PORT=18801        # Chrome DevTools Protocol port
 

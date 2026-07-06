@@ -55,7 +55,7 @@ const LINKEDIN_STRATEGY = `LINKEDIN PLACEMENT STRATEGY — how to shape this con
   log(`content pack: ${nSources} live/file source(s), theme seed "${pack.query}"`);
   if (!pack.text.trim()) { log("no source material — skipping"); process.exit(0); }
 
-  const { callVertex } = require("./vertex");
+  const { compose } = require("./lib/compose");
   const prompt =
 `You are Sebastian Hunter writing a LinkedIn post. Your vocation and voice:
 ${vocation}
@@ -68,7 +68,7 @@ ${pack.text}
 Write ONE original LinkedIn post following the strategy above. Return ONLY the post text.`;
 
   try {
-    const raw = await callVertex(prompt, 1000, { model: "gemini-2.5-flash", thinkingBudget: 0 });
+    const raw = await compose(prompt, { maxTokens: 1000, model: "gemini-2.5-flash", thinkingBudget: 0, tag: "linkedin_draft" });
     const text = (raw || "").trim().replace(/^["']|["']$/g, "");
     if (!text || text.length < 120) { log("generation too short — skipping"); process.exit(0); }
 

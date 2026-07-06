@@ -6,6 +6,12 @@ const PROJECT_ROOT = path.resolve(__dirname, '../..');
 const STATE_DIR = path.join(PROJECT_ROOT, 'state');
 const RUNNER_DIR = path.join(PROJECT_ROOT, 'runner');
 
+// Env override for a numeric setting; falls back when unset/non-numeric (accepts 0).
+const envInt = (name, dflt) => {
+  const n = Number(process.env[name]);
+  return Number.isFinite(n) ? n : dflt;
+};
+
 module.exports = {
   // ── Timing ────────────────────────────────────────────────────────────────
   BROWSE_INTERVAL: 1800,       // 30 minutes in seconds
@@ -14,8 +20,10 @@ module.exports = {
   CURIOSITY_EVERY: 12,         // refresh curiosity directive every ~4h
 
   // ── Hours (UTC) ───────────────────────────────────────────────────────────
-  TWEET_START: 7,              // earliest hour to post original tweets
-  TWEET_END: 23,               // latest hour (exclusive)
+  // Env-overridable (TWEET_START/TWEET_END). Set 0/24 in .env to disable the
+  // silent-hours posting window entirely (post around the clock).
+  TWEET_START: envInt('TWEET_START', 7),   // earliest hour to post original tweets
+  TWEET_END:   envInt('TWEET_END', 23),    // latest hour (exclusive)
 
   // ── Ports ─────────────────────────────────────────────────────────────────
   GATEWAY_PORT: 18789,         // openclaw gatels Protocol port

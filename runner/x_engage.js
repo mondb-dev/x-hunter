@@ -133,6 +133,7 @@ async function generateReply(post) {
   }
 
   const { callVertex } = require("./vertex");
+  const { compose } = require("./lib/compose");
   let persona = "";
   try {
     const { buildPersona, buildCoreContext } = require("./lib/sebastian_respond");
@@ -146,7 +147,9 @@ async function generateReply(post) {
     `Draft a reply (max 260 chars) that: names a specific fact/party/number; is direct and confident (no "interesting point", no hedging); does not start with "I"; sounds like a sharp person, not a bot. If the post is satire/joke/not a sincere claim, or you cannot add something genuinely worth saying, return SKIP.\n\nReturn ONLY the reply text.`;
 
   try {
-    const raw = await callVertex(prompt, 400, { model: "gemini-2.5-flash", thinkingBudget: 0 });
+    // Compose the reply on the Claude terminal when enabled (COMPOSE_BACKEND=claude),
+    // else on the local/Vertex brain. Persona/voice is carried in `prompt`.
+    const raw = await compose(prompt, { maxTokens: 400, model: "gemini-2.5-flash", thinkingBudget: 0, tag: "x_reply" });
     let text = (raw || "").trim().replace(/^["']|["']$/g, "");
     if (!text || text === "SKIP" || text.length > 270) return null;
 

@@ -355,9 +355,9 @@ async function draftReply(candidate, verification) {
     'Cite facts and sources directly: "The 2023 IMF report shows..." — not "my system found...".\n\n' +
     'Return ONLY the reply text. Nothing else. If you cannot write something genuinely worth posting, return SKIP.';
 
-  const { callVertex } = require('./vertex');
+  const { compose } = require('./lib/compose');
 
-  const raw = await callVertex(prompt, 2000, { model: 'gemini-2.5-flash', thinkingBudget: 0 });
+  const raw = await compose(prompt, { maxTokens: 2000, model: 'gemini-2.5-flash', thinkingBudget: 0, tag: 'proactive_reply' });
   const sourceUrls = [];
   const text = raw.trim();
 

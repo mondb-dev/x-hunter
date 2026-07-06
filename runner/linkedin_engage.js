@@ -64,7 +64,7 @@ function makeScorer(keywords) {
 
 // ── On-voice comment generation (Gemini) ───────────────────────────────────────
 async function generateComment(post) {
-  const { callVertex } = require("./vertex");
+  const { compose } = require("./lib/compose");
   let vocation = "";
   try { vocation = fs.readFileSync(VOCATION, "utf-8").slice(0, 1500); } catch {}
   const prompt =
@@ -85,7 +85,7 @@ database, or tool. If you cannot add something genuinely worth saying, return SK
 
 Return ONLY the comment text.`;
   try {
-    const raw = await callVertex(prompt, 400, { model: "gemini-2.5-flash", thinkingBudget: 0 });
+    const raw = await compose(prompt, { maxTokens: 400, model: "gemini-2.5-flash", thinkingBudget: 0, tag: "linkedin_comment" });
     const text = (raw || "").trim().replace(/^["']|["']$/g, "");
     if (!text || text === "SKIP" || text.length > 500) return null;
     if (voiceFilter.check(text).length) { log("comment voice_filter rejected"); return null; }
