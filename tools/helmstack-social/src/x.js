@@ -566,39 +566,61 @@ class X {
   }
 
   /**
-   * Publish a native X Article (long-form) via the x.com/i/article editor.
-   * Best-effort field discovery (title = first textbox, body = second) — the
-   * editor DOM is not as stable as the composer. dryRun stops after locating the
-   * editor. Returns { ok, url } (url best-effort from the profile).
+   * Publish a native X Article (long-form). Flow (verified 2026-07-06 on a
+   * Premium account): x.com/compose/articles is the LANDING page (drafts list) —
+   * click "Write" to open a fresh editor at /compose/articles/edit/<id>, which
+   * has a title field, a body contenteditable (aria-label "composer"/"Body"),
+   * and a Publish button. dryRun stops once the editor is open.
+   * Returns { ok, url } (url best-effort from the profile).
    */
   async postArticle({ title, body }, { dryRun = false } = {}) {
-    if (!(await this._gotoChecked("https://x.com/i/article"))) return { ok: false, reason: "navigation_failed" };
+    if (!(await this._gotoChecked("https://x.com/compose/articles"))) return { ok: false, reason: "navigation_failed" };
     await sleep(4000);
-    const boxes = await this.c.evalFn(this.tab, () =>
-      document.querySelectorAll('[role="textbox"], [contenteditable="true"]').length);
-    if (!boxes) return { ok: false, reason: "editor_not_found" };
-    if (dryRun) { this.log(`DRY RUN — article editor located (${boxes} field(s)), not publishing`); return { ok: false, reason: "dry_run", dryRun: true }; }
 
-    // Title → first textbox; body → second (or first if only one).
-    const focusBox = (idx) => this.c.evalFn(this.tab, (i) => {
-      const els = Array.from(document.querySelectorAll('[role="textbox"], [contenteditable="true"]'));
-      const el = els[i] || els[0]; if (el) { el.focus(); return true; } return false;
-    }, idx);
-    if (title) { await focusBox(0); await this.c.insertText(this.tab, title); await sleep(600); }
-    await focusBox(boxes > 1 ? 1 : 0);
-    // Chunk the body — long single inserts are unreliable.
-    for (let i = 0; i < body.length; i += 400) { await this.c.insertText(this.tab, body.slice(i, i + 400)); await sleep(120); }
-    await sleep(1000);
+    // Open a new article draft: empty-state "Write" button, or the top "create".
+    await this.c.evalFn(this.tab, () => {
+      const b = document.querySelector("[data-testid=empty_state_button_text]") ||
+        Array.from(document.querySelectorAll("button,[role=button]")).find((e) => /^write$|create/i.test((e.innerText || e.getAttribute("aria-label") || "").trim()));
+      if (b) (b.closest("button,[role=button]") || b).click();
+    });
+    // Wait for the editor route to load.
+    try {
+      await this.c.pollFn(this.tab, "article editor", () =>
+        /\/compose\/articles\/edit\//.test(location.href) && document.querySelectorAll('[role="textbox"],[contenteditable="true"]').length > 0,
+        { attempts: 12, interval: 1000, tag: "x" });
+    } catch { return { ok: false, reason: "editor_not_found" }; }
 
-    const published = await this.c.evalFn(this.tab, () => {
-      for (const sel of ['[data-testid="publishButton"]', '[data-testid="articlePublishButton"]', '[data-testid*="ublish"]']) {
-        const b = document.querySelector(sel); if (b && !b.disabled) { b.click(); return true; }
-      }
-      const b2 = Array.from(document.querySelectorAll("button, [role='button']")).find((x) => ["publish", "post"].includes((x.innerText || "").trim().toLowerCase()) && !x.disabled);
+    if (dryRun) { this.log("DRY RUN — article editor opened, not publishing"); return { ok: false, reason: "dry_run", dryRun: true }; }
+
+    // Title: a textbox/input that isn't the body composer. Body: the composer.
+    const focusTitle = () => this.c.evalFn(this.tab, () => {
+      const el = document.querySelector('input[aria-label*="Title" i], [role="textbox"][aria-label*="Title" i], [data-testid*="itle"]') ||
+        Array.from(document.querySelectorAll('[role="textbox"],[contenteditable="true"]')).find((e) => !/composer|body/i.test(e.getAttribute("aria-label") || ""));
+      if (el) { el.focus(); return true; } return false;
+    });
+    const focusBody = () => this.c.evalFn(this.tab, () => {
+      const el = document.querySelector('[aria-label="Body"], [contenteditable="true"][aria-label*="composer" i]') ||
+        Array.from(document.querySelectorAll('[contenteditable="true"],[role="textbox"]')).pop();
+      if (el) { el.focus(); return true; } return false;
+    });
+
+    if (title) { if (await focusTitle()) { await this.c.insertText(this.tab, title); await sleep(700); } }
+    if (await focusBody()) {
+      for (let i = 0; i < body.length; i += 400) { await this.c.insertText(this.tab, body.slice(i, i + 400)); await sleep(120); }
+    } else { return { ok: false, reason: "body_field_not_found" }; }
+    await sleep(1200);
+
+    // Publish (may require a second confirm-Publish in a dialog).
+    const clickPublish = () => this.c.evalFn(this.tab, () => {
+      const cands = ['[data-testid="publishButton"]', '[data-testid="articlePublishButton"]', '[data-testid*="ublish"]'];
+      for (const sel of cands) { const b = document.querySelector(sel); if (b && !b.disabled) { b.click(); return true; } }
+      const b2 = Array.from(document.querySelectorAll("button,[role=button]")).find((x) => ["publish", "post"].includes((x.innerText || x.getAttribute("aria-label") || "").trim().toLowerCase()) && !x.disabled);
       if (b2) { b2.click(); return true; }
       return false;
     });
-    if (!published) return { ok: false, reason: "publish_button_not_found" };
+    if (!(await clickPublish())) return { ok: false, reason: "publish_button_not_found" };
+    await sleep(1500);
+    await clickPublish().catch(() => {}); // confirm dialog, if any
     await sleep(5000);
     const url = await this._confirmFromProfile((title || body).slice(0, 40)).catch(() => null);
     return { ok: true, url: url || null };
