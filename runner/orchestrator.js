@@ -205,6 +205,16 @@ function runSocialPipeline() {
     runScriptLog(path.join(PROJECT_ROOT, 'runner/linkedin_collect.js'));
   }
 
+  // Facebook collect — scrape curated PH pages into feed_digest (FB is the
+  // primary PH narrative arena). GATED OFF by default (FB_COLLECT_ENABLED=1):
+  // FB's obfuscated, comment-interleaved DOM makes clean post-caption extraction
+  // unreliable, and feeding comment-noise into beliefs would pollute the
+  // ontology. Enable only once fb.js extraction is validated.
+  if (process.env.FB_COLLECT_ENABLED === '1' && dueForRun('fb_collect', 3 * HOUR)) {
+    log('social: Facebook collect (pages → beliefs)');
+    runScriptLog(path.join(PROJECT_ROOT, 'runner/fb_collect.js'));
+  }
+
   // LinkedIn engagement (like + comment)
   if (dueForRun('linkedin_engage', 4 * HOUR)) {
     log('social: LinkedIn engagement');
