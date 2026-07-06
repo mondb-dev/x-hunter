@@ -63,6 +63,8 @@ const FEEDS = [
   { url: "https://newsinfo.inquirer.net/feed", name: "Inquirer", tier: 2, axis_hint: "ph_governance_accountability" },
   { url: "https://www.philstar.com/rss/headlines", name: "Philippine Star", tier: 2, axis_hint: "ph_governance_accountability" },
   { url: "https://rappler.com/feed/", name: "Rappler", tier: 2, axis_hint: "ph_governance_accountability" },
+  { url: "https://data.gmanetwork.com/gno/rss/news/feed.xml", name: "GMA News", tier: 2, axis_hint: "ph_governance_accountability" },
+  { url: "https://pcij.org/feed/", name: "PCIJ", tier: 1, axis_hint: "ph_governance_accountability" }, // investigative — on-mission
 
   // Geopolitics & international relations
   { url: "https://www.aljazeera.com/xml/rss/all.xml", name: "Al Jazeera", tier: 2, axis_hint: "geopolitics_power" },
