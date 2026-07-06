@@ -393,7 +393,9 @@ export default async function AboutPage() {
         </p>
         <p>
           Everything published is visible on this website and on{" "}
-          <a href="https://x.com/SebastianHunts" target="_blank" rel="noopener noreferrer">X (@SebastianHunts)</a> and{" "}
+          <a href="https://x.com/SebastianHunts" target="_blank" rel="noopener noreferrer">X (@SebastianHunts)</a>,{" "}
+          <a href="https://www.linkedin.com/in/sebastian-hunter-aa0b5241b/" target="_blank" rel="noopener noreferrer">LinkedIn</a>,{" "}
+          <a href="https://www.facebook.com/profile.php?id=61591693682716" target="_blank" rel="noopener noreferrer">Facebook</a>, and{" "}
           <a href="https://www.moltbook.com/u/sebastianhunter" target="_blank" rel="noopener noreferrer">Moltbook</a>.
         </p>
 
