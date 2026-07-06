@@ -109,6 +109,10 @@ function trustWeight(username, trustMap) {
 const DRIFT_CAP_PER_DAY = 0.05;
 const TODAY_DATE = new Date().toISOString().slice(0, 10); // "YYYY-MM-DD"
 
+// Belief-axis formation math (recency-weighted score + slow-saturating
+// confidence) lives in one place so the live path and the migration agree.
+const { computeAxisScoreConfidence } = require("./lib/belief_calibration.js");
+
 function loadDriftCapState(axes) {
   let state = { date: TODAY_DATE, scores: {} };
   try {
@@ -548,45 +552,20 @@ for (const entry of (delta.evidence || [])) {
   // ── Deferred: score_after + confidence_after added after recompute below ──
 }
 
-// Recompute confidence and score using trust-weighted Bayesian update.
-// Only run on axes that received new evidence this call — axes with no new entries
-// retain their accumulated score/confidence (the log may not contain the full history).
-// score      = Σ(w_i × ±1) / Σ(w_i)     — trust-weighted mean
-// confidence = min(0.98, uniqueSources × 0.025) — unique source count drives confidence
-//              (not total weight — prevents pseudo-replication from inflating confidence)
+// Recompute score + confidence for axes that received new evidence this call.
+// score      = recency-weighted, trust-weighted mean of pole alignments (recent
+//              ~RECENCY_HALF_LIFE entries dominate) → established axes stay live.
+// confidence = CONF_MAX*(1 - e^(-weightedSources/CONF_K)) → slow-saturating,
+//              stays informative past 40 sources.
 for (const axis of onto.axes) {
   if (!axesUpdated.has(axis.id)) continue;
   const log = axis.evidence_log || [];
   if (!log.length) continue;
 
-  let weightedSum = 0;
-  let totalWeight = 0;
-  for (const e of log) {
-    const w    = typeof e === "object" ? (e.trust_weight ?? 1.0) : 1.0;
-    const sign = typeof e === "object" ? (e.pole_alignment === "right" ? 1 : -1)
-                                       : (e >= 0 ? 1 : -1);
-    weightedSum += w * sign;
-    totalWeight += w;
-  }
-
-  const rawScore = parseFloat((weightedSum / totalWeight).toFixed(4));
+  const { score: rawScore, confidence } = computeAxisScoreConfidence(log);
   // Apply daily drift cap — score cannot move more than ±0.05 from start-of-day value
   axis.score = parseFloat(applyDriftCap(axis.id, rawScore, driftState).toFixed(4));
-
-  // Confidence: trust-weighted unique-source count. Per unique source URL, take the
-  // max trust_weight across its entries (handles diversity dampening variation).
-  // Neutral/unknown sources (weight=1.0) behave identically to the old formula.
-  // Entries missing trust_weight default to 1.0 (backward-compatible).
-  const sourceWeights = new Map();
-  for (const e of log) {
-    if (!e || !e.source) continue;
-    const w = e.trust_weight ?? 1.0;
-    if (!sourceWeights.has(e.source) || sourceWeights.get(e.source) < w) {
-      sourceWeights.set(e.source, w);
-    }
-  }
-  const weightedSources = [...sourceWeights.values()].reduce((s, w) => s + w, 0);
-  axis.confidence = parseFloat(Math.min(0.98, weightedSources * 0.025).toFixed(4));
+  axis.confidence = confidence;
   if (axis.score !== rawScore) axesCapped++;
 
   // ── Stamp score_after + confidence_after on newly added evidence entries ──
