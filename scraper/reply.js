@@ -89,7 +89,11 @@ const SPAM_PATTERNS = [
   /\bwin\s+(free|big|prizes?)\b/i,
   /\b(dm\s+me|dm\s+for|message\s+me)\b/i,
   /\b(click|buy\s+now|limited\s+time|act\s+now)\b/i,
-  /\b(100x|1000x|moon|pump|rug|presale|mint\s+now)\b/i,
+  // NOTE: "pump" and "rug" are intentionally NOT here — they collide with
+  // legit deep-research asks ("pump.fun trenches", "is this token a rug?"),
+  // which the classifier + rugcheck tool are built to handle. Real hype spam
+  // is still caught by the multiplier/presale markers below + the Gemini SKIP.
+  /\b(100x|1000x|moon|presale|mint\s+now)\b/i,
   /\b(nft|token)\s+(drop|launch|sale)\b/i,
   /\bfollow\s+(back|for\s+follow)\b/i,
   /http[s]?:\/\/\S+\.(ru|cn|tk|xyz)\b/i,
@@ -233,6 +237,23 @@ function loadBeliefContext() {
   });
 }
 
+// Focused, single-purpose research-intent classifier. The main classify prompt
+// is large and its JSON template defaults needs_research=false, so an explicit
+// ask ("do a deep research", "is this token a rug", "who owns this wallet?")
+// often slips through as false. This isolated check reliably catches it.
+async function detectResearchIntent(text) {
+  const { callVertex } = require("../runner/vertex");
+  const prompt =
+`You classify a single X mention for RESEARCH INTENT only.
+Set needs_research=true if the mention ASKS you to find out / verify / analyze something factual that needs looking up — e.g. "do a deep research", "who owns this wallet/address?", "is this token a rug / map its holder clusters", "is <claim> true?", "what's the data/current state of <X>?". Otherwise false.
+MENTION: "${String(text).replace(/"/g, "'").slice(0, 500)}"
+Respond ONLY with JSON, no fences: {"needs_research":true|false,"research_query":"crisp standalone version of what to research, or empty"}`;
+  const raw = await callVertex(prompt, 256, { model: "gemini-2.5-flash", thinkingBudget: 0 });
+  const m = String(raw).replace(/```(?:json)?/gi, "").match(/\{[\s\S]*\}/);
+  if (!m) return { needs_research: false, research_query: "" };
+  return JSON.parse(m[0]);
+}
+
 // ── 5. Gemini: classify + draft with full context ─────────────────────────────
 async function geminiClassify(item, threadContext = [], memoryHints = [], userHistory = null, topicAccounts = [], verifiedHints = [], liveVerification = null, intelligenceBrief = null) {
   const { callVertex } = require("../runner/vertex");
@@ -363,6 +384,18 @@ or
   const match = stripped.match(/\{[\s\S]*\}/);
   if (!match) throw new Error(`Vertex returned no JSON. Raw: ${text.slice(0, 300)}`);
   const parsed = JSON.parse(match[0]);
+  // Research intent is easy to miss inside this large prompt; re-check it with a
+  // focused classifier whenever the main pass didn't already flag it.
+  if (parsed.verdict === "WORTHY" && !parsed.needs_research) {
+    try {
+      const ri = await detectResearchIntent(item.text);
+      if (ri && ri.needs_research) {
+        parsed.needs_research = true;
+        parsed.research_query = ri.research_query || item.text;
+        console.log(`[reply] research intent detected on re-check → "${String(parsed.research_query).slice(0, 80)}"`);
+      }
+    } catch (e) { console.warn(`[reply] research-intent re-check failed (non-fatal): ${e.message}`); }
+  }
   parsed.sourceUrls = [];
   return parsed;
 }
