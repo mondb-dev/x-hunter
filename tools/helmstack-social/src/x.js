@@ -22,6 +22,18 @@ const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
 const humanDelay = (min, max) => sleep(min + Math.floor(Math.random() * (max - min)));
 const norm = (s) => String(s || "").replace(/\s+/g, " ").trim();
 
+// X's composer inserts some non-ASCII punctuation unreliably via Input.insertText
+// (em/en dashes, smart quotes, ellipsis get dropped or altered) — the per-line
+// verify then never matches the expected text and the post ABORTS. Normalizing to
+// ASCII at the single insert chokepoint keeps expected == inserted and yields
+// clean posted text. Composed replies (LLM output) are full of these characters.
+const toComposerSafe = (s) => String(s || "")
+  .replace(/[—–]/g, "-")        // em/en dash → hyphen
+  .replace(/…/g, "...")               // ellipsis → three dots
+  .replace(/[‘’‛]/g, "'")   // smart single quotes → '
+  .replace(/[“”]/g, '"')         // smart double quotes → "
+  .replace(/[   ]/g, " ");  // nbsp / narrow / thin space → space
+
 class X {
   /**
    * @param {import('./client').HelmStackClient} client
@@ -194,6 +206,7 @@ class X {
    *   verify + clear-and-retry converge on the exact text.
    */
   async _insertVerified(text) {
+    text = toComposerSafe(text);   // ASCII-normalize so the verify can't fail on smart punctuation
     await this._focusComposer();
     await humanDelay(1500, 3000);
     // Warm up the input channel: the first insertText into a fresh modal is
