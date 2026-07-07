@@ -570,6 +570,25 @@ async function scrapeNotificationsApi() {
   }
 }
 
+// Capture mentions via live X SEARCH — X routinely keeps mentions out of the
+// notifications tab (quality/spam filtering), so the notifications scrape misses
+// them entirely. Searching "@handle" surfaces them regardless. Feeds the same
+// queue + dedupe as the notifications path; reply.js still spam-filters/classifies.
+async function scrapeMentionsViaSearch(x) {
+  const handle = process.env.X_USERNAME || "SebastianHunts";
+  console.log("[scraper] checking mentions via live search...");
+  try {
+    const own = handle.toLowerCase();
+    const results = await x.searchX(`@${handle}`, { limit: 20, mode: "live" });
+    const mentions = (results || []).filter((m) => (m.username || "").toLowerCase() !== own);
+    console.log(`[scraper] search: found ${mentions.length} mention(s)`);
+    const queued = appendMentionsToReplyQueue(mentions);
+    console.log(`[scraper] search: queued ${queued} new mention(s)`);
+  } catch (err) {
+    console.error(`[scraper] search mentions failed: ${err.message}`);
+  }
+}
+
 // ── Main ──────────────────────────────────────────────────────────────────────
 (async () => {
   console.log("[scraper] starting collect run...");
@@ -900,7 +919,8 @@ async function scrapeNotificationsApi() {
 
   // ── Phase 12: Scrape notifications / mentions ─────────────────────────────
   if (browserReady) {
-    await scrapeNotifications(x);
+    await scrapeNotifications(x);       // notifications tab (misses X-filtered mentions)
+    await scrapeMentionsViaSearch(x);   // live search (catches the ones notifications hide)
   } else {
     await scrapeNotificationsApi();
   }
