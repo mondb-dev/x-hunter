@@ -126,8 +126,10 @@ const TOOLS = {
       const a = p.attributes || {};
       const pc = a.price_change_percentage || {};
       const baseId = (((p.relationships || {}).base_token || {}).data || {}).id || '';
+      const mint = baseId.includes('_') ? baseId.slice(baseId.indexOf('_') + 1) : baseId;  // "solana_<mint>" → mint
       return {
         token: a.name,
+        mint: mint || undefined,                        // real mint → feeds rugcheck in refinement
         pumpfun: /pump$/i.test(baseId) || undefined,   // pump.fun mints end in "pump"
         priceUsd: num(a.base_token_price_usd),
         chg_h1_pct: num(pc.h1), chg_h24_pct: num(pc.h24),
@@ -151,7 +153,7 @@ const TOOLS = {
         const b = pr.baseToken || {};
         if (!b.symbol || seen.has(b.symbol)) continue;
         seen.add(b.symbol);
-        boosted.push({ token: `${b.name} (${b.symbol})`, pumpfun: /pump$/i.test(b.address || '') || undefined, priceUsd: num(pr.priceUsd), chg_h24_pct: num(pr.priceChange && pr.priceChange.h24), volH24: num(pr.volume && pr.volume.h24) });
+        boosted.push({ token: `${b.name} (${b.symbol})`, mint: b.address || undefined, pumpfun: /pump$/i.test(b.address || '') || undefined, priceUsd: num(pr.priceUsd), chg_h24_pct: num(pr.priceChange && pr.priceChange.h24), volH24: num(pr.volume && pr.volume.h24) });
         if (boosted.length >= 12) break;
       }
     }
@@ -418,7 +420,7 @@ Output ONLY JSON: {"steps":[{"tool":"recall|posts|search|fetch|rugcheck|trending
       // Drop steps whose input is a planning placeholder (e.g. "<mint_address_of_top_candidate>")
       // — those values only exist after earlier tools run; the runtime-refinement
       // round below re-issues them with the real values.
-      .filter((s) => s && TOOLS[s.tool] && !/<[^>]+>|\bTBD\b|\bplaceholder\b/i.test(String(s.input || '')))
+      .filter((s) => s && TOOLS[s.tool] && !/<[^>]+>|\bTBD\b|placeholder|mint_address|_(of|for)_|top.?candidate/i.test(String(s.input || '')))
       .slice(0, 4);
   } catch { return []; }
 }
