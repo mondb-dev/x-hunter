@@ -1664,6 +1664,34 @@ function sleep(ms) {
   return new Promise(r => setTimeout(r, ms));
 }
 
+// ── /deepresearch — Claude-driven deep research (plan → tools → synthesize) ───
+// Runs runner/deep_research.js as a detached subprocess (it's slow — plan +
+// searches + fetches + synthesis, ~1-3 min) so the bot stays responsive; replies
+// with the synthesized report when it finishes.
+function cmdDeepResearch(text) {
+  const question = text.split(/\s+/).slice(1).join(' ').trim();
+  if (!question) {
+    return sendMessage('Usage: <code>/deepresearch &lt;question&gt;</code>\nExamples:\n• /dr is Solana token &lt;mint&gt; an incoming rug — map holder clusters\n• /dr who owns the Solana address &lt;addr&gt;');
+  }
+  const child = spawn(process.execPath, [path.join(__dirname, 'deep_research.js'), question], {
+    cwd: path.resolve(__dirname, '..'), env: process.env,
+  });
+  let out = '';
+  child.stdout.on('data', d => (out += d));
+  child.stderr.on('data', d => (out += d));
+  const killer = setTimeout(() => { try { child.kill('SIGKILL'); } catch {} }, 300000);
+  child.on('close', () => {
+    clearTimeout(killer);
+    const i = out.indexOf('=== REPORT ===');
+    let report = i >= 0 ? out.slice(i + 14).trim() : '';
+    if (!report) report = '(no report produced)\n' + out.slice(-1500);
+    if (report.length > 3800) report = report.slice(0, 3800) + '\n…(truncated)';
+    sendMessage(`🔬 <b>Deep research</b> — ${escapeHtml(question.slice(0, 120))}\n\n<pre>${escapeHtml(report)}</pre>`).catch(() => {});
+  });
+  child.on('error', (e) => { clearTimeout(killer); sendMessage(`🔬 deep research failed to start: ${escapeHtml(e.message)}`).catch(() => {}); });
+  return sendMessage(`🔬 <b>Deep research started</b>\n${escapeHtml(question.slice(0, 200))}\n<i>plan → search → fetch → synthesize (~1-3 min)…</i>`);
+}
+
 // ── Message router ──────────────────────────────────────────────────────────
 
 async function handleMessage(msg) {
@@ -1696,6 +1724,8 @@ async function handleMessage(msg) {
     case '/vm':       return cmdVM();
     case '/errors':   return cmdErrors();
     case '/brief':    return cmdBrief(text);
+    case '/deepresearch':
+    case '/dr':       return cmdDeepResearch(text);
     case '/drift':    return cmdDrift();
     case '/cycle':    return cmdCycle();
     case '/restart':  return cmdRestart(text);
@@ -1724,6 +1754,7 @@ async function handleMessage(msg) {
       '/journal — latest journal entry\n' +
       '/vocation — current vocation\n' +
       '/drift — recent drift alerts\n' +
+      '/deepresearch (/dr) &lt;question&gt; — Claude plans + runs a multi-tool research pass (web/recall/fetch/rugcheck) and returns a cited report\n' +
       '/builder — active builder proposal\n' +
       '/builder ask ... — ask builder about the active proposal\n' +
       '/infra — current infra request status\n' +
