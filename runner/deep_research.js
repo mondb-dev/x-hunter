@@ -177,7 +177,9 @@ const TOOLS = {
       const x = await getXEngine();
       if (!x) return '(xsearch: HelmStack X browser unavailable)';
       if (!(await x.sessionOk())) return '(xsearch: X session not present in HelmStack)';
-      const posts = await x.searchX(String(input), { limit: 15, mode: 'live' });
+      // Serialize tab use: under parallel branches, two xsearch calls navigating
+      // the one shared tab at once would corrupt each other.
+      const posts = await withXLock(() => x.searchX(String(input), { limit: 15, mode: 'live' }));
       if (!posts || !posts.length) return `(no live X posts for "${input}")`;
       return posts.slice(0, 15)
         .map((p) => `@${p.username}: ${String(p.text || '').replace(/\s+/g, ' ').slice(0, 220)}`)
@@ -189,6 +191,13 @@ const TOOLS = {
 // Lazily-opened, reused HelmStack X browser tab for xsearch (a dedicated tab so it
 // doesn't hijack the scraper/reply shared tab). Cached for the life of the process.
 let _xEngine = null;
+// Mutex so only one xsearch drives the shared browser tab at a time.
+let _xLock = Promise.resolve();
+function withXLock(fn) {
+  const run = _xLock.then(fn, fn);
+  _xLock = run.then(() => {}, () => {});
+  return run;
+}
 async function getXEngine() {
   if (_xEngine !== null) return _xEngine || null;
   try {
@@ -424,18 +433,6 @@ Return empty arrays if the plan is already sound.`;
   return root;
 }
 
-// Order a node's children by depends_on (title references); stable fallback.
-function orderByDeps(children) {
-  const byTitle = new Map(children.map((c) => [c.title, c]));
-  const done = new Set(), out = [];
-  const visit = (c, stack = new Set()) => {
-    if (done.has(c.id) || stack.has(c.id)) return; stack.add(c.id);
-    for (const dep of (c.depends_on || [])) { const d = byTitle.get(dep); if (d && d !== c) visit(d, stack); }
-    if (!done.has(c.id)) { done.add(c.id); out.push(c); }
-  };
-  children.forEach((c) => visit(c));
-  return out;
-}
 
 // Generate concrete tool steps for a leaf, given its direction + tool hints.
 async function leafSteps(node) {
@@ -470,33 +467,69 @@ ${kids ? `SUB-FINDINGS:\n${kids}\n` : ''}${dossier ? `EVIDENCE:\n${dossier}` : '
   catch { return null; }
 }
 
-// Post-order execution: resolve children first, leaves run tools. v1 is
-// sequential (concurrency=1); step 2 flips this to bounded parallel workers.
+// ── Concurrency (step 2) ──────────────────────────────────────────────────────
+// Global semaphore bounding how many nodes do their OWN compute (reason() + tool
+// calls) at once — held only during a node's own work, NEVER while it awaits
+// children, so there is no deadlock. Independent sibling branches run in parallel;
+// this cap keeps the compose backend + HelmStack from being swamped.
+const DR_CONCURRENCY = Math.max(1, Number(process.env.DR_CONCURRENCY) || 3);
+let _active = 0; const _queue = [];
+async function withLimit(fn) {
+  if (_active >= DR_CONCURRENCY) await new Promise((r) => _queue.push(r));
+  _active++;
+  try { return await fn(); }
+  finally { _active--; const next = _queue.shift(); if (next) next(); }
+}
+
+// Run a node's children concurrently, honoring depends_on (a child waits for the
+// siblings it names). Memoized per child; a stack guard breaks any dependency
+// cycle so it can never deadlock. The global semaphore bounds actual concurrency.
+async function runChildren(children, worker) {
+  const byTitle = new Map(children.map((c) => [c.title, c]));
+  const started = new Map();
+  const run = (c, stack) => {
+    if (started.has(c.id)) return started.get(c.id);
+    const p = (async () => {
+      for (const d of (c.depends_on || [])) {
+        const dep = byTitle.get(d);
+        if (dep && dep !== c && !stack.has(dep.id)) await run(dep, new Set(stack).add(c.id));
+      }
+      await worker(c);
+    })();
+    started.set(c.id, p);
+    return p;
+  };
+  await Promise.allSettled(children.map((c) => run(c, new Set())));
+}
+
+// Post-order execution: children first (in parallel, dependency-ordered), then
+// this node's own work under the global concurrency limiter.
 async function researchNode(node, root, job, persist, maxFetch) {
   if (node.status === 'unresolvable') { await persist(); return node; }
   node.status = 'running'; await persist();
-  const orderedKids = orderByDeps(node.children || []);
-  const childAnswers = [];
-  for (const kid of orderedKids) { await researchNode(kid, root, job, persist, maxFetch); childAnswers.push(kid); }
+  const kids = node.children || [];
+  if (kids.length) await runChildren(kids, (c) => researchNode(c, root, job, persist, maxFetch));
 
-  if (!node.children || node.children.length === 0) {   // LEAF → run tools
-    const steps = await leafSteps(node);
-    log(`  [${node.id}] ${node.title}: ${steps.length} step(s)`);
-    const { findings, discoveredUrls } = await execute(steps);
-    const fetched = await adaptiveFetch(node.question, findings, discoveredUrls, Math.min(2, maxFetch));
-    node.findings = [...findings, ...fetched];
-    // Runtime refinement: now that real data exists (e.g. mints surfaced by
-    // 'trending', URLs by 'search'), issue the follow-ups that needed those
-    // concrete values — this is what closes data-dependent steps like rugcheck.
-    const follow = await gapSteps(node.question, { success_criteria: node.success_criterion }, node.findings);
-    if (follow.length) {
-      log(`  [${node.id}] refine: ${follow.length} follow-up step(s) — ${follow.map((s) => s.tool).join(', ')}`);
-      const fr = await execute(follow.slice(0, 3));
-      const ff = await adaptiveFetch(node.question, fr.findings, fr.discoveredUrls, 1);
-      node.findings = [...node.findings, ...fr.findings, ...ff];
+  await withLimit(async () => {
+    if (kids.length === 0) {   // LEAF → run tools
+      const steps = await leafSteps(node);
+      log(`  [${node.id}] ${node.title}: ${steps.length} step(s)`);
+      const { findings, discoveredUrls } = await execute(steps);
+      const fetched = await adaptiveFetch(node.question, findings, discoveredUrls, Math.min(2, maxFetch));
+      node.findings = [...findings, ...fetched];
+      // Runtime refinement: now that real data exists (e.g. mints surfaced by
+      // 'trending', URLs by 'search'), issue the follow-ups that needed those
+      // concrete values — this is what closes data-dependent steps like rugcheck.
+      const follow = await gapSteps(node.question, { success_criteria: node.success_criterion }, node.findings);
+      if (follow.length) {
+        log(`  [${node.id}] refine: ${follow.length} follow-up step(s) — ${follow.map((s) => s.tool).join(', ')}`);
+        const fr = await execute(follow.slice(0, 3));
+        const ff = await adaptiveFetch(node.question, fr.findings, fr.discoveredUrls, 1);
+        node.findings = [...node.findings, ...fr.findings, ...ff];
+      }
     }
-  }
-  node.answer = await answerNode(node, childAnswers);
+    node.answer = await answerNode(node, kids);
+  });
   node.status = node.answer ? 'answered' : 'unresolvable';
   await persist();
   return node;
