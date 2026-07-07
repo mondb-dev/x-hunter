@@ -31,10 +31,26 @@ if (fs.existsSync(path.join(ROOT, '.env'))) {
     if (m && process.env[m[1]] === undefined) process.env[m[1]] = m[2].trim();
   }
 }
+const https = require('https');
 const { reason } = require('./lib/compose');
 const { fetchPageText, searchWeb } = require('./lib/helmstack_fetch');
 const { recallText } = require('./lib/recall');
 const log = (m) => console.log(`[deep_research] ${m}`);
+
+/** Plain https GET → parsed JSON (follows one redirect). Resolves null on error. */
+function httpJson(url, { timeoutMs = 15000 } = {}) {
+  return new Promise((resolve) => {
+    const req = https.get(url, { headers: { 'User-Agent': 'Mozilla/5.0', 'Accept': 'application/json' } }, (res) => {
+      if ([301, 302, 307, 308].includes(res.statusCode) && res.headers.location) {
+        res.resume(); return resolve(httpJson(res.headers.location, { timeoutMs }));
+      }
+      let raw = ''; res.on('data', (c) => (raw += c));
+      res.on('end', () => { try { resolve(JSON.parse(raw)); } catch { resolve(null); } });
+    });
+    req.setTimeout(timeoutMs, () => { req.destroy(); resolve(null); });
+    req.on('error', () => resolve(null));
+  });
+}
 
 // ── Tool registry: the retrieval primitives the plan can call ─────────────────
 const TOOLS = {
@@ -62,13 +78,43 @@ const TOOLS = {
     const t = await fetchPageText(input, { maxChars: 3500 });
     return t || `(could not fetch ${input})`;
   },
+  // On-chain rug/holder-concentration analysis for a Solana token mint, via the
+  // RugCheck API (structured: authorities, top-holder concentration + insider
+  // flags, LP lock, liquidity, risk flags) — the reliable source for this, vs
+  // scraping explorer SPAs. Input: a Solana mint address.
+  async rugcheck(input) {
+    const mint = (String(input).match(/[1-9A-HJ-NP-Za-km-z]{32,44}/) || [])[0];
+    if (!mint) return '(rugcheck: no valid mint address in input)';
+    const r = await httpJson(`https://api.rugcheck.xyz/v1/tokens/${mint}/report`);
+    if (!r || typeof r !== 'object') return `(rugcheck: no data for ${mint})`;
+    const holders = (r.topHolders || []).slice(0, 12).map((h) =>
+      `${(h.pct != null ? h.pct.toFixed(2) : '?')}%${h.insider ? ' [insider]' : ''}${h.owner || h.address ? ' ' + String(h.owner || h.address).slice(0, 6) : ''}`);
+    return JSON.stringify({
+      mint,
+      score_normalised: r.score_normalised,
+      rugged: r.rugged,
+      mintAuthorityRenounced: r.mintAuthority == null,   // renounced = good (can't mint more)
+      freezeAuthorityRenounced: r.freezeAuthority == null, // renounced = good (can't freeze holders)
+      creator: r.creator,
+      creatorBalancePct: r.creatorBalance != null && r.token && r.token.supply ? +(100 * r.creatorBalance / r.token.supply).toFixed(2) : undefined,
+      totalHolders: r.totalHolders,
+      totalLPProviders: r.totalLPProviders,
+      totalMarketLiquidity: r.totalMarketLiquidity,
+      lpLocked: (r.markets || []).map((m) => m.lp && m.lp.lpLockedPct).filter((x) => x != null),
+      graphInsidersDetected: r.graphInsidersDetected,   // # insider CLUSTERS RugCheck detected
+      insiderNetworks: (r.insiderNetworks || []).map((n) => ({ size: n.size, pct: n.tokenAmountPct, type: n.type })),
+      risks: (r.risks || []).map((x) => `${x.name} [${x.level}]${x.value ? ' ' + x.value : ''}`),
+      topHolders: holders,
+    }, null, 1);
+  },
 };
 
 const TOOL_DESCR =
   'recall — Sebastian\'s own memory / past observations (semantic+FTS); input: a query.\n' +
   'posts  — full-text search of the X feed Sebastian has observed; input: keywords.\n' +
   'search — web search (returns titles/URLs/snippets); input: a search query.\n' +
-  'fetch  — read the page text of ONE specific URL; input: an https URL.';
+  'fetch  — read the page text of ONE specific URL; input: an https URL.\n' +
+  'rugcheck — on-chain analysis of a SOLANA TOKEN MINT via RugCheck: risk score, mint/freeze authority (null=renounced), top-holder concentration + insider flags, INSIDER CLUSTER count (graphInsidersDetected/insiderNetworks), LP lock, liquidity, holder count. Input: a Solana mint address. Use this for any token rug/cluster/holder-concentration question — do NOT scrape explorer pages for this.';
 
 async function plan(question) {
   const prompt =
