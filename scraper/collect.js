@@ -587,6 +587,9 @@ async function scrapeNotificationsApi() {
   try {
     x = new X(new HelmStackClient(), {
       ownHandle: (process.env.X_USERNAME || "SebastianHunts"),
+      dedicatedTab: true, // own tab: x_engage/other X automations share the default
+                          // tab and navigate it mid-flow, which was stomping the
+                          // timeline + notifications scrape (mentions never captured).
       log: (m) => console.log(`[scraper] ${m}`),
     });
     await x.ensureTab();
@@ -901,6 +904,8 @@ async function scrapeNotificationsApi() {
   } else {
     await scrapeNotificationsApi();
   }
+  // Close the dedicated tab so it doesn't accumulate one per run.
+  if (x && browserReady) { await x.close().catch(() => {}); }
 
   // ── Write scrape throughput metrics (#6) ──────────────────────────────────
   const METRICS_PATH = path.join(ROOT, "state", "scrape_metrics.jsonl");
