@@ -1,0 +1,388 @@
+{
+  "job_id": "2026-07-07T10-27-53-648Z_top-10-rugging-and-grifting-devs-on-pump",
+  "question": "Top 10 rugging and grifting devs on pump fun - tag their x accounts.",
+  "tier": "deep",
+  "status": "done",
+  "root": {
+    "title": "Top 10 Rugging and Grifting Devs on Pump.fun with X Accounts",
+    "question": "Who are the top 10 developers most frequently associated with rug pulls and grifting on pump.fun, and what are their X/Twitter handles?",
+    "direction": "First identify trending and recent pump.fun tokens to establish current landscape, then investigate known rug pulls and scam patterns to identify repeat offenders, cross-reference with community sentiment and reports, and compile the most notorious developers with their X accounts",
+    "research_areas": [
+      "Current pump.fun token launches and trenches",
+      "Known rug pulls and scam tokens on pump.fun",
+      "Community reports and sentiment about scam developers",
+      "Developer wallets and insider clusters",
+      "X accounts linked to multiple rugs"
+    ],
+    "tools_hint": [
+      "trending",
+      "xsearch",
+      "posts",
+      "search",
+      "rugcheck",
+      "recall",
+      "fetch"
+    ],
+    "success_criterion": "A ranked list of 10 developers with verified patterns of rugging/grifting on pump.fun, each with their X handle and evidence of multiple scams",
+    "depends_on": [],
+    "children": [
+      {
+        "title": "Current Pump.fun Token Landscape",
+        "question": "What are the newest and trending tokens on pump.fun right now, and which show rug characteristics?",
+        "direction": "Use trending to get live pump.fun launches, then use rugcheck on suspicious tokens to identify rug patterns and developer clusters",
+        "research_areas": [
+          "Latest pump.fun token launches",
+          "Tokens with rapid price dumps",
+          "High insider concentration tokens",
+          "Tokens with suspicious tokenomics"
+        ],
+        "tools_hint": [
+          "trending",
+          "rugcheck"
+        ],
+        "success_criterion": "List of 20-30 recent pump.fun tokens with rug risk scores and insider cluster data",
+        "depends_on": [],
+        "id": "1.1",
+        "status": "answered",
+        "findings": [
+          {
+            "tool": "trending",
+            "input": "solana",
+            "result": "{\n \"network\": \"solana\",\n \"source\": \"live: GeckoTerminal trending/new pools + DexScreener boosts\",\n \"trending_pools\": [\n  {\n   \"token\": \"Vaaland / SOL\",\n   \"mint\": \"6uYAQyXYMQ5sTNPRZmYSVMGTAzgkTrK5mGtHpPYCpump\",\n   \"pumpfun\": true,\n   \"priceUsd\": 0.000003781,\n   \"chg_h1_pct\": -9.779,\n   \"chg_h24_pct\": -93.59,\n   \"volH24\": 4782000,\n   \"fdv\": 3781,\n   \"ageMin\": 1340\n  },\n  {\n   \"token\": \"ANSEM / SOL\",\n   \"mint\": \"9cRCn9rGT8V2imeM2BaKs13yhMEais3ruM3rPvTGpump\",\n   \"pumpfun\": true,\n   \"priceUsd\": 0.398,\n   \"chg_h1_pct\": -2.399,\n   \"chg_h24_pct\": 14.87,\n   \"volH24\": 22710000,\n   \"fdv\": 396400000,\n   \"ageMin\": 13195\n  },\n  {\n   \"token\": \"LEVI / SOL\",\n   \"mint\": \"6baGyq4HLbUn93MQUGFqBktpXP8BRjpoxSsAap4ppump\",\n   \"pumpfun\": true,\n   \"priceUsd\": 0.004421,\n   \"chg_h1_pct\": -22.95,\n   \"chg_h24_pct\": -21.78,\n   \"volH24\": 13570000,\n   \"fdv\": 4379000,\n   \"ageMin\": 2241\n  },\n  {\n   \"token\": \"ANSEM / SOL\",\n   \"mint\": \"9cRCn9rGT8V2imeM2BaKs13yhMEais3ruM3rPvTGpump\",\n   \"pumpfun\": true,\n   \"priceUsd\": 0.3963,\n   \"chg_h1_pct\": -1.873,\n   \"chg_h24_pct\": 15.67,\n   \"volH24\": 11930000,\n   \"fdv\": 396000000,\n   \"ageMin\": 29603\n  },\n  {\n   \"token\": \"SAYLOR / SOL\",\n   \"mint\": \"AVVLwZcNnts8JffDiEZxLNXGk9nLAzRr6hf9KDWapump\",\n   \"pumpfun\": true,\n   \"priceUsd\": 0.0001191,\n   \"chg_h1_pct\": 41.06,\n   \"chg_h24_pct\": 86.97,\n   \"volH24\": 5548000,\n   \"fdv\": 120100,\n   \"ageMin\": 1294\n  },\n  {\n   \"token\": \"manlet / SOL\",\n   \"mint\": \"DdPrHYqM8Ueovnk9kAnAgoGhswkuaTqmxcoZzU3Zpump\",\n   \"pumpfun\": true,\n   \"priceUsd\": 0.009508,\n   \"chg_h1_pct\": 0.861,\n   \"chg_h24_pct\": 3.06,\n   \"volH24\": 5882000,\n   \"fdv\": 9533000,\n   \"ageMin\": 10797\n  },\n  {\n   \"token\": \"ANSEMIUS / SOL\",\n   \"mint\": \"DkmmVCUaBAcYjecqMdX7NdNQFCfb6uh1yQq9HEP8pump\",\n   \"pumpfun\": true,\n   \"priceUsd\": 0.001256,\n   \"chg_h1_pct\": 7.038,\n   \"chg_h24_pct\": 657,\n   \"volH24\": 2894000,\n   \"fdv\": 1274000,\n   \"ageMin\": 1412\n  },\n  {\n   \"token\": \"BABYANSEM / SOL\",\n   \"mint\": \"DLvuaz18bKnh1hEaCZsZ5NgJi7wYFm5RvgZVA2M5pump\",\n   \"pumpfun\": true,\n   \"priceUsd\": 0.002166,\n   \"chg_h1_pct\": -7.616,\n   \"chg_h24_pct\": 32.7,\n   \"volH24\": 1397000,\n   \"fdv\": 2166000,\n   \"ageMin\": 5943\n  },\n  {\n   \"token\": \"BIF / SOL\",\n   \"mint\": \"62YE1d4sRArBQzR5bdbxsx2k9LV3MdPV4xMC4Di2pump\",\n   \"pumpfun\": true,\n   \"priceUsd\": 0.003927,\n   \"chg_h1_pct\": -0.078,\n   \"chg_h24_pct\": 206.7,\n   \"volH24\": 6231000,\n   \"fdv\": 3906000,\n   \"ageMin\": 1872\n  },\n  {\n   \"token\": \"SAPIJIJU / SOL\",\n   \"mint\": \"8jayQDfRc3GYxftBJ2VAwjqmRBdYPC9KnjY15rc9pump\",\n   \"pumpfun\": true,\n   \"priceUsd\": 0.004019,\n   \"chg_h1_pct\": 11.51,\n   \"chg_h24_pct\": 5396,\n   \"volH24\": 12350000,\n   \"fdv\": 4051000,\n   \"ageMin\": 919\n  },\n  {\n   \"token\": \"MENSA / SOL\",\n   \"mint\": \"CFPkPq1eYPR8GLzEo59wUbbMioX4bshaTQiSGzTSpump\",\n   \"pumpfun\": true,\n   \"priceUsd\": 0.005119,\n   \"chg_h1_pct\": 6.937,\n   \"chg_h24_pct\": 20.89,\n   \"volH24\": 3536000,\n   \"fdv\": 5154000,\n   \"ageMin\": 7680\n  },\n  {\n   \"token\": \"BLACKOUT / SOL\",\n   \"mint\": \"A8wXmAgVy3peeHtifXNvYUUirGdNu4ezJoDno9trpump\",\n   \"pumpfun\": true,\n   \"priceUsd\": 0.000005169,\n   \"chg_h1_pct\": 5.981,\n   \"chg_h24_pct\": -94.51,\n   \"volH24\": 451900,\n   \"fdv\": 5249,\n   \"ageMin\": 2738\n  }\n ],\n \"newest_launches\": [\n  {\n   \"token\": \"Jack / SOL\",\n   \"mint\": \"FTXXHdDXiVAyJsYivk1mvVbAPbqe2vKZLwUBLVbKpump\",\n   \"pumpfun\": true,\n   \"priceUsd\": 0.000002496,\n   \"chg_h1_pct\": 0,\n   \"chg_h24_pct\": 0,\n   \"volH24\": 240.7,\n   \"fdv\": 2272,\n   \"ageMin\": 1\n  },\n  {\n   \"token\": \"Jack / SOL\",\n   \"mint\": \"3UuEGnnQTXKHh8vNXEvK5kspxs5PtwSC171SFBhzpump\",\n   \"pumpfun\": true,\n   \"priceUsd\": "
+          },
+          {
+            "tool": "rugcheck",
+            "input": "9cRCn9rGT8V2imeM2BaKs13yhMEais3ruM3rPvTGpump",
+            "result": "{\n \"mint\": \"9cRCn9rGT8V2imeM2BaKs13yhMEais3ruM3rPvTGpump\",\n \"score_normalised\": 54,\n \"rugged\": false,\n \"mintAuthorityRenounced\": true,\n \"freezeAuthorityRenounced\": true,\n \"creator\": \"9ENSWnedBEAvVB7jJKZrLRZ9vuVuJdBE7uJt2oAsG1jr\",\n \"creatorBalancePct\": 0,\n \"totalHolders\": 112546,\n \"totalLPProviders\": 20,\n \"totalMarketLiquidity\": 8693263.521223502,\n \"lpLocked\": [\n  0,\n  97.92091593745123,\n  0,\n  0,\n  0,\n  0,\n  0,\n  0,\n  0,\n  0,\n  0,\n  0,\n  0,\n  0,\n  0,\n  0,\n  0,\n  0,\n  9,\n  0,\n  0,\n  100,\n  0,\n  0,\n  0,\n  0,\n  0,\n  0,\n  0,\n  0,\n  0,\n  0,\n  0,\n  0,\n  0,\n  0,\n  0,\n  100,\n  0,\n  0,\n  0,\n  0,\n  0,\n  0,\n  0,\n  0,\n  0,\n  100,\n  0,\n  0,\n  0,\n  0,\n  0,\n  0,\n  0,\n  0,\n  0,\n  0,\n  0,\n  0,\n  0,\n  100,\n  0,\n  0,\n  0,\n  0,\n  0,\n  0,\n  0,\n  0,\n  0,\n  0,\n  0,\n  0,\n  0,\n  0,\n  0,\n  0,\n  0,\n  0,\n  0,\n  0,\n  0,\n  0,\n  0,\n  0,\n  0,\n  0,\n  0,\n  0,\n  100,\n  0,\n  100,\n  0,\n  0,\n  0,\n  0,\n  0,\n  0\n ],\n \"graphInsidersDetected\": 12,\n \"insiderNetworks\": [\n  {\n   \"size\": 4,\n   \"type\": \"transfer\"\n  },\n  {\n   \"size\": 4,\n   \"type\": \"transfer\"\n  },\n  {\n   \"size\": 4,\n   \"type\": \"transfer\"\n  }\n ],\n \"risks\": [\n  \"Top 10 holders high ownership [danger]\",\n  \"Single holder ownership [danger] 58.43%\"\n ],\n \"topHolders\": [\n  \"58.43% GV6UUm\",\n  \"8.94% FnzKY6\",\n  \"2.58% 2M2vLX\",\n  \"2.40% 8dut5x\",\n  \"2.11% 84YAYM\",\n  \"1.50% yHCxHB\",\n  \"1.50% Ac9Y9Q\",\n  \"1.35% DiBiwF\",\n  \"1.35% 111111\",\n  \"1.30% FwPApu\",\n  \"1.21% 111111\",\n  \"1.18% 111111\"\n ]\n}"
+          },
+          {
+            "tool": "rugcheck",
+            "input": "6uYAQyXYMQ5sTNPRZmYSVMGTAzgkTrK5mGtHpPYCpump",
+            "result": "{\n \"mint\": \"6uYAQyXYMQ5sTNPRZmYSVMGTAzgkTrK5mGtHpPYCpump\",\n \"score_normalised\": 8,\n \"rugged\": false,\n \"mintAuthorityRenounced\": true,\n \"freezeAuthorityRenounced\": true,\n \"creator\": \"sPJXTiUtzUPrN6mYKnftScR1LkgjpzmqpMokZzC9rsU\",\n \"creatorBalancePct\": 0,\n \"totalHolders\": 0,\n \"totalLPProviders\": 0,\n \"totalMarketLiquidity\": 5676.197652802128,\n \"lpLocked\": [\n  100,\n  0,\n  0,\n  0\n ],\n \"graphInsidersDetected\": 0,\n \"insiderNetworks\": [],\n \"risks\": [\n  \"Low Liquidity [warn] $2864.10\"\n ],\n \"topHolders\": [\n  \"74.36% 31A3uV\",\n  \"3.79% 111111\",\n  \"3.17% 6otU5o\",\n  \"2.51% BM9Ccy\",\n  \"2.31% 111111\",\n  \"2.29% C3nC41\",\n  \"2.24% 7JJ3dT\",\n  \"2.02% EQUdzn\",\n  \"1.99% 6rsvRF\",\n  \"1.89% AD6a4D\",\n  \"1.74% HeYQTw\",\n  \"1.34% CjTHwY\"\n ]\n}"
+          },
+          {
+            "tool": "rugcheck",
+            "input": "6baGyq4HLbUn93MQUGFqBktpXP8BRjpoxSsAap4ppump",
+            "result": "{\n \"mint\": \"6baGyq4HLbUn93MQUGFqBktpXP8BRjpoxSsAap4ppump\",\n \"score_normalised\": 41,\n \"rugged\": false,\n \"mintAuthorityRenounced\": true,\n \"freezeAuthorityRenounced\": true,\n \"creator\": \"8UrMcr7LazNCNq1s7chvNwCms5gxCS4V2CbLiG7L65Z8\",\n \"creatorBalancePct\": 0,\n \"totalHolders\": 9393,\n \"totalLPProviders\": 0,\n \"totalMarketLiquidity\": 366427.4989741544,\n \"lpLocked\": [\n  100,\n  0,\n  0,\n  0,\n  0,\n  0,\n  0,\n  0,\n  0,\n  0,\n  0,\n  0,\n  0,\n  0,\n  0,\n  0,\n  0\n ],\n \"graphInsidersDetected\": 27,\n \"insiderNetworks\": [\n  {\n   \"size\": 5,\n   \"type\": \"transfer\"\n  },\n  {\n   \"size\": 4,\n   \"type\": \"transfer\"\n  },\n  {\n   \"size\": 18,\n   \"type\": \"transfer\"\n  }\n ],\n \"risks\": [\n  \"Single holder ownership [danger] 42.09%\",\n  \"High holder concentration [warn]\"\n ],\n \"topHolders\": [\n  \"42.09% 8UrMcr\",\n  \"42.09% A1rtDw\",\n  \"20.69% 4G5j9b\",\n  \"4.76% 5x3ccQ\",\n  \"4.24% HB9Bip\",\n  \"2.75% 111111\",\n  \"2.50% 111111\",\n  \"2.17% 111111\",\n  \"2.16% 111111\",\n  \"2.12% 111111\",\n  \"2.12% EqMxjt\",\n  \"2.05% A9qUxX\"\n ]\n}"
+          }
+        ],
+        "answer": "Based on the evidence from GeckoTerminal/DexScreener trending pools and RugCheck analysis, the newest trending pump.fun tokens are **Vaaland** (22 hours old, -93.59% in 24h), **SAYLOR** (21 hours old, +86.97%), and **LEVI** (37 hours old, -21.78%). **Vaaland shows strong rug characteristics** with a very low RugCheck score of 8/100, 74.36% single holder concentration, and near-zero liquidity ($2,864), while **LEVI displays moderate risk** (score 41/100) with 42.09% held by two wallets and 27 detected insider networks. ANSEM appears more established (9+ days old) with better metrics (score 54/100, 112k+ holders) despite some concentration concerns.\n\n**Confidence: High** - data directly from rugcheck tool and live trending feeds.",
+        "children": []
+      },
+      {
+        "title": "Known Pump.fun Rug Pulls and Scams",
+        "question": "What are the most notorious and documented rug pulls that have occurred on pump.fun, including developer information?",
+        "direction": "Search for reports, lists, and documentation of pump.fun rugs; check Sebastian's memory for past observations; search X for community reports of scams",
+        "research_areas": [
+          "Published reports of pump.fun rugs",
+          "Community-maintained scam lists",
+          "High-profile rug incidents",
+          "Developer doxxing and exposure threads"
+        ],
+        "tools_hint": [
+          "search",
+          "recall",
+          "xsearch",
+          "posts",
+          "fetch"
+        ],
+        "success_criterion": "Database of 30+ documented pump.fun rugs with associated developer names, wallets, or X handles where available",
+        "depends_on": [],
+        "id": "1.2",
+        "status": "answered",
+        "findings": [],
+        "answer": "Based on the evidence provided, **no specific notorious rug pulls on pump.fun have been documented with developer information**. The X Community Discourse finding explicitly states that searches for pump.fun scammers, rug pullers, repeat offenders, wallet addresses, and blacklisted developers returned no substantive results across multiple targeted queries (xsearch tool). The absence of documented cases with developer details is consistent across all search attempts, including queries specifically designed to identify known bad actors and their wallet addresses.\n\n**Confidence: Medium-High** — while the evidence strongly indicates a lack of publicly documented cases in the searched sources, this reflects only what was found through the specific xsearch queries conducted, not the complete universe of available information.",
+        "children": [
+          {
+            "parent_id": "1.2",
+            "title": "X Community Discourse on Pump.fun Scammers",
+            "question": "What are X users currently saying about known pump.fun scammers, rug pullers, and repeat offenders? Which developer names or handles are being called out?",
+            "direction": "Capture real-time community knowledge and accusations about pump.fun scammers from X",
+            "research_areas": [
+              "community reports",
+              "scam callouts",
+              "rug warnings"
+            ],
+            "tools_hint": [
+              "xsearch",
+              "posts"
+            ],
+            "success_criterion": "Collection of 20+ X posts/threads naming specific developers, wallets, or X handles accused of pump.fun rugs",
+            "depends_on": [],
+            "children": [],
+            "id": "1.2.1",
+            "status": "answered",
+            "findings": [
+              {
+                "tool": "xsearch",
+                "input": "pump.fun scammer rug pull developer",
+                "result": "(no live X posts for \"pump.fun scammer rug pull developer\")"
+              },
+              {
+                "tool": "xsearch",
+                "input": "pump.fun repeat offender wallet address",
+                "result": "(no live X posts for \"pump.fun repeat offender wallet address\")"
+              },
+              {
+                "tool": "xsearch",
+                "input": "pump.fun dev rugged again",
+                "result": "@viper_moons: \n@sheepwifha72627: \n@MrDiamondBallz: \n@RageTraderSol: \n@ZenithTON: \n@BeLikeSol: \n@Linkkzyy: \n@PumpGuard_1: \n@its_phobia: \n@whemohere: \n@OldGrowthCrypto: \n@cryptofictions: "
+              },
+              {
+                "tool": "xsearch",
+                "input": "pump.fun scam list avoid developer",
+                "result": "(no live X posts for \"pump.fun scam list avoid developer\")"
+              },
+              {
+                "tool": "posts",
+                "input": "pump.fun scammer developer rug pull",
+                "result": "@RunOldMan: That's a mighty lumpy rug, what have you been sweeping under there...\n@EricLDaugh: The media will sweep this under the rug by tomorrow. The wins keep coming.\n@jehangeer_hasan: Classic Cramer pump signal. Time to inverse and short?\n@martn3ws: I swear it was IMPOSSIBLE to actually pull this off in real life\n@dweinberger66: Call me crazy, but a pump and a pipe would be far easier\n@RealValther: how Trump look at crypto knowing he can pump and dump it easily\n@hindu_bjp_k7: They only know how to carry out terrorist attacks, not pull off stunts like this.\n@madddieshi: This was news last year here in PH, that's an adult pretending to be a student, a scammer. The guard has been patient with that girl."
+              },
+              {
+                "tool": "xsearch",
+                "input": "@viper_moons @MrDiamondBallz @RageTraderSol pump.fun",
+                "result": "(no live X posts for \"@viper_moons @MrDiamondBallz @RageTraderSol pump.fun\")"
+              },
+              {
+                "tool": "xsearch",
+                "input": "pump.fun developer wallet blacklist",
+                "result": "@AveaiGlobal: \n@PumpAgentTrade: \n@MaChampCoin: "
+              }
+            ],
+            "answer": "Based on the evidence provided, **no specific X users are currently calling out known pump.fun scammers, rug pullers, or repeat offenders by name or wallet address**. The xsearch queries for \"pump.fun scammer rug pull developer,\" \"pump.fun repeat offender wallet address,\" \"pump.fun scam list avoid developer,\" and \"pump.fun developer wallet blacklist\" all returned no live X posts with substantive content. The search for \"pump.fun dev rugged again\" returned only usernames without accompanying text, and the broader posts search yielded only tangentially related content about rugs, pumps, and scams in general contexts unrelated to pump.fun developers. **Confidence: High** — the evidence clearly shows an absence of the requested information across multiple targeted searches (xsearch tool)."
+          }
+        ]
+      },
+      {
+        "title": "Repeat Offender Developer Identification",
+        "question": "Which developers or developer clusters appear across multiple rug pulls on pump.fun?",
+        "direction": "Cross-reference insider clusters from rugcheck data with known rug tokens; identify wallet patterns; search for developers called out multiple times in community reports",
+        "research_areas": [
+          "Recurring insider wallet clusters",
+          "Developers with multiple failed tokens",
+          "Known serial ruggers in the Solana ecosystem",
+          "Pattern matching across rug incidents"
+        ],
+        "tools_hint": [
+          "rugcheck",
+          "search",
+          "xsearch",
+          "recall"
+        ],
+        "success_criterion": "List of 15-20 developer identities or wallet clusters with evidence of involvement in 3+ rugs",
+        "depends_on": [
+          "Current Pump.fun Token Landscape",
+          "Known Pump.fun Rug Pulls and Scams"
+        ],
+        "id": "1.3",
+        "status": "answered",
+        "findings": [],
+        "answer": "**No Evidence Gathered**\n\nThe sub-findings acknowledge that while rugcheck data shows insider clusters for individual tokens (e.g., LEVI with 27 insiders across 3 networks), **no specific wallet addresses or developer identities appearing across multiple rug pulls were documented in the evidence**. The X/Twitter references to tracking \"the same group/deployer\" across $TJR, $ANSEM, and $LUKE remain unverified claims without concrete wallet addresses or cross-token analysis. \n\n**Confidence: None** - The question cannot be answered from the gathered evidence, as cross-rug developer tracking data was not collected.",
+        "children": [
+          {
+            "parent_id": "1.3",
+            "title": "Wallet Cluster Analysis for Repeat Offenders",
+            "question": "For tokens identified as rugs, what are the insider cluster patterns and can we track wallets across multiple scams?",
+            "direction": "Use rugcheck's insider cluster detection to identify connected wallets across multiple pump.fun rugs",
+            "research_areas": [
+              "on-chain clustering",
+              "insider networks",
+              "wallet connections"
+            ],
+            "tools_hint": [
+              "rugcheck"
+            ],
+            "success_criterion": "Identification of 5-10 wallet clusters appearing across 3+ different pump.fun rug tokens",
+            "depends_on": [
+              "1.2"
+            ],
+            "children": [],
+            "id": "1.3.1",
+            "status": "answered",
+            "findings": [
+              {
+                "tool": "trending",
+                "input": "solana",
+                "result": "{\n \"network\": \"solana\",\n \"source\": \"live: GeckoTerminal trending/new pools + DexScreener boosts\",\n \"trending_pools\": [\n  {\n   \"token\": \"Vaaland / SOL\",\n   \"mint\": \"6uYAQyXYMQ5sTNPRZmYSVMGTAzgkTrK5mGtHpPYCpump\",\n   \"pumpfun\": true,\n   \"priceUsd\": 0.000003781,\n   \"chg_h1_pct\": -9.779,\n   \"chg_h24_pct\": -93.59,\n   \"volH24\": 4782000,\n   \"fdv\": 3781,\n   \"ageMin\": 1341\n  },\n  {\n   \"token\": \"ANSEM / SOL\",\n   \"mint\": \"9cRCn9rGT8V2imeM2BaKs13yhMEais3ruM3rPvTGpump\",\n   \"pumpfun\": true,\n   \"priceUsd\": 0.3983,\n   \"chg_h1_pct\": -1.932,\n   \"chg_h24_pct\": 15.42,\n   \"volH24\": 22710000,\n   \"fdv\": 398300000,\n   \"ageMin\": 13197\n  },\n  {\n   \"token\": \"LEVI / SOL\",\n   \"mint\": \"6baGyq4HLbUn93MQUGFqBktpXP8BRjpoxSsAap4ppump\",\n   \"pumpfun\": true,\n   \"priceUsd\": 0.00457,\n   \"chg_h1_pct\": -19.54,\n   \"chg_h24_pct\": -18.32,\n   \"volH24\": 13580000,\n   \"fdv\": 4573000,\n   \"ageMin\": 2242\n  },\n  {\n   \"token\": \"ANSEM / SOL\",\n   \"mint\": \"9cRCn9rGT8V2imeM2BaKs13yhMEais3ruM3rPvTGpump\",\n   \"pumpfun\": true,\n   \"priceUsd\": 0.3963,\n   \"chg_h1_pct\": -1.888,\n   \"chg_h24_pct\": 15.65,\n   \"volH24\": 11930000,\n   \"fdv\": 398300000,\n   \"ageMin\": 29605\n  },\n  {\n   \"token\": \"SAYLOR / SOL\",\n   \"mint\": \"AVVLwZcNnts8JffDiEZxLNXGk9nLAzRr6hf9KDWapump\",\n   \"pumpfun\": true,\n   \"priceUsd\": 0.0001241,\n   \"chg_h1_pct\": 45.55,\n   \"chg_h24_pct\": 92.92,\n   \"volH24\": 5549000,\n   \"fdv\": 123900,\n   \"ageMin\": 1295\n  },\n  {\n   \"token\": \"manlet / SOL\",\n   \"mint\": \"DdPrHYqM8Ueovnk9kAnAgoGhswkuaTqmxcoZzU3Zpump\",\n   \"pumpfun\": true,\n   \"priceUsd\": 0.009588,\n   \"chg_h1_pct\": 1.776,\n   \"chg_h24_pct\": 3.995,\n   \"volH24\": 5884000,\n   \"fdv\": 9619000,\n   \"ageMin\": 10799\n  },\n  {\n   \"token\": \"ANSEMIUS / SOL\",\n   \"mint\": \"DkmmVCUaBAcYjecqMdX7NdNQFCfb6uh1yQq9HEP8pump\",\n   \"pumpfun\": true,\n   \"priceUsd\": 0.001237,\n   \"chg_h1_pct\": 4.019,\n   \"chg_h24_pct\": 635.6,\n   \"volH24\": 2902000,\n   \"fdv\": 1238000,\n   \"ageMin\": 1413\n  },\n  {\n   \"token\": \"BABYANSEM / SOL\",\n   \"mint\": \"DLvuaz18bKnh1hEaCZsZ5NgJi7wYFm5RvgZVA2M5pump\",\n   \"pumpfun\": true,\n   \"priceUsd\": 0.002168,\n   \"chg_h1_pct\": -7.543,\n   \"chg_h24_pct\": 32.81,\n   \"volH24\": 1397000,\n   \"fdv\": 2168000,\n   \"ageMin\": 5944\n  },\n  {\n   \"token\": \"BIF / SOL\",\n   \"mint\": \"62YE1d4sRArBQzR5bdbxsx2k9LV3MdPV4xMC4Di2pump\",\n   \"pumpfun\": true,\n   \"priceUsd\": 0.003959,\n   \"chg_h1_pct\": 1.269,\n   \"chg_h24_pct\": 210.8,\n   \"volH24\": 6231000,\n   \"fdv\": 3959000,\n   \"ageMin\": 1874\n  },\n  {\n   \"token\": \"SAPIJIJU / SOL\",\n   \"mint\": \"8jayQDfRc3GYxftBJ2VAwjqmRBdYPC9KnjY15rc9pump\",\n   \"pumpfun\": true,\n   \"priceUsd\": 0.003759,\n   \"chg_h1_pct\": 3.95,\n   \"chg_h24_pct\": 5024,\n   \"volH24\": 12350000,\n   \"fdv\": 3747000,\n   \"ageMin\": 920\n  },\n  {\n   \"token\": \"MENSA / SOL\",\n   \"mint\": \"CFPkPq1eYPR8GLzEo59wUbbMioX4bshaTQiSGzTSpump\",\n   \"pumpfun\": true,\n   \"priceUsd\": 0.005008,\n   \"chg_h1_pct\": 5.39,\n   \"chg_h24_pct\": 19.14,\n   \"volH24\": 3536000,\n   \"fdv\": 5080000,\n   \"ageMin\": 7681\n  },\n  {\n   \"token\": \"BLACKOUT / SOL\",\n   \"mint\": \"A8wXmAgVy3peeHtifXNvYUUirGdNu4ezJoDno9trpump\",\n   \"pumpfun\": true,\n   \"priceUsd\": 0.000005169,\n   \"chg_h1_pct\": 4.348,\n   \"chg_h24_pct\": -94.6,\n   \"volH24\": 451900,\n   \"fdv\": 5168,\n   \"ageMin\": 2739\n  }\n ],\n \"newest_launches\": [\n  {\n   \"token\": \"WorldCup / SOL\",\n   \"mint\": \"hs9z2TEuzRWAnTQ6MFJw86fL1gt3yAvb2DPBSkzeYhd\",\n   \"priceUsd\": 0.000004244,\n   \"chg_h1_pct\": 3.077,\n   \"chg_h24_pct\": 3.077,\n   \"volH24\": 823.1,\n   \"fdv\": 424000,\n   \"ageMin\": 1\n  },\n  {\n   \"token\": \"UFO / SOL\",\n   \"mint\": \"8G5Uo62hQf1RkXpWP1mcRAt5aMLmDHJviZgdxdTrpump\",\n   \"pumpfun\": true,\n   \"priceUsd\": 0.000002"
+              },
+              {
+                "tool": "rugcheck",
+                "input": "6uYAQyXYMQ5sTNPRZmYSVMGTAzgkTrK5mGtHpPYCpump",
+                "result": "{\n \"mint\": \"6uYAQyXYMQ5sTNPRZmYSVMGTAzgkTrK5mGtHpPYCpump\",\n \"score_normalised\": 8,\n \"rugged\": false,\n \"mintAuthorityRenounced\": true,\n \"freezeAuthorityRenounced\": true,\n \"creator\": \"sPJXTiUtzUPrN6mYKnftScR1LkgjpzmqpMokZzC9rsU\",\n \"creatorBalancePct\": 0,\n \"totalHolders\": 15924,\n \"totalLPProviders\": 0,\n \"totalMarketLiquidity\": 5670.776419110201,\n \"lpLocked\": [\n  100,\n  0,\n  0,\n  0\n ],\n \"graphInsidersDetected\": 0,\n \"insiderNetworks\": [],\n \"risks\": [\n  \"Low Liquidity [warn] $2858.68\"\n ],\n \"topHolders\": [\n  \"74.36% 31A3uV\",\n  \"3.79% 111111\",\n  \"3.17% 6otU5o\",\n  \"2.51% BM9Ccy\",\n  \"2.31% 111111\",\n  \"2.29% C3nC41\",\n  \"2.24% 7JJ3dT\",\n  \"2.02% EQUdzn\",\n  \"1.99% 6rsvRF\",\n  \"1.89% AD6a4D\",\n  \"1.74% HeYQTw\",\n  \"1.34% CjTHwY\"\n ]\n}"
+              },
+              {
+                "tool": "rugcheck",
+                "input": "6baGyq4HLbUn93MQUGFqBktpXP8BRjpoxSsAap4ppump",
+                "result": "{\n \"mint\": \"6baGyq4HLbUn93MQUGFqBktpXP8BRjpoxSsAap4ppump\",\n \"score_normalised\": 41,\n \"rugged\": false,\n \"mintAuthorityRenounced\": true,\n \"freezeAuthorityRenounced\": true,\n \"creator\": \"8UrMcr7LazNCNq1s7chvNwCms5gxCS4V2CbLiG7L65Z8\",\n \"creatorBalancePct\": 0,\n \"totalHolders\": 9393,\n \"totalLPProviders\": 0,\n \"totalMarketLiquidity\": 366427.4989741544,\n \"lpLocked\": [\n  100,\n  0,\n  0,\n  0,\n  0,\n  0,\n  0,\n  0,\n  0,\n  0,\n  0,\n  0,\n  0,\n  0,\n  0,\n  0,\n  0\n ],\n \"graphInsidersDetected\": 27,\n \"insiderNetworks\": [\n  {\n   \"size\": 5,\n   \"type\": \"transfer\"\n  },\n  {\n   \"size\": 4,\n   \"type\": \"transfer\"\n  },\n  {\n   \"size\": 18,\n   \"type\": \"transfer\"\n  }\n ],\n \"risks\": [\n  \"Single holder ownership [danger] 42.09%\",\n  \"High holder concentration [warn]\"\n ],\n \"topHolders\": [\n  \"42.09% 8UrMcr\",\n  \"42.09% A1rtDw\",\n  \"20.69% 4G5j9b\",\n  \"4.76% 5x3ccQ\",\n  \"4.24% HB9Bip\",\n  \"2.75% 111111\",\n  \"2.50% 111111\",\n  \"2.17% 111111\",\n  \"2.16% 111111\",\n  \"2.12% 111111\",\n  \"2.12% EqMxjt\",\n  \"2.05% A9qUxX\"\n ]\n}"
+              },
+              {
+                "tool": "xsearch",
+                "input": "insider cluster rug solana wallets",
+                "result": "@TryInfinite: people think Infinite is a coin list. here's what's actually running under the hood. discovery: rotating deep scans sweep the entire Solana micro-cap market every 45 seconds — volume leaders, fresh launches, transaction \n@MastrXYZ: Investigation; $TJR $ANSEM and $LUKE from the same group/ deployer! The Solana cabal is back in full swing, and this is a repeatable CT extraction template hiding in plain sight. I am showing you 1 single example out of \n@Cryptokasogon: Onchain analysis of United States Water Reserve (USWR) on Solana Market Overview Token: United States Water Reserve (USWR) Contract Address (CA): 4D8qUHm334fxqeTauPvF8gQ7fYgrD4Mpmb1Wy6ftUSWR Market Cap: $12.6 million 24‑\n@Cryptokasogon: Complete on‑chain analysis of $PEPONK on Solana Network . Market Overview Token: PEPONK ($PEPONK) Contract Address (CA): Gqqdgfkn7bcsuBQZEk9oMBkqCv1bRXvPmTLs3sQ9pump Market Cap: ~$24K 24h Volume: ~$5.5K. Vol/Mcap Ratio: \n@Emile0x1908: This BitcoinWhale token (CA: GQKEw7RyqQKnLmwo6UwQ1x2pd7BYQSC8Fzz9aKoGmUV2) screams classic Solana meme rug setup. Launched Dec 26, 2025 on http:// pump.fun ground zero for 90% of quick-extraction schemes. Creator wallet \n@StrendureQuant: David, your screenshots don’t prove what you think they prove — and anyone who understands on-chain analysis can see it. You posted: a holder cluster map a post-run correction chart liquidity + volume panels None of that\n@deedherah: You can scan any Solana token in seconds : Full security audit. Deep Holder distribution (bundlers, snipers, insider wallets, Dev wallets). Insider cluster detection (proprietary model outperforms BubbleMaps). Rug-pull r\n@HuyLe_HC: $LIBRA, backed by Javier Milei, crashed hard—$4.4 billion in market cap wiped out in hours after a hyped-up launch on February 14, 2025. It’s the same old story: big promises, insider dumps, and retail left holding the b\n@d_DeFi_Geenius: 3/ On-chain analysis exposed the truth: • 82% supply was held in a single cluster of wallets. • $87.4M was drained within 3 hours through strategic liquidity manipulation. •249,671 $SOL @solana siphoned by wallets linked\n@yqboom: you're simply not smart enough not to get rugged. and $libra is a prime example of that, all of you crying in the casino like DICKHEADS. \"bRO tHeY'Re iNsiDeRs\" - yes; yes they are. listen up tho... yes, LIBRA was a giga "
+              }
+            ],
+            "answer": "Based on the rugcheck evidence, token 6baGyq4HLbUn93MQUGFqBktpXP8BRjpoxSsAap4ppump (LEVI) shows **27 insiders detected across 3 transfer networks** (sizes: 5, 4, and 18 wallets), with the creator holding 42.09% and another linked wallet (A1rtDw) holding another 42.09%, indicating coordinated insider control. The X/Twitter search references tracking \"the same group/deployer\" across multiple tokens ($TJR, $ANSEM, $LUKE) and mentions \"repeatable CT extraction template\" suggesting cross-scam wallet tracking is occurring in the community, though specific wallet addresses across multiple rugs are not provided in this evidence. **Confidence: Medium** - rugcheck data is specific but cross-rug tracking claims lack concrete multi-token wallet evidence."
+          }
+        ]
+      },
+      {
+        "title": "X Account Attribution and Verification",
+        "question": "What are the verified X/Twitter handles for the identified repeat offender developers?",
+        "direction": "Use xsearch and posts to find X handles mentioned in rug reports; search for developer self-promotion before rugs; verify handles through community exposure threads",
+        "research_areas": [
+          "Developer X accounts promoting their tokens",
+          "Community call-out threads with @mentions",
+          "Screenshots and evidence linking handles to rugs",
+          "Developer aliases and sockpuppets"
+        ],
+        "tools_hint": [
+          "xsearch",
+          "posts",
+          "search",
+          "fetch"
+        ],
+        "success_criterion": "Verified X handles for at least 10 developers with clear evidence linking them to multiple pump.fun rugs",
+        "depends_on": [
+          "Repeat Offender Developer Identification"
+        ],
+        "id": "1.4",
+        "status": "answered",
+        "findings": [
+          {
+            "tool": "xsearch",
+            "input": "pump.fun rug developer exposed repeat scammer X handle twitter",
+            "result": "(no live X posts for \"pump.fun rug developer exposed repeat scammer X handle twitter\")"
+          },
+          {
+            "tool": "posts",
+            "input": "pump.fun rug developer handle twitter exposed scammer multiple",
+            "result": "@RunOldMan: That's a mighty lumpy rug, what have you been sweeping under there...\n@EricLDaugh: The media will sweep this under the rug by tomorrow. The wins keep coming.\n@depressionlesss: this is peak twitter\n@buffys: WHO???????? is on twitter spaces rn??? \n@A_Random_Medjed: Bobo tong grok ass translation ng twitter hahaha\n@EpicClipVault: How airports across the world handle luggage\n@VoterIDx: True…It  exposed a couple of other people  also \n@jehangeer_hasan: Classic Cramer pump signal. Time to inverse and short?"
+          },
+          {
+            "tool": "xsearch",
+            "input": "pump.fun scammer list developers multiple rugs same dev @",
+            "result": "(no live X posts for \"pump.fun scammer list developers multiple rugs same dev @\")"
+          },
+          {
+            "tool": "search",
+            "input": "pump.fun repeat rug developers twitter handles exposed scammers list",
+            "result": "1. 98% of Tokens on Pump.fun Are Rug Pulls or Fraud: Report\n   https://cryptopotato.com/98-of-tokens-on-pump-fun-are-rug-pulls-or-fraud-report/\n   A new report from Solidus Labs has exposed a huge amount of what it calls \"fraudulent\" activity on the Solana blockchain. The findings revealed that 98.6% of tokens launched on Pump.fun could be classified as either rug pulls or pump-and-dump schemes. Solana: A Hotbed for Meme Coin Scams?\n2. 98% of Tokens on Pump.fun Are Rug Pulls or Fraud: Report\n   https://cryptopotato.com/98-of-tokens-on-pump-fun-are-rug-pulls-or-fraud-report/\n   A new report from Solidus Labs has exposed a huge amount of what it calls \"fraudulent\" activity on the Solana blockchain. The findings revealed that 98.6% of tokens launched on Pump.fun could be classified as either rug pulls or pump-and-dump schemes. Solana: A Hotbed for Meme Coin Scams?\n3. 98% of Tokens on Pump.Fun Have Been Rug Pulls or an Act of Fraud, New ...\n   https://cryptonews.net/news/altcoins/30921239/\n   A report by Solidus Labs has revealed the alarming scale of fraudulent activity on the Solana blockchain, with 98.6% of tokens launched on Pump.fun being chalked down as rug pulls or pump-and-dump schemes. More than seven million tokens have been issued on Pump.fun since its inception in January 2024, with just 97,000 of those maintaining at least $1,000 in liquidity, the report added.\n4. 98% of Tokens on Pump.Fun Have Been Rug Pulls or an Act of Fraud, New ...\n   https://cryptonews.net/news/altcoins/30921239/\n   A report by Solidus Labs has revealed the alarming scale of fraudulent activity on the Solana blockchain, with 98.6% of tokens launched on Pump.fun being chalked down as rug pulls or pump-and-dump schemes. More than seven million tokens have been issued on Pump.fun since its inception in January 2024, with just 97,000 of those maintaining at least $1,000 in liquidity, the report added.\n5. 98% of Pump.fun Tokens Are Rug Pulls or Fraud, Says Report.\n   https://airdrops.com/news/98-of-tokens-on-pumpfun-are-rug-pulls-or-fraud-report-finds\n   Solidus Labs reveals 98.6% of tokens on Solana's Pump.fun are scams. Raydium also shows 93% rug pull activity amid growing regulatory pressure.\n6. 98% of Pump.fun Tokens Are Rug Pulls or Fraud, Says Report.\n   https://airdrops.com/news/98-of-tokens-on-pumpfun-are-rug-pulls-or-fraud-report-finds\n   Solidus Labs reveals 98.6% of tokens on Solana's Pump.fun are scams. Raydium also shows 93% rug pull activity amid growing regulatory pressure."
+          },
+          {
+            "tool": "fetch",
+            "input": "https://cryptopotato.com/98-of-tokens-on-pump-fun-are-rug-pulls-or-fraud-report/",
+            "result": "cryptopotato.comPerforming security verificationThis website uses a security service to protect against malicious bots. This page is displayed while the website verifies you are not a bot.Verification successful. Waiting for cryptopotato.com to respond"
+          },
+          {
+            "tool": "fetch",
+            "input": "https://cryptonews.net/news/altcoins/30921239/",
+            "result": "Back to the list\n \n\n \n \n\n 98% of Tokens on Pump.Fun Have Been Rug Pulls or an Act of Fraud, New Report Says\n\n \n \n \n  \n coindesk.com\n  + 1 more\n \n \n 08 May 2025 13:30, UTC\n \n \n \n \n \n \n \n \n \n\n \n \n \n \nA report by Solidus Labs has revealed the alarming scale of fraudulent activity on the Solana blockchain, with 98.6% of tokens launched on Pump.fun being chalked down as rug pulls or pump-and-dump schemes.\nMore than seven million tokens have been issued on Pump.fun since its inception in January 2024, with just 97,000 of those maintaining at least $1,000 in liquidity, the report added.\n\nPump.fun is a token creation platform that lets users issue new crypto tokens on the Solana blockchain at a very low cost.\n\nChart showing Pump.fun volume (Solidus Labs)\n\nThe largest rug pull Solidus Labs identified over the time period was worth $1.9 million and was related to MToken.\n\nWhilst the crypto industry has progressed and moved on following the spectacular implosion of FTX, hacks and scams are still rife with bad actors embezzling millions of dollars worth of assets by capitalizing on retail greed.\nThe memecoin sector is the greatest example of that, with 10s of thousands of bogus tokens being created every day. The hype around memecoin reached a crescendo in January when U.S. President Donal Trump touted his own TRUMP memecoin on social media. Shortly after the U.S. First Lady Melania Trump promoted MELANIA, both tokens are now down by 87% and 97% respectively, with a cabal of insiders reportedly profiting more than $100 million by buying the token before it was publicly available.\nMeanwhile, on decentralized exchange Raydium, Solidus Labs found that 93% of liquidity pools (361,000 pools) exhibited soft rug pull characteristics, with the median rug pulls worth $2.8K.\nIn February, a Merkle Science report revealed that $500 million had been lost to rug pulls and scams in 2024.\nSolana has emerged as a popular blockchain among criminals and scammers. Its near-zero fees and instant execution make it easy to deploy tokens and extract value.\nRegulators are keeping a watchful eye over the sector. In March, the SEC set up a Cyber and Emerging Technologies unit designed to “root out those seeking to misuse innovation to harm investors and diminish confidence in new technologies.”\nThe regulator filed a class action lawsuit against Meteora in April, naming individuals associated with the M3M3 meme coin, alleging that they were responsible for a $69 million rug pull.\n\n \n coindesk.com\n \n \n\n \n \n \n \n \n \n \n Similar news (1)\n \n \n Add similar news\n \n \n \n \n \n \n \n \n \n \n 98% of Tokens on Pump.fun Are Rug Pulls or Fraud: Report\n \n \n \n \n cryptopotato.com\n \n 10 May 2025 21:59, UTC\n \n \n \n \n \n \n \n \n \n \n \n Add similar news\n\n \n \n Send us a link to a similar news story on another source."
+          },
+          {
+            "tool": "search",
+            "input": "MToken pump.fun 1.9 million rug pull developer twitter handle wallet address",
+            "result": "1. 98% of Tokens on Pump.Fun Have Been Rug Pulls or an Act of Fraud, New ...\n   https://sg.news.yahoo.com/98-tokens-pump-fun-rug-130000045.html\n   A report by Solidus Labs has revealed the alarming scale of fraudulent activity on the Solana blockchain, with 98.6% of tokens launched on Pump.fun being chalked down as rug pulls or pump-and-dump schemes. More than seven million tokens have been issued on Pump.fun since its inception in January 2024, with just 97,000 of those maintaining at least $1,000 in liquidity, the report added. Pump ...\n2. 98% of Tokens on Pump.Fun Have Been Rug Pulls or an Act of Fraud, New ...\n   https://sg.news.yahoo.com/98-tokens-pump-fun-rug-130000045.html\n   A report by Solidus Labs has revealed the alarming scale of fraudulent activity on the Solana blockchain, with 98.6% of tokens launched on Pump.fun being chalked down as rug pulls or pump-and-dump schemes. More than seven million tokens have been issued on Pump.fun since its inception in January 2024, with just 97,000 of those maintaining at least $1,000 in liquidity, the report added. Pump ...\n3. Terminally ill developer rug pulls community: 'I have 120 ... - TheStreet\n   https://www.thestreet.com/crypto/investing/disabled-developer-rug-pulls-i-have-120-hours-to-live\n   A Pump.fun memecoin called 120 Hours hit a $534K peak before its developer, who claimed he was dying, drained liquidity and vanished.\n4. Terminally ill developer rug pulls community: 'I have 120 ... - TheStreet\n   https://www.thestreet.com/crypto/investing/disabled-developer-rug-pulls-i-have-120-hours-to-live\n   A Pump.fun memecoin called 120 Hours hit a $534K peak before its developer, who claimed he was dying, drained liquidity and vanished.\n5. 98% of Tokens on Pump.Fun Have Been Rug Pulls or an Act of Fraud, New ...\n   https://cryip.com/blog/2025/05/08/98-of-tokens-on-pump-fun-have-been-rug-pulls-or-an-act-of-fraud-new-report-says/\n   The largest rug pull Solidus Labs identified over the time period was worth $1.9 million and was related to MToken. Whilst the crypto industry has progressed and moved on following the spectacular implosion of FTX, hacks and scams are still rife with bad actors embezzling millions of dollars worth of assets by capitalizing on retail greed.\n6. 98% of Tokens on Pump.Fun Have Been Rug Pulls or an Act of Fraud, New ...\n   https://cryip.com/blog/2025/05/08/98-of-tokens-on-pump-fun-have-been-rug-pulls-or-an-act-of-fraud-new-report-says/\n   The largest rug pull Solidus Labs identified over the time period was worth $1.9 million and was related to MToken. Whilst the crypto industry has progressed and moved on following the spectacular implosion of FTX, hacks and scams are still rife with bad actors embezzling millions of dollars worth of assets by capitalizing on retail greed."
+          },
+          {
+            "tool": "search",
+            "input": "pump.fun serial scammer developers doxxed exposed wallet addresses multiple rugs",
+            "result": "1. PUMP Token Revealed as Scam, After Pump.fun Account Hack\n   https://www.banklesstimes.com/articles/2025/02/26/pump-token-revealed-as-scam-after-pump-fun-account-hack/\n   A wave of crypto hacks and scams is hitting many of the biggest players in the industry, with the latest victim being Pump.fun. Solana's biggest memecoin launchpad fell victim to a hack that was used to promote a fraudulent PUMP token. On Wednesday, February 26, hackers took control of Pump.fun's official Twitter (X) account. Specifically, they used it to falsely claim that the platform ...\n2. PUMP Token Revealed as Scam, After Pump.fun Account Hack\n   https://www.banklesstimes.com/articles/2025/02/26/pump-token-revealed-as-scam-after-pump-fun-account-hack/\n   A wave of crypto hacks and scams is hitting many of the biggest players in the industry, with the latest victim being Pump.fun. Solana's biggest memecoin launchpad fell victim to a hack that was used to promote a fraudulent PUMP token. On Wednesday, February 26, hackers took control of Pump.fun's official Twitter (X) account. Specifically, they used it to falsely claim that the platform ...\n3. Serial Token Deployers on Solana: A Threat to Blockchain Security\n   https://killy7.substack.com/p/serial-token-deployers-on-solana\n   Serial token deployers are individuals or entities that repeatedly launch tokens on Pump.fun, often with the intent to scam investors through rug pulls. These actors account for a disproportionate share of token deployments, with the top 1% responsible for nearly 30% of all launches. Their activities follow a cyclical pattern: launching multiple tokens in rapid succession, capitalizing on ...\n4. Serial Token Deployers on Solana: A Threat to Blockchain Security\n   https://killy7.substack.com/p/serial-token-deployers-on-solana\n   Serial token deployers are individuals or entities that repeatedly launch tokens on Pump.fun, often with the intent to scam investors through rug pulls. These actors account for a disproportionate share of token deployments, with the top 1% responsible for nearly 30% of all launches. Their activities follow a cyclical pattern: launching multiple tokens in rapid succession, capitalizing on ...\n5. Pump.fun Sniper Wallet Market Manipulation Scandal\n   https://www.cryptovate.io/pump-fun-sniper-wallet-manipulation-2025/\n   The Sniper Wallet Scheme Per Pine Analytics, approximately 1.75% of Pump.fun's token launches—exceeding 15,000 in the last month—were subject to manipulation by sniper wallets. These wallets, often funded by the same developers launching the tokens, buy up newly released memecoins to create an illusion of immediate demand.\n6. Pump.fun Sniper Wallet Market Manipulation Scandal\n   https://www.cryptovate.io/pump-fun-sniper-wallet-manipulation-2025/\n   The Sniper Wallet Scheme Per Pine Analytics, approximately 1.75% of Pump.fun's token launches—exceeding 15,000 in the last month—were subject to manipulation by sniper wallets. These wallets, often funded by the same developers launching the tokens, buy up newly released memecoins to create an illusion of immediate demand."
+          },
+          {
+            "tool": "search",
+            "input": "Solidus Labs pump.fun report named developers scammers twitter accounts",
+            "result": "1. The 2025 Rug Pull Report: Rug Pulls and Pump-and-Dumps on Solana\n   https://www.soliduslabs.com/reports/solana-rug-pulls-pump-dumps-crypto-compliance\n   This report comprehensively analyzes memecoin trading risks within Solana's leading decentralized exchanges - Pump.fun and Raydium. By quantifying the prevalence of pump-and-dump schemes and rug pulls, our research highlights critical risks in Solana's memecoin ecosystem, emphasizing the necessity for diligent consumer protection controls.\n2. The 2025 Rug Pull Report: Rug Pulls and Pump-and-Dumps on Solana\n   https://www.soliduslabs.com/reports/solana-rug-pulls-pump-dumps-crypto-compliance\n   This report comprehensively analyzes memecoin trading risks within Solana's leading decentralized exchanges - Pump.fun and Raydium. By quantifying the prevalence of pump-and-dump schemes and rug pulls, our research highlights critical risks in Solana's memecoin ecosystem, emphasizing the necessity for diligent consumer protection controls.\n3. 98% of Tokens on Pump.fun Flagged as Scams, Solidus Labs Report Reveals\n   https://beincrypto.com/pump-fun-tokens-scams-solidus-labs-report/\n   A new report from Solidus Labs has revealed that 98.6% of tokens issued on Pump.fun, a popular token creation platform on Solana, are considered scams or involved in fraudulent trading. Additionally, similar issues have been identified on Raydium, a major decentralized exchange (DEX) on Solana.\n4. 98% of Tokens on Pump.fun Flagged as Scams, Solidus Labs Report Reveals\n   https://beincrypto.com/pump-fun-tokens-scams-solidus-labs-report/\n   A new report from Solidus Labs has revealed that 98.6% of tokens issued on Pump.fun, a popular token creation platform on Solana, are considered scams or involved in fraudulent trading. Additionally, similar issues have been identified on Raydium, a major decentralized exchange (DEX) on Solana.\n5. Solidus Labs Reports Major Fraud in Solana's Pump.fun Tokens\n   https://coinlive.me/solanus-labs-solana-pump-fun-fraud/\n   The report by Solidus Labs reveals over 7 million tokens launched on Pump.fun were predominantly fraudulent, impacting investors and broader market trust. Unveiling this extensive fraud draws attention to necessary improvements in compliance practices.\n6. Solidus Labs Reports Major Fraud in Solana's Pump.fun Tokens\n   https://coinlive.me/solanus-labs-solana-pump-fun-fraud/\n   The report by Solidus Labs reveals over 7 million tokens launched on Pump.fun were predominantly fraudulent, impacting investors and broader market trust. Unveiling this extensive fraud draws attention to necessary improvements in compliance practices."
+          },
+          {
+            "tool": "fetch",
+            "input": "https://killy7.substack.com/p/serial-token-deployers-on-solana",
+            "result": "Discover more from Wherever This GoesFollowing my curiosity through history, sports, philosophy, and whatever else catches my attention.Already have an account? Sign inSerial Token Deployers on Solana: An In-Depth Analysis of Pump.fun's EcosystemKillyApr 17, 2025IntroductionThe Solana blockchain has solidified its position as a leading platform for decentralized applications, thanks to its high throughput and low transaction costs. Platforms like Pump.fun have democratized token creation, enabling anyone to launch a token for as little as 0.02 SOL (approximately $2). Since its launch in January 2024, Pump.fun has facilitated the creation of over 2.43 million tokens, generating more than $100 million in revenue. However, this accessibility has attracted malicious actors, known as serial token deployers, who exploit the system to deploy and “rug” tokens—abandoning projects after raising funds, leaving investors with worthless assets. This research article provides a comprehensive analysis of these serial deployers within the Pump.fun ecosystem, examining their growth, trends, methodologies, and the impact on the broader Solana community. It leverages Arkham Intelligence for tracking insights and offers actionable strategies to mitigate their prevalence and enhance security for users.Background on Pump.funPump.fun is a token launch platform on Solana that simplifies the process of creating and trading tokens. Users can launch a token by selecting a name, ticker symbol, and image, paying a small fee, and instantly begin trading on a bonding curve. The bonding curve model adjusts token prices based on demand, with prices increasing as more tokens are purchased. Once a token reaches a market cap of $69,000, $12,000 of liquidity is automatically deposited to Raydium, a decentralized exchange (DEX) on Solana, and the liquidity provider tokens are burned to prevent manipulation. This design has fueled the memecoin craze, with Pump.fun hosting popular tokens like MOTHER and MOODENG.Thanks for reading Moshood’s Substack! Subscribe for free to receive new posts and support my work.Despite its success, Pump.fun has faced criticism for enabling rug pulls, where deployers hype a token, attract investment, and then withdraw liquidity or abandon the project, causing the token’s value to collapse. The platform’s low barriers to entry and lack of stringent verification make it a prime target for serial token deployers.Photo by Precious Madubuike on UnsplashDeployment Volumes and TrendsPump.fun has experienced explosive growth in token deployment. As of April 2025, the platform has facilitated the creation of over 2.43 million tokens, with daily deployment rates often exceeding 16,000 during peak market conditions (Dune Analytics). However, only 1.4% of these tokens graduate to Raydium, and less than 0.002% sustain a $1 million market cap (Protos Research). This high failure rate creates an environment conducive to exploitation by serial deployers, who can launch multiple tokens with minimal cost, profiting from the few that gain traction.The platform’s revenue stream, derived from a 1% trading fee, has been substantial, with daily revenues reaching a record high of $2.31 million on July 30, 2024 (The Block). Over the past three months, Pump.fun has maintained a daily active user base of 50,000 to 70,000, indicating strong community engagement (Bitget News). Deployment trends correlate with market sentiment, with surges during bullish periods and declines"
+          }
+        ],
+        "answer": "Based on the evidence provided, **no verified X/Twitter handles for identified repeat offender developers were found**. The search results and fetched articles discuss the prevalence of rug pulls on pump.fun (98.6% of tokens per Solidus Labs report, cryptonews.net) and mention specific cases like the $1.9M MToken rug pull, but none of the sources provide actual Twitter handles or identify specific repeat offender developers by name or social media account. \n\n**Confidence: High** - The evidence consistently lacks this specific information despite multiple targeted searches.",
+        "children": []
+      },
+      {
+        "title": "Ranking and Evidence Compilation",
+        "question": "Who are the top 10 worst offenders ranked by severity, frequency, and total value rugged?",
+        "direction": "Rank developers by number of rugs, estimated stolen value, and community impact; compile evidence for each including X handles, specific tokens rugged, and rugcheck data",
+        "research_areas": [
+          "Number of rugs per developer",
+          "Total value extracted",
+          "Community sentiment and warnings",
+          "Current activity status"
+        ],
+        "tools_hint": [
+          "search",
+          "xsearch",
+          "recall"
+        ],
+        "success_criterion": "Final top 10 list with each developer's X handle, number of rugs, key evidence, and specific token examples",
+        "depends_on": [
+          "X Account Attribution and Verification",
+          "Repeat Offender Developer Identification"
+        ],
+        "id": "1.5",
+        "status": "answered",
+        "findings": [
+          {
+            "tool": "recall",
+            "input": "rug pull scam developers serial ruggers token theft exit scam repeated offenders",
+            "result": "(no memory match)"
+          },
+          {
+            "tool": "xsearch",
+            "input": "serial rugger developer multiple rugs scammer token theft exit scam worst offenders",
+            "result": "(no live X posts for \"serial rugger developer multiple rugs scammer token theft exit scam worst offenders\")"
+          },
+          {
+            "tool": "search",
+            "input": "top worst crypto rug pull developers serial scammers multiple tokens rugged Solana",
+            "result": "1. SolRugDetector: Investigating Rug Pulls on Solana - arXiv.org\n   https://arxiv.org/html/2603.24625v1\n   In this paper, we present a comprehensive empirical study of Rug Pulls on Solana. Based on 68 real-world incident reports, we construct and release a manually labeled dataset containing 117 confirmed Rug Pull tokens and characterize the workflow of Rug Pulls on Solana.\n2. SolRugDetector: Investigating Rug Pulls on Solana - arXiv.org\n   https://arxiv.org/html/2603.24625v1\n   In this paper, we present a comprehensive empirical study of Rug Pulls on Solana. Based on 68 real-world incident reports, we construct and release a manually labeled dataset containing 117 confirmed Rug Pull tokens and characterize the workflow of Rug Pulls on Solana.\n3. Solana Rug Pull Analysis: 76% of New Tokens Scams & $151M Lost\n   https://theholycoins.com/news/solana-rug-pull-analysis-research-reveals-76-of-new-tokens-are-scams-and-identifies-usd151\n   In a news Solana rug pull analysis, researchers found 76% of new tokens are scams, causing $151M in losses. Learn how SolRugDetector identifies automated fraud and on-chain syndicates.\n4. Solana Rug Pull Analysis: 76% of New Tokens Scams & $151M Lost\n   https://theholycoins.com/news/solana-rug-pull-analysis-research-reveals-76-of-new-tokens-are-scams-and-identifies-usd151\n   In a news Solana rug pull analysis, researchers found 76% of new tokens are scams, causing $151M in losses. Learn how SolRugDetector identifies automated fraud and on-chain syndicates.\n5. Serial Scammers and Attack of the Clones: How Scammers Coordinate ...\n   https://arxiv.org/html/2412.10993v1\n   To that end, we go one step deeper into the world of sophisticated serial (Rug-Pull) scammers by investigating groups of tightly connected addresses (supposedly belonging to the same scammers or scam organizations) that were behind multiple Rug-Pull scam tokens (ERC-20 on Uniswap and BEP-20 on Pancakeswap), which, not surprisingly, have highly ...\n6. Serial Scammers and Attack of the Clones: How Scammers Coordinate ...\n   https://arxiv.org/html/2412.10993v1\n   To that end, we go one step deeper into the world of sophisticated serial (Rug-Pull) scammers by investigating groups of tightly connected addresses (supposedly belonging to the same scammers or scam organizations) that were behind multiple Rug-Pull scam tokens (ERC-20 on Uniswap and BEP-20 on Pancakeswap), which, not surprisingly, have highly ..."
+          },
+          {
+            "tool": "xsearch",
+            "input": "\"rugged by\" OR \"dev rugged\" OR \"known rugger\" X handle twitter @",
+            "result": "@SkyF1ux: This is the problem with crypto This is the cancer to the industry. This project wasn't just a random meme. It was a full revolutionized utility. It pictured the future of RWAs on the blockchain. Yet it got shamelessly r\n@tontheneko: No, you are rugged by your own bad decision. He didn't ask for this coin and he needs the money, why wouldn't he sell?\n@Joselobtarg_: LJC ape $100 worth of $Hobbes at this level and thank me in the next 2-3months time. OG Ansem cat onchain with new cto after old boomer dev rugged the chart, Chat is full of believers and we are here for the long run. It\n@Iworkformybags: LJC ape $100 worth of $Hobbes at this level and thank me in the next 2-3months time. OG Ansem cat onchain with new cto after old boomer dev rugged the chart, Chat is full of believers and we are here for the long run. It\n@MrBsol: This guy lost +$10,000 after getting rugged by an OF girl streaming on PumpFun Girls changed OF for PumpFun"
+          },
+          {
+            "tool": "fetch",
+            "input": "https://arxiv.org/html/2603.24625v1",
+            "result": "SolRugDetector: Investigating Rug Pulls on Solana\n\nJiaxin Chen, Ziwei Li, Zigui Jiang,  Ruihong He, Yantong Zhou,\nJiajing Wu,  Zibin Zheng\nThe research is supported by the National Natural Science Foundation of China (62332004, 62472457 and 62372485). (Corresponding author: Zigui Jiang.)Jiaxin Chen, Ziwei Li, Zigui Jiang, Ruihong He, Yantong Zhou, Jiajing Wu and Zibin Zheng are with the School of Software Engineering, Sun Yat-sen University, Zhuhai 519082, China.\n\nAbstract\nSolana has experienced rapid growth due to its high performance and low transaction costs, but the extremely low barrier to token issuance has also led to widespread Rug Pulls. Unlike Ethereum-based Rug Pulls that rely on malicious smart contracts, the unified SPL Token program on Solana shifts fraudulent behaviors toward on-chain operations such as market manipulation. However, existing research has not yet conducted a systematic analysis of these specific Rug Pull patterns on Solana. In this paper, we present a comprehensive empirical study of Rug Pulls on Solana. Based on 68 real-world incident reports, we construct and release a manually labeled dataset containing 117 confirmed Rug Pull tokens and characterize the workflow of Rug Pulls on Solana. Building on this analysis, we propose SolRugDetector, a detection system that identifies fraudulent tokens solely using on-chain transaction and state data. Experimental results show that SolRugDetector outperforms existing tools on the labeled dataset. We further conduct a large-scale measurement on 100,063 tokens newly issued in the first half of 2025 and identify 76,469 Rug Pull tokens. After validating the in-the-wild detection results, we release this dataset and analyze the Rug Pull ecosystem on Solana. Our analysis reveals that Rug Pulls on Solana exhibit extremely short lifecycles, strong price-driven dynamics, severe economic losses, and highly organized group behaviors. These findings provide insights into the Solana Rug Pull landscape and support the development of effective on-chain defense mechanisms.\n\nI Introduction\n\nSolana [1], a high-performance blockchain platform launched in 2020, has emerged as a cornerstone of decentralized infrastructure by integrating Proof-of-History (PoH) with Proof-of-Stake (PoS). This architecture enables high throughput, low latency, and extremely low transaction costs. As of 2025, Solana has recorded over 1.05 billion active on-chain addresses and has emerged as the most popular blockchain ecosystem throughout 2024 and 2025 [2, 3].\n\nAt the same time, the minimal cost of token issuance, the absence of listing barriers, and the lack of mandatory audits have fostered a “high-frequency issuance, rapid-turnover” ecosystem on Solana. While this open environment catalyzes innovation, it also provides a fertile ground for malicious actors. Consequently, Rug Pulls have proliferated, evolving into a unique and massive fraudulent ecosystem specific to Solana.\n\nRug Pull is a quintessential cryptocurrency fraud wherein project developers attract investor capital through deceptive marketing or market manipulation, only to maliciously sell off tokens or abruptly withdraw liquidity. Such actions cause the project to collapse and the token price to plummet, leaving investors with substantial losses. Rug Pull incidents are rampant on Solana, leading to severe economic consequences. Kalal et al. [4] highlighted that Solana exhibits the highest density of Rug Pulls across major blockchains: approx"
+          },
+          {
+            "tool": "fetch",
+            "input": "https://theholycoins.com/news/solana-rug-pull-analysis-research-reveals-76-of-new-tokens-are-scams-and-identifies-usd151",
+            "result": "HomeNewsToken SalesLaunchpadsExchangesTop PicksSolana Rug Pull Analysis: Research Reveals 76% of New Tokens Are Scams and Identifies $151 Million in Quantifiable LossesBy Shay Feldman• Apr 06, 2026, 10:11 PM UTCCryptocurrency NewsSolanaCrypto ScamsCrypto AnalysisThe Solana blockchain is currently the most popular ecosystem for new token launches, but it has also become a high-risk environment for financial fraud.In a study released on March 25, 2026, a team of researchers from Sun Yat-sen University recently released a study titled “SolRugDetector: Investigating Rug Pulls on Solana,” providing the most detailed look to date at the mechanics of these on-chain scams.By analyzing 100,063 tokens issued between January and June 2025, the team showed that 76,469 (76.42%) of these projects were actually rug pulls.This article covers their findings on scam lifecycles, the development of a new detection tool called SolRugDetector, and the organized syndicates that run these operations on-chain.It is important to note that the study focused specifically on tokens that successfully reached the public market. They excluded the vast majority of tokens from the “Pump.fun” launchpad that failed to migrate to a decentralized exchange, as 98.6% of those never establish liquidity and lack analytical value.Why Solana Rug Pulls Are Different From Ethereum Smart Contract ScamsThe researchers explained that Solana uses a unified SPL Token program, which means creators cannot easily hide malicious code inside a custom smart contract as they do on Ethereum.On Ethereum, a developer might write a hidden function to stop users from selling, but on Solana, the underlying execution logic is governed by the official program for every token. Because of this, fraud on Solana shifts toward on-chain operations and market manipulation.The study showed that while many Ethereum scams rely on technical code exploits, Solana scams are driven by the deployer’s operational behavior.Using On-Chain Transaction Data to Detect Fraudulent Tokens with SolRugDetectorThe team built a system called SolRugDetector to identify these scams using only raw on-chain transactions and state data. The tool works in two phases: first, it filters out tokens based on their activity levels, and then it matches the remaining tokens against three typical rug pull patterns.The researchers mentioned that many existing tools rely on static judgments based on partial metadata. In contrast, SolRugDetector relies exclusively on raw on-chain instructions and balance changes, intentionally avoiding price-related data (like market charts) because different platforms often report inconsistent prices for the same token.In tests on a labeled dataset of 117 confirmed real-world rug pulls, the tool achieved an F1-score of 0.96, indicating it performed better than several enterprise-level detection services.The Three Most Common Execution Methods for Solana Token FraudThe research identified three primary ways scammers exit a project and take investor money:Freeze Authority Abuse: Scammers intentionally keep the power to freeze accounts. This allows them to let people buy tokens, but they then use a specific instruction to freeze the victim's account, preventing them from ever selling or transferring their assets.Liquidity Withdrawal: The creator waits for investors to buy the token and deposit capital into a trading pool, causing the price to rise. The scammer then uses their retained provider tokens to suddenly w"
+          },
+          {
+            "tool": "xsearch",
+            "input": "serial rugger OR multiple rugs OR scammer dev OR known rug developer wallet address CA mint",
+            "result": "@PowerPixelKK: I muted and blacklisted him 2 weeks ago lol he is a serial rugger\n@peaceluver1111: He is a serial rugger keep on tagging reporting his ass to x\n@peaceluver1111: A veteran of fucking being a serial rugger you ain’t shit that stolen money bringing bad karma to your life mother and grand mother fucker\n@CabalhunterAPI:  EXIT-LIQUIDITY RISK: HIGH — $hor Serial rugger: 25/25 past launches dead (100%) Cabal score: 75/100 Are you the exit liquidity? Check any Solana token free http:// api.cabal-hunter.com/map?mint=HYwSz tsAw2Efi24v2YY5Wn1u\n@Bahadury0093: Dev was poor scammer"
+          },
+          {
+            "tool": "search",
+            "input": "Solana rug pull developer wallet addresses serial scammer identified specific projects syndicate",
+            "result": "1. SolRugDetector: Investigating Rug Pulls on Solana - arXiv.org\n   https://arxiv.org/html/2603.24625v1\n   Unlike Ethereum-based Rug Pulls that rely on malicious smart contracts, the unified SPL Token program on Solana shifts fraudulent behaviors toward on-chain operations such as market manipulation. However, existing research has not yet conducted a systematic analysis of these specific Rug Pull patterns on Solana.\n2. SolRugDetector: Investigating Rug Pulls on Solana - arXiv.org\n   https://arxiv.org/html/2603.24625v1\n   Unlike Ethereum-based Rug Pulls that rely on malicious smart contracts, the unified SPL Token program on Solana shifts fraudulent behaviors toward on-chain operations such as market manipulation. However, existing research has not yet conducted a systematic analysis of these specific Rug Pull patterns on Solana.\n3. Serial Ruggers on Solana: How to Detect Repeat Offenders — Hannisol\n   https://hannisol.com/blog/serial-rugger-solana-wallet-detection\n   Some wallets have rugged 10+ projects under different names. Learn how to trace deployer wallet histories on Solscan and how Hannisol's domain database catches serial ruggers.\n4. Serial Ruggers on Solana: How to Detect Repeat Offenders — Hannisol\n   https://hannisol.com/blog/serial-rugger-solana-wallet-detection\n   Some wallets have rugged 10+ projects under different names. Learn how to trace deployer wallet histories on Solscan and how Hannisol's domain database catches serial ruggers.\n5. Solana Rug Pull Analysis: 76% of New Tokens Scams & $151M Lost\n   https://theholycoins.com/news/solana-rug-pull-analysis-research-reveals-76-of-new-tokens-are-scams-and-identifies-usd151\n   In a news Solana rug pull analysis, researchers found 76% of new tokens are scams, causing $151M in losses. Learn how SolRugDetector identifies automated fraud and on-chain syndicates.\n6. Solana Rug Pull Analysis: 76% of New Tokens Scams & $151M Lost\n   https://theholycoins.com/news/solana-rug-pull-analysis-research-reveals-76-of-new-tokens-are-scams-and-identifies-usd151\n   In a news Solana rug pull analysis, researchers found 76% of new tokens are scams, causing $151M in losses. Learn how SolRugDetector identifies automated fraud and on-chain syndicates."
+          },
+          {
+            "tool": "xsearch",
+            "input": "$SOL rugcheck scam alert warning dev rugged multiple times",
+            "result": "(no live X posts for \"$SOL rugcheck scam alert warning dev rugged multiple times\")"
+          },
+          {
+            "tool": "fetch",
+            "input": "https://hannisol.com/blog/serial-rugger-solana-wallet-detection",
+            "result": "The operator behind a new scam is often the same as behind the last one\n\nOne of the most underappreciated risks in the Solana ecosystem is not the first-time scammer — it's the professional one. Serial ruggers are operators who have launched multiple scam token projects, drained liquidity each time, and repeated the process under new identities, new token names, and new project narratives. They've optimized the process over dozens of operations. They know how to generate enough initial interest to attract capital, how to maintain plausible deniability during the promotion phase, and exactly when to exit before community backlash becomes overwhelming. Because they operate pseudonymously and change project names, many buyers never realize they're dealing with someone who has already rugged them — or someone in their wallet's community — multiple times.\n\nBut blockchain transparency works both ways. The same immutable ledger that cannot be altered also cannot hide on-chain behavior, and serial ruggers consistently leave traceable fingerprints at the wallet and domain level that can be detected with the right tools.\n\nWallet-level detection: tracing the deployer\n\nEvery Solana token has a deployer wallet — the address that created the token program and often the first address to hold a significant amount of supply. This wallet's history is permanently recorded on-chain and is the primary forensic entry point for serial rugger detection.\n\nThe detection process on Solscan:\n\n Find the token's creation transaction (search the mint address, look for the \"Token Created\" transaction in the earliest records)\n Open the deployer wallet address\n Review its complete transaction history, starting from the oldest records\n Look for: other token program deployments, interactions with other liquidity pools, patterns of rapid LP addition and removal (the rugpull signature), and funding connections to wallets that were themselves deployers of other tokens\n\nA deployer wallet with a history of 5–10 token deployments followed by liquidity drain events is a serial rugger's wallet. The current token is simply the next operation in a consistent pattern.\n\nThe funding chain: going up the tree\n\nExperienced serial ruggers often use fresh wallets for each project — wallets with no visible history that appear legitimate. The trace goes up the funding chain: what wallet funded the deployer's initial SOL? Where did that wallet's SOL come from? Following this chain often connects a \"new\" deployer wallet to a network of previously-used wallets with documented rugpull history.\n\nTools that facilitate this analysis: Solscan's transaction graph (manually followable), and on-chain analytics platforms like Bubblemaps.io, which visualize token holder relationships and funding chains graphically.\n\nDomain-level detection: what Hannisol's WHOIS system catches\n\nBeyond on-chain wallet traces, serial ruggers often reuse domain registration patterns, hosting providers, or website templates. Hannisol's RDAP/WHOIS integration checks every project domain in its database and maintains pattern records. When a new token appears with a domain registered through the same registrar, on the same hosting infrastructure, with the same privacy protection settings as multiple prior confirmed rugpull projects, this pattern constitutes meaningful evidence of a repeat operator.\n\nThe domain age check (flagging domains registered in the last two weeks) is the baseline. The pattern-matching component — identify"
+          }
+        ],
+        "answer": "Based on the evidence provided, **I cannot identify the top 10 worst offenders ranked by severity, frequency, and total value rugged**. \n\nThe research from Sun Yat-sen University's \"SolRugDetector\" study (https://arxiv.org/html/2603.24625v1 and https://theholycoins.com/news/solana-rug-pull-analysis-research-reveals-76-of-new-tokens-are-scams-and-identifies-usd151) analyzed 76,469 rug pulls on Solana totaling $151M in losses but does not rank individual perpetrators. While Hannisol (https://hannisol.com/blog/serial-rugger-solana-wallet-detection) mentions that \"some wallets have rugged 10+ projects under different names,\" no specific wallet addresses, developer identities, or ranked list of offenders is provided in the evidence.\n\n**Confidence: High** (that this specific data is not present in the evidence provided)",
+        "children": []
+      }
+    ],
+    "id": "1",
+    "status": "answered",
+    "findings": [],
+    "answer": "**Answer:**\n\nI cannot identify the top 10 developers most frequently associated with rug pulls on pump.fun from the evidence provided. Despite multiple targeted X/Twitter searches (xsearch tool) for pump.fun scammers, repeat offenders, wallet addresses, and blacklisted developers, no substantive results were returned. While research studies confirm widespread rug pull activity (98.6% token failure rate per Solidus Labs, cryptonews.net; 76,469 rug pulls totaling $151M per arxiv.org/html/2603.24625v1) and the Hannisol blog mentions some wallets have \"rugged 10+ projects,\" no specific developer names, ranked lists, or verified X/Twitter handles appear in the gathered evidence.\n\n**Confidence: High** — the evidence conclusively demonstrates this information was not found through the search methods employed."
+  }
+}
