@@ -167,11 +167,43 @@ const TOOLS = {
     if (!out.trending_pools.length && !out.newest_launches.length && !boosted.length) return `(trending: no live data for ${net})`;
     return JSON.stringify(out, null, 1);
   },
+  // Live X/Twitter search — recent posts matching a query, for real-time TRADER
+  // SENTIMENT / "what are people saying / why is X trending". Scrapes x.com/search
+  // (latest) via the HelmStack browser. This is the source for live sentiment; the
+  // 'posts' tool only covers Sebastian's OWN observed feed, and web 'search' with
+  // site:x.com is unreliable. Input: a query or cashtag (e.g. "$ANSEM", "pump.fun meta").
+  async xsearch(input) {
+    try {
+      const x = await getXEngine();
+      if (!x) return '(xsearch: HelmStack X browser unavailable)';
+      if (!(await x.sessionOk())) return '(xsearch: X session not present in HelmStack)';
+      const posts = await x.searchX(String(input), { limit: 15, mode: 'live' });
+      if (!posts || !posts.length) return `(no live X posts for "${input}")`;
+      return posts.slice(0, 15)
+        .map((p) => `@${p.username}: ${String(p.text || '').replace(/\s+/g, ' ').slice(0, 220)}`)
+        .join('\n');
+    } catch (e) { return `(xsearch error: ${e.message})`; }
+  },
 };
+
+// Lazily-opened, reused HelmStack X browser tab for xsearch (a dedicated tab so it
+// doesn't hijack the scraper/reply shared tab). Cached for the life of the process.
+let _xEngine = null;
+async function getXEngine() {
+  if (_xEngine !== null) return _xEngine || null;
+  try {
+    const { HelmStackClient, X } = require('../tools/helmstack-social/src');
+    const x = new X(new HelmStackClient(), { ownHandle: process.env.X_USERNAME || 'SebastianHunts', dedicatedTab: true, log: () => {} });
+    await x.ensureTab();
+    _xEngine = x;
+  } catch (e) { log(`xsearch engine init failed: ${e.message}`); _xEngine = false; }
+  return _xEngine || null;
+}
 
 const TOOL_DESCR =
   'recall — Sebastian\'s own memory / past observations (semantic+FTS); input: a query.\n' +
-  'posts  — full-text search of the X feed Sebastian has observed; input: keywords.\n' +
+  'posts  — full-text search of the X feed Sebastian has ALREADY observed (his own memory of X); input: keywords.\n' +
+  'xsearch — LIVE X/Twitter search (recent posts) for real-time trader SENTIMENT / "what are people saying now / why is X trending"; input: a query or cashtag (e.g. "$ANSEM"). Use this for current discourse — do NOT use web search with site:x.com (unreliable).\n' +
   'search — web search (returns titles/URLs/snippets); input: a search query.\n' +
   'fetch  — read the page text of ONE specific URL; input: an https URL.\n' +
   'rugcheck — on-chain analysis of a SOLANA TOKEN MINT via RugCheck: risk score, mint/freeze authority (null=renounced), top-holder concentration + insider flags, INSIDER CLUSTER count (graphInsidersDetected/insiderNetworks), LP lock, liquidity, holder count. Input: a Solana mint address. Use this for any token rug/cluster/holder-concentration question — do NOT scrape explorer pages for this.\n' +
@@ -185,8 +217,9 @@ ${TOOL_DESCR}
 QUESTION: ${question}
 
 First EVALUATE what kind of question this is and which source can actually answer it — do not default to generic web search. Match the question to the right instrument:
-- "current meta / what's trending / hot tokens / pump.fun or Solana trenches / newest launches" → use the 'trending' tool (live trending + new-launch + promoted tokens). This is primary; name specific tokens, their price action and age from it. You may ALSO 'fetch' canonical live pages for corroboration/detail: https://dexscreener.com/solana?rankBy=trendingScoreH6&order=desc , https://www.geckoterminal.com/solana/pools , https://pump.fun/board , and 'search' X/Twitter for what traders are saying about the meta right now (e.g. search "site:x.com pump.fun meta" or "pump.fun trending" ). Do NOT rely on CoinMarketCap/CoinGecko/Discord landing pages for live meta — they are stale.
-- "is <token> a rug / holder clusters / who holds it" → 'rugcheck' with the mint address.
+- "current meta / what's trending / hot tokens / pump.fun or Solana trenches / newest launches" → use the 'trending' tool (live trending + new-launch + promoted tokens). This is primary; name specific tokens, their price action and age from it. You may ALSO 'fetch' canonical live pages for corroboration/detail: https://dexscreener.com/solana?rankBy=trendingScoreH6&order=desc , https://www.geckoterminal.com/solana/pools , https://pump.fun/board . Do NOT rely on CoinMarketCap/CoinGecko/Discord landing pages for live meta — they are stale.
+- "sentiment / what are traders saying / why is <token> trending / community mood" → 'xsearch' (LIVE X search) with the token/cashtag or topic. This is the source for real-time discourse; do NOT use web 'search' with site:x.com.
+- "is <token> a rug / holder clusters / who holds it" → 'rugcheck' with the mint address (mints come from 'trending' output).
 - factual claim / who/what/when → recall + posts for what's known, then 'search' and 'fetch' the most authoritative primary source.
 
 Sequence generally: start from what's known (recall/posts), pull LIVE structured data (trending/rugcheck) when the question is about markets/tokens, then search+fetch to corroborate and add detail. For 'fetch' steps you may construct KNOWN canonical URLs directly; URLs discovered by 'search' are fetched in a later adaptive step, so you don't need to guess those.
@@ -195,7 +228,7 @@ Output ONLY JSON (no fences):
 {
   "goal": "restate what a good answer must establish",
   "approach": "1-2 sentence strategy — name which instrument answers this and why",
-  "steps": [ {"tool":"recall|posts|search|fetch|rugcheck|trending","input":"the query, URL, mint, or chain","rationale":"why this step"} ],
+  "steps": [ {"tool":"recall|posts|xsearch|search|fetch|rugcheck|trending","input":"the query, URL, mint, or chain","rationale":"why this step"} ],
   "success_criteria": "what would make the answer confident",
   "caveats": "what could make this unknowable or uncertain"
 }`;
@@ -248,7 +281,7 @@ ${dossier}
 List the sub-questions that are (a) not yet answered by the dossier AND (b) actually answerable with the tools above — then give the concrete steps to answer them. Examples of researchable "open questions": WHY a token is trending (search X / posts for the driver), whether a narrative (e.g. "AI agents") is present (trending/posts), a token's on-chain safety (rugcheck its mint), survivability/age stats (trending data), who a named figure is (search). Do NOT propose steps for things the dossier already answers, or that no tool can resolve. Be surgical — max 5 highest-value steps.
 
 Output ONLY JSON (no fences):
-{"remaining_gaps":["..."],"steps":[{"tool":"recall|posts|search|fetch|rugcheck|trending","input":"the query, URL, mint, or chain","rationale":"which gap this closes"}]}
+{"remaining_gaps":["..."],"steps":[{"tool":"recall|posts|xsearch|search|fetch|rugcheck|trending","input":"the query, URL, mint, or chain","rationale":"which gap this closes"}]}
 Return an empty steps array if the question is already well answered.`;
   const raw = await reason(prompt, { maxTokens: 900, tag: 'dr-gap' });
   try {
@@ -413,7 +446,7 @@ DIRECTION: ${node.direction || ''}
 SUGGESTED TOOLS: ${(node.tools_hint || []).join(', ') || '(any)'}
 RESOLVES WHEN: ${node.success_criterion || ''}
 TOOLS: ${TOOL_DESCR}
-Output ONLY JSON: {"steps":[{"tool":"recall|posts|search|fetch|rugcheck|trending","input":"..","rationale":".."}]}`;
+Output ONLY JSON: {"steps":[{"tool":"recall|posts|xsearch|search|fetch|rugcheck|trending","input":"..","rationale":".."}]}`;
   try {
     const j = cleanJson(await reason(prompt, { maxTokens: 700, tag: 'dr-leaf' }));
     return (j && Array.isArray(j.steps) ? j.steps : [])

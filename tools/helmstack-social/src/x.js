@@ -891,6 +891,27 @@ class X {
     return this._scrapeArticles(limit);
   }
 
+  /**
+   * Live X search — recent posts matching a query. `mode`: "live" (latest, the
+   * default — best for current sentiment) or "top". Scrolls to gather up to
+   * `limit`. Reuses the wedge-checked nav + the rich article extractor.
+   */
+  async searchX(query, { limit = 15, mode = "live", scrolls = 2 } = {}) {
+    const url = `https://x.com/search?q=${encodeURIComponent(query)}&src=typed_query&f=${mode === "top" ? "top" : "live"}`;
+    if (!(await this._gotoChecked(url))) return [];
+    await sleep(2000);
+    const now = await this.c.tabUrl(this.tab).catch(() => "");
+    if (now && !/\/search/.test(now)) return [];   // bounced (login wall / redirect)
+    const seen = new Map();
+    for (let i = 0; i <= scrolls; i++) {
+      for (const p of await this._scrapeArticles(limit)) if (p.id && !seen.has(p.id)) seen.set(p.id, p);
+      if (seen.size >= limit) break;
+      await this.c.evaluate(this.tab, "window.scrollBy(0, window.innerHeight*1.5)").catch(() => {});
+      await sleep(1500);
+    }
+    return Array.from(seen.values()).slice(0, limit);
+  }
+
   /** Like a scraped tweet by index. Returns true if it registered. */
   async likeByIdx(idx, { dryRun = false } = {}) {
     if (dryRun) return true;
