@@ -3,7 +3,7 @@
 const fs = require('fs');
 const path = require('path');
 const config = require('./config');
-const { callVertex } = require('../vertex');
+const { reason } = require('./compose');
 
 const ROOT = config.PROJECT_ROOT;
 
@@ -114,7 +114,23 @@ function loadProposalHistory(limit = 5) {
 
 function hasActiveProposal() {
   const proposal = loadJson(config.PROCESS_PROPOSAL_PATH);
-  return !!proposal && ['pending', 'building', 'testing'].includes(proposal.status);
+  if (!proposal || !['pending', 'building', 'testing'].includes(proposal.status)) return false;
+  // Auto-expire a proposal stuck 'pending' too long so a stale/un-buildable one
+  // can't deadlock reflection forever (the builder side has its own 7d expiry;
+  // this frees reflection sooner). Tunable via PROPOSAL_MAX_AGE_DAYS.
+  if (proposal.status === 'pending') {
+    const created = Date.parse(proposal.created_at || proposal.timestamp || 0);
+    const ageDays = created ? (Date.now() - created) / 86_400_000 : 0;
+    const maxDays = Number(process.env.PROPOSAL_MAX_AGE_DAYS) || 5;
+    if (ageDays >= maxDays) {
+      proposal.status = 'expired';
+      proposal.resolution = `Auto-expired after ${maxDays}d pending without a build.`;
+      proposal.resolved_at = new Date().toISOString();
+      try { require('fs').writeFileSync(config.PROCESS_PROPOSAL_PATH, JSON.stringify(proposal, null, 2)); } catch {}
+      return false;
+    }
+  }
+  return true;
 }
 
 function loadReflectionState() {
@@ -263,7 +279,7 @@ async function runProcessReflection({
     historyContext,
   });
 
-  const result = await callVertex(prompt, 4096);
+  const result = await reason(prompt, { maxTokens: 4096, tag: "process_reflection" });
   saveReflectionState({
     last_reflection_at: nowIso,
     last_source: source,

@@ -154,8 +154,8 @@ function checkTrigger(axes, ponderState) {
   return { fire: true, qualifying };
 }
 
-const { callVertex } = require("./vertex.js");
-async function callLLM(prompt, maxTokens = 1200) { return callVertex(prompt, maxTokens); }
+const { reason } = require("./lib/compose");
+async function callLLM(prompt, maxTokens = 1200) { return reason(prompt, { maxTokens, tag: "ponder" }); }
 
 // ── Format axes for prompt ────────────────────────────────────────────────────
 function formatAxesForPrompt(qualifying, allAxes) {

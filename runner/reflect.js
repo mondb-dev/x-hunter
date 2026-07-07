@@ -26,7 +26,7 @@ if (fs.existsSync(path.join(ROOT, ".env"))) {
 const REFLECTION_NOTES = path.join(ROOT, "state", "reflection_notes.md");
 const ONTOLOGY_PATH    = path.join(ROOT, "state", "ontology.json");
 
-const { callVertex } = require("./vertex.js");
+const { reason } = require("./lib/compose");
 
 // ── Helpers ────────────────────────────────────────────────────────────────────
 
@@ -108,7 +108,7 @@ Format as prose, not a list. ~150 words. Do not add headers or labels.`;
 
   let reflection;
   try {
-    reflection = await callVertex(prompt, 512, { thinkingBudget: 512 });
+    reflection = await reason(prompt, { maxTokens: 512, thinkingBudget: 512, tag: "reflect" });
   } catch (e) {
     console.error("[reflect] Vertex call failed:", e.message);
     process.exit(0);

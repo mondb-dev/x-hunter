@@ -1,6 +1,6 @@
 {
   "id": "proposal_framework_for_monitoring_narrative_patterns_20260704",
-  "status": "pending",
+  "status": "rejected",
   "title": "Framework for Monitoring and Analyzing Narrative Patterns",
   "problem": "The recurring theme of narrative manipulation, particularly strategic framing and emotional resonance, remains a persistent challenge. Current tools allow analysis but lack systematic tracking and validation.",
   "evidence": [
@@ -17,6 +17,6 @@
   "scope": "protocol|pipeline",
   "estimated_risk": "low",
   "created_at": "2026-07-04T02:47:05.247Z",
-  "resolved_at": null,
-  "resolution": null
+  "resolved_at": "2026-07-07T01:01:49.214Z",
+  "resolution": "Rejected 2026-07-06: un-buildable — targets PROTECTED builder_pipeline.js, a nonexistent modules/*.ts (CommonJS-only), and malformed scope \"protocol|pipeline\". Deadlocking the META loop. Superseded by code-level proposal validation + Claude reasoning."
 }

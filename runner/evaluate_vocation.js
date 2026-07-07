@@ -41,8 +41,8 @@ if (fs.existsSync(path.join(ROOT, ".env"))) {
   }
 }
 
-const { callVertex } = require("./vertex.js");
-async function callLLM(prompt) { return callVertex(prompt, 2048); }
+const { reason } = require("./lib/compose");
+async function callLLM(prompt) { return reason(prompt, { maxTokens: 2048, tag: "evaluate_vocation" }); }
 
 function loadJson(p) {
   try { return JSON.parse(fs.readFileSync(p, "utf-8")); } catch { return null; }

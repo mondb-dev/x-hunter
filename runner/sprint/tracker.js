@@ -25,7 +25,7 @@ const path = require("path");
 const ROOT  = path.resolve(__dirname, "../..");
 const STATE = path.join(ROOT, "state");
 
-const { callVertex }   = require("../vertex.js");
+const { reason } = require("../lib/compose");
 const { loadSprintDb } = require("../lib/db_backend");
 const sprintDb         = loadSprintDb();
 
@@ -251,7 +251,7 @@ Respond in JSON:
 If no matches, return { "matches": [], "unmatched_signals": [] }`;
 
   try {
-    const raw    = await callVertex(prompt, 2000);
+    const raw    = await reason(prompt, { maxTokens: 2000, tag: "sprint_tracker" });
     const parsed = repairJson(raw);
     return parsed || { matches: [], unmatched_signals: [] };
   } catch (err) {
@@ -289,7 +289,7 @@ What should change next week? Be specific and self-critical — not performative
 Respond as plain text (not JSON).`;
 
   try {
-    const retro = await callVertex(prompt, 1000);
+    const retro = await reason(prompt, { maxTokens: 1000, tag: "sprint_retro" });
     return retro.trim();
   } catch (err) {
     console.error(`[sprint/tracker] retro generation failed: ${err.message}`);

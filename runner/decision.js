@@ -51,7 +51,7 @@ function today() {
   return new Date().toISOString().slice(0, 10);
 }
 
-const { callVertex } = require("./vertex.js");
+const { reason } = require("./lib/compose");
 const { CAPABILITIES_SHORT } = require("./lib/capabilities");
 
 function buildDecisionPrompt(plans, vocation) {
@@ -150,7 +150,7 @@ async function main() {
   let parsed;
   try {
     const prompt = buildDecisionPrompt(briefs, vocation);
-    const raw    = await callVertex(prompt, 4000);
+    const raw    = await reason(prompt, { maxTokens: 4000, tag: "decision" });
     const match  = raw.match(/\{[\s\S]*\}/);
     if (!match) throw new Error("No JSON in response");
     try {

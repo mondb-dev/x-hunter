@@ -155,7 +155,66 @@ async function compose(prompt, opts = {}) {
   return callVertex(prompt, maxTokens, vertexOpts);
 }
 
-module.exports = { compose, claudeCompose, useClaudeCompose, DEFAULT_SYSTEM };
+// ── reason(): Claude as the REASONING backend for the cognition stack ─────────
+// Same mechanism as compose(), but for the "thinking" stages (ponder, deep_dive,
+// decision, planner, tracker, process_reflection, evaluate_vocation, reflect)
+// that otherwise run on the weak local qwen and defeat their own prompt-level
+// guardrails / emit malformed JSON. Gated SEPARATELY (THINK_BACKEND=claude) so
+// thinking and composing toggle independently. Cognition is a daily batch (a
+// handful of calls/day), so Claude cost/latency is negligible here.
+const REASON_SYSTEM =
+  'You are a careful reasoning engine for an autonomous agent. Follow the ' +
+  'instructions in the user message EXACTLY, including any required output ' +
+  'format and constraints. When the message asks for JSON, output ONLY the raw ' +
+  'JSON object/array — no prose, no markdown code fences, no commentary before ' +
+  'or after. When it asks for a specific single token or word, output only that. ' +
+  'Honor every stated rule (e.g. capability limits, forbidden actions).';
+
+/** True when the cognition/reasoning stages should route to the Claude terminal. */
+function useClaudeThink() {
+  const b = (process.env.THINK_BACKEND || '').toLowerCase();
+  return b === 'claude' || process.env.CLAUDE_THINK === '1';
+}
+
+/**
+ * reason(prompt, opts) → Promise<string>
+ * Drop-in for the cognition-path callVertex() calls. Routes to the Claude
+ * terminal when THINK_BACKEND=claude; on ANY failure falls back to callVertex
+ * (local qwen) so a Claude outage never stalls the daily cognition, unless
+ * opts.fallback === false. Backend off → identical to the old callVertex path.
+ *
+ * opts: maxTokens (callVertex budget, default 4096), model (vertex fallback
+ *   model id), claudeModel (default env CLAUDE_THINK_MODEL/'sonnet'), system,
+ *   temperature, thinkingBudget, timeoutMs, fallback, tag.
+ */
+async function reason(prompt, opts = {}) {
+  const { maxTokens = 4096, fallback = true, tag = 'reason' } = opts;
+
+  if (useClaudeThink()) {
+    try {
+      const out = await claudeCompose(prompt, {
+        system: opts.system || REASON_SYSTEM,
+        claudeModel: opts.claudeModel || process.env.CLAUDE_THINK_MODEL || 'sonnet',
+        timeoutMs: opts.timeoutMs || Number(process.env.CLAUDE_THINK_TIMEOUT_MS) || 180_000,
+      });
+      // Claude sometimes wraps JSON in ```json fences despite instructions; strip
+      // leading/trailing code fences so callers' JSON.parse/regex works cleanly.
+      return String(out).replace(/^\s*```[a-z]*\s*\n?/i, '').replace(/\n?\s*```\s*$/i, '').trim();
+    } catch (e) {
+      if (!fallback) throw e;
+      console.warn(`[${tag}] claude reason failed (${e.message}) — falling back to callVertex`);
+    }
+  }
+
+  const { callVertex } = require('../vertex');
+  const vertexOpts = {};
+  if (opts.model)                        vertexOpts.model = opts.model;
+  if (opts.temperature !== undefined)    vertexOpts.temperature = opts.temperature;
+  if (opts.thinkingBudget !== undefined) vertexOpts.thinkingBudget = opts.thinkingBudget;
+  return callVertex(prompt, maxTokens, vertexOpts);
+}
+
+module.exports = { compose, reason, claudeCompose, useClaudeCompose, useClaudeThink, DEFAULT_SYSTEM };
 
 // ── CLI: quick manual test — `node runner/lib/compose.js "your prompt"` ─────────
 if (require.main === module) {

@@ -58,7 +58,7 @@ function daysBetween(a, b) {
   return Math.round(Math.abs(new Date(b) - new Date(a)) / 86_400_000);
 }
 
-const { callVertex } = require("./vertex.js");
+const { reason } = require("./lib/compose");
 const { CAPABILITIES } = require("./lib/capabilities");
 
 function buildAxisContext(onto) {
@@ -176,7 +176,7 @@ async function main() {
     console.log(`[deep_dive] researching: "${plan.title}"`);
     try {
       const prompt   = buildResearchPrompt(plan, axisContext);
-      const raw      = await callVertex(prompt, 8000);
+      const raw      = await reason(prompt, { maxTokens: 8000, tag: "deep_dive" });
       // Extract JSON: try greedy match, then try repair for truncated JSON
       let research;
       const match    = raw.match(/\{[\s\S]*\}/);

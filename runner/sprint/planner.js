@@ -29,7 +29,7 @@ const path = require("path");
 const ROOT  = path.resolve(__dirname, "../..");
 const STATE = path.join(ROOT, "state");
 
-const { callVertex }  = require("../vertex.js");
+const { reason } = require("../lib/compose");
 const { loadSprintDb } = require("../lib/db_backend");
 const { CAPABILITIES } = require("../lib/capabilities");
 const sprintDb         = loadSprintDb();
@@ -145,7 +145,7 @@ async function callPlannerWithRetry(basePrompt, maxTokens, label, maxAttempts = 
     if (lastErrors.length) {
       prompt = basePrompt + `\n\n## YOUR PREVIOUS RESPONSE FAILED VALIDATION\nFix these specific issues and re-emit the same JSON shape:\n${lastErrors.map(e => "- " + e).join("\n")}\n\nRe-read the CRITICAL RULES section above. Do not repeat the same mistakes.`;
     }
-    const raw = await callVertex(prompt, maxTokens);
+    const raw = await reason(prompt, { maxTokens, tag: "planner" });
     const parsed = repairJson(raw);
     const errors = validatePlannerResponse(parsed);
     if (errors.length === 0) {
