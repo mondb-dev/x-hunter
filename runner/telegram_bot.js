@@ -1669,17 +1669,28 @@ function sleep(ms) {
 // searches + fetches + synthesis, ~1-3 min) so the bot stays responsive; replies
 // with the synthesized report when it finishes.
 function cmdDeepResearch(text) {
-  const question = text.split(/\s+/).slice(1).join(' ').trim();
+  // Optional leading depth keyword: `deep`/`tree`/`full` forces the hierarchical
+  // decomposition engine; `flat`/`fast`/`quick` forces the fast single-pass path;
+  // omitted → auto-classify by question complexity.
+  let words = text.split(/\s+/).slice(1);
+  let tier = null;
+  const first = (words[0] || '').toLowerCase();
+  if (['deep', 'tree', 'full'].includes(first)) { tier = 'deep'; words = words.slice(1); }
+  else if (['flat', 'fast', 'quick', 'standard'].includes(first)) { tier = 'standard'; words = words.slice(1); }
+  const question = words.join(' ').trim();
   if (!question) {
-    return sendMessage('Usage: <code>/deepresearch &lt;question&gt;</code>\nExamples:\n• /dr is Solana token &lt;mint&gt; an incoming rug — map holder clusters\n• /dr who owns the Solana address &lt;addr&gt;');
+    return sendMessage('Usage: <code>/deepresearch [deep|flat] &lt;question&gt;</code>\n• <b>deep</b> — full decomposition tree (thorough, ~3-5 min)\n• <b>flat</b> — fast single pass (~1-2 min)\n• omit → auto-picks by complexity\nExamples:\n• /dr deep what is the current pump.fun meta\n• /dr is Solana token &lt;mint&gt; a rug — map holder clusters\n• /dr who owns the Solana address &lt;addr&gt;');
   }
-  const child = spawn(process.execPath, [path.join(__dirname, 'deep_research.js'), question], {
+  const args = [path.join(__dirname, 'deep_research.js'), question];
+  if (tier) args.push(`--tier=${tier}`);
+  const child = spawn(process.execPath, args, {
     cwd: path.resolve(__dirname, '..'), env: process.env,
   });
   let out = '';
   child.stdout.on('data', d => (out += d));
   child.stderr.on('data', d => (out += d));
-  const killer = setTimeout(() => { try { child.kill('SIGKILL'); } catch {} }, 300000);
+  // Deep tree runs longer (parallel branches + refinement) — give it more headroom.
+  const killer = setTimeout(() => { try { child.kill('SIGKILL'); } catch {} }, tier === 'deep' ? 600000 : 300000);
   child.on('close', () => {
     clearTimeout(killer);
     const i = out.indexOf('=== REPORT ===');
@@ -1689,7 +1700,8 @@ function cmdDeepResearch(text) {
     sendMessage(`🔬 <b>Deep research</b> — ${escapeHtml(question.slice(0, 120))}\n\n<pre>${escapeHtml(report)}</pre>`).catch(() => {});
   });
   child.on('error', (e) => { clearTimeout(killer); sendMessage(`🔬 deep research failed to start: ${escapeHtml(e.message)}`).catch(() => {}); });
-  return sendMessage(`🔬 <b>Deep research started</b>\n${escapeHtml(question.slice(0, 200))}\n<i>plan → search → fetch → synthesize (~1-3 min)…</i>`);
+  const label = tier === 'deep' ? 'decompose → parallel branches → synthesize (~3-5 min)' : tier === 'standard' ? 'plan → search → fetch → synthesize (~1-2 min)' : 'auto-tiered · plan → tools → synthesize (~1-3 min)';
+  return sendMessage(`🔬 <b>Deep research started</b>${tier ? ` <i>[${tier}]</i>` : ''}\n${escapeHtml(question.slice(0, 200))}\n<i>${label}…</i>`);
 }
 
 // ── Message router ──────────────────────────────────────────────────────────
@@ -1754,7 +1766,7 @@ async function handleMessage(msg) {
       '/journal — latest journal entry\n' +
       '/vocation — current vocation\n' +
       '/drift — recent drift alerts\n' +
-      '/deepresearch (/dr) &lt;question&gt; — Claude plans + runs a multi-tool research pass (web/recall/fetch/rugcheck) and returns a cited report\n' +
+      '/deepresearch (/dr) [deep|flat] &lt;question&gt; — multi-tool research (trending/xsearch/rugcheck/web) → cited report. <b>deep</b>=decomposition tree (thorough), <b>flat</b>=fast single pass, omit=auto\n' +
       '/builder — active builder proposal\n' +
       '/builder ask ... — ask builder about the active proposal\n' +
       '/infra — current infra request status\n' +
