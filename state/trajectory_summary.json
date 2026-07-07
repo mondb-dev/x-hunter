@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-07T02:21:31.734Z",
+  "generated_at": "2026-07-07T05:11:36.370Z",
   "windows": [
     "1d",
     "3d",
@@ -30,21 +30,21 @@
     },
     "axis_power_accountability": {
       "current": {
-        "score": -0.1123,
+        "score": -0.1235,
         "confidence": 0.95
       },
       "1d": {
-        "score_delta": -0.0132,
+        "score_delta": -0.0244,
         "conf_delta": -0.03,
-        "direction": "→"
+        "direction": "↘"
       },
       "3d": {
-        "score_delta": -0.0195,
+        "score_delta": -0.0307,
         "conf_delta": -0.03,
-        "direction": "→"
+        "direction": "↘"
       },
       "7d": {
-        "score_delta": -0.0221,
+        "score_delta": -0.0333,
         "conf_delta": -0.03,
         "direction": "↘"
       }
@@ -660,23 +660,23 @@
     },
     "axis_political_vulnerability_foreign_influence_v1": {
       "current": {
-        "score": 0.0862,
-        "confidence": 0.7319
+        "score": 0.1362,
+        "confidence": 0.7459
       },
       "1d": {
-        "score_delta": 0,
-        "conf_delta": -0.1681,
-        "direction": "→"
+        "score_delta": 0.05,
+        "conf_delta": -0.1541,
+        "direction": "↗"
       },
       "3d": {
-        "score_delta": 0,
-        "conf_delta": -0.1741,
-        "direction": "→"
+        "score_delta": 0.05,
+        "conf_delta": -0.1601,
+        "direction": "↗"
       },
       "7d": {
-        "score_delta": 0,
-        "conf_delta": -0.1781,
-        "direction": "→"
+        "score_delta": 0.05,
+        "conf_delta": -0.1641,
+        "direction": "↗"
       }
     },
     "axis_religious_expression_hate_speech_v1": {
@@ -843,28 +843,15 @@
       },
       "7d": null
     },
-    "axis_public_integrity_diversion_v1": {
-      "current": {
-        "score": 0,
-        "confidence": 0
-      },
-      "1d": {
-        "score_delta": 0,
-        "conf_delta": 0,
-        "direction": "→"
-      },
-      "3d": null,
-      "7d": null
-    },
     "axis_humanitarian_crisis_response": {
       "current": {
-        "score": -0.05,
-        "confidence": 0.0268
+        "score": 0.05,
+        "confidence": 0.078
       },
       "1d": {
-        "score_delta": -0.05,
-        "conf_delta": 0.0268,
-        "direction": "↘"
+        "score_delta": 0.05,
+        "conf_delta": 0.078,
+        "direction": "↗"
       },
       "3d": null,
       "7d": null
@@ -892,9 +879,10 @@
       "7d": null
     }
   },
-  "notable_count": 5,
+  "notable_count": 6,
   "momentum_axes": [
     "axis_political_trust_corruption_v1",
-    "axis_public_trust_safety_crisis_v1"
+    "axis_public_trust_safety_crisis_v1",
+    "axis_political_vulnerability_foreign_influence_v1"
   ]
 }

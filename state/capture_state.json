@@ -1,141 +1,106 @@
 {
-  "checked_at": "2026-07-06T05:19:55.654Z",
-  "evidence_24h": 24,
-  "unique_sources": 9,
+  "checked_at": "2026-07-07T05:55:54.986Z",
+  "evidence_24h": 23,
+  "unique_sources": 5,
   "status": "captured",
   "alerts": [
     {
       "type": "source_dominance",
       "severity": "high",
-      "detail": "@unknown accounts for 58% of today's evidence (14/24)",
+      "detail": "@unknown accounts for 78% of today's evidence (18/23)",
       "username": "unknown",
-      "share": 0.583
+      "share": 0.783
+    },
+    {
+      "type": "axis_concentration",
+      "severity": "high",
+      "detail": "\"Power, Institutions, and Rule of Law\" received 74% of today's evidence (17/23)",
+      "axis_id": "axis_power_accountability",
+      "share": 0.739
     }
   ],
-  "summary": "1 capture alert(s) detected:\n[HIGH] @unknown accounts for 58% of today's evidence (14/24)",
+  "summary": "2 capture alert(s) detected:\n[HIGH] @unknown accounts for 78% of today's evidence (18/23)\n[HIGH] \"Power, Institutions, and Rule of Law\" received 74% of today's evidence (17/23)",
   "source_concentration": {
     "unknown": {
       "username": "unknown",
-      "count": 14,
-      "share": 0.583
+      "count": 18,
+      "share": 0.783
     },
-    "abscbnnews": {
-      "username": "abscbnnews",
-      "count": 3,
-      "share": 0.125
+    "_iancruz": {
+      "username": "_iancruz",
+      "count": 2,
+      "share": 0.087
     },
-    "dailyloud": {
-      "username": "dailyloud",
+    "bncdotph": {
+      "username": "bncdotph",
       "count": 1,
-      "share": 0.042
+      "share": 0.043
     },
-    "rainmaker1973": {
-      "username": "rainmaker1973",
+    "marionawfal": {
+      "username": "marionawfal",
       "count": 1,
-      "share": 0.042
+      "share": 0.043
     },
-    "inquirerdotnet": {
-      "username": "inquirerdotnet",
+    "ajenglish": {
+      "username": "ajenglish",
       "count": 1,
-      "share": 0.042
-    },
-    "mylordbebo": {
-      "username": "mylordbebo",
-      "count": 1,
-      "share": 0.042
-    },
-    "madrid_total2": {
-      "username": "madrid_total2",
-      "count": 1,
-      "share": 0.042
-    },
-    "whitehouse": {
-      "username": "whitehouse",
-      "count": 1,
-      "share": 0.042
-    },
-    "megakapamilya": {
-      "username": "megakapamilya",
-      "count": 1,
-      "share": 0.042
+      "share": 0.043
     }
   },
   "axis_concentration": {
-    "axis_geopolitical_rhetoric_v1": {
-      "axis_id": "axis_geopolitical_rhetoric_v1",
-      "label": "Geopolitical Rhetoric vs. Humanitarian Concerns",
-      "count": 10,
-      "share": 0.417
-    },
     "axis_power_accountability": {
       "axis_id": "axis_power_accountability",
       "label": "Power, Institutions, and Rule of Law",
-      "count": 7,
-      "share": 0.292
-    },
-    "axis_public_trust_safety_crisis_v1": {
-      "axis_id": "axis_public_trust_safety_crisis_v1",
-      "label": "Public Trust in Safety and Crisis Communication",
-      "count": 3,
-      "share": 0.125
+      "count": 17,
+      "share": 0.739
     },
     "axis_political_trust_corruption_v1": {
       "axis_id": "axis_political_trust_corruption_v1",
       "label": "Trust in Political Institutions and Anti-Corruption Efforts",
-      "count": 1,
-      "share": 0.042
+      "count": 2,
+      "share": 0.087
     },
-    "axis_media_integrity_v1": {
-      "axis_id": "axis_media_integrity_v1",
-      "label": "Integrity of Information and Social Media Manipulation",
-      "count": 1,
-      "share": 0.042
+    "axis_humanitarian_crisis_response": {
+      "axis_id": "axis_humanitarian_crisis_response",
+      "label": "Humanitarian Crisis Response",
+      "count": 2,
+      "share": 0.087
     },
-    "axis_economic_indicators_reliability_v1": {
-      "axis_id": "axis_economic_indicators_reliability_v1",
-      "label": "Reliability of Economic Indicators and Societal Progress",
+    "axis_political_vulnerability_foreign_influence_v1": {
+      "axis_id": "axis_political_vulnerability_foreign_influence_v1",
+      "label": "Political Vulnerability & Foreign Influence",
       "count": 1,
-      "share": 0.042
+      "share": 0.043
     },
-    "axis_discourse_order_polarization_v1": {
-      "axis_id": "axis_discourse_order_polarization_v1",
-      "label": "Discourse: Order vs. Polarization",
+    "axis_selective_outrage": {
+      "axis_id": "axis_selective_outrage",
+      "label": "Selective Outrage",
       "count": 1,
-      "share": 0.042
+      "share": 0.043
     }
   },
   "cluster_concentration": {
     "unknown": {
       "cluster": "unknown",
-      "count": 17,
-      "share": 0.708
+      "count": 20,
+      "share": 0.87
     },
     "breaking_news": {
       "cluster": "breaking_news",
-      "count": 4,
-      "share": 0.167
+      "count": 2,
+      "share": 0.087
     },
-    "entertainment": {
-      "cluster": "entertainment",
+    "asia_pacific": {
+      "cluster": "asia_pacific",
       "count": 1,
-      "share": 0.042
-    },
-    "science": {
-      "cluster": "science",
-      "count": 1,
-      "share": 0.042
-    },
-    "government_official": {
-      "cluster": "government_official",
-      "count": 1,
-      "share": 0.042
+      "share": 0.043
     }
   },
   "pole_balance": {
-    "left": 15,
-    "right": 9,
+    "left": 16,
+    "right": 7,
     "neutral": 0,
-    "left_share": 0.625,
-    "right_share": 0.375
+    "left_share": 0.696,
+    "right_share": 0.304
   }
 }
