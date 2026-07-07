@@ -272,17 +272,13 @@ Write a concise findings report: the answer (or best-supported hypothesis), the 
   return reason(prompt, { maxTokens: 1800, tag: 'dr-synth' });
 }
 
-async function deepResearch(question, { maxFetch = 4, planOnly = false, maxRounds = 2 } = {}) {
-  log(`question: ${question}`);
+// ── Flat path (trivial/standard tiers): plan → execute → refine → synthesize ──
+async function flatResearch(question, { maxFetch = 4, maxRounds = 2 } = {}) {
   const p = await plan(question);
   log(`plan: ${(p.steps || []).length} step(s) — ${p.approach || ''}`);
-  if (planOnly) return { plan: p };
   const { findings, discoveredUrls } = await execute(p.steps || []);
   const fetched = await adaptiveFetch(question, findings, discoveredUrls, maxFetch);
   let all = [...findings, ...fetched];
-
-  // Iterative refinement: research the still-open, researchable gaps instead of
-  // just reporting them. Loop until the critic finds nothing worth chasing.
   for (let round = 1; round <= maxRounds; round++) {
     const gaps = await gapSteps(question, p, all);
     if (!gaps.length) { log(`refine: no researchable gaps left (round ${round})`); break; }
@@ -291,9 +287,247 @@ async function deepResearch(question, { maxFetch = 4, planOnly = false, maxRound
     const gf = await adaptiveFetch(question, gr.findings, gr.discoveredUrls, Math.max(2, maxFetch - 1));
     all = [...all, ...gr.findings, ...gf];
   }
-
   const report = await synthesize(question, p, all);
   return { plan: p, findings: all, report };
+}
+
+// ══ Hierarchical decomposition engine (deep tier) ═════════════════════════════
+// analyze → decompose (≤3 levels) → review the whole checklist → run in logical
+// order → update a living doc (JSON + Markdown) → synthesize from the tree.
+// See docs/deep-research-decomposition.md.
+
+const JOBS_DIR = path.join(ROOT, 'state', 'research_jobs');
+const cleanJson = (raw) => { const m = String(raw).replace(/```(?:json)?/gi, '').match(/[[{][\s\S]*[}\]]/); return m ? JSON.parse(m[0]) : null; };
+
+// Cheap complexity gate. trivial|standard → flat path; deep → tree path.
+async function classify(question) {
+  const prompt =
+`Classify this research request's complexity for planning.
+QUESTION: ${question}
+- "trivial": one factual lookup / yes-no / single entity (e.g. "is X true?", "who owns wallet W?").
+- "standard": one topic, a few angles, no real sub-structure.
+- "deep": multi-part, a broad "state of / landscape / current meta", an explicit "deep research", or anything that clearly benefits from being broken into sub-questions.
+Output ONLY JSON: {"tier":"trivial|standard|deep","why":"short"}`;
+  try { const j = cleanJson(await reason(prompt, { maxTokens: 150, tag: 'dr-classify' })); return (j && j.tier) || 'standard'; }
+  catch { return 'standard'; }
+}
+
+// Give every node an id (1, 1.1, 1.2.3…), enforce depth + node caps, init state.
+function normalizeTree(root, maxDepth, maxNodes) {
+  const state = { n: 0 };
+  const walk = (node, depth, id) => {
+    if (!node || typeof node !== 'object') return null;
+    if (state.n >= maxNodes) return null;
+    state.n++;
+    node.id = id;
+    node.status = 'pending';
+    node.findings = [];
+    node.answer = null;
+    node.research_areas = Array.isArray(node.research_areas) ? node.research_areas : [];
+    node.tools_hint = (Array.isArray(node.tools_hint) ? node.tools_hint : []).filter((t) => TOOLS[t]);
+    node.depends_on = Array.isArray(node.depends_on) ? node.depends_on : [];
+    let kids = Array.isArray(node.children) ? node.children : [];
+    if (depth >= maxDepth) kids = [];              // enforce ≤ maxDepth levels
+    node.children = kids.map((k, i) => walk(k, depth + 1, `${id}.${i + 1}`)).filter(Boolean);
+    return node;
+  };
+  return walk(root, 1, '1');
+}
+
+async function decompose(question, { maxDepth = 3, maxNodes = 24 } = {}) {
+  const prompt =
+`You are Sebastian Hunter's research architect. Break the QUESTION into a research TREE.
+QUESTION: ${question}
+
+TOOLS available at the leaves:
+${TOOL_DESCR}
+
+Rules:
+- Nest UP TO ${maxDepth} levels — but only split a node when its parts are genuinely separable. Prefer 3-6 top-level parts.
+- A LEAF (no children) must be answerable by a short sequence of the tools above.
+- ${maxNodes} nodes max total.
+- Every node has: title, question (standalone), direction (how to approach it), research_areas (angles/sources to consider), tools_hint (subset of tool names likely to help), success_criterion (what evidence would resolve it), depends_on (titles of earlier nodes whose answers this needs first, or []).
+
+Output ONLY JSON (no fences), the root node:
+{"title":"..","question":"..","direction":"..","research_areas":[..],"tools_hint":[..],"success_criterion":"..","depends_on":[],"children":[ ..same shape.. ]}`;
+  const root = cleanJson(await reason(prompt, { maxTokens: 2600, tag: 'dr-decompose' }));
+  if (!root) throw new Error('decompose: no JSON tree returned');
+  return normalizeTree(root, maxDepth, maxNodes);
+}
+
+function flattenNodes(node, out = []) { if (!node) return out; out.push(node); (node.children || []).forEach((c) => flattenNodes(c, out)); return out; }
+function findNode(root, id) { return flattenNodes(root).find((n) => n.id === id) || null; }
+function renderOutline(root) {
+  return flattenNodes(root).map((n) => `${'  '.repeat(n.id.split('.').length - 1)}- [${n.id}] ${n.title} — resolves when: ${n.success_criterion || '?'}${n.depends_on.length ? ` (needs: ${n.depends_on.join(', ')})` : ''}`).join('\n');
+}
+
+// The "second check": critique the whole checklist before execution, revise once.
+async function reviewPlan(question, root) {
+  const prompt =
+`Review this research PLAN before any execution.
+QUESTION: ${question}
+TOOLS: ${TOOL_DESCR}
+
+PLAN:
+${renderOutline(root)}
+
+Check for: (a) missing angles/gaps, (b) redundant or overlapping nodes, (c) leaves NO tool can resolve, (d) wrong dependency order.
+Output ONLY JSON:
+{"add":[{"parent_id":"<id or root>","title":"..","question":"..","direction":"..","research_areas":[..],"tools_hint":[..],"success_criterion":"..","depends_on":[]}],"drop_ids":["<id>"],"mark_unresolvable_ids":["<id>"],"notes":".."}
+Return empty arrays if the plan is already sound.`;
+  let rev; try { rev = cleanJson(await reason(prompt, { maxTokens: 1200, tag: 'dr-review' })); } catch { rev = null; }
+  if (!rev) return root;
+  for (const id of (rev.drop_ids || [])) { const p = flattenNodes(root).find((n) => (n.children || []).some((c) => c.id === id)); if (p) p.children = p.children.filter((c) => c.id !== id); }
+  for (const id of (rev.mark_unresolvable_ids || [])) { const n = findNode(root, id); if (n) n.status = 'unresolvable'; }
+  for (const a of (rev.add || [])) {
+    const parent = findNode(root, a.parent_id) || root;
+    const child = normalizeTree({ ...a, children: [] }, 3, 999);
+    child.id = `${parent.id}.${(parent.children || []).length + 1}`;
+    parent.children = parent.children || []; parent.children.push(child);
+  }
+  if (rev.notes) log(`review: ${String(rev.notes).slice(0, 120)}`);
+  return root;
+}
+
+// Order a node's children by depends_on (title references); stable fallback.
+function orderByDeps(children) {
+  const byTitle = new Map(children.map((c) => [c.title, c]));
+  const done = new Set(), out = [];
+  const visit = (c, stack = new Set()) => {
+    if (done.has(c.id) || stack.has(c.id)) return; stack.add(c.id);
+    for (const dep of (c.depends_on || [])) { const d = byTitle.get(dep); if (d && d !== c) visit(d, stack); }
+    if (!done.has(c.id)) { done.add(c.id); out.push(c); }
+  };
+  children.forEach((c) => visit(c));
+  return out;
+}
+
+// Generate concrete tool steps for a leaf, given its direction + tool hints.
+async function leafSteps(node) {
+  const prompt =
+`Produce up to 4 concrete tool steps to answer this research bit.
+QUESTION: ${node.question}
+DIRECTION: ${node.direction || ''}
+SUGGESTED TOOLS: ${(node.tools_hint || []).join(', ') || '(any)'}
+RESOLVES WHEN: ${node.success_criterion || ''}
+TOOLS: ${TOOL_DESCR}
+Output ONLY JSON: {"steps":[{"tool":"recall|posts|search|fetch|rugcheck|trending","input":"..","rationale":".."}]}`;
+  try {
+    const j = cleanJson(await reason(prompt, { maxTokens: 700, tag: 'dr-leaf' }));
+    return (j && Array.isArray(j.steps) ? j.steps : [])
+      // Drop steps whose input is a planning placeholder (e.g. "<mint_address_of_top_candidate>")
+      // — those values only exist after earlier tools run; the runtime-refinement
+      // round below re-issues them with the real values.
+      .filter((s) => s && TOOLS[s.tool] && !/<[^>]+>|\bTBD\b|\bplaceholder\b/i.test(String(s.input || '')))
+      .slice(0, 4);
+  } catch { return []; }
+}
+
+// Short answer for one node from its own findings (+ children answers).
+async function answerNode(node, childAnswers) {
+  const dossier = node.findings.map((f) => `### ${f.tool}: ${f.input}\n${String(f.result).slice(0, 1400)}`).join('\n\n');
+  const kids = childAnswers.filter(Boolean).map((c) => `- ${c.title}: ${c.answer}`).join('\n');
+  const prompt =
+`Answer this ONE research sub-question from the evidence only (no invention). 2-4 sentences, specific, cite tool/URL, note confidence.
+SUB-QUESTION: ${node.question}
+${kids ? `SUB-FINDINGS:\n${kids}\n` : ''}${dossier ? `EVIDENCE:\n${dossier}` : '(no direct evidence gathered)'}`;
+  try { return String(await reason(prompt, { maxTokens: 400, tag: 'dr-node' })).trim(); }
+  catch { return null; }
+}
+
+// Post-order execution: resolve children first, leaves run tools. v1 is
+// sequential (concurrency=1); step 2 flips this to bounded parallel workers.
+async function researchNode(node, root, job, persist, maxFetch) {
+  if (node.status === 'unresolvable') { await persist(); return node; }
+  node.status = 'running'; await persist();
+  const orderedKids = orderByDeps(node.children || []);
+  const childAnswers = [];
+  for (const kid of orderedKids) { await researchNode(kid, root, job, persist, maxFetch); childAnswers.push(kid); }
+
+  if (!node.children || node.children.length === 0) {   // LEAF → run tools
+    const steps = await leafSteps(node);
+    log(`  [${node.id}] ${node.title}: ${steps.length} step(s)`);
+    const { findings, discoveredUrls } = await execute(steps);
+    const fetched = await adaptiveFetch(node.question, findings, discoveredUrls, Math.min(2, maxFetch));
+    node.findings = [...findings, ...fetched];
+    // Runtime refinement: now that real data exists (e.g. mints surfaced by
+    // 'trending', URLs by 'search'), issue the follow-ups that needed those
+    // concrete values — this is what closes data-dependent steps like rugcheck.
+    const follow = await gapSteps(node.question, { success_criteria: node.success_criterion }, node.findings);
+    if (follow.length) {
+      log(`  [${node.id}] refine: ${follow.length} follow-up step(s) — ${follow.map((s) => s.tool).join(', ')}`);
+      const fr = await execute(follow.slice(0, 3));
+      const ff = await adaptiveFetch(node.question, fr.findings, fr.discoveredUrls, 1);
+      node.findings = [...node.findings, ...fr.findings, ...ff];
+    }
+  }
+  node.answer = await answerNode(node, childAnswers);
+  node.status = node.answer ? 'answered' : 'unresolvable';
+  await persist();
+  return node;
+}
+
+function renderMarkdown(job) {
+  const mark = { pending: '[ ]', running: '[~]', answered: '[x]', unresolvable: '[!]' };
+  const lines = [`# Research: ${job.question}`, ``, `tier: ${job.tier} · status: ${job.status} · nodes: ${flattenNodes(job.root).length}`, ``];
+  for (const n of flattenNodes(job.root)) {
+    const indent = '  '.repeat(n.id.split('.').length - 1);
+    lines.push(`${indent}- ${mark[n.status] || '[ ]'} **${n.title}**`);
+    if (n.answer) lines.push(`${indent}  ${String(n.answer).replace(/\n+/g, ' ').slice(0, 300)}`);
+  }
+  return lines.join('\n');
+}
+
+async function treeResearch(question, { maxFetch = 3, maxDepth = 3, maxNodes = 24 } = {}) {
+  if (!fs.existsSync(JOBS_DIR)) fs.mkdirSync(JOBS_DIR, { recursive: true });
+  const jobId = `${new Date().toISOString().replace(/[:.]/g, '-')}_${question.toLowerCase().replace(/[^a-z0-9]+/g, '-').slice(0, 40)}`;
+  const job = { job_id: jobId, question, tier: 'deep', status: 'planning', root: null };
+  const persist = async () => {
+    try {
+      fs.writeFileSync(path.join(JOBS_DIR, `${jobId}.json`), JSON.stringify(job, null, 2));
+      if (job.root) fs.writeFileSync(path.join(JOBS_DIR, `${jobId}.md`), renderMarkdown(job));
+    } catch (e) { log(`persist failed (non-fatal): ${e.message}`); }
+  };
+
+  log(`decomposing (deep tier)…`);
+  job.root = await decompose(question, { maxDepth, maxNodes });
+  job.status = 'reviewing'; await persist();
+  job.root = await reviewPlan(question, job.root);
+  log(`plan: ${flattenNodes(job.root).length} node(s) after review`);
+  job.status = 'running'; await persist();
+
+  await researchNode(job.root, job.root, job, persist, maxFetch);
+
+  const allFindings = flattenNodes(job.root).flatMap((n) => n.findings || []);
+  const report = await synthesizeTree(question, job.root);
+  job.status = 'done'; await persist();
+  log(`done → ${path.join(JOBS_DIR, jobId + '.md')}`);
+  return { job, plan: job.root, findings: allFindings, report };
+}
+
+// Assemble the report from the resolved tree (structure already established).
+async function synthesizeTree(question, root) {
+  const outline = flattenNodes(root).map((n) => {
+    const indent = '  '.repeat(n.id.split('.').length - 1);
+    return `${indent}## ${n.title}\n${indent}${n.answer || '(unresolved)'}`;
+  }).join('\n\n');
+  const prompt =
+`You are Sebastian Hunter. Write the final research report for the QUESTION from the RESOLVED RESEARCH TREE below (answers already established per sub-question — do not invent beyond them). Organize logically, keep the concrete specifics/citations, give an overall confidence, and an "Open questions" section ONLY for genuinely unresolvable items.
+
+QUESTION: ${question}
+
+RESOLVED TREE:
+${outline}`;
+  return reason(prompt, { maxTokens: 2200, tag: 'dr-synth-tree' });
+}
+
+async function deepResearch(question, { maxFetch = 4, planOnly = false, maxRounds = 2, tier: forcedTier } = {}) {
+  log(`question: ${question}`);
+  if (planOnly) return { plan: await plan(question) };
+  const tier = forcedTier || await classify(question);
+  log(`tier: ${tier}`);
+  if (tier === 'deep') return treeResearch(question, { maxFetch: Math.min(3, maxFetch) });
+  return flatResearch(question, { maxFetch, maxRounds });
 }
 
 /** Turn research findings into publishable report blocks (with rug-check viz). */
@@ -348,7 +582,7 @@ async function researchAndPublish(question, { maxFetch = 3, publish = true, sour
   return { shortAnswer, url, report, findings };
 }
 
-module.exports = { deepResearch, researchAndPublish, plan, TOOLS };
+module.exports = { deepResearch, researchAndPublish, plan, TOOLS, classify, decompose, reviewPlan, treeResearch, flatResearch };
 
 // ── CLI ───────────────────────────────────────────────────────────────────────
 if (require.main === module) {
@@ -356,10 +590,11 @@ if (require.main === module) {
     const args = process.argv.slice(2);
     const planOnly = args.includes('--plan-only');
     const mf = (args.find((a) => a.startsWith('--max-fetch=')) || '').split('=')[1];
+    const forcedTier = (args.find((a) => a.startsWith('--tier=')) || '').split('=')[1];   // trivial|standard|deep
     const question = args.filter((a) => !a.startsWith('--')).join(' ').trim();
-    if (!question) { console.error('usage: node runner/deep_research.js "<question>" [--plan-only] [--max-fetch=N]'); process.exit(2); }
+    if (!question) { console.error('usage: node runner/deep_research.js "<question>" [--plan-only] [--tier=deep] [--max-fetch=N]'); process.exit(2); }
     try {
-      const res = await deepResearch(question, { planOnly, maxFetch: mf ? Number(mf) : 4 });
+      const res = await deepResearch(question, { planOnly, tier: forcedTier || undefined, maxFetch: mf ? Number(mf) : 4 });
       if (planOnly) { console.log('\n=== PLAN ===\n' + JSON.stringify(res.plan, null, 2)); }
       else { console.log('\n=== REPORT ===\n' + res.report); }
       process.exit(0);
