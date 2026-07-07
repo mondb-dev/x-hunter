@@ -523,10 +523,14 @@ ${outline}`;
   return reason(prompt, { maxTokens: 2200, tag: 'dr-synth-tree' });
 }
 
-async function deepResearch(question, { maxFetch = 4, planOnly = false, maxRounds = 2, tier: forcedTier } = {}) {
+async function deepResearch(question, { maxFetch = 4, planOnly = false, maxRounds = 2, tier: forcedTier, allowTree = true } = {}) {
   log(`question: ${question}`);
   if (planOnly) return { plan: await plan(question) };
-  const tier = forcedTier || await classify(question);
+  let tier = forcedTier || await classify(question);
+  // Gate: the deep tree tier is multi-minute + many-call. Callers that run inline
+  // in a latency-sensitive path (X mention auto-reply) pass allowTree=false, which
+  // downgrades deep→standard so they stay on the fast flat path.
+  if (tier === 'deep' && !allowTree) { log('tier: deep → standard (tree gated off for this caller)'); tier = 'standard'; }
   log(`tier: ${tier}`);
   if (tier === 'deep') return treeResearch(question, { maxFetch: Math.min(3, maxFetch) });
   return flatResearch(question, { maxFetch, maxRounds });
@@ -568,7 +572,10 @@ function findingsToBlocks(question, report, findings, shortAnswer) {
  * the full, visualized breakdown.
  */
 async function researchAndPublish(question, { maxFetch = 3, publish = true, source = 'x_mention' } = {}) {
-  const { findings, report } = await deepResearch(question, { maxFetch });
+  // Gate the slow deep-tree tier off the inline X-mention path unless explicitly
+  // opted in (X_DEEP_TREE=1). Other callers (e.g. Telegram /dr) allow the tree.
+  const allowTree = source !== 'x_mention' || process.env.X_DEEP_TREE === '1';
+  const { findings, report } = await deepResearch(question, { maxFetch, allowTree });
   const shortAnswer = await reason(
     `Given this research, write ONE X reply (max 240 chars) that directly answers the question in Sebastian Hunter's voice — specific, name the key finding, no hedging, no "I think". Question: ${question}\n\nResearch report:\n${report.slice(0, 2500)}\n\nReply text only (no quotes):`,
     { maxTokens: 200, tag: 'dr-reply' }
