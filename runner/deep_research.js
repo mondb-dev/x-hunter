@@ -226,10 +226,39 @@ async function adaptiveFetch(question, findings, urls, maxFetch) {
   return out;
 }
 
+// Critic pass: look at what's been gathered and propose follow-up tool steps that
+// would ANSWER the still-open, researchable sub-questions (the whole point — an
+// "open question" that a tool could resolve is a gap to close, not a caveat to
+// print). Returns [] when nothing further is worth chasing.
+async function gapSteps(question, plan, findings) {
+  const dossier = findings.map((f) => `### ${f.tool}: ${f.input}\n${String(f.result).slice(0, 1200)}`).join('\n\n');
+  const prompt =
+`You are Sebastian Hunter's research critic. Decide what is STILL worth researching.
+
+QUESTION: ${question}
+
+TOOLS AVAILABLE:
+${TOOL_DESCR}
+
+WHAT WE'VE GATHERED SO FAR:
+${dossier}
+
+List the sub-questions that are (a) not yet answered by the dossier AND (b) actually answerable with the tools above — then give the concrete steps to answer them. Examples of researchable "open questions": WHY a token is trending (search X / posts for the driver), whether a narrative (e.g. "AI agents") is present (trending/posts), a token's on-chain safety (rugcheck its mint), survivability/age stats (trending data), who a named figure is (search). Do NOT propose steps for things the dossier already answers, or that no tool can resolve. Be surgical — max 5 highest-value steps.
+
+Output ONLY JSON (no fences):
+{"remaining_gaps":["..."],"steps":[{"tool":"recall|posts|search|fetch|rugcheck|trending","input":"the query, URL, mint, or chain","rationale":"which gap this closes"}]}
+Return an empty steps array if the question is already well answered.`;
+  const raw = await reason(prompt, { maxTokens: 900, tag: 'dr-gap' });
+  try {
+    const j = JSON.parse(String(raw).replace(/```(?:json)?/gi, '').match(/\{[\s\S]*\}/)[0]);
+    return Array.isArray(j.steps) ? j.steps.filter((s) => s && TOOLS[s.tool]).slice(0, 5) : [];
+  } catch { return []; }
+}
+
 async function synthesize(question, plan, findings) {
   const dossier = findings.map((f) => `### ${f.tool}: ${f.input}\n${f.result}`).join('\n\n');
   const prompt =
-`You are Sebastian Hunter. Answer the QUESTION using ONLY the RESEARCH DOSSIER below (do not invent facts). Be specific, cite the source (tool + URL) for each claim, state a confidence level (high/medium/low), and honestly flag what remains unknown.
+`You are Sebastian Hunter. Answer the QUESTION using ONLY the RESEARCH DOSSIER below (do not invent facts). Be specific, cite the source (tool + URL) for each claim, state a confidence level (high/medium/low).
 
 QUESTION: ${question}
 
@@ -239,19 +268,32 @@ CAVEATS TO CHECK: ${plan.caveats || '(none)'}
 RESEARCH DOSSIER:
 ${dossier}
 
-Write a concise findings report: the answer (or best-supported hypothesis), the evidence with citations, confidence, and open questions.`;
+Write a concise findings report: the answer (or best-supported hypothesis), the evidence with citations, and confidence. You MAY include an "Open questions" section, but ONLY for things that genuinely could not be resolved with the available data — NOT for gaps you simply didn't pursue. If the dossier contains the answer to a sub-question, answer it; do not relist it as open.`;
   return reason(prompt, { maxTokens: 1800, tag: 'dr-synth' });
 }
 
-async function deepResearch(question, { maxFetch = 4, planOnly = false } = {}) {
+async function deepResearch(question, { maxFetch = 4, planOnly = false, maxRounds = 2 } = {}) {
   log(`question: ${question}`);
   const p = await plan(question);
   log(`plan: ${(p.steps || []).length} step(s) — ${p.approach || ''}`);
   if (planOnly) return { plan: p };
   const { findings, discoveredUrls } = await execute(p.steps || []);
   const fetched = await adaptiveFetch(question, findings, discoveredUrls, maxFetch);
-  const report = await synthesize(question, p, [...findings, ...fetched]);
-  return { plan: p, findings: [...findings, ...fetched], report };
+  let all = [...findings, ...fetched];
+
+  // Iterative refinement: research the still-open, researchable gaps instead of
+  // just reporting them. Loop until the critic finds nothing worth chasing.
+  for (let round = 1; round <= maxRounds; round++) {
+    const gaps = await gapSteps(question, p, all);
+    if (!gaps.length) { log(`refine: no researchable gaps left (round ${round})`); break; }
+    log(`refine round ${round}: ${gaps.length} follow-up step(s) — ${gaps.map((g) => g.tool).join(', ')}`);
+    const gr = await execute(gaps);
+    const gf = await adaptiveFetch(question, gr.findings, gr.discoveredUrls, Math.max(2, maxFetch - 1));
+    all = [...all, ...gr.findings, ...gf];
+  }
+
+  const report = await synthesize(question, p, all);
+  return { plan: p, findings: all, report };
 }
 
 /** Turn research findings into publishable report blocks (with rug-check viz). */
