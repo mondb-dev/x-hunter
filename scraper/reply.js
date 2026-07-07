@@ -677,21 +677,40 @@ function logInteraction(data, item, replyText, memoryHints) {
       replyText = mentionPrefix + replyText;
     }
 
-    // Truncate to 280 chars if needed
-    if (replyText.length > 280) {
+    // ── Trailing link: never promise a link we don't include ─────────────────
+    // Priority: research/source report URL → Veritas Lens (when verified) → the
+    // journal permalink we actually grounded in, whenever the draft points the
+    // reader at "my journal / a link / a past piece". Budget against raw length
+    // and TRIM the draft to make room, rather than silently dropping the link
+    // (which is how replies ended up saying "check my journal" with no URL).
+    const journalUrl = (memoryHints.find(m => m && m.webUrl) || {}).webUrl || null;
+    const alreadyHasUrl = /https?:\/\//.test(replyText);
+    const promisesLink = /\b(journals?|links?|wrote about|see my|check my|my (post|piece|article)|as I (noted|wrote|said)|previously)\b/i.test(replyText);
+
+    let trailingUrl = null;
+    const sourceUrls = verdict.sourceUrls || [];
+    if (sourceUrls.length > 0) trailingUrl = sourceUrls[0];
+    else if (liveVerification && liveVerification.lens_url) trailingUrl = liveVerification.lens_url;
+    else if (promisesLink && journalUrl) trailingUrl = journalUrl;
+
+    if (trailingUrl && !alreadyHasUrl) {
+      const room = 280 - (trailingUrl.length + 1); // +1 for the newline
+      if (replyText.length > room) replyText = replyText.slice(0, room - 1).trimEnd() + "…";
+      replyText = replyText + '\n' + trailingUrl;
+    } else if (replyText.length > 280) {
       replyText = replyText.slice(0, 277) + "…";
     }
 
-    // Append Veritas Lens URL when verification was run (X shortens to ~23 chars via t.co)
-    // lens_url is ~55 chars; with \n that leaves 223 chars for the reply text
-    if (liveVerification && liveVerification.lens_url && replyText.length <= 223) {
-      replyText = replyText + '\n' + liveVerification.lens_url;
-    } else {
-      // Fallback: append first source URL if available and fits
-      const sourceUrls = verdict.sourceUrls || [];
-      if (sourceUrls.length > 0 && replyText.length <= 247) {
-        replyText = replyText + '\n' + sourceUrls[0];
-      }
+    // Last-resort guard: if the draft still points the reader at a journal/link
+    // but none got attached, drop the dangling clause so we don't post a hollow
+    // reference. Only apply when a substantial reply survives the strip.
+    if (!/https?:\/\//.test(replyText) && promisesLink) {
+      const stripped = replyText
+        .replace(/\s*(?:[—,-]\s*)?(?:you can |please |pls )?(?:check|see|read)(?:\s+out)?\s+(?:my\s+)?journals?(?:\s+links?)?(?:\s+for\s+(?:more\s+)?context)?\.?/i, "")
+        .replace(/\s{2,}/g, " ")
+        .trim();
+      // Keep the strip only if what remains is still a real reply (prefix + ~1 clause).
+      if (stripped.length >= mentionPrefix.length + 25) replyText = stripped;
     }
 
     // ── Step 5: Post reply ────────────────────────────────────────────────
