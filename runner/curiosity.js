@@ -172,11 +172,17 @@ function buildSearchAngles(mainTerms, leftPole, rightPole) {
 // ── Silent-hours sprint helpers ───────────────────────────────────────────────
 
 /**
- * Check if current UTC hour is in silent period (outside active posting hours).
+ * Check if current UTC hour is in the curiosity "silent" research window.
+ * Decoupled from the posting window (TWEET_START/END) — those can be set to 0/24
+ * to post around the clock, which previously made this always-false and killed
+ * the sprint_research driver. Own window via CURIOSITY_SILENT_START/END
+ * (defaults 23→07 UTC, wrapping midnight).
  */
 function isSilentHours() {
   const h = new Date().getUTCHours();
-  return h < config.TWEET_START || h >= config.TWEET_END;
+  const s = Number.isFinite(Number(process.env.CURIOSITY_SILENT_START)) ? Number(process.env.CURIOSITY_SILENT_START) : 23;
+  const e = Number.isFinite(Number(process.env.CURIOSITY_SILENT_END))   ? Number(process.env.CURIOSITY_SILENT_END)   : 7;
+  return s <= e ? (h >= s && h < e) : (h >= s || h < e);
 }
 
 /**

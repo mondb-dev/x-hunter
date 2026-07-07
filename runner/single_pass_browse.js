@@ -60,6 +60,11 @@ const BROWSE_SCHEMA = {
       },
       required: ['evidence', 'new_axes'],
     },
+    // Restores the agent_hint curiosity driver: what to research next cycle.
+    next_focus: {
+      type: 'object',
+      properties: { suggested_query: { type: 'string' }, reason: { type: 'string' }, axis_id: { type: 'string' } },
+    },
   },
   required: ['synthesis', 'tensions', 'footnotes', 'ontology_deltas'],
 };
@@ -103,6 +108,7 @@ function buildPrompt({ day, today, hour }) {
   const digest    = readSafe(config.FEED_DIGEST_PATH, 6000);
   const notes     = readSafe(config.BROWSE_NOTES_PATH, 2500);
   const curiosity = readSafe(path.join(config.STATE_DIR, 'curiosity_directive.txt'), 800);
+  const lead      = readSafe(config.READING_URL_PATH, 400).trim();
   const discourse = readSafe(config.DISCOURSE_DIGEST_PATH, 1500);
   const recall    = readSafe(config.MEMORY_RECALL_PATH, 1200);
   const axes      = loadAxes().slice(0, 60);
@@ -116,6 +122,7 @@ function buildPrompt({ day, today, hour }) {
     '', '── DISCOURSE TENSIONS ──', discourse || '(none)',
     '', '── RECENT NOTES ──', notes || '(none)',
     '', '── CURIOSITY FOCUS ──', curiosity || '(none)',
+    '', '── ASSIGNED LEAD (from your reading queue — prioritize and interpret feed items related to this; flag it [DEEP DIVE] in a note if you engage it) ──', lead || '(none)',
     '', '── RELEVANT MEMORY ──', recall || '(none)',
     '', '── CURRENT BELIEF AXES (use ONLY these axis_ids) ──', axesList || '(none)',
     '',
@@ -127,7 +134,8 @@ function buildPrompt({ day, today, hour }) {
     '  "ontology_deltas": {',
     '    "evidence": [{"axis_id":"<existing id from the list above>","source":"https://real-url","content":"one sentence","summary":"1-2 sentences on what was observed and why it moves the axis","pole_alignment":"left"}],',
     '    "new_axes": [{"id":"snake_case_id","label":"short label","left_pole":"description","right_pole":"description"}]',
-    '  }',
+    '  },',
+    '  "next_focus": {"suggested_query":"one specific, concrete thing worth researching NEXT cycle based on what you saw (a named actor/claim/event to dig into) — steers your curiosity","reason":"why it matters to your vocation","axis_id":"optional related axis_id from the list"}',
     '}',
     'Rules: every evidence item and footnote MUST use a real URL taken from the feed above. Use axis_ids ONLY from the list. pole_alignment is "left" or "right". Omit the evidence or new_axes array if nothing is genuinely axis-worthy. Keep footnotes to the 2-4 most important sources.',
   ].join('\n');
@@ -243,7 +251,20 @@ async function main() {
   const prompt = buildPrompt({ day, today, hour });
   let data;
   try {
-    data = await localChatJSON(prompt, BROWSE_SCHEMA, { temperature: 0.4 });
+    // Browse observation is the core belief-forming inference. Run it on the
+    // Claude terminal when THINK_BACKEND=claude (far better synthesis + reliable
+    // JSON), falling back to the grammar-constrained local path on any failure.
+    const { useClaudeThink, reason } = require('./lib/compose');
+    if (useClaudeThink()) {
+      try {
+        const raw = await reason(prompt, { maxTokens: 4000, tag: 'browse', fallback: false });
+        data = JSON.parse(raw);
+        log('browse inferred via Claude');
+      } catch (e) {
+        log(`claude browse failed (${e.message}) — falling back to local schema JSON`);
+      }
+    }
+    if (!data) data = await localChatJSON(prompt, BROWSE_SCHEMA, { temperature: 0.4 });
   } catch (e) { log(`LLM/JSON error: ${e.message}`); return 1; }
 
   try {
@@ -252,6 +273,30 @@ async function main() {
   } catch (e) { log(`journal write failed: ${e.message}`); return 1; }
 
   try { writeDelta(data); } catch (e) { log(`delta write failed: ${e.message}`); }
+
+  // Restore the agent_hint curiosity driver: emit what to research next cycle
+  // (consumed + deleted by curiosity.js's agent_hint path). This reconnects the
+  // curiosity feedback loop the July-4 local switch had severed.
+  try {
+    const nf = data && data.next_focus;
+    if (nf && nf.suggested_query && String(nf.suggested_query).trim().length > 4) {
+      fs.writeFileSync(path.join(config.STATE_DIR, 'curiosity_hint.json'), JSON.stringify({
+        suggested_query: String(nf.suggested_query).trim(),
+        reason: nf.reason || '',
+        axis_id: nf.axis_id || null,
+        source: 'single_pass_browse',
+        ts: new Date().toISOString(),
+      }, null, 2));
+      log(`curiosity_hint written: "${String(nf.suggested_query).slice(0, 60)}"`);
+    }
+  } catch (e) { log(`curiosity_hint write failed: ${e.message}`); }
+
+  // Mark the assigned reading lead consumed so the queue rotates to the next one.
+  try {
+    if (readSafe(config.READING_URL_PATH, 400).trim()) {
+      require('child_process').execSync(`node "${path.join(ROOT, 'runner/reading_queue.js')}" --mark-done`, { stdio: 'ignore', timeout: 15000 });
+    }
+  } catch { /* non-fatal */ }
 
   // Leave browse notes for the TWEET cycle. The old agentic browse
   // (gemini_agent.js) wrote browse_notes.md via its write tool; this
