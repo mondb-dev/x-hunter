@@ -349,8 +349,10 @@ Instructions:
      specific claims, at least one of those actors and one of those claims must
      appear in your reply by name.
 
+RESEARCH: If the mention ASKS you to find out / verify / analyze something factual that needs looking up — e.g. "who owns this wallet/address?", "is this token a rug / map its holder clusters", "is <claim> true?", "what's the data on <X>?" — set needs_research=true and research_query to a crisp standalone version of what to research. Otherwise needs_research=false.
+
 Respond ONLY with valid JSON, no markdown fences:
-{"verdict":"WORTHY","reply":"your reply text here"}
+{"verdict":"WORTHY","reply":"your reply text here","needs_research":false,"research_query":""}
 or
 {"verdict":"SKIP","reason":"brief reason"}`;
 
@@ -617,6 +619,21 @@ function logInteraction(data, item, replyText, memoryHints) {
       item.status = "skipped";
       item.skip_reason = "reply text empty";
       continue;
+    }
+
+    // ── Autonomous deep research: if the mention asks a factual question, run
+    //    the research tool, publish a report page, and answer with a link. ──
+    let researchUrl = null;
+    if (verdict.needs_research && process.env.X_AUTO_RESEARCH === '1' && !dryRun) {
+      const q = (verdict.research_query || item.text).trim();
+      try {
+        console.log(`[reply] research question → deep_research: "${q.slice(0, 90)}"`);
+        const { researchAndPublish } = require('../runner/deep_research');
+        const rr = await researchAndPublish(q, { maxFetch: 3, source: 'x_mention' });
+        if (rr.shortAnswer) replyText = rr.shortAnswer;
+        if (rr.url) { researchUrl = rr.url; liveVerification = null; verdict.sourceUrls = [rr.url]; }
+        console.log(`[reply] research done → ${rr.url || '(no report)'}`);
+      } catch (e) { console.error(`[reply] research failed (${e.message}) — using plain draft`); }
     }
 
     // Always prepend @from_username so the person gets a mention notification.

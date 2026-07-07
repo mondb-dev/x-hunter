@@ -190,7 +190,59 @@ async function deepResearch(question, { maxFetch = 4, planOnly = false } = {}) {
   return { plan: p, findings: [...findings, ...fetched], report };
 }
 
-module.exports = { deepResearch, plan, TOOLS };
+/** Turn research findings into publishable report blocks (with rug-check viz). */
+function findingsToBlocks(question, report, findings, shortAnswer) {
+  const blocks = [{ type: 'callout', tone: 'info', title: 'Answer:', text: shortAnswer || 'See analysis below.' }];
+  // Rich rug-check viz when a rugcheck finding is present.
+  const rc = findings.find((f) => f.tool === 'rugcheck');
+  let kind = 'research';
+  if (rc) {
+    try {
+      const d = JSON.parse(rc.result);
+      kind = 'rug_check';
+      blocks.push({ type: 'keyvalue', items: [
+        { k: 'RugCheck score', v: `${d.score_normalised ?? '?'} / 10` },
+        { k: 'Rugged', v: d.rugged ? 'YES ⚠' : 'no' },
+        { k: 'Mint authority', v: d.mintAuthorityRenounced ? 'renounced ✓' : 'ACTIVE ⚠' },
+        { k: 'Freeze authority', v: d.freezeAuthorityRenounced ? 'renounced ✓' : 'ACTIVE ⚠' },
+        { k: 'Liquidity', v: d.totalMarketLiquidity != null ? `$${Math.round(d.totalMarketLiquidity).toLocaleString()}` : '?' },
+        { k: 'LP providers', v: d.totalLPProviders ?? '?' },
+        { k: 'Insider clusters', v: d.graphInsidersDetected ?? (d.insiderNetworks ? d.insiderNetworks.length : '?') },
+      ] });
+      const th = (d.topHolders || []).slice(0, 10).map((h) => { const m = String(h).match(/([\d.]+)%/); return { label: String(h).replace(/\s*[\d.]+%.*/, '') || 'holder', value: m ? +m[1] : 0 }; }).filter((x) => x.value);
+      if (th.length) blocks.push({ type: 'bar_chart', title: 'Top holders (% of supply)', data: th });
+    } catch { /* fall through to text */ }
+  }
+  blocks.push({ type: 'markdown', md: report });
+  const sources = findings.filter((f) => f.tool === 'fetch' && /^https?:\/\//.test(f.input)).map((f) => ({ url: f.input }));
+  if (sources.length) blocks.push({ type: 'sources', items: sources.slice(0, 8) });
+  return { blocks, kind };
+}
+
+/**
+ * researchAndPublish(question) — run deep research, publish a report page, and
+ * return a short X-length answer + the report URL. Used by the autonomous X
+ * reply path so a mention that asks a question gets a real answer + a link to
+ * the full, visualized breakdown.
+ */
+async function researchAndPublish(question, { maxFetch = 3, publish = true, source = 'x_mention' } = {}) {
+  const { findings, report } = await deepResearch(question, { maxFetch });
+  const shortAnswer = await reason(
+    `Given this research, write ONE X reply (max 240 chars) that directly answers the question in Sebastian Hunter's voice — specific, name the key finding, no hedging, no "I think". Question: ${question}\n\nResearch report:\n${report.slice(0, 2500)}\n\nReply text only (no quotes):`,
+    { maxTokens: 200, tag: 'dr-reply' }
+  ).then((t) => String(t).trim().replace(/^["']|["']$/g, '')).catch(() => '');
+  let url = null;
+  if (publish) {
+    try {
+      const { publishReport } = require('./publish_report');
+      const { blocks, kind } = findingsToBlocks(question, report, findings, shortAnswer);
+      url = await publishReport({ title: question.slice(0, 120), summary: shortAnswer, kind, source, blocks });
+    } catch (e) { log(`publish failed: ${e.message}`); }
+  }
+  return { shortAnswer, url, report, findings };
+}
+
+module.exports = { deepResearch, researchAndPublish, plan, TOOLS };
 
 // ── CLI ───────────────────────────────────────────────────────────────────────
 if (require.main === module) {
