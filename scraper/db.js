@@ -149,23 +149,31 @@ try { _db.exec("ALTER TABLE posts ADD COLUMN external_domains TEXT DEFAULT '[]'"
 try { _db.exec("ALTER TABLE accounts ADD COLUMN trust INTEGER DEFAULT 0"); } catch { /* already exists */ }
 
 // ── FTS5 sync triggers ────────────────────────────────────────────────────────
-// Keep posts_fts in sync with posts table automatically
+// Keep posts_fts (external content = 'posts') in sync with the posts table.
+// MUST include rowid: FTS5 external-content tables map back to the content table
+// by rowid, so triggers that omit it let FTS assign its own diverging rowids →
+// "fts5: missing row" on every MATCH (same failure as memory_fts below). DROP +
+// CREATE (not IF NOT EXISTS) so this replaces the older rowid-less triggers.
 _db.exec(`
-  CREATE TRIGGER IF NOT EXISTS posts_ai AFTER INSERT ON posts BEGIN
-    INSERT INTO posts_fts(id, username, text, keywords)
-    VALUES (new.id, new.username, new.text, new.keywords);
+  DROP TRIGGER IF EXISTS posts_ai;
+  DROP TRIGGER IF EXISTS posts_au;
+  DROP TRIGGER IF EXISTS posts_ad;
+
+  CREATE TRIGGER posts_ai AFTER INSERT ON posts BEGIN
+    INSERT INTO posts_fts(rowid, id, username, text, keywords)
+    VALUES (new.rowid, new.id, new.username, new.text, new.keywords);
   END;
 
-  CREATE TRIGGER IF NOT EXISTS posts_au AFTER UPDATE ON posts BEGIN
-    INSERT INTO posts_fts(posts_fts, id, username, text, keywords)
-    VALUES ('delete', old.id, old.username, old.text, old.keywords);
-    INSERT INTO posts_fts(id, username, text, keywords)
-    VALUES (new.id, new.username, new.text, new.keywords);
+  CREATE TRIGGER posts_au AFTER UPDATE ON posts BEGIN
+    INSERT INTO posts_fts(posts_fts, rowid, id, username, text, keywords)
+    VALUES ('delete', old.rowid, old.id, old.username, old.text, old.keywords);
+    INSERT INTO posts_fts(rowid, id, username, text, keywords)
+    VALUES (new.rowid, new.id, new.username, new.text, new.keywords);
   END;
 
-  CREATE TRIGGER IF NOT EXISTS posts_ad AFTER DELETE ON posts BEGIN
-    INSERT INTO posts_fts(posts_fts, id, username, text, keywords)
-    VALUES ('delete', old.id, old.username, old.text, old.keywords);
+  CREATE TRIGGER posts_ad AFTER DELETE ON posts BEGIN
+    INSERT INTO posts_fts(posts_fts, rowid, id, username, text, keywords)
+    VALUES ('delete', old.rowid, old.id, old.username, old.text, old.keywords);
   END;
 `);
 
