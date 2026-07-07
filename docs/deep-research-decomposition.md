@@ -97,12 +97,16 @@ run is observable and resumable (mirrors the `publish_report` pattern).
 
 ## Build order (incremental)
 
-1. **Tree core (sequential):** classify + decompose + reviewPlan + living doc +
-   sequential executeTree + tree-aware synthesize. Keep flat path for fast tier.
-   *(Biggest quality jump; self-contained.)*
-2. **Parallel branches / sub-agent workers** with a concurrency cap.
-3. **`x.com/search` sentiment tool** — closes the one gap that stays open now
-   (live trader sentiment), reusing the HelmStack browser.
+1. ✅ **Tree core (sequential):** classify + decompose + reviewPlan + living doc +
+   executeTree + tree-aware synthesize. Flat path kept for the fast tier. *(done)*
+2. ✅ **Parallel branches** — `runChildren` (dependency-aware, cycle-safe) +
+   `withLimit` global semaphore (`DR_CONCURRENCY`, default 3) + `xsearch` tab
+   mutex. Held only during a node's own compute, never while awaiting children. *(done)*
+3. ✅ **`xsearch` live X-search tool** — real-time trader sentiment via the
+   HelmStack browser; preferred over `site:x.com` web search. *(done)*
+
+Gating: deep tier runs on Telegram `/dr` + CLI; the X-mention path stays on the
+fast flat tier unless `X_DEEP_TREE=1` (avoids multi-minute inline runs).
 
 ## Open design questions (for review)
 
