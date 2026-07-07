@@ -161,10 +161,12 @@ async function generateReply(post) {
 (async () => {
   if (isXSuppressed("reply")) { log("X reply suppression active — skipping"); process.exit(0); }
 
-  const x = new X(new HelmStackClient(), { ownHandle: OWN_HANDLE, log });
+  // Dedicated tab: sharing the default x.com tab let concurrent X automations
+  // (esp. collect.js's mention scrape) navigate over each other mid-flow.
+  const x = new X(new HelmStackClient(), { ownHandle: OWN_HANDLE, dedicatedTab: true, log });
   try {
     await x.ensureTab();
-    if (!(await x.sessionOk())) { log("X session not present (no auth_token/ct0) — is HelmStack logged in?"); process.exit(0); }
+    if (!(await x.sessionOk())) { log("X session not present (no auth_token/ct0) — is HelmStack logged in?"); await x.close().catch(() => {}); process.exit(0); }
   } catch (err) { log(`could not reach HelmStack/X: ${err.message}`); process.exit(0); }
 
   const keywords = loadAxisKeywords();
@@ -185,5 +187,6 @@ async function generateReply(post) {
 
   if (!DRY_RUN) saveLedger(seen); // dry-runs must not mark posts as engaged
   log(`done — ${result.likes} like(s), ${result.replies} reply(ies)${DRY_RUN ? " (dry run)" : ""}`);
+  await x.close().catch(() => {});   // close the dedicated tab so tabs don't accumulate
   process.exit(0);
 })().catch((err) => { log(`fatal: ${err.message}`); process.exit(0); });
