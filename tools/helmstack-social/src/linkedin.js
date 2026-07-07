@@ -153,6 +153,127 @@ class LinkedIn {
     return parsed;
   }
 
+  /**
+   * Inbound notifications directed AT us that warrant a reply — mentions,
+   * comments on our posts, and replies to our comments. Skips the noise
+   * (impressions/analytics, profile views, news digests, bare reactions).
+   * Returns [{ id, type: 'mention'|'comment'|'reply', actor, text, href }] where
+   * `href` opens the post with the comment box focused (showCommentBox=true).
+   */
+  async scrapeNotifications({ limit = 20 } = {}) {
+    await this.c.navigate(this.tab, "https://www.linkedin.com/notifications/");
+    await sleep(3500);
+    await this.c.evaluate(this.tab, "window.scrollBy(0, 800)").catch(() => {});
+    await sleep(1200);
+    const raw = await this._eval(
+      `var cards=[].slice.call(document.querySelectorAll('article, .nt-card'));
+       var out=[]; var seen={};
+       for(var i=0;i<cards.length && out.length<${limit};i++){
+         var c=cards[i];
+         var text=(c.innerText||'').replace(/\\s+/g,' ').replace(/^Unread notification\\.?\\s*/i,'').trim();
+         if(!text||text.length<8||seen[text]) continue; seen[text]=1;
+         var type=null;
+         if(/mentioned you/i.test(text)) type='mention';
+         else if(/commented on (your|this)/i.test(text)) type='comment';
+         else if(/replied to (your|you)/i.test(text)) type='reply';
+         if(!type) continue;
+         var a=c.querySelector('a[href*=\"showCommentBox\"], a[href*=\"highlightedUpdateUrn\"], a[href*=\"/feed/update/\"], a[href*=\"/posts/\"]');
+         var href=a?a.href:'';
+         var idm=href.match(/comment[^0-9]*?(\\d{15,})/i)||href.match(/activity[^0-9]*?(\\d{15,})/i);
+         var id=idm?idm[1]:text.slice(0,60);
+         var actor=(text.split(/\\s+(?:mentioned|commented|replied)/i)[0]||'').trim().slice(0,60);
+         out.push({ id:id, type:type, actor:actor, text:text.slice(0,500), href:href });
+       }
+       return JSON.stringify(out);`
+    ).catch(() => "[]");
+    let arr; try { arr = JSON.parse(raw || "[]"); } catch { return []; }
+    // Prefer the comment/activity URN as a stable dedupe id (regex is cleaner here
+    // than in-page); fall back to the text slice the scraper already set.
+    for (const it of arr) {
+      if (!it.href) continue;
+      const m = it.href.match(/comment[^0-9]*?(\d{15,})/i) || it.href.match(/activity[^0-9]*?(\d{15,})/i);
+      if (m) it.id = m[1];
+    }
+    return arr;
+  }
+
+  /**
+   * Reply to a notification by opening its href (LinkedIn focuses the relevant
+   * comment box via showCommentBox=true), then typing + submitting into the first
+   * visible comment/reply editor. dryRun verifies the editor + text without posting.
+   * @returns {Promise<{ok:boolean, reason?:string, dryRun?:boolean}>}
+   */
+  async replyToNotification(href, text, { dryRun = false, type = "reply" } = {}) {
+    if (!href) return { ok: false, reason: "no_href" };
+    await this.c.navigate(this.tab, href).catch(() => {});
+    await sleep(4000);
+    // The comment thread renders below the fold; nudge it into view.
+    await this.c.evaluate(this.tab, "window.scrollBy(0, 400)").catch(() => {});
+    await sleep(1200);
+    // No editor exists until an opener is clicked (the showCommentBox URL param
+    // isn't honored on direct nav). For a comment/mention → click a "Reply"
+    // button; for a post comment → the "Comment" toggle. Try the preferred one,
+    // fall back to the other.
+    const openers = type === "comment" ? ['aria-label="Comment"', 'aria-label="Reply"'] : ['aria-label="Reply"', 'aria-label="Comment"'];
+    let opened = false;
+    for (const sel of openers) {
+      opened = await this._eval(
+        `var b=[].slice.call(document.querySelectorAll('button[${sel}]'))
+           .find(function(x){ return x.offsetParent!==null; });
+         if(!b) return false; b.click(); return true;`
+      ).catch(() => false);
+      if (opened) break;
+    }
+    if (!opened) return { ok: false, reason: "opener_not_found" };
+    await sleep(1800);
+    // Now the editor is rendered — focus the first visible one.
+    const focused = await this._eval(
+      `var eds=[].slice.call(document.querySelectorAll('.ql-editor, div[role=textbox]'))
+         .filter(function(e){ return e.offsetParent!==null; });
+       if(!eds.length) return false;
+       var ed=eds[0]; ed.focus(); ed.setAttribute('data-hs-reply','1'); return true;`
+    ).catch(() => false);
+    if (!focused) return { ok: false, reason: "editor_not_found" };
+    await sleep(500);
+
+    try { await this.c.insertText(this.tab, text); }
+    catch (err) { return { ok: false, reason: `insert:${err.message}` }; }
+    await sleep(1200);
+
+    const got = await this._eval(
+      `var ed=document.querySelector('[data-hs-reply="1"]'); return ed ? (ed.innerText||'').trim() : '';`
+    ).catch(() => "");
+    // Clicking "Reply" can pre-seed an @mention chip for the person, so the editor
+    // legitimately holds "@Name " + our text — verify our text is PRESENT, not equal.
+    if (!norm(got).includes(norm(text))) return { ok: false, reason: `text_verify_failed(${got.length}/${text.length})` };
+
+    if (dryRun) {
+      await this._eval(
+        `var ed=document.querySelector('[data-hs-reply="1"]');
+         if(ed){ed.focus();document.execCommand('selectAll');document.execCommand('delete');ed.removeAttribute('data-hs-reply');}
+         return true;`
+      ).catch(() => {});
+      return { ok: false, reason: "dry_run", dryRun: true };
+    }
+
+    // Submit: the active editor's nearest form has a "Reply"/"Comment" post button
+    // (text, no aria-label — distinguishes from the action-bar toggle).
+    const clicked = await this._eval(
+      `var ed=document.querySelector('[data-hs-reply="1"]');
+       var box=ed?ed.closest('form, .comments-comment-box, .comments-comment-texteditor')||ed.parentElement.parentElement:null;
+       var scope=box||document;
+       var b=[].slice.call(scope.querySelectorAll('button')).find(function(x){
+         var t=(x.innerText||'').trim();
+         return (t==='Reply'||t==='Comment'||t==='Post') && !(x.getAttribute('aria-label')||'').trim()
+           && x.getAttribute('aria-disabled')!=='true' && !x.disabled && x.offsetParent!==null;
+       });
+       if(!b) return false; b.click(); return true;`
+    ).catch(() => false);
+    if (!clicked) return { ok: false, reason: "submit_button_not_found" };
+    await sleep(1800);
+    return { ok: true };
+  }
+
   /** Like the post stamped with the given index. Returns true if it registered. */
   async like(idx, { dryRun = false } = {}) {
     if (dryRun) return true;
