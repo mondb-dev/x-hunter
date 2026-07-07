@@ -50,4 +50,45 @@ async function fetchPageText(url, { maxChars = 4000, settleMs = 2500 } = {}) {
   }
 }
 
-module.exports = { fetchPageText };
+/**
+ * Web search via HelmStack (DuckDuckGo HTML endpoint), returning real result
+ * URLs (DDG wraps them in /l/?uddg=<encoded> redirects — decoded here) so a
+ * caller can then fetchPageText() the promising ones. Never throws.
+ * @returns {Promise<Array<{title:string, url:string, snippet:string}>>}
+ */
+async function searchWeb(query, { max = 6, settleMs = 1800 } = {}) {
+  if (!query) return [];
+  const c = new HelmStackClient();
+  let tabId = null;
+  try {
+    await c.health();
+    const url = `https://html.duckduckgo.com/html/?q=${encodeURIComponent(query)}`;
+    const before = new Set((await c.listTabs()).map((t) => t.id));
+    const after = await c.openTab(url);
+    const created = (after || []).find((t) => !before.has(t.id));
+    tabId = created && created.id;
+    if (!tabId) return [];
+    await c.waitReady(tabId, { tag: 'search', attempts: 12 }).catch(() => {});
+    await new Promise((r) => setTimeout(r, settleMs));
+    const results = await c.evalFn(tabId, (mx) => {
+      const decode = (href) => {
+        try {
+          const m = /[?&]uddg=([^&]+)/.exec(href || '');
+          return m ? decodeURIComponent(m[1]) : href;
+        } catch { return href; }
+      };
+      return [].slice.call(document.querySelectorAll('.result__body, .web-result')).slice(0, mx).map((r) => {
+        const a = r.querySelector('.result__a, a.result__url, .result__title a');
+        const s = r.querySelector('.result__snippet');
+        return { title: (a ? a.innerText : '').trim(), url: decode(a ? a.getAttribute('href') : ''), snippet: (s ? s.innerText : '').trim() };
+      }).filter((x) => x.title && /^https?:\/\//.test(x.url));
+    }, max);
+    return results || [];
+  } catch {
+    return [];
+  } finally {
+    if (tabId) { try { await c.closeTab(tabId); } catch { /* ignore */ } }
+  }
+}
+
+module.exports = { fetchPageText, searchWeb };
