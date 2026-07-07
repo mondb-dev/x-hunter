@@ -61,7 +61,11 @@ const TOOLS = {
   async posts(input) {
     try {
       const { loadScraperDb } = require('./lib/db_backend');
-      const rows = await loadScraperDb().search(input, 8);
+      // Sanitize for FTS5: punctuation like the "." in "pump.fun" is a syntax
+      // error in a MATCH query, so reduce to bare word tokens (OR-joined).
+      const terms = String(input).toLowerCase().replace(/[^\w\s]/g, ' ').split(/\s+/).filter((w) => w.length > 1);
+      const q = terms.length ? terms.slice(0, 8).join(' OR ') : String(input);
+      const rows = await loadScraperDb().search(q, 8);
       if (!rows || !rows.length) return `(no observed posts matching "${input}")`;
       return rows.map((r) => `@${r.username}: ${(r.text || '').slice(0, 200)}`).join('\n');
     } catch (e) { return `(posts search error: ${e.message})`; }
@@ -107,6 +111,60 @@ const TOOLS = {
       topHolders: holders,
     }, null, 1);
   },
+  // Live "what's the current meta / what's trending" signal for a chain (default
+  // Solana). GeckoTerminal gives trending pools + newest launches (the actual
+  // "trenches"); DexScreener boosts show what's being paid to promote right now.
+  // This is the authoritative source for meta/trending questions — generic web
+  // search and CoinMarketCap/CoinGecko are stale and high-level by comparison.
+  // Input: a chain name ("solana" default; also eth/base/bsc).
+  async trending(input) {
+    const key = (String(input || '').toLowerCase().match(/solana|sol|eth|ethereum|base|bsc/) || ['solana'])[0];
+    const net = ({ sol: 'solana', ethereum: 'eth' }[key]) || key;
+    const num = (x) => (x == null || x === '' ? null : +(+x).toPrecision(4));
+    const gt = (p) => httpJson(`https://api.geckoterminal.com/api/v2/networks/${net}/${p}`, { timeoutMs: 12000 });
+    const fmt = (p) => {
+      const a = p.attributes || {};
+      const pc = a.price_change_percentage || {};
+      const baseId = (((p.relationships || {}).base_token || {}).data || {}).id || '';
+      return {
+        token: a.name,
+        pumpfun: /pump$/i.test(baseId) || undefined,   // pump.fun mints end in "pump"
+        priceUsd: num(a.base_token_price_usd),
+        chg_h1_pct: num(pc.h1), chg_h24_pct: num(pc.h24),
+        volH24: num(a.volume_usd && a.volume_usd.h24),
+        fdv: num(a.fdv_usd || a.market_cap_usd),
+        ageMin: a.pool_created_at ? Math.round((Date.now() - Date.parse(a.pool_created_at)) / 60000) : null,
+      };
+    };
+    const [trend, fresh, boosts] = await Promise.all([
+      gt('trending_pools?page=1'),
+      gt('new_pools?page=1'),
+      httpJson('https://api.dexscreener.com/token-boosts/top/v1', { timeoutMs: 10000 }),
+    ]);
+    // Resolve boosted (paid-promotion) token names on this chain — a meta signal.
+    let boosted = [];
+    const addrs = (Array.isArray(boosts) ? boosts : []).filter((b) => b.chainId === net).slice(0, 20).map((b) => b.tokenAddress);
+    if (addrs.length) {
+      const tok = await httpJson(`https://api.dexscreener.com/latest/dex/tokens/${addrs.join(',')}`, { timeoutMs: 10000 });
+      const seen = new Set();
+      for (const pr of ((tok && tok.pairs) || [])) {
+        const b = pr.baseToken || {};
+        if (!b.symbol || seen.has(b.symbol)) continue;
+        seen.add(b.symbol);
+        boosted.push({ token: `${b.name} (${b.symbol})`, pumpfun: /pump$/i.test(b.address || '') || undefined, priceUsd: num(pr.priceUsd), chg_h24_pct: num(pr.priceChange && pr.priceChange.h24), volH24: num(pr.volume && pr.volume.h24) });
+        if (boosted.length >= 12) break;
+      }
+    }
+    const out = {
+      network: net,
+      source: 'live: GeckoTerminal trending/new pools + DexScreener boosts',
+      trending_pools: (trend && trend.data ? trend.data.slice(0, 12).map(fmt) : []),
+      newest_launches: (fresh && fresh.data ? fresh.data.slice(0, 10).map(fmt) : []),
+      boosted_promoted: boosted,
+    };
+    if (!out.trending_pools.length && !out.newest_launches.length && !boosted.length) return `(trending: no live data for ${net})`;
+    return JSON.stringify(out, null, 1);
+  },
 };
 
 const TOOL_DESCR =
@@ -114,7 +172,8 @@ const TOOL_DESCR =
   'posts  — full-text search of the X feed Sebastian has observed; input: keywords.\n' +
   'search — web search (returns titles/URLs/snippets); input: a search query.\n' +
   'fetch  — read the page text of ONE specific URL; input: an https URL.\n' +
-  'rugcheck — on-chain analysis of a SOLANA TOKEN MINT via RugCheck: risk score, mint/freeze authority (null=renounced), top-holder concentration + insider flags, INSIDER CLUSTER count (graphInsidersDetected/insiderNetworks), LP lock, liquidity, holder count. Input: a Solana mint address. Use this for any token rug/cluster/holder-concentration question — do NOT scrape explorer pages for this.';
+  'rugcheck — on-chain analysis of a SOLANA TOKEN MINT via RugCheck: risk score, mint/freeze authority (null=renounced), top-holder concentration + insider flags, INSIDER CLUSTER count (graphInsidersDetected/insiderNetworks), LP lock, liquidity, holder count. Input: a Solana mint address. Use this for any token rug/cluster/holder-concentration question — do NOT scrape explorer pages for this.\n' +
+  'trending — LIVE trending tokens, newest launches ("trenches"), and paid-promoted tokens on a chain (default Solana) via GeckoTerminal + DexScreener: names, price, 1h/24h change, 24h volume, FDV, age, and a pump.fun flag. This is the AUTHORITATIVE source for "what is the current meta / what is trending / what is hot / pump.fun trenches" questions — always prefer it over web search/CoinMarketCap/CoinGecko, which are stale and high-level. Input: a chain name (default "solana").';
 
 async function plan(question) {
   const prompt =
@@ -123,13 +182,18 @@ ${TOOL_DESCR}
 
 QUESTION: ${question}
 
-Think about the best sequence: start from what's already known (recall/posts), then search, then fetch authoritative sources. For 'fetch' steps you may construct KNOWN canonical URLs (e.g. official explorers/registries) directly from the question; URLs discovered by 'search' will be fetched in a later adaptive step, so you don't need to guess those.
+First EVALUATE what kind of question this is and which source can actually answer it — do not default to generic web search. Match the question to the right instrument:
+- "current meta / what's trending / hot tokens / pump.fun or Solana trenches / newest launches" → use the 'trending' tool (live trending + new-launch + promoted tokens). This is primary; name specific tokens, their price action and age from it. You may ALSO 'fetch' canonical live pages for corroboration/detail: https://dexscreener.com/solana?rankBy=trendingScoreH6&order=desc , https://www.geckoterminal.com/solana/pools , https://pump.fun/board , and 'search' X/Twitter for what traders are saying about the meta right now (e.g. search "site:x.com pump.fun meta" or "pump.fun trending" ). Do NOT rely on CoinMarketCap/CoinGecko/Discord landing pages for live meta — they are stale.
+- "is <token> a rug / holder clusters / who holds it" → 'rugcheck' with the mint address.
+- factual claim / who/what/when → recall + posts for what's known, then 'search' and 'fetch' the most authoritative primary source.
+
+Sequence generally: start from what's known (recall/posts), pull LIVE structured data (trending/rugcheck) when the question is about markets/tokens, then search+fetch to corroborate and add detail. For 'fetch' steps you may construct KNOWN canonical URLs directly; URLs discovered by 'search' are fetched in a later adaptive step, so you don't need to guess those.
 
 Output ONLY JSON (no fences):
 {
   "goal": "restate what a good answer must establish",
-  "approach": "1-2 sentence strategy",
-  "steps": [ {"tool":"recall|posts|search|fetch","input":"the query or URL","rationale":"why this step"} ],
+  "approach": "1-2 sentence strategy — name which instrument answers this and why",
+  "steps": [ {"tool":"recall|posts|search|fetch|rugcheck|trending","input":"the query, URL, mint, or chain","rationale":"why this step"} ],
   "success_criteria": "what would make the answer confident",
   "caveats": "what could make this unknowable or uncertain"
 }`;
