@@ -104,7 +104,7 @@ function loadAxes() {
   } catch { return []; }
 }
 
-function buildPrompt({ day, today, hour }) {
+function buildPrompt({ day, today, hour, leadContent }) {
   const digest    = readSafe(config.FEED_DIGEST_PATH, 6000);
   const notes     = readSafe(config.BROWSE_NOTES_PATH, 2500);
   const curiosity = readSafe(path.join(config.STATE_DIR, 'curiosity_directive.txt'), 800);
@@ -123,6 +123,7 @@ function buildPrompt({ day, today, hour }) {
     '', '── RECENT NOTES ──', notes || '(none)',
     '', '── CURIOSITY FOCUS ──', curiosity || '(none)',
     '', '── ASSIGNED LEAD (from your reading queue — prioritize and interpret feed items related to this; flag it [DEEP DIVE] in a note if you engage it) ──', lead || '(none)',
+    ...(leadContent ? ['', '── FETCHED READING (the actual page content of your assigned lead — read it and cite it as a source with its URL if it informs an observation) ──', leadContent] : []),
     '', '── RELEVANT MEMORY ──', recall || '(none)',
     '', '── CURRENT BELIEF AXES (use ONLY these axis_ids) ──', axesList || '(none)',
     '',
@@ -248,7 +249,22 @@ async function main() {
     return 0;
   }
 
-  const prompt = buildPrompt({ day, today, hour });
+  // Directed reading: actually FETCH the assigned lead's content via HelmStack
+  // (a dedicated tab) so the agent reads it, not just sees the URL. Gated by
+  // BROWSE_FETCH=1; best-effort — falls back to URL-only awareness on any failure.
+  let leadContent = null;
+  if (process.env.BROWSE_FETCH === '1' && process.env.HELMSTACK_AUTH_TOKEN) {
+    const leadUrl = readSafe(config.READING_URL_PATH, 400).trim();
+    if (/^https?:\/\//i.test(leadUrl)) {
+      try {
+        const { fetchPageText } = require('./lib/helmstack_fetch');
+        leadContent = await fetchPageText(leadUrl, { maxChars: 4000 });
+        log(leadContent ? `fetched lead (${leadContent.length} chars): ${leadUrl.slice(0, 60)}` : `lead fetch empty: ${leadUrl.slice(0, 60)}`);
+      } catch (e) { log(`lead fetch failed: ${e.message}`); }
+    }
+  }
+
+  const prompt = buildPrompt({ day, today, hour, leadContent });
   let data;
   try {
     // Browse observation is the core belief-forming inference. Run it on the
