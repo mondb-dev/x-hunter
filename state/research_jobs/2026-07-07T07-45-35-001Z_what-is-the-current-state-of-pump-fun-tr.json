@@ -1,0 +1,359 @@
+{
+  "job_id": "2026-07-07T07-45-35-001Z_what-is-the-current-state-of-pump-fun-tr",
+  "question": "What is the current state of Pump.fun trenches? What is the current meta?",
+  "tier": "deep",
+  "status": "done",
+  "root": {
+    "title": "Pump.fun Trenches & Meta Analysis",
+    "question": "What is the current state of Pump.fun trenches? What is the current meta?",
+    "direction": "Break into three core areas: (1) live snapshot of current Pump.fun launches and trends, (2) Sebastian's past observations and patterns he's noted, (3) community discourse and sentiment around current meta",
+    "research_areas": [
+      "Real-time Pump.fun token launches and performance",
+      "Sebastian's historical context and past meta observations",
+      "Current community narratives and meta discussions on X"
+    ],
+    "tools_hint": [
+      "trending",
+      "recall",
+      "posts"
+    ],
+    "success_criterion": "Comprehensive view combining live data, Sebastian's memory, and community sentiment to characterize the current Pump.fun landscape",
+    "depends_on": [],
+    "children": [
+      {
+        "title": "Live Pump.fun Trenches Snapshot",
+        "question": "What tokens are currently launching and trending on Pump.fun right now?",
+        "direction": "Query trending tool for Solana to get the freshest Pump.fun launches, their performance metrics, and identify which are genuinely from Pump.fun platform",
+        "research_areas": [
+          "Newest Pump.fun launches (age < 24h)",
+          "Performance metrics: price action, volume, holder growth",
+          "Trending tokens with Pump.fun flag",
+          "Volume and volatility patterns"
+        ],
+        "tools_hint": [
+          "trending"
+        ],
+        "success_criterion": "List of current Pump.fun tokens with timestamps, price changes, volumes, and FDV showing what's actively being launched",
+        "depends_on": [],
+        "children": [
+          {
+            "title": "Top Performing New Launches",
+            "question": "Which brand new Pump.fun tokens (< 6 hours old) are showing strongest early traction?",
+            "direction": "Filter trending results for very recent launches, sort by volume and price performance to identify breakout tokens",
+            "research_areas": [
+              "Tokens under 6 hours old",
+              "High volume relative to age",
+              "Positive price momentum in first hours",
+              "Holder count velocity"
+            ],
+            "tools_hint": [
+              "trending"
+            ],
+            "success_criterion": "3-5 newest tokens with exceptional early metrics indicating potential meta leaders",
+            "depends_on": [
+              "Live Pump.fun Trenches Snapshot"
+            ],
+            "id": "1.1.1",
+            "status": "answered",
+            "findings": [
+              {
+                "tool": "trending",
+                "input": "solana",
+                "result": "{\n \"network\": \"solana\",\n \"source\": \"live: GeckoTerminal trending/new pools + DexScreener boosts\",\n \"trending_pools\": [\n  {\n   \"token\": \"Vaaland / SOL\",\n   \"pumpfun\": true,\n   \"priceUsd\": 0.000004011,\n   \"chg_h1_pct\": -89.41,\n   \"chg_h24_pct\": -93.2,\n   \"volH24\": 4781000,\n   \"fdv\": 4011,\n   \"ageMin\": 1177\n  },\n  {\n   \"token\": \"ANSEM / SOL\",\n   \"pumpfun\": true,\n   \"priceUsd\": 0.4286,\n   \"chg_h1_pct\": 7.624,\n   \"chg_h24_pct\": 25.69,\n   \"volH24\": 22650000,\n   \"fdv\": 428400000,\n   \"ageMin\": 13033\n  },\n  {\n   \"token\": \"LEVI / SOL\",\n   \"pumpfun\": true,\n   \"priceUsd\": 0.00512,\n   \"chg_h1_pct\": -31,\n   \"chg_h24_pct\": -30.12,\n   \"volH24\": 13560000,\n   \"fdv\": 5084000,\n   \"ageMin\": 2078\n  },\n  {\n   \"token\": \"ANSEM / SOL\",\n   \"pumpfun\": true,\n   \"priceUsd\": 0.4295,\n   \"chg_h1_pct\": 7.577,\n   \"chg_h24_pct\": 25.89,\n   \"volH24\": 11760000,\n   \"fdv\": 429200000,\n   \"ageMin\": 29441\n  },\n  {\n   \"token\": \"manlet / SOL\",\n   \"pumpfun\": true,\n   \"priceUsd\": 0.01016,\n   \"chg_h1_pct\": 14.43,\n   \"chg_h24_pct\": 4.796,\n   \"volH24\": 6143000,\n   \"fdv\": 10150000,\n   \"ageMin\": 10635\n  },\n  {\n   \"token\": \"SAYLOR / SOL\",\n   \"pumpfun\": true,\n   \"priceUsd\": 0.00008417,\n   \"chg_h1_pct\": -28.31,\n   \"chg_h24_pct\": 31.01,\n   \"volH24\": 5471000,\n   \"fdv\": 84170,\n   \"ageMin\": 1132\n  },\n  {\n   \"token\": \"BIF / SOL\",\n   \"pumpfun\": true,\n   \"priceUsd\": 0.004188,\n   \"chg_h1_pct\": -8.616,\n   \"chg_h24_pct\": 466.2,\n   \"volH24\": 6508000,\n   \"fdv\": 4202000,\n   \"ageMin\": 1710\n  },\n  {\n   \"token\": \"ANSEMIUS / SOL\",\n   \"pumpfun\": true,\n   \"priceUsd\": 0.0008405,\n   \"chg_h1_pct\": -18.39,\n   \"chg_h24_pct\": 392.4,\n   \"volH24\": 2441000,\n   \"fdv\": 828500,\n   \"ageMin\": 1249\n  },\n  {\n   \"token\": \"BABYANSEM / SOL\",\n   \"pumpfun\": true,\n   \"priceUsd\": 0.002426,\n   \"chg_h1_pct\": 16.82,\n   \"chg_h24_pct\": 57.5,\n   \"volH24\": 1308000,\n   \"fdv\": 2438000,\n   \"ageMin\": 5780\n  },\n  {\n   \"token\": \"Miku / SOL\",\n   \"pumpfun\": true,\n   \"priceUsd\": 0.00007272,\n   \"chg_h1_pct\": 3.323,\n   \"chg_h24_pct\": 116.5,\n   \"volH24\": 1669000,\n   \"fdv\": 71620,\n   \"ageMin\": 1365\n  },\n  {\n   \"token\": \"BLACKOUT / SOL\",\n   \"pumpfun\": true,\n   \"priceUsd\": 0.000005718,\n   \"chg_h1_pct\": 17.4,\n   \"chg_h24_pct\": -94.97,\n   \"volH24\": 505500,\n   \"fdv\": 5718,\n   \"ageMin\": 2575\n  },\n  {\n   \"token\": \"MENSA / SOL\",\n   \"pumpfun\": true,\n   \"priceUsd\": 0.005013,\n   \"chg_h1_pct\": 4.218,\n   \"chg_h24_pct\": 23.71,\n   \"volH24\": 3533000,\n   \"fdv\": 5013000,\n   \"ageMin\": 7517\n  }\n ],\n \"newest_launches\": [\n  {\n   \"token\": \"LIBERTYSEM / SOL\",\n   \"pumpfun\": true,\n   \"priceUsd\": 0.000001104,\n   \"chg_h1_pct\": 0,\n   \"chg_h24_pct\": 0,\n   \"volH24\": 26.02,\n   \"fdv\": 5287,\n   \"ageMin\": 0\n  },\n  {\n   \"token\": \"ㅤ / SOL\",\n   \"priceUsd\": 0.00004682,\n   \"chg_h1_pct\": 0,\n   \"chg_h24_pct\": 0,\n   \"volH24\": 13.68,\n   \"fdv\": 44300,\n   \"ageMin\": 1\n  },\n  {\n   \"token\": \"Sapijiju / SOL\",\n   \"pumpfun\": true,\n   \"priceUsd\": 3.553e-8,\n   \"chg_h1_pct\": -98.93,\n   \"chg_h24_pct\": -98.93,\n   \"volH24\": 48.74,\n   \"fdv\": 12.44,\n   \"ageMin\": 1\n  },\n  {\n   \"token\": \"chudbull / SOL\",\n   \"pumpfun\": true,\n   \"priceUsd\": 0.0001195,\n   \"chg_h1_pct\": -15.28,\n   \"chg_h24_pct\": -15.28,\n   \"volH24\": 124.2,\n   \"fdv\": 103900,\n   \"ageMin\": 1\n  },\n  {\n   \"token\": \"gugugaga / SOL\",\n   \"pumpfun\": true,\n   \"priceUsd\": 0.000002772,\n   \"chg_h1_pct\": 10.29,\n   \"chg_h24_pct\": 10.29,\n   \"volH24\": 210.9,\n   \"fdv\": 2779,\n   \"ageMin\": 1\n  },\n  {\n   \"token\": \"PUMPLON / SOL\",\n   \"priceUsd\": 0.6704,\n   \"chg_h1_pct\": 0.051,\n   \"chg_h24_pct\": 0.051,\n   \"volH24\": 7.31,\n   \"fdv\": 665600000,\n   \"ageMin\": 1\n  },\n  {\n   \"tok"
+              },
+              {
+                "tool": "rugcheck",
+                "input": "<mint_address_of_top_candidate_1>",
+                "result": "(rugcheck: no valid mint address in input)"
+              },
+              {
+                "tool": "rugcheck",
+                "input": "<mint_address_of_top_candidate_2>",
+                "result": "(rugcheck: no valid mint address in input)"
+              },
+              {
+                "tool": "rugcheck",
+                "input": "<mint_address_of_top_candidate_3>",
+                "result": "(rugcheck: no valid mint address in input)"
+              }
+            ],
+            "answer": "Based on the GeckoTerminal/DexScreener trending data, **no Pump.fun tokens under 6 hours old (360 minutes) show strong early traction** in this dataset. The youngest token listed is **Vaaland/SOL at 1,177 minutes old (~19.6 hours)**, which shows poor performance with -89.41% in 1 hour and $4.78M volume but collapsing price. The next youngest candidate, **SAYLOR/SOL at 1,132 minutes (~18.9 hours)**, also exceeds the 6-hour threshold and shows -28.31% in the last hour despite $5.47M volume. \n\n**Confidence: High** (based on GeckoTerminal live trending data, though limited to tokens that have achieved trending status).",
+            "children": []
+          },
+          {
+            "title": "Established Trenches Winners",
+            "question": "Which Pump.fun tokens from the past 24-48 hours have maintained or grown momentum?",
+            "direction": "Identify slightly older Pump.fun launches that sustained performance, showing what meta themes have staying power",
+            "research_areas": [
+              "Tokens 6-48 hours old",
+              "Sustained volume and holder growth",
+              "Consistent positive price action",
+              "Themes and narratives that persisted"
+            ],
+            "tools_hint": [
+              "trending"
+            ],
+            "success_criterion": "Tokens that graduated from initial launch to sustained interest, revealing durable meta patterns",
+            "depends_on": [
+              "Live Pump.fun Trenches Snapshot"
+            ],
+            "id": "1.1.2",
+            "status": "answered",
+            "findings": [
+              {
+                "tool": "trending",
+                "input": "solana",
+                "result": "{\n \"network\": \"solana\",\n \"source\": \"live: GeckoTerminal trending/new pools + DexScreener boosts\",\n \"trending_pools\": [\n  {\n   \"token\": \"Vaaland / SOL\",\n   \"pumpfun\": true,\n   \"priceUsd\": 0.000004011,\n   \"chg_h1_pct\": -89.41,\n   \"chg_h24_pct\": -93.2,\n   \"volH24\": 4781000,\n   \"fdv\": 4011,\n   \"ageMin\": 1178\n  },\n  {\n   \"token\": \"ANSEM / SOL\",\n   \"pumpfun\": true,\n   \"priceUsd\": 0.4286,\n   \"chg_h1_pct\": 7.624,\n   \"chg_h24_pct\": 25.69,\n   \"volH24\": 22650000,\n   \"fdv\": 428400000,\n   \"ageMin\": 13033\n  },\n  {\n   \"token\": \"LEVI / SOL\",\n   \"pumpfun\": true,\n   \"priceUsd\": 0.00512,\n   \"chg_h1_pct\": -31,\n   \"chg_h24_pct\": -30.12,\n   \"volH24\": 13560000,\n   \"fdv\": 5084000,\n   \"ageMin\": 2079\n  },\n  {\n   \"token\": \"ANSEM / SOL\",\n   \"pumpfun\": true,\n   \"priceUsd\": 0.4295,\n   \"chg_h1_pct\": 7.577,\n   \"chg_h24_pct\": 25.89,\n   \"volH24\": 11760000,\n   \"fdv\": 429200000,\n   \"ageMin\": 29441\n  },\n  {\n   \"token\": \"manlet / SOL\",\n   \"pumpfun\": true,\n   \"priceUsd\": 0.01016,\n   \"chg_h1_pct\": 14.43,\n   \"chg_h24_pct\": 4.796,\n   \"volH24\": 6143000,\n   \"fdv\": 10150000,\n   \"ageMin\": 10635\n  },\n  {\n   \"token\": \"SAYLOR / SOL\",\n   \"pumpfun\": true,\n   \"priceUsd\": 0.00008417,\n   \"chg_h1_pct\": -28.31,\n   \"chg_h24_pct\": 31.01,\n   \"volH24\": 5471000,\n   \"fdv\": 84170,\n   \"ageMin\": 1132\n  },\n  {\n   \"token\": \"BIF / SOL\",\n   \"pumpfun\": true,\n   \"priceUsd\": 0.004188,\n   \"chg_h1_pct\": -8.616,\n   \"chg_h24_pct\": 466.2,\n   \"volH24\": 6508000,\n   \"fdv\": 4202000,\n   \"ageMin\": 1710\n  },\n  {\n   \"token\": \"ANSEMIUS / SOL\",\n   \"pumpfun\": true,\n   \"priceUsd\": 0.0008405,\n   \"chg_h1_pct\": -18.39,\n   \"chg_h24_pct\": 392.4,\n   \"volH24\": 2441000,\n   \"fdv\": 828500,\n   \"ageMin\": 1249\n  },\n  {\n   \"token\": \"BABYANSEM / SOL\",\n   \"pumpfun\": true,\n   \"priceUsd\": 0.002426,\n   \"chg_h1_pct\": 16.82,\n   \"chg_h24_pct\": 57.5,\n   \"volH24\": 1308000,\n   \"fdv\": 2438000,\n   \"ageMin\": 5781\n  },\n  {\n   \"token\": \"Miku / SOL\",\n   \"pumpfun\": true,\n   \"priceUsd\": 0.00007272,\n   \"chg_h1_pct\": 3.323,\n   \"chg_h24_pct\": 116.5,\n   \"volH24\": 1669000,\n   \"fdv\": 71620,\n   \"ageMin\": 1365\n  },\n  {\n   \"token\": \"BLACKOUT / SOL\",\n   \"pumpfun\": true,\n   \"priceUsd\": 0.000005718,\n   \"chg_h1_pct\": 17.4,\n   \"chg_h24_pct\": -94.97,\n   \"volH24\": 505500,\n   \"fdv\": 5718,\n   \"ageMin\": 2576\n  },\n  {\n   \"token\": \"MENSA / SOL\",\n   \"pumpfun\": true,\n   \"priceUsd\": 0.005013,\n   \"chg_h1_pct\": 4.218,\n   \"chg_h24_pct\": 23.71,\n   \"volH24\": 3533000,\n   \"fdv\": 5013000,\n   \"ageMin\": 7517\n  }\n ],\n \"newest_launches\": [\n  {\n   \"token\": \"LIBERTYSEM / SOL\",\n   \"pumpfun\": true,\n   \"priceUsd\": 0.000001104,\n   \"chg_h1_pct\": 0,\n   \"chg_h24_pct\": 0,\n   \"volH24\": 26.02,\n   \"fdv\": 5287,\n   \"ageMin\": 1\n  },\n  {\n   \"token\": \"ㅤ / SOL\",\n   \"priceUsd\": 0.00004682,\n   \"chg_h1_pct\": 0,\n   \"chg_h24_pct\": 0,\n   \"volH24\": 13.68,\n   \"fdv\": 44300,\n   \"ageMin\": 1\n  },\n  {\n   \"token\": \"Sapijiju / SOL\",\n   \"pumpfun\": true,\n   \"priceUsd\": 3.553e-8,\n   \"chg_h1_pct\": -98.93,\n   \"chg_h24_pct\": -98.93,\n   \"volH24\": 48.74,\n   \"fdv\": 12.44,\n   \"ageMin\": 1\n  },\n  {\n   \"token\": \"chudbull / SOL\",\n   \"pumpfun\": true,\n   \"priceUsd\": 0.0001195,\n   \"chg_h1_pct\": -15.28,\n   \"chg_h24_pct\": -15.28,\n   \"volH24\": 124.2,\n   \"fdv\": 103900,\n   \"ageMin\": 1\n  },\n  {\n   \"token\": \"gugugaga / SOL\",\n   \"pumpfun\": true,\n   \"priceUsd\": 0.000002772,\n   \"chg_h1_pct\": 10.29,\n   \"chg_h24_pct\": 10.29,\n   \"volH24\": 210.9,\n   \"fdv\": 2779,\n   \"ageMin\": 1\n  },\n  {\n   \"token\": \"PUMPLON / SOL\",\n   \"priceUsd\": 0.6704,\n   \"chg_h1_pct\": 0.051,\n   \"chg_h24_pct\": 0.051,\n   \"volH24\": 7.31,\n   \"fdv\": 665600000,\n   \"ageMin\": 1\n  },\n  {\n   \"tok"
+              },
+              {
+                "tool": "recall",
+                "input": "pump.fun tokens launched 24-48 hours meta themes sustained momentum",
+                "result": "(no memory match)"
+              },
+              {
+                "tool": "posts",
+                "input": "pump.fun graduated sustained momentum meta",
+                "result": "(posts search error: fts5: missing row 6812 from content table 'main'.'posts')"
+              },
+              {
+                "tool": "rugcheck",
+                "input": "[top sustained token mint from trending results]",
+                "result": "(rugcheck: no valid mint address in input)"
+              }
+            ],
+            "answer": "Based on the evidence from GeckoTerminal trending pools, **ANSEM** and **manlet** are the Pump.fun tokens maintaining or growing momentum from the past 24-48 hours. ANSEM shows +25.69% to +25.89% growth over 24 hours with strong volume ($22.65M-$11.76M) and positive 1-hour momentum (+7.6%), while manlet demonstrates +4.8% 24-hour growth and +14.43% 1-hour growth with $6.14M volume. SAYLOR also shows +31% 24-hour growth but suffered -28.31% in the last hour, indicating potential reversal. \n\n**Confidence: Medium** – Data is from live GeckoTerminal/DexScreener trending pools, but limited to current snapshot without historical momentum confirmation.",
+            "children": []
+          }
+        ],
+        "id": "1.1",
+        "status": "answered",
+        "findings": [],
+        "answer": "Based on the evidence from GeckoTerminal trending data, **ANSEM and manlet are the primary Pump.fun tokens currently trending**, with ANSEM showing +25.69% to +25.89% 24-hour growth and +7.6% 1-hour momentum ($22.65M-$11.76M volume), while manlet demonstrates +4.8% 24-hour and +14.43% 1-hour growth ($6.14M volume). However, **no tokens under 6 hours old show strong traction in this dataset**, with the youngest listed being Vaaland/SOL at ~19.6 hours old (performing poorly at -89.41%). The evidence is limited to tokens that achieved trending status on GeckoTerminal/DexScreener rather than comprehensive Pump.fun launch data.\n\n**Confidence: Medium** – Data reflects current trending status but lacks comprehensive real-time Pump.fun launch feed coverage."
+      },
+      {
+        "title": "Sebastian's Meta Context",
+        "question": "What has Sebastian observed, noted, or predicted about Pump.fun meta and trenches in his past research?",
+        "direction": "Query Sebastian's memory for his own observations about Pump.fun patterns, meta shifts, successful strategies, and trenches behavior",
+        "research_areas": [
+          "Past meta observations and pattern recognition",
+          "Sebastian's predictions about Pump.fun evolution",
+          "Noted strategies for trenches trading",
+          "Historical context on meta cycles"
+        ],
+        "tools_hint": [
+          "recall"
+        ],
+        "success_criterion": "Sebastian's prior insights, frameworks, and pattern observations about Pump.fun that contextualize current state",
+        "depends_on": [],
+        "children": [
+          {
+            "title": "Previous Meta Patterns",
+            "question": "What meta patterns and cycles has Sebastian documented in Pump.fun trenches?",
+            "direction": "Search Sebastian's memory for observations about recurring themes, meta shifts, viral patterns, and what makes tokens succeed",
+            "research_areas": [
+              "Documented meta cycles",
+              "Theme patterns (memes, animals, AI, etc)",
+              "Success factors Sebastian identified",
+              "Timing and velocity patterns"
+            ],
+            "tools_hint": [
+              "recall"
+            ],
+            "success_criterion": "Sebastian's framework for understanding Pump.fun meta evolution and success patterns",
+            "depends_on": [
+              "Sebastian's Meta Context"
+            ],
+            "id": "1.2.1",
+            "status": "answered",
+            "findings": [
+              {
+                "tool": "recall",
+                "input": "Pump.fun meta patterns cycles viral trends what makes tokens succeed",
+                "result": "(no memory match)"
+              },
+              {
+                "tool": "recall",
+                "input": "Pump.fun trenches narrative shifts theme rotation memecoin patterns",
+                "result": "(no memory match)"
+              },
+              {
+                "tool": "recall",
+                "input": "token success factors viral mechanics community engagement Pump.fun",
+                "result": "(no memory match)"
+              },
+              {
+                "tool": "recall",
+                "input": "Pump.fun cycle timing meta rotation when trends shift momentum",
+                "result": "(no memory match)"
+              }
+            ],
+            "answer": "Based on the provided evidence, I cannot answer this question. All four memory recall attempts returned no matches for Sebastian's documentation of Pump.fun meta patterns, cycles, trenches activity, narrative shifts, or token success factors.\n\n**Confidence: 0%** - No relevant evidence was retrieved to support any claims about what meta patterns or cycles Sebastian has documented regarding Pump.fun.",
+            "children": []
+          },
+          {
+            "title": "Sebastian's Trenches Warnings",
+            "question": "What risks, rug patterns, or cautionary observations has Sebastian made about Pump.fun?",
+            "direction": "Query for Sebastian's notes on insider behavior, rug patterns, cluster activity, and risks he's identified",
+            "research_areas": [
+              "Rug check patterns and red flags",
+              "Insider cluster behavior",
+              "Common scam narratives",
+              "Risk management approaches"
+            ],
+            "tools_hint": [
+              "recall"
+            ],
+            "success_criterion": "Sebastian's accumulated knowledge of what to avoid and red flags in current trenches",
+            "depends_on": [
+              "Sebastian's Meta Context"
+            ],
+            "id": "1.2.2",
+            "status": "answered",
+            "findings": [
+              {
+                "tool": "recall",
+                "input": "Pump.fun risks rug patterns insider behavior red flags cautionary",
+                "result": "(no memory match)"
+              },
+              {
+                "tool": "recall",
+                "input": "cluster activity insider networks graphInsidersDetected Pump.fun",
+                "result": "(no memory match)"
+              },
+              {
+                "tool": "recall",
+                "input": "Pump.fun scams avoid warning signs top holder concentration",
+                "result": "(no memory match)"
+              },
+              {
+                "tool": "posts",
+                "input": "Pump.fun rug insider cluster avoid risk",
+                "result": "(posts search error: fts5: missing row 5379 from content table 'main'.'posts')"
+              }
+            ],
+            "answer": "Based on the provided evidence, I cannot answer this sub-question. All memory recall queries returned no matches, and the posts search resulted in a database error. There is no available evidence about Sebastian's observations regarding Pump.fun risks, rug patterns, or cautionary notes.\n\n**Confidence: 0%** (no evidence available)",
+            "children": []
+          }
+        ],
+        "id": "1.2",
+        "status": "answered",
+        "findings": [],
+        "answer": "Based on the provided evidence, I cannot answer this question. All memory recall attempts and searches returned no matches or database errors, with zero relevant evidence retrieved about Sebastian's observations, notes, or predictions regarding Pump.fun meta patterns, trenches activity, narrative shifts, or risk factors.\n\n**Confidence: 0%** - No documentary evidence exists in the available sources to support any claims about Sebastian's past research on Pump.fun dynamics."
+      },
+      {
+        "title": "Community Meta Discourse",
+        "question": "What are traders and influencers currently saying about Pump.fun meta on X?",
+        "direction": "Search X posts for recent discussions about Pump.fun meta, trenches, what's working, and current narratives",
+        "research_areas": [
+          "Recent meta discussions and declarations",
+          "Influencer calls and trend identification",
+          "Community sentiment on current launches",
+          "Narrative themes gaining traction"
+        ],
+        "tools_hint": [
+          "posts"
+        ],
+        "success_criterion": "Snapshot of community consensus and discourse about current Pump.fun state and meta",
+        "depends_on": [],
+        "children": [
+          {
+            "title": "Current Meta Narratives",
+            "question": "What themes, memes, or narratives are being called out as the current Pump.fun meta?",
+            "direction": "Search for posts mentioning 'pump.fun meta', 'trenches', 'current meta', and theme declarations",
+            "research_areas": [
+              "Declared meta themes",
+              "Viral narrative patterns",
+              "What influencers are calling",
+              "Emerging meme categories"
+            ],
+            "tools_hint": [
+              "posts"
+            ],
+            "success_criterion": "Clear picture of what narratives the community believes are hot right now",
+            "depends_on": [
+              "Community Meta Discourse"
+            ],
+            "id": "1.3.1",
+            "status": "answered",
+            "findings": [
+              {
+                "tool": "posts",
+                "input": "pump.fun meta",
+                "result": "(posts search error: fts5: missing row 6812 from content table 'main'.'posts')"
+              },
+              {
+                "tool": "posts",
+                "input": "current meta trenches",
+                "result": "(posts search error: fts5: missing row 5498 from content table 'main'.'posts')"
+              },
+              {
+                "tool": "posts",
+                "input": "pump fun theme narrative",
+                "result": "(posts search error: fts5: missing row 5396 from content table 'main'.'posts')"
+              },
+              {
+                "tool": "trending",
+                "input": "solana",
+                "result": "{\n \"network\": \"solana\",\n \"source\": \"live: GeckoTerminal trending/new pools + DexScreener boosts\",\n \"trending_pools\": [\n  {\n   \"token\": \"Vaaland / SOL\",\n   \"pumpfun\": true,\n   \"priceUsd\": 0.000004011,\n   \"chg_h1_pct\": -89.41,\n   \"chg_h24_pct\": -93.2,\n   \"volH24\": 4781000,\n   \"fdv\": 4011,\n   \"ageMin\": 1179\n  },\n  {\n   \"token\": \"ANSEM / SOL\",\n   \"pumpfun\": true,\n   \"priceUsd\": 0.4268,\n   \"chg_h1_pct\": 5.629,\n   \"chg_h24_pct\": 25.61,\n   \"volH24\": 22640000,\n   \"fdv\": 429000000,\n   \"ageMin\": 13034\n  },\n  {\n   \"token\": \"LEVI / SOL\",\n   \"pumpfun\": true,\n   \"priceUsd\": 0.005059,\n   \"chg_h1_pct\": -28.45,\n   \"chg_h24_pct\": -38.24,\n   \"volH24\": 13510000,\n   \"fdv\": 5055000,\n   \"ageMin\": 2080\n  },\n  {\n   \"token\": \"ANSEM / SOL\",\n   \"pumpfun\": true,\n   \"priceUsd\": 0.427,\n   \"chg_h1_pct\": 4.671,\n   \"chg_h24_pct\": 25.26,\n   \"volH24\": 11760000,\n   \"fdv\": 427000000,\n   \"ageMin\": 29442\n  },\n  {\n   \"token\": \"manlet / SOL\",\n   \"pumpfun\": true,\n   \"priceUsd\": 0.01012,\n   \"chg_h1_pct\": 8.19,\n   \"chg_h24_pct\": 3.429,\n   \"volH24\": 6118000,\n   \"fdv\": 10090000,\n   \"ageMin\": 10636\n  },\n  {\n   \"token\": \"SAYLOR / SOL\",\n   \"pumpfun\": true,\n   \"priceUsd\": 0.0000913,\n   \"chg_h1_pct\": -27.24,\n   \"chg_h24_pct\": 32.95,\n   \"volH24\": 5471000,\n   \"fdv\": 85420,\n   \"ageMin\": 1133\n  },\n  {\n   \"token\": \"BIF / SOL\",\n   \"pumpfun\": true,\n   \"priceUsd\": 0.004186,\n   \"chg_h1_pct\": -3.875,\n   \"chg_h24_pct\": 410.2,\n   \"volH24\": 6496000,\n   \"fdv\": 4208000,\n   \"ageMin\": 1711\n  },\n  {\n   \"token\": \"ANSEMIUS / SOL\",\n   \"pumpfun\": true,\n   \"priceUsd\": 0.0008652,\n   \"chg_h1_pct\": -13.62,\n   \"chg_h24_pct\": 406.8,\n   \"volH24\": 2442000,\n   \"fdv\": 852700,\n   \"ageMin\": 1250\n  },\n  {\n   \"token\": \"BABYANSEM / SOL\",\n   \"pumpfun\": true,\n   \"priceUsd\": 0.002369,\n   \"chg_h1_pct\": 12.11,\n   \"chg_h24_pct\": 61.27,\n   \"volH24\": 1307000,\n   \"fdv\": 2433000,\n   \"ageMin\": 5782\n  },\n  {\n   \"token\": \"Miku / SOL\",\n   \"pumpfun\": true,\n   \"priceUsd\": 0.00007272,\n   \"chg_h1_pct\": 2.923,\n   \"chg_h24_pct\": 119.8,\n   \"volH24\": 1669000,\n   \"fdv\": 72720,\n   \"ageMin\": 1366\n  },\n  {\n   \"token\": \"BLACKOUT / SOL\",\n   \"pumpfun\": true,\n   \"priceUsd\": 0.000005718,\n   \"chg_h1_pct\": 17.4,\n   \"chg_h24_pct\": -94.97,\n   \"volH24\": 505500,\n   \"fdv\": 5718,\n   \"ageMin\": 2577\n  },\n  {\n   \"token\": \"MENSA / SOL\",\n   \"pumpfun\": true,\n   \"priceUsd\": 0.005006,\n   \"chg_h1_pct\": 4.893,\n   \"chg_h24_pct\": 24.52,\n   \"volH24\": 3533000,\n   \"fdv\": 5046000,\n   \"ageMin\": 7518\n  }\n ],\n \"newest_launches\": [\n  {\n   \"token\": \"$DUBAIPGN / SOL\",\n   \"pumpfun\": true,\n   \"priceUsd\": 0.000001417,\n   \"chg_h1_pct\": 0,\n   \"chg_h24_pct\": 0,\n   \"volH24\": 0.6193,\n   \"fdv\": 2827,\n   \"ageMin\": 1\n  },\n  {\n   \"token\": \"money / SOL\",\n   \"pumpfun\": true,\n   \"priceUsd\": 0.000002471,\n   \"chg_h1_pct\": 0,\n   \"chg_h24_pct\": 0,\n   \"volH24\": 7.345,\n   \"fdv\": 4577,\n   \"ageMin\": 1\n  },\n  {\n   \"token\": \"ㅤ / USDC\",\n   \"priceUsd\": 0.005045,\n   \"chg_h1_pct\": 0,\n   \"chg_h24_pct\": 0,\n   \"volH24\": 0.1099,\n   \"fdv\": 5045000000,\n   \"ageMin\": 1\n  },\n  {\n   \"token\": \"W26 / SOL\",\n   \"priceUsd\": 2.622,\n   \"chg_h1_pct\": 0,\n   \"chg_h24_pct\": 0,\n   \"volH24\": 45660,\n   \"fdv\": 23100000,\n   \"ageMin\": 1\n  },\n  {\n   \"token\": \"bcat / SOL\",\n   \"pumpfun\": true,\n   \"priceUsd\": 0.000003732,\n   \"chg_h1_pct\": 0,\n   \"chg_h24_pct\": 0,\n   \"volH24\": 33.55,\n   \"fdv\": 3805,\n   \"ageMin\": 1\n  },\n  {\n   \"token\": \"GTFS / USDC\",\n   \"pumpfun\": true,\n   \"priceUsd\": 0.04675,\n   \"chg_h1_pct\": 0,\n   \"chg_h24_pct\": 0,\n   \"volH24\": 0.101,\n   \"fdv\": 0.2021,\n   \"ageMin\": 1\n  },\n  {\n   \"token\": \"©AT / SOL\",\n   \"priceUsd\": 0.000008733"
+              }
+            ],
+            "answer": "**INSUFFICIENT EVIDENCE:** All three posts searches returned database errors (\"fts5: missing row\" errors from tool:posts), so no textual content about Pump.fun themes, memes, or narratives is available. The trending pools data (source: GeckoTerminal/DexScreener via tool:trending) shows tokens like \"Vaaland,\" \"ANSEM,\" \"LEVI,\" \"manlet,\" and \"SAYLOR\" are currently active, but provides no context about the *thematic meta* (e.g., why these names, what narrative drives them). **Confidence: Cannot assess** – the question requires qualitative discourse data that the search tools failed to retrieve.",
+            "children": []
+          },
+          {
+            "title": "Trenches Sentiment & Warnings",
+            "question": "What is the current sentiment and what warnings are being shared about Pump.fun trenches?",
+            "direction": "Search for posts about trenches conditions, market fatigue, rug warnings, and trader sentiment",
+            "research_areas": [
+              "Overall market sentiment",
+              "Rug and scam warnings",
+              "Trader fatigue or excitement levels",
+              "Cautionary tales and lessons"
+            ],
+            "tools_hint": [
+              "posts"
+            ],
+            "success_criterion": "Community mood and risk awareness level around current trenches activity",
+            "depends_on": [
+              "Community Meta Discourse"
+            ],
+            "id": "1.3.2",
+            "status": "answered",
+            "findings": [
+              {
+                "tool": "posts",
+                "input": "pump.fun trenches rug warning fatigue",
+                "result": "(posts search error: fts5: missing row 5406 from content table 'main'.'posts')"
+              },
+              {
+                "tool": "posts",
+                "input": "trenches scam burned dead market",
+                "result": "(posts search error: fts5: missing row 5587 from content table 'main'.'posts')"
+              },
+              {
+                "tool": "posts",
+                "input": "pump.fun sentiment caution avoid",
+                "result": "(posts search error: fts5: missing row 6216 from content table 'main'.'posts')"
+              },
+              {
+                "tool": "recall",
+                "input": "pump.fun trenches sentiment warnings community mood",
+                "result": "(no memory match)"
+              }
+            ],
+            "answer": "**Unable to answer due to insufficient evidence.** All three post searches returned database errors (missing rows from content table), and the memory recall found no matches. Without accessible evidence about Pump.fun trenches sentiment or warnings, I cannot provide a factual response to this sub-question.\n\n**Confidence: 0%** (no usable evidence retrieved)",
+            "children": []
+          }
+        ],
+        "id": "1.3",
+        "status": "answered",
+        "findings": [],
+        "answer": "**INSUFFICIENT EVIDENCE TO ANSWER**\n\nAll attempts to retrieve trader and influencer discourse about Pump.fun meta on X failed due to database errors (\"fts5: missing row\" from tool:posts searches). While trending token data showed active tickers like \"Vaaland,\" \"ANSEM,\" \"LEVI,\" \"manlet,\" and \"SAYLOR\" (source: tool:trending via GeckoTerminal/DexScreener), no qualitative commentary, sentiment, warnings, or narrative context from X posts was successfully retrieved to characterize the current meta discussion.\n\n**Confidence: 0%** – Cannot assess without textual evidence from social discourse."
+      }
+    ],
+    "id": "1",
+    "status": "answered",
+    "findings": [],
+    "answer": "Based on the evidence, **ANSEM and manlet are the dominant Pump.fun tokens currently trending**, with ANSEM showing +25.69% 24h growth and $22.65M-$11.76M volume, while manlet exhibits +4.8% 24h and +14.43% 1h growth at $6.14M volume (GeckoTerminal trending data). **Notably, no tokens under 6 hours old gained traction in trending status**, with the youngest listed (Vaaland/SOL) at ~19.6 hours old and down -89.41%, suggesting either a quiet launch period or high early-stage attrition. The current meta appears focused on established trending tokens rather than fresh launches, though this view is limited to GeckoTerminal's trending feed rather than comprehensive Pump.fun launch data.\n\n**Confidence: Low-Medium** – Evidence reflects trending token performance but lacks real-time comprehensive launch feed and social sentiment context due to database retrieval failures."
+  }
+}
