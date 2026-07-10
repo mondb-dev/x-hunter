@@ -4,9 +4,9 @@ on:
   push:
     branches: [main]
     paths:
-      - 'web/**'
       - 'workers/verify/**'
       - 'workers/publish/**'
+      - 'workers/memory/**'
 
 env:
   PROJECT_ID: sebastian-hunter
@@ -14,38 +14,6 @@ env:
   REGISTRY: us-central1-docker.pkg.dev/sebastian-hunter/sebastian
 
 jobs:
-  deploy-web:
-    name: Deploy Web
-    runs-on: ubuntu-latest
-    if: |
-      contains(toJSON(github.event.commits[*].modified), 'web/') ||
-      contains(toJSON(github.event.commits[*].added), 'web/')
-    steps:
-      - uses: actions/checkout@v4
-
-      - id: auth
-        uses: google-github-actions/auth@v2
-        with:
-          credentials_json: ${{ secrets.GCP_SA_KEY }}
-
-      - uses: google-github-actions/setup-gcloud@v2
-
-      - name: Configure Docker
-        run: gcloud auth configure-docker us-central1-docker.pkg.dev --quiet
-
-      - name: Build and push
-        run: |
-          docker build -t $REGISTRY/web:${{ github.sha }} -t $REGISTRY/web:latest web/
-          docker push --all-tags $REGISTRY/web
-
-      - name: Deploy to Cloud Run
-        run: |
-          gcloud run deploy sebastian-web \
-            --image=$REGISTRY/web:${{ github.sha }} \
-            --region=$REGION \
-            --platform=managed \
-            --project=$PROJECT_ID
-
   deploy-verify:
     name: Deploy Verify Worker
     runs-on: ubuntu-latest
