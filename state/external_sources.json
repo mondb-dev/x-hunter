@@ -1,8 +1,8 @@
 {
   "schema_version": "1.0",
-  "generated_at": "2026-07-10T08:22:19.274Z",
+  "generated_at": "2026-07-10T08:57:01.403Z",
   "method": "mechanical_registry_v1",
-  "profiled_at": "2026-07-10T08:22:34.989Z",
+  "profiled_at": "2026-07-10T08:57:12.096Z",
   "sources": [
     {
       "domain": "theguardian.com",
@@ -2514,9 +2514,9 @@
       "entity": "Rappler",
       "kind": "unknown",
       "first_seen_at": "2026-06-22T04:04:30.428Z",
-      "last_seen_at": "2026-07-10T05:15:55.705Z",
+      "last_seen_at": "2026-07-10T08:23:11.178Z",
       "discovery": {
-        "distinct_urls": 82,
+        "distinct_urls": 84,
         "example_urls": [
           "https://www.rappler.com/fact-check-no-arrest-warrant-issued-vs-marcoleta",
           "https://www.rappler.com/technology/decoded-tacloban-school-shooting-disinformation-kiko-barzaga-discussions-juvenile-justice-law/",
@@ -2526,7 +2526,7 @@
         ],
         "origin_counts": {
           "ontology_evidence": 50,
-          "journals": 105,
+          "journals": 107,
           "articles": 1
         },
         "distinct_referring_accounts": 0,
@@ -2569,7 +2569,7 @@
         "breadth": {
           "score": 0.8799999999999999,
           "basis": [
-            "distinct_urls:82",
+            "distinct_urls:84",
             "distinct_axes:12",
             "origin_types:3"
           ]
@@ -2607,7 +2607,7 @@
           "method": "mechanical_v1",
           "basis": [
             "unknown_domain_pattern",
-            "distinct_urls:82",
+            "distinct_urls:84",
             "distinct_axes:12",
             "origin_types:3",
             "referring_accounts:0",
@@ -3191,9 +3191,9 @@
       "entity": "T Co",
       "kind": "unknown",
       "first_seen_at": "2016-05-05T18:57:30.000Z",
-      "last_seen_at": "2026-07-10T07:15:16.759Z",
+      "last_seen_at": "2026-07-10T08:30:00.000Z",
       "discovery": {
-        "distinct_urls": 7335,
+        "distinct_urls": 7339,
         "example_urls": [
           "https://t.co/pJSE124ec4",
           "https://t.co/Soz8BXPWaa",
@@ -3202,8 +3202,8 @@
           "https://t.co/cYaqYDRp08"
         ],
         "origin_counts": {
-          "feed_buffer": 4460,
-          "feed_buffer_reply": 4586
+          "feed_buffer": 4464,
+          "feed_buffer_reply": 4587
         },
         "distinct_referring_accounts": 2300,
         "sample_referring_accounts": [
@@ -3244,7 +3244,7 @@
         "breadth": {
           "score": 0.47,
           "basis": [
-            "distinct_urls:7335",
+            "distinct_urls:7339",
             "distinct_axes:0",
             "origin_types:2"
           ]
@@ -3283,7 +3283,7 @@
           "basis": [
             "unknown_domain_pattern",
             "doi_or_identifier_path_seen",
-            "distinct_urls:7335",
+            "distinct_urls:7339",
             "distinct_axes:0",
             "origin_types:2",
             "referring_accounts:2300",
@@ -3463,9 +3463,9 @@
       "entity": "Gmanetwork",
       "kind": "unknown",
       "first_seen_at": "2026-05-18T03:29:41.732Z",
-      "last_seen_at": "2026-07-10T06:46:02.004Z",
+      "last_seen_at": "2026-07-10T08:23:11.178Z",
       "discovery": {
-        "distinct_urls": 53,
+        "distinct_urls": 54,
         "example_urls": [
           "https://www.gmanetwork.com/news/topstories/nation/994225/explainer-objections-in-a-trial-and-their-role-in-due-process/story/",
           "https://www.gmanetwork.com/news/balitambayan/balita/993931/sen-escudero-sinabing-16-na-boto-ang-kailangan-para-mahatulang-guilty-si-vp-sara-duterte-sa-impea/story/",
@@ -3475,7 +3475,7 @@
         ],
         "origin_counts": {
           "ontology_evidence": 24,
-          "journals": 76
+          "journals": 77
         },
         "distinct_referring_accounts": 0,
         "sample_referring_accounts": [],
@@ -3512,7 +3512,7 @@
         "breadth": {
           "score": 0.82,
           "basis": [
-            "distinct_urls:53",
+            "distinct_urls:54",
             "distinct_axes:7",
             "origin_types:2"
           ]
@@ -3550,7 +3550,7 @@
           "method": "mechanical_v1",
           "basis": [
             "unknown_domain_pattern",
-            "distinct_urls:53",
+            "distinct_urls:54",
             "distinct_axes:7",
             "origin_types:2",
             "referring_accounts:0",
@@ -5910,7 +5910,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-07-07T08:48:51.054Z",
+        "fetched_at": "2026-07-10T08:57:06.632Z",
         "homepage_url": "https://arstechnica.com/",
         "example_url": "https://arstechnica.com/security/2026/06/users-cry-foul-after-amd-stripped-memory-crypto-from-its-consumer-cpus/",
         "homepage_status": 202,
@@ -9590,7 +9590,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-07-07T06:49:19.942Z",
+        "fetched_at": "2026-07-10T08:57:08.879Z",
         "homepage_url": "https://byteplus.com/",
         "example_url": "https://www.byteplus.com/en/contact-us/ai-cloud-products?utm_source=x&utm_medium=cpc&utm_campaign=leads_submit_eu_english_20260415_celene&utm_term=20260415_image_leads&utm_content=tecdo&twclid=24somkg02k4fm60up4bq87nhwy",
         "homepage_status": 200,
@@ -9716,7 +9716,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-07-07T07:18:48.793Z",
+        "fetched_at": "2026-07-10T08:57:10.046Z",
         "homepage_url": "https://tradeodds.io/",
         "example_url": "https://www.tradeodds.io/dashboard?tab=factor-match&utm_source=twitter&utm_medium=cpc&utm_campaign=Factor+Match+Purchase+Campaign+Desk&utm_id=factor+match+purchase+campaign+desk&utm_term=factor+match+purchase+purchase+desk+us&utm_content=ad2&twclid=21dpzozj7vqb86fdz6auuzunmy",
         "homepage_status": 200,
@@ -9968,7 +9968,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-07-07T07:18:50.382Z",
+        "fetched_at": "2026-07-10T08:57:12.096Z",
         "homepage_url": "https://nizima-action.com/",
         "example_url": "https://site.nizima-action.com/en/?twclid=2diqibk9zmfi9zdpw7jnuyzo3e",
         "homepage_status": 200,
@@ -12911,9 +12911,9 @@
       "entity": "Moltbook",
       "kind": "unknown",
       "first_seen_at": "2026-03-07T00:29:35.326Z",
-      "last_seen_at": "2026-07-09T08:00:10.530Z",
+      "last_seen_at": "2026-07-10T08:44:13.871Z",
       "discovery": {
-        "distinct_urls": 88,
+        "distinct_urls": 89,
         "example_urls": [
           "https://www.moltbook.com/post/29d49c40-bc59-4a1a-b875-3d3d41ec469e",
           "https://www.moltbook.com/post/3694a386-c24e-4744-8c06-2fc74c73c559",
@@ -12922,7 +12922,7 @@
           "https://www.moltbook.com/post/c6a71bf0-72ab-4867-820a-6b306bae0cea"
         ],
         "origin_counts": {
-          "articles": 88
+          "articles": 89
         },
         "distinct_referring_accounts": 0,
         "sample_referring_accounts": [],
@@ -12951,7 +12951,7 @@
         "breadth": {
           "score": 0.41,
           "basis": [
-            "distinct_urls:88",
+            "distinct_urls:89",
             "distinct_axes:0",
             "origin_types:1"
           ]
@@ -12989,7 +12989,7 @@
           "method": "mechanical_v1",
           "basis": [
             "unknown_domain_pattern",
-            "distinct_urls:88",
+            "distinct_urls:89",
             "distinct_axes:0",
             "origin_types:1",
             "referring_accounts:0",
