@@ -1,8 +1,8 @@
 {
   "schema_version": "1.0",
-  "generated_at": "2026-07-09T22:34:29.616Z",
+  "generated_at": "2026-07-10T01:34:32.771Z",
   "method": "mechanical_registry_v1",
-  "profiled_at": "2026-07-09T22:34:35.238Z",
+  "profiled_at": "2026-07-10T01:34:40.418Z",
   "sources": [
     {
       "domain": "theguardian.com",
@@ -11,7 +11,7 @@
       "first_seen_at": "2026-03-27T23:17:00Z",
       "last_seen_at": "2026-07-08T06:57:05.683Z",
       "discovery": {
-        "distinct_urls": 306,
+        "distinct_urls": 308,
         "example_urls": [
           "https://www.theguardian.com/us-news/2026/jun/23/trump-immigration-courthouse-arrest-policy",
           "https://www.theguardian.com/us-news/2026/jun/28/ice-minnesota-defending-democracy",
@@ -21,7 +21,7 @@
         ],
         "origin_counts": {
           "ontology_evidence": 29,
-          "reading_queue": 285,
+          "reading_queue": 287,
           "journals": 64,
           "articles": 1
         },
@@ -65,7 +65,7 @@
         "breadth": {
           "score": 0.94,
           "basis": [
-            "distinct_urls:306",
+            "distinct_urls:308",
             "distinct_axes:10",
             "origin_types:4"
           ]
@@ -105,7 +105,7 @@
             "newsroom_domain_pattern",
             "article_path_seen",
             "doi_or_identifier_path_seen",
-            "distinct_urls:306",
+            "distinct_urls:308",
             "distinct_axes:10",
             "origin_types:4",
             "referring_accounts:0",
@@ -531,9 +531,9 @@
       "entity": "Aljazeera",
       "kind": "news",
       "first_seen_at": "2026-06-22T02:45:00Z",
-      "last_seen_at": "2026-07-09T22:05:10.154Z",
+      "last_seen_at": "2026-07-10T01:05:07.395Z",
       "discovery": {
-        "distinct_urls": 201,
+        "distinct_urls": 202,
         "example_urls": [
           "https://www.aljazeera.com/opinions/2026/6/24/south-africas-crises-will-not-be-solved-by-blaming-migrants",
           "https://www.aljazeera.com/video/newsfeed/2026/6/27/newly-released-video-exposes-henry-nowak-killers-lies?traffic_source=rss",
@@ -544,7 +544,7 @@
         "origin_counts": {
           "ontology_evidence": 123,
           "reading_queue": 6,
-          "journals": 294
+          "journals": 295
         },
         "distinct_referring_accounts": 0,
         "sample_referring_accounts": [],
@@ -589,7 +589,7 @@
         "breadth": {
           "score": 0.8799999999999999,
           "basis": [
-            "distinct_urls:201",
+            "distinct_urls:202",
             "distinct_axes:14",
             "origin_types:3"
           ]
@@ -628,7 +628,7 @@
           "basis": [
             "newsroom_domain_pattern",
             "article_path_seen",
-            "distinct_urls:201",
+            "distinct_urls:202",
             "distinct_axes:14",
             "origin_types:3",
             "referring_accounts:0",
@@ -1175,7 +1175,7 @@
       "first_seen_at": "2026-06-26T07:05:00Z",
       "last_seen_at": "2026-07-05T19:15:44.455Z",
       "discovery": {
-        "distinct_urls": 156,
+        "distinct_urls": 158,
         "example_urls": [
           "https://www.bbc.co.uk/news/articles/cn8qxz6qypyo",
           "https://www.bbc.co.uk/news/articles/cn075j04pnyo?at_medium=RSS&amp;at_campaign=rss",
@@ -1185,7 +1185,7 @@
         ],
         "origin_counts": {
           "ontology_evidence": 4,
-          "reading_queue": 159,
+          "reading_queue": 161,
           "journals": 9
         },
         "distinct_referring_accounts": 0,
@@ -1219,7 +1219,7 @@
         "breadth": {
           "score": 0.7049999999999998,
           "basis": [
-            "distinct_urls:156",
+            "distinct_urls:158",
             "distinct_axes:3",
             "origin_types:3"
           ]
@@ -1257,7 +1257,7 @@
           "method": "mechanical_v1",
           "basis": [
             "newsroom_domain_pattern",
-            "distinct_urls:156",
+            "distinct_urls:158",
             "distinct_axes:3",
             "origin_types:3",
             "referring_accounts:0",
@@ -2921,9 +2921,9 @@
       "entity": "Amnesty",
       "kind": "unknown",
       "first_seen_at": "2026-03-31T12:16:18.459Z",
-      "last_seen_at": "2026-07-09T17:12:50.919Z",
+      "last_seen_at": "2026-07-10T01:05:07.395Z",
       "discovery": {
-        "distinct_urls": 35,
+        "distinct_urls": 36,
         "example_urls": [
           "https://www.amnesty.org/en/latest/news/2026/06/burkina-serge-oulon/",
           "https://www.amnesty.org/en/latest/news/2026/06/car-bozize/",
@@ -2933,8 +2933,8 @@
         ],
         "origin_counts": {
           "ontology_evidence": 32,
-          "reading_queue": 12,
-          "journals": 47
+          "reading_queue": 13,
+          "journals": 48
         },
         "distinct_referring_accounts": 0,
         "sample_referring_accounts": [],
@@ -2969,7 +2969,7 @@
         "breadth": {
           "score": 0.7633333333333332,
           "basis": [
-            "distinct_urls:35",
+            "distinct_urls:36",
             "distinct_axes:4",
             "origin_types:3"
           ]
@@ -3008,7 +3008,7 @@
           "basis": [
             "unknown_domain_pattern",
             "article_path_seen",
-            "distinct_urls:35",
+            "distinct_urls:36",
             "distinct_axes:4",
             "origin_types:3",
             "referring_accounts:0",
@@ -3189,9 +3189,9 @@
       "entity": "T Co",
       "kind": "unknown",
       "first_seen_at": "2016-05-05T18:57:30.000Z",
-      "last_seen_at": "2026-07-09T21:45:18.000Z",
+      "last_seen_at": "2026-07-10T01:22:01.000Z",
       "discovery": {
-        "distinct_urls": 7236,
+        "distinct_urls": 7292,
         "example_urls": [
           "https://t.co/pJSE124ec4",
           "https://t.co/Soz8BXPWaa",
@@ -3200,10 +3200,10 @@
           "https://t.co/cYaqYDRp08"
         ],
         "origin_counts": {
-          "feed_buffer": 4389,
-          "feed_buffer_reply": 4546
+          "feed_buffer": 4431,
+          "feed_buffer_reply": 4566
         },
-        "distinct_referring_accounts": 2272,
+        "distinct_referring_accounts": 2285,
         "sample_referring_accounts": [
           "0808iveta",
           "09abracadabra",
@@ -3211,10 +3211,10 @@
           "0xshivashish",
           "1109patricia",
           "16campaignbites",
+          "1984comrade",
           "1glenco",
           "1uscon",
-          "1yuriyouri",
-          "22three7eleven"
+          "1yuriyouri"
         ],
         "distinct_axes": []
       },
@@ -3242,7 +3242,7 @@
         "breadth": {
           "score": 0.47,
           "basis": [
-            "distinct_urls:7236",
+            "distinct_urls:7292",
             "distinct_axes:0",
             "origin_types:2"
           ]
@@ -3250,7 +3250,7 @@
         "corroboration": {
           "score": 0.825,
           "basis": [
-            "referring_accounts:2272",
+            "referring_accounts:2285",
             "origin_types:2"
           ]
         },
@@ -3281,10 +3281,10 @@
           "basis": [
             "unknown_domain_pattern",
             "doi_or_identifier_path_seen",
-            "distinct_urls:7236",
+            "distinct_urls:7292",
             "distinct_axes:0",
             "origin_types:2",
-            "referring_accounts:2272",
+            "referring_accounts:2285",
             "origin_types:2",
             "track_record_unavailable"
           ]
@@ -3461,9 +3461,9 @@
       "entity": "Gmanetwork",
       "kind": "unknown",
       "first_seen_at": "2026-05-18T03:29:41.732Z",
-      "last_seen_at": "2026-07-09T20:35:02.051Z",
+      "last_seen_at": "2026-07-10T01:05:07.419Z",
       "discovery": {
-        "distinct_urls": 49,
+        "distinct_urls": 50,
         "example_urls": [
           "https://www.gmanetwork.com/news/topstories/nation/994225/explainer-objections-in-a-trial-and-their-role-in-due-process/story/",
           "https://www.gmanetwork.com/news/balitambayan/balita/993931/sen-escudero-sinabing-16-na-boto-ang-kailangan-para-mahatulang-guilty-si-vp-sara-duterte-sa-impea/story/",
@@ -3472,8 +3472,8 @@
           "https://www.gmanetwork.com/news/topstories/nation/994080/electronic-copies-evidence-supreme-court/story/"
         ],
         "origin_counts": {
-          "ontology_evidence": 22,
-          "journals": 72
+          "ontology_evidence": 23,
+          "journals": 73
         },
         "distinct_referring_accounts": 0,
         "sample_referring_accounts": [],
@@ -3510,7 +3510,7 @@
         "breadth": {
           "score": 0.82,
           "basis": [
-            "distinct_urls:49",
+            "distinct_urls:50",
             "distinct_axes:7",
             "origin_types:2"
           ]
@@ -3548,7 +3548,7 @@
           "method": "mechanical_v1",
           "basis": [
             "unknown_domain_pattern",
-            "distinct_urls:49",
+            "distinct_urls:50",
             "distinct_axes:7",
             "origin_types:2",
             "referring_accounts:0",
@@ -4109,9 +4109,9 @@
       "entity": "Grok",
       "kind": "unknown",
       "first_seen_at": "2026-04-03T01:20:27.000Z",
-      "last_seen_at": "2026-07-09T19:03:02.000Z",
+      "last_seen_at": "2026-07-09T22:31:15.000Z",
       "discovery": {
-        "distinct_urls": 532,
+        "distinct_urls": 535,
         "example_urls": [
           "https://grok.com/imagine/post/9b92ff60-ec59-45db-8a35-8e1b743e5339",
           "https://grok.com/imagine/post/42c16172-4296-42be-b3d0-aa45ad7b6b97",
@@ -4120,10 +4120,10 @@
           "https://grok.com/imagine/post/3289422f-50b2-4655-8527-e2b1c950ce5e"
         ],
         "origin_counts": {
-          "feed_buffer_reply": 471,
-          "feed_buffer": 96
+          "feed_buffer_reply": 473,
+          "feed_buffer": 97
         },
-        "distinct_referring_accounts": 330,
+        "distinct_referring_accounts": 332,
         "sample_referring_accounts": [
           "100ohiostate",
           "1livinginca",
@@ -4161,7 +4161,7 @@
         "breadth": {
           "score": 0.47,
           "basis": [
-            "distinct_urls:532",
+            "distinct_urls:535",
             "distinct_axes:0",
             "origin_types:2"
           ]
@@ -4169,7 +4169,7 @@
         "corroboration": {
           "score": 0.825,
           "basis": [
-            "referring_accounts:330",
+            "referring_accounts:332",
             "origin_types:2"
           ]
         },
@@ -4199,10 +4199,10 @@
           "method": "mechanical_v1",
           "basis": [
             "unknown_domain_pattern",
-            "distinct_urls:532",
+            "distinct_urls:535",
             "distinct_axes:0",
             "origin_types:2",
-            "referring_accounts:330",
+            "referring_accounts:332",
             "origin_types:2",
             "track_record_unavailable"
           ]
@@ -4245,9 +4245,9 @@
       "entity": "Steampowered",
       "kind": "unknown",
       "first_seen_at": "2026-04-04T23:34:51.000Z",
-      "last_seen_at": "2026-07-09T15:14:58.361Z",
+      "last_seen_at": "2026-07-10T00:02:25.283Z",
       "discovery": {
-        "distinct_urls": 207,
+        "distinct_urls": 208,
         "example_urls": [
           "https://store.steampowered.com/app/1315180?twclid=2cb8mho5n4udnkq1fnm1yi4kkh",
           "https://store.steampowered.com/app/3321460?utm_campaign=launching&utm_source=X&utm_term=20260319_traffic&utm_medium=us&utm_content=Trailer_view&twclid=22351un15xjmtu22gjwnjp292d",
@@ -4257,7 +4257,7 @@
         ],
         "origin_counts": {
           "feed_buffer_reply": 197,
-          "feed_buffer": 10
+          "feed_buffer": 11
         },
         "distinct_referring_accounts": 35,
         "sample_referring_accounts": [
@@ -4297,7 +4297,7 @@
         "breadth": {
           "score": 0.47,
           "basis": [
-            "distinct_urls:207",
+            "distinct_urls:208",
             "distinct_axes:0",
             "origin_types:2"
           ]
@@ -4335,7 +4335,7 @@
           "method": "mechanical_v1",
           "basis": [
             "unknown_domain_pattern",
-            "distinct_urls:207",
+            "distinct_urls:208",
             "distinct_axes:0",
             "origin_types:2",
             "referring_accounts:35",
@@ -4902,9 +4902,9 @@
       "entity": "Starlink",
       "kind": "unknown",
       "first_seen_at": "2026-04-07T03:51:50.000Z",
-      "last_seen_at": "2026-07-09T18:27:26.000Z",
+      "last_seen_at": "2026-07-09T21:24:11.000Z",
       "discovery": {
-        "distinct_urls": 81,
+        "distinct_urls": 83,
         "example_urls": [
           "https://www.starlink.com/us/residential?referral=RC-DF-9543787-19448-67&utm_medium=paid&utm_campaign=awr_us_soc_twt_ptg_cau&utm_content=awr_us_soc_twt_ptg_cau_res_gvp_v4s_stc_en-us_sdb-bluesky-uptime&twclid=2cg62b1u0oqrypdim5oir1767e",
           "https://www.starlink.com/us/residential?referral=RC-DF-9543787-19448-67&utm_medium=paid&utm_campaign=awr_us_soc_twt_ptg_cau&utm_content=awr_us_soc_twt_ptg_cau_res_gvp_v4s_stc_en-us_sdb-avail-sat-yourhome&twclid=2216n7j93v9absqn77762mm626",
@@ -4913,7 +4913,7 @@
           "https://www.starlink.com/us/residential?referral=RC-DF-9543787-19448-67&utm_medium=paid&utm_campaign=awr_us_soc_twt_ptg_cau&utm_content=awr_us_soc_twt_ptg_cau_res_gvp_v4s_stc_en-us_sdb-avail-sat-arrived&twclid=21pi7t0qs8tgw0wgnh5mvmdu2g"
         ],
         "origin_counts": {
-          "feed_buffer_reply": 78,
+          "feed_buffer_reply": 80,
           "feed_buffer": 7
         },
         "distinct_referring_accounts": 5,
@@ -4949,7 +4949,7 @@
         "breadth": {
           "score": 0.47,
           "basis": [
-            "distinct_urls:81",
+            "distinct_urls:83",
             "distinct_axes:0",
             "origin_types:2"
           ]
@@ -4987,7 +4987,7 @@
           "method": "mechanical_v1",
           "basis": [
             "unknown_domain_pattern",
-            "distinct_urls:81",
+            "distinct_urls:83",
             "distinct_axes:0",
             "origin_types:2",
             "referring_accounts:5",
@@ -5024,6 +5024,137 @@
           "has_contact_link": false,
           "has_corrections_link": false,
           "outbound_links_count": 0,
+          "opinion_marker": false
+        }
+      }
+    },
+    {
+      "domain": "github.com",
+      "entity": "Github",
+      "kind": "unknown",
+      "first_seen_at": "2026-04-14T15:03:17.000Z",
+      "last_seen_at": "2026-07-10T01:02:17.641Z",
+      "discovery": {
+        "distinct_urls": 14,
+        "example_urls": [
+          "https://github.com/BlockRunAI/ClawRouter/?twclid=2bnr8zsvp3b72fbw0yuil7yilw",
+          "https://github.com/BlockRunAI/ClawRouter/?twclid=2bqo24qepc22zczc4xxnytdhfl",
+          "https://github.com/nattergabriel/reseed?twclid=2dsn1vz4tqvpxv8ewg0nmayxdq",
+          "https://github.com/nattergabriel/reseed?twclid=214tahk5vxa8hb5thwmqod29oc",
+          "https://github.com/votal-ai-hq/wb-red-team?twclid=21qqbdcwkkmhie2aavs0xry7lj"
+        ],
+        "origin_counts": {
+          "feed_buffer_reply": 13,
+          "feed_buffer": 1
+        },
+        "distinct_referring_accounts": 5,
+        "sample_referring_accounts": [
+          "blockrunai",
+          "eterdev",
+          "heyputer",
+          "lakesailhq",
+          "sundi133"
+        ],
+        "distinct_axes": []
+      },
+      "claims": {
+        "total": 0,
+        "supported": 0,
+        "refuted": 0,
+        "contested": 0,
+        "unverified": 0,
+        "resolved_count": 0
+      },
+      "structural_features": {
+        "has_search_paths": false,
+        "has_article_paths": false,
+        "has_doi_paths": false
+      },
+      "ratings": {
+        "provenance": {
+          "score": 0.45,
+          "basis": [
+            "unknown_domain_pattern"
+          ]
+        },
+        "breadth": {
+          "score": 0.47,
+          "basis": [
+            "distinct_urls:14",
+            "distinct_axes:0",
+            "origin_types:2"
+          ]
+        },
+        "corroboration": {
+          "score": 0.7166666666666668,
+          "basis": [
+            "referring_accounts:5",
+            "origin_types:2"
+          ]
+        },
+        "track_record": {
+          "score": null,
+          "basis": [
+            "no_resolved_claims_observed"
+          ]
+        },
+        "profile": {
+          "score": 0.19999999999999998,
+          "confidence": 0.65,
+          "basis": [
+            "meta_author:true",
+            "published_time:false",
+            "canonical:false",
+            "about:false",
+            "contact:false",
+            "corrections:false",
+            "outbound_links:2",
+            "opinion_marker:false"
+          ]
+        },
+        "overall": {
+          "score": 0.47937500000000005,
+          "confidence": 0.5907,
+          "method": "mechanical_v1",
+          "basis": [
+            "unknown_domain_pattern",
+            "distinct_urls:14",
+            "distinct_axes:0",
+            "origin_types:2",
+            "referring_accounts:5",
+            "origin_types:2",
+            "track_record_unavailable"
+          ]
+        }
+      },
+      "profile": {
+        "fetched_at": "2026-07-07T09:48:52.727Z",
+        "homepage_url": "https://github.com/",
+        "example_url": "https://github.com/BlockRunAI/ClawRouter/?twclid=2bnr8zsvp3b72fbw0yuil7yilw",
+        "homepage_status": 200,
+        "example_status": 200,
+        "homepage_final_url": "https://github.com/",
+        "example_final_url": "https://github.com/BlockRunAI/ClawRouter/?twclid=2bnr8zsvp3b72fbw0yuil7yilw",
+        "homepage_content_type": "text/html; charset=utf-8",
+        "example_content_type": "text/html; charset=utf-8",
+        "homepage": {
+          "has_meta_author": false,
+          "has_published_time": false,
+          "has_canonical": true,
+          "has_about_link": false,
+          "has_contact_link": false,
+          "has_corrections_link": false,
+          "outbound_links_count": 2,
+          "opinion_marker": false
+        },
+        "example": {
+          "has_meta_author": true,
+          "has_published_time": false,
+          "has_canonical": false,
+          "has_about_link": false,
+          "has_contact_link": false,
+          "has_corrections_link": false,
+          "outbound_links_count": 2,
           "opinion_marker": false
         }
       }
@@ -5669,136 +5800,6 @@
           "has_meta_author": false,
           "has_published_time": true,
           "has_canonical": true,
-          "has_about_link": false,
-          "has_contact_link": false,
-          "has_corrections_link": false,
-          "outbound_links_count": 2,
-          "opinion_marker": false
-        }
-      }
-    },
-    {
-      "domain": "github.com",
-      "entity": "Github",
-      "kind": "unknown",
-      "first_seen_at": "2026-04-14T15:03:17.000Z",
-      "last_seen_at": "2026-07-08T15:11:58.000Z",
-      "discovery": {
-        "distinct_urls": 13,
-        "example_urls": [
-          "https://github.com/BlockRunAI/ClawRouter/?twclid=2bnr8zsvp3b72fbw0yuil7yilw",
-          "https://github.com/BlockRunAI/ClawRouter/?twclid=2bqo24qepc22zczc4xxnytdhfl",
-          "https://github.com/nattergabriel/reseed?twclid=2dsn1vz4tqvpxv8ewg0nmayxdq",
-          "https://github.com/nattergabriel/reseed?twclid=214tahk5vxa8hb5thwmqod29oc",
-          "https://github.com/votal-ai-hq/wb-red-team?twclid=21qqbdcwkkmhie2aavs0xry7lj"
-        ],
-        "origin_counts": {
-          "feed_buffer_reply": 13
-        },
-        "distinct_referring_accounts": 5,
-        "sample_referring_accounts": [
-          "blockrunai",
-          "eterdev",
-          "heyputer",
-          "lakesailhq",
-          "sundi133"
-        ],
-        "distinct_axes": []
-      },
-      "claims": {
-        "total": 0,
-        "supported": 0,
-        "refuted": 0,
-        "contested": 0,
-        "unverified": 0,
-        "resolved_count": 0
-      },
-      "structural_features": {
-        "has_search_paths": false,
-        "has_article_paths": false,
-        "has_doi_paths": false
-      },
-      "ratings": {
-        "provenance": {
-          "score": 0.45,
-          "basis": [
-            "unknown_domain_pattern"
-          ]
-        },
-        "breadth": {
-          "score": 0.41,
-          "basis": [
-            "distinct_urls:13",
-            "distinct_axes:0",
-            "origin_types:1"
-          ]
-        },
-        "corroboration": {
-          "score": 0.6291666666666668,
-          "basis": [
-            "referring_accounts:5",
-            "origin_types:1"
-          ]
-        },
-        "track_record": {
-          "score": null,
-          "basis": [
-            "no_resolved_claims_observed"
-          ]
-        },
-        "profile": {
-          "score": 0.19999999999999998,
-          "confidence": 0.65,
-          "basis": [
-            "meta_author:true",
-            "published_time:false",
-            "canonical:false",
-            "about:false",
-            "contact:false",
-            "corrections:false",
-            "outbound_links:2",
-            "opinion_marker:false"
-          ]
-        },
-        "overall": {
-          "score": 0.458046875,
-          "confidence": 0.547725,
-          "method": "mechanical_v1",
-          "basis": [
-            "unknown_domain_pattern",
-            "distinct_urls:13",
-            "distinct_axes:0",
-            "origin_types:1",
-            "referring_accounts:5",
-            "origin_types:1",
-            "track_record_unavailable"
-          ]
-        }
-      },
-      "profile": {
-        "fetched_at": "2026-07-07T09:48:52.727Z",
-        "homepage_url": "https://github.com/",
-        "example_url": "https://github.com/BlockRunAI/ClawRouter/?twclid=2bnr8zsvp3b72fbw0yuil7yilw",
-        "homepage_status": 200,
-        "example_status": 200,
-        "homepage_final_url": "https://github.com/",
-        "example_final_url": "https://github.com/BlockRunAI/ClawRouter/?twclid=2bnr8zsvp3b72fbw0yuil7yilw",
-        "homepage_content_type": "text/html; charset=utf-8",
-        "example_content_type": "text/html; charset=utf-8",
-        "homepage": {
-          "has_meta_author": false,
-          "has_published_time": false,
-          "has_canonical": true,
-          "has_about_link": false,
-          "has_contact_link": false,
-          "has_corrections_link": false,
-          "outbound_links_count": 2,
-          "opinion_marker": false
-        },
-        "example": {
-          "has_meta_author": true,
-          "has_published_time": false,
-          "has_canonical": false,
           "has_about_link": false,
           "has_contact_link": false,
           "has_corrections_link": false,
@@ -6952,9 +6953,9 @@
       "entity": "Leronx",
       "kind": "unknown",
       "first_seen_at": "2026-04-15T20:55:40.000Z",
-      "last_seen_at": "2026-07-09T17:22:44.000Z",
+      "last_seen_at": "2026-07-10T00:02:15.628Z",
       "discovery": {
-        "distinct_urls": 19,
+        "distinct_urls": 20,
         "example_urls": [
           "https://leronx.org/?ref=005&tw=r84nh&tw_click=tw-r84nh-r84ni&twclid=29ffsgobmrsvjmkjlmgcllypv0",
           "https://leronx.org/?ref=181&tw=r84nh&tw_click=tw-r84nh-r84ni&twclid=26kkm70fsxggetky01v0uokud5",
@@ -6964,7 +6965,7 @@
         ],
         "origin_counts": {
           "feed_buffer_reply": 17,
-          "feed_buffer": 2
+          "feed_buffer": 3
         },
         "distinct_referring_accounts": 1,
         "sample_referring_accounts": [
@@ -6995,7 +6996,7 @@
         "breadth": {
           "score": 0.47,
           "basis": [
-            "distinct_urls:19",
+            "distinct_urls:20",
             "distinct_axes:0",
             "origin_types:2"
           ]
@@ -7033,7 +7034,7 @@
           "method": "mechanical_v1",
           "basis": [
             "unknown_domain_pattern",
-            "distinct_urls:19",
+            "distinct_urls:20",
             "distinct_axes:0",
             "origin_types:2",
             "referring_accounts:1",
@@ -9237,6 +9238,133 @@
       }
     },
     {
+      "domain": "bybet.com",
+      "entity": "Bybet",
+      "kind": "unknown",
+      "first_seen_at": "2026-07-03T10:17:00.000Z",
+      "last_seen_at": "2026-07-09T16:48:04.000Z",
+      "discovery": {
+        "distinct_urls": 10,
+        "example_urls": [
+          "https://bybet.com/promotion/detail/10/70?utm_source=x&utm_medium=cpc&utm_campaign=Awarenes-DTS-Football&twclid=2aetcv0gphixdtyqc7k0t0any5",
+          "https://bybet.com/promotion/detail/10/70?utm_source=x&utm_medium=cpc&utm_campaign=Awarenes-DTS-Football&twclid=28pmtq8gne93fer1uf6zicjua6",
+          "https://bybet.com/promotion/detail/10/70?utm_source=x&utm_medium=cpc&utm_campaign=Awarenes-DTS-Football&twclid=24kw4zi8brca21e9qzlwg2azd0",
+          "https://bybet.com/promotion/detail/10/70?utm_source=x&utm_medium=cpc&utm_campaign=Awarenes-DTS-Football&twclid=2cndo0zh45knkk2z74ihbh38yt",
+          "https://bybet.com/promotion/detail/10/70?utm_source=x&utm_medium=cpc&utm_campaign=Awarenes-DTS-Football&twclid=25ex2alzettvd9y7xvz985c90m"
+        ],
+        "origin_counts": {
+          "feed_buffer_reply": 5,
+          "feed_buffer": 5
+        },
+        "distinct_referring_accounts": 1,
+        "sample_referring_accounts": [
+          "bybetph"
+        ],
+        "distinct_axes": []
+      },
+      "claims": {
+        "total": 0,
+        "supported": 0,
+        "refuted": 0,
+        "contested": 0,
+        "unverified": 0,
+        "resolved_count": 0
+      },
+      "structural_features": {
+        "has_search_paths": false,
+        "has_article_paths": false,
+        "has_doi_paths": false
+      },
+      "ratings": {
+        "provenance": {
+          "score": 0.45,
+          "basis": [
+            "unknown_domain_pattern"
+          ]
+        },
+        "breadth": {
+          "score": 0.4116666666666667,
+          "basis": [
+            "distinct_urls:10",
+            "distinct_axes:0",
+            "origin_types:2"
+          ]
+        },
+        "corroboration": {
+          "score": 0.2833333333333333,
+          "basis": [
+            "referring_accounts:1",
+            "origin_types:2"
+          ]
+        },
+        "track_record": {
+          "score": null,
+          "basis": [
+            "no_resolved_claims_observed"
+          ]
+        },
+        "profile": {
+          "score": 0,
+          "confidence": 0.55,
+          "basis": [
+            "meta_author:false",
+            "published_time:false",
+            "canonical:false",
+            "about:false",
+            "contact:false",
+            "corrections:false",
+            "outbound_links:0",
+            "opinion_marker:false"
+          ]
+        },
+        "overall": {
+          "score": 0.42598958333333337,
+          "confidence": 0.35945000000000005,
+          "method": "mechanical_v1",
+          "basis": [
+            "unknown_domain_pattern",
+            "distinct_urls:10",
+            "distinct_axes:0",
+            "origin_types:2",
+            "referring_accounts:1",
+            "origin_types:2",
+            "track_record_unavailable"
+          ]
+        }
+      },
+      "profile": {
+        "fetched_at": "2026-07-09T08:12:11.880Z",
+        "homepage_url": "https://bybet.com/",
+        "example_url": "https://bybet.com/promotion/detail/10/70?utm_source=x&utm_medium=cpc&utm_campaign=Awarenes-DTS-Football&twclid=2aetcv0gphixdtyqc7k0t0any5",
+        "homepage_status": 200,
+        "example_status": 200,
+        "homepage_final_url": "https://bybet.com/",
+        "example_final_url": "https://bybet.com/promotion/detail/10/70?utm_source=x&utm_medium=cpc&utm_campaign=Awarenes-DTS-Football&twclid=2aetcv0gphixdtyqc7k0t0any5",
+        "homepage_content_type": "text/html; charset=utf-8",
+        "example_content_type": "text/html; charset=utf-8",
+        "homepage": {
+          "has_meta_author": false,
+          "has_published_time": false,
+          "has_canonical": false,
+          "has_about_link": false,
+          "has_contact_link": false,
+          "has_corrections_link": false,
+          "outbound_links_count": 0,
+          "opinion_marker": false
+        },
+        "example": {
+          "has_meta_author": false,
+          "has_published_time": false,
+          "has_canonical": false,
+          "has_about_link": false,
+          "has_contact_link": false,
+          "has_corrections_link": false,
+          "outbound_links_count": 0,
+          "opinion_marker": false
+        }
+      }
+    },
+    {
       "domain": "mikmak.ai",
       "entity": "Mikmak Ai",
       "kind": "unknown",
@@ -9361,133 +9489,6 @@
           "has_contact_link": false,
           "has_corrections_link": false,
           "outbound_links_count": 1,
-          "opinion_marker": false
-        }
-      }
-    },
-    {
-      "domain": "bybet.com",
-      "entity": "Bybet",
-      "kind": "unknown",
-      "first_seen_at": "2026-07-03T10:17:00.000Z",
-      "last_seen_at": "2026-07-09T14:25:41.000Z",
-      "discovery": {
-        "distinct_urls": 9,
-        "example_urls": [
-          "https://bybet.com/promotion/detail/10/70?utm_source=x&utm_medium=cpc&utm_campaign=Awarenes-DTS-Football&twclid=2aetcv0gphixdtyqc7k0t0any5",
-          "https://bybet.com/promotion/detail/10/70?utm_source=x&utm_medium=cpc&utm_campaign=Awarenes-DTS-Football&twclid=28pmtq8gne93fer1uf6zicjua6",
-          "https://bybet.com/promotion/detail/10/70?utm_source=x&utm_medium=cpc&utm_campaign=Awarenes-DTS-Football&twclid=24kw4zi8brca21e9qzlwg2azd0",
-          "https://bybet.com/promotion/detail/10/70?utm_source=x&utm_medium=cpc&utm_campaign=Awarenes-DTS-Football&twclid=2cndo0zh45knkk2z74ihbh38yt",
-          "https://bybet.com/promotion/detail/10/70?utm_source=x&utm_medium=cpc&utm_campaign=Awarenes-DTS-Football&twclid=25ex2alzettvd9y7xvz985c90m"
-        ],
-        "origin_counts": {
-          "feed_buffer_reply": 4,
-          "feed_buffer": 5
-        },
-        "distinct_referring_accounts": 1,
-        "sample_referring_accounts": [
-          "bybetph"
-        ],
-        "distinct_axes": []
-      },
-      "claims": {
-        "total": 0,
-        "supported": 0,
-        "refuted": 0,
-        "contested": 0,
-        "unverified": 0,
-        "resolved_count": 0
-      },
-      "structural_features": {
-        "has_search_paths": false,
-        "has_article_paths": false,
-        "has_doi_paths": false
-      },
-      "ratings": {
-        "provenance": {
-          "score": 0.45,
-          "basis": [
-            "unknown_domain_pattern"
-          ]
-        },
-        "breadth": {
-          "score": 0.38249999999999995,
-          "basis": [
-            "distinct_urls:9",
-            "distinct_axes:0",
-            "origin_types:2"
-          ]
-        },
-        "corroboration": {
-          "score": 0.2833333333333333,
-          "basis": [
-            "referring_accounts:1",
-            "origin_types:2"
-          ]
-        },
-        "track_record": {
-          "score": null,
-          "basis": [
-            "no_resolved_claims_observed"
-          ]
-        },
-        "profile": {
-          "score": 0,
-          "confidence": 0.55,
-          "basis": [
-            "meta_author:false",
-            "published_time:false",
-            "canonical:false",
-            "about:false",
-            "contact:false",
-            "corrections:false",
-            "outbound_links:0",
-            "opinion_marker:false"
-          ]
-        },
-        "overall": {
-          "score": 0.419609375,
-          "confidence": 0.330825,
-          "method": "mechanical_v1",
-          "basis": [
-            "unknown_domain_pattern",
-            "distinct_urls:9",
-            "distinct_axes:0",
-            "origin_types:2",
-            "referring_accounts:1",
-            "origin_types:2",
-            "track_record_unavailable"
-          ]
-        }
-      },
-      "profile": {
-        "fetched_at": "2026-07-09T08:12:11.880Z",
-        "homepage_url": "https://bybet.com/",
-        "example_url": "https://bybet.com/promotion/detail/10/70?utm_source=x&utm_medium=cpc&utm_campaign=Awarenes-DTS-Football&twclid=2aetcv0gphixdtyqc7k0t0any5",
-        "homepage_status": 200,
-        "example_status": 200,
-        "homepage_final_url": "https://bybet.com/",
-        "example_final_url": "https://bybet.com/promotion/detail/10/70?utm_source=x&utm_medium=cpc&utm_campaign=Awarenes-DTS-Football&twclid=2aetcv0gphixdtyqc7k0t0any5",
-        "homepage_content_type": "text/html; charset=utf-8",
-        "example_content_type": "text/html; charset=utf-8",
-        "homepage": {
-          "has_meta_author": false,
-          "has_published_time": false,
-          "has_canonical": false,
-          "has_about_link": false,
-          "has_contact_link": false,
-          "has_corrections_link": false,
-          "outbound_links_count": 0,
-          "opinion_marker": false
-        },
-        "example": {
-          "has_meta_author": false,
-          "has_published_time": false,
-          "has_canonical": false,
-          "has_about_link": false,
-          "has_contact_link": false,
-          "has_corrections_link": false,
-          "outbound_links_count": 0,
           "opinion_marker": false
         }
       }
@@ -13155,6 +13156,133 @@
       }
     },
     {
+      "domain": "flow.com",
+      "entity": "Flow",
+      "kind": "unknown",
+      "first_seen_at": "2026-07-07T10:18:49.076Z",
+      "last_seen_at": "2026-07-10T01:02:14.013Z",
+      "discovery": {
+        "distinct_urls": 7,
+        "example_urls": [
+          "https://flow.com/post/stablecoin-market-cap-on-flow-hits-all-time-high-of-74-6m?twclid=2czuzc6x3hqaue58fju5it9nms",
+          "https://flow.com/post/stablecoin-market-cap-on-flow-hits-all-time-high-of-74-6m?twclid=22dmhldav47uf75ss19rz0pemn",
+          "https://flow.com/post/stablecoin-market-cap-on-flow-hits-all-time-high-of-74-6m?twclid=28ofiyesmwha4byfuelry63frz",
+          "https://flow.com/post/stablecoin-market-cap-on-flow-hits-all-time-high-of-74-6m?twclid=25mm9c7hjbfn0zyrf4wlos5tep",
+          "https://flow.com/post/stablecoin-market-cap-on-flow-hits-all-time-high-of-74-6m?twclid=277h8s6kgto03qxvrlqp7rxyqt"
+        ],
+        "origin_counts": {
+          "feed_buffer": 4,
+          "feed_buffer_reply": 3
+        },
+        "distinct_referring_accounts": 1,
+        "sample_referring_accounts": [
+          "flow_blockchain"
+        ],
+        "distinct_axes": []
+      },
+      "claims": {
+        "total": 0,
+        "supported": 0,
+        "refuted": 0,
+        "contested": 0,
+        "unverified": 0,
+        "resolved_count": 0
+      },
+      "structural_features": {
+        "has_search_paths": false,
+        "has_article_paths": false,
+        "has_doi_paths": false
+      },
+      "ratings": {
+        "provenance": {
+          "score": 0.45,
+          "basis": [
+            "unknown_domain_pattern"
+          ]
+        },
+        "breadth": {
+          "score": 0.32416666666666666,
+          "basis": [
+            "distinct_urls:7",
+            "distinct_axes:0",
+            "origin_types:2"
+          ]
+        },
+        "corroboration": {
+          "score": 0.2833333333333333,
+          "basis": [
+            "referring_accounts:1",
+            "origin_types:2"
+          ]
+        },
+        "track_record": {
+          "score": null,
+          "basis": [
+            "no_resolved_claims_observed"
+          ]
+        },
+        "profile": {
+          "score": 0.36,
+          "confidence": 0.65,
+          "basis": [
+            "meta_author:false",
+            "published_time:false",
+            "canonical:true",
+            "about:true",
+            "contact:false",
+            "corrections:false",
+            "outbound_links:24",
+            "opinion_marker:false"
+          ]
+        },
+        "overall": {
+          "score": 0.4068489583333333,
+          "confidence": 0.273575,
+          "method": "mechanical_v1",
+          "basis": [
+            "unknown_domain_pattern",
+            "distinct_urls:7",
+            "distinct_axes:0",
+            "origin_types:2",
+            "referring_accounts:1",
+            "origin_types:2",
+            "track_record_unavailable"
+          ]
+        }
+      },
+      "profile": {
+        "fetched_at": "2026-07-08T06:31:21.887Z",
+        "homepage_url": "https://flow.com/",
+        "example_url": "https://flow.com/post/stablecoin-market-cap-on-flow-hits-all-time-high-of-74-6m?twclid=2czuzc6x3hqaue58fju5it9nms",
+        "homepage_status": 200,
+        "example_status": 200,
+        "homepage_final_url": "https://flow.com/",
+        "example_final_url": "https://flow.com/post/stablecoin-market-cap-on-flow-hits-all-time-high-of-74-6m?twclid=2czuzc6x3hqaue58fju5it9nms",
+        "homepage_content_type": "text/html; charset=utf-8",
+        "example_content_type": "text/html; charset=utf-8",
+        "homepage": {
+          "has_meta_author": false,
+          "has_published_time": false,
+          "has_canonical": true,
+          "has_about_link": true,
+          "has_contact_link": false,
+          "has_corrections_link": false,
+          "outbound_links_count": 16,
+          "opinion_marker": false
+        },
+        "example": {
+          "has_meta_author": false,
+          "has_published_time": false,
+          "has_canonical": true,
+          "has_about_link": true,
+          "has_contact_link": false,
+          "has_corrections_link": false,
+          "outbound_links_count": 24,
+          "opinion_marker": false
+        }
+      }
+    },
+    {
       "domain": "merck.com",
       "entity": "Merck",
       "kind": "unknown",
@@ -13783,6 +13911,133 @@
           "has_contact_link": false,
           "has_corrections_link": false,
           "outbound_links_count": 4,
+          "opinion_marker": false
+        }
+      }
+    },
+    {
+      "domain": "bcgame-bet.com",
+      "entity": "Bcgame-Bet",
+      "kind": "unknown",
+      "first_seen_at": "2026-04-20T20:40:29.000Z",
+      "last_seen_at": "2026-07-09T23:22:18.373Z",
+      "discovery": {
+        "distinct_urls": 6,
+        "example_urls": [
+          "https://bcall-global.bcgame-bet.com/dispatch-v6?i=45zn3497p&utm_medium=twitter&utm_content=%7B%7Bad_name%7D%7D&p=%2Flogin%2Fregist&ch=twitter&pixel_id=or72z&register=tw-or72z-or738&purchase=tw-or72z-or736&twclid=2cjhb3kupxi19emmjqo3fks82g",
+          "https://bcall-global.bcgame-bet.com/dispatch-v6?i=4du7tfckn&utm_medium=twitter&utm_content=X520_zfge_LiveC_EN_SS_20260331_T&p=%2Flogin%2Fregist&ch=twitter&pixel_id=or72z&register=tw-or72z-or738&purchase=tw-or72z-or736&twclid=2vztgz6ftbsi4y8a10wnpcdxh",
+          "https://bcall-global.bcgame-bet.com/dispatch-v6?i=45zn3497p&utm_medium=twitter&utm_content=X544%281%29_pmkq_WC_EN_SS_20260521_T&p=%2Flogin%2Fregist&ch=twitter&pixel_id=or72z&register=tw-or72z-or738&purchase=tw-or72z-or736&twclid=23ghs1bpinsaxhep7bv3fwth02",
+          "https://bcall-global.bcgame-bet.com/dispatch-v6?i=45zn3497p&utm_medium=twitter&utm_content=X565_pmkq_WC_EN_SS_20260708_T&p=%2Flogin%2Fregist&ch=twitter&pixel_id=or72z&register=tw-or72z-or738&purchase=tw-or72z-or736&twclid=2736ycy49dvv3yhpk0061975im",
+          "https://bcall-global.bcgame-bet.com/dispatch-v6?i=45zn3497p&utm_medium=twitter&utm_content=X565_pmkq_WC_EN_SS_20260708_T&p=%2Flogin%2Fregist&ch=twitter&pixel_id=or72z&register=tw-or72z-or738&purchase=tw-or72z-or736&twclid=29d1ionkhzfcakmtprj68ifwg8"
+        ],
+        "origin_counts": {
+          "feed_buffer_reply": 2,
+          "feed_buffer": 4
+        },
+        "distinct_referring_accounts": 1,
+        "sample_referring_accounts": [
+          "bcgame"
+        ],
+        "distinct_axes": []
+      },
+      "claims": {
+        "total": 0,
+        "supported": 0,
+        "refuted": 0,
+        "contested": 0,
+        "unverified": 0,
+        "resolved_count": 0
+      },
+      "structural_features": {
+        "has_search_paths": false,
+        "has_article_paths": false,
+        "has_doi_paths": false
+      },
+      "ratings": {
+        "provenance": {
+          "score": 0.45,
+          "basis": [
+            "unknown_domain_pattern"
+          ]
+        },
+        "breadth": {
+          "score": 0.295,
+          "basis": [
+            "distinct_urls:6",
+            "distinct_axes:0",
+            "origin_types:2"
+          ]
+        },
+        "corroboration": {
+          "score": 0.2833333333333333,
+          "basis": [
+            "referring_accounts:1",
+            "origin_types:2"
+          ]
+        },
+        "track_record": {
+          "score": null,
+          "basis": [
+            "no_resolved_claims_observed"
+          ]
+        },
+        "profile": {
+          "score": 0,
+          "confidence": 0.55,
+          "basis": [
+            "meta_author:false",
+            "published_time:false",
+            "canonical:false",
+            "about:false",
+            "contact:false",
+            "corrections:false",
+            "outbound_links:0",
+            "opinion_marker:false"
+          ]
+        },
+        "overall": {
+          "score": 0.40046875,
+          "confidence": 0.24495,
+          "method": "mechanical_v1",
+          "basis": [
+            "unknown_domain_pattern",
+            "distinct_urls:6",
+            "distinct_axes:0",
+            "origin_types:2",
+            "referring_accounts:1",
+            "origin_types:2",
+            "track_record_unavailable"
+          ]
+        }
+      },
+      "profile": {
+        "fetched_at": "2026-07-09T00:30:24.818Z",
+        "homepage_url": "https://bcgame-bet.com/",
+        "example_url": "https://bcall-global.bcgame-bet.com/dispatch-v6?i=45zn3497p&utm_medium=twitter&utm_content=%7B%7Bad_name%7D%7D&p=%2Flogin%2Fregist&ch=twitter&pixel_id=or72z&register=tw-or72z-or738&purchase=tw-or72z-or736&twclid=2cjhb3kupxi19emmjqo3fks82g",
+        "homepage_status": null,
+        "example_status": 415,
+        "homepage_final_url": "https://bcgame-bet.com/",
+        "example_final_url": "https://bcall-global.bcgame-bet.com/dispatch-v6?i=45zn3497p&utm_medium=twitter&utm_content=%7B%7Bad_name%7D%7D&p=%2Flogin%2Fregist&ch=twitter&pixel_id=or72z&register=tw-or72z-or738&purchase=tw-or72z-or736&twclid=2cjhb3kupxi19emmjqo3fks82g",
+        "homepage_content_type": "",
+        "example_content_type": "application/json",
+        "homepage": {
+          "has_meta_author": false,
+          "has_published_time": false,
+          "has_canonical": false,
+          "has_about_link": false,
+          "has_contact_link": false,
+          "has_corrections_link": false,
+          "outbound_links_count": 0,
+          "opinion_marker": false
+        },
+        "example": {
+          "has_meta_author": false,
+          "has_published_time": false,
+          "has_canonical": false,
+          "has_about_link": false,
+          "has_contact_link": false,
+          "has_corrections_link": false,
+          "outbound_links_count": 0,
           "opinion_marker": false
         }
       }
@@ -14640,7 +14895,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-07-06T23:38:31.013Z",
+        "fetched_at": "2026-07-10T00:04:32.396Z",
         "homepage_url": "https://panzer.quest/",
         "example_url": "https://panzer.quest/?r=twipq1wwa&twclid=29prb4l0osv19xvy30sejzir0",
         "homepage_status": 200,
@@ -15038,133 +15293,6 @@
           "has_contact_link": false,
           "has_corrections_link": false,
           "outbound_links_count": 14,
-          "opinion_marker": false
-        },
-        "example": {
-          "has_meta_author": false,
-          "has_published_time": false,
-          "has_canonical": false,
-          "has_about_link": false,
-          "has_contact_link": false,
-          "has_corrections_link": false,
-          "outbound_links_count": 0,
-          "opinion_marker": false
-        }
-      }
-    },
-    {
-      "domain": "bcgame-bet.com",
-      "entity": "Bcgame-Bet",
-      "kind": "unknown",
-      "first_seen_at": "2026-04-20T20:40:29.000Z",
-      "last_seen_at": "2026-07-09T05:24:52.270Z",
-      "discovery": {
-        "distinct_urls": 5,
-        "example_urls": [
-          "https://bcall-global.bcgame-bet.com/dispatch-v6?i=45zn3497p&utm_medium=twitter&utm_content=%7B%7Bad_name%7D%7D&p=%2Flogin%2Fregist&ch=twitter&pixel_id=or72z&register=tw-or72z-or738&purchase=tw-or72z-or736&twclid=2cjhb3kupxi19emmjqo3fks82g",
-          "https://bcall-global.bcgame-bet.com/dispatch-v6?i=4du7tfckn&utm_medium=twitter&utm_content=X520_zfge_LiveC_EN_SS_20260331_T&p=%2Flogin%2Fregist&ch=twitter&pixel_id=or72z&register=tw-or72z-or738&purchase=tw-or72z-or736&twclid=2vztgz6ftbsi4y8a10wnpcdxh",
-          "https://bcall-global.bcgame-bet.com/dispatch-v6?i=45zn3497p&utm_medium=twitter&utm_content=X544%281%29_pmkq_WC_EN_SS_20260521_T&p=%2Flogin%2Fregist&ch=twitter&pixel_id=or72z&register=tw-or72z-or738&purchase=tw-or72z-or736&twclid=23ghs1bpinsaxhep7bv3fwth02",
-          "https://bcall-global.bcgame-bet.com/dispatch-v6?i=45zn3497p&utm_medium=twitter&utm_content=X565_pmkq_WC_EN_SS_20260708_T&p=%2Flogin%2Fregist&ch=twitter&pixel_id=or72z&register=tw-or72z-or738&purchase=tw-or72z-or736&twclid=2736ycy49dvv3yhpk0061975im",
-          "https://bcall-global.bcgame-bet.com/dispatch-v6?i=45zn3497p&utm_medium=twitter&utm_content=X565_pmkq_WC_EN_SS_20260708_T&p=%2Flogin%2Fregist&ch=twitter&pixel_id=or72z&register=tw-or72z-or738&purchase=tw-or72z-or736&twclid=29d1ionkhzfcakmtprj68ifwg8"
-        ],
-        "origin_counts": {
-          "feed_buffer_reply": 2,
-          "feed_buffer": 3
-        },
-        "distinct_referring_accounts": 1,
-        "sample_referring_accounts": [
-          "bcgame"
-        ],
-        "distinct_axes": []
-      },
-      "claims": {
-        "total": 0,
-        "supported": 0,
-        "refuted": 0,
-        "contested": 0,
-        "unverified": 0,
-        "resolved_count": 0
-      },
-      "structural_features": {
-        "has_search_paths": false,
-        "has_article_paths": false,
-        "has_doi_paths": false
-      },
-      "ratings": {
-        "provenance": {
-          "score": 0.45,
-          "basis": [
-            "unknown_domain_pattern"
-          ]
-        },
-        "breadth": {
-          "score": 0.26583333333333337,
-          "basis": [
-            "distinct_urls:5",
-            "distinct_axes:0",
-            "origin_types:2"
-          ]
-        },
-        "corroboration": {
-          "score": 0.2833333333333333,
-          "basis": [
-            "referring_accounts:1",
-            "origin_types:2"
-          ]
-        },
-        "track_record": {
-          "score": null,
-          "basis": [
-            "no_resolved_claims_observed"
-          ]
-        },
-        "profile": {
-          "score": 0,
-          "confidence": 0.55,
-          "basis": [
-            "meta_author:false",
-            "published_time:false",
-            "canonical:false",
-            "about:false",
-            "contact:false",
-            "corrections:false",
-            "outbound_links:0",
-            "opinion_marker:false"
-          ]
-        },
-        "overall": {
-          "score": 0.39408854166666674,
-          "confidence": 0.216325,
-          "method": "mechanical_v1",
-          "basis": [
-            "unknown_domain_pattern",
-            "distinct_urls:5",
-            "distinct_axes:0",
-            "origin_types:2",
-            "referring_accounts:1",
-            "origin_types:2",
-            "track_record_unavailable"
-          ]
-        }
-      },
-      "profile": {
-        "fetched_at": "2026-07-09T00:30:24.818Z",
-        "homepage_url": "https://bcgame-bet.com/",
-        "example_url": "https://bcall-global.bcgame-bet.com/dispatch-v6?i=45zn3497p&utm_medium=twitter&utm_content=%7B%7Bad_name%7D%7D&p=%2Flogin%2Fregist&ch=twitter&pixel_id=or72z&register=tw-or72z-or738&purchase=tw-or72z-or736&twclid=2cjhb3kupxi19emmjqo3fks82g",
-        "homepage_status": null,
-        "example_status": 415,
-        "homepage_final_url": "https://bcgame-bet.com/",
-        "example_final_url": "https://bcall-global.bcgame-bet.com/dispatch-v6?i=45zn3497p&utm_medium=twitter&utm_content=%7B%7Bad_name%7D%7D&p=%2Flogin%2Fregist&ch=twitter&pixel_id=or72z&register=tw-or72z-or738&purchase=tw-or72z-or736&twclid=2cjhb3kupxi19emmjqo3fks82g",
-        "homepage_content_type": "",
-        "example_content_type": "application/json",
-        "homepage": {
-          "has_meta_author": false,
-          "has_published_time": false,
-          "has_canonical": false,
-          "has_about_link": false,
-          "has_contact_link": false,
-          "has_corrections_link": false,
-          "outbound_links_count": 0,
           "opinion_marker": false
         },
         "example": {
@@ -15810,133 +15938,6 @@
           "has_contact_link": false,
           "has_corrections_link": false,
           "outbound_links_count": 0,
-          "opinion_marker": false
-        }
-      }
-    },
-    {
-      "domain": "flow.com",
-      "entity": "Flow",
-      "kind": "unknown",
-      "first_seen_at": "2026-07-07T10:18:49.076Z",
-      "last_seen_at": "2026-07-08T23:34:37.546Z",
-      "discovery": {
-        "distinct_urls": 5,
-        "example_urls": [
-          "https://flow.com/post/stablecoin-market-cap-on-flow-hits-all-time-high-of-74-6m?twclid=2czuzc6x3hqaue58fju5it9nms",
-          "https://flow.com/post/stablecoin-market-cap-on-flow-hits-all-time-high-of-74-6m?twclid=22dmhldav47uf75ss19rz0pemn",
-          "https://flow.com/post/stablecoin-market-cap-on-flow-hits-all-time-high-of-74-6m?twclid=28ofiyesmwha4byfuelry63frz",
-          "https://flow.com/post/stablecoin-market-cap-on-flow-hits-all-time-high-of-74-6m?twclid=25mm9c7hjbfn0zyrf4wlos5tep",
-          "https://flow.com/post/stablecoin-market-cap-on-flow-hits-all-time-high-of-74-6m?twclid=277h8s6kgto03qxvrlqp7rxyqt"
-        ],
-        "origin_counts": {
-          "feed_buffer": 3,
-          "feed_buffer_reply": 2
-        },
-        "distinct_referring_accounts": 1,
-        "sample_referring_accounts": [
-          "flow_blockchain"
-        ],
-        "distinct_axes": []
-      },
-      "claims": {
-        "total": 0,
-        "supported": 0,
-        "refuted": 0,
-        "contested": 0,
-        "unverified": 0,
-        "resolved_count": 0
-      },
-      "structural_features": {
-        "has_search_paths": false,
-        "has_article_paths": false,
-        "has_doi_paths": false
-      },
-      "ratings": {
-        "provenance": {
-          "score": 0.45,
-          "basis": [
-            "unknown_domain_pattern"
-          ]
-        },
-        "breadth": {
-          "score": 0.26583333333333337,
-          "basis": [
-            "distinct_urls:5",
-            "distinct_axes:0",
-            "origin_types:2"
-          ]
-        },
-        "corroboration": {
-          "score": 0.2833333333333333,
-          "basis": [
-            "referring_accounts:1",
-            "origin_types:2"
-          ]
-        },
-        "track_record": {
-          "score": null,
-          "basis": [
-            "no_resolved_claims_observed"
-          ]
-        },
-        "profile": {
-          "score": 0.36,
-          "confidence": 0.65,
-          "basis": [
-            "meta_author:false",
-            "published_time:false",
-            "canonical:true",
-            "about:true",
-            "contact:false",
-            "corrections:false",
-            "outbound_links:24",
-            "opinion_marker:false"
-          ]
-        },
-        "overall": {
-          "score": 0.39408854166666674,
-          "confidence": 0.216325,
-          "method": "mechanical_v1",
-          "basis": [
-            "unknown_domain_pattern",
-            "distinct_urls:5",
-            "distinct_axes:0",
-            "origin_types:2",
-            "referring_accounts:1",
-            "origin_types:2",
-            "track_record_unavailable"
-          ]
-        }
-      },
-      "profile": {
-        "fetched_at": "2026-07-08T06:31:21.887Z",
-        "homepage_url": "https://flow.com/",
-        "example_url": "https://flow.com/post/stablecoin-market-cap-on-flow-hits-all-time-high-of-74-6m?twclid=2czuzc6x3hqaue58fju5it9nms",
-        "homepage_status": 200,
-        "example_status": 200,
-        "homepage_final_url": "https://flow.com/",
-        "example_final_url": "https://flow.com/post/stablecoin-market-cap-on-flow-hits-all-time-high-of-74-6m?twclid=2czuzc6x3hqaue58fju5it9nms",
-        "homepage_content_type": "text/html; charset=utf-8",
-        "example_content_type": "text/html; charset=utf-8",
-        "homepage": {
-          "has_meta_author": false,
-          "has_published_time": false,
-          "has_canonical": true,
-          "has_about_link": true,
-          "has_contact_link": false,
-          "has_corrections_link": false,
-          "outbound_links_count": 16,
-          "opinion_marker": false
-        },
-        "example": {
-          "has_meta_author": false,
-          "has_published_time": false,
-          "has_canonical": true,
-          "has_about_link": true,
-          "has_contact_link": false,
-          "has_corrections_link": false,
-          "outbound_links_count": 24,
           "opinion_marker": false
         }
       }
@@ -16945,6 +16946,132 @@
           "has_contact_link": false,
           "has_corrections_link": false,
           "outbound_links_count": 12,
+          "opinion_marker": false
+        }
+      }
+    },
+    {
+      "domain": "springermedicine.com",
+      "entity": "Springermedicine",
+      "kind": "unknown",
+      "first_seen_at": "2026-07-05T16:56:48.000Z",
+      "last_seen_at": "2026-07-09T21:16:37.000Z",
+      "discovery": {
+        "distinct_urls": 3,
+        "example_urls": [
+          "https://www.springermedicine.com/webinar-breakthroughs-in-bladder-cancer-care/52496396?utm_source=x&utm_medium=cpc&utm_campaign=bladder-cancer-care-webinar&utm_content=ad-4&twclid=27am5hqwt8x5t4o745p030f1a4",
+          "https://alzheimers-biomarkers-mdt.ime.springermedicine.com/build-your-own-infographic/?utm_source=x&utm_medium=cpc&utm_campaign=ad-mdt_infographic&utm_content=ad-4&twclid=238edfbmieiclnk6skv3yipuc6",
+          "https://www.springermedicine.com/ean-2026/52643724?utm_source=x&utm_medium=cpc&utm_campaign=ean-2026&utm_content=ad-2&twclid=237gdvf65c6mrr2h9yjgr8juck"
+        ],
+        "origin_counts": {
+          "feed_buffer": 1,
+          "feed_buffer_reply": 2
+        },
+        "distinct_referring_accounts": 2,
+        "sample_referring_accounts": [
+          "springer_med",
+          "springerime"
+        ],
+        "distinct_axes": []
+      },
+      "claims": {
+        "total": 0,
+        "supported": 0,
+        "refuted": 0,
+        "contested": 0,
+        "unverified": 0,
+        "resolved_count": 0
+      },
+      "structural_features": {
+        "has_search_paths": false,
+        "has_article_paths": false,
+        "has_doi_paths": false
+      },
+      "ratings": {
+        "provenance": {
+          "score": 0.45,
+          "basis": [
+            "unknown_domain_pattern"
+          ]
+        },
+        "breadth": {
+          "score": 0.2075,
+          "basis": [
+            "distinct_urls:3",
+            "distinct_axes:0",
+            "origin_types:2"
+          ]
+        },
+        "corroboration": {
+          "score": 0.39166666666666666,
+          "basis": [
+            "referring_accounts:2",
+            "origin_types:2"
+          ]
+        },
+        "track_record": {
+          "score": null,
+          "basis": [
+            "no_resolved_claims_observed"
+          ]
+        },
+        "profile": {
+          "score": 0.33999999999999997,
+          "confidence": 0.55,
+          "basis": [
+            "meta_author:false",
+            "published_time:false",
+            "canonical:true",
+            "about:false",
+            "contact:true",
+            "corrections:false",
+            "outbound_links:13",
+            "opinion_marker:false"
+          ]
+        },
+        "overall": {
+          "score": 0.391484375,
+          "confidence": 0.191325,
+          "method": "mechanical_v1",
+          "basis": [
+            "unknown_domain_pattern",
+            "distinct_urls:3",
+            "distinct_axes:0",
+            "origin_types:2",
+            "referring_accounts:2",
+            "origin_types:2",
+            "track_record_unavailable"
+          ]
+        }
+      },
+      "profile": {
+        "fetched_at": "2026-07-09T08:42:13.213Z",
+        "homepage_url": "https://springermedicine.com/",
+        "example_url": "https://www.springermedicine.com/webinar-breakthroughs-in-bladder-cancer-care/52496396?utm_source=x&utm_medium=cpc&utm_campaign=bladder-cancer-care-webinar&utm_content=ad-4&twclid=27am5hqwt8x5t4o745p030f1a4",
+        "homepage_status": 200,
+        "example_status": 200,
+        "homepage_final_url": "https://www.springermedicine.com/",
+        "example_final_url": "https://www.springermedicine.com/webinar-breakthroughs-in-bladder-cancer-care/52496396?utm_source=x&utm_medium=cpc&utm_campaign=bladder-cancer-care-webinar&utm_content=ad-4&twclid=27am5hqwt8x5t4o745p030f1a4",
+        "homepage_content_type": "text/html; charset=UTF-8",
+        "example_content_type": "text/html; charset=UTF-8",
+        "homepage": {
+          "has_meta_author": false,
+          "has_published_time": false,
+          "has_canonical": true,
+          "has_about_link": false,
+          "has_contact_link": true,
+          "has_corrections_link": false,
+          "outbound_links_count": 5,
+          "opinion_marker": false
+        },
+        "example": {
+          "has_meta_author": false,
+          "has_published_time": false,
+          "has_canonical": true,
+          "has_about_link": false,
+          "has_contact_link": true,
+          "has_corrections_link": false,
+          "outbound_links_count": 13,
           "opinion_marker": false
         }
       }
@@ -18961,131 +19088,6 @@
           "has_contact_link": false,
           "has_corrections_link": false,
           "outbound_links_count": 0,
-          "opinion_marker": false
-        }
-      }
-    },
-    {
-      "domain": "springermedicine.com",
-      "entity": "Springermedicine",
-      "kind": "unknown",
-      "first_seen_at": "2026-07-05T16:56:48.000Z",
-      "last_seen_at": "2026-07-06T05:10:40.758Z",
-      "discovery": {
-        "distinct_urls": 2,
-        "example_urls": [
-          "https://www.springermedicine.com/webinar-breakthroughs-in-bladder-cancer-care/52496396?utm_source=x&utm_medium=cpc&utm_campaign=bladder-cancer-care-webinar&utm_content=ad-4&twclid=27am5hqwt8x5t4o745p030f1a4",
-          "https://alzheimers-biomarkers-mdt.ime.springermedicine.com/build-your-own-infographic/?utm_source=x&utm_medium=cpc&utm_campaign=ad-mdt_infographic&utm_content=ad-4&twclid=238edfbmieiclnk6skv3yipuc6"
-        ],
-        "origin_counts": {
-          "feed_buffer": 1,
-          "feed_buffer_reply": 1
-        },
-        "distinct_referring_accounts": 2,
-        "sample_referring_accounts": [
-          "springer_med",
-          "springerime"
-        ],
-        "distinct_axes": []
-      },
-      "claims": {
-        "total": 0,
-        "supported": 0,
-        "refuted": 0,
-        "contested": 0,
-        "unverified": 0,
-        "resolved_count": 0
-      },
-      "structural_features": {
-        "has_search_paths": false,
-        "has_article_paths": false,
-        "has_doi_paths": false
-      },
-      "ratings": {
-        "provenance": {
-          "score": 0.45,
-          "basis": [
-            "unknown_domain_pattern"
-          ]
-        },
-        "breadth": {
-          "score": 0.17833333333333332,
-          "basis": [
-            "distinct_urls:2",
-            "distinct_axes:0",
-            "origin_types:2"
-          ]
-        },
-        "corroboration": {
-          "score": 0.39166666666666666,
-          "basis": [
-            "referring_accounts:2",
-            "origin_types:2"
-          ]
-        },
-        "track_record": {
-          "score": null,
-          "basis": [
-            "no_resolved_claims_observed"
-          ]
-        },
-        "profile": {
-          "score": 0.33999999999999997,
-          "confidence": 0.55,
-          "basis": [
-            "meta_author:false",
-            "published_time:false",
-            "canonical:true",
-            "about:false",
-            "contact:true",
-            "corrections:false",
-            "outbound_links:13",
-            "opinion_marker:false"
-          ]
-        },
-        "overall": {
-          "score": 0.3851041666666667,
-          "confidence": 0.1627,
-          "method": "mechanical_v1",
-          "basis": [
-            "unknown_domain_pattern",
-            "distinct_urls:2",
-            "distinct_axes:0",
-            "origin_types:2",
-            "referring_accounts:2",
-            "origin_types:2",
-            "track_record_unavailable"
-          ]
-        }
-      },
-      "profile": {
-        "fetched_at": "2026-07-09T08:42:13.213Z",
-        "homepage_url": "https://springermedicine.com/",
-        "example_url": "https://www.springermedicine.com/webinar-breakthroughs-in-bladder-cancer-care/52496396?utm_source=x&utm_medium=cpc&utm_campaign=bladder-cancer-care-webinar&utm_content=ad-4&twclid=27am5hqwt8x5t4o745p030f1a4",
-        "homepage_status": 200,
-        "example_status": 200,
-        "homepage_final_url": "https://www.springermedicine.com/",
-        "example_final_url": "https://www.springermedicine.com/webinar-breakthroughs-in-bladder-cancer-care/52496396?utm_source=x&utm_medium=cpc&utm_campaign=bladder-cancer-care-webinar&utm_content=ad-4&twclid=27am5hqwt8x5t4o745p030f1a4",
-        "homepage_content_type": "text/html; charset=UTF-8",
-        "example_content_type": "text/html; charset=UTF-8",
-        "homepage": {
-          "has_meta_author": false,
-          "has_published_time": false,
-          "has_canonical": true,
-          "has_about_link": false,
-          "has_contact_link": true,
-          "has_corrections_link": false,
-          "outbound_links_count": 5,
-          "opinion_marker": false
-        },
-        "example": {
-          "has_meta_author": false,
-          "has_published_time": false,
-          "has_canonical": true,
-          "has_about_link": false,
-          "has_contact_link": true,
-          "has_corrections_link": false,
-          "outbound_links_count": 13,
           "opinion_marker": false
         }
       }
@@ -25641,20 +25643,6 @@
             "no_resolved_claims_observed"
           ]
         },
-        "overall": {
-          "score": 0.37494791666666666,
-          "confidence": 0.13045,
-          "method": "mechanical_v1",
-          "basis": [
-            "unknown_domain_pattern",
-            "distinct_urls:2",
-            "distinct_axes:0",
-            "origin_types:2",
-            "referring_accounts:1",
-            "origin_types:2",
-            "track_record_unavailable"
-          ]
-        },
         "profile": {
           "score": 0.30000000000000004,
           "confidence": 0.65,
@@ -25667,6 +25655,20 @@
             "corrections:false",
             "outbound_links:6",
             "opinion_marker:false"
+          ]
+        },
+        "overall": {
+          "score": 0.37494791666666666,
+          "confidence": 0.13045,
+          "method": "mechanical_v1",
+          "basis": [
+            "unknown_domain_pattern",
+            "distinct_urls:2",
+            "distinct_axes:0",
+            "origin_types:2",
+            "referring_accounts:1",
+            "origin_types:2",
+            "track_record_unavailable"
           ]
         }
       },
@@ -27333,6 +27335,132 @@
           "has_published_time": false,
           "has_canonical": true,
           "has_about_link": true,
+          "has_contact_link": false,
+          "has_corrections_link": false,
+          "outbound_links_count": 5,
+          "opinion_marker": false
+        }
+      }
+    },
+    {
+      "domain": "telega.io",
+      "entity": "Telega Io",
+      "kind": "unknown",
+      "first_seen_at": "2026-07-07T13:24:28.000Z",
+      "last_seen_at": "2026-07-09T00:25:00.000Z",
+      "discovery": {
+        "distinct_urls": 5,
+        "example_urls": [
+          "https://telega.io/package/?r=Vz7qIZLvWm_r&utm_source=dsp_banner&utm_medium=cpc&utm_campaign=X%5BALL%5BS%5BD%5BM%5BAds%5BTGads%7Cs%7Cdsp_banner%7Cm%7Ccpc%7Cc%7C103%7Cct%7C102&twclid=29ffqq0bpqjb2yxu5ppn3bdkms",
+          "https://telega.io/package/?r=Vz7qIZLvWm_r&utm_source=dsp_banner&utm_medium=cpc&utm_campaign=X%5BALL%5BS%5BD%5BM%5BAds%5BTGads%7Cs%7Cdsp_banner%7Cm%7Ccpc%7Cc%7C103%7Cct%7C102&twclid=2b8q5c5fnuvy2s9r62w2xze02",
+          "https://telega.io/package/?r=Vz7qIZLvWm_r&utm_source=dsp_banner&utm_medium=cpc&utm_campaign=X%5BALL%5BS%5BD%5BM%5BAds%5BTGads%7Cs%7Cdsp_banner%7Cm%7Ccpc%7Cc%7C103%7Cct%7C102&twclid=22pdtbtmzfj1i1fstpl59cf6j6",
+          "https://telega.io/package/?r=Vz7qIZLvWm_r&utm_source=dsp_banner&utm_medium=cpc&utm_campaign=X%5BALL%5BS%5BD%5BM%5BAds%5BTGads%7Cs%7Cdsp_banner%7Cm%7Ccpc%7Cc%7C103%7Cct%7C102&twclid=26ldezzt45joey9xbastzcz0cu",
+          "https://telega.io/package/?r=Vz7qIZLvWm_r&utm_source=dsp_banner&utm_medium=cpc&utm_campaign=X%5BALL%5BS%5BD%5BM%5BAds%5BTGads%7Cs%7Cdsp_banner%7Cm%7Ccpc%7Cc%7C103%7Cct%7C102&twclid=2271dqz2a9mf9h25yohqpha3kz"
+        ],
+        "origin_counts": {
+          "feed_buffer_reply": 5
+        },
+        "distinct_referring_accounts": 1,
+        "sample_referring_accounts": [
+          "telegaen"
+        ],
+        "distinct_axes": []
+      },
+      "claims": {
+        "total": 0,
+        "supported": 0,
+        "refuted": 0,
+        "contested": 0,
+        "unverified": 0,
+        "resolved_count": 0
+      },
+      "structural_features": {
+        "has_search_paths": false,
+        "has_article_paths": false,
+        "has_doi_paths": false
+      },
+      "ratings": {
+        "provenance": {
+          "score": 0.45,
+          "basis": [
+            "unknown_domain_pattern"
+          ]
+        },
+        "breadth": {
+          "score": 0.20583333333333334,
+          "basis": [
+            "distinct_urls:5",
+            "distinct_axes:0",
+            "origin_types:1"
+          ]
+        },
+        "corroboration": {
+          "score": 0.19583333333333333,
+          "basis": [
+            "referring_accounts:1",
+            "origin_types:1"
+          ]
+        },
+        "track_record": {
+          "score": null,
+          "basis": [
+            "no_resolved_claims_observed"
+          ]
+        },
+        "profile": {
+          "score": 0.05,
+          "confidence": 0.55,
+          "basis": [
+            "meta_author:false",
+            "published_time:false",
+            "canonical:false",
+            "about:false",
+            "contact:false",
+            "corrections:false",
+            "outbound_links:5",
+            "opinion_marker:false"
+          ]
+        },
+        "overall": {
+          "score": 0.37276041666666665,
+          "confidence": 0.19585000000000002,
+          "method": "mechanical_v1",
+          "basis": [
+            "unknown_domain_pattern",
+            "distinct_urls:5",
+            "distinct_axes:0",
+            "origin_types:1",
+            "referring_accounts:1",
+            "origin_types:1",
+            "track_record_unavailable"
+          ]
+        }
+      },
+      "profile": {
+        "fetched_at": "2026-07-09T07:00:47.568Z",
+        "homepage_url": "https://telega.io/",
+        "example_url": "https://telega.io/package/?r=Vz7qIZLvWm_r&utm_source=dsp_banner&utm_medium=cpc&utm_campaign=X%5BALL%5BS%5BD%5BM%5BAds%5BTGads%7Cs%7Cdsp_banner%7Cm%7Ccpc%7Cc%7C103%7Cct%7C102&twclid=29ffqq0bpqjb2yxu5ppn3bdkms",
+        "homepage_status": 200,
+        "example_status": 200,
+        "homepage_final_url": "https://telega.io/",
+        "example_final_url": "https://telega.io/package?utm_source=dsp_banner&utm_medium=cpc&utm_campaign=X%5BALL%5BS%5BD%5BM%5BAds%5BTGads%7Cs%7Cdsp_banner%7Cm%7Ccpc%7Cc%7C103%7Cct%7C102&twclid=29ffqq0bpqjb2yxu5ppn3bdkms",
+        "homepage_content_type": "text/html; charset=utf-8",
+        "example_content_type": "text/html; charset=utf-8",
+        "homepage": {
+          "has_meta_author": false,
+          "has_published_time": false,
+          "has_canonical": false,
+          "has_about_link": false,
+          "has_contact_link": false,
+          "has_corrections_link": false,
+          "outbound_links_count": 6,
+          "opinion_marker": false
+        },
+        "example": {
+          "has_meta_author": false,
+          "has_published_time": false,
+          "has_canonical": false,
+          "has_about_link": false,
           "has_contact_link": false,
           "has_corrections_link": false,
           "outbound_links_count": 5,
@@ -30564,131 +30692,6 @@
           "has_contact_link": false,
           "has_corrections_link": false,
           "outbound_links_count": 0,
-          "opinion_marker": false
-        }
-      }
-    },
-    {
-      "domain": "telega.io",
-      "entity": "Telega Io",
-      "kind": "unknown",
-      "first_seen_at": "2026-07-07T13:24:28.000Z",
-      "last_seen_at": "2026-07-08T23:09:52.000Z",
-      "discovery": {
-        "distinct_urls": 4,
-        "example_urls": [
-          "https://telega.io/package/?r=Vz7qIZLvWm_r&utm_source=dsp_banner&utm_medium=cpc&utm_campaign=X%5BALL%5BS%5BD%5BM%5BAds%5BTGads%7Cs%7Cdsp_banner%7Cm%7Ccpc%7Cc%7C103%7Cct%7C102&twclid=29ffqq0bpqjb2yxu5ppn3bdkms",
-          "https://telega.io/package/?r=Vz7qIZLvWm_r&utm_source=dsp_banner&utm_medium=cpc&utm_campaign=X%5BALL%5BS%5BD%5BM%5BAds%5BTGads%7Cs%7Cdsp_banner%7Cm%7Ccpc%7Cc%7C103%7Cct%7C102&twclid=2b8q5c5fnuvy2s9r62w2xze02",
-          "https://telega.io/package/?r=Vz7qIZLvWm_r&utm_source=dsp_banner&utm_medium=cpc&utm_campaign=X%5BALL%5BS%5BD%5BM%5BAds%5BTGads%7Cs%7Cdsp_banner%7Cm%7Ccpc%7Cc%7C103%7Cct%7C102&twclid=22pdtbtmzfj1i1fstpl59cf6j6",
-          "https://telega.io/package/?r=Vz7qIZLvWm_r&utm_source=dsp_banner&utm_medium=cpc&utm_campaign=X%5BALL%5BS%5BD%5BM%5BAds%5BTGads%7Cs%7Cdsp_banner%7Cm%7Ccpc%7Cc%7C103%7Cct%7C102&twclid=26ldezzt45joey9xbastzcz0cu"
-        ],
-        "origin_counts": {
-          "feed_buffer_reply": 4
-        },
-        "distinct_referring_accounts": 1,
-        "sample_referring_accounts": [
-          "telegaen"
-        ],
-        "distinct_axes": []
-      },
-      "claims": {
-        "total": 0,
-        "supported": 0,
-        "refuted": 0,
-        "contested": 0,
-        "unverified": 0,
-        "resolved_count": 0
-      },
-      "structural_features": {
-        "has_search_paths": false,
-        "has_article_paths": false,
-        "has_doi_paths": false
-      },
-      "ratings": {
-        "provenance": {
-          "score": 0.45,
-          "basis": [
-            "unknown_domain_pattern"
-          ]
-        },
-        "breadth": {
-          "score": 0.17666666666666664,
-          "basis": [
-            "distinct_urls:4",
-            "distinct_axes:0",
-            "origin_types:1"
-          ]
-        },
-        "corroboration": {
-          "score": 0.19583333333333333,
-          "basis": [
-            "referring_accounts:1",
-            "origin_types:1"
-          ]
-        },
-        "track_record": {
-          "score": null,
-          "basis": [
-            "no_resolved_claims_observed"
-          ]
-        },
-        "profile": {
-          "score": 0.05,
-          "confidence": 0.55,
-          "basis": [
-            "meta_author:false",
-            "published_time:false",
-            "canonical:false",
-            "about:false",
-            "contact:false",
-            "corrections:false",
-            "outbound_links:5",
-            "opinion_marker:false"
-          ]
-        },
-        "overall": {
-          "score": 0.3663802083333333,
-          "confidence": 0.16722499999999998,
-          "method": "mechanical_v1",
-          "basis": [
-            "unknown_domain_pattern",
-            "distinct_urls:4",
-            "distinct_axes:0",
-            "origin_types:1",
-            "referring_accounts:1",
-            "origin_types:1",
-            "track_record_unavailable"
-          ]
-        }
-      },
-      "profile": {
-        "fetched_at": "2026-07-09T07:00:47.568Z",
-        "homepage_url": "https://telega.io/",
-        "example_url": "https://telega.io/package/?r=Vz7qIZLvWm_r&utm_source=dsp_banner&utm_medium=cpc&utm_campaign=X%5BALL%5BS%5BD%5BM%5BAds%5BTGads%7Cs%7Cdsp_banner%7Cm%7Ccpc%7Cc%7C103%7Cct%7C102&twclid=29ffqq0bpqjb2yxu5ppn3bdkms",
-        "homepage_status": 200,
-        "example_status": 200,
-        "homepage_final_url": "https://telega.io/",
-        "example_final_url": "https://telega.io/package?utm_source=dsp_banner&utm_medium=cpc&utm_campaign=X%5BALL%5BS%5BD%5BM%5BAds%5BTGads%7Cs%7Cdsp_banner%7Cm%7Ccpc%7Cc%7C103%7Cct%7C102&twclid=29ffqq0bpqjb2yxu5ppn3bdkms",
-        "homepage_content_type": "text/html; charset=utf-8",
-        "example_content_type": "text/html; charset=utf-8",
-        "homepage": {
-          "has_meta_author": false,
-          "has_published_time": false,
-          "has_canonical": false,
-          "has_about_link": false,
-          "has_contact_link": false,
-          "has_corrections_link": false,
-          "outbound_links_count": 6,
-          "opinion_marker": false
-        },
-        "example": {
-          "has_meta_author": false,
-          "has_published_time": false,
-          "has_canonical": false,
-          "has_about_link": false,
-          "has_contact_link": false,
-          "has_corrections_link": false,
-          "outbound_links_count": 5,
           "opinion_marker": false
         }
       }
@@ -41505,7 +41508,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-07-06T06:41:20.807Z",
+        "fetched_at": "2026-07-09T23:34:31.988Z",
         "homepage_url": "https://kiierr.com/",
         "example_url": "https://kiierr.com/regrow-your-hair-new/?twclid=23i2gackvanp24oqqrs1z7o7zb",
         "homepage_status": 200,
@@ -41628,7 +41631,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-07-06T06:41:23.047Z",
+        "fetched_at": "2026-07-09T23:34:34.624Z",
         "homepage_url": "https://lookforther.realtor/",
         "example_url": "https://lookforther.realtor/?CID=psm_CAC_X_IF_ETHICS&twclid=22auirinqzzr62nnn2m30ol8h8",
         "homepage_status": 200,
@@ -41751,7 +41754,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-07-06T06:41:25.801Z",
+        "fetched_at": "2026-07-09T23:34:37.358Z",
         "homepage_url": "https://sugar.org/",
         "example_url": "https://sugar.org/?twclid=21ib4ppr4qv4sw7b4fcgpqz36w",
         "homepage_status": 200,
@@ -41874,7 +41877,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-07-06T07:32:33.547Z",
+        "fetched_at": "2026-07-09T23:34:38.374Z",
         "homepage_url": "https://oneleet.com/",
         "example_url": "https://oneleet.com/?utm_source=twitter&utm_medium=paid_social&utm_campaign=compliance_theater&twclid=2a67j2m5wa6dh7oxzhxot0zwu2",
         "homepage_status": 200,
@@ -41997,7 +42000,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-07-06T12:02:35.784Z",
+        "fetched_at": "2026-07-10T00:04:32.725Z",
         "homepage_url": "https://ptgaming.ph/",
         "example_url": "https://www.ptgaming.ph/?twclid=21n3lg1hcl64ox73kjyr4lggz9",
         "homepage_status": 200,
@@ -42090,6 +42093,20 @@
             "no_resolved_claims_observed"
           ]
         },
+        "profile": {
+          "score": 0.46,
+          "confidence": 0.75,
+          "basis": [
+            "meta_author:true",
+            "published_time:false",
+            "canonical:true",
+            "about:true",
+            "contact:false",
+            "corrections:false",
+            "outbound_links:4",
+            "opinion_marker:false"
+          ]
+        },
         "overall": {
           "score": 0.3536197916666667,
           "confidence": 0.10997499999999999,
@@ -42103,6 +42120,37 @@
             "origin_types:1",
             "track_record_unavailable"
           ]
+        }
+      },
+      "profile": {
+        "fetched_at": "2026-07-10T00:04:34.844Z",
+        "homepage_url": "https://kalit.ai/",
+        "example_url": "https://kalit.ai/?utm_source=twitter&utm_medium=paid_social&utm_campaign=x_prospecting_t2&utm_term=compfollowers&utm_content=intro-video&twclid=2ab0y68caxp5yfk1045i4lcy0",
+        "homepage_status": 200,
+        "example_status": 200,
+        "homepage_final_url": "https://kalit.ai/",
+        "example_final_url": "https://kalit.ai/?utm_source=twitter&utm_medium=paid_social&utm_campaign=x_prospecting_t2&utm_term=compfollowers&utm_content=intro-video&twclid=2ab0y68caxp5yfk1045i4lcy0",
+        "homepage_content_type": "text/html; charset=utf-8",
+        "example_content_type": "text/html; charset=utf-8",
+        "homepage": {
+          "has_meta_author": true,
+          "has_published_time": false,
+          "has_canonical": true,
+          "has_about_link": true,
+          "has_contact_link": false,
+          "has_corrections_link": false,
+          "outbound_links_count": 4,
+          "opinion_marker": false
+        },
+        "example": {
+          "has_meta_author": true,
+          "has_published_time": false,
+          "has_canonical": true,
+          "has_about_link": true,
+          "has_contact_link": false,
+          "has_corrections_link": false,
+          "outbound_links_count": 4,
+          "opinion_marker": false
         }
       }
     },
@@ -42168,6 +42216,20 @@
             "no_resolved_claims_observed"
           ]
         },
+        "profile": {
+          "score": 0.43,
+          "confidence": 0.65,
+          "basis": [
+            "meta_author:false",
+            "published_time:false",
+            "canonical:true",
+            "about:true",
+            "contact:true",
+            "corrections:false",
+            "outbound_links:7",
+            "opinion_marker:false"
+          ]
+        },
         "overall": {
           "score": 0.3536197916666667,
           "confidence": 0.10997499999999999,
@@ -42181,6 +42243,37 @@
             "origin_types:1",
             "track_record_unavailable"
           ]
+        }
+      },
+      "profile": {
+        "fetched_at": "2026-07-10T00:04:35.067Z",
+        "homepage_url": "https://ovationproductions.asia/",
+        "example_url": "https://ovationproductions.asia/shows?twclid=211tuu4nlnemtbaxblsjggnut",
+        "homepage_status": 200,
+        "example_status": 200,
+        "homepage_final_url": "https://ovationproductions.asia/",
+        "example_final_url": "https://ovationproductions.asia/shows?twclid=211tuu4nlnemtbaxblsjggnut",
+        "homepage_content_type": "text/html; charset=utf-8",
+        "example_content_type": "text/html; charset=utf-8",
+        "homepage": {
+          "has_meta_author": false,
+          "has_published_time": false,
+          "has_canonical": true,
+          "has_about_link": true,
+          "has_contact_link": true,
+          "has_corrections_link": false,
+          "outbound_links_count": 7,
+          "opinion_marker": false
+        },
+        "example": {
+          "has_meta_author": false,
+          "has_published_time": false,
+          "has_canonical": true,
+          "has_about_link": true,
+          "has_contact_link": true,
+          "has_corrections_link": false,
+          "outbound_links_count": 7,
+          "opinion_marker": false
         }
       }
     },
@@ -42246,6 +42339,20 @@
             "no_resolved_claims_observed"
           ]
         },
+        "profile": {
+          "score": 0,
+          "confidence": 0.55,
+          "basis": [
+            "meta_author:false",
+            "published_time:false",
+            "canonical:false",
+            "about:false",
+            "contact:false",
+            "corrections:false",
+            "outbound_links:0",
+            "opinion_marker:false"
+          ]
+        },
         "overall": {
           "score": 0.3536197916666667,
           "confidence": 0.10997499999999999,
@@ -42259,6 +42366,37 @@
             "origin_types:1",
             "track_record_unavailable"
           ]
+        }
+      },
+      "profile": {
+        "fetched_at": "2026-07-10T01:04:31.186Z",
+        "homepage_url": "https://bitget.com/",
+        "example_url": "https://partner.bitget.com/bg/SMTwittercfd?twclid=2dlbmypv93aoxlr6pzrilrub21",
+        "homepage_status": null,
+        "example_status": null,
+        "homepage_final_url": "https://bitget.com/",
+        "example_final_url": "https://partner.bitget.com/bg/SMTwittercfd?twclid=2dlbmypv93aoxlr6pzrilrub21",
+        "homepage_content_type": "",
+        "example_content_type": "",
+        "homepage": {
+          "has_meta_author": false,
+          "has_published_time": false,
+          "has_canonical": false,
+          "has_about_link": false,
+          "has_contact_link": false,
+          "has_corrections_link": false,
+          "outbound_links_count": 0,
+          "opinion_marker": false
+        },
+        "example": {
+          "has_meta_author": false,
+          "has_published_time": false,
+          "has_canonical": false,
+          "has_about_link": false,
+          "has_contact_link": false,
+          "has_corrections_link": false,
+          "outbound_links_count": 0,
+          "opinion_marker": false
         }
       }
     },
@@ -42324,6 +42462,20 @@
             "no_resolved_claims_observed"
           ]
         },
+        "profile": {
+          "score": 0.1,
+          "confidence": 0.55,
+          "basis": [
+            "meta_author:false",
+            "published_time:false",
+            "canonical:true",
+            "about:false",
+            "contact:false",
+            "corrections:false",
+            "outbound_links:0",
+            "opinion_marker:false"
+          ]
+        },
         "overall": {
           "score": 0.3536197916666667,
           "confidence": 0.10997499999999999,
@@ -42337,6 +42489,37 @@
             "origin_types:1",
             "track_record_unavailable"
           ]
+        }
+      },
+      "profile": {
+        "fetched_at": "2026-07-10T01:04:32.747Z",
+        "homepage_url": "https://sentinels.gg/",
+        "example_url": "https://shop.sentinels.gg/collections/sen-metallics?twclid=2eikc5h5also5tonotr2q4ciq6",
+        "homepage_status": 200,
+        "example_status": 200,
+        "homepage_final_url": "https://sentinels.gg/",
+        "example_final_url": "https://shop.sentinels.gg/collections/sen-metallics?twclid=2eikc5h5also5tonotr2q4ciq6",
+        "homepage_content_type": "text/html; charset=UTF-8",
+        "example_content_type": "text/html; charset=utf-8",
+        "homepage": {
+          "has_meta_author": true,
+          "has_published_time": false,
+          "has_canonical": false,
+          "has_about_link": false,
+          "has_contact_link": false,
+          "has_corrections_link": false,
+          "outbound_links_count": 0,
+          "opinion_marker": false
+        },
+        "example": {
+          "has_meta_author": false,
+          "has_published_time": false,
+          "has_canonical": true,
+          "has_about_link": false,
+          "has_contact_link": false,
+          "has_corrections_link": false,
+          "outbound_links_count": 0,
+          "opinion_marker": false
         }
       }
     },
@@ -42402,6 +42585,20 @@
             "no_resolved_claims_observed"
           ]
         },
+        "profile": {
+          "score": 0,
+          "confidence": 0.55,
+          "basis": [
+            "meta_author:false",
+            "published_time:false",
+            "canonical:false",
+            "about:false",
+            "contact:false",
+            "corrections:false",
+            "outbound_links:0",
+            "opinion_marker:false"
+          ]
+        },
         "overall": {
           "score": 0.3536197916666667,
           "confidence": 0.10997499999999999,
@@ -42415,6 +42612,37 @@
             "origin_types:1",
             "track_record_unavailable"
           ]
+        }
+      },
+      "profile": {
+        "fetched_at": "2026-07-10T01:04:33.079Z",
+        "homepage_url": "https://afterprime.com/",
+        "example_url": "https://afterprime.com/trade/eurusd?utm_source=twitter&utm_campaign=tofu&utm_medium=video&twclid=2623ygrxed4wh1418d13xdzmrn",
+        "homepage_status": 403,
+        "example_status": 403,
+        "homepage_final_url": "https://afterprime.com/",
+        "example_final_url": "https://afterprime.com/trade/eurusd?utm_source=twitter&utm_campaign=tofu&utm_medium=video&twclid=2623ygrxed4wh1418d13xdzmrn",
+        "homepage_content_type": "text/html; charset=UTF-8",
+        "example_content_type": "text/html; charset=UTF-8",
+        "homepage": {
+          "has_meta_author": false,
+          "has_published_time": false,
+          "has_canonical": false,
+          "has_about_link": false,
+          "has_contact_link": false,
+          "has_corrections_link": false,
+          "outbound_links_count": 0,
+          "opinion_marker": false
+        },
+        "example": {
+          "has_meta_author": false,
+          "has_published_time": false,
+          "has_canonical": false,
+          "has_about_link": false,
+          "has_contact_link": false,
+          "has_corrections_link": false,
+          "outbound_links_count": 0,
+          "opinion_marker": false
         }
       }
     },
@@ -42480,6 +42708,20 @@
             "no_resolved_claims_observed"
           ]
         },
+        "profile": {
+          "score": 0,
+          "confidence": 0.55,
+          "basis": [
+            "meta_author:false",
+            "published_time:false",
+            "canonical:false",
+            "about:false",
+            "contact:false",
+            "corrections:false",
+            "outbound_links:0",
+            "opinion_marker:false"
+          ]
+        },
         "overall": {
           "score": 0.3536197916666667,
           "confidence": 0.10997499999999999,
@@ -42493,6 +42735,37 @@
             "origin_types:1",
             "track_record_unavailable"
           ]
+        }
+      },
+      "profile": {
+        "fetched_at": "2026-07-10T01:04:34.304Z",
+        "homepage_url": "https://gitalgame.com/",
+        "example_url": "https://gitalgame.com/?utm_source=x&utm_medium=paid_social&utm_campaign=gitalgame_888888_july2026&utm_term=premium_gaming_domain&utm_content=xads_blueviolet_esports_creative_01&twclid=2515cnulakw8v6oqhheftov038",
+        "homepage_status": 403,
+        "example_status": 403,
+        "homepage_final_url": "https://sedo.com/search/details/?partnerid=324561&language=e&domain=gitalgame.com&origin=sales_lander_15&utm_medium=Parking&utm_campaign=offerpage",
+        "example_final_url": "https://sedo.com/search/details/?partnerid=324561&language=e&domain=gitalgame.com&origin=sales_lander_15&utm_medium=Parking&utm_campaign=offerpage",
+        "homepage_content_type": "text/html; charset=UTF-8",
+        "example_content_type": "text/html; charset=UTF-8",
+        "homepage": {
+          "has_meta_author": false,
+          "has_published_time": false,
+          "has_canonical": false,
+          "has_about_link": false,
+          "has_contact_link": false,
+          "has_corrections_link": false,
+          "outbound_links_count": 0,
+          "opinion_marker": false
+        },
+        "example": {
+          "has_meta_author": false,
+          "has_published_time": false,
+          "has_canonical": false,
+          "has_about_link": false,
+          "has_contact_link": false,
+          "has_corrections_link": false,
+          "outbound_links_count": 0,
+          "opinion_marker": false
         }
       }
     },
@@ -42571,6 +42844,174 @@
             "origin_types:1",
             "track_record_unavailable"
           ]
+        },
+        "profile": {
+          "score": 0.48000000000000004,
+          "confidence": 0.75,
+          "basis": [
+            "meta_author:false",
+            "published_time:true",
+            "canonical:true",
+            "about:true",
+            "contact:false",
+            "corrections:false",
+            "outbound_links:6",
+            "opinion_marker:false"
+          ]
+        }
+      },
+      "profile": {
+        "fetched_at": "2026-07-10T01:34:33.333Z",
+        "homepage_url": "https://aitradingbotreview.com/",
+        "example_url": "https://aitradingbotreview.com/cointech2u-okx-testimonial/?utm_source=x&utm_medium=cpc&utm_campaign=ct2u_cici_testimonial_v1&utm_content=v3_architecture&twclid=29n2yshl33pi6gwhsndaezd9zg",
+        "homepage_status": 200,
+        "example_status": 200,
+        "homepage_final_url": "https://aitradingbotreview.com/",
+        "example_final_url": "https://aitradingbotreview.com/cointech2u-okx-testimonial/?utm_source=x&utm_medium=cpc&utm_campaign=ct2u_cici_testimonial_v1&utm_content=v3_architecture&twclid=29n2yshl33pi6gwhsndaezd9zg",
+        "homepage_content_type": "text/html",
+        "example_content_type": "text/html",
+        "homepage": {
+          "has_meta_author": false,
+          "has_published_time": false,
+          "has_canonical": true,
+          "has_about_link": true,
+          "has_contact_link": false,
+          "has_corrections_link": false,
+          "outbound_links_count": 4,
+          "opinion_marker": false
+        },
+        "example": {
+          "has_meta_author": false,
+          "has_published_time": true,
+          "has_canonical": true,
+          "has_about_link": true,
+          "has_contact_link": false,
+          "has_corrections_link": false,
+          "outbound_links_count": 6,
+          "opinion_marker": false
+        }
+      }
+    },
+    {
+      "domain": "puter.com",
+      "entity": "Puter",
+      "kind": "unknown",
+      "first_seen_at": "2026-07-08T10:10:02.050Z",
+      "last_seen_at": "2026-07-09T23:12:25.297Z",
+      "discovery": {
+        "distinct_urls": 2,
+        "example_urls": [
+          "https://developer.puter.com/?utm_source=x&utm_medium=paid_social&utm_campaign=backend_ai&twclid=27ht9opz02h3rp1i1jsomffb4m",
+          "https://developer.puter.com/?utm_source=x&utm_medium=paid_social&utm_campaign=backend_ai&twclid=28uqk0woxb9sb5z7pw33lqmjgm"
+        ],
+        "origin_counts": {
+          "feed_buffer": 2
+        },
+        "distinct_referring_accounts": 1,
+        "sample_referring_accounts": [
+          "heyputer"
+        ],
+        "distinct_axes": []
+      },
+      "claims": {
+        "total": 0,
+        "supported": 0,
+        "refuted": 0,
+        "contested": 0,
+        "unverified": 0,
+        "resolved_count": 0
+      },
+      "structural_features": {
+        "has_search_paths": false,
+        "has_article_paths": false,
+        "has_doi_paths": false
+      },
+      "ratings": {
+        "provenance": {
+          "score": 0.45,
+          "basis": [
+            "unknown_domain_pattern"
+          ]
+        },
+        "breadth": {
+          "score": 0.11833333333333332,
+          "basis": [
+            "distinct_urls:2",
+            "distinct_axes:0",
+            "origin_types:1"
+          ]
+        },
+        "corroboration": {
+          "score": 0.19583333333333333,
+          "basis": [
+            "referring_accounts:1",
+            "origin_types:1"
+          ]
+        },
+        "track_record": {
+          "score": null,
+          "basis": [
+            "no_resolved_claims_observed"
+          ]
+        },
+        "overall": {
+          "score": 0.3536197916666667,
+          "confidence": 0.10997499999999999,
+          "method": "mechanical_v1",
+          "basis": [
+            "unknown_domain_pattern",
+            "distinct_urls:2",
+            "distinct_axes:0",
+            "origin_types:1",
+            "referring_accounts:1",
+            "origin_types:1",
+            "track_record_unavailable"
+          ]
+        },
+        "profile": {
+          "score": 0.22,
+          "confidence": 0.55,
+          "basis": [
+            "meta_author:false",
+            "published_time:false",
+            "canonical:true",
+            "about:false",
+            "contact:false",
+            "corrections:false",
+            "outbound_links:16",
+            "opinion_marker:false"
+          ]
+        }
+      },
+      "profile": {
+        "fetched_at": "2026-07-10T01:34:33.673Z",
+        "homepage_url": "https://puter.com/",
+        "example_url": "https://developer.puter.com/?utm_source=x&utm_medium=paid_social&utm_campaign=backend_ai&twclid=27ht9opz02h3rp1i1jsomffb4m",
+        "homepage_status": 200,
+        "example_status": 200,
+        "homepage_final_url": "https://puter.com/",
+        "example_final_url": "https://developer.puter.com/?utm_source=x&utm_medium=paid_social&utm_campaign=backend_ai&twclid=27ht9opz02h3rp1i1jsomffb4m",
+        "homepage_content_type": "text/html; charset=utf-8",
+        "example_content_type": "text/html",
+        "homepage": {
+          "has_meta_author": true,
+          "has_published_time": false,
+          "has_canonical": true,
+          "has_about_link": false,
+          "has_contact_link": false,
+          "has_corrections_link": false,
+          "outbound_links_count": 10,
+          "opinion_marker": false
+        },
+        "example": {
+          "has_meta_author": false,
+          "has_published_time": false,
+          "has_canonical": true,
+          "has_about_link": false,
+          "has_contact_link": true,
+          "has_corrections_link": false,
+          "outbound_links_count": 16,
+          "opinion_marker": false
         }
       }
     },
@@ -42649,6 +43090,51 @@
             "origin_types:1",
             "track_record_unavailable"
           ]
+        },
+        "profile": {
+          "score": 0.4,
+          "confidence": 0.65,
+          "basis": [
+            "meta_author:false",
+            "published_time:true",
+            "canonical:true",
+            "about:false",
+            "contact:false",
+            "corrections:false",
+            "outbound_links:20",
+            "opinion_marker:false"
+          ]
+        }
+      },
+      "profile": {
+        "fetched_at": "2026-07-10T01:34:38.459Z",
+        "homepage_url": "https://fiba.basketball/",
+        "example_url": "https://www.fiba.basketball/en/events/fiba-basketball-world-cup-2027-asian-qualifiers/news/teams-confirmed-for-the-fiba-basketball-world-cup-2027-asian-qualifiers-second-round?fbclid=IwY2xjawS5zNpleHRuA2FlbQIxMABicmlkETBSRXVqVE03dkMwOVZYSFFIc3J0YwZhcHBfaWQQMjIyMDM5MTc4ODIwMDg5MgABHnNpKrOyCvwKpu-6IklyvVCJjLgnfwDLK_E2LBbT_BFY0A0sDKeVHGKD8gO7_aem_x6hSMw-gbXxwzVRTcScvdQ&twclid=28yyrktcdmkop0el0m83yyzd3b",
+        "homepage_status": 200,
+        "example_status": 200,
+        "homepage_final_url": "https://www.fiba.basketball/en",
+        "example_final_url": "https://www.fiba.basketball/en/events/fiba-basketball-world-cup-2027-asian-qualifiers/news/teams-confirmed-for-the-fiba-basketball-world-cup-2027-asian-qualifiers-second-round?fbclid=IwY2xjawS5zNpleHRuA2FlbQIxMABicmlkETBSRXVqVE03dkMwOVZYSFFIc3J0YwZhcHBfaWQQMjIyMDM5MTc4ODIwMDg5MgABHnNpKrOyCvwKpu-6IklyvVCJjLgnfwDLK_E2LBbT_BFY0A0sDKeVHGKD8gO7_aem_x6hSMw-gbXxwzVRTcScvdQ&twclid=28yyrktcdmkop0el0m83yyzd3b",
+        "homepage_content_type": "text/html; charset=utf-8",
+        "example_content_type": "text/html; charset=utf-8",
+        "homepage": {
+          "has_meta_author": false,
+          "has_published_time": false,
+          "has_canonical": true,
+          "has_about_link": false,
+          "has_contact_link": false,
+          "has_corrections_link": false,
+          "outbound_links_count": 24,
+          "opinion_marker": false
+        },
+        "example": {
+          "has_meta_author": false,
+          "has_published_time": true,
+          "has_canonical": true,
+          "has_about_link": false,
+          "has_contact_link": false,
+          "has_corrections_link": false,
+          "outbound_links_count": 20,
+          "opinion_marker": false
         }
       }
     },
@@ -42743,7 +43229,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-07-06T08:04:36.001Z",
+        "fetched_at": "2026-07-10T01:34:40.418Z",
         "homepage_url": "https://irys.xyz/",
         "example_url": "https://gateway.irys.xyz/lZR6DY8ugYpeIkHpBQpgaNeVWmEhahjrDBNGc5Fz0EE",
         "homepage_status": 200,
@@ -69888,83 +70374,6 @@
       }
     },
     {
-      "domain": "puter.com",
-      "entity": "Puter",
-      "kind": "unknown",
-      "first_seen_at": "2026-07-08T10:10:02.050Z",
-      "last_seen_at": "2026-07-08T10:10:02.050Z",
-      "discovery": {
-        "distinct_urls": 1,
-        "example_urls": [
-          "https://developer.puter.com/?utm_source=x&utm_medium=paid_social&utm_campaign=backend_ai&twclid=27ht9opz02h3rp1i1jsomffb4m"
-        ],
-        "origin_counts": {
-          "feed_buffer": 1
-        },
-        "distinct_referring_accounts": 1,
-        "sample_referring_accounts": [
-          "heyputer"
-        ],
-        "distinct_axes": []
-      },
-      "claims": {
-        "total": 0,
-        "supported": 0,
-        "refuted": 0,
-        "contested": 0,
-        "unverified": 0,
-        "resolved_count": 0
-      },
-      "structural_features": {
-        "has_search_paths": false,
-        "has_article_paths": false,
-        "has_doi_paths": false
-      },
-      "ratings": {
-        "provenance": {
-          "score": 0.45,
-          "basis": [
-            "unknown_domain_pattern"
-          ]
-        },
-        "breadth": {
-          "score": 0.08916666666666666,
-          "basis": [
-            "distinct_urls:1",
-            "distinct_axes:0",
-            "origin_types:1"
-          ]
-        },
-        "corroboration": {
-          "score": 0.19583333333333333,
-          "basis": [
-            "referring_accounts:1",
-            "origin_types:1"
-          ]
-        },
-        "track_record": {
-          "score": null,
-          "basis": [
-            "no_resolved_claims_observed"
-          ]
-        },
-        "overall": {
-          "score": 0.3472395833333333,
-          "confidence": 0.08135,
-          "method": "mechanical_v1",
-          "basis": [
-            "unknown_domain_pattern",
-            "distinct_urls:1",
-            "distinct_axes:0",
-            "origin_types:1",
-            "referring_accounts:1",
-            "origin_types:1",
-            "track_record_unavailable"
-          ]
-        }
-      }
-    },
-    {
       "domain": "highwater.fi",
       "entity": "Highwater Fi",
       "kind": "unknown",
@@ -70751,6 +71160,160 @@
         "distinct_referring_accounts": 1,
         "sample_referring_accounts": [
           "munifyai"
+        ],
+        "distinct_axes": []
+      },
+      "claims": {
+        "total": 0,
+        "supported": 0,
+        "refuted": 0,
+        "contested": 0,
+        "unverified": 0,
+        "resolved_count": 0
+      },
+      "structural_features": {
+        "has_search_paths": false,
+        "has_article_paths": false,
+        "has_doi_paths": false
+      },
+      "ratings": {
+        "provenance": {
+          "score": 0.45,
+          "basis": [
+            "unknown_domain_pattern"
+          ]
+        },
+        "breadth": {
+          "score": 0.08916666666666666,
+          "basis": [
+            "distinct_urls:1",
+            "distinct_axes:0",
+            "origin_types:1"
+          ]
+        },
+        "corroboration": {
+          "score": 0.19583333333333333,
+          "basis": [
+            "referring_accounts:1",
+            "origin_types:1"
+          ]
+        },
+        "track_record": {
+          "score": null,
+          "basis": [
+            "no_resolved_claims_observed"
+          ]
+        },
+        "overall": {
+          "score": 0.3472395833333333,
+          "confidence": 0.08135,
+          "method": "mechanical_v1",
+          "basis": [
+            "unknown_domain_pattern",
+            "distinct_urls:1",
+            "distinct_axes:0",
+            "origin_types:1",
+            "referring_accounts:1",
+            "origin_types:1",
+            "track_record_unavailable"
+          ]
+        }
+      }
+    },
+    {
+      "domain": "qorden.ai",
+      "entity": "Qorden Ai",
+      "kind": "unknown",
+      "first_seen_at": "2026-07-09T09:44:10.000Z",
+      "last_seen_at": "2026-07-09T09:44:10.000Z",
+      "discovery": {
+        "distinct_urls": 1,
+        "example_urls": [
+          "https://pages.qorden.ai/qordenate-waitlist?twclid=2cg1uzio64eau4eqrq5h9k3vz9"
+        ],
+        "origin_counts": {
+          "feed_buffer_reply": 1
+        },
+        "distinct_referring_accounts": 1,
+        "sample_referring_accounts": [
+          "qorden_ai"
+        ],
+        "distinct_axes": []
+      },
+      "claims": {
+        "total": 0,
+        "supported": 0,
+        "refuted": 0,
+        "contested": 0,
+        "unverified": 0,
+        "resolved_count": 0
+      },
+      "structural_features": {
+        "has_search_paths": false,
+        "has_article_paths": false,
+        "has_doi_paths": false
+      },
+      "ratings": {
+        "provenance": {
+          "score": 0.45,
+          "basis": [
+            "unknown_domain_pattern"
+          ]
+        },
+        "breadth": {
+          "score": 0.08916666666666666,
+          "basis": [
+            "distinct_urls:1",
+            "distinct_axes:0",
+            "origin_types:1"
+          ]
+        },
+        "corroboration": {
+          "score": 0.19583333333333333,
+          "basis": [
+            "referring_accounts:1",
+            "origin_types:1"
+          ]
+        },
+        "track_record": {
+          "score": null,
+          "basis": [
+            "no_resolved_claims_observed"
+          ]
+        },
+        "overall": {
+          "score": 0.3472395833333333,
+          "confidence": 0.08135,
+          "method": "mechanical_v1",
+          "basis": [
+            "unknown_domain_pattern",
+            "distinct_urls:1",
+            "distinct_axes:0",
+            "origin_types:1",
+            "referring_accounts:1",
+            "origin_types:1",
+            "track_record_unavailable"
+          ]
+        }
+      }
+    },
+    {
+      "domain": "tr.ee",
+      "entity": "Tr Ee",
+      "kind": "unknown",
+      "first_seen_at": "2026-07-10T01:12:17.633Z",
+      "last_seen_at": "2026-07-10T01:12:17.633Z",
+      "discovery": {
+        "distinct_urls": 1,
+        "example_urls": [
+          "https://tr.ee/wndhL7?twclid=22lr9koznm9ghbdy0s9178q7j0"
+        ],
+        "origin_counts": {
+          "feed_buffer": 1
+        },
+        "distinct_referring_accounts": 1,
+        "sample_referring_accounts": [
+          "kikidc16"
         ],
         "distinct_axes": []
       },
