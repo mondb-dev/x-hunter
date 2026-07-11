@@ -1,154 +1,113 @@
 {
-  "checked_at": "2026-07-10T08:38:40.969Z",
-  "evidence_24h": 29,
-  "unique_sources": 8,
+  "checked_at": "2026-07-11T09:36:22.748Z",
+  "evidence_24h": 10,
+  "unique_sources": 4,
   "status": "captured",
   "alerts": [
     {
       "type": "source_dominance",
       "severity": "high",
-      "detail": "@unknown accounts for 72% of today's evidence (21/29)",
+      "detail": "@unknown accounts for 70% of today's evidence (7/10)",
       "username": "unknown",
-      "share": 0.724
+      "share": 0.7
+    },
+    {
+      "type": "pole_skew",
+      "severity": "high",
+      "detail": "90% of evidence pushes \"left\" — risk of one-sided belief drift",
+      "dominant_pole": "left",
+      "share": 0.9
     }
   ],
-  "summary": "1 capture alert(s) detected:\n[HIGH] @unknown accounts for 72% of today's evidence (21/29)",
+  "summary": "2 capture alert(s) detected:\n[HIGH] @unknown accounts for 70% of today's evidence (7/10)\n[HIGH] 90% of evidence pushes \"left\" — risk of one-sided belief drift",
   "source_concentration": {
     "unknown": {
       "username": "unknown",
-      "count": 21,
-      "share": 0.724
+      "count": 7,
+      "share": 0.7
     },
-    "libsoftiktok": {
-      "username": "libsoftiktok",
-      "count": 2,
-      "share": 0.069
-    },
-    "gmanews": {
-      "username": "gmanews",
+    "basilthegreat": {
+      "username": "basilthegreat",
       "count": 1,
-      "share": 0.034
+      "share": 0.1
     },
-    "globeeyenews": {
-      "username": "globeeyenews",
+    "newswatchplusph": {
+      "username": "newswatchplusph",
       "count": 1,
-      "share": 0.034
+      "share": 0.1
     },
-    "crazymoments01": {
-      "username": "crazymoments01",
+    "rt_com": {
+      "username": "rt_com",
       "count": 1,
-      "share": 0.034
-    },
-    "cbsnews": {
-      "username": "cbsnews",
-      "count": 1,
-      "share": 0.034
-    },
-    "olilondontv": {
-      "username": "olilondontv",
-      "count": 1,
-      "share": 0.034
-    },
-    "coinvo": {
-      "username": "coinvo",
-      "count": 1,
-      "share": 0.034
+      "share": 0.1
     }
   },
   "axis_concentration": {
     "axis_power_accountability": {
       "axis_id": "axis_power_accountability",
       "label": "Power, Institutions, and Rule of Law",
-      "count": 10,
-      "share": 0.345
+      "count": 4,
+      "share": 0.4
     },
-    "axis_human_rights_exploitation_v1": {
-      "axis_id": "axis_human_rights_exploitation_v1",
-      "label": "Human Rights and Exploitation",
-      "count": 3,
-      "share": 0.103
-    },
-    "axis_geopolitical_rhetoric_v1": {
-      "axis_id": "axis_geopolitical_rhetoric_v1",
-      "label": "Geopolitical Rhetoric vs. Humanitarian Concerns",
-      "count": 2,
-      "share": 0.069
-    },
-    "axis_political_moral_conduct_v1": {
-      "axis_id": "axis_political_moral_conduct_v1",
-      "label": "Political Integrity and Moral Conduct in Public Service",
-      "count": 2,
-      "share": 0.069
-    },
-    "axis_religious_expression_hate_speech_v1": {
-      "axis_id": "axis_religious_expression_hate_speech_v1",
-      "label": "Freedom of Religious Expression vs. Hate Speech Legislation",
-      "count": 2,
-      "share": 0.069
+    "axis_epistemic_integrity": {
+      "axis_id": "axis_epistemic_integrity",
+      "label": "Truth and Evidence in Public Discourse",
+      "count": 1,
+      "share": 0.1
     },
     "axis_eje_accountability_v1": {
       "axis_id": "axis_eje_accountability_v1",
       "label": "Accountability for Extrajudicial Killings",
       "count": 1,
-      "share": 0.034
+      "share": 0.1
     },
-    "axis_media_integrity_v1": {
-      "axis_id": "axis_media_integrity_v1",
-      "label": "Integrity of Information and Social Media Manipulation",
+    "axis_public_trust_safety_crisis_v1": {
+      "axis_id": "axis_public_trust_safety_crisis_v1",
+      "label": "Public Trust in Safety and Crisis Communication",
       "count": 1,
-      "share": 0.034
+      "share": 0.1
     },
-    "axis_political_dynasties_meritocracy_v1": {
-      "axis_id": "axis_political_dynasties_meritocracy_v1",
-      "label": "Political Dynasties and Meritocracy",
+    "axis_national_sovereignty_v_intl_law_v1": {
+      "axis_id": "axis_national_sovereignty_v_intl_law_v1",
+      "label": "National Sovereignty vs. International Law",
       "count": 1,
-      "share": 0.034
+      "share": 0.1
     },
-    "axis_digital_supply_chain_security": {
-      "axis_id": "axis_digital_supply_chain_security",
-      "label": "Digital Supply Chain Security and Vulnerabilities",
+    "axis_political_moral_conduct_v1": {
+      "axis_id": "axis_political_moral_conduct_v1",
+      "label": "Political Integrity and Moral Conduct in Public Service",
       "count": 1,
-      "share": 0.034
+      "share": 0.1
     },
-    "axis_consumer_product_environmental_impact_v1": {
-      "axis_id": "axis_consumer_product_environmental_impact_v1",
-      "label": "Environmental and Health Impact of Consumer Products",
+    "axis_data_privacy_decentralization_v1": {
+      "axis_id": "axis_data_privacy_decentralization_v1",
+      "label": "Data Privacy and Decentralization",
       "count": 1,
-      "share": 0.034
+      "share": 0.1
     }
   },
   "cluster_concentration": {
     "unknown": {
       "cluster": "unknown",
-      "count": 25,
-      "share": 0.862
-    },
-    "breaking_news": {
-      "cluster": "breaking_news",
-      "count": 1,
-      "share": 0.034
-    },
-    "animal_content": {
-      "cluster": "animal_content",
-      "count": 1,
-      "share": 0.034
-    },
-    "us_politics": {
-      "cluster": "us_politics",
-      "count": 1,
-      "share": 0.034
+      "count": 7,
+      "share": 0.7
     },
     "disinformation": {
       "cluster": "disinformation",
+      "count": 2,
+      "share": 0.2
+    },
+    "accountability_journalism": {
+      "cluster": "accountability_journalism",
       "count": 1,
-      "share": 0.034
+      "share": 0.1
     }
   },
   "pole_balance": {
-    "left": 16,
-    "right": 13,
+    "left": 9,
+    "right": 1,
     "neutral": 0,
-    "left_share": 0.552,
-    "right_share": 0.448
+    "left_share": 0.9,
+    "right_share": 0.1
   }
 }
