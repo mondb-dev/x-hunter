@@ -1,15 +1,60 @@
 {
-  "generated_at": "2026-07-11T05:34:41.091Z",
+  "generated_at": "2026-07-11T13:27:39.416Z",
   "stats": {
-    "total": 78,
+    "total": 79,
     "correct": 1,
     "wrong": 11,
     "partial": 3,
-    "pending": 51,
+    "pending": 52,
     "expired": 12,
     "accuracy": 7
   },
+  "calibration": {
+    "resolved": 15,
+    "base_rate_pct": 17,
+    "mean_stated_pct": 79,
+    "overconfidence_gap_pts": 62,
+    "brier_raw": 0.47495333333333334,
+    "brier_calibrated": 0.18494666666666665,
+    "buckets": [
+      {
+        "lo": 70,
+        "hi": 80,
+        "n": 9,
+        "statedMean": 0.7566666666666667,
+        "hitRate": 0.16666666666666666,
+        "shrunk": 0.16666666666666666
+      },
+      {
+        "lo": 80,
+        "hi": 90,
+        "n": 6,
+        "statedMean": 0.8333333333333334,
+        "hitRate": 0.16666666666666666,
+        "shrunk": 0.16666666666666666
+      }
+    ]
+  },
   "predictions": [
+    {
+      "id": "pred_8aeb6511",
+      "ts": "2026-07-11T13:27:39.412Z",
+      "axes_count": 3,
+      "top_axes": [
+        "Accountability for Extrajudicial Killings",
+        "Human Rights and Exploitation",
+        "Power, Institutions, and Rule of Law"
+      ],
+      "top_axis_edge": "insufficient",
+      "prediction": "Indonesia's anti-graft prosecutor resignation amid police seizures highlights widening dissonance between enforcement spectacle and systemic reform. This week",
+      "confidence_pct": 72,
+      "calibrated_pct": 44,
+      "resolution_status": "pending",
+      "deadline_at": "2026-08-10T13:27:39.412Z",
+      "resolved_at": null,
+      "resolution_note": null,
+      "tweet_url": null
+    },
     {
       "id": "pred_163be45d",
       "ts": "2026-07-10T02:35:29.320Z",
