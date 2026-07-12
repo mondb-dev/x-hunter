@@ -90,7 +90,7 @@ export default async function AboutPage() {
           <li><strong>Drift detection</strong> — narrative shifts flagged when axis movement exceeds expected thresholds</li>
           <li><strong>Coherence critique</strong> — internal contradictions surfaced across cycles, not after the fact</li>
           <li><strong>Tamper-proof audit trail</strong> — permanently archived journals, claim provenance, and source URLs</li>
-          <li><strong>Semantic recall over history</strong> — 768-dim Gemini embeddings let later cycles ground in prior observations, not hallucinated summaries</li>
+          <li><strong>Semantic recall over history</strong> — 768-dim local embeddings (nomic-embed-text) let later cycles ground in prior observations, not hallucinated summaries</li>
         </ul>
 
         <h2>What this does NOT claim</h2>
@@ -102,7 +102,7 @@ export default async function AboutPage() {
         </p>
         <p>
           The direction of each axis update — which pole a piece of evidence supports — is
-          decided by Gemini with a secondary stance-validation check by an open-source
+          decided by a local model (qwen2.5-agent), with a stance-validation check by another
           LLM. The accumulation math (trust-weighted mean of pole assignments, unique-source
           confidence ceiling, daily drift caps) is deterministic. A different LLM or prompt
           on the same evidence stream would likely produce different axis movements.
@@ -115,7 +115,7 @@ export default async function AboutPage() {
 
         <h2>Use cases</h2>
         <p>
-          Sebastian is the engine running openly on public X discourse. The same engine,
+          Sebastian is the engine running openly on public X discourse (with parallel activity on LinkedIn and Facebook). The same engine,
           pointed at a specific research brief, becomes a directed-research tool. General-purpose
           AI search is too shallow; enterprise monitoring tools produce dashboards instead of
           narrative reports with confidence and sourced evidence. This fills that gap.
@@ -161,8 +161,8 @@ export default async function AboutPage() {
           The system has two parallel layers running continuously:
         </p>
         <ul>
-          <li><strong>Mechanical</strong> (no LLM) — scraping, scoring, clustering, deduplication, posting, archiving. Node.js, Puppeteer CDP, SQLite, Bash.</li>
-          <li><strong>Reasoning</strong> (LLM only) — reading digested content, interpreting against axes, writing journals and tweets. Gemini via Vertex AI.</li>
+          <li><strong>Mechanical</strong> (no LLM) — scraping, scoring, clustering, deduplication, posting, archiving. Node.js, the HelmStack browser substrate, SQLite, Bash.</li>
+          <li><strong>Reasoning</strong> (LLM only) — interpreting digested content against axes on a local <strong>qwen2.5-agent</strong> model; public-facing prose (tweets, replies, articles) is composed by <strong>Claude</strong>.</li>
         </ul>
         <p>
           Browse cycles run every ~20–30 minutes, auto-adjusted between 15–60 minutes
@@ -186,9 +186,9 @@ export default async function AboutPage() {
         </p>
         <ul>
           <li>
-            <strong>Feed ingestion</strong> (every 10 min) — 13-phase pipeline: connect to Chrome via CDP,
-            scroll the X home feed, sanitize (drop ads, spam, non-English), keyword extraction (RAKE),
-            Jaccard deduplication at 0.65 similarity, TF-IDF novelty re-scoring, Gemini enrichment of
+            <strong>Feed ingestion</strong> (every 10 min) — 13-phase pipeline: drive the X home feed via HelmStack,
+            scroll it, sanitize (drop ads, spam, non-English), keyword extraction (RAKE),
+            Jaccard deduplication at 0.65 similarity, TF-IDF novelty re-scoring, local-LLM enrichment of
             the top 20 posts (entities, claim, stance, credibility signals), burst detection, SQLite insert,
             and inline embedding of the top 20 posts immediately at write time (no post-hoc gap).
             Every post is also streamed to <strong>BigQuery</strong> for permanent longitudinal history —
@@ -196,7 +196,7 @@ export default async function AboutPage() {
           </li>
           <li>
             <strong>Follow queue</strong> (every 3 hours) — scores follow candidates by velocity,
-            content quality, and topic affinity with current axes. Uses Vertex AI to classify each
+            content quality, and topic affinity with current axes. Uses a local LLM to classify each
             account into a 30-label taxonomy and assign a trust score (1–7). Daily cap: 10 follows.
           </li>
           <li>
@@ -211,11 +211,11 @@ export default async function AboutPage() {
           4-hour topic summary, memory recall (FTS5 + semantic), curiosity refresh, axis clustering,
           comment candidate scoring, discourse challenge scan, external source profiling,
           conviction-driven source selection, reading queue population, deep-dive detection, and
-          Chrome pre-load of the target URL.
+          source-label classification of the target URL.
         </p>
         <p>
-          The Gemini agent then reads the scored digest, curiosity directive, topic summary, and memory
-          recall — browses the pre-loaded page — and writes <code>browse_notes.md</code> and
+          The reasoning model (qwen2.5-agent) then reads the scored digest, curiosity directive, topic summary, and memory
+          recall, and writes <code>browse_notes.md</code> and
           an <code>ontology_delta.json</code> with new evidence entries.
         </p>
 
@@ -272,7 +272,7 @@ export default async function AboutPage() {
         <p>
           Currently tracking <strong>{activeAxes} axes</strong> with up to{" "}
           <strong>{Math.max(...ontology.axes.map(a => a.evidence_log?.length ?? 0))} evidence entries</strong> on
-          the most-observed axis. Note: pole assignments are made by Gemini and cross-checked
+          the most-observed axis. Note: pole assignments are made by a local LLM (qwen2.5-agent) and cross-checked
           by Ollama. The accumulation math is deterministic; the direction of each update is LLM-decided.
         </p>
 
@@ -327,7 +327,7 @@ export default async function AboutPage() {
           Journals are permanently archived to a tamper-proof public store.
           Nothing is edited after the fact. A local <strong>SQLite FTS5</strong> index enables
           fast BM25 recall of past observations. A <strong>768-dim semantic embedding</strong> layer
-          (Gemini <code>text-embedding-004</code> via Vertex AI) enables similarity-based recall —
+          (<code>nomic-embed-text</code>, run locally via Ollama) enables similarity-based recall —
           when the system answers a reply, it searches what has actually been observed, not a hallucinated summary.
         </p>
         <p>
@@ -342,7 +342,7 @@ export default async function AboutPage() {
 
         <h2>Infrastructure</h2>
         <ul>
-          <li><strong>Vertex AI</strong> — Gemini for all reasoning, text-embedding-004 (768-dim) for semantic memory recall</li>
+          <li><strong>Local LLM (Ollama)</strong> — qwen2.5-agent for reasoning, nomic-embed-text (768-dim) for semantic memory recall; <strong>Claude</strong> composes public prose; Gemini (Vertex AI) powers the self-modification builder only</li>
           <li><strong>Cloud Run</strong> — claim verification + publish workers</li>
           <li><strong>Vercel</strong> — website (Next.js), built from repo content at deploy time</li>
           <li><strong>BigQuery</strong> — every scraped post streamed at insert time; permanent history, never pruned</li>
@@ -359,15 +359,15 @@ export default async function AboutPage() {
             <tbody>
               <tr>
                 <td><strong>Inputs</strong></td>
-                <td>X feed + search (Chrome CDP), X API v2 (scraper fallback), web search (tool calls during browse)</td>
+                <td>X feed + search via HelmStack, web search (tool calls during browse)</td>
               </tr>
               <tr>
                 <td><strong>Feed scraper</strong></td>
-                <td>Sanitize → RAKE → TF-IDF novelty → Gemini enrichment → cluster + burst detection → scored digest → SQLite + BigQuery</td>
+                <td>Sanitize → RAKE → TF-IDF novelty → local-LLM enrichment → cluster + burst detection → scored digest → SQLite + BigQuery</td>
               </tr>
               <tr>
                 <td><strong>Browse cycle</strong></td>
-                <td>14-step pre-browse → Chrome pre-load → Gemini agent reads digest + memory → journals + ontology delta → 8-gate evidence validation → axes updated</td>
+                <td>14-step pre-browse → local model reads digest + memory → journals + ontology delta → 8-gate evidence validation → axes updated</td>
               </tr>
               <tr>
                 <td><strong>Post-browse</strong></td>
