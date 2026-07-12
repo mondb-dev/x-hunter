@@ -1327,3 +1327,24 @@ details[open] > .verify-breakdown-summary::before { content: "▼ "; }
 .report-legend { list-style: none; padding: 0; font-size: 13px; display: grid; gap: 4px; }
 .report-legend li { display: flex; align-items: center; gap: 8px; }
 .report-legend span { width: 12px; height: 12px; border-radius: 3px; display: inline-block; }
+
+/* ── Funding / running-cost section (about page) ─────────────────────────── */
+.fund-card { border: 1px solid var(--border); border-radius: 4px; background: var(--surface); padding: 1.1rem 1.25rem; margin: 1rem 0 1.5rem; }
+.fund-table { width: 100%; border-collapse: collapse; font-size: 0.9rem; margin-bottom: 1.1rem; }
+.fund-table td { padding: 0.4rem 0; border-bottom: 1px solid var(--border); color: #d4d8de; }
+.fund-table .fund-amt { text-align: right; font-family: var(--font); color: var(--text); white-space: nowrap; }
+.fund-table .fund-total td { border-bottom: none; border-top: 1px solid #2a2d30; padding-top: 0.6rem; font-weight: 600; color: var(--text); }
+
+.fund-progress { display: flex; flex-direction: column; gap: 0.5rem; }
+.fund-progress-head { display: flex; justify-content: space-between; align-items: baseline; font-size: 0.85rem; }
+.fund-progress-label { color: var(--muted); text-transform: uppercase; letter-spacing: 0.04em; font-size: 0.72rem; }
+.fund-progress-nums { font-family: var(--font); color: var(--text); font-weight: 600; }
+.fund-track { position: relative; height: 8px; background: var(--border); border-radius: 5px; overflow: hidden; }
+.fund-fill { position: absolute; left: 0; top: 0; height: 100%; border-radius: 5px; background: linear-gradient(90deg, #14f195, #3b82f6); transition: width 0.6s ease; min-width: 2px; }
+.fund-progress-foot { display: flex; justify-content: space-between; font-size: 0.78rem; color: #c2c8d0; }
+.fund-muted { color: var(--muted); }
+
+.fund-wallet { display: flex; align-items: center; gap: 0.6rem; flex-wrap: wrap; margin-top: 0.4rem; width: 100%; background: var(--bg); border: 1px solid var(--border); border-radius: 4px; padding: 0.5rem 0.7rem; cursor: pointer; font-family: var(--font); text-align: left; transition: border-color 0.15s; }
+.fund-wallet:hover { border-color: #2a2d30; }
+.fund-wallet code { color: #9fe8c5; font-size: 0.72rem; word-break: break-all; flex: 1; min-width: 0; }
+.fund-copy { font-size: 0.7rem; color: var(--muted); border: 1px solid var(--border); border-radius: 3px; padding: 0.15rem 0.5rem; }

@@ -35,6 +35,8 @@ const STATE_FILES = [
   "active_plan.json",
   "action_plans.json",
   "verification_export.json",
+  "operating_cost.json",
+  "tip_wallet.json",
 ];
 
 const stateSrc = path.resolve(cwd, "..", "state");
