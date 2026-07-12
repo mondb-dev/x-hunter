@@ -1,0 +1,46 @@
+{
+  "generated_at": "2026-07-11T22:33:22.018Z",
+  "monthly_usd": {
+    "llm": 0.15,
+    "fixed": 101.25,
+    "total": 101.4
+  },
+  "llm_recent": {
+    "window_days": 7,
+    "usd": 0.036,
+    "calls": 1,
+    "daily_avg_usd": 0.0051,
+    "by_tag": {
+      "compose": {
+        "calls": 1,
+        "usd": 0.036043
+      }
+    },
+    "by_model": {
+      "claude": {
+        "calls": 1,
+        "usd": 0.036043
+      }
+    }
+  },
+  "fixed_breakdown": {
+    "host": 100,
+    "domain": 1.25,
+    "vercel": 0,
+    "other": 0,
+    "_note": "host ≈ $100/mo current cloud hosting (user-confirmed ~$100+). domain 1.25 ≈ $15/yr for sebastianhunter.fun. vercel 0 = hobby tier. Bump host if the real bill is higher."
+  },
+  "storage_wallet": {
+    "note": "no cached SOL balance; see watchdog Irys warnings"
+  },
+  "funding_goal": {
+    "mode": "mac",
+    "label": "dedicated Mac (one-time)",
+    "target_usd": 1400,
+    "raised_usd": 0,
+    "remaining_usd": 1400,
+    "pct": 0,
+    "why": "Sebastian currently runs on borrowed hardware; the goal is his own dedicated Mac (or cloud) so he can run sustainably and independently."
+  },
+  "metering": "live"
+}

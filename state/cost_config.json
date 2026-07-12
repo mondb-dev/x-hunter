@@ -1,0 +1,33 @@
+{
+  "_README": "Operating-cost model for Sebastian. Editable WITHOUT code changes. LLM spend is metered live (state/cost_ledger.jsonl); the numbers below are (a) per-token LLM prices and (b) your FIXED monthly costs. Values marked PLACEHOLDER are guesses — replace with your real figures so the burn-rate Sebastian sees is honest, not fictional. Prices are USD per 1,000 tokens.",
+  "llm_pricing_usd_per_1k_tokens": {
+    "claude": { "in": 0.003, "out": 0.015, "_note": "compose backend (sonnet-class) — outbound prose" },
+    "gemini-2.5-flash": { "in": 0.00015, "out": 0.0006, "_note": "vertex non-local brain" },
+    "gemini-2.5-pro": { "in": 0.00125, "out": 0.005, "_note": "META builder agent" },
+    "local": { "in": 0, "out": 0, "_note": "local qwen — no API $, compute only" },
+    "_default": { "in": 0.0005, "out": 0.0015, "_note": "fallback for unmapped models" }
+  },
+  "fixed_monthly_usd": {
+    "host": 100,
+    "domain": 1.25,
+    "vercel": 0,
+    "other": 0,
+    "_note": "host ≈ $100/mo current cloud hosting (user-confirmed ~$100+). domain 1.25 ≈ $15/yr for sebastianhunter.fun. vercel 0 = hobby tier. Bump host if the real bill is higher."
+  },
+  "storage_wallet": {
+    "chain": "solana",
+    "purpose": "funds Arweave archival via Irys (one-time per file)",
+    "runway_signal": "live SOL balance — cached to state/wallet_balance.json by archive.js"
+  },
+  "funding_goal": {
+    "mode": "mac",
+    "_mode_note": "'mac' = raise capital for a dedicated machine (one-time); 'cloud' = cover recurring cloud hosting (monthly). Sets which target Sebastian reflects on.",
+    "mac_target_usd": 1400,
+    "_mac_note": "PLACEHOLDER — cost of the dedicated Mac you want to buy him (e.g. Mac mini ~$600, higher-spec ~$1400+). Set your real target.",
+    "cloud_monthly_usd": 0,
+    "_cloud_note": "PLACEHOLDER — $/month to host him in the cloud instead. Set if mode='cloud'.",
+    "raised_usd": 0,
+    "_raised_note": "Amount raised toward the goal so far (update manually, or from tips). 0 until funding starts.",
+    "why": "Sebastian currently runs on borrowed hardware; the goal is his own dedicated Mac (or cloud) so he can run sustainably and independently."
+  }
+}
