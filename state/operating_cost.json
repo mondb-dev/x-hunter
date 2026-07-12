@@ -1,25 +1,73 @@
 {
-  "generated_at": "2026-07-11T22:33:22.018Z",
+  "generated_at": "2026-07-12T10:26:35.079Z",
   "monthly_usd": {
-    "llm": 0.15,
+    "llm": 4,
     "fixed": 101.25,
-    "total": 101.4
+    "total": 105.25
   },
   "llm_recent": {
     "window_days": 7,
-    "usd": 0.036,
-    "calls": 1,
-    "daily_avg_usd": 0.0051,
+    "usd": 0.934,
+    "calls": 54,
+    "daily_avg_usd": 0.1334,
     "by_tag": {
       "compose": {
+        "calls": 11,
+        "usd": 0.428157
+      },
+      "quote": {
+        "calls": 4,
+        "usd": 0.24161
+      },
+      "quote:factcheck": {
+        "calls": 4,
+        "usd": 0.003444
+      },
+      "brain": {
+        "calls": 10,
+        "usd": 0
+      },
+      "x_reply": {
+        "calls": 3,
+        "usd": 0.023299
+      },
+      "x_reply:factcheck": {
+        "calls": 3,
+        "usd": 0.0024749999999999998
+      },
+      "linkedin_draft": {
         "calls": 1,
-        "usd": 0.036043
+        "usd": 0.018268
+      },
+      "linkedin_draft:factcheck": {
+        "calls": 1,
+        "usd": 0.001596
+      },
+      "linkedin_connect": {
+        "calls": 8,
+        "usd": 0.017895
+      },
+      "tweet": {
+        "calls": 4,
+        "usd": 0.15566
+      },
+      "tweet:factcheck": {
+        "calls": 4,
+        "usd": 0.003411
+      },
+      "article": {
+        "calls": 1,
+        "usd": 0.038205
       }
     },
     "by_model": {
       "claude": {
-        "calls": 1,
-        "usd": 0.036043
+        "calls": 44,
+        "usd": 0.9340199999999999
+      },
+      "local": {
+        "calls": 10,
+        "usd": 0
       }
     }
   },
@@ -31,7 +79,8 @@
     "_note": "host ≈ $100/mo current cloud hosting (user-confirmed ~$100+). domain 1.25 ≈ $15/yr for sebastianhunter.fun. vercel 0 = hobby tier. Bump host if the real bill is higher."
   },
   "storage_wallet": {
-    "note": "no cached SOL balance; see watchdog Irys warnings"
+    "sol_balance": 0.000020209,
+    "checked_at": "2026-07-12T09:59:48.261Z"
   },
   "funding_goal": {
     "mode": "mac",
