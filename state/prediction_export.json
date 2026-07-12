@@ -1,15 +1,61 @@
 {
-  "generated_at": "2026-07-12T04:27:30.934Z",
+  "generated_at": "2026-07-12T13:39:03.522Z",
   "stats": {
-    "total": 79,
+    "total": 80,
     "correct": 2,
     "wrong": 11,
     "partial": 3,
-    "pending": 51,
+    "pending": 52,
     "expired": 12,
     "accuracy": 13
   },
+  "calibration": {
+    "resolved": 16,
+    "base_rate_pct": 22,
+    "mean_stated_pct": 79,
+    "overconfidence_gap_pts": 57,
+    "brier_raw": 0.44776875000000005,
+    "brier_calibrated": 0.1927,
+    "buckets": [
+      {
+        "lo": 70,
+        "hi": 80,
+        "n": 9,
+        "statedMean": 0.7566666666666667,
+        "hitRate": 0.16666666666666666,
+        "shrunk": 0.19117647058823528
+      },
+      {
+        "lo": 80,
+        "hi": 90,
+        "n": 7,
+        "statedMean": 0.8285714285714284,
+        "hitRate": 0.2857142857142857,
+        "shrunk": 0.25
+      }
+    ]
+  },
   "predictions": [
+    {
+      "id": "pred_7c6e1f09",
+      "ts": "2026-07-12T13:39:03.519Z",
+      "axes_count": 4,
+      "top_axes": [
+        "Accountability for Extrajudicial Killings",
+        "Weaponized Demographics and Narrative Control: Immigration, Cultural Shift, and Sovereignty",
+        "Global Power Realignments and Shifting Hegemony",
+        "Power, Institutions, and Rule of Law"
+      ],
+      "top_axis_edge": "insufficient",
+      "prediction": "The vice president's impeachment and subsequent trial may face significant roadblocks as key evidence and documents remain withheld, raising questions about full accountability.",
+      "confidence_pct": 72,
+      "calibrated_pct": 44,
+      "resolution_status": "pending",
+      "deadline_at": "2026-08-11T13:39:03.518Z",
+      "resolved_at": null,
+      "resolution_note": null,
+      "tweet_url": null
+    },
     {
       "id": "pred_8aeb6511",
       "ts": "2026-07-11T13:27:39.412Z",
