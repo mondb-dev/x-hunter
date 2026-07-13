@@ -1,72 +1,76 @@
 {
-  "generated_at": "2026-07-12T10:26:35.079Z",
+  "generated_at": "2026-07-13T11:03:11.696Z",
   "monthly_usd": {
-    "llm": 4,
+    "llm": 10.81,
     "fixed": 101.25,
-    "total": 105.25
+    "total": 112.06
   },
   "llm_recent": {
     "window_days": 7,
-    "usd": 0.934,
-    "calls": 54,
-    "daily_avg_usd": 0.1334,
+    "usd": 2.5229,
+    "calls": 146,
+    "daily_avg_usd": 0.3604,
     "by_tag": {
       "compose": {
-        "calls": 11,
-        "usd": 0.428157
+        "calls": 33,
+        "usd": 1.1678220000000001
       },
       "quote": {
-        "calls": 4,
-        "usd": 0.24161
+        "calls": 10,
+        "usd": 0.6060749999999999
       },
       "quote:factcheck": {
-        "calls": 4,
-        "usd": 0.003444
+        "calls": 10,
+        "usd": 0.008894999999999998
       },
       "brain": {
-        "calls": 10,
+        "calls": 34,
         "usd": 0
       },
       "x_reply": {
-        "calls": 3,
-        "usd": 0.023299
+        "calls": 8,
+        "usd": 0.062425999999999995
       },
       "x_reply:factcheck": {
-        "calls": 3,
-        "usd": 0.0024749999999999998
+        "calls": 8,
+        "usd": 0.006729
       },
       "linkedin_draft": {
-        "calls": 1,
-        "usd": 0.018268
+        "calls": 3,
+        "usd": 0.057586
       },
       "linkedin_draft:factcheck": {
-        "calls": 1,
-        "usd": 0.001596
+        "calls": 3,
+        "usd": 0.009500999999999999
       },
       "linkedin_connect": {
-        "calls": 8,
-        "usd": 0.017895
+        "calls": 13,
+        "usd": 0.029175
       },
       "tweet": {
-        "calls": 4,
-        "usd": 0.15566
+        "calls": 11,
+        "usd": 0.42445299999999997
       },
       "tweet:factcheck": {
-        "calls": 4,
-        "usd": 0.003411
+        "calls": 10,
+        "usd": 0.008442
       },
       "article": {
+        "calls": 2,
+        "usd": 0.07789
+      },
+      "thread_draft": {
         "calls": 1,
-        "usd": 0.038205
+        "usd": 0.063917
       }
     },
     "by_model": {
       "claude": {
-        "calls": 44,
-        "usd": 0.9340199999999999
+        "calls": 112,
+        "usd": 2.5229110000000006
       },
       "local": {
-        "calls": 10,
+        "calls": 34,
         "usd": 0
       }
     }
@@ -80,7 +84,7 @@
   },
   "storage_wallet": {
     "sol_balance": 0.000020209,
-    "checked_at": "2026-07-12T09:59:48.261Z"
+    "checked_at": "2026-07-13T10:10:57.817Z"
   },
   "funding_goal": {
     "mode": "mac",
