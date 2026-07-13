@@ -1,15 +1,60 @@
 {
-  "generated_at": "2026-07-13T03:09:37.560Z",
+  "generated_at": "2026-07-13T15:18:34.410Z",
   "stats": {
-    "total": 80,
+    "total": 81,
     "correct": 2,
     "wrong": 12,
     "partial": 3,
-    "pending": 51,
+    "pending": 52,
     "expired": 12,
     "accuracy": 12
   },
+  "calibration": {
+    "resolved": 17,
+    "base_rate_pct": 21,
+    "mean_stated_pct": 79,
+    "overconfidence_gap_pts": 59,
+    "brier_raw": 0.4639294117647059,
+    "brier_calibrated": 0.1836882352941176,
+    "buckets": [
+      {
+        "lo": 70,
+        "hi": 80,
+        "n": 9,
+        "statedMean": 0.7566666666666667,
+        "hitRate": 0.16666666666666666,
+        "shrunk": 0.185121107266436
+      },
+      {
+        "lo": 80,
+        "hi": 90,
+        "n": 8,
+        "statedMean": 0.8312499999999999,
+        "hitRate": 0.25,
+        "shrunk": 0.22794117647058823
+      }
+    ]
+  },
   "predictions": [
+    {
+      "id": "pred_1460e3bf",
+      "ts": "2026-07-13T15:18:34.407Z",
+      "axes_count": 3,
+      "top_axes": [
+        "Weaponized Demographics and Narrative Control: Immigration, Cultural Shift, and Sovereignty",
+        "National Sovereignty vs. International Law",
+        "Global Power Realignments and Shifting Hegemony"
+      ],
+      "top_axis_edge": "insufficient",
+      "prediction": "The Marcos government's impeachment attempt against VP Duterte will face legal challenges as no concrete evidence supports the claims. This week",
+      "confidence_pct": 65,
+      "calibrated_pct": 39,
+      "resolution_status": "pending",
+      "deadline_at": "2026-08-12T15:18:34.406Z",
+      "resolved_at": null,
+      "resolution_note": null,
+      "tweet_url": null
+    },
     {
       "id": "pred_7c6e1f09",
       "ts": "2026-07-12T13:39:03.519Z",
