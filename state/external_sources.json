@@ -1,8 +1,8 @@
 {
   "schema_version": "1.0",
-  "generated_at": "2026-07-12T21:37:35.793Z",
+  "generated_at": "2026-07-13T00:37:41.973Z",
   "method": "mechanical_registry_v1",
-  "profiled_at": "2026-07-12T21:38:46.328Z",
+  "profiled_at": "2026-07-13T00:37:46.628Z",
   "sources": [
     {
       "domain": "theguardian.com",
@@ -11,7 +11,7 @@
       "first_seen_at": "2026-03-27T23:17:00Z",
       "last_seen_at": "2026-07-12T08:57:23.009Z",
       "discovery": {
-        "distinct_urls": 342,
+        "distinct_urls": 343,
         "example_urls": [
           "https://www.theguardian.com/us-news/2026/jun/23/trump-immigration-courthouse-arrest-policy",
           "https://www.theguardian.com/us-news/2026/jun/28/ice-minnesota-defending-democracy",
@@ -21,7 +21,7 @@
         ],
         "origin_counts": {
           "ontology_evidence": 31,
-          "reading_queue": 318,
+          "reading_queue": 319,
           "journals": 70,
           "articles": 1
         },
@@ -66,7 +66,7 @@
         "breadth": {
           "score": 0.94,
           "basis": [
-            "distinct_urls:342",
+            "distinct_urls:343",
             "distinct_axes:11",
             "origin_types:4"
           ]
@@ -106,7 +106,7 @@
             "newsroom_domain_pattern",
             "article_path_seen",
             "doi_or_identifier_path_seen",
-            "distinct_urls:342",
+            "distinct_urls:343",
             "distinct_axes:11",
             "origin_types:4",
             "referring_accounts:0",
@@ -679,7 +679,7 @@
       "first_seen_at": "2026-06-22T00:15:00Z",
       "last_seen_at": "2026-07-12T02:57:03.792Z",
       "discovery": {
-        "distinct_urls": 231,
+        "distinct_urls": 232,
         "example_urls": [
           "https://www.nytimes.com/2026/06/19/world/canada/frank-stronach-trial-guilty-sex-charges.html",
           "https://www.nytimes.com/2026/06/27/world/americas/mexican-officials-us-informants.html",
@@ -689,7 +689,7 @@
         ],
         "origin_counts": {
           "ontology_evidence": 8,
-          "reading_queue": 229,
+          "reading_queue": 230,
           "journals": 20
         },
         "distinct_referring_accounts": 0,
@@ -726,7 +726,7 @@
         "breadth": {
           "score": 0.8216666666666665,
           "basis": [
-            "distinct_urls:231",
+            "distinct_urls:232",
             "distinct_axes:5",
             "origin_types:3"
           ]
@@ -765,7 +765,7 @@
           "basis": [
             "newsroom_domain_pattern",
             "article_path_seen",
-            "distinct_urls:231",
+            "distinct_urls:232",
             "distinct_axes:5",
             "origin_types:3",
             "referring_accounts:0",
@@ -1178,7 +1178,7 @@
       "first_seen_at": "2026-06-26T07:05:00Z",
       "last_seen_at": "2026-07-11T20:57:02.247Z",
       "discovery": {
-        "distinct_urls": 182,
+        "distinct_urls": 183,
         "example_urls": [
           "https://www.bbc.co.uk/news/articles/cn8qxz6qypyo",
           "https://www.bbc.co.uk/news/articles/cn075j04pnyo?at_medium=RSS&amp;at_campaign=rss",
@@ -1188,7 +1188,7 @@
         ],
         "origin_counts": {
           "ontology_evidence": 4,
-          "reading_queue": 185,
+          "reading_queue": 186,
           "journals": 11
         },
         "distinct_referring_accounts": 0,
@@ -1222,7 +1222,7 @@
         "breadth": {
           "score": 0.7049999999999998,
           "basis": [
-            "distinct_urls:182",
+            "distinct_urls:183",
             "distinct_axes:3",
             "origin_types:3"
           ]
@@ -1260,7 +1260,7 @@
           "method": "mechanical_v1",
           "basis": [
             "newsroom_domain_pattern",
-            "distinct_urls:182",
+            "distinct_urls:183",
             "distinct_axes:3",
             "origin_types:3",
             "referring_accounts:0",
@@ -11973,7 +11973,7 @@
           ]
         },
         "profile": {
-          "score": 0.009999999999999998,
+          "score": 0,
           "confidence": 0.55,
           "basis": [
             "meta_author:false",
@@ -11982,7 +11982,7 @@
             "about:false",
             "contact:false",
             "corrections:false",
-            "outbound_links:1",
+            "outbound_links:0",
             "opinion_marker:false"
           ]
         },
@@ -12002,15 +12002,15 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-07-10T00:04:32.396Z",
+        "fetched_at": "2026-07-13T00:07:59.289Z",
         "homepage_url": "https://panzer.quest/",
         "example_url": "https://panzer.quest/?r=twipq1wwa&twclid=29prb4l0osv19xvy30sejzir0",
-        "homepage_status": 200,
-        "example_status": 200,
+        "homepage_status": null,
+        "example_status": null,
         "homepage_final_url": "https://panzer.quest/",
         "example_final_url": "https://panzer.quest/?r=twipq1wwa&twclid=29prb4l0osv19xvy30sejzir0",
-        "homepage_content_type": "text/html; charset=UTF-8",
-        "example_content_type": "text/html; charset=UTF-8",
+        "homepage_content_type": "",
+        "example_content_type": "",
         "homepage": {
           "has_meta_author": false,
           "has_published_time": false,
@@ -12018,7 +12018,7 @@
           "has_about_link": false,
           "has_contact_link": false,
           "has_corrections_link": false,
-          "outbound_links_count": 1,
+          "outbound_links_count": 0,
           "opinion_marker": false
         },
         "example": {
@@ -12028,7 +12028,7 @@
           "has_about_link": false,
           "has_contact_link": false,
           "has_corrections_link": false,
-          "outbound_links_count": 1,
+          "outbound_links_count": 0,
           "opinion_marker": false
         }
       }
@@ -26810,16 +26810,16 @@
           ]
         },
         "profile": {
-          "score": 0.30000000000000004,
-          "confidence": 0.65,
+          "score": 0,
+          "confidence": 0.55,
           "basis": [
             "meta_author:false",
             "published_time:false",
-            "canonical:true",
-            "about:true",
+            "canonical:false",
+            "about:false",
             "contact:false",
             "corrections:false",
-            "outbound_links:6",
+            "outbound_links:0",
             "opinion_marker:false"
           ]
         },
@@ -26839,33 +26839,33 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-07-09T22:34:31.221Z",
+        "fetched_at": "2026-07-12T22:37:57.096Z",
         "homepage_url": "https://zerogex.io/",
         "example_url": "https://zerogex.io/spx-gamma-levels?utm_source=x&utm_medium=paid_social&utm_campaign=levels_awareness&utm_content=trial_direct_hook&twclid=2a4dncr82b7vzedk7ixybb1asi",
-        "homepage_status": 200,
-        "example_status": 200,
+        "homepage_status": null,
+        "example_status": null,
         "homepage_final_url": "https://zerogex.io/",
         "example_final_url": "https://zerogex.io/spx-gamma-levels?utm_source=x&utm_medium=paid_social&utm_campaign=levels_awareness&utm_content=trial_direct_hook&twclid=2a4dncr82b7vzedk7ixybb1asi",
-        "homepage_content_type": "text/html; charset=utf-8",
-        "example_content_type": "text/html; charset=utf-8",
+        "homepage_content_type": "",
+        "example_content_type": "",
         "homepage": {
           "has_meta_author": false,
           "has_published_time": false,
-          "has_canonical": true,
-          "has_about_link": true,
+          "has_canonical": false,
+          "has_about_link": false,
           "has_contact_link": false,
           "has_corrections_link": false,
-          "outbound_links_count": 3,
+          "outbound_links_count": 0,
           "opinion_marker": false
         },
         "example": {
           "has_meta_author": false,
           "has_published_time": false,
-          "has_canonical": true,
-          "has_about_link": true,
+          "has_canonical": false,
+          "has_about_link": false,
           "has_contact_link": false,
           "has_corrections_link": false,
-          "outbound_links_count": 6,
+          "outbound_links_count": 0,
           "opinion_marker": false
         }
       }
@@ -35396,16 +35396,16 @@
           ]
         },
         "profile": {
-          "score": 0.43,
-          "confidence": 0.65,
+          "score": 0,
+          "confidence": 0.55,
           "basis": [
             "meta_author:false",
             "published_time:false",
-            "canonical:true",
-            "about:true",
-            "contact:true",
+            "canonical:false",
+            "about:false",
+            "contact:false",
             "corrections:false",
-            "outbound_links:7",
+            "outbound_links:0",
             "opinion_marker:false"
           ]
         },
@@ -35425,33 +35425,33 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-07-10T00:04:35.067Z",
+        "fetched_at": "2026-07-13T00:08:19.293Z",
         "homepage_url": "https://ovationproductions.asia/",
         "example_url": "https://ovationproductions.asia/shows?twclid=211tuu4nlnemtbaxblsjggnut",
-        "homepage_status": 200,
-        "example_status": 200,
+        "homepage_status": null,
+        "example_status": null,
         "homepage_final_url": "https://ovationproductions.asia/",
         "example_final_url": "https://ovationproductions.asia/shows?twclid=211tuu4nlnemtbaxblsjggnut",
-        "homepage_content_type": "text/html; charset=utf-8",
-        "example_content_type": "text/html; charset=utf-8",
+        "homepage_content_type": "",
+        "example_content_type": "",
         "homepage": {
           "has_meta_author": false,
           "has_published_time": false,
-          "has_canonical": true,
-          "has_about_link": true,
-          "has_contact_link": true,
+          "has_canonical": false,
+          "has_about_link": false,
+          "has_contact_link": false,
           "has_corrections_link": false,
-          "outbound_links_count": 7,
+          "outbound_links_count": 0,
           "opinion_marker": false
         },
         "example": {
           "has_meta_author": false,
           "has_published_time": false,
-          "has_canonical": true,
-          "has_about_link": true,
-          "has_contact_link": true,
+          "has_canonical": false,
+          "has_about_link": false,
+          "has_contact_link": false,
           "has_corrections_link": false,
-          "outbound_links_count": 7,
+          "outbound_links_count": 0,
           "opinion_marker": false
         }
       }
@@ -37143,15 +37143,15 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-07-09T11:12:18.090Z",
+        "fetched_at": "2026-07-12T22:38:17.102Z",
         "homepage_url": "https://cointracker.io/",
         "example_url": "https://www.cointracker.io/?utm_source=x&utm_medium=paid_social&utm_campaign=PDM_PaidSocial_X_Awareness_Reach&twclid=2db4ytuyg7wyekq6zcdaap0vjo",
-        "homepage_status": 403,
-        "example_status": 403,
-        "homepage_final_url": "https://www.cointracker.io/",
+        "homepage_status": null,
+        "example_status": null,
+        "homepage_final_url": "https://cointracker.io/",
         "example_final_url": "https://www.cointracker.io/?utm_source=x&utm_medium=paid_social&utm_campaign=PDM_PaidSocial_X_Awareness_Reach&twclid=2db4ytuyg7wyekq6zcdaap0vjo",
-        "homepage_content_type": "text/html; charset=UTF-8",
-        "example_content_type": "text/html; charset=UTF-8",
+        "homepage_content_type": "",
+        "example_content_type": "",
         "homepage": {
           "has_meta_author": false,
           "has_published_time": false,
@@ -37237,10 +37237,10 @@
           ]
         },
         "profile": {
-          "score": 0.18,
-          "confidence": 0.65,
+          "score": 0,
+          "confidence": 0.55,
           "basis": [
-            "meta_author:true",
+            "meta_author:false",
             "published_time:false",
             "canonical:false",
             "about:false",
@@ -37266,17 +37266,17 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-07-09T11:42:15.423Z",
+        "fetched_at": "2026-07-12T22:38:37.106Z",
         "homepage_url": "https://executionos.app/",
         "example_url": "https://executionos.app/?twclid=21y98qnc3fpcspd69ruatoqb5k",
-        "homepage_status": 200,
-        "example_status": 200,
+        "homepage_status": null,
+        "example_status": null,
         "homepage_final_url": "https://executionos.app/",
         "example_final_url": "https://executionos.app/?twclid=21y98qnc3fpcspd69ruatoqb5k",
-        "homepage_content_type": "text/html; charset=utf-8",
-        "example_content_type": "text/html; charset=utf-8",
+        "homepage_content_type": "",
+        "example_content_type": "",
         "homepage": {
-          "has_meta_author": true,
+          "has_meta_author": false,
           "has_published_time": false,
           "has_canonical": false,
           "has_about_link": false,
@@ -37286,7 +37286,7 @@
           "opinion_marker": false
         },
         "example": {
-          "has_meta_author": true,
+          "has_meta_author": false,
           "has_published_time": false,
           "has_canonical": false,
           "has_about_link": false,
@@ -37360,16 +37360,16 @@
           ]
         },
         "profile": {
-          "score": 0.42,
-          "confidence": 0.65,
+          "score": 0,
+          "confidence": 0.55,
           "basis": [
             "meta_author:false",
             "published_time:false",
-            "canonical:true",
-            "about:true",
-            "contact:true",
+            "canonical:false",
+            "about:false",
+            "contact:false",
             "corrections:false",
-            "outbound_links:6",
+            "outbound_links:0",
             "opinion_marker:false"
           ]
         },
@@ -37389,33 +37389,33 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-07-09T11:42:22.333Z",
+        "fetched_at": "2026-07-12T22:38:57.111Z",
         "homepage_url": "https://stanford.edu/",
         "example_url": "https://setr.stanford.edu/?utm_source=paid-social&utm_medium=x&utm_campaign=consideration&utm_term=nationwide&utm_content=general_image&twclid=24yi2v8i7akrj8uxvbrlymn90n",
-        "homepage_status": 200,
-        "example_status": 200,
-        "homepage_final_url": "https://www.stanford.edu/",
+        "homepage_status": null,
+        "example_status": null,
+        "homepage_final_url": "https://stanford.edu/",
         "example_final_url": "https://setr.stanford.edu/?utm_source=paid-social&utm_medium=x&utm_campaign=consideration&utm_term=nationwide&utm_content=general_image&twclid=24yi2v8i7akrj8uxvbrlymn90n",
-        "homepage_content_type": "text/html; charset=utf-8",
-        "example_content_type": "text/html; charset=UTF-8",
+        "homepage_content_type": "",
+        "example_content_type": "",
         "homepage": {
           "has_meta_author": false,
-          "has_published_time": true,
-          "has_canonical": true,
-          "has_about_link": true,
-          "has_contact_link": true,
+          "has_published_time": false,
+          "has_canonical": false,
+          "has_about_link": false,
+          "has_contact_link": false,
           "has_corrections_link": false,
-          "outbound_links_count": 13,
+          "outbound_links_count": 0,
           "opinion_marker": false
         },
         "example": {
           "has_meta_author": false,
           "has_published_time": false,
-          "has_canonical": true,
-          "has_about_link": true,
-          "has_contact_link": true,
+          "has_canonical": false,
+          "has_about_link": false,
+          "has_contact_link": false,
           "has_corrections_link": false,
-          "outbound_links_count": 6,
+          "outbound_links_count": 0,
           "opinion_marker": false
         }
       }
@@ -37483,16 +37483,16 @@
           ]
         },
         "profile": {
-          "score": 0.15000000000000002,
+          "score": 0,
           "confidence": 0.55,
           "basis": [
             "meta_author:false",
             "published_time:false",
-            "canonical:true",
+            "canonical:false",
             "about:false",
             "contact:false",
             "corrections:false",
-            "outbound_links:5",
+            "outbound_links:0",
             "opinion_marker:false"
           ]
         },
@@ -37512,33 +37512,33 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-07-09T11:42:24.033Z",
+        "fetched_at": "2026-07-12T23:07:57.254Z",
         "homepage_url": "https://spotandtango.com/",
         "example_url": "https://www.spotandtango.com/unkibble?discount=XUNKIBBLE&utm_medium=cpc&utm_campaign=X_Convert_2026&utm_source=twitter&twclid=2adust2nkwc5tq5qj4fqfz0vb8",
-        "homepage_status": 200,
-        "example_status": 200,
-        "homepage_final_url": "https://www.spotandtango.com/",
+        "homepage_status": null,
+        "example_status": null,
+        "homepage_final_url": "https://spotandtango.com/",
         "example_final_url": "https://www.spotandtango.com/unkibble?discount=XUNKIBBLE&utm_medium=cpc&utm_campaign=X_Convert_2026&utm_source=twitter&twclid=2adust2nkwc5tq5qj4fqfz0vb8",
-        "homepage_content_type": "text/html; charset=utf-8",
-        "example_content_type": "text/html; charset=utf-8",
+        "homepage_content_type": "",
+        "example_content_type": "",
         "homepage": {
           "has_meta_author": false,
           "has_published_time": false,
-          "has_canonical": true,
+          "has_canonical": false,
           "has_about_link": false,
           "has_contact_link": false,
           "has_corrections_link": false,
-          "outbound_links_count": 4,
+          "outbound_links_count": 0,
           "opinion_marker": false
         },
         "example": {
           "has_meta_author": false,
           "has_published_time": false,
-          "has_canonical": true,
+          "has_canonical": false,
           "has_about_link": false,
           "has_contact_link": false,
           "has_corrections_link": false,
-          "outbound_links_count": 5,
+          "outbound_links_count": 0,
           "opinion_marker": false
         }
       }
@@ -37635,7 +37635,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-07-09T11:42:44.040Z",
+        "fetched_at": "2026-07-12T23:08:17.261Z",
         "homepage_url": "https://kfc.com/",
         "example_url": "https://www.kfc.com/menu?utm_source=twitter&utm_medium=social&utm_campaign=kfcvaluefeast&utm_creative=9box&twclid=250lznofqwrkd2iq53t7qffgxo",
         "homepage_status": null,
@@ -37729,14 +37729,14 @@
           ]
         },
         "profile": {
-          "score": 0.26,
-          "confidence": 0.65,
+          "score": 0,
+          "confidence": 0.55,
           "basis": [
             "meta_author:false",
             "published_time:false",
             "canonical:false",
-            "about:true",
-            "contact:true",
+            "about:false",
+            "contact:false",
             "corrections:false",
             "outbound_links:0",
             "opinion_marker:false"
@@ -37758,23 +37758,23 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-07-09T12:42:16.375Z",
+        "fetched_at": "2026-07-12T23:08:37.267Z",
         "homepage_url": "https://3c.wiki/",
         "example_url": "https://3c.wiki/3PtZuMY?twclid=2bz0sgqd5e9nj510697vwg5ap7",
-        "homepage_status": 200,
-        "example_status": 403,
-        "homepage_final_url": "https://bitly.com/pages/landing/branded-short-domains-powered-by-bitly?bsd=3c.wiki",
-        "example_final_url": "https://app.3commas.io/en/auth/registration?utm_source=twitter-ads&utm_medium=cpc&utm_campaign=backtest_picks&utm_term=post&utm_content=backtest_picks_february3",
-        "homepage_content_type": "text/html; charset=utf-8",
-        "example_content_type": "text/html; charset=UTF-8",
+        "homepage_status": null,
+        "example_status": null,
+        "homepage_final_url": "https://3c.wiki/",
+        "example_final_url": "https://3c.wiki/3PtZuMY?twclid=2bz0sgqd5e9nj510697vwg5ap7",
+        "homepage_content_type": "",
+        "example_content_type": "",
         "homepage": {
           "has_meta_author": false,
-          "has_published_time": true,
-          "has_canonical": true,
-          "has_about_link": true,
-          "has_contact_link": true,
+          "has_published_time": false,
+          "has_canonical": false,
+          "has_about_link": false,
+          "has_contact_link": false,
           "has_corrections_link": false,
-          "outbound_links_count": 70,
+          "outbound_links_count": 0,
           "opinion_marker": false
         },
         "example": {
@@ -37852,16 +37852,16 @@
           ]
         },
         "profile": {
-          "score": 0.15000000000000002,
+          "score": 0,
           "confidence": 0.55,
           "basis": [
             "meta_author:false",
             "published_time:false",
-            "canonical:true",
+            "canonical:false",
             "about:false",
             "contact:false",
             "corrections:false",
-            "outbound_links:5",
+            "outbound_links:0",
             "opinion_marker:false"
           ]
         },
@@ -37881,33 +37881,33 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-07-09T12:42:18.187Z",
+        "fetched_at": "2026-07-12T23:08:57.270Z",
         "homepage_url": "https://lumalabs.ai/",
         "example_url": "https://lumalabs.ai/app?utm_source=x&utm_medium=paid_social&utm_campaign=prospectingX&twclid=27jcpv8qkd9yiwma3uys0cthqd",
-        "homepage_status": 200,
-        "example_status": 200,
+        "homepage_status": null,
+        "example_status": null,
         "homepage_final_url": "https://lumalabs.ai/",
         "example_final_url": "https://lumalabs.ai/app?utm_source=x&utm_medium=paid_social&utm_campaign=prospectingX&twclid=27jcpv8qkd9yiwma3uys0cthqd",
-        "homepage_content_type": "text/html; charset=utf-8",
-        "example_content_type": "text/html; charset=utf-8",
+        "homepage_content_type": "",
+        "example_content_type": "",
         "homepage": {
           "has_meta_author": false,
           "has_published_time": false,
-          "has_canonical": true,
+          "has_canonical": false,
           "has_about_link": false,
           "has_contact_link": false,
           "has_corrections_link": false,
-          "outbound_links_count": 5,
+          "outbound_links_count": 0,
           "opinion_marker": false
         },
         "example": {
           "has_meta_author": false,
           "has_published_time": false,
-          "has_canonical": true,
+          "has_canonical": false,
           "has_about_link": false,
           "has_contact_link": false,
           "has_corrections_link": false,
-          "outbound_links_count": 5,
+          "outbound_links_count": 0,
           "opinion_marker": false
         }
       }
@@ -37975,16 +37975,16 @@
           ]
         },
         "profile": {
-          "score": 0.31000000000000005,
-          "confidence": 0.65,
+          "score": 0,
+          "confidence": 0.55,
           "basis": [
             "meta_author:false",
-            "published_time:true",
-            "canonical:true",
+            "published_time:false",
+            "canonical:false",
             "about:false",
             "contact:false",
             "corrections:false",
-            "outbound_links:3",
+            "outbound_links:0",
             "opinion_marker:false"
           ]
         },
@@ -38004,15 +38004,15 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-07-09T12:42:30.276Z",
+        "fetched_at": "2026-07-13T00:08:39.299Z",
         "homepage_url": "https://statefreedomcaucus.org/",
         "example_url": "https://www.statefreedomcaucus.org/15-strong/?twclid=2epfodwob5z2m8xe9l0e1w4xfa",
         "homepage_status": null,
-        "example_status": 200,
+        "example_status": null,
         "homepage_final_url": "https://statefreedomcaucus.org/",
         "example_final_url": "https://www.statefreedomcaucus.org/15-strong/?twclid=2epfodwob5z2m8xe9l0e1w4xfa",
         "homepage_content_type": "",
-        "example_content_type": "text/html; charset=UTF-8",
+        "example_content_type": "",
         "homepage": {
           "has_meta_author": false,
           "has_published_time": false,
@@ -38025,12 +38025,12 @@
         },
         "example": {
           "has_meta_author": false,
-          "has_published_time": true,
-          "has_canonical": true,
+          "has_published_time": false,
+          "has_canonical": false,
           "has_about_link": false,
-          "has_contact_link": true,
+          "has_contact_link": false,
           "has_corrections_link": false,
-          "outbound_links_count": 3,
+          "outbound_links_count": 0,
           "opinion_marker": false
         }
       }
@@ -38098,16 +38098,16 @@
           ]
         },
         "profile": {
-          "score": 0.23,
+          "score": 0,
           "confidence": 0.55,
           "basis": [
             "meta_author:false",
             "published_time:false",
-            "canonical:true",
+            "canonical:false",
             "about:false",
-            "contact:true",
+            "contact:false",
             "corrections:false",
-            "outbound_links:1",
+            "outbound_links:0",
             "opinion_marker:false"
           ]
         },
@@ -38127,33 +38127,33 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-07-09T12:42:31.899Z",
+        "fetched_at": "2026-07-13T00:08:59.303Z",
         "homepage_url": "https://gamedaymath.com/",
         "example_url": "https://www.gamedaymath.com/pricing?twclid=22wv0ellx5eqlyjtmchr7w8rag",
-        "homepage_status": 200,
-        "example_status": 200,
-        "homepage_final_url": "https://www.gamedaymath.com/",
+        "homepage_status": null,
+        "example_status": null,
+        "homepage_final_url": "https://gamedaymath.com/",
         "example_final_url": "https://www.gamedaymath.com/pricing?twclid=22wv0ellx5eqlyjtmchr7w8rag",
-        "homepage_content_type": "text/html; charset=utf-8",
-        "example_content_type": "text/html; charset=utf-8",
+        "homepage_content_type": "",
+        "example_content_type": "",
         "homepage": {
           "has_meta_author": false,
           "has_published_time": false,
-          "has_canonical": true,
+          "has_canonical": false,
           "has_about_link": false,
-          "has_contact_link": true,
+          "has_contact_link": false,
           "has_corrections_link": false,
-          "outbound_links_count": 1,
+          "outbound_links_count": 0,
           "opinion_marker": false
         },
         "example": {
           "has_meta_author": false,
           "has_published_time": false,
-          "has_canonical": true,
+          "has_canonical": false,
           "has_about_link": false,
-          "has_contact_link": true,
+          "has_contact_link": false,
           "has_corrections_link": false,
-          "outbound_links_count": 1,
+          "outbound_links_count": 0,
           "opinion_marker": false
         }
       }
@@ -38250,7 +38250,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-07-09T13:12:16.554Z",
+        "fetched_at": "2026-07-13T00:37:43.234Z",
         "homepage_url": "https://monadicdna.com/",
         "example_url": "https://explorer.monadicdna.com/?twclid=23v8cbj938nxfoq8gmro6dqa1l",
         "homepage_status": 200,
@@ -38373,7 +38373,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-07-09T13:12:18.481Z",
+        "fetched_at": "2026-07-13T00:37:44.232Z",
         "homepage_url": "https://any.run/",
         "example_url": "https://any.run/cybersecurity-blog/anyrun-macos-sandbox/?utm_source=twitter&utm_medium=post&utm_campaign=macos_ad&utm_content=linktoblog&utm_term=300326&twclid=23x4x734jui85kqg60evobo3x3",
         "homepage_status": 200,
@@ -38496,7 +38496,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-07-09T13:12:20.114Z",
+        "fetched_at": "2026-07-13T00:37:45.706Z",
         "homepage_url": "https://alphacapital.pro/",
         "example_url": "https://alphacapital.pro/pages/performance/?utm_source=twitter&utm_medium=ad1&utm_campaign=ac&twclid=2b8weeqkz95cs1xc59f8v2j7ob",
         "homepage_status": 200,
@@ -38619,7 +38619,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-07-09T13:12:21.311Z",
+        "fetched_at": "2026-07-13T00:37:46.628Z",
         "homepage_url": "https://willowvoice.com/",
         "example_url": "https://willowvoice.com/developers?twclid=2ebuy7l735ljqyo9xotbgwpmp0",
         "homepage_status": 200,
