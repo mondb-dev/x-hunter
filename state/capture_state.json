@@ -1,171 +1,171 @@
 {
-  "checked_at": "2026-07-13T10:53:56.840Z",
-  "evidence_24h": 37,
-  "unique_sources": 14,
+  "checked_at": "2026-07-14T11:49:11.835Z",
+  "evidence_24h": 24,
+  "unique_sources": 11,
   "status": "captured",
   "alerts": [
     {
       "type": "source_dominance",
       "severity": "high",
-      "detail": "@unknown accounts for 62% of today's evidence (23/37)",
+      "detail": "@unknown accounts for 50% of today's evidence (12/24)",
       "username": "unknown",
-      "share": 0.622
+      "share": 0.5
     },
     {
       "type": "pole_skew",
       "severity": "moderate",
-      "detail": "73% of evidence pushes \"left\" — risk of one-sided belief drift",
+      "detail": "75% of evidence pushes \"left\" — risk of one-sided belief drift",
       "dominant_pole": "left",
-      "share": 0.73
+      "share": 0.75
     }
   ],
-  "summary": "2 capture alert(s) detected:\n[HIGH] @unknown accounts for 62% of today's evidence (23/37)\n[MODERATE] 73% of evidence pushes \"left\" — risk of one-sided belief drift",
+  "summary": "2 capture alert(s) detected:\n[HIGH] @unknown accounts for 50% of today's evidence (12/24)\n[MODERATE] 75% of evidence pushes \"left\" — risk of one-sided belief drift",
   "source_concentration": {
     "unknown": {
       "username": "unknown",
-      "count": 23,
-      "share": 0.622
+      "count": 12,
+      "share": 0.5
     },
-    "nicksortor": {
-      "username": "nicksortor",
+    "edkrassen": {
+      "username": "edkrassen",
       "count": 2,
-      "share": 0.054
+      "share": 0.083
     },
-    "foxnews": {
-      "username": "foxnews",
-      "count": 1,
-      "share": 0.027
+    "n_alharbi112": {
+      "username": "n_alharbi112",
+      "count": 2,
+      "share": 0.083
     },
-    "atrupar": {
-      "username": "atrupar",
+    "calltoactivism": {
+      "username": "calltoactivism",
       "count": 1,
-      "share": 0.027
+      "share": 0.042
     },
-    "gunthereagleman": {
-      "username": "gunthereagleman",
+    "thejfreakinc": {
+      "username": "thejfreakinc",
       "count": 1,
-      "share": 0.027
+      "share": 0.042
     },
-    "philippinestar": {
-      "username": "philippinestar",
+    "iranintl_en": {
+      "username": "iranintl_en",
       "count": 1,
-      "share": 0.027
+      "share": 0.042
     },
-    "mog_russen": {
-      "username": "mog_russen",
+    "the_fjc": {
+      "username": "the_fjc",
       "count": 1,
-      "share": 0.027
+      "share": 0.042
     },
-    "ericldaugh": {
-      "username": "ericldaugh",
+    "jesusfalcis": {
+      "username": "jesusfalcis",
       "count": 1,
-      "share": 0.027
+      "share": 0.042
     },
-    "clashreport": {
-      "username": "clashreport",
+    "ajenglish": {
+      "username": "ajenglish",
       "count": 1,
-      "share": 0.027
+      "share": 0.042
     },
-    "rt_on_x": {
-      "username": "rt_on_x",
+    "____selah": {
+      "username": "____selah",
       "count": 1,
-      "share": 0.027
+      "share": 0.042
     }
   },
   "axis_concentration": {
-    "axis_power_accountability": {
-      "axis_id": "axis_power_accountability",
-      "label": "Power, Institutions, and Rule of Law",
-      "count": 8,
-      "share": 0.216
-    },
     "axis_procedural_governance_accountability": {
       "axis_id": "axis_procedural_governance_accountability",
       "label": "Procedural Governance vs. Genuine Accountability",
-      "count": 6,
-      "share": 0.162
+      "count": 8,
+      "share": 0.333
+    },
+    "axis_power_accountability": {
+      "axis_id": "axis_power_accountability",
+      "label": "Power, Institutions, and Rule of Law",
+      "count": 4,
+      "share": 0.167
     },
     "axis_epistemic_integrity": {
       "axis_id": "axis_epistemic_integrity",
       "label": "Truth and Evidence in Public Discourse",
-      "count": 4,
-      "share": 0.108
-    },
-    "axis_media_integrity_v1": {
-      "axis_id": "axis_media_integrity_v1",
-      "label": "Integrity of Information and Social Media Manipulation",
-      "count": 4,
-      "share": 0.108
-    },
-    "axis_public_trust_safety_crisis_v1": {
-      "axis_id": "axis_public_trust_safety_crisis_v1",
-      "label": "Public Trust in Safety and Crisis Communication",
-      "count": 3,
-      "share": 0.081
-    },
-    "axis_procedural_governance_v1": {
-      "axis_id": "axis_procedural_governance_v1",
-      "label": "Procedural Governance vs. Substantive Action",
-      "count": 3,
-      "share": 0.081
-    },
-    "axis_human_rights_exploitation_v1": {
-      "axis_id": "axis_human_rights_exploitation_v1",
-      "label": "Human Rights and Exploitation",
       "count": 2,
-      "share": 0.054
-    },
-    "axis_eje_accountability_v1": {
-      "axis_id": "axis_eje_accountability_v1",
-      "label": "Accountability for Extrajudicial Killings",
-      "count": 1,
-      "share": 0.027
-    },
-    "axis_ph_geopolitics_wps_v1": {
-      "axis_id": "axis_ph_geopolitics_wps_v1",
-      "label": "Philippine Geopolitical Alignment in the West Philippine Sea",
-      "count": 1,
-      "share": 0.027
+      "share": 0.083
     },
     "axis_national_sovereignty_v_intl_law_v1": {
       "axis_id": "axis_national_sovereignty_v_intl_law_v1",
       "label": "National Sovereignty vs. International Law",
+      "count": 2,
+      "share": 0.083
+    },
+    "axis_geopolitical_control_narratives": {
+      "axis_id": "axis_geopolitical_control_narratives",
+      "label": "Geopolitical Control Narratives: Asserting Sovereignty vs. International Norms",
+      "count": 2,
+      "share": 0.083
+    },
+    "axis_humanitarian_crisis_response": {
+      "axis_id": "axis_humanitarian_crisis_response",
+      "label": "Humanitarian Crisis Response",
+      "count": 2,
+      "share": 0.083
+    },
+    "axis_ai_societal_impact_v1": {
+      "axis_id": "axis_ai_societal_impact_v1",
+      "label": "Societal Impact and Ethical Concerns of AI/Robots",
       "count": 1,
-      "share": 0.027
+      "share": 0.042
+    },
+    "axis_media_integrity_v1": {
+      "axis_id": "axis_media_integrity_v1",
+      "label": "Integrity of Information and Social Media Manipulation",
+      "count": 1,
+      "share": 0.042
+    },
+    "axis_geopolitical_rhetoric_v1": {
+      "axis_id": "axis_geopolitical_rhetoric_v1",
+      "label": "Geopolitical Rhetoric vs. Humanitarian Concerns",
+      "count": 1,
+      "share": 0.042
+    },
+    "axis_human_rights_exploitation_v1": {
+      "axis_id": "axis_human_rights_exploitation_v1",
+      "label": "Human Rights and Exploitation",
+      "count": 1,
+      "share": 0.042
     }
   },
   "cluster_concentration": {
     "unknown": {
       "cluster": "unknown",
-      "count": 27,
-      "share": 0.73
+      "count": 17,
+      "share": 0.708
     },
-    "us_politics": {
-      "cluster": "us_politics",
+    "breaking_news": {
+      "cluster": "breaking_news",
       "count": 3,
-      "share": 0.081
+      "share": 0.125
     },
     "accountability_journalism": {
       "cluster": "accountability_journalism",
       "count": 2,
-      "share": 0.054
+      "share": 0.083
     },
-    "breaking_news": {
-      "cluster": "breaking_news",
-      "count": 2,
-      "share": 0.054
+    "us_politics": {
+      "cluster": "us_politics",
+      "count": 1,
+      "share": 0.042
     },
     "middle_east": {
       "cluster": "middle_east",
       "count": 1,
-      "share": 0.027
+      "share": 0.042
     }
   },
   "pole_balance": {
-    "left": 27,
-    "right": 10,
+    "left": 18,
+    "right": 6,
     "neutral": 0,
-    "left_share": 0.73,
-    "right_share": 0.27
+    "left_share": 0.75,
+    "right_share": 0.25
   }
 }
