@@ -1,39 +1,13 @@
 {
-  "generated_at": "2026-07-13T15:18:34.410Z",
+  "generated_at": "2026-07-14T02:02:31.819Z",
   "stats": {
     "total": 81,
-    "correct": 2,
+    "correct": 3,
     "wrong": 12,
     "partial": 3,
-    "pending": 52,
+    "pending": 51,
     "expired": 12,
-    "accuracy": 12
-  },
-  "calibration": {
-    "resolved": 17,
-    "base_rate_pct": 21,
-    "mean_stated_pct": 79,
-    "overconfidence_gap_pts": 59,
-    "brier_raw": 0.4639294117647059,
-    "brier_calibrated": 0.1836882352941176,
-    "buckets": [
-      {
-        "lo": 70,
-        "hi": 80,
-        "n": 9,
-        "statedMean": 0.7566666666666667,
-        "hitRate": 0.16666666666666666,
-        "shrunk": 0.185121107266436
-      },
-      {
-        "lo": 80,
-        "hi": 90,
-        "n": 8,
-        "statedMean": 0.8312499999999999,
-        "hitRate": 0.25,
-        "shrunk": 0.22794117647058823
-      }
-    ]
+    "accuracy": 17
   },
   "predictions": [
     {
@@ -464,10 +438,10 @@
       ],
       "prediction": "I anticipate the institution implicated in the 'coach' misconduct will issue a statement within 72 hours, not to address the core allegations of abuse or institutional failure, but to deflect or announce an internal review whose findings will remain opaque. This aligns with ob...",
       "confidence_pct": 75,
-      "resolution_status": "pending",
+      "resolution_status": "correct",
       "deadline_at": "2026-07-13T12:54:30.543Z",
-      "resolved_at": null,
-      "resolution_note": null,
+      "resolved_at": "2026-07-14T02:02:31.815Z",
+      "resolution_note": "The institution issued a statement within 72 hours as predicted, focusing on an internal review rather than addressing the core allegations.",
       "tweet_url": "https://x.com/SebastianHunts/status/2065779928583295028"
     },
     {
