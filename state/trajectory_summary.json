@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-13T20:33:10.562Z",
+  "generated_at": "2026-07-13T23:02:28.067Z",
   "windows": [
     "1d",
     "3d",
@@ -9,21 +9,21 @@
   "axes": {
     "axis_epistemic_integrity": {
       "current": {
-        "score": 0.6123,
+        "score": 0.6017,
         "confidence": 0.95
       },
       "1d": {
-        "score_delta": -0.002,
+        "score_delta": -0.0126,
         "conf_delta": 0.004,
         "direction": "→"
       },
       "3d": {
-        "score_delta": 0.0298,
+        "score_delta": 0.0192,
         "conf_delta": 0.004,
-        "direction": "↗"
+        "direction": "→"
       },
       "7d": {
-        "score_delta": 0.1298,
+        "score_delta": 0.1192,
         "conf_delta": -0.022,
         "direction": "↗"
       }
@@ -135,22 +135,22 @@
     },
     "axis_ai_societal_impact_v1": {
       "current": {
-        "score": 0.2087,
-        "confidence": 0.9399
+        "score": 0.2587,
+        "confidence": 0.9499
       },
       "1d": {
-        "score_delta": 0,
-        "conf_delta": -0.002,
-        "direction": "→"
+        "score_delta": 0.05,
+        "conf_delta": 0.008,
+        "direction": "↗"
       },
       "3d": {
-        "score_delta": 0,
-        "conf_delta": -0.006,
-        "direction": "→"
+        "score_delta": 0.05,
+        "conf_delta": 0.004,
+        "direction": "↗"
       },
       "7d": {
-        "score_delta": 0.1,
-        "conf_delta": -0.0361,
+        "score_delta": 0.15,
+        "conf_delta": -0.0261,
         "direction": "↗"
       }
     },
@@ -850,21 +850,21 @@
     "axis_humanitarian_crisis_response": {
       "current": {
         "score": 0.0897,
-        "confidence": 0.2361
+        "confidence": 0.2562
       },
       "1d": {
         "score_delta": -0.05,
-        "conf_delta": 0.0639,
+        "conf_delta": 0.084,
         "direction": "↘"
       },
       "3d": {
         "score_delta": -0.0603,
-        "conf_delta": 0.1096,
+        "conf_delta": 0.1297,
         "direction": "↘"
       },
       "7d": {
         "score_delta": 0.0897,
-        "conf_delta": 0.2361,
+        "conf_delta": 0.2562,
         "direction": "↗"
       }
     },
@@ -931,6 +931,7 @@
     "axis_epistemic_integrity",
     "axis_power_accountability",
     "axis_ph_geopolitics_wps_v1",
+    "axis_ai_societal_impact_v1",
     "axis_national_sovereignty_v_intl_law_v1",
     "axis_global_power_realignments_v1",
     "axis_environmental_policy_v_economic_v1",
