@@ -112,6 +112,32 @@ class LinkedIn {
     return { posted: false, reason: `http_${res.status}: ${(res.body || "").slice(0, 120)}` };
   }
 
+  /**
+   * Scrape a post permalink's engagement counts (for the post-performance loop).
+   * @returns {Promise<{reactions:number, comments:number}>} best-effort; 0 on miss.
+   */
+  async scrapePostEngagement(url) {
+    await this.c.navigate(this.tab, url);
+    await this.c.waitReady(this.tab, { tag: "linkedin" }).catch(() => {});
+    await sleep(3500);
+    await this.c.evaluate(this.tab, "window.scrollBy(0, 450)").catch(() => {});
+    await sleep(1200);
+    const raw = await this._eval(
+      `var out={reactions:null,comments:null};
+       var nodes=[].slice.call(document.querySelectorAll('[aria-label]'));
+       for(var i=0;i<nodes.length;i++){ var al=nodes[i].getAttribute('aria-label')||'';
+         if(out.reactions==null){ var mr=al.match(/([\\d,]+)\\s+reaction/i); if(mr) out.reactions=parseInt(mr[1].replace(/,/g,''),10); }
+         if(out.comments==null){ var mc=al.match(/([\\d,]+)\\s+comment/i); if(mc) out.comments=parseInt(mc[1].replace(/,/g,''),10); }
+       }
+       var sc=document.querySelector('.social-details-social-counts'); var t=sc?(sc.innerText||''):'';
+       if(out.comments==null && t){ var c=t.match(/([\\d,]+)\\s+comment/i); if(c) out.comments=parseInt(c[1].replace(/,/g,''),10); }
+       if(out.reactions==null && t){ var r=t.match(/([\\d,]+)/); if(r) out.reactions=parseInt(r[1].replace(/,/g,''),10); }
+       return JSON.stringify(out);`
+    ).catch(() => "{}");
+    let m = {}; try { m = JSON.parse(raw || "{}"); } catch {}
+    return { reactions: m.reactions || 0, comments: m.comments || 0 };
+  }
+
   // ── Feed scraping + engagement (top frame) ──────────────────────────────────
   /**
    * Scrape the feed. Stamps each post container with data-hs-idx and returns

@@ -235,6 +235,13 @@ function runSocialPipeline() {
     runScriptLog(path.join(PROJECT_ROOT, 'runner/linkedin_post.js'));
   }
 
+  // LinkedIn post-performance measurement — scrape engagement on past posts so
+  // the test-and-learn loop can score opening techniques (feeds linkedin_draft).
+  if (dueForRun('linkedin_measure', 12 * HOUR)) {
+    log('social: LinkedIn measure (post engagement → learn)');
+    runScriptLog(path.join(PROJECT_ROOT, 'runner/linkedin_measure.js'));
+  }
+
   // LinkedIn connections — niche People-search + note-personalized invites. The
   // script enforces its own hard per-DAY cap, so an 8h gate (≈2-3 runs/day) just
   // paces the batches; it never over-invites.

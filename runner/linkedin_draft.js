@@ -21,6 +21,7 @@ const config = require("./lib/config");
 const { buildContentPack } = require("./lib/content_sources");
 
 const outbox = require("./lib/outbox");
+const perf = require("./lib/linkedin_performance");
 
 const ROOT = path.resolve(__dirname, "..");
 const VOCATION = path.join(ROOT, "vocation.md");
@@ -63,12 +64,20 @@ const LINKEDIN_STRATEGY = `LINKEDIN PLACEMENT STRATEGY — how to shape this con
   let recallBlock = "";
   try { recallBlock = await require("./lib/recall").recallText(pack.query, { maxChars: 1200 }); } catch {}
 
+  // Test-and-learn: pick an opening TECHNIQUE (explore/exploit on measured
+  // engagement) and feed the track record back into the prompt.
+  const technique = perf.pickTechnique();
+  const perfSummary = perf.summaryText();
+  log(`technique: ${technique.id} (${technique.label})`);
+
   const prompt =
 `You are Sebastian Hunter writing a LinkedIn post. Your vocation and voice:
 ${vocation}
 
 ${LINKEDIN_STRATEGY}
 
+OPENING TECHNIQUE TO USE FOR THIS POST: ${technique.instruction}
+${perfSummary ? `\n${perfSummary}\n` : ""}
 YOUR CURRENT BELIEF AXES (your mapped positions — the post must argue consistently with these; lean on the highest-confidence axis that fits the theme):
 ${axesBlock || "(unavailable)"}
 
@@ -78,7 +87,7 @@ ${recallBlock || "(none)"}
 SOURCE MATERIAL (draw the theme from across these — cite specifics):
 ${pack.text}
 
-Write ONE original LinkedIn post following the strategy above. Return ONLY the post text.`;
+Write ONE original LinkedIn post following the strategy above and the opening technique. Return ONLY the post text.`;
 
   try {
     const raw = await compose(prompt, { maxTokens: 1000, model: "gemini-2.5-flash", thinkingBudget: 0, tag: "linkedin_draft" });
@@ -117,7 +126,7 @@ Write ONE original LinkedIn post following the strategy above. Return ONLY the p
       log(`coherence gate unavailable (${e.message}) — proceeding`);
     }
 
-    const { id, deduped } = outbox.enqueue({ channel: "linkedin", kind: "post", text, meta: { cycle: Number.parseInt(process.env.CYCLE_NUMBER || "", 10) || null } });
+    const { id, deduped } = outbox.enqueue({ channel: "linkedin", kind: "post", text, meta: { cycle: Number.parseInt(process.env.CYCLE_NUMBER || "", 10) || null, technique: technique.id } });
     log(deduped ? `identical post already queued (outbox #${id}) — not re-queuing` : `enqueued post to outbox #${id} (${text.length} chars)`);
     process.exit(0);
   } catch (err) {

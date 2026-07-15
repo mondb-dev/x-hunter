@@ -21,6 +21,7 @@ const { HelmStackClient, LinkedIn } = require("../tools/helmstack-social/src");
 const { logLinkedIn } = require("./posts_log");
 const voiceFilter = require("./lib/voice_filter");
 const outbox = require("./lib/outbox");
+const perf = require("./lib/linkedin_performance");
 
 const CYCLE = Number.parseInt(process.env.CYCLE_NUMBER || "", 10) || null;
 const DRY_RUN = process.env.HELMSTACK_DRY_RUN === "1";
@@ -57,5 +58,7 @@ const log = (m) => console.log(`[${tag}] ${m}`);
   outbox.markPosted(item.id, { url: res.url || null });
   log(`SUCCESS${res.url ? `: ${res.url}` : ""} (outbox #${item.id})`);
   logLinkedIn({ type: "linkedin_post", content: text, url: res.url || "", cycle: CYCLE });
+  // Tag the post with its opening technique so linkedin_measure can score it later.
+  if (res.url && item.meta && item.meta.technique) { try { perf.recordPost(res.url, item.meta.technique); } catch {} }
   process.exit(0);
 })().catch((err) => { log(`fatal: ${err.message}`); process.exit(1); });
