@@ -113,6 +113,45 @@ class LinkedIn {
   }
 
   /**
+   * Publish a post WITH an image via LinkedIn's own media pipeline (register →
+   * PUT bytes → normShares with the asset URN) — same same-origin voyager fetch
+   * as post(), since the UI composer is iframe-isolated. `imagePath` = a local
+   * file; the CALLER deletes it afterward.
+   * @returns {Promise<{posted:boolean, url?:string, reason?:string, dryRun?:boolean}>}
+   */
+  async postImage(text, imagePath, { dryRun = false } = {}) {
+    const fs = require("fs");
+    let b64, size;
+    try { const buf = fs.readFileSync(imagePath); b64 = buf.toString("base64"); size = buf.length; }
+    catch (e) { return { posted: false, reason: `read_image:${e.message}` }; }
+    const cur = await this.c.tabUrl(this.tab).catch(() => "");
+    if (!/linkedin\.com/.test(cur)) await this.gotoFeed();
+    if (dryRun) { this.log(`DRY RUN — would post image (${size}b) + ${text.length} chars`); return { posted: false, reason: "dry_run", dryRun: true }; }
+    const filename = "image." + ((imagePath.split(".").pop() || "png").toLowerCase());
+    const expr = `(async function(){
+      var m=document.cookie.match(/JSESSIONID="?([^";]+)"?/); if(!m) return JSON.stringify({error:"no_csrf"});
+      var H={"csrf-token":m[1],"content-type":"application/json","accept":"application/vnd.linkedin.normalized+json+2.1"};
+      try{
+        var reg=await fetch("https://www.linkedin.com/voyager/api/voyagerVideoDashMediaUploadMetadata?action=upload",{method:"POST",credentials:"include",headers:H,body:JSON.stringify({mediaUploadType:"IMAGE_SHARING",fileSize:${size},filename:${JSON.stringify(filename)}})});
+        var rj=await reg.json(); var v=rj.data&&rj.data.value; if(!v) return JSON.stringify({error:"register_failed"});
+        var bin=atob(${JSON.stringify(b64)}); var arr=new Uint8Array(bin.length); for(var i=0;i<bin.length;i++)arr[i]=bin.charCodeAt(i);
+        var put=await fetch(v.singleUploadUrl,{method:"PUT",credentials:"include",headers:v.singleUploadHeaders||{},body:arr});
+        if(!put.ok) return JSON.stringify({error:"put_http_"+put.status});
+        await new Promise(r=>setTimeout(r,4000)); // let LinkedIn process the image
+        var body={visibleToConnectionsOnly:false,externalAudienceProviders:[],commentaryV2:{text:${JSON.stringify(text)},attributes:[]},origin:"FEED",allowedCommentersScope:"ALL",postState:"PUBLISHED",media:[{category:"IMAGE",mediaUrn:v.urn,tapTargets:[]}]};
+        var sh=await fetch("https://www.linkedin.com/voyager/api/contentcreation/normShares",{method:"POST",credentials:"include",headers:H,body:JSON.stringify(body)});
+        var st=await sh.text(); var am=st.match(/urn:li:activity:(\\d+)/);
+        return JSON.stringify({status:sh.status, activity: am?am[0]:null, body: am?undefined:st.slice(0,160)});
+      }catch(e){ return JSON.stringify({error:e.message}); }
+    })()`;
+    let r = {};
+    try { r = JSON.parse(await this.c.evaluate(this.tab, expr, { timeout: 45000 })); }
+    catch (e) { return { posted: false, reason: `eval_failed:${e.message}` }; }
+    if (r.activity) { const u = `https://www.linkedin.com/feed/update/${r.activity}/`; this.log(`posted image: ${u}`); return { posted: true, url: u }; }
+    return { posted: false, reason: r.error || `http_${r.status}:${(r.body || "").slice(0, 120)}` };
+  }
+
+  /**
    * Scrape a post permalink's engagement counts (for the post-performance loop).
    * @returns {Promise<{reactions:number, comments:number}>} best-effort; 0 on miss.
    */

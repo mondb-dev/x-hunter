@@ -51,7 +51,25 @@ const log = (m) => console.log(`[${tag}] ${m}`);
     log(`could not reach HelmStack/LinkedIn: ${err.message}`); outbox.markFailed(item.id, `unreachable: ${err.message}`); process.exit(1);
   }
 
-  const res = await li.post(text, { dryRun: DRY_RUN });
+  // Optional image: if the draft carried a source URL (meta.image_source), copy
+  // that source's og:image and post it via LinkedIn's media pipeline with a
+  // "📷 via <source>" line. The temp image is ALWAYS deleted afterward.
+  let res, tmpImg = null;
+  const sourceUrl = item.meta && item.meta.image_source;
+  try {
+    if (sourceUrl && !DRY_RUN) {
+      const si = require("./lib/source_image");
+      const img = await si.fetchSourceImage(sourceUrl);
+      if (img) {
+        tmpImg = img.path;
+        log(`attaching source image from ${img.source}`);
+        res = await li.postImage(`${text}\n\n${si.attribution(img.source)}`, img.path, { dryRun: DRY_RUN });
+      } else { log("no og:image at source — posting text only"); }
+    }
+    if (!res) res = await li.post(text, { dryRun: DRY_RUN });
+  } finally {
+    if (tmpImg) { try { require("./lib/source_image").cleanup(tmpImg); } catch {} }
+  }
   if (res.dryRun) { outbox.markFailed(item.id, "dry_run"); log("DRY RUN complete — not published (item returned to pending)"); process.exit(0); }
   if (!res.posted) { const st = outbox.markFailed(item.id, res.reason || "post_failed"); log(`post failed (${res.reason}) — outbox #${item.id} → ${st}`); process.exit(1); }
 
