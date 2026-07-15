@@ -12,10 +12,11 @@ Captured 2026-07-15, updated same day (quote/reply API migration + retweet actio
 - **Source images** — `lib/source_image.js`: fetch a source's `og:image` server-side (no CORS) → temp file → cleanup. Attribution `📷 via <source>`.
 - **LinkedIn post learn-loop** — `lib/linkedin_performance.js` + `linkedin_measure.js`: tag each post with an opening technique, scrape reactions+comments, feed technique→engagement back into the draft prompt (explore/exploit).
 - Fixed `findOwnTweetUrl` navigating to `x.com/undefined` (`this.ownHandle` → `this.handle`).
+- **Image auto-trigger (X)** — `compose_tweet.js` now sets `state/tweet_image_source.txt` autonomously via `lib/lead_source_image.js`: extracts source URLs from the same browse notes the tweet was composed from, scores each by word-overlap relevance to the drafted tweet, and picks the top candidate that actually exposes an og:image (fetch-probe, HTML only). No match → no file → text-only post (unchanged). Deterministic (no extra LLM call); `IMAGE_AUTO_TRIGGER=0` disables. Attribution improved in `source_image.hostLabel`: an X status now credits the author `@handle` (its og:image is the tweet's own media) instead of a bare "x.com".
 
-## Follow-up 1 — image auto-trigger (small)
+## ~~Follow-up 1 — image auto-trigger (small)~~ — DONE (X)
 
-Image posting is wired + works **when a source URL is set** (X: `state/tweet_image_source.txt`; LinkedIn: outbox `meta.image_source`), but nothing sets it autonomously. The compose step should pick a lead source-with-image (e.g. from the content pack / a referenced article or tweet) and populate that. The capability + cleanup are complete; this is just the trigger.
+Done for X (above). LinkedIn's image trigger (outbox `meta.image_source`) is still unset autonomously — the LinkedIn draft path (`runner/linkedin_draft.js`) could call the same `pickLeadSource(text, notes)` and stash the result in the outbox item's `meta.image_source`. Small follow-up, same helper.
 
 ## Item 3 — LEARN repost + quote, all channels (large; the main remaining ask)
 

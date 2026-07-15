@@ -112,5 +112,24 @@ function dayNumberFrom(today) {
   const journalUrl = `https://sebastianhunter.fun/journal/${today}/${hour}`;
   fs.writeFileSync(DRAFT_PATH, `${finalText}\n${journalUrl}\n`);
   log(`wrote draft (${finalText.length} chars): ${finalText.slice(0, 60)}...`);
+
+  // Image auto-trigger: pick the lead source-with-image from the same browse
+  // notes this tweet was composed from, and set tweet_image_source.txt so the
+  // poster (post_x_helmstack) copies that og:image + attributes it. A miss
+  // leaves no file → text-only post, unchanged. Best-effort: never block the
+  // draft on image selection. IMAGE_AUTO_TRIGGER=0 disables it.
+  const imgSrcPath = path.join(path.dirname(DRAFT_PATH), 'tweet_image_source.txt');
+  try { fs.unlinkSync(imgSrcPath); } catch { /* none pending */ }
+  if (process.env.IMAGE_AUTO_TRIGGER !== '0') {
+    try {
+      const { pickLeadSource } = require('./lib/lead_source_image');
+      const notes = ctx.browseNotesFull || '';
+      const lead = await pickLeadSource(finalText, notes);
+      if (lead) {
+        fs.writeFileSync(imgSrcPath, lead.url + '\n');
+        log(`image source set: ${lead.source} (${lead.url})`);
+      }
+    } catch (e) { log(`image auto-trigger skipped: ${e.message}`); }
+  }
   process.exit(0);
 })();

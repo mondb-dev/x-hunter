@@ -26,8 +26,14 @@ function extractOgImage(html) {
   return m ? m[1] : null;
 }
 
-/** Best-effort host label for attribution when no explicit source name is given. */
+/**
+ * Best-effort attribution label when no explicit source name is given. An X/Twitter
+ * status credits the author's @handle (its og:image is the tweet's own media);
+ * anything else uses the host (e.g. "amnesty.org").
+ */
 function hostLabel(u) {
+  const x = String(u).match(/^https?:\/\/(?:x|twitter)\.com\/([A-Za-z0-9_]+)\/status\/\d+/i);
+  if (x) return '@' + x[1];
   try { return new URL(u).hostname.replace(/^www\./, ''); } catch { return u; }
 }
 
