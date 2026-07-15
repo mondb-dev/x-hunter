@@ -1,76 +1,80 @@
 {
-  "generated_at": "2026-07-14T11:56:49.363Z",
+  "generated_at": "2026-07-15T14:13:40.366Z",
   "monthly_usd": {
-    "llm": 21.26,
+    "llm": 30.12,
     "fixed": 101.25,
-    "total": 122.51
+    "total": 131.37
   },
   "llm_recent": {
     "window_days": 7,
-    "usd": 4.9599,
-    "calls": 336,
-    "daily_avg_usd": 0.7086,
+    "usd": 7.0285,
+    "calls": 442,
+    "daily_avg_usd": 1.0041,
     "by_tag": {
       "compose": {
-        "calls": 98,
-        "usd": 2.5212510000000004
+        "calls": 126,
+        "usd": 3.4815020000000003
       },
       "quote": {
-        "calls": 18,
-        "usd": 1.126597
+        "calls": 27,
+        "usd": 1.683313
       },
       "quote:factcheck": {
-        "calls": 18,
-        "usd": 0.015897
+        "calls": 27,
+        "usd": 0.023685000000000005
       },
       "brain": {
-        "calls": 96,
+        "calls": 114,
         "usd": 0
       },
       "x_reply": {
-        "calls": 14,
-        "usd": 0.110548
+        "calls": 22,
+        "usd": 0.174038
       },
       "x_reply:factcheck": {
-        "calls": 14,
-        "usd": 0.011942999999999999
+        "calls": 20,
+        "usd": 0.017061
       },
       "linkedin_draft": {
-        "calls": 5,
-        "usd": 0.096683
+        "calls": 7,
+        "usd": 0.136639
       },
       "linkedin_draft:factcheck": {
-        "calls": 4,
-        "usd": 0.011168999999999998
+        "calls": 6,
+        "usd": 0.014465999999999998
       },
       "linkedin_connect": {
-        "calls": 29,
-        "usd": 0.066936
+        "calls": 39,
+        "usd": 0.09063900000000001
       },
       "tweet": {
-        "calls": 19,
-        "usd": 0.736269
+        "calls": 27,
+        "usd": 1.045181
       },
       "tweet:factcheck": {
-        "calls": 16,
-        "usd": 0.013527
+        "calls": 20,
+        "usd": 0.016851
       },
       "article": {
         "calls": 3,
         "usd": 0.12299
       },
       "thread_draft": {
-        "calls": 2,
-        "usd": 0.126071
+        "calls": 3,
+        "usd": 0.198984
+      },
+      "helmstack_feedback": {
+        "calls": 1,
+        "usd": 0.023109
       }
     },
     "by_model": {
       "claude": {
-        "calls": 240,
-        "usd": 4.959881000000002
+        "calls": 328,
+        "usd": 7.028457999999995
       },
       "local": {
-        "calls": 96,
+        "calls": 114,
         "usd": 0
       }
     }
@@ -84,7 +88,7 @@
   },
   "storage_wallet": {
     "sol_balance": 0.000020209,
-    "checked_at": "2026-07-14T10:33:57.258Z"
+    "checked_at": "2026-07-15T10:52:12.046Z"
   },
   "funding_goal": {
     "mode": "mac",

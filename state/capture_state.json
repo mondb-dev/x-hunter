@@ -1,95 +1,67 @@
 {
-  "checked_at": "2026-07-14T11:49:11.835Z",
+  "checked_at": "2026-07-15T12:37:16.332Z",
   "evidence_24h": 24,
-  "unique_sources": 11,
+  "unique_sources": 7,
   "status": "captured",
   "alerts": [
     {
       "type": "source_dominance",
       "severity": "high",
-      "detail": "@unknown accounts for 50% of today's evidence (12/24)",
+      "detail": "@unknown accounts for 75% of today's evidence (18/24)",
       "username": "unknown",
-      "share": 0.5
-    },
-    {
-      "type": "pole_skew",
-      "severity": "moderate",
-      "detail": "75% of evidence pushes \"left\" — risk of one-sided belief drift",
-      "dominant_pole": "left",
       "share": 0.75
     }
   ],
-  "summary": "2 capture alert(s) detected:\n[HIGH] @unknown accounts for 50% of today's evidence (12/24)\n[MODERATE] 75% of evidence pushes \"left\" — risk of one-sided belief drift",
+  "summary": "1 capture alert(s) detected:\n[HIGH] @unknown accounts for 75% of today's evidence (18/24)",
   "source_concentration": {
     "unknown": {
       "username": "unknown",
-      "count": 12,
-      "share": 0.5
+      "count": 18,
+      "share": 0.75
     },
-    "edkrassen": {
-      "username": "edkrassen",
-      "count": 2,
-      "share": 0.083
-    },
-    "n_alharbi112": {
-      "username": "n_alharbi112",
-      "count": 2,
-      "share": 0.083
-    },
-    "calltoactivism": {
-      "username": "calltoactivism",
+    "atrupar": {
+      "username": "atrupar",
       "count": 1,
       "share": 0.042
     },
-    "thejfreakinc": {
-      "username": "thejfreakinc",
+    "globaltimesnews": {
+      "username": "globaltimesnews",
       "count": 1,
       "share": 0.042
     },
-    "iranintl_en": {
-      "username": "iranintl_en",
+    "news5ph": {
+      "username": "news5ph",
       "count": 1,
       "share": 0.042
     },
-    "the_fjc": {
-      "username": "the_fjc",
+    "cheldiokno": {
+      "username": "cheldiokno",
       "count": 1,
       "share": 0.042
     },
-    "jesusfalcis": {
-      "username": "jesusfalcis",
+    "ericldaugh": {
+      "username": "ericldaugh",
       "count": 1,
       "share": 0.042
     },
-    "ajenglish": {
-      "username": "ajenglish",
-      "count": 1,
-      "share": 0.042
-    },
-    "____selah": {
-      "username": "____selah",
+    "rt_com": {
+      "username": "rt_com",
       "count": 1,
       "share": 0.042
     }
   },
   "axis_concentration": {
-    "axis_procedural_governance_accountability": {
-      "axis_id": "axis_procedural_governance_accountability",
-      "label": "Procedural Governance vs. Genuine Accountability",
-      "count": 8,
-      "share": 0.333
-    },
     "axis_power_accountability": {
       "axis_id": "axis_power_accountability",
       "label": "Power, Institutions, and Rule of Law",
+      "count": 5,
+      "share": 0.208
+    },
+    "axis_procedural_governance_accountability": {
+      "axis_id": "axis_procedural_governance_accountability",
+      "label": "Procedural Governance vs. Genuine Accountability",
       "count": 4,
       "share": 0.167
-    },
-    "axis_epistemic_integrity": {
-      "axis_id": "axis_epistemic_integrity",
-      "label": "Truth and Evidence in Public Discourse",
-      "count": 2,
-      "share": 0.083
     },
     "axis_national_sovereignty_v_intl_law_v1": {
       "axis_id": "axis_national_sovereignty_v_intl_law_v1",
@@ -97,15 +69,15 @@
       "count": 2,
       "share": 0.083
     },
-    "axis_geopolitical_control_narratives": {
-      "axis_id": "axis_geopolitical_control_narratives",
-      "label": "Geopolitical Control Narratives: Asserting Sovereignty vs. International Norms",
+    "axis_human_rights_exploitation_v1": {
+      "axis_id": "axis_human_rights_exploitation_v1",
+      "label": "Human Rights and Exploitation",
       "count": 2,
       "share": 0.083
     },
-    "axis_humanitarian_crisis_response": {
-      "axis_id": "axis_humanitarian_crisis_response",
-      "label": "Humanitarian Crisis Response",
+    "axis_rapid_disinformation_v1": {
+      "axis_id": "axis_rapid_disinformation_v1",
+      "label": "Rapid Disinformation",
       "count": 2,
       "share": 0.083
     },
@@ -121,15 +93,21 @@
       "count": 1,
       "share": 0.042
     },
-    "axis_geopolitical_rhetoric_v1": {
-      "axis_id": "axis_geopolitical_rhetoric_v1",
-      "label": "Geopolitical Rhetoric vs. Humanitarian Concerns",
+    "axis_digital_supply_chain_security": {
+      "axis_id": "axis_digital_supply_chain_security",
+      "label": "Digital Supply Chain Security and Vulnerabilities",
       "count": 1,
       "share": 0.042
     },
-    "axis_human_rights_exploitation_v1": {
-      "axis_id": "axis_human_rights_exploitation_v1",
-      "label": "Human Rights and Exploitation",
+    "axis_environmental_policy_v_economic_v1": {
+      "axis_id": "axis_environmental_policy_v_economic_v1",
+      "label": "Environmental Policy vs. Economic Development",
+      "count": 1,
+      "share": 0.042
+    },
+    "axis_political_vulnerability_foreign_influence_v1": {
+      "axis_id": "axis_political_vulnerability_foreign_influence_v1",
+      "label": "Political Vulnerability & Foreign Influence",
       "count": 1,
       "share": 0.042
     }
@@ -137,13 +115,8 @@
   "cluster_concentration": {
     "unknown": {
       "cluster": "unknown",
-      "count": 17,
-      "share": 0.708
-    },
-    "breaking_news": {
-      "cluster": "breaking_news",
-      "count": 3,
-      "share": 0.125
+      "count": 20,
+      "share": 0.833
     },
     "accountability_journalism": {
       "cluster": "accountability_journalism",
@@ -155,17 +128,17 @@
       "count": 1,
       "share": 0.042
     },
-    "middle_east": {
-      "cluster": "middle_east",
+    "disinformation": {
+      "cluster": "disinformation",
       "count": 1,
       "share": 0.042
     }
   },
   "pole_balance": {
-    "left": 18,
-    "right": 6,
+    "left": 14,
+    "right": 10,
     "neutral": 0,
-    "left_share": 0.75,
-    "right_share": 0.25
+    "left_share": 0.583,
+    "right_share": 0.417
   }
 }

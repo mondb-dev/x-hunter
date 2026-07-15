@@ -1,8 +1,8 @@
 {
   "schema_version": "1.0",
-  "generated_at": "2026-07-15T10:21:17.286Z",
+  "generated_at": "2026-07-15T11:51:29.618Z",
   "method": "mechanical_registry_v1",
-  "profiled_at": "2026-07-15T10:21:33.375Z",
+  "profiled_at": "2026-07-15T11:51:39.596Z",
   "sources": [
     {
       "domain": "theguardian.com",
@@ -11,7 +11,7 @@
       "first_seen_at": "2026-03-27T23:17:00Z",
       "last_seen_at": "2026-07-13T23:01:48.746Z",
       "discovery": {
-        "distinct_urls": 382,
+        "distinct_urls": 383,
         "example_urls": [
           "https://www.theguardian.com/us-news/2026/jun/23/trump-immigration-courthouse-arrest-policy",
           "https://www.theguardian.com/us-news/2026/jun/28/ice-minnesota-defending-democracy",
@@ -21,7 +21,7 @@
         ],
         "origin_counts": {
           "ontology_evidence": 32,
-          "reading_queue": 358,
+          "reading_queue": 359,
           "journals": 71,
           "articles": 1
         },
@@ -67,7 +67,7 @@
         "breadth": {
           "score": 0.94,
           "basis": [
-            "distinct_urls:382",
+            "distinct_urls:383",
             "distinct_axes:12",
             "origin_types:4"
           ]
@@ -107,7 +107,7 @@
             "newsroom_domain_pattern",
             "article_path_seen",
             "doi_or_identifier_path_seen",
-            "distinct_urls:382",
+            "distinct_urls:383",
             "distinct_axes:12",
             "origin_types:4",
             "referring_accounts:0",
@@ -681,7 +681,7 @@
       "first_seen_at": "2026-06-22T00:15:00Z",
       "last_seen_at": "2026-07-15T03:51:51.926Z",
       "discovery": {
-        "distinct_urls": 258,
+        "distinct_urls": 259,
         "example_urls": [
           "https://www.nytimes.com/2026/06/19/world/canada/frank-stronach-trial-guilty-sex-charges.html",
           "https://www.nytimes.com/2026/06/27/world/americas/mexican-officials-us-informants.html",
@@ -691,7 +691,7 @@
         ],
         "origin_counts": {
           "ontology_evidence": 8,
-          "reading_queue": 260,
+          "reading_queue": 261,
           "journals": 22
         },
         "distinct_referring_accounts": 0,
@@ -728,7 +728,7 @@
         "breadth": {
           "score": 0.8216666666666665,
           "basis": [
-            "distinct_urls:258",
+            "distinct_urls:259",
             "distinct_axes:5",
             "origin_types:3"
           ]
@@ -767,7 +767,7 @@
           "basis": [
             "newsroom_domain_pattern",
             "article_path_seen",
-            "distinct_urls:258",
+            "distinct_urls:259",
             "distinct_axes:5",
             "origin_types:3",
             "referring_accounts:0",
@@ -1305,7 +1305,7 @@
       "first_seen_at": "2026-06-26T07:05:00Z",
       "last_seen_at": "2026-07-11T20:57:02.247Z",
       "discovery": {
-        "distinct_urls": 210,
+        "distinct_urls": 211,
         "example_urls": [
           "https://www.bbc.co.uk/news/articles/cn8qxz6qypyo",
           "https://www.bbc.co.uk/news/articles/cn075j04pnyo?at_medium=RSS&amp;at_campaign=rss",
@@ -1315,7 +1315,7 @@
         ],
         "origin_counts": {
           "ontology_evidence": 4,
-          "reading_queue": 214,
+          "reading_queue": 215,
           "journals": 11
         },
         "distinct_referring_accounts": 0,
@@ -1349,7 +1349,7 @@
         "breadth": {
           "score": 0.7049999999999998,
           "basis": [
-            "distinct_urls:210",
+            "distinct_urls:211",
             "distinct_axes:3",
             "origin_types:3"
           ]
@@ -1387,7 +1387,7 @@
           "method": "mechanical_v1",
           "basis": [
             "newsroom_domain_pattern",
-            "distinct_urls:210",
+            "distinct_urls:211",
             "distinct_axes:3",
             "origin_types:3",
             "referring_accounts:0",
@@ -2782,9 +2782,9 @@
       "entity": "Rappler",
       "kind": "unknown",
       "first_seen_at": "2026-06-22T04:04:30.428Z",
-      "last_seen_at": "2026-07-15T09:51:54.790Z",
+      "last_seen_at": "2026-07-15T11:21:48.836Z",
       "discovery": {
-        "distinct_urls": 116,
+        "distinct_urls": 118,
         "example_urls": [
           "https://www.rappler.com/fact-check-no-arrest-warrant-issued-vs-marcoleta",
           "https://www.rappler.com/technology/decoded-tacloban-school-shooting-disinformation-kiko-barzaga-discussions-juvenile-justice-law/",
@@ -2793,8 +2793,8 @@
           "https://www.rappler.com/philippines/barmm-minorities-demand-genuine-representation-parliamentary-elections/"
         ],
         "origin_counts": {
-          "ontology_evidence": 65,
-          "journals": 142,
+          "ontology_evidence": 66,
+          "journals": 144,
           "articles": 1
         },
         "distinct_referring_accounts": 0,
@@ -2841,7 +2841,7 @@
         "breadth": {
           "score": 0.8799999999999999,
           "basis": [
-            "distinct_urls:116",
+            "distinct_urls:118",
             "distinct_axes:16",
             "origin_types:3"
           ]
@@ -2879,7 +2879,7 @@
           "method": "mechanical_v1",
           "basis": [
             "unknown_domain_pattern",
-            "distinct_urls:116",
+            "distinct_urls:118",
             "distinct_axes:16",
             "origin_types:3",
             "referring_accounts:0",
@@ -3466,7 +3466,7 @@
       "entity": "T Co",
       "kind": "unknown",
       "first_seen_at": "2016-05-05T18:57:30.000Z",
-      "last_seen_at": "2026-07-15T05:10:25.000Z",
+      "last_seen_at": "2026-07-15T10:33:44.000Z",
       "discovery": {
         "distinct_urls": 7938,
         "example_urls": [
@@ -3477,7 +3477,7 @@
           "https://t.co/cYaqYDRp08"
         ],
         "origin_counts": {
-          "feed_buffer": 4952,
+          "feed_buffer": 4953,
           "feed_buffer_reply": 4830
         },
         "distinct_referring_accounts": 2478,
@@ -3604,9 +3604,9 @@
       "entity": "Gmanetwork",
       "kind": "unknown",
       "first_seen_at": "2026-05-18T03:29:41.732Z",
-      "last_seen_at": "2026-07-15T09:51:54.756Z",
+      "last_seen_at": "2026-07-15T11:21:48.811Z",
       "discovery": {
-        "distinct_urls": 115,
+        "distinct_urls": 116,
         "example_urls": [
           "https://www.gmanetwork.com/news/topstories/nation/994225/explainer-objections-in-a-trial-and-their-role-in-due-process/story/",
           "https://www.gmanetwork.com/news/balitambayan/balita/993931/sen-escudero-sinabing-16-na-boto-ang-kailangan-para-mahatulang-guilty-si-vp-sara-duterte-sa-impea/story/",
@@ -3616,7 +3616,7 @@
         ],
         "origin_counts": {
           "ontology_evidence": 44,
-          "journals": 143
+          "journals": 144
         },
         "distinct_referring_accounts": 0,
         "sample_referring_accounts": [],
@@ -3656,7 +3656,7 @@
         "breadth": {
           "score": 0.82,
           "basis": [
-            "distinct_urls:115",
+            "distinct_urls:116",
             "distinct_axes:10",
             "origin_types:2"
           ]
@@ -3694,7 +3694,7 @@
           "method": "mechanical_v1",
           "basis": [
             "unknown_domain_pattern",
-            "distinct_urls:115",
+            "distinct_urls:116",
             "distinct_axes:10",
             "origin_types:2",
             "referring_accounts:0",
@@ -17087,7 +17087,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-07-12T10:37:28.525Z",
+        "fetched_at": "2026-07-15T11:21:20.025Z",
         "homepage_url": "https://pyrenva.com/",
         "example_url": "https://www.pyrenva.com/products/havern-polo?utm_source=twitter&utm_campaign=HpoloSWC02&twclid=285udvuvfb3zz15rwylu1v9etj",
         "homepage_status": 403,
@@ -31374,7 +31374,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-07-12T06:26:35.473Z",
+        "fetched_at": "2026-07-15T11:21:20.505Z",
         "homepage_url": "https://icc-cpi.int/",
         "example_url": "https://icc-cpi.int/news/icc-concludes-confirmation-charges-hearing-el-hishri-case",
         "homepage_status": 403,
@@ -31498,7 +31498,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-07-12T07:56:36.175Z",
+        "fetched_at": "2026-07-15T11:21:20.769Z",
         "homepage_url": "https://abs-cbn.com/",
         "example_url": "https://news.abs-cbn.com/news/2026/06/09/nbi-dismisses-kickback-claims-as-hearsay",
         "homepage_status": 403,
@@ -31622,7 +31622,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-07-12T07:56:37.004Z",
+        "fetched_at": "2026-07-15T11:21:21.480Z",
         "homepage_url": "https://abscbn.news/",
         "example_url": "https://abscbn.news/4cXfLnd",
         "homepage_status": 403,
@@ -31746,7 +31746,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-07-12T09:26:37.851Z",
+        "fetched_at": "2026-07-15T11:51:34.190Z",
         "homepage_url": "https://thedispatch.com/",
         "example_url": "https://thedispatch.com/article/slavery-christianity-judaism/?twclid=224n5l3gu5l6wy53cctpntxjmr",
         "homepage_status": 200,
@@ -31870,7 +31870,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-07-12T09:26:38.852Z",
+        "fetched_at": "2026-07-15T11:51:35.367Z",
         "homepage_url": "https://scienceandculture.com/",
         "example_url": "https://scienceandculture.com/2026/04/cosmic-orphans-no-more-stephen-meyer-on-the-meaning-of-the-artemis-ii-mission/?twclid=2rnhdm9vyiuko1egq7pyr6uby",
         "homepage_status": 200,
@@ -31994,7 +31994,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-07-12T10:37:30.700Z",
+        "fetched_at": "2026-07-15T11:51:38.042Z",
         "homepage_url": "https://19fortyfive.com/",
         "example_url": "https://www.19fortyfive.com/2026/04/we-touched-the-super-guppy-nasas-whale-shaped-cargo-plane-has-a-25-foot-wide-internal-diameter-swallowed-apollo-rocket-stages-whole-and-only-one-still-flies/?twclid=23xrrcgqxanqbvkiqbsyzs1ox8",
         "homepage_status": 200,
@@ -32118,7 +32118,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-07-12T10:37:31.761Z",
+        "fetched_at": "2026-07-15T11:51:39.596Z",
         "homepage_url": "https://usatoday.com/",
         "example_url": "https://www.usatoday.com/story/sponsor-story/collegium-pharmaceutical/2026/05/05/paris-hilton-on-adhd-advocacy-and-support-in-the-workplace/89244166007/?twclid=28p40ybg70zs0nzujyc1b1b5mt",
         "homepage_status": 200,
