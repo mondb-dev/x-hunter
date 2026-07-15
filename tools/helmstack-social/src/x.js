@@ -15,6 +15,9 @@
  */
 
 const HOME_URL = "https://x.com/home";
+// X's public web bearer (used by the logged-in web client). Auth is completed by
+// the session cookies + ct0 CSRF; this constant is the same for every web user.
+const X_WEB_BEARER = "AAAAAAAAAAAAAAAAAAAAANRILgAAAAAAnNwIzUejRCOuH5E6I8xnZz4puTs=1Zv7ttfk8LF81IUq16cHjhLTvJu4FA33AGWWjCpTnA";
 const COMPOSE_BOX = '[data-testid="tweetTextarea_0"]';
 const POST_BUTTON = '[data-testid="tweetButton"], [data-testid="tweetButtonInline"]';
 
@@ -386,7 +389,83 @@ class X {
    * Publish a tweet.
    * @returns {Promise<{posted:boolean, url?:string|null, reason?:string, dryRun?:boolean}>}
    */
+  /**
+   * Publish a tweet. Prefers X's internal CreateTweet GraphQL API (an in-page
+   * fetch authed by the session's ct0 CSRF token) — NO composer, so none of the
+   * composer's insert/duplication/draft-restore failure modes apply. Falls back
+   * to the UI composer only if the API path is unavailable. X_POST_VIA_API=0
+   * forces the composer.
+   */
   async post(text, { dryRun = false } = {}) {
+    if (process.env.X_POST_VIA_API !== "0") {
+      const api = await this.postViaApi(text, { dryRun });
+      if (api.posted || api.dryRun) return api;
+      this.log(`API post unavailable (${api.reason}) — falling back to composer`);
+    }
+    return this._postViaComposer(text, { dryRun });
+  }
+
+  /** Extract (and cache) the rotating CreateTweet GraphQL queryId from the loaded JS bundle. */
+  async _createTweetQueryId({ force = false } = {}) {
+    if (this._ctQid && !force) return this._ctQid;
+    // Use c.evaluate directly (not _eval, which wraps in a SYNC fn and would drop
+    // this async IIFE's promise).
+    const qid = await this.c.evaluate(this.tab,
+      `(async function(){
+         var srcs=[].slice.call(document.querySelectorAll('script[src]')).map(function(s){return s.src;})
+           .filter(function(u){return /main\\.[a-f0-9]+\\.js/.test(u)||/(api|responsive-web)[^/]*\\.[a-f0-9]+\\.js/.test(u);});
+         for(var i=0;i<srcs.length;i++){ try{ var txt=await (await fetch(srcs[i])).text();
+           var m=txt.match(/queryId:"([^"]+)",operationName:"CreateTweet"/)||txt.match(/operationName:"CreateTweet"[^}]*?queryId:"([^"]+)"/);
+           if(m) return m[1]; }catch(e){} }
+         return "";
+       })()`, { timeout: 30000 }
+    ).catch(() => "");
+    if (qid) this._ctQid = qid;
+    return this._ctQid || null;
+  }
+
+  /**
+   * Post via X's CreateTweet GraphQL mutation (in-page, session-authed). Empty
+   * `features` is accepted by X, so there is no rotating-features maintenance.
+   * @returns {Promise<{posted:boolean, url?:string, reason?:string, dryRun?:boolean}>}
+   */
+  async postViaApi(text, { dryRun = false } = {}) {
+    const cur = await this.c.tabUrl(this.tab).catch(() => "");
+    if (!/x\.com|twitter\.com/.test(cur)) { if (!(await this._gotoChecked(HOME_URL))) return { posted: false, reason: "nav_failed" }; }
+    const qid = await this._createTweetQueryId();
+    if (!qid) return { posted: false, reason: "no_queryid" };
+    if (dryRun) { this.log(`DRY RUN — CreateTweet API ready (qid ${qid.slice(0, 8)}…), not posting`); return { posted: false, reason: "dry_run", dryRun: true }; }
+
+    const doPost = async (queryId) => {
+      const expr = `(async function(){
+        var ct0=(document.cookie.match(/ct0=([^;]+)/)||[])[1]; if(!ct0) return JSON.stringify({error:"no_ct0"});
+        var body={variables:{tweet_text:${JSON.stringify(text)},dark_request:false,media:{media_entities:[],possibly_sensitive:false},semantic_annotation_ids:[]},features:{},queryId:${JSON.stringify(queryId)}};
+        try{ var r=await fetch("https://x.com/i/api/graphql/"+${JSON.stringify(queryId)}+"/CreateTweet",{method:"POST",credentials:"include",
+          headers:{"authorization":"Bearer ${X_WEB_BEARER}","x-csrf-token":ct0,"content-type":"application/json","x-twitter-auth-type":"OAuth2Session","x-twitter-active-user":"yes"},body:JSON.stringify(body)});
+          var t=await r.text(); var id=null; try{id=JSON.parse(t).data.create_tweet.tweet_results.result.rest_id;}catch(e){}
+          return JSON.stringify({status:r.status, id:id, body:id?undefined:t.slice(0,180)});
+        }catch(e){return JSON.stringify({error:e.message});}
+      })()`;
+      try { return JSON.parse(await this.c.evaluate(this.tab, expr, { timeout: 25000 })); }
+      catch (e) { return { error: `eval:${e.message}` }; }
+    };
+
+    let r = await doPost(qid);
+    if (!r.id && !r.error) {
+      // queryId may have rotated — re-extract once and retry.
+      const qid2 = await this._createTweetQueryId({ force: true });
+      if (qid2 && qid2 !== qid) r = await doPost(qid2);
+    }
+    if (r.id) {
+      const url = `https://x.com/${this.handle || "i/web"}/status/${r.id}`;
+      this.log(`posted via API: ${url}`);
+      return { posted: true, url };
+    }
+    return { posted: false, reason: `api_${r.status || "err"}:${(r.body || r.error || "").slice(0, 120)}` };
+  }
+
+  /** UI-composer fallback for post() — used only when the API path is unavailable. */
+  async _postViaComposer(text, { dryRun = false } = {}) {
     await this.gotoHome();
     await humanDelay(2000, 4000);
     try {
