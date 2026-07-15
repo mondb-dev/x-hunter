@@ -9,7 +9,11 @@
  * false-negatives, profile-edit forms that don't render, timeouts. This scans
  * the recent logs, categorizes the failures with counts + verbatim examples,
  * and has Sebastian (via the Claude compose backend) write a prioritized
- * feedback report to docs/helmstack-feedback/<date>.md (+ latest.md).
+ * feedback note to <notes dir>/<date>.md (+ latest.md).
+ *
+ * Notes are LOCAL + gitignored (they're working notes for building HelmStack,
+ * not repo content). Default dir: helmstack/notes/ (gitignored). Override with
+ * HELMSTACK_NOTES_DIR to point elsewhere (e.g. the HelmStack project repo).
  *
  * Non-fatal. Wired into the orchestrator (dueForRun); also runnable by hand:
  *   node runner/helmstack_feedback.js [--dry]   (--dry = no LLM, deterministic report)
@@ -22,7 +26,9 @@ const path = require("path");
 const config = require("./lib/config");
 
 const ROOT = config.PROJECT_ROOT || path.resolve(__dirname, "..");
-const OUT_DIR = path.join(ROOT, "docs", "helmstack-feedback");
+const OUT_DIR = process.env.HELMSTACK_NOTES_DIR
+  ? path.resolve(process.env.HELMSTACK_NOTES_DIR)
+  : path.join(ROOT, "helmstack", "notes");
 const DRY = process.argv.includes("--dry");
 const TAIL = Number(process.env.HELMSTACK_FEEDBACK_TAIL || 4000);
 const log = (m) => console.log(`[helmstack_feedback] ${m}`);
@@ -115,7 +121,7 @@ Order by severity × frequency. Be direct and specific — this goes to the peop
     fs.mkdirSync(OUT_DIR, { recursive: true });
     fs.writeFileSync(path.join(OUT_DIR, `${date}.md`), report + "\n");
     fs.writeFileSync(path.join(OUT_DIR, "latest.md"), report + "\n");
-    log(`wrote docs/helmstack-feedback/${date}.md (+ latest.md)`);
+    log(`wrote ${path.relative(ROOT, OUT_DIR)}/${date}.md (+ latest.md)`);
   } catch (e) { log(`write failed: ${e.message}`); }
   process.exit(0);
 })().catch((e) => { log(`fatal: ${e.message}`); process.exit(0); });

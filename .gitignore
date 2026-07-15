@@ -72,3 +72,9 @@ context-bridge.md
 
 # Build-generated article image copies (originals are committed at articles/images/)
 web/public/images/articles/
+
+# Wallet / key material — never commit
+.secrets/
+
+# HelmStack dogfooding notes — local working notes, not repo content
+helmstack/
