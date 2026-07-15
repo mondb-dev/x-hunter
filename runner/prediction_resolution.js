@@ -205,6 +205,9 @@ function rebuildExport() {
   if (!isDryRun) {
     saveLines(updatedLines);
     rebuildExport();
+    // Refresh the calibration report now that new outcomes have landed, so the
+    // next prediction sees an up-to-date track record.
+    try { require("./lib/prediction_calibration").refresh(PREDICTION_LOG, path.join(ROOT, "state", "prediction_calibration.json")); } catch {}
 
     if (bestResolutionTweet) {
       fs.writeFileSync(RESOLUTION_DRAFT, bestResolutionTweet, "utf-8");
