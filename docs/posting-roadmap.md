@@ -1,33 +1,29 @@
 # Sebastian posting — roadmap & remaining work
 
-Captured 2026-07-15. Context for the next build session (human or the META builder).
+Captured 2026-07-15, updated same day (quote/reply API migration + retweet action session). Context for the next build session (human or the META builder).
 
-## Done (this session, all committed + validated live)
+## Done (all committed; API paths validated by live dry-run)
 
 - **X tweets via API** — `X.post()` uses X's `CreateTweet` GraphQL (in-page fetch, session `ct0`, queryId extracted from the bundle, empty `features`). No composer → no double/triple-paste. Composer kept as fallback; `X_POST_VIA_API=0` forces it.
+- **X quotes + replies via API** — `X.quote()` / `X.reply()` are API-first: `postViaApi` now takes `attachmentUrl` (quote) and `replyToTweetId` (reply → `variables.reply = {in_reply_to_tweet_id, exclude_reply_user_ids:[]}`). Composer flows kept as fallback (`_quoteViaComposer` / `_replyOnPage`); the quote mentions-guard still loads the source page first. `X_POST_VIA_API=0` forces the composer. Shared machinery generalized: `_graphqlQueryId(opName)` (per-op cache) + `_graphqlMutation(opName, variables)` (queryId-rotation retry).
+- **X repost (retweet)** — `X.retweet()` / `X.unretweet()` via `CreateRetweet`/`DeleteRetweet` mutations (API-only, no UI fallback; "already retweeted" treated as success). Manual/queue entry point: `runner/x_repost.js <url> [--undo] [--topic t]` (self-repost guard, `HELMSTACK_DRY_RUN=1` supported), logs via `posts_log.logRepost` (`type:"repost"` + `source_handle`/`topic` for the future learn-loop).
 - **X images** — `X.postImage()`: browser upload via HelmStack file-input (CDP `setFileInputFiles`) + guarded text insert.
 - **LinkedIn images** — `LinkedIn.postImage()`: voyager media pipeline (register `voyagerVideoDashMediaUploadMetadata?action=upload` → PUT bytes to `singleUploadUrl` → `normShares` with `media:[{category:"IMAGE", mediaUrn, tapTargets:[]}]`). Used because the LI composer is iframe-isolated.
 - **Source images** — `lib/source_image.js`: fetch a source's `og:image` server-side (no CORS) → temp file → cleanup. Attribution `📷 via <source>`.
 - **LinkedIn post learn-loop** — `lib/linkedin_performance.js` + `linkedin_measure.js`: tag each post with an opening technique, scrape reactions+comments, feed technique→engagement back into the draft prompt (explore/exploit).
+- Fixed `findOwnTweetUrl` navigating to `x.com/undefined` (`this.ownHandle` → `this.handle`).
 
 ## Follow-up 1 — image auto-trigger (small)
 
 Image posting is wired + works **when a source URL is set** (X: `state/tweet_image_source.txt`; LinkedIn: outbox `meta.image_source`), but nothing sets it autonomously. The compose step should pick a lead source-with-image (e.g. from the content pack / a referenced article or tweet) and populate that. The capability + cleanup are complete; this is just the trigger.
 
-## Follow-up 2 — retire composer from quotes/replies (medium)
-
-`X.quote()` and `X.reply()` still use the composer (can still double). Migrate to the API:
-- Quote: `CreateTweet` with `variables.attachment_url = "<source tweet url>"`.
-- Reply: `CreateTweet` with `variables.reply = {in_reply_to_tweet_id, exclude_reply_user_ids:[]}`.
-Reuse `postViaApi`'s queryId + bearer + ct0 machinery — just extend the variables.
-
 ## Item 3 — LEARN repost + quote, all channels (large; the main remaining ask)
 
-Two layers. Most of layer 1 doesn't exist yet.
+Two layers. Layer 1 is done for X (quote via API + retweet action, above); LinkedIn reshare and FB share remain.
 
 ### Layer 1 — the actions (build per channel)
-- **X quote** — exists (`X.quote`), composer-based → migrate to API (see Follow-up 2).
-- **X repost (retweet)** — NEW. GraphQL `CreateRetweet` mutation (extract its queryId from the bundle the same way as CreateTweet; body `{variables:{tweet_id, dark_request:false}, queryId}`). Un-retweet = `DeleteRetweet`.
+- **X quote** — DONE (API-first, see above).
+- **X repost (retweet)** — DONE (`X.retweet`/`unretweet` + `runner/x_repost.js`, see above). Still needs an autonomous trigger: nothing selects what to repost yet (that selection is where the layer-2 loop plugs in).
 - **LinkedIn reshare** — NEW. Voyager: reshare an update via `contentcreation/normShares` with the reshared activity URN as the parent/`resharedUpdate` (reverse-engineer the exact field), or the dedicated reshare endpoint. Same JSESSIONID-CSRF fetch pattern.
 - **Facebook share** — NEW + HARD. FB is automation-hostile (observation-only today; trusted-CDP clicks only). Likely defer or last.
 
@@ -38,12 +34,12 @@ Once the actions exist:
 - Correlate → feed back into the selection: *which sources/topics/commentary styles are worth amplifying*. Same architecture as `lib/linkedin_performance.js` and the prediction-calibration loop.
 
 ### Suggested order
-1. X quote→API + X retweet action.
+1. ~~X quote→API + X retweet action.~~ DONE.
 2. LinkedIn reshare action.
-3. Learn-loop over X repost/quote (measure via the profile), then extend to LinkedIn.
+3. Learn-loop over X repost/quote (measure via the profile), then extend to LinkedIn. Repost selection (what's worth amplifying) + the autonomous trigger for `X.retweet` live here; `logRepost` already records `source_handle`/`topic` to correlate against.
 4. FB share — only if the FB automation surface improves.
 
 ## Reusable machinery already in place
-- In-page authed fetch pattern (X: `ct0` + web bearer + dynamic queryId; LinkedIn: JSESSIONID csrf) — see `X.postViaApi` and `LinkedIn.post`/`postImage`.
+- In-page authed fetch pattern (X: `ct0` + web bearer + dynamic queryId; LinkedIn: JSESSIONID csrf) — see `X._graphqlMutation` (generic: any bundle-declared mutation by operationName) and `LinkedIn.post`/`postImage`.
 - `_confirmFromProfile` / `findOwnTweetUrl` for post confirmation (note the `post_unconfirmed` false-negative: always re-scan the profile rather than trust the confirm).
 - HelmStack tab cleanup keeps one canonical tab per surface (prevents the wedged-tab bugs that break composer flows).

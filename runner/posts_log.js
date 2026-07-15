@@ -122,6 +122,31 @@ function logQuote({ source_url, content, tweet_url, date, cycle, mode }) {
 }
 
 /**
+ * Append a repost (retweet) entry — no content of our own, so the source URL is
+ * the identity. `source_handle` and `topic` feed the amplification learn-loop
+ * (which sources/topics are worth reposting). Dedupes on source_url.
+ */
+function logRepost({ source_url, source_handle, topic, date, cycle }) {
+  const log = readLog();
+  const dup = log.posts.find(p => p.type === "repost" && p.source_url === source_url);
+  if (dup) {
+    console.log("[posts_log] repost already logged, skipping");
+    return;
+  }
+  log.posts.push({
+    type: "repost",
+    source_url,
+    source_handle: source_handle || "",
+    ...(topic ? { topic } : {}),
+    date: date || new Date().toISOString().slice(0, 10),
+    cycle: cycle || null,
+    posted_at: new Date().toISOString(),
+  });
+  writeLog(log);
+  console.log(`[posts_log] logged repost (source: ${source_url})`);
+}
+
+/**
  * Append an article entry (X Articles long-form).
  */
 function logArticle({ title, content, article_url, date, landmark_number }) {
@@ -203,7 +228,7 @@ function logLinkedIn({ type, content, url, target_author, target_url, date, cycl
   console.log(`[posts_log] logged ${kind}${content ? ` (${content.length} chars)` : ""}`);
 }
 
-module.exports = { logTweet, logQuote, logArticle, logSignal, logVerification, logLinkedIn };
+module.exports = { logTweet, logQuote, logRepost, logArticle, logSignal, logVerification, logLinkedIn };
 
 /**
  * Append a verification post entry (watch signal or resolution).
