@@ -8,7 +8,9 @@
  * LinkedIn feed, live web search — see lib/content_sources.js) and synthesises ONE
  * long-form LinkedIn post using a LinkedIn-specific placement strategy.
  *
- * Skips (exit 0, no write) if a pending draft already exists.
+ * Enqueues the finished post into the channel-agnostic outbox (lib/outbox) as a
+ * pending 'linkedin' item; linkedin_post.js drains it. No more single-file draft
+ * (state/linkedin_draft.txt) that could deadlock when a draft failed a gate.
  */
 
 "use strict";
@@ -18,8 +20,9 @@ const path = require("path");
 const config = require("./lib/config");
 const { buildContentPack } = require("./lib/content_sources");
 
+const outbox = require("./lib/outbox");
+
 const ROOT = path.resolve(__dirname, "..");
-const DRAFT = path.join(config.STATE_DIR, "linkedin_draft.txt");
 const VOCATION = path.join(ROOT, "vocation.md");
 const log = (m) => console.log(`[linkedin_draft] ${m}`);
 
@@ -35,11 +38,6 @@ const LINKEDIN_STRATEGY = `LINKEDIN PLACEMENT STRATEGY — how to shape this con
 - NO hashtags, NO emojis, NO thread markers ("1/n", "🧵"), NO X-style punchy one-liners. Open with the insight (no "Excited to share"), close with a genuine question that invites professional discussion.`;
 
 (async () => {
-  if (fs.existsSync(DRAFT)) {
-    const existing = fs.readFileSync(DRAFT, "utf-8").trim();
-    if (existing && existing !== "SKIP") { log("pending draft exists — not overwriting"); process.exit(0); }
-  }
-
   let vocation = "";
   try { vocation = fs.readFileSync(VOCATION, "utf-8").slice(0, 1500); } catch {}
 
@@ -119,8 +117,8 @@ Write ONE original LinkedIn post following the strategy above. Return ONLY the p
       log(`coherence gate unavailable (${e.message}) — proceeding`);
     }
 
-    fs.writeFileSync(DRAFT, text);
-    log(`wrote draft (${text.length} chars)`);
+    const { id, deduped } = outbox.enqueue({ channel: "linkedin", kind: "post", text, meta: { cycle: Number.parseInt(process.env.CYCLE_NUMBER || "", 10) || null } });
+    log(deduped ? `identical post already queued (outbox #${id}) — not re-queuing` : `enqueued post to outbox #${id} (${text.length} chars)`);
     process.exit(0);
   } catch (err) {
     log(`generation failed: ${err.message}`);

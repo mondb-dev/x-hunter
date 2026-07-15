@@ -20,6 +20,30 @@ const voiceFilter = require("./voice_filter");
 const DRY_RUN = process.env.HELMSTACK_DRY_RUN === "1";
 const OWN_HANDLES = ["sebhunts_ai", "sebastianhunts", "sebastian_hunts"];
 
+// Opt-in unified outbox for X (default OFF — the file/result/attempt contract and
+// cycle metrics are untouched when off). When OUTBOX_X=1, each tweet/quote is
+// recorded in lib/outbox for a unified ledger + content-level DEDUP: identical
+// text queued or posted in the last 7 days is skipped rather than reposted.
+const OUTBOX_X = process.env.OUTBOX_X === "1";
+const outbox = OUTBOX_X ? require("./outbox") : null;
+
+/**
+ * Record an outbound X item and check for a duplicate. Returns {id, deduped}
+ * (or null when OUTBOX_X is off / on error — callers then behave as before).
+ */
+function outboxEnqueue(kind, text, meta) {
+  if (!OUTBOX_X) return null;
+  try { return outbox.enqueue({ channel: "x", kind, text, meta }); } catch { return null; }
+}
+function outboxMark(id, outcome, extra) {
+  if (!OUTBOX_X || !id) return;
+  try {
+    if (outcome === "posted") outbox.markPosted(id, { url: extra || null });
+    else if (outcome === "rejected") outbox.markRejected(id, extra || "");
+    else outbox.markFailed(id, extra || "");
+  } catch { /* ledger errors never affect posting */ }
+}
+
 async function makeEngine(tag, attemptFile, kind, cycle) {
   const x = new X(new HelmStackClient(), { ownHandle: HANDLE, log: (m) => console.log(`[${tag}] ${m}`) });
   try {
@@ -49,10 +73,16 @@ async function runTweet({ draftFile, resultFile, attemptFile, cycle }) {
     writeAttempt(attemptFile, { kind: "tweet", outcome: "failed", reason: "draft_empty", cycle });
     return 1;
   }
+  const ob = outboxEnqueue("tweet", tweetText, { cycle });
+  if (ob && ob.deduped) {
+    console.log(`[${tag}] identical tweet already queued/posted (outbox #${ob.id}) — skipping duplicate`);
+    writeAttempt(attemptFile, { kind: "tweet", outcome: "skipped", reason: "duplicate", cycle });
+    return 0;
+  }
   console.log(`[${tag}] posting (${tweetText.length} chars): ${tweetText.slice(0, 80)}...`);
 
   const x = await makeEngine(tag, attemptFile, "tweet", cycle);
-  if (!x) return 1;
+  if (!x) { outboxMark(ob && ob.id, "failed", "helmstack_connect_failed"); return 1; }
 
   let res;
   try {
@@ -60,12 +90,14 @@ async function runTweet({ draftFile, resultFile, attemptFile, cycle }) {
   } catch (err) {
     console.error(`[${tag}] error: ${err.message}`);
     clearFile(resultFile);
+    outboxMark(ob && ob.id, "failed", `exception: ${err.message}`);
     writeAttempt(attemptFile, { kind: "tweet", outcome: "failed", reason: "exception", error: err.message, cycle });
     return 1;
   }
 
-  if (res.dryRun) { writeAttempt(attemptFile, { kind: "tweet", outcome: "dry_run", cycle }); return 0; }
+  if (res.dryRun) { outboxMark(ob && ob.id, "failed", "dry_run"); writeAttempt(attemptFile, { kind: "tweet", outcome: "dry_run", cycle }); return 0; }
   if (!res.posted) {
+    outboxMark(ob && ob.id, "failed", res.reason || "post_failed");
     writeAttempt(attemptFile, { kind: "tweet", outcome: "failed", reason: res.reason || "post_failed", cycle });
     return 1;
   }
@@ -73,6 +105,7 @@ async function runTweet({ draftFile, resultFile, attemptFile, cycle }) {
   const tweetUrl = res.url && isConfirmedStatusUrl(res.url) ? res.url : "posted";
   if (tweetUrl === "posted") fs.writeFileSync(resultFile, "posted\n");
   else writeResult(resultFile, tweetUrl);
+  outboxMark(ob && ob.id, "posted", tweetUrl === "posted" ? null : tweetUrl);
   writeAttempt(attemptFile, { kind: "tweet", outcome: "confirmed", confirmed_url: tweetUrl, backend: "helmstack", cycle });
   logTweet({ content: tweetText, tweet_url: tweetUrl, cycle });
   await x.c.navigate(x.tab, "https://x.com/home").catch(() => {});
@@ -127,10 +160,16 @@ async function runQuote({ draftFile, resultFile, attemptFile, cycle }) {
     writeAttempt(attemptFile, { kind: "quote", outcome: "failed", reason: "voice_filter", cycle });
     return 1;
   }
+  const ob = outboxEnqueue("quote", quoteText, { cycle, sourceUrl });
+  if (ob && ob.deduped) {
+    console.log(`[${tag}] identical quote already queued/posted (outbox #${ob.id}) — skipping duplicate`);
+    writeAttempt(attemptFile, { kind: "quote", outcome: "skipped", reason: "duplicate", source_url: sourceUrl, cycle });
+    return 0;
+  }
   console.log(`[${tag}] quoting: ${sourceUrl} (${quoteText.length} chars)`);
 
   const x = await makeEngine(tag, attemptFile, "quote", cycle);
-  if (!x) return 1;
+  if (!x) { outboxMark(ob && ob.id, "failed", "helmstack_connect_failed"); return 1; }
 
   let res;
   try {
@@ -138,12 +177,14 @@ async function runQuote({ draftFile, resultFile, attemptFile, cycle }) {
   } catch (err) {
     console.error(`[${tag}] error: ${err.message}`);
     clearFile(resultFile);
+    outboxMark(ob && ob.id, "failed", `exception: ${err.message}`);
     writeAttempt(attemptFile, { kind: "quote", outcome: "failed", reason: "exception", error: err.message, source_url: sourceUrl, cycle });
     return 1;
   }
 
-  if (res.dryRun) { writeAttempt(attemptFile, { kind: "quote", outcome: "dry_run", source_url: sourceUrl, cycle }); return 0; }
+  if (res.dryRun) { outboxMark(ob && ob.id, "failed", "dry_run"); writeAttempt(attemptFile, { kind: "quote", outcome: "dry_run", source_url: sourceUrl, cycle }); return 0; }
   if (!res.posted) {
+    outboxMark(ob && ob.id, "failed", res.reason || "post_failed");
     writeAttempt(attemptFile, { kind: "quote", outcome: "failed", reason: res.reason || "post_failed", source_url: sourceUrl, cycle });
     return 1;
   }
@@ -151,6 +192,7 @@ async function runQuote({ draftFile, resultFile, attemptFile, cycle }) {
   const quoteUrl = res.url || "posted";
   if (quoteUrl === "posted") fs.writeFileSync(resultFile, "posted\n");
   else writeResult(resultFile, quoteUrl);
+  outboxMark(ob && ob.id, "posted", quoteUrl === "posted" ? null : quoteUrl);
   writeAttempt(attemptFile, { kind: "quote", outcome: "confirmed", confirmed_url: quoteUrl, source_url: sourceUrl, backend: "helmstack", cycle });
   logQuote({ content: quoteText, source_url: sourceUrl, tweet_url: quoteUrl, cycle });
   await x.c.navigate(x.tab, "https://x.com/home").catch(() => {});
