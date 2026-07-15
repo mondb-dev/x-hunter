@@ -1,15 +1,17 @@
 #!/usr/bin/env node
 'use strict';
 /**
- * runner/fb_seed_follows.js — one-time: follow the curated PH Pages (lib/fb_sources)
- * so Sebastian's HOME feed populates over time (approach A), complementing the
- * direct page scraping in fb_collect.js (approach B).
+ * runner/fb_seed_follows.js — follow curated PH Pages (lib/fb_sources) AND public
+ * figures / creators (lib/fb_figures) so Sebastian's HOME feed populates over time
+ * (approach A), complementing the direct page scraping in fb_collect.js (approach B).
  *
- * Follows are an automated action with a small ban surface, so this is
- * deliberately slow (long human-ish gaps between pages) and one-shot. A ledger
- * records which pages we've already followed so re-runs skip them.
+ * Follows are an automated action with a small ban surface, so this is deliberately
+ * slow (long human-ish gaps) and capped per run (FB_FOLLOW_MAX). A ledger records
+ * which targets we've already followed so re-runs skip them and only pick up newly
+ * added Pages/figures — safe to run on a recurring schedule.
  *
- * Env: HELMSTACK_AUTH_TOKEN (required), HELMSTACK_DRY_RUN=1 (locate button, don't click).
+ * Env: HELMSTACK_AUTH_TOKEN (required), HELMSTACK_DRY_RUN=1 (locate button, don't
+ *      click), FB_FOLLOW_MAX (6 per run), FB_FOLLOW_GAP_MS (20000).
  * Run: node runner/fb_seed_follows.js
  */
 
@@ -17,10 +19,12 @@ const fs = require('fs');
 const path = require('path');
 const config = require('./lib/config');
 const SOURCES = require('./lib/fb_sources');
+const FIGURES = require('./lib/fb_figures');
 const { HelmStackClient, FB } = require('../tools/helmstack-social/src');
 
 const LEDGER = path.join(config.STATE_DIR, 'fb_followed.json');
 const DRY = process.env.HELMSTACK_DRY_RUN === '1';
+const MAX_PER_RUN = parseInt(process.env.FB_FOLLOW_MAX || '6', 10); // cap follows/run (ban surface)
 const GAP_MS = parseInt(process.env.FB_FOLLOW_GAP_MS || '20000', 10); // ~20s between follows
 const log = (m) => console.log(`[fb_seed_follows] ${m}`);
 const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
@@ -37,8 +41,9 @@ function saveFollowed(s) { try { fs.writeFileSync(LEDGER, JSON.stringify({ urls:
   } catch (e) { log(`cannot reach HelmStack/FB: ${e.message}`); process.exit(0); }
 
   const followed = loadFollowed();
-  const todo = SOURCES.filter((s) => !followed.has(s.url));
-  log(`${todo.length} page(s) to follow (${followed.size} already done)${DRY ? ' [dry-run]' : ''}`);
+  const all = [...SOURCES, ...FIGURES];
+  const todo = all.filter((s) => !followed.has(s.url)).slice(0, MAX_PER_RUN);
+  log(`${todo.length} target(s) this run (${followed.size}/${all.length} already done, cap ${MAX_PER_RUN})${DRY ? ' [dry-run]' : ''}`);
 
   let ok = 0;
   for (let i = 0; i < todo.length; i++) {

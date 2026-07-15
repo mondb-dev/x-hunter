@@ -359,6 +359,210 @@ class LinkedIn {
     return cleared ? { ok: true } : { ok: false, reason: "submit_unconfirmed" };
   }
 
+  // ── People search + networking (connect / follow) ───────────────────────────
+  /**
+   * Search People and return lightweight result descriptors. Name + headline are
+   * parsed from the profile link's own text ("Name • 3rd+ Headline…"), which is
+   * far more stable than LinkedIn's hashed result-card markup. connect() then
+   * navigates to each profileUrl to act, so no card stamping is needed.
+   * @returns {Promise<Array<{name:string,headline:string,profileUrl:string}>>}
+   */
+  async searchPeople(query, { limit = 12 } = {}) {
+    const url = `https://www.linkedin.com/search/results/people/?keywords=${encodeURIComponent(query)}&origin=GLOBAL_SEARCH_HEADER`;
+    await this.c.navigate(this.tab, url);
+    await this.c.waitReady(this.tab, { tag: "linkedin" }).catch(() => {});
+    await sleep(3000);
+    for (let i = 0; i < 2; i++) {
+      await this.c.evaluate(this.tab, "window.scrollBy(0, window.innerHeight)").catch(() => {});
+      await sleep(1500);
+    }
+    await this.c.evaluate(this.tab, "window.scrollTo(0,0)").catch(() => {});
+    await sleep(700);
+
+    const raw = await this._eval(
+      `var out=[]; var seen={};
+       var links=[].slice.call(document.querySelectorAll('a[href*=\"/in/\"]'));
+       for(var i=0;i<links.length && out.length<${limit};i++){
+         var a=links[i];
+         var href=(a.href||'').split('?')[0];
+         if(!/\\/in\\//.test(href) || seen[href]) continue;
+         var full=(a.innerText||'').replace(/Status is (online|offline|reachable)/ig,'').replace(/\\s+/g,' ').trim();
+         if(!full) continue;
+         seen[href]=1;
+         var parts=full.split('•').map(function(s){return s.trim();});
+         var name=(parts[0]||'').replace(/View .*profile.*/i,'').trim();
+         if(!name || /^LinkedIn Member$/i.test(name)) continue;
+         var headline=parts[1]?parts[1].replace(/^(1st|2nd|3rd\\+?)\\s*/i,'').trim():'';
+         out.push({ name: name.slice(0,80), headline: headline.slice(0,160), profileUrl: href });
+       }
+       return JSON.stringify(out);`
+    ).catch(() => "[]");
+    let parsed = [];
+    try { parsed = JSON.parse(raw || "[]"); } catch { parsed = []; }
+    if (this.ownHandleHint) {
+      parsed = parsed.filter((p) => !(p.name || "").toLowerCase().includes(this.ownHandleHint));
+    }
+    return parsed;
+  }
+
+  /** Dismiss the current LinkedIn modal (X button, else Escape). */
+  async _dismissDialog() {
+    await this._eval(
+      `var d=document.querySelector('div[role=dialog]'); if(!d) return false;
+       var b=d.querySelector('button[aria-label=\"Dismiss\"]')||d.querySelector('button[aria-label=Dismiss]');
+       if(b){ b.click(); return true; } return false;`
+    ).catch(() => {});
+    try { await this.c.pressKey(this.tab, { key: "Escape", code: "Escape", keyCode: 27 }); } catch {}
+    await sleep(800);
+  }
+
+  /** Click the profile top-card Follow button. → {ok} | {ok:false,reason} */
+  async _followTopCard() {
+    const r = await this._eval(
+      `var m=document.querySelector('main')||document;
+       var b=[].slice.call(m.querySelectorAll('button')).find(function(x){ return x.offsetParent!==null && (/^Follow\\b/.test(x.getAttribute('aria-label')||'') || (x.innerText||'').trim()==='Follow'); });
+       if(!b) return 'no_follow'; b.click(); return 'ok';`
+    ).catch(() => "no_follow");
+    if (r === "ok") { await sleep(1500); return { ok: true }; }
+    return { ok: false, reason: "no_follow" };
+  }
+
+  /**
+   * Complete the invitation modal after a Connect click: optionally add a note,
+   * then Send. Falls back to sending WITHOUT a note if the note editor is
+   * unavailable (LinkedIn's weekly free-note limit / upsell).
+   * @returns {Promise<{ok:boolean, noteSent?:boolean, reason?:string, dryRun?:boolean}>}
+   */
+  async _completeInvite({ note = "", dryRun = false } = {}) {
+    const modal = await this._eval(
+      `var d=document.querySelector('div[role=dialog]'); if(!d) return 'none';
+       if(/weekly invitation limit|reached the weekly|invite limit/i.test(d.innerText||'')) return 'weekly_limit';
+       return 'dialog';`
+    ).catch(() => "none");
+
+    if (modal === "weekly_limit") { await this._dismissDialog(); return { ok: false, reason: "weekly_limit" }; }
+    if (modal === "none") {
+      // The dialog can render a beat late — give it one more chance before deciding.
+      await sleep(1400);
+      const late = await this._eval(
+        `var d=document.querySelector('div[role=dialog]'); if(d) return 'dialog';
+         var m=document.querySelector('main')||document; return [].slice.call(m.querySelectorAll('button')).some(function(x){ return /^Pending/i.test((x.innerText||'').trim()); }) ? 'pending' : 'none';`
+      ).catch(() => "none");
+      if (late === "pending") return { ok: true, noteSent: false }; // sent directly, no modal
+      if (late !== "dialog") return { ok: false, reason: "no_invite_modal" };
+      // else: dialog showed up late — fall through to the note/send handling below.
+    }
+
+    if (dryRun) { await this._dismissDialog(); return { ok: false, reason: "dry_run", dryRun: true }; }
+
+    let noteSent = false;
+    if (note) {
+      const addNote = await this._eval(
+        `var d=document.querySelector('div[role=dialog]'); if(!d) return false;
+         var b=[].slice.call(d.querySelectorAll('button')).find(function(x){ var al=(x.getAttribute('aria-label')||''); var t=(x.innerText||'').trim(); return /add a note/i.test(al) || t==='Add a note'; });
+         if(!b) return false; b.click(); return true;`
+      ).catch(() => false);
+      if (addNote) {
+        await sleep(1200);
+        const focused = await this._eval(
+          `var d=document.querySelector('div[role=dialog]'); if(!d) return false;
+           var ta=d.querySelector('#custom-message')||d.querySelector('textarea[name=message]')||d.querySelector('textarea');
+           if(!ta) return false; ta.focus(); ta.setAttribute('data-hs-note','1'); return true;`
+        ).catch(() => false);
+        if (focused) {
+          try { await this.c.insertText(this.tab, note); } catch {}
+          await sleep(1000);
+          const got = await this._eval(`var ta=document.querySelector('[data-hs-note="1"]'); return ta ? (ta.value||ta.innerText||'').trim() : '';`).catch(() => "");
+          noteSent = norm(got).length > 0 && norm(got).includes(norm(note.slice(0, 40)));
+        }
+        // If the note editor never appeared (limit/upsell), fall through and send blank.
+      }
+    }
+
+    const sent = await this._eval(
+      `var d=document.querySelector('div[role=dialog]'); if(!d) return false;
+       var b=[].slice.call(d.querySelectorAll('button')).find(function(x){ var al=(x.getAttribute('aria-label')||''); var t=(x.innerText||'').trim(); return /^Send(\\b| invitation| now| without)/i.test(al) || t==='Send' || t==='Send invitation' || t==='Send without a note'; });
+       if(!b||b.getAttribute('aria-disabled')==='true'||b.disabled) return false; b.click(); return true;`
+    ).catch(() => false);
+    if (!sent) { await this._dismissDialog(); return { ok: false, reason: "send_btn_not_found" }; }
+    await sleep(1800);
+    return { ok: true, noteSent };
+  }
+
+  /**
+   * Reach out to a person by navigating to their profile. LinkedIn now steers
+   * cold (out-of-network) profiles to Follow and only exposes Connect for warmer
+   * ones, so this PREFERS Connect (with a personalized note where the editor is
+   * available) and gracefully FOLLOWS when Connect isn't offered (unless
+   * allowFollow=false). dryRun locates the available action without acting.
+   * @returns {Promise<{ok:boolean, action?:'connect'|'follow', noteSent?:boolean, reason?:string, dryRun?:boolean}>}
+   */
+  async connect(profileUrl, { note = "", allowFollow = true, dryRun = false } = {}) {
+    await this.c.navigate(this.tab, profileUrl);
+    await this.c.waitReady(this.tab, { tag: "linkedin" }).catch(() => {});
+    await sleep(3500);
+    await this.c.evaluate(this.tab, "window.scrollTo(0,0)").catch(() => {});
+    await sleep(500);
+
+    // 1. Connect on the top card?
+    let action = await this._eval(
+      `var m=document.querySelector('main')||document;
+       var btns=[].slice.call(m.querySelectorAll('button')).filter(function(b){ return b.offsetParent!==null; });
+       var c=btns.find(function(b){ var al=(b.getAttribute('aria-label')||''); var t=(b.innerText||'').trim(); return (/^Invite\\b/.test(al) && /to connect/i.test(al)) || t==='Connect'; });
+       if(c){ c.click(); return 'connect'; }
+       if(btns.some(function(b){ return /^Pending/i.test((b.innerText||'').trim()) || /Pending/i.test(b.getAttribute('aria-label')||''); })) return 'already_pending';
+       return 'no_top_connect';`
+    ).catch((e) => `err:${e.message}`);
+
+    // 2. Connect hidden under the top-card "More" menu?
+    if (action === "no_top_connect") {
+      const openedMore = await this._eval(
+        `var m=document.querySelector('main')||document;
+         var b=[].slice.call(m.querySelectorAll('button')).find(function(x){ return (x.getAttribute('aria-label')||'').trim()==='More' && x.offsetParent!==null; });
+         if(!b) return false; b.click(); return true;`
+      ).catch(() => false);
+      if (openedMore) {
+        await sleep(1200);
+        const clicked = await this._eval(
+          `var it=[].slice.call(document.querySelectorAll('[role=menuitem],[role=button],button,a')).find(function(x){ var al=(x.getAttribute('aria-label')||''); var t=(x.innerText||'').trim(); return x.offsetParent!==null && ((/^Invite\\b/.test(al) && /to connect/i.test(al)) || t==='Connect'); });
+           if(!it) return false; it.click(); return true;`
+        ).catch(() => false);
+        if (clicked) action = "connect";
+        else { try { await this.c.pressKey(this.tab, { key: "Escape", code: "Escape", keyCode: 27 }); } catch {} await sleep(400); action = "no_connect"; }
+      } else action = "no_connect";
+    }
+
+    if (typeof action === "string" && action.startsWith("err:")) return { ok: false, reason: action };
+    if (action === "already_pending") return { ok: false, reason: "already_pending" };
+
+    // 3a. Connect flow → handle the invite modal.
+    if (action === "connect") {
+      await sleep(1800);
+      const res = await this._completeInvite({ note, dryRun });
+      if (res.ok || res.dryRun) return { ...res, action: "connect" };
+      // Invite couldn't complete (weekly limit / modal issue) → Follow instead.
+      if (allowFollow && !dryRun) {
+        const f = await this._followTopCard();
+        if (f.ok) return { ok: true, action: "follow", noteSent: false, downgradedFrom: res.reason };
+      }
+      return { ...res, action: "connect" };
+    }
+
+    // 3b. No Connect available → Follow fallback.
+    if (allowFollow) {
+      if (dryRun) {
+        const canFollow = await this._eval(
+          `var m=document.querySelector('main')||document; return [].slice.call(m.querySelectorAll('button')).some(function(x){ return x.offsetParent!==null && (/^Follow\\b/.test(x.getAttribute('aria-label')||'') || (x.innerText||'').trim()==='Follow'); });`
+        ).catch(() => false);
+        return canFollow ? { ok: false, reason: "dry_run", dryRun: true, action: "follow" } : { ok: false, reason: "no_action", dryRun: true };
+      }
+      const f = await this._followTopCard();
+      return f.ok ? { ok: true, action: "follow", noteSent: false } : { ok: false, reason: "no_action" };
+    }
+
+    return { ok: false, reason: "no_connect_available" };
+  }
+
   /**
    * High-level feed engagement: scrape → score → like top-N → comment on top-M.
    * All app-specific behaviour is injected:
