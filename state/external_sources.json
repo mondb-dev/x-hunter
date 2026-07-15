@@ -1,8 +1,8 @@
 {
   "schema_version": "1.0",
-  "generated_at": "2026-07-15T11:51:29.618Z",
+  "generated_at": "2026-07-15T14:53:56.406Z",
   "method": "mechanical_registry_v1",
-  "profiled_at": "2026-07-15T11:51:39.596Z",
+  "profiled_at": "2026-07-15T14:54:06.373Z",
   "sources": [
     {
       "domain": "theguardian.com",
@@ -11,7 +11,7 @@
       "first_seen_at": "2026-03-27T23:17:00Z",
       "last_seen_at": "2026-07-13T23:01:48.746Z",
       "discovery": {
-        "distinct_urls": 383,
+        "distinct_urls": 384,
         "example_urls": [
           "https://www.theguardian.com/us-news/2026/jun/23/trump-immigration-courthouse-arrest-policy",
           "https://www.theguardian.com/us-news/2026/jun/28/ice-minnesota-defending-democracy",
@@ -21,7 +21,7 @@
         ],
         "origin_counts": {
           "ontology_evidence": 32,
-          "reading_queue": 359,
+          "reading_queue": 360,
           "journals": 71,
           "articles": 1
         },
@@ -67,7 +67,7 @@
         "breadth": {
           "score": 0.94,
           "basis": [
-            "distinct_urls:383",
+            "distinct_urls:384",
             "distinct_axes:12",
             "origin_types:4"
           ]
@@ -107,7 +107,7 @@
             "newsroom_domain_pattern",
             "article_path_seen",
             "doi_or_identifier_path_seen",
-            "distinct_urls:383",
+            "distinct_urls:384",
             "distinct_axes:12",
             "origin_types:4",
             "referring_accounts:0",
@@ -681,7 +681,7 @@
       "first_seen_at": "2026-06-22T00:15:00Z",
       "last_seen_at": "2026-07-15T03:51:51.926Z",
       "discovery": {
-        "distinct_urls": 259,
+        "distinct_urls": 260,
         "example_urls": [
           "https://www.nytimes.com/2026/06/19/world/canada/frank-stronach-trial-guilty-sex-charges.html",
           "https://www.nytimes.com/2026/06/27/world/americas/mexican-officials-us-informants.html",
@@ -691,7 +691,7 @@
         ],
         "origin_counts": {
           "ontology_evidence": 8,
-          "reading_queue": 261,
+          "reading_queue": 262,
           "journals": 22
         },
         "distinct_referring_accounts": 0,
@@ -728,7 +728,7 @@
         "breadth": {
           "score": 0.8216666666666665,
           "basis": [
-            "distinct_urls:259",
+            "distinct_urls:260",
             "distinct_axes:5",
             "origin_types:3"
           ]
@@ -767,7 +767,7 @@
           "basis": [
             "newsroom_domain_pattern",
             "article_path_seen",
-            "distinct_urls:259",
+            "distinct_urls:260",
             "distinct_axes:5",
             "origin_types:3",
             "referring_accounts:0",
@@ -1305,7 +1305,7 @@
       "first_seen_at": "2026-06-26T07:05:00Z",
       "last_seen_at": "2026-07-11T20:57:02.247Z",
       "discovery": {
-        "distinct_urls": 211,
+        "distinct_urls": 212,
         "example_urls": [
           "https://www.bbc.co.uk/news/articles/cn8qxz6qypyo",
           "https://www.bbc.co.uk/news/articles/cn075j04pnyo?at_medium=RSS&amp;at_campaign=rss",
@@ -1315,7 +1315,7 @@
         ],
         "origin_counts": {
           "ontology_evidence": 4,
-          "reading_queue": 215,
+          "reading_queue": 216,
           "journals": 11
         },
         "distinct_referring_accounts": 0,
@@ -1349,7 +1349,7 @@
         "breadth": {
           "score": 0.7049999999999998,
           "basis": [
-            "distinct_urls:211",
+            "distinct_urls:212",
             "distinct_axes:3",
             "origin_types:3"
           ]
@@ -1387,7 +1387,7 @@
           "method": "mechanical_v1",
           "basis": [
             "newsroom_domain_pattern",
-            "distinct_urls:211",
+            "distinct_urls:212",
             "distinct_axes:3",
             "origin_types:3",
             "referring_accounts:0",
@@ -2237,6 +2237,142 @@
       }
     },
     {
+      "domain": "pcij.org",
+      "entity": "Pcij",
+      "kind": "unknown",
+      "first_seen_at": "2026-07-08T04:32:07.894Z",
+      "last_seen_at": "2026-07-15T14:24:43.743Z",
+      "discovery": {
+        "distinct_urls": 11,
+        "example_urls": [
+          "https://pcij.org/2026/06/23/tycoons-swoop-in-clean-energy-boom/",
+          "https://pcij.org/2026/05/24/duterte-impeach-votes-2026/",
+          "https://pcij.org/2026/07/01/ten-years-ago-today-day-one-year-one-of-the-antidrug-campaign/",
+          "https://pcij.org/2026/05/25/7-reasons-why-the-party-list-system-serves-dynasties-not-democracy/",
+          "https://pcij.org/2026/07/04/on-roblox-pinoy-kids-preyed-on-by-violent-extremists/"
+        ],
+        "origin_counts": {
+          "ontology_evidence": 9,
+          "reading_queue": 6,
+          "journals": 14
+        },
+        "distinct_referring_accounts": 0,
+        "sample_referring_accounts": [],
+        "distinct_axes": [
+          "axis_digital_supply_chain_security",
+          "axis_eje_accountability_v1",
+          "axis_environmental_policy_v_economic_v1",
+          "axis_human_rights_exploitation_v1",
+          "axis_political_dynasties_meritocracy_v1",
+          "axis_political_vulnerability_foreign_influence_v1",
+          "axis_power_accountability"
+        ]
+      },
+      "claims": {
+        "total": 0,
+        "supported": 0,
+        "refuted": 0,
+        "contested": 0,
+        "unverified": 0,
+        "resolved_count": 0
+      },
+      "structural_features": {
+        "has_search_paths": false,
+        "has_article_paths": true,
+        "has_doi_paths": false
+      },
+      "ratings": {
+        "provenance": {
+          "score": 0.48,
+          "basis": [
+            "unknown_domain_pattern",
+            "article_path_seen"
+          ]
+        },
+        "breadth": {
+          "score": 0.8508333333333333,
+          "basis": [
+            "distinct_urls:11",
+            "distinct_axes:7",
+            "origin_types:3"
+          ]
+        },
+        "corroboration": {
+          "score": 0.26249999999999996,
+          "basis": [
+            "referring_accounts:0",
+            "origin_types:3"
+          ]
+        },
+        "track_record": {
+          "score": null,
+          "basis": [
+            "no_resolved_claims_observed"
+          ]
+        },
+        "profile": {
+          "score": 0.58,
+          "confidence": 0.75,
+          "basis": [
+            "meta_author:true",
+            "published_time:true",
+            "canonical:true",
+            "about:false",
+            "contact:false",
+            "corrections:false",
+            "outbound_links:24",
+            "opinion_marker:false"
+          ]
+        },
+        "overall": {
+          "score": 0.5407291666666666,
+          "confidence": 0.4498,
+          "method": "mechanical_v1",
+          "basis": [
+            "unknown_domain_pattern",
+            "article_path_seen",
+            "distinct_urls:11",
+            "distinct_axes:7",
+            "origin_types:3",
+            "referring_accounts:0",
+            "origin_types:3",
+            "track_record_unavailable"
+          ]
+        }
+      },
+      "profile": {
+        "fetched_at": "2026-07-15T14:23:59.785Z",
+        "homepage_url": "https://pcij.org/",
+        "example_url": "https://pcij.org/2026/06/23/tycoons-swoop-in-clean-energy-boom/",
+        "homepage_status": 200,
+        "example_status": 200,
+        "homepage_final_url": "https://pcij.org/",
+        "example_final_url": "https://pcij.org/2026/06/23/tycoons-swoop-in-clean-energy-boom/",
+        "homepage_content_type": "text/html; charset=UTF-8",
+        "example_content_type": "text/html; charset=UTF-8",
+        "homepage": {
+          "has_meta_author": false,
+          "has_published_time": true,
+          "has_canonical": true,
+          "has_about_link": false,
+          "has_contact_link": false,
+          "has_corrections_link": false,
+          "outbound_links_count": 9,
+          "opinion_marker": false
+        },
+        "example": {
+          "has_meta_author": true,
+          "has_published_time": true,
+          "has_canonical": true,
+          "has_about_link": false,
+          "has_contact_link": false,
+          "has_corrections_link": false,
+          "outbound_links_count": 24,
+          "opinion_marker": false
+        }
+      }
+    },
+    {
       "domain": "hrw.org",
       "entity": "Hrw",
       "kind": "unknown",
@@ -2366,141 +2502,6 @@
           "has_contact_link": true,
           "has_corrections_link": true,
           "outbound_links_count": 20,
-          "opinion_marker": false
-        }
-      }
-    },
-    {
-      "domain": "pcij.org",
-      "entity": "Pcij",
-      "kind": "unknown",
-      "first_seen_at": "2026-07-08T04:32:07.894Z",
-      "last_seen_at": "2026-07-12T13:38:13.417Z",
-      "discovery": {
-        "distinct_urls": 10,
-        "example_urls": [
-          "https://pcij.org/2026/06/23/tycoons-swoop-in-clean-energy-boom/",
-          "https://pcij.org/2026/05/24/duterte-impeach-votes-2026/",
-          "https://pcij.org/2026/07/01/ten-years-ago-today-day-one-year-one-of-the-antidrug-campaign/",
-          "https://pcij.org/2026/05/25/7-reasons-why-the-party-list-system-serves-dynasties-not-democracy/",
-          "https://pcij.org/2026/07/04/on-roblox-pinoy-kids-preyed-on-by-violent-extremists/"
-        ],
-        "origin_counts": {
-          "ontology_evidence": 8,
-          "reading_queue": 6,
-          "journals": 12
-        },
-        "distinct_referring_accounts": 0,
-        "sample_referring_accounts": [],
-        "distinct_axes": [
-          "axis_eje_accountability_v1",
-          "axis_environmental_policy_v_economic_v1",
-          "axis_human_rights_exploitation_v1",
-          "axis_political_dynasties_meritocracy_v1",
-          "axis_political_vulnerability_foreign_influence_v1",
-          "axis_power_accountability"
-        ]
-      },
-      "claims": {
-        "total": 0,
-        "supported": 0,
-        "refuted": 0,
-        "contested": 0,
-        "unverified": 0,
-        "resolved_count": 0
-      },
-      "structural_features": {
-        "has_search_paths": false,
-        "has_article_paths": true,
-        "has_doi_paths": false
-      },
-      "ratings": {
-        "provenance": {
-          "score": 0.48,
-          "basis": [
-            "unknown_domain_pattern",
-            "article_path_seen"
-          ]
-        },
-        "breadth": {
-          "score": 0.8216666666666665,
-          "basis": [
-            "distinct_urls:10",
-            "distinct_axes:6",
-            "origin_types:3"
-          ]
-        },
-        "corroboration": {
-          "score": 0.26249999999999996,
-          "basis": [
-            "referring_accounts:0",
-            "origin_types:3"
-          ]
-        },
-        "track_record": {
-          "score": null,
-          "basis": [
-            "no_resolved_claims_observed"
-          ]
-        },
-        "profile": {
-          "score": 0.58,
-          "confidence": 0.75,
-          "basis": [
-            "meta_author:true",
-            "published_time:true",
-            "canonical:true",
-            "about:false",
-            "contact:false",
-            "corrections:false",
-            "outbound_links:24",
-            "opinion_marker:false"
-          ]
-        },
-        "overall": {
-          "score": 0.5343489583333333,
-          "confidence": 0.42117499999999997,
-          "method": "mechanical_v1",
-          "basis": [
-            "unknown_domain_pattern",
-            "article_path_seen",
-            "distinct_urls:10",
-            "distinct_axes:6",
-            "origin_types:3",
-            "referring_accounts:0",
-            "origin_types:3",
-            "track_record_unavailable"
-          ]
-        }
-      },
-      "profile": {
-        "fetched_at": "2026-07-12T12:07:29.468Z",
-        "homepage_url": "https://pcij.org/",
-        "example_url": "https://pcij.org/2026/06/23/tycoons-swoop-in-clean-energy-boom/",
-        "homepage_status": 200,
-        "example_status": 200,
-        "homepage_final_url": "https://pcij.org/",
-        "example_final_url": "https://pcij.org/2026/06/23/tycoons-swoop-in-clean-energy-boom/",
-        "homepage_content_type": "text/html; charset=UTF-8",
-        "example_content_type": "text/html; charset=UTF-8",
-        "homepage": {
-          "has_meta_author": false,
-          "has_published_time": true,
-          "has_canonical": true,
-          "has_about_link": false,
-          "has_contact_link": false,
-          "has_corrections_link": false,
-          "outbound_links_count": 9,
-          "opinion_marker": false
-        },
-        "example": {
-          "has_meta_author": true,
-          "has_published_time": true,
-          "has_canonical": true,
-          "has_about_link": false,
-          "has_contact_link": false,
-          "has_corrections_link": false,
-          "outbound_links_count": 24,
           "opinion_marker": false
         }
       }
@@ -3062,9 +3063,9 @@
       "entity": "Techcrunch",
       "kind": "unknown",
       "first_seen_at": "2026-06-22T23:31:00Z",
-      "last_seen_at": "2026-07-14T23:21:52.738Z",
+      "last_seen_at": "2026-07-15T14:24:43.701Z",
       "discovery": {
-        "distinct_urls": 46,
+        "distinct_urls": 47,
         "example_urls": [
           "https://techcrunch.com/2026/06/22/shareholders-sue-ubers-board-over-sexual-assaults-other-incidents/",
           "https://techcrunch.com/2026/06/25/notion-mail-shuts-down-amid-agent-takeover/",
@@ -3074,7 +3075,7 @@
         ],
         "origin_counts": {
           "ontology_evidence": 20,
-          "journals": 52
+          "journals": 53
         },
         "distinct_referring_accounts": 0,
         "sample_referring_accounts": [],
@@ -3113,7 +3114,7 @@
         "breadth": {
           "score": 0.82,
           "basis": [
-            "distinct_urls:46",
+            "distinct_urls:47",
             "distinct_axes:8",
             "origin_types:2"
           ]
@@ -3152,7 +3153,7 @@
           "basis": [
             "unknown_domain_pattern",
             "article_path_seen",
-            "distinct_urls:46",
+            "distinct_urls:47",
             "distinct_axes:8",
             "origin_types:2",
             "referring_accounts:0",
@@ -3468,7 +3469,7 @@
       "first_seen_at": "2016-05-05T18:57:30.000Z",
       "last_seen_at": "2026-07-15T10:33:44.000Z",
       "discovery": {
-        "distinct_urls": 7938,
+        "distinct_urls": 7939,
         "example_urls": [
           "https://t.co/pJSE124ec4",
           "https://t.co/Soz8BXPWaa",
@@ -3477,7 +3478,7 @@
           "https://t.co/cYaqYDRp08"
         ],
         "origin_counts": {
-          "feed_buffer": 4953,
+          "feed_buffer": 4954,
           "feed_buffer_reply": 4830
         },
         "distinct_referring_accounts": 2478,
@@ -3519,7 +3520,7 @@
         "breadth": {
           "score": 0.47,
           "basis": [
-            "distinct_urls:7938",
+            "distinct_urls:7939",
             "distinct_axes:0",
             "origin_types:2"
           ]
@@ -3558,7 +3559,7 @@
           "basis": [
             "unknown_domain_pattern",
             "doi_or_identifier_path_seen",
-            "distinct_urls:7938",
+            "distinct_urls:7939",
             "distinct_axes:0",
             "origin_types:2",
             "referring_accounts:2478",
@@ -32242,7 +32243,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-07-12T10:37:31.943Z",
+        "fetched_at": "2026-07-15T14:24:00.209Z",
         "homepage_url": "https://axios.com/",
         "example_url": "https://www.axios.com/2026/04/21/axios-event-future-of-health-summit-2026?twclid=26ijftyq8roj3woqxoi4hprufc",
         "homepage_status": 403,
@@ -32366,7 +32367,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-07-12T11:07:31.479Z",
+        "fetched_at": "2026-07-15T14:24:05.084Z",
         "homepage_url": "https://trendmicro.com/",
         "example_url": "https://newsroom.trendmicro.com/2026-03-23-Trend-Micros-Enterprise-Business-is-now-TrendAI-TM?utm_source=twitter_paid&utm_medium=social&utm_campaign=ent_corporate_aw_gl_int_rebrand&utm_content=carouse&twclid=2cmz9tfo72r6gek4sy5lql8osu",
         "homepage_status": 200,
@@ -32490,7 +32491,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-07-12T11:07:33.206Z",
+        "fetched_at": "2026-07-15T14:24:08.210Z",
         "homepage_url": "https://nigerianobservernews.com/",
         "example_url": "https://nigerianobservernews.com/2026/06/igbinedion-university-stuns-world-clinches-huawei-ict-global-crown-women-in-tech-award/",
         "homepage_status": 200,
@@ -32710,12 +32711,12 @@
           ]
         },
         "profile": {
-          "score": 0.1,
+          "score": 0,
           "confidence": 0.55,
           "basis": [
             "meta_author:false",
             "published_time:false",
-            "canonical:true",
+            "canonical:false",
             "about:false",
             "contact:false",
             "corrections:false",
@@ -32739,19 +32740,19 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-07-12T11:07:34.495Z",
+        "fetched_at": "2026-07-15T14:53:57.534Z",
         "homepage_url": "https://manduka.com/",
         "example_url": "https://www.manduka.com/products/manduka-pro-yoga-mat?utm_source=twitter&utm_medium=cpc&utm_campaign=xconvert&utm_content=PRO+Mat+-+Rooibos+1x1&twclid=2c1i50hvb8z81u6asprj4f4oqt",
-        "homepage_status": 200,
-        "example_status": 200,
-        "homepage_final_url": "https://www.manduka.com/",
+        "homepage_status": 429,
+        "example_status": 429,
+        "homepage_final_url": "https://manduka.com/",
         "example_final_url": "https://www.manduka.com/products/manduka-pro-yoga-mat?utm_source=twitter&utm_medium=cpc&utm_campaign=xconvert&utm_content=PRO+Mat+-+Rooibos+1x1&twclid=2c1i50hvb8z81u6asprj4f4oqt",
-        "homepage_content_type": "text/html; charset=utf-8",
-        "example_content_type": "text/html; charset=utf-8",
+        "homepage_content_type": "text/plain",
+        "example_content_type": "text/plain",
         "homepage": {
           "has_meta_author": false,
           "has_published_time": false,
-          "has_canonical": true,
+          "has_canonical": false,
           "has_about_link": false,
           "has_contact_link": false,
           "has_corrections_link": false,
@@ -32761,7 +32762,7 @@
         "example": {
           "has_meta_author": false,
           "has_published_time": false,
-          "has_canonical": true,
+          "has_canonical": false,
           "has_about_link": false,
           "has_contact_link": false,
           "has_corrections_link": false,
@@ -32864,7 +32865,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-07-12T11:07:36.656Z",
+        "fetched_at": "2026-07-15T14:53:59.994Z",
         "homepage_url": "https://tickerscores.ai/",
         "example_url": "https://tickerscores.ai/?twclid=29mi9nru582fdb9vf7t1d5r9yf",
         "homepage_status": 200,
@@ -32989,7 +32990,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-07-12T12:07:33.298Z",
+        "fetched_at": "2026-07-15T14:54:05.485Z",
         "homepage_url": "https://eclincher.com/",
         "example_url": "https://www.eclincher.com/ai-social-media-agent?twclid=22gdnmarextv0i2rs5d53x1dzn",
         "homepage_status": 200,
@@ -33114,7 +33115,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-07-12T12:07:34.428Z",
+        "fetched_at": "2026-07-15T14:54:06.373Z",
         "homepage_url": "https://tcgsherpa.com/",
         "example_url": "https://www.tcgsherpa.com/?utm_source=x&utm_medium=paid_social&utm_campaign=tcg-sherpa-launch-apr26&utm_content=What_Does_static&twclid=2c6bdjexgck8vqk1pzn57lvtb7",
         "homepage_status": 200,
