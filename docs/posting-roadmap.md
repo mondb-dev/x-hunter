@@ -14,9 +14,12 @@ Captured 2026-07-15, updated same day (quote/reply API migration + retweet actio
 - Fixed `findOwnTweetUrl` navigating to `x.com/undefined` (`this.ownHandle` → `this.handle`).
 - **Image auto-trigger (X)** — `compose_tweet.js` now sets `state/tweet_image_source.txt` autonomously via `lib/lead_source_image.js`: extracts source URLs from the same browse notes the tweet was composed from, scores each by word-overlap relevance to the drafted tweet, and picks the top candidate that actually exposes an og:image (fetch-probe, HTML only). No match → no file → text-only post (unchanged). Deterministic (no extra LLM call); `IMAGE_AUTO_TRIGGER=0` disables. Attribution improved in `source_image.hostLabel`: an X status now credits the author `@handle` (its og:image is the tweet's own media) instead of a bare "x.com".
 
-## ~~Follow-up 1 — image auto-trigger (small)~~ — DONE (X)
+## ~~Follow-up 1 — image auto-trigger (small)~~ — DONE (X + LinkedIn)
 
-Done for X (above). LinkedIn's image trigger (outbox `meta.image_source`) is still unset autonomously — the LinkedIn draft path (`runner/linkedin_draft.js`) could call the same `pickLeadSource(text, notes)` and stash the result in the outbox item's `meta.image_source`. Small follow-up, same helper.
+Both channels now set their image source autonomously via `lib/lead_source_image.js`:
+- **X** — `compose_tweet.js` writes `state/tweet_image_source.txt` from the browse notes.
+- **LinkedIn** — `linkedin_draft.js` calls `pickLeadSource(text, pack.text)` over the content pack and stashes the winner in the outbox item's `meta.image_source` (JSON-persisted, read back by `linkedin_post.js`).
+Both are best-effort (miss → text-only, unchanged), deterministic (no extra LLM call), and gated by `IMAGE_AUTO_TRIGGER=0`.
 
 ## Item 3 — LEARN repost + quote, all channels (large; the main remaining ask)
 

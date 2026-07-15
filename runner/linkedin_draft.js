@@ -126,7 +126,20 @@ Write ONE original LinkedIn post following the strategy above and the opening te
       log(`coherence gate unavailable (${e.message}) — proceeding`);
     }
 
-    const { id, deduped } = outbox.enqueue({ channel: "linkedin", kind: "post", text, meta: { cycle: Number.parseInt(process.env.CYCLE_NUMBER || "", 10) || null, technique: technique.id } });
+    // Image auto-trigger: pick a lead source-with-image from the same content
+    // pack this post was composed from; linkedin_post.js copies its og:image +
+    // attributes it. Best-effort — a miss just means a text-only post.
+    // IMAGE_AUTO_TRIGGER=0 disables.
+    let imageSource = null;
+    if (process.env.IMAGE_AUTO_TRIGGER !== "0") {
+      try {
+        const { pickLeadSource } = require("./lib/lead_source_image");
+        const lead = await pickLeadSource(text, pack.text);
+        if (lead) { imageSource = lead.url; log(`image source set: ${lead.source} (${lead.url})`); }
+      } catch (e) { log(`image auto-trigger skipped: ${e.message}`); }
+    }
+
+    const { id, deduped } = outbox.enqueue({ channel: "linkedin", kind: "post", text, meta: { cycle: Number.parseInt(process.env.CYCLE_NUMBER || "", 10) || null, technique: technique.id, ...(imageSource ? { image_source: imageSource } : {}) } });
     log(deduped ? `identical post already queued (outbox #${id}) — not re-queuing` : `enqueued post to outbox #${id} (${text.length} chars)`);
     process.exit(0);
   } catch (err) {
