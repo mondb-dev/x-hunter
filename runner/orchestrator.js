@@ -190,6 +190,13 @@ const HOUR = 60 * 60 * 1000;
 function runSocialPipeline() {
   if (!process.env.HELMSTACK_AUTH_TOKEN) return; // module not configured
 
+  // Close stray/duplicate HelmStack tabs FIRST so the social actions below run
+  // on a clean tab set (leftover dupes are the root of the "wedged tab" bugs).
+  if (dueForRun('helmstack_tab_cleanup', 1 * HOUR)) {
+    log('social: HelmStack tab cleanup');
+    runScriptLog(path.join(PROJECT_ROOT, 'runner/helmstack_tab_cleanup.js'));
+  }
+
   // X engagement (likes + replies) — replies migrated here from the legacy CDP
   // proactive_reply path onto HelmStack (stable HTTP API, no Network.enable
   // timeouts). Reply drafts are verify-gated + fact-checked in x_engage.
@@ -226,6 +233,35 @@ function runSocialPipeline() {
     log('social: LinkedIn draft + post');
     runScriptLog(path.join(PROJECT_ROOT, 'runner/linkedin_draft.js'));
     runScriptLog(path.join(PROJECT_ROOT, 'runner/linkedin_post.js'));
+  }
+
+  // LinkedIn connections — niche People-search + note-personalized invites. The
+  // script enforces its own hard per-DAY cap, so an 8h gate (≈2-3 runs/day) just
+  // paces the batches; it never over-invites.
+  if (dueForRun('linkedin_connect', 8 * HOUR)) {
+    log('social: LinkedIn connect (niche-search invites)');
+    runScriptLog(path.join(PROJECT_ROOT, 'runner/linkedin_connect.js'));
+  }
+
+  // Facebook follows — curated Pages + public figures (paced, ledgered, capped
+  // per run). Opt out with FB_FOLLOW_ENABLED=0.
+  if (process.env.FB_FOLLOW_ENABLED !== '0' && dueForRun('fb_follow', 6 * HOUR)) {
+    log('social: Facebook follow (pages + figures)');
+    runScriptLog(path.join(PROJECT_ROOT, 'runner/fb_seed_follows.js'));
+  }
+
+  // Outbound queue maintenance — age out stale drafts + prune old terminal rows.
+  if (dueForRun('outbox_maintain', 24 * HOUR)) {
+    log('social: outbox maintenance (stale + cleanup)');
+    runScriptLog(path.join(PROJECT_ROOT, 'runner/outbox_maintain.js'));
+  }
+
+  // HelmStack dogfooding feedback — Sebastian writes a prioritized report of the
+  // HelmStack friction in his own logs (docs/helmstack-feedback/) so it can be
+  // built correctly. Daily.
+  if (dueForRun('helmstack_feedback', 24 * HOUR)) {
+    log('social: HelmStack feedback report');
+    runScriptLog(path.join(PROJECT_ROOT, 'runner/helmstack_feedback.js'));
   }
 }
 
