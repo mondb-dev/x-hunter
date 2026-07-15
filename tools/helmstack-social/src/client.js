@@ -59,6 +59,8 @@ class HelmStackClient {
 
   // ── Input (CDP-level — reaches cross-origin iframes) ────────────────────────
   insertText(id, text) { return this.request("POST", `/api/tabs/${id}/insert-text`, { text }); }
+  /** Set files on a file input (CDP DOM.setFileInputFiles). `files` = absolute paths on the HelmStack host. */
+  setFileInput(id, selector, files) { return this.request("POST", `/api/tabs/${id}/file-input`, { selector, files: Array.isArray(files) ? files : [files] }); }
   pressKey(id, opts)   { return this.request("POST", `/api/tabs/${id}/key`, opts); }
   clickAt(id, x, y)    { return this.request("POST", `/api/tabs/${id}/click`, { x, y }); }
   /** Cmd/Meta+Enter — submits many composers regardless of frame origin. */

@@ -464,6 +464,53 @@ class X {
     return { posted: false, reason: `api_${r.status || "err"}:${(r.body || r.error || "").slice(0, 120)}` };
   }
 
+  /**
+   * Post a tweet WITH an image, uploaded the real browser way — HelmStack sets the
+   * composer's file input via CDP (DOM.setFileInputFiles), so X runs its own media
+   * upload. Text goes through the guarded composer insert. `imagePaths` = absolute
+   * path(s) on the HelmStack host; the CALLER deletes the temp file afterward.
+   * @returns {Promise<{posted:boolean, url?:string|null, reason?:string, dryRun?:boolean}>}
+   */
+  async postImage(text, imagePaths, { dryRun = false } = {}) {
+    const files = (Array.isArray(imagePaths) ? imagePaths : [imagePaths]).filter(Boolean);
+    if (!files.length) return { posted: false, reason: "no_image" };
+    await this.gotoHome();
+    await humanDelay(1500, 2500);
+    try {
+      await this.c.pollFn(this.tab, "compose box", () => !!document.querySelector('[data-testid="tweetTextarea_0"]'), { attempts: 15, interval: 1000, tag: "x" });
+    } catch { return { posted: false, reason: "compose_box_not_found" }; }
+    await this._focusComposer();
+    await sleep(600);
+    try { await this.c.setFileInput(this.tab, 'input[data-testid="fileInput"]', files); }
+    catch (e) { return { posted: false, reason: `file_input:${e.message}` }; }
+    // Wait for X to attach + finish uploading (the Remove-media control appears).
+    let attached = false;
+    for (let i = 0; i < 25 && !attached; i++) {
+      attached = await this.c.evalFn(this.tab, () =>
+        !!document.querySelector('[data-testid="attachments"] img, [aria-label="Remove media"], [data-testid="removeMedia"], [data-testid="tweetPhoto"]')
+      ).catch(() => false);
+      if (!attached) await sleep(1000);
+    }
+    if (!attached) return { posted: false, reason: "image_not_attached" };
+    await sleep(1500); // let the upload finalize before enabling Post
+
+    if (text && !(await this._insertVerified(text))) return { posted: false, reason: "text_insert_failed" };
+    try { await this._waitPostEnabled(); } catch { return { posted: false, reason: "post_button_disabled" }; }
+    const pre = await this._toast(); if (pre) return { posted: false, reason: `anti_automation:${pre}` };
+    if (dryRun) { this.log("DRY RUN — image attached + text verified, not posting"); await this._discardComposer(); return { posted: false, reason: "dry_run", dryRun: true }; }
+
+    await humanDelay(1500, 3000);
+    if (text && !(await this._settleComposer(text))) return { posted: false, reason: "composer_mismatch_preposting" };
+    await this._clickPost();
+    await sleep(6000);
+    const post2 = await this._toast(); if (post2) return { posted: false, reason: `anti_automation:${post2}` };
+    const url = text ? await this._confirmFromProfile(text) : null;
+    if (url) { this.log(`posted image tweet: ${url}`); return { posted: true, url }; }
+    const now = await this.c.tabUrl(this.tab).catch(() => "");
+    if (/\/home/.test(now)) { this.log("image tweet probable success (URL uncaptured)"); return { posted: true, url: null }; }
+    return { posted: false, reason: "post_unconfirmed" };
+  }
+
   /** UI-composer fallback for post() — used only when the API path is unavailable. */
   async _postViaComposer(text, { dryRun = false } = {}) {
     await this.gotoHome();

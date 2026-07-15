@@ -12,6 +12,7 @@
  */
 
 const fs = require("fs");
+const path = require("path");
 const { HelmStackClient, X } = require("../../tools/helmstack-social/src");
 const { logTweet, logQuote } = require("../posts_log");
 const { HANDLE, clearFile, isConfirmedStatusUrl, writeAttempt, writeResult } = require("../post_result");
@@ -84,16 +85,35 @@ async function runTweet({ draftFile, resultFile, attemptFile, cycle }) {
   const x = await makeEngine(tag, attemptFile, "tweet", cycle);
   if (!x) { outboxMark(ob && ob.id, "failed", "helmstack_connect_failed"); return 1; }
 
-  let res;
+  // Optional image: if a source URL is provided (state/tweet_image_source.txt),
+  // copy that source's og:image and post it the browser way (x.postImage) with
+  // "📷 via <source>" attribution. The temp image is ALWAYS deleted after posting.
+  const srcFile = path.join(path.dirname(draftFile), "tweet_image_source.txt");
+  let sourceUrl = ""; try { sourceUrl = fs.readFileSync(srcFile, "utf-8").trim(); } catch {}
+  let res, tmpImg = null;
+  const cleanupImage = () => { if (tmpImg) { try { require("./source_image").cleanup(tmpImg); } catch {} tmpImg = null; } try { if (sourceUrl) fs.unlinkSync(srcFile); } catch {} };
   try {
-    res = await x.post(tweetText, { dryRun: DRY_RUN });
+    if (sourceUrl && !DRY_RUN) {
+      const si = require("./source_image");
+      const img = await si.fetchSourceImage(sourceUrl);
+      if (img) {
+        tmpImg = img.path;
+        console.log(`[${tag}] attaching source image from ${img.source}`);
+        res = await x.postImage(`${tweetText}\n\n${si.attribution(img.source)}`, img.path, { dryRun: DRY_RUN });
+      } else {
+        console.log(`[${tag}] no og:image at source — posting text only`);
+      }
+    }
+    if (!res) res = await x.post(tweetText, { dryRun: DRY_RUN });
   } catch (err) {
+    cleanupImage();
     console.error(`[${tag}] error: ${err.message}`);
     clearFile(resultFile);
     outboxMark(ob && ob.id, "failed", `exception: ${err.message}`);
     writeAttempt(attemptFile, { kind: "tweet", outcome: "failed", reason: "exception", error: err.message, cycle });
     return 1;
   }
+  cleanupImage(); // posting done (success or fail) — temp image gone
 
   if (res.dryRun) { outboxMark(ob && ob.id, "failed", "dry_run"); writeAttempt(attemptFile, { kind: "tweet", outcome: "dry_run", cycle }); return 0; }
   if (!res.posted) {
