@@ -106,6 +106,10 @@ function claudeCompose(prompt, opts = {}) {
       if (j.is_error) return finish(reject, new Error(`claude error: ${String(j.result).slice(0, 300)}`));
       const text = (j.result || '').trim();
       if (!text) return finish(reject, new Error('claude returned empty result'));
+      try {
+        const u = j.usage || {};
+        require('./cost_meter').record({ tag: opts.tag || 'compose', model, inTokens: u.input_tokens, outTokens: u.output_tokens, usd: j.total_cost_usd, promptChars: prompt.length, outChars: text.length });
+      } catch {}
       finish(resolve, text);
     });
 

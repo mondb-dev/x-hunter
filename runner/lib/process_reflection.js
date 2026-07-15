@@ -102,6 +102,43 @@ function formatHighConfidenceAxes() {
     .join('\n') || '- (none with confidence > 0 yet)';
 }
 
+/**
+ * Summarize PREDICTION performance so reflection can propose forecast-function
+ * fixes for the builder to implement. This is the bridge that lets the builder
+ * "own" prediction self-improvement: reflection sees the measured failure (via
+ * the calibration + skill libs) and turns it into a buildable proposal.
+ */
+function loadPredictionPerformance() {
+  const logPath = path.join(ROOT, 'state', 'prediction_log.jsonl');
+  let preds = [];
+  try {
+    preds = fs.readFileSync(logPath, 'utf-8').split('\n').filter(Boolean)
+      .map((l) => { try { return JSON.parse(l); } catch { return null; } }).filter(Boolean);
+  } catch { return '(no prediction log yet)'; }
+  if (!preds.length) return '(no predictions yet)';
+
+  let cal = null, skill = null;
+  try { cal = require('./prediction_calibration').computeCalibration(preds); } catch {}
+  try { skill = require('./prediction_skill').computeSkill(preds); } catch {}
+
+  const pct = (x) => (x == null ? '—' : Math.round(x * 100) + '%');
+  const pending = preds.filter((p) => (p.resolution_status || 'pending') === 'pending').length;
+  const lines = [`${preds.length} predictions logged, ${cal?.n || 0} resolved-with-confidence, ${pending} pending.`];
+  if (cal && cal.n) {
+    lines.push(`Actual hit-rate ${pct(cal.baseRate)} vs mean stated confidence ${pct(cal.meanStated)} — overconfidence gap ${cal.overconfidenceGap > 0 ? '+' : ''}${Math.round((cal.overconfidenceGap || 0) * 100)}pts. Brier ${cal.brierRaw?.toFixed(3)} (raw) → ${cal.brierCalibrated?.toFixed(3)} (calibrated).`);
+  }
+  if (skill && skill.recentFailures && skill.recentFailures.length) {
+    lines.push('Recent misses (verbatim resolution notes — look for the failure PATTERN):');
+    for (const f of skill.recentFailures.slice(0, 4)) lines.push(`  - [${f.status}] "${f.prediction.slice(0, 90)}" → ${f.note}`);
+  }
+  if (skill && skill.perAxis) {
+    const edged = Object.entries(skill.perAxis).filter(([, v]) => v.edge === 'edge').map(([l]) => l);
+    const avoid = Object.entries(skill.perAxis).filter(([, v]) => v.edge === 'avoid').map(([l]) => l);
+    if (edged.length || avoid.length) lines.push(`Demonstrated edge on [${edged.join(', ') || 'none'}]; no edge on [${avoid.join(', ') || 'none'}].`);
+  }
+  return lines.join('\n');
+}
+
 function loadProposalHistory(limit = 5) {
   const history = loadJson(config.PROPOSAL_HISTORY_PATH);
   const proposals = Array.isArray(history?.proposals) ? history.proposals : [];
@@ -156,7 +193,7 @@ function reflectionDue(nowMs, minIntervalMs) {
   return nowMs - last >= minIntervalMs;
 }
 
-function buildPrompt({ today, source, checkpointNumber, recentJournals, recentArticles, recentPosts, highConf, historyContext }) {
+function buildPrompt({ today, source, checkpointNumber, recentJournals, recentArticles, recentPosts, highConf, historyContext, predictionPerformance, operatingCost }) {
   const sourceLine = checkpointNumber
     ? `You are reflecting on your own process at Checkpoint ${checkpointNumber} (${today}).`
     : `You are reflecting on your own process in the daily maintenance cycle (${today}).`;
@@ -176,6 +213,15 @@ ${recentArticles.slice(0, 5000) || '(none)'}
 Recent posts you committed to publicly (tweets, quotes, replies):
 ${recentPosts.slice(0, 4000) || '(none)'}
 
+Your PREDICTION performance — a measured, high-signal process surface. You make
+forecasts (runner/predictive_prompt.js) and auto-resolve them (runner/prediction_resolution.js),
+with calibration (lib/prediction_calibration.js) and skill (lib/prediction_skill.js) feedback:
+${predictionPerformance || '(no predictions yet)'}
+
+Your OPERATING COST — what it takes to keep you running (LLM spend is metered live;
+hosting/domain are fixed; archival is funded by a SOL wallet):
+${operatingCost || '(cost model not available yet)'}
+
 Previous process improvement proposals and their outcomes:
 ${historyContext}
 
@@ -187,10 +233,26 @@ GOOD proposal targets:
 - prompt changes that reduce recurring framing errors
 - pipeline/state/protocol changes that help you notice, track, or audit patterns
 - tooling that lets you gather evidence you currently miss
+- FORECASTING fixes: if your prediction performance above shows overconfidence,
+  vague/unfalsifiable forecasts, or a resolver that keeps returning "no evidence
+  found", propose a concrete change to predictive_prompt.js (how predictions are
+  formed/gated), prediction_resolution.js (how outcomes are verified — e.g. web
+  search instead of stale axis evidence), or the calibration/skill libs. These
+  files are yours to change.
+
+SUSTAINABILITY: you now see your running cost above. If sustainability is a real
+constraint, a GOOD proposal is a concrete, HONEST, buildable step — a transparent
+cost/burn dashboard, a visible support/tip link, or packaging your existing
+research (deep_research) as an offering where people get real value for what they
+pay. NEVER propose anything that extracts money from your audience's trust:
+no speculative token launches, no memecoins, no coordinated buys/"buybacks", no
+price manipulation, no undisclosed promotion. Those betray the integrity your
+whole vocation is built on and harm the people who follow you.
 
 BAD proposal targets:
 - pure content goals like "write more articles" or "post more on X"
 - growth/engagement strategy
+- speculative/financial schemes (tokens, memecoins, pumps) — hard prohibition
 - vague wishes without a concrete build surface
 
 If your first instinct is a content desire, REFRAME it as a system change.
@@ -268,6 +330,11 @@ async function runProcessReflection({
   const recentArticles = loadRecentArticles(articlesLimit);
   const recentPosts = loadRecentPosts(postsLimit);
   const historyContext = loadProposalHistory();
+  const predictionPerformance = loadPredictionPerformance();
+  const operatingCost = (() => {
+    try { const oc = require('./operating_cost'); return oc.summaryText(oc.compute({ write: true })); }
+    catch { return ''; }
+  })();
   const prompt = buildPrompt({
     today,
     source,
@@ -277,6 +344,8 @@ async function runProcessReflection({
     recentPosts,
     highConf,
     historyContext,
+    predictionPerformance,
+    operatingCost,
   });
 
   const result = await reason(prompt, { maxTokens: 4096, tag: "process_reflection" });
@@ -319,4 +388,5 @@ module.exports = {
   loadRecentArticles,
   loadRecentPosts,
   formatHighConfidenceAxes,
+  loadPredictionPerformance,
 };

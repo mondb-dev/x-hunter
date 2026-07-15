@@ -79,6 +79,10 @@ async function callBuilder(prompt, maxTokens = 2000, options = {}) {
             .map(p => p.text)
             .join("");
           if (!text) throw new Error(`No content in response: ${raw.slice(0, 300)}`);
+          try {
+            const u = j?.usageMetadata || {};
+            require('./lib/cost_meter').record({ tag: 'builder', model: options.model || DEFAULT_MODEL, inTokens: u.promptTokenCount, outTokens: u.candidatesTokenCount, promptChars: prompt.length, outChars: text.length });
+          } catch {}
           resolve(text.trim());
         } catch (e) { reject(e); }
       });

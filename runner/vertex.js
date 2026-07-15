@@ -13,6 +13,7 @@
 const https = require("https");
 const { getAccessToken, getProjectConfig } = require("./gcp_auth");
 const { useLocal, localChat } = require("./local_llm");
+const costMeter = require("./lib/cost_meter");
 
 /**
  * callVertex(prompt, maxTokens, options)
@@ -27,10 +28,12 @@ async function callVertex(prompt, maxTokens = 2000, options = {}) {
   // Local backend: route the entire non-agent brain to Ollama when OLLAMA_BASE_URL
   // points at a local server. Interface is unchanged for all ~35 callers.
   if (useLocal()) {
-    return localChat(prompt, {
+    const out = await localChat(prompt, {
       maxTokens,
       temperature: options.temperature ?? 0.7,
     });
+    try { costMeter.record({ tag: options.tag || "brain", model: "local", promptChars: prompt.length, outChars: (out || "").length }); } catch {}
+    return out;
   }
 
   const token    = await getAccessToken();
@@ -87,6 +90,10 @@ async function callVertex(prompt, maxTokens = 2000, options = {}) {
             .map(p => p.text)
             .join("");
           if (!text) throw new Error(`No content in response: ${raw.slice(0, 300)}`);
+          try {
+            const u = j?.usageMetadata || {};
+            costMeter.record({ tag: options.tag || "vertex", model, inTokens: u.promptTokenCount, outTokens: u.candidatesTokenCount, promptChars: prompt.length, outChars: text.length });
+          } catch {}
           resolve(text.trim());
         } catch (e) { reject(e); }
       });

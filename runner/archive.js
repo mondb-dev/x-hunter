@@ -228,7 +228,15 @@ function scanDir(dir, pattern) {
   const irys = await getIrys();
   if (irys) {
     const bal = await irys.getLoadedBalance();
-    console.log(`[archive] Irys connected. Balance: ${irys.utils.fromAtomic(bal)} SOL`);
+    const sol = Number(irys.utils.fromAtomic(bal));
+    console.log(`[archive] Irys connected. Balance: ${sol} SOL`);
+    // Cache for the operating-cost self-model (lib/operating_cost reads this as the
+    // archival runway signal — it can't afford a live Irys connect on every cycle).
+    try {
+      const fs = require("fs"), path = require("path");
+      fs.writeFileSync(path.join(__dirname, "..", "state", "wallet_balance.json"),
+        JSON.stringify({ sol, at: new Date().toISOString() }, null, 2));
+    } catch {}
   } else {
     console.log("[archive] Irys unavailable — local indexing only");
   }
