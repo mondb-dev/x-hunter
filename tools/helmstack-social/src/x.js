@@ -405,63 +405,102 @@ class X {
     return this._postViaComposer(text, { dryRun });
   }
 
-  /** Extract (and cache) the rotating CreateTweet GraphQL queryId from the loaded JS bundle. */
-  async _createTweetQueryId({ force = false } = {}) {
-    if (this._ctQid && !force) return this._ctQid;
+  /**
+   * Extract (and cache, per operation) a rotating GraphQL queryId from the
+   * loaded JS bundle — CreateTweet, CreateRetweet, DeleteRetweet, etc.
+   * Assumes an x.com page is loaded in the tab (callers guard navigation).
+   */
+  async _graphqlQueryId(opName, { force = false } = {}) {
+    this._qids = this._qids || {};
+    if (this._qids[opName] && !force) return this._qids[opName];
     // Use c.evaluate directly (not _eval, which wraps in a SYNC fn and would drop
     // this async IIFE's promise).
     const qid = await this.c.evaluate(this.tab,
       `(async function(){
+         var op=${JSON.stringify(opName)};
          var srcs=[].slice.call(document.querySelectorAll('script[src]')).map(function(s){return s.src;})
            .filter(function(u){return /main\\.[a-f0-9]+\\.js/.test(u)||/(api|responsive-web)[^/]*\\.[a-f0-9]+\\.js/.test(u);});
          for(var i=0;i<srcs.length;i++){ try{ var txt=await (await fetch(srcs[i])).text();
-           var m=txt.match(/queryId:"([^"]+)",operationName:"CreateTweet"/)||txt.match(/operationName:"CreateTweet"[^}]*?queryId:"([^"]+)"/);
+           var m=txt.match(new RegExp('queryId:"([^"]+)",operationName:"'+op+'"'))||txt.match(new RegExp('operationName:"'+op+'"[^}]*?queryId:"([^"]+)"'));
            if(m) return m[1]; }catch(e){} }
          return "";
        })()`, { timeout: 30000 }
     ).catch(() => "");
-    if (qid) this._ctQid = qid;
-    return this._ctQid || null;
+    if (qid) this._qids[opName] = qid;
+    return this._qids[opName] || null;
   }
 
   /**
-   * Post via X's CreateTweet GraphQL mutation (in-page, session-authed). Empty
-   * `features` is accepted by X, so there is no rotating-features maintenance.
-   * @returns {Promise<{posted:boolean, url?:string, reason?:string, dryRun?:boolean}>}
+   * Run one of X's GraphQL mutations in-page (session-authed: ct0 CSRF + the
+   * public web bearer — the same machinery postViaApi validated live). Retries
+   * once with a re-extracted queryId if the cached one has rotated (non-200).
+   * @returns {Promise<{status?:number, json?:object, raw?:string, error?:string}>}
    */
-  async postViaApi(text, { dryRun = false } = {}) {
+  async _graphqlMutation(opName, variables, { withFeatures = false } = {}) {
     const cur = await this.c.tabUrl(this.tab).catch(() => "");
-    if (!/x\.com|twitter\.com/.test(cur)) { if (!(await this._gotoChecked(HOME_URL))) return { posted: false, reason: "nav_failed" }; }
-    const qid = await this._createTweetQueryId();
-    if (!qid) return { posted: false, reason: "no_queryid" };
-    if (dryRun) { this.log(`DRY RUN — CreateTweet API ready (qid ${qid.slice(0, 8)}…), not posting`); return { posted: false, reason: "dry_run", dryRun: true }; }
+    if (!/x\.com|twitter\.com/.test(cur)) { if (!(await this._gotoChecked(HOME_URL))) return { error: "nav_failed" }; }
+    const qid = await this._graphqlQueryId(opName);
+    if (!qid) return { error: "no_queryid" };
 
-    const doPost = async (queryId) => {
+    const doCall = async (queryId) => {
+      const body = withFeatures ? { variables, features: {}, queryId } : { variables, queryId };
       const expr = `(async function(){
         var ct0=(document.cookie.match(/ct0=([^;]+)/)||[])[1]; if(!ct0) return JSON.stringify({error:"no_ct0"});
-        var body={variables:{tweet_text:${JSON.stringify(text)},dark_request:false,media:{media_entities:[],possibly_sensitive:false},semantic_annotation_ids:[]},features:{},queryId:${JSON.stringify(queryId)}};
-        try{ var r=await fetch("https://x.com/i/api/graphql/"+${JSON.stringify(queryId)}+"/CreateTweet",{method:"POST",credentials:"include",
-          headers:{"authorization":"Bearer ${X_WEB_BEARER}","x-csrf-token":ct0,"content-type":"application/json","x-twitter-auth-type":"OAuth2Session","x-twitter-active-user":"yes"},body:JSON.stringify(body)});
-          var t=await r.text(); var id=null; try{id=JSON.parse(t).data.create_tweet.tweet_results.result.rest_id;}catch(e){}
-          return JSON.stringify({status:r.status, id:id, body:id?undefined:t.slice(0,180)});
+        try{ var r=await fetch("https://x.com/i/api/graphql/"+${JSON.stringify(queryId)}+"/"+${JSON.stringify(opName)},{method:"POST",credentials:"include",
+          headers:{"authorization":"Bearer ${X_WEB_BEARER}","x-csrf-token":ct0,"content-type":"application/json","x-twitter-auth-type":"OAuth2Session","x-twitter-active-user":"yes"},body:${JSON.stringify(JSON.stringify(body))}});
+          var t=await r.text(); var j=null; try{j=JSON.parse(t);}catch(e){}
+          return JSON.stringify({status:r.status, json:j, raw:j?undefined:t.slice(0,200)});
         }catch(e){return JSON.stringify({error:e.message});}
       })()`;
       try { return JSON.parse(await this.c.evaluate(this.tab, expr, { timeout: 25000 })); }
       catch (e) { return { error: `eval:${e.message}` }; }
     };
 
-    let r = await doPost(qid);
-    if (!r.id && !r.error) {
-      // queryId may have rotated — re-extract once and retry.
-      const qid2 = await this._createTweetQueryId({ force: true });
-      if (qid2 && qid2 !== qid) r = await doPost(qid2);
+    let r = await doCall(qid);
+    if (r.status && r.status !== 200) {
+      const qid2 = await this._graphqlQueryId(opName, { force: true });
+      if (qid2 && qid2 !== qid) r = await doCall(qid2);
     }
-    if (r.id) {
-      const url = `https://x.com/${this.handle || "i/web"}/status/${r.id}`;
+    return r;
+  }
+
+  /** Flatten a mutation result's error detail into a short reason string. */
+  _apiReason(r) {
+    const msg = (r.json?.errors || []).map((e) => e.message).join("; ") || r.error || r.raw || "";
+    return `api_${r.status || "err"}:${String(msg).slice(0, 120)}`;
+  }
+
+  /**
+   * Post via X's CreateTweet GraphQL mutation (in-page, session-authed). Empty
+   * `features` is accepted by X, so there is no rotating-features maintenance.
+   * `attachmentUrl` makes the tweet a QUOTE of that status; `replyToTweetId`
+   * makes it a REPLY to that status id.
+   * @returns {Promise<{posted:boolean, url?:string, reason?:string, dryRun?:boolean}>}
+   */
+  async postViaApi(text, { dryRun = false, attachmentUrl = null, replyToTweetId = null } = {}) {
+    const cur = await this.c.tabUrl(this.tab).catch(() => "");
+    if (!/x\.com|twitter\.com/.test(cur)) { if (!(await this._gotoChecked(HOME_URL))) return { posted: false, reason: "nav_failed" }; }
+    const qid = await this._graphqlQueryId("CreateTweet");
+    if (!qid) return { posted: false, reason: "no_queryid" };
+    if (dryRun) { this.log(`DRY RUN — CreateTweet API ready (qid ${qid.slice(0, 8)}…), not posting`); return { posted: false, reason: "dry_run", dryRun: true }; }
+
+    const variables = {
+      tweet_text: text,
+      dark_request: false,
+      media: { media_entities: [], possibly_sensitive: false },
+      semantic_annotation_ids: [],
+    };
+    if (attachmentUrl) variables.attachment_url = String(attachmentUrl).split("?")[0];
+    if (replyToTweetId) variables.reply = { in_reply_to_tweet_id: String(replyToTweetId), exclude_reply_user_ids: [] };
+
+    const r = await this._graphqlMutation("CreateTweet", variables, { withFeatures: true });
+    const id = r.json?.data?.create_tweet?.tweet_results?.result?.rest_id;
+    if (id) {
+      const url = `https://x.com/${this.handle || "i/web"}/status/${id}`;
       this.log(`posted via API: ${url}`);
       return { posted: true, url };
     }
-    return { posted: false, reason: `api_${r.status || "err"}:${(r.body || r.error || "").slice(0, 120)}` };
+    return { posted: false, reason: this._apiReason(r) };
   }
 
   /**
@@ -547,7 +586,11 @@ class X {
   }
 
   /**
-   * Quote-tweet a source post with commentary.
+   * Quote-tweet a source post with commentary. Prefers the CreateTweet API with
+   * `attachment_url` (no composer → none of its duplication failure modes);
+   * falls back to the retweet-menu composer flow if the API is unavailable.
+   * X_POST_VIA_API=0 forces the composer. Either way the source page is loaded
+   * first so the mentions guard sees the real tweet.
    * @param {string} sourceUrl  https://x.com/<user>/status/<id>
    */
   async quote(sourceUrl, text, { dryRun = false, skipIfMentions = [] } = {}) {
@@ -569,6 +612,16 @@ class X {
       }, skipIfMentions).catch(() => false);
       if (mentions) return { posted: false, reason: "skipped_mentions_self" };
     }
+    if (process.env.X_POST_VIA_API !== "0") {
+      const api = await this.postViaApi(text, { dryRun, attachmentUrl: sourceUrl });
+      if (api.posted || api.dryRun) return api;
+      this.log(`API quote unavailable (${api.reason}) — falling back to composer`);
+    }
+    return this._quoteViaComposer(text, { dryRun });
+  }
+
+  /** UI-composer fallback for quote() — assumes the source permalink is already loaded. */
+  async _quoteViaComposer(text, { dryRun = false } = {}) {
     await this.c.evalFn(this.tab, () => { document.querySelector("[data-testid='retweet']")?.click(); });
     try {
       await this.c.pollFn(this.tab, "quote menu item", () => Array.from(document.querySelectorAll("[role='menuitem']")).some((i) => (i.innerText || "").trim().toLowerCase() === "quote"), { attempts: 8, interval: 1000, tag: "x" });
@@ -602,12 +655,22 @@ class X {
   }
 
   /**
-   * Reply to a tweet. If the compose/insert sequence fails (a wedged tab kills
+   * Reply to a tweet. Prefers the CreateTweet API with `reply.in_reply_to_tweet_id`
+   * (no composer → immune to the wedged-tab insert failures). Falls back to the
+   * composer flow: if the compose/insert sequence fails there (a wedged tab kills
    * CDP input even when the URL check passes — e.g. after idling through slow
    * LLM work), the tab is recycled and the sequence retried once.
+   * X_POST_VIA_API=0 forces the composer.
    * @param {string} tweetUrl  the target status URL
    */
   async reply(tweetUrl, text, { dryRun = false } = {}) {
+    const replyToTweetId = (String(tweetUrl).match(/\/status\/(\d+)/) || [])[1];
+    if (replyToTweetId && process.env.X_POST_VIA_API !== "0") {
+      const api = await this.postViaApi(text, { dryRun, replyToTweetId });
+      if (api.posted) { this.log(`replied via API: ${api.url || tweetUrl}`); return { ok: true, url: api.url || null }; }
+      if (api.dryRun) return { ok: false, reason: "dry_run", dryRun: true };
+      this.log(`API reply unavailable (${api.reason}) — falling back to composer`);
+    }
     if (!(await this._gotoChecked(tweetUrl))) return { ok: false, reason: "navigation_failed" };
     let res = await this._replyOnPage(tweetUrl, text, { dryRun });
     const retryable = ["reply_button_not_found", "compose_box_not_found", "text_insert_failed", "composer_mismatch_preposting"];
@@ -662,6 +725,51 @@ class X {
   }
 
   /**
+   * Repost (retweet) a tweet via the CreateRetweet GraphQL mutation — the same
+   * in-page authed-fetch machinery as CreateTweet. API-only: no composer is
+   * involved, so a failure is cheap to retry and there is no UI fallback.
+   * Reposting a tweet that is already reposted is treated as success.
+   * @param {string} tweetUrl  https://x.com/<user>/status/<id>
+   * @returns {Promise<{ok:boolean, reason?:string, dryRun?:boolean}>}
+   */
+  async retweet(tweetUrl, { dryRun = false } = {}) {
+    const id = (String(tweetUrl).match(/\/status\/(\d+)/) || [])[1];
+    if (!id) return { ok: false, reason: "bad_url" };
+    const cur = await this.c.tabUrl(this.tab).catch(() => "");
+    if (!/x\.com|twitter\.com/.test(cur)) { if (!(await this._gotoChecked(HOME_URL))) return { ok: false, reason: "nav_failed" }; }
+    if (dryRun) {
+      const qid = await this._graphqlQueryId("CreateRetweet");
+      if (!qid) return { ok: false, reason: "no_queryid" };
+      this.log(`DRY RUN — CreateRetweet API ready (qid ${qid.slice(0, 8)}…), not reposting`);
+      return { ok: false, reason: "dry_run", dryRun: true };
+    }
+    const r = await this._graphqlMutation("CreateRetweet", { tweet_id: id, dark_request: false });
+    if (r.json?.data?.create_retweet?.retweet_results?.result?.rest_id) {
+      this.log(`reposted: ${tweetUrl}`);
+      return { ok: true };
+    }
+    const msg = (r.json?.errors || []).map((e) => e.message).join("; ");
+    if (/already retweeted/i.test(msg)) { this.log(`already reposted: ${tweetUrl}`); return { ok: true, reason: "already_retweeted" }; }
+    return { ok: false, reason: this._apiReason(r) };
+  }
+
+  /**
+   * Undo a repost via the DeleteRetweet GraphQL mutation.
+   * @returns {Promise<{ok:boolean, reason?:string, dryRun?:boolean}>}
+   */
+  async unretweet(tweetUrl, { dryRun = false } = {}) {
+    const id = (String(tweetUrl).match(/\/status\/(\d+)/) || [])[1];
+    if (!id) return { ok: false, reason: "bad_url" };
+    if (dryRun) { this.log("DRY RUN — not un-reposting"); return { ok: false, reason: "dry_run", dryRun: true }; }
+    const r = await this._graphqlMutation("DeleteRetweet", { source_tweet_id: id, dark_request: false });
+    if (r.json?.data?.unretweet?.source_tweet_results?.result?.rest_id) {
+      this.log(`un-reposted: ${tweetUrl}`);
+      return { ok: true };
+    }
+    return { ok: false, reason: this._apiReason(r) };
+  }
+
+  /**
    * Post a thread: tweet[0] as an original, each subsequent tweet as a reply to
    * the previous one (self-thread). Confirms each tweet's URL from the profile so
    * the next reply chains to it — the same mechanism post() uses.
@@ -682,7 +790,7 @@ class X {
       if (!prev) { this.log(`thread: no URL to chain tweet${i + 1} onto — stopping (tweet1 is live)`); urls.push(null); break; }
       const r = await this.reply(prev, tweets[i], { dryRun });
       if (!r.ok) { this.log(`thread: tweet${i + 1} reply failed (${r.reason})`); urls.push(null); continue; }
-      const u = await this._confirmFromProfile(tweets[i]).catch(() => null);
+      const u = r.url || (await this._confirmFromProfile(tweets[i]).catch(() => null));
       urls.push(u || null);
       if (u) prev = u; // chain the next reply to this one; else keep the last good URL
     }
@@ -773,7 +881,7 @@ class X {
 
   /** Find one of our own tweets on the profile whose text contains `fragment`; returns its status URL or null. */
   async findOwnTweetUrl(fragment, { limit = 20 } = {}) {
-    if (!(await this._gotoChecked(`https://x.com/${this.ownHandle}`))) return null;
+    if (!(await this._gotoChecked(`https://x.com/${this.handle}`))) return null;
     await sleep(3000);
     return this.c.evalFn(this.tab, (a) => {
       const arts = Array.from(document.querySelectorAll("article")).slice(0, a.limit);
