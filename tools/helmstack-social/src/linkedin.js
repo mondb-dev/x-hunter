@@ -424,6 +424,142 @@ class LinkedIn {
     return cleared ? { ok: true } : { ok: false, reason: "submit_unconfirmed" };
   }
 
+  /**
+   * Instant-repost (reshare, no commentary) the feed post stamped `idx`.
+   *
+   * UI-DRIVEN by necessity: unlike post()/comment(), instant repost is NOT a
+   * voyager JSON endpoint. LinkedIn's current feed drives it through a
+   * Server-Driven-UI / React-Server-Component action —
+   *   POST /flagship-web/rsc-action/actions/server-request
+   *        ?sduiid=com.linkedin.sdui.feed.requests.createInstantRepost
+   * whose payload is RSC-serialized and carries a render-scoped `parentSpanId`
+   * nonce, so it can't be replayed with a same-origin fetch the way post() is.
+   * We therefore click the Repost control → the "Repost" (instant) menu item and
+   * confirm via the "Repost successful" toast. (Verified live 2026-07-16.)
+   *
+   * @param {number} idx  data-hs-idx stamped by scrapeFeed()
+   * @returns {Promise<{ok:boolean, reason?:string, dryRun?:boolean}>}
+   */
+  async reshare(idx, { dryRun = false } = {}) {
+    // Open the Repost dropdown on the target post.
+    const opened = await this._eval(
+      `var li=document.querySelector('div[data-hs-idx=\"${idx}\"]');
+       if(!li) return 'no_post';
+       li.scrollIntoView({block:'center'});
+       var b=[].slice.call(li.querySelectorAll('button')).find(function(x){ return (x.getAttribute('aria-label')||'')==='Repost'; });
+       if(!b) return 'no_repost_btn'; b.click(); return 'ok';`
+    ).catch((e) => `err:${e.message}`);
+    if (opened !== "ok") return { ok: false, reason: `open:${opened}` };
+    await sleep(2500);
+
+    // Locate the instant "Repost" item (subtext "Instantly bring …").
+    const found = await this._eval(
+      `var t=[].slice.call(document.querySelectorAll('div,span,button,li,a'))
+        .find(function(n){ return /Instantly bring/i.test(n.innerText||'') && (n.innerText||'').length<120; });
+       return t ? 'ok' : 'no_instant_item';`
+    ).catch(() => "no_instant_item");
+    if (found !== "ok") return { ok: false, reason: found };
+
+    if (dryRun) {
+      // Close the menu without publishing.
+      await this._eval(`document.body.dispatchEvent(new KeyboardEvent('keydown',{key:'Escape',bubbles:true})); return true;`).catch(() => {});
+      this.log("DRY RUN — instant-repost item located, not publishing");
+      return { ok: false, reason: "dry_run", dryRun: true };
+    }
+
+    const clicked = await this._eval(
+      `var t=[].slice.call(document.querySelectorAll('div,span,button,li,a'))
+        .find(function(n){ return /Instantly bring/i.test(n.innerText||'') && (n.innerText||'').length<120; });
+       if(!t) return 'gone';
+       (t.closest('[role=\"button\"],button,li,a,.artdeco-dropdown__item')||t).click(); return 'ok';`
+    ).catch((e) => `err:${e.message}`);
+    if (clicked !== "ok") return { ok: false, reason: `click:${clicked}` };
+
+    // Confirm via the success toast ("Repost successful. View repost."), which is
+    // transient — poll for it rather than checking once, so a slow toast isn't a
+    // false negative (which would make a caller retry and double-post).
+    for (let i = 0; i < 10; i++) {
+      await sleep(700);
+      const toast = await this._eval(
+        `var els=[].slice.call(document.querySelectorAll('[role="alert"], .artdeco-toast-item, div, span'));
+         for(var i=0;i<els.length;i++){ var t=(els[i].innerText||'').trim();
+           if(/Repost successful/i.test(t) && t.length<80) return 'ok'; }
+         return 'no_toast';`
+      ).catch(() => "no_toast");
+      if (toast === "ok") { this.log(`reshared feed post idx ${idx}`); return { ok: true }; }
+    }
+    return { ok: false, reason: "repost_unconfirmed" };
+  }
+
+  /**
+   * Delete one of our reshares from our profile's recent activity, identified by
+   * a text fragment of the reshared content. Undo for reshare() (retract a
+   * mis-amplification). The reshare's control menu → "Delete repost" is driven by
+   * REAL pointer clicks (this.c.clickAt) at the elements' rect centers: LinkedIn's
+   * control-menu button ignores a synthetic .click(), and the confirm modal
+   * ("Delete repost? … Delete") must be clicked live too. (Verified 2026-07-16.)
+   *
+   * @param {string} profileUrl  our profile URL (…/in/<vanity>/)
+   * @param {string} match       case-insensitive substring of the reshared post
+   * @returns {Promise<{ok:boolean, reason?:string, dryRun?:boolean}>}
+   */
+  async deleteReshare(profileUrl, match, { dryRun = false } = {}) {
+    const act = (profileUrl.startsWith("http") ? profileUrl : "https://www.linkedin.com" + profileUrl).replace(/\/$/, "") + "/recent-activity/all/";
+    const reEsc = String(match).replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
+    const presentJs = `(function(){
+      var items=[].slice.call(document.querySelectorAll('div[role="listitem"], .feed-shared-update-v2')).slice(0,8);
+      var idx=items.findIndex(function(it){ var t=it.innerText||''; return /reposted/i.test(t) && new RegExp(${JSON.stringify(reEsc)},'i').test(t); });
+      return JSON.stringify({rendered:items.length, present:idx>=0});
+    })()`;
+    // A just-created reshare sits at the top of recent activity, where its
+    // control-menu button is occluded by the sticky nav (~y64) after a
+    // scrollIntoView-center — clickAt then misses it. An absolute scrollTo(0,120)
+    // lands the caret at a clickable ~y117 (verified 2026-07-16); read the rect
+    // WITHOUT re-centering.
+    const caretJs = `(function(){
+      var items=[].slice.call(document.querySelectorAll('div[role="listitem"], .feed-shared-update-v2'));
+      var target=items.find(function(it){ var t=it.innerText||''; return /reposted/i.test(t) && new RegExp(${JSON.stringify(reEsc)},'i').test(t); });
+      if(!target) return "null";
+      var c=target.querySelector('button[aria-label*="control menu" i], button[aria-label*="more actions" i]');
+      if(!c) return "null"; var r=c.getBoundingClientRect();
+      return JSON.stringify({x:Math.round(r.x+r.width/2), y:Math.round(r.y+r.height/2)});
+    })()`;
+    const coordsOf = (reSrc) => `(function(){
+      var re=${reSrc};
+      var nodes=[].slice.call(document.querySelectorAll('div[role="button"],button,li,span,a,[role="menuitem"]'));
+      for(var i=0;i<nodes.length;i++){ var el=nodes[i]; var s=(el.innerText||'').trim();
+        if(re.test(s) && s.length<40){ var rc=el.getBoundingClientRect(); if(rc.width>0&&rc.height>0&&el.offsetParent!==null) return JSON.stringify({x:Math.round(rc.x+rc.width/2),y:Math.round(rc.y+rc.height/2)}); } }
+      return "null";
+    })()`;
+    const parse = (s) => (s === "null" ? null : JSON.parse(s));
+    const check = async () => {
+      await this.c.navigate(this.tab, act);
+      await this.c.waitReady(this.tab, { tag: "linkedin" }).catch(() => {});
+      let st = { rendered: 0, present: false };
+      for (let w = 0; w < 15; w++) { await sleep(1000); st = JSON.parse(await this.c.evaluate(this.tab, presentJs).catch(() => '{"rendered":0,"present":false}')); if (st.rendered) break; }
+      return st;
+    };
+
+    for (let attempt = 1; attempt <= 4; attempt++) {
+      const st = await check();
+      if (st.rendered > 0 && !st.present) return { ok: true };
+      if (!st.rendered) continue;
+      if (dryRun) { this.log("DRY RUN — reshare located on profile, not deleting"); return { ok: false, reason: "dry_run", dryRun: true }; }
+      await this.c.evaluate(this.tab, "window.scrollTo(0, 120)").catch(() => {});
+      await sleep(900);
+      const cc = parse(await this.c.evaluate(this.tab, caretJs).catch(() => "null"));
+      if (!cc) continue;
+      await this.c.clickAt(this.tab, cc.x, cc.y); await sleep(2200);
+      const dc = parse(await this.c.evaluate(this.tab, coordsOf("/^Delete repost$/i")).catch(() => "null"));
+      if (!dc) continue;
+      await this.c.clickAt(this.tab, dc.x, dc.y); await sleep(1800);
+      for (let i = 0; i < 8; i++) { const fc = parse(await this.c.evaluate(this.tab, coordsOf("/^Delete$/i")).catch(() => "null")); if (fc) { await this.c.clickAt(this.tab, fc.x, fc.y); break; } await sleep(700); }
+      await sleep(3500);
+    }
+    const fin = await check();
+    return fin.rendered > 0 && !fin.present ? { ok: true } : { ok: false, reason: "still_present" };
+  }
+
   // ── People search + networking (connect / follow) ───────────────────────────
   /**
    * Search People and return lightweight result descriptors. Name + headline are

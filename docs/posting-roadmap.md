@@ -23,13 +23,15 @@ Both are best-effort (miss → text-only, unchanged), deterministic (no extra LL
 
 ## Item 3 — LEARN repost + quote, all channels (large; the main remaining ask)
 
-Two layers. Layer 1 is done for X (quote via API + retweet action, above); LinkedIn reshare and FB share remain.
+Two layers. Layer 1 is done for X (quote via API + retweet action) and LinkedIn (UI-driven reshare, below); only FB share remains. Layer 2 (the learn-loop over what gets amplified) is still to build on top.
 
 ### Layer 1 — the actions (build per channel)
 - **X quote** — DONE (API-first, see above).
 - **X repost (retweet)** — DONE (`X.retweet`/`unretweet` + `runner/x_repost.js`, see above). Still needs an autonomous trigger: nothing selects what to repost yet (that selection is where the layer-2 loop plugs in).
-- **LinkedIn reshare** — NEW. Voyager: reshare an update via `contentcreation/normShares` with the reshared activity URN as the parent/`resharedUpdate` (reverse-engineer the exact field), or the dedicated reshare endpoint. Same JSESSIONID-CSRF fetch pattern.
-  - **Recon note (2026-07-15):** grepping the loaded LI JS bundles for the reshare field names is a DEAD END — `normShares`, `resharedUpdate`, `RESHARE*`, `parentUrn`, `reshareContext` all return **zero** literal hits even though `post()` clearly hits `normShares` (the path + field names are built dynamically, not string literals). Unlike X's `CreateTweet` queryId, there's nothing to extract statically. The reliable path is to **capture the real reshare request** (endpoint + body shape) from the HelmStack network log while performing one live reshare via the UI (then undo) — but that's a public publish action, so it needs the operator's go-ahead before running. Once the body shape is known, mirror it in a `LinkedIn.reshare(activityUrn, commentary?)` using the same JSESSIONID-CSRF voyager fetch as `post()`.
+- **LinkedIn reshare** — DONE (UI-driven), via `LinkedIn.reshare(idx)` + `LinkedIn.deleteReshare(profileUrl, match)`.
+  - **Definitive finding (2026-07-16, live capture):** an instant repost is **NOT a voyager JSON endpoint** — it fires a single Server-Driven-UI / React-Server-Component action: `POST /flagship-web/rsc-action/actions/server-request?sduiid=com.linkedin.sdui.feed.requests.createInstantRepost&parentSpanId=<nonce>`. The payload is RSC-serialized and carries a **render-scoped `parentSpanId`**, so it can't be replayed with a same-origin fetch the way `post()` is — there is no stable JSON API to mirror. (This is also why the bundle-grep for `normShares`/`resharedUpdate`/etc. found nothing: reshare doesn't use them.) Capture method that finally worked: diff `performance.getEntriesByType('resource')` before/after the reshare — main-thread `fetch`/`XHR`/`sendBeacon` interceptors all saw nothing (the app holds native refs / uses the SW).
+  - **Implementation:** `reshare(idx)` clicks the Repost control → the instant "Repost" menu item on the feed post stamped by `scrapeFeed`, and confirms via the polled "Repost successful" toast (verified live: creates a real reshare, `{ok:true}`). `deleteReshare(profileUrl, match)` retracts it from `…/recent-activity/all/`: it drives the reshare item's ⋯ menu → "Delete repost" → the "Delete repost?" confirm with **real CDP pointer clicks** (`clickAt`), because a synthetic `.click()` does NOT open LinkedIn's control menu, and the top item's caret must be pushed clear of the sticky nav first (`scrollTo(0,120)` → caret ~y117). Undo confirmed live (profile returns to zero reshares).
+  - **Known limitation:** `deleteReshare` is reliable as a **fresh, standalone** operation; running many delete cycles inside one long-lived process/tab degrades (menu stops opening) — the learn-loop should call it per-invocation, not loop it in-process.
 - **Facebook share** — NEW + HARD. FB is automation-hostile (observation-only today; trusted-CDP clicks only). Likely defer or last.
 
 ### Layer 2 — the learn-loop (mirror the LinkedIn posting loop)
@@ -40,8 +42,8 @@ Once the actions exist:
 
 ### Suggested order
 1. ~~X quote→API + X retweet action.~~ DONE.
-2. LinkedIn reshare action.
-3. Learn-loop over X repost/quote (measure via the profile), then extend to LinkedIn. Repost selection (what's worth amplifying) + the autonomous trigger for `X.retweet` live here; `logRepost` already records `source_handle`/`topic` to correlate against.
+2. ~~LinkedIn reshare action.~~ DONE (UI-driven — `LinkedIn.reshare`/`deleteReshare`).
+3. Learn-loop over X repost/quote + LinkedIn reshare (measure via each profile), and the autonomous selection of what to amplify. Repost selection + the autonomous trigger for `X.retweet`/`LinkedIn.reshare` live here; `logRepost` already records `source_handle`/`topic` to correlate against. **This is now the main remaining ask.**
 4. FB share — only if the FB automation surface improves.
 
 ## Reusable machinery already in place
