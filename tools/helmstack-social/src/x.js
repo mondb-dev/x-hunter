@@ -101,9 +101,16 @@ class X {
   }
 
   async gotoHome() {
-    await this.c.navigate(this.tab, HOME_URL);
-    await this.c.waitReady(this.tab, { tag: "x" });
-    await sleep(2500);
+    // Use the checked navigation (verifies landing, recycles a wedged tab) rather
+    // than a bare navigate: a post attempt leaves the tab on /compose/post with an
+    // open composer, and if that navigation snaps back (the wedged-tab bug) the
+    // NEXT post would run on the stuck compose page — its composer "won't clear",
+    // so every post aborts until the tab is manually closed. _gotoChecked recycles
+    // the tab instead, so posting self-heals from a stuck compose state.
+    if (!(await this._gotoChecked(HOME_URL))) {
+      this.log("could not land on /home — proceeding (compose-box poll will guard)");
+    }
+    await sleep(2000);
   }
 
   /** Close the current tab and open a fresh one at `url` (reuses an exact-URL match). */
@@ -195,6 +202,30 @@ class X {
   }
 
   /**
+   * Hard-discard whatever is in the composer AND X's persisted draft, closing any
+   * open compose modal. CRITICAL: when an insert aborts, X saves the typed text as
+   * a DRAFT and restores it into the NEXT compose cycle — where fresh text piles
+   * onto it. That is how two unrelated tweets + warm-up "." dots end up stacked and
+   * multiplied in one posted tweet, even though every attempt logged
+   * `text_insert_failed`. So every abort path must call this: an empty draft can't
+   * accumulate or auto-post.
+   */
+  async _discardComposer() {
+    await this._clearComposer().catch(() => {});               // inline-composer case
+    // Modal case: Escape raises X's "Save / Discard" sheet — click Discard.
+    await this.c.pressKey(this.tab, { key: "Escape", code: "Escape", keyCode: 27 }).catch(() => {});
+    await sleep(600);
+    const discarded = await this.c.evalFn(this.tab, () => {
+      const btns = Array.from(document.querySelectorAll('[data-testid="confirmationSheetConfirm"],[role="button"],button'));
+      const d = btns.find((b) => /^(discard|delete)$/i.test((b.innerText || "").trim()));
+      if (d) { d.click(); return true; }
+      return false;
+    }).catch(() => false);
+    await sleep(600);
+    return discarded;
+  }
+
+  /**
    * Insert text into the (already-open) composer and verify it matches.
    * Input.insertText quirks (all empirically observed against X's composer):
    * - a payload containing "scheme://" is dropped ENTIRELY — URLs must be
@@ -211,16 +242,22 @@ class X {
     await humanDelay(1500, 3000);
     // Warm up the input channel: the first insertText into a fresh modal is
     // silently buffered (it flushes, doubled, with a later call). Poke with a
-    // probe char until something visibly registers, then clear it.
-    for (let t = 0; t < 4; t++) {
-      await this.c.insertText(this.tab, ".").catch(() => {});
-      await sleep(400);
-      const seen = await this.c.evalFn(this.tab, (sel) => { const e = document.querySelector(sel); return e ? e.innerText.trim().length > 0 : false; }, COMPOSE_BOX);
-      if (seen) break;
+    // probe char until something visibly registers, then clear it. ONLY when the
+    // composer is empty — if a draft was restored, the channel is already proven
+    // and probing would just stamp a stray "." onto that draft (the "....." seen
+    // between stacked tweets), which then rides along if a later clear misses.
+    const hasDraft = await this.c.evalFn(this.tab, (sel) => { const e = document.querySelector(sel); return e ? e.innerText.trim().length > 0 : false; }, COMPOSE_BOX).catch(() => false);
+    if (!hasDraft) {
+      for (let t = 0; t < 4; t++) {
+        await this.c.insertText(this.tab, ".").catch(() => {});
+        await sleep(400);
+        const seen = await this.c.evalFn(this.tab, (sel) => { const e = document.querySelector(sel); return e ? e.innerText.trim().length > 0 : false; }, COMPOSE_BOX);
+        if (seen) break;
+      }
     }
     // Never insert into a non-empty composer — leftover text makes insertText
     // APPEND, stacking duplicate copies (the "…fact.EU announces…" ×4 bug).
-    if (!(await this._clearComposer())) { this.log("composer would not clear before insert — aborting (avoids duplication)"); return false; }
+    if (!(await this._clearComposer())) { this.log("composer would not clear before insert — discarding draft + aborting"); await this._discardComposer(); return false; }
     for (let attempt = 1; attempt <= 3; attempt++) {
       await this._focusComposer();
       await sleep(300);
@@ -266,8 +303,37 @@ class X {
       this.log(`text verify miss ${attempt}/3 (${(got || "").trim().length}/${text.length})`);
       // Must fully clear before retrying, or the next insert appends onto the
       // miss and compounds into duplicated text. If it won't clear, abort.
-      if (!(await this._clearComposer())) { this.log("composer would not clear after miss — aborting (avoids duplication)"); return false; }
+      if (!(await this._clearComposer())) { this.log("composer would not clear after miss — discarding draft + aborting"); await this._discardComposer(); return false; }
     }
+    // All attempts missed: the text landed somewhere the verifier can't see (a
+    // stray modal / restored draft). Discard so it can't accumulate or auto-post.
+    this.log("insert unverified after 3 attempts — discarding draft");
+    await this._discardComposer();
+    return false;
+  }
+
+  /**
+   * Final anti-duplication guard, run immediately before clicking Post.
+   * `_insertVerified` confirms the composer at verify time, but X holds the last
+   * insert in a buffer that flushes on the NEXT input event — so a duplicate can
+   * flush during the human delay / post-button polling that follows, doubling or
+   * tripling the text after it was verified. This re-reads the composer as late as
+   * possible: if it drifted, it clears + reinserts once, and returns false (caller
+   * aborts) if it STILL doesn't exactly match — we never publish doubled text.
+   * @returns {Promise<boolean>} safe to post
+   */
+  async _settleComposer(text) {
+    const safe = toComposerSafe(text);
+    const read = async () => norm(await this.c.evalFn(this.tab, (sel) => { const e = document.querySelector(sel); return e ? e.innerText : ""; }, COMPOSE_BOX).catch(() => ""));
+    await sleep(1200); // let any buffered flush land before the final check
+    if (await read() === norm(safe)) return true;
+    this.log("composer drifted after verify (late buffer flush) — reinserting once");
+    if (!(await this._clearComposer())) { this.log("composer would not clear pre-post — aborting"); return false; }
+    if (!(await this._insertVerified(safe))) return false;
+    await sleep(1200);
+    if ((await read()) === norm(safe)) return true;
+    this.log("composer still mismatched pre-post — discarding draft + aborting to avoid duplicate");
+    await this._discardComposer();
     return false;
   }
 
@@ -340,6 +406,7 @@ class X {
     }
 
     await humanDelay(1500, 3000);
+    if (!(await this._settleComposer(text))) return { posted: false, reason: "composer_mismatch_preposting" };
     await this._clickPost();
     await sleep(5000);
     const post2 = await this._toast();
@@ -400,6 +467,7 @@ class X {
     }
 
     await humanDelay(1500, 3000);
+    if (!(await this._settleComposer(text))) return { posted: false, reason: "composer_mismatch_preposting" };
     await this._clickPost();
     await sleep(5000);
     const url = await this._confirmFromProfile(text);
@@ -416,7 +484,7 @@ class X {
   async reply(tweetUrl, text, { dryRun = false } = {}) {
     if (!(await this._gotoChecked(tweetUrl))) return { ok: false, reason: "navigation_failed" };
     let res = await this._replyOnPage(tweetUrl, text, { dryRun });
-    const retryable = ["reply_button_not_found", "compose_box_not_found", "text_insert_failed"];
+    const retryable = ["reply_button_not_found", "compose_box_not_found", "text_insert_failed", "composer_mismatch_preposting"];
     if (!res.ok && !res.dryRun && retryable.includes(res.reason)) {
       this.log(`reply attempt failed (${res.reason}) — recycling tab and retrying once`);
       await this._freshTab(tweetUrl);
@@ -459,6 +527,7 @@ class X {
     }
 
     await humanDelay(1500, 3000);
+    if (!(await this._settleComposer(text))) return { ok: false, reason: "composer_mismatch_preposting" };
     await this._clickPost();
     await sleep(4000);
     const post2 = await this._toast();
