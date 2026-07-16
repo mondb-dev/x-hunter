@@ -54,15 +54,25 @@ Note (live-validated): `CreateRetweet` must be sent WITHOUT a `features` field
 now retries once on transient 404/5xx (not on 400/401/403/429, so posting can't
 double-fire). `retweet`/`unretweet` verified live (profile confirmed clean after undo).
 
-**Still to wire:**
-- **LinkedIn amplify trigger** — the parallel of `x_amplify` for reshare: scrape feed → score → `pickAmplifyTarget` → `LinkedIn.reshare(idx)` → tag. Needs the reshare's own URL captured for measurement (the UI `reshare()` doesn't return one — read it back from recent-activity, like `deleteReshare` locates it) so it can be tagged `measurable:true` and scored by `amplify_measure`.
-- **X quote-with-commentary as an amplify technique** (currently only bare repost is auto-fired; quote earns richer engagement but needs composed commentary + the quote API path already built).
+**LinkedIn amplify trigger — DONE** (`runner/linkedin_amplify.js`, scheduled 8h): the
+parallel of `x_amplify`. Scrapes the feed → scores each candidate (LinkedIn-tuned
+scorer + shared guards) AND learned source value → `pickAmplifyTarget` → `LinkedIn.reshare(idx)`
+→ reads the reshare's own permalink back (`LinkedIn.latestReshareUrl`, via the
+recent-activity `data-urn`) → tags it `measurable:true`. One reshare/run, ledgered.
+Live-verified end-to-end (reshare published, URL captured, tagged; then cleaned up).
+Note: `scrapeFeed`'s author field is empty against LinkedIn's current obfuscated
+DOM, so the script parses the author from the feed-card text (unit-tested on the
+real "Recommended for you" / "reposted this" / "likes this" formats).
+
+**Still to wire (smaller follow-ups):**
+- **X quote-with-commentary as an amplify technique** — `x_amplify` currently fires only a bare repost; a quote earns richer (measurable) engagement but needs composed commentary on top of the already-built quote API path.
+- **Fix `scrapeFeed` author extraction** in the shared engine (obfuscated LinkedIn DOM) so the text-parse fallback in `linkedin_amplify` isn't needed and `linkedin_engage`/`collect` get real authors too.
 
 ### Suggested order
 1. ~~X quote→API + X retweet action.~~ DONE.
 2. ~~LinkedIn reshare action.~~ DONE (UI-driven — `LinkedIn.reshare`/`deleteReshare`).
-3. ~~Learn-loop core + autonomous X trigger.~~ DONE (`lib/amplify_performance.js`, `amplify_measure.js`, `x_amplify.js`). The X amplification loop is live end-to-end.
-4. LinkedIn amplify trigger (parallel of `x_amplify`) — the main open item now.
+3. ~~Learn-loop core + autonomous X trigger.~~ DONE.
+4. ~~LinkedIn amplify trigger.~~ DONE (`linkedin_amplify.js` + `LinkedIn.latestReshareUrl`). **Both channels' amplification loops are now live end-to-end.**
 5. FB share — only if the FB automation surface improves.
 
 ## Reusable machinery already in place
