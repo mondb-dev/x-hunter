@@ -5,8 +5,10 @@
  * LinkedIn posting needs a content source (unlike tweets, which the TWEET cycle
  * writes). This pulls a collective content pack across ALL of Sebastian's signals
  * (journal, X posts, engagements, articles, collected news, live X timeline, live
- * LinkedIn feed, live web search — see lib/content_sources.js) and synthesises ONE
- * long-form LinkedIn post using a LinkedIn-specific placement strategy.
+ * LinkedIn feed, live web search — see lib/content_sources.js), PLANS the post's
+ * shape first (lib/linkedin_plan: structure, opening, length, tone, media — so
+ * posts read organically instead of stamped from one template), then composes
+ * the prose to that plan.
  *
  * Enqueues the finished post into the channel-agnostic outbox (lib/outbox) as a
  * pending 'linkedin' item; linkedin_post.js drains it. No more single-file draft
@@ -27,16 +29,20 @@ const ROOT = path.resolve(__dirname, "..");
 const VOCATION = path.join(ROOT, "vocation.md");
 const log = (m) => console.log(`[linkedin_draft] ${m}`);
 
-// LinkedIn is a professional network, not X. The placement strategy shapes the
-// same underlying vocation into content that lands with LinkedIn's audience
-// (media, policy, comms, tech, information-integrity professionals).
-const LINKEDIN_STRATEGY = `LINKEDIN PLACEMENT STRATEGY — how to shape this content for LinkedIn (NOT X):
+// LinkedIn is a professional network, not X. The VOICE rules below are always
+// enforced; the SHAPE of each post (structure, opening, length, ending, media)
+// is decided per-post by the plan stage (lib/linkedin_plan) so consecutive
+// posts don't share one skeleton. The fixed-format lines survive only in the
+// fallback template used when planning fails.
+const LINKEDIN_VOICE = `LINKEDIN PLACEMENT — how to shape this content for LinkedIn (NOT X):
 - Audience: professionals in media, policy, communications, technology, and information integrity. They reward analysis and credibility, not hot takes.
 - Pick ONE theme that recurs across the source material below (cross-source grounding beats a single feed). Prefer a theme where the journal, engagements, and live feeds point the same way.
 - Frame it as a SYSTEMIC insight, not a reaction: connect a specific, current example (name the actor, the claim, the number, the event — from the sources) to the broader mechanism of strategic narrative construction / manufactured consent. Move from the concrete instance to the pattern.
 - Offer something useful: a lens, a distinction, or a question a professional could apply to their own field. Sebastian's value is making manipulation legible, not scoring points.
-- Format: first person, 150-350 words, 2-4 short plain paragraphs. Measured and analytical in tone.
-- NO hashtags, NO emojis, NO thread markers ("1/n", "🧵"), NO X-style punchy one-liners. Open with the insight (no "Excited to share"), close with a genuine question that invites professional discussion.`;
+- First person. NO hashtags, NO emojis, NO thread markers ("1/n", "🧵"), NO X-style punchy one-liners, no "Excited to share".`;
+
+// Fallback shape when the plan stage is unavailable — the old fixed template.
+const FALLBACK_FORMAT = `- Format: 150-350 words, 2-4 short plain paragraphs. Measured and analytical in tone. Open with the insight, close with a genuine question that invites professional discussion.`;
 
 (async () => {
   let vocation = "";
@@ -64,19 +70,51 @@ const LINKEDIN_STRATEGY = `LINKEDIN PLACEMENT STRATEGY — how to shape this con
   let recallBlock = "";
   try { recallBlock = await require("./lib/recall").recallText(pack.query, { maxChars: 1200 }); } catch {}
 
-  // Test-and-learn: pick an opening TECHNIQUE (explore/exploit on measured
-  // engagement) and feed the track record back into the prompt.
-  const technique = perf.pickTechnique();
   const perfSummary = perf.summaryText();
-  log(`technique: ${technique.id} (${technique.label})`);
+
+  // Plan first: decide how THIS post should be shaped — structure, opening,
+  // length, tone, media — from the material, the measured track record, and the
+  // shape of the last few posts. Falls back to the fixed template on any failure.
+  let plan = null;
+  try {
+    const { planPost } = require("./lib/linkedin_plan");
+    plan = await planPost({
+      packText: pack.text,
+      perfSummary,
+      recentPosts: outbox.recentPosted("linkedin", { limit: 3 }),
+    });
+  } catch (e) { log(`plan stage failed (${e.message}) — using fallback template`); }
+
+  // The technique id feeds the test-and-learn loop (linkedin_measure scores it).
+  // With a plan, the planner's choice is recorded; without one, epsilon-greedy
+  // pickTechnique() drives the old fixed-template prompt.
+  let technique = null;
+  if (plan) {
+    log(`plan: opening=${plan.opening_technique} ~${plan.length_words}w media=${plan.media}${plan.media_rationale ? ` (${plan.media_rationale})` : ""}`);
+    log(`plan structure: ${plan.structure}`);
+  } else {
+    technique = perf.pickTechnique();
+    log(`no plan — fallback technique: ${technique.id} (${technique.label})`);
+  }
+  const techniqueId = plan ? plan.opening_technique : technique.id;
+
+  const shapeBlock = plan
+    ? `YOUR POST PLAN — you decided this shape for this specific material; follow it:
+- Theme: ${plan.theme || "(as implied by the structure)"}
+- Structure: ${plan.structure}
+- Opening move: ${plan.opening}
+- Length: about ${plan.length_words} words
+- Tone: ${plan.tone}
+End the post the way the structure says — do NOT bolt on a closing question unless the plan calls for one.`
+    : `${FALLBACK_FORMAT}\n\nOPENING TECHNIQUE TO USE FOR THIS POST: ${technique.instruction}`;
 
   const prompt =
 `You are Sebastian Hunter writing a LinkedIn post. Your vocation and voice:
 ${vocation}
 
-${LINKEDIN_STRATEGY}
+${LINKEDIN_VOICE}
 
-OPENING TECHNIQUE TO USE FOR THIS POST: ${technique.instruction}
+${shapeBlock}
 ${perfSummary ? `\n${perfSummary}\n` : ""}
 YOUR CURRENT BELIEF AXES (your mapped positions — the post must argue consistently with these; lean on the highest-confidence axis that fits the theme):
 ${axesBlock || "(unavailable)"}
@@ -87,7 +125,7 @@ ${recallBlock || "(none)"}
 SOURCE MATERIAL (draw the theme from across these — cite specifics):
 ${pack.text}
 
-Write ONE original LinkedIn post following the strategy above and the opening technique. Return ONLY the post text.`;
+Write ONE original LinkedIn post following the voice rules and the ${plan ? "post plan" : "format and opening technique"} above. Return ONLY the post text.`;
 
   try {
     const raw = await compose(prompt, { maxTokens: 1000, model: "gemini-2.5-flash", thinkingBudget: 0, tag: "linkedin_draft" });
@@ -126,20 +164,32 @@ Write ONE original LinkedIn post following the strategy above and the opening te
       log(`coherence gate unavailable (${e.message}) — proceeding`);
     }
 
-    // Image auto-trigger: pick a lead source-with-image from the same content
-    // pack this post was composed from; linkedin_post.js copies its og:image +
-    // attributes it. Best-effort — a miss just means a text-only post.
-    // IMAGE_AUTO_TRIGGER=0 disables.
+    // Media follows the plan (no plan → old behavior of trying an image).
+    //   image → linkedin_post.js copies the lead source's og:image + attributes it.
+    //   link  → append the lead source URL so LinkedIn renders a preview card.
+    //   none  → clean text-only post.
+    // pickLeadSource coherence-gates the source against the post either way; a
+    // miss just means text-only. IMAGE_AUTO_TRIGGER=0 disables all media.
     let imageSource = null;
-    if (process.env.IMAGE_AUTO_TRIGGER !== "0") {
+    let linkSource = null;
+    const wantMedia = plan ? plan.media : "image";
+    if (process.env.IMAGE_AUTO_TRIGGER !== "0" && wantMedia !== "none") {
       try {
         const { pickLeadSource } = require("./lib/lead_source_image");
         const lead = await pickLeadSource(text, pack.text);
-        if (lead) { imageSource = lead.url; log(`image source set: ${lead.source} (${lead.url})`); }
-      } catch (e) { log(`image auto-trigger skipped: ${e.message}`); }
+        if (lead && wantMedia === "image") { imageSource = lead.url; log(`image source set: ${lead.source} (${lead.url})`); }
+        else if (lead && wantMedia === "link") { linkSource = lead.url; text = `${text}\n\n${lead.url}`; log(`link preview set: ${lead.source} (${lead.url})`); }
+        else log(`no coherent lead source for media=${wantMedia} — posting text only`);
+      } catch (e) { log(`media auto-trigger skipped: ${e.message}`); }
     }
 
-    const { id, deduped } = outbox.enqueue({ channel: "linkedin", kind: "post", text, meta: { cycle: Number.parseInt(process.env.CYCLE_NUMBER || "", 10) || null, technique: technique.id, ...(imageSource ? { image_source: imageSource } : {}) } });
+    const { id, deduped } = outbox.enqueue({ channel: "linkedin", kind: "post", text, meta: {
+      cycle: Number.parseInt(process.env.CYCLE_NUMBER || "", 10) || null,
+      technique: techniqueId,
+      ...(plan ? { planned: true, media: wantMedia, structure: plan.structure } : {}),
+      ...(imageSource ? { image_source: imageSource } : {}),
+      ...(linkSource ? { link_source: linkSource } : {}),
+    } });
     log(deduped ? `identical post already queued (outbox #${id}) — not re-queuing` : `enqueued post to outbox #${id} (${text.length} chars)`);
     process.exit(0);
   } catch (err) {
