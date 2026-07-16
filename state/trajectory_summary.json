@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-15T20:24:59.399Z",
+  "generated_at": "2026-07-15T23:25:08.071Z",
   "windows": [
     "1d",
     "3d",
@@ -30,21 +30,21 @@
     },
     "axis_power_accountability": {
       "current": {
-        "score": -0.2102,
+        "score": -0.2125,
         "confidence": 0.95
       },
       "1d": {
-        "score_delta": -0.0189,
+        "score_delta": -0.0212,
         "conf_delta": 0,
-        "direction": "→"
+        "direction": "↘"
       },
       "3d": {
-        "score_delta": -0.0333,
+        "score_delta": -0.0356,
         "conf_delta": 0,
         "direction": "↘"
       },
       "7d": {
-        "score_delta": -0.093,
+        "score_delta": -0.0953,
         "conf_delta": 0,
         "direction": "↘"
       }
@@ -136,21 +136,21 @@
     "axis_ai_societal_impact_v1": {
       "current": {
         "score": 0.3087,
-        "confidence": 0.9499
+        "confidence": 0.9479
       },
       "1d": {
         "score_delta": 0.05,
-        "conf_delta": 0,
+        "conf_delta": -0.002,
         "direction": "↗"
       },
       "3d": {
         "score_delta": 0.1,
-        "conf_delta": 0.008,
+        "conf_delta": 0.006,
         "direction": "↗"
       },
       "7d": {
         "score_delta": 0.15,
-        "conf_delta": 0,
+        "conf_delta": -0.002,
         "direction": "↗"
       }
     },
@@ -303,23 +303,23 @@
     },
     "axis_discourse_order_polarization_v1": {
       "current": {
-        "score": 0.4774,
-        "confidence": 0.8646
+        "score": 0.5274,
+        "confidence": 0.8871
       },
       "1d": {
-        "score_delta": 0,
-        "conf_delta": -0.002,
-        "direction": "→"
+        "score_delta": 0.05,
+        "conf_delta": 0.0205,
+        "direction": "↗"
       },
       "3d": {
-        "score_delta": 0,
-        "conf_delta": -0.006,
-        "direction": "→"
+        "score_delta": 0.05,
+        "conf_delta": 0.0165,
+        "direction": "↗"
       },
       "7d": {
-        "score_delta": 0,
-        "conf_delta": -0.014,
-        "direction": "→"
+        "score_delta": 0.05,
+        "conf_delta": 0.0085,
+        "direction": "↗"
       }
     },
     "axis_global_economic_stability_v1": {
@@ -745,21 +745,21 @@
     "axis_immigration_policy_v_national_control_v1": {
       "current": {
         "score": 0.8672,
-        "confidence": 0.9027
+        "confidence": 0.9007
       },
       "1d": {
         "score_delta": 0.0041,
-        "conf_delta": 0.0188,
+        "conf_delta": 0.0168,
         "direction": "→"
       },
       "3d": {
         "score_delta": 0.0041,
-        "conf_delta": 0.0148,
+        "conf_delta": 0.0128,
         "direction": "→"
       },
       "7d": {
         "score_delta": 0.0041,
-        "conf_delta": 0.0068,
+        "conf_delta": 0.0048,
         "direction": "→"
       }
     },
@@ -787,21 +787,21 @@
     "axis_geopolitical_control_narratives": {
       "current": {
         "score": 0.3,
-        "confidence": 0.1941
+        "confidence": 0.1921
       },
       "1d": {
         "score_delta": 0.0552,
-        "conf_delta": 0.0219,
+        "conf_delta": 0.0199,
         "direction": "↗"
       },
       "3d": {
         "score_delta": 0.1,
-        "conf_delta": 0.0676,
+        "conf_delta": 0.0656,
         "direction": "↗"
       },
       "7d": {
         "score_delta": 0.2,
-        "conf_delta": 0.1473,
+        "conf_delta": 0.1453,
         "direction": "↗"
       }
     },
@@ -904,13 +904,13 @@
     },
     "axis_procedural_governance_v1": {
       "current": {
-        "score": -0.05,
-        "confidence": 0.0823
+        "score": -0.1,
+        "confidence": 0.1106
       },
       "1d": {
-        "score_delta": 0,
-        "conf_delta": -0.002,
-        "direction": "→"
+        "score_delta": -0.05,
+        "conf_delta": 0.0263,
+        "direction": "↘"
       },
       "3d": null,
       "7d": null
@@ -948,6 +948,7 @@
     "axis_ph_geopolitics_wps_v1",
     "axis_ai_societal_impact_v1",
     "axis_media_integrity_v1",
+    "axis_discourse_order_polarization_v1",
     "axis_national_sovereignty_v_intl_law_v1",
     "axis_global_power_realignments_v1",
     "axis_environmental_policy_v_economic_v1",
