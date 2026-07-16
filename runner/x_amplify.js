@@ -23,7 +23,7 @@ const { HelmStackClient, X } = require("../tools/helmstack-social/src");
 const { isXSuppressed } = require("./lib/x_control");
 const { loadAxisKeywords, makeScorer } = require("./lib/content_relevance");
 const amplify = require("./lib/amplify_performance");
-const { logRepost } = require("./posts_log");
+const { logRepost, logQuote } = require("./posts_log");
 
 const ROOT = path.resolve(__dirname, "..");
 const LEDGER = path.join(ROOT, "state", "x_amplified.json");
@@ -33,11 +33,41 @@ const DRY_RUN = process.env.HELMSTACK_DRY_RUN === "1";
 const MAX = Number.parseInt(process.env.X_AMPLIFY_MAX || "1", 10);
 const RELEVANCE_MIN = Number.parseInt(process.env.X_AMPLIFY_RELEVANCE_MIN || "2", 10);
 const SCRAPE = Number.parseInt(process.env.X_AMPLIFY_SCRAPE || "20", 10);
+// Quote-with-commentary is a richer, MEASURABLE amplification (its own tweet earns
+// engagement) but heavier (an LLM compose + gates), so it's used only for squarely
+// on-topic posts and only some of the time; otherwise a bare repost. QUOTE_PROB=0
+// disables quoting entirely (always bare repost).
+const QUOTE_MIN_RELEVANCE = Number.parseInt(process.env.X_AMPLIFY_QUOTE_MIN_RELEVANCE || "3", 10);
+const QUOTE_PROB = Number.parseFloat(process.env.X_AMPLIFY_QUOTE_PROB || "0.4");
 const OWN_HANDLE = "SebastianHunts";
 const log = (m) => console.log(`[x_amplify] ${m}`);
 
 function loadLedger() { try { return new Set(JSON.parse(fs.readFileSync(LEDGER, "utf-8")).keys); } catch { return new Set(); } }
 function saveLedger(seen) { try { fs.writeFileSync(LEDGER, JSON.stringify({ keys: [...seen].slice(-1000) }, null, 2)); } catch {} }
+
+// Compose short on-voice commentary for a quote-tweet amplification (gated by
+// voice_filter + fact-check). Returns the text or null (→ caller bare-reposts).
+async function composeCommentary(post) {
+  const { compose } = require("./lib/compose");
+  const { passOutbound } = require("./lib/outbound_gates");
+  let persona = "";
+  try {
+    const { buildPersona, buildCoreContext } = require("./lib/sebastian_respond");
+    persona = buildPersona("reply") + "\n\n" + buildCoreContext({ maxAxes: 6, journalCount: 1, journalChars: 300, includeClaims: true });
+  } catch { persona = "You are Sebastian Hunter, mapping how narratives are constructed in public discourse. Direct, specific, evidence-first."; }
+
+  const prompt = persona +
+    `\n\nCURRENT DATE: ${new Date().toISOString().slice(0, 10)}. Do not rely on training data for current officeholders.\n` +
+    `\nYou are QUOTE-TWEETING this post by @${post.handle} to amplify it with your own sharp framing (the original is attached below the quote, so don't restate it):\n"""\n${(post.text || "").slice(0, 500)}\n"""\n\n` +
+    `Write a single quote-tweet comment (max 240 chars) that adds ONE specific angle — the pattern it fits, the tension it exposes, the number/actor that matters. Direct and confident; no "interesting", no hedging; don't start with "I". If you can't add something genuinely worth saying, return SKIP.\n\nReturn ONLY the comment text.`;
+
+  try {
+    const raw = await compose(prompt, { maxTokens: 300, model: "gemini-2.5-flash", thinkingBudget: 0, tag: "x_amplify_quote" });
+    const gated = await passOutbound(raw, { gates: ["voice", "factcheck"], maxLen: 240, tag: "x_amplify_quote" });
+    if (!gated.ok) { log(`quote commentary gate rejected: ${gated.reason}`); return null; }
+    return gated.text;
+  } catch (e) { log(`quote commentary failed: ${e.message}`); return null; }
+}
 
 (async () => {
   if (isXSuppressed("repost")) { log("X amplification suppression active — skipping"); process.exit(0); }
@@ -83,19 +113,44 @@ function saveLedger(seen) { try { fs.writeFileSync(LEDGER, JSON.stringify({ keys
       // best-relevance post from the chosen source
       const pool = candidates.filter((c) => c.sourceHandle === handle).map((c) => c.post).sort((a, b) => b.relevance - a.relevance);
       const target = pool[0];
-      log(`pick: @${handle} (${choice.reason}) — relevance ${target.relevance.toFixed(1)} — ${target.url}`);
+      const srcUrl = target.url.split("?")[0];
+
+      // Technique: quote-with-commentary for squarely-on-topic posts, sometimes;
+      // else a bare repost. Quote needs the 'quote' suppression to be off.
+      const wantQuote = QUOTE_PROB > 0 && target.relevance >= QUOTE_MIN_RELEVANCE
+        && Math.random() < QUOTE_PROB && !isXSuppressed("quote");
+      log(`pick: @${handle} (${choice.reason}) — relevance ${target.relevance.toFixed(1)} — ${wantQuote ? "quote" : "repost"} — ${target.url}`);
 
       if (DRY_RUN) {
-        log(`DRY RUN — would repost ${target.url}`);
-      } else {
+        log(`DRY RUN — would ${wantQuote ? "quote" : "repost"} ${target.url}`);
+        for (let j = candidates.length - 1; j >= 0; j--) if (candidates[j].sourceHandle === handle) candidates.splice(j, 1);
+        continue;
+      }
+
+      // Try the quote path first if selected; fall back to bare repost if the
+      // commentary can't be composed/gated or the quote fails to post.
+      let done = false;
+      if (wantQuote) {
+        const commentary = await composeCommentary(target);
+        if (commentary) {
+          const q = await x.quote(srcUrl, commentary, { dryRun: false, skipIfMentions: [OWN_HANDLE] });
+          if (q.posted && q.url) {
+            seen.add(target.tweetId);
+            logQuote({ content: commentary, source_url: srcUrl, tweet_url: q.url, cycle: CYCLE });
+            amplify.recordAmplification(q.url, { channel: "x", sourceHandle: handle, technique: "quote", sourceUrl: srcUrl, measurable: true });
+            log(`amplified (quote) @${handle}: ${q.url}`);
+            amplified++; done = true;
+          } else { log(`quote failed (${q.reason || "no_url"}) — falling back to repost`); }
+        } else { log("no commentary — falling back to repost"); }
+      }
+      if (!done) {
         const res = await x.retweet(target.url, { dryRun: false });
         if (!res.ok) { log(`repost failed (${res.reason}) — trying next`); }
         else {
           seen.add(target.tweetId);
-          const srcUrl = target.url.split("?")[0];
           logRepost({ source_url: srcUrl, source_handle: handle, topic: null });
           amplify.recordAmplification(`repost:${srcUrl}`, { channel: "x", sourceHandle: handle, technique: "repost", sourceUrl: srcUrl, measurable: false });
-          log(`amplified @${handle}: ${srcUrl}`);
+          log(`amplified (repost) @${handle}: ${srcUrl}`);
           amplified++;
         }
       }

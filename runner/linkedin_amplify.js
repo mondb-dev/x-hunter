@@ -37,19 +37,6 @@ const log = (m) => console.log(`[linkedin_amplify] ${m}`);
 function loadLedger() { try { return new Set(JSON.parse(fs.readFileSync(LEDGER, "utf-8")).keys); } catch { return new Set(); } }
 function saveLedger(seen) { try { fs.writeFileSync(LEDGER, JSON.stringify({ keys: [...seen].slice(-1000) }, null, 2)); } catch {} }
 
-// scrapeFeed's author field is empty against LinkedIn's current obfuscated DOM,
-// but the scraped text embeds the actor name after the feed-card chrome, e.g.
-// "Feed post number 2 Recommended for you Sayash Kapoor • 3rd+ …" or
-// "Feed post Rizza Camingawan reposted this Jay Tarriela • 3rd+ …" (the reshared
-// author). Parse it out as the amplify arm; empty if unrecognizable.
-function parseAuthor(text) {
-  let t = String(text || "").replace(/\s+/g, " ").trim();
-  t = t.replace(/^Feed post( number \d+)?\s*/i, "");
-  t = t.replace(/^(Recommended for you|Promoted|.*? reposted this|.*? likes this|.*? loves this|.*? celebrates this|.*? commented on this|.*? follows)\s+/i, "");
-  const m = t.match(/^(.{2,60}?)\s*•/);
-  return m ? m[1].trim() : "";
-}
-
 // LinkedIn-tuned relevance scorer (shared guards + local-brain 0-3 rating).
 function makeScorer() {
   const { generate: llmGenerate } = require("./llm");
@@ -89,9 +76,8 @@ function makeScorer() {
     // scrapeFeed exposes one for only some posts. Use the permalink as the dedup
     // key when present, else a stable author+text fallback. Own posts are already
     // dropped by scrapeFeed's ownHandleHint filter.
-    const authorOf = (p) => (p.author || "").trim() || parseAuthor(p.text);
-    const dedupKey = (p) => p.permalink || ("li:" + authorOf(p) + ":" + (p.text || "").replace(/\s+/g, " ").trim().slice(0, 40));
-    const fresh = posts.filter((p) => authorOf(p) && (p.text || "").trim() && !seen.has(dedupKey(p)));
+    const dedupKey = (p) => p.permalink || ("li:" + (p.author || "").trim() + ":" + (p.text || "").replace(/\s+/g, " ").trim().slice(0, 40));
+    const fresh = posts.filter((p) => (p.author || "").trim() && (p.text || "").trim() && !seen.has(dedupKey(p)));
     if (!fresh.length) { log("no fresh candidates"); process.exit(0); }
 
     const scored = [];
@@ -104,7 +90,7 @@ function makeScorer() {
 
     // Bandit pick over sources (author names), then the most relevant post from
     // the chosen source.
-    const candidates = scored.map((p) => ({ sourceHandle: authorOf(p), post: p }));
+    const candidates = scored.map((p) => ({ sourceHandle: p.author, post: p }));
     const choice = amplify.pickAmplifyTarget(candidates);
     if (!choice) { log("no pick"); process.exit(0); }
     const author = choice.candidate.sourceHandle;

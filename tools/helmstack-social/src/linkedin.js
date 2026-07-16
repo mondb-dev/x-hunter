@@ -198,8 +198,20 @@ class LinkedIn {
        for(var i=0;i<items.length && out.length<${limit}; i++){
          var li=items[i];
          li.setAttribute('data-hs-idx', String(out.length));
-         var authorEl=li.querySelector('span[dir=ltr] span[aria-hidden=true]') || li.querySelector('.update-components-actor__name span[aria-hidden=true]') || li.querySelector('span[aria-hidden=true]');
-         var author=authorEl ? (authorEl.innerText||'').trim() : '';
+         // Author = the CONTENT author. LinkedIn's feed markup is obfuscated (the
+         // old .update-components-actor__* selectors return null), and for
+         // engagement-surfaced cards the top avatar is the engager, not the post
+         // author. The card text reliably reads "<reason> <Author> • <degree> …"
+         // ("… reposted this <Author>", "… likes this <Author>", "Recommended for
+         // you <Author>", or just "<Author>"), so parse the author out of it;
+         // fall back to the avatar alt ("View <Name>'s profile") for odd cards.
+         var full=(li.innerText||'').replace(/\\s+/g,' ').trim();
+         var a=full.replace(/^Feed post( number \\d+)?\\s*/i,'')
+                   .replace(/^(Recommended for you|Promoted|.*? reposted this|.*? likes this|.*? loves this|.*? celebrates this|.*? commented on this|.*? follows)\\s+/i,'');
+         var am=a.match(/^(.{2,60}?)\\s*•/);
+         var author=am?am[1].trim():'';
+         if(!author){ var imgs=li.querySelectorAll('img[alt]');
+           for(var ai=0; ai<imgs.length; ai++){ var im=(imgs[ai].getAttribute('alt')||'').match(/^View (.+?)(?:’|')s profile/i); if(im){ author=im[1].trim(); break; } } }
          var textEl=li.querySelector('.update-components-text, .feed-shared-update-v2__description, [data-test-id=main-feed-activity-card__commentary]');
          var text=textEl ? (textEl.innerText||'').trim() : (li.innerText||'').replace(/\\s+/g,' ').trim().slice(0,400);
          var likeBtn=li.querySelector('button[aria-label^=\"Reaction button state\"]');
