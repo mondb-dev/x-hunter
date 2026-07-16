@@ -1,8 +1,8 @@
 {
   "schema_version": "1.0",
-  "generated_at": "2026-07-16T08:01:38.840Z",
+  "generated_at": "2026-07-16T13:12:17.921Z",
   "method": "mechanical_registry_v1",
-  "profiled_at": "2026-07-16T08:02:22.025Z",
+  "profiled_at": "2026-07-16T13:12:22.283Z",
   "sources": [
     {
       "domain": "theguardian.com",
@@ -11,7 +11,7 @@
       "first_seen_at": "2026-03-27T23:17:00Z",
       "last_seen_at": "2026-07-13T23:01:48.746Z",
       "discovery": {
-        "distinct_urls": 395,
+        "distinct_urls": 397,
         "example_urls": [
           "https://www.theguardian.com/us-news/2026/jun/23/trump-immigration-courthouse-arrest-policy",
           "https://www.theguardian.com/us-news/2026/jun/28/ice-minnesota-defending-democracy",
@@ -21,7 +21,7 @@
         ],
         "origin_counts": {
           "ontology_evidence": 32,
-          "reading_queue": 372,
+          "reading_queue": 374,
           "journals": 71,
           "articles": 1
         },
@@ -67,7 +67,7 @@
         "breadth": {
           "score": 0.94,
           "basis": [
-            "distinct_urls:395",
+            "distinct_urls:397",
             "distinct_axes:12",
             "origin_types:4"
           ]
@@ -107,7 +107,7 @@
             "newsroom_domain_pattern",
             "article_path_seen",
             "doi_or_identifier_path_seen",
-            "distinct_urls:395",
+            "distinct_urls:397",
             "distinct_axes:12",
             "origin_types:4",
             "referring_accounts:0",
@@ -161,7 +161,7 @@
         ],
         "origin_counts": {
           "claim_tracker": 1,
-          "reading_queue": 8
+          "reading_queue": 9
         },
         "distinct_referring_accounts": 0,
         "sample_referring_accounts": [],
@@ -497,7 +497,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-07-13T12:47:16.068Z",
+        "fetched_at": "2026-07-16T13:12:19.267Z",
         "homepage_url": "https://justice.gov/",
         "example_url": "https://www.justice.gov/usao-ri/pr/two-business-executives-plead-guilty-tech-support-fraud-scheme?twclid=29h44gflnugo1w0tbpbxpo8m7s",
         "homepage_status": 200,
@@ -533,9 +533,9 @@
       "entity": "Aljazeera",
       "kind": "news",
       "first_seen_at": "2026-06-22T02:45:00Z",
-      "last_seen_at": "2026-07-16T05:25:15.884Z",
+      "last_seen_at": "2026-07-16T12:42:55.495Z",
       "discovery": {
-        "distinct_urls": 242,
+        "distinct_urls": 243,
         "example_urls": [
           "https://www.aljazeera.com/opinions/2026/6/24/south-africas-crises-will-not-be-solved-by-blaming-migrants",
           "https://www.aljazeera.com/video/newsfeed/2026/6/27/newly-released-video-exposes-henry-nowak-killers-lies?traffic_source=rss",
@@ -545,8 +545,8 @@
         ],
         "origin_counts": {
           "ontology_evidence": 134,
-          "reading_queue": 8,
-          "journals": 332
+          "reading_queue": 9,
+          "journals": 333
         },
         "distinct_referring_accounts": 0,
         "sample_referring_accounts": [],
@@ -594,7 +594,7 @@
         "breadth": {
           "score": 0.8799999999999999,
           "basis": [
-            "distinct_urls:242",
+            "distinct_urls:243",
             "distinct_axes:17",
             "origin_types:3"
           ]
@@ -633,7 +633,7 @@
           "basis": [
             "newsroom_domain_pattern",
             "article_path_seen",
-            "distinct_urls:242",
+            "distinct_urls:243",
             "distinct_axes:17",
             "origin_types:3",
             "referring_accounts:0",
@@ -681,7 +681,7 @@
       "first_seen_at": "2026-06-22T00:15:00Z",
       "last_seen_at": "2026-07-15T03:51:51.926Z",
       "discovery": {
-        "distinct_urls": 268,
+        "distinct_urls": 270,
         "example_urls": [
           "https://www.nytimes.com/2026/06/19/world/canada/frank-stronach-trial-guilty-sex-charges.html",
           "https://www.nytimes.com/2026/06/27/world/americas/mexican-officials-us-informants.html",
@@ -691,7 +691,7 @@
         ],
         "origin_counts": {
           "ontology_evidence": 8,
-          "reading_queue": 271,
+          "reading_queue": 273,
           "journals": 22
         },
         "distinct_referring_accounts": 0,
@@ -728,7 +728,7 @@
         "breadth": {
           "score": 0.8216666666666665,
           "basis": [
-            "distinct_urls:268",
+            "distinct_urls:270",
             "distinct_axes:5",
             "origin_types:3"
           ]
@@ -767,7 +767,7 @@
           "basis": [
             "newsroom_domain_pattern",
             "article_path_seen",
-            "distinct_urls:268",
+            "distinct_urls:270",
             "distinct_axes:5",
             "origin_types:3",
             "referring_accounts:0",
@@ -1068,7 +1068,7 @@
           "https://www.house.gov/"
         ],
         "origin_counts": {
-          "reading_queue": 8,
+          "reading_queue": 9,
           "journals": 1
         },
         "distinct_referring_accounts": 0,
@@ -1189,7 +1189,7 @@
           "http://trumprx.gov/"
         ],
         "origin_counts": {
-          "reading_queue": 8,
+          "reading_queue": 9,
           "journals": 1
         },
         "distinct_referring_accounts": 0,
@@ -1267,7 +1267,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-07-13T12:47:17.943Z",
+        "fetched_at": "2026-07-16T13:12:19.720Z",
         "homepage_url": "https://trumprx.gov/",
         "example_url": "http://trumprx.gov/",
         "homepage_status": 200,
@@ -1305,7 +1305,7 @@
       "first_seen_at": "2026-06-26T07:05:00Z",
       "last_seen_at": "2026-07-11T20:57:02.247Z",
       "discovery": {
-        "distinct_urls": 218,
+        "distinct_urls": 220,
         "example_urls": [
           "https://www.bbc.co.uk/news/articles/cn8qxz6qypyo",
           "https://www.bbc.co.uk/news/articles/cn075j04pnyo?at_medium=RSS&amp;at_campaign=rss",
@@ -1315,7 +1315,7 @@
         ],
         "origin_counts": {
           "ontology_evidence": 4,
-          "reading_queue": 222,
+          "reading_queue": 224,
           "journals": 11
         },
         "distinct_referring_accounts": 0,
@@ -1349,7 +1349,7 @@
         "breadth": {
           "score": 0.7049999999999998,
           "basis": [
-            "distinct_urls:218",
+            "distinct_urls:220",
             "distinct_axes:3",
             "origin_types:3"
           ]
@@ -1387,7 +1387,7 @@
           "method": "mechanical_v1",
           "basis": [
             "newsroom_domain_pattern",
-            "distinct_urls:218",
+            "distinct_urls:220",
             "distinct_axes:3",
             "origin_types:3",
             "referring_accounts:0",
@@ -1441,7 +1441,7 @@
         ],
         "origin_counts": {
           "ontology_evidence": 3,
-          "reading_queue": 8
+          "reading_queue": 9
         },
         "distinct_referring_accounts": 0,
         "sample_referring_accounts": [],
@@ -2084,7 +2084,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-07-13T12:47:20.132Z",
+        "fetched_at": "2026-07-16T13:12:20.671Z",
         "homepage_url": "https://youtube.com/",
         "example_url": "https://www.youtube.com/watch?v=s31Wd_dF5hI",
         "homepage_status": 200,
@@ -2127,7 +2127,7 @@
           "https://apnews.com/hub/iran"
         ],
         "origin_counts": {
-          "reading_queue": 8,
+          "reading_queue": 9,
           "journals": 1
         },
         "distinct_referring_accounts": 0,
@@ -2377,9 +2377,9 @@
       "entity": "Amnesty",
       "kind": "unknown",
       "first_seen_at": "2026-03-31T12:16:18.459Z",
-      "last_seen_at": "2026-07-15T16:24:40.106Z",
+      "last_seen_at": "2026-07-16T12:42:55.495Z",
       "discovery": {
-        "distinct_urls": 42,
+        "distinct_urls": 43,
         "example_urls": [
           "https://www.amnesty.org/en/latest/news/2026/06/burkina-serge-oulon/",
           "https://www.amnesty.org/en/latest/news/2026/06/car-bozize/",
@@ -2390,7 +2390,7 @@
         "origin_counts": {
           "ontology_evidence": 38,
           "reading_queue": 20,
-          "journals": 55
+          "journals": 56
         },
         "distinct_referring_accounts": 0,
         "sample_referring_accounts": [],
@@ -2426,7 +2426,7 @@
         "breadth": {
           "score": 0.8216666666666665,
           "basis": [
-            "distinct_urls:42",
+            "distinct_urls:43",
             "distinct_axes:5",
             "origin_types:3"
           ]
@@ -2465,7 +2465,7 @@
           "basis": [
             "unknown_domain_pattern",
             "article_path_seen",
-            "distinct_urls:42",
+            "distinct_urls:43",
             "distinct_axes:5",
             "origin_types:3",
             "referring_accounts:0",
@@ -2779,9 +2779,9 @@
       "entity": "Inquirer",
       "kind": "unknown",
       "first_seen_at": "2026-05-09T10:15:15.053Z",
-      "last_seen_at": "2026-07-16T03:55:09.498Z",
+      "last_seen_at": "2026-07-16T08:02:56.004Z",
       "discovery": {
-        "distinct_urls": 138,
+        "distinct_urls": 139,
         "example_urls": [
           "https://www.inquirer.net/capiz-broadcaster-shooting-probe-widens-as-cops-form-task-force",
           "https://newsinfo.inquirer.net/2251519/chr-carries-out-motu-proprio-probe-into-tacloban-cavite-school-incidents",
@@ -2791,7 +2791,7 @@
         ],
         "origin_counts": {
           "ontology_evidence": 67,
-          "journals": 211,
+          "journals": 212,
           "articles": 1
         },
         "distinct_referring_accounts": 0,
@@ -2834,7 +2834,7 @@
         "breadth": {
           "score": 0.8799999999999999,
           "basis": [
-            "distinct_urls:138",
+            "distinct_urls:139",
             "distinct_axes:12",
             "origin_types:3"
           ]
@@ -2872,7 +2872,7 @@
           "method": "mechanical_v1",
           "basis": [
             "unknown_domain_pattern",
-            "distinct_urls:138",
+            "distinct_urls:139",
             "distinct_axes:12",
             "origin_types:3",
             "referring_accounts:0",
@@ -2918,19 +2918,19 @@
       "entity": "Rappler",
       "kind": "unknown",
       "first_seen_at": "2026-06-22T04:04:30.428Z",
-      "last_seen_at": "2026-07-16T05:25:15.884Z",
+      "last_seen_at": "2026-07-16T09:11:27.353Z",
       "discovery": {
-        "distinct_urls": 121,
+        "distinct_urls": 125,
         "example_urls": [
           "https://www.rappler.com/fact-check-no-arrest-warrant-issued-vs-marcoleta",
           "https://www.rappler.com/technology/decoded-tacloban-school-shooting-disinformation-kiko-barzaga-discussions-juvenile-justice-law/",
           "https://www.rappler.com/voices/newsletters/decoded-tacloban-school-shooting-lies-undermine-protective-measures/",
           "https://www.rappler.com/newsbreak/fact-check/unmodified-audit-opinion-not-clear-sara-duterte/",
-          "https://www.rappler.com/philippines/barmm-minorities-demand-genuine-representation-parliamentary-elections/"
+          "https://www.rappler.com/voices/thought-leaders/vantage-point-bir-tax-amlc-records-billions-questions-sara-duterte-ignore/"
         ],
         "origin_counts": {
-          "ontology_evidence": 67,
-          "journals": 147,
+          "ontology_evidence": 70,
+          "journals": 151,
           "articles": 1
         },
         "distinct_referring_accounts": 0,
@@ -2940,6 +2940,7 @@
           "axis_collective_voice",
           "axis_digital_supply_chain_security",
           "axis_eje_accountability_v1",
+          "axis_environmental_policy_v_economic_v1",
           "axis_epistemic_integrity",
           "axis_global_power_realignments_v1",
           "axis_media_integrity_v1",
@@ -2977,8 +2978,8 @@
         "breadth": {
           "score": 0.8799999999999999,
           "basis": [
-            "distinct_urls:121",
-            "distinct_axes:16",
+            "distinct_urls:125",
+            "distinct_axes:17",
             "origin_types:3"
           ]
         },
@@ -3015,8 +3016,8 @@
           "method": "mechanical_v1",
           "basis": [
             "unknown_domain_pattern",
-            "distinct_urls:121",
-            "distinct_axes:16",
+            "distinct_urls:125",
+            "distinct_axes:17",
             "origin_types:3",
             "referring_accounts:0",
             "origin_types:3",
@@ -3198,9 +3199,9 @@
       "entity": "Techcrunch",
       "kind": "unknown",
       "first_seen_at": "2026-06-22T23:31:00Z",
-      "last_seen_at": "2026-07-16T01:24:58.016Z",
+      "last_seen_at": "2026-07-16T12:42:55.527Z",
       "discovery": {
-        "distinct_urls": 51,
+        "distinct_urls": 52,
         "example_urls": [
           "https://techcrunch.com/2026/06/22/shareholders-sue-ubers-board-over-sexual-assaults-other-incidents/",
           "https://techcrunch.com/2026/06/25/notion-mail-shuts-down-amid-agent-takeover/",
@@ -3209,8 +3210,8 @@
           "https://techcrunch.com/2026/06/26/xprize-founder-says-humans-behave-better-when-they-re-being-watched/"
         ],
         "origin_counts": {
-          "ontology_evidence": 22,
-          "journals": 58
+          "ontology_evidence": 23,
+          "journals": 59
         },
         "distinct_referring_accounts": 0,
         "sample_referring_accounts": [],
@@ -3251,7 +3252,7 @@
         "breadth": {
           "score": 0.82,
           "basis": [
-            "distinct_urls:51",
+            "distinct_urls:52",
             "distinct_axes:10",
             "origin_types:2"
           ]
@@ -3290,7 +3291,7 @@
           "basis": [
             "unknown_domain_pattern",
             "article_path_seen",
-            "distinct_urls:51",
+            "distinct_urls:52",
             "distinct_axes:10",
             "origin_types:2",
             "referring_accounts:0",
@@ -3471,9 +3472,9 @@
       "entity": "T Co",
       "kind": "unknown",
       "first_seen_at": "2016-05-05T18:57:30.000Z",
-      "last_seen_at": "2026-07-16T01:20:27.000Z",
+      "last_seen_at": "2026-07-16T11:30:16.000Z",
       "discovery": {
-        "distinct_urls": 7941,
+        "distinct_urls": 7946,
         "example_urls": [
           "https://t.co/pJSE124ec4",
           "https://t.co/Soz8BXPWaa",
@@ -3482,7 +3483,7 @@
           "https://t.co/cYaqYDRp08"
         ],
         "origin_counts": {
-          "feed_buffer": 4956,
+          "feed_buffer": 4961,
           "feed_buffer_reply": 4830
         },
         "distinct_referring_accounts": 2479,
@@ -3524,7 +3525,7 @@
         "breadth": {
           "score": 0.47,
           "basis": [
-            "distinct_urls:7941",
+            "distinct_urls:7946",
             "distinct_axes:0",
             "origin_types:2"
           ]
@@ -3563,7 +3564,7 @@
           "basis": [
             "unknown_domain_pattern",
             "doi_or_identifier_path_seen",
-            "distinct_urls:7941",
+            "distinct_urls:7946",
             "distinct_axes:0",
             "origin_types:2",
             "referring_accounts:2479",
@@ -3609,9 +3610,9 @@
       "entity": "Gmanetwork",
       "kind": "unknown",
       "first_seen_at": "2026-05-18T03:29:41.732Z",
-      "last_seen_at": "2026-07-16T05:25:15.921Z",
+      "last_seen_at": "2026-07-16T12:42:55.527Z",
       "discovery": {
-        "distinct_urls": 122,
+        "distinct_urls": 125,
         "example_urls": [
           "https://www.gmanetwork.com/news/topstories/nation/994225/explainer-objections-in-a-trial-and-their-role-in-due-process/story/",
           "https://www.gmanetwork.com/news/balitambayan/balita/993931/sen-escudero-sinabing-16-na-boto-ang-kailangan-para-mahatulang-guilty-si-vp-sara-duterte-sa-impea/story/",
@@ -3620,8 +3621,8 @@
           "https://www.gmanetwork.com/news/topstories/nation/994080/electronic-copies-evidence-supreme-court/story/"
         ],
         "origin_counts": {
-          "ontology_evidence": 45,
-          "journals": 150
+          "ontology_evidence": 48,
+          "journals": 153
         },
         "distinct_referring_accounts": 0,
         "sample_referring_accounts": [],
@@ -3661,7 +3662,7 @@
         "breadth": {
           "score": 0.82,
           "basis": [
-            "distinct_urls:122",
+            "distinct_urls:125",
             "distinct_axes:10",
             "origin_types:2"
           ]
@@ -3699,7 +3700,7 @@
           "method": "mechanical_v1",
           "basis": [
             "unknown_domain_pattern",
-            "distinct_urls:122",
+            "distinct_urls:125",
             "distinct_axes:10",
             "origin_types:2",
             "referring_accounts:0",
@@ -3842,7 +3843,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-07-13T12:47:22.809Z",
+        "fetched_at": "2026-07-16T13:12:22.283Z",
         "homepage_url": "https://reut.rs/",
         "example_url": "https://reut.rs/42N9gxi",
         "homepage_status": 401,
@@ -4737,13 +4738,13 @@
           ]
         },
         "profile": {
-          "score": 0.65,
-          "confidence": 0.85,
+          "score": 0.51,
+          "confidence": 0.75,
           "basis": [
             "meta_author:true",
             "published_time:true",
             "canonical:true",
-            "about:true",
+            "about:false",
             "contact:false",
             "corrections:false",
             "outbound_links:5",
@@ -4766,23 +4767,23 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-07-13T06:37:51.345Z",
+        "fetched_at": "2026-07-16T09:10:44.624Z",
         "homepage_url": "https://substack.com/",
         "example_url": "https://aniobrien.substack.com/p/white-working-class-girls-sacrificed",
-        "homepage_status": 200,
+        "homepage_status": null,
         "example_status": 200,
         "homepage_final_url": "https://substack.com/",
         "example_final_url": "https://aniobrien.substack.com/p/white-working-class-girls-sacrificed",
-        "homepage_content_type": "text/html; charset=utf-8",
+        "homepage_content_type": "",
         "example_content_type": "text/html; charset=utf-8",
         "homepage": {
-          "has_meta_author": true,
+          "has_meta_author": false,
           "has_published_time": false,
-          "has_canonical": true,
-          "has_about_link": true,
+          "has_canonical": false,
+          "has_about_link": false,
           "has_contact_link": false,
           "has_corrections_link": false,
-          "outbound_links_count": 1,
+          "outbound_links_count": 0,
           "opinion_marker": false
         },
         "example": {
@@ -4892,7 +4893,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-07-13T06:37:54.819Z",
+        "fetched_at": "2026-07-16T09:10:49.772Z",
         "homepage_url": "https://newsguardtech.com/",
         "example_url": "https://www.newsguardtech.com/",
         "homepage_status": 200,
@@ -5018,7 +5019,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-07-13T06:37:56.284Z",
+        "fetched_at": "2026-07-16T09:10:52.074Z",
         "homepage_url": "https://snopes.com/",
         "example_url": "https://snopes.com/fact-check/strait-of-hormuz-oil-shorts-trump/",
         "homepage_status": 200,
@@ -5149,7 +5150,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-07-13T06:37:56.669Z",
+        "fetched_at": "2026-07-16T09:10:54.095Z",
         "homepage_url": "https://starlink.com/",
         "example_url": "https://www.starlink.com/us/residential?referral=RC-DF-9543787-19448-67&utm_medium=paid&utm_campaign=awr_us_soc_twt_ptg_cau&utm_content=awr_us_soc_twt_ptg_cau_res_gvp_v4s_stc_en-us_sdb-bluesky-uptime&twclid=2cg62b1u0oqrypdim5oir1767e",
         "homepage_status": 200,
@@ -5323,7 +5324,7 @@
           "https://www.reuters.com/site-search/?query=Evidence-based%20claims%2C%20transparent%20sourcing%2C%20honest%20uncertainty%2C%20good-faith%20argu%20Truth%20and%20Evidence%20in%20Public%20Discourse"
         ],
         "origin_counts": {
-          "reading_queue": 9
+          "reading_queue": 10
         },
         "distinct_referring_accounts": 1,
         "sample_referring_accounts": [
@@ -5404,15 +5405,15 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-07-13T07:37:52.013Z",
+        "fetched_at": "2026-07-16T09:38:46.098Z",
         "homepage_url": "https://reuters.com/",
         "example_url": "https://www.reuters.com/site-search/?query=Evidence-based%20claims%2C%20transparent%20sourcing%2C%20honest%20uncertainty%2C%20good-faith%20argu%20Truth%20and%20Evidence%20in%20Public%20Discourse",
-        "homepage_status": 401,
-        "example_status": 401,
-        "homepage_final_url": "https://www.reuters.com/",
+        "homepage_status": null,
+        "example_status": null,
+        "homepage_final_url": "https://reuters.com/",
         "example_final_url": "https://www.reuters.com/site-search/?query=Evidence-based%20claims%2C%20transparent%20sourcing%2C%20honest%20uncertainty%2C%20good-faith%20argu%20Truth%20and%20Evidence%20in%20Public%20Discourse",
-        "homepage_content_type": "text/html;charset=utf-8",
-        "example_content_type": "text/html;charset=utf-8",
+        "homepage_content_type": "",
+        "example_content_type": "",
         "homepage": {
           "has_meta_author": false,
           "has_published_time": false,
@@ -5802,15 +5803,15 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-07-13T09:07:54.534Z",
+        "fetched_at": "2026-07-16T09:38:46.125Z",
         "homepage_url": "https://arstechnica.com/",
         "example_url": "https://arstechnica.com/security/2026/06/users-cry-foul-after-amd-stripped-memory-crypto-from-its-consumer-cpus/",
-        "homepage_status": 202,
-        "example_status": 202,
+        "homepage_status": null,
+        "example_status": null,
         "homepage_final_url": "https://arstechnica.com/",
         "example_final_url": "https://arstechnica.com/security/2026/06/users-cry-foul-after-amd-stripped-memory-crypto-from-its-consumer-cpus/",
-        "homepage_content_type": "text/html; charset=UTF-8",
-        "example_content_type": "text/html; charset=UTF-8",
+        "homepage_content_type": "",
+        "example_content_type": "",
         "homepage": {
           "has_meta_author": false,
           "has_published_time": false,
@@ -6662,14 +6663,14 @@
           ]
         },
         "profile": {
-          "score": 0.12,
+          "score": 0,
           "confidence": 0.55,
           "basis": [
             "meta_author:false",
             "published_time:false",
             "canonical:false",
             "about:false",
-            "contact:true",
+            "contact:false",
             "corrections:false",
             "outbound_links:0",
             "opinion_marker:false"
@@ -6691,23 +6692,23 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-07-13T09:38:00.671Z",
+        "fetched_at": "2026-07-16T09:38:46.128Z",
         "homepage_url": "https://byteplus.com/",
         "example_url": "https://www.byteplus.com/en/contact-us/ai-cloud-products?utm_source=x&utm_medium=cpc&utm_campaign=leads_submit_eu_english_20260415_celene&utm_term=20260415_image_leads&utm_content=tecdo&twclid=24somkg02k4fm60up4bq87nhwy",
-        "homepage_status": 200,
-        "example_status": 200,
-        "homepage_final_url": "https://www.byteplus.com/en",
+        "homepage_status": null,
+        "example_status": null,
+        "homepage_final_url": "https://byteplus.com/",
         "example_final_url": "https://www.byteplus.com/en/contact-us/ai-cloud-products?utm_source=x&utm_medium=cpc&utm_campaign=leads_submit_eu_english_20260415_celene&utm_term=20260415_image_leads&utm_content=tecdo&twclid=24somkg02k4fm60up4bq87nhwy",
-        "homepage_content_type": "text/html; charset=UTF-8",
-        "example_content_type": "text/html; charset=UTF-8",
+        "homepage_content_type": "",
+        "example_content_type": "",
         "homepage": {
           "has_meta_author": false,
           "has_published_time": false,
-          "has_canonical": true,
+          "has_canonical": false,
           "has_about_link": false,
-          "has_contact_link": true,
+          "has_contact_link": false,
           "has_corrections_link": false,
-          "outbound_links_count": 5,
+          "outbound_links_count": 0,
           "opinion_marker": false
         },
         "example": {
@@ -6789,13 +6790,13 @@
           ]
         },
         "profile": {
-          "score": 0.24000000000000002,
-          "confidence": 0.65,
+          "score": 0,
+          "confidence": 0.55,
           "basis": [
             "meta_author:false",
             "published_time:false",
-            "canonical:true",
-            "about:true",
+            "canonical:false",
+            "about:false",
             "contact:false",
             "corrections:false",
             "outbound_links:0",
@@ -6818,20 +6819,20 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-07-13T07:37:53.928Z",
+        "fetched_at": "2026-07-16T09:38:46.131Z",
         "homepage_url": "https://athena.com/",
         "example_url": "https://www.athena.com/cl/x?utm_source=twitter&utm_medium=paid_social&utm_campaign=%7B%7Bcampaign_name%7D%7D&utm_term=%7B%7Badgroup_name%7D%7D&utm_content=%7B%7Bad_name%7D%7D&twclid=27k7ut43wxglvx2o2e2nj7pszs",
-        "homepage_status": 200,
-        "example_status": 200,
-        "homepage_final_url": "https://www.athena.com/",
+        "homepage_status": null,
+        "example_status": null,
+        "homepage_final_url": "https://athena.com/",
         "example_final_url": "https://www.athena.com/cl/x?utm_source=twitter&utm_medium=paid_social&utm_campaign=%7B%7Bcampaign_name%7D%7D&utm_term=%7B%7Badgroup_name%7D%7D&utm_content=%7B%7Bad_name%7D%7D&twclid=27k7ut43wxglvx2o2e2nj7pszs",
-        "homepage_content_type": "text/html; charset=utf-8",
-        "example_content_type": "text/html; charset=utf-8",
+        "homepage_content_type": "",
+        "example_content_type": "",
         "homepage": {
           "has_meta_author": false,
           "has_published_time": false,
-          "has_canonical": true,
-          "has_about_link": true,
+          "has_canonical": false,
+          "has_about_link": false,
           "has_contact_link": false,
           "has_corrections_link": false,
           "outbound_links_count": 0,
@@ -6840,7 +6841,7 @@
         "example": {
           "has_meta_author": false,
           "has_published_time": false,
-          "has_canonical": true,
+          "has_canonical": false,
           "has_about_link": false,
           "has_contact_link": false,
           "has_corrections_link": false,
@@ -6945,7 +6946,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-07-13T07:37:57.437Z",
+        "fetched_at": "2026-07-16T12:42:20.322Z",
         "homepage_url": "https://jamf.com/",
         "example_url": "https://www.jamf.com/blog/mac-management-security-trends-enterprise-it-2025/?utm_source=twitter&utm_medium=sponsored-social&utm_campaign=am_icf_smas_mms_banner_icp&utm_content=20260213_com_ent-midmkt_p_jmac_blog_6679_SIT&twclid=26vc3aicbe9m10pi19ume82b0z",
         "homepage_status": 200,
@@ -7326,7 +7327,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-07-13T09:07:56.301Z",
+        "fetched_at": "2026-07-16T12:42:20.966Z",
         "homepage_url": "https://nizima-action.com/",
         "example_url": "https://site.nizima-action.com/en/?twclid=2diqibk9zmfi9zdpw7jnuyzo3e",
         "homepage_status": 200,
@@ -7453,7 +7454,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-07-13T09:07:59.052Z",
+        "fetched_at": "2026-07-16T12:42:24.180Z",
         "homepage_url": "https://leronx.org/",
         "example_url": "https://leronx.org/?ref=005&tw=r84nh&tw_click=tw-r84nh-r84ni&twclid=29ffsgobmrsvjmkjlmgcllypv0",
         "homepage_status": 200,
@@ -7580,7 +7581,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-07-13T07:37:59.194Z",
+        "fetched_at": "2026-07-16T12:42:24.718Z",
         "homepage_url": "https://app.link/",
         "example_url": "https://chipotle.app.link/rTJVnvMgW1b?%243p=a_twitter&twclid=26fm1l3fbt5tx0wzqe3pjv9fkn",
         "homepage_status": 404,
@@ -10668,6 +10669,133 @@
       }
     },
     {
+      "domain": "coderabbit.ai",
+      "entity": "Coderabbit Ai",
+      "kind": "unknown",
+      "first_seen_at": "2026-06-09T09:50:16.000Z",
+      "last_seen_at": "2026-07-16T09:06:28.349Z",
+      "discovery": {
+        "distinct_urls": 10,
+        "example_urls": [
+          "https://www.coderabbit.ai/agent?utm_source=twitter&utm_medium=cpc&utm_campaign=brandawareness_slack&twclid=25ohyy1nnhx1vb6p888i79f380",
+          "https://www.coderabbit.ai/agent?utm_source=twitter&utm_medium=cpc&utm_campaign=brandawareness_slack&twclid=289waaptg8g5p8kt9nmjdhtmdm",
+          "https://www.coderabbit.ai/agent?utm_source=twitter&utm_medium=cpc&utm_campaign=brandawareness_slack&twclid=221iix4gf082d85ifrr3eh1dr6",
+          "https://coderabbit.ai/?utm_source=twitter&utm_medium=cpc&utm_campaign=intlretargetingsignup&twclid=2bprglk8wen4ni6d1hxw416sxj",
+          "https://coderabbit.ai/?utm_source=twitter&utm_medium=cpc&utm_campaign=intlprospectingsignup&twclid=23a3why4v3msp82hu0ra2sxiek"
+        ],
+        "origin_counts": {
+          "feed_buffer_reply": 7,
+          "feed_buffer": 3
+        },
+        "distinct_referring_accounts": 1,
+        "sample_referring_accounts": [
+          "coderabbitai"
+        ],
+        "distinct_axes": []
+      },
+      "claims": {
+        "total": 0,
+        "supported": 0,
+        "refuted": 0,
+        "contested": 0,
+        "unverified": 0,
+        "resolved_count": 0
+      },
+      "structural_features": {
+        "has_search_paths": false,
+        "has_article_paths": false,
+        "has_doi_paths": false
+      },
+      "ratings": {
+        "provenance": {
+          "score": 0.45,
+          "basis": [
+            "unknown_domain_pattern"
+          ]
+        },
+        "breadth": {
+          "score": 0.4116666666666667,
+          "basis": [
+            "distinct_urls:10",
+            "distinct_axes:0",
+            "origin_types:2"
+          ]
+        },
+        "corroboration": {
+          "score": 0.2833333333333333,
+          "basis": [
+            "referring_accounts:1",
+            "origin_types:2"
+          ]
+        },
+        "track_record": {
+          "score": null,
+          "basis": [
+            "no_resolved_claims_observed"
+          ]
+        },
+        "profile": {
+          "score": 0.12,
+          "confidence": 0.55,
+          "basis": [
+            "meta_author:false",
+            "published_time:false",
+            "canonical:false",
+            "about:false",
+            "contact:true",
+            "corrections:false",
+            "outbound_links:0",
+            "opinion_marker:false"
+          ]
+        },
+        "overall": {
+          "score": 0.42598958333333337,
+          "confidence": 0.35945000000000005,
+          "method": "mechanical_v1",
+          "basis": [
+            "unknown_domain_pattern",
+            "distinct_urls:10",
+            "distinct_axes:0",
+            "origin_types:2",
+            "referring_accounts:1",
+            "origin_types:2",
+            "track_record_unavailable"
+          ]
+        }
+      },
+      "profile": {
+        "fetched_at": "2026-07-15T02:21:12.329Z",
+        "homepage_url": "https://coderabbit.ai/",
+        "example_url": "https://www.coderabbit.ai/agent?utm_source=twitter&utm_medium=cpc&utm_campaign=brandawareness_slack&twclid=25ohyy1nnhx1vb6p888i79f380",
+        "homepage_status": 200,
+        "example_status": 200,
+        "homepage_final_url": "https://www.coderabbit.ai/",
+        "example_final_url": "https://www.coderabbit.ai/agent?utm_source=twitter&utm_medium=cpc&utm_campaign=brandawareness_slack&twclid=25ohyy1nnhx1vb6p888i79f380",
+        "homepage_content_type": "text/html; charset=utf-8",
+        "example_content_type": "text/html; charset=utf-8",
+        "homepage": {
+          "has_meta_author": false,
+          "has_published_time": false,
+          "has_canonical": false,
+          "has_about_link": false,
+          "has_contact_link": true,
+          "has_corrections_link": false,
+          "outbound_links_count": 5,
+          "opinion_marker": false
+        },
+        "example": {
+          "has_meta_author": false,
+          "has_published_time": false,
+          "has_canonical": false,
+          "has_about_link": false,
+          "has_contact_link": false,
+          "has_corrections_link": false,
+          "outbound_links_count": 0,
+          "opinion_marker": false
+        }
+      }
+    },
+    {
       "domain": "mikmak.ai",
       "entity": "Mikmak Ai",
       "kind": "unknown",
@@ -10792,133 +10920,6 @@
           "has_contact_link": false,
           "has_corrections_link": false,
           "outbound_links_count": 1,
-          "opinion_marker": false
-        }
-      }
-    },
-    {
-      "domain": "coderabbit.ai",
-      "entity": "Coderabbit Ai",
-      "kind": "unknown",
-      "first_seen_at": "2026-06-09T09:50:16.000Z",
-      "last_seen_at": "2026-07-13T17:48:19.000Z",
-      "discovery": {
-        "distinct_urls": 9,
-        "example_urls": [
-          "https://www.coderabbit.ai/agent?utm_source=twitter&utm_medium=cpc&utm_campaign=brandawareness_slack&twclid=25ohyy1nnhx1vb6p888i79f380",
-          "https://www.coderabbit.ai/agent?utm_source=twitter&utm_medium=cpc&utm_campaign=brandawareness_slack&twclid=289waaptg8g5p8kt9nmjdhtmdm",
-          "https://www.coderabbit.ai/agent?utm_source=twitter&utm_medium=cpc&utm_campaign=brandawareness_slack&twclid=221iix4gf082d85ifrr3eh1dr6",
-          "https://coderabbit.ai/?utm_source=twitter&utm_medium=cpc&utm_campaign=intlretargetingsignup&twclid=2bprglk8wen4ni6d1hxw416sxj",
-          "https://coderabbit.ai/?utm_source=twitter&utm_medium=cpc&utm_campaign=intlprospectingsignup&twclid=23a3why4v3msp82hu0ra2sxiek"
-        ],
-        "origin_counts": {
-          "feed_buffer_reply": 7,
-          "feed_buffer": 2
-        },
-        "distinct_referring_accounts": 1,
-        "sample_referring_accounts": [
-          "coderabbitai"
-        ],
-        "distinct_axes": []
-      },
-      "claims": {
-        "total": 0,
-        "supported": 0,
-        "refuted": 0,
-        "contested": 0,
-        "unverified": 0,
-        "resolved_count": 0
-      },
-      "structural_features": {
-        "has_search_paths": false,
-        "has_article_paths": false,
-        "has_doi_paths": false
-      },
-      "ratings": {
-        "provenance": {
-          "score": 0.45,
-          "basis": [
-            "unknown_domain_pattern"
-          ]
-        },
-        "breadth": {
-          "score": 0.38249999999999995,
-          "basis": [
-            "distinct_urls:9",
-            "distinct_axes:0",
-            "origin_types:2"
-          ]
-        },
-        "corroboration": {
-          "score": 0.2833333333333333,
-          "basis": [
-            "referring_accounts:1",
-            "origin_types:2"
-          ]
-        },
-        "track_record": {
-          "score": null,
-          "basis": [
-            "no_resolved_claims_observed"
-          ]
-        },
-        "profile": {
-          "score": 0.12,
-          "confidence": 0.55,
-          "basis": [
-            "meta_author:false",
-            "published_time:false",
-            "canonical:false",
-            "about:false",
-            "contact:true",
-            "corrections:false",
-            "outbound_links:0",
-            "opinion_marker:false"
-          ]
-        },
-        "overall": {
-          "score": 0.419609375,
-          "confidence": 0.330825,
-          "method": "mechanical_v1",
-          "basis": [
-            "unknown_domain_pattern",
-            "distinct_urls:9",
-            "distinct_axes:0",
-            "origin_types:2",
-            "referring_accounts:1",
-            "origin_types:2",
-            "track_record_unavailable"
-          ]
-        }
-      },
-      "profile": {
-        "fetched_at": "2026-07-15T02:21:12.329Z",
-        "homepage_url": "https://coderabbit.ai/",
-        "example_url": "https://www.coderabbit.ai/agent?utm_source=twitter&utm_medium=cpc&utm_campaign=brandawareness_slack&twclid=25ohyy1nnhx1vb6p888i79f380",
-        "homepage_status": 200,
-        "example_status": 200,
-        "homepage_final_url": "https://www.coderabbit.ai/",
-        "example_final_url": "https://www.coderabbit.ai/agent?utm_source=twitter&utm_medium=cpc&utm_campaign=brandawareness_slack&twclid=25ohyy1nnhx1vb6p888i79f380",
-        "homepage_content_type": "text/html; charset=utf-8",
-        "example_content_type": "text/html; charset=utf-8",
-        "homepage": {
-          "has_meta_author": false,
-          "has_published_time": false,
-          "has_canonical": false,
-          "has_about_link": false,
-          "has_contact_link": true,
-          "has_corrections_link": false,
-          "outbound_links_count": 5,
-          "opinion_marker": false
-        },
-        "example": {
-          "has_meta_author": false,
-          "has_published_time": false,
-          "has_canonical": false,
-          "has_about_link": false,
-          "has_contact_link": false,
-          "has_corrections_link": false,
-          "outbound_links_count": 0,
           "opinion_marker": false
         }
       }
