@@ -414,8 +414,9 @@ class X {
     this._qids = this._qids || {};
     if (this._qids[opName] && !force) return this._qids[opName];
     // Use c.evaluate directly (not _eval, which wraps in a SYNC fn and would drop
-    // this async IIFE's promise).
-    const qid = await this.c.evaluate(this.tab,
+    // this async IIFE's promise). The in-page script-source fetch is occasionally
+    // flaky (empty result), so try a couple of times before giving up.
+    const extract = () => this.c.evaluate(this.tab,
       `(async function(){
          var op=${JSON.stringify(opName)};
          var srcs=[].slice.call(document.querySelectorAll('script[src]')).map(function(s){return s.src;})
@@ -426,6 +427,8 @@ class X {
          return "";
        })()`, { timeout: 30000 }
     ).catch(() => "");
+    let qid = "";
+    for (let i = 0; i < 2 && !qid; i++) { qid = await extract(); if (!qid) await sleep(800); }
     if (qid) this._qids[opName] = qid;
     return this._qids[opName] || null;
   }
@@ -457,9 +460,16 @@ class X {
     };
 
     let r = await doCall(qid);
-    if (r.status && r.status !== 200) {
-      const qid2 = await this._graphqlQueryId(opName, { force: true });
-      if (qid2 && qid2 !== qid) r = await doCall(qid2);
+    // Retry once ONLY on a transient status — a 404 (stale/rotated queryId or a
+    // routing hiccup; observed intermittently on CreateRetweet) or a 5xx. Retry
+    // even if the re-extracted queryId is unchanged (the old "only if different"
+    // guard is what surfaced spurious api_404s). Deterministic rejections
+    // (400/401/403) and rate-limits (429) are NOT retried, so posting can't
+    // double-fire on a hard rejection.
+    if (r.status && (r.status === 404 || r.status >= 500)) {
+      const qid2 = (await this._graphqlQueryId(opName, { force: true })) || qid;
+      await sleep(600);
+      r = await doCall(qid2);
     }
     return r;
   }

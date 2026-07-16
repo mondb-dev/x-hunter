@@ -205,6 +205,13 @@ function runSocialPipeline() {
     runScriptLog(path.join(PROJECT_ROOT, 'runner/x_engage.js'), '', { X_MAX_REPLIES: '1' });
   }
 
+  // X amplification — repost one high-relevance timeline post, choosing the
+  // source via the amplify learn-loop (explore/exploit on measured engagement).
+  if (dueForRun('x_amplify', 6 * HOUR)) {
+    log('social: X amplify (learn-loop repost)');
+    runScriptLog(path.join(PROJECT_ROOT, 'runner/x_amplify.js'));
+  }
+
   // LinkedIn collect — scrape the feed into feed_digest so the BROWSE cycle
   // absorbs LinkedIn into beliefs/ontology/journal, the same way X does.
   if (dueForRun('linkedin_collect', 2 * HOUR)) {

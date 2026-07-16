@@ -19,6 +19,7 @@ function isXSuppressed(kind) {
   if (kind === 'tweet' || kind === 'signal') return control.tweets === true;
   if (kind === 'quote') return control.quotes === true;
   if (kind === 'reply') return control.replies === true;
+  if (kind === 'repost') return control.reposts === true;
 
   return false;
 }

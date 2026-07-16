@@ -20,9 +20,9 @@ const fs = require("fs");
 const path = require("path");
 const { HelmStackClient, X } = require("../tools/helmstack-social/src");
 const { isXSuppressed } = require("./lib/x_control");
+const { loadAxisKeywords, makeScorer } = require("./lib/content_relevance");
 
 const ROOT = path.resolve(__dirname, "..");
-const ONTOLOGY = path.join(ROOT, "state", "ontology.json");
 const LEDGER = path.join(ROOT, "state", "x_engaged.json");
 const INTERACTIONS = path.join(ROOT, "state", "interactions.json");
 
@@ -48,68 +48,9 @@ function logInteraction(entry) {
   } catch {}
 }
 
-// ── Content guards (ported from proactive_reply) ────────────────────────────
-function isSensitiveContent(text) {
-  const t = text.toLowerCase();
-  if (/\b(rape|child rape|sexual assault|molest|paedophile|pedophile|child abuse|grooming)\b/.test(t)) return true;
-  if (/\b(trafficking|sex trafficking|epstein|diddy)\b/.test(t)) return true;
-  if (/\b(killed|murdered|assassinated)\b.{0,40}\b(president|minister|senator|governor|mayor)\b/i.test(t)) return true;
-  if (/\b(president|minister|senator|governor|mayor)\b.{0,40}\b(killed|murdered|assassinated)\b/i.test(t)) return true;
-  return false;
-}
-function isSatireOrJoke(text) {
-  const t = text.toLowerCase();
-  if (/\b(satire|parody|irony|ironic|sarcasm|sarcastic|just kidding|jk|lmao|lmfao|lol)\b/.test(t)) return true;
-  if (/^(why did|what do you call|knock knock|fun fact:|hot take:|unpopular opinion:)/i.test(text)) return true;
-  if (/😂|🤣|💀|😭/.test(text) || /\/s\b/.test(t)) return true;
-  const emoji = (text.match(/[\u{1F300}-\u{1FAFF}]/gu) || []).length;
-  return emoji >= 4 && text.length < 80;
-}
-
-// ── Axis relevance scoring ───────────────────────────────────────────────────
-function loadAxisKeywords() {
-  try {
-    const o = JSON.parse(fs.readFileSync(ONTOLOGY, "utf-8"));
-    const axes = (o.axes || []).filter((a) => (a.confidence || 0) >= 0.7).sort((a, b) => b.confidence - a.confidence).slice(0, 8);
-    const kw = [];
-    for (const a of axes) (a.label + " " + a.left_pole + " " + a.right_pole).toLowerCase().split(/[^a-z0-9]+/).filter((w) => w.length > 4).forEach((w) => kw.push(w));
-    return [...new Set(kw)];
-  } catch { return []; }
-}
-// Relevance scoring is LLM-driven (local qwen), not keyword-substring matching.
-// The old scorer built a vocabulary from abstract axis labels ("accountability",
-// "institutions") that virtually never appear verbatim in real tweets, so every
-// cycle scored 0 relevant. A small local model judges topical relevance far more
-// robustly. Keyword hits survive only as a cheap tie-breaker.
-function makeScorer(keywords) {
-  const { generate: llmGenerate } = require("./llm");
-  return async (post) => {
-    const text = (post.text || "").trim();
-    if (!text) return -1;
-    if (isSensitiveContent(text) || isSatireOrJoke(text)) return -1; // hard-skip
-
-    const lower = text.toLowerCase();
-    let hits = 0;
-    for (const kw of keywords) if (lower.includes(kw)) hits++;
-
-    let rel = 0;
-    try {
-      const raw = await llmGenerate(
-        `You rate posts for Sebastian Hunter, who analyzes how narratives are constructed in public discourse: political messaging, media framing, propaganda, spin, institutional accountability, manipulation of public opinion.\n\n` +
-        `Rate ONLY the substantive relevance to those themes. Greetings, blessings, motivational quotes, personal life, jokes, ads, and sports = 0 even if they mention people. A post must actually engage with power, politics, media, or truth-claims to score 2-3.\n\n` +
-        `Answer with a SINGLE digit:\n0 = irrelevant, 1 = tangential mention, 2 = relevant, 3 = squarely on-topic.\n\n` +
-        `POST: "${text.slice(0, 400)}"\n\nDigit:`,
-        { temperature: 0, maxTokens: 5, timeoutMs: 30_000 }
-      );
-      const m = String(raw).match(/[0-3]/);
-      rel = m ? Number(m[0]) : 0;
-    } catch {
-      rel = hits > 0 ? 1 : 0; // LLM down → fall back to lexical signal
-    }
-    // Relevance dominates; keyword hits only break ties between equal-relevance posts.
-    return rel + Math.min(hits, 2) * 0.1;
-  };
-}
+// Content guards + axis relevance scoring live in lib/content_relevance (shared
+// with x_amplify). makeScorer returns an LLM (local qwen) 0-3 relevance rating
+// (+ keyword-hit tie-break); guarded content scores -1.
 
 // ── On-voice reply generation (verify-gate + local LLM + fact-check) ─────────
 async function generateReply(post) {
