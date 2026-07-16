@@ -242,6 +242,14 @@ function runSocialPipeline() {
     runScriptLog(path.join(PROJECT_ROOT, 'runner/linkedin_measure.js'));
   }
 
+  // Amplification measurement — scrape engagement on past amplifications (X
+  // quotes, LinkedIn reshares) so the amplify learn-loop can correlate
+  // source/topic → engagement and bias what gets amplified next.
+  if (dueForRun('amplify_measure', 12 * HOUR)) {
+    log('social: amplify measure (repost/quote/reshare engagement → learn)');
+    runScriptLog(path.join(PROJECT_ROOT, 'runner/amplify_measure.js'));
+  }
+
   // LinkedIn connections — niche People-search + note-personalized invites. The
   // script enforces its own hard per-DAY cap, so an 8h gate (≈2-3 runs/day) just
   // paces the batches; it never over-invites.

@@ -53,7 +53,15 @@ async function main() {
     console.error(`[x_repost] ${undo ? "un-repost" : "repost"} failed: ${res.reason}`);
     process.exit(1);
   }
-  if (!undo) logRepost({ source_url: tweetUrl.split("?")[0], source_handle: sourceHandle, topic });
+  if (!undo) {
+    const srcUrl = tweetUrl.split("?")[0];
+    logRepost({ source_url: srcUrl, source_handle: sourceHandle, topic });
+    // Amplification learn-loop: tag WHAT we amplified. A bare repost has no own
+    // engagement surface, so measurable:false — it records the source for the
+    // track record but never sits in the measure queue. Keyed by source URL
+    // (a retweet has no own status URL).
+    try { require("./lib/amplify_performance").recordAmplification(`repost:${srcUrl}`, { channel: "x", sourceHandle, topic, technique: "repost", sourceUrl: srcUrl, measurable: false }); } catch {}
+  }
   console.log(`[x_repost] ${undo ? "un-reposted" : "reposted"}: ${tweetUrl}`);
   process.exit(0);
 }

@@ -215,6 +215,12 @@ async function runQuote({ draftFile, resultFile, attemptFile, cycle }) {
   outboxMark(ob && ob.id, "posted", quoteUrl === "posted" ? null : quoteUrl);
   writeAttempt(attemptFile, { kind: "quote", outcome: "confirmed", confirmed_url: quoteUrl, source_url: sourceUrl, backend: "helmstack", cycle });
   logQuote({ content: quoteText, source_url: sourceUrl, tweet_url: quoteUrl, cycle });
+  // Amplification learn-loop: a quote tweet DOES earn its own engagement, so tag
+  // it measurable (keyed by our quote URL) — amplify_measure scrapes it later.
+  if (quoteUrl && quoteUrl !== "posted") {
+    const srcHandle = (sourceUrl.match(/(?:x|twitter)\.com\/([^/]+)\/status\//i) || [])[1] || "";
+    try { require("./amplify_performance").recordAmplification(quoteUrl, { channel: "x", sourceHandle: srcHandle, technique: "quote", sourceUrl, measurable: true }); } catch {}
+  }
   await x.c.navigate(x.tab, "https://x.com/home").catch(() => {});
   return 0;
 }

@@ -1183,6 +1183,38 @@ class X {
     return all.slice(1); // caller filters/sorts/slices
   }
 
+  /**
+   * Scrape one tweet's own engagement by permalink — the focused tweet's action
+   * bar exposes aria-labels like "N replies", "N reposts", "N likes". Returns a
+   * {reactions, comments} shape matching the amplify learn-loop (reactions=likes,
+   * comments=replies) so a quote tweet's earned engagement can be measured.
+   * Best-effort; zeros on miss.
+   * @returns {Promise<{reactions:number, comments:number, reposts:number}>}
+   */
+  async scrapeTweetEngagement(tweetUrl) {
+    if (!(await this._gotoChecked(tweetUrl))) return { reactions: 0, comments: 0, reposts: 0 };
+    await sleep(2500);
+    const id = (String(tweetUrl).match(/\/status\/(\d+)/) || [])[1] || "";
+    const raw = await this.c.evalFn(this.tab, (sid) => {
+      const num = (s) => { if (s == null) return null; const m = String(s).replace(/,/g, "").match(/([\d.]+)\s*([KMB]?)/i); if (!m) return null; let n = parseFloat(m[1]); const u = (m[2] || "").toUpperCase(); if (u === "K") n *= 1e3; else if (u === "M") n *= 1e6; else if (u === "B") n *= 1e9; return Math.round(n); };
+      const arts = Array.from(document.querySelectorAll("article"));
+      const art = (sid && arts.find((a) => a.querySelector(`a[href*="/status/${sid}"]`))) || arts[0];
+      if (!art) return JSON.stringify({});
+      // X's action bar exposes ONE combined aria-label, e.g.
+      // "12 replies, 34 reposts, 560 likes, 8 bookmarks, 90000 views".
+      const group = art.querySelector('[role="group"][aria-label]');
+      const label = group ? group.getAttribute("aria-label") || "" : "";
+      const pick = (re) => { const m = label.match(re); return m ? m[1] : null; };
+      return JSON.stringify({
+        likes: num(pick(/([\d,.]+\s*[KMB]?)\s+like/i)),
+        replies: num(pick(/([\d,.]+\s*[KMB]?)\s+repl/i)),
+        reposts: num(pick(/([\d,.]+\s*[KMB]?)\s+repost/i)),
+      });
+    }, id).catch(() => "{}");
+    let m = {}; try { m = JSON.parse(raw || "{}"); } catch {}
+    return { reactions: m.likes || 0, comments: m.replies || 0, reposts: m.reposts || 0 };
+  }
+
   /** Mentions from the notifications page. */
   async scrapeMentions({ limit = 20 } = {}) {
     await this._gotoChecked("https://x.com/notifications/mentions");
