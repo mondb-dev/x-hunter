@@ -41,19 +41,29 @@ The measure→correlate→select machinery is built as `lib/amplify_performance.
 - **Measure** — `runner/amplify_measure.js` (scheduled in `runSocialPipeline`, 12h gate) scrapes each due amplification's engagement: X via the new `X.scrapeTweetEngagement(url)` (parses the combined action-bar aria-label → likes/replies/reposts; live-validated), LinkedIn via the existing `scrapePostEngagement`. `engagement = reactions + comments`.
 - **Correlate + select** — `sourceStats()`/`topicStats()` average engagement per source/topic; `pickAmplifyTarget(candidates)` chooses what to amplify next via force-explore-under-sampled → epsilon-greedy → exploit-highest-avg (unit-tested); `summaryText()` renders the track record. `AMPLIFY_MIN_SAMPLES`/`AMPLIFY_EPSILON` tune it.
 
-**Still to wire (the remaining ask):** the autonomous *trigger* — nothing yet
-calls `pickAmplifyTarget` over a live candidate set (scraped feed/timeline, scored
-by conviction + learned source value) and then fires `X.retweet` / `X.quote` /
-`LinkedIn.reshare`. Also: LinkedIn reshare tagging (`recordAmplification` at a
-reshare site) once that trigger exists, and capturing the reshare's own URL for
-measurement (the UI `reshare()` doesn't return one — read it back from
-recent-activity, like `deleteReshare` locates it).
+**Autonomous trigger — DONE for X** (`runner/x_amplify.js`, scheduled 6h): scrapes
+the timeline, scores each candidate by conviction-relevance (shared
+`lib/content_relevance` scorer) AND learned source value, `pickAmplifyTarget`
+chooses, `X.retweet` fires, `recordAmplification` tags it. One repost/run, ledgered
+(`state/x_amplified.json`); own/already-amplified/low-relevance/guarded content
+excluded. Operator kill-switch: `control.reposts` (via `x_control`). The X loop now
+closes end-to-end: **select → act → measure → correlate → bias next select.**
+
+Note (live-validated): `CreateRetweet` must be sent WITHOUT a `features` field
+(with it → 404; `CreateTweet` is the opposite) and 404s intermittently — `x.js`
+now retries once on transient 404/5xx (not on 400/401/403/429, so posting can't
+double-fire). `retweet`/`unretweet` verified live (profile confirmed clean after undo).
+
+**Still to wire:**
+- **LinkedIn amplify trigger** — the parallel of `x_amplify` for reshare: scrape feed → score → `pickAmplifyTarget` → `LinkedIn.reshare(idx)` → tag. Needs the reshare's own URL captured for measurement (the UI `reshare()` doesn't return one — read it back from recent-activity, like `deleteReshare` locates it) so it can be tagged `measurable:true` and scored by `amplify_measure`.
+- **X quote-with-commentary as an amplify technique** (currently only bare repost is auto-fired; quote earns richer engagement but needs composed commentary + the quote API path already built).
 
 ### Suggested order
 1. ~~X quote→API + X retweet action.~~ DONE.
 2. ~~LinkedIn reshare action.~~ DONE (UI-driven — `LinkedIn.reshare`/`deleteReshare`).
-3. ~~Learn-loop core (measure/correlate/select machinery).~~ DONE (`lib/amplify_performance.js` + `amplify_measure.js`). **Remaining: the autonomous amplify trigger that calls `pickAmplifyTarget` + fires the action** — the main open item now.
-4. FB share — only if the FB automation surface improves.
+3. ~~Learn-loop core + autonomous X trigger.~~ DONE (`lib/amplify_performance.js`, `amplify_measure.js`, `x_amplify.js`). The X amplification loop is live end-to-end.
+4. LinkedIn amplify trigger (parallel of `x_amplify`) — the main open item now.
+5. FB share — only if the FB automation surface improves.
 
 ## Reusable machinery already in place
 - In-page authed fetch pattern (X: `ct0` + web bearer + dynamic queryId; LinkedIn: JSESSIONID csrf) — see `X._graphqlMutation` (generic: any bundle-declared mutation by operationName) and `LinkedIn.post`/`postImage`.
