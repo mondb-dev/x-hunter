@@ -1,8 +1,8 @@
 {
   "schema_version": "1.0",
-  "generated_at": "2026-07-16T13:12:17.921Z",
+  "generated_at": "2026-07-16T14:42:21.243Z",
   "method": "mechanical_registry_v1",
-  "profiled_at": "2026-07-16T13:12:22.283Z",
+  "profiled_at": "2026-07-16T14:42:34.075Z",
   "sources": [
     {
       "domain": "theguardian.com",
@@ -11,7 +11,7 @@
       "first_seen_at": "2026-03-27T23:17:00Z",
       "last_seen_at": "2026-07-13T23:01:48.746Z",
       "discovery": {
-        "distinct_urls": 397,
+        "distinct_urls": 398,
         "example_urls": [
           "https://www.theguardian.com/us-news/2026/jun/23/trump-immigration-courthouse-arrest-policy",
           "https://www.theguardian.com/us-news/2026/jun/28/ice-minnesota-defending-democracy",
@@ -21,7 +21,7 @@
         ],
         "origin_counts": {
           "ontology_evidence": 32,
-          "reading_queue": 374,
+          "reading_queue": 375,
           "journals": 71,
           "articles": 1
         },
@@ -67,7 +67,7 @@
         "breadth": {
           "score": 0.94,
           "basis": [
-            "distinct_urls:397",
+            "distinct_urls:398",
             "distinct_axes:12",
             "origin_types:4"
           ]
@@ -107,7 +107,7 @@
             "newsroom_domain_pattern",
             "article_path_seen",
             "doi_or_identifier_path_seen",
-            "distinct_urls:397",
+            "distinct_urls:398",
             "distinct_axes:12",
             "origin_types:4",
             "referring_accounts:0",
@@ -533,9 +533,9 @@
       "entity": "Aljazeera",
       "kind": "news",
       "first_seen_at": "2026-06-22T02:45:00Z",
-      "last_seen_at": "2026-07-16T12:42:55.495Z",
+      "last_seen_at": "2026-07-16T14:12:56.531Z",
       "discovery": {
-        "distinct_urls": 243,
+        "distinct_urls": 244,
         "example_urls": [
           "https://www.aljazeera.com/opinions/2026/6/24/south-africas-crises-will-not-be-solved-by-blaming-migrants",
           "https://www.aljazeera.com/video/newsfeed/2026/6/27/newly-released-video-exposes-henry-nowak-killers-lies?traffic_source=rss",
@@ -544,15 +544,16 @@
           "https://www.aljazeera.com/video/newsfeed/2026/7/1/why-is-maga-in-meltdown-over-the-supreme-court-birthright-ruling-2?traffic_source=rss"
         ],
         "origin_counts": {
-          "ontology_evidence": 134,
+          "ontology_evidence": 135,
           "reading_queue": 9,
-          "journals": 333
+          "journals": 334
         },
         "distinct_referring_accounts": 0,
         "sample_referring_accounts": [],
         "distinct_axes": [
           "axis_authoritarian_self_determination_v1",
           "axis_data_privacy_decentralization_v1",
+          "axis_discourse_order_polarization_v1",
           "axis_epistemic_integrity",
           "axis_geopolitical_rhetoric_v1",
           "axis_global_economic_stability_v1",
@@ -594,8 +595,8 @@
         "breadth": {
           "score": 0.8799999999999999,
           "basis": [
-            "distinct_urls:243",
-            "distinct_axes:17",
+            "distinct_urls:244",
+            "distinct_axes:18",
             "origin_types:3"
           ]
         },
@@ -633,8 +634,8 @@
           "basis": [
             "newsroom_domain_pattern",
             "article_path_seen",
-            "distinct_urls:243",
-            "distinct_axes:17",
+            "distinct_urls:244",
+            "distinct_axes:18",
             "origin_types:3",
             "referring_accounts:0",
             "origin_types:3",
@@ -681,7 +682,7 @@
       "first_seen_at": "2026-06-22T00:15:00Z",
       "last_seen_at": "2026-07-15T03:51:51.926Z",
       "discovery": {
-        "distinct_urls": 270,
+        "distinct_urls": 271,
         "example_urls": [
           "https://www.nytimes.com/2026/06/19/world/canada/frank-stronach-trial-guilty-sex-charges.html",
           "https://www.nytimes.com/2026/06/27/world/americas/mexican-officials-us-informants.html",
@@ -691,7 +692,7 @@
         ],
         "origin_counts": {
           "ontology_evidence": 8,
-          "reading_queue": 273,
+          "reading_queue": 274,
           "journals": 22
         },
         "distinct_referring_accounts": 0,
@@ -728,7 +729,7 @@
         "breadth": {
           "score": 0.8216666666666665,
           "basis": [
-            "distinct_urls:270",
+            "distinct_urls:271",
             "distinct_axes:5",
             "origin_types:3"
           ]
@@ -767,7 +768,7 @@
           "basis": [
             "newsroom_domain_pattern",
             "article_path_seen",
-            "distinct_urls:270",
+            "distinct_urls:271",
             "distinct_axes:5",
             "origin_types:3",
             "referring_accounts:0",
@@ -1305,7 +1306,7 @@
       "first_seen_at": "2026-06-26T07:05:00Z",
       "last_seen_at": "2026-07-11T20:57:02.247Z",
       "discovery": {
-        "distinct_urls": 220,
+        "distinct_urls": 221,
         "example_urls": [
           "https://www.bbc.co.uk/news/articles/cn8qxz6qypyo",
           "https://www.bbc.co.uk/news/articles/cn075j04pnyo?at_medium=RSS&amp;at_campaign=rss",
@@ -1315,7 +1316,7 @@
         ],
         "origin_counts": {
           "ontology_evidence": 4,
-          "reading_queue": 224,
+          "reading_queue": 225,
           "journals": 11
         },
         "distinct_referring_accounts": 0,
@@ -1349,7 +1350,7 @@
         "breadth": {
           "score": 0.7049999999999998,
           "basis": [
-            "distinct_urls:220",
+            "distinct_urls:221",
             "distinct_axes:3",
             "origin_types:3"
           ]
@@ -1387,7 +1388,7 @@
           "method": "mechanical_v1",
           "basis": [
             "newsroom_domain_pattern",
-            "distinct_urls:220",
+            "distinct_urls:221",
             "distinct_axes:3",
             "origin_types:3",
             "referring_accounts:0",
@@ -1978,6 +1979,141 @@
       }
     },
     {
+      "domain": "amnesty.org",
+      "entity": "Amnesty",
+      "kind": "unknown",
+      "first_seen_at": "2026-03-31T12:16:18.459Z",
+      "last_seen_at": "2026-07-16T14:12:56.531Z",
+      "discovery": {
+        "distinct_urls": 44,
+        "example_urls": [
+          "https://www.amnesty.org/en/latest/news/2026/06/burkina-serge-oulon/",
+          "https://www.amnesty.org/en/latest/news/2026/06/car-bozize/",
+          "https://www.amnesty.org/en/latest/news/2026/06/turkiye-authorities-must-lift-blanket-protest-ban-ahead-of-nato-summit-and-release-scores-of-arbitrarily-detained-people/",
+          "https://www.amnesty.org/en/latest/news/2026/06/usa-four-months-after-horrific-minab-school-airstrike-accountability-delayed/",
+          "https://www.amnesty.org/en/latest/news/2026/06/usa-four-months-after-horrific-minab-school-airstrike"
+        ],
+        "origin_counts": {
+          "ontology_evidence": 39,
+          "reading_queue": 20,
+          "journals": 57
+        },
+        "distinct_referring_accounts": 0,
+        "sample_referring_accounts": [],
+        "distinct_axes": [
+          "axis_authoritarian_self_determination_v1",
+          "axis_human_rights_exploitation_v1",
+          "axis_humanitarian_crisis_response",
+          "axis_information_control_v1",
+          "axis_national_sovereignty_v_intl_law_v1",
+          "axis_power_accountability"
+        ]
+      },
+      "claims": {
+        "total": 0,
+        "supported": 0,
+        "refuted": 0,
+        "contested": 0,
+        "unverified": 0,
+        "resolved_count": 0
+      },
+      "structural_features": {
+        "has_search_paths": false,
+        "has_article_paths": true,
+        "has_doi_paths": false
+      },
+      "ratings": {
+        "provenance": {
+          "score": 0.48,
+          "basis": [
+            "unknown_domain_pattern",
+            "article_path_seen"
+          ]
+        },
+        "breadth": {
+          "score": 0.8799999999999999,
+          "basis": [
+            "distinct_urls:44",
+            "distinct_axes:6",
+            "origin_types:3"
+          ]
+        },
+        "corroboration": {
+          "score": 0.26249999999999996,
+          "basis": [
+            "referring_accounts:0",
+            "origin_types:3"
+          ]
+        },
+        "track_record": {
+          "score": null,
+          "basis": [
+            "no_resolved_claims_observed"
+          ]
+        },
+        "profile": {
+          "score": 0.52,
+          "confidence": 0.65,
+          "basis": [
+            "meta_author:false",
+            "published_time:true",
+            "canonical:true",
+            "about:false",
+            "contact:true",
+            "corrections:false",
+            "outbound_links:30",
+            "opinion_marker:false"
+          ]
+        },
+        "overall": {
+          "score": 0.547109375,
+          "confidence": 0.6584249999999999,
+          "method": "mechanical_v1",
+          "basis": [
+            "unknown_domain_pattern",
+            "article_path_seen",
+            "distinct_urls:44",
+            "distinct_axes:6",
+            "origin_types:3",
+            "referring_accounts:0",
+            "origin_types:3",
+            "track_record_unavailable"
+          ]
+        }
+      },
+      "profile": {
+        "fetched_at": "2026-07-16T03:54:33.607Z",
+        "homepage_url": "https://amnesty.org/",
+        "example_url": "https://www.amnesty.org/en/latest/news/2026/06/burkina-serge-oulon/",
+        "homepage_status": 200,
+        "example_status": 200,
+        "homepage_final_url": "https://www.amnesty.org/en/",
+        "example_final_url": "https://www.amnesty.org/en/latest/news/2026/06/burkina-serge-oulon/",
+        "homepage_content_type": "text/html; charset=UTF-8",
+        "example_content_type": "text/html; charset=UTF-8",
+        "homepage": {
+          "has_meta_author": false,
+          "has_published_time": true,
+          "has_canonical": true,
+          "has_about_link": false,
+          "has_contact_link": true,
+          "has_corrections_link": false,
+          "outbound_links_count": 7,
+          "opinion_marker": false
+        },
+        "example": {
+          "has_meta_author": false,
+          "has_published_time": true,
+          "has_canonical": true,
+          "has_about_link": false,
+          "has_contact_link": true,
+          "has_corrections_link": false,
+          "outbound_links_count": 30,
+          "opinion_marker": false
+        }
+      }
+    },
+    {
       "domain": "youtube.com",
       "entity": "Youtube",
       "kind": "unknown",
@@ -2368,140 +2504,6 @@
           "has_contact_link": false,
           "has_corrections_link": false,
           "outbound_links_count": 24,
-          "opinion_marker": false
-        }
-      }
-    },
-    {
-      "domain": "amnesty.org",
-      "entity": "Amnesty",
-      "kind": "unknown",
-      "first_seen_at": "2026-03-31T12:16:18.459Z",
-      "last_seen_at": "2026-07-16T12:42:55.495Z",
-      "discovery": {
-        "distinct_urls": 43,
-        "example_urls": [
-          "https://www.amnesty.org/en/latest/news/2026/06/burkina-serge-oulon/",
-          "https://www.amnesty.org/en/latest/news/2026/06/car-bozize/",
-          "https://www.amnesty.org/en/latest/news/2026/06/turkiye-authorities-must-lift-blanket-protest-ban-ahead-of-nato-summit-and-release-scores-of-arbitrarily-detained-people/",
-          "https://www.amnesty.org/en/latest/news/2026/06/usa-four-months-after-horrific-minab-school-airstrike-accountability-delayed/",
-          "https://www.amnesty.org/en/latest/news/2026/06/usa-four-months-after-horrific-minab-school-airstrike"
-        ],
-        "origin_counts": {
-          "ontology_evidence": 38,
-          "reading_queue": 20,
-          "journals": 56
-        },
-        "distinct_referring_accounts": 0,
-        "sample_referring_accounts": [],
-        "distinct_axes": [
-          "axis_authoritarian_self_determination_v1",
-          "axis_human_rights_exploitation_v1",
-          "axis_information_control_v1",
-          "axis_national_sovereignty_v_intl_law_v1",
-          "axis_power_accountability"
-        ]
-      },
-      "claims": {
-        "total": 0,
-        "supported": 0,
-        "refuted": 0,
-        "contested": 0,
-        "unverified": 0,
-        "resolved_count": 0
-      },
-      "structural_features": {
-        "has_search_paths": false,
-        "has_article_paths": true,
-        "has_doi_paths": false
-      },
-      "ratings": {
-        "provenance": {
-          "score": 0.48,
-          "basis": [
-            "unknown_domain_pattern",
-            "article_path_seen"
-          ]
-        },
-        "breadth": {
-          "score": 0.8216666666666665,
-          "basis": [
-            "distinct_urls:43",
-            "distinct_axes:5",
-            "origin_types:3"
-          ]
-        },
-        "corroboration": {
-          "score": 0.26249999999999996,
-          "basis": [
-            "referring_accounts:0",
-            "origin_types:3"
-          ]
-        },
-        "track_record": {
-          "score": null,
-          "basis": [
-            "no_resolved_claims_observed"
-          ]
-        },
-        "profile": {
-          "score": 0.52,
-          "confidence": 0.65,
-          "basis": [
-            "meta_author:false",
-            "published_time:true",
-            "canonical:true",
-            "about:false",
-            "contact:true",
-            "corrections:false",
-            "outbound_links:30",
-            "opinion_marker:false"
-          ]
-        },
-        "overall": {
-          "score": 0.5343489583333333,
-          "confidence": 0.6461749999999999,
-          "method": "mechanical_v1",
-          "basis": [
-            "unknown_domain_pattern",
-            "article_path_seen",
-            "distinct_urls:43",
-            "distinct_axes:5",
-            "origin_types:3",
-            "referring_accounts:0",
-            "origin_types:3",
-            "track_record_unavailable"
-          ]
-        }
-      },
-      "profile": {
-        "fetched_at": "2026-07-16T03:54:33.607Z",
-        "homepage_url": "https://amnesty.org/",
-        "example_url": "https://www.amnesty.org/en/latest/news/2026/06/burkina-serge-oulon/",
-        "homepage_status": 200,
-        "example_status": 200,
-        "homepage_final_url": "https://www.amnesty.org/en/",
-        "example_final_url": "https://www.amnesty.org/en/latest/news/2026/06/burkina-serge-oulon/",
-        "homepage_content_type": "text/html; charset=UTF-8",
-        "example_content_type": "text/html; charset=UTF-8",
-        "homepage": {
-          "has_meta_author": false,
-          "has_published_time": true,
-          "has_canonical": true,
-          "has_about_link": false,
-          "has_contact_link": true,
-          "has_corrections_link": false,
-          "outbound_links_count": 7,
-          "opinion_marker": false
-        },
-        "example": {
-          "has_meta_author": false,
-          "has_published_time": true,
-          "has_canonical": true,
-          "has_about_link": false,
-          "has_contact_link": true,
-          "has_corrections_link": false,
-          "outbound_links_count": 30,
           "opinion_marker": false
         }
       }
@@ -3472,9 +3474,9 @@
       "entity": "T Co",
       "kind": "unknown",
       "first_seen_at": "2016-05-05T18:57:30.000Z",
-      "last_seen_at": "2026-07-16T11:30:16.000Z",
+      "last_seen_at": "2026-07-16T12:40:14.000Z",
       "discovery": {
-        "distinct_urls": 7946,
+        "distinct_urls": 7949,
         "example_urls": [
           "https://t.co/pJSE124ec4",
           "https://t.co/Soz8BXPWaa",
@@ -3483,7 +3485,7 @@
           "https://t.co/cYaqYDRp08"
         ],
         "origin_counts": {
-          "feed_buffer": 4961,
+          "feed_buffer": 4964,
           "feed_buffer_reply": 4830
         },
         "distinct_referring_accounts": 2479,
@@ -3525,7 +3527,7 @@
         "breadth": {
           "score": 0.47,
           "basis": [
-            "distinct_urls:7946",
+            "distinct_urls:7949",
             "distinct_axes:0",
             "origin_types:2"
           ]
@@ -3564,7 +3566,7 @@
           "basis": [
             "unknown_domain_pattern",
             "doi_or_identifier_path_seen",
-            "distinct_urls:7946",
+            "distinct_urls:7949",
             "distinct_axes:0",
             "origin_types:2",
             "referring_accounts:2479",
@@ -3610,9 +3612,9 @@
       "entity": "Gmanetwork",
       "kind": "unknown",
       "first_seen_at": "2026-05-18T03:29:41.732Z",
-      "last_seen_at": "2026-07-16T12:42:55.527Z",
+      "last_seen_at": "2026-07-16T14:12:56.481Z",
       "discovery": {
-        "distinct_urls": 125,
+        "distinct_urls": 126,
         "example_urls": [
           "https://www.gmanetwork.com/news/topstories/nation/994225/explainer-objections-in-a-trial-and-their-role-in-due-process/story/",
           "https://www.gmanetwork.com/news/balitambayan/balita/993931/sen-escudero-sinabing-16-na-boto-ang-kailangan-para-mahatulang-guilty-si-vp-sara-duterte-sa-impea/story/",
@@ -3622,7 +3624,7 @@
         ],
         "origin_counts": {
           "ontology_evidence": 48,
-          "journals": 153
+          "journals": 154
         },
         "distinct_referring_accounts": 0,
         "sample_referring_accounts": [],
@@ -3662,7 +3664,7 @@
         "breadth": {
           "score": 0.82,
           "basis": [
-            "distinct_urls:125",
+            "distinct_urls:126",
             "distinct_axes:10",
             "origin_types:2"
           ]
@@ -3700,7 +3702,7 @@
           "method": "mechanical_v1",
           "basis": [
             "unknown_domain_pattern",
-            "distinct_urls:125",
+            "distinct_urls:126",
             "distinct_axes:10",
             "origin_types:2",
             "referring_accounts:0",
@@ -5281,7 +5283,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-07-13T13:47:12.526Z",
+        "fetched_at": "2026-07-16T14:12:23.491Z",
         "homepage_url": "https://github.com/",
         "example_url": "https://github.com/BlockRunAI/ClawRouter/?twclid=2bnr8zsvp3b72fbw0yuil7yilw",
         "homepage_status": 200,
@@ -5540,7 +5542,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-07-13T13:47:32.533Z",
+        "fetched_at": "2026-07-16T14:12:24.050Z",
         "homepage_url": "https://relaylab.us/",
         "example_url": "https://relaylab.us/?twclid=26u9kccij1307faosstalj2w2",
         "homepage_status": null,
@@ -5932,7 +5934,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-07-13T13:47:34.563Z",
+        "fetched_at": "2026-07-16T14:12:26.792Z",
         "homepage_url": "https://huawei.com/",
         "example_url": "https://www.huawei.com/en/media-center/transform/24/06-jason-lee?utm_medium=psm&utm_source=twitter&utm_campaign=Transform",
         "homepage_status": 200,
@@ -7073,7 +7075,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-07-13T13:47:34.776Z",
+        "fetched_at": "2026-07-16T14:12:26.987Z",
         "homepage_url": "https://bet88.ph/",
         "example_url": "https://bet88.ph/en/?type=registration&modal=user&ref=xa027&twclid=27gurqyk8ekpo92oqcm3aeuing",
         "homepage_status": 200,
@@ -7708,7 +7710,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-07-13T08:07:56.164Z",
+        "fetched_at": "2026-07-16T14:42:24.063Z",
         "homepage_url": "https://bk.com/",
         "example_url": "https://www.bk.com/menu/section/fb06fabe-a285-4fb4-994a-c617a1547ddb?utm_source=X&utm_medium=Social-Social&utm_campaign=Peppercorn-Awareness&utm_content=Peppercorn-IMG-Warning&twclid=24j7ivpacvxqbg2t5it24skrl9",
         "homepage_status": 200,
@@ -7835,7 +7837,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-07-13T14:17:10.779Z",
+        "fetched_at": "2026-07-16T14:42:30.544Z",
         "homepage_url": "https://hyperagent.com/",
         "example_url": "https://www.hyperagent.com/?promo=FIRST1000&utm_source=twitter&utm_medium=paidsocial&utm_campaign=hyperagent_conversions&utm_content=ag3_fleet&utm_term=ag3_ai_dev_followers&utm_id=recNjFFq2Yg5747V4&twclid=2dzs7nc78iuf64njs9fxab27tl",
         "homepage_status": 200,
@@ -8343,7 +8345,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-07-13T08:07:59.643Z",
+        "fetched_at": "2026-07-16T14:42:33.827Z",
         "homepage_url": "https://mottandbow.com/",
         "example_url": "https://www.mottandbow.com/collections/mens-denim2-onlyjeansworthbuying?utm_source=twitter&utm_medium=twitter&utm_campaign=%28M%29+Denim+-+USA+-+Prospecting+-+ABO+8+-+2026+VAIO+%5Bcashback%5D&utm_term=%28M%29+Denim+-+USA+-+Broad+1+-+Auto+%5BAll%5D&utm_content=img-md-neeta-buttshot-highquality-D943-V1-B-h27-p2-LP_MDOJ-c%2FNone-irl&twclid=2cc4cnrb0o1hpyal9rg55w07zo",
         "homepage_status": 200,
@@ -8978,7 +8980,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-07-13T14:17:11.010Z",
+        "fetched_at": "2026-07-16T14:42:34.075Z",
         "homepage_url": "https://combos.fun/",
         "example_url": "https://combos.fun/?utm_source=X&utm_campaign=promote%3Dcar2&twclid=2aswwo64b7owkoq09axl1gyba6",
         "homepage_status": 403,

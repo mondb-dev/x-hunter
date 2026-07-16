@@ -1,144 +1,139 @@
 {
-  "checked_at": "2026-07-15T12:37:16.332Z",
-  "evidence_24h": 24,
-  "unique_sources": 7,
+  "checked_at": "2026-07-16T14:49:46.448Z",
+  "evidence_24h": 26,
+  "unique_sources": 6,
   "status": "captured",
   "alerts": [
     {
       "type": "source_dominance",
       "severity": "high",
-      "detail": "@unknown accounts for 75% of today's evidence (18/24)",
+      "detail": "@unknown accounts for 73% of today's evidence (19/26)",
       "username": "unknown",
-      "share": 0.75
+      "share": 0.731
     }
   ],
-  "summary": "1 capture alert(s) detected:\n[HIGH] @unknown accounts for 75% of today's evidence (18/24)",
+  "summary": "1 capture alert(s) detected:\n[HIGH] @unknown accounts for 73% of today's evidence (19/26)",
   "source_concentration": {
     "unknown": {
       "username": "unknown",
-      "count": 18,
-      "share": 0.75
+      "count": 19,
+      "share": 0.731
+    },
+    "ricci_richy": {
+      "username": "ricci_richy",
+      "count": 2,
+      "share": 0.077
+    },
+    "ericldaugh": {
+      "username": "ericldaugh",
+      "count": 2,
+      "share": 0.077
+    },
+    "leaderjohnthune": {
+      "username": "leaderjohnthune",
+      "count": 1,
+      "share": 0.038
+    },
+    "rokhanna": {
+      "username": "rokhanna",
+      "count": 1,
+      "share": 0.038
     },
     "atrupar": {
       "username": "atrupar",
       "count": 1,
-      "share": 0.042
-    },
-    "globaltimesnews": {
-      "username": "globaltimesnews",
-      "count": 1,
-      "share": 0.042
-    },
-    "news5ph": {
-      "username": "news5ph",
-      "count": 1,
-      "share": 0.042
-    },
-    "cheldiokno": {
-      "username": "cheldiokno",
-      "count": 1,
-      "share": 0.042
-    },
-    "ericldaugh": {
-      "username": "ericldaugh",
-      "count": 1,
-      "share": 0.042
-    },
-    "rt_com": {
-      "username": "rt_com",
-      "count": 1,
-      "share": 0.042
+      "share": 0.038
     }
   },
   "axis_concentration": {
-    "axis_power_accountability": {
-      "axis_id": "axis_power_accountability",
-      "label": "Power, Institutions, and Rule of Law",
-      "count": 5,
-      "share": 0.208
-    },
     "axis_procedural_governance_accountability": {
       "axis_id": "axis_procedural_governance_accountability",
       "label": "Procedural Governance vs. Genuine Accountability",
+      "count": 6,
+      "share": 0.231
+    },
+    "axis_information_control_v1": {
+      "axis_id": "axis_information_control_v1",
+      "label": "Information Control",
       "count": 4,
-      "share": 0.167
+      "share": 0.154
     },
-    "axis_national_sovereignty_v_intl_law_v1": {
-      "axis_id": "axis_national_sovereignty_v_intl_law_v1",
-      "label": "National Sovereignty vs. International Law",
-      "count": 2,
-      "share": 0.083
+    "axis_power_accountability": {
+      "axis_id": "axis_power_accountability",
+      "label": "Power, Institutions, and Rule of Law",
+      "count": 3,
+      "share": 0.115
     },
-    "axis_human_rights_exploitation_v1": {
-      "axis_id": "axis_human_rights_exploitation_v1",
-      "label": "Human Rights and Exploitation",
+    "axis_discourse_order_polarization_v1": {
+      "axis_id": "axis_discourse_order_polarization_v1",
+      "label": "Discourse: Order vs. Polarization",
       "count": 2,
-      "share": 0.083
+      "share": 0.077
     },
-    "axis_rapid_disinformation_v1": {
-      "axis_id": "axis_rapid_disinformation_v1",
-      "label": "Rapid Disinformation",
+    "axis_procedural_governance_v1": {
+      "axis_id": "axis_procedural_governance_v1",
+      "label": "Procedural Governance vs. Substantive Action",
       "count": 2,
-      "share": 0.083
+      "share": 0.077
+    },
+    "axis_epistemic_integrity": {
+      "axis_id": "axis_epistemic_integrity",
+      "label": "Truth and Evidence in Public Discourse",
+      "count": 1,
+      "share": 0.038
+    },
+    "axis_collective_voice": {
+      "axis_id": "axis_collective_voice",
+      "label": "Authentic Participation vs. Managed Consent",
+      "count": 1,
+      "share": 0.038
     },
     "axis_ai_societal_impact_v1": {
       "axis_id": "axis_ai_societal_impact_v1",
       "label": "Societal Impact and Ethical Concerns of AI/Robots",
       "count": 1,
-      "share": 0.042
+      "share": 0.038
     },
-    "axis_media_integrity_v1": {
-      "axis_id": "axis_media_integrity_v1",
-      "label": "Integrity of Information and Social Media Manipulation",
+    "axis_authoritarian_self_determination_v1": {
+      "axis_id": "axis_authoritarian_self_determination_v1",
+      "label": "Authoritarian Control vs. Individual/Collective Self-Determination",
       "count": 1,
-      "share": 0.042
+      "share": 0.038
     },
-    "axis_digital_supply_chain_security": {
-      "axis_id": "axis_digital_supply_chain_security",
-      "label": "Digital Supply Chain Security and Vulnerabilities",
+    "axis_political_moral_conduct_v1": {
+      "axis_id": "axis_political_moral_conduct_v1",
+      "label": "Political Integrity and Moral Conduct in Public Service",
       "count": 1,
-      "share": 0.042
-    },
-    "axis_environmental_policy_v_economic_v1": {
-      "axis_id": "axis_environmental_policy_v_economic_v1",
-      "label": "Environmental Policy vs. Economic Development",
-      "count": 1,
-      "share": 0.042
-    },
-    "axis_political_vulnerability_foreign_influence_v1": {
-      "axis_id": "axis_political_vulnerability_foreign_influence_v1",
-      "label": "Political Vulnerability & Foreign Influence",
-      "count": 1,
-      "share": 0.042
+      "share": 0.038
     }
   },
   "cluster_concentration": {
     "unknown": {
       "cluster": "unknown",
-      "count": 20,
-      "share": 0.833
+      "count": 21,
+      "share": 0.808
     },
-    "accountability_journalism": {
-      "cluster": "accountability_journalism",
+    "asia_pacific": {
+      "cluster": "asia_pacific",
       "count": 2,
-      "share": 0.083
+      "share": 0.077
     },
     "us_politics": {
       "cluster": "us_politics",
-      "count": 1,
-      "share": 0.042
+      "count": 2,
+      "share": 0.077
     },
-    "disinformation": {
-      "cluster": "disinformation",
+    "accountability_journalism": {
+      "cluster": "accountability_journalism",
       "count": 1,
-      "share": 0.042
+      "share": 0.038
     }
   },
   "pole_balance": {
-    "left": 14,
-    "right": 10,
+    "left": 13,
+    "right": 13,
     "neutral": 0,
-    "left_share": 0.583,
-    "right_share": 0.417
+    "left_share": 0.5,
+    "right_share": 0.5
   }
 }
