@@ -235,6 +235,13 @@ function runSocialPipeline() {
     runScriptLog(path.join(PROJECT_ROOT, 'runner/linkedin_engage.js'));
   }
 
+  // LinkedIn amplification — reshare one high-relevance feed post, choosing the
+  // source via the amplify learn-loop (parallel of x_amplify).
+  if (dueForRun('linkedin_amplify', 8 * HOUR)) {
+    log('social: LinkedIn amplify (learn-loop reshare)');
+    runScriptLog(path.join(PROJECT_ROOT, 'runner/linkedin_amplify.js'));
+  }
+
   // LinkedIn post — generate a draft then publish (twice a day)
   if (dueForRun('linkedin_post', 12 * HOUR)) {
     log('social: LinkedIn draft + post');

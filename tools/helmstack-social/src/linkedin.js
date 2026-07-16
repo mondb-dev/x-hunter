@@ -560,6 +560,37 @@ class LinkedIn {
     return fin.rendered > 0 && !fin.present ? { ok: true } : { ok: false, reason: "still_present" };
   }
 
+  /**
+   * Read back the permalink of our most recent reshare from recent activity — the
+   * UI reshare() doesn't return a URL, so the amplify loop calls this right after
+   * to tag the reshare measurable. Recent-activity items carry a data-urn
+   * (urn:li:activity:N); the permalink is feed/update/<urn>/. Matches the top
+   * reshare item (optionally constrained to `match` text). Returns URL or null.
+   *
+   * @param {string} profileUrl  our profile URL (…/in/<vanity>/)
+   * @param {string} [match]     case-insensitive substring to constrain the reshare
+   * @returns {Promise<string|null>}
+   */
+  async latestReshareUrl(profileUrl, match = "") {
+    const act = (profileUrl.startsWith("http") ? profileUrl : "https://www.linkedin.com" + profileUrl).replace(/\/$/, "") + "/recent-activity/all/";
+    const reEsc = String(match).replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
+    await this.c.navigate(this.tab, act);
+    await this.c.waitReady(this.tab, { tag: "linkedin" }).catch(() => {});
+    let urn = null;
+    for (let w = 0; w < 12 && !urn; w++) {
+      await sleep(1000);
+      urn = await this.c.evaluate(this.tab, `(function(){
+        var items=[].slice.call(document.querySelectorAll('div[role="listitem"], .feed-shared-update-v2')).slice(0,8);
+        var t=items.find(function(it){ var tx=it.innerText||''; return /Sebastian Hunter reposted/i.test(tx) && (${JSON.stringify(!match)} || new RegExp(${JSON.stringify(reEsc)},'i').test(tx)); });
+        if(!t) return "";
+        var el=t.hasAttribute('data-urn')?t:t.querySelector('[data-urn]');
+        return el ? (el.getAttribute('data-urn')||"") : "";
+      })()`).catch(() => "");
+      if (!urn) urn = null;
+    }
+    return urn ? `https://www.linkedin.com/feed/update/${urn}/` : null;
+  }
+
   // ── People search + networking (connect / follow) ───────────────────────────
   /**
    * Search People and return lightweight result descriptors. Name + headline are
