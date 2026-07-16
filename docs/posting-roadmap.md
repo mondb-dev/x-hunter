@@ -64,16 +64,18 @@ Note: `scrapeFeed`'s author field is empty against LinkedIn's current obfuscated
 DOM, so the script parses the author from the feed-card text (unit-tested on the
 real "Recommended for you" / "reposted this" / "likes this" formats).
 
-**Still to wire (smaller follow-ups):**
-- **X quote-with-commentary as an amplify technique** — `x_amplify` currently fires only a bare repost; a quote earns richer (measurable) engagement but needs composed commentary on top of the already-built quote API path.
-- **Fix `scrapeFeed` author extraction** in the shared engine (obfuscated LinkedIn DOM) so the text-parse fallback in `linkedin_amplify` isn't needed and `linkedin_engage`/`collect` get real authors too.
+**Done (both follow-ups):**
+- **X quote-with-commentary technique** — `x_amplify` now, for squarely-on-topic posts (relevance ≥ `X_AMPLIFY_QUOTE_MIN_RELEVANCE`, default 3), sometimes (`X_AMPLIFY_QUOTE_PROB`, default 0.4) composes short on-voice commentary (voice + fact-check gated) and quote-tweets instead of bare-reposting — a richer, MEASURABLE amplification tagged `measurable:true`. Falls back to bare repost on any failure; honors the `quote` kill-switch. (Live quote posting couldn't be exercised at build time — X daily tweet limit, shared with the live agent — but the path detects that and falls back.)
+- **`scrapeFeed` author extraction (shared engine)** — the obfuscated LinkedIn DOM made the old selectors return `""`; now parses the CONTENT author from the card text (avatar-alt fallback). Live-verified across post/repost/like cards. Fixes `linkedin_engage`/`collect` authors too, and `linkedin_amplify` dropped its own text-parse fallback.
 
-### Suggested order
+### Suggested order — all DONE except FB
 1. ~~X quote→API + X retweet action.~~ DONE.
 2. ~~LinkedIn reshare action.~~ DONE (UI-driven — `LinkedIn.reshare`/`deleteReshare`).
-3. ~~Learn-loop core + autonomous X trigger.~~ DONE.
-4. ~~LinkedIn amplify trigger.~~ DONE (`linkedin_amplify.js` + `LinkedIn.latestReshareUrl`). **Both channels' amplification loops are now live end-to-end.**
-5. FB share — only if the FB automation surface improves.
+3. ~~Learn-loop core + autonomous X trigger (repost + quote techniques).~~ DONE.
+4. ~~LinkedIn amplify trigger.~~ DONE (`linkedin_amplify.js` + `LinkedIn.latestReshareUrl`).
+5. **FB share — the only remaining item**, and only if the FB automation surface improves (FB is automation-hostile; observation-only today).
+
+Both channels' amplification loops are live end-to-end: **select → act (repost/quote/reshare) → measure → correlate → bias next select.** Everything except Facebook is shipped.
 
 ## Reusable machinery already in place
 - In-page authed fetch pattern (X: `ct0` + web bearer + dynamic queryId; LinkedIn: JSESSIONID csrf) — see `X._graphqlMutation` (generic: any bundle-declared mutation by operationName) and `LinkedIn.post`/`postImage`.
