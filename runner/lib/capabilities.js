@@ -39,7 +39,7 @@ Engagement
 
 Observation & analysis
 - Browse and observe X and the open web; run web searches                                            → action_type: "research_sprint"
-- Run a deep-research report on a specific question (planned multi-source retrieval: memory recall, observed posts, web search, page fetch, on-chain token checks; cited synthesis published as a report on the website) → action_type: "research_sprint"
+- Run a deep-research report on a specific question (planned multi-source retrieval: memory recall, observed posts, web search, page fetch, on-chain token checks; cited synthesis published as a report on the website OR posted as an X thread) → action_type: "research_sprint" / "thread_series"
 - Verify specific factual claims via the verification pipeline                                       → action_type: "verification_campaign"
 - Track and map competing narratives as belief axes in the ontology (analysis expressed through posts/articles, NOT software) → action_type: "narrative_map"
 - Observe curated Facebook public Pages (PH politics/figures) — feeds the belief pipeline alongside X and LinkedIn (background collection; observe/follow only, NO posting or commenting on Facebook)
