@@ -915,18 +915,91 @@ async function researchAndPublish(question, { maxFetch = 3, publish = true, sour
   return { shortAnswer, url, report, findings, bailed: false, published: !!url, confidence: conf };
 }
 
-module.exports = { deepResearch, researchAndPublish, plan, TOOLS, classify, decompose, reviewPlan, treeResearch, flatResearch, contextTriage };
+/**
+ * researchToThread(question) — run deep research and POST the findings as an X
+ * self-thread (no website report page). Same triage + quality bar as
+ * researchAndPublish: a bail returns the clarifying question instead, and a
+ * compromised / below-DR_MIN_PUBLISH_CONF pass posts nothing. Thread prose goes
+ * through the outbound compose backend + passOutbound gates (voice, factcheck)
+ * per tweet, then lib/post_x_helmstack runThread (which logs to posts_log, so
+ * the sprint tracker sees it as a thread signal).
+ */
+async function researchToThread(question, { maxFetch = 4, maxTweets = 5, live = true } = {}) {
+  const res = await deepResearch(question, { maxFetch, allowTree: true, maxVerify: 3 });
+  if (res.bailed) return { posted: false, bailed: true, clarify: res.clarify, report: res.report };
+
+  const a = res.assessment || {};
+  const conf = a.confidence_pct;
+  const MIN = Number(process.env.DR_MIN_PUBLISH_CONF || 40);
+  if (a.compromised || (conf != null && conf < MIN)) {
+    log(`thread gate: WITHHELD (confidence=${conf != null ? conf + '%' : '?'}${a.compromised ? `, compromised: ${a.compromised_why || 'yes'}` : ''})`);
+    return { posted: false, gated: true, confidence: conf, report: res.report };
+  }
+
+  const { compose } = require('./lib/compose');
+  const raw = await compose(
+`Turn this research into an X thread of 3-${maxTweets} tweets by Sebastian Hunter.
+Rules:
+- Tweet 1 hooks with the key finding${a.key_finding ? ` (${a.key_finding})` : ''} — concrete and specific; no "a thread", no thread emoji.
+- Each tweet under 260 chars, plain ASCII punctuation, stands on its own, carries a specific (name, number, mechanism).
+- Match certainty to the research confidence (${conf != null ? conf + '%' : 'unstated'}) — never claim past the evidence.
+- Last tweet may name the 1-2 strongest sources (bare URLs fine). No hashtags.
+QUESTION: ${question}
+
+RESEARCH REPORT:
+${String(res.report).slice(0, 3500)}
+
+Output ONLY a JSON array of tweet strings.`,
+    { maxTokens: 900, tag: 'dr-thread' });
+  let tweets = null;
+  try { tweets = cleanJson(raw); } catch { /* handled below */ }
+  tweets = (Array.isArray(tweets) ? tweets : []).map((t) => String(t).trim()).filter(Boolean).slice(0, maxTweets);
+  if (tweets.length < 2) { log('thread compose failed — no usable tweets'); return { posted: false, reason: 'thread_compose_failed', report: res.report }; }
+
+  const { passOutbound } = require('./lib/outbound_gates');
+  const gated = [];
+  for (const t of tweets) {
+    const g = await passOutbound(t, { maxLen: 275, tag: 'dr-thread' });
+    if (g.ok) gated.push(g.text);
+    else log(`thread gate dropped a tweet (${g.reason}): ${t.slice(0, 60)}`);
+  }
+  if (gated.length < 2) return { posted: false, reason: 'gates_dropped_thread', tweets, report: res.report };
+
+  if (!live) { log(`dry run — composed ${gated.length} tweet(s), not posting`); return { posted: false, dryRun: true, tweets: gated, confidence: conf, report: res.report }; }
+
+  const { runThread } = require('./lib/post_x_helmstack');
+  const r = await runThread(gated, {});
+  if (!r.ok) return { posted: false, reason: r.reason || 'post_failed', tweets: gated, report: res.report };
+  log(`thread posted: ${r.tweet1Url}`);
+  return { posted: true, url: r.tweet1Url, urls: r.urls, tweets: gated, confidence: conf, report: res.report };
+}
+
+module.exports = { deepResearch, researchAndPublish, researchToThread, plan, TOOLS, classify, decompose, reviewPlan, treeResearch, flatResearch, contextTriage };
 
 // ── CLI ───────────────────────────────────────────────────────────────────────
 if (require.main === module) {
   (async () => {
     const args = process.argv.slice(2);
     const planOnly = args.includes('--plan-only');
+    const asThread = args.includes('--thread');
+    const dry = args.includes('--dry');
     const mf = (args.find((a) => a.startsWith('--max-fetch=')) || '').split('=')[1];
     const forcedTier = (args.find((a) => a.startsWith('--tier=')) || '').split('=')[1];   // trivial|standard|deep
     const question = args.filter((a) => !a.startsWith('--')).join(' ').trim();
-    if (!question) { console.error('usage: node runner/deep_research.js "<question>" [--plan-only] [--tier=deep] [--max-fetch=N]'); process.exit(2); }
+    if (!question) { console.error('usage: node runner/deep_research.js "<question>" [--plan-only] [--tier=deep] [--max-fetch=N] [--thread [--dry]]'); process.exit(2); }
     try {
+      if (asThread) {
+        const t = await researchToThread(question, { maxFetch: mf ? Number(mf) : 4, live: !dry });
+        console.log('\n=== THREAD ===');
+        if (t.bailed) console.log(`(bailed) ${t.clarify}`);
+        else if (t.gated) console.log(`(withheld by quality gate — confidence ${t.confidence != null ? t.confidence + '%' : '?'})`);
+        else if (!t.posted && !t.dryRun) console.log(`(not posted: ${t.reason})`);
+        else {
+          (t.tweets || []).forEach((tw, i) => console.log(`\n[${i + 1}] ${tw}`));
+          console.log(t.posted ? `\nposted: ${t.url}` : '\n(dry run — not posted)');
+        }
+        process.exit(0);
+      }
       const res = await deepResearch(question, { planOnly, tier: forcedTier || undefined, maxFetch: mf ? Number(mf) : 4 });
       if (planOnly) { console.log('\n=== PLAN ===\n' + JSON.stringify(res.plan, null, 2)); }
       else {
