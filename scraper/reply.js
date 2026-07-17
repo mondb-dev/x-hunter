@@ -87,7 +87,11 @@ function writeQueue(items) {
 const SPAM_PATTERNS = [
   /\bgiveaway\b/i,
   /\bwin\s+(free|big|prizes?)\b/i,
-  /\b(dm\s+me|dm\s+for|message\s+me)\b/i,
+  // no leading \b on the dm variants: bait like "Let's talkdm us" glues the
+  // words together and a word boundary never fires
+  /dm\s*(me|us)\b/i,
+  /\b(dm\s+for|message\s+(me|us))\b/i,
+  /\blet'?s\s+talk\s*dm/i,
   /\b(click|buy\s+now|limited\s+time|act\s+now)\b/i,
   // NOTE: "pump" and "rug" are intentionally NOT here — they collide with
   // legit deep-research asks ("pump.fun trenches", "is this token a rug?"),
@@ -117,25 +121,64 @@ function isSpam(item) {
 
 // ── 2. Fetch thread context via HelmStack ─────────────────────────────────────
 /**
- * Extract the visible conversation on the mention's permalink, DOM order:
- * ancestor tweets first, then the mention itself. Returns up to 6
- * `{user, text}` snippets (quoted tweets folded into the text).
+ * The conversation around the mention, partitioned so the reply prompt can tell
+ * the model what came BEFORE the mention (the thread it must understand) vs
+ * what sits below it. scrapeConversation scroll-loads the ancestor chain (X
+ * lazy-renders it above the focused tweet — a flat scrape saw only the mention,
+ * which is why replies used to have no idea what the thread was about).
+ *
+ * Returns { ancestors, repliesBelow, rootId, all } — each entry {id, user, text},
+ * quoted tweets folded into the text. Never throws; empty parts on failure.
  */
 async function fetchThreadContext(x, item) {
   const tweetUrl = `https://x.com/${item.from_username}/status/${item.id}`;
+  let ancestors = [];
+  let repliesBelow = [];
+  let all = [];
   try {
-    const articles = await x.scrapeConversation(tweetUrl, { limit: 6 });
-    return articles.map(a => {
+    const articles = await x.scrapeConversation(tweetUrl, { limit: 8 });
+    all = articles.map(a => {
       let text = (a.text || "").trim();
       if (a.quotedText) {
         text += `\n[quoting @${a.quotedUsername || "?"}: "${a.quotedText.slice(0, 200)}"]`;
       }
-      return { user: a.username || a.displayName || "?", text };
-    }).filter(a => a.text.length > 0);
+      return { id: a.id, user: a.username || a.displayName || "?", text };
+    }).filter(a => a.text.length > 0 || a.id === item.id);
+    const idx = all.findIndex(a => a.id === item.id);
+    // Mention not matched in the scrape → treat everything as prior context.
+    ancestors = idx >= 0 ? all.slice(0, idx) : all;
+    repliesBelow = idx >= 0 ? all.slice(idx + 1) : [];
   } catch (err) {
-    console.warn(`[reply] thread context fetch failed: ${err.message}`);
-    return [];
+    console.warn(`[reply] thread context scrape failed: ${err.message}`);
   }
+  // X serves permalink pages to this session WITHOUT the conversation timeline
+  // (verified: provably-a-reply mentions render as a lone article), so the DOM
+  // scrape usually yields no ancestors. Walk replying_to_status via the public
+  // fxtwitter API instead — that chain is what the reply model must understand.
+  if (ancestors.length === 0) {
+    try {
+      const { fetchAncestors } = require("../runner/lib/x_thread");
+      ancestors = await fetchAncestors(item.id, { maxDepth: 5 });
+      if (ancestors.length) console.log(`[reply] ancestors resolved via fxtwitter API (browser saw none)`);
+    } catch (err) {
+      console.warn(`[reply] ancestor API walk failed: ${err.message}`);
+    }
+  }
+  const rootId = (ancestors[0] && ancestors[0].id) || item.id;
+  return { ancestors, repliesBelow, rootId, all };
+}
+
+/**
+ * Sebastian's own prior replies in THIS thread, from the interactions ledger
+ * (replies are stamped with root_id at log time). Without this, a follow-up
+ * mention in a thread he already replied in reads as a cold start.
+ */
+function ownRepliesInThread(interactions, rootId, excludeId) {
+  if (!rootId) return [];
+  return (interactions.replies || [])
+    .filter(r => r.root_id === rootId && r.id !== excludeId)
+    .slice(-3)
+    .map(r => ({ from: r.from, our_reply: r.our_reply }));
 }
 
 // ── 3. Memory recall ──────────────────────────────────────────────────────────
@@ -255,16 +298,24 @@ Respond ONLY with JSON, no fences: {"needs_research":true|false,"research_query"
 }
 
 // ── 5. Gemini: classify + draft with full context ─────────────────────────────
-async function geminiClassify(item, threadContext = [], memoryHints = [], userHistory = null, topicAccounts = [], verifiedHints = [], liveVerification = null, intelligenceBrief = null) {
+async function geminiClassify(item, threadContext = null, memoryHints = [], userHistory = null, topicAccounts = [], verifiedHints = [], liveVerification = null, intelligenceBrief = null, ownThread = []) {
   const { callVertex } = require("../runner/vertex");
 
-  // Build thread context block
+  // Build thread context block: the conversation ABOVE the mention (root first,
+  // immediate parent last), with Sebastian's own tweets marked as YOU, plus his
+  // ledger-recorded prior replies in this thread.
+  const fmtUser = (u) => (String(u || "").toLowerCase() === OWN_USERNAME ? `YOU (@${u})` : `@${u}`);
   let threadBlock = "";
-  if (threadContext.length > 0) {
-    threadBlock = "\nThread context (conversation before this mention):\n" +
-      threadContext
-        .map(a => `  @${a.user}: "${a.text.slice(0, 220)}"`)
+  const ancestors = (threadContext && threadContext.ancestors) || [];
+  if (ancestors.length > 0) {
+    threadBlock = "\nThe conversation this mention is part of, oldest first — the FIRST tweet is the thread's root post, the LAST is what the mention directly responds to:\n" +
+      ancestors
+        .map(a => `  ${fmtUser(a.user)}: "${a.text.slice(0, 220)}"`)
         .join("\n") + "\n";
+  }
+  if (ownThread && ownThread.length > 0) {
+    threadBlock += "\nYour own earlier replies in THIS thread (do not repeat yourself — build on what you already said):\n" +
+      ownThread.map(r => `  You (to @${r.from}): "${(r.our_reply || "").slice(0, 160)}"`).join("\n") + "\n";
   }
 
   // Build memory block
@@ -430,7 +481,7 @@ function getUserHistory(data, username) {
   return (data.users || {})[username] || null;
 }
 
-function logInteraction(data, item, replyText, memoryHints) {
+function logInteraction(data, item, replyText, memoryHints, rootId = null) {
   data.total_replies = (data.total_replies || 0) + 1;
   data.today_count   = (data.today_count   || 0) + 1;
   data.last_reply_at = new Date().toISOString();
@@ -439,6 +490,7 @@ function logInteraction(data, item, replyText, memoryHints) {
     from:          item.from_username,
     their_text:    item.text,
     our_reply:     replyText,
+    root_id:       rootId,   // thread root — lets a later mention in the same thread recall this reply
     memory_used:   memoryHints.map(m => `${m.type}:${m.title}`),
     replied_at:    data.last_reply_at,
   });
@@ -570,10 +622,11 @@ function logInteraction(data, item, replyText, memoryHints) {
     // ── Step 2: Fetch thread context (navigate to tweet) ──────────────────
     console.log(`[reply] fetching thread context...`);
     const threadContext = await fetchThreadContext(x, item);
-    console.log(`[reply] thread: ${threadContext.length} tweet(s) in view`);
+    const ownThread = ownRepliesInThread(interactions, threadContext.rootId, item.id);
+    console.log(`[reply] thread: ${threadContext.ancestors.length} ancestor(s), ${threadContext.repliesBelow.length} below, ${ownThread.length} own prior repl(ies) (root ${threadContext.rootId || "n/a"})`);
 
     // ── Step 3: Memory recall + account lookup ────────────────────────────
-    const memoryHints = await recallForMention(item.text, threadContext);
+    const memoryHints = await recallForMention(item.text, threadContext.ancestors);
     const topicAccounts = accountsForTopic(item.text);
     if (memoryHints.length > 0) {
       console.log(`[reply] memory: ${memoryHints.length} relevant entry(s) (${memoryHints.map(m => m.title).join(", ")})`);
@@ -593,16 +646,14 @@ function logInteraction(data, item, replyText, memoryHints) {
     // ── Step 3b: Live claim verification ──────────────────────────────────
     let liveVerification = null;
     if (verifyClaim) {
-      // If the message is a short "verify this" intent, extract claim from the
-      // parent post (threadContext[0]) instead of the user's own short message.
+      // If the message is a short "verify this" intent, extract the claim from
+      // the tweet the mention DIRECTLY responds to (nearest ancestor — that is
+      // what "this" refers to), not the user's own short message.
       const isVerifyIntent = /\b(verify|fact.?check|is this true|check this|true or false)\b/i.test(item.text)
         && item.text.length <= 80;
-      const claimSource = isVerifyIntent && threadContext.length > 0
-        ? threadContext[0].text
-        : item.text;
-      const claimHandle = isVerifyIntent && threadContext.length > 0
-        ? threadContext[0].user
-        : item.from_username;
+      const parent = threadContext.ancestors[threadContext.ancestors.length - 1] || null;
+      const claimSource = isVerifyIntent && parent ? parent.text : item.text;
+      const claimHandle = isVerifyIntent && parent ? parent.user : item.from_username;
 
       if (claimSource && claimSource.length > 40) {
         try {
@@ -631,7 +682,7 @@ function logInteraction(data, item, replyText, memoryHints) {
 
     let verdict;
     try {
-      verdict = await geminiClassify(item, threadContext, memoryHints, userHistory, topicAccounts, [], liveVerification, intelligenceBrief);
+      verdict = await geminiClassify(item, threadContext, memoryHints, userHistory, topicAccounts, [], liveVerification, intelligenceBrief, ownThread);
     } catch (err) {
       console.error(`[reply] Gemini error: ${err.message}`);
       item.status = "error";
@@ -724,7 +775,7 @@ function logInteraction(data, item, replyText, memoryHints) {
       item.status    = "done";
       item.our_reply = replyText;
       item.replied_at = new Date().toISOString();
-      logInteraction(interactions, item, replyText, memoryHints); // increments today_count
+      logInteraction(interactions, item, replyText, memoryHints, threadContext.rootId); // increments today_count
       repliedThisRun++;
       interactions.last_reply_at = item.replied_at;
 
