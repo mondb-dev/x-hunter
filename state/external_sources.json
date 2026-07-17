@@ -1,8 +1,8 @@
 {
   "schema_version": "1.0",
-  "generated_at": "2026-07-16T23:41:18.665Z",
+  "generated_at": "2026-07-17T02:41:24.127Z",
   "method": "mechanical_registry_v1",
-  "profiled_at": "2026-07-16T23:41:22.915Z",
+  "profiled_at": "2026-07-17T02:41:28.234Z",
   "sources": [
     {
       "domain": "theguardian.com",
@@ -11,7 +11,7 @@
       "first_seen_at": "2026-03-27T23:17:00Z",
       "last_seen_at": "2026-07-13T23:01:48.746Z",
       "discovery": {
-        "distinct_urls": 404,
+        "distinct_urls": 406,
         "example_urls": [
           "https://www.theguardian.com/us-news/2026/jun/23/trump-immigration-courthouse-arrest-policy",
           "https://www.theguardian.com/us-news/2026/jun/28/ice-minnesota-defending-democracy",
@@ -21,7 +21,7 @@
         ],
         "origin_counts": {
           "ontology_evidence": 32,
-          "reading_queue": 381,
+          "reading_queue": 383,
           "journals": 71,
           "articles": 1
         },
@@ -67,7 +67,7 @@
         "breadth": {
           "score": 0.94,
           "basis": [
-            "distinct_urls:404",
+            "distinct_urls:406",
             "distinct_axes:12",
             "origin_types:4"
           ]
@@ -107,7 +107,7 @@
             "newsroom_domain_pattern",
             "article_path_seen",
             "doi_or_identifier_path_seen",
-            "distinct_urls:404",
+            "distinct_urls:406",
             "distinct_axes:12",
             "origin_types:4",
             "referring_accounts:0",
@@ -533,9 +533,9 @@
       "entity": "Aljazeera",
       "kind": "news",
       "first_seen_at": "2026-06-22T02:45:00Z",
-      "last_seen_at": "2026-07-16T22:12:07.442Z",
+      "last_seen_at": "2026-07-17T01:11:57.964Z",
       "discovery": {
-        "distinct_urls": 249,
+        "distinct_urls": 250,
         "example_urls": [
           "https://www.aljazeera.com/opinions/2026/6/24/south-africas-crises-will-not-be-solved-by-blaming-migrants",
           "https://www.aljazeera.com/video/newsfeed/2026/6/27/newly-released-video-exposes-henry-nowak-killers-lies?traffic_source=rss",
@@ -546,7 +546,7 @@
         "origin_counts": {
           "ontology_evidence": 138,
           "reading_queue": 9,
-          "journals": 339
+          "journals": 340
         },
         "distinct_referring_accounts": 0,
         "sample_referring_accounts": [],
@@ -596,7 +596,7 @@
         "breadth": {
           "score": 0.8799999999999999,
           "basis": [
-            "distinct_urls:249",
+            "distinct_urls:250",
             "distinct_axes:19",
             "origin_types:3"
           ]
@@ -635,7 +635,7 @@
           "basis": [
             "newsroom_domain_pattern",
             "article_path_seen",
-            "distinct_urls:249",
+            "distinct_urls:250",
             "distinct_axes:19",
             "origin_types:3",
             "referring_accounts:0",
@@ -1307,7 +1307,7 @@
       "first_seen_at": "2026-06-26T07:05:00Z",
       "last_seen_at": "2026-07-11T20:57:02.247Z",
       "discovery": {
-        "distinct_urls": 227,
+        "distinct_urls": 228,
         "example_urls": [
           "https://www.bbc.co.uk/news/articles/cn8qxz6qypyo",
           "https://www.bbc.co.uk/news/articles/cn075j04pnyo?at_medium=RSS&amp;at_campaign=rss",
@@ -1317,7 +1317,7 @@
         ],
         "origin_counts": {
           "ontology_evidence": 4,
-          "reading_queue": 231,
+          "reading_queue": 232,
           "journals": 11
         },
         "distinct_referring_accounts": 0,
@@ -1351,7 +1351,7 @@
         "breadth": {
           "score": 0.7049999999999998,
           "basis": [
-            "distinct_urls:227",
+            "distinct_urls:228",
             "distinct_axes:3",
             "origin_types:3"
           ]
@@ -1389,7 +1389,7 @@
           "method": "mechanical_v1",
           "basis": [
             "newsroom_domain_pattern",
-            "distinct_urls:227",
+            "distinct_urls:228",
             "distinct_axes:3",
             "origin_types:3",
             "referring_accounts:0",
@@ -1984,9 +1984,9 @@
       "entity": "Amnesty",
       "kind": "unknown",
       "first_seen_at": "2026-03-31T12:16:18.459Z",
-      "last_seen_at": "2026-07-16T19:16:39.360Z",
+      "last_seen_at": "2026-07-17T01:11:57.988Z",
       "discovery": {
-        "distinct_urls": 45,
+        "distinct_urls": 47,
         "example_urls": [
           "https://www.amnesty.org/en/latest/news/2026/06/burkina-serge-oulon/",
           "https://www.amnesty.org/en/latest/news/2026/06/car-bozize/",
@@ -1995,9 +1995,9 @@
           "https://www.amnesty.org/en/latest/news/2026/06/usa-four-months-after-horrific-minab-school-airstrike"
         ],
         "origin_counts": {
-          "ontology_evidence": 40,
-          "reading_queue": 20,
-          "journals": 62
+          "ontology_evidence": 41,
+          "reading_queue": 22,
+          "journals": 63
         },
         "distinct_referring_accounts": 0,
         "sample_referring_accounts": [],
@@ -2034,7 +2034,7 @@
         "breadth": {
           "score": 0.8799999999999999,
           "basis": [
-            "distinct_urls:45",
+            "distinct_urls:47",
             "distinct_axes:6",
             "origin_types:3"
           ]
@@ -2073,7 +2073,7 @@
           "basis": [
             "unknown_domain_pattern",
             "article_path_seen",
-            "distinct_urls:45",
+            "distinct_urls:47",
             "distinct_axes:6",
             "origin_types:3",
             "referring_accounts:0",
@@ -2782,9 +2782,9 @@
       "entity": "Inquirer",
       "kind": "unknown",
       "first_seen_at": "2026-05-09T10:15:15.053Z",
-      "last_seen_at": "2026-07-16T23:12:22.617Z",
+      "last_seen_at": "2026-07-17T02:12:09.803Z",
       "discovery": {
-        "distinct_urls": 145,
+        "distinct_urls": 148,
         "example_urls": [
           "https://www.inquirer.net/capiz-broadcaster-shooting-probe-widens-as-cops-form-task-force",
           "https://newsinfo.inquirer.net/2251519/chr-carries-out-motu-proprio-probe-into-tacloban-cavite-school-incidents",
@@ -2793,8 +2793,8 @@
           "https://newsinfo.inquirer.net/2252742/fwd-defense-lawyer-poa-says-being-listed-as-the-prosecs-witness-not-a-problem"
         ],
         "origin_counts": {
-          "ontology_evidence": 69,
-          "journals": 218,
+          "ontology_evidence": 70,
+          "journals": 220,
           "articles": 1
         },
         "distinct_referring_accounts": 0,
@@ -2839,7 +2839,7 @@
         "breadth": {
           "score": 0.8799999999999999,
           "basis": [
-            "distinct_urls:145",
+            "distinct_urls:148",
             "distinct_axes:14",
             "origin_types:3"
           ]
@@ -2877,7 +2877,7 @@
           "method": "mechanical_v1",
           "basis": [
             "unknown_domain_pattern",
-            "distinct_urls:145",
+            "distinct_urls:148",
             "distinct_axes:14",
             "origin_types:3",
             "referring_accounts:0",
@@ -2923,9 +2923,9 @@
       "entity": "Rappler",
       "kind": "unknown",
       "first_seen_at": "2026-06-22T04:04:30.428Z",
-      "last_seen_at": "2026-07-16T09:11:27.353Z",
+      "last_seen_at": "2026-07-17T02:12:09.777Z",
       "discovery": {
-        "distinct_urls": 125,
+        "distinct_urls": 128,
         "example_urls": [
           "https://www.rappler.com/fact-check-no-arrest-warrant-issued-vs-marcoleta",
           "https://www.rappler.com/technology/decoded-tacloban-school-shooting-disinformation-kiko-barzaga-discussions-juvenile-justice-law/",
@@ -2935,7 +2935,7 @@
         ],
         "origin_counts": {
           "ontology_evidence": 70,
-          "journals": 151,
+          "journals": 154,
           "articles": 1
         },
         "distinct_referring_accounts": 0,
@@ -2983,7 +2983,7 @@
         "breadth": {
           "score": 0.8799999999999999,
           "basis": [
-            "distinct_urls:125",
+            "distinct_urls:128",
             "distinct_axes:17",
             "origin_types:3"
           ]
@@ -3021,7 +3021,7 @@
           "method": "mechanical_v1",
           "basis": [
             "unknown_domain_pattern",
-            "distinct_urls:125",
+            "distinct_urls:128",
             "distinct_axes:17",
             "origin_types:3",
             "referring_accounts:0",
@@ -3067,9 +3067,9 @@
       "entity": "Philstar",
       "kind": "unknown",
       "first_seen_at": "2026-05-20T06:57:31.760Z",
-      "last_seen_at": "2026-07-15T05:21:55.741Z",
+      "last_seen_at": "2026-07-17T02:12:09.803Z",
       "discovery": {
-        "distinct_urls": 85,
+        "distinct_urls": 87,
         "example_urls": [
           "https://www.philstar.com/headlines/2026/06/24/2537506/mike-defensor-face-trafficking-complaint-over-pasig-ktv-bar-raid",
           "https://www.philstar.com/headlines/2026/06/24/2537509/ched-tells-ateneo-explain-drowning-baterbonia-adili-or-face-sanctions",
@@ -3078,8 +3078,8 @@
           "https://www.philstar.com/headlines/2026/06/28/2538295/icc-freezes-money-seized-duterte"
         ],
         "origin_counts": {
-          "ontology_evidence": 50,
-          "journals": 124
+          "ontology_evidence": 52,
+          "journals": 126
         },
         "distinct_referring_accounts": 0,
         "sample_referring_accounts": [],
@@ -3090,6 +3090,7 @@
           "axis_political_moral_conduct_v1",
           "axis_political_trust_corruption_v1",
           "axis_power_accountability",
+          "axis_procedural_governance_accountability_v1",
           "axis_procedural_governance_v1",
           "axis_public_trust_safety_crisis_v1",
           "axis_social_welfare_v_military_spending_v1"
@@ -3119,8 +3120,8 @@
         "breadth": {
           "score": 0.82,
           "basis": [
-            "distinct_urls:85",
-            "distinct_axes:9",
+            "distinct_urls:87",
+            "distinct_axes:10",
             "origin_types:2"
           ]
         },
@@ -3158,8 +3159,8 @@
           "basis": [
             "unknown_domain_pattern",
             "article_path_seen",
-            "distinct_urls:85",
-            "distinct_axes:9",
+            "distinct_urls:87",
+            "distinct_axes:10",
             "origin_types:2",
             "referring_accounts:0",
             "origin_types:2",
@@ -3168,7 +3169,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-07-14T02:01:27.577Z",
+        "fetched_at": "2026-07-17T02:11:26.814Z",
         "homepage_url": "https://philstar.com/",
         "example_url": "https://www.philstar.com/headlines/2026/06/24/2537506/mike-defensor-face-trafficking-complaint-over-pasig-ktv-bar-raid",
         "homepage_status": 200,
@@ -3184,7 +3185,7 @@
           "has_about_link": false,
           "has_contact_link": false,
           "has_corrections_link": false,
-          "outbound_links_count": 76,
+          "outbound_links_count": 72,
           "opinion_marker": false
         },
         "example": {
@@ -3204,9 +3205,9 @@
       "entity": "Techcrunch",
       "kind": "unknown",
       "first_seen_at": "2026-06-22T23:31:00Z",
-      "last_seen_at": "2026-07-16T22:05:25.177Z",
+      "last_seen_at": "2026-07-17T01:11:57.964Z",
       "discovery": {
-        "distinct_urls": 54,
+        "distinct_urls": 55,
         "example_urls": [
           "https://techcrunch.com/2026/06/22/shareholders-sue-ubers-board-over-sexual-assaults-other-incidents/",
           "https://techcrunch.com/2026/06/25/notion-mail-shuts-down-amid-agent-takeover/",
@@ -3216,7 +3217,7 @@
         ],
         "origin_counts": {
           "ontology_evidence": 24,
-          "journals": 61
+          "journals": 62
         },
         "distinct_referring_accounts": 0,
         "sample_referring_accounts": [],
@@ -3257,7 +3258,7 @@
         "breadth": {
           "score": 0.82,
           "basis": [
-            "distinct_urls:54",
+            "distinct_urls:55",
             "distinct_axes:10",
             "origin_types:2"
           ]
@@ -3296,7 +3297,7 @@
           "basis": [
             "unknown_domain_pattern",
             "article_path_seen",
-            "distinct_urls:54",
+            "distinct_urls:55",
             "distinct_axes:10",
             "origin_types:2",
             "referring_accounts:0",
@@ -3306,7 +3307,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-07-14T02:01:28.940Z",
+        "fetched_at": "2026-07-17T02:11:27.990Z",
         "homepage_url": "https://techcrunch.com/",
         "example_url": "https://techcrunch.com/2026/06/22/shareholders-sue-ubers-board-over-sexual-assaults-other-incidents/",
         "homepage_status": 200,
@@ -3477,9 +3478,9 @@
       "entity": "T Co",
       "kind": "unknown",
       "first_seen_at": "2016-05-05T18:57:30.000Z",
-      "last_seen_at": "2026-07-16T22:05:13.165Z",
+      "last_seen_at": "2026-07-17T00:04:22.000Z",
       "discovery": {
-        "distinct_urls": 7952,
+        "distinct_urls": 7955,
         "example_urls": [
           "https://t.co/pJSE124ec4",
           "https://t.co/Soz8BXPWaa",
@@ -3488,7 +3489,7 @@
           "https://t.co/cYaqYDRp08"
         ],
         "origin_counts": {
-          "feed_buffer": 4967,
+          "feed_buffer": 4971,
           "feed_buffer_reply": 4830
         },
         "distinct_referring_accounts": 2480,
@@ -3530,7 +3531,7 @@
         "breadth": {
           "score": 0.47,
           "basis": [
-            "distinct_urls:7952",
+            "distinct_urls:7955",
             "distinct_axes:0",
             "origin_types:2"
           ]
@@ -3569,7 +3570,7 @@
           "basis": [
             "unknown_domain_pattern",
             "doi_or_identifier_path_seen",
-            "distinct_urls:7952",
+            "distinct_urls:7955",
             "distinct_axes:0",
             "origin_types:2",
             "referring_accounts:2480",
@@ -3975,7 +3976,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-07-14T02:01:31.395Z",
+        "fetched_at": "2026-07-17T02:11:29.799Z",
         "homepage_url": "https://brobible.com/",
         "example_url": "https://brobible.com/culture/paige-ostroushko-savanah-hernandez-anti-ice-protest-arrest/",
         "homepage_status": 200,
@@ -4638,7 +4639,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-07-14T02:01:41.870Z",
+        "fetched_at": "2026-07-17T02:11:40.093Z",
         "homepage_url": "https://doubleclick.net/",
         "example_url": "https://ad.doubleclick.net/ddm/trackclk/N117602.5126432X/B34540950.438517562;dc_trk_aid=631787244;dc_trk_cid=249093288;dc_dbm_token=$%7BDC_DBM_TOKEN%7D;dc_lat=;dc_rdid=;tag_for_child_directed_treatment=;tfua=;gdpr=$%7BGDPR%7D;gdpr_consent=$%7BGDPR_CONSENT_755%7D;gpp=$%7BGPP_STRING_755%7D;gpp_sid=$%7BGPP_SID%7D;ltd=;dc_tdv=1?twclid=292cdwzoayexun1iu6o4fsk10z",
         "homepage_status": 200,
@@ -5677,7 +5678,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-07-14T02:31:18.367Z",
+        "fetched_at": "2026-07-17T02:41:25.358Z",
         "homepage_url": "https://youtu.be/",
         "example_url": "https://youtu.be/m7jAReMF2c8?si=AtT5ue3VPnmZq5V6",
         "homepage_status": 200,
@@ -6570,7 +6571,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-07-14T02:31:18.955Z",
+        "fetched_at": "2026-07-17T02:41:25.801Z",
         "homepage_url": "https://ro.co/",
         "example_url": "https://ro.co/lp/weight-loss/quiz/?utm_medium=paid_social&utm_source=Twitter&utm_campaign=41158458&utm_term=54579155&utm_content=Ad2&twclid=2bv3rduaz2ypp78vahy5e6wspd",
         "homepage_status": 403,
@@ -9237,7 +9238,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-07-14T02:31:20.624Z",
+        "fetched_at": "2026-07-17T02:41:27.528Z",
         "homepage_url": "https://aramco.com/",
         "example_url": "https://www.aramco.com/en/what-we-do/energy-innovation/innovation-ecosystem/aramco-fifa-partnership?utm_source=x&utm_medium=cpm&utm_term=en_vid_cpm_inf-ftbl_na_football-fans&utm_content=en_4x5_vid_6s_global_fifa-whatif_na_m3&twclid=2f1bxdfhmr1if32n1ssvcc3xtc",
         "homepage_status": 200,
@@ -9622,7 +9623,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-07-14T01:01:14.711Z",
+        "fetched_at": "2026-07-17T01:11:24.788Z",
         "homepage_url": "https://onelink.me/",
         "example_url": "https://vix.onelink.me/Z4oU/hyuh928w?twclid=24s36ffdjwv85ew8o2yfteqmxu",
         "homepage_status": 200,
@@ -10898,7 +10899,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-07-14T00:31:12.326Z",
+        "fetched_at": "2026-07-17T00:41:28.923Z",
         "homepage_url": "https://mikmak.ai/",
         "example_url": "https://shop.mikmak.ai/social/69d80508c17cd48204adad0b?utm_source=twitter&utm_medium=paid_social&utm_campaign=une_hl_685&utm_term=P3G43FN-&utm_content=hlm-feel-the-flavor-overall-x_jar-and-squeezes_na_spicy_bsay_na_1x1_twpr_none_shnw_en_stp_mikmak_dark_na_sta-base_004_na_na_0565-demo-broad&utm_placement=amplify_preroll&utm_marketing_tactic=Consideration&utm_format=0565-demo-broad&utm_placementid=P3G43FN&utm_variant=brandsay&twclid=2dqu9rpgpoqo0mblvt9uebl5t7",
         "homepage_status": 200,
@@ -12035,7 +12036,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-07-14T00:31:13.291Z",
+        "fetched_at": "2026-07-17T00:41:29.714Z",
         "homepage_url": "https://guardianbikes.com/",
         "example_url": "https://guardianbikes.com/products/balance-bike?variant=41102033158237&utm_source=twitter&twclid=2dhmyi0k26r61jxbnc07720qis&utm_content=dpa_carousel&utm_campaign=X_2026_DPA_Remarketing_Campaign+&utm_medium=cpc",
         "homepage_status": 200,
@@ -12161,7 +12162,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-07-14T00:31:14.860Z",
+        "fetched_at": "2026-07-17T00:41:31.688Z",
         "homepage_url": "https://lovart.ai/",
         "example_url": "https://www.lovart.ai/?sourceId=910062&sourceid=910062&utm_source=twitter&utm_medium=paid_social&utm_campaign=Lovart_910062_Meta_US_AIModel_ag_260416_lead&twclid=2a5k8izlnshoxgoxi52b1tnd45",
         "homepage_status": 200,
@@ -12287,7 +12288,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-07-14T00:31:15.456Z",
+        "fetched_at": "2026-07-17T00:41:32.220Z",
         "homepage_url": "https://heylemon.ai/",
         "example_url": "https://heylemon.ai/?utm_source=paid_X_all1&twclid=2bprvotipsebt2ywwd413k1c6r",
         "homepage_status": 200,
@@ -12413,7 +12414,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-07-14T01:01:16.684Z",
+        "fetched_at": "2026-07-17T01:11:26.321Z",
         "homepage_url": "https://wavedash.com/",
         "example_url": "https://wavedash.com/?twclid=29k171tm7pjzrxbob4j7cmjl3o",
         "homepage_status": 200,
@@ -12665,7 +12666,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-07-14T02:31:21.674Z",
+        "fetched_at": "2026-07-17T02:41:28.234Z",
         "homepage_url": "https://babbily.com/",
         "example_url": "https://platform.babbily.com/?twclid=28ntbg85b8teebnlu9ilz4yxht",
         "homepage_status": 200,
@@ -12917,7 +12918,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-07-14T01:01:17.615Z",
+        "fetched_at": "2026-07-17T01:11:27.386Z",
         "homepage_url": "https://teslahubs.com/",
         "example_url": "https://teslahubs.com/products/teslahubs-proguard-advanced-noise-reduction-weatherproofing-kit?tw_source=twitter&tw_campaign=May_2_ProGuard_Sales__Men_25_34_Web_02_05_2026&utm_term=Static_PG_img_224_1.1&twclid=22spdhzoczolm0ipnjon5bt2pn",
         "homepage_status": 200,
@@ -13169,7 +13170,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-07-14T01:01:18.099Z",
+        "fetched_at": "2026-07-17T01:11:27.836Z",
         "homepage_url": "https://h-tech.space/",
         "example_url": "https://teamlore.h-tech.space/?twclid=21cpesmzgsrh5ius8yd25zbe9t",
         "homepage_status": null,
@@ -23552,6 +23553,131 @@
       }
     },
     {
+      "domain": "houseofkaisers.com",
+      "entity": "Houseofkaisers",
+      "kind": "unknown",
+      "first_seen_at": "2026-07-10T10:08:04.000Z",
+      "last_seen_at": "2026-07-17T00:15:03.955Z",
+      "discovery": {
+        "distinct_urls": 3,
+        "example_urls": [
+          "https://houseofkaisers.com/kai-portal/beta?twclid=26t8hp42r8pe5p1i02xmt53ngc",
+          "https://houseofkaisers.com/kai-portal/beta?twclid=294qv2knf6zybbci1shhs01fk5",
+          "https://houseofkaisers.com/kai-portal/beta?twclid=2b08mgw0iz6p84y3u9pv17ykaw"
+        ],
+        "origin_counts": {
+          "feed_buffer_reply": 1,
+          "feed_buffer": 2
+        },
+        "distinct_referring_accounts": 1,
+        "sample_referring_accounts": [
+          "kaidotnow"
+        ],
+        "distinct_axes": []
+      },
+      "claims": {
+        "total": 0,
+        "supported": 0,
+        "refuted": 0,
+        "contested": 0,
+        "unverified": 0,
+        "resolved_count": 0
+      },
+      "structural_features": {
+        "has_search_paths": false,
+        "has_article_paths": false,
+        "has_doi_paths": false
+      },
+      "ratings": {
+        "provenance": {
+          "score": 0.45,
+          "basis": [
+            "unknown_domain_pattern"
+          ]
+        },
+        "breadth": {
+          "score": 0.2075,
+          "basis": [
+            "distinct_urls:3",
+            "distinct_axes:0",
+            "origin_types:2"
+          ]
+        },
+        "corroboration": {
+          "score": 0.2833333333333333,
+          "basis": [
+            "referring_accounts:1",
+            "origin_types:2"
+          ]
+        },
+        "track_record": {
+          "score": null,
+          "basis": [
+            "no_resolved_claims_observed"
+          ]
+        },
+        "profile": {
+          "score": 0,
+          "confidence": 0.55,
+          "basis": [
+            "meta_author:false",
+            "published_time:false",
+            "canonical:false",
+            "about:false",
+            "contact:false",
+            "corrections:false",
+            "outbound_links:0",
+            "opinion_marker:false"
+          ]
+        },
+        "overall": {
+          "score": 0.381328125,
+          "confidence": 0.15907500000000002,
+          "method": "mechanical_v1",
+          "basis": [
+            "unknown_domain_pattern",
+            "distinct_urls:3",
+            "distinct_axes:0",
+            "origin_types:2",
+            "referring_accounts:1",
+            "origin_types:2",
+            "track_record_unavailable"
+          ]
+        }
+      },
+      "profile": {
+        "fetched_at": "2026-07-16T18:42:25.706Z",
+        "homepage_url": "https://houseofkaisers.com/",
+        "example_url": "https://houseofkaisers.com/kai-portal/beta?twclid=26t8hp42r8pe5p1i02xmt53ngc",
+        "homepage_status": 200,
+        "example_status": 200,
+        "homepage_final_url": "https://houseofkaisers.com/",
+        "example_final_url": "https://houseofkaisers.com/kai-portal/beta?twclid=26t8hp42r8pe5p1i02xmt53ngc",
+        "homepage_content_type": "text/html; charset=utf-8",
+        "example_content_type": "text/html; charset=utf-8",
+        "homepage": {
+          "has_meta_author": false,
+          "has_published_time": false,
+          "has_canonical": false,
+          "has_about_link": false,
+          "has_contact_link": false,
+          "has_corrections_link": false,
+          "outbound_links_count": 0,
+          "opinion_marker": false
+        },
+        "example": {
+          "has_meta_author": false,
+          "has_published_time": false,
+          "has_canonical": false,
+          "has_about_link": false,
+          "has_contact_link": false,
+          "has_corrections_link": false,
+          "outbound_links_count": 0,
+          "opinion_marker": false
+        }
+      }
+    },
+    {
       "domain": "tcg-corner.com",
       "entity": "Tcg-Corner",
       "kind": "unknown",
@@ -28164,130 +28290,6 @@
           "has_contact_link": false,
           "has_corrections_link": false,
           "outbound_links_count": 6,
-          "opinion_marker": false
-        }
-      }
-    },
-    {
-      "domain": "houseofkaisers.com",
-      "entity": "Houseofkaisers",
-      "kind": "unknown",
-      "first_seen_at": "2026-07-10T10:08:04.000Z",
-      "last_seen_at": "2026-07-13T13:18:42.132Z",
-      "discovery": {
-        "distinct_urls": 2,
-        "example_urls": [
-          "https://houseofkaisers.com/kai-portal/beta?twclid=26t8hp42r8pe5p1i02xmt53ngc",
-          "https://houseofkaisers.com/kai-portal/beta?twclid=294qv2knf6zybbci1shhs01fk5"
-        ],
-        "origin_counts": {
-          "feed_buffer_reply": 1,
-          "feed_buffer": 1
-        },
-        "distinct_referring_accounts": 1,
-        "sample_referring_accounts": [
-          "kaidotnow"
-        ],
-        "distinct_axes": []
-      },
-      "claims": {
-        "total": 0,
-        "supported": 0,
-        "refuted": 0,
-        "contested": 0,
-        "unverified": 0,
-        "resolved_count": 0
-      },
-      "structural_features": {
-        "has_search_paths": false,
-        "has_article_paths": false,
-        "has_doi_paths": false
-      },
-      "ratings": {
-        "provenance": {
-          "score": 0.45,
-          "basis": [
-            "unknown_domain_pattern"
-          ]
-        },
-        "breadth": {
-          "score": 0.17833333333333332,
-          "basis": [
-            "distinct_urls:2",
-            "distinct_axes:0",
-            "origin_types:2"
-          ]
-        },
-        "corroboration": {
-          "score": 0.2833333333333333,
-          "basis": [
-            "referring_accounts:1",
-            "origin_types:2"
-          ]
-        },
-        "track_record": {
-          "score": null,
-          "basis": [
-            "no_resolved_claims_observed"
-          ]
-        },
-        "profile": {
-          "score": 0,
-          "confidence": 0.55,
-          "basis": [
-            "meta_author:false",
-            "published_time:false",
-            "canonical:false",
-            "about:false",
-            "contact:false",
-            "corrections:false",
-            "outbound_links:0",
-            "opinion_marker:false"
-          ]
-        },
-        "overall": {
-          "score": 0.37494791666666666,
-          "confidence": 0.13045,
-          "method": "mechanical_v1",
-          "basis": [
-            "unknown_domain_pattern",
-            "distinct_urls:2",
-            "distinct_axes:0",
-            "origin_types:2",
-            "referring_accounts:1",
-            "origin_types:2",
-            "track_record_unavailable"
-          ]
-        }
-      },
-      "profile": {
-        "fetched_at": "2026-07-16T18:42:25.706Z",
-        "homepage_url": "https://houseofkaisers.com/",
-        "example_url": "https://houseofkaisers.com/kai-portal/beta?twclid=26t8hp42r8pe5p1i02xmt53ngc",
-        "homepage_status": 200,
-        "example_status": 200,
-        "homepage_final_url": "https://houseofkaisers.com/",
-        "example_final_url": "https://houseofkaisers.com/kai-portal/beta?twclid=26t8hp42r8pe5p1i02xmt53ngc",
-        "homepage_content_type": "text/html; charset=utf-8",
-        "example_content_type": "text/html; charset=utf-8",
-        "homepage": {
-          "has_meta_author": false,
-          "has_published_time": false,
-          "has_canonical": false,
-          "has_about_link": false,
-          "has_contact_link": false,
-          "has_corrections_link": false,
-          "outbound_links_count": 0,
-          "opinion_marker": false
-        },
-        "example": {
-          "has_meta_author": false,
-          "has_published_time": false,
-          "has_canonical": false,
-          "has_about_link": false,
-          "has_contact_link": false,
-          "has_corrections_link": false,
-          "outbound_links_count": 0,
           "opinion_marker": false
         }
       }
