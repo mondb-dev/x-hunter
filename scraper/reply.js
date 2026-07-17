@@ -46,6 +46,26 @@ const REPLY_QUEUE  = path.join(ROOT, "state", "reply_queue.jsonl");
 const INTERACTIONS = path.join(ROOT, "state", "interactions.json");
 const ONTOLOGY     = path.join(ROOT, "state", "ontology.json");
 const VOCATION     = path.join(ROOT, "state", "vocation.json");
+const CLARIFY_PENDING = path.join(ROOT, "state", "research_clarify_pending.json");
+
+// ── Clarification resume ledger ──────────────────────────────────────────────
+// When deep research bails with a clarifying question, remember it keyed by
+// thread root. When the SAME user replies in that thread, their reply IS the
+// answer — resume the research with it merged into the original question,
+// instead of routing a bare answer ("Jimothy the raccoon") through the generic
+// chat composer, which grounds on belief memory and drifts off-topic.
+function loadClarifyPending() {
+  try { return JSON.parse(fs.readFileSync(CLARIFY_PENDING, "utf-8")); } catch { return {}; }
+}
+function saveClarifyPending(map) {
+  const cutoff = Date.now() - 48 * 3600 * 1000;
+  const out = {};
+  for (const k of Object.keys(map).slice(-50)) {
+    const v = map[k];
+    if (v && Date.parse(v.ts || 0) > cutoff) out[k] = v;
+  }
+  try { fs.writeFileSync(CLARIFY_PENDING, JSON.stringify(out, null, 2)); } catch {}
+}
 
 const MAX_PER_RUN  = 3;
 const MIN_GAP_MS   = 5 * 60 * 1000;  // 5 minutes between replies
@@ -625,6 +645,19 @@ function logInteraction(data, item, replyText, memoryHints, rootId = null) {
     const ownThread = ownRepliesInThread(interactions, threadContext.rootId, item.id);
     console.log(`[reply] thread: ${threadContext.ancestors.length} ancestor(s), ${threadContext.repliesBelow.length} below, ${ownThread.length} own prior repl(ies) (root ${threadContext.rootId || "n/a"})`);
 
+    // Did WE ask this user a clarifying research question in this thread? Then
+    // this mention is the answer — consumed at the classify step below.
+    let clarifyResume = null;
+    if (process.env.X_AUTO_RESEARCH === "1" && !dryRun) {
+      const cp = loadClarifyPending();
+      const pend = cp[threadContext.rootId];
+      if (pend && pend.from === item.from_username) {
+        clarifyResume = pend;
+        delete cp[threadContext.rootId];
+        saveClarifyPending(cp);
+      }
+    }
+
     // ── Step 3: Memory recall + account lookup ────────────────────────────
     const memoryHints = await recallForMention(item.text, threadContext.ancestors);
     const topicAccounts = accountsForTopic(item.text);
@@ -681,13 +714,33 @@ function logInteraction(data, item, replyText, memoryHints, rootId = null) {
     }
 
     let verdict;
-    try {
-      verdict = await geminiClassify(item, threadContext, memoryHints, userHistory, topicAccounts, [], liveVerification, intelligenceBrief, ownThread);
-    } catch (err) {
-      console.error(`[reply] Gemini error: ${err.message}`);
-      item.status = "error";
-      item.error = err.message;
-      continue;
+    if (clarifyResume) {
+      const mergedQ = `${clarifyResume.q}\n\nClarification from @${item.from_username}: ${item.text}`;
+      console.log(`[reply] clarification received — resuming research with: "${item.text.slice(0, 70)}"`);
+      try {
+        const { researchAndPublish } = require("../runner/deep_research");
+        const rr = await researchAndPublish(mergedQ, { maxFetch: 3, source: "x_mention" });
+        if (rr.bailed) {
+          const cp = loadClarifyPending();
+          cp[threadContext.rootId || item.id] = { q: mergedQ, from: item.from_username, ts: new Date().toISOString() };
+          saveClarifyPending(cp);
+        }
+        liveVerification = null;
+        verdict = { verdict: "WORTHY", reply: rr.shortAnswer || "", needs_research: false, sourceUrls: rr.url ? [rr.url] : [] };
+        console.log(`[reply] resume research done → ${rr.url || (rr.bailed ? "(still underspecified — asking again)" : "(no report)")}`);
+      } catch (err) {
+        console.error(`[reply] resume research failed (${err.message}) — falling back to classifier`);
+      }
+    }
+    if (!verdict) {
+      try {
+        verdict = await geminiClassify(item, threadContext, memoryHints, userHistory, topicAccounts, [], liveVerification, intelligenceBrief, ownThread);
+      } catch (err) {
+        console.error(`[reply] Gemini error: ${err.message}`);
+        item.status = "error";
+        item.error = err.message;
+        continue;
+      }
     }
 
     console.log(`[reply] Gemini verdict: ${verdict.verdict}`);
@@ -716,6 +769,14 @@ function logInteraction(data, item, replyText, memoryHints, rootId = null) {
         const rr = await researchAndPublish(q, { maxFetch: 3, source: 'x_mention' });
         if (rr.shortAnswer) replyText = rr.shortAnswer;
         if (rr.url) { researchUrl = rr.url; liveVerification = null; verdict.sourceUrls = [rr.url]; }
+        if (rr.bailed) {
+          // We're about to post a clarifying question — arm the resume so the
+          // user's answer in this thread continues the research, not chat.
+          const cp = loadClarifyPending();
+          cp[threadContext.rootId || item.id] = { q, from: item.from_username, ts: new Date().toISOString() };
+          saveClarifyPending(cp);
+          console.log(`[reply] research bailed — clarify posted, resume armed (root ${threadContext.rootId || item.id})`);
+        }
         console.log(`[reply] research done → ${rr.url || '(no report)'}`);
       } catch (e) { console.error(`[reply] research failed (${e.message}) — using plain draft`); }
     }
