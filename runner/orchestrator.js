@@ -292,6 +292,22 @@ function runSocialPipeline() {
     log('social: HelmStack feedback report');
     runScriptLog(path.join(PROJECT_ROOT, 'runner/helmstack_feedback.js'));
   }
+
+  // Plan-driven deep research — answer one of the active plan's open research
+  // questions per day with a full deep-research pass, published to the website.
+  // Detached: a deep pass runs 1-5 min, far beyond runScriptLog's 120s cap;
+  // plan_research.js has its own 10-min watchdog.
+  if (process.env.PLAN_RESEARCH_ENABLED !== '0' && dueForRun('plan_research', 24 * HOUR)) {
+    log('plan: deep-research executor (detached)');
+    try {
+      const out = fs.openSync(config.RUNNER_LOG_PATH, 'a');
+      const child = spawn(process.execPath, [path.join(PROJECT_ROOT, 'runner/plan_research.js')], {
+        cwd: PROJECT_ROOT, env: process.env, detached: true, stdio: ['ignore', out, out],
+      });
+      child.unref();
+      fs.closeSync(out);
+    } catch (e) { log(`plan_research spawn failed (non-fatal): ${e.message}`); }
+  }
 }
 
 // ── Signal handlers (critical — bash traps don't survive exec) ──────────────

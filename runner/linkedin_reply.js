@@ -57,7 +57,7 @@ async function composeReply(item) {
     try {
       const { deepResearch } = require("./deep_research");
       const r = await deepResearch(content.slice(0, 300), { tier: "standard", maxFetch: 2 });
-      if (r && r.report) researchBlock = `\n\nRESEARCH (draw only on what's relevant, weave in specifics naturally):\n${r.report.slice(0, 1500)}`;
+      if (r && r.report && !r.bailed) researchBlock = `\n\nRESEARCH (draw only on what's relevant, weave in specifics naturally):\n${r.report.slice(0, 1500)}`;
     } catch (e) { log(`research enrich failed (non-fatal): ${e.message}`); }
   }
   const kind = item.type === "mention" ? "mentioned you" : item.type === "comment" ? "commented on your post" : "replied to your comment";

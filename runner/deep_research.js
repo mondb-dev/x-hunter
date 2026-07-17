@@ -3,17 +3,22 @@
 /**
  * runner/deep_research.js — a Claude-driven deep-research TOOL.
  *
- * Composes the agent's existing retrieval tools into a plan → execute →
- * (adaptive fetch) → synthesize loop:
- *   1. PLAN   — Claude drafts an explicit research plan (approach + tool steps).
- *   2. EXECUTE— runs each planned step against a real tool:
- *        recall  → memory/observations (lib/recall)
- *        posts   → full-text search of Sebastian's observed feed (scraper DB)
- *        search  → web search via HelmStack/DuckDuckGo (lib/helmstack_fetch)
- *        fetch   → page text of a specific URL via HelmStack (lib/helmstack_fetch)
- *   3. FETCH  — Claude picks the most promising URLs surfaced by searches and
- *               reads them (one adaptive round).
- *   4. SYNTH  — Claude writes a cited answer with a confidence level + caveats.
+ * Composes the agent's existing retrieval tools into a grounded research loop:
+ *   0. TRIAGE — cheap grounding pass (recall/posts/search), then judge the
+ *               question: proceed / reformulate / bail with a clarifying
+ *               question (no full pass on underspecified questions).
+ *   1. PLAN   — explicit research plan (approach + tool steps), grounded with
+ *               today's date + a source-quality rubric.
+ *   2. EXECUTE— runs each planned step against a real tool (recall, posts,
+ *               xsearch, search, fetch, rugcheck, trending).
+ *   3. REFINE — critic rounds close researchable gaps AND maintain the marks
+ *               ledger: unfamiliar terms, claims to verify, tool gaps.
+ *   4. RESOLVE— term credibility lookups + claim verification via the
+ *               intelligence pipeline (lib/verify_claim); unresolvable info
+ *               needs are recorded in state/tool_gaps.json for capability review.
+ *   5. SYNTH  — cited report + structured self-assessment {confidence_pct,
+ *               compromised}; researchAndPublish gates publishing on it and the
+ *               short answer's certainty is matched to the confidence.
  *
  * All inference (plan, url-selection, synthesis) runs on the Claude terminal via
  * reason() (THINK_BACKEND=claude), falling back to the local brain.
@@ -36,6 +41,19 @@ const { reason } = require('./lib/compose');
 const { fetchPageText, searchWeb } = require('./lib/helmstack_fetch');
 const { recallText } = require('./lib/recall');
 const log = (m) => console.log(`[deep_research] ${m}`);
+
+const TODAY = () => new Date().toISOString().slice(0, 10);
+
+// Injected into every prompt that chooses or weighs sources. Exists because
+// reports were citing SEO content farms ("AI contract scanners", listicle
+// guides) as authorities alongside on-chain data.
+const SOURCE_RUBRIC =
+  'SOURCE QUALITY RUBRIC (apply when choosing URLs and weighing claims):\n' +
+  '- T1 primary/structured: on-chain data (rugcheck/trending), official docs/filings/statements, the actual post or page in question.\n' +
+  '- T2 established institutions: major news outlets, government, academic, recognized research firms.\n' +
+  '- T3 real niche sources: trade press, known analysts, project blogs.\n' +
+  '- T4 SEO content farms, "learn/guide" listicles, AI-generated blogs, sites selling a product in the topic area — UNRELIABLE. ' +
+  'A load-bearing claim sourced only from T4 must be independently corroborated or dropped; never recommend a T4 product/site as a solution.';
 
 /** Plain https GET → parsed JSON (follows one redirect). Resolves null on error. */
 function httpJson(url, { timeoutMs = 15000 } = {}) {
@@ -218,12 +236,59 @@ const TOOL_DESCR =
   'rugcheck — on-chain analysis of a SOLANA TOKEN MINT via RugCheck: risk score, mint/freeze authority (null=renounced), top-holder concentration + insider flags, INSIDER CLUSTER count (graphInsidersDetected/insiderNetworks), LP lock, liquidity, holder count. Input: a Solana mint address. Use this for any token rug/cluster/holder-concentration question — do NOT scrape explorer pages for this.\n' +
   'trending — LIVE trending tokens, newest launches ("trenches"), and paid-promoted tokens on a chain (default Solana) via GeckoTerminal + DexScreener: names, price, 1h/24h change, 24h volume, FDV, age, and a pump.fun flag. This is the AUTHORITATIVE source for "what is the current meta / what is trending / what is hot / pump.fun trenches" questions — always prefer it over web search/CoinMarketCap/CoinGecko, which are stale and high-level. Input: a chain name (default "solana").';
 
-async function plan(question) {
+// ── Stage A+B: context pass + triage ─────────────────────────────────────────
+// Cheap grounding BEFORE any planning: what is this question actually about, are
+// its entities identifiable, and is it researchable as asked? Kills the
+// garbage-in-garbage-out failure mode where a full pass runs on an
+// underspecified question ("combat the situation involving a memecoin" — which
+// memecoin?) and publishes confident filler.
+async function contextTriage(question) {
+  const [rec, po, se] = await Promise.all([
+    TOOLS.recall(question).catch(() => '(recall unavailable)'),
+    TOOLS.posts(question).catch(() => '(posts unavailable)'),
+    TOOLS.search(question).then((r) => (r && r.text) || String(r)).catch(() => '(search unavailable)'),
+  ]);
   const prompt =
-`You are Sebastian Hunter's research planner. Draft an explicit plan to answer the QUESTION using ONLY these tools:
-${TOOL_DESCR}
+`Today is ${TODAY()}. You are Sebastian Hunter's research intake. Decide whether this QUESTION is researchable as asked, and build a short context brief for the planner.
 
 QUESTION: ${question}
+
+QUICK GROUNDING (own memory, observed feed, one web search):
+### recall
+${String(rec).slice(0, 1000)}
+### observed posts
+${String(po).slice(0, 1000)}
+### web search
+${String(se).slice(0, 1200)}
+
+Judge:
+- "proceed": the question names identifiable entities (or needs none) and can be researched as asked.
+- "reformulate": the intent is clear but the phrasing is vague — restate it as ONE precise, researchable question, keeping the asker's intent and pinning it to the concrete entities the grounding surfaced.
+- "bail": a specific referent is REQUIRED and missing (e.g. "this token" with no name or mint anywhere in the question or grounding) — research would produce generic filler. Write ONE short clarifying question to ask back.
+
+Output ONLY JSON (no fences):
+{"verdict":"proceed|reformulate|bail","question":"the question to research (original or reformulated)","clarify":"bail only: the clarifying question to ask back","brief":"3-5 sentences: domain, key entities + identifiers found, what is already known, what a good answer must establish"}`;
+  try {
+    const j = cleanJson(await reason(prompt, { maxTokens: 700, tag: 'dr-triage' }));
+    if (!j || !j.verdict) return null;
+    return {
+      verdict: ['proceed', 'reformulate', 'bail'].includes(j.verdict) ? j.verdict : 'proceed',
+      question: String(j.question || question).trim() || question,
+      clarify: String(j.clarify || '').trim(),
+      brief: String(j.brief || '').trim(),
+    };
+  } catch (e) { log(`triage failed (non-fatal, proceeding): ${e.message}`); return null; }
+}
+
+async function plan(question, context) {
+  const prompt =
+`Today is ${TODAY()}. You are Sebastian Hunter's research planner. Draft an explicit plan to answer the QUESTION using ONLY these tools:
+${TOOL_DESCR}
+
+${SOURCE_RUBRIC}
+
+QUESTION: ${question}
+${context ? `\nCONTEXT BRIEF (from the intake grounding pass):\n${context}\n` : ''}
 
 First EVALUATE what kind of question this is and which source can actually answer it — do not default to generic web search. Match the question to the right instrument:
 - "current meta / what's trending / hot tokens / pump.fun or Solana trenches / newest launches" → use the 'trending' tool (live trending + new-launch + promoted tokens). This is primary; name specific tokens, their price action and age from it. You may ALSO 'fetch' canonical live pages for corroboration/detail: https://dexscreener.com/solana?rankBy=trendingScoreH6&order=desc , https://www.geckoterminal.com/solana/pools , https://pump.fun/board . Do NOT rely on CoinMarketCap/CoinGecko/Discord landing pages for live meta — they are stale.
@@ -270,69 +335,185 @@ async function adaptiveFetch(question, findings, urls, maxFetch) {
   return out;
 }
 
-// Critic pass: look at what's been gathered and propose follow-up tool steps that
-// would ANSWER the still-open, researchable sub-questions (the whole point — an
-// "open question" that a tool could resolve is a gap to close, not a caveat to
-// print). Returns [] when nothing further is worth chasing.
+// Critic pass: look at what's been gathered and (a) propose follow-up tool steps
+// that would ANSWER the still-open, researchable sub-questions, and (b) maintain
+// the MARKS LEDGER — terms we encountered but don't actually understand,
+// load-bearing claims that need verification, and info needs no tool can answer
+// (tool gaps). Returns { steps, marked_terms, verify_points, tool_gaps }.
 async function gapSteps(question, plan, findings) {
   const dossier = findings.map((f) => `### ${f.tool}: ${f.input}\n${String(f.result).slice(0, 1200)}`).join('\n\n');
   const prompt =
-`You are Sebastian Hunter's research critic. Decide what is STILL worth researching.
+`Today is ${TODAY()}. You are Sebastian Hunter's research critic. Audit what has been gathered.
 
 QUESTION: ${question}
 
 TOOLS AVAILABLE:
 ${TOOL_DESCR}
 
+${SOURCE_RUBRIC}
+
 WHAT WE'VE GATHERED SO FAR:
 ${dossier}
 
-List the sub-questions that are (a) not yet answered by the dossier AND (b) actually answerable with the tools above — then give the concrete steps to answer them. Examples of researchable "open questions": WHY a token is trending (search X / posts for the driver), whether a narrative (e.g. "AI agents") is present (trending/posts), a token's on-chain safety (rugcheck its mint), survivability/age stats (trending data), who a named figure is (search). Do NOT propose steps for things the dossier already answers, or that no tool can resolve. Be surgical — max 5 highest-value steps.
+Produce four things:
+1. steps — sub-questions that are (a) not yet answered by the dossier AND (b) actually answerable with the tools above, as concrete tool steps. Examples: WHY a token is trending (xsearch/posts for the driver), a token's on-chain safety (rugcheck its mint), who a named figure is (search). Do NOT propose steps for things the dossier already answers, or that no tool can resolve. Max 5 highest-value.
+2. marked_terms — load-bearing names/products/sites/jargon in the dossier we do NOT actually understand or whose credibility is unestablished (e.g. an unknown "AI scanner" site the dossier cites as an authority). Max 3.
+3. verify_points — the specific factual claims the final answer will rest on that are single-source, T4-sourced, or surprising — phrased as complete verifiable statements. Max 4, importance 1 (nice to check) to 3 (answer collapses if false).
+4. tool_gaps — info needs that NO available tool can answer, with what capability would (only genuine gaps — not laziness).
 
 Output ONLY JSON (no fences):
-{"remaining_gaps":["..."],"steps":[{"tool":"recall|posts|xsearch|search|fetch|rugcheck|trending","input":"the query, URL, mint, or chain","rationale":"which gap this closes"}]}
-Return an empty steps array if the question is already well answered.`;
-  const raw = await reason(prompt, { maxTokens: 900, tag: 'dr-gap' });
+{"remaining_gaps":["..."],"steps":[{"tool":"recall|posts|xsearch|search|fetch|rugcheck|trending","input":"the query, URL, mint, or chain","rationale":"which gap this closes"}],"marked_terms":[{"term":"..","why":"why it matters / what is unclear"}],"verify_points":[{"claim":"complete factual statement","source":"url or tool that produced it","importance":1}],"tool_gaps":[{"need":"what we could not find out","suggested_tool":"what capability would answer it"}]}
+Return empty arrays for anything that does not apply.`;
+  const empty = { steps: [], marked_terms: [], verify_points: [], tool_gaps: [] };
+  const raw = await reason(prompt, { maxTokens: 1300, tag: 'dr-gap' });
   try {
     const j = JSON.parse(String(raw).replace(/```(?:json)?/gi, '').match(/\{[\s\S]*\}/)[0]);
-    return Array.isArray(j.steps) ? j.steps.filter((s) => s && TOOLS[s.tool]).slice(0, 5) : [];
-  } catch { return []; }
+    return {
+      steps: Array.isArray(j.steps) ? j.steps.filter((s) => s && TOOLS[s.tool]).slice(0, 5) : [],
+      marked_terms: Array.isArray(j.marked_terms) ? j.marked_terms.filter((t) => t && t.term).slice(0, 3) : [],
+      verify_points: Array.isArray(j.verify_points) ? j.verify_points.filter((v) => v && v.claim).slice(0, 4) : [],
+      tool_gaps: Array.isArray(j.tool_gaps) ? j.tool_gaps.filter((g) => g && g.need).slice(0, 3) : [],
+    };
+  } catch { return empty; }
 }
 
-async function synthesize(question, plan, findings) {
+// Merge one critic pass's marks into a run-level ledger (dedup by term/claim).
+function mergeLedger(ledger, critic) {
+  if (!critic) return ledger;
+  const has = (arr, key, val) => arr.some((x) => String(x[key]).toLowerCase() === String(val).toLowerCase());
+  for (const t of critic.marked_terms || []) if (!has(ledger.marked_terms, 'term', t.term)) ledger.marked_terms.push(t);
+  for (const v of critic.verify_points || []) if (!has(ledger.verify_points, 'claim', v.claim)) ledger.verify_points.push(v);
+  for (const g of critic.tool_gaps || []) if (!has(ledger.tool_gaps, 'need', g.need)) ledger.tool_gaps.push(g);
+  return ledger;
+}
+
+// ── Stage E: resolution loop — deal with the marks ───────────────────────────
+// Terms we don't understand get looked up (a term that resolves to "SEO spam
+// site" discredits every claim it sourced); load-bearing claims go through the
+// existing verification pipeline (runner/intelligence via lib/verify_claim).
+async function resolveMarks(question, ledger, { maxVerify = 3, maxTermLookups = 3 } = {}) {
+  const found = [];
+  for (const t of ledger.marked_terms.slice(0, maxTermLookups)) {
+    log(`resolve term: "${t.term}"`);
+    const out = await TOOLS.search(`what is "${t.term}" — credibility, who runs it`).catch(() => null);
+    found.push({ tool: 'search', input: `term check: ${t.term} (${t.why || 'unclear'})`, result: String((out && out.text) || out || '(no results)').slice(0, 2000) });
+  }
+  const toVerify = ledger.verify_points
+    .sort((a, b) => (b.importance || 1) - (a.importance || 1)).slice(0, maxVerify);
+  if (toVerify.length) {
+    let verifyClaimFn = null;
+    try { ({ verifyClaim: verifyClaimFn } = require('./lib/verify_claim')); } catch (e) { log(`verify pipeline unavailable: ${e.message}`); }
+    for (const v of toVerify) {
+      log(`verify claim: "${String(v.claim).slice(0, 80)}"`);
+      let result = '(verification unavailable)';
+      if (verifyClaimFn) {
+        const r = verifyClaimFn({ claim: v.claim, url: /^https?:\/\//.test(v.source || '') ? v.source : undefined, dryRun: true });
+        if (r) result = JSON.stringify({ status: r.status, confidence: r.confidence, verdict: r.verdict_label, summary: r.summary, evidence: (r.evidence_urls || []).slice(0, 4) });
+      }
+      found.push({ tool: 'verify', input: v.claim, result });
+    }
+  }
+  return found;
+}
+
+// ── Stage F: tool gaps → capability feedback ─────────────────────────────────
+// No autonomous tool creation (runtime-built code is both untrustworthy and an
+// injection amplifier). Recurring gaps in state/tool_gaps.json are the signal
+// for a human/Claude session to build the tool, add it to TOOLS here, and
+// register it in lib/capabilities.js.
+function recordToolGaps(question, gaps) {
+  if (!gaps || !gaps.length) return;
+  const p = path.join(ROOT, 'state', 'tool_gaps.json');
+  let state; try { state = JSON.parse(fs.readFileSync(p, 'utf-8')); } catch { state = { gaps: [] }; }
+  for (const g of gaps) {
+    const key = String(g.need).toLowerCase().slice(0, 80);
+    const hit = state.gaps.find((x) => x.key === key);
+    if (hit) { hit.count += 1; hit.last_seen = TODAY(); hit.last_question = String(question).slice(0, 140); }
+    else {
+      state.gaps.push({
+        key, need: String(g.need).slice(0, 240), suggested_tool: String(g.suggested_tool || '').slice(0, 240),
+        count: 1, first_seen: TODAY(), last_seen: TODAY(), last_question: String(question).slice(0, 140),
+      });
+    }
+  }
+  state.gaps = state.gaps.slice(-100);
+  try { fs.writeFileSync(p, JSON.stringify(state, null, 2)); log(`tool gap(s) recorded: ${gaps.map((g) => String(g.need).slice(0, 50)).join(' | ')}`); }
+  catch (e) { log(`tool_gaps write failed (non-fatal): ${e.message}`); }
+}
+
+async function synthesize(question, plan, findings, { context, ledger } = {}) {
   const dossier = findings.map((f) => `### ${f.tool}: ${f.input}\n${f.result}`).join('\n\n');
+  const unresolved = ledger ? ledger.tool_gaps.map((g) => g.need) : [];
   const prompt =
-`You are Sebastian Hunter. Answer the QUESTION using ONLY the RESEARCH DOSSIER below (do not invent facts). Be specific, cite the source (tool + URL) for each claim, state a confidence level (high/medium/low).
+`Today is ${TODAY()}. You are Sebastian Hunter. Answer the QUESTION using ONLY the RESEARCH DOSSIER below (do not invent facts). Be specific and cite the source (tool + URL) for each claim.
+
+${SOURCE_RUBRIC}
 
 QUESTION: ${question}
-
+${context ? `\nCONTEXT BRIEF: ${context}\n` : ''}
 SUCCESS CRITERIA: ${plan.success_criteria || '(none)'}
 CAVEATS TO CHECK: ${plan.caveats || '(none)'}
 
 RESEARCH DOSSIER:
 ${dossier}
 
-Write a concise findings report: the answer (or best-supported hypothesis), the evidence with citations, and confidence. You MAY include an "Open questions" section, but ONLY for things that genuinely could not be resolved with the available data — NOT for gaps you simply didn't pursue. If the dossier contains the answer to a sub-question, answer it; do not relist it as open.`;
-  return reason(prompt, { maxTokens: 1800, tag: 'dr-synth' });
+Rules:
+- 'verify' entries are adjudications from the verification pipeline: a claim it marks false/unsupported must be dropped or explicitly negated; a confirmed claim may be stated with confidence.
+- Claims resting only on T4 sources: exclude, or state them WITH the caveat that the source is unreliable. Never recommend a T4 product/site.
+- Findings irrelevant to the QUESTION (side-tracks from research detours): leave them out entirely.
+- No boilerplate headers ("Prepared by", "Date") — start directly with the substance.
+- "Open questions": ONLY things that genuinely could not be resolved with the available data${unresolved.length ? ` (known unresolved: ${unresolved.join('; ')})` : ''} — never gaps you simply didn't pursue.
+
+Output ONLY JSON (no fences):
+{"report_md":"the full findings report in Markdown","key_finding":"ONE sentence — the single most important finding","confidence_pct":0-100,"compromised":false,"compromised_why":"only if compromised: what undermined the research","open_questions":["..."]}
+Set "compromised": true when the research could not actually address the question (missing referent, no usable data) — regardless of how much generic material was gathered. confidence_pct is your honest calibrated probability that the key finding is correct.`;
+  const raw = await reason(prompt, { maxTokens: 2600, tag: 'dr-synth' });
+  try {
+    const j = cleanJson(raw);
+    if (j && j.report_md) {
+      return {
+        report: String(j.report_md),
+        assessment: {
+          key_finding: String(j.key_finding || '').trim(),
+          confidence_pct: Number.isFinite(+j.confidence_pct) ? Math.max(0, Math.min(100, +j.confidence_pct)) : null,
+          compromised: !!j.compromised,
+          compromised_why: String(j.compromised_why || '').trim(),
+          open_questions: Array.isArray(j.open_questions) ? j.open_questions.slice(0, 6) : [],
+        },
+      };
+    }
+  } catch { /* fall through */ }
+  // Fallback: treat raw output as the report, unassessed.
+  return { report: String(raw), assessment: { key_finding: '', confidence_pct: null, compromised: false, compromised_why: '', open_questions: [] } };
 }
 
-// ── Flat path (trivial/standard tiers): plan → execute → refine → synthesize ──
-async function flatResearch(question, { maxFetch = 4, maxRounds = 2 } = {}) {
-  const p = await plan(question);
+// ── Flat path (trivial/standard tiers) ────────────────────────────────────────
+// plan → execute → refine (rounds accumulate the marks ledger) → resolve marks
+// (term lookups + claim verification) → record tool gaps → calibrated synthesis.
+async function flatResearch(question, { maxFetch = 4, maxRounds = 2, context = null, maxVerify = 3 } = {}) {
+  const p = await plan(question, context);
   log(`plan: ${(p.steps || []).length} step(s) — ${p.approach || ''}`);
   const { findings, discoveredUrls } = await execute(p.steps || []);
   const fetched = await adaptiveFetch(question, findings, discoveredUrls, maxFetch);
   let all = [...findings, ...fetched];
+  const ledger = { marked_terms: [], verify_points: [], tool_gaps: [] };
   for (let round = 1; round <= maxRounds; round++) {
-    const gaps = await gapSteps(question, p, all);
-    if (!gaps.length) { log(`refine: no researchable gaps left (round ${round})`); break; }
-    log(`refine round ${round}: ${gaps.length} follow-up step(s) — ${gaps.map((g) => g.tool).join(', ')}`);
-    const gr = await execute(gaps);
+    const critic = await gapSteps(question, p, all);
+    mergeLedger(ledger, critic);
+    if (!critic.steps.length) { log(`refine: no researchable gaps left (round ${round})`); break; }
+    log(`refine round ${round}: ${critic.steps.length} follow-up step(s) — ${critic.steps.map((g) => g.tool).join(', ')}`);
+    const gr = await execute(critic.steps);
     const gf = await adaptiveFetch(question, gr.findings, gr.discoveredUrls, Math.max(2, maxFetch - 1));
     all = [...all, ...gr.findings, ...gf];
   }
-  const report = await synthesize(question, p, all);
-  return { plan: p, findings: all, report };
+  if (ledger.marked_terms.length || ledger.verify_points.length) {
+    log(`marks: ${ledger.marked_terms.length} term(s), ${ledger.verify_points.length} claim(s) to verify`);
+    const resolved = await resolveMarks(question, ledger, { maxVerify });
+    if (resolved.length) all = [...all, ...resolved];
+  }
+  recordToolGaps(question, ledger.tool_gaps);
+  const { report, assessment } = await synthesize(question, p, all, { context, ledger });
+  return { plan: p, findings: all, report, assessment };
 }
 
 // ══ Hierarchical decomposition engine (deep tier) ═════════════════════════════
@@ -520,7 +701,9 @@ async function researchNode(node, root, job, persist, maxFetch) {
       // Runtime refinement: now that real data exists (e.g. mints surfaced by
       // 'trending', URLs by 'search'), issue the follow-ups that needed those
       // concrete values — this is what closes data-dependent steps like rugcheck.
-      const follow = await gapSteps(node.question, { success_criteria: node.success_criterion }, node.findings);
+      const critic = await gapSteps(node.question, { success_criteria: node.success_criterion }, node.findings);
+      if (job.ledger) mergeLedger(job.ledger, critic);
+      const follow = critic.steps;
       if (follow.length) {
         log(`  [${node.id}] refine: ${follow.length} follow-up step(s) — ${follow.map((s) => s.tool).join(', ')}`);
         const fr = await execute(follow.slice(0, 3));
@@ -546,10 +729,10 @@ function renderMarkdown(job) {
   return lines.join('\n');
 }
 
-async function treeResearch(question, { maxFetch = 3, maxDepth = 3, maxNodes = 24 } = {}) {
+async function treeResearch(question, { maxFetch = 3, maxDepth = 3, maxNodes = 24, context = null, maxVerify = 3 } = {}) {
   if (!fs.existsSync(JOBS_DIR)) fs.mkdirSync(JOBS_DIR, { recursive: true });
   const jobId = `${new Date().toISOString().replace(/[:.]/g, '-')}_${question.toLowerCase().replace(/[^a-z0-9]+/g, '-').slice(0, 40)}`;
-  const job = { job_id: jobId, question, tier: 'deep', status: 'planning', root: null };
+  const job = { job_id: jobId, question, tier: 'deep', status: 'planning', root: null, ledger: { marked_terms: [], verify_points: [], tool_gaps: [] } };
   const persist = async () => {
     try {
       fs.writeFileSync(path.join(JOBS_DIR, `${jobId}.json`), JSON.stringify(job, null, 2));
@@ -566,40 +749,92 @@ async function treeResearch(question, { maxFetch = 3, maxDepth = 3, maxNodes = 2
 
   await researchNode(job.root, job.root, job, persist, maxFetch);
 
-  const allFindings = flattenNodes(job.root).flatMap((n) => n.findings || []);
-  const report = await synthesizeTree(question, job.root);
+  let allFindings = flattenNodes(job.root).flatMap((n) => n.findings || []);
+  if (job.ledger.marked_terms.length || job.ledger.verify_points.length) {
+    log(`marks: ${job.ledger.marked_terms.length} term(s), ${job.ledger.verify_points.length} claim(s) to verify`);
+    const resolved = await resolveMarks(question, job.ledger, { maxVerify });
+    if (resolved.length) allFindings = [...allFindings, ...resolved];
+  }
+  recordToolGaps(question, job.ledger.tool_gaps);
+  const { report, assessment } = await synthesizeTree(question, job.root, { context, ledger: job.ledger, extraFindings: allFindings.filter((f) => f.tool === 'verify' || String(f.input).startsWith('term check:')) });
   job.status = 'done'; await persist();
   log(`done → ${path.join(JOBS_DIR, jobId + '.md')}`);
-  return { job, plan: job.root, findings: allFindings, report };
+  return { job, plan: job.root, findings: allFindings, report, assessment };
 }
 
 // Assemble the report from the resolved tree (structure already established).
-async function synthesizeTree(question, root) {
+async function synthesizeTree(question, root, { context, ledger, extraFindings = [] } = {}) {
   const outline = flattenNodes(root).map((n) => {
     const indent = '  '.repeat(n.id.split('.').length - 1);
     return `${indent}## ${n.title}\n${indent}${n.answer || '(unresolved)'}`;
   }).join('\n\n');
+  const extras = extraFindings.length
+    ? `\nRESOLUTION FINDINGS (term credibility checks + verification-pipeline adjudications — a claim marked false/unsupported must be dropped or negated):\n${extraFindings.map((f) => `### ${f.tool}: ${f.input}\n${String(f.result).slice(0, 1500)}`).join('\n\n')}\n`
+    : '';
   const prompt =
-`You are Sebastian Hunter. Write the final research report for the QUESTION from the RESOLVED RESEARCH TREE below (answers already established per sub-question — do not invent beyond them). Organize logically, keep the concrete specifics/citations, give an overall confidence, and an "Open questions" section ONLY for genuinely unresolvable items.
+`Today is ${TODAY()}. You are Sebastian Hunter. Write the final research report for the QUESTION from the RESOLVED RESEARCH TREE below (answers already established per sub-question — do not invent beyond them). Organize logically, keep the concrete specifics/citations. No boilerplate headers ("Prepared by", "Date") — start with the substance.
+
+${SOURCE_RUBRIC}
 
 QUESTION: ${question}
-
+${context ? `\nCONTEXT BRIEF: ${context}\n` : ''}
 RESOLVED TREE:
-${outline}`;
-  return reason(prompt, { maxTokens: 2200, tag: 'dr-synth-tree' });
+${outline}
+${extras}
+Output ONLY JSON (no fences):
+{"report_md":"the full report in Markdown","key_finding":"ONE sentence — the single most important finding","confidence_pct":0-100,"compromised":false,"compromised_why":"only if compromised","open_questions":["genuinely unresolvable items only"]}
+Set "compromised": true when the research could not actually address the question. confidence_pct is your honest calibrated probability that the key finding is correct.`;
+  const raw = await reason(prompt, { maxTokens: 3000, tag: 'dr-synth-tree' });
+  try {
+    const j = cleanJson(raw);
+    if (j && j.report_md) {
+      return {
+        report: String(j.report_md),
+        assessment: {
+          key_finding: String(j.key_finding || '').trim(),
+          confidence_pct: Number.isFinite(+j.confidence_pct) ? Math.max(0, Math.min(100, +j.confidence_pct)) : null,
+          compromised: !!j.compromised,
+          compromised_why: String(j.compromised_why || '').trim(),
+          open_questions: Array.isArray(j.open_questions) ? j.open_questions.slice(0, 6) : [],
+        },
+      };
+    }
+  } catch { /* fall through */ }
+  return { report: String(raw), assessment: { key_finding: '', confidence_pct: null, compromised: false, compromised_why: '', open_questions: [] } };
 }
 
-async function deepResearch(question, { maxFetch = 4, planOnly = false, maxRounds = 2, tier: forcedTier, allowTree = true } = {}) {
+async function deepResearch(question, { maxFetch = 4, planOnly = false, maxRounds = 2, tier: forcedTier, allowTree = true, triage = true, maxVerify = 3 } = {}) {
   log(`question: ${question}`);
-  if (planOnly) return { plan: await plan(question) };
+  // Stage A+B: ground the question, then triage — proceed / reformulate / bail.
+  let context = null;
+  if (triage) {
+    const t = await contextTriage(question);
+    if (t) {
+      if (t.verdict === 'bail') {
+        log(`triage: bail — ${t.clarify || 'question underspecified'}`);
+        const clarify = t.clarify || 'The question is missing the specific subject to research — which one do you mean?';
+        return {
+          bailed: true, clarify, findings: [],
+          report: `Could not research this as asked: ${t.brief || 'the question has no identifiable referent.'}\n\nTo proceed: ${clarify}`,
+          assessment: { key_finding: '', confidence_pct: 0, compromised: true, compromised_why: 'question underspecified — bailed at triage', open_questions: [clarify] },
+        };
+      }
+      if (t.verdict === 'reformulate' && t.question && t.question !== question) {
+        log(`triage: reformulated → ${t.question}`);
+        question = t.question;
+      }
+      context = t.brief || null;
+    }
+  }
+  if (planOnly) return { plan: await plan(question, context) };
   let tier = forcedTier || await classify(question);
   // Gate: the deep tree tier is multi-minute + many-call. Callers that run inline
   // in a latency-sensitive path (X mention auto-reply) pass allowTree=false, which
   // downgrades deep→standard so they stay on the fast flat path.
   if (tier === 'deep' && !allowTree) { log('tier: deep → standard (tree gated off for this caller)'); tier = 'standard'; }
   log(`tier: ${tier}`);
-  if (tier === 'deep') return treeResearch(question, { maxFetch: Math.min(3, maxFetch) });
-  return flatResearch(question, { maxFetch, maxRounds });
+  if (tier === 'deep') return treeResearch(question, { maxFetch: Math.min(3, maxFetch), context, maxVerify });
+  return flatResearch(question, { maxFetch, maxRounds, context, maxVerify });
 }
 
 /** Turn research findings into publishable report blocks (with rug-check viz). */
@@ -641,23 +876,46 @@ async function researchAndPublish(question, { maxFetch = 3, publish = true, sour
   // Gate the slow deep-tree tier off the inline X-mention path unless explicitly
   // opted in (X_DEEP_TREE=1). Other callers (e.g. Telegram /dr) allow the tree.
   const allowTree = source !== 'x_mention' || process.env.X_DEEP_TREE === '1';
-  const { findings, report } = await deepResearch(question, { maxFetch, allowTree });
+  // The mention path answers inline — cap the (slow) verification pass at 1 claim.
+  const maxVerify = source === 'x_mention' ? 1 : 3;
+  const res = await deepResearch(question, { maxFetch, allowTree, maxVerify });
+
+  // Triage bailed: the "short answer" IS the clarifying question — callers reply
+  // with it as-is, and nothing is published.
+  if (res.bailed) {
+    log('triage bailed — returning clarifying question, nothing published');
+    return { shortAnswer: res.clarify, url: null, report: res.report, findings: [], bailed: true, published: false, confidence: 0 };
+  }
+
+  const { findings, report } = res;
+  const a = res.assessment || {};
+  const conf = a.confidence_pct;
   const shortAnswer = await reason(
-    `Given this research, write ONE X reply (max 240 chars) that directly answers the question in Sebastian Hunter's voice — specific, name the key finding, no hedging, no "I think". Question: ${question}\n\nResearch report:\n${report.slice(0, 2500)}\n\nReply text only (no quotes):`,
+    `Given this research, write ONE X reply (max 240 chars) that answers the question in Sebastian Hunter's voice — specific, no filler. Research confidence: ${conf != null ? `${conf}%` : 'unstated'}${a.key_finding ? `; key finding: ${a.key_finding}` : ''}. Match the reply's certainty to that confidence — ≥70: state the key finding directly; 40-69: state the best-supported finding with its ONE main caveat; <40: say plainly what could and could not be established. Never claim more certainty than the evidence supports. Question: ${question}\n\nResearch report:\n${report.slice(0, 2500)}\n\nReply text only (no quotes):`,
     { maxTokens: 200, tag: 'dr-reply' }
   ).then((t) => String(t).trim().replace(/^["']|["']$/g, '')).catch(() => '');
+
+  // Publish gate: a compromised or low-confidence pass is not worth a public
+  // report page under Sebastian's name — answer inline with honest uncertainty,
+  // publish nothing.
+  const MIN_PUBLISH_CONF = Number(process.env.DR_MIN_PUBLISH_CONF || 40);
+  const publishable = publish && !a.compromised && (conf == null || conf >= MIN_PUBLISH_CONF);
+  if (publish && !publishable) {
+    log(`publish gate: WITHHELD (confidence=${conf != null ? conf + '%' : '?'}${a.compromised ? `, compromised: ${a.compromised_why || 'yes'}` : ''})`);
+  }
   let url = null;
-  if (publish) {
+  if (publishable) {
     try {
       const { publishReport } = require('./publish_report');
       const { blocks, kind } = findingsToBlocks(question, report, findings, shortAnswer);
+      if (conf != null) blocks[0].title = `Answer (confidence ${conf}%):`;
       url = await publishReport({ title: question.slice(0, 120), summary: shortAnswer, kind, source, blocks });
     } catch (e) { log(`publish failed: ${e.message}`); }
   }
-  return { shortAnswer, url, report, findings };
+  return { shortAnswer, url, report, findings, bailed: false, published: !!url, confidence: conf };
 }
 
-module.exports = { deepResearch, researchAndPublish, plan, TOOLS, classify, decompose, reviewPlan, treeResearch, flatResearch };
+module.exports = { deepResearch, researchAndPublish, plan, TOOLS, classify, decompose, reviewPlan, treeResearch, flatResearch, contextTriage };
 
 // ── CLI ───────────────────────────────────────────────────────────────────────
 if (require.main === module) {
@@ -671,7 +929,11 @@ if (require.main === module) {
     try {
       const res = await deepResearch(question, { planOnly, tier: forcedTier || undefined, maxFetch: mf ? Number(mf) : 4 });
       if (planOnly) { console.log('\n=== PLAN ===\n' + JSON.stringify(res.plan, null, 2)); }
-      else { console.log('\n=== REPORT ===\n' + res.report); }
+      else {
+        const a = res.assessment || {};
+        const meta = a.confidence_pct != null ? `\n\n— confidence: ${a.confidence_pct}%${a.compromised ? ` · COMPROMISED: ${a.compromised_why}` : ''}` : '';
+        console.log('\n=== REPORT ===\n' + res.report + meta);
+      }
       process.exit(0);
     } catch (e) { console.error(`[deep_research] failed: ${e.message}`); process.exit(1); }
   })();
