@@ -872,13 +872,13 @@ function findingsToBlocks(question, report, findings, shortAnswer) {
  * reply path so a mention that asks a question gets a real answer + a link to
  * the full, visualized breakdown.
  */
-async function researchAndPublish(question, { maxFetch = 3, publish = true, source = 'x_mention' } = {}) {
+async function researchAndPublish(question, { maxFetch = 3, publish = true, source = 'x_mention', _res = null } = {}) {
   // Gate the slow deep-tree tier off the inline X-mention path unless explicitly
   // opted in (X_DEEP_TREE=1). Other callers (e.g. Telegram /dr) allow the tree.
   const allowTree = source !== 'x_mention' || process.env.X_DEEP_TREE === '1';
   // The mention path answers inline — cap the (slow) verification pass at 1 claim.
   const maxVerify = source === 'x_mention' ? 1 : 3;
-  const res = await deepResearch(question, { maxFetch, allowTree, maxVerify });
+  const res = _res || await deepResearch(question, { maxFetch, allowTree, maxVerify });
 
   // Triage bailed: the "short answer" IS the clarifying question — callers reply
   // with it as-is, and nothing is published.
@@ -924,8 +924,8 @@ async function researchAndPublish(question, { maxFetch = 3, publish = true, sour
  * per tweet, then lib/post_x_helmstack runThread (which logs to posts_log, so
  * the sprint tracker sees it as a thread signal).
  */
-async function researchToThread(question, { maxFetch = 4, maxTweets = 5, live = true } = {}) {
-  const res = await deepResearch(question, { maxFetch, allowTree: true, maxVerify: 3 });
+async function researchToThread(question, { maxFetch = 4, maxTweets = 5, live = true, _res = null } = {}) {
+  const res = _res || await deepResearch(question, { maxFetch, allowTree: true, maxVerify: 3 });
   if (res.bailed) return { posted: false, bailed: true, clarify: res.clarify, report: res.report };
 
   const a = res.assessment || {};
@@ -974,29 +974,100 @@ Output ONLY a JSON array of tweet strings.`,
   return { posted: true, url: r.tweet1Url, urls: r.urls, tweets: gated, confidence: conf, report: res.report };
 }
 
-module.exports = { deepResearch, researchAndPublish, researchToThread, plan, TOOLS, classify, decompose, reviewPlan, treeResearch, flatResearch, contextTriage };
+// ── Delivery format choice ───────────────────────────────────────────────────
+// Given finished research, pick how Sebastian should put it out: a website
+// report page, an X thread, or (once the HelmStack driver exists) an X Article.
+// "article" currently falls back to "report" and logs demand into
+// state/tool_gaps.json so the driver port's priority is data-driven.
+const DELIVERY_FORMATS = ['report', 'thread', 'article', 'auto'];
+
+async function chooseFormat(question, res) {
+  const a = res.assessment || {};
+  const prompt =
+`Research is complete. Pick the best delivery format for Sebastian Hunter to put it out on.
+
+QUESTION: ${question}
+KEY FINDING: ${a.key_finding || '(none stated)'}
+CONFIDENCE: ${a.confidence_pct != null ? a.confidence_pct + '%' : 'unstated'}
+REPORT (first 1500 chars):
+${String(res.report).slice(0, 1500)}
+
+Formats:
+- "thread": ONE sharp finding that 3-5 tweets can fully carry; timely, discourse-driving, opinionated. Best when the value is the take, not the data.
+- "report": data-heavy (tables, on-chain numbers, many sources), reference value — a web page people link to and revisit. Best when the evidence IS the value.
+- "article": long-form narrative essay — worth it only for multi-section stories with an arc. (NOTE: article delivery is not yet available; if it is genuinely the best fit, still say so — the system falls back to "report" and records the demand.)
+
+Output ONLY JSON: {"format":"thread|report|article","why":"one short sentence"}`;
+  try {
+    const j = cleanJson(await reason(prompt, { maxTokens: 200, tag: 'dr-format' }));
+    const f = j && DELIVERY_FORMATS.includes(j.format) ? j.format : 'report';
+    log(`format choice: ${f}${j && j.why ? ` — ${String(j.why).slice(0, 100)}` : ''}`);
+    return f;
+  } catch { return 'report'; }
+}
+
+/**
+ * researchAndDeliver(question, { format }) — the one-call entry: research once,
+ * then deliver in the requested format ('report' | 'thread' | 'article' |
+ * 'auto' = let the model pick from the finished research). Bail and the
+ * quality gate behave identically across formats. Returns a uniform shape:
+ * { bailed?, clarify?, gated?, format, url, posted/published, tweets?,
+ *   confidence, report, shortAnswer? }.
+ */
+async function researchAndDeliver(question, { format = 'auto', maxFetch = 4, source = 'deliver', live = true } = {}) {
+  if (!DELIVERY_FORMATS.includes(format)) format = 'auto';
+  const res = await deepResearch(question, { maxFetch, allowTree: true, maxVerify: 3 });
+  if (res.bailed) return { bailed: true, clarify: res.clarify, format: null, url: null, confidence: 0, report: res.report };
+
+  const a = res.assessment || {};
+  const conf = a.confidence_pct;
+  const MIN = Number(process.env.DR_MIN_PUBLISH_CONF || 40);
+  if (a.compromised || (conf != null && conf < MIN)) {
+    log(`deliver gate: WITHHELD (confidence=${conf != null ? conf + '%' : '?'}${a.compromised ? `, compromised: ${a.compromised_why || 'yes'}` : ''})`);
+    return { gated: true, format: null, url: null, confidence: conf, report: res.report };
+  }
+
+  let chosen = format === 'auto' ? await chooseFormat(question, res) : format;
+  if (chosen === 'article') {
+    recordToolGaps(question, [{ need: 'X Article delivery format for research output', suggested_tool: 'HelmStack postArticle driver (x.com/i/article) in tools/helmstack-social/src/x.js' }]);
+    log('format: article requested → falling back to report (driver not yet built)');
+    chosen = 'report';
+  }
+
+  if (chosen === 'thread') {
+    const t = await researchToThread(question, { live, _res: res });
+    return { ...t, format: 'thread', url: t.url || null };
+  }
+  const r = await researchAndPublish(question, { publish: live, source, _res: res });
+  return { ...r, format: 'report', posted: false };
+}
+
+module.exports = { deepResearch, researchAndPublish, researchToThread, researchAndDeliver, chooseFormat, plan, TOOLS, classify, decompose, reviewPlan, treeResearch, flatResearch, contextTriage };
 
 // ── CLI ───────────────────────────────────────────────────────────────────────
 if (require.main === module) {
   (async () => {
     const args = process.argv.slice(2);
     const planOnly = args.includes('--plan-only');
-    const asThread = args.includes('--thread');
     const dry = args.includes('--dry');
+    let fmt = (args.find((a) => a.startsWith('--format=')) || '').split('=')[1] || null;  // report|thread|article|auto
+    if (args.includes('--thread')) fmt = 'thread';
     const mf = (args.find((a) => a.startsWith('--max-fetch=')) || '').split('=')[1];
     const forcedTier = (args.find((a) => a.startsWith('--tier=')) || '').split('=')[1];   // trivial|standard|deep
     const question = args.filter((a) => !a.startsWith('--')).join(' ').trim();
-    if (!question) { console.error('usage: node runner/deep_research.js "<question>" [--plan-only] [--tier=deep] [--max-fetch=N] [--thread [--dry]]'); process.exit(2); }
+    if (!question) { console.error('usage: node runner/deep_research.js "<question>" [--plan-only] [--tier=deep] [--max-fetch=N] [--format=report|thread|article|auto | --thread] [--dry]'); process.exit(2); }
     try {
-      if (asThread) {
-        const t = await researchToThread(question, { maxFetch: mf ? Number(mf) : 4, live: !dry });
-        console.log('\n=== THREAD ===');
+      if (fmt) {
+        const t = await researchAndDeliver(question, { format: fmt, maxFetch: mf ? Number(mf) : 4, live: !dry, source: 'cli' });
+        console.log(`\n=== DELIVER (${t.format || 'none'}) ===`);
         if (t.bailed) console.log(`(bailed) ${t.clarify}`);
         else if (t.gated) console.log(`(withheld by quality gate — confidence ${t.confidence != null ? t.confidence + '%' : '?'})`);
-        else if (!t.posted && !t.dryRun) console.log(`(not posted: ${t.reason})`);
-        else {
+        else if (t.format === 'thread') {
           (t.tweets || []).forEach((tw, i) => console.log(`\n[${i + 1}] ${tw}`));
-          console.log(t.posted ? `\nposted: ${t.url}` : '\n(dry run — not posted)');
+          console.log(t.posted ? `\nposted: ${t.url}` : t.dryRun ? '\n(dry run — not posted)' : `\n(not posted: ${t.reason})`);
+        } else {
+          console.log(t.shortAnswer || '');
+          console.log(t.url ? `\npublished: ${t.url}` : dry ? '\n(dry run — not published)' : '\n(not published)');
         }
         process.exit(0);
       }
