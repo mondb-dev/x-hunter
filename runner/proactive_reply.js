@@ -259,7 +259,7 @@ function alreadyEngaged(url) {
 
 // ── Gemini reply draft ──────────────────────────────────────────────────────
 
-async function draftReply(candidate, verification) {
+async function draftReply(candidate, verification, threadAncestors = []) {
   const coreContext = buildCoreContext({
     maxAxes: 10,
     journalCount: 2,
@@ -304,6 +304,12 @@ async function draftReply(candidate, verification) {
       '- NEVER fabricate corrections. Only correct claims when you have specific counter-evidence from the sources above.\n';
   }
 
+  let threadBlock = '';
+  if (threadAncestors.length > 0) {
+    threadBlock = '\nThe post is a REPLY inside this conversation (oldest first — the first tweet is the root; understand what is actually being discussed before engaging):\n' +
+      threadAncestors.map(a => `  @${a.user}: "${(a.text || '').slice(0, 200).replace(/\n/g, ' ')}"`).join('\n') + '\n';
+  }
+
   const prompt = buildPersona('reply') + '\n\n' +
     coreContext +
     recallBlock +
@@ -312,8 +318,9 @@ async function draftReply(candidate, verification) {
     '\n\nCURRENT DATE: ' + new Date().toISOString().slice(0, 10) + '. Use this to evaluate all claims about who currently holds a political office, role, or position. Do NOT rely on training data for current officeholders — verify against this date. If you are unsure who currently holds a role, omit the title and use the person\'s name only.\n' +
     '\n\nYou are proactively engaging with a post on X. This is outbound -- nobody asked you.\n' +
     'Your goal: insert Sebastian\'s voice into a high-visibility conversation, especially to correct\n' +
-    'wrong claims with solid evidence from your research and investigations.\n\n' +
-    'The post:\n' +
+    'wrong claims with solid evidence from your research and investigations.\n' +
+    threadBlock +
+    '\nThe post' + (threadAncestors.length > 0 ? ' (a reply in the conversation above)' : '') + ':\n' +
     '  @' + candidate.handle + ': "' + candidate.text + '"\n' +
     '  (' + candidate.likes + ' likes' + (candidate.isFactualClaim ? ', contains factual claim' : '') + ')\n\n' +
     'Draft a reply (max 260 chars) that:\n' +
@@ -563,8 +570,19 @@ async function main() {
     return;
   }
 
-  // Draft reply with verification context
-  const draft = await draftReply(target, verification);
+  // Thread context: if the target is a reply mid-conversation, read its
+  // ancestor chain before drafting — engaging blind mid-thread produced the
+  // worst non-sequiturs. Via lib/x_thread (fxtwitter API): the browser session
+  // doesn't render conversations on permalinks, so DOM scraping can't see them.
+  let threadAncestors = [];
+  try {
+    const targetId = ((target.url || '').match(/\/status\/(\d+)/) || [])[1];
+    if (targetId) threadAncestors = await require('./lib/x_thread').fetchAncestors(targetId, { maxDepth: 5 });
+  } catch (e) { log('thread context failed (non-fatal): ' + e.message); }
+  if (threadAncestors.length) log(`thread: ${threadAncestors.length} ancestor tweet(s) above target`);
+
+  // Draft reply with verification + thread context
+  const draft = await draftReply(target, verification, threadAncestors);
   if (!draft) {
     log('LLM returned SKIP or empty — no reply this cycle');
     recordSkip(target.url, 'LLM SKIP');

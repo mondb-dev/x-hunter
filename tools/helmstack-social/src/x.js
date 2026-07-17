@@ -1174,15 +1174,46 @@ class X {
   }
 
   /**
-   * The conversation visible on a tweet permalink, in DOM order: ancestor
-   * tweets first, then the focused tweet, then replies below. Unlike
-   * scrapeThreadReplies() nothing is dropped — callers that need "what came
-   * before this tweet" (e.g. mention-reply context) slice it themselves.
+   * The conversation on a tweet permalink in CHRONOLOGICAL order: root/ancestor
+   * tweets first, then the focused tweet, then replies below. Callers that need
+   * "what came before this tweet" (e.g. mention-reply context) slice around the
+   * focused id themselves.
+   *
+   * X anchors the permalink view on the FOCUSED tweet and lazy-renders the
+   * ancestor chain above it, so a flat scrape after page-load sees exactly one
+   * article and the thread reads as empty (every mention reply used to log
+   * "thread: 1 tweet in view"). We scroll UP until no new tweets appear,
+   * merging by id across scrapes (virtualization can drop articles out of the
+   * DOM between passes) and sorting by timestamp, which equals conversation
+   * order within a reply chain.
    */
   async scrapeConversation(tweetUrl, { limit = 6 } = {}) {
     if (!(await this._gotoChecked(tweetUrl))) return [];
-    await sleep(1500);
-    return this._scrapeArticles(limit);
+    await sleep(2000);
+    const focusedId = (String(tweetUrl).match(/\/status\/(\d+)/) || [])[1] || null;
+    const seen = new Map();
+    const grab = async () => {
+      for (const a of await this._scrapeArticles(limit + 6)) {
+        if (a.id && !seen.has(a.id)) seen.set(a.id, a);
+      }
+    };
+    await grab();
+    let dry = 0;
+    for (let i = 0; i < 5 && dry < 2; i++) {
+      const before = seen.size;
+      await this.c.evaluate(this.tab, "window.scrollBy(0, -1400)").catch(() => {});
+      await sleep(1100);
+      await grab();
+      dry = seen.size === before ? dry + 1 : 0;
+    }
+    const all = Array.from(seen.values()).sort((a, b) => (a.ts || 0) - (b.ts || 0));
+    if (all.length <= limit) return all;
+    // Trim to `limit` but never drop the focused tweet: keep the window of
+    // ancestors ending at the focused tweet, then fill with replies below.
+    const fi = focusedId ? all.findIndex((a) => a.id === focusedId) : -1;
+    if (fi < 0) return all.slice(0, limit);
+    const start = Math.max(0, fi - (limit - 1));
+    return all.slice(start, start + limit);
   }
 
   /** Top replies under a tweet permalink (drops the root tweet). */
