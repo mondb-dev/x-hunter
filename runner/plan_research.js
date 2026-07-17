@@ -65,19 +65,26 @@ async function main() {
   if (!question) { log(`no unanswered research questions for plan "${planKey}"`); return; }
 
   log(`plan "${planKey}" → question: ${question.slice(0, 140)}`);
-  const { researchAndPublish } = require('./deep_research');
-  const { shortAnswer, url } = await researchAndPublish(question, { maxFetch: 4, source: 'plan' });
+  // Delivery format follows the plan's action type: thread-shaped plans put
+  // findings out as X threads, otherwise the model picks from the finished
+  // research (report page vs thread; X Article once its driver exists).
+  const FORMAT_BY_ACTION = { thread_series: 'thread', engage_campaign: 'thread', article_series: 'report' };
+  const format = FORMAT_BY_ACTION[plan.action_type] || 'auto';
+  const { researchAndDeliver } = require('./deep_research');
+  const r = await researchAndDeliver(question, { source: 'plan', format });
 
   state.done.push(qHash(question));
   state.results.push({
     question,
-    url: url || null,
-    short: String(shortAnswer || '').slice(0, 240),
+    format: r.format || null,
+    url: r.url || null,
+    gated: r.gated || false,
+    short: String(r.shortAnswer || (r.tweets && r.tweets[0]) || r.clarify || '').slice(0, 240),
     ts: new Date().toISOString(),
   });
   state.results = state.results.slice(-40);
   fs.writeFileSync(STATE_PATH, JSON.stringify(state, null, 2));
-  log(url ? `published: ${url}` : 'research done (publish failed — result kept in state)');
+  log(r.url ? `delivered as ${r.format}: ${r.url}` : r.gated ? 'withheld by quality gate (kept in state)' : 'research done (no delivery — result kept in state)');
 }
 
 // Hard watchdog: a wedged research pass must not leave a zombie process behind.
