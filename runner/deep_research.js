@@ -974,11 +974,68 @@ Output ONLY a JSON array of tweet strings.`,
   return { posted: true, url: r.tweet1Url, urls: r.urls, tweets: gated, confidence: conf, report: res.report };
 }
 
+/**
+ * researchToArticle(question) — run deep research and publish the findings as a
+ * native X Article (long-form, x.com/compose/articles) via the HelmStack
+ * driver. Same triage + quality bar as researchToThread: a bail returns the
+ * clarifying question, and a compromised / below-DR_MIN_PUBLISH_CONF pass
+ * publishes nothing. Title + body go through the outbound compose backend and
+ * the voice/factcheck gates, then lib/post_x_helmstack runArticle (which logs
+ * to posts_log as an article). Requires X Premium on the account.
+ */
+async function researchToArticle(question, { maxFetch = 4, live = true, _res = null } = {}) {
+  const res = _res || await deepResearch(question, { maxFetch, allowTree: true, maxVerify: 3 });
+  if (res.bailed) return { posted: false, bailed: true, clarify: res.clarify, report: res.report };
+
+  const a = res.assessment || {};
+  const conf = a.confidence_pct;
+  const MIN = Number(process.env.DR_MIN_PUBLISH_CONF || 40);
+  if (a.compromised || (conf != null && conf < MIN)) {
+    log(`article gate: WITHHELD (confidence=${conf != null ? conf + '%' : '?'}${a.compromised ? `, compromised: ${a.compromised_why || 'yes'}` : ''})`);
+    return { posted: false, gated: true, confidence: conf, report: res.report };
+  }
+
+  const { compose } = require('./lib/compose');
+  const raw = await compose(
+`Turn this research into a long-form X Article by Sebastian Hunter.
+Rules:
+- Title under 100 chars — concrete, carries the key finding${a.key_finding ? ` (${a.key_finding})` : ''}; no clickbait.
+- Body 600-1200 words as plain paragraphs separated by blank lines — no markdown headers, no bullet lists, no bold/italics (the editor takes plain text only).
+- Open with the finding, then walk the evidence; every paragraph carries a specific (name, number, mechanism).
+- Match certainty to the research confidence (${conf != null ? conf + '%' : 'unstated'}) — never claim past the evidence.
+- Close by naming the 1-2 strongest sources (bare URLs fine). No hashtags.
+QUESTION: ${question}
+
+RESEARCH REPORT:
+${String(res.report).slice(0, 6000)}
+
+Output ONLY JSON: {"title":"...","body":"..."}`,
+    { maxTokens: 2500, tag: 'dr-article' });
+  let draft = null;
+  try { draft = cleanJson(raw); } catch { /* handled below */ }
+  const title = draft ? String(draft.title || '').trim() : '';
+  const body = draft ? String(draft.body || '').trim() : '';
+  if (!title || body.length < 500) { log('article compose failed — no usable draft'); return { posted: false, reason: 'article_compose_failed', report: res.report }; }
+
+  const { passOutbound } = require('./lib/outbound_gates');
+  const gt = await passOutbound(title, { maxLen: 120, tag: 'dr-article-title' });
+  if (!gt.ok) { log(`article gate dropped title (${gt.reason})`); return { posted: false, reason: 'gates_dropped_article', report: res.report }; }
+  const gb = await passOutbound(body, { maxLen: 12000, tag: 'dr-article' });
+  if (!gb.ok) { log(`article gate dropped body (${gb.reason})`); return { posted: false, reason: 'gates_dropped_article', report: res.report }; }
+
+  if (!live) { log('dry run — article composed, not publishing'); return { posted: false, dryRun: true, title: gt.text, body: gb.text, confidence: conf, report: res.report }; }
+
+  const { runArticle } = require('./lib/post_x_helmstack');
+  const r = await runArticle({ title: gt.text, body: gb.text });
+  if (r.dryRun) return { posted: false, dryRun: true, title: gt.text, body: gb.text, confidence: conf, report: res.report };
+  if (!r.ok) return { posted: false, reason: r.reason || 'post_failed', title: gt.text, report: res.report };
+  log(`article published: ${r.url || '(url uncaptured)'}`);
+  return { posted: true, url: r.url || null, title: gt.text, confidence: conf, report: res.report };
+}
+
 // ── Delivery format choice ───────────────────────────────────────────────────
 // Given finished research, pick how Sebastian should put it out: a website
-// report page, an X thread, or (once the HelmStack driver exists) an X Article.
-// "article" currently falls back to "report" and logs demand into
-// state/tool_gaps.json so the driver port's priority is data-driven.
+// report page, an X thread, or a native X Article (long-form).
 const DELIVERY_FORMATS = ['report', 'thread', 'article', 'auto'];
 
 async function chooseFormat(question, res) {
@@ -995,7 +1052,7 @@ ${String(res.report).slice(0, 1500)}
 Formats:
 - "thread": ONE sharp finding that 3-5 tweets can fully carry; timely, discourse-driving, opinionated. Best when the value is the take, not the data.
 - "report": data-heavy (tables, on-chain numbers, many sources), reference value — a web page people link to and revisit. Best when the evidence IS the value.
-- "article": long-form narrative essay — worth it only for multi-section stories with an arc. (NOTE: article delivery is not yet available; if it is genuinely the best fit, still say so — the system falls back to "report" and records the demand.)
+- "article": long-form narrative essay published natively on X — worth it only for multi-section stories with an arc that 600+ words genuinely earn.
 
 Output ONLY JSON: {"format":"thread|report|article","why":"one short sentence"}`;
   try {
@@ -1027,13 +1084,11 @@ async function researchAndDeliver(question, { format = 'auto', maxFetch = 4, sou
     return { gated: true, format: null, url: null, confidence: conf, report: res.report };
   }
 
-  let chosen = format === 'auto' ? await chooseFormat(question, res) : format;
+  const chosen = format === 'auto' ? await chooseFormat(question, res) : format;
   if (chosen === 'article') {
-    recordToolGaps(question, [{ need: 'X Article delivery format for research output', suggested_tool: 'HelmStack postArticle driver (x.com/i/article) in tools/helmstack-social/src/x.js' }]);
-    log('format: article requested → falling back to report (driver not yet built)');
-    chosen = 'report';
+    const t = await researchToArticle(question, { live, _res: res });
+    return { ...t, format: 'article', url: t.url || null };
   }
-
   if (chosen === 'thread') {
     const t = await researchToThread(question, { live, _res: res });
     return { ...t, format: 'thread', url: t.url || null };
@@ -1042,7 +1097,7 @@ async function researchAndDeliver(question, { format = 'auto', maxFetch = 4, sou
   return { ...r, format: 'report', posted: false };
 }
 
-module.exports = { deepResearch, researchAndPublish, researchToThread, researchAndDeliver, chooseFormat, plan, TOOLS, classify, decompose, reviewPlan, treeResearch, flatResearch, contextTriage };
+module.exports = { deepResearch, researchAndPublish, researchToThread, researchToArticle, researchAndDeliver, chooseFormat, plan, TOOLS, classify, decompose, reviewPlan, treeResearch, flatResearch, contextTriage };
 
 // ── CLI ───────────────────────────────────────────────────────────────────────
 if (require.main === module) {
@@ -1065,6 +1120,10 @@ if (require.main === module) {
         else if (t.format === 'thread') {
           (t.tweets || []).forEach((tw, i) => console.log(`\n[${i + 1}] ${tw}`));
           console.log(t.posted ? `\nposted: ${t.url}` : t.dryRun ? '\n(dry run — not posted)' : `\n(not posted: ${t.reason})`);
+        } else if (t.format === 'article') {
+          console.log(t.title || '');
+          if (t.body) console.log(`\n${t.body}`);
+          console.log(t.posted ? `\npublished: ${t.url || '(url uncaptured)'}` : t.dryRun ? '\n(dry run — not published)' : `\n(not posted: ${t.reason})`);
         } else {
           console.log(t.shortAnswer || '');
           console.log(t.url ? `\npublished: ${t.url}` : dry ? '\n(dry run — not published)' : '\n(not published)');

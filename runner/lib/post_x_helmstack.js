@@ -14,7 +14,7 @@
 const fs = require("fs");
 const path = require("path");
 const { HelmStackClient, X } = require("../../tools/helmstack-social/src");
-const { logTweet, logQuote } = require("../posts_log");
+const { logTweet, logQuote, logArticle } = require("../posts_log");
 const { HANDLE, clearFile, isConfirmedStatusUrl, writeAttempt, writeResult } = require("../post_result");
 const voiceFilter = require("./voice_filter");
 
@@ -263,4 +263,41 @@ async function runThread(tweets, { cycle } = {}) {
   return { ok: true, tweet1Url, urls };
 }
 
-module.exports = { runTweet, runQuote, runThread };
+// ── runArticle ────────────────────────────────────────────────────────────────
+// Publishes a native X Article (long-form) via the engine. Gating stays with the
+// caller (deep_research researchToArticle); this only posts + logs. Uses a
+// DEDICATED tab: the article editor holds /compose/articles/edit/<id> open for
+// minutes while the body inserts, and concurrent consumers (collect.js ticks)
+// would adopt and navigate a shared tab mid-insert.
+// Returns { ok, url, dryRun?, reason? }.
+async function runArticle({ title, body } = {}) {
+  const tag = "post_article.hs";
+  if (!title || !body) return { ok: false, reason: "missing_title_or_body" };
+
+  const x = new X(new HelmStackClient(), { ownHandle: HANDLE, dedicatedTab: true, log: (m) => console.log(`[${tag}] ${m}`) });
+  try {
+    await x.c.health();
+    await x.ensureTab();
+  } catch (err) {
+    console.error(`[${tag}] could not reach HelmStack: ${err.message}`);
+    return { ok: false, reason: "helmstack_connect_failed" };
+  }
+
+  let res;
+  try {
+    res = await x.postArticle({ title, body }, { dryRun: DRY_RUN });
+  } catch (err) {
+    console.error(`[${tag}] error: ${err.message}`);
+    await x.close().catch(() => {});
+    return { ok: false, reason: "exception", error: err.message };
+  }
+
+  if (res.dryRun) { console.log(`[${tag}] dry run — not published`); await x.close().catch(() => {}); return { ok: false, dryRun: true }; }
+  if (!res.ok) { console.error(`[${tag}] article failed: ${res.reason}`); await x.close().catch(() => {}); return { ok: false, reason: res.reason }; }
+
+  logArticle({ title, content: body, article_url: res.url || "" });
+  await x.close().catch(() => {});
+  return { ok: true, url: res.url || null };
+}
+
+module.exports = { runTweet, runQuote, runThread, runArticle };

@@ -910,12 +910,54 @@ class X {
    * Premium account): x.com/compose/articles is the LANDING page (drafts list) —
    * click "Write" to open a fresh editor at /compose/articles/edit/<id>, which
    * has a title field, a body contenteditable (aria-label "composer"/"Body"),
-   * and a Publish button. dryRun stops once the editor is open.
+   * and a Publish button. dryRun inserts + verifies both fields, then clears
+   * them and stops before the Publish click (the house dry-run semantics); an
+   * empty "Untitled" draft may remain in the drafts list.
+   *
+   * Title and body are ASCII-normalized (toComposerSafe) and the body is
+   * inserted line-by-line with real Enter keypresses — Input.insertText drops
+   * a payload containing "\n" or "scheme://" ENTIRELY (same quirks as the
+   * tweet composer), so a raw chunked insert silently loses whole paragraphs.
+   * Both fields are verified before Publish; on a verify miss nothing is
+   * published (the draft stays in x.com/compose/articles for inspection).
    * Returns { ok, url } (url best-effort from the profile).
    */
   async postArticle({ title, body }, { dryRun = false } = {}) {
+    title = toComposerSafe(title);
+    body = toComposerSafe(body);
+    if (!body) return { ok: false, reason: "empty_body" };
     if (!(await this._gotoChecked("https://x.com/compose/articles"))) return { ok: false, reason: "navigation_failed" };
     await sleep(4000);
+
+    // HelmStack tabs are HIDDEN WebContentsViews: requestAnimationFrame and
+    // IntersectionObserver never fire there, and the article editor's mount
+    // chain depends on them — the /edit/<id> page spins forever (verified
+    // 2026-07-18; every other X surface renders fine hidden). Shim them to
+    // timer-based fallbacks BEFORE clicking Write; the shims survive the SPA
+    // route into the editor (they'd be wiped by a full navigation).
+    await this.c.evalFn(this.tab, () => {
+      window.requestAnimationFrame = (cb) => setTimeout(() => cb(performance.now()), 16);
+      window.cancelAnimationFrame = (id) => clearTimeout(id);
+      window.requestIdleCallback = (cb) => setTimeout(() => cb({ didTimeout: false, timeRemaining: () => 50 }), 1);
+      window.cancelIdleCallback = (id) => clearTimeout(id);
+      window.IntersectionObserver = class {
+        constructor(cb) { this.cb = cb; }
+        observe(el) {
+          const r = el.getBoundingClientRect();
+          setTimeout(() => this.cb([{ isIntersecting: true, target: el, intersectionRatio: 1, boundingClientRect: r, intersectionRect: r, rootBounds: null, time: performance.now() }], this), 1);
+        }
+        unobserve() {}
+        disconnect() {}
+        takeRecords() { return []; }
+      };
+      try {
+        Object.defineProperty(document, "visibilityState", { get: () => "visible", configurable: true });
+        Object.defineProperty(document, "hidden", { get: () => false, configurable: true });
+        document.hasFocus = () => true;
+        document.dispatchEvent(new Event("visibilitychange"));
+      } catch {}
+      return true;
+    }).catch(() => {});
 
     // Open a new article draft: empty-state "Write" button, or the top "create".
     await this.c.evalFn(this.tab, () => {
@@ -923,32 +965,117 @@ class X {
         Array.from(document.querySelectorAll("button,[role=button]")).find((e) => /^write$|create/i.test((e.innerText || e.getAttribute("aria-label") || "").trim()));
       if (b) (b.closest("button,[role=button]") || b).click();
     });
-    // Wait for the editor route to load.
+    // Wait for the editor route AND its fields. The Draft.js editor chunk +
+    // draft fetch are SLOW (15-30s of spinners is normal) — poll generously.
     try {
       await this.c.pollFn(this.tab, "article editor", () =>
-        /\/compose\/articles\/edit\//.test(location.href) && document.querySelectorAll('[role="textbox"],[contenteditable="true"]').length > 0,
-        { attempts: 12, interval: 1000, tag: "x" });
+        /\/compose\/articles\/edit\//.test(location.href) &&
+        !!(document.querySelector('[data-testid="composer"]') || document.querySelector('textarea[placeholder*="title" i]')),
+        { attempts: 30, interval: 2000, tag: "x" });
     } catch { return { ok: false, reason: "editor_not_found" }; }
 
-    if (dryRun) { this.log("DRY RUN — article editor opened, not publishing"); return { ok: false, reason: "dry_run", dryRun: true }; }
+    // One page-side helper for both fields (observed 2026-07-18): title is a
+    // bare <textarea placeholder="Add a title"> (no aria-label/testid); body is
+    // the Draft.js contenteditable div[data-testid="composer"].
+    const fieldOp = (which, op) => this.c.evalFn(this.tab, (a) => {
+      const findTitle = () =>
+        document.querySelector('textarea[placeholder*="title" i], input[aria-label*="Title" i], textarea[aria-label*="Title" i], [data-testid*="itle" i]');
+      const findBody = () =>
+        document.querySelector('[data-testid="composer"], [aria-label="Body"], [contenteditable="true"][aria-label*="composer" i]') ||
+        Array.from(document.querySelectorAll('[contenteditable="true"]')).pop();
+      const el = a.which === "title" ? findTitle() : findBody();
+      if (!el) return null;
+      if (a.op === "rect") {
+        el.scrollIntoView({ block: "center" });
+        const r = el.getBoundingClientRect();
+        if (!r.width || !r.height) return null;
+        return JSON.stringify({ x: Math.round(r.x + Math.min(r.width / 2, 200)), y: Math.round(r.y + Math.min(r.height / 2, 20)) });
+      }
+      if (a.op === "focus") { el.focus(); return "true"; }
+      if (a.op === "read") return "value" in el ? String(el.value) : (el.innerText || "");
+      if (a.op === "clear") {
+        if ("value" in el) {
+          const setter = Object.getOwnPropertyDescriptor(Object.getPrototypeOf(el), "value").set;
+          setter.call(el, "");
+          el.dispatchEvent(new Event("input", { bubbles: true }));
+        } else { el.focus(); document.execCommand("selectAll"); document.execCommand("delete"); }
+        return "true";
+      }
+      return null;
+    }, { which, op });
 
-    // Title: a textbox/input that isn't the body composer. Body: the composer.
-    const focusTitle = () => this.c.evalFn(this.tab, () => {
-      const el = document.querySelector('input[aria-label*="Title" i], [role="textbox"][aria-label*="Title" i], [data-testid*="itle"]') ||
-        Array.from(document.querySelectorAll('[role="textbox"],[contenteditable="true"]')).find((e) => !/composer|body/i.test(e.getAttribute("aria-label") || ""));
-      if (el) { el.focus(); return true; } return false;
-    });
-    const focusBody = () => this.c.evalFn(this.tab, () => {
-      const el = document.querySelector('[aria-label="Body"], [contenteditable="true"][aria-label*="composer" i]') ||
-        Array.from(document.querySelectorAll('[contenteditable="true"],[role="textbox"]')).pop();
-      if (el) { el.focus(); return true; } return false;
-    });
+    // element.focus() alone doesn't reliably move CDP input focus (same as the
+    // tweet composer) — click the field's bounding box first.
+    const focusField = async (which) => {
+      const raw = await fieldOp(which, "rect").catch(() => null);
+      let pt = null;
+      try { pt = JSON.parse(raw); } catch {}
+      if (pt) await this.c.clickAt(this.tab, pt.x, pt.y).catch(() => {});
+      return !!(await fieldOp(which, "focus"));
+    };
 
-    if (title) { if (await focusTitle()) { await this.c.insertText(this.tab, title); await sleep(700); } }
-    if (await focusBody()) {
-      for (let i = 0; i < body.length; i += 400) { await this.c.insertText(this.tab, body.slice(i, i + 400)); await sleep(120); }
-    } else { return { ok: false, reason: "body_field_not_found" }; }
+    // Insert one logical line, split at URL scheme boundaries ("scheme://"
+    // payloads are dropped whole), with the End-key flush after each piece.
+    const insertLine = async (line) => {
+      const pieces = line.split(/(\s?https?:)(?=\/\/)/).filter(Boolean);
+      for (const piece of pieces) {
+        await this.c.insertText(this.tab, piece);
+        await sleep(250);
+        await this.c.pressKey(this.tab, { key: "End", code: "End", keyCode: 35 }).catch(() => {});
+        await sleep(150);
+      }
+    };
+
+    // Title: insert + verify, one clear-and-retry.
+    if (title) {
+      let okTitle = false;
+      for (let t = 0; t < 2 && !okTitle; t++) {
+        if (!(await focusField("title"))) return { ok: false, reason: "title_field_not_found" };
+        await sleep(300);
+        await insertLine(title.replace(/\n+/g, " "));
+        await sleep(700);
+        okTitle = norm(await fieldOp("title", "read").catch(() => "")) === norm(title.replace(/\n+/g, " "));
+        if (!okTitle) { this.log(`article title verify miss ${t + 1}/2`); await fieldOp("title", "clear").catch(() => {}); await sleep(400); }
+      }
+      if (!okTitle) return { ok: false, reason: "title_verify_failed" };
+    }
+
+    // Body: line-by-line with real Enter keypresses, verify the full text,
+    // one clear-and-retry. Never publish an unverified body.
+    let okBody = false;
+    for (let t = 0; t < 2 && !okBody; t++) {
+      if (!(await focusField("body"))) return { ok: false, reason: "body_field_not_found" };
+      await sleep(300);
+      const lines = body.split("\n");
+      for (let li = 0; li < lines.length; li++) {
+        if (lines[li]) await insertLine(lines[li]);
+        if (li < lines.length - 1) {
+          await this.c.pressKey(this.tab, { key: "Enter", code: "Enter", keyCode: 13, text: "\r" }).catch(() => {});
+          await sleep(150);
+        }
+      }
+      await sleep(1500);
+      const got = norm(await fieldOp("body", "read").catch(() => ""));
+      okBody = got === norm(body);
+      if (!okBody) {
+        this.log(`article body verify miss ${t + 1}/2 (${got.length}/${norm(body).length} chars)`);
+        await fieldOp("body", "clear").catch(() => {});
+        await sleep(600);
+      }
+    }
+    if (!okBody) {
+      this.log("article body unverified — NOT publishing (draft left in /compose/articles)");
+      return { ok: false, reason: "body_verify_failed" };
+    }
     await sleep(1200);
+
+    if (dryRun) {
+      this.log("DRY RUN — title + body inserted and verified; clearing draft, not publishing");
+      await fieldOp("title", "clear").catch(() => {});
+      await fieldOp("body", "clear").catch(() => {});
+      await sleep(1000);
+      return { ok: false, reason: "dry_run", dryRun: true };
+    }
 
     // Publish (may require a second confirm-Publish in a dialog).
     const clickPublish = () => this.c.evalFn(this.tab, () => {

@@ -365,7 +365,8 @@ if (require.main === module) {
     console.log(`[post_article] title: "${title}"`);
     console.log(`[post_article] body: ${body.length} chars`);
 
-    // HelmStack path (default) — publish via the engine's article editor.
+    // HelmStack path (POST_BACKEND=helmstack, same opt-in as every posting
+    // script) — publish via the engine's article editor.
     if ((process.env.POST_BACKEND || "").toLowerCase() === "helmstack") {
       const { HelmStackClient, X } = require("../tools/helmstack-social/src");
       const { HANDLE } = require("./post_result");
