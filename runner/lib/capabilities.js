@@ -39,8 +39,10 @@ Engagement
 
 Observation & analysis
 - Browse and observe X and the open web; run web searches                                            → action_type: "research_sprint"
+- Run a deep-research report on a specific question (planned multi-source retrieval: memory recall, observed posts, web search, page fetch, on-chain token checks; cited synthesis published as a report on the website) → action_type: "research_sprint"
 - Verify specific factual claims via the verification pipeline                                       → action_type: "verification_campaign"
 - Track and map competing narratives as belief axes in the ontology (analysis expressed through posts/articles, NOT software) → action_type: "narrative_map"
+- Observe curated Facebook public Pages (PH politics/figures) — feeds the belief pipeline alongside X and LinkedIn (background collection; observe/follow only, NO posting or commenting on Facebook)
 - Write daily journal reflections (always on; not a plan action by itself)
 
 HARD LIMITS — DO NOT propose any of these (they cannot be executed):
@@ -58,7 +60,8 @@ he can drive.`;
 /** Compact one-liner for decision.js's scoring criteria. */
 const CAPABILITIES_SHORT =
   "must be executable with existing tools only — X posts/threads/quotes/likes/replies, " +
-  "LinkedIn posts + comments, articles (website + Moltbook), claim verification, research, " +
+  "LinkedIn posts + comments, articles (website + Moltbook), claim verification, research " +
+  "(incl. deep-research reports published to the website), FB Page observation (no FB posting), " +
   "narrative mapping via the belief ontology. NO building apps/tools/dashboards/sites/software " +
   "(including 'documented prototypes').";
 

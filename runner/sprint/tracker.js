@@ -107,6 +107,22 @@ function gatherTodaySignals() {
     }
   }
 
+  // Check for deep-research reports published today or yesterday (website
+  // reports index — written by publish_report.js, driven by plan_research.js
+  // and the reactive X-mention/Telegram paths).
+  const reportsIndex = loadJson(path.join(ROOT, "web", "public", "data", "reports", "index.json"));
+  if (Array.isArray(reportsIndex)) {
+    for (const r of reportsIndex) {
+      const rd = (r.generated_at || "").slice(0, 10);
+      if (rd === d || rd === yesterday) {
+        signals.push({
+          source: "report",
+          description: `Published deep-research report: "${(r.title || "untitled").slice(0, 120)}" (${rd})`,
+        });
+      }
+    }
+  }
+
   // Check posts_log for today's and yesterday's posts
   const postsLog = loadJson(path.join(STATE, "posts_log.json"));
   if (postsLog?.posts) {
