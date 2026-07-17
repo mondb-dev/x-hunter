@@ -2,7 +2,7 @@
 /**
  * runner/linkedin_measure.js — measure engagement on Sebastian's LinkedIn posts
  * so the test-and-learn loop (lib/linkedin_performance) can correlate opening
- * technique → engagement. Scrapes reactions + comments for posts old enough to
+ * shape → engagement. Scrapes reactions/comments/reposts/impressions for posts old enough to
  * have accrued engagement (default >24h) but not yet measured.
  *
  * Env: HELMSTACK_AUTH_TOKEN (required), LI_MEASURE_MAX (6), LI_MEASURE_MIN_AGE_H (24).
@@ -33,7 +33,7 @@ const log = (m) => console.log(`[linkedin_measure] ${m}`);
     try {
       const m = await li.scrapePostEngagement(p.url);
       perf.recordMetric(p.url, m);
-      log(`${p.technique}: ${m.reactions} reactions + ${m.comments} comments (${m.reactions + m.comments} eng) — ${p.url.slice(-24)}`);
+      log(`${p.technique || "post"}: ${m.reactions}r ${m.comments}c ${m.reposts}rp / ${m.impressions} impressions — ${p.url.slice(-24)}`);
       measured++;
     } catch (e) { log(`measure failed for ${p.url.slice(-24)}: ${e.message}`); }
   }

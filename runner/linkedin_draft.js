@@ -194,7 +194,7 @@ Write ONE original LinkedIn post following the voice rules and the ${plan ? "pos
     const { id, deduped } = outbox.enqueue({ channel: "linkedin", kind: "post", text, meta: {
       cycle: Number.parseInt(process.env.CYCLE_NUMBER || "", 10) || null,
       technique: plan ? plan.technique : technique.id,
-      ...(plan ? { planned: true, ending: plan.ending, length: plan.length, media: plan.media, structure: plan.structure } : {}),
+      ...(plan ? { planned: true, ending: plan.ending, length: plan.length, media: plan.media, topic: plan.topic, structure: plan.structure } : {}),
       ...(imageSource ? { image_source: imageSource } : {}),
       ...(linkSource ? { link_source: linkSource } : {}),
     } });

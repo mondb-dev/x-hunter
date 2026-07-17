@@ -68,6 +68,7 @@ ${recent || '(none posted yet)'}
 Return ONLY a JSON object:
 {
   "theme": "one line — the single argument of the post",
+  "topic": "1-3 word lowercase slug for what the post is about (e.g. 'philippine impeachment', 'platform moderation') — recorded for stats, reuse a slug you'd use for similar posts",
   "structure": "2-3 sentences: how it opens, how it moves, paragraph rhythm, and how it ends — consistent with the assigned shape",
   "opening": "one line — the exact opening move for this material",
   "length_words": ${Math.round((lo + hi) / 2)},
@@ -117,6 +118,7 @@ function parsePlan(raw, assignment) {
   const plan = {
     ...shape,
     theme: str(p.theme),
+    topic: str(p.topic).toLowerCase().slice(0, 40),
     structure: str(p.structure),
     opening: str(p.opening),
     length_words: Math.min(hi, Math.max(lo, Number(p.length_words) || Math.round((lo + hi) / 2))),
