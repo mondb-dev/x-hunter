@@ -72,40 +72,48 @@ const FALLBACK_FORMAT = `- Format: 150-350 words, 2-4 short plain paragraphs. Me
 
   const perfSummary = perf.summaryText();
 
-  // Plan first: decide how THIS post should be shaped — structure, opening,
-  // length, tone, media — from the material, the measured track record, and the
-  // shape of the last few posts. Falls back to the fixed template on any failure.
+  // Shape is an A/B experiment: the explore/exploit controller (pickShape)
+  // assigns this post's test cell across every measured dimension — opening,
+  // ending, length, media. The plan stage then FITS that assignment to the
+  // material (theme, structural blueprint, exact opening move), overriding a
+  // dimension only when the material can't support it (override recorded, so
+  // measurement always reflects what was actually posted).
+  const assignment = perf.pickShape();
+  log(`shape assignment: ${["technique","ending","length","media"].map((d) => `${d}=${assignment[d]} [${assignment.why[d]}]`).join(", ")}`);
+
   let plan = null;
   try {
     const { planPost } = require("./lib/linkedin_plan");
     plan = await planPost({
       packText: pack.text,
-      perfSummary,
+      assignment,
       recentPosts: outbox.recentPosted("linkedin", { limit: 3 }),
     });
   } catch (e) { log(`plan stage failed (${e.message}) — using fallback template`); }
 
-  // The technique id feeds the test-and-learn loop (linkedin_measure scores it).
-  // With a plan, the planner's choice is recorded; without one, epsilon-greedy
-  // pickTechnique() drives the old fixed-template prompt.
   let technique = null;
   if (plan) {
-    log(`plan: opening=${plan.opening_technique} ~${plan.length_words}w media=${plan.media}${plan.media_rationale ? ` (${plan.media_rationale})` : ""}`);
+    for (const o of plan.overrides) log(`plan OVERRIDE: ${o.dimension} → ${o.value} (${o.reason})`);
+    log(`plan: ${plan.technique}/${plan.ending}/${plan.length}/${plan.media} ~${plan.length_words}w${plan.media_rationale ? ` — ${plan.media_rationale}` : ""}`);
     log(`plan structure: ${plan.structure}`);
   } else {
     technique = perf.pickTechnique();
     log(`no plan — fallback technique: ${technique.id} (${technique.label})`);
   }
-  const techniqueId = plan ? plan.opening_technique : technique.id;
 
+  const ENDING_DIRECTIVE = {
+    question: "END on a genuine question that invites professional discussion.",
+    claim: "END on a flat declarative claim — no closing question.",
+    implication: "END on the implication — what follows if this pattern holds. No closing question.",
+  };
   const shapeBlock = plan
-    ? `YOUR POST PLAN — you decided this shape for this specific material; follow it:
+    ? `YOUR POST PLAN — the shape comes from your measured A/B experiment; the fit to this material is yours. Follow it:
 - Theme: ${plan.theme || "(as implied by the structure)"}
 - Structure: ${plan.structure}
 - Opening move: ${plan.opening}
 - Length: about ${plan.length_words} words
 - Tone: ${plan.tone}
-End the post the way the structure says — do NOT bolt on a closing question unless the plan calls for one.`
+- ${ENDING_DIRECTIVE[plan.ending] || ENDING_DIRECTIVE.claim}`
     : `${FALLBACK_FORMAT}\n\nOPENING TECHNIQUE TO USE FOR THIS POST: ${technique.instruction}`;
 
   const prompt =
@@ -185,8 +193,8 @@ Write ONE original LinkedIn post following the voice rules and the ${plan ? "pos
 
     const { id, deduped } = outbox.enqueue({ channel: "linkedin", kind: "post", text, meta: {
       cycle: Number.parseInt(process.env.CYCLE_NUMBER || "", 10) || null,
-      technique: techniqueId,
-      ...(plan ? { planned: true, media: wantMedia, structure: plan.structure } : {}),
+      technique: plan ? plan.technique : technique.id,
+      ...(plan ? { planned: true, ending: plan.ending, length: plan.length, media: plan.media, structure: plan.structure } : {}),
       ...(imageSource ? { image_source: imageSource } : {}),
       ...(linkSource ? { link_source: linkSource } : {}),
     } });

@@ -54,7 +54,7 @@ const log = (m) => console.log(`[${tag}] ${m}`);
   // Optional image: if the draft carried a source URL (meta.image_source), copy
   // that source's og:image and post it via LinkedIn's media pipeline with a
   // "📷 via <source>" line. The temp image is ALWAYS deleted afterward.
-  let res, tmpImg = null;
+  let res, tmpImg = null, postedWithImage = false;
   const sourceUrl = item.meta && item.meta.image_source;
   try {
     if (sourceUrl && !DRY_RUN) {
@@ -64,6 +64,7 @@ const log = (m) => console.log(`[${tag}] ${m}`);
         tmpImg = img.path;
         log(`attaching source image from ${img.source}`);
         res = await li.postImage(`${text}\n\n${si.attribution(img.source)}`, img.path, { dryRun: DRY_RUN });
+        postedWithImage = !!(res && res.posted);
       } else { log("no og:image at source — posting text only"); }
     }
     if (!res) res = await li.post(text, { dryRun: DRY_RUN });
@@ -76,7 +77,19 @@ const log = (m) => console.log(`[${tag}] ${m}`);
   outbox.markPosted(item.id, { url: res.url || null });
   log(`SUCCESS${res.url ? `: ${res.url}` : ""} (outbox #${item.id})`);
   logLinkedIn({ type: "linkedin_post", content: text, url: res.url || "", cycle: CYCLE });
-  // Tag the post with its opening technique so linkedin_measure can score it later.
-  if (res.url && item.meta && item.meta.technique) { try { perf.recordPost(res.url, item.meta.technique); } catch {} }
+  // Tag the post with the shape ACTUALLY published (image fetch can fall back to
+  // text-only; ending/length are derived from the final text) so the A/B loop
+  // (linkedin_measure → lib/linkedin_performance) scores real cells, not intent.
+  if (res.url) {
+    try {
+      const meta = item.meta || {};
+      perf.recordPost(res.url, {
+        technique: meta.technique,
+        ending: /\?\s*$/.test(text.trim()) ? "question" : (meta.ending || "claim"),
+        length: perf.lengthBucket(text.split(/\s+/).filter(Boolean).length),
+        media: postedWithImage ? "image" : (meta.link_source ? "link" : "none"),
+      });
+    } catch {}
+  }
   process.exit(0);
 })().catch((err) => { log(`fatal: ${err.message}`); process.exit(1); });
