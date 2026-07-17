@@ -1,17 +1,22 @@
 'use strict';
 /**
  * runner/lib/linkedin_performance.js — the "test and learn" loop for Sebastian's
- * LinkedIn posting. Each post is tagged with an opening TECHNIQUE; engagement
- * (reactions + comments) is measured after it accrues; the technique→engagement
- * profile is fed back into the draft prompt and biases technique selection
- * (explore/exploit). Same shape as the prediction-calibration loop.
+ * LinkedIn posting. Each post is tagged with its SHAPE (opening technique,
+ * ending type, length bucket, media); engagement (reactions + comments) is
+ * measured after it accrues; the per-dimension engagement profile is fed back
+ * into the draft prompt and biases shape selection (explore/exploit). Every
+ * post contributes a sample to ALL dimensions at once, so the loop warms up in
+ * a handful of posts despite testing four variables. Same mechanism as the
+ * prediction-calibration loop.
  *
- *   pickTechnique()      -> a technique to use next (epsilon-greedy + force-explore)
- *   summaryText()        -> track-record string for the draft prompt
- *   recordPost(url,tech) -> tag a freshly-posted URL with its technique
+ *   pickShape()          -> per-dimension assignment for the next post (force-explore + epsilon-greedy)
+ *   pickTechnique()      -> technique-only pick (fallback template path)
+ *   summaryText()        -> track-record string for the draft/plan prompt
+ *   recordPost(url,shape)-> tag a freshly-posted URL with its shape ({technique, ending, length, media}; a bare string is treated as {technique})
  *   recordMetric(url,m)  -> store scraped {reactions,comments} for a URL
  *   unmeasured({hours})  -> posts old enough to measure but not yet measured
- *   techniqueStats()     -> {id: {n, avgEng, avgReactions, avgComments}}
+ *   dimensionStats()     -> {dim: {value: {n, avgEng}}}
+ *   lengthBucket(words)  -> 'short' | 'medium' | 'long'
  *
  * Metric optimized: ENGAGEMENT = reactions + comments (user-chosen). Pure JS.
  */
@@ -21,8 +26,23 @@ const path = require('path');
 const config = require('./config');
 
 const STORE = path.join(config.STATE_DIR, 'linkedin_post_metrics.json');
-const MIN_SAMPLES = Number(process.env.LI_LEARN_MIN_SAMPLES) || 2;   // force-explore until each technique has this many measured posts
+const MIN_SAMPLES = Number(process.env.LI_LEARN_MIN_SAMPLES) || 2;   // force-explore until each value has this many measured posts
 const EPS = Number(process.env.LI_LEARN_EPSILON) || 0.3;             // explore probability once warmed up
+
+// The shape dimensions Sebastian A/B-tests. Small, distinct value sets so each
+// accrues enough samples to compare; one post samples every dimension.
+const DIMENSIONS = {
+  technique: ['question_hook', 'stat_hook', 'contrarian_hook', 'scene_hook'],
+  ending:    ['question', 'claim', 'implication'],
+  length:    ['short', 'medium', 'long'],          // see lengthBucket()
+  media:     ['none', 'image', 'link'],
+};
+
+const LENGTH_WORDS = { short: [100, 150], medium: [150, 250], long: [250, 350] };
+
+function lengthBucket(words) {
+  return words < 150 ? 'short' : words <= 250 ? 'medium' : 'long';
+}
 
 // The variable Sebastian A/B-tests: how a LinkedIn post OPENS. Kept to a small,
 // distinct set so each accrues enough samples to compare.
@@ -41,11 +61,18 @@ function load() {
 }
 function save(store) { try { fs.writeFileSync(STORE, JSON.stringify(store, null, 2)); } catch {} }
 
-/** Tag a freshly-posted URL with the technique it used (engagement filled in later). */
-function recordPost(url, technique, postedAt) {
-  if (!url || !technique) return;
+/** Tag a freshly-posted URL with its shape (engagement filled in later).
+ *  shape: {technique, ending, length, media} — unknown/missing dims are simply
+ *  not recorded; a bare string is back-compat for {technique}. */
+function recordPost(url, shape, postedAt) {
+  if (!url || !shape) return;
+  if (typeof shape === 'string') shape = { technique: shape };
+  const dims = {};
+  for (const [dim, values] of Object.entries(DIMENSIONS)) {
+    if (shape[dim] && values.includes(shape[dim])) dims[dim] = shape[dim];
+  }
   const s = load();
-  s.posts[url] = { ...(s.posts[url] || {}), technique, posted_at: postedAt || new Date().toISOString() };
+  s.posts[url] = { ...(s.posts[url] || {}), ...dims, posted_at: postedAt || new Date().toISOString() };
   save(s);
 }
 
@@ -63,8 +90,8 @@ function unmeasured({ olderThanHours = 24, staleAfterHours = 72 } = {}) {
   const now = Date.now();
   const out = [];
   for (const [url, p] of Object.entries(s.posts)) {
-    if (!p.technique) continue;
-    const age = p.posted_at ? (now - Date.parse(p.posted_at)) / 3600000 : 0;
+    if (!p.posted_at) continue;   // any shape-tagged post gets measured (a dim may be missing, e.g. technique 'other')
+    const age = (now - Date.parse(p.posted_at)) / 3600000;
     if (age < olderThanHours) continue;                       // too fresh to measure
     const measuredAge = p.measured_at ? (now - Date.parse(p.measured_at)) / 3600000 : Infinity;
     // measure once after it settles; re-measure only if the last measurement is old and the post is still young-ish
@@ -74,7 +101,72 @@ function unmeasured({ olderThanHours = 24, staleAfterHours = 72 } = {}) {
   return out;
 }
 
-/** Per-technique averages over MEASURED posts. */
+/** Per-dimension per-value averages over MEASURED posts: {dim: {value: {n, avgEng}}}. */
+function dimensionStats() {
+  const s = load();
+  const out = {};
+  for (const [dim, values] of Object.entries(DIMENSIONS)) {
+    out[dim] = {};
+    for (const v of values) out[dim][v] = { n: 0, engagement: 0, avgEng: null };
+  }
+  for (const p of Object.values(s.posts)) {
+    if (p.engagement == null) continue;
+    for (const dim of Object.keys(DIMENSIONS)) {
+      const a = p[dim] && out[dim][p[dim]];
+      if (!a) continue;
+      a.n++; a.engagement += p.engagement || 0;
+    }
+  }
+  for (const dim of Object.keys(out)) {
+    for (const v of Object.keys(out[dim])) {
+      const a = out[dim][v];
+      a.avgEng = a.n ? +(a.engagement / a.n).toFixed(1) : null;
+    }
+  }
+  return out;
+}
+
+/** One explore/exploit pick within a single dimension. */
+function pickValue(values, stat) {
+  const under = values.filter((v) => stat[v].n < MIN_SAMPLES);
+  if (under.length) {
+    under.sort((a, b) => stat[a].n - stat[b].n);   // least-sampled first
+    return { value: under[0], why: `explore (${stat[under[0]].n} sample(s))` };
+  }
+  if (Math.random() < EPS) {
+    const v = values[Math.floor(Math.random() * values.length)];
+    return { value: v, why: 'explore (epsilon)' };
+  }
+  let best = values[0];
+  for (const v of values) if ((stat[v].avgEng ?? -1) > (stat[best].avgEng ?? -1)) best = v;
+  return { value: best, why: `exploit (avg ${stat[best].avgEng})` };
+}
+
+/**
+ * The A/B controller: assign the next post's test cell across every shape
+ * dimension — force-explore under-sampled values, epsilon-greedy otherwise.
+ * Returns {technique, ending, length, media, words: [lo, hi], why: {dim: reason}}.
+ */
+function pickShape() {
+  const stats = dimensionStats();
+  const shape = { why: {} };
+  for (const [dim, values] of Object.entries(DIMENSIONS)) {
+    const { value, why } = pickValue(values, stats[dim]);
+    shape[dim] = value;
+    shape.why[dim] = why;
+  }
+  shape.words = LENGTH_WORDS[shape.length];
+  return shape;
+}
+
+/** Choose the next technique only (fallback template path): force-explore, else epsilon-greedy. */
+function pickTechnique() {
+  const stat = dimensionStats().technique;
+  const { value } = pickValue(DIMENSIONS.technique, stat);
+  return byId(value);
+}
+
+/** Per-technique averages over MEASURED posts (kept for back-compat). */
 function techniqueStats() {
   const s = load();
   const acc = {};
@@ -93,33 +185,26 @@ function techniqueStats() {
   return acc;
 }
 
-/** Choose the next technique: force-explore under-sampled ones, else epsilon-greedy on avg engagement. */
-function pickTechnique() {
-  const stats = techniqueStats();
-  const under = TECHNIQUES.filter((t) => stats[t.id].n < MIN_SAMPLES);
-  if (under.length) {
-    // least-sampled first, deterministic-ish
-    under.sort((a, b) => stats[a.id].n - stats[b.id].n);
-    return under[0];
-  }
-  if (Math.random() < EPS) return TECHNIQUES[Math.floor(Math.random() * TECHNIQUES.length)];
-  let best = TECHNIQUES[0];
-  for (const t of TECHNIQUES) if ((stats[t.id].avgEng ?? -1) > (stats[best.id].avgEng ?? -1)) best = t;
-  return best;
-}
-
-/** Track-record paragraph for the draft prompt. */
+/** Track-record paragraph for the draft/plan prompt, across all shape dimensions. */
 function summaryText() {
-  const stats = techniqueStats();
-  const measured = TECHNIQUES.filter((t) => stats[t.id].n > 0);
-  if (!measured.length) return '';
-  const rows = TECHNIQUES.map((t) => {
-    const a = stats[t.id];
-    return a.n ? `  • ${t.label}: avg ${a.avgEng} engagement (${a.avgReactions} reactions + ${a.avgComments} comments) over ${a.n} post(s)` : `  • ${t.label}: no data yet`;
-  }).join('\n');
-  const best = measured.reduce((b, t) => (stats[t.id].avgEng > stats[b.id].avgEng ? t : b), measured[0]);
-  return `YOUR LINKEDIN POSTING TRACK RECORD (engagement = reactions + comments), by opening technique:\n${rows}\n` +
-    `Best-performing so far: "${best.label}". Lean into what actually resonates — this is measured, not guessed.`;
+  const stats = dimensionStats();
+  const lines = [];
+  for (const [dim, values] of Object.entries(DIMENSIONS)) {
+    const measured = values.filter((v) => stats[dim][v].n > 0);
+    if (!measured.length) continue;
+    const row = values.map((v) => {
+      const a = stats[dim][v];
+      return a.n ? `${v}: avg ${a.avgEng} (${a.n})` : `${v}: no data`;
+    }).join(' | ');
+    lines.push(`  • ${dim} — ${row}`);
+  }
+  if (!lines.length) return '';
+  return `YOUR LINKEDIN POSTING TRACK RECORD (engagement = reactions + comments), by shape dimension [avg engagement (measured posts)]:\n${lines.join('\n')}\n` +
+    `This is measured, not guessed.`;
 }
 
-module.exports = { TECHNIQUES, byId, recordPost, recordMetric, unmeasured, techniqueStats, pickTechnique, summaryText };
+module.exports = {
+  TECHNIQUES, DIMENSIONS, LENGTH_WORDS, byId, lengthBucket,
+  recordPost, recordMetric, unmeasured,
+  dimensionStats, techniqueStats, pickShape, pickTechnique, summaryText,
+};
