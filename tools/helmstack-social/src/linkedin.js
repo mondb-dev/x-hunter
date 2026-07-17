@@ -153,7 +153,9 @@ class LinkedIn {
 
   /**
    * Scrape a post permalink's engagement counts (for the post-performance loop).
-   * @returns {Promise<{reactions:number, comments:number}>} best-effort; 0 on miss.
+   * Impressions are only rendered on the owner's own posts (the analytics line
+   * under the post) — 0 for posts you don't own or when LinkedIn hides it.
+   * @returns {Promise<{reactions:number, comments:number, reposts:number, impressions:number}>} best-effort; 0 on miss.
    */
   async scrapePostEngagement(url) {
     await this.c.navigate(this.tab, url);
@@ -162,19 +164,23 @@ class LinkedIn {
     await this.c.evaluate(this.tab, "window.scrollBy(0, 450)").catch(() => {});
     await sleep(1200);
     const raw = await this._eval(
-      `var out={reactions:null,comments:null};
+      `var out={reactions:null,comments:null,reposts:null,impressions:null};
        var nodes=[].slice.call(document.querySelectorAll('[aria-label]'));
        for(var i=0;i<nodes.length;i++){ var al=nodes[i].getAttribute('aria-label')||'';
          if(out.reactions==null){ var mr=al.match(/([\\d,]+)\\s+reaction/i); if(mr) out.reactions=parseInt(mr[1].replace(/,/g,''),10); }
          if(out.comments==null){ var mc=al.match(/([\\d,]+)\\s+comment/i); if(mc) out.comments=parseInt(mc[1].replace(/,/g,''),10); }
+         if(out.reposts==null){ var mp=al.match(/([\\d,]+)\\s+repost/i); if(mp) out.reposts=parseInt(mp[1].replace(/,/g,''),10); }
        }
        var sc=document.querySelector('.social-details-social-counts'); var t=sc?(sc.innerText||''):'';
        if(out.comments==null && t){ var c=t.match(/([\\d,]+)\\s+comment/i); if(c) out.comments=parseInt(c[1].replace(/,/g,''),10); }
+       if(out.reposts==null && t){ var p=t.match(/([\\d,]+)\\s+repost/i); if(p) out.reposts=parseInt(p[1].replace(/,/g,''),10); }
        if(out.reactions==null && t){ var r=t.match(/([\\d,]+)/); if(r) out.reactions=parseInt(r[1].replace(/,/g,''),10); }
+       var bt=(document.body.innerText||'').slice(0,20000);
+       var mi=bt.match(/([\\d,]+)\\s+impression/i); if(mi) out.impressions=parseInt(mi[1].replace(/,/g,''),10);
        return JSON.stringify(out);`
     ).catch(() => "{}");
     let m = {}; try { m = JSON.parse(raw || "{}"); } catch {}
-    return { reactions: m.reactions || 0, comments: m.comments || 0 };
+    return { reactions: m.reactions || 0, comments: m.comments || 0, reposts: m.reposts || 0, impressions: m.impressions || 0 };
   }
 
   // ── Feed scraping + engagement (top frame) ──────────────────────────────────

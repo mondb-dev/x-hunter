@@ -88,6 +88,7 @@ const log = (m) => console.log(`[${tag}] ${m}`);
         ending: /\?\s*$/.test(text.trim()) ? "question" : (meta.ending || "claim"),
         length: perf.lengthBucket(text.split(/\s+/).filter(Boolean).length),
         media: postedWithImage ? "image" : (meta.link_source ? "link" : "none"),
+        topic: meta.topic,
       });
     } catch {}
   }
