@@ -6,7 +6,10 @@
  *   1. Algorithmic spam pre-filter  (free — no API)
  *   2. Fetch thread context         (HelmStack — reads conversation before this mention)
  *   3. Memory recall                (SQLite FTS5 — retrieves relevant past thinking)
- *   4. Gemini classify + draft      (enriched prompt: thread + memory + mention)
+ *   4. Classify + draft             (Claude terminal via lib/compose.reason() when
+ *                                    THINK_BACKEND=claude, else Vertex fallback)
+ *   4b. Outbound gate               (shared voice_filter + fact-check — same bar
+ *                                    as every other publishing surface)
  *   5. Post reply                   (HelmStack X engine reply())
  *   6. Log to state/interactions.json
  *
@@ -319,8 +322,6 @@ Respond ONLY with JSON, no fences: {"needs_research":true|false,"research_query"
 
 // ── 5. Gemini: classify + draft with full context ─────────────────────────────
 async function geminiClassify(item, threadContext = null, memoryHints = [], userHistory = null, topicAccounts = [], verifiedHints = [], liveVerification = null, intelligenceBrief = null, ownThread = []) {
-  const { callVertex } = require("../runner/vertex");
-
   // Build thread context block: the conversation ABOVE the mention (root first,
   // immediate parent last), with Sebastian's own tweets marked as YOU, plus his
   // ledger-recorded prior replies in this thread.
@@ -409,6 +410,10 @@ Instructions:
 2. Check your past thinking — you have journal entries and positions above.
 3. Decide: WORTHY or SKIP?
    - SKIP: spam, marketing, NFT/crypto hype, scam, bot, low-effort mention, insults with no substance.
+   - SKIP: gibberish, garbled text, or a slang-only jab (in ANY language — mentions are often
+     Tagalog/Taglish) that contains no question and no claim. If you cannot confidently state
+     what the mention is saying, SKIP — do NOT guess, and NEVER answer a question that was not
+     asked. Replying to an unintelligible jab with your positions makes you look like a bot.
    - SKIP if asking about: contract address (CA), token address, where to buy, collection details,
      mint link, or anything related to purchasing/collecting Sebastian's work.
      Reply with: {"verdict":"WORTHY","reply":"My handler @0xAnomalia handles that side of things — hit them up."}
@@ -453,7 +458,13 @@ Respond ONLY with valid JSON, no markdown fences:
 or
 {"verdict":"SKIP","reason":"brief reason"}`;
 
-  const text = await callVertex(prompt, 2048, { model: 'gemini-2.5-flash', thinkingBudget: 0 });
+  // Route through the Claude reasoning backend (THINK_BACKEND=claude) — the one
+  // outbound surface still drafting on bare Gemini flash was this mention path,
+  // which is exactly where the clueless stance-dump replies came from. reason()
+  // falls back to callVertex on any Claude failure, so behaviour with the flag
+  // unset is unchanged.
+  const { reason } = require("../runner/lib/compose");
+  const text = await reason(prompt, { maxTokens: 2048, model: 'gemini-2.5-flash', thinkingBudget: 0, tag: 'x_mention_reply' });
 
   // Strip optional markdown fences, then extract the JSON object (greedy match)
   const stripped = text.replace(/```(?:json)?\s*/gi, "").replace(/```\s*/g, "").trim();
@@ -784,6 +795,23 @@ function logInteraction(data, item, replyText, memoryHints, rootId = null) {
         }
         console.log(`[reply] research done → ${rr.url || '(no report)'}`);
       } catch (e) { console.error(`[reply] research failed (${e.message}) — using plain draft`); }
+    }
+
+    // ── Step 4b: Shared outbound gate (voice_filter + fact-check) ─────────
+    // Every other publishing surface passes this bar; mention replies were the
+    // one path that posted ungated drafts.
+    try {
+      const { passOutbound } = require("../runner/lib/outbound_gates");
+      const gated = await passOutbound(replyText, { gates: ["voice", "factcheck"], maxLen: 270, tag: "x_mention_reply" });
+      if (!gated.ok) {
+        console.log(`[reply] outbound gate rejected: ${gated.reason}`);
+        item.status = "skipped";
+        item.skip_reason = `outbound gate: ${gated.reason}`;
+        continue;
+      }
+      replyText = gated.text;
+    } catch (e) {
+      console.warn(`[reply] outbound gate errored (non-fatal, posting ungated): ${e.message}`);
     }
 
     // Always prepend @from_username so the person gets a mention notification.

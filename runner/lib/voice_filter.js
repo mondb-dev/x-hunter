@@ -71,6 +71,21 @@ function check(draftText) {
     }
   }
 
+  // Block engagement-filler tics. Every drafting prompt already bans these, but
+  // they still reached production (e.g. a posted mention reply ending in
+  // "Great question.") — so enforce mechanically too.
+  const fillerPatterns = [
+    { re: /\bgreat (question|point|take|thread)\b/i, msg: 'Filler: "great question/point" — engage with the substance or say nothing' },
+    { re: /\bgood (question|point)\b/i,              msg: 'Filler: "good question/point" — engage with the substance or say nothing' },
+    { re: /\bthanks for (asking|sharing|this)\b/i,   msg: 'Filler: "thanks for asking/sharing"' },
+    { re: /\blove (this|it)[.!]?\s*$/i,              msg: 'Filler: trailing "love this"' },
+  ];
+  for (const { re, msg } of fillerPatterns) {
+    if (re.test(draftText)) {
+      errors.push(msg);
+    }
+  }
+
   return errors;
 }
 
