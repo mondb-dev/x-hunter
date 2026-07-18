@@ -294,9 +294,10 @@ function runSocialPipeline() {
   }
 
   // Stance scan — daily: resolve open stances (web-check outcomes, feed the
-  // result back into the belief ontology via ontology_delta) and form up to 2
-  // new stances on live named events from the feed digest. Detached: searches
-  // + reason() calls run 1-3 min; stance_scan.js has its own 8-min watchdog.
+  // result back into the belief ontology via ontology_delta), then form new
+  // stances: candidates from the feed digest, deep-researched + verified via
+  // the DR pipeline before committing (taste picks skip research). Detached:
+  // runs several minutes; stance_scan.js has its own 12-min watchdog.
   if (process.env.STANCE_SCAN_ENABLED !== '0' && dueForRun('stance_scan', 24 * HOUR)) {
     log('beliefs: stance scan (detached)');
     try {

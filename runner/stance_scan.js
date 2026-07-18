@@ -26,7 +26,7 @@ const { buildConvictions } = require('./lib/convictions');
 const stances = require('./lib/stances');
 
 const ROOT = path.resolve(__dirname, '..');
-const MAX_RUN_MS = 8 * 60 * 1000;
+const MAX_RUN_MS = 12 * 60 * 1000;   // resolution checks + one inline deep-research pass
 const TODAY = () => new Date().toISOString().slice(0, 10);
 const log = (m) => console.log(`[stance_scan] ${m}`);
 
@@ -70,7 +70,15 @@ Output ONLY JSON: {"resolved":false} OR {"resolved":true,"outcome":"one sentence
   }
 }
 
-// ── Pass 2: formation ─────────────────────────────────────────────────────────
+// ── Pass 2: formation — candidates → deep research → verified commit ─────────
+// A stance is a public commitment, so it earns the same evidence bar as
+// everything else: principled candidates go through deepResearch (triage,
+// source rubric, claim verification via the intelligence pipeline) and only
+// commit when the research clears DR gates; the stance's confidence is CAPPED
+// by the research confidence. Taste picks (sports/culture) skip research —
+// they are flavor, not findings.
+const MIN_RESEARCH_CONF = Number(process.env.STANCE_MIN_RESEARCH_CONF || 45);
+
 async function formPass() {
   const open = stances.activeStances();
   if (open.length >= stances.MAX_OPEN) { log(`open cap reached (${open.length}) — no formation`); return; }
@@ -82,15 +90,10 @@ async function formPass() {
   const ontology = loadJson(path.join(ROOT, 'state', 'ontology.json'), {});
   const vocation = loadJson(path.join(ROOT, 'state', 'vocation.json'), {});
   const convictions = buildConvictions({ ontology, vocation, maxAxes: 10 });
-  const axes = Object.values(ontology.axes || ontology || {})
-    .filter((a) => a && a.id)
-    .sort((a, b) => ((b.confidence || 0) * Math.abs(b.score || 0)) - ((a.confidence || 0) * Math.abs(a.score || 0)))
-    .slice(0, 20)
-    .map((a) => `${a.id} — "${a.label}" (lean: ${a.score > 0 ? 'right' : a.score < 0 ? 'left' : 'neutral'}; left="${(a.left_pole || '').slice(0, 60)}", right="${(a.right_pole || '').slice(0, 60)}")`)
-    .join('\n');
 
-  const raw = await reason(
-`Today is ${TODAY()}. You are Sebastian Hunter deciding whether to COMMIT to a side on any live, named, time-bound contested event visible in today's feed. A stance is a public commitment he will hold consistently and be scored on when the event resolves — take one only when his beliefs (or persona taste) genuinely ground a side.
+  // Step 1: spot candidate events (cheap — no commitment yet).
+  const rawCand = await reason(
+`Today is ${TODAY()}. You are Sebastian Hunter's stance scout. From today's feed, list up to 2 CANDIDATE events he might commit a side on — named, time-bound, contested, with a checkable outcome (a vote, verdict, election, match, deadline). Not vague themes. Zero candidates is a fine answer.
 
 ${convictions}
 
@@ -100,28 +103,74 @@ ${open.map((s) => `- ${s.event}: ${s.side}`).join('\n') || '(none)'}
 ── TODAY'S FEED DIGEST ──
 ${digest}
 
-── AXES AVAILABLE FOR GROUNDING (use exact axis_id; pole = which pole the SIDE follows from) ──
+Types: "principled" (a side could follow from the convictions above — will be deep-researched before committing) or "taste" (sports/culture persona pick — no research needed).
+Output ONLY JSON (no fences):
+{"candidates":[{"event":"short name","question":"the researchable question that settles which side to take","type":"principled|taste","side_if_taste":"only for taste: the pick"}]}`,
+    { maxTokens: 500, tag: 'stance-scout' });
+
+  let candidates = [];
+  try { const j = cleanJson(rawCand); candidates = Array.isArray(j && j.candidates) ? j.candidates.slice(0, 2) : []; } catch {}
+  if (!candidates.length) { log('formation: no candidate events today'); return; }
+
+  // Taste candidates commit directly (capped inside addStance).
+  for (const c of candidates.filter((x) => x.type === 'taste')) {
+    const r = stances.addStance({ event: c.event, question: c.question, side: c.side_if_taste || '', type: 'taste' });
+    log(r.ok ? `STANCE TAKEN [taste] "${r.stance.event}": ${r.stance.side}` : `taste candidate rejected (${r.reason}): ${String(c.event).slice(0, 60)}`);
+  }
+
+  // Step 2: research the top principled candidate with the full DR machinery.
+  const cand = candidates.find((x) => x.type !== 'taste');
+  if (!cand) return;
+  log(`researching candidate: "${cand.event}" — ${String(cand.question).slice(0, 100)}`);
+  const { deepResearch } = require('./deep_research');
+  const res = await deepResearch(String(cand.question || cand.event), { maxFetch: 3, allowTree: false, maxVerify: 2 });
+  if (res.bailed) { log(`candidate underspecified (${res.clarify || 'triage bail'}) — no stance`); return; }
+  const a = res.assessment || {};
+  if (a.compromised || (a.confidence_pct != null && a.confidence_pct < MIN_RESEARCH_CONF)) {
+    log(`evidence too weak to commit (confidence=${a.confidence_pct != null ? a.confidence_pct + '%' : '?'}${a.compromised ? ', compromised' : ''}) — no stance`);
+    return;
+  }
+
+  // Step 3: commit decision, grounded in convictions + the verified research.
+  const axes = Object.values(ontology.axes || ontology || {})
+    .filter((x) => x && x.id)
+    .sort((x, y) => ((y.confidence || 0) * Math.abs(y.score || 0)) - ((x.confidence || 0) * Math.abs(x.score || 0)))
+    .slice(0, 20)
+    .map((x) => `${x.id} — "${x.label}" (left="${(x.left_pole || '').slice(0, 60)}", right="${(x.right_pole || '').slice(0, 60)}")`)
+    .join('\n');
+  const rawCommit = await reason(
+`Today is ${TODAY()}. You are Sebastian Hunter deciding whether to COMMIT to a side on "${cand.event}" after researching it. He will hold this side consistently in public and be scored on it when the event resolves.
+
+${convictions}
+
+── RESEARCH (verified — confidence ${a.confidence_pct != null ? a.confidence_pct + '%' : 'unstated'}; key finding: ${a.key_finding || '(none)'}) ──
+${String(res.report).slice(0, 2500)}
+
+── AXES AVAILABLE FOR GROUNDING (exact axis_id; pole = which pole the SIDE follows from) ──
 ${axes}
 
-Rules:
-- 0-2 stances. Zero is a fine answer — most days have nothing worth committing to.
-- The event must be NAMED and TIME-BOUND with a checkable outcome (a vote, verdict, election, match, deadline) — not a vague theme.
-- "principled": the side must follow from the convictions above; cite 1-2 grounding axes with the pole it follows from.
-- "taste": sports/culture picks with no belief grounding — allowed, sparing, clearly flavor.
-- confidence_pct is the honest probability the side proves right — Sebastian's record is scored against it.
-
+Commit ONLY if the researched evidence + convictions genuinely ground a side; otherwise decline. confidence_pct must NOT exceed the research confidence.
 Output ONLY JSON (no fences):
-{"stances":[{"event":"short name","question":"what will be settled","side":"the committed side","type":"principled|taste","grounded_in":[{"axis_id":"...","pole":"left|right"}],"confidence_pct":60,"rationale":"one sentence in Sebastian's voice","resolves_when":"date or condition"}]}`,
-    { maxTokens: 800, tag: 'stance-form' });
+{"commit":false} OR {"commit":true,"side":"the committed side","grounded_in":[{"axis_id":"...","pole":"left|right"}],"confidence_pct":55,"rationale":"one sentence in Sebastian's voice citing the key evidence","resolves_when":"date or condition"}`,
+    { maxTokens: 500, tag: 'stance-commit' });
 
-  let proposed = [];
-  try { const j = cleanJson(raw); proposed = Array.isArray(j && j.stances) ? j.stances.slice(0, 2) : []; } catch {}
-  if (!proposed.length) { log('formation: nothing worth committing to today'); return; }
-  for (const p of proposed) {
-    const r = stances.addStance(p);
-    if (r.ok) log(`STANCE TAKEN [${r.stance.type}] "${r.stance.event}": ${r.stance.side} (${r.stance.confidence_pct}%)`);
-    else log(`stance rejected (${r.reason}): ${String(p.event).slice(0, 60)}`);
-  }
+  let d = null;
+  try { d = cleanJson(rawCommit); } catch {}
+  if (!d || !d.commit) { log(`declined to commit on "${cand.event}" after research`); return; }
+  const cappedConf = a.confidence_pct != null ? Math.min(+d.confidence_pct || 60, a.confidence_pct) : (+d.confidence_pct || 60);
+  const r = stances.addStance({
+    event: cand.event,
+    question: cand.question,
+    side: d.side,
+    type: 'principled',
+    grounded_in: d.grounded_in,
+    confidence_pct: cappedConf,
+    rationale: d.rationale,
+    resolves_when: d.resolves_when,
+    research: { confidence_pct: a.confidence_pct, key_finding: a.key_finding },
+  });
+  if (r.ok) log(`STANCE TAKEN [principled, researched ${a.confidence_pct != null ? a.confidence_pct + '%' : '?'}] "${r.stance.event}": ${r.stance.side} (${r.stance.confidence_pct}%)`);
+  else log(`stance rejected (${r.reason}): ${String(cand.event).slice(0, 60)}`);
 }
 
 const killer = setTimeout(() => { log(`exceeded ${MAX_RUN_MS / 60000} min — aborting`); process.exit(1); }, MAX_RUN_MS);
