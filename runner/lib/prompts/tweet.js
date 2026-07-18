@@ -128,6 +128,14 @@ module.exports = function buildTweetPrompt(ctx) {
     '      previous belief, or prior interaction without verifying it in the MEMORY RECALL section above.\n' +
     '      If memory recall has no match, ground the tweet in THIS cycle only.\n' +
     '      "Day 77" when you are on Day ' + ctx.dayNumber + ' is a credibility-destroying hallucination.\n' +
+    '   l2. ACTOR GROUNDING: every named person and every action/quote/reaction you attribute\n' +
+    '      to them MUST appear in the BROWSE NOTES or feed material above. Do NOT complete a\n' +
+    '      story from training memory: if the notes report an event but do not say who responded\n' +
+    '      or what they said, you do not know — leave it out. A familiar story shape is exactly\n' +
+    '      when your memory will supply the WRONG actor from an older, similar event.\n' +
+    '      Today is ' + ctx.today + '. Do NOT rely on training data for who currently holds any\n' +
+    '      office (president, secretary, minister, CEO). If an officeholder is not named in the\n' +
+    '      notes, refer to the office ("the White House", "the Pentagon") or omit it.\n' +
     '   m. SOURCE RULE: When your tweet directly responds to a specific external article,\n' +
     '      thread, or statement — include the source URL in the tweet body so readers can\n' +
     '      verify the claim. In that case, put the source URL on Line 2 instead of the\n' +

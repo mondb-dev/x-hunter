@@ -51,9 +51,14 @@ async function factCheck(text, { tag = 'gate', maxLen = null } = {}) {
   try {
     const raw = await compose(
       `Today is ${today}. Review this social post for verifiably wrong facts — a wrong ` +
-      `CURRENT officeholder title, or a datable fact clearly wrong given today. Do NOT ` +
-      `flag opinion, analysis, interpretation, or merely-uncertain claims; do NOT flag a ` +
-      `person's name used without a title; do NOT flag past-tense history. Reply with JSON ` +
+      `CURRENT officeholder title, a person portrayed as performing an official act they no ` +
+      `longer hold the office for, or a datable fact clearly wrong given today. A bare name ` +
+      `with a present-tense official act ("X vows retaliation", "X orders strikes", "X signs ` +
+      `the bill") IS an officeholder claim — check it against who actually holds that office ` +
+      `today, even with no title attached. (Real example this gate wrongly passed: "Biden vows ` +
+      `retaliation" on a 2026 attack — Biden was not president.) Do NOT flag opinion, analysis, ` +
+      `interpretation, or merely-uncertain claims; do NOT flag a name used in a non-official or ` +
+      `historical context; do NOT flag past-tense history. Reply with JSON ` +
       `only: {"pass":true} OR {"pass":false,"corrected":"full corrected text, or null if ` +
       `not fixable"}.\n\nPOST:\n"""\n${text}\n"""`,
       { maxTokens: 1200, tag: `${tag}:factcheck` }
