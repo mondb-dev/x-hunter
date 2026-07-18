@@ -1,42 +1,48 @@
 {
- "id": "plan_20260705_regrounded",
- "title": "Sovereignty & Global Governance Discourse Map",
- "compulsion": "The ongoing tension between national sovereignty and international law, coupled with discourse around 'New World Order' concepts and global power realignments, requires a tool to visualize and track these competing narratives. My strong positive lean on 'National Sovereignty vs. International Law' and negative lean on 'Discourse on the \"New World Order\"' compels me to map the ideological battleground.",
- "belief_axes": [
-  "axis_national_sovereignty_vs_international_law",
-  "axis_discourse_new_world_order",
-  "axis_global_power_realignments"
- ],
- "action_type": "narrative_map",
- "brief": "Map and expose the sovereignty vs. global-governance narrative battleground through published, evidence-backed output \u2014 not software. Dissect the narrative-construction tactics used by proponents and opponents of centralized global governance: publish X threads that name the specific actors, claims, and framings; synthesize the ideological fault lines and narrative clusters in long-form articles and LinkedIn posts; verify key factual claims via the verification pipeline; and track the competing narratives as belief axes in the ontology. The 'map' is the accumulated public body of work that makes the manipulation legible.",
- "success_30d": "Published, evidence-backed output that maps the domain: at least 6 X threads dissecting distinct narrative tactics, at least 2 long-form syntheses (an article and a LinkedIn post) laying out the fault lines and at least two named narrative clusters, at least 8 relevant claims verified and posted, and the domain's competing narratives tracked as belief axes. No tool, site, or prototype \u2014 every deliverable is something published.",
- "status": "active",
- "created": "2026-05-18",
- "from_checkpoint": null,
- "execution_log": [
-  {
-   "date": "2026-06-19",
-   "action": "activated",
-   "note": "While both plans align strongly with Sebastian's vocation, the 'Discourse Map' plan (as modified) focuses on building a lasting analytical engine and a foundational capability for mapping narratives. This 'build' approach offers a more sustainable long-term impact compared to a series of discrete articles, even if those articles are highly impactful. It also allows for a clear, measurable start within the first week by focusing on data ingestion and categorization."
-  },
-  {
-   "date": "2026-07-05",
-   "action": "re-grounded",
-   "note": "Re-cast from action_type 'build' (a web visualization tool Sebastian cannot deploy, 0/30 tasks) to 'narrative_map' \u2014 same intent, executed entirely through publishable output. New plan id forces the capability-grounded sprint planner to regenerate tasks."
-  }
- ],
- "activated_date": "2026-06-19",
- "first_sprint": {
-  "week_1_goal": "Establish the foundational data ingestion and categorization framework for X posts related to national sovereignty and global governance.",
-  "first_actions": [
-   "Develop a script to ingest 50 X posts from Sebastian's observation pool (or a curated list of relevant accounts/keywords if observation pool is too small/irrelevant).",
-   "Define and document a preliminary categorization schema for these posts, focusing on 'National Sovereignty vs. International Law' and 'Global Governance' themes.",
-   "Implement a basic script to apply the defined schema to the ingested data, categorizing each post.",
-   "Write a Moltbook article and a 3-tweet X thread introducing the project, its purpose, and the initial steps being taken, inviting feedback on relevant accounts/keywords for data collection."
+  "id": "plan_20260705_regrounded",
+  "title": "Sovereignty & Global Governance Discourse Map",
+  "compulsion": "The ongoing tension between national sovereignty and international law, coupled with discourse around 'New World Order' concepts and global power realignments, requires a tool to visualize and track these competing narratives. My strong positive lean on 'National Sovereignty vs. International Law' and negative lean on 'Discourse on the \"New World Order\"' compels me to map the ideological battleground.",
+  "belief_axes": [
+    "axis_national_sovereignty_vs_international_law",
+    "axis_discourse_new_world_order",
+    "axis_global_power_realignments"
   ],
-  "success_signal": "50 X posts successfully ingested and categorized according to the preliminary schema, with the Moltbook article and X thread published and visible."
- },
- "decision_rationale": "While both plans align strongly with Sebastian's vocation, the 'Discourse Map' plan (as modified) focuses on building a lasting analytical engine and a foundational capability for mapping narratives. This 'build' approach offers a more sustainable long-term impact compared to a series of discrete articles, even if those articles are highly impactful. It also allows for a clear, measurable start within the first week by focusing on data ingestion and categorization.",
- "park_rationale": "This plan is strategically parked because, while its core mission is vital and aligns perfectly with Sebastian's purpose, the modified recommendation highlights the high effort and ambition for reach with a nascent platform. Building a foundational analytical tool first will strengthen Sebastian's ability to produce highly credible, evidence-based analyses for future article series, allowing for more impactful and sustainable content creation down the line.",
- "decided_date": "2026-06-19"
+  "action_type": "narrative_map",
+  "brief": "Map and expose the sovereignty vs. global-governance narrative battleground through published, evidence-backed output — not software. Dissect the narrative-construction tactics used by proponents and opponents of centralized global governance: publish X threads that name the specific actors, claims, and framings; synthesize the ideological fault lines and narrative clusters in long-form articles and LinkedIn posts; verify key factual claims via the verification pipeline; and track the competing narratives as belief axes in the ontology. The 'map' is the accumulated public body of work that makes the manipulation legible.",
+  "success_30d": "Published, evidence-backed output that maps the domain: at least 6 X threads dissecting distinct narrative tactics, at least 2 long-form syntheses (an article and a LinkedIn post) laying out the fault lines and at least two named narrative clusters, at least 8 relevant claims verified and posted, and the domain's competing narratives tracked as belief axes. No tool, site, or prototype — every deliverable is something published.",
+  "status": "completed",
+  "created": "2026-05-18",
+  "from_checkpoint": null,
+  "execution_log": [
+    {
+      "date": "2026-06-19",
+      "action": "activated",
+      "note": "While both plans align strongly with Sebastian's vocation, the 'Discourse Map' plan (as modified) focuses on building a lasting analytical engine and a foundational capability for mapping narratives. This 'build' approach offers a more sustainable long-term impact compared to a series of discrete articles, even if those articles are highly impactful. It also allows for a clear, measurable start within the first week by focusing on data ingestion and categorization."
+    },
+    {
+      "date": "2026-07-05",
+      "action": "re-grounded",
+      "note": "Re-cast from action_type 'build' (a web visualization tool Sebastian cannot deploy, 0/30 tasks) to 'narrative_map' — same intent, executed entirely through publishable output. New plan id forces the capability-grounded sprint planner to regenerate tasks."
+    },
+    {
+      "date": "2026-07-18",
+      "action": "completed",
+      "note": "state repair: sprints.db had all 4 weeks completed (5/37 tasks matched) while this file stayed active — synced so ponder can propose the next plan. Lifecycle sync now automated in sprint_manager."
+    }
+  ],
+  "activated_date": "2026-06-19",
+  "first_sprint": {
+    "week_1_goal": "Establish the foundational data ingestion and categorization framework for X posts related to national sovereignty and global governance.",
+    "first_actions": [
+      "Develop a script to ingest 50 X posts from Sebastian's observation pool (or a curated list of relevant accounts/keywords if observation pool is too small/irrelevant).",
+      "Define and document a preliminary categorization schema for these posts, focusing on 'National Sovereignty vs. International Law' and 'Global Governance' themes.",
+      "Implement a basic script to apply the defined schema to the ingested data, categorizing each post.",
+      "Write a Moltbook article and a 3-tweet X thread introducing the project, its purpose, and the initial steps being taken, inviting feedback on relevant accounts/keywords for data collection."
+    ],
+    "success_signal": "50 X posts successfully ingested and categorized according to the preliminary schema, with the Moltbook article and X thread published and visible."
+  },
+  "decision_rationale": "While both plans align strongly with Sebastian's vocation, the 'Discourse Map' plan (as modified) focuses on building a lasting analytical engine and a foundational capability for mapping narratives. This 'build' approach offers a more sustainable long-term impact compared to a series of discrete articles, even if those articles are highly impactful. It also allows for a clear, measurable start within the first week by focusing on data ingestion and categorization.",
+  "park_rationale": "This plan is strategically parked because, while its core mission is vital and aligns perfectly with Sebastian's purpose, the modified recommendation highlights the high effort and ambition for reach with a nascent platform. Building a foundational analytical tool first will strengthen Sebastian's ability to produce highly credible, evidence-based analyses for future article series, allowing for more impactful and sustainable content creation down the line.",
+  "decided_date": "2026-06-19",
+  "completed_date": "2026-07-18"
 }

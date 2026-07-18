@@ -1,17 +1,17 @@
 {
   "schema_version": "1.0",
-  "generated_at": "2026-07-17T23:41:57.045Z",
+  "generated_at": "2026-07-18T02:41:54.282Z",
   "method": "mechanical_registry_v1",
-  "profiled_at": "2026-07-17T23:42:00.711Z",
+  "profiled_at": "2026-07-18T02:42:01.209Z",
   "sources": [
     {
       "domain": "theguardian.com",
       "entity": "Theguardian",
       "kind": "news",
       "first_seen_at": "2026-03-27T23:17:00Z",
-      "last_seen_at": "2026-07-13T23:01:48.746Z",
+      "last_seen_at": "2026-07-18T00:42:44.930Z",
       "discovery": {
-        "distinct_urls": 420,
+        "distinct_urls": 423,
         "example_urls": [
           "https://www.theguardian.com/us-news/2026/jun/23/trump-immigration-courthouse-arrest-policy",
           "https://www.theguardian.com/us-news/2026/jun/28/ice-minnesota-defending-democracy",
@@ -21,8 +21,8 @@
         ],
         "origin_counts": {
           "ontology_evidence": 32,
-          "reading_queue": 397,
-          "journals": 71,
+          "reading_queue": 399,
+          "journals": 72,
           "articles": 1
         },
         "distinct_referring_accounts": 0,
@@ -67,7 +67,7 @@
         "breadth": {
           "score": 0.94,
           "basis": [
-            "distinct_urls:420",
+            "distinct_urls:423",
             "distinct_axes:12",
             "origin_types:4"
           ]
@@ -107,7 +107,7 @@
             "newsroom_domain_pattern",
             "article_path_seen",
             "doi_or_identifier_path_seen",
-            "distinct_urls:420",
+            "distinct_urls:423",
             "distinct_axes:12",
             "origin_types:4",
             "referring_accounts:0",
@@ -535,7 +535,7 @@
       "first_seen_at": "2026-06-22T00:15:00Z",
       "last_seen_at": "2026-07-17T21:42:30.191Z",
       "discovery": {
-        "distinct_urls": 291,
+        "distinct_urls": 292,
         "example_urls": [
           "https://www.nytimes.com/2026/06/19/world/canada/frank-stronach-trial-guilty-sex-charges.html",
           "https://www.nytimes.com/2026/06/27/world/americas/mexican-officials-us-informants.html",
@@ -545,7 +545,7 @@
         ],
         "origin_counts": {
           "ontology_evidence": 10,
-          "reading_queue": 291,
+          "reading_queue": 292,
           "journals": 26
         },
         "distinct_referring_accounts": 0,
@@ -583,7 +583,7 @@
         "breadth": {
           "score": 0.8799999999999999,
           "basis": [
-            "distinct_urls:291",
+            "distinct_urls:292",
             "distinct_axes:6",
             "origin_types:3"
           ]
@@ -622,7 +622,7 @@
           "basis": [
             "newsroom_domain_pattern",
             "article_path_seen",
-            "distinct_urls:291",
+            "distinct_urls:292",
             "distinct_axes:6",
             "origin_types:3",
             "referring_accounts:0",
@@ -668,9 +668,9 @@
       "entity": "Aljazeera",
       "kind": "news",
       "first_seen_at": "2026-06-22T02:45:00Z",
-      "last_seen_at": "2026-07-17T20:12:30.787Z",
+      "last_seen_at": "2026-07-18T02:12:50.166Z",
       "discovery": {
-        "distinct_urls": 255,
+        "distinct_urls": 259,
         "example_urls": [
           "https://www.aljazeera.com/opinions/2026/6/24/south-africas-crises-will-not-be-solved-by-blaming-migrants",
           "https://www.aljazeera.com/video/newsfeed/2026/6/27/newly-released-video-exposes-henry-nowak-killers-lies?traffic_source=rss",
@@ -679,9 +679,9 @@
           "https://www.aljazeera.com/video/newsfeed/2026/7/1/why-is-maga-in-meltdown-over-the-supreme-court-birthright-ruling-2?traffic_source=rss"
         ],
         "origin_counts": {
-          "ontology_evidence": 140,
+          "ontology_evidence": 141,
           "reading_queue": 9,
-          "journals": 345
+          "journals": 349
         },
         "distinct_referring_accounts": 0,
         "sample_referring_accounts": [],
@@ -703,6 +703,7 @@
           "axis_political_trust_corruption_v1",
           "axis_political_vulnerability_foreign_influence_v1",
           "axis_power_accountability",
+          "axis_procedural_governance_accountability_v1",
           "axis_public_trust_safety_crisis_v1",
           "axis_religion_politics_war_v1",
           "axis_selective_outrage"
@@ -732,8 +733,8 @@
         "breadth": {
           "score": 0.8799999999999999,
           "basis": [
-            "distinct_urls:255",
-            "distinct_axes:20",
+            "distinct_urls:259",
+            "distinct_axes:21",
             "origin_types:3"
           ]
         },
@@ -771,8 +772,8 @@
           "basis": [
             "newsroom_domain_pattern",
             "article_path_seen",
-            "distinct_urls:255",
-            "distinct_axes:20",
+            "distinct_urls:259",
+            "distinct_axes:21",
             "origin_types:3",
             "referring_accounts:0",
             "origin_types:3",
@@ -1432,7 +1433,7 @@
       "first_seen_at": "2026-06-26T07:05:00Z",
       "last_seen_at": "2026-07-11T20:57:02.247Z",
       "discovery": {
-        "distinct_urls": 237,
+        "distinct_urls": 239,
         "example_urls": [
           "https://www.bbc.co.uk/news/articles/cn8qxz6qypyo",
           "https://www.bbc.co.uk/news/articles/cn075j04pnyo?at_medium=RSS&amp;at_campaign=rss",
@@ -1442,7 +1443,7 @@
         ],
         "origin_counts": {
           "ontology_evidence": 4,
-          "reading_queue": 242,
+          "reading_queue": 244,
           "journals": 11
         },
         "distinct_referring_accounts": 0,
@@ -1476,7 +1477,7 @@
         "breadth": {
           "score": 0.7049999999999998,
           "basis": [
-            "distinct_urls:237",
+            "distinct_urls:239",
             "distinct_axes:3",
             "origin_types:3"
           ]
@@ -1514,7 +1515,7 @@
           "method": "mechanical_v1",
           "basis": [
             "newsroom_domain_pattern",
-            "distinct_urls:237",
+            "distinct_urls:239",
             "distinct_axes:3",
             "origin_types:3",
             "referring_accounts:0",
@@ -2109,7 +2110,7 @@
       "entity": "Amnesty",
       "kind": "unknown",
       "first_seen_at": "2026-03-31T12:16:18.459Z",
-      "last_seen_at": "2026-07-17T08:12:08.914Z",
+      "last_seen_at": "2026-07-18T00:42:44.930Z",
       "discovery": {
         "distinct_urls": 49,
         "example_urls": [
@@ -2122,7 +2123,7 @@
         "origin_counts": {
           "ontology_evidence": 42,
           "reading_queue": 23,
-          "journals": 64
+          "journals": 65
         },
         "distinct_referring_accounts": 0,
         "sample_referring_accounts": [],
@@ -3607,9 +3608,9 @@
       "entity": "T Co",
       "kind": "unknown",
       "first_seen_at": "2016-05-05T18:57:30.000Z",
-      "last_seen_at": "2026-07-17T21:24:08.000Z",
+      "last_seen_at": "2026-07-18T01:57:54.000Z",
       "discovery": {
-        "distinct_urls": 7979,
+        "distinct_urls": 7989,
         "example_urls": [
           "https://t.co/pJSE124ec4",
           "https://t.co/Soz8BXPWaa",
@@ -3618,10 +3619,10 @@
           "https://t.co/cYaqYDRp08"
         ],
         "origin_counts": {
-          "feed_buffer": 4999,
+          "feed_buffer": 5009,
           "feed_buffer_reply": 4830
         },
-        "distinct_referring_accounts": 2483,
+        "distinct_referring_accounts": 2484,
         "sample_referring_accounts": [
           "0808iveta",
           "09abracadabra",
@@ -3660,7 +3661,7 @@
         "breadth": {
           "score": 0.47,
           "basis": [
-            "distinct_urls:7979",
+            "distinct_urls:7989",
             "distinct_axes:0",
             "origin_types:2"
           ]
@@ -3668,7 +3669,7 @@
         "corroboration": {
           "score": 0.825,
           "basis": [
-            "referring_accounts:2483",
+            "referring_accounts:2484",
             "origin_types:2"
           ]
         },
@@ -3699,10 +3700,10 @@
           "basis": [
             "unknown_domain_pattern",
             "doi_or_identifier_path_seen",
-            "distinct_urls:7979",
+            "distinct_urls:7989",
             "distinct_axes:0",
             "origin_types:2",
-            "referring_accounts:2483",
+            "referring_accounts:2484",
             "origin_types:2",
             "track_record_unavailable"
           ]
@@ -3745,9 +3746,9 @@
       "entity": "Gmanetwork",
       "kind": "unknown",
       "first_seen_at": "2026-05-18T03:29:41.732Z",
-      "last_seen_at": "2026-07-17T20:12:30.787Z",
+      "last_seen_at": "2026-07-18T02:12:50.133Z",
       "discovery": {
-        "distinct_urls": 141,
+        "distinct_urls": 142,
         "example_urls": [
           "https://www.gmanetwork.com/news/topstories/nation/994225/explainer-objections-in-a-trial-and-their-role-in-due-process/story/",
           "https://www.gmanetwork.com/news/balitambayan/balita/993931/sen-escudero-sinabing-16-na-boto-ang-kailangan-para-mahatulang-guilty-si-vp-sara-duterte-sa-impea/story/",
@@ -3757,7 +3758,7 @@
         ],
         "origin_counts": {
           "ontology_evidence": 55,
-          "journals": 171
+          "journals": 172
         },
         "distinct_referring_accounts": 0,
         "sample_referring_accounts": [],
@@ -3799,7 +3800,7 @@
         "breadth": {
           "score": 0.82,
           "basis": [
-            "distinct_urls:141",
+            "distinct_urls:142",
             "distinct_axes:12",
             "origin_types:2"
           ]
@@ -3837,7 +3838,7 @@
           "method": "mechanical_v1",
           "basis": [
             "unknown_domain_pattern",
-            "distinct_urls:141",
+            "distinct_urls:142",
             "distinct_axes:12",
             "origin_types:2",
             "referring_accounts:0",
@@ -8389,9 +8390,9 @@
       "entity": "Aramco",
       "kind": "unknown",
       "first_seen_at": "2026-05-22T17:43:51.000Z",
-      "last_seen_at": "2026-07-17T21:55:15.190Z",
+      "last_seen_at": "2026-07-17T23:55:17.039Z",
       "discovery": {
-        "distinct_urls": 16,
+        "distinct_urls": 17,
         "example_urls": [
           "https://www.aramco.com/en/what-we-do/energy-innovation/innovation-ecosystem/aramco-fifa-partnership?utm_source=x&utm_medium=cpm&utm_term=en_vid_cpm_inf-ftbl_na_football-fans&utm_content=en_4x5_vid_6s_global_fifa-whatif_na_m3&twclid=2f1bxdfhmr1if32n1ssvcc3xtc",
           "https://www.aramco.com/en/what-we-do/energy-innovation/innovation-ecosystem/aramco-fifa-partnership?utm_source=x&utm_medium=cpm&utm_term=en_vid_cpm_inf-ftbl_na_market-influencers&utm_content=en_16x9_vid_30s_global_fifa-rlntlss_na_m1&twclid=2b6bkiqxqvmhv9tycqp5ma5uj",
@@ -8401,7 +8402,7 @@
         ],
         "origin_counts": {
           "feed_buffer_reply": 6,
-          "feed_buffer": 10
+          "feed_buffer": 11
         },
         "distinct_referring_accounts": 1,
         "sample_referring_accounts": [
@@ -8432,7 +8433,7 @@
         "breadth": {
           "score": 0.47,
           "basis": [
-            "distinct_urls:16",
+            "distinct_urls:17",
             "distinct_axes:0",
             "origin_types:2"
           ]
@@ -8466,11 +8467,11 @@
         },
         "overall": {
           "score": 0.43875,
-          "confidence": 0.5066999999999999,
+          "confidence": 0.5292,
           "method": "mechanical_v1",
           "basis": [
             "unknown_domain_pattern",
-            "distinct_urls:16",
+            "distinct_urls:17",
             "distinct_axes:0",
             "origin_types:2",
             "referring_accounts:1",
@@ -8734,7 +8735,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-07-15T02:21:11.910Z",
+        "fetched_at": "2026-07-18T02:41:54.518Z",
         "homepage_url": "https://bcgame-bet.com/",
         "example_url": "https://bcall-global.bcgame-bet.com/dispatch-v6?i=45zn3497p&utm_medium=twitter&utm_content=%7B%7Bad_name%7D%7D&p=%2Flogin%2Fregist&ch=twitter&pixel_id=or72z&register=tw-or72z-or738&purchase=tw-or72z-or736&twclid=2cjhb3kupxi19emmjqo3fks82g",
         "homepage_status": null,
@@ -10901,7 +10902,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-07-15T02:21:12.329Z",
+        "fetched_at": "2026-07-18T02:41:55.015Z",
         "homepage_url": "https://coderabbit.ai/",
         "example_url": "https://www.coderabbit.ai/agent?utm_source=twitter&utm_medium=cpc&utm_campaign=brandawareness_slack&twclid=25ohyy1nnhx1vb6p888i79f380",
         "homepage_status": 200,
@@ -20894,7 +20895,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-07-14T23:51:08.974Z",
+        "fetched_at": "2026-07-18T00:42:10.224Z",
         "homepage_url": "https://fantheone.com/",
         "example_url": "https://fantheone.com/download?twclid=2ffn21z0ebyxzqvqa4nwehpql",
         "homepage_status": 200,
@@ -22777,7 +22778,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-07-15T00:51:13.861Z",
+        "fetched_at": "2026-07-18T01:12:00.980Z",
         "homepage_url": "https://hubs.la/",
         "example_url": "https://hubs.la/Q044Rgs40?twclid=2dj6mgj4wttl7kn2ssc6dwffaw",
         "homepage_status": 200,
@@ -26032,7 +26033,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-07-14T23:51:08.992Z",
+        "fetched_at": "2026-07-18T00:42:10.241Z",
         "homepage_url": "https://x.xom/",
         "example_url": "https://x.xom/EricLDaugh/status/2049914155461652916",
         "homepage_status": null,
@@ -26158,7 +26159,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-07-14T23:51:12.152Z",
+        "fetched_at": "2026-07-18T00:42:11.581Z",
         "homepage_url": "https://sourcebot.dev/",
         "example_url": "https://docs.sourcebot.dev/docs/features/mcp-server?twclid=24rnkjjr58b4nqm87glv1o5dr0",
         "homepage_status": 200,
@@ -26284,7 +26285,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-07-14T23:51:12.538Z",
+        "fetched_at": "2026-07-18T00:42:12.362Z",
         "homepage_url": "https://co.jp/",
         "example_url": "https://audition-en.anycolor.co.jp/?twclid=2bmm2ufti869142c85xr0ucr6a",
         "homepage_status": null,
@@ -26410,7 +26411,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-07-15T00:51:16.747Z",
+        "fetched_at": "2026-07-18T01:12:03.894Z",
         "homepage_url": "https://e.lilly/",
         "example_url": "https://e.lilly/4alH5c4?twclid=2ctpaufet268794kpf0u2aweev",
         "homepage_status": 200,
@@ -26534,7 +26535,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-07-15T00:51:17.518Z",
+        "fetched_at": "2026-07-18T01:12:04.470Z",
         "homepage_url": "https://coingecko.com/",
         "example_url": "https://www.coingecko.com/en/api/acquisition/entry-plans?utm_source=twitter&utm_medium=ad&utm_campaign=bau&utm_content=mar26-gt-brand-ad-free-v1&audience_segment=prospecting&twclid=26xrmua0k4othy65876mc0aamh",
         "homepage_status": 200,
@@ -26658,7 +26659,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-07-15T00:51:18.808Z",
+        "fetched_at": "2026-07-18T01:12:04.617Z",
         "homepage_url": "https://onkodex.com/",
         "example_url": "https://onkodex.com/join/?twclid=21aq9xwo1p6ea49gu5skcha56k",
         "homepage_status": 200,
@@ -26753,7 +26754,7 @@
           ]
         },
         "profile": {
-          "score": 0.59,
+          "score": 0.6499999999999999,
           "confidence": 0.75,
           "basis": [
             "meta_author:true",
@@ -26762,7 +26763,7 @@
             "about:false",
             "contact:true",
             "corrections:false",
-            "outbound_links:1",
+            "outbound_links:7",
             "opinion_marker:false"
           ]
         },
@@ -26782,13 +26783,13 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-07-15T01:21:15.291Z",
+        "fetched_at": "2026-07-18T02:12:06.516Z",
         "homepage_url": "https://artprice.com/",
         "example_url": "https://www.artprice.com/artprice-news/14183/world-record-a-painting-by-raja-ravi-varma-sold-for-nearly-18-million-dollars-in-mumbai?utm_medium=artprice-news&utm_source=X&utm_campaign=news&utm_content=14183&twclid=23wn7ayvhifg7vr11g3elt7wk3",
         "homepage_status": 200,
         "example_status": 200,
         "homepage_final_url": "https://www.artprice.com/check_browser?from=%252F",
-        "example_final_url": "https://www.artprice.com/artprice-news/14183/world-record-a-painting-by-raja-ravi-varma-sold-for-nearly-18-million-dollars-in-mumbai?utm_medium=artprice-news&utm_source=X&utm_campaign=news&utm_content=14183&twclid=23wn7ayvhifg7vr11g3elt7wk3",
+        "example_final_url": "https://news.artprice.com/en/14183/world-record-a-painting-by-raja-ravi-varma-sold-for-nearly-18-million-dollars-in-mumbai?utm_medium=artprice-news&utm_source=X&utm_campaign=news&utm_content=14183&twclid=23wn7ayvhifg7vr11g3elt7wk3",
         "homepage_content_type": "text/html; charset=utf-8",
         "example_content_type": "text/html; charset=utf-8",
         "homepage": {
@@ -26806,9 +26807,9 @@
           "has_published_time": true,
           "has_canonical": true,
           "has_about_link": false,
-          "has_contact_link": false,
+          "has_contact_link": true,
           "has_corrections_link": false,
-          "outbound_links_count": 1,
+          "outbound_links_count": 7,
           "opinion_marker": false
         }
       }
@@ -26877,7 +26878,7 @@
           ]
         },
         "profile": {
-          "score": 0.19,
+          "score": 0.18,
           "confidence": 0.55,
           "basis": [
             "meta_author:false",
@@ -26886,7 +26887,7 @@
             "about:false",
             "contact:true",
             "corrections:false",
-            "outbound_links:7",
+            "outbound_links:6",
             "opinion_marker:false"
           ]
         },
@@ -26906,7 +26907,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-07-15T01:21:19.622Z",
+        "fetched_at": "2026-07-18T02:12:10.213Z",
         "homepage_url": "https://pupgum.com/",
         "example_url": "https://pupgum.com/?discount=X20&utm_source=twitter&utm_medium=cpc&utm_campaign=x04&twclid=2dx55fuulwvv0t6pgl8v4t8syr",
         "homepage_status": 200,
@@ -26922,7 +26923,7 @@
           "has_about_link": false,
           "has_contact_link": true,
           "has_corrections_link": false,
-          "outbound_links_count": 7,
+          "outbound_links_count": 6,
           "opinion_marker": false
         },
         "example": {
@@ -26932,7 +26933,7 @@
           "has_about_link": false,
           "has_contact_link": true,
           "has_corrections_link": false,
-          "outbound_links_count": 7,
+          "outbound_links_count": 6,
           "opinion_marker": false
         }
       }
@@ -27030,7 +27031,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-07-15T01:21:31.137Z",
+        "fetched_at": "2026-07-18T02:12:21.702Z",
         "homepage_url": "https://spr.ly/",
         "example_url": "http://spr.ly/6017B6mDnt?twclid=2ajcph2gf0va7okmqyb2o5fv6v",
         "homepage_status": 200,
@@ -27154,7 +27155,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-07-15T01:21:33.386Z",
+        "fetched_at": "2026-07-18T02:12:24.443Z",
         "homepage_url": "https://interactivebrokers.com/",
         "example_url": "https://www.interactivebrokers.com/mkt/?src=twitter1516e&url=%2Fen%2Ftrading%2Fmargin.php&twclid=26s33m7076ex8oai4uldw5cov5",
         "homepage_status": 200,
@@ -27249,12 +27250,12 @@
           ]
         },
         "profile": {
-          "score": 0,
+          "score": 0.1,
           "confidence": 0.55,
           "basis": [
             "meta_author:false",
             "published_time:false",
-            "canonical:false",
+            "canonical:true",
             "about:false",
             "contact:false",
             "corrections:false",
@@ -27278,15 +27279,15 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-07-15T02:21:16.764Z",
+        "fetched_at": "2026-07-18T02:42:00.132Z",
         "homepage_url": "https://deere.com/",
         "example_url": "https://www.deere.com/en/technology-products/precision-ag-technology/remote-management/operations-center-pro-golf/?twclid=24oqwc0zuejy7hkjph647og8x6",
         "homepage_status": 200,
-        "example_status": 404,
+        "example_status": 200,
         "homepage_final_url": "https://www.deere.com/en-us/",
-        "example_final_url": "https://www.deere.com/en/technology-products/precision-ag-technology/remote-management/operations-center-pro-golf/?twclid=24oqwc0zuejy7hkjph647og8x6",
+        "example_final_url": "https://www.deere.com/en-us/products-solutions/technology-solutions/precision-agriculture-technology-solutions/john-deere-operations-center-pro-golf-license-ota5mfbd",
         "homepage_content_type": "text/html;charset=UTF-8",
-        "example_content_type": "text/html; charset=utf-8",
+        "example_content_type": "text/html;charset=UTF-8",
         "homepage": {
           "has_meta_author": false,
           "has_published_time": false,
@@ -27300,7 +27301,7 @@
         "example": {
           "has_meta_author": false,
           "has_published_time": false,
-          "has_canonical": false,
+          "has_canonical": true,
           "has_about_link": false,
           "has_contact_link": false,
           "has_corrections_link": false,
@@ -27402,7 +27403,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-07-15T02:21:18.242Z",
+        "fetched_at": "2026-07-18T02:42:01.209Z",
         "homepage_url": "https://tolt.com/",
         "example_url": "https://tolt.com/?twclid=24jeerwwldzt1cwgx3ktzfvzm5",
         "homepage_status": 200,
@@ -46524,6 +46525,84 @@
         "distinct_referring_accounts": 1,
         "sample_referring_accounts": [
           "alphawirehq"
+        ],
+        "distinct_axes": []
+      },
+      "claims": {
+        "total": 0,
+        "supported": 0,
+        "refuted": 0,
+        "contested": 0,
+        "unverified": 0,
+        "resolved_count": 0
+      },
+      "structural_features": {
+        "has_search_paths": false,
+        "has_article_paths": false,
+        "has_doi_paths": false
+      },
+      "ratings": {
+        "provenance": {
+          "score": 0.45,
+          "basis": [
+            "unknown_domain_pattern"
+          ]
+        },
+        "breadth": {
+          "score": 0.11833333333333332,
+          "basis": [
+            "distinct_urls:2",
+            "distinct_axes:0",
+            "origin_types:1"
+          ]
+        },
+        "corroboration": {
+          "score": 0.19583333333333333,
+          "basis": [
+            "referring_accounts:1",
+            "origin_types:1"
+          ]
+        },
+        "track_record": {
+          "score": null,
+          "basis": [
+            "no_resolved_claims_observed"
+          ]
+        },
+        "overall": {
+          "score": 0.3536197916666667,
+          "confidence": 0.10997499999999999,
+          "method": "mechanical_v1",
+          "basis": [
+            "unknown_domain_pattern",
+            "distinct_urls:2",
+            "distinct_axes:0",
+            "origin_types:1",
+            "referring_accounts:1",
+            "origin_types:1",
+            "track_record_unavailable"
+          ]
+        }
+      }
+    },
+    {
+      "domain": "bingoplus.com",
+      "entity": "Bingoplus",
+      "kind": "unknown",
+      "first_seen_at": "2026-07-17T11:05:11.063Z",
+      "last_seen_at": "2026-07-18T00:55:17.442Z",
+      "discovery": {
+        "distinct_urls": 2,
+        "example_urls": [
+          "https://bingoplus.com/?palcode=2077999381702086656&twclid=28n3e8dzy2r55kg6u29i1aw2go",
+          "https://bingoplus.com/?palcode=2077999381702086656&twclid=2sbajjyc0d17wzna42pa42owg"
+        ],
+        "origin_counts": {
+          "feed_buffer": 2
+        },
+        "distinct_referring_accounts": 1,
+        "sample_referring_accounts": [
+          "bingoplusph"
         ],
         "distinct_axes": []
       },
@@ -76101,83 +76180,6 @@
         "distinct_referring_accounts": 1,
         "sample_referring_accounts": [
           "kutla_ai"
-        ],
-        "distinct_axes": []
-      },
-      "claims": {
-        "total": 0,
-        "supported": 0,
-        "refuted": 0,
-        "contested": 0,
-        "unverified": 0,
-        "resolved_count": 0
-      },
-      "structural_features": {
-        "has_search_paths": false,
-        "has_article_paths": false,
-        "has_doi_paths": false
-      },
-      "ratings": {
-        "provenance": {
-          "score": 0.45,
-          "basis": [
-            "unknown_domain_pattern"
-          ]
-        },
-        "breadth": {
-          "score": 0.08916666666666666,
-          "basis": [
-            "distinct_urls:1",
-            "distinct_axes:0",
-            "origin_types:1"
-          ]
-        },
-        "corroboration": {
-          "score": 0.19583333333333333,
-          "basis": [
-            "referring_accounts:1",
-            "origin_types:1"
-          ]
-        },
-        "track_record": {
-          "score": null,
-          "basis": [
-            "no_resolved_claims_observed"
-          ]
-        },
-        "overall": {
-          "score": 0.3472395833333333,
-          "confidence": 0.08135,
-          "method": "mechanical_v1",
-          "basis": [
-            "unknown_domain_pattern",
-            "distinct_urls:1",
-            "distinct_axes:0",
-            "origin_types:1",
-            "referring_accounts:1",
-            "origin_types:1",
-            "track_record_unavailable"
-          ]
-        }
-      }
-    },
-    {
-      "domain": "bingoplus.com",
-      "entity": "Bingoplus",
-      "kind": "unknown",
-      "first_seen_at": "2026-07-17T11:05:11.063Z",
-      "last_seen_at": "2026-07-17T11:05:11.063Z",
-      "discovery": {
-        "distinct_urls": 1,
-        "example_urls": [
-          "https://bingoplus.com/?palcode=2077999381702086656&twclid=28n3e8dzy2r55kg6u29i1aw2go"
-        ],
-        "origin_counts": {
-          "feed_buffer": 1
-        },
-        "distinct_referring_accounts": 1,
-        "sample_referring_accounts": [
-          "bingoplusph"
         ],
         "distinct_axes": []
       },
