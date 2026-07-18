@@ -22,6 +22,7 @@ module.exports = function buildTweetPrompt(ctx) {
     ctx.memoryRecall + '\n' +
     '\u2500\u2500 CURRENT BELIEF AXES (read before updating ontology) \u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\n' +
     ctx.currentAxes + '\n' +
+    require('../stances').stancesPromptBlock() +
     '\u2500\u2500 SPRINT PLAN (ACTIVE \u2014 your in-progress tasks ARE your priority) \u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\n' +
     ctx.activePlanContext + '\n' +
     '\u2500\u2500 RECENT DISCOURSE (reply exchanges) \u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\n' +
