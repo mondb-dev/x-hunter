@@ -139,37 +139,44 @@ Output ONLY JSON (no fences):
     .map((x) => `${x.id} — "${x.label}" (left="${(x.left_pole || '').slice(0, 60)}", right="${(x.right_pole || '').slice(0, 60)}")`)
     .join('\n');
   const rawCommit = await reason(
-`Today is ${TODAY()}. You are Sebastian Hunter deciding whether to COMMIT to a side on "${cand.event}" after researching it. He will hold this side consistently in public and be scored on it when the event resolves.
+`Today is ${TODAY()}. You are Sebastian Hunter placing his STANCE on "${cand.event}" after researching it. A stance is a position on a SPECTRUM between two poles — the sign is the side he argues publicly, the magnitude is how far the verified evidence leans (it shapes how forcefully he states it). He holds it consistently and is scored when the event resolves.
 
 ${convictions}
 
 ── RESEARCH (verified — confidence ${a.confidence_pct != null ? a.confidence_pct + '%' : 'unstated'}; key finding: ${a.key_finding || '(none)'}) ──
 ${String(res.report).slice(0, 2500)}
 
-── AXES AVAILABLE FOR GROUNDING (exact axis_id; pole = which pole the SIDE follows from) ──
+── AXES AVAILABLE FOR GROUNDING (exact axis_id; pole = which pole the position follows from) ──
 ${axes}
 
-Commit ONLY if the researched evidence + convictions genuinely ground a side; otherwise decline. confidence_pct must NOT exceed the research confidence.
+Define the spectrum and place the position:
+- pole_a (negative end) and pole_b (positive end): the two opposing resolutions of the question, in plain words.
+- position in [-1,+1]: where the RESEARCHED EVIDENCE + convictions actually land — NOT how strongly he wishes. ±0.2 = tentative lean, ±0.5 = clear, ±0.8 = strong. If the honest position is inside ±0.15, DECLINE — a fake side is worse than none.
+- confidence_pct: the separate, calibrated probability the RESOLVABLE outcome lands on his side of the spectrum — must NOT exceed the research confidence. ("justified (+0.7) but only 40% likely to succeed" is a valid honest stance.)
+
 Output ONLY JSON (no fences):
-{"commit":false} OR {"commit":true,"side":"the committed side","grounded_in":[{"axis_id":"...","pole":"left|right"}],"confidence_pct":55,"rationale":"one sentence in Sebastian's voice citing the key evidence","resolves_when":"date or condition"}`,
-    { maxTokens: 500, tag: 'stance-commit' });
+{"commit":false,"why":"one line"} OR {"commit":true,"pole_a":"...","pole_b":"...","position":0.6,"side":"the side he argues (matches the position's sign)","grounded_in":[{"axis_id":"...","pole":"left|right"}],"confidence_pct":55,"rationale":"one sentence in Sebastian's voice citing the key evidence","resolves_when":"date or condition"}`,
+    { maxTokens: 600, tag: 'stance-commit' });
 
   let d = null;
   try { d = cleanJson(rawCommit); } catch {}
-  if (!d || !d.commit) { log(`declined to commit on "${cand.event}" after research`); return; }
+  if (!d || !d.commit) { log(`declined to commit on "${cand.event}" after research${d && d.why ? ` — ${String(d.why).slice(0, 100)}` : ''}`); return; }
   const cappedConf = a.confidence_pct != null ? Math.min(+d.confidence_pct || 60, a.confidence_pct) : (+d.confidence_pct || 60);
   const r = stances.addStance({
     event: cand.event,
     question: cand.question,
     side: d.side,
     type: 'principled',
+    pole_a: d.pole_a,
+    pole_b: d.pole_b,
+    position: d.position,
     grounded_in: d.grounded_in,
     confidence_pct: cappedConf,
     rationale: d.rationale,
     resolves_when: d.resolves_when,
     research: { confidence_pct: a.confidence_pct, key_finding: a.key_finding },
   });
-  if (r.ok) log(`STANCE TAKEN [principled, researched ${a.confidence_pct != null ? a.confidence_pct + '%' : '?'}] "${r.stance.event}": ${r.stance.side} (${r.stance.confidence_pct}%)`);
+  if (r.ok) log(`STANCE TAKEN [principled, researched ${a.confidence_pct != null ? a.confidence_pct + '%' : '?'}] "${r.stance.event}": position ${r.stance.position != null ? (r.stance.position > 0 ? '+' : '') + r.stance.position.toFixed(2) : '?'} → ${r.stance.side} (odds ${r.stance.confidence_pct}%)`);
   else log(`stance rejected (${r.reason}): ${String(cand.event).slice(0, 60)}`);
 }
 
