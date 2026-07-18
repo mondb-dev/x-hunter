@@ -88,6 +88,9 @@ function addStance(input) {
     rationale: String(input.rationale || '').slice(0, 400),
     resolves_when: String(input.resolves_when || '').slice(0, 160),
     taken_at: input.taken_at || new Date().toISOString().slice(0, 10),
+    research: input.research && typeof input.research === 'object'
+      ? { confidence_pct: input.research.confidence_pct ?? null, key_finding: String(input.research.key_finding || '').slice(0, 240) }
+      : null,
     last_checked: null,
     status: 'open',
     outcome: null,
