@@ -102,7 +102,9 @@ function checkTrigger(axes, ponderState) {
   // Exception: if the 30-day window has expired, close the plan and allow pondering.
   const activePlan = loadJson(ACTIVE_PLAN);
   if (activePlan && activePlan.status === "active") {
-    const activated = activePlan.activated_date;
+    // Fall back through decided/created dates so a plan missing activated_date
+    // can never suppress pondering forever.
+    const activated = activePlan.activated_date || activePlan.decided_date || activePlan.created;
     const daysSince = activated ? daysBetween(activated, today()) : 0;
 
     if (daysSince >= 30) {
