@@ -47,21 +47,40 @@ async function main() {
   const planKey = String(plan.title || 'untitled').slice(0, 120);
   let state = loadJson(STATE_PATH, null);
   if (!state || state.plan !== planKey) {
-    state = { plan: planKey, done: [], fallback_done: false, results: [] };
+    state = { plan: planKey, done: [], results: [] };
   }
 
-  const openQuestions = ((plan.research || {}).open_questions || [])
+  let openQuestions = ((plan.research || {}).open_questions || [])
     .map((q) => String(q).trim()).filter(Boolean);
-  let question = openQuestions.find((q) => !state.done.includes(qHash(q))) || null;
 
-  if (!question && plan.action_type === 'research_sprint' && !state.fallback_done) {
-    const seed = String(plan.compulsion || plan.title || '').trim();
-    if (seed) {
-      question = `What is the current state of, and strongest evidence around: ${seed}?`;
-      state.fallback_done = true;
+  // A plan can arrive without a research brief (e.g. re-grounded plans lose the
+  // deep-dive brief match, leaving research: null). Derive researchable
+  // questions ONCE from the plan itself so daily research still serves it.
+  if (!openQuestions.length) {
+    if (!Array.isArray(state.derived_questions)) {
+      log('plan has no research.open_questions — deriving from the plan brief');
+      try {
+        const { reason } = require('./lib/compose');
+        const raw = await reason(
+`From this plan, list the 3-5 most valuable RESEARCHABLE questions — each must be answerable with web/X search, page reads, memory of observed posts, or on-chain token data (no "build/track/decide" items, no questions about Sebastian's own output).
+
+PLAN: ${plan.title}
+TYPE: ${plan.action_type || '?'}
+COMPULSION: ${String(plan.compulsion || '').slice(0, 600)}
+BRIEF: ${String(plan.brief || '').slice(0, 900)}
+
+Each question standalone and specific (name actors, claims, mechanisms). Output ONLY a JSON array of question strings.`,
+          { maxTokens: 500, tag: 'plan-research-derive' });
+        const m = String(raw).replace(/```(?:json)?/gi, '').match(/\[[\s\S]*\]/);
+        state.derived_questions = (m ? JSON.parse(m[0]) : []).map((q) => String(q).trim()).filter(Boolean).slice(0, 5);
+        log(`derived ${state.derived_questions.length} question(s)`);
+      } catch (e) { log(`question derivation failed (non-fatal): ${e.message}`); state.derived_questions = []; }
+      fs.writeFileSync(STATE_PATH, JSON.stringify(state, null, 2));
     }
+    openQuestions = state.derived_questions;
   }
 
+  const question = openQuestions.find((q) => !state.done.includes(qHash(q))) || null;
   if (!question) { log(`no unanswered research questions for plan "${planKey}"`); return; }
 
   log(`plan "${planKey}" → question: ${question.slice(0, 140)}`);

@@ -196,6 +196,7 @@ async function main() {
       // Attach research brief to the plan for reference
       const brief = briefs.find(b => b.title === plan.title);
       if (brief) plan.research = brief.research;
+      else console.warn(`[decision] no deep-dive brief matched "${plan.title}" — plan_research will derive open questions from the plan itself`);
       activePlan = plan;
     } else if (parkedTitles.includes(plan.title) && plan.status === "proposed") {
       plan.status      = "parked";

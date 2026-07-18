@@ -48,6 +48,31 @@ function today() {
   return new Date().toISOString().slice(0, 10);
 }
 
+// Sync plan completion back into the JSON state the rest of the system reads.
+// Without this, sprints.db says "completed" while active_plan.json stays
+// "active" forever — ponder stays suppressed and no next plan is ever proposed.
+function markPlanCompleteInState(activePlan, note) {
+  try {
+    const done = { ...activePlan, status: "completed", completed_date: today() };
+    done.execution_log = [...(activePlan.execution_log || []), { date: today(), action: "completed", note }];
+    fs.writeFileSync(ACTIVE_PLAN_PATH, JSON.stringify(done, null, 2));
+    console.log(`[sprint_manager] active_plan.json marked completed`);
+  } catch (err) {
+    console.error(`[sprint_manager] failed to update active_plan.json: ${err.message}`);
+  }
+  try {
+    const plansPath = path.join(STATE, "action_plans.json");
+    const plans = JSON.parse(fs.readFileSync(plansPath, "utf-8"));
+    const p = (Array.isArray(plans) ? plans : []).find(x => x.title === activePlan.title && x.status === "active");
+    if (p) {
+      p.status = "completed";
+      p.completed_date = today();
+      fs.writeFileSync(plansPath, JSON.stringify(plans, null, 2));
+      console.log(`[sprint_manager] action_plans.json entry marked completed`);
+    }
+  } catch { /* non-fatal — action_plans.json may not exist */ }
+}
+
 // ── Main ──────────────────────────────────────────────────────────────────────
 
 async function main() {
@@ -131,11 +156,13 @@ async function main() {
       } else {
         console.log("[sprint_manager] all 4 weeks done — plan complete");
         await sprintDb.completePlan(planId, today());
+        markPlanCompleteInState(activePlan, "all 4 sprint weeks completed");
       }
     }
   } else if (trackResult.action === "plan_completed") {
     console.log("[sprint_manager] plan marked complete");
     await sprintDb.completePlan(planId, today());
+    markPlanCompleteInState(activePlan, "tracker reported plan completed (all sprints done)");
   }
 
   // 6. LOG — write sprint context for tweet prompt
