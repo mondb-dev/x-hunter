@@ -1,8 +1,8 @@
 {
   "schema_version": "1.0",
-  "generated_at": "2026-07-18T15:42:06.762Z",
+  "generated_at": "2026-07-18T17:42:08.304Z",
   "method": "mechanical_registry_v1",
-  "profiled_at": "2026-07-18T15:42:14.215Z",
+  "profiled_at": "2026-07-18T17:42:35.113Z",
   "sources": [
     {
       "domain": "theguardian.com",
@@ -11,7 +11,7 @@
       "first_seen_at": "2026-03-27T23:17:00Z",
       "last_seen_at": "2026-07-18T14:12:41.419Z",
       "discovery": {
-        "distinct_urls": 435,
+        "distinct_urls": 436,
         "example_urls": [
           "https://www.theguardian.com/us-news/2026/jun/23/trump-immigration-courthouse-arrest-policy",
           "https://www.theguardian.com/us-news/2026/jun/28/ice-minnesota-defending-democracy",
@@ -21,7 +21,7 @@
         ],
         "origin_counts": {
           "ontology_evidence": 36,
-          "reading_queue": 408,
+          "reading_queue": 409,
           "journals": 77,
           "articles": 1
         },
@@ -70,7 +70,7 @@
         "breadth": {
           "score": 0.94,
           "basis": [
-            "distinct_urls:435",
+            "distinct_urls:436",
             "distinct_axes:15",
             "origin_types:4"
           ]
@@ -110,7 +110,7 @@
             "newsroom_domain_pattern",
             "article_path_seen",
             "doi_or_identifier_path_seen",
-            "distinct_urls:435",
+            "distinct_urls:436",
             "distinct_axes:15",
             "origin_types:4",
             "referring_accounts:0",
@@ -374,7 +374,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-07-15T17:23:56.797Z",
+        "fetched_at": "2026-07-18T17:42:10.169Z",
         "homepage_url": "https://cbp.gov/",
         "example_url": "https://careers.cbp.gov/s/connect-to-recruiter?campaignid=701SJ00000BV0tR&utm_source=X&utm_medium=paid_social&utm_campaign=MGC_C5SXt125J11T&twclid=24uhcrvlvs0lo9d4mk5w8lgcjg",
         "homepage_status": 200,
@@ -538,7 +538,7 @@
       "first_seen_at": "2026-06-22T00:15:00Z",
       "last_seen_at": "2026-07-18T14:12:41.395Z",
       "discovery": {
-        "distinct_urls": 299,
+        "distinct_urls": 300,
         "example_urls": [
           "https://www.nytimes.com/2026/06/19/world/canada/frank-stronach-trial-guilty-sex-charges.html",
           "https://www.nytimes.com/2026/06/27/world/americas/mexican-officials-us-informants.html",
@@ -548,7 +548,7 @@
         ],
         "origin_counts": {
           "ontology_evidence": 11,
-          "reading_queue": 299,
+          "reading_queue": 300,
           "journals": 28
         },
         "distinct_referring_accounts": 0,
@@ -586,7 +586,7 @@
         "breadth": {
           "score": 0.8799999999999999,
           "basis": [
-            "distinct_urls:299",
+            "distinct_urls:300",
             "distinct_axes:6",
             "origin_types:3"
           ]
@@ -625,7 +625,7 @@
           "basis": [
             "newsroom_domain_pattern",
             "article_path_seen",
-            "distinct_urls:299",
+            "distinct_urls:300",
             "distinct_axes:6",
             "origin_types:3",
             "referring_accounts:0",
@@ -671,9 +671,9 @@
       "entity": "Aljazeera",
       "kind": "news",
       "first_seen_at": "2026-06-22T02:45:00Z",
-      "last_seen_at": "2026-07-18T12:42:45.201Z",
+      "last_seen_at": "2026-07-18T17:13:05.340Z",
       "discovery": {
-        "distinct_urls": 263,
+        "distinct_urls": 265,
         "example_urls": [
           "https://www.aljazeera.com/opinions/2026/6/24/south-africas-crises-will-not-be-solved-by-blaming-migrants",
           "https://www.aljazeera.com/video/newsfeed/2026/6/27/newly-released-video-exposes-henry-nowak-killers-lies?traffic_source=rss",
@@ -682,9 +682,9 @@
           "https://www.aljazeera.com/video/newsfeed/2026/7/1/why-is-maga-in-meltdown-over-the-supreme-court-birthright-ruling-2?traffic_source=rss"
         ],
         "origin_counts": {
-          "ontology_evidence": 143,
+          "ontology_evidence": 145,
           "reading_queue": 9,
-          "journals": 353
+          "journals": 355
         },
         "distinct_referring_accounts": 0,
         "sample_referring_accounts": [],
@@ -694,6 +694,7 @@
           "axis_data_privacy_decentralization_v1",
           "axis_discourse_order_polarization_v1",
           "axis_epistemic_integrity",
+          "axis_geopolitical_control_narratives",
           "axis_geopolitical_rhetoric_v1",
           "axis_global_economic_stability_v1",
           "axis_global_power_realignments_v1",
@@ -736,8 +737,8 @@
         "breadth": {
           "score": 0.8799999999999999,
           "basis": [
-            "distinct_urls:263",
-            "distinct_axes:21",
+            "distinct_urls:265",
+            "distinct_axes:22",
             "origin_types:3"
           ]
         },
@@ -775,8 +776,8 @@
           "basis": [
             "newsroom_domain_pattern",
             "article_path_seen",
-            "distinct_urls:263",
-            "distinct_axes:21",
+            "distinct_urls:265",
+            "distinct_axes:22",
             "origin_types:3",
             "referring_accounts:0",
             "origin_types:3",
@@ -908,7 +909,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-07-15T17:24:00.925Z",
+        "fetched_at": "2026-07-18T17:42:14.587Z",
         "homepage_url": "https://census.gov/",
         "example_url": "https://www.census.gov/",
         "homepage_status": 200,
@@ -1655,7 +1656,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-07-15T17:24:20.935Z",
+        "fetched_at": "2026-07-18T17:42:34.597Z",
         "homepage_url": "https://washingtonpost.com/",
         "example_url": "https://www.washingtonpost.com/world/2026/04/13/us-iran-blockade-strait-hormuz-oil/",
         "homepage_status": null,
@@ -1943,7 +1944,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-07-15T17:24:21.430Z",
+        "fetched_at": "2026-07-18T17:42:35.113Z",
         "homepage_url": "https://google.com/",
         "example_url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQG8zTjzNOXrSBZwvSTLobfen2T2Mfxyn8MYVxW4sIU6cWottxkV4pJs_p6fwS7LJGs_vuED8LS-hCfYDaWBVPP6g5GilaCYMrJml-ow5K6SCv_H_b1Dl2x1bJE8PTS68J1lar6YIqGro0gdLxt0MIOMv-l1vVmmO0WJQtLSOEieMA6I7dl7eRgRC0BRXQWnC1DBXjH9CBNLq5ag1EbSnkyImyoNmXyv0qV7VQUvoAHc5OC2odagG5YXdhPj4Im_aZZUwd8=",
         "homepage_status": 200,
@@ -2507,20 +2508,20 @@
       "entity": "Pcij",
       "kind": "unknown",
       "first_seen_at": "2026-07-08T04:32:07.894Z",
-      "last_seen_at": "2026-07-17T07:12:09.833Z",
+      "last_seen_at": "2026-07-18T17:13:05.340Z",
       "discovery": {
         "distinct_urls": 11,
         "example_urls": [
           "https://pcij.org/2026/06/23/tycoons-swoop-in-clean-energy-boom/",
           "https://pcij.org/2026/05/24/duterte-impeach-votes-2026/",
+          "https://pcij.org/2026/05/25/duterte-impeach-votes-2026/",
           "https://pcij.org/2026/07/01/ten-years-ago-today-day-one-year-one-of-the-antidrug-campaign/",
-          "https://pcij.org/2026/05/25/7-reasons-why-the-party-list-system-serves-dynasties-not-democracy/",
-          "https://pcij.org/2026/07/04/on-roblox-pinoy-kids-preyed-on-by-violent-extremists/"
+          "https://pcij.org/2026/05/25/7-reasons-why-the-party-list-system-serves-dynasties-not-democracy/"
         ],
         "origin_counts": {
-          "ontology_evidence": 9,
-          "reading_queue": 7,
-          "journals": 15
+          "ontology_evidence": 14,
+          "reading_queue": 8,
+          "journals": 22
         },
         "distinct_referring_accounts": 0,
         "sample_referring_accounts": [],
@@ -2531,7 +2532,8 @@
           "axis_human_rights_exploitation_v1",
           "axis_political_dynasties_meritocracy_v1",
           "axis_political_vulnerability_foreign_influence_v1",
-          "axis_power_accountability"
+          "axis_power_accountability",
+          "axis_procedural_governance_accountability_v1"
         ]
       },
       "claims": {
@@ -2559,7 +2561,7 @@
           "score": 0.8508333333333333,
           "basis": [
             "distinct_urls:11",
-            "distinct_axes:7",
+            "distinct_axes:8",
             "origin_types:3"
           ]
         },
@@ -2598,7 +2600,7 @@
             "unknown_domain_pattern",
             "article_path_seen",
             "distinct_urls:11",
-            "distinct_axes:7",
+            "distinct_axes:8",
             "origin_types:3",
             "referring_accounts:0",
             "origin_types:3",
@@ -3625,7 +3627,7 @@
           "https://t.co/cYaqYDRp08"
         ],
         "origin_counts": {
-          "feed_buffer": 5043,
+          "feed_buffer": 5044,
           "feed_buffer_reply": 4830
         },
         "distinct_referring_accounts": 2484,
@@ -3752,9 +3754,9 @@
       "entity": "Gmanetwork",
       "kind": "unknown",
       "first_seen_at": "2026-05-18T03:29:41.732Z",
-      "last_seen_at": "2026-07-18T14:12:41.395Z",
+      "last_seen_at": "2026-07-18T16:13:11.070Z",
       "discovery": {
-        "distinct_urls": 146,
+        "distinct_urls": 148,
         "example_urls": [
           "https://www.gmanetwork.com/news/topstories/nation/994225/explainer-objections-in-a-trial-and-their-role-in-due-process/story/",
           "https://www.gmanetwork.com/news/balitambayan/balita/993931/sen-escudero-sinabing-16-na-boto-ang-kailangan-para-mahatulang-guilty-si-vp-sara-duterte-sa-impea/story/",
@@ -3763,8 +3765,8 @@
           "https://www.gmanetwork.com/news/topstories/nation/994080/electronic-copies-evidence-supreme-court/story/"
         ],
         "origin_counts": {
-          "ontology_evidence": 56,
-          "journals": 177
+          "ontology_evidence": 57,
+          "journals": 180
         },
         "distinct_referring_accounts": 0,
         "sample_referring_accounts": [],
@@ -3806,7 +3808,7 @@
         "breadth": {
           "score": 0.82,
           "basis": [
-            "distinct_urls:146",
+            "distinct_urls:148",
             "distinct_axes:12",
             "origin_types:2"
           ]
@@ -3844,7 +3846,7 @@
           "method": "mechanical_v1",
           "basis": [
             "unknown_domain_pattern",
-            "distinct_urls:146",
+            "distinct_urls:148",
             "distinct_axes:12",
             "origin_types:2",
             "referring_accounts:0",
@@ -18503,7 +18505,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-07-15T15:53:57.811Z",
+        "fetched_at": "2026-07-18T16:12:18.627Z",
         "homepage_url": "https://slynora.com/",
         "example_url": "https://www.slynora.com/products/non-slip-thick-sole-cloud-slides-for-men?utm_source=twitter&utm_campaign=41804910&twclid=2dusafrlugnqx0tw8g5vfsrw0n",
         "homepage_status": 403,
@@ -33516,7 +33518,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-07-15T15:53:58.366Z",
+        "fetched_at": "2026-07-18T16:12:21.917Z",
         "homepage_url": "https://doordash.com/",
         "example_url": "https://www.doordash.com/browse/list/7e5f3a06-8f84-4d8f-b1f9-dd2f7871459a?twclid=2expxmm8nilk7hhcpg2qwpcu7n",
         "homepage_status": 403,
@@ -33641,7 +33643,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-07-15T15:54:01.555Z",
+        "fetched_at": "2026-07-18T16:12:25.235Z",
         "homepage_url": "https://angel.com/",
         "example_url": "https://www.angel.com/tickets/young-washington?twclid=27mi12v89i7upcqxfvv5wwjfcz",
         "homepage_status": 200,
@@ -33766,7 +33768,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-07-15T15:54:02.871Z",
+        "fetched_at": "2026-07-18T16:12:26.543Z",
         "homepage_url": "https://gopuff.com/",
         "example_url": "https://www.gopuff.com/go/ai?twclid=2df5moz835ertdpa0tqci700x9",
         "homepage_status": 403,
@@ -33891,7 +33893,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-07-15T16:24:02.153Z",
+        "fetched_at": "2026-07-18T17:12:12.803Z",
         "homepage_url": "https://lend.xyz/",
         "example_url": "https://app.lend.xyz/op/3?twclid=238nk3jmrq3apwjk6xspl8fcb8",
         "homepage_status": 200,
@@ -34121,7 +34123,7 @@
             "about:false",
             "contact:true",
             "corrections:false",
-            "outbound_links:137",
+            "outbound_links:138",
             "opinion_marker:false"
           ]
         },
@@ -34141,7 +34143,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-07-15T16:24:03.976Z",
+        "fetched_at": "2026-07-18T17:12:14.543Z",
         "homepage_url": "https://figma.bot/",
         "example_url": "https://figma.bot/4erZ585?twclid=2c31nfwdd6xvlc3otoa9aoi4sv",
         "homepage_status": 200,
@@ -34167,7 +34169,7 @@
           "has_about_link": false,
           "has_contact_link": false,
           "has_corrections_link": false,
-          "outbound_links_count": 137,
+          "outbound_links_count": 138,
           "opinion_marker": false
         }
       }
@@ -34389,7 +34391,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-07-15T16:24:05.871Z",
+        "fetched_at": "2026-07-18T17:12:16.152Z",
         "homepage_url": "https://georgetown.edu/",
         "example_url": "https://gjia.georgetown.edu/2026/03/26/the-war-against-iran-and-global-risks-tell-me-how-this-ends/",
         "homepage_status": 200,
@@ -34513,7 +34515,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-07-15T16:24:07.177Z",
+        "fetched_at": "2026-07-18T17:12:17.355Z",
         "homepage_url": "https://fandango.com/",
         "example_url": "https://www.fandango.com/lee-cronins-the-mummy-2026-244052/movie-overview?twclid=2buocyfoltepc4nr5ab0l6j90t",
         "homepage_status": 200,
@@ -34529,7 +34531,7 @@
           "has_about_link": false,
           "has_contact_link": false,
           "has_corrections_link": false,
-          "outbound_links_count": 22,
+          "outbound_links_count": 21,
           "opinion_marker": false
         },
         "example": {
