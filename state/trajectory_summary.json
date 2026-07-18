@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-18T06:43:00.166Z",
+  "generated_at": "2026-07-18T09:43:20.636Z",
   "windows": [
     "1d",
     "3d",
@@ -283,21 +283,21 @@
     "axis_authoritarian_self_determination_v1": {
       "current": {
         "score": 0.2389,
-        "confidence": 0.9497
+        "confidence": 0.9477
       },
       "1d": {
         "score_delta": 0,
-        "conf_delta": 0,
+        "conf_delta": -0.002,
         "direction": "→"
       },
       "3d": {
         "score_delta": 0.0208,
-        "conf_delta": 0.018,
+        "conf_delta": 0.016,
         "direction": "↗"
       },
       "7d": {
         "score_delta": 0.0208,
-        "conf_delta": 0.01,
+        "conf_delta": 0.008,
         "direction": "↗"
       }
     },
@@ -597,22 +597,22 @@
     },
     "axis_environmental_policy_v_economic_v1": {
       "current": {
-        "score": -0.4415,
-        "confidence": 0.5579
+        "score": -0.3915,
+        "confidence": 0.5835
       },
       "1d": {
-        "score_delta": 0,
-        "conf_delta": -0.002,
-        "direction": "→"
+        "score_delta": 0.05,
+        "conf_delta": 0.0236,
+        "direction": "↗"
       },
       "3d": {
-        "score_delta": 0.05,
-        "conf_delta": 0.0072,
+        "score_delta": 0.1,
+        "conf_delta": 0.0328,
         "direction": "↗"
       },
       "7d": {
-        "score_delta": 0.15,
-        "conf_delta": 0.0407,
+        "score_delta": 0.2,
+        "conf_delta": 0.0663,
         "direction": "↗"
       }
     },
@@ -908,17 +908,17 @@
     },
     "axis_procedural_governance_v1": {
       "current": {
-        "score": -0.2,
-        "confidence": 0.2821
+        "score": -0.25,
+        "confidence": 0.3009
       },
       "1d": {
-        "score_delta": 0,
-        "conf_delta": 0,
-        "direction": "→"
+        "score_delta": -0.05,
+        "conf_delta": 0.0188,
+        "direction": "↘"
       },
       "3d": {
-        "score_delta": -0.15,
-        "conf_delta": 0.1998,
+        "score_delta": -0.2,
+        "conf_delta": 0.2186,
         "direction": "↘"
       },
       "7d": null
@@ -960,11 +960,11 @@
     "axis_procedural_governance_accountability_v1": {
       "current": {
         "score": -0.05,
-        "confidence": 0.304
+        "confidence": 0.3399
       },
       "1d": {
         "score_delta": -0.05,
-        "conf_delta": 0.1208,
+        "conf_delta": 0.1567,
         "direction": "↘"
       },
       "3d": null,
@@ -980,6 +980,15 @@
       "7d": null
     },
     "axis_dehumanization_propaganda_v1": {
+      "current": {
+        "score": 0.05,
+        "confidence": 0.078
+      },
+      "1d": null,
+      "3d": null,
+      "7d": null
+    },
+    "axis_ai_automated_dehumanization_v1": {
       "current": {
         "score": 0.05,
         "confidence": 0.0268

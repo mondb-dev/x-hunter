@@ -1,17 +1,17 @@
 {
   "schema_version": "1.0",
-  "generated_at": "2026-07-18T08:42:01.800Z",
+  "generated_at": "2026-07-18T11:42:02.463Z",
   "method": "mechanical_registry_v1",
-  "profiled_at": "2026-07-18T08:42:06.637Z",
+  "profiled_at": "2026-07-18T11:42:05.310Z",
   "sources": [
     {
       "domain": "theguardian.com",
       "entity": "Theguardian",
       "kind": "news",
       "first_seen_at": "2026-03-27T23:17:00Z",
-      "last_seen_at": "2026-07-18T08:12:37.507Z",
+      "last_seen_at": "2026-07-18T11:12:47.941Z",
       "discovery": {
-        "distinct_urls": 428,
+        "distinct_urls": 432,
         "example_urls": [
           "https://www.theguardian.com/us-news/2026/jun/23/trump-immigration-courthouse-arrest-policy",
           "https://www.theguardian.com/us-news/2026/jun/28/ice-minnesota-defending-democracy",
@@ -20,15 +20,16 @@
           "https://www.theguardian.com/global-development/2026/jun/26/woman-sadia-moalim-ali-three-year-jail-sentence-somalia-online-comments-governement"
         ],
         "origin_counts": {
-          "ontology_evidence": 33,
-          "reading_queue": 403,
-          "journals": 74,
+          "ontology_evidence": 35,
+          "reading_queue": 405,
+          "journals": 76,
           "articles": 1
         },
         "distinct_referring_accounts": 0,
         "sample_referring_accounts": [],
         "distinct_axes": [
           "axis_authoritarian_self_determination_v1",
+          "axis_collective_voice",
           "axis_economic_indicators_reliability_v1",
           "axis_geopolitical_rhetoric_v1",
           "axis_global_economic_stability_v1",
@@ -40,6 +41,7 @@
           "axis_political_trust_corruption_v1",
           "axis_power_accountability",
           "axis_procedural_governance_accountability_v1",
+          "axis_procedural_governance_v1",
           "axis_weaponized_demographics_narrative_control_v1"
         ]
       },
@@ -68,8 +70,8 @@
         "breadth": {
           "score": 0.94,
           "basis": [
-            "distinct_urls:428",
-            "distinct_axes:13",
+            "distinct_urls:432",
+            "distinct_axes:15",
             "origin_types:4"
           ]
         },
@@ -108,8 +110,8 @@
             "newsroom_domain_pattern",
             "article_path_seen",
             "doi_or_identifier_path_seen",
-            "distinct_urls:428",
-            "distinct_axes:13",
+            "distinct_urls:432",
+            "distinct_axes:15",
             "origin_types:4",
             "referring_accounts:0",
             "origin_types:4",
@@ -534,9 +536,9 @@
       "entity": "Nytimes",
       "kind": "news",
       "first_seen_at": "2026-06-22T00:15:00Z",
-      "last_seen_at": "2026-07-17T21:42:30.191Z",
+      "last_seen_at": "2026-07-18T11:12:47.941Z",
       "discovery": {
-        "distinct_urls": 294,
+        "distinct_urls": 296,
         "example_urls": [
           "https://www.nytimes.com/2026/06/19/world/canada/frank-stronach-trial-guilty-sex-charges.html",
           "https://www.nytimes.com/2026/06/27/world/americas/mexican-officials-us-informants.html",
@@ -545,9 +547,9 @@
           "https://www.nytimes.com/2026/07/05/world/middleeast/iran-grand-mosalla-khamenei.html"
         ],
         "origin_counts": {
-          "ontology_evidence": 10,
-          "reading_queue": 294,
-          "journals": 26
+          "ontology_evidence": 11,
+          "reading_queue": 296,
+          "journals": 27
         },
         "distinct_referring_accounts": 0,
         "sample_referring_accounts": [],
@@ -584,7 +586,7 @@
         "breadth": {
           "score": 0.8799999999999999,
           "basis": [
-            "distinct_urls:294",
+            "distinct_urls:296",
             "distinct_axes:6",
             "origin_types:3"
           ]
@@ -623,7 +625,7 @@
           "basis": [
             "newsroom_domain_pattern",
             "article_path_seen",
-            "distinct_urls:294",
+            "distinct_urls:296",
             "distinct_axes:6",
             "origin_types:3",
             "referring_accounts:0",
@@ -1434,7 +1436,7 @@
       "first_seen_at": "2026-06-26T07:05:00Z",
       "last_seen_at": "2026-07-11T20:57:02.247Z",
       "discovery": {
-        "distinct_urls": 242,
+        "distinct_urls": 243,
         "example_urls": [
           "https://www.bbc.co.uk/news/articles/cn8qxz6qypyo",
           "https://www.bbc.co.uk/news/articles/cn075j04pnyo?at_medium=RSS&amp;at_campaign=rss",
@@ -1444,7 +1446,7 @@
         ],
         "origin_counts": {
           "ontology_evidence": 4,
-          "reading_queue": 247,
+          "reading_queue": 248,
           "journals": 11
         },
         "distinct_referring_accounts": 0,
@@ -1478,7 +1480,7 @@
         "breadth": {
           "score": 0.7049999999999998,
           "basis": [
-            "distinct_urls:242",
+            "distinct_urls:243",
             "distinct_axes:3",
             "origin_types:3"
           ]
@@ -1516,7 +1518,7 @@
           "method": "mechanical_v1",
           "basis": [
             "newsroom_domain_pattern",
-            "distinct_urls:242",
+            "distinct_urls:243",
             "distinct_axes:3",
             "origin_types:3",
             "referring_accounts:0",
@@ -2111,7 +2113,7 @@
       "entity": "Amnesty",
       "kind": "unknown",
       "first_seen_at": "2026-03-31T12:16:18.459Z",
-      "last_seen_at": "2026-07-18T00:42:44.930Z",
+      "last_seen_at": "2026-07-18T10:12:36.369Z",
       "discovery": {
         "distinct_urls": 49,
         "example_urls": [
@@ -2123,8 +2125,8 @@
         ],
         "origin_counts": {
           "ontology_evidence": 42,
-          "reading_queue": 23,
-          "journals": 65
+          "reading_queue": 24,
+          "journals": 67
         },
         "distinct_referring_accounts": 0,
         "sample_referring_accounts": [],
@@ -2909,9 +2911,9 @@
       "entity": "Inquirer",
       "kind": "unknown",
       "first_seen_at": "2026-05-09T10:15:15.053Z",
-      "last_seen_at": "2026-07-18T08:12:37.486Z",
+      "last_seen_at": "2026-07-18T11:12:47.915Z",
       "discovery": {
-        "distinct_urls": 163,
+        "distinct_urls": 164,
         "example_urls": [
           "https://www.inquirer.net/capiz-broadcaster-shooting-probe-widens-as-cops-form-task-force",
           "https://newsinfo.inquirer.net/2251519/chr-carries-out-motu-proprio-probe-into-tacloban-cavite-school-incidents",
@@ -2921,7 +2923,7 @@
         ],
         "origin_counts": {
           "ontology_evidence": 76,
-          "journals": 236,
+          "journals": 237,
           "articles": 1
         },
         "distinct_referring_accounts": 0,
@@ -2966,7 +2968,7 @@
         "breadth": {
           "score": 0.8799999999999999,
           "basis": [
-            "distinct_urls:163",
+            "distinct_urls:164",
             "distinct_axes:14",
             "origin_types:3"
           ]
@@ -3004,7 +3006,7 @@
           "method": "mechanical_v1",
           "basis": [
             "unknown_domain_pattern",
-            "distinct_urls:163",
+            "distinct_urls:164",
             "distinct_axes:14",
             "origin_types:3",
             "referring_accounts:0",
@@ -3050,9 +3052,9 @@
       "entity": "Rappler",
       "kind": "unknown",
       "first_seen_at": "2026-06-22T04:04:30.428Z",
-      "last_seen_at": "2026-07-18T03:42:33.102Z",
+      "last_seen_at": "2026-07-18T10:12:36.387Z",
       "discovery": {
-        "distinct_urls": 134,
+        "distinct_urls": 135,
         "example_urls": [
           "https://www.rappler.com/fact-check-no-arrest-warrant-issued-vs-marcoleta",
           "https://www.rappler.com/technology/decoded-tacloban-school-shooting-disinformation-kiko-barzaga-discussions-juvenile-justice-law/",
@@ -3061,13 +3063,14 @@
           "https://www.rappler.com/voices/thought-leaders/vantage-point-bir-tax-amlc-records-billions-questions-sara-duterte-ignore/"
         ],
         "origin_counts": {
-          "ontology_evidence": 75,
-          "journals": 160,
+          "ontology_evidence": 77,
+          "journals": 162,
           "articles": 1
         },
         "distinct_referring_accounts": 0,
         "sample_referring_accounts": [],
         "distinct_axes": [
+          "axis_ai_automated_dehumanization_v1",
           "axis_ai_societal_impact_v1",
           "axis_collective_voice",
           "axis_data_privacy_decentralization_v1",
@@ -3113,8 +3116,8 @@
         "breadth": {
           "score": 0.8799999999999999,
           "basis": [
-            "distinct_urls:134",
-            "distinct_axes:20",
+            "distinct_urls:135",
+            "distinct_axes:21",
             "origin_types:3"
           ]
         },
@@ -3151,8 +3154,8 @@
           "method": "mechanical_v1",
           "basis": [
             "unknown_domain_pattern",
-            "distinct_urls:134",
-            "distinct_axes:20",
+            "distinct_urls:135",
+            "distinct_axes:21",
             "origin_types:3",
             "referring_accounts:0",
             "origin_types:3",
@@ -3197,9 +3200,9 @@
       "entity": "Philstar",
       "kind": "unknown",
       "first_seen_at": "2026-05-20T06:57:31.760Z",
-      "last_seen_at": "2026-07-18T06:42:30.523Z",
+      "last_seen_at": "2026-07-18T10:12:36.387Z",
       "discovery": {
-        "distinct_urls": 93,
+        "distinct_urls": 94,
         "example_urls": [
           "https://www.philstar.com/headlines/2026/06/24/2537506/mike-defensor-face-trafficking-complaint-over-pasig-ktv-bar-raid",
           "https://www.philstar.com/headlines/2026/06/24/2537509/ched-tells-ateneo-explain-drowning-baterbonia-adili-or-face-sanctions",
@@ -3208,8 +3211,8 @@
           "https://www.philstar.com/headlines/2026/06/28/2538295/icc-freezes-money-seized-duterte"
         ],
         "origin_counts": {
-          "ontology_evidence": 55,
-          "journals": 133
+          "ontology_evidence": 57,
+          "journals": 135
         },
         "distinct_referring_accounts": 0,
         "sample_referring_accounts": [],
@@ -3251,7 +3254,7 @@
         "breadth": {
           "score": 0.82,
           "basis": [
-            "distinct_urls:93",
+            "distinct_urls:94",
             "distinct_axes:11",
             "origin_types:2"
           ]
@@ -3290,7 +3293,7 @@
           "basis": [
             "unknown_domain_pattern",
             "article_path_seen",
-            "distinct_urls:93",
+            "distinct_urls:94",
             "distinct_axes:11",
             "origin_types:2",
             "referring_accounts:0",
@@ -3611,9 +3614,9 @@
       "entity": "T Co",
       "kind": "unknown",
       "first_seen_at": "2016-05-05T18:57:30.000Z",
-      "last_seen_at": "2026-07-18T07:50:18.000Z",
+      "last_seen_at": "2026-07-18T09:23:20.000Z",
       "discovery": {
-        "distinct_urls": 8005,
+        "distinct_urls": 8010,
         "example_urls": [
           "https://t.co/pJSE124ec4",
           "https://t.co/Soz8BXPWaa",
@@ -3622,7 +3625,7 @@
           "https://t.co/cYaqYDRp08"
         ],
         "origin_counts": {
-          "feed_buffer": 5029,
+          "feed_buffer": 5035,
           "feed_buffer_reply": 4830
         },
         "distinct_referring_accounts": 2484,
@@ -3664,7 +3667,7 @@
         "breadth": {
           "score": 0.47,
           "basis": [
-            "distinct_urls:8005",
+            "distinct_urls:8010",
             "distinct_axes:0",
             "origin_types:2"
           ]
@@ -3703,7 +3706,7 @@
           "basis": [
             "unknown_domain_pattern",
             "doi_or_identifier_path_seen",
-            "distinct_urls:8005",
+            "distinct_urls:8010",
             "distinct_axes:0",
             "origin_types:2",
             "referring_accounts:2484",
@@ -3749,9 +3752,9 @@
       "entity": "Gmanetwork",
       "kind": "unknown",
       "first_seen_at": "2026-05-18T03:29:41.732Z",
-      "last_seen_at": "2026-07-18T08:12:37.507Z",
+      "last_seen_at": "2026-07-18T10:12:36.369Z",
       "discovery": {
-        "distinct_urls": 144,
+        "distinct_urls": 145,
         "example_urls": [
           "https://www.gmanetwork.com/news/topstories/nation/994225/explainer-objections-in-a-trial-and-their-role-in-due-process/story/",
           "https://www.gmanetwork.com/news/balitambayan/balita/993931/sen-escudero-sinabing-16-na-boto-ang-kailangan-para-mahatulang-guilty-si-vp-sara-duterte-sa-impea/story/",
@@ -3761,7 +3764,7 @@
         ],
         "origin_counts": {
           "ontology_evidence": 56,
-          "journals": 174
+          "journals": 176
         },
         "distinct_referring_accounts": 0,
         "sample_referring_accounts": [],
@@ -3803,7 +3806,7 @@
         "breadth": {
           "score": 0.82,
           "basis": [
-            "distinct_urls:144",
+            "distinct_urls:145",
             "distinct_axes:12",
             "origin_types:2"
           ]
@@ -3841,7 +3844,7 @@
           "method": "mechanical_v1",
           "basis": [
             "unknown_domain_pattern",
-            "distinct_urls:144",
+            "distinct_urls:145",
             "distinct_axes:12",
             "origin_types:2",
             "referring_accounts:0",
@@ -6579,7 +6582,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-07-15T09:51:20.910Z",
+        "fetched_at": "2026-07-18T10:12:03.764Z",
         "homepage_url": "https://springermedicine.com/",
         "example_url": "https://www.springermedicine.com/webinar-breakthroughs-in-bladder-cancer-care/52496396?utm_source=x&utm_medium=cpc&utm_campaign=bladder-cancer-care-webinar&utm_content=ad-4&twclid=27am5hqwt8x5t4o745p030f1a4",
         "homepage_status": 200,
@@ -8103,7 +8106,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-07-15T09:51:21.235Z",
+        "fetched_at": "2026-07-18T10:12:04.250Z",
         "homepage_url": "https://fundingpips.com/",
         "example_url": "https://fundingpips.com/?utm_source=x&utm_medium=paid_social&utm_campaign=2026_q3_global_acquisition_all_in_sale&utm_content=2073786412856660020&twclid=24njria5jvt4ka7ejelux4oc97",
         "homepage_status": 429,
@@ -8230,7 +8233,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-07-15T09:51:21.554Z",
+        "fetched_at": "2026-07-18T10:12:04.647Z",
         "homepage_url": "https://bybet.com/",
         "example_url": "https://bybet.com/promotion/detail/10/70?utm_source=x&utm_medium=cpc&utm_campaign=Awarenes-DTS-Football&twclid=2aetcv0gphixdtyqc7k0t0any5",
         "homepage_status": 200,
@@ -9396,6 +9399,133 @@
           "has_meta_author": false,
           "has_published_time": false,
           "has_canonical": true,
+          "has_about_link": false,
+          "has_contact_link": false,
+          "has_corrections_link": false,
+          "outbound_links_count": 0,
+          "opinion_marker": false
+        }
+      }
+    },
+    {
+      "domain": "coderabbit.ai",
+      "entity": "Coderabbit Ai",
+      "kind": "unknown",
+      "first_seen_at": "2026-06-09T09:50:16.000Z",
+      "last_seen_at": "2026-07-18T11:05:27.213Z",
+      "discovery": {
+        "distinct_urls": 12,
+        "example_urls": [
+          "https://www.coderabbit.ai/agent?utm_source=twitter&utm_medium=cpc&utm_campaign=brandawareness_slack&twclid=25ohyy1nnhx1vb6p888i79f380",
+          "https://www.coderabbit.ai/agent?utm_source=twitter&utm_medium=cpc&utm_campaign=brandawareness_slack&twclid=289waaptg8g5p8kt9nmjdhtmdm",
+          "https://www.coderabbit.ai/agent?utm_source=twitter&utm_medium=cpc&utm_campaign=brandawareness_slack&twclid=221iix4gf082d85ifrr3eh1dr6",
+          "https://coderabbit.ai/?utm_source=twitter&utm_medium=cpc&utm_campaign=intlretargetingsignup&twclid=2bprglk8wen4ni6d1hxw416sxj",
+          "https://coderabbit.ai/?utm_source=twitter&utm_medium=cpc&utm_campaign=intlprospectingsignup&twclid=23a3why4v3msp82hu0ra2sxiek"
+        ],
+        "origin_counts": {
+          "feed_buffer_reply": 7,
+          "feed_buffer": 5
+        },
+        "distinct_referring_accounts": 1,
+        "sample_referring_accounts": [
+          "coderabbitai"
+        ],
+        "distinct_axes": []
+      },
+      "claims": {
+        "total": 0,
+        "supported": 0,
+        "refuted": 0,
+        "contested": 0,
+        "unverified": 0,
+        "resolved_count": 0
+      },
+      "structural_features": {
+        "has_search_paths": false,
+        "has_article_paths": false,
+        "has_doi_paths": false
+      },
+      "ratings": {
+        "provenance": {
+          "score": 0.45,
+          "basis": [
+            "unknown_domain_pattern"
+          ]
+        },
+        "breadth": {
+          "score": 0.47,
+          "basis": [
+            "distinct_urls:12",
+            "distinct_axes:0",
+            "origin_types:2"
+          ]
+        },
+        "corroboration": {
+          "score": 0.2833333333333333,
+          "basis": [
+            "referring_accounts:1",
+            "origin_types:2"
+          ]
+        },
+        "track_record": {
+          "score": null,
+          "basis": [
+            "no_resolved_claims_observed"
+          ]
+        },
+        "profile": {
+          "score": 0.12,
+          "confidence": 0.55,
+          "basis": [
+            "meta_author:false",
+            "published_time:false",
+            "canonical:false",
+            "about:false",
+            "contact:true",
+            "corrections:false",
+            "outbound_links:0",
+            "opinion_marker:false"
+          ]
+        },
+        "overall": {
+          "score": 0.43875,
+          "confidence": 0.4167,
+          "method": "mechanical_v1",
+          "basis": [
+            "unknown_domain_pattern",
+            "distinct_urls:12",
+            "distinct_axes:0",
+            "origin_types:2",
+            "referring_accounts:1",
+            "origin_types:2",
+            "track_record_unavailable"
+          ]
+        }
+      },
+      "profile": {
+        "fetched_at": "2026-07-18T02:41:55.015Z",
+        "homepage_url": "https://coderabbit.ai/",
+        "example_url": "https://www.coderabbit.ai/agent?utm_source=twitter&utm_medium=cpc&utm_campaign=brandawareness_slack&twclid=25ohyy1nnhx1vb6p888i79f380",
+        "homepage_status": 200,
+        "example_status": 200,
+        "homepage_final_url": "https://www.coderabbit.ai/",
+        "example_final_url": "https://www.coderabbit.ai/agent?utm_source=twitter&utm_medium=cpc&utm_campaign=brandawareness_slack&twclid=25ohyy1nnhx1vb6p888i79f380",
+        "homepage_content_type": "text/html; charset=utf-8",
+        "example_content_type": "text/html; charset=utf-8",
+        "homepage": {
+          "has_meta_author": false,
+          "has_published_time": false,
+          "has_canonical": false,
+          "has_about_link": false,
+          "has_contact_link": true,
+          "has_corrections_link": false,
+          "outbound_links_count": 5,
+          "opinion_marker": false
+        },
+        "example": {
+          "has_meta_author": false,
+          "has_published_time": false,
+          "has_canonical": false,
           "has_about_link": false,
           "has_contact_link": false,
           "has_corrections_link": false,
@@ -10810,27 +10940,27 @@
       }
     },
     {
-      "domain": "coderabbit.ai",
-      "entity": "Coderabbit Ai",
+      "domain": "utspaycashback.com",
+      "entity": "Utspaycashback",
       "kind": "unknown",
-      "first_seen_at": "2026-06-09T09:50:16.000Z",
-      "last_seen_at": "2026-07-16T09:06:28.349Z",
+      "first_seen_at": "2026-05-21T14:10:00.000Z",
+      "last_seen_at": "2026-07-18T10:35:27.301Z",
       "discovery": {
         "distinct_urls": 10,
         "example_urls": [
-          "https://www.coderabbit.ai/agent?utm_source=twitter&utm_medium=cpc&utm_campaign=brandawareness_slack&twclid=25ohyy1nnhx1vb6p888i79f380",
-          "https://www.coderabbit.ai/agent?utm_source=twitter&utm_medium=cpc&utm_campaign=brandawareness_slack&twclid=289waaptg8g5p8kt9nmjdhtmdm",
-          "https://www.coderabbit.ai/agent?utm_source=twitter&utm_medium=cpc&utm_campaign=brandawareness_slack&twclid=221iix4gf082d85ifrr3eh1dr6",
-          "https://coderabbit.ai/?utm_source=twitter&utm_medium=cpc&utm_campaign=intlretargetingsignup&twclid=2bprglk8wen4ni6d1hxw416sxj",
-          "https://coderabbit.ai/?utm_source=twitter&utm_medium=cpc&utm_campaign=intlprospectingsignup&twclid=23a3why4v3msp82hu0ra2sxiek"
+          "https://www.utspaycashback.com/?twclid=2650deq3k4trsekhk3xdbpt9o7",
+          "https://www.utspaycashback.com/",
+          "https://www.utspaycashback.com/en/",
+          "https://www.utspaycashback.com/?twclid=292o3qrnsgky7onjhs2eapiz8g",
+          "https://www.utspaycashback.com/en/?twclid=2a22fdkdzakde312aqu78i88sn"
         ],
         "origin_counts": {
-          "feed_buffer_reply": 7,
-          "feed_buffer": 3
+          "feed_buffer_reply": 14,
+          "feed_buffer": 7
         },
         "distinct_referring_accounts": 1,
         "sample_referring_accounts": [
-          "coderabbitai"
+          "utspay_official"
         ],
         "distinct_axes": []
       },
@@ -10876,16 +11006,16 @@
           ]
         },
         "profile": {
-          "score": 0.12,
-          "confidence": 0.55,
+          "score": 0.4,
+          "confidence": 0.65,
           "basis": [
             "meta_author:false",
-            "published_time:false",
-            "canonical:false",
+            "published_time:true",
+            "canonical:true",
             "about:false",
-            "contact:true",
+            "contact:false",
             "corrections:false",
-            "outbound_links:0",
+            "outbound_links:35",
             "opinion_marker:false"
           ]
         },
@@ -10905,33 +11035,33 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-07-18T02:41:55.015Z",
-        "homepage_url": "https://coderabbit.ai/",
-        "example_url": "https://www.coderabbit.ai/agent?utm_source=twitter&utm_medium=cpc&utm_campaign=brandawareness_slack&twclid=25ohyy1nnhx1vb6p888i79f380",
+        "fetched_at": "2026-07-18T08:42:05.403Z",
+        "homepage_url": "https://utspaycashback.com/",
+        "example_url": "https://www.utspaycashback.com/?twclid=2650deq3k4trsekhk3xdbpt9o7",
         "homepage_status": 200,
         "example_status": 200,
-        "homepage_final_url": "https://www.coderabbit.ai/",
-        "example_final_url": "https://www.coderabbit.ai/agent?utm_source=twitter&utm_medium=cpc&utm_campaign=brandawareness_slack&twclid=25ohyy1nnhx1vb6p888i79f380",
-        "homepage_content_type": "text/html; charset=utf-8",
-        "example_content_type": "text/html; charset=utf-8",
+        "homepage_final_url": "https://www.utspaycashback.com/en/",
+        "example_final_url": "https://www.utspaycashback.com/?twclid=2650deq3k4trsekhk3xdbpt9o7",
+        "homepage_content_type": "text/html; charset=UTF-8",
+        "example_content_type": "text/html; charset=UTF-8",
         "homepage": {
           "has_meta_author": false,
-          "has_published_time": false,
-          "has_canonical": false,
+          "has_published_time": true,
+          "has_canonical": true,
           "has_about_link": false,
-          "has_contact_link": true,
+          "has_contact_link": false,
           "has_corrections_link": false,
-          "outbound_links_count": 5,
+          "outbound_links_count": 35,
           "opinion_marker": false
         },
         "example": {
           "has_meta_author": false,
-          "has_published_time": false,
-          "has_canonical": false,
+          "has_published_time": true,
+          "has_canonical": true,
           "has_about_link": false,
           "has_contact_link": false,
           "has_corrections_link": false,
-          "outbound_links_count": 0,
+          "outbound_links_count": 35,
           "opinion_marker": false
         }
       }
@@ -11061,133 +11191,6 @@
           "has_contact_link": false,
           "has_corrections_link": false,
           "outbound_links_count": 1,
-          "opinion_marker": false
-        }
-      }
-    },
-    {
-      "domain": "utspaycashback.com",
-      "entity": "Utspaycashback",
-      "kind": "unknown",
-      "first_seen_at": "2026-05-21T14:10:00.000Z",
-      "last_seen_at": "2026-07-16T16:20:20.300Z",
-      "discovery": {
-        "distinct_urls": 9,
-        "example_urls": [
-          "https://www.utspaycashback.com/?twclid=2650deq3k4trsekhk3xdbpt9o7",
-          "https://www.utspaycashback.com/",
-          "https://www.utspaycashback.com/en/",
-          "https://www.utspaycashback.com/?twclid=292o3qrnsgky7onjhs2eapiz8g",
-          "https://www.utspaycashback.com/en/?twclid=2a22fdkdzakde312aqu78i88sn"
-        ],
-        "origin_counts": {
-          "feed_buffer_reply": 14,
-          "feed_buffer": 6
-        },
-        "distinct_referring_accounts": 1,
-        "sample_referring_accounts": [
-          "utspay_official"
-        ],
-        "distinct_axes": []
-      },
-      "claims": {
-        "total": 0,
-        "supported": 0,
-        "refuted": 0,
-        "contested": 0,
-        "unverified": 0,
-        "resolved_count": 0
-      },
-      "structural_features": {
-        "has_search_paths": false,
-        "has_article_paths": false,
-        "has_doi_paths": false
-      },
-      "ratings": {
-        "provenance": {
-          "score": 0.45,
-          "basis": [
-            "unknown_domain_pattern"
-          ]
-        },
-        "breadth": {
-          "score": 0.38249999999999995,
-          "basis": [
-            "distinct_urls:9",
-            "distinct_axes:0",
-            "origin_types:2"
-          ]
-        },
-        "corroboration": {
-          "score": 0.2833333333333333,
-          "basis": [
-            "referring_accounts:1",
-            "origin_types:2"
-          ]
-        },
-        "track_record": {
-          "score": null,
-          "basis": [
-            "no_resolved_claims_observed"
-          ]
-        },
-        "profile": {
-          "score": 0.4,
-          "confidence": 0.65,
-          "basis": [
-            "meta_author:false",
-            "published_time:true",
-            "canonical:true",
-            "about:false",
-            "contact:false",
-            "corrections:false",
-            "outbound_links:35",
-            "opinion_marker:false"
-          ]
-        },
-        "overall": {
-          "score": 0.419609375,
-          "confidence": 0.330825,
-          "method": "mechanical_v1",
-          "basis": [
-            "unknown_domain_pattern",
-            "distinct_urls:9",
-            "distinct_axes:0",
-            "origin_types:2",
-            "referring_accounts:1",
-            "origin_types:2",
-            "track_record_unavailable"
-          ]
-        }
-      },
-      "profile": {
-        "fetched_at": "2026-07-18T08:42:05.403Z",
-        "homepage_url": "https://utspaycashback.com/",
-        "example_url": "https://www.utspaycashback.com/?twclid=2650deq3k4trsekhk3xdbpt9o7",
-        "homepage_status": 200,
-        "example_status": 200,
-        "homepage_final_url": "https://www.utspaycashback.com/en/",
-        "example_final_url": "https://www.utspaycashback.com/?twclid=2650deq3k4trsekhk3xdbpt9o7",
-        "homepage_content_type": "text/html; charset=UTF-8",
-        "example_content_type": "text/html; charset=UTF-8",
-        "homepage": {
-          "has_meta_author": false,
-          "has_published_time": true,
-          "has_canonical": true,
-          "has_about_link": false,
-          "has_contact_link": false,
-          "has_corrections_link": false,
-          "outbound_links_count": 35,
-          "opinion_marker": false
-        },
-        "example": {
-          "has_meta_author": false,
-          "has_published_time": true,
-          "has_canonical": true,
-          "has_about_link": false,
-          "has_contact_link": false,
-          "has_corrections_link": false,
-          "outbound_links_count": 35,
           "opinion_marker": false
         }
       }
@@ -13814,7 +13817,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-07-15T09:51:21.825Z",
+        "fetched_at": "2026-07-18T10:12:05.181Z",
         "homepage_url": "https://wencrypto.com/",
         "example_url": "https://wencrypto.com/pricing?twt_id=54613980&twclid=26wi5gtwrb7b2ig70kcqcspr3n",
         "homepage_status": 200,
@@ -16980,7 +16983,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-07-15T08:51:19.303Z",
+        "fetched_at": "2026-07-18T09:42:01.202Z",
         "homepage_url": "https://serus.ai/",
         "example_url": "https://www.serus.ai/?twclid=29v4lxmzvo39j1dtelbj405bc3",
         "homepage_status": 200,
@@ -17107,19 +17110,19 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-07-15T10:21:29.652Z",
+        "fetched_at": "2026-07-18T11:12:12.112Z",
         "homepage_url": "https://bcgm1.com/",
         "example_url": "https://bcgm1.com/i-97wbvq0rqm-n/?p=%2Flogin%2Fregist&utm_medium=twitter&utm_content=X557_zfge_WC_EN_SS_20260623_T&p=%2Flogin%2Fregist&ch=twitter&pixel_id=or72z&register=tw-or72z-or738&purchase=tw-or72z-or736&twclid=2c7k3uyirbkh3ff8w9vbicvapx",
-        "homepage_status": null,
+        "homepage_status": 200,
         "example_status": null,
-        "homepage_final_url": "https://bcgm1.com/",
+        "homepage_final_url": "https://playph03.com/?traceId=XAHBIF-1784373122746",
         "example_final_url": "https://bcgm1.com/i-97wbvq0rqm-n/?p=%2Flogin%2Fregist&utm_medium=twitter&utm_content=X557_zfge_WC_EN_SS_20260623_T&p=%2Flogin%2Fregist&ch=twitter&pixel_id=or72z&register=tw-or72z-or738&purchase=tw-or72z-or736&twclid=2c7k3uyirbkh3ff8w9vbicvapx",
-        "homepage_content_type": "",
+        "homepage_content_type": "text/html; charset=utf-8",
         "example_content_type": "",
         "homepage": {
           "has_meta_author": false,
           "has_published_time": false,
-          "has_canonical": false,
+          "has_canonical": true,
           "has_about_link": false,
           "has_contact_link": false,
           "has_corrections_link": false,
@@ -17234,7 +17237,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-07-15T11:21:20.025Z",
+        "fetched_at": "2026-07-18T11:42:03.462Z",
         "homepage_url": "https://pyrenva.com/",
         "example_url": "https://www.pyrenva.com/products/havern-polo?utm_source=twitter&utm_campaign=HpoloSWC02&twclid=285udvuvfb3zz15rwylu1v9etj",
         "homepage_status": 403,
@@ -25291,7 +25294,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-07-15T10:21:30.940Z",
+        "fetched_at": "2026-07-18T11:12:14.075Z",
         "homepage_url": "https://walrus.xyz/",
         "example_url": "https://memory.walrus.xyz/?utm_source=twitter&utm_medium=paid_social&utm_campaign=walrus_memory&twclid=25m14v5tjdgue38tcgv9nyht3e",
         "homepage_status": 200,
@@ -30658,7 +30661,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-07-15T08:51:23.003Z",
+        "fetched_at": "2026-07-18T09:42:03.790Z",
         "homepage_url": "https://telega.io/",
         "example_url": "https://telega.io/package/?r=Vz7qIZLvWm_r&utm_source=dsp_banner&utm_medium=cpc&utm_campaign=X%5BALL%5BS%5BD%5BM%5BAds%5BTGads%7Cs%7Cdsp_banner%7Cm%7Ccpc%7Cc%7C103%7Cct%7C102&twclid=29ffqq0bpqjb2yxu5ppn3bdkms",
         "homepage_status": 200,
@@ -31013,7 +31016,7 @@
             "about:false",
             "contact:false",
             "corrections:false",
-            "outbound_links:18",
+            "outbound_links:22",
             "opinion_marker:false"
           ]
         },
@@ -31033,7 +31036,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-07-15T07:21:25.587Z",
+        "fetched_at": "2026-07-18T09:42:04.506Z",
         "homepage_url": "https://straitstimes.com/",
         "example_url": "https://straitstimes.com/",
         "homepage_status": 200,
@@ -31049,7 +31052,7 @@
           "has_about_link": false,
           "has_contact_link": false,
           "has_corrections_link": false,
-          "outbound_links_count": 18,
+          "outbound_links_count": 22,
           "opinion_marker": false
         },
         "example": {
@@ -31059,7 +31062,7 @@
           "has_about_link": false,
           "has_contact_link": false,
           "has_corrections_link": false,
-          "outbound_links_count": 18,
+          "outbound_links_count": 22,
           "opinion_marker": false
         }
       }
@@ -31156,7 +31159,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-07-15T08:51:23.368Z",
+        "fetched_at": "2026-07-18T09:42:04.956Z",
         "homepage_url": "https://brennancenter.org/",
         "example_url": "https://www.brennancenter.org/",
         "homepage_status": 200,
@@ -31279,7 +31282,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-07-15T08:51:28.412Z",
+        "fetched_at": "2026-07-18T11:12:15.648Z",
         "homepage_url": "https://thesandersfirmpc.com/",
         "example_url": "https://thesandersfirmpc.com/evidentiary-inversion-when-internal-investigations-manufacture-misconduct/",
         "homepage_status": 200,
@@ -31402,7 +31405,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-07-15T10:21:31.975Z",
+        "fetched_at": "2026-07-18T11:12:16.760Z",
         "homepage_url": "https://hindustantimes.com/",
         "example_url": "https://www.hindustantimes.com/cities/lucknow-news/saffron-cash-for-crores-probe-into-ram-mandir-donation-scam-widens-to-employees-150-sevadars-under-scanner-101718873733575.html",
         "homepage_status": 200,
@@ -31525,7 +31528,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-07-15T10:21:33.375Z",
+        "fetched_at": "2026-07-18T11:42:04.605Z",
         "homepage_url": "https://britannica.com/",
         "example_url": "https://www.britannica.com/event/2026-Iran-War",
         "homepage_status": 403,
@@ -31648,7 +31651,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-07-15T11:21:20.505Z",
+        "fetched_at": "2026-07-18T11:42:05.069Z",
         "homepage_url": "https://icc-cpi.int/",
         "example_url": "https://icc-cpi.int/news/icc-concludes-confirmation-charges-hearing-el-hishri-case",
         "homepage_status": 403,
@@ -31772,7 +31775,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-07-15T11:21:20.769Z",
+        "fetched_at": "2026-07-18T11:42:05.310Z",
         "homepage_url": "https://abs-cbn.com/",
         "example_url": "https://news.abs-cbn.com/news/2026/06/09/nbi-dismisses-kickback-claims-as-hearsay",
         "homepage_status": 403,
@@ -76770,6 +76773,83 @@
         "distinct_referring_accounts": 1,
         "sample_referring_accounts": [
           "alphasenseinc"
+        ],
+        "distinct_axes": []
+      },
+      "claims": {
+        "total": 0,
+        "supported": 0,
+        "refuted": 0,
+        "contested": 0,
+        "unverified": 0,
+        "resolved_count": 0
+      },
+      "structural_features": {
+        "has_search_paths": false,
+        "has_article_paths": false,
+        "has_doi_paths": false
+      },
+      "ratings": {
+        "provenance": {
+          "score": 0.45,
+          "basis": [
+            "unknown_domain_pattern"
+          ]
+        },
+        "breadth": {
+          "score": 0.08916666666666666,
+          "basis": [
+            "distinct_urls:1",
+            "distinct_axes:0",
+            "origin_types:1"
+          ]
+        },
+        "corroboration": {
+          "score": 0.19583333333333333,
+          "basis": [
+            "referring_accounts:1",
+            "origin_types:1"
+          ]
+        },
+        "track_record": {
+          "score": null,
+          "basis": [
+            "no_resolved_claims_observed"
+          ]
+        },
+        "overall": {
+          "score": 0.3472395833333333,
+          "confidence": 0.08135,
+          "method": "mechanical_v1",
+          "basis": [
+            "unknown_domain_pattern",
+            "distinct_urls:1",
+            "distinct_axes:0",
+            "origin_types:1",
+            "referring_accounts:1",
+            "origin_types:1",
+            "track_record_unavailable"
+          ]
+        }
+      }
+    },
+    {
+      "domain": "dynamicocean.net",
+      "entity": "Dynamicocean",
+      "kind": "unknown",
+      "first_seen_at": "2026-07-18T10:05:27.718Z",
+      "last_seen_at": "2026-07-18T10:05:27.718Z",
+      "discovery": {
+        "distinct_urls": 1,
+        "example_urls": [
+          "https://dynamicocean.net/?twclid=2576n00y5l1125y8xeb3lcwmz1"
+        ],
+        "origin_counts": {
+          "feed_buffer": 1
+        },
+        "distinct_referring_accounts": 1,
+        "sample_referring_accounts": [
+          "urbanmediafix"
         ],
         "distinct_axes": []
       },
