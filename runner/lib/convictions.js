@@ -69,4 +69,4 @@ function buildConvictions({ ontology, vocation, maxAxes = 8, minConf = 0.45 } = 
   return parts.join('\n').trim();
 }
 
-module.exports = { buildConvictions, convictionLine, poleAtScore };
+module.exports = { buildConvictions, convictionLine, poleAtScore, strengthWord };

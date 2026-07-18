@@ -19,10 +19,18 @@
  *     in; one that resolved WRONG is evidence for the opposite pole. Being
  *     wrong in public literally moves the beliefs that produced the call.
  *
+ * A principled stance is an EVENT-SCOPED MINI-AXIS, mirroring the ontology
+ * schema: two named poles + a research-derived position in [-1, +1]. The sign
+ * is the committed side; the magnitude is how far the verified evidence
+ * leans, and drives voice strength downstream (tentatively/clearly/strongly —
+ * same scale as axis convictions). confidence_pct stays separate: it is the
+ * calibrated probability the RESOLVABLE outcome goes his way ("justified
+ * (+0.7) but only 40% likely to succeed" is a valid, honest stance).
+ *
  * state/stances.json: { stances: [{ id, event, question, side, type,
- *   grounded_in, confidence_pct, rationale, resolves_when, taken_at,
- *   last_checked, status: "open"|"resolved"|"abandoned", outcome, was_right,
- *   resolved_at }] }
+ *   pole_a, pole_b, position, grounded_in, confidence_pct, rationale,
+ *   resolves_when, research, taken_at, last_checked,
+ *   status: "open"|"resolved"|"abandoned", outcome, was_right, resolved_at }] }
  */
 
 const fs = require('fs');
@@ -36,6 +44,7 @@ const ONTO_PATH = path.join(ROOT, 'state', 'ontology.json');
 
 const MAX_OPEN = 6;
 const MAX_OPEN_TASTE = 2;
+const MIN_POSITION = 0.15;   // leans weaker than this are declines, not stances
 
 function loadStances() {
   try { return JSON.parse(fs.readFileSync(STANCES_PATH, 'utf-8')); } catch { return { stances: [] }; }
@@ -71,11 +80,18 @@ function addStance(input) {
     return { ok: false, reason: 'taste_cap_reached' };
   }
   let grounded = [];
+  let position = null;
   if (type === 'principled') {
     const ids = new Set(ontologyAxes().map(a => a.id));
     grounded = (Array.isArray(input.grounded_in) ? input.grounded_in : [])
       .filter(g => g && ids.has(g.axis_id) && ['left', 'right'].includes(g.pole));
     if (!grounded.length) return { ok: false, reason: 'no_valid_axis_grounding' };
+    // Spectrum: position in [-1, +1] between pole_a (-) and pole_b (+). A lean
+    // under the commit floor is not a stance — decline instead of faking a side.
+    if (Number.isFinite(+input.position)) {
+      position = Math.max(-1, Math.min(1, +input.position));
+      if (Math.abs(position) < MIN_POSITION) return { ok: false, reason: 'lean_below_commit_floor' };
+    }
   }
   const stance = {
     id: 'stance_' + crypto.createHash('md5').update(key + (input.taken_at || '')).digest('hex').slice(0, 8),
@@ -83,6 +99,9 @@ function addStance(input) {
     question: String(input.question || input.event).slice(0, 200),
     side: String(input.side || '').slice(0, 160),
     type,
+    pole_a: String(input.pole_a || '').slice(0, 120),
+    pole_b: String(input.pole_b || '').slice(0, 120),
+    position,
     grounded_in: grounded,
     confidence_pct: Number.isFinite(+input.confidence_pct) ? Math.max(1, Math.min(99, +input.confidence_pct)) : 60,
     rationale: String(input.rationale || '').slice(0, 400),
@@ -148,13 +167,20 @@ function stancesPromptBlock({ max = MAX_OPEN } = {}) {
     const byId = new Map(ontologyAxes().map(a => [a.id, a.label || a.id]));
     return (id) => byId.get(id) || id;
   })();
+  const { strengthWord } = require('./convictions');
   const lines = open.map((s) => {
     if (s.type === 'taste') return `- [taste] ${s.event}: ${s.side} (persona pick — never argue this as fact)`;
     const from = s.grounded_in.map((g) => axisLabel(g.axis_id)).join(', ');
+    // Spectrum rendering: lean strength shapes the voice — a ±0.2 stance is
+    // stated tentatively, a ±0.8 stance flat-out. Odds stay separate.
+    if (Number.isFinite(+s.position) && s.pole_a && s.pole_b) {
+      const toward = s.position > 0 ? s.pole_b : s.pole_a;
+      return `- ${s.event}: I ${strengthWord(s.position)} lean toward "${toward}" (${s.position > 0 ? '+' : ''}${(+s.position).toFixed(2)} on ${s.pole_a} ↔ ${s.pole_b}); odds it resolves my way: ${s.confidence_pct}% — ${s.rationale || 'see beliefs'}${from ? ` [from: ${from}]` : ''}`;
+    }
     return `- ${s.event}: ${s.side} (${s.confidence_pct}%) — because ${s.rationale || 'see beliefs'}${from ? ` [from: ${from}]` : ''}`;
   });
   return '── COMMITTED STANCES (sides already taken — hold these lines; never contradict one in passing; changing a side requires an explicit public mind-change post) ──\n' +
     lines.join('\n') + '\n';
 }
 
-module.exports = { loadStances, saveStances, activeStances, addStance, resolveStance, stancesPromptBlock, eventKey, MAX_OPEN, MAX_OPEN_TASTE };
+module.exports = { loadStances, saveStances, activeStances, addStance, resolveStance, stancesPromptBlock, eventKey, MAX_OPEN, MAX_OPEN_TASTE, MIN_POSITION };
