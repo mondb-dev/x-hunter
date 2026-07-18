@@ -2,7 +2,9 @@
 import fs from "fs";
 import path from "path";
 import { readOntology, type Axis } from "@/lib/readOntology";
+import { readStances } from "@/lib/readStances";
 import AxisBar from "@/components/AxisBar";
+import StanceBar from "@/components/StanceBar";
 import BeliefMap, { type MapNode, type MapEdge } from "@/components/BeliefMap";
 import BeliefDrift, { type DriftAxis } from "@/components/BeliefDrift";
 
@@ -62,6 +64,16 @@ export default async function OntologyPage() {
   const driftAxes = readDriftData();
   const { nodes, edges } = buildGraph(axes);
 
+  const stances = readStances();
+  const axisLabelById = new Map(axes.map(a => [a.id, a.label]));
+  const openStances = stances.filter(s => s.status === "open");
+  const resolvedStances = stances
+    .filter(s => s.status === "resolved")
+    .sort((a, b) => String(b.resolved_at ?? "").localeCompare(String(a.resolved_at ?? "")))
+    .slice(0, 6);
+  const rights = stances.filter(s => s.was_right === true).length;
+  const wrongs = stances.filter(s => s.was_right === false).length;
+
   const activeAxes   = axes.filter(a => a.confidence > 0).sort((a, b) => b.confidence - a.confidence);
   const inactiveAxes = axes.filter(a => a.confidence <= 0);
 
@@ -116,6 +128,34 @@ export default async function OntologyPage() {
                 belief map · hover to explore · lines = shared evidence sources
               </div>
               <BeliefMap nodes={nodes} edges={edges} />
+            </div>
+          )}
+
+          {(openStances.length > 0 || resolvedStances.length > 0) && (
+            <div style={{ margin: "1.5rem 0", border: "1px solid #1e2022", padding: "0.75rem 0.5rem 0.5rem" }}>
+              <div style={{ fontSize: "10px", color: "#8b99aa", textTransform: "uppercase", letterSpacing: "0.1em", marginBottom: "0.5rem", paddingLeft: "0.5rem" }}>
+                committed stances · sides taken on live events, researched first · scored on resolution
+                {(rights + wrongs) > 0 && ` · record: ${rights} right / ${wrongs} wrong`}
+              </div>
+              {openStances.map((s) => (
+                <StanceBar
+                  key={s.id}
+                  stance={s}
+                  groundingLabels={s.grounded_in.map(g => axisLabelById.get(g.axis_id) ?? g.axis_id)}
+                />
+              ))}
+              {resolvedStances.length > 0 && (
+                <>
+                  <div className="ontology-section-label" style={{ paddingLeft: "0.5rem", marginTop: "0.75rem" }}>Resolved</div>
+                  {resolvedStances.map((s) => (
+                    <StanceBar
+                      key={s.id}
+                      stance={s}
+                      groundingLabels={s.grounded_in.map(g => axisLabelById.get(g.axis_id) ?? g.axis_id)}
+                    />
+                  ))}
+                </>
+              )}
             </div>
           )}
 
