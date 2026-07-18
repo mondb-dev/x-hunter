@@ -87,7 +87,7 @@ Each question standalone and specific (name actors, claims, mechanisms). Output 
   // Delivery format follows the plan's action type: thread-shaped plans put
   // findings out as X threads, otherwise the model picks from the finished
   // research (report page vs thread; X Article once its driver exists).
-  const FORMAT_BY_ACTION = { thread_series: 'thread', engage_campaign: 'thread', article_series: 'report' };
+  const FORMAT_BY_ACTION = { thread_series: 'thread', engage_campaign: 'thread', article_series: 'article' };
   const format = FORMAT_BY_ACTION[plan.action_type] || 'auto';
   const { researchAndDeliver } = require('./deep_research');
   const r = await researchAndDeliver(question, { source: 'plan', format });
