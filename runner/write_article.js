@@ -71,12 +71,30 @@ function pickAxis(ontology, artState, override) {
     if (hit) return hit;
     console.warn(`[article] --axis "${override}" not found, falling back to rotation`);
   }
+  const recentlyUsed = new Set(artState.recent_axes || []);
+
+  // Plan-first: while a plan is active, its belief_axes get priority — the plan's
+  // long-form synthesis tasks can only complete if articles actually land on its
+  // axes. Rotation (recent_axes) still interleaves other topics once the plan's
+  // axes have been covered recently.
+  try {
+    const plan = JSON.parse(fs.readFileSync(path.join(ROOT, "state", "active_plan.json"), "utf-8"));
+    if (plan && plan.status === "active" && Array.isArray(plan.belief_axes) && plan.belief_axes.length) {
+      const planSet = new Set(plan.belief_axes);
+      const planFresh = axes.filter(a => planSet.has(a.id) && !recentlyUsed.has(a.id || a.label))
+        .sort((a, b) => ((b.confidence || 0) * Math.abs(b.score || 0)) - ((a.confidence || 0) * Math.abs(a.score || 0)));
+      if (planFresh.length) {
+        console.log(`[article] axis from active plan "${String(plan.title).slice(0, 50)}"`);
+        return planFresh[0];
+      }
+    }
+  } catch { /* no active plan — rotation as usual */ }
+
   const candidates = axes
     .filter(a => (a.confidence || 0) > 0.3 && Math.abs(a.score || 0) > 0.1)
     .sort((a, b) => (b.confidence * Math.abs(b.score)) - (a.confidence * Math.abs(a.score)));
 
   const top5 = candidates.slice(0, 5);
-  const recentlyUsed = new Set(artState.recent_axes || []);
   const fresh = top5.filter(a => !recentlyUsed.has(a.id || a.label));
   return (fresh.length > 0 ? fresh : top5)[0] || candidates[0];
 }
