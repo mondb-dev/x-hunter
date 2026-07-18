@@ -293,6 +293,22 @@ function runSocialPipeline() {
     runScriptLog(path.join(PROJECT_ROOT, 'runner/helmstack_feedback.js'));
   }
 
+  // Stance scan — daily: resolve open stances (web-check outcomes, feed the
+  // result back into the belief ontology via ontology_delta) and form up to 2
+  // new stances on live named events from the feed digest. Detached: searches
+  // + reason() calls run 1-3 min; stance_scan.js has its own 8-min watchdog.
+  if (process.env.STANCE_SCAN_ENABLED !== '0' && dueForRun('stance_scan', 24 * HOUR)) {
+    log('beliefs: stance scan (detached)');
+    try {
+      const out = fs.openSync(config.RUNNER_LOG_PATH, 'a');
+      const child = spawn(process.execPath, [path.join(PROJECT_ROOT, 'runner/stance_scan.js')], {
+        cwd: PROJECT_ROOT, env: process.env, detached: true, stdio: ['ignore', out, out],
+      });
+      child.unref();
+      fs.closeSync(out);
+    } catch (e) { log(`stance_scan spawn failed (non-fatal): ${e.message}`); }
+  }
+
   // Plan-driven deep research — answer one of the active plan's open research
   // questions per day with a full deep-research pass, published to the website.
   // Detached: a deep pass runs 1-5 min, far beyond runScriptLog's 120s cap;

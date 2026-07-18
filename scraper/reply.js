@@ -393,9 +393,14 @@ async function geminiClassify(item, threadContext = null, memoryHints = [], user
     ? formatBriefForPrompt(intelligenceBrief)
     : loadBeliefContext();
 
+  // Committed stances: sides already taken on live events — replies must hold
+  // the line, not re-derive a position per mention.
+  let stanceBlock = "";
+  try { stanceBlock = require("../runner/lib/stances").stancesPromptBlock(); } catch { /* non-fatal */ }
+
   const prompt = `${buildPersona('reply')}
 
-${beliefBlock}${threadBlock}${memoryBlock}${accountBlock}${userBlock}${verifyBlock}
+${beliefBlock}${stanceBlock}${threadBlock}${memoryBlock}${accountBlock}${userBlock}${verifyBlock}
 The mention you are replying to:
 @${item.from_username}: "${item.text}"${item.quoted_text ? `\n[This is a quote tweet. The post they quoted (from @${item.quoted_username || "?"}): "${item.quoted_text.slice(0, 400)}"]` : ""}
 

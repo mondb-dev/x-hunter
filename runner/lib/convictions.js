@@ -59,6 +59,13 @@ function buildConvictions({ ontology, vocation, maxAxes = 8, minConf = 0.45 } = 
     parts.push(...lines);
   }
 
+  // Committed stances (lib/stances): specific sides already taken on live
+  // events — downstream writing must stay consistent with them.
+  try {
+    const block = require('./stances').stancesPromptBlock();
+    if (block) { parts.push(''); parts.push(block.trim()); }
+  } catch { /* non-fatal */ }
+
   return parts.join('\n').trim();
 }
 
