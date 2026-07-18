@@ -1,8 +1,8 @@
 {
   "schema_version": "1.0",
-  "generated_at": "2026-07-18T14:42:03.165Z",
+  "generated_at": "2026-07-18T15:42:06.762Z",
   "method": "mechanical_registry_v1",
-  "profiled_at": "2026-07-18T14:42:09.246Z",
+  "profiled_at": "2026-07-18T15:42:14.215Z",
   "sources": [
     {
       "domain": "theguardian.com",
@@ -11,7 +11,7 @@
       "first_seen_at": "2026-03-27T23:17:00Z",
       "last_seen_at": "2026-07-18T14:12:41.419Z",
       "discovery": {
-        "distinct_urls": 434,
+        "distinct_urls": 435,
         "example_urls": [
           "https://www.theguardian.com/us-news/2026/jun/23/trump-immigration-courthouse-arrest-policy",
           "https://www.theguardian.com/us-news/2026/jun/28/ice-minnesota-defending-democracy",
@@ -21,7 +21,7 @@
         ],
         "origin_counts": {
           "ontology_evidence": 36,
-          "reading_queue": 407,
+          "reading_queue": 408,
           "journals": 77,
           "articles": 1
         },
@@ -70,7 +70,7 @@
         "breadth": {
           "score": 0.94,
           "basis": [
-            "distinct_urls:434",
+            "distinct_urls:435",
             "distinct_axes:15",
             "origin_types:4"
           ]
@@ -110,7 +110,7 @@
             "newsroom_domain_pattern",
             "article_path_seen",
             "doi_or_identifier_path_seen",
-            "distinct_urls:434",
+            "distinct_urls:435",
             "distinct_axes:15",
             "origin_types:4",
             "referring_accounts:0",
@@ -538,7 +538,7 @@
       "first_seen_at": "2026-06-22T00:15:00Z",
       "last_seen_at": "2026-07-18T14:12:41.395Z",
       "discovery": {
-        "distinct_urls": 298,
+        "distinct_urls": 299,
         "example_urls": [
           "https://www.nytimes.com/2026/06/19/world/canada/frank-stronach-trial-guilty-sex-charges.html",
           "https://www.nytimes.com/2026/06/27/world/americas/mexican-officials-us-informants.html",
@@ -548,7 +548,7 @@
         ],
         "origin_counts": {
           "ontology_evidence": 11,
-          "reading_queue": 298,
+          "reading_queue": 299,
           "journals": 28
         },
         "distinct_referring_accounts": 0,
@@ -586,7 +586,7 @@
         "breadth": {
           "score": 0.8799999999999999,
           "basis": [
-            "distinct_urls:298",
+            "distinct_urls:299",
             "distinct_axes:6",
             "origin_types:3"
           ]
@@ -625,7 +625,7 @@
           "basis": [
             "newsroom_domain_pattern",
             "article_path_seen",
-            "distinct_urls:298",
+            "distinct_urls:299",
             "distinct_axes:6",
             "origin_types:3",
             "referring_accounts:0",
@@ -1436,7 +1436,7 @@
       "first_seen_at": "2026-06-26T07:05:00Z",
       "last_seen_at": "2026-07-18T12:42:45.228Z",
       "discovery": {
-        "distinct_urls": 245,
+        "distinct_urls": 246,
         "example_urls": [
           "https://www.bbc.co.uk/news/articles/cn8qxz6qypyo",
           "https://www.bbc.co.uk/news/articles/cn075j04pnyo?at_medium=RSS&amp;at_campaign=rss",
@@ -1446,7 +1446,7 @@
         ],
         "origin_counts": {
           "ontology_evidence": 5,
-          "reading_queue": 249,
+          "reading_queue": 250,
           "journals": 12
         },
         "distinct_referring_accounts": 0,
@@ -1480,7 +1480,7 @@
         "breadth": {
           "score": 0.7049999999999998,
           "basis": [
-            "distinct_urls:245",
+            "distinct_urls:246",
             "distinct_axes:3",
             "origin_types:3"
           ]
@@ -1518,7 +1518,7 @@
           "method": "mechanical_v1",
           "basis": [
             "newsroom_domain_pattern",
-            "distinct_urls:245",
+            "distinct_urls:246",
             "distinct_axes:3",
             "origin_types:3",
             "referring_accounts:0",
@@ -3616,7 +3616,7 @@
       "first_seen_at": "2016-05-05T18:57:30.000Z",
       "last_seen_at": "2026-07-18T14:08:33.000Z",
       "discovery": {
-        "distinct_urls": 8016,
+        "distinct_urls": 8017,
         "example_urls": [
           "https://t.co/pJSE124ec4",
           "https://t.co/Soz8BXPWaa",
@@ -3625,7 +3625,7 @@
           "https://t.co/cYaqYDRp08"
         ],
         "origin_counts": {
-          "feed_buffer": 5042,
+          "feed_buffer": 5043,
           "feed_buffer_reply": 4830
         },
         "distinct_referring_accounts": 2484,
@@ -3667,7 +3667,7 @@
         "breadth": {
           "score": 0.47,
           "basis": [
-            "distinct_urls:8016",
+            "distinct_urls:8017",
             "distinct_axes:0",
             "origin_types:2"
           ]
@@ -3706,7 +3706,7 @@
           "basis": [
             "unknown_domain_pattern",
             "doi_or_identifier_path_seen",
-            "distinct_urls:8016",
+            "distinct_urls:8017",
             "distinct_axes:0",
             "origin_types:2",
             "referring_accounts:2484",
@@ -32987,12 +32987,12 @@
           ]
         },
         "profile": {
-          "score": 0,
+          "score": 0.1,
           "confidence": 0.55,
           "basis": [
             "meta_author:false",
             "published_time:false",
-            "canonical:false",
+            "canonical:true",
             "about:false",
             "contact:false",
             "corrections:false",
@@ -33016,19 +33016,19 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-07-15T14:53:57.534Z",
+        "fetched_at": "2026-07-18T15:42:08.409Z",
         "homepage_url": "https://manduka.com/",
         "example_url": "https://www.manduka.com/products/manduka-pro-yoga-mat?utm_source=twitter&utm_medium=cpc&utm_campaign=xconvert&utm_content=PRO+Mat+-+Rooibos+1x1&twclid=2c1i50hvb8z81u6asprj4f4oqt",
-        "homepage_status": 429,
-        "example_status": 429,
-        "homepage_final_url": "https://manduka.com/",
+        "homepage_status": 200,
+        "example_status": 200,
+        "homepage_final_url": "https://www.manduka.com/",
         "example_final_url": "https://www.manduka.com/products/manduka-pro-yoga-mat?utm_source=twitter&utm_medium=cpc&utm_campaign=xconvert&utm_content=PRO+Mat+-+Rooibos+1x1&twclid=2c1i50hvb8z81u6asprj4f4oqt",
-        "homepage_content_type": "text/plain",
-        "example_content_type": "text/plain",
+        "homepage_content_type": "text/html; charset=utf-8",
+        "example_content_type": "text/html; charset=utf-8",
         "homepage": {
           "has_meta_author": false,
           "has_published_time": false,
-          "has_canonical": false,
+          "has_canonical": true,
           "has_about_link": false,
           "has_contact_link": false,
           "has_corrections_link": false,
@@ -33038,7 +33038,7 @@
         "example": {
           "has_meta_author": false,
           "has_published_time": false,
-          "has_canonical": false,
+          "has_canonical": true,
           "has_about_link": false,
           "has_contact_link": false,
           "has_corrections_link": false,
@@ -33141,7 +33141,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-07-15T14:53:59.994Z",
+        "fetched_at": "2026-07-18T15:42:10.768Z",
         "homepage_url": "https://tickerscores.ai/",
         "example_url": "https://tickerscores.ai/?twclid=29mi9nru582fdb9vf7t1d5r9yf",
         "homepage_status": 200,
@@ -33266,7 +33266,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-07-15T14:54:05.485Z",
+        "fetched_at": "2026-07-18T15:42:13.571Z",
         "homepage_url": "https://eclincher.com/",
         "example_url": "https://www.eclincher.com/ai-social-media-agent?twclid=22gdnmarextv0i2rs5d53x1dzn",
         "homepage_status": 200,
@@ -33391,7 +33391,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-07-15T14:54:06.373Z",
+        "fetched_at": "2026-07-18T15:42:14.215Z",
         "homepage_url": "https://tcgsherpa.com/",
         "example_url": "https://www.tcgsherpa.com/?utm_source=x&utm_medium=paid_social&utm_campaign=tcg-sherpa-launch-apr26&utm_content=What_Does_static&twclid=2c6bdjexgck8vqk1pzn57lvtb7",
         "homepage_status": 200,

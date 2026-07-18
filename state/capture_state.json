@@ -1,164 +1,144 @@
 {
-  "checked_at": "2026-07-17T15:21:24.341Z",
-  "evidence_24h": 41,
-  "unique_sources": 13,
+  "checked_at": "2026-07-18T15:48:50.099Z",
+  "evidence_24h": 35,
+  "unique_sources": 7,
   "status": "captured",
   "alerts": [
     {
       "type": "source_dominance",
       "severity": "high",
-      "detail": "@unknown accounts for 66% of today's evidence (27/41)",
+      "detail": "@unknown accounts for 80% of today's evidence (28/35)",
       "username": "unknown",
-      "share": 0.659
+      "share": 0.8
     }
   ],
-  "summary": "1 capture alert(s) detected:\n[HIGH] @unknown accounts for 66% of today's evidence (27/41)",
+  "summary": "1 capture alert(s) detected:\n[HIGH] @unknown accounts for 80% of today's evidence (28/35)",
   "source_concentration": {
     "unknown": {
       "username": "unknown",
-      "count": 27,
-      "share": 0.659
-    },
-    "atrupar": {
-      "username": "atrupar",
-      "count": 2,
-      "share": 0.049
-    },
-    "ericldaugh": {
-      "username": "ericldaugh",
-      "count": 2,
-      "share": 0.049
-    },
-    "news5ph": {
-      "username": "news5ph",
-      "count": 1,
-      "share": 0.024
-    },
-    "cbsnews": {
-      "username": "cbsnews",
-      "count": 1,
-      "share": 0.024
-    },
-    "abc": {
-      "username": "abc",
-      "count": 1,
-      "share": 0.024
+      "count": 28,
+      "share": 0.8
     },
     "philippinestar": {
       "username": "philippinestar",
+      "count": 2,
+      "share": 0.057
+    },
+    "acyn": {
+      "username": "acyn",
       "count": 1,
-      "share": 0.024
+      "share": 0.029
+    },
+    "calltoactivism": {
+      "username": "calltoactivism",
+      "count": 1,
+      "share": 0.029
+    },
+    "iampinglacson": {
+      "username": "iampinglacson",
+      "count": 1,
+      "share": 0.029
     },
     "gmanews": {
       "username": "gmanews",
       "count": 1,
-      "share": 0.024
+      "share": 0.029
     },
-    "rt_com": {
-      "username": "rt_com",
+    "jesusfalcis": {
+      "username": "jesusfalcis",
       "count": 1,
-      "share": 0.024
-    },
-    "philstarnews": {
-      "username": "philstarnews",
-      "count": 1,
-      "share": 0.024
+      "share": 0.029
     }
   },
   "axis_concentration": {
     "axis_procedural_governance_accountability_v1": {
       "axis_id": "axis_procedural_governance_accountability_v1",
       "label": "Procedural Governance vs. Genuine Accountability",
-      "count": 8,
-      "share": 0.195
-    },
-    "axis_power_accountability": {
-      "axis_id": "axis_power_accountability",
-      "label": "Power, Institutions, and Rule of Law",
-      "count": 6,
-      "share": 0.146
+      "count": 11,
+      "share": 0.314
     },
     "axis_procedural_governance_v1": {
       "axis_id": "axis_procedural_governance_v1",
       "label": "Procedural Governance vs. Substantive Action",
-      "count": 4,
-      "share": 0.098
+      "count": 3,
+      "share": 0.086
+    },
+    "axis_geopolitical_rhetoric_v1": {
+      "axis_id": "axis_geopolitical_rhetoric_v1",
+      "label": "Geopolitical Rhetoric vs. Humanitarian Concerns",
+      "count": 2,
+      "share": 0.057
+    },
+    "axis_political_moral_conduct_v1": {
+      "axis_id": "axis_political_moral_conduct_v1",
+      "label": "Political Integrity and Moral Conduct in Public Service",
+      "count": 2,
+      "share": 0.057
     },
     "axis_information_control_v1": {
       "axis_id": "axis_information_control_v1",
       "label": "Information Control",
-      "count": 4,
-      "share": 0.098
-    },
-    "axis_rapid_disinformation_v1": {
-      "axis_id": "axis_rapid_disinformation_v1",
-      "label": "Rapid Disinformation",
-      "count": 3,
-      "share": 0.073
-    },
-    "axis_media_integrity_v1": {
-      "axis_id": "axis_media_integrity_v1",
-      "label": "Integrity of Information and Social Media Manipulation",
       "count": 2,
-      "share": 0.049
+      "share": 0.057
     },
-    "axis_national_sovereignty_v_intl_law_v1": {
-      "axis_id": "axis_national_sovereignty_v_intl_law_v1",
-      "label": "National Sovereignty vs. International Law",
+    "axis_dehumanization_propaganda_v1": {
+      "axis_id": "axis_dehumanization_propaganda_v1",
+      "label": "Dehumanization as State Propaganda Strategy",
       "count": 2,
-      "share": 0.049
+      "share": 0.057
     },
-    "axis_geopolitical_control_narratives": {
-      "axis_id": "axis_geopolitical_control_narratives",
-      "label": "Geopolitical Control Narratives: Asserting Sovereignty vs. International Norms",
+    "axis_ai_automated_dehumanization_v1": {
+      "axis_id": "axis_ai_automated_dehumanization_v1",
+      "label": "AI-Automated Dehumanization in State Propaganda",
       "count": 2,
-      "share": 0.049
+      "share": 0.057
     },
     "axis_epistemic_integrity": {
       "axis_id": "axis_epistemic_integrity",
       "label": "Truth and Evidence in Public Discourse",
       "count": 1,
-      "share": 0.024
+      "share": 0.029
+    },
+    "axis_power_accountability": {
+      "axis_id": "axis_power_accountability",
+      "label": "Power, Institutions, and Rule of Law",
+      "count": 1,
+      "share": 0.029
     },
     "axis_collective_voice": {
       "axis_id": "axis_collective_voice",
       "label": "Authentic Participation vs. Managed Consent",
       "count": 1,
-      "share": 0.024
+      "share": 0.029
     }
   },
   "cluster_concentration": {
     "unknown": {
       "cluster": "unknown",
       "count": 29,
-      "share": 0.707
-    },
-    "accountability_journalism": {
-      "cluster": "accountability_journalism",
-      "count": 3,
-      "share": 0.073
+      "share": 0.829
     },
     "breaking_news": {
       "cluster": "breaking_news",
       "count": 3,
-      "share": 0.073
+      "share": 0.086
     },
     "us_politics": {
       "cluster": "us_politics",
-      "count": 3,
-      "share": 0.073
+      "count": 2,
+      "share": 0.057
     },
-    "disinformation": {
-      "cluster": "disinformation",
+    "accountability_journalism": {
+      "cluster": "accountability_journalism",
       "count": 1,
-      "share": 0.024
+      "share": 0.029
     }
   },
   "pole_balance": {
-    "left": 28,
-    "right": 13,
+    "left": 18,
+    "right": 17,
     "neutral": 0,
-    "left_share": 0.683,
-    "right_share": 0.317
+    "left_share": 0.514,
+    "right_share": 0.486
   }
 }
