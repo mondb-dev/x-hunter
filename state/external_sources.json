@@ -1,8 +1,8 @@
 {
   "schema_version": "1.0",
-  "generated_at": "2026-07-17T20:41:44.857Z",
+  "generated_at": "2026-07-17T23:41:57.045Z",
   "method": "mechanical_registry_v1",
-  "profiled_at": "2026-07-17T20:41:55.379Z",
+  "profiled_at": "2026-07-17T23:42:00.711Z",
   "sources": [
     {
       "domain": "theguardian.com",
@@ -11,7 +11,7 @@
       "first_seen_at": "2026-03-27T23:17:00Z",
       "last_seen_at": "2026-07-13T23:01:48.746Z",
       "discovery": {
-        "distinct_urls": 418,
+        "distinct_urls": 420,
         "example_urls": [
           "https://www.theguardian.com/us-news/2026/jun/23/trump-immigration-courthouse-arrest-policy",
           "https://www.theguardian.com/us-news/2026/jun/28/ice-minnesota-defending-democracy",
@@ -21,7 +21,7 @@
         ],
         "origin_counts": {
           "ontology_evidence": 32,
-          "reading_queue": 395,
+          "reading_queue": 397,
           "journals": 71,
           "articles": 1
         },
@@ -67,7 +67,7 @@
         "breadth": {
           "score": 0.94,
           "basis": [
-            "distinct_urls:418",
+            "distinct_urls:420",
             "distinct_axes:12",
             "origin_types:4"
           ]
@@ -107,7 +107,7 @@
             "newsroom_domain_pattern",
             "article_path_seen",
             "doi_or_identifier_path_seen",
-            "distinct_urls:418",
+            "distinct_urls:420",
             "distinct_axes:12",
             "origin_types:4",
             "referring_accounts:0",
@@ -529,6 +529,141 @@
       }
     },
     {
+      "domain": "nytimes.com",
+      "entity": "Nytimes",
+      "kind": "news",
+      "first_seen_at": "2026-06-22T00:15:00Z",
+      "last_seen_at": "2026-07-17T21:42:30.191Z",
+      "discovery": {
+        "distinct_urls": 291,
+        "example_urls": [
+          "https://www.nytimes.com/2026/06/19/world/canada/frank-stronach-trial-guilty-sex-charges.html",
+          "https://www.nytimes.com/2026/06/27/world/americas/mexican-officials-us-informants.html",
+          "https://www.nytimes.com/2026/06/28/world/americas/venezuela-quake-relief-rodriguez.html",
+          "https://www.nytimes.com/2026/07/17/world/europe/nadezhdin-detained-russia-politics-election-nadezhdin.html",
+          "https://www.nytimes.com/2026/07/05/world/middleeast/iran-grand-mosalla-khamenei.html"
+        ],
+        "origin_counts": {
+          "ontology_evidence": 10,
+          "reading_queue": 291,
+          "journals": 26
+        },
+        "distinct_referring_accounts": 0,
+        "sample_referring_accounts": [],
+        "distinct_axes": [
+          "axis_authoritarian_self_determination_v1",
+          "axis_geopolitical_rhetoric_v1",
+          "axis_global_power_realignments_v1",
+          "axis_human_rights_exploitation_v1",
+          "axis_national_sovereignty_v_intl_law_v1",
+          "axis_power_accountability"
+        ]
+      },
+      "claims": {
+        "total": 0,
+        "supported": 0,
+        "refuted": 0,
+        "contested": 0,
+        "unverified": 0,
+        "resolved_count": 0
+      },
+      "structural_features": {
+        "has_search_paths": false,
+        "has_article_paths": true,
+        "has_doi_paths": false
+      },
+      "ratings": {
+        "provenance": {
+          "score": 0.75,
+          "basis": [
+            "newsroom_domain_pattern",
+            "article_path_seen"
+          ]
+        },
+        "breadth": {
+          "score": 0.8799999999999999,
+          "basis": [
+            "distinct_urls:291",
+            "distinct_axes:6",
+            "origin_types:3"
+          ]
+        },
+        "corroboration": {
+          "score": 0.26249999999999996,
+          "basis": [
+            "referring_accounts:0",
+            "origin_types:3"
+          ]
+        },
+        "track_record": {
+          "score": null,
+          "basis": [
+            "no_resolved_claims_observed"
+          ]
+        },
+        "profile": {
+          "score": 0,
+          "confidence": 0.55,
+          "basis": [
+            "meta_author:false",
+            "published_time:false",
+            "canonical:false",
+            "about:false",
+            "contact:false",
+            "corrections:false",
+            "outbound_links:0",
+            "opinion_marker:false"
+          ]
+        },
+        "overall": {
+          "score": 0.7327343749999999,
+          "confidence": 0.6584249999999999,
+          "method": "mechanical_v1",
+          "basis": [
+            "newsroom_domain_pattern",
+            "article_path_seen",
+            "distinct_urls:291",
+            "distinct_axes:6",
+            "origin_types:3",
+            "referring_accounts:0",
+            "origin_types:3",
+            "track_record_unavailable"
+          ]
+        }
+      },
+      "profile": {
+        "fetched_at": "2026-07-15T18:53:59.648Z",
+        "homepage_url": "https://nytimes.com/",
+        "example_url": "https://www.nytimes.com/2026/06/19/world/canada/frank-stronach-trial-guilty-sex-charges.html",
+        "homepage_status": 200,
+        "example_status": 403,
+        "homepage_final_url": "https://www.nytimes.com/",
+        "example_final_url": "https://www.nytimes.com/2026/06/19/world/canada/frank-stronach-trial-guilty-sex-charges.html",
+        "homepage_content_type": "text/html; charset=utf-8",
+        "example_content_type": "text/html;charset=utf-8",
+        "homepage": {
+          "has_meta_author": false,
+          "has_published_time": true,
+          "has_canonical": true,
+          "has_about_link": false,
+          "has_contact_link": false,
+          "has_corrections_link": false,
+          "outbound_links_count": 0,
+          "opinion_marker": true
+        },
+        "example": {
+          "has_meta_author": false,
+          "has_published_time": false,
+          "has_canonical": false,
+          "has_about_link": false,
+          "has_contact_link": false,
+          "has_corrections_link": false,
+          "outbound_links_count": 0,
+          "opinion_marker": false
+        }
+      }
+    },
+    {
       "domain": "aljazeera.com",
       "entity": "Aljazeera",
       "kind": "news",
@@ -674,140 +809,6 @@
           "has_corrections_link": false,
           "outbound_links_count": 26,
           "opinion_marker": true
-        }
-      }
-    },
-    {
-      "domain": "nytimes.com",
-      "entity": "Nytimes",
-      "kind": "news",
-      "first_seen_at": "2026-06-22T00:15:00Z",
-      "last_seen_at": "2026-07-17T20:12:30.787Z",
-      "discovery": {
-        "distinct_urls": 288,
-        "example_urls": [
-          "https://www.nytimes.com/2026/06/19/world/canada/frank-stronach-trial-guilty-sex-charges.html",
-          "https://www.nytimes.com/2026/06/27/world/americas/mexican-officials-us-informants.html",
-          "https://www.nytimes.com/2026/06/28/world/americas/venezuela-quake-relief-rodriguez.html",
-          "https://www.nytimes.com/2026/07/17/world/europe/nadezhdin-detained-russia-politics-election-nadezhdin.html",
-          "https://www.nytimes.com/2026/07/05/world/middleeast/iran-grand-mosalla-khamenei.html"
-        ],
-        "origin_counts": {
-          "ontology_evidence": 9,
-          "reading_queue": 290,
-          "journals": 24
-        },
-        "distinct_referring_accounts": 0,
-        "sample_referring_accounts": [],
-        "distinct_axes": [
-          "axis_authoritarian_self_determination_v1",
-          "axis_geopolitical_rhetoric_v1",
-          "axis_global_power_realignments_v1",
-          "axis_human_rights_exploitation_v1",
-          "axis_power_accountability"
-        ]
-      },
-      "claims": {
-        "total": 0,
-        "supported": 0,
-        "refuted": 0,
-        "contested": 0,
-        "unverified": 0,
-        "resolved_count": 0
-      },
-      "structural_features": {
-        "has_search_paths": false,
-        "has_article_paths": true,
-        "has_doi_paths": false
-      },
-      "ratings": {
-        "provenance": {
-          "score": 0.75,
-          "basis": [
-            "newsroom_domain_pattern",
-            "article_path_seen"
-          ]
-        },
-        "breadth": {
-          "score": 0.8216666666666665,
-          "basis": [
-            "distinct_urls:288",
-            "distinct_axes:5",
-            "origin_types:3"
-          ]
-        },
-        "corroboration": {
-          "score": 0.26249999999999996,
-          "basis": [
-            "referring_accounts:0",
-            "origin_types:3"
-          ]
-        },
-        "track_record": {
-          "score": null,
-          "basis": [
-            "no_resolved_claims_observed"
-          ]
-        },
-        "profile": {
-          "score": 0,
-          "confidence": 0.55,
-          "basis": [
-            "meta_author:false",
-            "published_time:false",
-            "canonical:false",
-            "about:false",
-            "contact:false",
-            "corrections:false",
-            "outbound_links:0",
-            "opinion_marker:false"
-          ]
-        },
-        "overall": {
-          "score": 0.7199739583333333,
-          "confidence": 0.6461749999999999,
-          "method": "mechanical_v1",
-          "basis": [
-            "newsroom_domain_pattern",
-            "article_path_seen",
-            "distinct_urls:288",
-            "distinct_axes:5",
-            "origin_types:3",
-            "referring_accounts:0",
-            "origin_types:3",
-            "track_record_unavailable"
-          ]
-        }
-      },
-      "profile": {
-        "fetched_at": "2026-07-15T18:53:59.648Z",
-        "homepage_url": "https://nytimes.com/",
-        "example_url": "https://www.nytimes.com/2026/06/19/world/canada/frank-stronach-trial-guilty-sex-charges.html",
-        "homepage_status": 200,
-        "example_status": 403,
-        "homepage_final_url": "https://www.nytimes.com/",
-        "example_final_url": "https://www.nytimes.com/2026/06/19/world/canada/frank-stronach-trial-guilty-sex-charges.html",
-        "homepage_content_type": "text/html; charset=utf-8",
-        "example_content_type": "text/html;charset=utf-8",
-        "homepage": {
-          "has_meta_author": false,
-          "has_published_time": true,
-          "has_canonical": true,
-          "has_about_link": false,
-          "has_contact_link": false,
-          "has_corrections_link": false,
-          "outbound_links_count": 0,
-          "opinion_marker": true
-        },
-        "example": {
-          "has_meta_author": false,
-          "has_published_time": false,
-          "has_canonical": false,
-          "has_about_link": false,
-          "has_contact_link": false,
-          "has_corrections_link": false,
-          "outbound_links_count": 0,
-          "opinion_marker": false
         }
       }
     },
@@ -1431,7 +1432,7 @@
       "first_seen_at": "2026-06-26T07:05:00Z",
       "last_seen_at": "2026-07-11T20:57:02.247Z",
       "discovery": {
-        "distinct_urls": 235,
+        "distinct_urls": 237,
         "example_urls": [
           "https://www.bbc.co.uk/news/articles/cn8qxz6qypyo",
           "https://www.bbc.co.uk/news/articles/cn075j04pnyo?at_medium=RSS&amp;at_campaign=rss",
@@ -1441,7 +1442,7 @@
         ],
         "origin_counts": {
           "ontology_evidence": 4,
-          "reading_queue": 240,
+          "reading_queue": 242,
           "journals": 11
         },
         "distinct_referring_accounts": 0,
@@ -1475,7 +1476,7 @@
         "breadth": {
           "score": 0.7049999999999998,
           "basis": [
-            "distinct_urls:235",
+            "distinct_urls:237",
             "distinct_axes:3",
             "origin_types:3"
           ]
@@ -1513,7 +1514,7 @@
           "method": "mechanical_v1",
           "basis": [
             "newsroom_domain_pattern",
-            "distinct_urls:235",
+            "distinct_urls:237",
             "distinct_axes:3",
             "origin_types:3",
             "referring_accounts:0",
@@ -2906,9 +2907,9 @@
       "entity": "Inquirer",
       "kind": "unknown",
       "first_seen_at": "2026-05-09T10:15:15.053Z",
-      "last_seen_at": "2026-07-17T18:42:19.810Z",
+      "last_seen_at": "2026-07-17T23:12:36.545Z",
       "discovery": {
-        "distinct_urls": 155,
+        "distinct_urls": 159,
         "example_urls": [
           "https://www.inquirer.net/capiz-broadcaster-shooting-probe-widens-as-cops-form-task-force",
           "https://newsinfo.inquirer.net/2251519/chr-carries-out-motu-proprio-probe-into-tacloban-cavite-school-incidents",
@@ -2917,8 +2918,8 @@
           "https://newsinfo.inquirer.net/2252742/fwd-defense-lawyer-poa-says-being-listed-as-the-prosecs-witness-not-a-problem"
         ],
         "origin_counts": {
-          "ontology_evidence": 73,
-          "journals": 228,
+          "ontology_evidence": 75,
+          "journals": 232,
           "articles": 1
         },
         "distinct_referring_accounts": 0,
@@ -2963,7 +2964,7 @@
         "breadth": {
           "score": 0.8799999999999999,
           "basis": [
-            "distinct_urls:155",
+            "distinct_urls:159",
             "distinct_axes:14",
             "origin_types:3"
           ]
@@ -3001,7 +3002,7 @@
           "method": "mechanical_v1",
           "basis": [
             "unknown_domain_pattern",
-            "distinct_urls:155",
+            "distinct_urls:159",
             "distinct_axes:14",
             "origin_types:3",
             "referring_accounts:0",
@@ -3606,9 +3607,9 @@
       "entity": "T Co",
       "kind": "unknown",
       "first_seen_at": "2016-05-05T18:57:30.000Z",
-      "last_seen_at": "2026-07-17T19:55:15.682Z",
+      "last_seen_at": "2026-07-17T21:24:08.000Z",
       "discovery": {
-        "distinct_urls": 7976,
+        "distinct_urls": 7979,
         "example_urls": [
           "https://t.co/pJSE124ec4",
           "https://t.co/Soz8BXPWaa",
@@ -3617,7 +3618,7 @@
           "https://t.co/cYaqYDRp08"
         ],
         "origin_counts": {
-          "feed_buffer": 4996,
+          "feed_buffer": 4999,
           "feed_buffer_reply": 4830
         },
         "distinct_referring_accounts": 2483,
@@ -3659,7 +3660,7 @@
         "breadth": {
           "score": 0.47,
           "basis": [
-            "distinct_urls:7976",
+            "distinct_urls:7979",
             "distinct_axes:0",
             "origin_types:2"
           ]
@@ -3698,7 +3699,7 @@
           "basis": [
             "unknown_domain_pattern",
             "doi_or_identifier_path_seen",
-            "distinct_urls:7976",
+            "distinct_urls:7979",
             "distinct_axes:0",
             "origin_types:2",
             "referring_accounts:2483",
@@ -8384,6 +8385,133 @@
       }
     },
     {
+      "domain": "aramco.com",
+      "entity": "Aramco",
+      "kind": "unknown",
+      "first_seen_at": "2026-05-22T17:43:51.000Z",
+      "last_seen_at": "2026-07-17T21:55:15.190Z",
+      "discovery": {
+        "distinct_urls": 16,
+        "example_urls": [
+          "https://www.aramco.com/en/what-we-do/energy-innovation/innovation-ecosystem/aramco-fifa-partnership?utm_source=x&utm_medium=cpm&utm_term=en_vid_cpm_inf-ftbl_na_football-fans&utm_content=en_4x5_vid_6s_global_fifa-whatif_na_m3&twclid=2f1bxdfhmr1if32n1ssvcc3xtc",
+          "https://www.aramco.com/en/what-we-do/energy-innovation/innovation-ecosystem/aramco-fifa-partnership?utm_source=x&utm_medium=cpm&utm_term=en_vid_cpm_inf-ftbl_na_market-influencers&utm_content=en_16x9_vid_30s_global_fifa-rlntlss_na_m1&twclid=2b6bkiqxqvmhv9tycqp5ma5uj",
+          "https://www.aramco.com/en/what-we-do/energy-innovation/innovation-ecosystem/aramco-fifa-partnership?utm_source=x&utm_medium=cpm&utm_term=en_vid_cpm_inf-ftbl_na_market-influencers&utm_content=en_16x9_vid_30s_global_fifa-rlntlss_na_m1&twclid=2ey59zdh375v9eo466ckr6r8f4",
+          "https://www.aramco.com/en/what-we-do/energy-innovation/innovation-ecosystem/aramco-fifa-partnership?utm_source=x&utm_medium=cpm&utm_term=en_img_cpm_inf-ftbl_na_football-fans&utm_content=en_1x1_img_na_global_fifa_na_m4&twclid=24043e2z8f9ms0xtx92fzmf1rl",
+          "https://www.aramco.com/en/what-we-do/energy-innovation/innovation-ecosystem/aramco-fifa-partnership?utm_source=x&utm_medium=cpm&utm_term=en_img_cpm_inf-ftbl_na_football-fans&utm_content=en_1x1_img_na_global_fifa_na_m1&twclid=26uzq5n1tixa0c7cip836uuk2q"
+        ],
+        "origin_counts": {
+          "feed_buffer_reply": 6,
+          "feed_buffer": 10
+        },
+        "distinct_referring_accounts": 1,
+        "sample_referring_accounts": [
+          "aramco"
+        ],
+        "distinct_axes": []
+      },
+      "claims": {
+        "total": 0,
+        "supported": 0,
+        "refuted": 0,
+        "contested": 0,
+        "unverified": 0,
+        "resolved_count": 0
+      },
+      "structural_features": {
+        "has_search_paths": false,
+        "has_article_paths": false,
+        "has_doi_paths": false
+      },
+      "ratings": {
+        "provenance": {
+          "score": 0.45,
+          "basis": [
+            "unknown_domain_pattern"
+          ]
+        },
+        "breadth": {
+          "score": 0.47,
+          "basis": [
+            "distinct_urls:16",
+            "distinct_axes:0",
+            "origin_types:2"
+          ]
+        },
+        "corroboration": {
+          "score": 0.2833333333333333,
+          "basis": [
+            "referring_accounts:1",
+            "origin_types:2"
+          ]
+        },
+        "track_record": {
+          "score": null,
+          "basis": [
+            "no_resolved_claims_observed"
+          ]
+        },
+        "profile": {
+          "score": 0.22,
+          "confidence": 0.55,
+          "basis": [
+            "meta_author:false",
+            "published_time:false",
+            "canonical:true",
+            "about:false",
+            "contact:false",
+            "corrections:false",
+            "outbound_links:15",
+            "opinion_marker:false"
+          ]
+        },
+        "overall": {
+          "score": 0.43875,
+          "confidence": 0.5066999999999999,
+          "method": "mechanical_v1",
+          "basis": [
+            "unknown_domain_pattern",
+            "distinct_urls:16",
+            "distinct_axes:0",
+            "origin_types:2",
+            "referring_accounts:1",
+            "origin_types:2",
+            "track_record_unavailable"
+          ]
+        }
+      },
+      "profile": {
+        "fetched_at": "2026-07-17T02:41:27.528Z",
+        "homepage_url": "https://aramco.com/",
+        "example_url": "https://www.aramco.com/en/what-we-do/energy-innovation/innovation-ecosystem/aramco-fifa-partnership?utm_source=x&utm_medium=cpm&utm_term=en_vid_cpm_inf-ftbl_na_football-fans&utm_content=en_4x5_vid_6s_global_fifa-whatif_na_m3&twclid=2f1bxdfhmr1if32n1ssvcc3xtc",
+        "homepage_status": 200,
+        "example_status": 200,
+        "homepage_final_url": "https://www.aramco.com/",
+        "example_final_url": "https://www.aramco.com/en/what-we-do/energy-innovation/innovation-ecosystem/aramco-fifa-partnership?utm_source=x&utm_medium=cpm&utm_term=en_vid_cpm_inf-ftbl_na_football-fans&utm_content=en_4x5_vid_6s_global_fifa-whatif_na_m3&twclid=2f1bxdfhmr1if32n1ssvcc3xtc",
+        "homepage_content_type": "text/html; charset=utf-8",
+        "example_content_type": "text/html; charset=utf-8",
+        "homepage": {
+          "has_meta_author": false,
+          "has_published_time": false,
+          "has_canonical": true,
+          "has_about_link": false,
+          "has_contact_link": false,
+          "has_corrections_link": false,
+          "outbound_links_count": 1,
+          "opinion_marker": false
+        },
+        "example": {
+          "has_meta_author": false,
+          "has_published_time": false,
+          "has_canonical": true,
+          "has_about_link": false,
+          "has_contact_link": false,
+          "has_corrections_link": false,
+          "outbound_links_count": 15,
+          "opinion_marker": false
+        }
+      }
+    },
+    {
       "domain": "mottandbow.com",
       "entity": "Mottandbow",
       "kind": "unknown",
@@ -8633,133 +8761,6 @@
           "has_contact_link": false,
           "has_corrections_link": false,
           "outbound_links_count": 0,
-          "opinion_marker": false
-        }
-      }
-    },
-    {
-      "domain": "aramco.com",
-      "entity": "Aramco",
-      "kind": "unknown",
-      "first_seen_at": "2026-05-22T17:43:51.000Z",
-      "last_seen_at": "2026-07-17T18:35:13.208Z",
-      "discovery": {
-        "distinct_urls": 15,
-        "example_urls": [
-          "https://www.aramco.com/en/what-we-do/energy-innovation/innovation-ecosystem/aramco-fifa-partnership?utm_source=x&utm_medium=cpm&utm_term=en_vid_cpm_inf-ftbl_na_football-fans&utm_content=en_4x5_vid_6s_global_fifa-whatif_na_m3&twclid=2f1bxdfhmr1if32n1ssvcc3xtc",
-          "https://www.aramco.com/en/what-we-do/energy-innovation/innovation-ecosystem/aramco-fifa-partnership?utm_source=x&utm_medium=cpm&utm_term=en_vid_cpm_inf-ftbl_na_market-influencers&utm_content=en_16x9_vid_30s_global_fifa-rlntlss_na_m1&twclid=2b6bkiqxqvmhv9tycqp5ma5uj",
-          "https://www.aramco.com/en/what-we-do/energy-innovation/innovation-ecosystem/aramco-fifa-partnership?utm_source=x&utm_medium=cpm&utm_term=en_vid_cpm_inf-ftbl_na_market-influencers&utm_content=en_16x9_vid_30s_global_fifa-rlntlss_na_m1&twclid=2ey59zdh375v9eo466ckr6r8f4",
-          "https://www.aramco.com/en/what-we-do/energy-innovation/innovation-ecosystem/aramco-fifa-partnership?utm_source=x&utm_medium=cpm&utm_term=en_img_cpm_inf-ftbl_na_football-fans&utm_content=en_1x1_img_na_global_fifa_na_m4&twclid=24043e2z8f9ms0xtx92fzmf1rl",
-          "https://www.aramco.com/en/what-we-do/energy-innovation/innovation-ecosystem/aramco-fifa-partnership?utm_source=x&utm_medium=cpm&utm_term=en_img_cpm_inf-ftbl_na_football-fans&utm_content=en_1x1_img_na_global_fifa_na_m1&twclid=26uzq5n1tixa0c7cip836uuk2q"
-        ],
-        "origin_counts": {
-          "feed_buffer_reply": 6,
-          "feed_buffer": 9
-        },
-        "distinct_referring_accounts": 1,
-        "sample_referring_accounts": [
-          "aramco"
-        ],
-        "distinct_axes": []
-      },
-      "claims": {
-        "total": 0,
-        "supported": 0,
-        "refuted": 0,
-        "contested": 0,
-        "unverified": 0,
-        "resolved_count": 0
-      },
-      "structural_features": {
-        "has_search_paths": false,
-        "has_article_paths": false,
-        "has_doi_paths": false
-      },
-      "ratings": {
-        "provenance": {
-          "score": 0.45,
-          "basis": [
-            "unknown_domain_pattern"
-          ]
-        },
-        "breadth": {
-          "score": 0.47,
-          "basis": [
-            "distinct_urls:15",
-            "distinct_axes:0",
-            "origin_types:2"
-          ]
-        },
-        "corroboration": {
-          "score": 0.2833333333333333,
-          "basis": [
-            "referring_accounts:1",
-            "origin_types:2"
-          ]
-        },
-        "track_record": {
-          "score": null,
-          "basis": [
-            "no_resolved_claims_observed"
-          ]
-        },
-        "profile": {
-          "score": 0.22,
-          "confidence": 0.55,
-          "basis": [
-            "meta_author:false",
-            "published_time:false",
-            "canonical:true",
-            "about:false",
-            "contact:false",
-            "corrections:false",
-            "outbound_links:15",
-            "opinion_marker:false"
-          ]
-        },
-        "overall": {
-          "score": 0.43875,
-          "confidence": 0.4842,
-          "method": "mechanical_v1",
-          "basis": [
-            "unknown_domain_pattern",
-            "distinct_urls:15",
-            "distinct_axes:0",
-            "origin_types:2",
-            "referring_accounts:1",
-            "origin_types:2",
-            "track_record_unavailable"
-          ]
-        }
-      },
-      "profile": {
-        "fetched_at": "2026-07-17T02:41:27.528Z",
-        "homepage_url": "https://aramco.com/",
-        "example_url": "https://www.aramco.com/en/what-we-do/energy-innovation/innovation-ecosystem/aramco-fifa-partnership?utm_source=x&utm_medium=cpm&utm_term=en_vid_cpm_inf-ftbl_na_football-fans&utm_content=en_4x5_vid_6s_global_fifa-whatif_na_m3&twclid=2f1bxdfhmr1if32n1ssvcc3xtc",
-        "homepage_status": 200,
-        "example_status": 200,
-        "homepage_final_url": "https://www.aramco.com/",
-        "example_final_url": "https://www.aramco.com/en/what-we-do/energy-innovation/innovation-ecosystem/aramco-fifa-partnership?utm_source=x&utm_medium=cpm&utm_term=en_vid_cpm_inf-ftbl_na_football-fans&utm_content=en_4x5_vid_6s_global_fifa-whatif_na_m3&twclid=2f1bxdfhmr1if32n1ssvcc3xtc",
-        "homepage_content_type": "text/html; charset=utf-8",
-        "example_content_type": "text/html; charset=utf-8",
-        "homepage": {
-          "has_meta_author": false,
-          "has_published_time": false,
-          "has_canonical": true,
-          "has_about_link": false,
-          "has_contact_link": false,
-          "has_corrections_link": false,
-          "outbound_links_count": 1,
-          "opinion_marker": false
-        },
-        "example": {
-          "has_meta_author": false,
-          "has_published_time": false,
-          "has_canonical": true,
-          "has_about_link": false,
-          "has_contact_link": false,
-          "has_corrections_link": false,
-          "outbound_links_count": 15,
           "opinion_marker": false
         }
       }
@@ -15326,7 +15327,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-07-14T21:51:09.503Z",
+        "fetched_at": "2026-07-17T22:11:49.034Z",
         "homepage_url": "https://betterstack.com/",
         "example_url": "https://betterstack.com/incident-management?twclid=23e9xf4wt9fpugvwab34523yyy",
         "homepage_status": 200,
@@ -24026,7 +24027,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-07-14T20:51:08.897Z",
+        "fetched_at": "2026-07-17T21:41:49.291Z",
         "homepage_url": "https://loxia.ai/",
         "example_url": "https://onbuzz.loxia.ai/?utm_term=intent_hunter_ph&twclid=22dvq9qdielp92zv7ti0ehdgsa",
         "homepage_status": 200,
@@ -24152,7 +24153,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-07-14T20:51:09.637Z",
+        "fetched_at": "2026-07-17T21:41:49.810Z",
         "homepage_url": "https://openinfer.io/",
         "example_url": "https://openinfer.io/news/2026-06-02-nvidia-dynamo-proved-inference-needs-a-control-plane/?twclid=27dzvvpluhv8xln5kqrwwhmmra",
         "homepage_status": 200,
@@ -24278,13 +24279,13 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-07-14T20:51:12.716Z",
+        "fetched_at": "2026-07-17T21:41:55.322Z",
         "homepage_url": "https://zite.com/",
         "example_url": "https://try.zite.com/ad-integrations-1?twclid=22vk5745ty6qkvlrboi0g1qhow",
         "homepage_status": 200,
         "example_status": 200,
         "homepage_final_url": "https://www.zite.com/",
-        "example_final_url": "https://www.zite.com/?utm_source=twitter&utm_medium=cpc&utm_campaign=xcred&utm_term=integrations&dub_id=u5Bqh2fKLATbfBnC&twclid=22vk5745ty6qkvlrboi0g1qhow",
+        "example_final_url": "https://www.zite.com/?utm_source=twitter&utm_medium=cpc&utm_campaign=xcred&utm_term=integrations&dub_id=uRgQlTLzlFLOeb0o&twclid=22vk5745ty6qkvlrboi0g1qhow",
         "homepage_content_type": "text/html; charset=utf-8",
         "example_content_type": "text/html; charset=utf-8",
         "homepage": {
@@ -24404,7 +24405,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-07-14T20:51:13.812Z",
+        "fetched_at": "2026-07-17T21:41:56.737Z",
         "homepage_url": "https://grayzonewarfare.com/",
         "example_url": "https://www.grayzonewarfare.com/?twclid=230bsti1ugak1ht0ipkmwplfde",
         "homepage_status": 200,
@@ -24530,7 +24531,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-07-14T21:51:11.760Z",
+        "fetched_at": "2026-07-17T22:11:50.950Z",
         "homepage_url": "https://bron.org/",
         "example_url": "https://go.bron.org/analytics?twclid=21xfmrfi5gvde5oc65teiw0ea1",
         "homepage_status": 200,
@@ -24656,7 +24657,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-07-14T21:51:12.986Z",
+        "fetched_at": "2026-07-17T22:11:51.935Z",
         "homepage_url": "https://getpolyscope.com/",
         "example_url": "https://getpolyscope.com/?twclid=23d1n8q57spajkavshlbwt8gzs",
         "homepage_status": 200,
@@ -24782,7 +24783,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-07-14T21:51:13.271Z",
+        "fetched_at": "2026-07-17T22:11:52.416Z",
         "homepage_url": "https://simple.life/",
         "example_url": "https://simple.life/survey/tai-chi-walking?utm_source=twitter&utm_medium=cpc&utm_campaign=MB%3AOS_Web_All_Main_Purchase_Auto_US_w%2Fo_30.04.26_TaiChiWalkingGS_NewAds_9x16_Broad_25_CPM&twclid=29t6xjk72sn6e9tdvqx781kng4",
         "homepage_status": 200,
@@ -24879,14 +24880,14 @@
           ]
         },
         "profile": {
-          "score": 0.12,
+          "score": 0,
           "confidence": 0.55,
           "basis": [
             "meta_author:false",
             "published_time:false",
             "canonical:false",
             "about:false",
-            "contact:true",
+            "contact:false",
             "corrections:false",
             "outbound_links:0",
             "opinion_marker:false"
@@ -24908,23 +24909,23 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-07-14T22:21:10.929Z",
+        "fetched_at": "2026-07-17T23:11:49.354Z",
         "homepage_url": "https://seotrends.pro/",
         "example_url": "https://www.seotrends.pro/register?ref=promo&twclid=2boi27d8dao8t8jau1ht2f5vjk",
-        "homepage_status": 200,
-        "example_status": 200,
+        "homepage_status": null,
+        "example_status": null,
         "homepage_final_url": "https://seotrends.pro/",
-        "example_final_url": "https://seotrends.pro/register?ref=promo&twclid=2boi27d8dao8t8jau1ht2f5vjk",
-        "homepage_content_type": "text/html; charset=UTF-8",
-        "example_content_type": "text/html; charset=UTF-8",
+        "example_final_url": "https://www.seotrends.pro/register?ref=promo&twclid=2boi27d8dao8t8jau1ht2f5vjk",
+        "homepage_content_type": "",
+        "example_content_type": "",
         "homepage": {
           "has_meta_author": false,
           "has_published_time": false,
-          "has_canonical": true,
+          "has_canonical": false,
           "has_about_link": false,
-          "has_contact_link": true,
+          "has_contact_link": false,
           "has_corrections_link": false,
-          "outbound_links_count": 7,
+          "outbound_links_count": 0,
           "opinion_marker": false
         },
         "example": {
@@ -25034,15 +25035,15 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-07-14T22:21:11.633Z",
+        "fetched_at": "2026-07-17T23:11:49.794Z",
         "homepage_url": "https://alppouch.com/",
         "example_url": "https://alppouch.com/products/drifters-lemon-raspberry-nicotine-pouches?variant=45695862079684&utm_source=twitter&twclid=2f0tn2lk34ykymzkyz3xx7lfzj&tw_adsetid=55002677&tw_campaign=41318448&utm_content=dpa-carousel-drifters&utm_campaign=cs-dpa-carousel-sales-alp-pouch&utm_medium=paid_social&tw_source=twitter&utm_term=55002677",
-        "homepage_status": 429,
-        "example_status": 429,
+        "homepage_status": 503,
+        "example_status": 503,
         "homepage_final_url": "https://alppouch.com/",
         "example_final_url": "https://alppouch.com/products/drifters-lemon-raspberry-nicotine-pouches?variant=45695862079684&utm_source=twitter&twclid=2f0tn2lk34ykymzkyz3xx7lfzj&tw_adsetid=55002677&tw_campaign=41318448&utm_content=dpa-carousel-drifters&utm_campaign=cs-dpa-carousel-sales-alp-pouch&utm_medium=paid_social&tw_source=twitter&utm_term=55002677",
-        "homepage_content_type": "text/plain",
-        "example_content_type": "text/plain",
+        "homepage_content_type": "text/html",
+        "example_content_type": "text/html",
         "homepage": {
           "has_meta_author": false,
           "has_published_time": false,
@@ -25160,7 +25161,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-07-14T22:21:15.101Z",
+        "fetched_at": "2026-07-17T23:11:52.386Z",
         "homepage_url": "https://happyseeds.ai/",
         "example_url": "https://link.happyseeds.ai/hs2?twclid=23gsc44gehebnjbbfpce6085rj",
         "homepage_status": 200,
@@ -25410,7 +25411,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-07-14T22:21:16.670Z",
+        "fetched_at": "2026-07-17T23:11:53.796Z",
         "homepage_url": "https://understandingwar.org/",
         "example_url": "https://understandingwar.org/research/middle-east/the-war-in-iran-operational-progress-but-challenges-remain/",
         "homepage_status": 200,
@@ -25534,7 +25535,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-07-14T23:21:10.021Z",
+        "fetched_at": "2026-07-17T23:41:57.835Z",
         "homepage_url": "https://cloud.com/",
         "example_url": "https://vertexaisearch.cloud.com/grounding-api-redirect/AUZIYQFSWSYvOQGbg3SZ62H68s6EQ7K3SDaKjwIQHlaz9zHuvl54a0-NcWGetby_oXYGwNVVSnfjs-uuruUzZPui0CEG8-9ULvvo7uCENkdZg9q0GiDJPzMnCYR6Z1F1psILyn3cXFL6vUvygZFuGIJqVzsBU61E8mSZscgGMWoo_FZksTftzSdDpmr-Ia3xisZ-MFC2_Jqtsp-ocMfRH_jDNgyC8DoVCkyQgifZKurYqlbZNG0g_yJWE7md4E3GQ==",
         "homepage_status": 200,
@@ -25658,7 +25659,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-07-14T23:21:10.989Z",
+        "fetched_at": "2026-07-17T23:41:58.225Z",
         "homepage_url": "https://foreigninterference.org/",
         "example_url": "https://foreigninterference.org/p/cia-disinformation-operations-compromise",
         "homepage_status": 200,
@@ -25762,7 +25763,7 @@
             "about:true",
             "contact:false",
             "corrections:false",
-            "outbound_links:268",
+            "outbound_links:258",
             "opinion_marker:false"
           ]
         },
@@ -25782,7 +25783,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-07-14T23:21:12.167Z",
+        "fetched_at": "2026-07-17T23:41:59.587Z",
         "homepage_url": "https://cfr.org/",
         "example_url": "https://www.cfr.org/global-conflict-tracker/conflict/confrontation-between-united-states-and-iran",
         "homepage_status": 200,
@@ -25798,7 +25799,7 @@
           "has_about_link": true,
           "has_contact_link": false,
           "has_corrections_link": false,
-          "outbound_links_count": 14,
+          "outbound_links_count": 13,
           "opinion_marker": false
         },
         "example": {
@@ -25808,7 +25809,7 @@
           "has_about_link": true,
           "has_contact_link": true,
           "has_corrections_link": false,
-          "outbound_links_count": 268,
+          "outbound_links_count": 258,
           "opinion_marker": false
         }
       }
@@ -25877,16 +25878,16 @@
           ]
         },
         "profile": {
-          "score": 0.48,
-          "confidence": 0.65,
+          "score": 0,
+          "confidence": 0.55,
           "basis": [
             "meta_author:false",
             "published_time:false",
-            "canonical:true",
-            "about:true",
-            "contact:true",
+            "canonical:false",
+            "about:false",
+            "contact:false",
             "corrections:false",
-            "outbound_links:16",
+            "outbound_links:0",
             "opinion_marker:false"
           ]
         },
@@ -25906,33 +25907,33 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-07-14T23:21:12.526Z",
+        "fetched_at": "2026-07-17T23:42:00.711Z",
         "homepage_url": "https://timesofisrael.com/",
         "example_url": "https://timesofisrael.com/",
-        "homepage_status": 200,
-        "example_status": 200,
+        "homepage_status": 403,
+        "example_status": 403,
         "homepage_final_url": "https://www.timesofisrael.com/",
         "example_final_url": "https://www.timesofisrael.com/",
-        "homepage_content_type": "text/html",
-        "example_content_type": "text/html",
+        "homepage_content_type": "text/html; charset=UTF-8",
+        "example_content_type": "text/html; charset=UTF-8",
         "homepage": {
           "has_meta_author": false,
           "has_published_time": false,
-          "has_canonical": true,
-          "has_about_link": true,
-          "has_contact_link": true,
+          "has_canonical": false,
+          "has_about_link": false,
+          "has_contact_link": false,
           "has_corrections_link": false,
-          "outbound_links_count": 16,
+          "outbound_links_count": 0,
           "opinion_marker": false
         },
         "example": {
           "has_meta_author": false,
           "has_published_time": false,
-          "has_canonical": true,
-          "has_about_link": true,
-          "has_contact_link": true,
+          "has_canonical": false,
+          "has_about_link": false,
+          "has_contact_link": false,
           "has_corrections_link": false,
-          "outbound_links_count": 16,
+          "outbound_links_count": 0,
           "opinion_marker": false
         }
       }
@@ -37634,6 +37635,85 @@
       }
     },
     {
+      "domain": "simba.sg",
+      "entity": "Simba Sg",
+      "kind": "unknown",
+      "first_seen_at": "2026-07-13T16:58:40.909Z",
+      "last_seen_at": "2026-07-17T23:25:22.691Z",
+      "discovery": {
+        "distinct_urls": 3,
+        "example_urls": [
+          "https://simba.sg/home?twclid=246gm13qkkeak3bq6hmc879ar",
+          "https://simba.sg/broadband?twclid=263lercxhlqpt3f5k37y6e8h8x",
+          "https://simba.sg/home?utm_source=x&utm_medium=paid_social&twclid=2ai1rami0qu8qwrfit3wc7bhv6"
+        ],
+        "origin_counts": {
+          "feed_buffer": 3
+        },
+        "distinct_referring_accounts": 1,
+        "sample_referring_accounts": [
+          "simbatelecomsg"
+        ],
+        "distinct_axes": []
+      },
+      "claims": {
+        "total": 0,
+        "supported": 0,
+        "refuted": 0,
+        "contested": 0,
+        "unverified": 0,
+        "resolved_count": 0
+      },
+      "structural_features": {
+        "has_search_paths": false,
+        "has_article_paths": false,
+        "has_doi_paths": false
+      },
+      "ratings": {
+        "provenance": {
+          "score": 0.45,
+          "basis": [
+            "unknown_domain_pattern"
+          ]
+        },
+        "breadth": {
+          "score": 0.1475,
+          "basis": [
+            "distinct_urls:3",
+            "distinct_axes:0",
+            "origin_types:1"
+          ]
+        },
+        "corroboration": {
+          "score": 0.19583333333333333,
+          "basis": [
+            "referring_accounts:1",
+            "origin_types:1"
+          ]
+        },
+        "track_record": {
+          "score": null,
+          "basis": [
+            "no_resolved_claims_observed"
+          ]
+        },
+        "overall": {
+          "score": 0.36000000000000004,
+          "confidence": 0.1386,
+          "method": "mechanical_v1",
+          "basis": [
+            "unknown_domain_pattern",
+            "distinct_urls:3",
+            "distinct_axes:0",
+            "origin_types:1",
+            "referring_accounts:1",
+            "origin_types:1",
+            "track_record_unavailable"
+          ]
+        }
+      }
+    },
+    {
       "domain": "rice.edu",
       "entity": "Rice",
       "kind": "unknown",
@@ -46288,84 +46368,6 @@
         "distinct_referring_accounts": 1,
         "sample_referring_accounts": [
           "googlecloud_sg"
-        ],
-        "distinct_axes": []
-      },
-      "claims": {
-        "total": 0,
-        "supported": 0,
-        "refuted": 0,
-        "contested": 0,
-        "unverified": 0,
-        "resolved_count": 0
-      },
-      "structural_features": {
-        "has_search_paths": false,
-        "has_article_paths": false,
-        "has_doi_paths": false
-      },
-      "ratings": {
-        "provenance": {
-          "score": 0.45,
-          "basis": [
-            "unknown_domain_pattern"
-          ]
-        },
-        "breadth": {
-          "score": 0.11833333333333332,
-          "basis": [
-            "distinct_urls:2",
-            "distinct_axes:0",
-            "origin_types:1"
-          ]
-        },
-        "corroboration": {
-          "score": 0.19583333333333333,
-          "basis": [
-            "referring_accounts:1",
-            "origin_types:1"
-          ]
-        },
-        "track_record": {
-          "score": null,
-          "basis": [
-            "no_resolved_claims_observed"
-          ]
-        },
-        "overall": {
-          "score": 0.3536197916666667,
-          "confidence": 0.10997499999999999,
-          "method": "mechanical_v1",
-          "basis": [
-            "unknown_domain_pattern",
-            "distinct_urls:2",
-            "distinct_axes:0",
-            "origin_types:1",
-            "referring_accounts:1",
-            "origin_types:1",
-            "track_record_unavailable"
-          ]
-        }
-      }
-    },
-    {
-      "domain": "simba.sg",
-      "entity": "Simba Sg",
-      "kind": "unknown",
-      "first_seen_at": "2026-07-13T16:58:40.909Z",
-      "last_seen_at": "2026-07-17T19:45:13.105Z",
-      "discovery": {
-        "distinct_urls": 2,
-        "example_urls": [
-          "https://simba.sg/home?twclid=246gm13qkkeak3bq6hmc879ar",
-          "https://simba.sg/broadband?twclid=263lercxhlqpt3f5k37y6e8h8x"
-        ],
-        "origin_counts": {
-          "feed_buffer": 2
-        },
-        "distinct_referring_accounts": 1,
-        "sample_referring_accounts": [
-          "simbatelecomsg"
         ],
         "distinct_axes": []
       },
@@ -76561,6 +76563,160 @@
         "distinct_referring_accounts": 1,
         "sample_referring_accounts": [
           "jobescape_ai"
+        ],
+        "distinct_axes": []
+      },
+      "claims": {
+        "total": 0,
+        "supported": 0,
+        "refuted": 0,
+        "contested": 0,
+        "unverified": 0,
+        "resolved_count": 0
+      },
+      "structural_features": {
+        "has_search_paths": false,
+        "has_article_paths": false,
+        "has_doi_paths": false
+      },
+      "ratings": {
+        "provenance": {
+          "score": 0.45,
+          "basis": [
+            "unknown_domain_pattern"
+          ]
+        },
+        "breadth": {
+          "score": 0.08916666666666666,
+          "basis": [
+            "distinct_urls:1",
+            "distinct_axes:0",
+            "origin_types:1"
+          ]
+        },
+        "corroboration": {
+          "score": 0.19583333333333333,
+          "basis": [
+            "referring_accounts:1",
+            "origin_types:1"
+          ]
+        },
+        "track_record": {
+          "score": null,
+          "basis": [
+            "no_resolved_claims_observed"
+          ]
+        },
+        "overall": {
+          "score": 0.3472395833333333,
+          "confidence": 0.08135,
+          "method": "mechanical_v1",
+          "basis": [
+            "unknown_domain_pattern",
+            "distinct_urls:1",
+            "distinct_axes:0",
+            "origin_types:1",
+            "referring_accounts:1",
+            "origin_types:1",
+            "track_record_unavailable"
+          ]
+        }
+      }
+    },
+    {
+      "domain": "longbridge.com",
+      "entity": "Longbridge",
+      "kind": "unknown",
+      "first_seen_at": "2026-07-17T21:15:14.276Z",
+      "last_seen_at": "2026-07-17T21:15:14.276Z",
+      "discovery": {
+        "distinct_urls": 1,
+        "example_urls": [
+          "https://longbridge.com/sg/longbridge-ai?channel=SGAI0001&twclid=27m5o8o2o9vynl50diwyukaj1x"
+        ],
+        "origin_counts": {
+          "feed_buffer": 1
+        },
+        "distinct_referring_accounts": 1,
+        "sample_referring_accounts": [
+          "longbridgeai"
+        ],
+        "distinct_axes": []
+      },
+      "claims": {
+        "total": 0,
+        "supported": 0,
+        "refuted": 0,
+        "contested": 0,
+        "unverified": 0,
+        "resolved_count": 0
+      },
+      "structural_features": {
+        "has_search_paths": false,
+        "has_article_paths": false,
+        "has_doi_paths": false
+      },
+      "ratings": {
+        "provenance": {
+          "score": 0.45,
+          "basis": [
+            "unknown_domain_pattern"
+          ]
+        },
+        "breadth": {
+          "score": 0.08916666666666666,
+          "basis": [
+            "distinct_urls:1",
+            "distinct_axes:0",
+            "origin_types:1"
+          ]
+        },
+        "corroboration": {
+          "score": 0.19583333333333333,
+          "basis": [
+            "referring_accounts:1",
+            "origin_types:1"
+          ]
+        },
+        "track_record": {
+          "score": null,
+          "basis": [
+            "no_resolved_claims_observed"
+          ]
+        },
+        "overall": {
+          "score": 0.3472395833333333,
+          "confidence": 0.08135,
+          "method": "mechanical_v1",
+          "basis": [
+            "unknown_domain_pattern",
+            "distinct_urls:1",
+            "distinct_axes:0",
+            "origin_types:1",
+            "referring_accounts:1",
+            "origin_types:1",
+            "track_record_unavailable"
+          ]
+        }
+      }
+    },
+    {
+      "domain": "alpha-sense.com",
+      "entity": "Alpha-Sense",
+      "kind": "unknown",
+      "first_seen_at": "2026-07-17T22:35:17.055Z",
+      "last_seen_at": "2026-07-17T22:35:17.055Z",
+      "discovery": {
+        "distinct_urls": 1,
+        "example_urls": [
+          "https://www.alpha-sense.com/?utm_source=twitter&utm_medium=ps&utm_campaign=TOFU-Content_FS_APAC_video&utm_content=harry-stebbings-20VC_video&twclid=2ce46untfg4fn49nwjc9wp8k8o"
+        ],
+        "origin_counts": {
+          "feed_buffer": 1
+        },
+        "distinct_referring_accounts": 1,
+        "sample_referring_accounts": [
+          "alphasenseinc"
         ],
         "distinct_axes": []
       },
