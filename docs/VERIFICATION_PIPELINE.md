@@ -1,13 +1,20 @@
-# Verification Pipeline (updated 2026-04-19)
+# Verification Pipeline (updated 2026-07-19)
+
+> Verification inference (claim scoring, web-search grounding) genuinely still
+> runs on **Gemini 2.5 Flash via Vertex** — both in `workers/verify` (Cloud Run)
+> and the local `runner/intelligence/` scripts. It is the one part of the
+> system where Gemini references below are current, not legacy. Reply *drafting*,
+> however, now routes through `lib/compose.reason()` (Claude when
+> `THINK_BACKEND=claude`, Vertex-grounded fallback otherwise).
 
 ## Overview
 
-The claim verification system provides three capabilities:
+The claim verification system provides four capabilities:
 
-1. **Isolated LLM credentials** — verification uses `BUILDER_CREDENTIALS` (separate service account) to avoid rate-limit contention with the browse/synthesize pipeline
-2. **Periodic verification via systemd timer** — `verify_claims.js` runs every 2 hours automatically
+1. **Isolated LLM credentials** — verification uses `BUILDER_CREDENTIALS` (separate service account) to avoid rate-limit contention with the main pipeline
+2. **Periodic verification** — `runner/intelligence/verify_claims.js` runs from the daily block (`runner/lib/daily.js`); the Cloud Run worker (`hunter-verify`) runs on Cloud Scheduler every 2 hours
 3. **On-demand verification via `verify_one.js`** — callable by the agent mid-interaction for priority fact-checking
-4. **Grounded reply drafting** — both reply pipelines (`proactive_reply.js` and `scraper/reply.js`) use Vertex AI with Google Search grounding (`tools: [{ google_search: {} }]`) when composing replies, enabling independent fact-checking at draft time and automatic source citation
+4. **Grounded reply drafting** — both reply pipelines (`proactive_reply.js` and `scraper/reply.js`) draft via `lib/compose` (Claude primary); the Vertex fallback path keeps Google Search grounding (`tools: [{ google_search: {} }]`), and verification results are injected into the draft prompt either way
 
 ---
 
@@ -155,15 +162,15 @@ const result = JSON.parse(
 | `WEB_SEARCH_PER_CYCLE` | 3 | Claims web-searched per run |
 | `STALE_HOURS` | 48 | Unresolved claims older than this get priority |
 
-### Systemd Timer
+### Scheduling
 
-Installed at `~/.config/systemd/user/verify-claims.timer`. Runs every 2 hours at :17 past the odd hour with up to 2 minutes random jitter.
+The systemd timer era is over (the system moved off the GCP VM). Today:
+- **Local batch**: `runner/intelligence/verify_claims.js` fires from the daily
+  block (`runner/lib/daily.js:106`), logging to `runner/verify_claims.log`.
+- **Cloud worker**: `hunter-verify` (Cloud Run) runs on Cloud Scheduler every
+  2 hours (`verify-claims-schedule` → `/verify-cycle`).
 
 ```bash
-# Check status
-systemctl --user status verify-claims.timer
-systemctl --user list-timers verify-claims.timer
-
 # View logs
 tail -f runner/verify_claims.log
 
@@ -217,14 +224,14 @@ Both `verify_one.js` and `verify_claims.js` use the same scorer (`claim_scorer.j
 
 ## LLM Credentials
 
-| Pipeline | Credentials | Model | Google Search |
-|----------|-------------|-------|---------------|
-| `verify_one.js` (pre-verification) | `BUILDER_CREDENTIALS` | `gemini-2.5-flash` | Yes (`google_search: {}`) |
-| `verify_claims.js` (batch) | `BUILDER_CREDENTIALS` | `gemini-2.5-flash` | Yes (`google_search: {}`) |
-| `proactive_reply.js` (draft) | `GOOGLE_APPLICATION_CREDENTIALS` | `gemini-2.5-flash` | Yes (`google_search: {}`) |
-| `scraper/reply.js` (draft) | `GOOGLE_APPLICATION_CREDENTIALS` | `gemini-2.5-flash` | Yes (`google_search: {}`) |
+| Pipeline | Backend | Model | Google Search |
+|----------|---------|-------|---------------|
+| `verify_one.js` (pre-verification) | Vertex, `BUILDER_CREDENTIALS` | `gemini-2.5-flash` | Yes (`google_search: {}`) |
+| `verify_claims.js` (batch) | Vertex, `BUILDER_CREDENTIALS` | `gemini-2.5-flash` | Yes (`google_search: {}`) |
+| `proactive_reply.js` (draft) | `lib/compose.compose()` — Claude primary, Vertex fallback | Claude / `gemini-2.5-flash` | fallback path only |
+| `scraper/reply.js` (draft) | `lib/compose.reason()` — Claude primary, Vertex fallback | Claude / `gemini-2.5-flash` | fallback path only |
 
-Pre-verification uses `BUILDER_CREDENTIALS` (separate GCP service account) to keep verification traffic isolated from the main browse/synthesize pipeline. Reply drafting uses the main `GOOGLE_APPLICATION_CREDENTIALS` via `callGemini()` (from `runner/lib/sebastian_respond.js` for proactive replies, direct `fetch` for inbound replies).
+Pre-verification uses `BUILDER_CREDENTIALS` (separate GCP service account) to keep verification traffic isolated from the main pipeline. Reply drafting routes through `runner/lib/compose.js`: Claude composes when `THINK_BACKEND`/`COMPOSE_BACKEND` is `claude` (verification results are injected into the prompt as a `LIVE VERIFICATION` block); the Vertex fallback keeps grounded search.
 
 ---
 

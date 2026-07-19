@@ -2,21 +2,30 @@
 
 ## Overview
 
-An autonomous AI agent that reads X (Twitter), tracks evidence and interprets discourse, journals,
-tweets, and publishes to sebastianhunter.fun. The system runs continuously
-on a cloud VM as a systemd service.
+An autonomous AI agent that reads X, LinkedIn, and Facebook, tracks evidence and
+interprets discourse, journals, posts, runs deep research, and publishes to
+sebastianhunter.fun. The system runs continuously on a local macOS machine as a
+set of launchd agents (see docs/INVENTORY.md §1).
 
-There are two distinct layers:
+There are three distinct layers:
 
 - **Mechanical layer** — Node.js scripts that handle all scraping, browser
-  navigation, data processing, posting, and git. No LLM.
-- **Reasoning layer** — Gemini 2.5 Flash (via runner/lib/gemini_agent.js — stateless Vertex AI function-calling) that reads pre-digested
-  text files, thinks, and writes text files. No browser access, no shell commands.
+  automation (via the HelmStack substrate + the `tools/helmstack-social`
+  engines), data processing, posting, and git. No LLM.
+- **Reasoning layer** — a local **qwen2.5-agent** model via Ollama
+  (`runner/lib/gemini_agent.js` — legacy filename; it is an OpenAI-compatible
+  chat loop against `OLLAMA_BASE_URL`) reads pre-digested text files, thinks,
+  and writes text files. Scoring/gating/planning run on the same local model.
+- **Composition layer** — public-facing prose (tweets, quotes, replies,
+  LinkedIn posts, articles) is composed by the **Claude CLI**
+  (`runner/lib/compose.js`, `COMPOSE_BACKEND=claude`); deep-research reasoning
+  runs on Claude too (`THINK_BACKEND=claude`).
 
-All posting (tweets, quote-tweets, replies) is handled mechanically via CDP.
-The LLM writes draft text files; `post_tweet.js` and `post_quote.js` post them.
-Git commit/push is handled by `runner/lib/git.js`. The LLM has no direct
-access to the browser or shell.
+All posting is handled mechanically. Drafts pass the shared outbound gates
+(`runner/lib/outbound_gates.js`: voice + fact-check) and, for LinkedIn (and X
+when `OUTBOX_X=1`), the outbox queue (`runner/lib/outbox.js`), then post via the
+HelmStack engines (`POST_BACKEND=helmstack`). Git commit/push is handled by
+`runner/lib/git.js`. The LLM has no direct access to the browser or shell.
 
 ---
 
@@ -46,11 +55,12 @@ collect.js  reply.js     follows.js
 
 ### `scraper/collect.js` — every 10 min
 
-Scrapes the X feed via CDP (puppeteer-core connects to existing Chrome).
-Runs a 12-phase analytics pipeline:
+Scrapes the X feed via HelmStack (plus LinkedIn via `runner/linkedin_collect.js`
+and RSS via `scraper/rss_collect.js` feeding the same digest).
+Runs a multi-phase analytics pipeline:
 
 ```
-CDP extract raw posts
+HelmStack extract raw posts
   → sanitizePost()          filter ads, short, emoji-spam, non-English
   → seenSet dedup           skip posts already indexed this session
   → extractKeywords()       RAKE — extract top keyphrases per post
@@ -78,21 +88,25 @@ mention:
 
 ```
 1. Spam pre-filter          algorithmic regex — no API call wasted
-2. fetchThreadContext()     CDP navigates to tweet URL, extracts ≤6 articles
-                            (ancestor tweets + the mention itself)
-                            → page stays on tweet URL for step 5
+                            (research-intent mentions are exempted and routed
+                            to deep_research instead of the normal reply path)
+2. fetchThreadContext()     HelmStack reads the conversation before the mention
 3. recallForMention()       RAKE keywords from mention text
                             → db.recallMemory() → ≤3 relevant past entries
                             from journals/checkpoints (FTS5 BM25)
-4. geminiClassify()         gemini-2.5-flash via Vertex AI with full context:
-                              - Thread context
-                              - Past thinking from memory
-                              - The mention text
-                            Returns WORTHY+reply or SKIP+reason
-5. postReply()              CDP posts reply (page already on tweet URL —
-                            no re-navigation)
+4. classify + draft         Claude terminal via lib/compose.reason()
+                            (THINK_BACKEND=claude, Vertex fallback):
+                            WORTHY+reply or SKIP+reason
+4b. outbound gate           shared voice_filter + fact-check
+                            (runner/lib/outbound_gates.js) — same bar as every
+                            other publishing surface
+5. postReply()              HelmStack X engine reply()
 6. logInteraction()         state/interactions.json (records memory_used)
 ```
+
+Mentions are captured by `scraper/collect.js` via live search (X hides mentions
+from notifications). Research-intent mentions get the full deep-research
+treatment — see docs/DEEP_RESEARCH.md.
 
 Rate limits: 3/run · 5 min between posts · 10/day cap
 
@@ -109,7 +123,7 @@ follow_score = avg_velocity × 0.35
              + recency_factor × 0.10   (10 × exp(-ageHours/48))
 
 → followCandidates()     top unfollow'd accounts above threshold
-→ CDP follow action      navigate x.com/<username>, click Follow
+→ HelmStack follow       navigate x.com/<username>, click Follow
 → markFollowed()         accounts.followed = 1
 → trust_graph.json       logged with trust_score:3, follow_reason
 ```
@@ -120,15 +134,18 @@ Rate limits: 3/run · 1 min between follows · 10/day cap
 
 ## Agent Cycle (Reasoning — LLM Only)
 
-Runs every 20 minutes. Every 6th cycle is a tweet cycle (every 2 hours).
+Runs every ~30 minutes, auto-adjusted between 15–60 minutes by the cadence
+engine (`runner/cadence.js`). Every 6th cycle is a tweet cycle; every 3rd a
+quote cycle (`runner/lib/config.js`).
 
-### Before each browse cycle — `run.sh` prepares context:
+### Before each browse cycle — `runner/lib/pre_browse.js` prepares context (17 steps):
 
-```bash
-node scraper/query.js --hours 4     → state/topic_summary.txt
-node runner/recall.js --limit 5     → state/memory_recall.txt
-node runner/prefetch_url.js         → state/reading_url.txt (if queued item exists)
-```
+FTS maintenance → topic summary (`scraper/query.js --hours 4`) → memory recall
+(FTS5 + semantic) → curiosity refresh → search curiosity → axis clustering →
+RSS collect → comment candidates → discourse scan → discourse digest → external
+source discovery → external source profiling → source selection → reading queue
+→ deep-dive detection → prefetch (`state/reading_url.txt`) → source-label
+classification.
 
 ### Browsing Direction Signals (priority order: Deep Dive > Curiosity > X Trending)
 
@@ -319,9 +336,10 @@ Writes:
   state/ontology.json          update axis scores
 
 Then (mechanical — via orchestrator.js):
-  → post_tweet.js / post_quote.js posts via CDP
+  → drafts pass outbound gates (voice + fact-check), then post via the
+    HelmStack X engine (runner/lib/post_x_helmstack.js; POST_BACKEND=helmstack)
   → posts_log.js logs to state/posts_log.json
-  → git add / commit / push (lib/git.js)
+  → git add / commit / push (runner/lib/git.js)
   → archive.js indexes new journals/checkpoints → SQLite memory
                 → attempt Irys/Arweave upload if SOL balance ok
 ```
@@ -470,10 +488,10 @@ Active hours (UTC 07-23):        Silent hours (UTC 23-07):
 ## Data Flow (End-to-End)
 
 ```
-X feed (raw HTML)
+X feed (+ LinkedIn feed, RSS)
     │
-    ▼ CDP (puppeteer-core)
-collect.js — 12-phase pipeline — scored + clustered digest
+    ▼ HelmStack (browser substrate, HTTP API :7070)
+collect.js — multi-phase pipeline — scored + clustered digest
     │                                │
     ▼                                ▼
 state/index.db               state/feed_digest.txt
@@ -486,9 +504,10 @@ state/index.db               state/feed_digest.txt
     │       ▼
     │   memory_recall.txt
     │
-    ├── reply.js → fetchThreadContext (CDP) → geminiClassify → postReply (CDP)
+    ├── reply.js → fetchThreadContext (HelmStack) → Claude classify+draft
+    │              → outbound gate → postReply (HelmStack)
     │
-    └── follows.js → computeFollowScore → CDP follow → trust_graph.json
+    └── follows.js → computeFollowScore → HelmStack follow → trust_graph.json
                                                │
                               ┌────────────────┴────────────────┐
                               ▼                                 ▼
@@ -552,25 +571,32 @@ follow_score = avg_velocity × 0.35
 
 | Component | Technology |
 |---|---|
-| Browser automation | puppeteer-core CDP (connects to existing Chrome) |
-| Database | SQLite via `better-sqlite3` — WAL mode, FTS5 full-text search |
-| LLM (browse + tweet) | Gemini 2.5 Flash via runner/lib/gemini_agent.js (stateless Vertex AI function-calling) |
-| LLM (reply filter) | gemini-2.5-flash via Vertex AI |
-| LLM (local critique) | Ollama `qwen2.5:7b` — no API cost, post-cycle consistency check |
-| Permanent storage | Arweave via Irys L2 (SOL-funded, `@irys/sdk`) — journals, checkpoints, tweet records |
-| Web frontend | Next.js at sebastianhunter.fun |
-| Orchestration | `run.sh` (init) → `orchestrator.js` (Node.js main loop, SIGTERM-safe); systemd |
+| Browser automation | HelmStack substrate (HTTP API :7070) + `tools/helmstack-social` X/LinkedIn engines; legacy Chrome CDP retained for residual utilities |
+| Database | SQLite via `better-sqlite3` — WAL mode, FTS5 full-text search (`state/index.db`, `state/outbox.db`); BigQuery for permanent post history |
+| LLM (agent brain) | local qwen2.5-agent via Ollama (`runner/lib/gemini_agent.js` — legacy filename) |
+| LLM (outbound prose) | Claude CLI via `runner/lib/compose.js` (`COMPOSE_BACKEND=claude`); deep-research reasoning via `THINK_BACKEND=claude` |
+| LLM (scoring/gates/critique) | local qwen2.5-agent (`runner/local_llm.js`) |
+| LLM (cloud workers) | Gemini 2.5 Flash via Vertex — `workers/verify` claim verification and `runner/builder_vertex.js` self-mod builder only |
+| Embeddings | nomic-embed-text 768-dim local via Ollama |
+| Permanent storage | Arweave via Irys L2 (SOL-funded, `@irys/sdk`) — journals, checkpoints, articles, evidence sources |
+| Web frontend | Next.js at sebastianhunter.fun (Vercel, built from repo content) |
+| Orchestration | `run.sh` (init) → `orchestrator.js` (Node.js main loop, SIGTERM-safe); **launchd** (`com.sebastian.runner`, KeepAlive) |
 
 ---
 
 ## Posting Pipeline
 
-The LLM writes drafts; mechanical scripts handle all posting actions.
+Claude composes drafts (`runner/lib/compose.js`); mechanical scripts handle all
+posting. Every outbound surface passes the shared gates
+(`runner/lib/outbound_gates.js`: voice filter + fact-check). LinkedIn drafts —
+and X drafts when `OUTBOX_X=1` — flow through the outbox queue
+(`runner/lib/outbox.js`, `state/outbox.db`: status-tracked, content-dedup,
+LIFO claim). Full detail: docs/OUTBOUND.md.
 
 ```
-LLM tweet cycle writes:
-  state/tweet_draft.txt        → post_tweet.js posts via CDP, logs to posts_log.json
-  state/quote_draft.txt        → post_quote.js posts via CDP, logs to posts_log.json
+Tweet cycle writes:
+  state/tweet_draft.txt        → gates → HelmStack X engine (CreateTweet), logs to posts_log.json
+  state/quote_draft.txt        → gates → HelmStack X engine, logs to posts_log.json
 
 After posting:
   runner/moltbook.js           → publishes to Moltbook (social log):
@@ -586,13 +612,35 @@ Ponder tweet (when ponder fires):
                                → announces vocation + first action + @mentions aligned accounts
 ```
 
+## Research & Outbound Subsystems (post-June 2026)
+
+Documented in their own files; listed here so the architecture map is complete:
+
+| Subsystem | Entry | Doc |
+|---|---|---|
+| Deep research (triage→plan→execute→refine→resolve→synth; reports/threads/X Articles) | `runner/deep_research.js`, `runner/plan_research.js` | docs/DEEP_RESEARCH.md |
+| Outbox + gates + channel engines + amplification learn-loop | `runner/lib/outbox.js`, `outbound_gates.js`, `runner/*_amplify.js` | docs/OUTBOUND.md |
+| Stances (committed positions on named events) | `runner/stance_scan.js` | docs/STANCES.md |
+| Predictions + confidence calibration | `runner/prediction_resolution.js` | docs/PREDICTIONS.md |
+| Operating-cost self-model | `runner/lib/cost_meter.js`, `operating_cost.js` | docs/COSTS.md |
+| LinkedIn plan-first posting + A/B shape experiment | `runner/lib/linkedin_plan.js`, `linkedin_performance.js` | docs/OUTBOUND.md |
+
+Belief-axis math (recency-weighted score, saturating confidence) is centralized
+in `runner/lib/belief_calibration.js` — the old ×0.025-per-source / 0.98-ceiling
+formula is retired.
+
+---
+
 ## Stability and Recovery
 
-- systemd `TimeoutStopSec=20` ensures graceful shutdown within 20s
+- launchd `KeepAlive` restarts the runner if it exits; restarts should happen in
+  the sleep window, not mid-posting-window (restart-in-sleep-window rule)
 - `orchestrator.js` uses `setTimeout`-based inter-cycle sleep (SIGTERM-safe)
 - Post-sleep detection: if `ELAPSED > 2 × BROWSE_INTERVAL` (machine was suspended),
   orchestrator triggers a browser stop/start before the next cycle
 - `clean_stale_locks()` removes dead-PID lock files each cycle
-- `agent_run()` has a 900s timeout to prevent a hung gemini_agent_runner.js child process from blocking forever
-- The Vertex AI reasoning loop is stateless per cycle (no session accumulation); the browser session is reset every 6 cycles (prevents CDP compaction rate-limit deadlock)
-- Gemini `--thinking low` flag is omitted on retry (different quota path avoids "unknown error")
+- Agent runs have a hard timeout (15 min in run.sh) to prevent hung child
+  processes from blocking the loop; a failed browse retries once without thinking
+- The reasoning loop is stateless per cycle (no session accumulation); browser
+  tabs are cleaned up periodically (`runner/cleanup_tabs.js`, HelmStack auto
+  tab-cleanup)

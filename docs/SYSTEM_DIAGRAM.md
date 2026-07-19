@@ -6,100 +6,115 @@ flowchart LR
     %% ── INPUTS ───────────────────────────────────────────────────────────
     subgraph IN["  INPUTS  "]
         direction TB
-        XI["X / Twitter\nfeed · trending · search"]
-        WS["Web Search\n(curiosity, claim verify)"]
-        XT["X API\n(scraper · reply scan)"]
+        XI["X feed · trending\nsearch · mentions"]
+        LI["LinkedIn feed"]
+        FB["Facebook + RSS\n(GMA · PCIJ · …)"]
+        WS["Web search\n(curiosity · research · verify)"]
     end
 
-    %% ── GCP VM ───────────────────────────────────────────────────────────
-    subgraph VM["  GCP VM · us-central1-a  "]
+    %% ── LOCAL MAC (launchd) ─────────────────────────────────────────────
+    subgraph MAC["  Local macOS · launchd  "]
         direction TB
 
-        CHR["Chrome CDP :18801\n(headless, X session)"]
+        HS["HelmStack substrate\nHTTP API :7070\n+ helmstack-social engines"]
 
-        subgraph CYCLE["Browse cycle · ~20 min"]
+        subgraph CYCLE["Browse cycle · 15–60 min (cadence)"]
             direction TB
-            SCR["Scraper\nhunter.db SQLite\nposts · keywords · memory"]
-            AGT["Browse Agent\nGemini 2.5 Flash\nobserves · journals · notes"]
-            BLF["Belief System\nontology.json · axes\nCUSUM drift detection"]
-            SIG["Signal Detector\n6-signal landmark scan\n4h throttle"]
-            CRT["Critique\nGemini Flash\ncoherence · meta proposals"]
-            PON["Ponder / Proposals\nconviction threshold\naction_plans.json"]
+            SCR["Scraper\nstate/index.db SQLite\nposts · keywords · memory"]
+            AGT["Browse agent\nqwen2.5-agent (Ollama)\nobserves · journals · delta"]
+            BLF["Belief system\nontology.json · axes\ngates + calibration"]
+            CUR["Curiosity / discourse\n/ trending direction"]
         end
 
-        TG["Telegram Bot\nadmin control · alerts"]
+        subgraph RSRCH["Research & positions"]
+            direction TB
+            DR["Deep research\ntriage→plan→execute\n→refine→resolve→synth"]
+            ST["Stances\nnamed-event positions"]
+            PR["Predictions\nlog · resolve · calibrate"]
+        end
+
+        subgraph OUTB["Outbound"]
+            direction TB
+            CMP["Compose\nClaude CLI"]
+            GTE["Outbound gates\nvoice + fact-check"]
+            OBX["Outbox queue\nstate/outbox.db"]
+            AMP["Amplify learn-loop\nrepost/reshare bandit"]
+        end
+
+        CST["Cost self-model\nLLM meter + fixed + SOL"]
+        TG["Telegram bot\nadmin · /dr research"]
     end
 
-    %% ── GCP SERVICES ─────────────────────────────────────────────────────
-    subgraph GCP["  GCP Services  "]
+    %% ── CLOUD ────────────────────────────────────────────────────────────
+    subgraph CLOUD["  Cloud  "]
         direction TB
-        VTX["Vertex AI\nGemini 2.5 Flash · Imagen 4\neditorial · hero art · embed"]
-        SQL["Cloud SQL · Postgres\n768-dim embeddings\nsemantic recall"]
-        RUN["Cloud Run\nverify · publish · memory"]
+        RUN["Cloud Run workers\nverify (Gemini) · publish · memory"]
+        BQ["BigQuery\nall scraped posts\nnever pruned"]
     end
 
-    %% ── STORAGE / SYNC ───────────────────────────────────────────────────
+    %% ── STORAGE ──────────────────────────────────────────────────────────
     subgraph STORE["  Permanent Storage  "]
         direction TB
-        GIT["GitHub\njournals · state\ngit push each cycle"]
-        ARW["Arweave via Irys\njournals · checkpoints\nlandmark articles + cards"]
+        GIT["GitHub\ngit push each cycle"]
+        ARW["Arweave via Irys\njournals · checkpoints\narticles · evidence URLs"]
     end
 
     %% ── OUTPUTS ──────────────────────────────────────────────────────────
     subgraph OUT["  OUTPUTS  "]
         direction TB
-        XO["X / Twitter\ntweets · quote-tweets\nreplies · X Articles"]
+        XO["X\ntweets · quotes · replies\nthreads · X Articles"]
+        LO["LinkedIn\nposts · comments · reshares"]
         MB["Moltbook\nlong-form articles"]
-        WEB["sebastianhunter.fun\nVercel · Next.js\nbuilt from repo at deploy"]
+        WEB["sebastianhunter.fun\nVercel · Next.js\nreports · ontology · predictions"]
     end
 
-    %% ── INPUT FLOWS ──────────────────────────────────────────────────────
-    XI -->|"CDP browse"| CHR
-    WS -->|"tool call"| AGT
-    XT -->|"scrape"| SCR
+    %% ── FLOWS ────────────────────────────────────────────────────────────
+    XI --> HS
+    LI --> HS
+    FB --> HS
+    HS --> SCR
+    WS --> DR
+    WS --> AGT
 
-    %% ── INTERNAL FLOWS ───────────────────────────────────────────────────
-    CHR --> SCR
     SCR --> AGT
     AGT --> BLF
-    AGT --> CRT
-    BLF --> SIG
-    BLF --> PON
-    SIG --> CRT
+    BLF --> CUR
+    CUR --> AGT
+    ST <--> BLF
+    PR <--> BLF
+    SCR -->|"mentions\n(research intent)"| DR
+    TG -->|"/dr"| DR
 
-    %% ── GCP SERVICE FLOWS ────────────────────────────────────────────────
-    AGT <-->|"generate · embed"| VTX
-    SIG -->|"editorial · hero art"| VTX
-    AGT <-->|"semantic recall"| SQL
-    AGT <-->|"verify · memory"| RUN
+    AGT --> CMP
+    DR --> CMP
+    CMP --> GTE
+    GTE --> OBX
+    OBX --> HS
+    AMP --> HS
+    HS --> XO
+    HS --> LO
 
-    %% ── STORAGE FLOWS ────────────────────────────────────────────────────
-    AGT -->|"journal commit"| GIT
+    SCR -->|"stream"| BQ
+    BLF <-->|"claim verify"| RUN
+    AGT -->|"commit"| GIT
     AGT -->|"upload"| ARW
-    SIG -->|"landmark article + card"| ARW
-
-    %% ── OUTPUT FLOWS ─────────────────────────────────────────────────────
-    CRT -->|"tweet gate\npost-tweet coherence"| XO
-    AGT -->|"tweet draft\nquote · reply"| XO
-    SIG -->|"X Article\nlandmark"| XO
-    AGT -->|"long-form"| MB
-    GIT -->|"Vercel build\nserves state + content"| WEB
-    ARW -->|"permanent URLs\nembedded in pages"| WEB
+    CMP --> MB
+    GIT -->|"Vercel build"| WEB
+    ARW -->|"permanent URLs"| WEB
+    CST -.-> WEB
 
     %% ── STYLES ───────────────────────────────────────────────────────────
-    classDef input     fill:#1a2a3a,stroke:#4a9eff,color:#e0f0ff
-    classDef vm        fill:#1a1a2a,stroke:#7a6aff,color:#e0e0ff
-    classDef gcp       fill:#1a2a1a,stroke:#4aff9e,color:#e0ffe0
-    classDef store     fill:#2a1a1a,stroke:#ff9e4a,color:#ffe0c0
-    classDef output    fill:#2a1a2a,stroke:#ff4aff,color:#ffe0ff
-    classDef cycle     fill:#111122,stroke:#5a5aaa,color:#ccccff
+    classDef input  fill:#1a2a3a,stroke:#4a9eff,color:#e0f0ff
+    classDef mac    fill:#1a1a2a,stroke:#7a6aff,color:#e0e0ff
+    classDef cloud  fill:#1a2a1a,stroke:#4aff9e,color:#e0ffe0
+    classDef store  fill:#2a1a1a,stroke:#ff9e4a,color:#ffe0c0
+    classDef output fill:#2a1a2a,stroke:#ff4aff,color:#ffe0ff
 
-    class XI,WS,XT input
-    class CHR,TG,VM vm
-    class VTX,SQL,RUN gcp
+    class XI,LI,FB,WS input
+    class HS,SCR,AGT,BLF,CUR,DR,ST,PR,CMP,GTE,OBX,AMP,CST,TG mac
+    class RUN,BQ cloud
     class GIT,ARW store
-    class XO,MB,WEB output
-    class SCR,AGT,BLF,SIG,CRT,PON cycle
+    class XO,LO,MB,WEB output
 ```
 
 ---
@@ -108,10 +123,11 @@ flowchart LR
 
 | Layer | What it does |
 |---|---|
-| **Inputs** | X feed + search (browsed via Chrome CDP), X API (scraper), web search (tool calls during browse) |
-| **Browse cycle** | Scrape → digest → Gemini agent observes and journals → belief axes updated → signals scanned → critique runs → posts drafted |
-| **Vertex AI** | Gemini 2.5 Flash for all LLM work; Imagen 4 for landmark hero art; text-embedding-004 for semantic memory |
-| **Cloud SQL** | Postgres stores 768-dim embeddings for semantic recall during browse and reply |
-| **Cloud Run** | Three workers: claim verification, article publishing, memory API |
-| **Permanent storage** | GitHub (git push every cycle); Arweave via Irys (journals, checkpoints, landmark articles + cards) |
-| **Outputs** | X (tweets, quotes, replies, X Articles); Moltbook (long-form); sebastianhunter.fun (Vercel · Next.js, built from repo content; embeds Arweave URLs for permanent content) |
+| **Inputs** | X + LinkedIn + Facebook/RSS feeds via HelmStack; web search (curiosity, deep research, claim verification) |
+| **Scraper** | Sanitize → RAKE → Jaccard dedup → TF-IDF novelty → local-LLM enrichment → cluster + burst detection → scored digest → SQLite + BigQuery |
+| **Browse cycle** | 17-step pre-browse → local qwen2.5-agent reads digest + memory → journals + ontology delta → evidence gates (`apply_ontology_delta.js`) → axes updated via `belief_calibration.js` |
+| **Research** | Deep research (mentions, Telegram `/dr`, daily plan questions) → reports / X threads / X Articles; stances + predictions feed back into the ontology |
+| **Outbound** | Claude composes → voice + fact-check gates → outbox queue → HelmStack channel engines (X GraphQL, LinkedIn voyager/UI); amplification learn-loop reposts/reshares and measures results |
+| **Cloud** | Cloud Run workers (verify — Gemini, publish, memory); BigQuery permanent post history |
+| **Permanent storage** | GitHub (push every cycle); Arweave via Irys (journals, checkpoints, articles, evidence source URLs) |
+| **Outputs** | X, LinkedIn, Facebook (observation + planned share), Moltbook, sebastianhunter.fun (journals, ontology, reports, predictions, veritas lens, checkpoints) |

@@ -55,6 +55,34 @@ function archiveOntology() {
   }
 }
 
+// Weekly docs-drift audit (scripts/docs_drift_audit.js) — self-throttled via a
+// stamp file so it fires at most once per 7 days. Non-fatal: a docs audit must
+// never break maintenance.
+function runWeeklyDocsDriftAudit() {
+  if (dryRun) {
+    log('Skipping docs drift audit in dry run mode.');
+    return;
+  }
+  const stampPath = path.join(__dirname, '..', 'state', 'docs_drift_last_run');
+  try {
+    const now = Date.now();
+    if (fs.existsSync(stampPath)) {
+      const last = Date.parse(fs.readFileSync(stampPath, 'utf8').trim());
+      if (!Number.isNaN(last) && now - last < 7 * 24 * 3600 * 1000) return;
+    }
+    log('Running weekly docs drift audit...');
+    const { execFileSync } = require('child_process');
+    execFileSync('node', [path.join(__dirname, '..', 'scripts', 'docs_drift_audit.js')], {
+      stdio: 'inherit',
+      timeout: 120000,
+    });
+    fs.writeFileSync(stampPath, new Date().toISOString());
+    log('Docs drift audit complete.');
+  } catch (err) {
+    console.error('Docs drift audit failed (non-fatal): ' + err.message);
+  }
+}
+
 function main() {
   log('Starting daily maintenance' + (dryRun ? ' (dry run)' : '') + '...');
 
@@ -78,6 +106,8 @@ function main() {
 
   // Archive the ontology at the end of the process for the next day's run
   archiveOntology();
+
+  runWeeklyDocsDriftAudit();
 
   log('Daily maintenance complete.');
 }

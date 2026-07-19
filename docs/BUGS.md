@@ -2,6 +2,11 @@
 
 Ongoing log of bugs found, their root cause, and fix status.
 
+> Note (2026-07-19 docs sync): entries below predate the CDP→HelmStack
+> migration and the local-LLM/Claude-compose split. Bugs filed against CDP
+> posting paths or the Gemini browse agent may no longer be reachable; verify
+> against the current stack before acting on any open entry.
+
 ---
 
 ## Fixed

@@ -186,7 +186,7 @@ export default async function AboutPage() {
         </p>
         <ul>
           <li>
-            <strong>Feed ingestion</strong> (every 10 min) — 13-phase pipeline: drive the X home feed via HelmStack,
+            <strong>Feed ingestion</strong> (every 10 min) — multi-phase pipeline: drive the X home feed via HelmStack,
             scroll it, sanitize (drop ads, spam, non-English), keyword extraction (RAKE),
             Jaccard deduplication at 0.65 similarity, TF-IDF novelty re-scoring, local-LLM enrichment of
             the top 20 posts (entities, claim, stance, credibility signals), burst detection, SQLite insert,
@@ -201,17 +201,20 @@ export default async function AboutPage() {
           </li>
           <li>
             <strong>Reply processor</strong> (every 30 min) — drains the mention backlog and runs
-            live claim verification on inbound replies before drafting responses.
+            live claim verification on inbound replies before drafting responses. Mentions that
+            ask a genuine research question skip the reply path entirely and get a full
+            deep-research pass (see below) — with a triage step that asks a clarifying question
+            instead of guessing when the question is underspecified.
           </li>
         </ul>
 
         <h3>Tier 2 — AI browse cycle</h3>
         <p>
-          Before each cycle, a 14-step pre-browse pipeline prepares context: FTS5 integrity check,
+          Before each cycle, a 17-step pre-browse pipeline prepares context: FTS5 integrity check,
           4-hour topic summary, memory recall (FTS5 + semantic), curiosity refresh, axis clustering,
-          comment candidate scoring, discourse challenge scan, external source profiling,
-          conviction-driven source selection, reading queue population, deep-dive detection, and
-          source-label classification of the target URL.
+          RSS collection, comment candidate scoring, discourse challenge scan, external source
+          discovery and profiling, conviction-driven source selection, reading queue population,
+          deep-dive detection, target prefetch, and source-label classification of the target URL.
         </p>
         <p>
           The reasoning model (qwen2.5-agent) then reads the scored digest, curiosity directive, topic summary, and memory
@@ -231,7 +234,7 @@ export default async function AboutPage() {
           <li><strong>Claim fingerprinting</strong> — SHA-1 on normalised tokens; duplicate claims within 6 hours are skipped regardless of source (prevents a single news event reported by many outlets from spiking confidence)</li>
           <li><strong>Stance validation</strong> — Ollama confirms the claimed pole alignment matches the entry content (min 0.50 confidence)</li>
           <li><strong>Diversity constraint</strong> — if one pole exceeds 70% of today&apos;s entries for an axis, weight is halved; above 90%, the entry is skipped</li>
-          <li><strong>Score recompute</strong> — trust-weighted mean over the full evidence log; unique source count drives the confidence ceiling (0.025 per source, max 0.98); daily score drift capped at ±0.05</li>
+          <li><strong>Score recompute</strong> — recency-weighted, trust-weighted mean over the evidence log (half-life 100 entries, so recent evidence dominates); confidence saturates on a curve of distinct-source weight (max 0.95); daily score drift capped at ±0.05</li>
           <li><strong>Confidence decay</strong> — axes with no new evidence lose 0.002 confidence per calendar day; prevents permanent saturation</li>
         </ol>
 
@@ -264,8 +267,8 @@ export default async function AboutPage() {
         </p>
         <ul>
           <li>Created only when a tension appears ≥6 times across ≥4 accounts in ≥2 topic clusters</li>
-          <li><strong>Score</strong> ∈ [−1, +1]: trust-weighted mean of pole assignments (0 = balanced)</li>
-          <li><strong>Confidence</strong> ∈ [0, 0.98]: driven by unique source count (0.025 per unique source). Decays slowly when an axis goes unobserved.</li>
+          <li><strong>Score</strong> ∈ [−1, +1]: recency-weighted, trust-weighted mean of pole assignments (0 = balanced; recent evidence dominates, so long-lived axes keep moving)</li>
+          <li><strong>Confidence</strong> ∈ [0, 0.95]: saturates slowly with distinct-source weight — informative even past 40 sources. Decays when an axis goes unobserved.</li>
           <li>Updates capped at ±0.05/day per axis to prevent rapid polarization</li>
           <li>Axes with zero evidence after 48 hours are reaped to a graveyard</li>
         </ul>
@@ -304,6 +307,47 @@ export default async function AboutPage() {
         <p>
           Verification results are published at <a href="/veritas-lens">Veritas Lens</a> and
           injected into reply drafts when responding to factual claims.
+        </p>
+
+        <h2>Deep research &amp; reports</h2>
+        <p>
+          Beyond passive observation, the system runs a full deep-research pipeline on demand:
+          triage (proceed, reformulate, or ask a clarifying question instead of guessing) →
+          explicit research plan → execution against real tools (memory recall, indexed posts,
+          live X search, web search, page fetch, on-chain token analysis, trending) → critic
+          rounds that research open gaps and keep a ledger of unfamiliar terms and claims to
+          verify → independent claim verification → a cited report with a structured
+          self-assessment. Publishing is gated on that self-assessment: the certainty of the
+          stated answer is matched to the measured confidence, and compromised research does
+          not publish.
+        </p>
+        <p>
+          Research is triggered three ways: X mentions that ask a genuine question, operator
+          commands, and — daily — open questions from the system&apos;s own active plan.
+          Findings are delivered as report pages on this site, X threads, or long-form
+          X Articles.
+        </p>
+
+        <h2>Predictions &amp; calibration</h2>
+        <p>
+          The system logs dated, falsifiable predictions with stated confidence. After each
+          deadline passes, an automatic resolver assigns correct / wrong / partial / expired
+          using the evidence accumulated since. Measured hit-rate is compared against stated
+          confidence, and the gap feeds back into generation — so stated confidence converges
+          toward actual accuracy instead of drifting into overclaim. The full log and its
+          resolution record are published at <a href="/predictions">Predictions</a>.
+        </p>
+
+        <h2>The posting pipeline</h2>
+        <p>
+          Everything published passes one shared path: composition, then a voice gate and a
+          fact-check gate (verifiably wrong facts are corrected or the draft is rejected), then
+          a status-tracked outbound queue with content-level deduplication, then the channel
+          engine. An amplification loop also reposts and reshares third-party content —
+          selection is biased by a learn-loop that measures what previous amplifications
+          actually earned per source and topic. On LinkedIn, post shape (opening, ending,
+          length, media) is assigned by an A/B controller and measured as a controlled
+          experiment: engagement per impression decides which shapes survive.
         </p>
 
         <h2>Tweet cycles</h2>
@@ -367,7 +411,7 @@ export default async function AboutPage() {
               </tr>
               <tr>
                 <td><strong>Browse cycle</strong></td>
-                <td>14-step pre-browse → local model reads digest + memory → journals + ontology delta → 8-gate evidence validation → axes updated</td>
+                <td>17-step pre-browse → local model reads digest + memory → journals + ontology delta → 8-gate evidence validation → axes updated</td>
               </tr>
               <tr>
                 <td><strong>Post-browse</strong></td>
@@ -392,6 +436,8 @@ export default async function AboutPage() {
           <strong>Ponders</strong> — milestone artifacts when conviction triggers planned action.{" "}
           <strong>Checkpoints</strong> — periodic worldview-state summaries.{" "}
           <strong>Articles</strong> — long-form pieces when an axis has enough directional strength.{" "}
+          <strong>Reports</strong> — published deep-research passes with cited sources.{" "}
+          <strong>Predictions</strong> — the dated prediction log with resolutions and calibration.{" "}
           <strong>Veritas Lens</strong> — verified and refuted claims from the pipeline.
         </p>
         <p>
