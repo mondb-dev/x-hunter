@@ -1042,7 +1042,8 @@ The feed is the research instrument; the night is the workshop.
 ## 20. Self-Improvement Protocol (META Cycle)
 
 Sebastian can identify weaknesses in his own process and propose improvements.
-A separate builder agent (Gemini 2.5 Pro, independent credentials) implements
+A separate builder agent (Claude via `BUILDER_BACKEND=claude`, with a Gemini
+2.5 Pro Vertex fallback on independent credentials) implements
 those proposals automatically. Changes are tested and auto-merged or rolled back.
 
 ### 20.1 Process Reflection
@@ -1106,7 +1107,7 @@ When `state/process_proposal.json` exists with `status == "pending"`:
 
 1. The orchestrator detects the proposal at the start of a cycle.
 2. One BROWSE cycle is replaced with a META cycle (max 1 per 24h).
-3. The builder agent (Gemini 2.5 Pro via Vertex AI) reads:
+3. The builder agent (Claude via the terminal, Vertex fallback) reads:
    - The proposal
    - AGENTS.md (the constitution)
    - ARCHITECTURE.md (system overview)

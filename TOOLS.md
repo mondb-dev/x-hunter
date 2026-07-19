@@ -129,7 +129,7 @@ embeddings), `prediction_log.jsonl`, `cost_ledger.jsonl` + `cost_config.json` +
 | Research reasoning | Claude CLI | `THINK_BACKEND=claude`, `CLAUDE_THINK_MODEL` |
 | Embeddings (768-dim) | nomic-embed-text via Ollama | `LOCAL_EMBED_MODEL` |
 | Claim verification (Cloud Run) | Gemini 2.5 Flash via Vertex | worker-side |
-| Self-mod builder | Gemini via Vertex | `BUILDER_MODEL`, `BUILDER_CREDENTIALS` |
+| Self-mod builder | Claude CLI; Gemini 2.5 Pro Vertex fallback | `BUILDER_BACKEND=claude`, `CLAUDE_BUILDER_MODEL`; fallback `BUILDER_MODEL`, `BUILDER_CREDENTIALS` |
 
 ---
 
@@ -174,7 +174,8 @@ BROWSE_MODEL / META_MODEL / OLLAMA_BASE_URL / OLLAMA_MODEL
 LOCAL_CHAT_MODEL / LOCAL_EMBED_MODEL
 COMPOSE_BACKEND / CLAUDE_COMPOSE_MODEL / CLAUDE_ARTICLE_MODEL / CLAUDE_COMPOSE_TIMEOUT_MS
 THINK_BACKEND / CLAUDE_THINK_MODEL / CLAUDE_THINK_TIMEOUT_MS
-BUILDER_MODEL / BUILDER_CREDENTIALS
+BUILDER_BACKEND / CLAUDE_BUILDER_MODEL / CLAUDE_BUILDER_TIMEOUT_MS
+BUILDER_MODEL / BUILDER_CREDENTIALS   # Vertex fallback path
 
 # posting + browser
 POST_BACKEND=helmstack / HELMSTACK_URL / HELMSTACK_AUTH_TOKEN / OUTBOX_X
