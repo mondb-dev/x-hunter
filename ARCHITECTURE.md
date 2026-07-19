@@ -576,7 +576,8 @@ follow_score = avg_velocity × 0.35
 | LLM (agent brain) | local qwen2.5-agent via Ollama (`runner/lib/gemini_agent.js` — legacy filename) |
 | LLM (outbound prose) | Claude CLI via `runner/lib/compose.js` (`COMPOSE_BACKEND=claude`); deep-research reasoning via `THINK_BACKEND=claude` |
 | LLM (scoring/gates/critique) | local qwen2.5-agent (`runner/local_llm.js`) |
-| LLM (cloud workers) | Gemini 2.5 Flash via Vertex — `workers/verify` claim verification and `runner/builder_vertex.js` self-mod builder only |
+| LLM (self-mod builder) | Claude CLI (`BUILDER_BACKEND=claude` in `runner/builder_vertex.js`); Gemini 2.5 Pro Vertex fallback |
+| LLM (cloud workers) | Gemini 2.5 Flash via Vertex — `workers/verify` claim verification |
 | Embeddings | nomic-embed-text 768-dim local via Ollama |
 | Permanent storage | Arweave via Irys L2 (SOL-funded, `@irys/sdk`) — journals, checkpoints, articles, evidence sources |
 | Web frontend | Next.js at sebastianhunter.fun (Vercel, built from repo content) |

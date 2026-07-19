@@ -87,7 +87,7 @@ See `.env.example` for the full list. Key vars:
 | `BROWSE_MODEL` / `LOCAL_CHAT_MODEL` | local reasoning model (qwen2.5-agent) |
 | `OLLAMA_BASE_URL` | Ollama endpoint (localhost:11434) |
 | `LOCAL_EMBED_MODEL` | embedding model (nomic-embed-text) |
-| `COMPOSE_BACKEND=claude` / `THINK_BACKEND=claude` | route outbound prose / research reasoning to the Claude CLI |
+| `COMPOSE_BACKEND` / `THINK_BACKEND` / `BUILDER_BACKEND` = `claude` | route outbound prose / research reasoning / self-mod builds to the Claude CLI |
 | `POST_BACKEND=helmstack` | posting via the helmstack-social engines |
 | `HELMSTACK_URL` / `HELMSTACK_AUTH_TOKEN` | HelmStack HTTP API (:7070) |
 | `OUTBOX_X` | opt X posting into the unified outbox queue |

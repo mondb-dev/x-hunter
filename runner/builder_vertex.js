@@ -1,16 +1,28 @@
 #!/usr/bin/env node
 /**
- * runner/builder_vertex.js — Vertex AI caller using BUILDER_CREDENTIALS
+ * runner/builder_vertex.js — builder-agent LLM caller (Claude or Vertex)
  *
  * Used by the META cycle builder agent and Telegram /builder ask command.
- * Uses a separate GCP service account (BUILDER_CREDENTIALS) to keep
- * builder traffic isolated from the main browse/synthesize pipeline.
+ * Historically Vertex-only (Gemini 2.5 Pro via BUILDER_CREDENTIALS — a separate
+ * GCP service account keeping builder traffic isolated from the main pipeline).
+ *
+ * BUILDER_BACKEND=claude routes builder inference through the Claude CLI
+ * (same `claude -p` mechanism as lib/compose.js COMPOSE/THINK backends), with
+ * automatic fallback to the Vertex path on any Claude failure — a Claude
+ * outage never blocks a build. Gated separately so compose/think/build toggle
+ * independently.
  *
  * Exports:
  *   callBuilder(prompt, maxTokens, options) → Promise<string>
  *
- * options.thinkingBudget  — thinking token budget (default: 0)
- * options.model           — model override (default: BUILDER_MODEL env or gemini-2.5-pro)
+ * options.thinkingBudget  — thinking token budget (Vertex path; default: 0)
+ * options.model           — Vertex model override (default: BUILDER_MODEL env or gemini-2.5-pro)
+ * options.claudeModel     — Claude alias/id (default: CLAUDE_BUILDER_MODEL env or 'sonnet')
+ * options.fallback        — false → surface Claude errors instead of falling back (default true)
+ *
+ * Env: BUILDER_BACKEND=claude (or CLAUDE_BUILDER=1) enables the Claude path;
+ *      CLAUDE_BUILDER_MODEL, CLAUDE_BUILDER_TIMEOUT_MS (default 600000 — builds
+ *      emit up to ~16k tokens and can run minutes).
  */
 
 "use strict";
@@ -20,13 +32,45 @@ const { getTokenForKey, getProjectConfig } = require("./gcp_auth");
 
 const DEFAULT_MODEL = process.env.BUILDER_MODEL || "gemini-2.5-pro";
 
+// Builder outputs are code/diffs/JSON consumed mechanically — same contract the
+// Vertex path had, so the system prompt demands exact-format output only.
+const BUILDER_SYSTEM =
+  "You are a precise software-engineering engine for an autonomous agent's " +
+  "self-modification builder. Follow the instructions in the user message " +
+  "EXACTLY, including any required output format (unified diffs, full file " +
+  "contents, or JSON). Output ONLY what is requested — no preamble, no " +
+  "markdown code fences unless the instructions ask for them, no commentary " +
+  "before or after. Honor every stated constraint.";
+
+/** True when builder inference should route to the Claude terminal. */
+function useClaudeBuilder() {
+  const b = (process.env.BUILDER_BACKEND || "").toLowerCase();
+  return b === "claude" || process.env.CLAUDE_BUILDER === "1";
+}
+
 /**
  * callBuilder(prompt, maxTokens, options)
  *
- * Calls Vertex AI using the builder service account.
+ * Routes to the Claude CLI when BUILDER_BACKEND=claude (falling back to Vertex
+ * on failure), else calls Vertex AI using the builder service account.
  * Returns the trimmed text content string.
  */
 async function callBuilder(prompt, maxTokens = 2000, options = {}) {
+  if (useClaudeBuilder()) {
+    try {
+      const { claudeCompose } = require("./lib/compose");
+      return await claudeCompose(prompt, {
+        claudeModel: options.claudeModel || process.env.CLAUDE_BUILDER_MODEL || "sonnet",
+        system: BUILDER_SYSTEM,
+        timeoutMs: Number(process.env.CLAUDE_BUILDER_TIMEOUT_MS) || 600_000,
+        tag: "builder",
+      });
+    } catch (e) {
+      if (options.fallback === false) throw e;
+      console.warn(`[builder] claude build failed (${e.message}) — falling back to Vertex`);
+    }
+  }
+
   const keyPath = process.env.BUILDER_CREDENTIALS;
   if (!keyPath) throw new Error("BUILDER_CREDENTIALS env var is not set");
 
@@ -93,4 +137,4 @@ async function callBuilder(prompt, maxTokens = 2000, options = {}) {
   });
 }
 
-module.exports = { callBuilder };
+module.exports = { callBuilder, useClaudeBuilder };

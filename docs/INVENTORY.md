@@ -35,7 +35,7 @@ Scraper loops (`scraper/start.sh:21-23`): collect 600s · reply 1800s · follows
 | Embeddings (768-dim) | **nomic-embed-text** local (`LOCAL_EMBED_MODEL`) | `runner/local_llm.js:22`; Vertex `text-embedding-004` fallback path retained in `runner/llm.js` |
 | Claim verification (worker + local intelligence scripts) | **Gemini 2.5 Flash** via Vertex | `workers/verify/index.js:137` (Cloud Run), `runner/intelligence/verify_claims.js` — genuinely still Gemini |
 | Media/vision description | Gemini 2.5 Flash via Vertex | `runner/vision.js:19` (`describeMedia`, used by collect.js) |
-| Self-modification builder | **Gemini 2.5 Pro** via Vertex (`BUILDER_MODEL`) | `runner/builder_vertex.js:21` |
+| Self-modification builder | **Claude CLI** (`BUILDER_BACKEND=claude`, `CLAUDE_BUILDER_MODEL`); Gemini 2.5 Pro Vertex fallback (`BUILDER_MODEL`) | `runner/builder_vertex.js` — routes like compose/think; falls back to Vertex on Claude failure |
 | Website /api/ask endpoint | Gemini 2.5 Flash via Vertex | `web/lib/sebastianRespond.ts` (server-side site code) |
 
 ## 3. Cycle anatomy
@@ -165,7 +165,8 @@ BigQuery streaming · Arweave via Irys (Solana-funded; SOLANA_* keys) · Moltboo
 Env vars in live `.env` (names only): see `.env.example`; notable current ones —
 BROWSE_MODEL, META_MODEL, OLLAMA_BASE_URL/OLLAMA_MODEL, LOCAL_CHAT_MODEL,
 LOCAL_EMBED_MODEL, COMPOSE_BACKEND, CLAUDE_COMPOSE_MODEL, CLAUDE_ARTICLE_MODEL,
-THINK_BACKEND, CLAUDE_THINK_MODEL, POST_BACKEND=helmstack, HELMSTACK_URL,
+THINK_BACKEND, CLAUDE_THINK_MODEL, BUILDER_BACKEND, CLAUDE_BUILDER_MODEL,
+CLAUDE_BUILDER_TIMEOUT_MS, POST_BACKEND=helmstack, HELMSTACK_URL,
 HELMSTACK_AUTH_TOKEN, OUTBOX_X, X_AUTO_RESEARCH, X_DEEP_TREE, TWEET_START/END.
 
 ## 8. Dead / legacy code flags
