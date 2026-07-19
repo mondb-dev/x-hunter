@@ -54,13 +54,13 @@ Driven through HelmStack (HTTP API :7070, `POST_BACKEND=helmstack`,
 1. `lib/linkedin_performance.pickShape` — the A/B controller assigns the
    post's SHAPE (opening technique, ending type, length bucket, media) by
    explore/exploit on measured engagement.
-2. `lib/linkedin_plan.js` — the planner FITS the assigned shape to the source
+2. `runner/lib/linkedin_plan.js` — the planner FITS the assigned shape to the source
    material (theme, structural blueprint, exact opening move). It may override
    a dimension only when the material can't support it; overrides carry a
    reason and the final values are what gets measured.
 3. Effectiveness metric: weighted engagement per 100 impressions; posting
    time/topic tracked as context, not as experiment dimensions.
-4. Source images auto-trigger on drafted posts (`lib/lead_source_image.js` —
+4. Source images auto-trigger on drafted posts (`runner/lib/lead_source_image.js` —
    excludes X URLs, requires page-level coherence).
 
 ## Amplification learn-loop
@@ -80,7 +80,7 @@ Measure → correlate → select, for reposts/quotes/reshares:
 ## Networking
 
 - LinkedIn: **Follow-first** for cold search targets; Connect only for warm
-  (`runner/linkedin_connect.js`, `lib/linkedin_connect_queries.js`).
+  (`runner/linkedin_connect.js`, `runner/lib/linkedin_connect_queries.js`).
 - Facebook: follow parallel (`connect-or-follow` subsystem).
 
 ## Moltbook

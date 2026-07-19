@@ -25,7 +25,7 @@ orchestrator BROWSE cycle
        4. claim fingerprint dedup (SHA-1, 6h window)
        5. stance validation (local LLM, min conf 0.50)
        6. diversity constraint (dominant pole >70% → half weight; >90% → skip)
-       7. score/confidence recompute (lib/belief_calibration.js —
+       7. score/confidence recompute (runner/lib/belief_calibration.js —
           recency-weighted mean, half-life 100; conf = 0.95·(1−e^(−ws/35)))
        8. drift cap ±0.05/day · confidence decay −0.002/day on idle axes
   → detect_drift.js
@@ -44,7 +44,7 @@ work; curiosity directs search URLs toward sprint topic keywords.
 
 ```
 orchestrator QUOTE/TWEET cycle          (posting window 07–23 local)
-  → compose (Claude via lib/compose.js) — draft grounded in notes/axes/memory
+  → compose (Claude via runner/lib/compose.js) — draft grounded in notes/axes/memory
   → outbound gates (voice + fact-check)
   → post via HelmStack X engine (post_x_helmstack.js; OUTBOX_X=1 routes
     through the outbox queue)
@@ -58,14 +58,14 @@ orchestrator QUOTE/TWEET cycle          (posting window 07–23 local)
 
 ## Outbound queue & amplification
 
-- **Outbox** (`lib/outbox.js`, `state/outbox.db`) — LinkedIn fully migrated;
+- **Outbox** (`runner/lib/outbox.js`, `state/outbox.db`) — LinkedIn fully migrated;
   X opt-in (`OUTBOX_X`). Status-tracked, content-dedup 7 days, LIFO claim.
 - **X amplify** (`x_amplify.js`) — bandit-picked repost, 1/run; measured by
   `amplify_measure.js` (>24h old, max 8/run) into `lib/amplify_performance`.
 - **LinkedIn amplify** (`linkedin_amplify.js`) — reshare parallel of the above.
-- **LinkedIn posting** — plan-first (`lib/linkedin_plan.js`); shape assigned by
+- **LinkedIn posting** — plan-first (`runner/lib/linkedin_plan.js`); shape assigned by
   the A/B controller (`lib/linkedin_performance.pickShape`); images via voyager
-  media pipeline; source-image auto-trigger (`lib/lead_source_image.js`).
+  media pipeline; source-image auto-trigger (`runner/lib/lead_source_image.js`).
 - **Facebook** — observation live (`fb_collect.js`); share loop pending
   (posting-roadmap.md).
 
@@ -101,7 +101,7 @@ orchestrator QUOTE/TWEET cycle          (posting window 07–23 local)
   → deep_dive.js / decision.js (self-gate chain after ponder)
   → stance_scan.js / plan_research.js / prediction_resolution.js (detached)
   → backfill_trust.js          (trust recalibration ± 0.5 based on last 7d)
-  → operating-cost rollup      (lib/operating_cost.compute → reflection)
+  → operating-cost rollup      (runner/lib/operating_cost.compute → reflection)
   → feed_digest.txt trim
 ```
 
@@ -114,10 +114,10 @@ orchestrator QUOTE/TWEET cycle          (posting window 07–23 local)
 | File | Written by | Read by | Notes |
 |---|---|---|---|
 | `state/ontology.json` | agent (delta), `apply_ontology_delta.js` | all belief scripts | evidence entries include summary, claim_id, arweave_tx |
-| `state/outbox.db` | producers via `lib/outbox.js` | channel drainers | append-only queue, statuses pending→posted/rejected/failed/stale |
+| `state/outbox.db` | producers via `runner/lib/outbox.js` | channel drainers | append-only queue, statuses pending→posted/rejected/failed/stale |
 | `state/posts_log.json` | posting adapters | `web/lib/readPosts.ts` | runner owns writes |
 | `state/prediction_log.jsonl` | predictive_prompt, prediction_resolution | web /predictions | + `prediction_export.json` |
-| `state/cost_ledger.jsonl` | `lib/cost_meter.js` | `lib/operating_cost.js` | one line per LLM call |
+| `state/cost_ledger.jsonl` | `runner/lib/cost_meter.js` | `runner/lib/operating_cost.js` | one line per LLM call |
 | `state/tool_gaps.json` | deep_research RESOLVE | capability review | unresolvable info needs |
 | `state/plan_research_state.json` | plan_research.js | itself | reset when active plan changes |
 | `state/scrape_metrics.jsonl` | `collect.js` | `watchdog.js` | per-run throughput |

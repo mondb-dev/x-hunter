@@ -55,7 +55,7 @@ HelmStack) runs on BROWSE cycles (orchestrator.js:185).
 source dedup → self-echo → claim fingerprint (SHA-1, 6h window, :409) → stance
 validation (Ollama, min conf 0.50, :69) → diversity constraint (dominant pole >70%
 → weight 0.5; >90% → skip, :57-61) → score recompute via
-`lib/belief_calibration.js` → drift cap ±0.05/day (:109) → confidence decay
+`runner/lib/belief_calibration.js` → drift cap ±0.05/day (:109) → confidence decay
 0.002/day (:632-644).
 
 **Belief math** (`runner/lib/belief_calibration.js` — replaced the old ×0.025/0.98
@@ -102,7 +102,7 @@ Follows (`scraper/follows.js:18,45`): max 3/run, 10/day, 1 min between.
   `runner/amplify_measure.js` (score amplifications >24h old, max 8/run),
   `runner/lib/amplify_performance.js` (source/topic → engagement correlation).
 - **Moltbook**: `runner/moltbook.js` article cross-post. **Networking**:
-  `runner/linkedin_connect.js` + `lib/linkedin_connect_queries.js` (Follow-first for
+  `runner/linkedin_connect.js` + `runner/lib/linkedin_connect_queries.js` (Follow-first for
   cold, Connect for warm), `fb` follow parallel.
 
 ## 5. Research / stances / predictions / costs

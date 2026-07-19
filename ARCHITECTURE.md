@@ -339,7 +339,7 @@ Then (mechanical — via orchestrator.js):
   → drafts pass outbound gates (voice + fact-check), then post via the
     HelmStack X engine (runner/lib/post_x_helmstack.js; POST_BACKEND=helmstack)
   → posts_log.js logs to state/posts_log.json
-  → git add / commit / push (lib/git.js)
+  → git add / commit / push (runner/lib/git.js)
   → archive.js indexes new journals/checkpoints → SQLite memory
                 → attempt Irys/Arweave upload if SOL balance ok
 ```

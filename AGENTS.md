@@ -1086,6 +1086,11 @@ Scope types:
 - Proposals must cite specific evidence (journal entries, failure patterns, drift alerts).
 - Proposals must estimate scope and risk.
 - High-risk proposals are deferred — Sebastian can re-propose as medium after more evidence.
+- **Docs move with code**: any implemented change that alters behavior under
+  `runner/`, `scraper/`, `lib/`, `pipelines/`, or `web/` must update the matching
+  doc (README, ARCHITECTURE.md, TOOLS.md, or the relevant `docs/*.md`) in the same
+  change. The weekly docs-drift audit (`scripts/docs_drift_audit.js`, report at
+  `state/docs_drift_report.json`) flags violations for the next reflection.
 
 ### 20.4 What Sebastian CANNOT Propose
 
