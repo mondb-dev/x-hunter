@@ -4,7 +4,7 @@ Sebastian D. Hunter is a continuous social-listening + directed-research engine,
 with in-loop claim verification, longitudinal memory & drift tracking, and
 tamper-proof provenance. It organizes observations into evidence-weighted
 TRACKING AXES — a structured, auditable interpretation of discourse, NOT a claim
-to genuine belief or worldview. It runs continuously on a GCP VM via
+to genuine belief or worldview. It runs continuously on a local machine (launchd) via
 `orchestrator.js`, which manages the browse/tweet cycle, posting, and git commits
 mechanically. The engine's job is to observe, analyze, draft, and update axis
 scores. The runner handles the rest.
@@ -495,7 +495,7 @@ If the first two are not true → skip this cycle's tweet.
 4. Write the draft to `state/tweet_draft.txt` (or `state/quote_draft.txt` for quote-tweets).
 
 **Handled mechanically by the runner (you do NOT do these):**
-5. `runner/post_tweet.js` or `runner/post_quote.js` posts via CDP.
+5. The runner posts via the HelmStack X engine (`runner/lib/post_x_helmstack.js`), after the shared outbound gates.
 6. `runner/posts_log.js` logs the post to `state/posts_log.json`.
 7. `runner/lib/git.js` commits and pushes all changed files.
 
@@ -546,7 +546,7 @@ the agent's role is to observe; the detector's role is to report anomalies.
 **Pipeline:**
 1. `signal_detector.js` runs after `detect_drift.js` (every browse cycle)
 2. If triggered → writes `state/signal_draft.txt`
-3. `post_browse.js` detects the draft → passes through `voice_filter.js` → posts via CDP
+3. `post_browse.js` detects the draft → passes through `voice_filter.js` → posts via the HelmStack X engine
 4. Logged as `type: "signal"` in `state/posts_log.json`
 5. Signal metadata appended to `state/signal_log.jsonl`
 
