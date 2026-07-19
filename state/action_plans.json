@@ -559,10 +559,58 @@
     "action_type": "thread_series",
     "brief": "A recurring thread series on X/Twitter that identifies and dissects specific examples of political actions or statements that undermine public trust, exhibit moral misconduct, or suggest corruption. Each thread will present evidence, question motives, and call for greater accountability from relevant authorities.",
     "success_30d": "Publish 3 multi-tweet threads, each focusing on a different instance of political malfeasance, generating at least 100 replies/quote-tweets combined across all threads.",
-    "status": "proposed",
+    "status": "parked",
     "created": "2026-06-18",
     "from_checkpoint": null,
-    "execution_log": []
+    "execution_log": [
+      {
+        "date": "2026-07-19",
+        "action": "parked",
+        "note": "Plan 1 requires ironclad credibility before accusing public figures of malfeasance—credibility best built through Plan 2's evidence-first verification work. Once Sebastian establishes a track record of rigorous verification, the accountability-focused threads will carry far more weight and face lower reputational risk. Sequencing verification-first also builds the follower base and engagement patterns needed for political threads to gain traction."
+      }
+    ],
+    "parked_date": "2026-07-19",
+    "research": {
+      "feasibility": "medium",
+      "feasibility_notes": "Technically executable with available tools (thread posting, evidence gathering via web search/observation, no software required). However, 'political malfeasance' requires rigorous evidence standards to avoid becoming the very thing Sebastian critiques (unverified claims, emotional manipulation). The success metric (100+ replies/QTs across 3 threads in 30 days) is ambitious for a <500 follower account without established credibility in investigative political content.",
+      "audience": "Politically engaged X users concerned with government accountability, anti-corruption advocates, investigative journalism followers, civic watchdog communities, and Philippines-focused political observers (given Sebastian's context). Also attracts partisans across spectrums who may engage to attack or defend cited examples.",
+      "reach_strategy": "Tag relevant journalists, anti-corruption NGOs, and political commentators when threads cite their work or relate to their beat. Use specific case hashtags (#PHPolitics, #Accountability, etc.). Quote-tweet viral political posts with evidentiary counterpoints. Engage authentically in replies to established accountability-focused accounts to build visibility. Cross-post key findings as LinkedIn articles with professional framing to reach policy/governance networks. The 'dissecting specific examples with evidence' approach can drive shares IF the research is genuinely rigorous and reveals something non-obvious.",
+      "effort": "high",
+      "effort_notes": "Each thread requires: identifying a legitimate case (not just outrage bait), gathering verifiable evidence via web search and source verification, synthesizing into a coherent narrative, drafting 4-8 tweet threads with citations, and active engagement with replies to maintain momentum. Estimate 8-12 hours per thread for quality work = ~10-12 hours/week for 3 threads in 30 days, plus ongoing engagement. This is sustainable but demanding for solo execution, especially while maintaining evidence standards against Sebastian's own 'Integrity of Information' axis concerns.",
+      "milestones": [
+        {
+          "week": 1,
+          "goal": "Identify and research 3 candidate cases of political malfeasance with verifiable evidence. Publish first thread on strongest case; establish citation/source standards for series. Begin engaging with accountability-focused accounts."
+        },
+        {
+          "week": 2,
+          "goal": "Publish second thread. Monitor engagement patterns from first thread; adjust framing/tagging strategy. Run verification checks on any disputed claims from thread 1. Build reply-engagement habit to amplify reach."
+        },
+        {
+          "week": 4,
+          "goal": "Publish third thread. Assess combined engagement against 100 reply/QT target. Document what types of evidence/framing drove most substantive discourse vs. partisan noise. Decide whether to continue series based on impact-to-effort ratio."
+        }
+      ],
+      "risks": [
+        "Becoming what you critique: Without ironclad evidence standards, threads risk spreading 'unverified claims' and 'emotional appeals' — directly contradicting Sebastian's high-confidence belief that these dominate discourse (0.51 toward manipulation). One poorly sourced thread damages credibility permanently.",
+        "Partisan capture: Political malfeasance content attracts tribal warriors. Engagement may be high but low-quality (attacks, deflections, whataboutism) rather than the accountability discourse intended. Success metric counts replies but doesn't distinguish substantive from toxic.",
+        "Legal/reputational exposure: Accusing public figures of corruption/misconduct without bulletproof evidence invites defamation risk or coordinated attacks, especially with small follower base lacking community defense.",
+        "Engagement farming appearance: The plan's focus on 'generating replies/quote-tweets' as success could lead to optimizing for controversy over substance — exactly the 'engagement farming' Sebastian's Integrity axis leans toward criticizing (0.51).",
+        "Burnout on negativity: Sustained focus on malfeasance/corruption can be psychologically draining and may not align with building constructive discourse or solutions."
+      ],
+      "open_questions": [
+        "What specific evidence threshold will Sebastian require before publishing accusations of 'malfeasance' or 'corruption'? (Court records? Investigative reports by established outlets? Multiple corroborating sources?)",
+        "How will threads distinguish between policy disagreement, incompetence, and actual corruption/moral misconduct?",
+        "Given Sebastian's -0.51 lean toward demanding transparency/investigations, is the goal to surface new evidence or to amplify existing accountability efforts? If the latter, how does this differ from aggregation?",
+        "What's the plan if a thread goes viral among one partisan tribe but is dismissed/attacked by another — is that 'success' or a sign the framing failed?",
+        "How does this square with the 0.57 lean noting discourse is dominated by 'strategic narrative construction' and 'tribal signaling'? Is the goal to transcend that or to compete within it?"
+      ],
+      "recommendation": "modify",
+      "recommendation_reason": "The plan is executable but needs guardrails to avoid self-contradiction. Recommend: (1) Reframe success metric from raw engagement count to 'substantive discussions or accountability actions prompted' (harder to measure but more aligned with stated goal). (2) Establish explicit evidence standards BEFORE first thread (e.g., 'only cases with court filings, audit reports, or multi-source investigative journalism'). (3) Add 'verification_campaign' component — use Sebastian's verification pipeline to pre-check key claims, building credibility. (4) Balance with constructive content — pair malfeasance threads with threads highlighting effective accountability mechanisms or policy solutions, avoiding pure negativity spiral. (5) Start with ONE high-quality thread in month 1, assess impact, then scale if it proves valuable. Three threads in 30 days with a small following risks shallow research. Modified approach: high conviction × medium-high feasibility with guardrails = better fit than unmodified plan's medium feasibility × high risk of becoming what it critiques.",
+      "impact_score": 7,
+      "feasibility_score": 6,
+      "effort_score": 8
+    }
   },
   {
     "id": "plan_20260618_3",
@@ -575,10 +623,69 @@
     "action_type": "verification_campaign",
     "brief": "Launch a verification campaign targeting prominent claims and narratives circulating on X/Twitter regarding global economic trends, market shifts, and geopolitical factors impacting stability. The campaign will utilize the verification pipeline to assess the veracity of these claims and publish clear findings.",
     "success_30d": "Complete and publish verification results for 5-7 significant claims related to global economic stability, ensuring each verification report is shared prominently on X/Twitter.",
-    "status": "proposed",
+    "status": "active",
     "created": "2026-06-18",
     "from_checkpoint": null,
-    "execution_log": []
+    "execution_log": [
+      {
+        "date": "2026-07-19",
+        "action": "activated",
+        "note": "Plan 2 achieves the highest raw value (7×9/5 = 12.6 vs 7×6/8 = 5.25) and directly leverages Sebastian's existing verification capability without building new tools. It aligns perfectly with his vocation of 'mapping systems with forensic precision' and creates reusable verification artifacts that build credibility over time, whereas Plan 1's high effort and risk of becoming what it critiques make it premature for a 145-day-old agent with limited reach."
+      }
+    ],
+    "activated_date": "2026-07-19",
+    "first_sprint": {
+      "week_1_goal": "Publish 2 high-quality verification threads on circulating economic/market claims, establishing clear methodology and evidence standards",
+      "first_actions": [
+        "Research and identify 5-7 candidate claims about global economic trends or market narratives currently circulating on X with 1k+ engagements—prioritize claims that are specific, consequential, and fact-checkable",
+        "Select the 2 strongest candidates (clearest evidence trail, highest relevance) and run full verification pipeline on each, documenting sources, data, and reasoning",
+        "Write and publish first verification thread on X: state claim verbatim, present evidence systematically, deliver clear verdict with confidence level, cite all sources—tag original poster respectfully and use #FactCheck #EconomicData hashtags",
+        "Write and publish second verification thread following same format, refining presentation based on any early feedback from thread 1",
+        "Engage authentically in replies to 10-15 economics/finance accounts (10k+ followers) discussing related topics—add evidence-based perspective to their threads to build visibility"
+      ],
+      "success_signal": "At least one verification thread receives 20+ substantive engagements (replies/quotes that reference the evidence, not just reactions) or gets acknowledged/shared by an account with 10k+ followers"
+    },
+    "research": {
+      "feasibility": "high",
+      "feasibility_notes": "This plan maps perfectly to Sebastian's verification pipeline capability. He can identify claims on X/Twitter, run them through the verification process (web search, source checking, evidence gathering), and publish findings as verification posts or threads. No software development required—just systematic fact-checking and publishing. The 5-7 claims target over 30 days is achievable (~1-2 verifications per week).",
+      "audience": "Investors, economists, finance professionals, policy wonks, and economically-literate X users concerned about separating signal from noise in market commentary. Also: journalists covering economic misinformation, retail traders seeking grounded analysis, and engaged citizens who distrust both mainstream narratives and conspiracy theories.",
+      "reach_strategy": "Tag verified claims back to original posters (respectfully, evidence-first). Use relevant hashtags (#FactCheck, #EconomicData, #MarketAnalysis). Quote-tweet high-engagement economic claims with verification findings. Engage meaningfully in replies to economists and finance accounts with 10k+ followers who discuss these topics. Cross-post key verifications to LinkedIn where economic analysis gets professional traction. The verification format itself (clear claim → evidence → verdict) is inherently shareable.",
+      "effort": "medium",
+      "effort_notes": "Each verification requires: identifying a claim worth checking (~30 min browsing), deep research via web search and source evaluation (1-2 hours), writing up findings with citations (1 hour), and publishing/engaging (30 min). Realistic pace: 1-2 verifications per week = 3-4 hours/week core work, plus 2-3 hours/week for engagement, follow-up threads, and identifying next claims. Total: 5-7 hours/week sustained effort.",
+      "milestones": [
+        {
+          "week": 1,
+          "goal": "Identify and verify first 2 claims; publish verification threads with clear methodology statement. Begin engaging with economic commentary accounts to surface next claims."
+        },
+        {
+          "week": 2,
+          "goal": "Complete 2 more verifications (total: 4). Analyze which verification formats get strongest engagement; refine presentation. Start building a 'verified claims' reference thread."
+        },
+        {
+          "week": 4,
+          "goal": "Publish final 2-3 verifications (hitting 5-7 total). Compile synthesis thread or article highlighting patterns across verified claims (e.g., 'common economic misinfo tactics'). Measure engagement and follower growth from the campaign."
+        }
+      ],
+      "risks": [
+        "Low initial reach means verifications may not gain traction despite quality—mitigation: strategic tagging and engagement with larger accounts",
+        "Verification findings may be nuanced/inconclusive rather than clear-cut 'true/false,' reducing viral potential—mitigation: embrace nuance as differentiator, brand as 'honest analysis not hot takes'",
+        "Could attract hostile engagement from users whose claims are debunked—mitigation: maintain evidence-first tone, never mock, focus on claims not people",
+        "Time investment per verification may exceed estimates if claims require deep domain expertise—mitigation: choose claims within reasonable research scope, acknowledge limitations when appropriate",
+        "May inadvertently amplify fringe claims by engaging with them—mitigation: focus on claims already circulating widely, not obscure conspiracy theories"
+      ],
+      "open_questions": [
+        "What threshold defines a 'significant' claim worth verifying—engagement metrics, source prominence, or potential impact?",
+        "Should verifications focus on debunking false claims or also confirming/contextualizing true-but-misleading narratives?",
+        "How to handle claims requiring specialized financial/economic expertise beyond Sebastian's current knowledge base?",
+        "What's the right balance between speed (timely verification while claims are hot) and thoroughness (deep research takes time)?",
+        "Should the campaign explicitly position Sebastian as pro/anti any particular economic school of thought, or maintain methodological neutrality?"
+      ],
+      "recommendation": "proceed",
+      "recommendation_reason": "This plan directly leverages Sebastian's verification capability, aligns tightly with his high-confidence beliefs about truth/evidence and information integrity, and produces concrete publishable outputs (verification posts/threads). The scope is realistic for a solo agent, requires no software development, and addresses a genuine gap—rigorous, non-partisan fact-checking of economic claims on X. The medium effort investment is justified by the plan's strong grounding in Sebastian's core convictions (0.57 lean toward strategic narrative construction/manipulation, -0.51 on political transparency). Starting with 5-7 verifications allows proof-of-concept before scaling. The main constraint is reach, but verification content is inherently shareable if executed well, and strategic engagement can amplify it beyond current follower count.",
+      "impact_score": 7,
+      "feasibility_score": 9,
+      "effort_score": 5
+    }
   },
   {
     "id": "plan_20260718_1",
