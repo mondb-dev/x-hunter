@@ -1,8 +1,8 @@
 {
   "schema_version": "1.0",
-  "generated_at": "2026-07-19T06:00:44.370Z",
+  "generated_at": "2026-07-19T09:00:47.476Z",
   "method": "mechanical_registry_v1",
-  "profiled_at": "2026-07-19T06:01:03.089Z",
+  "profiled_at": "2026-07-19T09:00:55.867Z",
   "sources": [
     {
       "domain": "theguardian.com",
@@ -11,7 +11,7 @@
       "first_seen_at": "2026-03-27T23:17:00Z",
       "last_seen_at": "2026-07-18T23:13:08.522Z",
       "discovery": {
-        "distinct_urls": 443,
+        "distinct_urls": 445,
         "example_urls": [
           "https://www.theguardian.com/us-news/2026/jun/23/trump-immigration-courthouse-arrest-policy",
           "https://www.theguardian.com/us-news/2026/jun/28/ice-minnesota-defending-democracy",
@@ -21,7 +21,7 @@
         ],
         "origin_counts": {
           "ontology_evidence": 37,
-          "reading_queue": 416,
+          "reading_queue": 418,
           "journals": 79,
           "articles": 1
         },
@@ -71,7 +71,7 @@
         "breadth": {
           "score": 0.94,
           "basis": [
-            "distinct_urls:443",
+            "distinct_urls:445",
             "distinct_axes:16",
             "origin_types:4"
           ]
@@ -111,7 +111,7 @@
             "newsroom_domain_pattern",
             "article_path_seen",
             "doi_or_identifier_path_seen",
-            "distinct_urls:443",
+            "distinct_urls:445",
             "distinct_axes:16",
             "origin_types:4",
             "referring_accounts:0",
@@ -165,7 +165,7 @@
         ],
         "origin_counts": {
           "claim_tracker": 1,
-          "reading_queue": 9
+          "reading_queue": 10
         },
         "distinct_referring_accounts": 0,
         "sample_referring_accounts": [],
@@ -684,7 +684,7 @@
         ],
         "origin_counts": {
           "ontology_evidence": 146,
-          "reading_queue": 9,
+          "reading_queue": 10,
           "journals": 361
         },
         "distinct_referring_accounts": 0,
@@ -757,13 +757,13 @@
           ]
         },
         "profile": {
-          "score": 0.49999999999999994,
-          "confidence": 0.75,
+          "score": 0.64,
+          "confidence": 0.85,
           "basis": [
             "meta_author:true",
             "published_time:true",
             "canonical:true",
-            "about:false",
+            "about:true",
             "contact:false",
             "corrections:false",
             "outbound_links:26",
@@ -787,24 +787,24 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-07-16T08:01:49.864Z",
+        "fetched_at": "2026-07-19T08:30:52.002Z",
         "homepage_url": "https://aljazeera.com/",
         "example_url": "https://www.aljazeera.com/opinions/2026/6/24/south-africas-crises-will-not-be-solved-by-blaming-migrants",
-        "homepage_status": null,
+        "homepage_status": 200,
         "example_status": 200,
-        "homepage_final_url": "https://aljazeera.com/",
+        "homepage_final_url": "https://www.aljazeera.com/",
         "example_final_url": "https://www.aljazeera.com/opinions/2026/6/24/south-africas-crises-will-not-be-solved-by-blaming-migrants",
-        "homepage_content_type": "",
+        "homepage_content_type": "text/html; charset=utf-8",
         "example_content_type": "text/html; charset=utf-8",
         "homepage": {
           "has_meta_author": false,
-          "has_published_time": false,
-          "has_canonical": false,
-          "has_about_link": false,
+          "has_published_time": true,
+          "has_canonical": true,
+          "has_about_link": true,
           "has_contact_link": false,
           "has_corrections_link": false,
-          "outbound_links_count": 0,
-          "opinion_marker": false
+          "outbound_links_count": 23,
+          "opinion_marker": true
         },
         "example": {
           "has_meta_author": true,
@@ -1201,7 +1201,7 @@
           "https://www.house.gov/"
         ],
         "origin_counts": {
-          "reading_queue": 9,
+          "reading_queue": 10,
           "journals": 1
         },
         "distinct_referring_accounts": 0,
@@ -1438,7 +1438,7 @@
       "first_seen_at": "2026-06-26T07:05:00Z",
       "last_seen_at": "2026-07-19T00:43:14.647Z",
       "discovery": {
-        "distinct_urls": 251,
+        "distinct_urls": 252,
         "example_urls": [
           "https://www.bbc.co.uk/news/articles/cn8qxz6qypyo",
           "https://www.bbc.co.uk/news/articles/cn075j04pnyo?at_medium=RSS&amp;at_campaign=rss",
@@ -1448,7 +1448,7 @@
         ],
         "origin_counts": {
           "ontology_evidence": 5,
-          "reading_queue": 254,
+          "reading_queue": 255,
           "journals": 13
         },
         "distinct_referring_accounts": 0,
@@ -1482,7 +1482,7 @@
         "breadth": {
           "score": 0.7049999999999998,
           "basis": [
-            "distinct_urls:251",
+            "distinct_urls:252",
             "distinct_axes:3",
             "origin_types:3"
           ]
@@ -1520,7 +1520,7 @@
           "method": "mechanical_v1",
           "basis": [
             "newsroom_domain_pattern",
-            "distinct_urls:251",
+            "distinct_urls:252",
             "distinct_axes:3",
             "origin_types:3",
             "referring_accounts:0",
@@ -2914,9 +2914,9 @@
       "entity": "Inquirer",
       "kind": "unknown",
       "first_seen_at": "2026-05-09T10:15:15.053Z",
-      "last_seen_at": "2026-07-19T05:31:45.735Z",
+      "last_seen_at": "2026-07-19T08:31:33.929Z",
       "discovery": {
-        "distinct_urls": 172,
+        "distinct_urls": 174,
         "example_urls": [
           "https://www.inquirer.net/capiz-broadcaster-shooting-probe-widens-as-cops-form-task-force",
           "https://newsinfo.inquirer.net/2251519/chr-carries-out-motu-proprio-probe-into-tacloban-cavite-school-incidents",
@@ -2925,8 +2925,8 @@
           "https://newsinfo.inquirer.net/2252742/fwd-defense-lawyer-poa-says-being-listed-as-the-prosecs-witness-not-a-problem"
         ],
         "origin_counts": {
-          "ontology_evidence": 80,
-          "journals": 247,
+          "ontology_evidence": 82,
+          "journals": 249,
           "articles": 1
         },
         "distinct_referring_accounts": 0,
@@ -2971,7 +2971,7 @@
         "breadth": {
           "score": 0.8799999999999999,
           "basis": [
-            "distinct_urls:172",
+            "distinct_urls:174",
             "distinct_axes:14",
             "origin_types:3"
           ]
@@ -3009,7 +3009,7 @@
           "method": "mechanical_v1",
           "basis": [
             "unknown_domain_pattern",
-            "distinct_urls:172",
+            "distinct_urls:174",
             "distinct_axes:14",
             "origin_types:3",
             "referring_accounts:0",
@@ -3055,9 +3055,9 @@
       "entity": "Rappler",
       "kind": "unknown",
       "first_seen_at": "2026-06-22T04:04:30.428Z",
-      "last_seen_at": "2026-07-19T02:13:03.337Z",
+      "last_seen_at": "2026-07-19T08:31:33.902Z",
       "discovery": {
-        "distinct_urls": 137,
+        "distinct_urls": 138,
         "example_urls": [
           "https://www.rappler.com/fact-check-no-arrest-warrant-issued-vs-marcoleta",
           "https://www.rappler.com/technology/decoded-tacloban-school-shooting-disinformation-kiko-barzaga-discussions-juvenile-justice-law/",
@@ -3067,7 +3067,7 @@
         ],
         "origin_counts": {
           "ontology_evidence": 77,
-          "journals": 164,
+          "journals": 165,
           "articles": 1
         },
         "distinct_referring_accounts": 0,
@@ -3119,7 +3119,7 @@
         "breadth": {
           "score": 0.8799999999999999,
           "basis": [
-            "distinct_urls:137",
+            "distinct_urls:138",
             "distinct_axes:21",
             "origin_types:3"
           ]
@@ -3157,7 +3157,7 @@
           "method": "mechanical_v1",
           "basis": [
             "unknown_domain_pattern",
-            "distinct_urls:137",
+            "distinct_urls:138",
             "distinct_axes:21",
             "origin_types:3",
             "referring_accounts:0",
@@ -3203,9 +3203,9 @@
       "entity": "Philstar",
       "kind": "unknown",
       "first_seen_at": "2026-05-20T06:57:31.760Z",
-      "last_seen_at": "2026-07-18T18:42:49.178Z",
+      "last_seen_at": "2026-07-19T07:01:27.172Z",
       "discovery": {
-        "distinct_urls": 96,
+        "distinct_urls": 97,
         "example_urls": [
           "https://www.philstar.com/headlines/2026/06/24/2537506/mike-defensor-face-trafficking-complaint-over-pasig-ktv-bar-raid",
           "https://www.philstar.com/headlines/2026/06/24/2537509/ched-tells-ateneo-explain-drowning-baterbonia-adili-or-face-sanctions",
@@ -3215,7 +3215,7 @@
         ],
         "origin_counts": {
           "ontology_evidence": 58,
-          "journals": 137
+          "journals": 138
         },
         "distinct_referring_accounts": 0,
         "sample_referring_accounts": [],
@@ -3257,7 +3257,7 @@
         "breadth": {
           "score": 0.82,
           "basis": [
-            "distinct_urls:96",
+            "distinct_urls:97",
             "distinct_axes:11",
             "origin_types:2"
           ]
@@ -3296,7 +3296,7 @@
           "basis": [
             "unknown_domain_pattern",
             "article_path_seen",
-            "distinct_urls:96",
+            "distinct_urls:97",
             "distinct_axes:11",
             "origin_types:2",
             "referring_accounts:0",
@@ -3552,16 +3552,16 @@
           ]
         },
         "profile": {
-          "score": 0.26,
+          "score": 0.48,
           "confidence": 0.65,
           "basis": [
             "meta_author:false",
             "published_time:false",
-            "canonical:false",
+            "canonical:true",
             "about:true",
             "contact:true",
             "corrections:false",
-            "outbound_links:0",
+            "outbound_links:27",
             "opinion_marker:false"
           ]
         },
@@ -3581,15 +3581,15 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-07-16T08:02:07.287Z",
+        "fetched_at": "2026-07-19T08:30:54.803Z",
         "homepage_url": "https://bit.ly/",
         "example_url": "https://bit.ly/4rFUGm4?twclid=2cxu7o43bx4p37y7v84zudvy2q",
         "homepage_status": 200,
-        "example_status": null,
+        "example_status": 200,
         "homepage_final_url": "https://bitly.com/",
-        "example_final_url": "https://bit.ly/4rFUGm4?twclid=2cxu7o43bx4p37y7v84zudvy2q",
+        "example_final_url": "https://3commas.io/?utm_source=twitter-ads&utm_medium=cpc&utm_campaign=usa_coinbasefutures&utm_term=post&utm_content=coinbase-futures",
         "homepage_content_type": "text/html; charset=utf-8",
-        "example_content_type": "",
+        "example_content_type": "text/html; charset=utf-8",
         "homepage": {
           "has_meta_author": false,
           "has_published_time": true,
@@ -3603,11 +3603,11 @@
         "example": {
           "has_meta_author": false,
           "has_published_time": false,
-          "has_canonical": false,
-          "has_about_link": false,
+          "has_canonical": true,
+          "has_about_link": true,
           "has_contact_link": false,
           "has_corrections_link": false,
-          "outbound_links_count": 0,
+          "outbound_links_count": 27,
           "opinion_marker": false
         }
       }
@@ -3617,9 +3617,9 @@
       "entity": "T Co",
       "kind": "unknown",
       "first_seen_at": "2016-05-05T18:57:30.000Z",
-      "last_seen_at": "2026-07-19T05:21:16.000Z",
+      "last_seen_at": "2026-07-19T05:30:00.000Z",
       "discovery": {
-        "distinct_urls": 8034,
+        "distinct_urls": 8038,
         "example_urls": [
           "https://t.co/pJSE124ec4",
           "https://t.co/Soz8BXPWaa",
@@ -3628,7 +3628,7 @@
           "https://t.co/cYaqYDRp08"
         ],
         "origin_counts": {
-          "feed_buffer": 5062,
+          "feed_buffer": 5066,
           "feed_buffer_reply": 4830
         },
         "distinct_referring_accounts": 2484,
@@ -3670,7 +3670,7 @@
         "breadth": {
           "score": 0.47,
           "basis": [
-            "distinct_urls:8034",
+            "distinct_urls:8038",
             "distinct_axes:0",
             "origin_types:2"
           ]
@@ -3709,7 +3709,7 @@
           "basis": [
             "unknown_domain_pattern",
             "doi_or_identifier_path_seen",
-            "distinct_urls:8034",
+            "distinct_urls:8038",
             "distinct_axes:0",
             "origin_types:2",
             "referring_accounts:2484",
@@ -3755,9 +3755,9 @@
       "entity": "Gmanetwork",
       "kind": "unknown",
       "first_seen_at": "2026-05-18T03:29:41.732Z",
-      "last_seen_at": "2026-07-19T05:31:45.712Z",
+      "last_seen_at": "2026-07-19T08:31:33.902Z",
       "discovery": {
-        "distinct_urls": 152,
+        "distinct_urls": 158,
         "example_urls": [
           "https://www.gmanetwork.com/news/topstories/nation/994225/explainer-objections-in-a-trial-and-their-role-in-due-process/story/",
           "https://www.gmanetwork.com/news/balitambayan/balita/993931/sen-escudero-sinabing-16-na-boto-ang-kailangan-para-mahatulang-guilty-si-vp-sara-duterte-sa-impea/story/",
@@ -3766,8 +3766,8 @@
           "https://www.gmanetwork.com/news/topstories/nation/994080/electronic-copies-evidence-supreme-court/story/"
         ],
         "origin_counts": {
-          "ontology_evidence": 60,
-          "journals": 185
+          "ontology_evidence": 62,
+          "journals": 191
         },
         "distinct_referring_accounts": 0,
         "sample_referring_accounts": [],
@@ -3777,6 +3777,7 @@
           "axis_humanitarian_crisis_response",
           "axis_media_integrity_v1",
           "axis_national_sovereignty_v_intl_law_v1",
+          "axis_ph_geopolitics_wps_v1",
           "axis_political_dynasties_meritocracy_v1",
           "axis_political_moral_conduct_v1",
           "axis_political_trust_corruption_v1",
@@ -3810,8 +3811,8 @@
         "breadth": {
           "score": 0.82,
           "basis": [
-            "distinct_urls:152",
-            "distinct_axes:13",
+            "distinct_urls:158",
+            "distinct_axes:14",
             "origin_types:2"
           ]
         },
@@ -3848,8 +3849,8 @@
           "method": "mechanical_v1",
           "basis": [
             "unknown_domain_pattern",
-            "distinct_urls:152",
-            "distinct_axes:13",
+            "distinct_urls:158",
+            "distinct_axes:14",
             "origin_types:2",
             "referring_accounts:0",
             "origin_types:2",
@@ -4245,23 +4246,23 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-07-16T08:02:18.697Z",
+        "fetched_at": "2026-07-19T08:30:55.854Z",
         "homepage_url": "https://epochtimes.com/",
         "example_url": "https://www.epochtimes.com/",
-        "homepage_status": null,
+        "homepage_status": 200,
         "example_status": 200,
-        "homepage_final_url": "https://epochtimes.com/",
+        "homepage_final_url": "https://www.epochtimes.com/",
         "example_final_url": "https://www.epochtimes.com/",
-        "homepage_content_type": "",
+        "homepage_content_type": "text/html; charset=UTF-8",
         "example_content_type": "text/html; charset=UTF-8",
         "homepage": {
           "has_meta_author": false,
           "has_published_time": false,
-          "has_canonical": false,
+          "has_canonical": true,
           "has_about_link": false,
           "has_contact_link": false,
           "has_corrections_link": false,
-          "outbound_links_count": 0,
+          "outbound_links_count": 61,
           "opinion_marker": false
         },
         "example": {
@@ -4373,7 +4374,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-07-16T08:02:22.025Z",
+        "fetched_at": "2026-07-19T08:30:57.064Z",
         "homepage_url": "https://idf.il/",
         "example_url": "https://www.idf.il/en/articles/2026/04/16/idf-finds-weapons-in-school-in-bint-jbeil-lebanon/",
         "homepage_status": null,
@@ -44992,7 +44993,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-07-13T18:47:19.480Z",
+        "fetched_at": "2026-07-19T07:00:47.647Z",
         "homepage_url": "https://rsvlts.com/",
         "example_url": "https://www.rsvlts.com/collections/rocky/products/rocky-hearts-on-fire-swim-trunks?utm_source=twitter&utm_medium=cpc&utm_campaign=rocky&utm_term=3878448&twclid=29acb84lz8x1f7nqu7wna0a5zi",
         "homepage_status": 200,
@@ -45115,7 +45116,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-07-13T18:47:21.640Z",
+        "fetched_at": "2026-07-19T07:00:49.393Z",
         "homepage_url": "https://agentstatus.dev/",
         "example_url": "https://agentstatus.dev/?twclid=25rbfxkgyh0s8w6dbsvrb25thd",
         "homepage_status": 200,
@@ -45238,7 +45239,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-07-13T18:47:22.147Z",
+        "fetched_at": "2026-07-19T07:00:49.718Z",
         "homepage_url": "https://agnes-ai.com/",
         "example_url": "https://platform.agnes-ai.com/?twclid=22ywp827kbc6iee374jyxfkzgx",
         "homepage_status": 200,
@@ -45361,7 +45362,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-07-13T20:01:23.059Z",
+        "fetched_at": "2026-07-19T07:00:52.631Z",
         "homepage_url": "https://kiierr.com/",
         "example_url": "https://kiierr.com/regrow-your-hair-new/?twclid=23i2gackvanp24oqqrs1z7o7zb",
         "homepage_status": 200,
@@ -45484,7 +45485,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-07-13T20:01:25.418Z",
+        "fetched_at": "2026-07-19T07:30:48.055Z",
         "homepage_url": "https://lookforther.realtor/",
         "example_url": "https://lookforther.realtor/?CID=psm_CAC_X_IF_ETHICS&twclid=22auirinqzzr62nnn2m30ol8h8",
         "homepage_status": 200,
@@ -45607,7 +45608,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-07-13T20:01:28.261Z",
+        "fetched_at": "2026-07-19T07:30:50.761Z",
         "homepage_url": "https://sugar.org/",
         "example_url": "https://sugar.org/?twclid=21ib4ppr4qv4sw7b4fcgpqz36w",
         "homepage_status": 200,
@@ -45730,7 +45731,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-07-13T20:01:29.509Z",
+        "fetched_at": "2026-07-19T07:30:52.692Z",
         "homepage_url": "https://oneleet.com/",
         "example_url": "https://oneleet.com/?utm_source=twitter&utm_medium=paid_social&utm_campaign=compliance_theater&twclid=2a67j2m5wa6dh7oxzhxot0zwu2",
         "homepage_status": 200,
@@ -45853,7 +45854,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-07-13T20:31:23.166Z",
+        "fetched_at": "2026-07-19T07:30:53.028Z",
         "homepage_url": "https://ptgaming.ph/",
         "example_url": "https://www.ptgaming.ph/?twclid=21n3lg1hcl64ox73kjyr4lggz9",
         "homepage_status": 200,
@@ -45976,7 +45977,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-07-13T20:31:26.187Z",
+        "fetched_at": "2026-07-19T09:00:49.593Z",
         "homepage_url": "https://kalit.ai/",
         "example_url": "https://kalit.ai/?utm_source=twitter&utm_medium=paid_social&utm_campaign=x_prospecting_t2&utm_term=compfollowers&utm_content=intro-video&twclid=2ab0y68caxp5yfk1045i4lcy0",
         "homepage_status": 200,
@@ -46099,7 +46100,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-07-13T20:31:28.312Z",
+        "fetched_at": "2026-07-19T09:00:51.150Z",
         "homepage_url": "https://gitalgame.com/",
         "example_url": "https://gitalgame.com/?utm_source=x&utm_medium=paid_social&utm_campaign=gitalgame_888888_july2026&utm_term=premium_gaming_domain&utm_content=xads_blueviolet_esports_creative_01&twclid=2515cnulakw8v6oqhheftov038",
         "homepage_status": 403,
@@ -46222,7 +46223,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-07-13T21:31:28.208Z",
+        "fetched_at": "2026-07-19T09:00:53.801Z",
         "homepage_url": "https://munify.ai/",
         "example_url": "https://munify.ai/?twclid=2dqqlc06hd00g4mbmpeijnyhrm",
         "homepage_status": 200,
@@ -46345,7 +46346,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-07-14T03:31:14.814Z",
+        "fetched_at": "2026-07-19T09:00:55.867Z",
         "homepage_url": "https://basemap.cc/",
         "example_url": "https://basemap.cc/explore?twclid=226o0u97p1sxujr91bs157bwa2",
         "homepage_status": 200,
@@ -76900,6 +76901,83 @@
         "distinct_referring_accounts": 1,
         "sample_referring_accounts": [
           "urbanmediafix"
+        ],
+        "distinct_axes": []
+      },
+      "claims": {
+        "total": 0,
+        "supported": 0,
+        "refuted": 0,
+        "contested": 0,
+        "unverified": 0,
+        "resolved_count": 0
+      },
+      "structural_features": {
+        "has_search_paths": false,
+        "has_article_paths": false,
+        "has_doi_paths": false
+      },
+      "ratings": {
+        "provenance": {
+          "score": 0.45,
+          "basis": [
+            "unknown_domain_pattern"
+          ]
+        },
+        "breadth": {
+          "score": 0.08916666666666666,
+          "basis": [
+            "distinct_urls:1",
+            "distinct_axes:0",
+            "origin_types:1"
+          ]
+        },
+        "corroboration": {
+          "score": 0.19583333333333333,
+          "basis": [
+            "referring_accounts:1",
+            "origin_types:1"
+          ]
+        },
+        "track_record": {
+          "score": null,
+          "basis": [
+            "no_resolved_claims_observed"
+          ]
+        },
+        "overall": {
+          "score": 0.3472395833333333,
+          "confidence": 0.08135,
+          "method": "mechanical_v1",
+          "basis": [
+            "unknown_domain_pattern",
+            "distinct_urls:1",
+            "distinct_axes:0",
+            "origin_types:1",
+            "referring_accounts:1",
+            "origin_types:1",
+            "track_record_unavailable"
+          ]
+        }
+      }
+    },
+    {
+      "domain": "hypeddit.com",
+      "entity": "Hypeddit",
+      "kind": "unknown",
+      "first_seen_at": "2026-07-19T08:05:35.939Z",
+      "last_seen_at": "2026-07-19T08:05:35.939Z",
+      "discovery": {
+        "distinct_urls": 1,
+        "example_urls": [
+          "https://hypeddit.com/psychicfeverfromexiletribe/ifyouremine?twclid=23rtj49iasvoyuwyxn3g4hwi03"
+        ],
+        "origin_counts": {
+          "feed_buffer": 1
+        },
+        "distinct_referring_accounts": 1,
+        "sample_referring_accounts": [
+          "psyfe_official"
         ],
         "distinct_axes": []
       },
