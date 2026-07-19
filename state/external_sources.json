@@ -1,17 +1,17 @@
 {
   "schema_version": "1.0",
-  "generated_at": "2026-07-19T18:13:59.549Z",
+  "generated_at": "2026-07-19T21:14:00.733Z",
   "method": "mechanical_registry_v1",
-  "profiled_at": "2026-07-19T18:14:09.330Z",
+  "profiled_at": "2026-07-19T21:14:06.070Z",
   "sources": [
     {
       "domain": "theguardian.com",
       "entity": "Theguardian",
       "kind": "news",
       "first_seen_at": "2026-03-27T23:17:00Z",
-      "last_seen_at": "2026-07-19T16:13:02.005Z",
+      "last_seen_at": "2026-07-19T20:44:41.291Z",
       "discovery": {
-        "distinct_urls": 452,
+        "distinct_urls": 455,
         "example_urls": [
           "https://www.theguardian.com/us-news/2026/jun/23/trump-immigration-courthouse-arrest-policy",
           "https://www.theguardian.com/us-news/2026/jun/28/ice-minnesota-defending-democracy",
@@ -20,9 +20,9 @@
           "https://www.theguardian.com/global-development/2026/jun/26/woman-sadia-moalim-ali-three-year-jail-sentence-somalia-online-comments-governement"
         ],
         "origin_counts": {
-          "ontology_evidence": 37,
-          "reading_queue": 424,
-          "journals": 81,
+          "ontology_evidence": 38,
+          "reading_queue": 426,
+          "journals": 82,
           "articles": 1
         },
         "distinct_referring_accounts": 0,
@@ -71,7 +71,7 @@
         "breadth": {
           "score": 0.94,
           "basis": [
-            "distinct_urls:452",
+            "distinct_urls:455",
             "distinct_axes:16",
             "origin_types:4"
           ]
@@ -111,7 +111,7 @@
             "newsroom_domain_pattern",
             "article_path_seen",
             "doi_or_identifier_path_seen",
-            "distinct_urls:452",
+            "distinct_urls:455",
             "distinct_axes:16",
             "origin_types:4",
             "referring_accounts:0",
@@ -537,9 +537,9 @@
       "entity": "Nytimes",
       "kind": "news",
       "first_seen_at": "2026-06-22T00:15:00Z",
-      "last_seen_at": "2026-07-18T21:42:57.675Z",
+      "last_seen_at": "2026-07-19T20:44:41.272Z",
       "discovery": {
-        "distinct_urls": 308,
+        "distinct_urls": 310,
         "example_urls": [
           "https://www.nytimes.com/2026/06/19/world/canada/frank-stronach-trial-guilty-sex-charges.html",
           "https://www.nytimes.com/2026/06/27/world/americas/mexican-officials-us-informants.html",
@@ -549,8 +549,8 @@
         ],
         "origin_counts": {
           "ontology_evidence": 12,
-          "reading_queue": 309,
-          "journals": 30
+          "reading_queue": 311,
+          "journals": 31
         },
         "distinct_referring_accounts": 0,
         "sample_referring_accounts": [],
@@ -587,7 +587,7 @@
         "breadth": {
           "score": 0.8799999999999999,
           "basis": [
-            "distinct_urls:308",
+            "distinct_urls:310",
             "distinct_axes:6",
             "origin_types:3"
           ]
@@ -626,7 +626,7 @@
           "basis": [
             "newsroom_domain_pattern",
             "article_path_seen",
-            "distinct_urls:308",
+            "distinct_urls:310",
             "distinct_axes:6",
             "origin_types:3",
             "referring_accounts:0",
@@ -672,9 +672,9 @@
       "entity": "Aljazeera",
       "kind": "news",
       "first_seen_at": "2026-06-22T02:45:00Z",
-      "last_seen_at": "2026-07-19T17:44:57.766Z",
+      "last_seen_at": "2026-07-19T19:14:36.816Z",
       "discovery": {
-        "distinct_urls": 273,
+        "distinct_urls": 274,
         "example_urls": [
           "https://www.aljazeera.com/opinions/2026/6/24/south-africas-crises-will-not-be-solved-by-blaming-migrants",
           "https://www.aljazeera.com/video/newsfeed/2026/6/27/newly-released-video-exposes-henry-nowak-killers-lies?traffic_source=rss",
@@ -685,7 +685,7 @@
         "origin_counts": {
           "ontology_evidence": 149,
           "reading_queue": 10,
-          "journals": 364
+          "journals": 365
         },
         "distinct_referring_accounts": 0,
         "sample_referring_accounts": [],
@@ -739,7 +739,7 @@
         "breadth": {
           "score": 0.8799999999999999,
           "basis": [
-            "distinct_urls:273",
+            "distinct_urls:274",
             "distinct_axes:23",
             "origin_types:3"
           ]
@@ -778,7 +778,7 @@
           "basis": [
             "newsroom_domain_pattern",
             "article_path_seen",
-            "distinct_urls:273",
+            "distinct_urls:274",
             "distinct_axes:23",
             "origin_types:3",
             "referring_accounts:0",
@@ -1078,7 +1078,7 @@
           "https://doi.org/10.1002/ped4.70061?twclid=2e8cuab281hyoulc7u4h9bd94u"
         ],
         "origin_counts": {
-          "reading_queue": 2,
+          "reading_queue": 3,
           "feed_buffer": 1,
           "feed_buffer_reply": 1
         },
@@ -1159,7 +1159,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-07-16T18:42:24.445Z",
+        "fetched_at": "2026-07-19T19:13:58.168Z",
         "homepage_url": "https://doi.org/",
         "example_url": "https://doi.org/10.1002/ped4.70061?twclid=2p92o0thcwkaxz6o70plj8t4q",
         "homepage_status": 200,
@@ -1437,9 +1437,9 @@
       "entity": "Bbc",
       "kind": "news",
       "first_seen_at": "2026-06-26T07:05:00Z",
-      "last_seen_at": "2026-07-19T00:43:14.647Z",
+      "last_seen_at": "2026-07-19T20:44:41.291Z",
       "discovery": {
-        "distinct_urls": 257,
+        "distinct_urls": 259,
         "example_urls": [
           "https://www.bbc.co.uk/news/articles/cn8qxz6qypyo",
           "https://www.bbc.co.uk/news/articles/cn075j04pnyo?at_medium=RSS&amp;at_campaign=rss",
@@ -1448,15 +1448,16 @@
           "https://www.bbc.co.uk/news/articles/cdxdwkgqgq0o?at_medium=RSS&amp;at_campaign=rss"
         ],
         "origin_counts": {
-          "ontology_evidence": 5,
-          "reading_queue": 260,
-          "journals": 13
+          "ontology_evidence": 6,
+          "reading_queue": 261,
+          "journals": 14
         },
         "distinct_referring_accounts": 0,
         "sample_referring_accounts": [],
         "distinct_axes": [
           "axis_epistemic_integrity",
           "axis_global_power_realignments_v1",
+          "axis_procedural_governance_accountability_v1",
           "axis_religion_politics_war_v1"
         ]
       },
@@ -1481,10 +1482,10 @@
           ]
         },
         "breadth": {
-          "score": 0.7049999999999998,
+          "score": 0.7633333333333332,
           "basis": [
-            "distinct_urls:257",
-            "distinct_axes:3",
+            "distinct_urls:259",
+            "distinct_axes:4",
             "origin_types:3"
           ]
         },
@@ -1516,13 +1517,13 @@
           ]
         },
         "overall": {
-          "score": 0.673828125,
-          "confidence": 0.621675,
+          "score": 0.6865885416666667,
+          "confidence": 0.633925,
           "method": "mechanical_v1",
           "basis": [
             "newsroom_domain_pattern",
-            "distinct_urls:257",
-            "distinct_axes:3",
+            "distinct_urls:259",
+            "distinct_axes:4",
             "origin_types:3",
             "referring_accounts:0",
             "origin_types:3",
@@ -2116,7 +2117,7 @@
       "entity": "Amnesty",
       "kind": "unknown",
       "first_seen_at": "2026-03-31T12:16:18.459Z",
-      "last_seen_at": "2026-07-19T14:44:12.571Z",
+      "last_seen_at": "2026-07-19T18:14:48.481Z",
       "discovery": {
         "distinct_urls": 49,
         "example_urls": [
@@ -2129,7 +2130,7 @@
         "origin_counts": {
           "ontology_evidence": 43,
           "reading_queue": 25,
-          "journals": 70
+          "journals": 71
         },
         "distinct_referring_accounts": 0,
         "sample_referring_accounts": [],
@@ -3205,9 +3206,9 @@
       "entity": "Philstar",
       "kind": "unknown",
       "first_seen_at": "2026-05-20T06:57:31.760Z",
-      "last_seen_at": "2026-07-19T17:44:57.766Z",
+      "last_seen_at": "2026-07-19T19:14:36.838Z",
       "discovery": {
-        "distinct_urls": 100,
+        "distinct_urls": 103,
         "example_urls": [
           "https://www.philstar.com/headlines/2026/06/24/2537506/mike-defensor-face-trafficking-complaint-over-pasig-ktv-bar-raid",
           "https://www.philstar.com/headlines/2026/06/24/2537509/ched-tells-ateneo-explain-drowning-baterbonia-adili-or-face-sanctions",
@@ -3216,8 +3217,8 @@
           "https://www.philstar.com/headlines/2026/06/28/2538295/icc-freezes-money-seized-duterte"
         ],
         "origin_counts": {
-          "ontology_evidence": 58,
-          "journals": 141
+          "ontology_evidence": 60,
+          "journals": 143
         },
         "distinct_referring_accounts": 0,
         "sample_referring_accounts": [],
@@ -3259,7 +3260,7 @@
         "breadth": {
           "score": 0.82,
           "basis": [
-            "distinct_urls:100",
+            "distinct_urls:103",
             "distinct_axes:11",
             "origin_types:2"
           ]
@@ -3298,7 +3299,7 @@
           "basis": [
             "unknown_domain_pattern",
             "article_path_seen",
-            "distinct_urls:100",
+            "distinct_urls:103",
             "distinct_axes:11",
             "origin_types:2",
             "referring_accounts:0",
@@ -3619,9 +3620,9 @@
       "entity": "T Co",
       "kind": "unknown",
       "first_seen_at": "2016-05-05T18:57:30.000Z",
-      "last_seen_at": "2026-07-19T16:10:01.000Z",
+      "last_seen_at": "2026-07-19T19:30:11.000Z",
       "discovery": {
-        "distinct_urls": 8054,
+        "distinct_urls": 8057,
         "example_urls": [
           "https://t.co/pJSE124ec4",
           "https://t.co/Soz8BXPWaa",
@@ -3630,7 +3631,7 @@
           "https://t.co/cYaqYDRp08"
         ],
         "origin_counts": {
-          "feed_buffer": 5083,
+          "feed_buffer": 5086,
           "feed_buffer_reply": 4830
         },
         "distinct_referring_accounts": 2484,
@@ -3672,7 +3673,7 @@
         "breadth": {
           "score": 0.47,
           "basis": [
-            "distinct_urls:8054",
+            "distinct_urls:8057",
             "distinct_axes:0",
             "origin_types:2"
           ]
@@ -3711,7 +3712,7 @@
           "basis": [
             "unknown_domain_pattern",
             "doi_or_identifier_path_seen",
-            "distinct_urls:8054",
+            "distinct_urls:8057",
             "distinct_axes:0",
             "origin_types:2",
             "referring_accounts:2484",
@@ -3757,9 +3758,9 @@
       "entity": "Gmanetwork",
       "kind": "unknown",
       "first_seen_at": "2026-05-18T03:29:41.732Z",
-      "last_seen_at": "2026-07-19T17:44:57.796Z",
+      "last_seen_at": "2026-07-19T19:14:36.838Z",
       "discovery": {
-        "distinct_urls": 163,
+        "distinct_urls": 164,
         "example_urls": [
           "https://www.gmanetwork.com/news/topstories/nation/994225/explainer-objections-in-a-trial-and-their-role-in-due-process/story/",
           "https://www.gmanetwork.com/news/balitambayan/balita/993931/sen-escudero-sinabing-16-na-boto-ang-kailangan-para-mahatulang-guilty-si-vp-sara-duterte-sa-impea/story/",
@@ -3768,8 +3769,8 @@
           "https://www.gmanetwork.com/news/topstories/nation/994080/electronic-copies-evidence-supreme-court/story/"
         ],
         "origin_counts": {
-          "ontology_evidence": 63,
-          "journals": 197
+          "ontology_evidence": 64,
+          "journals": 198
         },
         "distinct_referring_accounts": 0,
         "sample_referring_accounts": [],
@@ -3813,7 +3814,7 @@
         "breadth": {
           "score": 0.82,
           "basis": [
-            "distinct_urls:163",
+            "distinct_urls:164",
             "distinct_axes:14",
             "origin_types:2"
           ]
@@ -3851,7 +3852,7 @@
           "method": "mechanical_v1",
           "basis": [
             "unknown_domain_pattern",
-            "distinct_urls:163",
+            "distinct_urls:164",
             "distinct_axes:14",
             "origin_types:2",
             "referring_accounts:0",
@@ -5588,6 +5589,137 @@
       }
     },
     {
+      "domain": "arstechnica.com",
+      "entity": "Arstechnica",
+      "kind": "unknown",
+      "first_seen_at": "2026-06-24T20:02:00Z",
+      "last_seen_at": "2026-07-19T18:14:48.481Z",
+      "discovery": {
+        "distinct_urls": 9,
+        "example_urls": [
+          "https://arstechnica.com/security/2026/06/users-cry-foul-after-amd-stripped-memory-crypto-from-its-consumer-cpus/",
+          "https://arstechnica.com/security/2026/06/24/dashlane-explains-how-attackers-managed-to-download-encrypted-password-vaults/",
+          "https://arstechnica.com/security/2026/07/high-severity-guest-vm-escape-is-1-of-2-linux-vulnerabilities-to-surface-this-week/",
+          "https://arstechnica.com/security/2026/06/massive-breach-spills-credentials-for-thousands-of-sensitive-networks/",
+          "https://arstechnica.com/security/2026/07/microsoft-secure-boot-has-been-broken-for-most-of-its-existence/"
+        ],
+        "origin_counts": {
+          "ontology_evidence": 5,
+          "journals": 7
+        },
+        "distinct_referring_accounts": 0,
+        "sample_referring_accounts": [],
+        "distinct_axes": [
+          "axis_ai_societal_impact_v1",
+          "axis_digital_supply_chain_security",
+          "axis_power_accountability"
+        ]
+      },
+      "claims": {
+        "total": 0,
+        "supported": 0,
+        "refuted": 0,
+        "contested": 0,
+        "unverified": 0,
+        "resolved_count": 0
+      },
+      "structural_features": {
+        "has_search_paths": false,
+        "has_article_paths": true,
+        "has_doi_paths": false
+      },
+      "ratings": {
+        "provenance": {
+          "score": 0.48,
+          "basis": [
+            "unknown_domain_pattern",
+            "article_path_seen"
+          ]
+        },
+        "breadth": {
+          "score": 0.5574999999999999,
+          "basis": [
+            "distinct_urls:9",
+            "distinct_axes:3",
+            "origin_types:2"
+          ]
+        },
+        "corroboration": {
+          "score": 0.175,
+          "basis": [
+            "referring_accounts:0",
+            "origin_types:2"
+          ]
+        },
+        "track_record": {
+          "score": null,
+          "basis": [
+            "no_resolved_claims_observed"
+          ]
+        },
+        "profile": {
+          "score": 0,
+          "confidence": 0.55,
+          "basis": [
+            "meta_author:false",
+            "published_time:false",
+            "canonical:false",
+            "about:false",
+            "contact:false",
+            "corrections:false",
+            "outbound_links:0",
+            "opinion_marker:false"
+          ]
+        },
+        "overall": {
+          "score": 0.4683593749999999,
+          "confidence": 0.335325,
+          "method": "mechanical_v1",
+          "basis": [
+            "unknown_domain_pattern",
+            "article_path_seen",
+            "distinct_urls:9",
+            "distinct_axes:3",
+            "origin_types:2",
+            "referring_accounts:0",
+            "origin_types:2",
+            "track_record_unavailable"
+          ]
+        }
+      },
+      "profile": {
+        "fetched_at": "2026-07-19T10:30:55.665Z",
+        "homepage_url": "https://arstechnica.com/",
+        "example_url": "https://arstechnica.com/security/2026/06/users-cry-foul-after-amd-stripped-memory-crypto-from-its-consumer-cpus/",
+        "homepage_status": 202,
+        "example_status": 202,
+        "homepage_final_url": "https://arstechnica.com/",
+        "example_final_url": "https://arstechnica.com/security/2026/06/users-cry-foul-after-amd-stripped-memory-crypto-from-its-consumer-cpus/",
+        "homepage_content_type": "text/html; charset=UTF-8",
+        "example_content_type": "text/html; charset=UTF-8",
+        "homepage": {
+          "has_meta_author": false,
+          "has_published_time": false,
+          "has_canonical": false,
+          "has_about_link": false,
+          "has_contact_link": false,
+          "has_corrections_link": false,
+          "outbound_links_count": 0,
+          "opinion_marker": false
+        },
+        "example": {
+          "has_meta_author": false,
+          "has_published_time": false,
+          "has_canonical": false,
+          "has_about_link": false,
+          "has_contact_link": false,
+          "has_corrections_link": false,
+          "outbound_links_count": 0,
+          "opinion_marker": false
+        }
+      }
+    },
+    {
       "domain": "relaylab.us",
       "entity": "Relaylab Us",
       "kind": "unknown",
@@ -5836,137 +5968,6 @@
           "has_meta_author": false,
           "has_published_time": false,
           "has_canonical": true,
-          "has_about_link": false,
-          "has_contact_link": false,
-          "has_corrections_link": false,
-          "outbound_links_count": 0,
-          "opinion_marker": false
-        },
-        "example": {
-          "has_meta_author": false,
-          "has_published_time": false,
-          "has_canonical": false,
-          "has_about_link": false,
-          "has_contact_link": false,
-          "has_corrections_link": false,
-          "outbound_links_count": 0,
-          "opinion_marker": false
-        }
-      }
-    },
-    {
-      "domain": "arstechnica.com",
-      "entity": "Arstechnica",
-      "kind": "unknown",
-      "first_seen_at": "2026-06-24T20:02:00Z",
-      "last_seen_at": "2026-07-14T23:21:52.738Z",
-      "discovery": {
-        "distinct_urls": 8,
-        "example_urls": [
-          "https://arstechnica.com/security/2026/06/users-cry-foul-after-amd-stripped-memory-crypto-from-its-consumer-cpus/",
-          "https://arstechnica.com/security/2026/06/24/dashlane-explains-how-attackers-managed-to-download-encrypted-password-vaults/",
-          "https://arstechnica.com/security/2026/07/high-severity-guest-vm-escape-is-1-of-2-linux-vulnerabilities-to-surface-this-week/",
-          "https://arstechnica.com/security/2026/06/massive-breach-spills-credentials-for-thousands-of-sensitive-networks/",
-          "https://arstechnica.com/security/2026/07/microsoft-secure-boot-has-been-broken-for-most-of-its-existence/"
-        ],
-        "origin_counts": {
-          "ontology_evidence": 5,
-          "journals": 6
-        },
-        "distinct_referring_accounts": 0,
-        "sample_referring_accounts": [],
-        "distinct_axes": [
-          "axis_ai_societal_impact_v1",
-          "axis_digital_supply_chain_security",
-          "axis_power_accountability"
-        ]
-      },
-      "claims": {
-        "total": 0,
-        "supported": 0,
-        "refuted": 0,
-        "contested": 0,
-        "unverified": 0,
-        "resolved_count": 0
-      },
-      "structural_features": {
-        "has_search_paths": false,
-        "has_article_paths": true,
-        "has_doi_paths": false
-      },
-      "ratings": {
-        "provenance": {
-          "score": 0.48,
-          "basis": [
-            "unknown_domain_pattern",
-            "article_path_seen"
-          ]
-        },
-        "breadth": {
-          "score": 0.5283333333333333,
-          "basis": [
-            "distinct_urls:8",
-            "distinct_axes:3",
-            "origin_types:2"
-          ]
-        },
-        "corroboration": {
-          "score": 0.175,
-          "basis": [
-            "referring_accounts:0",
-            "origin_types:2"
-          ]
-        },
-        "track_record": {
-          "score": null,
-          "basis": [
-            "no_resolved_claims_observed"
-          ]
-        },
-        "profile": {
-          "score": 0,
-          "confidence": 0.55,
-          "basis": [
-            "meta_author:false",
-            "published_time:false",
-            "canonical:false",
-            "about:false",
-            "contact:false",
-            "corrections:false",
-            "outbound_links:0",
-            "opinion_marker:false"
-          ]
-        },
-        "overall": {
-          "score": 0.4619791666666666,
-          "confidence": 0.3067,
-          "method": "mechanical_v1",
-          "basis": [
-            "unknown_domain_pattern",
-            "article_path_seen",
-            "distinct_urls:8",
-            "distinct_axes:3",
-            "origin_types:2",
-            "referring_accounts:0",
-            "origin_types:2",
-            "track_record_unavailable"
-          ]
-        }
-      },
-      "profile": {
-        "fetched_at": "2026-07-19T10:30:55.665Z",
-        "homepage_url": "https://arstechnica.com/",
-        "example_url": "https://arstechnica.com/security/2026/06/users-cry-foul-after-amd-stripped-memory-crypto-from-its-consumer-cpus/",
-        "homepage_status": 202,
-        "example_status": 202,
-        "homepage_final_url": "https://arstechnica.com/",
-        "example_final_url": "https://arstechnica.com/security/2026/06/users-cry-foul-after-amd-stripped-memory-crypto-from-its-consumer-cpus/",
-        "homepage_content_type": "text/html; charset=UTF-8",
-        "example_content_type": "text/html; charset=UTF-8",
-        "homepage": {
-          "has_meta_author": false,
-          "has_published_time": false,
-          "has_canonical": false,
           "has_about_link": false,
           "has_contact_link": false,
           "has_corrections_link": false,
@@ -19018,7 +19019,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-07-16T18:42:25.296Z",
+        "fetched_at": "2026-07-19T19:13:58.966Z",
         "homepage_url": "https://imbue.com/",
         "example_url": "https://imbue.com/product/bouncer/redirect.html?utm_source=x&utm_medium=paid_social&utm_campaign=omni&authuser=0&hl=en&twclid=28wps3duhy1q7hzrcdj2h5pxpl",
         "homepage_status": 200,
@@ -23793,7 +23794,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-07-16T18:42:25.706Z",
+        "fetched_at": "2026-07-19T19:13:59.520Z",
         "homepage_url": "https://houseofkaisers.com/",
         "example_url": "https://houseofkaisers.com/kai-portal/beta?twclid=26t8hp42r8pe5p1i02xmt53ngc",
         "homepage_status": 200,
@@ -28782,7 +28783,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-07-16T18:42:26.860Z",
+        "fetched_at": "2026-07-19T19:14:00.845Z",
         "homepage_url": "https://konseki.io/",
         "example_url": "https://konseki.io/ai-trading?utm_source=x&utm_medium=cpc&utm_campaign=ai_trading&utm_content=1&twclid=247r2buzkj6byyu2qg69k3pf3k",
         "homepage_status": 200,
@@ -35142,7 +35143,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-07-16T19:12:23.190Z",
+        "fetched_at": "2026-07-19T19:44:00.228Z",
         "homepage_url": "https://apple.com/",
         "example_url": "https://apps.apple.com/us/app/oceanhorn-3/id1539411904?twclid=25zyeamc9kepxd6rdpaddxcmui",
         "homepage_status": 200,
@@ -40446,7 +40447,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-07-16T19:12:24.356Z",
+        "fetched_at": "2026-07-19T19:44:01.811Z",
         "homepage_url": "https://monadicdna.com/",
         "example_url": "https://explorer.monadicdna.com/?twclid=23v8cbj938nxfoq8gmro6dqa1l",
         "homepage_status": 200,
@@ -40569,7 +40570,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-07-16T19:12:26.796Z",
+        "fetched_at": "2026-07-19T19:44:04.465Z",
         "homepage_url": "https://any.run/",
         "example_url": "https://any.run/cybersecurity-blog/anyrun-macos-sandbox/?utm_source=twitter&utm_medium=post&utm_campaign=macos_ad&utm_content=linktoblog&utm_term=300326&twclid=23x4x734jui85kqg60evobo3x3",
         "homepage_status": 200,
@@ -40692,7 +40693,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-07-16T19:12:28.392Z",
+        "fetched_at": "2026-07-19T19:44:06.347Z",
         "homepage_url": "https://alphacapital.pro/",
         "example_url": "https://alphacapital.pro/pages/performance/?utm_source=twitter&utm_medium=ad1&utm_campaign=ac&twclid=2b8weeqkz95cs1xc59f8v2j7ob",
         "homepage_status": 200,
@@ -47454,7 +47455,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-07-13T22:01:24.198Z",
+        "fetched_at": "2026-07-19T20:43:59.650Z",
         "homepage_url": "https://twimg.com/",
         "example_url": "https://pbs.twimg.com/media/GMB52q8X0AA0k_e?format=jpg&name=large",
         "homepage_status": null,
@@ -47547,13 +47548,13 @@
           ]
         },
         "profile": {
-          "score": 0,
-          "confidence": 0.55,
+          "score": 0.14,
+          "confidence": 0.65,
           "basis": [
             "meta_author:false",
             "published_time:false",
             "canonical:false",
-            "about:false",
+            "about:true",
             "contact:false",
             "corrections:false",
             "outbound_links:0",
@@ -47576,23 +47577,23 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-07-13T22:01:24.218Z",
+        "fetched_at": "2026-07-19T20:44:02.707Z",
         "homepage_url": "https://t.me/",
         "example_url": "http://t.me/PressTV",
-        "homepage_status": null,
-        "example_status": null,
-        "homepage_final_url": "https://t.me/",
-        "example_final_url": "http://t.me/PressTV",
-        "homepage_content_type": "",
-        "example_content_type": "",
+        "homepage_status": 200,
+        "example_status": 200,
+        "homepage_final_url": "https://telegram.org/",
+        "example_final_url": "https://t.me/PressTV",
+        "homepage_content_type": "text/html; charset=utf-8",
+        "example_content_type": "text/html; charset=utf-8",
         "homepage": {
           "has_meta_author": false,
           "has_published_time": false,
           "has_canonical": false,
-          "has_about_link": false,
+          "has_about_link": true,
           "has_contact_link": false,
           "has_corrections_link": false,
-          "outbound_links_count": 0,
+          "outbound_links_count": 2,
           "opinion_marker": false
         },
         "example": {
@@ -47698,7 +47699,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-07-13T22:01:24.532Z",
+        "fetched_at": "2026-07-19T20:44:02.835Z",
         "homepage_url": "https://migrationpolicy.org/",
         "example_url": "https://migrationpolicy.org/",
         "homepage_status": 403,
@@ -47820,7 +47821,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-07-13T23:01:13.648Z",
+        "fetched_at": "2026-07-19T20:44:04.913Z",
         "homepage_url": "https://abcnews.link/",
         "example_url": "https://abcnews.link/SAFHg1K",
         "homepage_status": 200,
@@ -47942,7 +47943,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-07-13T23:01:14.166Z",
+        "fetched_at": "2026-07-19T21:14:01.203Z",
         "homepage_url": "https://example.com/",
         "example_url": "https://example.com/google-meta-gemini-control",
         "homepage_status": 200,
@@ -48044,7 +48045,7 @@
             "about:false",
             "contact:false",
             "corrections:false",
-            "outbound_links:30",
+            "outbound_links:28",
             "opinion_marker:false"
           ]
         },
@@ -48064,7 +48065,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-07-13T23:01:15.678Z",
+        "fetched_at": "2026-07-19T21:14:02.693Z",
         "homepage_url": "https://elpais.com/",
         "example_url": "https://elpais.com/",
         "homepage_status": 200,
@@ -48080,7 +48081,7 @@
           "has_about_link": false,
           "has_contact_link": false,
           "has_corrections_link": false,
-          "outbound_links_count": 30,
+          "outbound_links_count": 28,
           "opinion_marker": false
         },
         "example": {
@@ -48090,7 +48091,7 @@
           "has_about_link": false,
           "has_contact_link": false,
           "has_corrections_link": false,
-          "outbound_links_count": 30,
+          "outbound_links_count": 28,
           "opinion_marker": false
         }
       }
@@ -48186,7 +48187,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-07-13T23:01:15.897Z",
+        "fetched_at": "2026-07-19T21:14:02.985Z",
         "homepage_url": "https://com.cn/",
         "example_url": "https://www.chinadaily.com.cn/a/202604/15/WS661c9e83a31082690940026e.html",
         "homepage_status": null,
@@ -48308,7 +48309,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-07-14T03:31:19.168Z",
+        "fetched_at": "2026-07-19T21:14:06.070Z",
         "homepage_url": "https://trib.al/",
         "example_url": "https://trib.al/etqydoJ",
         "homepage_status": 200,
