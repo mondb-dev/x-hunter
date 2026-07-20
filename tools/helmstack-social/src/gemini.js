@@ -68,6 +68,41 @@ class Gemini {
     return !!r;
   }
 
+  /**
+   * Attach a local image to the prompt (character reference / image-to-video
+   * start frame). Gemini's composer keeps a hidden file input; CDP
+   * DOM.setFileInputFiles reaches it without the picker UI.
+   */
+  async attachImage(filePath) {
+    // Surface the upload affordance first (some builds only mount the input
+    // after the + menu opens); harmless if the input already exists.
+    await this._eval(`(() => {
+      const plus = document.querySelector('button[aria-label*="Add" i], button[aria-label*="Upload" i], button[aria-label*="attach" i], uploader button');
+      if (plus) plus.click();
+      return !!plus;
+    })()`).catch(() => {});
+    await sleep(800);
+    const hasInput = await this._eval(`!!document.querySelector('input[type="file"]')`).catch(() => false);
+    if (!hasInput) { console.warn("[gemini] no file input found — continuing without reference image"); return false; }
+    try {
+      await this.client.setFileInput(this.tabId, 'input[type="file"]', [filePath]);
+    } catch (e) {
+      console.warn(`[gemini] reference attach failed (${e.message}) — continuing without it`);
+      return false;
+    }
+    // Wait for the upload chip/thumbnail to appear in the composer.
+    for (let i = 0; i < 10; i++) {
+      await sleep(1200);
+      const ready = await this._eval(`(() => {
+        const chip = document.querySelector('uploader-file-preview, [data-test-id*="file-preview"], img[src^="blob:"], [class*="attachment"]');
+        return !!chip;
+      })()`).catch(() => false);
+      if (ready) { console.log("[gemini] reference image attached"); return true; }
+    }
+    console.warn("[gemini] reference upload did not confirm — continuing anyway");
+    return false;
+  }
+
   async _typeAndSend(prompt) {
     const typed = await this._eval(`(() => {
       const ed = document.querySelector('rich-textarea [contenteditable="true"], [contenteditable="true"]');
@@ -102,29 +137,36 @@ class Gemini {
    * @param {number} [opts.timeoutMs=180000]
    * @param {number} [opts.minWidth=512]  reject icons/thumbnails
    */
-  async generateImage(prompt, { timeoutMs = 180_000, minWidth = 512 } = {}) {
+  async generateImage(prompt, { timeoutMs = 180_000, minWidth = 512, referenceImagePath = null } = {}) {
     await this.ensureTab();
     if (!(await this.signedIn())) {
       console.warn("[gemini] no Google session in the HelmStack profile — skipping image");
       return null;
     }
 
-    const fullPrompt = `Generate an image. ${prompt}`;
+    if (referenceImagePath) await this.attachImage(referenceImagePath);
+
+    const fullPrompt = referenceImagePath
+      ? `Generate an image using the attached image as the exact character reference — same character, same design. ${prompt}`
+      : `Generate an image. ${prompt}`;
     await this._typeAndSend(fullPrompt);
+
+    // Generated media lives inside model-response; scoping there keeps a
+    // user-bubble attachment (the reference image) from being mistaken for output.
+    const FIND_IMG = `[...document.querySelectorAll('model-response img')]
+        .find(i => i.src.startsWith('blob:') && i.naturalWidth >= ${minWidth})`;
 
     const deadline = Date.now() + timeoutMs;
     while (Date.now() < deadline) {
       await sleep(4000);
       const found = await this._eval(`(() => {
-        const img = [...document.querySelectorAll('img')]
-          .find(i => i.src.startsWith('blob:') && i.naturalWidth >= ${minWidth});
+        const img = ${FIND_IMG};
         return img ? { w: img.naturalWidth, h: img.naturalHeight } : null;
       })()`).catch(() => null);
       if (found) {
         // blob: refetch is blocked in this app — canvas is the reliable path.
         const dataUrl = await this._eval(`(() => {
-          const img = [...document.querySelectorAll('img')]
-            .find(i => i.src.startsWith('blob:') && i.naturalWidth >= ${minWidth});
+          const img = ${FIND_IMG};
           if (!img) return null;
           const c = document.createElement('canvas');
           c.width = img.naturalWidth; c.height = img.naturalHeight;
@@ -152,14 +194,18 @@ class Gemini {
    * Returns { buffer, mime } or null. Bytes are pulled through the page in
    * base64 chunks (videos are too big for a single evaluate round-trip).
    */
-  async generateVideo(prompt, { timeoutMs = 600_000 } = {}) {
+  async generateVideo(prompt, { timeoutMs = 600_000, referenceImagePath = null } = {}) {
     await this.ensureTab();
     if (!(await this.signedIn())) {
       console.warn("[gemini] no Google session — skipping video");
       return null;
     }
 
-    await this._typeAndSend(`Create a video: ${prompt}`);
+    if (referenceImagePath) await this.attachImage(referenceImagePath);
+    const fullPrompt = referenceImagePath
+      ? `Create a video using the attached image as the exact character reference — same character, same design. ${prompt}`
+      : `Create a video: ${prompt}`;
+    await this._typeAndSend(fullPrompt);
 
     const deadline = Date.now() + timeoutMs;
     let src = null;

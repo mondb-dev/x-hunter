@@ -95,6 +95,7 @@ function gatherInclinations() {
 
 async function composeSceneBrief(inc) {
   const { reason } = require("./lib/compose");
+  const { CHARACTER_DIRECTIVE } = require("./image_style");
   const prompt = [
     `Today is ${today()}. Sebastian D. Hunter is an AI discourse analyst. Based on what moved his`,
     `attention today, decide WHERE he is right now — one concrete, visually specific location tied`,
@@ -106,15 +107,16 @@ async function composeSceneBrief(inc) {
     inc.curiosity ? `Current curiosity: ${inc.curiosity}` : ``,
     `Recent observation notes (tail): ${inc.notesTail.slice(-1200)}`,
     ``,
-    `CHARACTER SHEET (must be followed exactly): Sebastian is depicted as a faceless dark`,
-    `silhouette of a man in a long dark coat and flat cap. Never a real person's likeness, never a`,
-    `face, never text or lettering in frame, no national flags or symbols.`,
+    `CHARACTER SHEET (must be followed exactly — this is Sebastian's canonical avatar and a`,
+    `reference image of it will be attached to the generation): ${CHARACTER_DIRECTIVE}`,
+    `Never a real person's likeness, never human faces, never text or lettering in frame, no`,
+    `national flags or symbols.`,
     ``,
     `Output ONLY raw JSON: {"location": "<city/place, 3-8 words>", "activity": "<what he's doing,`,
-    `one sentence>", "video_prompt": "<a single Veo prompt for an 8-second clip: 16-bit pixel-art`,
-    `animation style, wide cinematic 16:9, the character sheet silhouette in the location, one`,
-    `slow camera move, ambient motion (rain, crowds, screens, traffic), moody palette matching the`,
-    `topic, no text, no faces>"}`,
+    `one sentence>", "video_prompt": "<a single Veo prompt for an 8-second clip: stylized`,
+    `animation, wide cinematic 16:9, the canonical chick character (exactly per the character`,
+    `sheet) small in a big detailed location, one slow camera move, ambient motion (rain, crowds,`,
+    `screens, traffic), moody palette matching the topic, no text, no human faces>"}`,
   ].filter(Boolean).join("\n");
 
   const raw = await reason(prompt, { maxTokens: 800, tag: "where_video" });
@@ -178,8 +180,12 @@ async function main() {
   if (DRY) { log("dry-run: skipping generation"); return; }
 
   const { HelmStackClient, Gemini } = require("../tools/helmstack-social/src");
+  const { CHARACTER_REFERENCE_IMAGE } = require("./image_style");
   const gemini = new Gemini(new HelmStackClient());
-  const video = await gemini.generateVideo(brief.video_prompt, { timeoutMs: 10 * 60 * 1000 });
+  const video = await gemini.generateVideo(brief.video_prompt, {
+    timeoutMs: 10 * 60 * 1000,
+    referenceImagePath: fs.existsSync(CHARACTER_REFERENCE_IMAGE) ? CHARACTER_REFERENCE_IMAGE : null,
+  });
   if (!video) {
     log("no video today (see [gemini] reason above) — will retry tomorrow");
     fs.writeFileSync(STAMP, JSON.stringify({ ...stamp, last_attempt: today(), last_reason: "engine returned null" }, null, 2));
