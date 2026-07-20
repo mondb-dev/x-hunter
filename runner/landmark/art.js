@@ -1,24 +1,27 @@
 /**
- * runner/landmark/art.js — Hero art generation via Imagen 4 (Vertex AI)
+ * runner/landmark/art.js — Hero art generation via the Gemini web app
  *
- * Generates a hero image for a landmark editorial using Google's
- * Imagen 4 model via Vertex AI.
+ * Generates a hero image for a landmark editorial by driving the signed-in
+ * gemini.google.com session in the HelmStack browser (helmstack-social Gemini
+ * engine). Replaced Imagen 4 / Vertex AI in the GCP exit (2026-07): no API key,
+ * no billing — uses the Google account signed into the browser profile.
  *
  * Style: Pixel art (primary) — see docs/IMAGE_STYLE.md for canonical rules.
  * Human figures are faceless silhouettes. No text/lettering. No national symbols.
  * Action-oriented composition. Accurate depiction of topic (era, geography, objects).
  *
- * Returns a Buffer of PNG image data (16:9).
+ * Returns a Buffer of PNG image data (16:9-ish; the web app decides exact size).
+ * Throws on failure, same as the Imagen version — callers already treat hero
+ * art as non-fatal.
  */
 
 "use strict";
 
-const fs    = require("fs");
-const https = require("https");
-const path  = require("path");
+const fs   = require("fs");
+const path = require("path");
 const { LANDMARK_TIERS } = require("./config");
-const { getAccessToken, getProjectConfig } = require("../gcp_auth");
 const { STYLE_DIRECTIVE } = require("../image_style");
+const { HelmStackClient, Gemini } = require("../../tools/helmstack-social/src");
 
 // Style rules: docs/IMAGE_STYLE.md + runner/image_style.js
 
@@ -28,7 +31,7 @@ const { STYLE_DIRECTIVE } = require("../image_style");
  * @param {string[]} event.topKeywords - top keywords from the event
  * @param {number} event.signalCount
  * @param {string} [event.landmarkTierKey]
- * @returns {string} prompt for Imagen
+ * @returns {string} prompt for the image model
  */
 function buildArtPrompt(event) {
   const tier = LANDMARK_TIERS[event.landmarkTierKey] || LANDMARK_TIERS.tier_2;
@@ -52,10 +55,8 @@ function buildArtPrompt(event) {
   ].filter(Boolean).join(" ");
 }
 
-// ── Imagen 4 API call (Vertex AI) ────────────────────────────────────────────
-
 /**
- * Generate hero art using Imagen 4 via Vertex AI.
+ * Generate hero art via the Gemini web app (HelmStack-driven).
  *
  * @param {object} event - the landmark event object
  * @param {object} [opts]
@@ -63,61 +64,21 @@ function buildArtPrompt(event) {
  * @returns {Promise<{buffer: Buffer, prompt: string}>}
  */
 async function generateHeroArt(event, opts = {}) {
-  const token = await getAccessToken();
-  const { project, location } = getProjectConfig();
-  const model = "imagen-4.0-generate-001";
   const prompt = buildArtPrompt(event);
-  console.log(`[art] Generating hero art with prompt: ${prompt.slice(0, 120)}...`);
+  console.log(`[art] Generating hero art via Gemini web: ${prompt.slice(0, 120)}...`);
 
-  const apiPath = `/v1/projects/${project}/locations/${location}/publishers/google/models/${model}:predict`;
-
-  const body = JSON.stringify({
-    instances: [{ prompt }],
-    parameters: {
-      sampleCount: 1,
-      aspectRatio: "16:9",
-      safetySetting: "block_only_high",
-    },
-  });
-
-  const imageBuffer = await new Promise((resolve, reject) => {
-    const req = https.request({
-      hostname: `${location}-aiplatform.googleapis.com`,
-      path: apiPath,
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-        "Authorization": `Bearer ${token}`,
-      },
-    }, res => {
-      const chunks = [];
-      res.on("data", c => chunks.push(c));
-      res.on("end", () => {
-        try {
-          const raw = Buffer.concat(chunks).toString("utf-8");
-          const j = JSON.parse(raw);
-          if (j.error) throw new Error(`Imagen API error: ${JSON.stringify(j.error).slice(0, 300)}`);
-          const predictions = j.predictions;
-          if (!predictions || !predictions[0]?.bytesBase64Encoded) {
-            throw new Error(`No image in response: ${raw.slice(0, 300)}`);
-          }
-          resolve(Buffer.from(predictions[0].bytesBase64Encoded, "base64"));
-        } catch (e) { reject(e); }
-      });
-    });
-    req.on("error", reject);
-    req.write(body);
-    req.end();
-  });
+  const gemini = new Gemini(new HelmStackClient());
+  const result = await gemini.generateImage(prompt);
+  if (!result) throw new Error("Gemini web image generation returned nothing (quota, sign-in, or timeout — see [gemini] logs)");
 
   if (opts.outputPath) {
     const dir = path.dirname(opts.outputPath);
     if (!fs.existsSync(dir)) fs.mkdirSync(dir, { recursive: true });
-    fs.writeFileSync(opts.outputPath, imageBuffer);
-    console.log(`[art] Saved hero art: ${opts.outputPath} (${(imageBuffer.length / 1024).toFixed(0)} KB)`);
+    fs.writeFileSync(opts.outputPath, result.buffer);
+    console.log(`[art] Saved hero art: ${opts.outputPath} (${(result.buffer.length / 1024).toFixed(0)} KB)`);
   }
 
-  return { buffer: imageBuffer, prompt };
+  return { buffer: result.buffer, prompt };
 }
 
 module.exports = { generateHeroArt, buildArtPrompt };
