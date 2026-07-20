@@ -560,6 +560,64 @@ class X {
     return { posted: false, reason: "post_unconfirmed" };
   }
 
+  /**
+   * Post a tweet WITH a video — same real-browser mechanism as postImage
+   * (composer file input via CDP), but with video-sized waits: X uploads AND
+   * transcodes before the Post button enables, which can take minutes for a
+   * multi-MB clip. `videoPath` = absolute path on the HelmStack host.
+   * @returns {Promise<{posted:boolean, url?:string|null, reason?:string, dryRun?:boolean}>}
+   */
+  async postVideo(text, videoPath, { dryRun = false } = {}) {
+    if (!videoPath) return { posted: false, reason: "no_video" };
+    await this.gotoHome();
+    await humanDelay(1500, 2500);
+    try {
+      await this.c.pollFn(this.tab, "compose box", () => !!document.querySelector('[data-testid="tweetTextarea_0"]'), { attempts: 15, interval: 1000, tag: "x" });
+    } catch { return { posted: false, reason: "compose_box_not_found" }; }
+    await this._focusComposer();
+    await sleep(600);
+    try { await this.c.setFileInput(this.tab, 'input[data-testid="fileInput"]', [videoPath]); }
+    catch (e) { return { posted: false, reason: `file_input:${e.message}` }; }
+
+    // Wait for the video to attach (player/remove control appears)…
+    let attached = false;
+    for (let i = 0; i < 45 && !attached; i++) {
+      attached = await this.c.evalFn(this.tab, () =>
+        !!document.querySelector('[data-testid="attachments"] video, [data-testid="videoPlayer"], [aria-label="Remove media"], [data-testid="removeMedia"]')
+      ).catch(() => false);
+      if (!attached) await sleep(2000);
+    }
+    if (!attached) return { posted: false, reason: "video_not_attached" };
+
+    if (text && !(await this._insertVerified(text))) return { posted: false, reason: "text_insert_failed" };
+
+    // …then for upload + transcode to finish: Post stays disabled until X is
+    // ready, so poll it on video timescales (up to ~4 min).
+    let enabled = false;
+    for (let i = 0; i < 16 && !enabled; i++) {
+      enabled = await this.c.evalFn(this.tab, () => {
+        const el = document.querySelector('[data-testid="tweetButton"],[data-testid="tweetButtonInline"]');
+        return el != null && el.getAttribute("aria-disabled") !== "true";
+      }).catch(() => false);
+      if (!enabled) await sleep(15000);
+    }
+    if (!enabled) return { posted: false, reason: "video_processing_timeout" };
+
+    const pre = await this._toast(); if (pre) return { posted: false, reason: `anti_automation:${pre}` };
+    if (dryRun) { this.log("DRY RUN — video attached + text verified, not posting"); await this._discardComposer(); return { posted: false, reason: "dry_run", dryRun: true }; }
+
+    await humanDelay(1500, 3000);
+    if (text && !(await this._settleComposer(text))) return { posted: false, reason: "composer_mismatch_preposting" };
+    await this._clickPost();
+    await sleep(10000); // video tweets take longer to land
+    const post2 = await this._toast(); if (post2) return { posted: false, reason: `anti_automation:${post2}` };
+    const url = text ? await this._confirmFromProfile(text) : null;
+    if (url) { this.log(`posted video tweet: ${url}`); return { posted: true, url }; }
+    const now = await this.c.tabUrl(this.tab).catch(() => "");
+    if (/\/home/.test(now)) { this.log("video tweet probable success (URL uncaptured)"); return { posted: true, url: null }; }
+    return { posted: false, reason: "post_unconfirmed" };
+  }
+
   /** UI-composer fallback for post() — used only when the API path is unavailable. */
   async _postViaComposer(text, { dryRun = false } = {}) {
     await this.gotoHome();
