@@ -14,6 +14,7 @@ const { HelmStackClient } = require("./client");
 const { LinkedIn, FEED_URL } = require("./linkedin");
 const { X, X_HOME_URL } = require("./x");
 const { FB, FB_HOME_URL } = require("./fb");
+const { Gemini, GEMINI_URL } = require("./gemini");
 const session = require("./session");
 
 module.exports = {
@@ -21,8 +22,10 @@ module.exports = {
   LinkedIn,
   X,
   FB,
+  Gemini,
   session,
   LINKEDIN_FEED_URL: FEED_URL,
   X_HOME_URL,
   FB_HOME_URL,
+  GEMINI_URL,
 };

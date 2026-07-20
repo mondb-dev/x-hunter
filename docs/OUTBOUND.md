@@ -46,6 +46,11 @@ Driven through HelmStack (HTTP API :7070, `POST_BACKEND=helmstack`,
   responder (dry-run default).
 - **Facebook**: engine + observation scaffolding; share loop pending
   (posting-roadmap.md item).
+- **Gemini** (`src/gemini.js`): media-generation engine, not a posting channel —
+  drives the signed-in gemini.google.com session for landmark hero art
+  (`runner/landmark/art.js`) and experimental Veo video. Fresh chat per
+  generation; image bytes extracted via canvas (blob refetch is blocked);
+  null-with-reason on quota/sign-in/timeout so callers ship without media.
 - Legacy CDP scripts (`runner/post_tweet.js` et al.) remain as the
   non-helmstack backend path.
 
