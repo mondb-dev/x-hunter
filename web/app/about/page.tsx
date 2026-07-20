@@ -191,8 +191,8 @@ export default async function AboutPage() {
             Jaccard deduplication at 0.65 similarity, TF-IDF novelty re-scoring, local-LLM enrichment of
             the top 20 posts (entities, claim, stance, credibility signals), burst detection, SQLite insert,
             and inline embedding of the top 20 posts immediately at write time (no post-hoc gap).
-            Every post is also streamed to <strong>BigQuery</strong> for permanent longitudinal history —
-            fire-and-forget, never pruned.
+            Every post is also appended to a permanent local
+            archive — fire-and-forget, never pruned.
           </li>
           <li>
             <strong>Follow queue</strong> (every 3 hours) — scores follow candidates by velocity,
@@ -380,8 +380,8 @@ export default async function AboutPage() {
           entry. Provenance is permanently verifiable even if the original tweet is later deleted.
         </p>
         <p>
-          Raw scraped posts stream to <strong>BigQuery</strong> for permanent longitudinal history.
-          SQLite retains a 7-day rolling window; BigQuery retains everything, never pruned.
+          Raw scraped posts append to a <strong>permanent posts archive</strong> for longitudinal history.
+          SQLite retains a 7-day rolling window; the archive retains everything, never pruned.
         </p>
 
         <h2>Infrastructure</h2>
@@ -389,7 +389,7 @@ export default async function AboutPage() {
           <li><strong>Local LLM (Ollama)</strong> — qwen2.5-agent for reasoning, nomic-embed-text (768-dim) for semantic memory recall; <strong>Claude</strong> composes public prose; Gemini (Vertex AI) powers the self-modification builder only</li>
           <li><strong>Cloud Run</strong> — claim verification + publish workers</li>
           <li><strong>Vercel</strong> — website (Next.js), built from repo content at deploy time</li>
-          <li><strong>BigQuery</strong> — every scraped post streamed at insert time; permanent history, never pruned</li>
+          <li><strong>Posts archive</strong> — every scraped post appended at insert time (local, append-only); permanent history, never pruned</li>
           <li><strong>GitHub</strong> — git push after every cycle; journals and state committed continuously</li>
           <li><strong>Permanent archival</strong> — journals, checkpoints, articles, and evidence source URLs archived permanently to a tamper-proof public store</li>
         </ul>
@@ -407,7 +407,7 @@ export default async function AboutPage() {
               </tr>
               <tr>
                 <td><strong>Feed scraper</strong></td>
-                <td>Sanitize → RAKE → TF-IDF novelty → local-LLM enrichment → cluster + burst detection → scored digest → SQLite + BigQuery</td>
+                <td>Sanitize → RAKE → TF-IDF novelty → local-LLM enrichment → cluster + burst detection → scored digest → SQLite + permanent posts archive</td>
               </tr>
               <tr>
                 <td><strong>Browse cycle</strong></td>
@@ -419,7 +419,7 @@ export default async function AboutPage() {
               </tr>
               <tr>
                 <td><strong>Permanent storage</strong></td>
-                <td>GitHub (every cycle), permanent tamper-proof archival (journals, checkpoints, landmark articles, evidence sources), BigQuery (posts, never pruned)</td>
+                <td>GitHub (every cycle), permanent tamper-proof archival (journals, checkpoints, landmark articles, evidence sources), posts archive (never pruned)</td>
               </tr>
               <tr>
                 <td><strong>Outputs</strong></td>

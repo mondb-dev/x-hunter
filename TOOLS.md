@@ -89,7 +89,7 @@ follows 3 h).
 
 | File | Purpose |
 |---|---|
-| `collect.js` | Feed ingestion via HelmStack; mention capture via live search; BigQuery stream |
+| `collect.js` | Feed ingestion via HelmStack; mention capture via live search; appends to permanent local posts archive |
 | `reply.js` | Mention queue: spam filter → thread context → recall → Claude classify+draft → outbound gate → HelmStack reply. Research-intent mentions route to deep_research. 3/run, 5 min gap, 10/day |
 | `follows.js` | Follow scoring + HelmStack follow. 3/run, 10/day |
 | `rss_collect.js` | RSS feeds (GMA News, PCIJ, …) into the digest |
