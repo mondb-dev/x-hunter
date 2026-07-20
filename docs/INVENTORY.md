@@ -35,6 +35,7 @@ Scraper loops (`scraper/start.sh:21-23`): collect 600s · reply 1800s · follows
 | Embeddings (768-dim) | **nomic-embed-text** local (`LOCAL_EMBED_MODEL`) | `runner/local_llm.js:22`; Vertex `text-embedding-004` fallback path retained in `runner/llm.js` |
 | Claim verification (worker + local intelligence scripts) | **Gemini 2.5 Flash** via Vertex | `workers/verify/index.js:137` (Cloud Run), `runner/intelligence/verify_claims.js` — genuinely still Gemini |
 | Media/vision description | Gemini 2.5 Flash via Vertex | `runner/vision.js:19` (`describeMedia`, used by collect.js) |
+| Article covers | **No model** — attributed og:image from a cited/evidence source (Imagen retired 2026-07) | `runner/article_art.js` (reuses `lib/lead_source_image` + `lib/source_image`); Imagen remains only in `runner/landmark/art.js` |
 | Self-modification builder | **Claude CLI** (`BUILDER_BACKEND=claude`, `CLAUDE_BUILDER_MODEL`); Gemini 2.5 Pro Vertex fallback (`BUILDER_MODEL`) | `runner/builder_vertex.js` — routes like compose/think; falls back to Vertex on Claude failure |
 | Website /api/ask endpoint | Gemini 2.5 Flash via Vertex | `web/lib/sebastianRespond.ts` (server-side site code) |
 
