@@ -111,6 +111,61 @@ class FB {
     return { ok: true };
   }
 
+  /** Trusted click on the first ON-SCREEN element matching `expr` (FB keeps
+   *  offscreen dialog twins whose elements have negative coords — filter them). */
+  async _trustedClick(expr) {
+    const xy = await this.c.evaluate(this.tab, `(() => {
+      const els = ${expr};
+      for (const el of els) {
+        const r = el.getBoundingClientRect();
+        if (r.width > 0 && r.x >= 0 && r.y >= 0 && r.x < window.innerWidth) return { x: Math.round(r.x + r.width / 2), y: Math.round(r.y + r.height / 2) };
+      }
+      return null;
+    })()`).catch(() => null);
+    if (!xy) return false;
+    await this.c.request("POST", `/api/tabs/${this.tab}/click`, xy).catch(() => {});
+    return true;
+  }
+
+  /**
+   * Try to switch the open Create-post dialog's audience to Public. New FB
+   * accounts have Public DISABLED ("Learn why this setting is disabled") —
+   * in that case we keep the current audience and report why. The audience
+   * picker's "Set as default audience" box is checked by default, so the
+   * first successful Public selection also becomes the account default.
+   * All clicks must be trusted CDP clicks (FB ignores synthetic .click()).
+   * @returns {Promise<"public"|"disabled"|"unavailable">}
+   */
+  async _ensurePublicAudience() {
+    const chip = await this._trustedClick(`[...document.querySelectorAll('[role="dialog"]')].filter(x => /create post/i.test(x.textContent || "")).flatMap(d => [...d.querySelectorAll('[role="button"]')]).filter(b => /^(friends|friends of friends|only me|close friends)$/i.test((b.textContent || "").trim()))`);
+    if (!chip) {
+      // Already Public, or no audience chip found.
+      const already = await this.c.evalFn(this.tab, () => {
+        const ds = [...document.querySelectorAll('[role="dialog"]')].filter((x) => /create post/i.test(x.textContent || ""));
+        return ds.some((d) => [...d.querySelectorAll('[role="button"]')].some((b) => /^public$/i.test((b.textContent || "").trim())));
+      }).catch(() => false);
+      return already ? "public" : "unavailable";
+    }
+    await sleep(2500);
+
+    const disabled = await this.c.evalFn(this.tab, () =>
+      /learn why this setting is disabled/i.test(([...document.querySelectorAll('[role="dialog"]')].find((x) => /who can see your post/i.test(x.textContent || "")) || {}).textContent || "")
+    ).catch(() => false);
+
+    let outcome = "unavailable";
+    if (!disabled) {
+      const picked = await this._trustedClick(`[...document.querySelectorAll('[role="dialog"] [role="radio"], [role="dialog"] div[role="button"]')].filter(e => /^public/i.test((e.textContent || "").trim().slice(0, 10)))`);
+      if (picked) { await sleep(1200); outcome = "public"; }
+    } else {
+      outcome = "disabled";
+      this.log("Public audience is disabled on this account (new-account restriction) — keeping current audience");
+    }
+    // Done closes the audience view either way.
+    await this._trustedClick(`[...document.querySelectorAll('[role="dialog"] [role="button"],[aria-label="Done"]')].filter(b => /^done$/i.test((b.getAttribute("aria-label") || b.textContent || "").trim()))`);
+    await sleep(1500);
+    return outcome;
+  }
+
   /**
    * Post a video with caption — FB's first posting capability (2026-07-20,
    * built for the daily stance-video cross-post). Drives the composer the
@@ -148,6 +203,13 @@ class FB {
     }).catch(() => false);
     if (!opened) return { posted: false, reason: "composer_trigger_not_found" };
     await sleep(3500);
+
+    // 1b. Widest audience FB allows: Public when the account can, else keep
+    // the default and log why. Never blocks the post.
+    try {
+      const audience = await this._ensurePublicAudience();
+      this.log(`audience: ${audience}`);
+    } catch (e) { this.log(`audience step failed (non-fatal): ${e.message}`); }
 
     // 2. The Create post dialog premounts its file input (verified live
     // 2026-07-20); the Photo/video click is only a fallback to force-mount it.
