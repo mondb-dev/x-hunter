@@ -1,5 +1,11 @@
 # Sebastian D. Hunter — Image Generation Style Guide
 
+> **Note (2026-07-20, GCP exit):** Imagen-generated *article covers* are retired —
+> `runner/article_art.js` now uses the og:image of a cited/evidence source with a
+> visible credit line (same mechanism as tweet/LinkedIn source images). This style
+> guide still applies to `runner/landmark/art.js` (landmark hero art), the one
+> remaining Imagen call site.
+
 All images generated for this project (article covers, landmark editorials, future contexts)
 must follow these rules. Prompt builders reference this document.
 

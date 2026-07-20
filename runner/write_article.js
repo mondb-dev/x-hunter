@@ -240,10 +240,9 @@ End on what follows: a specific prediction, a consequence, an action that needs 
   - REFUTED → do not assert; mention only as a debunked claim.
 - Use footnotes [^N] for items without a URL; define under "---" at the end.
 - Aim for 4+ citations total.
-
-─── IMAGES ─────────────────────────────────────────────
-At 2 natural section breaks, on their own line:
-[IMAGE: vivid concrete scene — specific objects, specific setting, no abstract concepts]
+- When the notes carry both an X post AND the underlying article/report URL for
+  the same fact, cite the underlying article URL (it is the primary source, and
+  it lets the cover-image picker find an attributable news image).
 
 ─── TITLE ──────────────────────────────────────────────
 First line, exactly:

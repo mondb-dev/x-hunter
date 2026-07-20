@@ -123,7 +123,7 @@ function reports() {
   // 10-min timeout: cold synthesis (6 claim verifications) + gpt-5 composition can exceed 5 min
   runScript('write_article.js', '', 600000);
 
-  // Article cover image (Imagen 4) + inline images
+  // Article cover image (attributed og:image from a cited/evidence source)
   const today = new Date().toISOString().slice(0, 10);
   runScript('article_art.js', `--date ${today}`);
 
