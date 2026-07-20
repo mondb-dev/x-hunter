@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-20T12:01:57.694Z",
+  "generated_at": "2026-07-20T15:01:53.971Z",
   "windows": [
     "1d",
     "3d",
@@ -156,7 +156,28 @@
     },
     "axis_media_integrity_v1": {
       "current": {
-        "score": 0.5068,
+        "score": 0.4987,
+        "confidence": 0.95
+      },
+      "1d": {
+        "score_delta": -0.0081,
+        "conf_delta": 0,
+        "direction": "→"
+      },
+      "3d": {
+        "score_delta": -0.0382,
+        "conf_delta": 0,
+        "direction": "↘"
+      },
+      "7d": {
+        "score_delta": -0.0887,
+        "conf_delta": 0,
+        "direction": "↘"
+      }
+    },
+    "axis_geopolitical_rhetoric_v1": {
+      "current": {
+        "score": 0.1625,
         "confidence": 0.948
       },
       "1d": {
@@ -165,34 +186,13 @@
         "direction": "→"
       },
       "3d": {
-        "score_delta": -0.0301,
-        "conf_delta": -0.002,
-        "direction": "↘"
-      },
-      "7d": {
-        "score_delta": -0.0806,
-        "conf_delta": -0.002,
-        "direction": "↘"
-      }
-    },
-    "axis_geopolitical_rhetoric_v1": {
-      "current": {
-        "score": 0.1625,
-        "confidence": 0.95
-      },
-      "1d": {
-        "score_delta": 0,
-        "conf_delta": 0,
-        "direction": "→"
-      },
-      "3d": {
         "score_delta": -0.0188,
-        "conf_delta": 0.008,
+        "conf_delta": 0.006,
         "direction": "→"
       },
       "7d": {
         "score_delta": -0.0304,
-        "conf_delta": 0.002,
+        "conf_delta": 0,
         "direction": "↘"
       }
     },
@@ -472,21 +472,21 @@
     "axis_human_rights_exploitation_v1": {
       "current": {
         "score": -0.4281,
-        "confidence": 0.9498
+        "confidence": 0.9478
       },
       "1d": {
         "score_delta": 0,
-        "conf_delta": 0,
+        "conf_delta": -0.002,
         "direction": "→"
       },
       "3d": {
         "score_delta": 0.002,
-        "conf_delta": 0,
+        "conf_delta": -0.002,
         "direction": "→"
       },
       "7d": {
         "score_delta": 0,
-        "conf_delta": 0,
+        "conf_delta": -0.002,
         "direction": "→"
       }
     },
@@ -934,21 +934,21 @@
     "axis_information_control_v1": {
       "current": {
         "score": 0.3,
-        "confidence": 0.3428
+        "confidence": 0.3408
       },
       "1d": {
         "score_delta": 0,
-        "conf_delta": 0,
+        "conf_delta": -0.002,
         "direction": "→"
       },
       "3d": {
         "score_delta": 0.1,
-        "conf_delta": 0.0543,
+        "conf_delta": 0.0523,
         "direction": "↗"
       },
       "7d": {
         "score_delta": 0.3,
-        "conf_delta": 0.3428,
+        "conf_delta": 0.3408,
         "direction": "↗"
       }
     },
@@ -976,16 +976,16 @@
     "axis_procedural_governance_accountability_v1": {
       "current": {
         "score": -0.15,
-        "confidence": 0.6456
+        "confidence": 0.6542
       },
       "1d": {
         "score_delta": -0.05,
-        "conf_delta": 0.093,
+        "conf_delta": 0.1016,
         "direction": "↘"
       },
       "3d": {
         "score_delta": -0.15,
-        "conf_delta": 0.4624,
+        "conf_delta": 0.471,
         "direction": "↘"
       },
       "7d": null

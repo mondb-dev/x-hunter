@@ -1,154 +1,129 @@
 {
-  "checked_at": "2026-07-19T16:18:43.614Z",
-  "evidence_24h": 39,
-  "unique_sources": 8,
+  "checked_at": "2026-07-20T17:06:08.104Z",
+  "evidence_24h": 18,
+  "unique_sources": 5,
   "status": "captured",
   "alerts": [
     {
       "type": "source_dominance",
       "severity": "high",
-      "detail": "@unknown accounts for 72% of today's evidence (28/39)",
+      "detail": "@unknown accounts for 72% of today's evidence (13/18)",
       "username": "unknown",
-      "share": 0.718
+      "share": 0.722
+    },
+    {
+      "type": "pole_skew",
+      "severity": "moderate",
+      "detail": "72% of evidence pushes \"left\" — risk of one-sided belief drift",
+      "dominant_pole": "left",
+      "share": 0.722
     }
   ],
-  "summary": "1 capture alert(s) detected:\n[HIGH] @unknown accounts for 72% of today's evidence (28/39)",
+  "summary": "2 capture alert(s) detected:\n[HIGH] @unknown accounts for 72% of today's evidence (13/18)\n[MODERATE] 72% of evidence pushes \"left\" — risk of one-sided belief drift",
   "source_concentration": {
     "unknown": {
       "username": "unknown",
-      "count": 28,
-      "share": 0.718
+      "count": 13,
+      "share": 0.722
+    },
+    "philippinestar": {
+      "username": "philippinestar",
+      "count": 2,
+      "share": 0.111
+    },
+    "jesusfalcis": {
+      "username": "jesusfalcis",
+      "count": 1,
+      "share": 0.056
     },
     "inquirerdotnet": {
       "username": "inquirerdotnet",
-      "count": 4,
-      "share": 0.103
-    },
-    "philstarnews": {
-      "username": "philstarnews",
-      "count": 2,
-      "share": 0.051
-    },
-    "abscbnnews": {
-      "username": "abscbnnews",
       "count": 1,
-      "share": 0.026
+      "share": 0.056
     },
-    "foxnews": {
-      "username": "foxnews",
+    "wateralwayswet": {
+      "username": "wateralwayswet",
       "count": 1,
-      "share": 0.026
-    },
-    "ericldaugh": {
-      "username": "ericldaugh",
-      "count": 1,
-      "share": 0.026
-    },
-    "news5ph": {
-      "username": "news5ph",
-      "count": 1,
-      "share": 0.026
-    },
-    "gmanews": {
-      "username": "gmanews",
-      "count": 1,
-      "share": 0.026
+      "share": 0.056
     }
   },
   "axis_concentration": {
     "axis_procedural_governance_accountability_v1": {
       "axis_id": "axis_procedural_governance_accountability_v1",
       "label": "Procedural Governance vs. Genuine Accountability",
-      "count": 9,
-      "share": 0.231
-    },
-    "axis_power_accountability": {
-      "axis_id": "axis_power_accountability",
-      "label": "Power, Institutions, and Rule of Law",
-      "count": 4,
-      "share": 0.103
+      "count": 8,
+      "share": 0.444
     },
     "axis_political_trust_corruption_v1": {
       "axis_id": "axis_political_trust_corruption_v1",
       "label": "Trust in Political Institutions and Anti-Corruption Efforts",
-      "count": 3,
-      "share": 0.077
+      "count": 2,
+      "share": 0.111
     },
-    "axis_media_integrity_v1": {
-      "axis_id": "axis_media_integrity_v1",
-      "label": "Integrity of Information and Social Media Manipulation",
-      "count": 3,
-      "share": 0.077
-    },
-    "axis_geopolitical_rhetoric_v1": {
-      "axis_id": "axis_geopolitical_rhetoric_v1",
-      "label": "Geopolitical Rhetoric vs. Humanitarian Concerns",
-      "count": 3,
-      "share": 0.077
+    "axis_national_sovereignty_v_intl_law_v1": {
+      "axis_id": "axis_national_sovereignty_v_intl_law_v1",
+      "label": "National Sovereignty vs. International Law",
+      "count": 2,
+      "share": 0.111
     },
     "axis_procedural_governance_v1": {
       "axis_id": "axis_procedural_governance_v1",
       "label": "Procedural Governance vs. Substantive Action",
-      "count": 3,
-      "share": 0.077
-    },
-    "axis_ph_geopolitics_wps_v1": {
-      "axis_id": "axis_ph_geopolitics_wps_v1",
-      "label": "Philippine Geopolitical Alignment in the West Philippine Sea",
       "count": 2,
-      "share": 0.051
-    },
-    "axis_dehumanization_propaganda_v1": {
-      "axis_id": "axis_dehumanization_propaganda_v1",
-      "label": "Dehumanization as State Propaganda Strategy",
-      "count": 2,
-      "share": 0.051
-    },
-    "axis_epistemic_integrity": {
-      "axis_id": "axis_epistemic_integrity",
-      "label": "Truth and Evidence in Public Discourse",
-      "count": 1,
-      "share": 0.026
+      "share": 0.111
     },
     "axis_collective_voice": {
       "axis_id": "axis_collective_voice",
       "label": "Authentic Participation vs. Managed Consent",
       "count": 1,
-      "share": 0.026
+      "share": 0.056
+    },
+    "axis_eje_accountability_v1": {
+      "axis_id": "axis_eje_accountability_v1",
+      "label": "Accountability for Extrajudicial Killings",
+      "count": 1,
+      "share": 0.056
+    },
+    "axis_media_integrity_v1": {
+      "axis_id": "axis_media_integrity_v1",
+      "label": "Integrity of Information and Social Media Manipulation",
+      "count": 1,
+      "share": 0.056
+    },
+    "axis_humanitarian_crisis_response": {
+      "axis_id": "axis_humanitarian_crisis_response",
+      "label": "Humanitarian Crisis Response",
+      "count": 1,
+      "share": 0.056
     }
   },
   "cluster_concentration": {
     "unknown": {
       "cluster": "unknown",
-      "count": 28,
-      "share": 0.718
+      "count": 13,
+      "share": 0.722
     },
     "breaking_news": {
       "cluster": "breaking_news",
-      "count": 6,
-      "share": 0.154
-    },
-    "geopolitics": {
-      "cluster": "geopolitics",
-      "count": 2,
-      "share": 0.051
-    },
-    "us_politics": {
-      "cluster": "us_politics",
-      "count": 2,
-      "share": 0.051
+      "count": 3,
+      "share": 0.167
     },
     "accountability_journalism": {
       "cluster": "accountability_journalism",
       "count": 1,
-      "share": 0.026
+      "share": 0.056
+    },
+    "asia_pacific": {
+      "cluster": "asia_pacific",
+      "count": 1,
+      "share": 0.056
     }
   },
   "pole_balance": {
-    "left": 24,
-    "right": 15,
+    "left": 13,
+    "right": 5,
     "neutral": 0,
-    "left_share": 0.615,
-    "right_share": 0.385
+    "left_share": 0.722,
+    "right_share": 0.278
   }
 }
