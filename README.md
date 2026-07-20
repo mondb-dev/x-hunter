@@ -18,7 +18,7 @@ Three layers run continuously (see [docs/INVENTORY.md](docs/INVENTORY.md) for th
 Browse cycles run every ~30 minutes, auto-adjusted between 15–60 minutes by a metacognition engine (`runner/cadence.js`) that reads signal density, axis velocity, post pressure, and staleness. Each cycle:
 
 1. **Tier 1 — Continuous scraper** (always running independently, `scraper/start.sh`):
-   - `scraper/collect.js` (every 10 min) — feed ingestion via HelmStack: sanitize → RAKE keywords → Jaccard dedup (0.65) → TF-IDF novelty → local-LLM enrichment of top posts → burst detection → SQLite insert + inline embedding → BigQuery stream
+   - `scraper/collect.js` (every 10 min) — feed ingestion via HelmStack: sanitize → RAKE keywords → Jaccard dedup (0.65) → TF-IDF novelty → local-LLM enrichment of top posts → burst detection → SQLite insert + inline embedding → permanent local posts archive
    - `scraper/follows.js` (every 3 h) — scores follow candidates, classifies via local LLM (30-label taxonomy, trust 1–7); max 3/run, 10/day
    - `scraper/reply.js` (every 30 min) — drains the mention backlog (captured via live search), verifies claims, routes research-intent mentions into deep research, drafts replies via Claude behind the shared outbound gate
 
@@ -61,7 +61,7 @@ Sebastian runs on a **local macOS machine** via launchd agents (`~/Library/Launc
 | Agent brain | qwen2.5-agent via Ollama (localhost:11434) |
 | Outbound prose | Claude CLI (`claude -p`) via `runner/lib/compose.js` |
 | Claim-verify + publish + memory workers | Cloud Run (`workers/verify` — Gemini 2.5 Flash via Vertex, `workers/publish`, `workers/memory`) |
-| Database | SQLite `state/index.db` (7-day posts window) + `state/outbox.db`; BigQuery permanent post history |
+| Database | SQLite `state/index.db` (7-day posts window) + `state/outbox.db`; permanent post history in `state/posts_archive/` (append-only NDJSON, monthly files) |
 | Embeddings | nomic-embed-text (768-dim) local via Ollama |
 | Website | Vercel (Next.js) — built from repo content via `web/scripts/prebuild.js` on push to main |
 | Archival | Arweave via Irys (Solana-funded): journals, checkpoints, articles, evidence source URLs |
@@ -166,7 +166,7 @@ Every cycle commits to GitHub and pushes. Vercel rebuilds the site on push; its 
 | Predictions + stances | Continuous | Logged, auto-resolved, calibration published |
 | `state/ontology.json` | Every cycle | All axes with scores, confidence, evidence |
 
-Journals and checkpoints are permanently archived to **Arweave** via Irys. Evidence source URLs are archived individually so provenance survives deletion. All scraped posts stream to **BigQuery**.
+Journals and checkpoints are permanently archived to **Arweave** via Irys. Evidence source URLs are archived individually so provenance survives deletion. All scraped posts append to the local **posts archive** (`state/posts_archive/YYYY-MM.jsonl`, never pruned; BigQuery streaming was retired in the GCP exit, 2026-07).
 
 ---
 

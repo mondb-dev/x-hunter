@@ -572,7 +572,7 @@ follow_score = avg_velocity × 0.35
 | Component | Technology |
 |---|---|
 | Browser automation | HelmStack substrate (HTTP API :7070) + `tools/helmstack-social` X/LinkedIn engines; legacy Chrome CDP retained for residual utilities |
-| Database | SQLite via `better-sqlite3` — WAL mode, FTS5 full-text search (`state/index.db`, `state/outbox.db`); BigQuery for permanent post history |
+| Database | SQLite via `better-sqlite3` — WAL mode, FTS5 full-text search (`state/index.db`, `state/outbox.db`); permanent post history in `state/posts_archive/` (local NDJSON, never pruned) |
 | LLM (agent brain) | local qwen2.5-agent via Ollama (`runner/lib/gemini_agent.js` — legacy filename) |
 | LLM (outbound prose) | Claude CLI via `runner/lib/compose.js` (`COMPOSE_BACKEND=claude`); deep-research reasoning via `THINK_BACKEND=claude` |
 | LLM (scoring/gates/critique) | local qwen2.5-agent (`runner/local_llm.js`) |

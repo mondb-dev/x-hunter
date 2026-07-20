@@ -23,7 +23,7 @@ The core ingestion engine. 13-phase pipeline per run:
 7b. **Inline embedding**: embeds up to 20 top posts (by score) immediately after SQLite insert via `embed()` → `db.storeEmbedding("post", ...)`. Eliminates post-embedding gap.
 8. **Reply fetch**: navigates to permalink for top posts, fetches up to 5 replies each (HelmStack or API `searchRecent` fallback).
 9. **Gemini Vision** (`describeMedia`): batch-sends captured screenshots for text description.
-10. **SQLite write**: inserts posts, keywords, replies into `state/index.db`; upserts per-account rolling stats. Each post is also streamed to BigQuery (`dataset: hunter, table: posts`, project `sebastian-hunter`) for permanent history — fire-and-forget, failures do not block pipeline.
+10. **SQLite write**: inserts posts, keywords, replies into `state/index.db`; upserts per-account rolling stats. Each post is also appended to the permanent local posts archive (`state/posts_archive/YYYY-MM.jsonl`, same row shape the old BigQuery table had) — fire-and-forget, failures do not block the pipeline.
 11. **Cluster + burst detection**: `clusterPosts()` (Jaccard 0.25), `detectBursts()` (4h vs 4–8h keyword frequency), `tagClusterBursts()`.
 12. **Output**: clustered digest → `feed_digest.txt`; raw JSONL → `feed_buffer.jsonl`; mentions → `reply_queue.jsonl`; `seen_ids.json` updated.
 13. **Metrics**: appends to `state/scrape_metrics.jsonl` — `{ ts, raw, after_sanitize, after_dedup, after_novelty, stored, api_fallback, reply_count }`. If last 3 runs all have `stored < 5`, sets `health_state.json` `scrape_degraded: true`.
@@ -220,7 +220,7 @@ Database: `state/index.db`
 | `memory_fts` | FTS5 over memory (type, title, text_content, keywords) |
 | `embeddings` | 768-dim `nomic-embed-text` vectors (local via Ollama; Vertex `text-embedding-004` fallback path retained) keyed by (entity_type, entity_id); used for semantic recall. Memory: 100% coverage; posts: embedded inline at collect time. |
 
-Pruning: posts + keywords older than 7 days deleted on `db.prune()`. All posts are also streamed to BigQuery (`dataset: hunter, table: posts`) for permanent longitudinal history.
+Pruning: posts + keywords older than 7 days deleted on `db.prune()`. All posts are also appended to `state/posts_archive/` (append-only NDJSON, never pruned) for permanent longitudinal history.
 
 ---
 
@@ -247,7 +247,7 @@ Evidence source URLs are also archived: each new `evidence_log` entry appends `{
 X feed (HelmStack/API) + LinkedIn feed + RSS
   → collect.js → sanitize + RAKE + TF-IDF + local-LLM enrichment + cluster
     → state/index.db                 (posts, keywords, accounts)
-    → BigQuery: dataset hunter        (permanent history, never pruned)
+    → state/posts_archive/YYYY-MM.jsonl  (permanent history, never pruned)
     → state/feed_buffer.jsonl         (raw JSONL)
     → state/feed_digest.txt           (scored digest for AI context)
     → state/reply_queue.jsonl         (mentions)
@@ -326,4 +326,4 @@ Daily (once/24h via runner/lib/daily.js)
 - Semantic embeddings: memory 100% covered; posts embedded inline at collect time. Model: `nomic-embed-text` (768-dim) local via Ollama (`LOCAL_EMBED_MODEL`); Vertex fallback path retained in `runner/llm.js`. No manual backfill needed going forward.
 - Evidence summaries: 82.5% populated as of 2026-04-16. Remaining entries being filled via `runner/backfill_evidence_summaries.js`. Re-run `backfill_embeddings.js --memory` after completion to embed the new summaries.
 - Trust scores: populated by `follows.js` at follow time + `backfill_trust.js` (already run; avg 3.33, range 1–7, 3,866 accounts). Weekly recalibration fires via `runner/lib/daily.js`.
-- BigQuery: `@google-cloud/bigquery` installed in `scraper/`. Dataset `hunter`, table `posts`, project `sebastian-hunter` (US region). Posts streamed at insert time; failures suppressed.
+- Posts archive: BigQuery streaming was retired in the GCP exit (2026-07) — the free tier rejects streaming inserts, so it was silently dropping rows. `bqInsertPost()` in `collect.js` (name kept for the call site) now appends the same row shape to `state/posts_archive/YYYY-MM.jsonl`; a future warehouse can bulk-load these files.

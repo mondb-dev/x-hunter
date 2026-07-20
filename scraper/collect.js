@@ -63,45 +63,38 @@ try {
   // embed not available
 }
 
-// BigQuery streaming (non-blocking)
-let _bqClient = null;
-let _bqTable = null;
-function getBqTable() {
-  if (_bqTable) return _bqTable;
-  try {
-    const {BigQuery} = require("@google-cloud/bigquery");
-    _bqClient = new BigQuery({projectId: "sebastian-hunter"});
-    _bqTable = _bqClient.dataset("hunter").table("posts");
-  } catch(e) {
-    console.warn("[collect] BigQuery not available:", e.message);
-  }
-  return _bqTable;
-}
+// Permanent post archive (local, append-only) — replaced BigQuery streaming
+// during the GCP exit (2026-07). SQLite prunes posts at 7 days; this NDJSON
+// archive under state/posts_archive/YYYY-MM.jsonl is never pruned and keeps
+// the same row shape the BQ table had, so a future warehouse migration can
+// bulk-load these files directly. Fire-and-forget: an archive failure must
+// never block the collect pipeline.
+const POSTS_ARCHIVE_DIR = path.join(__dirname, "..", "state", "posts_archive");
 function bqInsertPost(post) {
-  const tbl = getBqTable();
-  if (!tbl) return;
-  const row = {
-    id: post.id || String(post.ts),
-    text: (post.text || "").slice(0, 2000),
-    username: post.username || "",
-    ts: post.ts || 0,
-    score: post.total || 0,
-    velocity: post.velocity || 0,
-    trust: post.trust || 0,
-    alignment: post.alignment || 0,
-    media_type: post.mediaType || "",
-    external_urls: JSON.stringify(post.external_urls || []).slice(0, 500),
-    cluster: post.cluster || "",
-    stance: (post.gemini_meta && post.gemini_meta.stance) || "",
-    claim: (post.gemini_meta && post.gemini_meta.claim) || "",
-    entities: JSON.stringify((post.gemini_meta && post.gemini_meta.entities) || []).slice(0, 500),
-    inserted_at: Date.now(),
-  };
-  tbl.insert([row]).catch(e => {
-    if (e.name !== "PartialFailureError") {
-      console.warn("[collect] BQ insert error:", e.message);
-    }
-  });
+  try {
+    const row = {
+      id: post.id || String(post.ts),
+      text: (post.text || "").slice(0, 2000),
+      username: post.username || "",
+      ts: post.ts || 0,
+      score: post.total || 0,
+      velocity: post.velocity || 0,
+      trust: post.trust || 0,
+      alignment: post.alignment || 0,
+      media_type: post.mediaType || "",
+      external_urls: JSON.stringify(post.external_urls || []).slice(0, 500),
+      cluster: post.cluster || "",
+      stance: (post.gemini_meta && post.gemini_meta.stance) || "",
+      claim: (post.gemini_meta && post.gemini_meta.claim) || "",
+      entities: JSON.stringify((post.gemini_meta && post.gemini_meta.entities) || []).slice(0, 500),
+      inserted_at: Date.now(),
+    };
+    if (!fs.existsSync(POSTS_ARCHIVE_DIR)) fs.mkdirSync(POSTS_ARCHIVE_DIR, { recursive: true });
+    const month = new Date().toISOString().slice(0, 7); // YYYY-MM
+    fs.appendFileSync(path.join(POSTS_ARCHIVE_DIR, `${month}.jsonl`), JSON.stringify(row) + "\n");
+  } catch (e) {
+    console.warn("[collect] posts archive error:", e.message);
+  }
 }
 
 if (dotenv) dotenv.config({ path: path.join(__dirname, "..", ".env") });

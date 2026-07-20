@@ -72,7 +72,7 @@ formula): score = recency-weighted mean, half-life 100 entries
 **Scraper collect** (`scraper/collect.js`): sanitize → RAKE → dedup (Jaccard 0.65,
 `scraper/analytics.js:136`) → TF-IDF novelty → local-LLM enrichment (post.gemini_meta
 field name is legacy; enrichment runs on the local model via `_llmGenerate`) →
-burst detection → SQLite insert + inline embedding → BigQuery stream.
+burst detection → SQLite insert + inline embedding → permanent local posts archive (`state/posts_archive/YYYY-MM.jsonl`; replaced BigQuery in the GCP exit, 2026-07).
 Follows (`scraper/follows.js:18,45`): max 3/run, 10/day, 1 min between.
 
 ## 4. Outbound pipeline
@@ -139,7 +139,7 @@ Follows (`scraper/follows.js:18,45`): max 3/run, 10/day, 1 min between.
 
 - **SQLite** `state/index.db` (`scraper/db.js`): tables posts (:37), keywords (:73),
   accounts (:84), memory (:100), embeddings (:126). WAL. 7-day rolling window for
-  posts; **BigQuery** stream at insert time is the permanent store.
+  posts; the **local posts archive** (`state/posts_archive/`, append-only NDJSON, monthly files, never pruned) is the permanent store — BigQuery streaming retired 2026-07 (GCP exit).
 - **Outbox** `state/outbox.db` (separate better-sqlite3 DB).
 - **Key state files**: ontology.json, trust_graph.json, feed_digest.txt,
   curiosity_directive.txt, cadence.json, reading_queue.jsonl,
@@ -158,7 +158,7 @@ Follows (`scraper/follows.js:18,45`): max 3/run, 10/day, 1 min between.
 HelmStack HTTP API `:7070` (`HELMSTACK_URL`/`HELMSTACK_AUTH_TOKEN`) · X GraphQL
 (CreateTweet/CreateRetweet) via helmstack-social · LinkedIn voyager + UI drive ·
 Ollama localhost:11434 · Vertex AI (workers/verify, builder, fallback paths) ·
-BigQuery streaming · Arweave via Irys (Solana-funded; SOLANA_* keys) · Moltbook API
+Arweave via Irys (Solana-funded; SOLANA_* keys) · Moltbook API
 · Telegram bot API · Vercel deploy hook · Cloud Run worker URLs
 (VERIFY_WORKER_URL, PUBLISH_WORKER_URL) · GitHub push per cycle.
 
