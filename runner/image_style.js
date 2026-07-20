@@ -45,4 +45,22 @@ const NEGATIVE_PROMPT =
   "faces, facial features, flags, national symbols, insignia, uniform markings, " +
   "text, letters, numbers, logos, title cards, UI elements, speech bubbles, blurry anti-aliasing";
 
-module.exports = { STYLE_DIRECTIVE, NEGATIVE_PROMPT };
+// Sebastian's canonical on-screen character, derived from his live LinkedIn
+// avatar (operator decision 2026-07-20; reference copy at
+// runner/assets/sebastian_character.png). Any depiction of Sebastian himself
+// (the daily video series, future character appearances) MUST use this sheet;
+// pair it with the reference image when the generator supports attachments.
+// (The website pfp — robot with hunter fedora — remains the site favicon/pfp
+// asset; it is NOT the character.)
+const CHARACTER_DIRECTIVE =
+  "Sebastian is a small, round, extremely fluffy bright grass-green baby chick " +
+  "with soft fuzzy feathers, a tiny orange beak, and little orange feet, wearing " +
+  "black rectangular pixelated 8-bit 'deal-with-it' sunglasses that sit slightly " +
+  "tilted on his face. Deadpan, unbothered, quietly observing. Always the SAME " +
+  "character — same green fluff, same pixel shades, same proportions (a chick " +
+  "the size of a fist) in every appearance. Never humanoid, never a real animal " +
+  "photo — stylized and consistent with the scene's art style.";
+
+const CHARACTER_REFERENCE_IMAGE = require("path").join(__dirname, "assets", "sebastian_character.png");
+
+module.exports = { STYLE_DIRECTIVE, NEGATIVE_PROMPT, CHARACTER_DIRECTIVE, CHARACTER_REFERENCE_IMAGE };
