@@ -110,6 +110,118 @@ class FB {
     await sleep(2500);
     return { ok: true };
   }
+
+  /**
+   * Post a video with caption — FB's first posting capability (2026-07-20,
+   * built for the daily stance-video cross-post). Drives the composer the
+   * real-browser way: open the create-post dialog, attach via the dialog's
+   * file input (CDP setFileInputFiles), type the caption, wait for FB's
+   * upload/processing, click Post.
+   *
+   * FB's DOM is obfuscated; selectors lean on aria-labels and role attributes,
+   * with generous polls. Any miss returns { posted:false, reason } — callers
+   * treat FB as best-effort.
+   * @returns {Promise<{posted:boolean, reason?:string, dryRun?:boolean}>}
+   */
+  async postVideo(text, videoPath, { dryRun = false } = {}) {
+    if (!videoPath) return { posted: false, reason: "no_video" };
+    await this.ensureTab();
+    await this._goto(HOME_URL);
+    await sleep(4000);
+
+    // 0. Dismiss interstitials (e.g. the "You're in sleep mode" modal) — they
+    // sit in [role=dialog] and hijack any dialog-scoped selector.
+    await this.c.evalFn(this.tab, () => {
+      const ok = [...document.querySelectorAll('[role="button"],button')]
+        .find((b) => /^(ok|okay|not now|close)$/i.test((b.textContent || "").trim()));
+      if (ok) ok.click();
+      return !!ok;
+    }).catch(() => false);
+    await sleep(1500);
+
+    // 1. Open the create-post dialog ("What's on your mind…").
+    const opened = await this.c.evalFn(this.tab, () => {
+      const trigger = [...document.querySelectorAll('[role="button"]')]
+        .find((b) => /what'?s on your mind/i.test(b.textContent || ""));
+      if (!trigger) return false;
+      trigger.click(); return true;
+    }).catch(() => false);
+    if (!opened) return { posted: false, reason: "composer_trigger_not_found" };
+    await sleep(3500);
+
+    // 2. The Create post dialog premounts its file input (verified live
+    // 2026-07-20); the Photo/video click is only a fallback to force-mount it.
+    const hasInput = await this.c.evalFn(this.tab, () => {
+      const d = [...document.querySelectorAll('[role="dialog"]')].find((x) => /create post/i.test(x.textContent || ""));
+      if (!d) return false;
+      if (!d.querySelector('input[type="file"]')) {
+        const btn = [...d.querySelectorAll('[role="button"],[aria-label]')]
+          .find((b) => /photo\/video|photo or video/i.test(b.getAttribute("aria-label") || b.textContent || ""));
+        if (btn) btn.click();
+      }
+      return true;
+    }).catch(() => false);
+    if (!hasInput) return { posted: false, reason: "create_post_dialog_not_found" };
+    await sleep(1500);
+
+    // 3. Attach — scope to the dialog's input, global input as fallback.
+    try { await this.c.setFileInput(this.tab, '[role="dialog"] input[type="file"]', [videoPath]); }
+    catch { try { await this.c.setFileInput(this.tab, 'input[type="file"]', [videoPath]); }
+    catch (e) { return { posted: false, reason: `file_input:${e.message}` }; } }
+
+    // 4. Wait for the video to attach (thumbnail/player in the dialog).
+    let attached = false;
+    for (let i = 0; i < 30 && !attached; i++) {
+      attached = await this.c.evalFn(this.tab, () => {
+        const d = [...document.querySelectorAll('[role="dialog"]')].find((x) => /create post/i.test(x.textContent || ""));
+        return !!(d && (d.querySelector("video") || [...d.querySelectorAll("div")].some((e) => /uploading|processing/i.test(e.getAttribute("aria-label") || ""))));
+      }).catch(() => false);
+      if (!attached) await sleep(2000);
+    }
+    if (!attached) return { posted: false, reason: "video_not_attached" };
+
+    // 5. Caption into the dialog's composer.
+    if (text) {
+      const focused = await this.c.evalFn(this.tab, () => {
+        const d = [...document.querySelectorAll('[role="dialog"]')].find((x) => /create post/i.test(x.textContent || ""));
+        const box = d && d.querySelector('[contenteditable="true"][role="textbox"]');
+        if (!box) return false;
+        box.focus(); return true;
+      }).catch(() => false);
+      if (!focused) return { posted: false, reason: "caption_box_not_found" };
+      try { await this.c.insertText(this.tab, text); } catch (e) { return { posted: false, reason: `caption:${e.message}` }; }
+      await sleep(800);
+    }
+
+    // 6. Post (FB keeps it disabled until processing allows; poll on video timescales).
+    let clicked = false;
+    for (let i = 0; i < 16 && !clicked; i++) {
+      if (dryRun) break;
+      clicked = await this.c.evalFn(this.tab, () => {
+        const d = [...document.querySelectorAll('[role="dialog"]')].find((x) => /create post/i.test(x.textContent || ""));
+        const btn = d && [...d.querySelectorAll('[role="button"],[aria-label="Post"]')]
+          .find((b) => /^post$/i.test((b.getAttribute("aria-label") || b.textContent || "").trim()) && b.getAttribute("aria-disabled") !== "true");
+        if (!btn) return false;
+        btn.click(); return true;
+      }).catch(() => false);
+      if (!clicked) await sleep(15000);
+    }
+    if (dryRun) { this.log("DRY RUN — video attached + caption set, not posting"); return { posted: false, reason: "dry_run", dryRun: true }; }
+    if (!clicked) return { posted: false, reason: "post_button_not_enabled" };
+
+    // FB uploads in the background after Post: success = the "being processed"
+    // toast, or the Create post dialog going away. Poll up to ~2 min.
+    for (let i = 0; i < 12; i++) {
+      await sleep(10000);
+      const done = await this.c.evalFn(this.tab, () => {
+        const d = [...document.querySelectorAll('[role="dialog"]')].find((x) => /create post/i.test(x.textContent || ""));
+        const toast = [...document.querySelectorAll("div,span")].some((e) => /being processed|post is (now )?(ready|live)|shared to/i.test((e.textContent || "").slice(0, 80)));
+        return !d || toast;
+      }).catch(() => false);
+      if (done) { this.log("video post submitted to Facebook"); return { posted: true }; }
+    }
+    return { posted: false, reason: "upload_unconfirmed" };
+  }
 }
 
 module.exports = { FB, FB_HOME_URL: HOME_URL };

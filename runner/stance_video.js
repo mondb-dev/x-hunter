@@ -219,7 +219,42 @@ async function main() {
   log(`saved ${outPath} (${(video.buffer.length / 1048576).toFixed(1)} MB)`);
 
   await sendTelegramVideo(outPath, `Sebastian on: ${brief.topic}\n"${brief.spoken_line}"\n(${brief.location})`);
-  fs.writeFileSync(STAMP, JSON.stringify({ last_success: today(), topic: brief.topic, line: brief.spoken_line, path: outPath }, null, 2));
+
+  // Launch it: post the clip to X autonomously (STANCE_VIDEO_POST=0 to hold at
+  // Telegram-review only). Caption = the spoken line — it already passed the
+  // outbound gates; posting failure is non-fatal (video is saved + reviewed,
+  // and tomorrow brings a new episode).
+  let postedUrl = null;
+  if (process.env.STANCE_VIDEO_POST !== "0") {
+    try {
+      const { X } = require("../tools/helmstack-social/src");
+      const x = new X(new (require("../tools/helmstack-social/src").HelmStackClient)());
+      const r = await x.postVideo(brief.spoken_line, outPath, { dryRun: process.env.HELMSTACK_DRY_RUN === "1" });
+      if (r.posted) {
+        postedUrl = r.url || null;
+        log(`launched on X: ${postedUrl || "(url uncaptured)"}`);
+        try {
+          require("./posts_log").logTweet({ content: brief.spoken_line, tweet_url: postedUrl, date: today(), type: "stance_video" });
+        } catch (e) { log(`posts_log failed (non-fatal): ${e.message}`); }
+      } else {
+        log(`X launch failed (non-fatal): ${r.reason}`);
+      }
+    } catch (e) { log(`X launch error (non-fatal): ${e.message}`); }
+  }
+
+  // Cross-post to Facebook (best-effort; STANCE_VIDEO_FB=0 to disable).
+  let fbPosted = false;
+  if (process.env.STANCE_VIDEO_POST !== "0" && process.env.STANCE_VIDEO_FB !== "0") {
+    try {
+      const { HelmStackClient, FB } = require("../tools/helmstack-social/src");
+      const fb = new FB(new HelmStackClient());
+      const r = await fb.postVideo(brief.spoken_line, outPath, { dryRun: process.env.HELMSTACK_DRY_RUN === "1" });
+      fbPosted = !!r.posted;
+      log(fbPosted ? "cross-posted to Facebook" : `FB cross-post failed (non-fatal): ${r.reason}`);
+    } catch (e) { log(`FB cross-post error (non-fatal): ${e.message}`); }
+  }
+
+  fs.writeFileSync(STAMP, JSON.stringify({ last_success: today(), topic: brief.topic, line: brief.spoken_line, path: outPath, x_url: postedUrl, fb_posted: fbPosted }, null, 2));
 }
 
 main()
