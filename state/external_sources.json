@@ -1,8 +1,8 @@
 {
   "schema_version": "1.0",
-  "generated_at": "2026-07-20T11:00:51.171Z",
+  "generated_at": "2026-07-20T14:01:00.063Z",
   "method": "mechanical_registry_v1",
-  "profiled_at": "2026-07-20T11:01:00.345Z",
+  "profiled_at": "2026-07-20T14:01:05.850Z",
   "sources": [
     {
       "domain": "theguardian.com",
@@ -11,7 +11,7 @@
       "first_seen_at": "2026-03-27T23:17:00Z",
       "last_seen_at": "2026-07-19T20:44:41.291Z",
       "discovery": {
-        "distinct_urls": 460,
+        "distinct_urls": 462,
         "example_urls": [
           "https://www.theguardian.com/us-news/2026/jun/23/trump-immigration-courthouse-arrest-policy",
           "https://www.theguardian.com/us-news/2026/jun/28/ice-minnesota-defending-democracy",
@@ -21,7 +21,7 @@
         ],
         "origin_counts": {
           "ontology_evidence": 38,
-          "reading_queue": 431,
+          "reading_queue": 433,
           "journals": 82,
           "articles": 1
         },
@@ -71,7 +71,7 @@
         "breadth": {
           "score": 0.94,
           "basis": [
-            "distinct_urls:460",
+            "distinct_urls:462",
             "distinct_axes:16",
             "origin_types:4"
           ]
@@ -111,7 +111,7 @@
             "newsroom_domain_pattern",
             "article_path_seen",
             "doi_or_identifier_path_seen",
-            "distinct_urls:460",
+            "distinct_urls:462",
             "distinct_axes:16",
             "origin_types:4",
             "referring_accounts:0",
@@ -121,7 +121,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-07-17T11:11:30.384Z",
+        "fetched_at": "2026-07-20T12:00:52.371Z",
         "homepage_url": "https://theguardian.com/",
         "example_url": "https://www.theguardian.com/us-news/2026/jun/23/trump-immigration-courthouse-arrest-policy",
         "homepage_status": 200,
@@ -539,7 +539,7 @@
       "first_seen_at": "2026-06-22T00:15:00Z",
       "last_seen_at": "2026-07-19T20:44:41.272Z",
       "discovery": {
-        "distinct_urls": 314,
+        "distinct_urls": 316,
         "example_urls": [
           "https://www.nytimes.com/2026/06/19/world/canada/frank-stronach-trial-guilty-sex-charges.html",
           "https://www.nytimes.com/2026/06/27/world/americas/mexican-officials-us-informants.html",
@@ -549,7 +549,7 @@
         ],
         "origin_counts": {
           "ontology_evidence": 12,
-          "reading_queue": 315,
+          "reading_queue": 317,
           "journals": 31
         },
         "distinct_referring_accounts": 0,
@@ -587,7 +587,7 @@
         "breadth": {
           "score": 0.8799999999999999,
           "basis": [
-            "distinct_urls:314",
+            "distinct_urls:316",
             "distinct_axes:6",
             "origin_types:3"
           ]
@@ -626,7 +626,7 @@
           "basis": [
             "newsroom_domain_pattern",
             "article_path_seen",
-            "distinct_urls:314",
+            "distinct_urls:316",
             "distinct_axes:6",
             "origin_types:3",
             "referring_accounts:0",
@@ -672,9 +672,9 @@
       "entity": "Aljazeera",
       "kind": "news",
       "first_seen_at": "2026-06-22T02:45:00Z",
-      "last_seen_at": "2026-07-20T06:31:39.947Z",
+      "last_seen_at": "2026-07-20T13:31:47.713Z",
       "discovery": {
-        "distinct_urls": 275,
+        "distinct_urls": 276,
         "example_urls": [
           "https://www.aljazeera.com/opinions/2026/6/24/south-africas-crises-will-not-be-solved-by-blaming-migrants",
           "https://www.aljazeera.com/video/newsfeed/2026/6/27/newly-released-video-exposes-henry-nowak-killers-lies?traffic_source=rss",
@@ -685,7 +685,7 @@
         "origin_counts": {
           "ontology_evidence": 149,
           "reading_queue": 10,
-          "journals": 366
+          "journals": 367
         },
         "distinct_referring_accounts": 0,
         "sample_referring_accounts": [],
@@ -739,7 +739,7 @@
         "breadth": {
           "score": 0.8799999999999999,
           "basis": [
-            "distinct_urls:275",
+            "distinct_urls:276",
             "distinct_axes:23",
             "origin_types:3"
           ]
@@ -778,7 +778,7 @@
           "basis": [
             "newsroom_domain_pattern",
             "article_path_seen",
-            "distinct_urls:275",
+            "distinct_urls:276",
             "distinct_axes:23",
             "origin_types:3",
             "referring_accounts:0",
@@ -1280,7 +1280,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-07-17T11:11:31.231Z",
+        "fetched_at": "2026-07-20T12:00:53.557Z",
         "homepage_url": "https://house.gov/",
         "example_url": "https://www.house.gov/",
         "homepage_status": 200,
@@ -1439,7 +1439,7 @@
       "first_seen_at": "2026-06-26T07:05:00Z",
       "last_seen_at": "2026-07-19T20:44:41.291Z",
       "discovery": {
-        "distinct_urls": 264,
+        "distinct_urls": 265,
         "example_urls": [
           "https://www.bbc.co.uk/news/articles/cn8qxz6qypyo",
           "https://www.bbc.co.uk/news/articles/cn075j04pnyo?at_medium=RSS&amp;at_campaign=rss",
@@ -1449,7 +1449,7 @@
         ],
         "origin_counts": {
           "ontology_evidence": 6,
-          "reading_queue": 266,
+          "reading_queue": 267,
           "journals": 14
         },
         "distinct_referring_accounts": 0,
@@ -1484,7 +1484,7 @@
         "breadth": {
           "score": 0.7633333333333332,
           "basis": [
-            "distinct_urls:264",
+            "distinct_urls:265",
             "distinct_axes:4",
             "origin_types:3"
           ]
@@ -1522,7 +1522,7 @@
           "method": "mechanical_v1",
           "basis": [
             "newsroom_domain_pattern",
-            "distinct_urls:264",
+            "distinct_urls:265",
             "distinct_axes:4",
             "origin_types:3",
             "referring_accounts:0",
@@ -1532,7 +1532,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-07-17T12:41:32.262Z",
+        "fetched_at": "2026-07-20T13:31:03.352Z",
         "homepage_url": "https://bbc.co.uk/",
         "example_url": "https://www.bbc.co.uk/news/articles/cn8qxz6qypyo",
         "homepage_status": 200,
@@ -2475,7 +2475,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-07-17T11:11:31.632Z",
+        "fetched_at": "2026-07-20T12:00:53.965Z",
         "homepage_url": "https://apnews.com/",
         "example_url": "https://apnews.com/hub/iran",
         "homepage_status": 200,
@@ -3058,9 +3058,9 @@
       "entity": "Rappler",
       "kind": "unknown",
       "first_seen_at": "2026-06-22T04:04:30.428Z",
-      "last_seen_at": "2026-07-19T11:31:32.414Z",
+      "last_seen_at": "2026-07-20T12:01:24.692Z",
       "discovery": {
-        "distinct_urls": 140,
+        "distinct_urls": 141,
         "example_urls": [
           "https://www.rappler.com/fact-check-no-arrest-warrant-issued-vs-marcoleta",
           "https://www.rappler.com/technology/decoded-tacloban-school-shooting-disinformation-kiko-barzaga-discussions-juvenile-justice-law/",
@@ -3070,7 +3070,7 @@
         ],
         "origin_counts": {
           "ontology_evidence": 78,
-          "journals": 167,
+          "journals": 168,
           "articles": 1
         },
         "distinct_referring_accounts": 0,
@@ -3122,7 +3122,7 @@
         "breadth": {
           "score": 0.8799999999999999,
           "basis": [
-            "distinct_urls:140",
+            "distinct_urls:141",
             "distinct_axes:21",
             "origin_types:3"
           ]
@@ -3160,7 +3160,7 @@
           "method": "mechanical_v1",
           "basis": [
             "unknown_domain_pattern",
-            "distinct_urls:140",
+            "distinct_urls:141",
             "distinct_axes:21",
             "origin_types:3",
             "referring_accounts:0",
@@ -3620,9 +3620,9 @@
       "entity": "T Co",
       "kind": "unknown",
       "first_seen_at": "2016-05-05T18:57:30.000Z",
-      "last_seen_at": "2026-07-20T09:32:00.000Z",
+      "last_seen_at": "2026-07-20T09:50:19.000Z",
       "discovery": {
-        "distinct_urls": 8069,
+        "distinct_urls": 8070,
         "example_urls": [
           "https://t.co/pJSE124ec4",
           "https://t.co/Soz8BXPWaa",
@@ -3631,7 +3631,7 @@
           "https://t.co/cYaqYDRp08"
         ],
         "origin_counts": {
-          "feed_buffer": 5100,
+          "feed_buffer": 5101,
           "feed_buffer_reply": 4830
         },
         "distinct_referring_accounts": 2484,
@@ -3673,7 +3673,7 @@
         "breadth": {
           "score": 0.47,
           "basis": [
-            "distinct_urls:8069",
+            "distinct_urls:8070",
             "distinct_axes:0",
             "origin_types:2"
           ]
@@ -3712,7 +3712,7 @@
           "basis": [
             "unknown_domain_pattern",
             "doi_or_identifier_path_seen",
-            "distinct_urls:8069",
+            "distinct_urls:8070",
             "distinct_axes:0",
             "origin_types:2",
             "referring_accounts:2484",
@@ -3722,7 +3722,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-07-17T11:11:32.859Z",
+        "fetched_at": "2026-07-20T12:00:55.083Z",
         "homepage_url": "https://t.co/",
         "example_url": "https://t.co/pJSE124ec4",
         "homepage_status": 200,
@@ -3758,9 +3758,9 @@
       "entity": "Gmanetwork",
       "kind": "unknown",
       "first_seen_at": "2026-05-18T03:29:41.732Z",
-      "last_seen_at": "2026-07-20T10:31:38.151Z",
+      "last_seen_at": "2026-07-20T13:31:47.750Z",
       "discovery": {
-        "distinct_urls": 172,
+        "distinct_urls": 175,
         "example_urls": [
           "https://www.gmanetwork.com/news/topstories/nation/994225/explainer-objections-in-a-trial-and-their-role-in-due-process/story/",
           "https://www.gmanetwork.com/news/balitambayan/balita/993931/sen-escudero-sinabing-16-na-boto-ang-kailangan-para-mahatulang-guilty-si-vp-sara-duterte-sa-impea/story/",
@@ -3769,8 +3769,8 @@
           "https://www.gmanetwork.com/news/topstories/nation/994080/electronic-copies-evidence-supreme-court/story/"
         ],
         "origin_counts": {
-          "ontology_evidence": 66,
-          "journals": 207
+          "ontology_evidence": 67,
+          "journals": 210
         },
         "distinct_referring_accounts": 0,
         "sample_referring_accounts": [],
@@ -3814,7 +3814,7 @@
         "breadth": {
           "score": 0.82,
           "basis": [
-            "distinct_urls:172",
+            "distinct_urls:175",
             "distinct_axes:14",
             "origin_types:2"
           ]
@@ -3852,7 +3852,7 @@
           "method": "mechanical_v1",
           "basis": [
             "unknown_domain_pattern",
-            "distinct_urls:172",
+            "distinct_urls:175",
             "distinct_axes:14",
             "origin_types:2",
             "referring_accounts:0",
@@ -4513,19 +4513,19 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-07-17T12:41:33.527Z",
+        "fetched_at": "2026-07-20T13:31:05.550Z",
         "homepage_url": "https://grok.com/",
         "example_url": "https://grok.com/imagine/post/9b92ff60-ec59-45db-8a35-8e1b743e5339",
-        "homepage_status": 403,
+        "homepage_status": 200,
         "example_status": 200,
         "homepage_final_url": "https://grok.com/",
         "example_final_url": "https://grok.com/imagine/post/9b92ff60-ec59-45db-8a35-8e1b743e5339",
-        "homepage_content_type": "text/html; charset=UTF-8",
+        "homepage_content_type": "text/html; charset=utf-8",
         "example_content_type": "text/html; charset=utf-8",
         "homepage": {
           "has_meta_author": false,
           "has_published_time": false,
-          "has_canonical": false,
+          "has_canonical": true,
           "has_about_link": false,
           "has_contact_link": false,
           "has_corrections_link": false,
@@ -6214,7 +6214,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-07-17T11:41:31.182Z",
+        "fetched_at": "2026-07-20T12:30:59.692Z",
         "homepage_url": "https://rockstargames.com/",
         "example_url": "https://www.rockstargames.com/gta-online?utm_source=Twitter&utm_medium=p_social&utm_campaign=506-kch-pre-release-gift-20260702&utm_content=uk-eng&twclid=21k9dspaz1uqc236nsfftz24wo",
         "homepage_status": 200,
@@ -6343,7 +6343,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-07-17T12:41:34.889Z",
+        "fetched_at": "2026-07-20T13:31:07.388Z",
         "homepage_url": "https://theepochtimes.com/",
         "example_url": "https://www.theepochtimes.com/china/former-chinese-military-doctor-leaks-ccp-plan-to-use-taiwanese-troops-as-organ-bank-5871639?utm_medium=DigitalMkt&utm_source=twitter&utm_campaign=content_FormerChineseMilitary-karen-20250827&utm_content=img-2_FormerChineseMilitary&utm_term=new-pagevisitor&gl=reg&twclid=2387x75uji9nq8gmjpy9cer691",
         "homepage_status": 200,
@@ -6463,7 +6463,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-07-17T12:41:36.027Z",
+        "fetched_at": "2026-07-20T13:31:10.770Z",
         "homepage_url": "https://wikipedia.org/",
         "example_url": "https://en.wikipedia.org/wiki/2026_Iran_war",
         "homepage_status": 200,
@@ -9675,6 +9675,133 @@
       }
     },
     {
+      "domain": "travala.com",
+      "entity": "Travala",
+      "kind": "unknown",
+      "first_seen_at": "2026-07-07T12:18:51.059Z",
+      "last_seen_at": "2026-07-20T12:29:43.135Z",
+      "discovery": {
+        "distinct_urls": 13,
+        "example_urls": [
+          "https://www.travala.com/?camp_name=&camp_offer=credit&camp_content=Sign-up-or-log-in-to-receive-%2450-off-flights%2C-hotels-and-activities.&camp_code=BTCASIA50&camp_value=50&utm_campaign=BTCASIA50&utm_medium=by-travala-cpc&utm_source=twitter&twclid=26wz3yk3m5mtcltdzivyfesoom",
+          "https://www.travala.com/?camp_name=&camp_offer=credit&camp_content=Sign-up-or-log-in-to-receive-%2450-off-flights%2C-hotels-and-activities.&camp_code=BTCASIA50&camp_value=50&utm_campaign=BTCASIA50&utm_medium=by-travala-cpc&utm_source=twitter&twclid=27hwmpgkfaysz941g6s97hdxaj",
+          "https://www.travala.com/?camp_name=COINFESTASIA2026&camp_offer=credit&camp_content=Sign-up-or-log-in-to-receive-%2450-off-flights%2C-hotels-and-activities.&camp_code=COINFESTASIA2026&camp_value=50&twclid=294v9257q2r0tg4r9ly3pj1y4e",
+          "https://www.travala.com/?camp_name=COINFESTASIA2026&camp_offer=credit&camp_content=Sign-up-or-log-in-to-receive-%2450-off-flights%2C-hotels-and-activities.&camp_code=COINFESTASIA2026&camp_value=50&twclid=2b6tiv0rornjsaszcrq273c8h7",
+          "https://www.travala.com/?camp_name=&camp_offer=credit&camp_content=Sign-up-or-log-in-to-receive-%2450-off-flights%2C-hotels-and-activities.&camp_code=BTCASIA50&camp_value=50&utm_campaign=BTCASIA50&utm_medium=by-travala-cpc&utm_source=twitter&twclid=2bbhq20cxwi8wz4ld34c9p9zyc"
+        ],
+        "origin_counts": {
+          "feed_buffer": 9,
+          "feed_buffer_reply": 4
+        },
+        "distinct_referring_accounts": 1,
+        "sample_referring_accounts": [
+          "travalacom"
+        ],
+        "distinct_axes": []
+      },
+      "claims": {
+        "total": 0,
+        "supported": 0,
+        "refuted": 0,
+        "contested": 0,
+        "unverified": 0,
+        "resolved_count": 0
+      },
+      "structural_features": {
+        "has_search_paths": false,
+        "has_article_paths": false,
+        "has_doi_paths": false
+      },
+      "ratings": {
+        "provenance": {
+          "score": 0.45,
+          "basis": [
+            "unknown_domain_pattern"
+          ]
+        },
+        "breadth": {
+          "score": 0.47,
+          "basis": [
+            "distinct_urls:13",
+            "distinct_axes:0",
+            "origin_types:2"
+          ]
+        },
+        "corroboration": {
+          "score": 0.2833333333333333,
+          "basis": [
+            "referring_accounts:1",
+            "origin_types:2"
+          ]
+        },
+        "track_record": {
+          "score": null,
+          "basis": [
+            "no_resolved_claims_observed"
+          ]
+        },
+        "profile": {
+          "score": 0.1,
+          "confidence": 0.55,
+          "basis": [
+            "meta_author:false",
+            "published_time:false",
+            "canonical:true",
+            "about:false",
+            "contact:false",
+            "corrections:false",
+            "outbound_links:0",
+            "opinion_marker:false"
+          ]
+        },
+        "overall": {
+          "score": 0.43875,
+          "confidence": 0.4392,
+          "method": "mechanical_v1",
+          "basis": [
+            "unknown_domain_pattern",
+            "distinct_urls:13",
+            "distinct_axes:0",
+            "origin_types:2",
+            "referring_accounts:1",
+            "origin_types:2",
+            "track_record_unavailable"
+          ]
+        }
+      },
+      "profile": {
+        "fetched_at": "2026-07-18T08:42:04.212Z",
+        "homepage_url": "https://travala.com/",
+        "example_url": "https://www.travala.com/?camp_name=&camp_offer=credit&camp_content=Sign-up-or-log-in-to-receive-%2450-off-flights%2C-hotels-and-activities.&camp_code=BTCASIA50&camp_value=50&utm_campaign=BTCASIA50&utm_medium=by-travala-cpc&utm_source=twitter&twclid=26wz3yk3m5mtcltdzivyfesoom",
+        "homepage_status": 200,
+        "example_status": 200,
+        "homepage_final_url": "https://www.travala.com/",
+        "example_final_url": "https://www.travala.com/?camp_name=&camp_offer=credit&camp_content=Sign-up-or-log-in-to-receive-%2450-off-flights%2C-hotels-and-activities.&camp_code=BTCASIA50&camp_value=50&utm_campaign=BTCASIA50&utm_medium=by-travala-cpc&utm_source=twitter&twclid=26wz3yk3m5mtcltdzivyfesoom",
+        "homepage_content_type": "text/html; charset=utf-8",
+        "example_content_type": "text/html; charset=utf-8",
+        "homepage": {
+          "has_meta_author": false,
+          "has_published_time": false,
+          "has_canonical": true,
+          "has_about_link": false,
+          "has_contact_link": false,
+          "has_corrections_link": false,
+          "outbound_links_count": 0,
+          "opinion_marker": false
+        },
+        "example": {
+          "has_meta_author": false,
+          "has_published_time": false,
+          "has_canonical": true,
+          "has_about_link": false,
+          "has_contact_link": false,
+          "has_corrections_link": false,
+          "outbound_links_count": 0,
+          "opinion_marker": false
+        }
+      }
+    },
+    {
       "domain": "metaphysicalarticles.org",
       "entity": "Metaphysicalarticles",
       "kind": "unknown",
@@ -10436,133 +10563,6 @@
           "has_contact_link": false,
           "has_corrections_link": false,
           "outbound_links_count": 35,
-          "opinion_marker": false
-        }
-      }
-    },
-    {
-      "domain": "travala.com",
-      "entity": "Travala",
-      "kind": "unknown",
-      "first_seen_at": "2026-07-07T12:18:51.059Z",
-      "last_seen_at": "2026-07-15T00:17:07.000Z",
-      "discovery": {
-        "distinct_urls": 11,
-        "example_urls": [
-          "https://www.travala.com/?camp_name=&camp_offer=credit&camp_content=Sign-up-or-log-in-to-receive-%2450-off-flights%2C-hotels-and-activities.&camp_code=BTCASIA50&camp_value=50&utm_campaign=BTCASIA50&utm_medium=by-travala-cpc&utm_source=twitter&twclid=26wz3yk3m5mtcltdzivyfesoom",
-          "https://www.travala.com/?camp_name=&camp_offer=credit&camp_content=Sign-up-or-log-in-to-receive-%2450-off-flights%2C-hotels-and-activities.&camp_code=BTCASIA50&camp_value=50&utm_campaign=BTCASIA50&utm_medium=by-travala-cpc&utm_source=twitter&twclid=27hwmpgkfaysz941g6s97hdxaj",
-          "https://www.travala.com/?camp_name=COINFESTASIA2026&camp_offer=credit&camp_content=Sign-up-or-log-in-to-receive-%2450-off-flights%2C-hotels-and-activities.&camp_code=COINFESTASIA2026&camp_value=50&twclid=294v9257q2r0tg4r9ly3pj1y4e",
-          "https://www.travala.com/?camp_name=COINFESTASIA2026&camp_offer=credit&camp_content=Sign-up-or-log-in-to-receive-%2450-off-flights%2C-hotels-and-activities.&camp_code=COINFESTASIA2026&camp_value=50&twclid=2b6tiv0rornjsaszcrq273c8h7",
-          "https://www.travala.com/?camp_name=&camp_offer=credit&camp_content=Sign-up-or-log-in-to-receive-%2450-off-flights%2C-hotels-and-activities.&camp_code=BTCASIA50&camp_value=50&utm_campaign=BTCASIA50&utm_medium=by-travala-cpc&utm_source=twitter&twclid=2bbhq20cxwi8wz4ld34c9p9zyc"
-        ],
-        "origin_counts": {
-          "feed_buffer": 7,
-          "feed_buffer_reply": 4
-        },
-        "distinct_referring_accounts": 1,
-        "sample_referring_accounts": [
-          "travalacom"
-        ],
-        "distinct_axes": []
-      },
-      "claims": {
-        "total": 0,
-        "supported": 0,
-        "refuted": 0,
-        "contested": 0,
-        "unverified": 0,
-        "resolved_count": 0
-      },
-      "structural_features": {
-        "has_search_paths": false,
-        "has_article_paths": false,
-        "has_doi_paths": false
-      },
-      "ratings": {
-        "provenance": {
-          "score": 0.45,
-          "basis": [
-            "unknown_domain_pattern"
-          ]
-        },
-        "breadth": {
-          "score": 0.4408333333333333,
-          "basis": [
-            "distinct_urls:11",
-            "distinct_axes:0",
-            "origin_types:2"
-          ]
-        },
-        "corroboration": {
-          "score": 0.2833333333333333,
-          "basis": [
-            "referring_accounts:1",
-            "origin_types:2"
-          ]
-        },
-        "track_record": {
-          "score": null,
-          "basis": [
-            "no_resolved_claims_observed"
-          ]
-        },
-        "profile": {
-          "score": 0.1,
-          "confidence": 0.55,
-          "basis": [
-            "meta_author:false",
-            "published_time:false",
-            "canonical:true",
-            "about:false",
-            "contact:false",
-            "corrections:false",
-            "outbound_links:0",
-            "opinion_marker:false"
-          ]
-        },
-        "overall": {
-          "score": 0.43236979166666667,
-          "confidence": 0.388075,
-          "method": "mechanical_v1",
-          "basis": [
-            "unknown_domain_pattern",
-            "distinct_urls:11",
-            "distinct_axes:0",
-            "origin_types:2",
-            "referring_accounts:1",
-            "origin_types:2",
-            "track_record_unavailable"
-          ]
-        }
-      },
-      "profile": {
-        "fetched_at": "2026-07-18T08:42:04.212Z",
-        "homepage_url": "https://travala.com/",
-        "example_url": "https://www.travala.com/?camp_name=&camp_offer=credit&camp_content=Sign-up-or-log-in-to-receive-%2450-off-flights%2C-hotels-and-activities.&camp_code=BTCASIA50&camp_value=50&utm_campaign=BTCASIA50&utm_medium=by-travala-cpc&utm_source=twitter&twclid=26wz3yk3m5mtcltdzivyfesoom",
-        "homepage_status": 200,
-        "example_status": 200,
-        "homepage_final_url": "https://www.travala.com/",
-        "example_final_url": "https://www.travala.com/?camp_name=&camp_offer=credit&camp_content=Sign-up-or-log-in-to-receive-%2450-off-flights%2C-hotels-and-activities.&camp_code=BTCASIA50&camp_value=50&utm_campaign=BTCASIA50&utm_medium=by-travala-cpc&utm_source=twitter&twclid=26wz3yk3m5mtcltdzivyfesoom",
-        "homepage_content_type": "text/html; charset=utf-8",
-        "example_content_type": "text/html; charset=utf-8",
-        "homepage": {
-          "has_meta_author": false,
-          "has_published_time": false,
-          "has_canonical": true,
-          "has_about_link": false,
-          "has_contact_link": false,
-          "has_corrections_link": false,
-          "outbound_links_count": 0,
-          "opinion_marker": false
-        },
-        "example": {
-          "has_meta_author": false,
-          "has_published_time": false,
-          "has_canonical": true,
-          "has_about_link": false,
-          "has_contact_link": false,
-          "has_corrections_link": false,
-          "outbound_links_count": 0,
           "opinion_marker": false
         }
       }
@@ -14081,7 +14081,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-07-17T11:41:32.984Z",
+        "fetched_at": "2026-07-20T12:31:04.347Z",
         "homepage_url": "https://par.bz/",
         "example_url": "https://par.bz/nep?twclid=2cqyfqbi1emcrdcv6yo3eddsrk",
         "homepage_status": 403,
@@ -18386,7 +18386,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-07-17T11:41:33.736Z",
+        "fetched_at": "2026-07-20T12:31:05.036Z",
         "homepage_url": "https://myblockchainweek.com/",
         "example_url": "https://myblockchainweek.com/buy-ticket?twclid=21nicpg0ek4tfxn16u0mxc14r1",
         "homepage_status": 200,
@@ -19403,7 +19403,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-07-17T11:41:35.097Z",
+        "fetched_at": "2026-07-20T12:31:07.624Z",
         "homepage_url": "https://celsius.com/",
         "example_url": "https://www.celsius.com/buy-locate/?utm_medium=paidsocial&utm_campaign=pillars&utm_content=musicfestival&twclid=2ejkfis7fdkuksuqyzg68f5wfq",
         "homepage_status": 200,
@@ -19655,7 +19655,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-07-17T13:11:37.698Z",
+        "fetched_at": "2026-07-20T14:01:02.749Z",
         "homepage_url": "https://easesourcing.com/",
         "example_url": "https://www.easesourcing.com/?utm_source=twitter&utm_medium=cpc&utm_campaign=eu260327&twclid=2c9z6424e0kfmv2lyfp3g2o0yr",
         "homepage_status": 200,
@@ -19781,7 +19781,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-07-17T13:11:38.863Z",
+        "fetched_at": "2026-07-20T14:01:04.201Z",
         "homepage_url": "https://artyfacts.ai/",
         "example_url": "https://www.artyfacts.ai/?utm_source=x&utm_medium=paid_social&utm_campaign=waitlist_traffic&utm_content=capture_demo&utm_term=variantA&twclid=2e7ew786ao2fxw0qm1wxfdqe3b",
         "homepage_status": 200,
@@ -19907,7 +19907,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-07-17T13:11:39.523Z",
+        "fetched_at": "2026-07-20T14:01:05.023Z",
         "homepage_url": "https://subspace.build/",
         "example_url": "https://subspace.build/?utm_source=x&utm_campaign=memory_card_trick&twclid=26pw69bugqoexf6jq5nzgivo8r",
         "homepage_status": 200,
@@ -20033,7 +20033,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-07-17T13:11:40.172Z",
+        "fetched_at": "2026-07-20T14:01:05.850Z",
         "homepage_url": "https://peppermint.com/",
         "example_url": "https://peppermint.com/landing-page?utm_source=twitter_landing&utm_medium=paid_social&utm_campaign=ai-memory-x&utm_content=ag1-peppermint-remembers&twclid=24xl0c5ogt12h51rk4eehxo4ge",
         "homepage_status": 200,
@@ -47140,6 +47140,84 @@
         "distinct_referring_accounts": 1,
         "sample_referring_accounts": [
           "psyfe_official"
+        ],
+        "distinct_axes": []
+      },
+      "claims": {
+        "total": 0,
+        "supported": 0,
+        "refuted": 0,
+        "contested": 0,
+        "unverified": 0,
+        "resolved_count": 0
+      },
+      "structural_features": {
+        "has_search_paths": false,
+        "has_article_paths": false,
+        "has_doi_paths": false
+      },
+      "ratings": {
+        "provenance": {
+          "score": 0.45,
+          "basis": [
+            "unknown_domain_pattern"
+          ]
+        },
+        "breadth": {
+          "score": 0.11833333333333332,
+          "basis": [
+            "distinct_urls:2",
+            "distinct_axes:0",
+            "origin_types:1"
+          ]
+        },
+        "corroboration": {
+          "score": 0.19583333333333333,
+          "basis": [
+            "referring_accounts:1",
+            "origin_types:1"
+          ]
+        },
+        "track_record": {
+          "score": null,
+          "basis": [
+            "no_resolved_claims_observed"
+          ]
+        },
+        "overall": {
+          "score": 0.3536197916666667,
+          "confidence": 0.10997499999999999,
+          "method": "mechanical_v1",
+          "basis": [
+            "unknown_domain_pattern",
+            "distinct_urls:2",
+            "distinct_axes:0",
+            "origin_types:1",
+            "referring_accounts:1",
+            "origin_types:1",
+            "track_record_unavailable"
+          ]
+        }
+      }
+    },
+    {
+      "domain": "canadacis.org",
+      "entity": "Canadacis",
+      "kind": "unknown",
+      "first_seen_at": "2026-07-20T10:39:44.178Z",
+      "last_seen_at": "2026-07-20T11:49:43.159Z",
+      "discovery": {
+        "distinct_urls": 2,
+        "example_urls": [
+          "https://ph2canada.canadacis.org/?utm_source=twitter&utm_medium=conversions&utm_campaign=ph01&twclid=29zxowpwkbmryvjqutr3f9ysur",
+          "https://ph2canadaf.canadacis.org/?utm_source=twitter&utm_medium=conversions&utm_campaign=ph02family&twclid=21851pq80jbiwf7qxdcye65i6t"
+        ],
+        "origin_counts": {
+          "feed_buffer": 2
+        },
+        "distinct_referring_accounts": 1,
+        "sample_referring_accounts": [
+          "cis_immigration"
         ],
         "distinct_axes": []
       },
@@ -77487,83 +77565,6 @@
         "distinct_referring_accounts": 1,
         "sample_referring_accounts": [
           "noomeva_store"
-        ],
-        "distinct_axes": []
-      },
-      "claims": {
-        "total": 0,
-        "supported": 0,
-        "refuted": 0,
-        "contested": 0,
-        "unverified": 0,
-        "resolved_count": 0
-      },
-      "structural_features": {
-        "has_search_paths": false,
-        "has_article_paths": false,
-        "has_doi_paths": false
-      },
-      "ratings": {
-        "provenance": {
-          "score": 0.45,
-          "basis": [
-            "unknown_domain_pattern"
-          ]
-        },
-        "breadth": {
-          "score": 0.08916666666666666,
-          "basis": [
-            "distinct_urls:1",
-            "distinct_axes:0",
-            "origin_types:1"
-          ]
-        },
-        "corroboration": {
-          "score": 0.19583333333333333,
-          "basis": [
-            "referring_accounts:1",
-            "origin_types:1"
-          ]
-        },
-        "track_record": {
-          "score": null,
-          "basis": [
-            "no_resolved_claims_observed"
-          ]
-        },
-        "overall": {
-          "score": 0.3472395833333333,
-          "confidence": 0.08135,
-          "method": "mechanical_v1",
-          "basis": [
-            "unknown_domain_pattern",
-            "distinct_urls:1",
-            "distinct_axes:0",
-            "origin_types:1",
-            "referring_accounts:1",
-            "origin_types:1",
-            "track_record_unavailable"
-          ]
-        }
-      }
-    },
-    {
-      "domain": "canadacis.org",
-      "entity": "Canadacis",
-      "kind": "unknown",
-      "first_seen_at": "2026-07-20T10:39:44.178Z",
-      "last_seen_at": "2026-07-20T10:39:44.178Z",
-      "discovery": {
-        "distinct_urls": 1,
-        "example_urls": [
-          "https://ph2canada.canadacis.org/?utm_source=twitter&utm_medium=conversions&utm_campaign=ph01&twclid=29zxowpwkbmryvjqutr3f9ysur"
-        ],
-        "origin_counts": {
-          "feed_buffer": 1
-        },
-        "distinct_referring_accounts": 1,
-        "sample_referring_accounts": [
-          "cis_immigration"
         ],
         "distinct_axes": []
       },
