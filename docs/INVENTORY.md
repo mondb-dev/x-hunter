@@ -131,6 +131,10 @@ Follows (`scraper/follows.js:18,45`): max 3/run, 10/day, 1 min between.
   `prediction_log.jsonl` + `prediction_export.json`. Calibration
   (`runner/predictive_prompt.js` + belief_calibration feedback) injects measured
   hit-rate back into generation.
+- **Daily video** `runner/where_is_sebastian.js` — "Where is Sebastian today?"
+  series: inclination-derived scene brief (reason/Claude) → Veo via the Gemini
+  web engine; gated on account entitlement; output `state/videos/`, review via
+  Telegram.
 - **Costs** `runner/lib/cost_meter.js` (per-LLM-call ledger →
   `state/cost_ledger.jsonl`, rollup by model/tag) + `runner/lib/operating_cost.js`
   (LLM + fixed costs from `state/cost_config.json` + SOL-wallet storage runway →

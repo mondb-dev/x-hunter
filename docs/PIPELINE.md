@@ -82,6 +82,11 @@ orchestrator QUOTE/TWEET cycle          (posting window 07–23 local)
 - **Prediction resolution** (`prediction_resolution.js`, 1/day) — resolves
   expired predictions; calibration feeds back into generation. See
   PREDICTIONS.md.
+- **"Where is Sebastian today?"** (`where_is_sebastian.js`, 1/day, detached) —
+  scene brief from the day's inclinations (axis moves, stances, notes) via the
+  think backend → Veo clip via the Gemini web engine → `state/videos/` +
+  Telegram review. Self-gating until the signed-in account has a Veo
+  entitlement (`WHERE_VIDEO_ENABLED`).
 
 **Status:** Running ✓
 
