@@ -131,10 +131,12 @@ Follows (`scraper/follows.js:18,45`): max 3/run, 10/day, 1 min between.
   `prediction_log.jsonl` + `prediction_export.json`. Calibration
   (`runner/predictive_prompt.js` + belief_calibration feedback) injects measured
   hit-rate back into generation.
-- **Daily video** `runner/where_is_sebastian.js` — "Where is Sebastian today?"
-  series: inclination-derived scene brief (reason/Claude) → Veo via the Gemini
-  web engine; gated on account entitlement; output `state/videos/`, review via
-  Telegram. Character: the canonical green-chick-with-pixel-shades
+- **Daily stance video** `runner/stance_video.js` — the canonical chick
+  character states his current position on camera, on location. Subject:
+  newest open stance → strongest conviction → biggest axis move. Spoken line
+  composed by the think backend, confidence-calibrated, passed through the
+  shared outbound gates. Veo via the Gemini web engine; gated on account
+  entitlement; output `state/videos/`, review via Telegram. Character: the canonical green-chick-with-pixel-shades
   (`CHARACTER_DIRECTIVE` in `runner/image_style.js`, reference asset
   `runner/assets/sebastian_character.png` — from his live LinkedIn avatar,
   operator decision 2026-07-20).
