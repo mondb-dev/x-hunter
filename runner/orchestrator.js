@@ -310,6 +310,23 @@ function runSocialPipeline() {
     } catch (e) { log(`stance_scan spawn failed (non-fatal): ${e.message}`); }
   }
 
+  // "Where is Sebastian today?" — daily video: scene derived from the day's
+  // inclinations (axis moves, stances, notes), generated via the Gemini web
+  // engine (Veo). Self-gating: exits 0 with a logged reason until the signed-in
+  // Google account has a video entitlement. Detached: generation runs minutes;
+  // the script has its own 20-min watchdog.
+  if (process.env.WHERE_VIDEO_ENABLED !== '0' && dueForRun('where_video', 24 * HOUR)) {
+    log('media: where-is-sebastian daily video (detached)');
+    try {
+      const out = fs.openSync(config.RUNNER_LOG_PATH, 'a');
+      const child = spawn(process.execPath, [path.join(PROJECT_ROOT, 'runner/where_is_sebastian.js')], {
+        cwd: PROJECT_ROOT, env: process.env, detached: true, stdio: ['ignore', out, out],
+      });
+      child.unref();
+      fs.closeSync(out);
+    } catch (e) { log(`where_video spawn failed (non-fatal): ${e.message}`); }
+  }
+
   // Plan-driven deep research — answer one of the active plan's open research
   // questions per day with a full deep-research pass, published to the website.
   // Detached: a deep pass runs 1-5 min, far beyond runScriptLog's 120s cap;
