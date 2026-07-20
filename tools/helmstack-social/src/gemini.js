@@ -28,20 +28,38 @@ const GEMINI_URL = "https://gemini.google.com/app";
 const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
 
 class Gemini {
-  /** @param {import('./client').HelmStackClient} client */
-  constructor(client) {
+  /**
+   * @param {import('./client').HelmStackClient} client
+   * @param {object} [opts]
+   * @param {number} [opts.accountIndex]  Google multi-account index to pin to
+   *   (default env GEMINI_ACCOUNT_INDEX or 0). The browser can hold several
+   *   Google sessions; /u/N/ addressing keeps media generation on a specific
+   *   one (e.g. the AI Pro account) while everything else stays on u/0.
+   */
+  constructor(client, { accountIndex } = {}) {
     this.client = client;
     this.tabId = null;
+    const idx = accountIndex !== undefined ? accountIndex : Number(process.env.GEMINI_ACCOUNT_INDEX || 0);
+    this.accountIndex = Number.isFinite(idx) && idx > 0 ? idx : 0;
   }
 
-  /** Fresh chat tab: reuse a gemini.google.com tab if present, else open one. */
+  get url() {
+    return this.accountIndex > 0 ? `https://gemini.google.com/u/${this.accountIndex}/app` : GEMINI_URL;
+  }
+
+  _tabMatches(t) {
+    const u = t.url || "";
+    if (!/gemini\.google\.com/.test(u)) return false;
+    const m = u.match(/\/u\/(\d+)\//);
+    const tabIdx = m ? Number(m[1]) : 0;
+    return tabIdx === this.accountIndex;
+  }
+
+  /** Fresh chat tab on the pinned account: reuse a matching tab, else open one. */
   async ensureTab() {
-    this.tabId = await this.client.ensureTab(
-      (t) => /gemini\.google\.com/.test(t.url || ""),
-      GEMINI_URL
-    );
+    this.tabId = await this.client.ensureTab((t) => this._tabMatches(t), this.url);
     // Always reset to a new conversation so prior prompts don't leak in.
-    await this.client.request("POST", `/api/tabs/${this.tabId}/navigate`, { url: GEMINI_URL });
+    await this.client.request("POST", `/api/tabs/${this.tabId}/navigate`, { url: this.url });
     await sleep(3500);
     await this._dismissDialogs();
     return this.tabId;
@@ -222,33 +240,37 @@ class Gemini {
       return null;
     }
 
-    // Stage the bytes in the page, then pull them out in 1.5MB base64 chunks.
-    const meta = await this._eval(`(async () => {
-      try {
-        const res = await fetch(document.querySelector('model-response video, video').src);
-        const buf = await res.arrayBuffer();
-        const bytes = new Uint8Array(buf);
-        let bin = ""; const CHUNK = 0x8000;
-        for (let i = 0; i < bytes.length; i += CHUNK) bin += String.fromCharCode.apply(null, bytes.subarray(i, i + CHUNK));
-        window.__hs_video_b64 = btoa(bin);
-        return { size: buf.byteLength, mime: res.headers.get('content-type') || 'video/mp4' };
-      } catch (e) { return { error: String(e) }; }
-    })()`, { timeout: 120_000 });
-    if (!meta || meta.error) {
-      console.warn(`[gemini] video byte staging failed: ${meta && meta.error}`);
+    // Veo serves the clip from a signed usercontent.google.com URL that needs
+    // the browser's Google cookies (in-page fetch dies on CORS; cookie-less
+    // fetch gets an HTML wall). Pull the cookies for that origin from the
+    // browser and fetch the bytes Node-side — verified 2026-07-20.
+    if (!/^https?:/.test(src)) {
+      console.warn(`[gemini] unexpected video src scheme: ${src.slice(0, 40)} — cannot extract`);
       return null;
     }
-
-    const b64Parts = [];
-    const PART = 1_500_000;
-    const totalB64 = await this._eval(`window.__hs_video_b64.length`);
-    for (let off = 0; off < totalB64; off += PART) {
-      b64Parts.push(await this._eval(`window.__hs_video_b64.slice(${off}, ${off + PART})`, { timeout: 60_000 }));
+    try {
+      const origin = new URL(src).origin;
+      const raw = await this.client.getCookies(this.tabId, origin).catch(() => null);
+      const list = Array.isArray(raw) ? raw : (raw && raw.cookies) || [];
+      const cookieHeader = list.map((k) => `${k.name}=${k.value}`).join("; ");
+      const res = await fetch(src, {
+        headers: {
+          cookie: cookieHeader,
+          "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36",
+        },
+      });
+      const mime = res.headers.get("content-type") || "";
+      if (!res.ok || !/video|octet/.test(mime)) {
+        console.warn(`[gemini] video fetch got HTTP ${res.status} ${mime} — cookie wall?`);
+        return null;
+      }
+      const buffer = Buffer.from(await res.arrayBuffer());
+      console.log(`[gemini] video generated: ${(buffer.length / 1048576).toFixed(1)} MB (${mime})`);
+      return { buffer, mime };
+    } catch (e) {
+      console.warn(`[gemini] video byte extraction failed: ${e.message}`);
+      return null;
     }
-    await this._eval(`delete window.__hs_video_b64`).catch(() => {});
-    const buffer = Buffer.from(b64Parts.join(""), "base64");
-    console.log(`[gemini] video generated: ${buffer.length} bytes (${meta.mime})`);
-    return { buffer, mime: meta.mime };
   }
 }
 
