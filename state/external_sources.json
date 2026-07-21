@@ -1,8 +1,8 @@
 {
   "schema_version": "1.0",
-  "generated_at": "2026-07-21T08:01:11.062Z",
+  "generated_at": "2026-07-21T10:42:04.823Z",
   "method": "mechanical_registry_v1",
-  "profiled_at": "2026-07-21T08:01:18.373Z",
+  "profiled_at": "2026-07-21T10:42:07.043Z",
   "sources": [
     {
       "domain": "theguardian.com",
@@ -11,7 +11,7 @@
       "first_seen_at": "2026-03-27T23:17:00Z",
       "last_seen_at": "2026-07-19T20:44:41.291Z",
       "discovery": {
-        "distinct_urls": 474,
+        "distinct_urls": 476,
         "example_urls": [
           "https://www.theguardian.com/us-news/2026/jun/23/trump-immigration-courthouse-arrest-policy",
           "https://www.theguardian.com/us-news/2026/jun/28/ice-minnesota-defending-democracy",
@@ -21,7 +21,7 @@
         ],
         "origin_counts": {
           "ontology_evidence": 38,
-          "reading_queue": 445,
+          "reading_queue": 447,
           "journals": 82,
           "articles": 1
         },
@@ -71,7 +71,7 @@
         "breadth": {
           "score": 0.94,
           "basis": [
-            "distinct_urls:474",
+            "distinct_urls:476",
             "distinct_axes:16",
             "origin_types:4"
           ]
@@ -111,7 +111,7 @@
             "newsroom_domain_pattern",
             "article_path_seen",
             "doi_or_identifier_path_seen",
-            "distinct_urls:474",
+            "distinct_urls:476",
             "distinct_axes:16",
             "origin_types:4",
             "referring_accounts:0",
@@ -692,7 +692,7 @@
       "first_seen_at": "2026-06-22T00:15:00Z",
       "last_seen_at": "2026-07-20T21:01:34.607Z",
       "discovery": {
-        "distinct_urls": 323,
+        "distinct_urls": 325,
         "example_urls": [
           "https://www.nytimes.com/2026/06/19/world/canada/frank-stronach-trial-guilty-sex-charges.html",
           "https://www.nytimes.com/2026/06/27/world/americas/mexican-officials-us-informants.html",
@@ -702,7 +702,7 @@
         ],
         "origin_counts": {
           "ontology_evidence": 12,
-          "reading_queue": 323,
+          "reading_queue": 325,
           "journals": 32
         },
         "distinct_referring_accounts": 0,
@@ -740,7 +740,7 @@
         "breadth": {
           "score": 0.8799999999999999,
           "basis": [
-            "distinct_urls:323",
+            "distinct_urls:325",
             "distinct_axes:6",
             "origin_types:3"
           ]
@@ -779,7 +779,7 @@
           "basis": [
             "newsroom_domain_pattern",
             "article_path_seen",
-            "distinct_urls:323",
+            "distinct_urls:325",
             "distinct_axes:6",
             "origin_types:3",
             "referring_accounts:0",
@@ -1440,7 +1440,7 @@
       "first_seen_at": "2026-06-26T07:05:00Z",
       "last_seen_at": "2026-07-19T20:44:41.291Z",
       "discovery": {
-        "distinct_urls": 271,
+        "distinct_urls": 272,
         "example_urls": [
           "https://www.bbc.co.uk/news/articles/cn8qxz6qypyo",
           "https://www.bbc.co.uk/news/articles/cn075j04pnyo?at_medium=RSS&amp;at_campaign=rss",
@@ -1450,7 +1450,7 @@
         ],
         "origin_counts": {
           "ontology_evidence": 6,
-          "reading_queue": 277,
+          "reading_queue": 278,
           "journals": 14
         },
         "distinct_referring_accounts": 0,
@@ -1485,7 +1485,7 @@
         "breadth": {
           "score": 0.7633333333333332,
           "basis": [
-            "distinct_urls:271",
+            "distinct_urls:272",
             "distinct_axes:4",
             "origin_types:3"
           ]
@@ -1523,7 +1523,7 @@
           "method": "mechanical_v1",
           "basis": [
             "newsroom_domain_pattern",
-            "distinct_urls:271",
+            "distinct_urls:272",
             "distinct_axes:4",
             "origin_types:3",
             "referring_accounts:0",
@@ -2118,7 +2118,7 @@
       "entity": "Amnesty",
       "kind": "unknown",
       "first_seen_at": "2026-03-31T12:16:18.459Z",
-      "last_seen_at": "2026-07-20T15:31:49.450Z",
+      "last_seen_at": "2026-07-21T10:12:41.791Z",
       "discovery": {
         "distinct_urls": 50,
         "example_urls": [
@@ -2130,8 +2130,8 @@
         ],
         "origin_counts": {
           "ontology_evidence": 44,
-          "reading_queue": 27,
-          "journals": 73
+          "reading_queue": 28,
+          "journals": 74
         },
         "distinct_referring_accounts": 0,
         "sample_referring_accounts": [],
@@ -3621,9 +3621,9 @@
       "entity": "T Co",
       "kind": "unknown",
       "first_seen_at": "2016-05-05T18:57:30.000Z",
-      "last_seen_at": "2026-07-21T04:38:32.000Z",
+      "last_seen_at": "2026-07-21T05:50:15.000Z",
       "discovery": {
-        "distinct_urls": 8081,
+        "distinct_urls": 8082,
         "example_urls": [
           "https://t.co/pJSE124ec4",
           "https://t.co/Soz8BXPWaa",
@@ -3632,7 +3632,7 @@
           "https://t.co/cYaqYDRp08"
         ],
         "origin_counts": {
-          "feed_buffer": 5114,
+          "feed_buffer": 5115,
           "feed_buffer_reply": 4830
         },
         "distinct_referring_accounts": 2484,
@@ -3674,7 +3674,7 @@
         "breadth": {
           "score": 0.47,
           "basis": [
-            "distinct_urls:8081",
+            "distinct_urls:8082",
             "distinct_axes:0",
             "origin_types:2"
           ]
@@ -3713,7 +3713,7 @@
           "basis": [
             "unknown_domain_pattern",
             "doi_or_identifier_path_seen",
-            "distinct_urls:8081",
+            "distinct_urls:8082",
             "distinct_axes:0",
             "origin_types:2",
             "referring_accounts:2484",
@@ -3759,9 +3759,9 @@
       "entity": "Gmanetwork",
       "kind": "unknown",
       "first_seen_at": "2026-05-18T03:29:41.732Z",
-      "last_seen_at": "2026-07-21T06:01:42.715Z",
+      "last_seen_at": "2026-07-21T10:12:41.791Z",
       "discovery": {
-        "distinct_urls": 182,
+        "distinct_urls": 183,
         "example_urls": [
           "https://www.gmanetwork.com/news/topstories/nation/994225/explainer-objections-in-a-trial-and-their-role-in-due-process/story/",
           "https://www.gmanetwork.com/news/balitambayan/balita/993931/sen-escudero-sinabing-16-na-boto-ang-kailangan-para-mahatulang-guilty-si-vp-sara-duterte-sa-impea/story/",
@@ -3771,7 +3771,7 @@
         ],
         "origin_counts": {
           "ontology_evidence": 70,
-          "journals": 217
+          "journals": 218
         },
         "distinct_referring_accounts": 0,
         "sample_referring_accounts": [],
@@ -3816,7 +3816,7 @@
         "breadth": {
           "score": 0.82,
           "basis": [
-            "distinct_urls:182",
+            "distinct_urls:183",
             "distinct_axes:15",
             "origin_types:2"
           ]
@@ -3854,7 +3854,7 @@
           "method": "mechanical_v1",
           "basis": [
             "unknown_domain_pattern",
-            "distinct_urls:182",
+            "distinct_urls:183",
             "distinct_axes:15",
             "origin_types:2",
             "referring_accounts:0",
@@ -6724,7 +6724,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-07-18T10:12:03.764Z",
+        "fetched_at": "2026-07-21T10:12:06.718Z",
         "homepage_url": "https://springermedicine.com/",
         "example_url": "https://www.springermedicine.com/webinar-breakthroughs-in-bladder-cancer-care/52496396?utm_source=x&utm_medium=cpc&utm_campaign=bladder-cancer-care-webinar&utm_content=ad-4&twclid=27am5hqwt8x5t4o745p030f1a4",
         "homepage_status": 200,
@@ -8121,7 +8121,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-07-18T10:12:04.250Z",
+        "fetched_at": "2026-07-21T10:12:07.010Z",
         "homepage_url": "https://fundingpips.com/",
         "example_url": "https://fundingpips.com/?utm_source=x&utm_medium=paid_social&utm_campaign=2026_q3_global_acquisition_all_in_sale&utm_content=2073786412856660020&twclid=24njria5jvt4ka7ejelux4oc97",
         "homepage_status": 429,
@@ -8375,7 +8375,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-07-18T10:12:04.647Z",
+        "fetched_at": "2026-07-21T10:42:05.439Z",
         "homepage_url": "https://bybet.com/",
         "example_url": "https://bybet.com/promotion/detail/10/70?utm_source=x&utm_medium=cpc&utm_campaign=Awarenes-DTS-Football&twclid=2aetcv0gphixdtyqc7k0t0any5",
         "homepage_status": 200,
@@ -9137,7 +9137,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-07-18T08:42:02.971Z",
+        "fetched_at": "2026-07-21T09:01:09.353Z",
         "homepage_url": "https://amro-asia.org/",
         "example_url": "https://amro-asia.org/about-us/who-we-are/?utm_source=X&twclid=2n1gu531399vzt4gm709so7oz",
         "homepage_status": 200,
@@ -9772,7 +9772,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-07-18T08:42:04.212Z",
+        "fetched_at": "2026-07-21T09:01:10.249Z",
         "homepage_url": "https://travala.com/",
         "example_url": "https://www.travala.com/?camp_name=&camp_offer=credit&camp_content=Sign-up-or-log-in-to-receive-%2450-off-flights%2C-hotels-and-activities.&camp_code=BTCASIA50&camp_value=50&utm_campaign=BTCASIA50&utm_medium=by-travala-cpc&utm_source=twitter&twclid=26wz3yk3m5mtcltdzivyfesoom",
         "homepage_status": 200,
@@ -10538,7 +10538,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-07-18T08:42:05.403Z",
+        "fetched_at": "2026-07-21T09:01:10.738Z",
         "homepage_url": "https://utspaycashback.com/",
         "example_url": "https://www.utspaycashback.com/?twclid=2650deq3k4trsekhk3xdbpt9o7",
         "homepage_status": 200,
@@ -13829,7 +13829,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-07-18T10:12:05.181Z",
+        "fetched_at": "2026-07-21T10:42:05.696Z",
         "homepage_url": "https://wencrypto.com/",
         "example_url": "https://wencrypto.com/pricing?twt_id=54613980&twclid=26wi5gtwrb7b2ig70kcqcspr3n",
         "homepage_status": 200,
@@ -15981,7 +15981,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-07-18T08:42:06.637Z",
+        "fetched_at": "2026-07-21T09:01:11.810Z",
         "homepage_url": "https://parksystems.com/",
         "example_url": "https://www.parksystems.com/en/products/research-afm/small-sample-afm/fx40?utm_source=paid-x&utm_medium=social&utm_campaign=hq-FX40_paper_Autonomous_AI-DrivenAFM_260701-2026-06-15-CM005+&twclid=26i21embi38s4z9rci48kmjdf8",
         "homepage_status": 200,
@@ -16995,7 +16995,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-07-18T09:42:01.202Z",
+        "fetched_at": "2026-07-21T10:12:07.512Z",
         "homepage_url": "https://serus.ai/",
         "example_url": "https://www.serus.ai/?twclid=29v4lxmzvo39j1dtelbj405bc3",
         "homepage_status": 200,
@@ -30297,7 +30297,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-07-18T08:12:03.399Z",
+        "fetched_at": "2026-07-21T09:12:05.000Z",
         "homepage_url": "https://instacart.com/",
         "example_url": "https://www.instacart.com/store/brands/budweiser?ic_source=social&ic_campaignid=2026&twclid=2dlv3d1a0x9ht77bw7gqwrn3ou",
         "homepage_status": 200,
@@ -30423,7 +30423,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-07-18T08:12:05.555Z",
+        "fetched_at": "2026-07-21T09:12:07.052Z",
         "homepage_url": "https://tow.dev/",
         "example_url": "https://tow.dev/?utm_source=twitter&utm_medium=cpc&utm_campaign=launch&utm_id=twitter_launch&twclid=26xxdbf1ybv4rz2smsfk823weq",
         "homepage_status": 200,
@@ -30549,7 +30549,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-07-18T08:12:06.696Z",
+        "fetched_at": "2026-07-21T09:12:08.176Z",
         "homepage_url": "https://cisco.com/",
         "example_url": "https://www.cisco.com/site/us/en/solutions/artificial-intelligence/agentic-ops/cisco-cloud-control/index.html?twclid=2duz592pw3kdegqcvwn4z7b0qh",
         "homepage_status": 200,
@@ -30675,7 +30675,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-07-18T09:42:03.790Z",
+        "fetched_at": "2026-07-21T10:12:10.713Z",
         "homepage_url": "https://telega.io/",
         "example_url": "https://telega.io/package/?r=Vz7qIZLvWm_r&utm_source=dsp_banner&utm_medium=cpc&utm_campaign=X%5BALL%5BS%5BD%5BM%5BAds%5BTGads%7Cs%7Cdsp_banner%7Cm%7Ccpc%7Cc%7C103%7Cct%7C102&twclid=29ffqq0bpqjb2yxu5ppn3bdkms",
         "homepage_status": 200,
@@ -30927,7 +30927,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-07-18T08:12:06.884Z",
+        "fetched_at": "2026-07-21T09:12:08.407Z",
         "homepage_url": "https://bingoplus.com/",
         "example_url": "https://bingoplus.com/?palcode=2077999381702086656&twclid=28n3e8dzy2r55kg6u29i1aw2go",
         "homepage_status": 200,
@@ -31050,7 +31050,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-07-18T09:42:04.506Z",
+        "fetched_at": "2026-07-21T10:42:06.616Z",
         "homepage_url": "https://straitstimes.com/",
         "example_url": "https://straitstimes.com/",
         "homepage_status": 200,
@@ -31173,7 +31173,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-07-18T09:42:04.956Z",
+        "fetched_at": "2026-07-21T10:42:07.043Z",
         "homepage_url": "https://brennancenter.org/",
         "example_url": "https://www.brennancenter.org/",
         "homepage_status": 200,
@@ -77694,6 +77694,160 @@
         "distinct_referring_accounts": 1,
         "sample_referring_accounts": [
           "noomeva_store"
+        ],
+        "distinct_axes": []
+      },
+      "claims": {
+        "total": 0,
+        "supported": 0,
+        "refuted": 0,
+        "contested": 0,
+        "unverified": 0,
+        "resolved_count": 0
+      },
+      "structural_features": {
+        "has_search_paths": false,
+        "has_article_paths": false,
+        "has_doi_paths": false
+      },
+      "ratings": {
+        "provenance": {
+          "score": 0.45,
+          "basis": [
+            "unknown_domain_pattern"
+          ]
+        },
+        "breadth": {
+          "score": 0.08916666666666666,
+          "basis": [
+            "distinct_urls:1",
+            "distinct_axes:0",
+            "origin_types:1"
+          ]
+        },
+        "corroboration": {
+          "score": 0.19583333333333333,
+          "basis": [
+            "referring_accounts:1",
+            "origin_types:1"
+          ]
+        },
+        "track_record": {
+          "score": null,
+          "basis": [
+            "no_resolved_claims_observed"
+          ]
+        },
+        "overall": {
+          "score": 0.3472395833333333,
+          "confidence": 0.08135,
+          "method": "mechanical_v1",
+          "basis": [
+            "unknown_domain_pattern",
+            "distinct_urls:1",
+            "distinct_axes:0",
+            "origin_types:1",
+            "referring_accounts:1",
+            "origin_types:1",
+            "track_record_unavailable"
+          ]
+        }
+      }
+    },
+    {
+      "domain": "herond.org",
+      "entity": "Herond",
+      "kind": "unknown",
+      "first_seen_at": "2026-07-21T08:19:55.084Z",
+      "last_seen_at": "2026-07-21T08:19:55.084Z",
+      "discovery": {
+        "distinct_urls": 1,
+        "example_urls": [
+          "https://herond.org/?utm_source=promotionx&utm_medium=social&twclid=2cg0q7l8qwlax5t4b3u375y0hi"
+        ],
+        "origin_counts": {
+          "feed_buffer": 1
+        },
+        "distinct_referring_accounts": 1,
+        "sample_referring_accounts": [
+          "herondbrowser"
+        ],
+        "distinct_axes": []
+      },
+      "claims": {
+        "total": 0,
+        "supported": 0,
+        "refuted": 0,
+        "contested": 0,
+        "unverified": 0,
+        "resolved_count": 0
+      },
+      "structural_features": {
+        "has_search_paths": false,
+        "has_article_paths": false,
+        "has_doi_paths": false
+      },
+      "ratings": {
+        "provenance": {
+          "score": 0.45,
+          "basis": [
+            "unknown_domain_pattern"
+          ]
+        },
+        "breadth": {
+          "score": 0.08916666666666666,
+          "basis": [
+            "distinct_urls:1",
+            "distinct_axes:0",
+            "origin_types:1"
+          ]
+        },
+        "corroboration": {
+          "score": 0.19583333333333333,
+          "basis": [
+            "referring_accounts:1",
+            "origin_types:1"
+          ]
+        },
+        "track_record": {
+          "score": null,
+          "basis": [
+            "no_resolved_claims_observed"
+          ]
+        },
+        "overall": {
+          "score": 0.3472395833333333,
+          "confidence": 0.08135,
+          "method": "mechanical_v1",
+          "basis": [
+            "unknown_domain_pattern",
+            "distinct_urls:1",
+            "distinct_axes:0",
+            "origin_types:1",
+            "referring_accounts:1",
+            "origin_types:1",
+            "track_record_unavailable"
+          ]
+        }
+      }
+    },
+    {
+      "domain": "thefastmode.com",
+      "entity": "Thefastmode",
+      "kind": "unknown",
+      "first_seen_at": "2026-07-21T08:49:55.450Z",
+      "last_seen_at": "2026-07-21T08:49:55.450Z",
+      "discovery": {
+        "distinct_urls": 1,
+        "example_urls": [
+          "https://www.thefastmode.com/technology-solutions/49624-ai-powered-connectivity-apac-charts-a-unified-path-to-a-smarter-digital-future?twclid=281yms0e71cmmk7m5khtvm4j4n"
+        ],
+        "origin_counts": {
+          "feed_buffer": 1
+        },
+        "distinct_referring_accounts": 1,
+        "sample_referring_accounts": [
+          "huawei"
         ],
         "distinct_axes": []
       },
