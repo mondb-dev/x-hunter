@@ -20,6 +20,13 @@ stance registry (`lib/stances`):
    (validated by `addStance`); **taste** stances (sports/culture) are capped
    at 2 open at a time.
 
+   The scout reads a compact **candidate menu** (`recentDigestMenu`), not the raw
+   digest: `feed_digest.txt` is an append-only ~500KB firehose, so a byte-tail
+   skews to whichever RSS batch landed last and hides the named events that are
+   real stance material. The menu keeps only header + `TITLE` lines from the last
+   ~600 lines (spans many batches/categories), dropping URL/SUMMARY bulk to stay
+   token-bounded (~13KB).
+
 Before committing, a stance gets a research + verify pass
 (`stance_scan` research step) — no stance on vibes.
 

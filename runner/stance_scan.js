@@ -34,6 +34,20 @@ const cleanJson = (raw) => { const m = String(raw).replace(/```(?:json)?/gi, '')
 
 function loadJson(p, fb) { try { return JSON.parse(fs.readFileSync(p, 'utf-8')); } catch { return fb; } }
 
+// The feed digest is an append-only ~500KB firehose, so a raw byte-tail (the old
+// .slice(-4000)) skews to whichever RSS batch landed last — routinely TechCrunch
+// or Al Jazeera filler — and hides the named PH events that are the actual stance
+// material. Build a compact candidate MENU instead: keep only the header + TITLE
+// lines from the last ~600 lines (spans many batches/categories) and drop the
+// URL/SUMMARY bulk so the window stays wide but token-bounded.
+function recentDigestMenu(lines = 600, maxChars = 13000) {
+  let raw = '';
+  try { raw = fs.readFileSync(config.FEED_DIGEST_PATH, 'utf-8'); } catch { return ''; }
+  const kept = raw.split('\n').slice(-lines)
+    .filter((l) => /^\s*\[(?:RSS|FB|LinkedIn)[^\]]*\]/.test(l) || /^\s*TITLE:/.test(l));
+  return kept.join('\n').slice(-maxChars);
+}
+
 // ── Pass 1: resolution ────────────────────────────────────────────────────────
 async function resolvePass() {
   const open = stances.activeStances()
@@ -83,8 +97,7 @@ async function formPass() {
   const open = stances.activeStances();
   if (open.length >= stances.MAX_OPEN) { log(`open cap reached (${open.length}) — no formation`); return; }
 
-  let digest = '';
-  try { digest = fs.readFileSync(config.FEED_DIGEST_PATH, 'utf-8').slice(-4000); } catch {}
+  const digest = recentDigestMenu();
   if (!digest.trim()) { log('no feed digest — skipping formation'); return; }
 
   const ontology = loadJson(path.join(ROOT, 'state', 'ontology.json'), {});
@@ -100,7 +113,7 @@ ${convictions}
 ── EXISTING OPEN STANCES (do NOT duplicate these events) ──
 ${open.map((s) => `- ${s.event}: ${s.side}`).join('\n') || '(none)'}
 
-── TODAY'S FEED DIGEST ──
+── RECENT FEED (headlines from the last few days — commit only to CURRENT, contested events) ──
 ${digest}
 
 Types: "principled" (a side could follow from the convictions above — will be deep-researched before committing) or "taste" (sports/culture persona pick — no research needed).
