@@ -63,8 +63,19 @@ Driven through HelmStack (HTTP API :7070, `POST_BACKEND=helmstack`,
    material (theme, structural blueprint, exact opening move). It may override
    a dimension only when the material can't support it; overrides carry a
    reason and the final values are what gets measured.
-3. Effectiveness metric: weighted engagement per 100 impressions; posting
-   time/topic tracked as context, not as experiment dimensions.
+3. Effectiveness metric: weighted engagement (reactions + 2×comments + 3×reposts)
+   per 100 impressions. Two small-sample corrections before it biases selection
+   (`scoreDimensions`): (a) **shrinkage** — a post's rate is pulled toward its
+   baseline by `LI_LEARN_SHRINK_K` pseudo-impressions, so a low-reach post can't
+   read as a hard 0 or a fluke win; (b) **confound control** — each post is scored
+   as a residual vs the baseline rate of its context bucket (`LI_LEARN_CONTEXT`,
+   default `day`), so a dimension only wins by beating its own context, not by
+   drawing hotter topics/times. The bucket baseline collapses to the global pooled
+   rate until it has `LI_LEARN_MIN_CONTEXT` posts, degrading gracefully on thin
+   data; dimension means are impression-weighted. Posting time/topic are tracked
+   as context, not as experiment dimensions. A post scores only once reach is
+   known (impressions > 0), which requires `runner/linkedin_measure.js` to have
+   run — until then every dimension reads null and `pickShape` force-explores.
 4. Source images auto-trigger on drafted posts (`runner/lib/lead_source_image.js` —
    excludes X URLs, requires page-level coherence).
 

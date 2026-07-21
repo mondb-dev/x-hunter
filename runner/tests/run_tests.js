@@ -399,6 +399,95 @@ section("Claim verification coverage");
   }
 }
 
+// ── Section 8: LinkedIn A/B scoring (precision-weight + confound control) ────
+
+section("LinkedIn A/B scoring");
+
+{
+  let perf;
+  try {
+    perf = require(path.join(RUNNER, "lib", "linkedin_performance"));
+  } catch (e) {
+    fail("load linkedin_performance", e.message);
+    perf = null;
+  }
+
+  if (perf) {
+    const close = (a, b, eps = 0.05) => Math.abs(a - b) < eps;
+
+    // (1) Shrinkage: a zero-engagement post at LOW reach must be punished far
+    //     less than the same at HIGH reach, and stay near the baseline.
+    {
+      const lo = perf.shrunkRate(0, 40, 5);    // 0 reactions / 40 impressions, baseline 5
+      const hi = perf.shrunkRate(0, 4000, 5);  // 0 reactions / 4000 impressions
+      if (lo > hi && lo > 3.5 && hi < 1) pass(`shrinkage: 0/40 → ${lo.toFixed(2)} stays near baseline, 0/4000 → ${hi.toFixed(2)} punished`);
+      else fail("shrinkage", `expected lo(${lo.toFixed(2)}) near baseline > hi(${hi.toFixed(2)}) near 0`);
+    }
+
+    // (2) Precision weighting: a value's score must track the HIGH-reach post,
+    //     not a low-reach fluke. Two 'claim' posts, same (thin) context.
+    {
+      const posts = [
+        { ending: "claim", day: "weekday", impressions: 5000, engagement: 100 }, // rate 2, reliable
+        { ending: "claim", day: "weekday", impressions: 50,   engagement: 20  }, // rate 40, fluke
+      ];
+      const s = perf.scoreDimensions(posts);
+      const avg = s.ending.claim.avgScore;
+      // residuals: high-reach ≈ -0.36, low-reach ≈ +7.5; weighted mean must sit near the high-reach one
+      const resHi = perf.shrunkRate(100, 5000, (100 * 120) / 5050) - (100 * 120) / 5050;
+      const resLo = perf.shrunkRate(20, 50, (100 * 120) / 5050) - (100 * 120) / 5050;
+      if (Math.abs(avg - resHi) < Math.abs(avg - resLo)) pass(`precision weighting: claim score ${avg} tracks high-reach post (${resHi.toFixed(2)}), not fluke (${resLo.toFixed(2)})`);
+      else fail("precision weighting", `avg ${avg} closer to fluke ${resLo.toFixed(2)} than reliable ${resHi.toFixed(2)}`);
+    }
+
+    // (3) Confound control: question_hook only ever ran in a HOT context
+    //     (weekend) and stat_hook in a COLD one (weekday), but each UNDER/OVER
+    //     performs its own context. Residual scoring must rank stat_hook above
+    //     question_hook even though question_hook has the higher ABSOLUTE rate.
+    {
+      const wk = (technique, rate) => ({ technique, day: "weekend", impressions: 1000, engagement: rate * 10 });
+      const wd = (technique, rate) => ({ technique, day: "weekday", impressions: 1000, engagement: rate * 10 });
+      const posts = [
+        wk("question_hook", 8), wk("question_hook", 8), wk("question_hook", 8),
+        wk("contrarian_hook", 14), wk("contrarian_hook", 14),           // hot-context filler
+        wd("stat_hook", 5), wd("stat_hook", 5), wd("stat_hook", 5),
+        wd("scene_hook", 2), wd("scene_hook", 2),                       // cold-context filler
+      ];
+      const s = perf.scoreDimensions(posts);
+      const q = s.technique.question_hook.avgScore;
+      const st = s.technique.stat_hook.avgScore;
+      const absWinner = 8 > 5; // question_hook has the higher raw rate
+      if (absWinner && st > q && q < 0) pass(`confound control: stat_hook ${st} ranked above question_hook ${q} despite lower raw rate (residual beats absolute)`);
+      else fail("confound control", `expected stat_hook(${st}) > question_hook(${q}) with question_hook below its context`);
+    }
+
+    // (4) Graceful degradation: the real production store is currently all
+    //     unmeasured (no impressions) — scoring must not throw and must return
+    //     null everywhere rather than fabricating winners.
+    {
+      const storePath = path.join(STATE, "linkedin_post_metrics.json");
+      if (!fileExists(storePath)) {
+        skip("real store scoring", "linkedin_post_metrics.json not present");
+      } else {
+        const data = loadJson(storePath);
+        if (data instanceof Error) { fail("real store scoring", data.message); }
+        else {
+          try {
+            const s = perf.scoreDimensions(Object.values(data.posts || {}));
+            const anyScored = Object.values(s).some((dim) => Object.values(dim).some((v) => v.avgScore != null));
+            const measured = Object.values(data.posts || {}).filter((p) => Number(p.impressions) > 0).length;
+            if (measured === 0 && !anyScored) pass(`graceful degradation: ${Object.keys(data.posts || {}).length} tagged, 0 measured → all avgScore null (no fabricated winners)`);
+            else if (measured > 0) pass(`real store: ${measured} measured post(s) scored`);
+            else fail("graceful degradation", "0 measured posts but a dimension produced a non-null score");
+          } catch (e) {
+            fail("real store scoring", e.message);
+          }
+        }
+      }
+    }
+  }
+}
+
 // ── Summary ───────────────────────────────────────────────────────────────────
 
 function printSummary() {

@@ -21,11 +21,12 @@
  *
  * METRIC ("effective"): weighted engagement = reactions + 2×comments + 3×reposts
  * (weights env-tunable: LI_W_REACTION/COMMENT/REPOST — a repost extends reach,
- * a comment costs real effort, a reaction is cheap). The A/B score is that
- * weighted engagement PER 100 IMPRESSIONS when reach was scraped (own posts
- * expose an impressions line), so a post seen by 40 people and one seen by
- * 4,000 compare fairly; raw weighted engagement is the degraded fallback when
- * the impressions scrape misses. Pure JS.
+ * a comment costs real effort, a reaction is cheap), measured PER 100 IMPRESSIONS
+ * when reach was scraped (own posts expose an impressions line) so a post seen by
+ * 40 people and one by 4,000 compare fairly. Before this biases selection,
+ * scoreDimensions() applies two small-sample corrections — shrinkage toward a
+ * baseline (SHRINK_K) and confound control via context-bucket residuals (see its
+ * docstring). A post scores only once reach is known (impressions > 0). Pure JS.
  *
  * CONTEXT, NOT LEVERS: posting time (Asia/Manila bucket), weekday/weekend, and
  * a coarse topic slug are recorded per post and reported in summaryText() so
@@ -40,6 +41,9 @@ const config = require('./config');
 const STORE = path.join(config.STATE_DIR, 'linkedin_post_metrics.json');
 const MIN_SAMPLES = Number(process.env.LI_LEARN_MIN_SAMPLES) || 2;   // force-explore until each value has this many measured posts
 const EPS = Number(process.env.LI_LEARN_EPSILON) || 0.3;             // explore probability once warmed up
+const SHRINK_K = Number(process.env.LI_LEARN_SHRINK_K) || 200;       // prior "pseudo-impressions" pulling a post's rate toward its baseline
+const MIN_CONTEXT = Number(process.env.LI_LEARN_MIN_CONTEXT) || 4;   // posts a context bucket needs before it overrides the global baseline
+const CONTEXT_DIM = process.env.LI_LEARN_CONTEXT || 'day';           // observed dim used as the confound baseline (day/time/topic); day is densest
 
 // Engagement weights (see METRIC above).
 const W = {
@@ -156,32 +160,82 @@ function unmeasured({ olderThanHours = 24, staleAfterHours = 72 } = {}) {
   return out;
 }
 
-/** Per-dimension per-value score averages over MEASURED posts (assigned dims):
- *  {dim: {value: {n, avgScore}}}. Score = postScore() (rate-preferred). */
-function dimensionStats() {
-  const s = load();
+/** Shrink a weighted-engagement count `e` over `imp` impressions toward a
+ *  baseline rate `base` (per 100 impressions), using SHRINK_K pseudo-impressions
+ *  of prior mass. Low reach ⇒ close to `base`; high reach ⇒ close to observed. */
+function shrunkRate(e, imp, base) {
+  return (100 * (e + (base / 100) * SHRINK_K)) / (imp + SHRINK_K);
+}
+
+/**
+ * Precision-weighted, context-adjusted score per dimension value — the pure core
+ * of dimensionStats(), taking an explicit post list so it is testable without
+ * touching production state. Returns {dim: {value: {n, avgScore}}} where avgScore
+ * is the impression-weighted mean RESIDUAL vs each post's context baseline
+ * (0 = on par with its context, positive = above). Two small-sample fixes:
+ *   1. Shrinkage — a low-reach post (e.g. 0 reactions / 40 impressions) no longer
+ *      reads as a hard 0; its rate is pulled toward the baseline in proportion to
+ *      how little reach it had (empirical Bayes, SHRINK_K).
+ *   2. Confound control — each post is scored relative to the baseline rate of its
+ *      CONTEXT_DIM bucket (default `day`), so "question_hook wins" means it beat
+ *      its own context, not that it drew hotter topics/times. The bucket baseline
+ *      collapses to the global pooled rate until it has MIN_CONTEXT posts, so it
+ *      degrades gracefully on thin data.
+ * A post counts only when impressions > 0 (no reach ⇒ no comparable rate).
+ */
+function scoreDimensions(posts) {
+  const scored = [];
+  let E = 0, I = 0;
+  for (const p of posts) {
+    const imp = Number(p.impressions) || 0;
+    if (imp <= 0 || p.engagement == null) continue;   // not comparably measured
+    const e = Number(p.engagement) || 0;
+    scored.push({ p, imp, e });
+    E += e; I += imp;
+  }
+  const G = I > 0 ? (100 * E) / I : 0;                 // global pooled rate (shrink target)
+
+  const buckets = {};                                  // per-context-bucket accumulation
+  for (const { p, imp, e } of scored) {
+    const key = p[CONTEXT_DIM] || '';
+    const b = buckets[key] || (buckets[key] = { e: 0, i: 0, n: 0 });
+    b.e += e; b.i += imp; b.n++;
+  }
+  const baselineFor = (p) => {
+    const b = buckets[p[CONTEXT_DIM] || ''];
+    if (!b || b.n < MIN_CONTEXT || b.i <= 0) return G;  // thin bucket ⇒ global baseline
+    return shrunkRate(b.e, b.i, G);                     // dense bucket, itself shrunk toward G
+  };
+
   const out = {};
   for (const [dim, values] of Object.entries(DIMENSIONS)) {
     out[dim] = {};
-    for (const v of values) out[dim][v] = { n: 0, total: 0, avgScore: null };
+    for (const v of values) out[dim][v] = { n: 0, _w: 0, _wsum: 0, avgScore: null };
   }
-  for (const p of Object.values(s.posts)) {
-    const score = postScore(p);
-    if (score == null) continue;
+  for (const { p, imp, e } of scored) {
+    const base = baselineFor(p);
+    const residual = shrunkRate(e, imp, base) - base;  // post's rate vs its context, shrunk
     for (const dim of Object.keys(DIMENSIONS)) {
       const a = p[dim] && out[dim][p[dim]];
       if (!a) continue;
-      a.n++; a.total += score;
+      a.n++; a._w += imp; a._wsum += imp * residual;    // impression-weighted
     }
   }
   for (const dim of Object.keys(out)) {
     for (const v of Object.keys(out[dim])) {
       const a = out[dim][v];
-      a.avgScore = a.n ? +(a.total / a.n).toFixed(2) : null;
-      delete a.total;
+      a.avgScore = a._w > 0 ? +(a._wsum / a._w).toFixed(2) : null;
+      delete a._w; delete a._wsum;
     }
   }
   return out;
+}
+
+/** Per-dimension per-value scores over MEASURED posts (assigned dims):
+ *  {dim: {value: {n, avgScore}}}. avgScore = impression-weighted residual vs
+ *  context baseline — see scoreDimensions(). */
+function dimensionStats() {
+  return scoreDimensions(Object.values(load().posts));
 }
 
 /** Context stats over MEASURED posts — recorded per post, never assigned by
@@ -283,7 +337,7 @@ function summaryText() {
     lines.push(`  • ${dim} — ${row}`);
   }
   if (!lines.length) return '';
-  const out = [`YOUR LINKEDIN POSTING TRACK RECORD, by shape dimension [avg score (measured posts)] — score = reactions + 2×comments + 3×reposts per 100 impressions:`, ...lines];
+  const out = [`YOUR LINKEDIN POSTING TRACK RECORD, by shape dimension [avg score (measured posts)] — score = engagement rate (reactions + 2×comments + 3×reposts per 100 impressions) RELATIVE TO your baseline for that context; 0 = par, positive = above, negative = below:`, ...lines];
 
   const obs = observedStats();
   const obsLines = [];
@@ -301,5 +355,5 @@ function summaryText() {
 module.exports = {
   TECHNIQUES, DIMENSIONS, LENGTH_WORDS, byId, lengthBucket, postScore,
   recordPost, recordMetric, unmeasured,
-  dimensionStats, observedStats, techniqueStats, pickShape, pickTechnique, summaryText,
+  dimensionStats, scoreDimensions, shrunkRate, observedStats, techniqueStats, pickShape, pickTechnique, summaryText,
 };
