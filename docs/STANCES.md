@@ -30,6 +30,33 @@ stance registry (`lib/stances`):
 Before committing, a stance gets a research + verify pass
 (`stance_scan` research step) — no stance on vibes.
 
+3. **REFLECT** — he then looks at what he is holding and decides, per open
+   stance, whether it is worth saying at LENGTH: a long-form **article**, a
+   **video** piece to camera, both, or neither. **Neither is the expected
+   answer** — the prompt says so explicitly, and most stances earn nothing.
+   The decision is recorded on the stance (`media.article` / `media.video`
+   with `wanted`, `why`, `decided_at`) via `setMediaDecision`.
+
+## Long-form: his decision, the tools execute
+
+Producing long-form is **not** a scheduled reflex. The reflect pass above is the
+only place the judgement is made; the two tools merely drain the queue it
+creates, and `markMediaDone` means nothing is produced twice.
+
+| Tool | Acts on | Gate |
+|---|---|---|
+| `runner/stance_article.js` | newest open stance with `media.article.wanted` | `STANCE_ARTICLE_ENABLED != 0` |
+| `runner/stance_video.js` | newest open stance not declined/already filmed | `STANCE_VIDEO_ENABLED != 0` |
+
+Both are spawned daily (detached) from the orchestrator and no-op cheaply when
+he has asked for nothing. `stance_article` researches the stance's **own
+question with triage left ON** — if his pipeline judges the question
+underspecified, that is an answer, not something to route around — then composes
+the article to argue the `side` + `rationale` he committed to, so the thesis is
+his. Publishing runs the same confidence + voice/fact-check gates as any other
+public output. For video, an explicit "no" only removes that stance as a
+subject; the series falls through to its axis fallbacks rather than going dark.
+
 ## Holding vs. swaying
 
 An open stance holds its line until the event resolves — new evidence does not

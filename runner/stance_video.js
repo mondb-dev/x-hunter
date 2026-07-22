@@ -54,14 +54,21 @@ function readJson(p, fb) { try { return JSON.parse(fs.readFileSync(p, "utf-8"));
 // ── 1. Pick today's subject ───────────────────────────────────────────────────
 
 function pickSubject() {
-  // 1. Newest open stance
+  // 1. Newest open stance he hasn't ruled out for video.
+  //    Whether a stance earns a piece to camera is HIS call, made in
+  //    stance_scan's reflect pass. A stance he explicitly declined (or already
+  //    filmed) is skipped here and the series falls through to the axis
+  //    fallbacks below — so his "no" is respected without ending the daily run.
   try {
-    const { activeStances } = require("./lib/stances");
-    const open = activeStances().sort((a, b) => String(b.taken_at || "").localeCompare(String(a.taken_at || "")));
+    const { activeStances, declinedMedia, producedMedia } = require("./lib/stances");
+    const open = activeStances()
+      .filter((s) => !declinedMedia(s, "video") && !producedMedia(s, "video"))
+      .sort((a, b) => String(b.taken_at || "").localeCompare(String(a.taken_at || "")));
     if (open.length) {
       const s = open[0];
       return {
         kind: "stance",
+        stanceId: s.id,
         text: `EVENT: ${s.event}\nQUESTION: ${s.question || ""}\nHIS SIDE: ${s.side} (position ${s.position}, spectrum ${s.pole_a} ↔ ${s.pole_b})\nCONFIDENCE it resolves his way: ${s.confidence_pct}%\nRATIONALE: ${s.rationale || ""}`,
       };
     }
@@ -217,6 +224,11 @@ async function main() {
   const outPath = path.join(VIDEOS_DIR, `stance_${today()}.mp4`);
   fs.writeFileSync(outPath, video.buffer);
   log(`saved ${outPath} (${(video.buffer.length / 1048576).toFixed(1)} MB)`);
+  // Latch it on the stance so the series moves on instead of refilming the same
+  // position tomorrow (no-op for axis-fallback subjects, which carry no id).
+  if (subject.stanceId) {
+    try { require("./lib/stances").markMediaDone(subject.stanceId, "video", { file: outPath }); } catch { /* non-fatal */ }
+  }
 
   await sendTelegramVideo(outPath, `Sebastian on: ${brief.topic}\n"${brief.spoken_line}"\n(${brief.location})`);
 

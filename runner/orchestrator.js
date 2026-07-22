@@ -328,6 +328,22 @@ function runSocialPipeline() {
     } catch (e) { log(`stance_video spawn failed (non-fatal): ${e.message}`); }
   }
 
+  // Long-form article on a stance he decided (in stance_scan's reflect pass) was
+  // worth saying at length. No-ops cheaply when he asked for nothing, so a daily
+  // check just drains the queue he creates. Detached: research + compose run
+  // minutes; the script has its own 25-min watchdog.
+  if (process.env.STANCE_ARTICLE_ENABLED !== '0' && dueForRun('stance_article', 24 * HOUR)) {
+    log('media: stance article check (detached)');
+    try {
+      const out = fs.openSync(config.RUNNER_LOG_PATH, 'a');
+      const child = spawn(process.execPath, [path.join(PROJECT_ROOT, 'runner/stance_article.js')], {
+        cwd: PROJECT_ROOT, env: process.env, detached: true, stdio: ['ignore', out, out],
+      });
+      child.unref();
+      fs.closeSync(out);
+    } catch (e) { log(`stance_article spawn failed (non-fatal): ${e.message}`); }
+  }
+
   // Plan-driven deep research — answer one of the active plan's open research
   // questions per day with a full deep-research pass, published to the website.
   // Detached: a deep pass runs 1-5 min, far beyond runScriptLog's 120s cap;

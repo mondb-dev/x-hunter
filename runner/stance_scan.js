@@ -193,11 +193,64 @@ Output ONLY JSON (no fences):
   else log(`stance rejected (${r.reason}): ${String(cand.event).slice(0, 60)}`);
 }
 
+// ── reflect ─────────────────────────────────────────────────────────────────
+// Having resolved and formed, he looks at what he is holding and decides — for
+// himself — whether any of it is worth saying at LENGTH: a long-form article, a
+// piece to camera, both, or (usually) neither. Only the decision is made here;
+// runner/stance_article.js and runner/stance_video.js execute it later. That
+// keeps long-form his call rather than a scheduled reflex, and "no" is the
+// expected answer for most stances.
+async function reflectPass() {
+  const open = stances.activeStances();
+  if (!open.length) { log('reflection: no open stances'); return; }
+  const undecided = open.filter((s) => stances.MEDIA_KINDS.some((k) => !(((s.media || {})[k] || {}).decided_at)));
+  if (!undecided.length) { log('reflection: every open stance already judged'); return; }
+
+  const ontology = loadJson(path.join(ROOT, 'state', 'ontology.json'), {});
+  const vocation = loadJson(path.join(ROOT, 'state', 'vocation.json'), {});
+  const convictions = buildConvictions({ ontology, vocation, maxAxes: 10 });
+
+  for (const s of undecided.slice(0, 2)) {
+    const raw = await reason(
+`Today is ${TODAY()}. You are Sebastian Hunter, deciding whether a stance you hold is worth saying at LENGTH — beyond the posts you already make about it.
+
+${convictions}
+
+── THE STANCE ──
+Event: ${s.event}
+Question: ${s.question}
+Your side: ${s.side} (position ${s.position}, odds it resolves your way ${s.confidence_pct}%)
+Your reasoning: ${s.rationale || '(none recorded)'}
+Research confidence behind it: ${(s.research || {}).confidence_pct != null ? (s.research || {}).confidence_pct + '%' : 'unstated'}
+
+Judge each format independently. Saying NO to both is the normal answer — most stances do not earn either.
+- ARTICLE (600-1200 words, long-form, published on X): earns it ONLY when the case rests on a documentary/evidentiary chain that needs room — specific names, numbers and mechanisms a post cannot carry.
+- VIDEO (short piece to camera, you saying the position out loud on location): earns it ONLY when the position is sharp enough to land in a few spoken sentences AND hits harder as a person saying it than as text.
+
+Output ONLY JSON (no fences):
+{"article":{"want":false,"why":"one short line"},"video":{"want":false,"why":"one short line"}}`,
+      { maxTokens: 300, tag: 'stance-reflect' });
+
+    let d = null;
+    try { d = cleanJson(raw); } catch {}
+    if (!d) { log(`reflection: unparseable decision for "${s.event}"`); continue; }
+    for (const kind of stances.MEDIA_KINDS) {
+      if (((s.media || {})[kind] || {}).decided_at) continue;      // already judged
+      const want = !!(d[kind] && d[kind].want);
+      const why = String((d[kind] && d[kind].why) || '').trim();
+      const r = stances.setMediaDecision(s.id, kind, { wanted: want, why });
+      if (r.ok) log(`reflection [${kind}] "${s.event}": ${want ? 'WANTS IT' : 'skip'}${why ? ` — ${why.slice(0, 80)}` : ''}`);
+      else log(`reflection [${kind}] not recorded (${r.reason})`);
+    }
+  }
+}
+
 const killer = setTimeout(() => { log(`exceeded ${MAX_RUN_MS / 60000} min — aborting`); process.exit(1); }, MAX_RUN_MS);
 
 (async () => {
   await resolvePass();
   await formPass();
+  await reflectPass();
 })()
   .then(() => { clearTimeout(killer); process.exit(0); })
   .catch((e) => { log(`error (non-fatal): ${e.message}`); clearTimeout(killer); process.exit(0); });

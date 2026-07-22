@@ -126,6 +126,14 @@ Follows (`scraper/follows.js:18,45`): max 3/run, 10/day, 1 min between.
   `lib/stances` → ontology_delta); FORM 0-2 new stances on named, time-bound,
   contested events — principled stances must ground in real axes; taste stances
   capped at 2. Spectrum positions (event-scoped mini-axis), not binary.
+  REFLECT: he decides per stance whether it earns a long-form **article** and/or
+  **video** (neither is the expected answer), recorded on the stance as
+  `media.{article,video}` via `lib/stances setMediaDecision`.
+- **Stance article** `runner/stance_article.js` (daily, detached,
+  `STANCE_ARTICLE_ENABLED`): drains the article queue his reflect pass created —
+  researches the stance's own question (triage ON), composes to argue the side he
+  committed to, publishes through the usual confidence + voice/fact-check gates
+  via `researchToArticle`. No-ops when he asked for nothing.
 - **Predictions** `runner/prediction_resolution.js` (self-throttled 1/day):
   resolves past-deadline predictions → correct|wrong|partial|expired; updates
   `prediction_log.jsonl` + `prediction_export.json`. Calibration

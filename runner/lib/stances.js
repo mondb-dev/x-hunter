@@ -46,6 +46,7 @@ const MAX_OPEN = 6;
 const MAX_OPEN_TASTE = 2;
 const MIN_POSITION = 0.15;   // leans weaker than this are declines, not stances
 const MAX_REVISIONS = 2;     // a stance may be swayed by new evidence, but rarely — past this, resolve or abandon
+const MEDIA_KINDS = ['article', 'video'];   // long-form he may choose to make about a stance
 
 function loadStances() {
   try { return JSON.parse(fs.readFileSync(STANCES_PATH, 'utf-8')); } catch { return { stances: [] }; }
@@ -212,6 +213,63 @@ function reviseStance(id, { position, side, confidence_pct, rationale, reason, p
   return { ok: true, stance: s, material };
 }
 
+// ── Long-form media: HIS decision, the tools only execute it ────────────────
+// Whether a stance is worth an article or a piece to camera is a judgement
+// Sebastian makes himself, in stance_scan's reflect pass. These record that
+// decision so runner/stance_article.js and runner/stance_video.js produce
+// something ONLY because he asked for it — and never produce it twice.
+
+/** Record his decision on `kind` for a stance. kind: 'article' | 'video'. */
+function setMediaDecision(id, kind, { wanted, why } = {}) {
+  if (!MEDIA_KINDS.includes(kind)) return { ok: false, reason: 'bad_kind' };
+  const st = loadStances();
+  const s = st.stances.find((x) => x.id === id && x.status === 'open');
+  if (!s) return { ok: false, reason: 'not_found_or_closed' };
+  s.media = s.media || {};
+  const prev = s.media[kind] || {};
+  if (prev.done_at) return { ok: false, reason: 'already_produced' };
+  s.media[kind] = {
+    ...prev,
+    wanted: !!wanted,
+    why: String(why || '').slice(0, 300),
+    decided_at: new Date().toISOString(),
+  };
+  saveStances(st);
+  return { ok: true, stance: s };
+}
+
+/** Mark a piece as actually produced — the tools' idempotency latch. */
+function markMediaDone(id, kind, { url = null, file = null } = {}) {
+  if (!MEDIA_KINDS.includes(kind)) return { ok: false, reason: 'bad_kind' };
+  const st = loadStances();
+  const s = st.stances.find((x) => x.id === id);
+  if (!s) return { ok: false, reason: 'not_found' };
+  s.media = s.media || {};
+  s.media[kind] = { ...(s.media[kind] || {}), done_at: new Date().toISOString(), url: url || null, file: file || null };
+  saveStances(st);
+  return { ok: true, stance: s };
+}
+
+/** Open stances he asked for `kind` on, not yet produced (work queue). */
+function pendingMedia(kind) {
+  return activeStances().filter((s) => {
+    const m = (s.media || {})[kind] || {};
+    return m.wanted === true && !m.done_at;
+  });
+}
+
+/** True when he has explicitly said NO to `kind` for this stance. */
+function declinedMedia(stance, kind) {
+  const m = ((stance || {}).media || {})[kind];
+  return !!m && m.wanted === false;
+}
+
+/** True when he has already produced `kind` for this stance. */
+function producedMedia(stance, kind) {
+  const m = ((stance || {}).media || {})[kind];
+  return !!(m && m.done_at);
+}
+
 /**
  * Prompt block of active stances for the composing paths (tweet, reply, quote,
  * convictions). Empty string when no open stances.
@@ -239,4 +297,4 @@ function stancesPromptBlock({ max = MAX_OPEN } = {}) {
     lines.join('\n') + '\n';
 }
 
-module.exports = { loadStances, saveStances, activeStances, addStance, resolveStance, reviseStance, stancesPromptBlock, eventKey, MAX_OPEN, MAX_OPEN_TASTE, MIN_POSITION, MAX_REVISIONS };
+module.exports = { loadStances, saveStances, activeStances, addStance, resolveStance, reviseStance, setMediaDecision, markMediaDone, pendingMedia, declinedMedia, producedMedia, stancesPromptBlock, eventKey, MAX_OPEN, MAX_OPEN_TASTE, MIN_POSITION, MAX_REVISIONS, MEDIA_KINDS };
