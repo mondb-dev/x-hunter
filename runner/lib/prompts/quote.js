@@ -11,6 +11,7 @@ module.exports = function buildQuotePrompt(ctx) {
     'Your strongest belief axes (what you actually think matters):\n' +
     ctx.topAxes + '\n' +
     '\n' +
+    require('../stances').stancesPromptBlock() +
     'Already quoted source tweets (do NOT quote these again):\n' +
     ctx.quotedSources + '\n' +
     '\n' +

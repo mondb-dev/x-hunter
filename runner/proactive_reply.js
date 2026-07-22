@@ -312,6 +312,7 @@ async function draftReply(candidate, verification, threadAncestors = []) {
 
   const prompt = buildPersona('reply') + '\n\n' +
     coreContext +
+    require('./lib/stances').stancesPromptBlock() +
     recallBlock +
     userHistoryBlock +
     verificationBlock +

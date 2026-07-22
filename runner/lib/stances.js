@@ -45,6 +45,7 @@ const ONTO_PATH = path.join(ROOT, 'state', 'ontology.json');
 const MAX_OPEN = 6;
 const MAX_OPEN_TASTE = 2;
 const MIN_POSITION = 0.15;   // leans weaker than this are declines, not stances
+const MAX_REVISIONS = 2;     // a stance may be swayed by new evidence, but rarely — past this, resolve or abandon
 
 function loadStances() {
   try { return JSON.parse(fs.readFileSync(STANCES_PATH, 'utf-8')); } catch { return { stances: [] }; }
@@ -157,7 +158,62 @@ function resolveStance(id, { outcome, was_right = null, abandoned = false } = {}
 }
 
 /**
- * Prompt block of active stances for the composing paths (tweet, reply,
+ * Sway an OPEN stance on new evidence — the honest escape hatch from immutability.
+ * A stance holds its line until it resolves, but genuinely disconfirming evidence
+ * must have a way to move it rather than forcing the persona to keep repeating a
+ * position it no longer believes. This is deliberately COSTLY: it requires a
+ * reason, is capped at MAX_REVISIONS, records the full from→to history, and flags
+ * material shifts (a side flip or a sign change in position) as needing an explicit
+ * public mind-change post — the change is never silent. Identity fields
+ * (event/question/grounded_in) are immutable; only position/side/confidence/
+ * rationale move. Returns { ok, reason?, stance?, material? }.
+ */
+function reviseStance(id, { position, side, confidence_pct, rationale, reason, public_post_url } = {}) {
+  const st = loadStances();
+  const s = st.stances.find(x => x.id === id && x.status === 'open');
+  if (!s) return { ok: false, reason: 'not_found_or_closed' };
+  if (!String(reason || '').trim()) return { ok: false, reason: 'reason_required' };
+  s.revisions = Array.isArray(s.revisions) ? s.revisions : [];
+  if (s.revisions.length >= MAX_REVISIONS) return { ok: false, reason: 'revision_cap_reached' };
+
+  const from = { position: s.position, side: s.side, confidence_pct: s.confidence_pct };
+  let newPos = s.position;
+  if (Number.isFinite(+position)) {
+    newPos = Math.max(-1, Math.min(1, +position));
+    // A sway that lands inside the commit floor is not a new side — it's a
+    // withdrawal. Abandon honestly rather than hold a fake lean.
+    if (s.type === 'principled' && Math.abs(newPos) < MIN_POSITION) return { ok: false, reason: 'lean_below_commit_floor_abandon_instead' };
+  }
+  const newSide = side != null ? String(side).slice(0, 160) : s.side;
+  const newConf = Number.isFinite(+confidence_pct) ? Math.max(1, Math.min(99, +confidence_pct)) : s.confidence_pct;
+
+  // Material = the public position actually flipped (side changed, or the lean
+  // crossed zero). Cosmetic tweaks (same side, confidence nudge) are not material.
+  const material = (newSide !== s.side) ||
+    (Number.isFinite(+from.position) && Number.isFinite(+newPos) && Math.sign(from.position) !== Math.sign(newPos) && newPos !== 0);
+
+  s.position = newPos;
+  s.side = newSide;
+  s.confidence_pct = newConf;
+  if (rationale != null) s.rationale = String(rationale).slice(0, 400);
+  s.last_checked = new Date().toISOString().slice(0, 10);
+  s.revisions.push({
+    at: new Date().toISOString(),
+    from,
+    to: { position: newPos, side: newSide, confidence_pct: newConf },
+    reason: String(reason).slice(0, 400),
+    material,
+    public_post_url: public_post_url ? String(public_post_url).slice(0, 200) : null,
+  });
+  // A material sway that has not been publicly owned is flagged for the
+  // mind-change poster; cleared once a public_post_url is supplied.
+  s.needs_public_mind_change = material && !public_post_url;
+  saveStances(st);
+  return { ok: true, stance: s, material };
+}
+
+/**
+ * Prompt block of active stances for the composing paths (tweet, reply, quote,
  * convictions). Empty string when no open stances.
  */
 function stancesPromptBlock({ max = MAX_OPEN } = {}) {
@@ -183,4 +239,4 @@ function stancesPromptBlock({ max = MAX_OPEN } = {}) {
     lines.join('\n') + '\n';
 }
 
-module.exports = { loadStances, saveStances, activeStances, addStance, resolveStance, stancesPromptBlock, eventKey, MAX_OPEN, MAX_OPEN_TASTE, MIN_POSITION };
+module.exports = { loadStances, saveStances, activeStances, addStance, resolveStance, reviseStance, stancesPromptBlock, eventKey, MAX_OPEN, MAX_OPEN_TASTE, MIN_POSITION, MAX_REVISIONS };

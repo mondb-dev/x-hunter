@@ -30,6 +30,32 @@ stance registry (`lib/stances`):
 Before committing, a stance gets a research + verify pass
 (`stance_scan` research step) — no stance on vibes.
 
+## Holding vs. swaying
+
+An open stance holds its line until the event resolves — new evidence does not
+silently move it, which is the point (you can be scored on it, and can't quietly
+walk it back). But immutability is brittle, so `reviseStance` (`lib/stances`) is
+the honest escape hatch, deliberately **costly**:
+
+- Requires a `reason`; capped at `MAX_REVISIONS` (2) per stance — past that,
+  resolve or abandon.
+- Only `position` / `side` / `confidence_pct` / `rationale` move; identity
+  fields (`event`, `question`, `grounded_in`) are immutable.
+- Records the full `from → to` history in `revisions[]`.
+- A **material** shift (a side flip, or the lean crossing zero) sets
+  `needs_public_mind_change` — the reversal must be owned in public, not made
+  silently; the flag clears once a `public_post_url` is supplied. (Distinct from
+  `post_mind_change.js`, which is axis-driven.)
+
+## Messaging inclusion
+
+`stancesPromptBlock()` injects open stances as a guardrail ("hold these lines;
+never contradict in passing") into every composing surface: **tweets**
+(`prompts/tweet.js`), **articles** (via `buildConvictions`), **quotes**
+(`prompts/quote.js`), and **replies** (`proactive_reply.js`). Consistency across
+surfaces is the whole value of a committed stance — a reply that undercuts a
+tweeted line is the exact failure this prevents.
+
 ## Surfacing
 
 Committed stances render on the website's ontology page
