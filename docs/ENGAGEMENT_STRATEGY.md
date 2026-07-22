@@ -128,6 +128,18 @@ Factual claim posts are scored higher regardless of engagement volume — a wron
 
 **Verification**: `verify_one.js` runs on the target post's text. If the claim is refuted or unverified, the reply draft prompt explicitly instructs Sebastian to call it out with the counter-evidence.
 
+**Comprehension check** (`x_engage.js checkComprehension`): after the voice +
+fact-check gates, a draft is checked for whether it actually understands the
+post — no inverted subject/object, no invented contradiction, not "correcting" a
+claim the post never made. (This is the gap that let a reply flip *"US soldier
+killed in an Iranian attack on a base in Jordan"* into *"why does the post say
+Jordan, we're hitting Iran"* — the fact-check gate passed it because the
+tangential claim was true.) It is **non-blocking by design**: a miss triggers a
+REGEN with the specific correction rather than a drop, the checker **fails open**
+on its own errors, and if a miss is still unresolved after the retries the last
+draft posts anyway with a loud log marker. The check steers accuracy; it never
+silently withholds output.
+
 ### Inbound Replies
 
 Source: mentions in Sebastian's notifications.

@@ -52,6 +52,46 @@ function logInteraction(entry) {
 // with x_amplify). makeScorer returns an LLM (local qwen) 0-3 relevance rating
 // (+ keyword-hit tie-break); guarded content scores -1.
 
+// Tolerant JSON extractor for the comprehension checker's output.
+function extractJson(raw) {
+  const m = String(raw || "").replace(/```(?:json)?/gi, "").match(/\{[\s\S]*\}/);
+  if (!m) return null;
+  try { return JSON.parse(m[0]); } catch { return null; }
+}
+
+// ── Comprehension gate ───────────────────────────────────────────────────────
+// Does the drafted reply actually understand what the POST says — right
+// subject/object, no inverted meaning, no invented contradiction? This is the
+// hole the @FoxNews miss went through: a post reporting "US soldier killed in an
+// Iranian attack on a base IN Jordan" drew a reply that flipped it to "we're
+// hitting Iran, why does the post say Jordan" — a total misread that the
+// fact-check gate still passed because the tangential claim it made was true.
+//
+// Deliberately NON-BLOCKING: a fail here asks for a REGEN (see generateReply),
+// not a silent drop, and the checker fails OPEN — an unparseable/errored check
+// never withholds an otherwise-gated reply. So the pipeline always produces
+// output; the check only steers it toward accuracy.
+async function checkComprehension(postText, reply) {
+  const { reason } = require("./lib/compose");
+  const prompt =
+`Judge ONLY whether the REPLY correctly understands what the POST actually says — not its style or whether you agree.
+
+POST:
+"${String(postText || "").slice(0, 800)}"
+
+REPLY:
+"${reply}"
+
+FAIL it only if the reply clearly: inverts who did what to whom, invents a contradiction the post does not contain, "corrects" something the post never claimed, or is answering a different post. Agreeing, disagreeing, or adding context to the post's ACTUAL content all PASS.
+
+Output ONLY JSON: {"understands": true, "why": "one short line"}`;
+  try {
+    const j = extractJson(await reason(prompt, { maxTokens: 150, tag: "x_reply_comprehension" }));
+    if (!j || typeof j.understands !== "boolean") return { ok: true, why: "checker_unparseable_failopen" };
+    return { ok: j.understands, why: String(j.why || "").slice(0, 160) };
+  } catch (e) { return { ok: true, why: `checker_error_failopen:${e.message}` }; }
+}
+
 // ── On-voice reply generation (verify-gate + local LLM + fact-check) ─────────
 async function generateReply(post) {
   // Verify the target post's central claim before engaging (ported from the
@@ -87,15 +127,39 @@ async function generateReply(post) {
     `\nThe post by @${post.handle}:\n"${(post.text || "").slice(0, 600)}"\n\n` +
     `Draft a reply (max 260 chars) that: names a specific fact/party/number; is direct and confident (no "interesting point", no hedging); does not start with "I"; sounds like a sharp person, not a bot. If the post is satire/joke/not a sincere claim, or you cannot add something genuinely worth saying, return SKIP.\n\nReturn ONLY the reply text.`;
 
-  try {
-    // Compose the reply on the Claude terminal when enabled (COMPOSE_BACKEND=claude),
-    // else on the local/Vertex brain. Persona/voice is carried in `prompt`.
-    const raw = await compose(prompt, { maxTokens: 400, model: "gemini-2.5-flash", thinkingBudget: 0, tag: "x_reply" });
+  // Compose → gate → comprehension-check, regenerating on a misread rather than
+  // dropping. Output always goes through: a comprehension miss triggers a REGEN
+  // with the specific correction, and if it's still unresolved after the retries
+  // the last gated draft is posted anyway (fail-open per directive) with a loud
+  // marker for review — the check steers accuracy, it never silently withholds.
+  const COMPREHEND_ATTEMPTS = 2;
+  let feedback = "", lastText = null;
+  for (let attempt = 1; attempt <= COMPREHEND_ATTEMPTS; attempt++) {
+    let raw;
+    try {
+      // Compose on the Claude terminal when enabled (COMPOSE_BACKEND=claude), else
+      // on the local/Vertex brain. Persona/voice is carried in `prompt`.
+      raw = await compose(prompt + feedback, { maxTokens: 400, model: "gemini-2.5-flash", thinkingBudget: 0, tag: "x_reply" });
+    } catch (err) { log(`reply generation failed: ${err.message}`); return null; }
+
     // Shared outbound gate: voice_filter (was missing on replies) + fact-check.
     const gated = await passOutbound(raw, { gates: ["voice", "factcheck"], maxLen: 270, tag: "x_reply" });
     if (!gated.ok) { log(`reply gate rejected: ${gated.reason}`); return null; }
-    return gated.text;
-  } catch (err) { log(`reply generation failed: ${err.message}`); return null; }
+    const text = (gated.text || "").trim();
+    if (!text || text.toUpperCase() === "SKIP") return null;   // model chose not to reply
+    lastText = text;
+
+    const comp = await checkComprehension(post.text || "", text);
+    if (comp.ok) return text;
+
+    log(`comprehension miss @${post.handle} (attempt ${attempt}/${COMPREHEND_ATTEMPTS}): ${comp.why}`);
+    feedback =
+      `\n\nYOUR PREVIOUS DRAFT MISREAD THE POST — ${comp.why}. Re-read the post above carefully: get WHO did WHAT to WHOM and the direction of events right, and do not invent a contradiction it doesn't contain. Write a corrected reply, or return SKIP if there is nothing accurate worth adding.`;
+  }
+  // Directive: all output goes through — post the last draft rather than dropping,
+  // but flag it clearly so a lingering misread is caught in review.
+  log(`comprehension unresolved @${post.handle} after ${COMPREHEND_ATTEMPTS} attempts — posting last draft anyway (fail-open): "${(lastText || "").slice(0, 60)}"`);
+  return lastText;
 }
 
 // ── Main ─────────────────────────────────────────────────────────────────────
