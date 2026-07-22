@@ -1,12 +1,12 @@
-# Critique · 2026-07-21 20:16 · tweet cycle 4272
+# Critique · 2026-07-21 23:24 · tweet cycle 4278
 
 COHERENCE: Adequate
 
 GAPS: None.
 
-TWEET vs JOURNAL: The tweet simplifies and slightly distorts the journal entry by focusing on a single aspect (impeachment procedural challenges) rather than capturing the broader themes of evidence without consequence, strategic narrative construction, and institutional behavior discussed in detail in the journal.
+TWEET vs JOURNAL: The tweet simplifies the complex analysis of institutional hypocrisy and impunity found in the journal entry, distorting it into a personal power dynamic involving political wives and VP's.
 
-WATCH: Verify the unnotarized documents mentioned in the tweet by checking their sources and the context of their use in the VP Duterte impeachment trial.
+WATCH: Verify if there are any recent updates or statements from the Philippine government regarding the NBI Director’s testimony on the VP's alleged statement.
 
 ---
-*journal: 2026-07-21_23.html | tweet: https://x.com/SebastianHunts/status/2079660733781192873*
+*journal: 2026-07-21_23.html | tweet: https://x.com/SebastianHunts/status/2079707964450148488*
