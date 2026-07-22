@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-22T05:51:26.354Z",
+  "generated_at": "2026-07-22T08:51:19.396Z",
   "windows": [
     "1d",
     "3d",
@@ -51,22 +51,22 @@
     },
     "axis_collective_voice": {
       "current": {
-        "score": 0.1795,
-        "confidence": 0.9373
+        "score": 0.1697,
+        "confidence": 0.9435
       },
       "1d": {
-        "score_delta": 0,
-        "conf_delta": -0.002,
+        "score_delta": -0.0098,
+        "conf_delta": 0.0042,
         "direction": "→"
       },
       "3d": {
-        "score_delta": 0.0069,
-        "conf_delta": -0.0058,
+        "score_delta": -0.0029,
+        "conf_delta": 0.0004,
         "direction": "→"
       },
       "7d": {
-        "score_delta": -0.0306,
-        "conf_delta": 0.0097,
+        "score_delta": -0.0404,
+        "conf_delta": 0.0159,
         "direction": "↘"
       }
     },
@@ -114,22 +114,22 @@
     },
     "axis_ph_geopolitics_wps_v1": {
       "current": {
-        "score": -0.2,
-        "confidence": 0.5895
+        "score": -0.25,
+        "confidence": 0.6055
       },
       "1d": {
-        "score_delta": 0,
-        "conf_delta": -0.002,
-        "direction": "→"
+        "score_delta": -0.05,
+        "conf_delta": 0.014,
+        "direction": "↘"
       },
       "3d": {
-        "score_delta": 0,
-        "conf_delta": -0.006,
-        "direction": "→"
+        "score_delta": -0.05,
+        "conf_delta": 0.01,
+        "direction": "↘"
       },
       "7d": {
-        "score_delta": -0.05,
-        "conf_delta": 0.0317,
+        "score_delta": -0.1,
+        "conf_delta": 0.0477,
         "direction": "↘"
       }
     },
@@ -1053,6 +1053,7 @@
   },
   "notable_count": 8,
   "momentum_axes": [
+    "axis_ph_geopolitics_wps_v1",
     "axis_ai_societal_impact_v1",
     "axis_media_integrity_v1",
     "axis_environmental_policy_v_economic_v1",

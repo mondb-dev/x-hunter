@@ -1,8 +1,8 @@
 {
   "schema_version": "1.0",
-  "generated_at": "2026-07-22T07:50:07.466Z",
+  "generated_at": "2026-07-22T10:50:12.973Z",
   "method": "mechanical_registry_v1",
-  "profiled_at": "2026-07-22T07:50:11.993Z",
+  "profiled_at": "2026-07-22T10:50:20.165Z",
   "sources": [
     {
       "domain": "theguardian.com",
@@ -11,7 +11,7 @@
       "first_seen_at": "2026-03-27T23:17:00Z",
       "last_seen_at": "2026-07-21T17:55:40.798Z",
       "discovery": {
-        "distinct_urls": 490,
+        "distinct_urls": 492,
         "example_urls": [
           "https://www.theguardian.com/us-news/2026/jun/23/trump-immigration-courthouse-arrest-policy",
           "https://www.theguardian.com/us-news/2026/jun/28/ice-minnesota-defending-democracy",
@@ -21,7 +21,7 @@
         ],
         "origin_counts": {
           "ontology_evidence": 38,
-          "reading_queue": 462,
+          "reading_queue": 464,
           "journals": 82,
           "articles": 2
         },
@@ -71,7 +71,7 @@
         "breadth": {
           "score": 0.94,
           "basis": [
-            "distinct_urls:490",
+            "distinct_urls:492",
             "distinct_axes:16",
             "origin_types:4"
           ]
@@ -111,7 +111,7 @@
             "newsroom_domain_pattern",
             "article_path_seen",
             "doi_or_identifier_path_seen",
-            "distinct_urls:490",
+            "distinct_urls:492",
             "distinct_axes:16",
             "origin_types:4",
             "referring_accounts:0",
@@ -165,7 +165,7 @@
         ],
         "origin_counts": {
           "claim_tracker": 1,
-          "reading_queue": 10
+          "reading_queue": 11
         },
         "distinct_referring_accounts": 0,
         "sample_referring_accounts": [],
@@ -296,7 +296,7 @@
         ],
         "origin_counts": {
           "ontology_evidence": 154,
-          "reading_queue": 10,
+          "reading_queue": 11,
           "journals": 384,
           "articles": 4
         },
@@ -402,7 +402,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-07-19T08:30:52.002Z",
+        "fetched_at": "2026-07-22T08:50:13.683Z",
         "homepage_url": "https://aljazeera.com/",
         "example_url": "https://www.aljazeera.com/opinions/2026/6/24/south-africas-crises-will-not-be-solved-by-blaming-migrants",
         "homepage_status": 200,
@@ -413,7 +413,7 @@
         "example_content_type": "text/html; charset=utf-8",
         "homepage": {
           "has_meta_author": false,
-          "has_published_time": true,
+          "has_published_time": false,
           "has_canonical": true,
           "has_about_link": true,
           "has_contact_link": false,
@@ -693,7 +693,7 @@
       "first_seen_at": "2026-06-22T00:15:00Z",
       "last_seen_at": "2026-07-21T20:50:27.960Z",
       "discovery": {
-        "distinct_urls": 337,
+        "distinct_urls": 339,
         "example_urls": [
           "https://www.nytimes.com/2026/06/19/world/canada/frank-stronach-trial-guilty-sex-charges.html",
           "https://www.nytimes.com/2026/06/27/world/americas/mexican-officials-us-informants.html",
@@ -703,7 +703,7 @@
         ],
         "origin_counts": {
           "ontology_evidence": 12,
-          "reading_queue": 338,
+          "reading_queue": 340,
           "journals": 33
         },
         "distinct_referring_accounts": 0,
@@ -741,7 +741,7 @@
         "breadth": {
           "score": 0.8799999999999999,
           "basis": [
-            "distinct_urls:337",
+            "distinct_urls:339",
             "distinct_axes:6",
             "origin_types:3"
           ]
@@ -780,7 +780,7 @@
           "basis": [
             "newsroom_domain_pattern",
             "article_path_seen",
-            "distinct_urls:337",
+            "distinct_urls:339",
             "distinct_axes:6",
             "origin_types:3",
             "referring_accounts:0",
@@ -1204,7 +1204,7 @@
           "https://www.house.gov/"
         ],
         "origin_counts": {
-          "reading_queue": 10,
+          "reading_queue": 11,
           "journals": 1
         },
         "distinct_referring_accounts": 0,
@@ -1325,7 +1325,7 @@
           "http://trumprx.gov/"
         ],
         "origin_counts": {
-          "reading_queue": 10,
+          "reading_queue": 11,
           "journals": 1
         },
         "distinct_referring_accounts": 0,
@@ -1441,7 +1441,7 @@
       "first_seen_at": "2026-06-26T07:05:00Z",
       "last_seen_at": "2026-07-19T20:44:41.291Z",
       "discovery": {
-        "distinct_urls": 280,
+        "distinct_urls": 282,
         "example_urls": [
           "https://www.bbc.co.uk/news/articles/cn8qxz6qypyo",
           "https://www.bbc.co.uk/news/articles/cn075j04pnyo?at_medium=RSS&amp;at_campaign=rss",
@@ -1451,7 +1451,7 @@
         ],
         "origin_counts": {
           "ontology_evidence": 6,
-          "reading_queue": 287,
+          "reading_queue": 289,
           "journals": 14
         },
         "distinct_referring_accounts": 0,
@@ -1486,7 +1486,7 @@
         "breadth": {
           "score": 0.7633333333333332,
           "basis": [
-            "distinct_urls:280",
+            "distinct_urls:282",
             "distinct_axes:4",
             "origin_types:3"
           ]
@@ -1524,7 +1524,7 @@
           "method": "mechanical_v1",
           "basis": [
             "newsroom_domain_pattern",
-            "distinct_urls:280",
+            "distinct_urls:282",
             "distinct_axes:4",
             "origin_types:3",
             "referring_accounts:0",
@@ -1578,7 +1578,7 @@
         ],
         "origin_counts": {
           "ontology_evidence": 3,
-          "reading_queue": 10
+          "reading_queue": 11
         },
         "distinct_referring_accounts": 0,
         "sample_referring_accounts": [],
@@ -2399,7 +2399,7 @@
           "https://apnews.com/hub/iran"
         ],
         "origin_counts": {
-          "reading_queue": 10,
+          "reading_queue": 11,
           "journals": 1
         },
         "distinct_referring_accounts": 0,
@@ -3061,9 +3061,9 @@
       "entity": "Rappler",
       "kind": "unknown",
       "first_seen_at": "2026-06-22T04:04:30.428Z",
-      "last_seen_at": "2026-07-22T07:20:42.910Z",
+      "last_seen_at": "2026-07-22T10:21:04.057Z",
       "discovery": {
-        "distinct_urls": 147,
+        "distinct_urls": 148,
         "example_urls": [
           "https://www.rappler.com/fact-check-no-arrest-warrant-issued-vs-marcoleta",
           "https://www.rappler.com/technology/decoded-tacloban-school-shooting-disinformation-kiko-barzaga-discussions-juvenile-justice-law/",
@@ -3073,7 +3073,7 @@
         ],
         "origin_counts": {
           "ontology_evidence": 81,
-          "journals": 174,
+          "journals": 175,
           "articles": 1
         },
         "distinct_referring_accounts": 0,
@@ -3125,7 +3125,7 @@
         "breadth": {
           "score": 0.8799999999999999,
           "basis": [
-            "distinct_urls:147",
+            "distinct_urls:148",
             "distinct_axes:21",
             "origin_types:3"
           ]
@@ -3163,7 +3163,7 @@
           "method": "mechanical_v1",
           "basis": [
             "unknown_domain_pattern",
-            "distinct_urls:147",
+            "distinct_urls:148",
             "distinct_axes:21",
             "origin_types:3",
             "referring_accounts:0",
@@ -3588,7 +3588,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-07-19T08:30:54.803Z",
+        "fetched_at": "2026-07-22T08:50:15.355Z",
         "homepage_url": "https://bit.ly/",
         "example_url": "https://bit.ly/4rFUGm4?twclid=2cxu7o43bx4p37y7v84zudvy2q",
         "homepage_status": 200,
@@ -3626,7 +3626,7 @@
       "first_seen_at": "2016-05-05T18:57:30.000Z",
       "last_seen_at": "2026-07-22T06:08:37.000Z",
       "discovery": {
-        "distinct_urls": 8110,
+        "distinct_urls": 8111,
         "example_urls": [
           "https://t.co/pJSE124ec4",
           "https://t.co/Soz8BXPWaa",
@@ -3635,7 +3635,7 @@
           "https://t.co/cYaqYDRp08"
         ],
         "origin_counts": {
-          "feed_buffer": 5154,
+          "feed_buffer": 5155,
           "feed_buffer_reply": 4831
         },
         "distinct_referring_accounts": 2485,
@@ -3677,7 +3677,7 @@
         "breadth": {
           "score": 0.47,
           "basis": [
-            "distinct_urls:8110",
+            "distinct_urls:8111",
             "distinct_axes:0",
             "origin_types:2"
           ]
@@ -3716,7 +3716,7 @@
           "basis": [
             "unknown_domain_pattern",
             "doi_or_identifier_path_seen",
-            "distinct_urls:8110",
+            "distinct_urls:8111",
             "distinct_axes:0",
             "origin_types:2",
             "referring_accounts:2485",
@@ -3762,9 +3762,9 @@
       "entity": "Gmanetwork",
       "kind": "unknown",
       "first_seen_at": "2026-05-18T03:29:41.732Z",
-      "last_seen_at": "2026-07-22T07:20:42.910Z",
+      "last_seen_at": "2026-07-22T10:21:04.057Z",
       "discovery": {
-        "distinct_urls": 196,
+        "distinct_urls": 203,
         "example_urls": [
           "https://www.gmanetwork.com/news/topstories/nation/994225/explainer-objections-in-a-trial-and-their-role-in-due-process/story/",
           "https://www.gmanetwork.com/news/balitambayan/balita/993931/sen-escudero-sinabing-16-na-boto-ang-kailangan-para-mahatulang-guilty-si-vp-sara-duterte-sa-impea/story/",
@@ -3773,12 +3773,13 @@
           "https://www.gmanetwork.com/news/topstories/nation/994080/electronic-copies-evidence-supreme-court/story/"
         ],
         "origin_counts": {
-          "ontology_evidence": 73,
-          "journals": 230
+          "ontology_evidence": 74,
+          "journals": 237
         },
         "distinct_referring_accounts": 0,
         "sample_referring_accounts": [],
         "distinct_axes": [
+          "axis_collective_voice",
           "axis_eje_accountability_v1",
           "axis_epistemic_integrity",
           "axis_geopolitical_control_narratives",
@@ -3820,8 +3821,8 @@
         "breadth": {
           "score": 0.82,
           "basis": [
-            "distinct_urls:196",
-            "distinct_axes:16",
+            "distinct_urls:203",
+            "distinct_axes:17",
             "origin_types:2"
           ]
         },
@@ -3858,8 +3859,8 @@
           "method": "mechanical_v1",
           "basis": [
             "unknown_domain_pattern",
-            "distinct_urls:196",
-            "distinct_axes:16",
+            "distinct_urls:203",
+            "distinct_axes:17",
             "origin_types:2",
             "referring_accounts:0",
             "origin_types:2",
@@ -4255,7 +4256,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-07-19T08:30:55.854Z",
+        "fetched_at": "2026-07-22T08:50:15.807Z",
         "homepage_url": "https://epochtimes.com/",
         "example_url": "https://www.epochtimes.com/",
         "homepage_status": 200,
@@ -4383,7 +4384,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-07-19T08:30:57.064Z",
+        "fetched_at": "2026-07-22T08:50:16.579Z",
         "homepage_url": "https://idf.il/",
         "example_url": "https://www.idf.il/en/articles/2026/04/16/idf-finds-weapons-in-school-in-bint-jbeil-lebanon/",
         "homepage_status": null,
@@ -5057,7 +5058,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-07-19T10:00:50.714Z",
+        "fetched_at": "2026-07-22T10:20:15.976Z",
         "homepage_url": "https://substack.com/",
         "example_url": "https://aniobrien.substack.com/p/white-working-class-girls-sacrificed",
         "homepage_status": 200,
@@ -5183,7 +5184,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-07-19T10:00:54.227Z",
+        "fetched_at": "2026-07-22T10:20:18.915Z",
         "homepage_url": "https://newsguardtech.com/",
         "example_url": "https://www.newsguardtech.com/",
         "homepage_status": 200,
@@ -5309,7 +5310,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-07-19T10:00:55.652Z",
+        "fetched_at": "2026-07-22T10:20:23.364Z",
         "homepage_url": "https://snopes.com/",
         "example_url": "https://snopes.com/fact-check/strait-of-hormuz-oil-shorts-trump/",
         "homepage_status": 200,
@@ -5345,9 +5346,9 @@
       "entity": "Starlink",
       "kind": "unknown",
       "first_seen_at": "2026-04-07T03:51:50.000Z",
-      "last_seen_at": "2026-07-22T03:40:17.203Z",
+      "last_seen_at": "2026-07-22T09:40:22.099Z",
       "discovery": {
-        "distinct_urls": 90,
+        "distinct_urls": 91,
         "example_urls": [
           "https://www.starlink.com/us/residential?referral=RC-DF-9543787-19448-67&utm_medium=paid&utm_campaign=awr_us_soc_twt_ptg_cau&utm_content=awr_us_soc_twt_ptg_cau_res_gvp_v4s_stc_en-us_sdb-bluesky-uptime&twclid=2cg62b1u0oqrypdim5oir1767e",
           "https://www.starlink.com/us/residential?referral=RC-DF-9543787-19448-67&utm_medium=paid&utm_campaign=awr_us_soc_twt_ptg_cau&utm_content=awr_us_soc_twt_ptg_cau_res_gvp_v4s_stc_en-us_sdb-avail-sat-yourhome&twclid=2216n7j93v9absqn77762mm626",
@@ -5357,7 +5358,7 @@
         ],
         "origin_counts": {
           "feed_buffer_reply": 84,
-          "feed_buffer": 10
+          "feed_buffer": 11
         },
         "distinct_referring_accounts": 5,
         "sample_referring_accounts": [
@@ -5392,7 +5393,7 @@
         "breadth": {
           "score": 0.47,
           "basis": [
-            "distinct_urls:90",
+            "distinct_urls:91",
             "distinct_axes:0",
             "origin_types:2"
           ]
@@ -5430,7 +5431,7 @@
           "method": "mechanical_v1",
           "basis": [
             "unknown_domain_pattern",
-            "distinct_urls:90",
+            "distinct_urls:91",
             "distinct_axes:0",
             "origin_types:2",
             "referring_accounts:5",
@@ -5440,7 +5441,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-07-19T10:00:57.489Z",
+        "fetched_at": "2026-07-22T10:20:23.866Z",
         "homepage_url": "https://starlink.com/",
         "example_url": "https://www.starlink.com/us/residential?referral=RC-DF-9543787-19448-67&utm_medium=paid&utm_campaign=awr_us_soc_twt_ptg_cau&utm_content=awr_us_soc_twt_ptg_cau_res_gvp_v4s_stc_en-us_sdb-bluesky-uptime&twclid=2cg62b1u0oqrypdim5oir1767e",
         "homepage_status": 200,
@@ -5564,7 +5565,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-07-19T10:30:53.944Z",
+        "fetched_at": "2026-07-22T10:50:14.387Z",
         "homepage_url": "https://reuters.com/",
         "example_url": "https://www.reuters.com/site-search/?query=Evidence-based%20claims%2C%20transparent%20sourcing%2C%20honest%20uncertainty%2C%20good-faith%20argu%20Truth%20and%20Evidence%20in%20Public%20Discourse",
         "homepage_status": 401,
@@ -5695,7 +5696,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-07-19T10:30:55.665Z",
+        "fetched_at": "2026-07-22T10:50:16.620Z",
         "homepage_url": "https://arstechnica.com/",
         "example_url": "https://arstechnica.com/security/2026/06/users-cry-foul-after-amd-stripped-memory-crypto-from-its-consumer-cpus/",
         "homepage_status": 202,
@@ -6982,7 +6983,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-07-19T10:30:56.588Z",
+        "fetched_at": "2026-07-22T10:50:18.206Z",
         "homepage_url": "https://byteplus.com/",
         "example_url": "https://www.byteplus.com/en/contact-us/ai-cloud-products?utm_source=x&utm_medium=cpc&utm_campaign=leads_submit_eu_english_20260415_celene&utm_term=20260415_image_leads&utm_content=tecdo&twclid=24somkg02k4fm60up4bq87nhwy",
         "homepage_status": 200,
@@ -7109,7 +7110,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-07-19T10:30:58.276Z",
+        "fetched_at": "2026-07-22T10:50:20.165Z",
         "homepage_url": "https://athena.com/",
         "example_url": "https://www.athena.com/cl/x?utm_source=twitter&utm_medium=paid_social&utm_campaign=%7B%7Bcampaign_name%7D%7D&utm_term=%7B%7Badgroup_name%7D%7D&utm_content=%7B%7Bad_name%7D%7D&twclid=27k7ut43wxglvx2o2e2nj7pszs",
         "homepage_status": 200,
@@ -43044,7 +43045,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-07-17T04:11:25.779Z",
+        "fetched_at": "2026-07-22T09:20:14.206Z",
         "homepage_url": "https://topoready.com/",
         "example_url": "https://topoready.com/?utm_source=twitter&utm_medium=cpc&utm_campaign=topoready_early_access&utm_content=image_with_titles&twclid=26mope2cwejyke6epnanupsaz3",
         "homepage_status": 200,
@@ -43167,7 +43168,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-07-17T04:11:26.707Z",
+        "fetched_at": "2026-07-22T09:20:15.109Z",
         "homepage_url": "https://hexclad.com/",
         "example_url": "https://hexclad.com/pages/12-pc-landing-page?utm_source=twitter&utm_medium=paid&utm_campaign=HEX+01+%7C+Q2+26%27+Chargeable+%7C+4.6.26&utm_term=US+-+M%2FF+-+21-65%2B+-+Interest-Based+-+4.6.26&utm_content=HEX%23763_V3&twclid=2bnrkgftya8pykff4uwp59b29d",
         "homepage_status": 200,
@@ -43290,7 +43291,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-07-17T04:11:30.451Z",
+        "fetched_at": "2026-07-22T09:20:18.330Z",
         "homepage_url": "https://bruntworkwear.com/",
         "example_url": "https://bruntworkwear.com/collections/fathers-day?utm_source=twitter&utm_medium=cpc&utm_campaign=%7B%7Bcampaign_name%7D%7D&utm_term=%7B%7Badgroup_name%7D%7D&utm_content=%7B%7Bad_name%7D%7D&hpt_source=twitter&hpt_campaign_id=%7B%7Bcampaign_id%7D%7D&hpt_adgroup_id=%7B%7Badgroup_id%7D%7D&hpt_ad_id=%7B%7Bad_id%7D%7D&twclid=27cbkia972xnwru1wrcn3n1z0q",
         "homepage_status": 200,
@@ -43413,7 +43414,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-07-17T05:11:25.219Z",
+        "fetched_at": "2026-07-22T09:20:19.968Z",
         "homepage_url": "https://paramountplus.com/",
         "example_url": "https://www.paramountplus.com/shows/dutton-ranch/?ftag=PPM-07-10cbi9g&twclid=2dm265hhtvlky8rqv8df36ol4k",
         "homepage_status": 200,
