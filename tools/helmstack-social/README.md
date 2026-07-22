@@ -24,6 +24,14 @@ same way.
   the CDP insert-text endpoint and posts are confirmed by scanning the author's
   profile for the new status URL. Each engine picks whatever mechanism is robust
   for its platform behind the same class shape.
+  - **Composer hygiene:** X persists an aborted compose as a *draft* and restores
+    it (text **and** attached media) into the next compose cycle, where fresh
+    content stacks onto it — the cause of duplicated/fused posts with a stale
+    image. Guards: text-only paths strip any restored media (`_removeComposerMedia`,
+    targeted by locale-independent testid) before inserting; `_discardComposer`
+    clears media + text so Escape closes with **no** Save/Discard sheet (the sheet's
+    button labels are localized — this account's UI is Filipino — so an
+    English-text discard match would silently miss and X would *save* the draft).
 
 ## Requirements
 

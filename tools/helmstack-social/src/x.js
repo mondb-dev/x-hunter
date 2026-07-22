@@ -214,18 +214,52 @@ class X {
    * accumulate or auto-post.
    */
   async _discardComposer() {
+    // Attached media survives a text-only clear and rides into the next compose
+    // cycle (the wrong-image-on-a-quote bug). Pull it out first — the remove
+    // control's testid is locale-independent — so "empty" means no text AND no
+    // media.
+    await this._removeComposerMedia().catch(() => {});
     await this._clearComposer().catch(() => {});               // inline-composer case
-    // Modal case: Escape raises X's "Save / Discard" sheet — click Discard.
+    // With text + media gone, Escape closes the modal WITHOUT raising the
+    // Save/Discard sheet — which sidesteps X's locale-specific button labels.
+    // (This account's UI is Filipino, so the old English "Discard" text match
+    // silently missed and X SAVED the draft, which then restored + stacked next
+    // cycle.) The confirm-sheet click below is now only a best-effort fallback
+    // for when the clear itself failed.
     await this.c.pressKey(this.tab, { key: "Escape", code: "Escape", keyCode: 27 }).catch(() => {});
     await sleep(600);
     const discarded = await this.c.evalFn(this.tab, () => {
-      const btns = Array.from(document.querySelectorAll('[data-testid="confirmationSheetConfirm"],[role="button"],button'));
-      const d = btns.find((b) => /^(discard|delete)$/i.test((b.innerText || "").trim()));
+      // Best-effort fallback: only reached if the clear above failed and X raised
+      // the "Save post?" sheet. Match the Discard button by TEXT (English +
+      // common Filipino labels) — deliberately NOT by confirmationSheetConfirm,
+      // because on that sheet the confirm testid is the SAVE action; clicking it
+      // would persist the draft and make the accumulation worse.
+      const sheet = document.querySelector('[data-testid="confirmationSheetDialog"]') || document;
+      const d = Array.from(sheet.querySelectorAll('[role="button"],button'))
+        .find((b) => /^(discard|delete|itapon|i-?discard|burahin|alisin)$/i.test((b.innerText || "").trim()));
       if (d) { d.click(); return true; }
       return false;
     }).catch(() => false);
     await sleep(600);
     return discarded;
+  }
+
+  /**
+   * Remove every attached media item from the composer. The remove control is
+   * targeted by testid (locale-independent); the English aria-label is a
+   * secondary selector. Returns the count of remove controls clicked.
+   */
+  async _removeComposerMedia() {
+    for (let pass = 0; pass < 4; pass++) {
+      const clicked = await this.c.evalFn(this.tab, () => {
+        const btns = Array.from(document.querySelectorAll('[data-testid="removeMedia"], [aria-label="Remove media"]'));
+        btns.forEach((b) => b.click());
+        return btns.length;
+      }).catch(() => 0);
+      if (!clicked) return pass > 0;   // nothing left to remove
+      await sleep(300);
+    }
+    return true;
   }
 
   /**
@@ -627,6 +661,10 @@ class X {
     } catch {
       return { posted: false, reason: "compose_box_not_found" };
     }
+    // A plain tweet has no intended media, so anything attached here was restored
+    // from a prior aborted draft — strip it before inserting or it rides along
+    // (the wrong-photo-on-a-tweet bug). Text is cleared inside _insertVerified.
+    await this._removeComposerMedia().catch(() => {});
     if (!(await this._insertVerified(text))) return { posted: false, reason: "text_insert_failed" };
     try { await this._waitPostEnabled(); } catch { return { posted: false, reason: "post_button_disabled" }; }
     const pre = await this._toast();
@@ -702,6 +740,10 @@ class X {
     } catch {
       return { posted: false, reason: "compose_box_not_found" };
     }
+    // A quote carries no uploaded media (the quoted post is an embedded card, not
+    // an attachment), so strip anything restored from a prior aborted draft before
+    // inserting the commentary — this is how the stale image ended up on a quote.
+    await this._removeComposerMedia().catch(() => {});
     if (!(await this._insertVerified(text))) return { posted: false, reason: "text_insert_failed" };
     try { await this._waitPostEnabled(); } catch { return { posted: false, reason: "post_button_disabled" }; }
     const pre = await this._toast();
