@@ -185,7 +185,13 @@ async function run() {
   }));
 }
 
-run().catch(err => {
+// Exit explicitly on success: run() awaits all DB writeback/export before printing
+// the verdict, but open handles (the pg pool, web-search keep-alive) then keep the
+// event loop alive. Without this, the process hangs after printing and the caller's
+// execFileSync 90s timeout KILLS it — discarding a verdict that was already computed
+// (the recurring `spawnSync node ETIMEDOUT`), so every claim reads as unverified and
+// deep-research confidence collapses to "compromised".
+run().then(() => process.exit(0)).catch(err => {
   console.error(`[verify_one] fatal: ${err.message}`);
   process.exit(1);
 });
