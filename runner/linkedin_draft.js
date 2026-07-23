@@ -180,7 +180,18 @@ Write ONE original LinkedIn post following the voice rules and the ${plan ? "pos
     // miss just means text-only. IMAGE_AUTO_TRIGGER=0 disables all media.
     let imageSource = null;
     let linkSource = null;
-    const wantMedia = plan ? plan.media : "image";
+    // The A/B assignment decides media, NOT the plan. The plan used to win here
+    // and it vetoed the image arm every time on speculation ("no photographable
+    // news event ... unlikely to have strong news imagery") — without ever
+    // fetching anything. Two facts show that veto was wrong: X pulled a perfectly
+    // good og:image from an Inquirer article on the SAME impeachment story that
+    // day, and 13/13 tracked LinkedIn posts came out media=none, so the image arm
+    // sat at 0 samples and the A/B could never learn whether images help.
+    // pickLeadSource below is the empirical arbiter — it actually fetches and
+    // coherence-gates the source, and a miss falls back to text-only anyway, so
+    // letting the assignment through costs nothing in quality.
+    const wantMedia = (assignment && assignment.media) || (plan ? plan.media : "image");
+    if (plan && plan.media !== wantMedia) log(`media: using A/B assignment "${wantMedia}" over plan "${plan.media}"${plan.media_rationale ? ` (plan said: ${String(plan.media_rationale).slice(0, 90)})` : ""}`);
     if (process.env.IMAGE_AUTO_TRIGGER !== "0" && wantMedia !== "none") {
       try {
         const { pickLeadSource } = require("./lib/lead_source_image");
