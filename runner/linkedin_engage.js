@@ -111,8 +111,18 @@ async function generateComment(post) {
 
   try {
     const raw = await compose(prompt, { maxTokens: 400, model: "gemini-2.5-flash", thinkingBudget: 0, tag: "linkedin_comment" });
-    const gated = await passOutbound(raw, { gates: ["voice", "factcheck"], maxLen: 500, tag: "linkedin_comment" });
+    // `source` enables the coherence gate (does the comment understand the
+    // post?); `regenerate` re-drafts a misread rather than dropping it.
+    const gated = await passOutbound(raw, {
+      gates: ["voice", "factcheck"], maxLen: 500, tag: "linkedin_comment",
+      source: post.text || "",
+      regenerate: async (why) => compose(
+        prompt + `\n\nYOUR PREVIOUS DRAFT MISREAD THE POST — ${why}. Re-read it: get WHO did WHAT to WHOM right and do not invent a contradiction. Write a corrected comment, or return SKIP.`,
+        { maxTokens: 400, model: "gemini-2.5-flash", thinkingBudget: 0, tag: "linkedin_comment" }
+      ),
+    });
     if (!gated.ok) { log(`comment gate rejected: ${gated.reason}`); return null; }
+    if (gated.coherence) log(`coherence flag: ${gated.coherence.why}`);
     return gated.text;
   } catch (err) { log(`comment generation failed: ${err.message}`); return null; }
 }

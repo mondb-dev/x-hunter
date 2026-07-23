@@ -103,8 +103,23 @@ function dayNumberFrom(today) {
   // postQuoteTweet). Corrects stale facts or rejects. maxLen is the platform
   // reality (~280 for the commentary tweet; the quoted post is a separate card)
   // even though the prompt targets ~240 for density.
-  const gated = await passOutbound(commentary, { gates: ['factcheck'], maxLen: 280, tag: 'quote' });
+  // Recover the quoted post's own text from the digest so the coherence gate
+  // has a source to check the commentary against (the reader sees that post as a
+  // card, so a misread of it is published too). Best-effort: no match → the gate
+  // is skipped rather than guessing.
+  let sourceText = '';
+  try {
+    const dg = String(ctx.digest || '');
+    const i = dg.indexOf(url);
+    if (i !== -1) sourceText = dg.slice(Math.max(0, i - 600), i).split(/\n(?=\s*\[)/).pop() || '';
+  } catch { /* non-fatal */ }
+
+  const gated = await passOutbound(commentary, {
+    gates: ['factcheck'], maxLen: 280, tag: 'quote',
+    source: sourceText || null,
+  });
   if (!gated.ok) { log(`gate rejected: ${gated.reason} — SKIP`); fs.writeFileSync(DRAFT_PATH, 'SKIP\n'); process.exit(0); }
+  if (gated.coherence) log(`coherence flag: ${gated.coherence.why}`);
   commentary = gated.text;
 
   fs.writeFileSync(DRAFT_PATH, `${url}\n${commentary}\n`);

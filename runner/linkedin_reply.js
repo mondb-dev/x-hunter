@@ -69,8 +69,18 @@ ${content.slice(0, 1200)}
 Write a thoughtful reply (2-5 sentences) that adds a SPECIFIC, grounded point — name a concrete claim, mechanism, number, or example; engage what they actually said. First person, direct. No filler ("great question"), no hashtags, no emojis, no tool/system names. If there's nothing worth adding, return SKIP.${researchBlock}
 Reply text only:`;
   const raw = await compose(prompt, { maxTokens: 400, model: "gemini-2.5-flash", thinkingBudget: 0, tag: "linkedin_reply" });
-  const gated = await passOutbound(raw, { gates: ["voice", "factcheck"], maxLen: 600, tag: "linkedin_reply" });
+  // `source` enables the coherence gate (does the reply understand what they
+  // actually said?); `regenerate` re-drafts a misread rather than dropping it.
+  const gated = await passOutbound(raw, {
+    gates: ["voice", "factcheck"], maxLen: 600, tag: "linkedin_reply",
+    source: content || "",
+    regenerate: async (why) => compose(
+      prompt + `\n\nYOUR PREVIOUS DRAFT MISREAD THEM — ${why}. Re-read what they actually said: get WHO did WHAT to WHOM right and do not invent a contradiction. Write a corrected reply, or return SKIP.`,
+      { maxTokens: 400, model: "gemini-2.5-flash", thinkingBudget: 0, tag: "linkedin_reply" }
+    ),
+  });
   if (!gated.ok) { log(`gate rejected: ${gated.reason}`); return null; }
+  if (gated.coherence) log(`coherence flag: ${gated.coherence.why}`);
   return gated.text;
 }
 

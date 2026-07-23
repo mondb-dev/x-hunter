@@ -63,8 +63,18 @@ async function composeCommentary(post) {
 
   try {
     const raw = await compose(prompt, { maxTokens: 300, model: "gemini-2.5-flash", thinkingBudget: 0, tag: "x_amplify_quote" });
-    const gated = await passOutbound(raw, { gates: ["voice", "factcheck"], maxLen: 240, tag: "x_amplify_quote" });
+    // `source` enables the coherence gate (does the commentary understand the
+    // post it quotes?); `regenerate` re-drafts a misread rather than dropping it.
+    const gated = await passOutbound(raw, {
+      gates: ["voice", "factcheck"], maxLen: 240, tag: "x_amplify_quote",
+      source: post.text || "",
+      regenerate: async (why) => compose(
+        prompt + `\n\nYOUR PREVIOUS DRAFT MISREAD THE POST — ${why}. Re-read it: get WHO did WHAT to WHOM right and do not invent a contradiction. Write a corrected comment, or return SKIP.`,
+        { maxTokens: 300, model: "gemini-2.5-flash", thinkingBudget: 0, tag: "x_amplify_quote" }
+      ),
+    });
     if (!gated.ok) { log(`quote commentary gate rejected: ${gated.reason}`); return null; }
+    if (gated.coherence) log(`coherence flag @${post.handle}: ${gated.coherence.why}`);
     return gated.text;
   } catch (e) { log(`quote commentary failed: ${e.message}`); return null; }
 }
