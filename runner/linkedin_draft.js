@@ -31,15 +31,27 @@ const log = (m) => console.log(`[linkedin_draft] ${m}`);
 
 // LinkedIn is a professional network, not X. The VOICE rules below are always
 // enforced; the SHAPE of each post (structure, opening, length, ending, media)
-// is decided per-post by the plan stage (lib/linkedin_plan) so consecutive
-// posts don't share one skeleton. The fixed-format lines survive only in the
-// fallback template used when planning fails.
+// is varied per-post by the plan stage (lib/linkedin_plan).
+//
+// That was NOT enough on its own. This block used to mandate one architecture —
+// "frame it as a SYSTEMIC insight ... move from the concrete instance to the
+// pattern" — which sits ABOVE the plan, so the plan could only vary the trim
+// while every post kept the same skeleton. Combined with "pick one theme that
+// recurs ACROSS the source material", it also pushed the drafter to weld
+// unrelated stories together to satisfy cross-source grounding. The result read
+// mechanical and jumbled: three consecutive posts that each opened on a distant
+// topic, pivoted ("Which brings me to..."), drew a structural parallel, and
+// closed on an aphorism. The rules now let the material decide the form, forbid
+// the forced pivot, and show the drafter its own recent openings/closings so it
+// can see the rut it is in.
 const LINKEDIN_VOICE = `LINKEDIN PLACEMENT — how to shape this content for LinkedIn (NOT X):
 - Audience: professionals in media, policy, communications, technology, and information integrity. They reward analysis and credibility, not hot takes.
-- Pick ONE theme that recurs across the source material below (cross-source grounding beats a single feed). Prefer a theme where the journal, engagements, and live feeds point the same way.
-- Frame it as a SYSTEMIC insight, not a reaction: connect a specific, current example (name the actor, the claim, the number, the event — from the sources) to the broader mechanism of strategic narrative construction / manufactured consent. Move from the concrete instance to the pattern.
-- Offer something useful: a lens, a distinction, or a question a professional could apply to their own field. Sebastian's value is making manipulation legible, not scoring points.
-- First person. NO hashtags, NO emojis, NO thread markers ("1/n", "🧵"), NO X-style punchy one-liners, no "Excited to share".`;
+- Write about ONE thing. Pick the single story in the material you actually have something to say about, and stay on it. Depth on one subject beats coverage of three.
+- DO NOT weld unrelated items together. If the material holds an AI story and a Philippine court story, they are two posts, not one. Never open on a distant topic in order to pivot to your real subject ("Which brings me to...", "Now set that against...", "reveals a parallel"). A connection is only worth drawing if it survives someone asking "is that actually the same mechanism, or does it just sound like it?" — if the honest answer is that it merely rhymes, drop it and write about the one thing.
+- Not every post is a systemic essay. Let the material decide what this is: sometimes the pattern behind an event; sometimes one sharp observation that needs no scaffolding; sometimes a correction of something widely repeated; sometimes a question you genuinely cannot answer yet; sometimes just the thing you noticed today and why it stuck. A short post that says one true thing beats 300 words reaching for significance.
+- Earn the abstraction. Go up to the general mechanism only when the specific case actually supports it. If you can't get there honestly, stay concrete and stop — an unearned closing aphorism is the most obvious tell of manufactured insight.
+- Vary how you sound. Read the RECENT POSTS below and do not reuse their architecture, their rhythm, or their closing move. If the last posts all built to a tidy final maxim, do not write another one.
+- First person. NO hashtags, NO emojis, NO thread markers ("1/n", "🧵"), no "Excited to share".`;
 
 // Fallback shape when the plan stage is unavailable — the old fixed template.
 const FALLBACK_FORMAT = `- Format: 150-350 words, 2-4 short plain paragraphs. Measured and analytical in tone. Open with the insight, close with a genuine question that invites professional discussion.`;
@@ -116,12 +128,31 @@ const FALLBACK_FORMAT = `- Format: 150-350 words, 2-4 short plain paragraphs. Me
 - ${ENDING_DIRECTIVE[plan.ending] || ENDING_DIRECTIVE.claim}`
     : `${FALLBACK_FORMAT}\n\nOPENING TECHNIQUE TO USE FOR THIS POST: ${technique.instruction}`;
 
+  // Show the drafter its OWN last few posts. Without this the "vary how you
+  // sound" rule is unenforceable — the model cannot avoid a rut it cannot see,
+  // which is how three consecutive posts ended up sharing one architecture
+  // (distant opener → pivot → structural parallel → closing maxim). Opening and
+  // closing lines are what repeat, so show those rather than whole posts.
+  let recentBlock = "";
+  try {
+    const recents = outbox.recentPosted("linkedin", { limit: 3 }) || [];
+    if (recents.length) {
+      recentBlock = "\nRECENT POSTS — your last few, newest first. Do NOT reuse their architecture, rhythm, or closing move:\n" +
+        recents.map((r, i) => {
+          const lines = String(r.text || "").split("\n").map((s) => s.trim()).filter(Boolean);
+          const open = (lines[0] || "").slice(0, 160);
+          const close = (lines[lines.length - 1] || "").slice(0, 160);
+          return `${i + 1}. OPENED: "${open}"\n   CLOSED: "${close}"`;
+        }).join("\n") + "\n";
+    }
+  } catch { /* non-fatal */ }
+
   const prompt =
 `You are Sebastian Hunter writing a LinkedIn post. Your vocation and voice:
 ${vocation}
 
 ${LINKEDIN_VOICE}
-
+${recentBlock}
 ${shapeBlock}
 ${perfSummary ? `\n${perfSummary}\n` : ""}
 YOUR CURRENT BELIEF AXES (your mapped positions — the post must argue consistently with these; lean on the highest-confidence axis that fits the theme):
