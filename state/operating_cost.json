@@ -1,79 +1,75 @@
 {
-  "generated_at": "2026-07-22T18:33:07.131Z",
+  "generated_at": "2026-07-23T19:01:58.804Z",
   "monthly_usd": {
-    "llm": 82.28,
+    "llm": 87.92,
     "fixed": 101.25,
-    "total": 183.53
+    "total": 189.17
   },
   "llm_recent": {
     "window_days": 7,
-    "usd": 19.1991,
-    "calls": 1252,
-    "daily_avg_usd": 2.7427,
+    "usd": 20.5156,
+    "calls": 1759,
+    "daily_avg_usd": 2.9308,
     "by_tag": {
-      "compose": {
-        "calls": 737,
-        "usd": 13.350710000000014
-      },
       "brain": {
-        "calls": 171,
+        "calls": 163,
         "usd": 0
       },
-      "x_reply": {
-        "calls": 43,
-        "usd": 0.345139
-      },
-      "x_reply:factcheck": {
-        "calls": 39,
-        "usd": 0.04083899999999999
+      "compose": {
+        "calls": 779,
+        "usd": 13.624026000000002
       },
       "quote": {
-        "calls": 52,
-        "usd": 2.740366999999999
+        "calls": 54,
+        "usd": 2.8650959999999994
       },
-      "quote:factcheck": {
+      "x_reply": {
         "calls": 46,
-        "usd": 0.05046899999999999
+        "usd": 0.3704269999999999
       },
-      "tweet": {
-        "calls": 50,
-        "usd": 1.874899
-      },
-      "tweet:factcheck": {
-        "calls": 40,
-        "usd": 0.04282499999999999
+      "x_reply:factcheck": {
+        "calls": 41,
+        "usd": 0.048719999999999986
       },
       "linkedin_draft": {
         "calls": 14,
-        "usd": 0.282007
+        "usd": 0.29090900000000003
       },
       "linkedin_draft:factcheck": {
         "calls": 14,
-        "usd": 0.033315000000000004
+        "usd": 0.034365
+      },
+      "tweet": {
+        "calls": 52,
+        "usd": 1.9539100000000003
+      },
+      "tweet:factcheck": {
+        "calls": 41,
+        "usd": 0.04574400000000001
+      },
+      "quote:factcheck": {
+        "calls": 49,
+        "usd": 0.056445
       },
       "linkedin_connect": {
         "calls": 23,
-        "usd": 0.05381700000000001
-      },
-      "thread_draft": {
-        "calls": 1,
-        "usd": 0.039815
+        "usd": 0.054189
       },
       "article": {
-        "calls": 5,
-        "usd": 0.210055
+        "calls": 6,
+        "usd": 0.250265
       },
       "x_mention_reply:factcheck": {
         "calls": 5,
         "usd": 0.005265
       },
       "helmstack_feedback": {
-        "calls": 2,
-        "usd": 0.035817
+        "calls": 3,
+        "usd": 0.04863
       },
       "stance_video:factcheck": {
-        "calls": 2,
-        "usd": 0.002343
+        "calls": 3,
+        "usd": 0.003489
       },
       "x_amplify_quote": {
         "calls": 1,
@@ -94,16 +90,44 @@
       "dr-article:factcheck": {
         "calls": 2,
         "usd": 0.030445999999999997
+      },
+      "t:comprehension": {
+        "calls": 2,
+        "usd": 0.00237
+      },
+      "quote:comprehension": {
+        "calls": 1,
+        "usd": 0.001647
+      },
+      "policytest": {
+        "calls": 1,
+        "usd": 0.00105
+      },
+      "t2:comprehension": {
+        "calls": 1,
+        "usd": 0.001203
+      },
+      "t3:comprehension": {
+        "calls": 1,
+        "usd": 0.001185
+      },
+      "t4:comprehension": {
+        "calls": 1,
+        "usd": 0.001185
+      },
+      "llm": {
+        "calls": 451,
+        "usd": 0.7641189999999999
       }
     },
     "by_model": {
-      "claude": {
-        "calls": 1081,
-        "usd": 19.199053999999972
-      },
       "local": {
-        "calls": 171,
+        "calls": 163,
         "usd": 0
+      },
+      "claude": {
+        "calls": 1596,
+        "usd": 20.51561099999999
       }
     }
   },
@@ -116,7 +140,7 @@
   },
   "storage_wallet": {
     "sol_balance": 0.000020209,
-    "checked_at": "2026-07-22T17:25:02.426Z"
+    "checked_at": "2026-07-23T17:24:21.065Z"
   },
   "funding_goal": {
     "mode": "mac",
