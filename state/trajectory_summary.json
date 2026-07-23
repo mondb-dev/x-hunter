@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-23T02:54:19.987Z",
+  "generated_at": "2026-07-23T05:54:08.593Z",
   "windows": [
     "1d",
     "3d",
@@ -72,8 +72,29 @@
     },
     "axis_eje_accountability_v1": {
       "current": {
-        "score": -0.578,
-        "confidence": 0.9245
+        "score": -0.5818,
+        "confidence": 0.931
+      },
+      "1d": {
+        "score_delta": -0.0038,
+        "conf_delta": 0.0045,
+        "direction": "→"
+      },
+      "3d": {
+        "score_delta": -0.0038,
+        "conf_delta": 0.0005,
+        "direction": "→"
+      },
+      "7d": {
+        "score_delta": -0.0076,
+        "conf_delta": 0.0071,
+        "direction": "→"
+      }
+    },
+    "axis_political_trust_corruption_v1": {
+      "current": {
+        "score": -0.5121,
+        "confidence": 0.948
       },
       "1d": {
         "score_delta": 0,
@@ -81,34 +102,13 @@
         "direction": "→"
       },
       "3d": {
-        "score_delta": 0,
-        "conf_delta": -0.006,
-        "direction": "→"
-      },
-      "7d": {
-        "score_delta": -0.0038,
-        "conf_delta": 0.0006,
-        "direction": "→"
-      }
-    },
-    "axis_political_trust_corruption_v1": {
-      "current": {
-        "score": -0.5121,
-        "confidence": 0.95
-      },
-      "1d": {
-        "score_delta": 0,
-        "conf_delta": 0,
-        "direction": "→"
-      },
-      "3d": {
         "score_delta": 0.008,
-        "conf_delta": 0,
+        "conf_delta": -0.002,
         "direction": "→"
       },
       "7d": {
         "score_delta": -0.0155,
-        "conf_delta": 0.016,
+        "conf_delta": 0.014,
         "direction": "→"
       }
     },
@@ -240,23 +240,23 @@
     },
     "axis_political_dynasties_meritocracy_v1": {
       "current": {
-        "score": 0.0364,
-        "confidence": 0.5892
+        "score": 0.0864,
+        "confidence": 0.6168
       },
       "1d": {
-        "score_delta": 0,
-        "conf_delta": -0.002,
-        "direction": "→"
+        "score_delta": 0.05,
+        "conf_delta": 0.0256,
+        "direction": "↗"
       },
       "3d": {
-        "score_delta": 0,
-        "conf_delta": -0.006,
-        "direction": "→"
+        "score_delta": 0.05,
+        "conf_delta": 0.0216,
+        "direction": "↗"
       },
       "7d": {
-        "score_delta": -0.0208,
-        "conf_delta": 0.0376,
-        "direction": "↘"
+        "score_delta": 0.0292,
+        "conf_delta": 0.0652,
+        "direction": "↗"
       }
     },
     "axis_economic_indicators_reliability_v1": {
@@ -891,23 +891,23 @@
     },
     "axis_procedural_governance_accountability": {
       "current": {
-        "score": -0.25,
-        "confidence": 0.4459
+        "score": -0.3,
+        "confidence": 0.4871
       },
       "1d": {
-        "score_delta": 0,
-        "conf_delta": -0.002,
-        "direction": "→"
+        "score_delta": -0.05,
+        "conf_delta": 0.0392,
+        "direction": "↘"
       },
       "3d": {
-        "score_delta": 0,
-        "conf_delta": -0.006,
-        "direction": "→"
+        "score_delta": -0.05,
+        "conf_delta": 0.0352,
+        "direction": "↘"
       },
       "7d": {
-        "score_delta": 0,
-        "conf_delta": -0.014,
-        "direction": "→"
+        "score_delta": -0.05,
+        "conf_delta": 0.0272,
+        "direction": "↘"
       }
     },
     "axis_procedural_governance_v1": {
@@ -976,16 +976,16 @@
     "axis_procedural_governance_accountability_v1": {
       "current": {
         "score": -0.3,
-        "confidence": 0.7245
+        "confidence": 0.7308
       },
       "1d": {
         "score_delta": -0.1,
-        "conf_delta": 0.0133,
+        "conf_delta": 0.0196,
         "direction": "↘"
       },
       "3d": {
         "score_delta": -0.15,
-        "conf_delta": 0.0703,
+        "conf_delta": 0.0766,
         "direction": "↘"
       },
       "7d": null
@@ -1027,11 +1027,11 @@
     "axis_procedural_governance_substantive_action": {
       "current": {
         "score": -0.1,
-        "confidence": 0.2947
+        "confidence": 0.2927
       },
       "1d": {
         "score_delta": 0,
-        "conf_delta": 0,
+        "conf_delta": -0.002,
         "direction": "→"
       },
       "3d": null,
@@ -1046,6 +1046,7 @@
     "axis_environmental_policy_v_economic_v1",
     "axis_geopolitical_control_narratives",
     "axis_humanitarian_crisis_response",
+    "axis_procedural_governance_accountability",
     "axis_information_control_v1"
   ]
 }
