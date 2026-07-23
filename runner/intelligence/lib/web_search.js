@@ -180,15 +180,25 @@ async function webSearchVerify(claimText) {
 }
 
 /**
- * Fully-local claim verification: browser search (agent's Chrome) + local LLM
- * summarization. evidence_urls come from the real search results, not the LLM.
+ * Claim verification: HelmStack browser search + LLM summarization.
+ * evidence_urls come from the real search results, not the LLM.
+ *
+ * Search runs through the HelmStack browser session (lib/helmstack_fetch) rather
+ * than the legacy CDP Chrome: HelmStack is the session the rest of the system
+ * already drives, and the old path scraped Bing through headless Chrome, which
+ * is the more bot-blocked surface. Falls back to the CDP scraper if HelmStack
+ * returns nothing, so a HelmStack outage degrades rather than blanks verification.
  */
 async function webSearchVerifyLocal(claimText) {
   try {
+    const { searchWeb } = require('../../lib/helmstack_fetch');
     const { browserSearch } = require('../../lib/browser_search');
     const { callVertex } = require('../../vertex'); // routes to local Ollama under useLocal()
 
-    const results = await browserSearch(claimText, { maxResults: 6 });
+    let results = await searchWeb(claimText, { max: 6 });
+    if (!results.length) {
+      results = await browserSearch(claimText, { maxResults: 6 }).catch(() => []);
+    }
     const empty = {
       web_search_result: 'no_results', summary: 'No web results found.',
       evidence_urls: [], evidence_domains: [], original_source: null, claim_date: null,

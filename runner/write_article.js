@@ -253,23 +253,24 @@ Output ONLY the TITLE line followed by the article. No preamble.`;
 
   console.log("[article] composing editorial...");
   let article;
-  const composeModels = ['gemini-2.5-pro', 'gemini-2.5-pro', 'gemini-2.5-flash'];
-  for (let attempt = 0; attempt < composeModels.length; attempt++) {
-    const composeModel = composeModels[attempt];
+  // Long-form composes on Claude (opus by default — CLAUDE_ARTICLE_MODEL to
+  // override). Retries are plain backoff on the SAME backend: the old loop
+  // cycled gemini-2.5-pro/flash model ids, which are dead now that the Vertex
+  // text transport is gone (inference is Claude, else local).
+  const ATTEMPTS = 3;
+  for (let attempt = 0; attempt < ATTEMPTS; attempt++) {
     try {
       if (attempt > 0) {
         const delaySec = attempt * 10;
-        console.log("[article] retry attempt " + attempt + " with " + composeModel + "...");
+        console.log("[article] retry attempt " + attempt + " (claude) after " + delaySec + "s...");
         await new Promise(r => setTimeout(r, delaySec * 1000));
       }
-      // Compose on the Claude terminal when enabled (opus for long-form); the
-      // gemini composeModel is the fallback model on the local/Vertex path.
-      article = await compose(prompt, { maxTokens: 8192, model: composeModel, thinkingBudget: 0, claudeModel: process.env.CLAUDE_ARTICLE_MODEL || "opus", tag: "article" });
+      article = await compose(prompt, { maxTokens: 8192, claudeModel: process.env.CLAUDE_ARTICLE_MODEL || "opus", tag: "article" });
       if (article && article.length >= 200) break;
       console.error("[article] attempt " + (attempt + 1) + " response too short (" + (article||"").length + " chars)");
     } catch (e) {
-      console.error("[article] attempt " + (attempt + 1) + " composition failed (" + composeModel + "):", e.message);
-      if (attempt === composeModels.length - 1) process.exit(1);
+      console.error("[article] attempt " + (attempt + 1) + " composition failed:", e.message);
+      if (attempt === ATTEMPTS - 1) process.exit(1);
     }
   }
 
