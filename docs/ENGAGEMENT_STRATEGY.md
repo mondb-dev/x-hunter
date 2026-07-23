@@ -179,6 +179,24 @@ Link-free posts also draw ~3× comments and ~2.5× dwell time. The `link` media 
 was REMOVED for that reason; images are native and carry no penalty. Re-add only
 as a first-comment implementation, never as a body URL.
 
+**Media arms** are `none | image | chart`.
+
+- `image` copies a source article's og:image with a `📷 via <source>` credit. Use
+  it when the photo is genuinely informative — a scene, a document. A generic
+  outlet card or headshot is filler, and a credit line is a norm, not a licence,
+  so systematic reuse of press photography is a real exposure for an account
+  whose subject is institutional accountability.
+- `chart` (`lib/post_chart.js`) renders an ORIGINAL chart of figures the post
+  already cites: licence-clean, distinctive, and it shows the analysis instead of
+  decorating it. **Fabrication guard** — every plotted value must appear verbatim
+  in the post or its source material; a proposed number that is not in the text
+  is treated as invented and the chart is dropped whole. Most posts have no
+  chartable dataset and fall through to text-only, which is the honest outcome.
+
+Do NOT force media onto every post. Nothing in the researched evidence says
+images beat text-only for analytical content — only that links are penalised and
+images are not. Both arms need samples for the A/B to answer it.
+
 ### Inbound Replies
 
 Source: mentions in Sebastian's notifications.

@@ -211,6 +211,7 @@ Write ONE original LinkedIn post following the voice rules and the ${plan ? "pos
     // miss just means text-only. IMAGE_AUTO_TRIGGER=0 disables all media.
     let imageSource = null;
     let linkSource = null;
+    let chartSpec = null;
     // The A/B assignment decides media, NOT the plan. The plan used to win here
     // and it vetoed the image arm every time on speculation ("no photographable
     // news event ... unlikely to have strong news imagery") — without ever
@@ -223,7 +224,21 @@ Write ONE original LinkedIn post following the voice rules and the ${plan ? "pos
     // letting the assignment through costs nothing in quality.
     const wantMedia = (assignment && assignment.media) || (plan ? plan.media : "image");
     if (plan && plan.media !== wantMedia) log(`media: using A/B assignment "${wantMedia}" over plan "${plan.media}"${plan.media_rationale ? ` (plan said: ${String(plan.media_rationale).slice(0, 90)})` : ""}`);
-    if (process.env.IMAGE_AUTO_TRIGGER !== "0" && wantMedia !== "none") {
+    // chart = an ORIGINAL chart of figures this post already cites. Only the SPEC
+    // is built here; rendering happens at post time so no temp PNG has to survive
+    // the queue. planChart returns null unless the material holds >=3 comparable
+    // figures AND every plotted value appears literally in it, so most posts fall
+    // through to text-only — which is the honest outcome, not a failure.
+    if (process.env.IMAGE_AUTO_TRIGGER !== "0" && wantMedia === "chart") {
+      try {
+        const { planChart } = require("./lib/post_chart");
+        chartSpec = await planChart(text, pack.text);
+        log(chartSpec
+          ? `chart planned: ${chartSpec.type} "${chartSpec.title}" (${chartSpec.labels.length} points, source: ${chartSpec.source || "unattributed"})`
+          : "no chartable dataset in the material — posting text only");
+      } catch (e) { log(`chart plan skipped: ${e.message}`); }
+    }
+    if (process.env.IMAGE_AUTO_TRIGGER !== "0" && wantMedia !== "none" && wantMedia !== "chart") {
       try {
         const { pickLeadSource } = require("./lib/lead_source_image");
         const lead = await pickLeadSource(text, pack.text);
@@ -239,6 +254,7 @@ Write ONE original LinkedIn post following the voice rules and the ${plan ? "pos
       ...(plan ? { planned: true, ending: plan.ending, length: plan.length, media: plan.media, topic: plan.topic, structure: plan.structure } : {}),
       ...(imageSource ? { image_source: imageSource } : {}),
       ...(linkSource ? { link_source: linkSource } : {}),
+      ...(chartSpec ? { chart_spec: chartSpec } : {}),
     } });
     log(deduped ? `identical post already queued (outbox #${id}) — not re-queuing` : `enqueued post to outbox #${id} (${text.length} chars)`);
     process.exit(0);

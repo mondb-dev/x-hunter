@@ -55,9 +55,24 @@ const log = (m) => console.log(`[${tag}] ${m}`);
   // that source's og:image and post it via LinkedIn's media pipeline with a
   // "📷 via <source>" line. The temp image is ALWAYS deleted afterward.
   let res, tmpImg = null, postedWithImage = false;
+  let tmpChartDir = null, postedWithChart = false;
   const sourceUrl = item.meta && item.meta.image_source;
+  const chartSpec = item.meta && item.meta.chart_spec;
   try {
-    if (sourceUrl && !DRY_RUN) {
+    // A chart is HIS OWN artifact, so it carries a data-source credit rather than
+    // a "📷 via" photo credit — the figures are borrowed, the rendering is not.
+    if (chartSpec && !DRY_RUN) {
+      const pc = require("./lib/post_chart");
+      const rendered = pc.renderChart(chartSpec);
+      if (rendered) {
+        tmpChartDir = rendered.dir;
+        log(`attaching original chart: "${chartSpec.title}"`);
+        const credit = chartSpec.source ? `\n\nChart: mine. Figures: ${chartSpec.source}.` : "";
+        res = await li.postImage(`${text}${credit}`, rendered.path, { dryRun: DRY_RUN });
+        postedWithChart = !!(res && res.posted);
+      } else { log("chart render failed — posting text only"); }
+    }
+    if (!res && sourceUrl && !DRY_RUN) {
       const si = require("./lib/source_image");
       const img = await si.fetchSourceImage(sourceUrl);
       if (img) {
@@ -70,6 +85,7 @@ const log = (m) => console.log(`[${tag}] ${m}`);
     if (!res) res = await li.post(text, { dryRun: DRY_RUN });
   } finally {
     if (tmpImg) { try { require("./lib/source_image").cleanup(tmpImg); } catch {} }
+    if (tmpChartDir) { try { require("./lib/post_chart").cleanup(tmpChartDir); } catch {} }
   }
   if (res.dryRun) { outbox.markFailed(item.id, "dry_run"); log("DRY RUN complete — not published (item returned to pending)"); process.exit(0); }
   if (!res.posted) { const st = outbox.markFailed(item.id, res.reason || "post_failed"); log(`post failed (${res.reason}) — outbox #${item.id} → ${st}`); process.exit(1); }
@@ -87,7 +103,7 @@ const log = (m) => console.log(`[${tag}] ${m}`);
         technique: meta.technique,
         ending: /\?\s*$/.test(text.trim()) ? "question" : (meta.ending || "claim"),
         length: perf.lengthBucket(text.split(/\s+/).filter(Boolean).length),
-        media: postedWithImage ? "image" : (meta.link_source ? "link" : "none"),
+        media: postedWithChart ? "chart" : (postedWithImage ? "image" : (meta.link_source ? "link" : "none")),
         topic: meta.topic,
       });
     } catch {}

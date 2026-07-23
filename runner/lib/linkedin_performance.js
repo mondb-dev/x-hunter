@@ -80,7 +80,11 @@ const DIMENSIONS = {
   // 0% for native). Link-free posts also see ~3x comments and ~2.5x dwell time.
   // Images are native and carry no penalty, so image/none are the honest arms.
   // Re-add only as a first-comment implementation, never as a body URL.
-  media:     ['none', 'image'],
+  // 'chart' = an ORIGINAL chart of figures the post already cites (lib/post_chart):
+  // licence-clean, unlike republishing an outlet's photo under a credit line, and
+  // it shows the analysis rather than decorating it. Falls back to text-only when
+  // the material has no chartable dataset, which is the common case.
+  media:     ['none', 'image', 'chart'],
 };
 
 const LENGTH_WORDS = { short: [100, 150], medium: [150, 250], long: [250, 350] };
