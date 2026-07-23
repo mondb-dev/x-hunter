@@ -151,6 +151,34 @@ rather than a drop; the gate **fails open** on its own errors; and an unresolved
 miss publishes anyway with a loud log marker. It runs only when the caller passes
 a `source`, so sourceless output (original tweets) skips it entirely.
 
+### LinkedIn posts — what the evidence says
+
+The shape A/B (`lib/linkedin_performance.js DIMENSIONS`) is seeded from measured
+data, not intuition, because this account's own sample is far too small to learn
+from alone (13 posts, 141 total impressions).
+
+**Hooks** — AuthoredUp, 309,614 personal posts (Dec 2025–May 2026, >100
+impressions, outliers trimmed), median engagement rate by opening style:
+
+| Opener | Median ER |
+|---|---|
+| Story (drop into a moment) | **2.60%** |
+| Contrarian | 2.31% |
+| Statement (flat claim) | 2.27% |
+| Results (number) | 2.19% |
+| Question | **2.16% — last** |
+
+A question asks the reader to do work before they have decided to care and hands
+them an exit; a claim opens an information gap they read on to close. `question_hook`
+was therefore REMOVED — it was dead last, and this account had used it for **10 of
+its 13 posts**, while never once using the two best styles.
+
+**Links** — after LinkedIn's March 2026 update, a URL **in the post body costs
+45–55% of reach** (first comment: 10–15%; native article/newsletter: 0%).
+Link-free posts also draw ~3× comments and ~2.5× dwell time. The `link` media arm
+was REMOVED for that reason; images are native and carry no penalty. Re-add only
+as a first-comment implementation, never as a body URL.
+
 ### Inbound Replies
 
 Source: mentions in Sebastian's notifications.

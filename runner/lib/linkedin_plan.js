@@ -55,7 +55,7 @@ THIS POST'S ASSIGNED SHAPE (from measured data — honor it):
 - opening technique: ${assignment.technique} — ${tech ? tech.instruction : ''}
 - ending: ${assignment.ending} (question = close on a genuine question; claim = close on a flat declarative; implication = close on what follows if the pattern holds)
 - length: ${assignment.length} (${lo}-${hi} words)
-- media: ${assignment.media} ("none" = text only; "image" = one news photo copied from a source article about your exact topic, credited; "link" = end with one source article URL for a preview card. Video/documents/polls do not exist for you.)
+- media: ${assignment.media} ("none" = text only; "image" = one news photo copied from a source article about your exact topic, credited. Video/documents/polls do not exist for you. NEVER put a URL in the post body — an in-body link costs 45-55% of reach.)
 
 You may override a dimension ONLY if this material genuinely cannot support it (e.g. media=image but no source article would carry a strong on-topic photo, or the assigned opening is impossible for every viable theme). List any override in "overrides" with the dimension, the value you used instead, and one line of reason. Overrides should be rare.
 

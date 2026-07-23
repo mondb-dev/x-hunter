@@ -72,10 +72,15 @@ function dayBucket(iso) {
 // The shape dimensions Sebastian A/B-tests. Small, distinct value sets so each
 // accrues enough samples to compare; one post samples every dimension.
 const DIMENSIONS = {
-  technique: ['question_hook', 'stat_hook', 'contrarian_hook', 'scene_hook'],
+  technique: ['scene_hook', 'contrarian_hook', 'statement_hook', 'stat_hook'],
   ending:    ['question', 'claim', 'implication'],
   length:    ['short', 'medium', 'long'],          // see lengthBucket()
-  media:     ['none', 'image', 'link'],
+  // 'link' REMOVED: a URL in the post body costs -45% to -55% reach after
+  // LinkedIn's March 2026 update (in-body link vs -10/-15% for a first comment,
+  // 0% for native). Link-free posts also see ~3x comments and ~2.5x dwell time.
+  // Images are native and carry no penalty, so image/none are the honest arms.
+  // Re-add only as a first-comment implementation, never as a body URL.
+  media:     ['none', 'image'],
 };
 
 const LENGTH_WORDS = { short: [100, 150], medium: [150, 250], long: [250, 350] };
@@ -86,11 +91,20 @@ function lengthBucket(words) {
 
 // The variable Sebastian A/B-tests: how a LinkedIn post OPENS. Kept to a small,
 // distinct set so each accrues enough samples to compare.
+// Ordered by measured median engagement rate — AuthoredUp's analysis of 309,614
+// personal LinkedIn posts (Dec 2025–May 2026, >100 impressions, outliers trimmed):
+//   story 2.60% · contrarian 2.31% · statement 2.27% · results 2.19% · question 2.16%
+//
+// 'question_hook' was REMOVED: it finished dead last of five styles, and it was
+// the arm this account had used for 10 of its 13 posts. A question asks the
+// reader to do work before they have decided to care and hands them an exit; a
+// claim opens an information gap they read on to close. With samples this scarce,
+// spending them re-discovering a result measured across 310K posts is waste.
 const TECHNIQUES = [
-  { id: 'question_hook',   label: 'open with a sharp question',   instruction: 'OPEN with a single sharp, specific question that names the real tension — no preamble, no "Have you ever". The question must be concrete to this topic.' },
-  { id: 'stat_hook',       label: 'open with a concrete number',  instruction: 'OPEN with a specific, verifiable number or fact from the source material, then unpack what it actually reveals.' },
+  { id: 'scene_hook',      label: 'open in a concrete moment',    instruction: 'OPEN inside a specific moment — the actor, the act, the place, as if the reader walked in on it. No framing sentence, no throat-clearing, no abstraction first. Then move from that instance to the systemic pattern. (Highest-measured opener: narrative openers make the reader need the next line.)' },
   { id: 'contrarian_hook', label: 'open contrarian',              instruction: 'OPEN by stating the conventional reading in one line, then flip it — the non-obvious interpretation the evidence actually supports.' },
-  { id: 'scene_hook',      label: 'open with a concrete scene',   instruction: 'OPEN with one concrete, current example — name the actor, the event, the specific moment — then move from that instance to the systemic pattern.' },
+  { id: 'statement_hook',  label: 'open with a flat claim',       instruction: 'OPEN with one flat, specific declarative the reader will have an opinion about — no hedging, no setup. Then defend it with the evidence.' },
+  { id: 'stat_hook',       label: 'open with a concrete number',  instruction: 'OPEN with a specific, verifiable number or fact from the source material, then unpack what it actually reveals.' },
 ];
 
 const byId = (id) => TECHNIQUES.find((t) => t.id === id) || null;
