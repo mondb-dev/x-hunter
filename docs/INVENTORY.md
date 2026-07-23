@@ -29,7 +29,7 @@ Scraper loops (`scraper/start.sh:21-23`): collect 600s · reply 1800s · follows
 | Role | Model | Where |
 |---|---|---|
 | Agent brain (browse/journal/ontology) | **qwen2.5-agent** local via Ollama (`BROWSE_MODEL`, `.env`) | `runner/lib/gemini_agent.js` — legacy filename; it's an OpenAI-compatible chat loop on `OLLAMA_BASE_URL` (localhost:11434), Vertex only if that URL points at aiplatform (`gemini_agent.js:18-20`) |
-| Scoring / gating / planning | qwen2.5-agent (`LOCAL_CHAT_MODEL`) | `runner/local_llm.js`; `runner/llm.js` routes generate/embed to it when OLLAMA_BASE_URL is local |
+| Scoring / gating / planning / voice rewrite | **Claude, else local qwen2.5-agent** | `runner/llm.js generate()` — POLICY: Claude first via `lib/compose`, local fallback, **Gemini transport removed**. `runner/vertex.js callVertex()` is now local-only and THROWS instead of falling back to Gemini. Pass `localOnly:true` to skip Claude in hot scoring loops (a `claude -p` spawn measures ~4s). |
 | Outbound prose (tweets, quotes, replies, LinkedIn, articles) | **Claude CLI** (`claude -p`, `COMPOSE_BACKEND=claude`) | `runner/lib/compose.js` — full system-prompt override, no tools; local fallback |
 | Deep-research reasoning (plan, refine, synth) | **Claude CLI** (`THINK_BACKEND=claude`) | `runner/deep_research.js` header |
 | Embeddings (768-dim) | **nomic-embed-text** local (`LOCAL_EMBED_MODEL`) | `runner/local_llm.js:22`; Vertex `text-embedding-004` fallback path retained in `runner/llm.js` |

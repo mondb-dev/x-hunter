@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 /**
- * runner/llm.js — shared Gemini Flash helper via Vertex AI
+ * runner/llm.js — shared text-generation + embedding helper
  *
  * Exports:
  *   generate(prompt, opts)  → Promise<string>       text response
@@ -8,11 +8,14 @@
  *   cosineSimilarity(a, b)  → number in [-1, 1]
  *   topK(queryVec, entries, k) → sorted entries with .similarity
  *
- * Uses Vertex AI via service account (GOOGLE_APPLICATION_CREDENTIALS).
+ * INFERENCE POLICY: generate() is Claude, or in its absence LOCAL — never
+ * Gemini. The Vertex/Gemini text transport has been removed.
  *
- * Models:
- *   generate → gemini-3-flash
- *   embed    → text-embedding-004 (768 dimensions)
+ * EMBEDDINGS are a separate concern and still use Vertex text-embedding-004 when
+ * the local embedder is unavailable: embeddings are vectors, not voice, and the
+ * stored corpus must stay in ONE model space or every similarity lookup breaks.
+ * Switching that is a re-embed migration (backfill_embeddings.js), not a routing
+ * change.
  */
 
 "use strict";
@@ -20,11 +23,10 @@
 const { getAccessToken, getProjectConfig } = require("./gcp_auth");
 const { useLocal, localChat, localEmbed } = require("./local_llm");
 
-const GENERATE_MODEL = "gemini-2.5-flash";
 const EMBED_MODEL    = "text-embedding-004";
 
 /**
- * Generate text via Gemini Flash on Vertex AI.
+ * Generate text — Claude first, local fallback.
  *
  * @param {string} prompt
  * @param {object} [opts]
@@ -38,53 +40,38 @@ async function generate(prompt, opts = {}) {
     temperature = 0.2,
     maxTokens   = 350,
     timeoutMs   = 60_000,
+    tag         = "llm",
+    localOnly   = false,     // opt-out for hot scoring loops (see note below)
   } = opts;
+
+  // POLICY: inference is Claude, or in its absence LOCAL — never Gemini.
+  // This path previously went local-first and fell through to Vertex Gemini.
+  // Going Claude-first matters most for voice/language work: the local 7B
+  // (qwen2.5-agent) invents Filipino morphology — it produced the non-words
+  // "atinomilaan"/"Hipotengyal"/"legalisyon" in a published tweet and dropped a
+  // source attribution while rewriting. compose() handles the Claude call and
+  // falls back to callVertex(), which is local-only.
+  //
+  // localOnly:true skips Claude for high-frequency scoring callers where a
+  // per-call `claude -p` spawn would dominate cycle time.
+  if (!localOnly) {
+    try {
+      const { compose } = require("./lib/compose");
+      const out = await compose(prompt, { maxTokens, temperature, tag });
+      if (out && String(out).trim()) return String(out).trim();
+    } catch (e) {
+      console.warn(`[llm] claude/compose failed (${e.message}) — falling back to local`);
+    }
+  }
 
   if (useLocal()) {
     return localChat(prompt, { maxTokens, temperature, timeoutMs });
   }
 
-  const token = await getAccessToken();
-  const { project, location } = getProjectConfig();
-
-  const controller = new AbortController();
-  const timer      = setTimeout(() => controller.abort(), timeoutMs);
-
-  try {
-    const url = `https://${location}-aiplatform.googleapis.com/v1/projects/${project}/locations/${location}/publishers/google/models/${GENERATE_MODEL}:generateContent`;
-    const res = await fetch(url, {
-      method:  "POST",
-      headers: {
-        "Content-Type": "application/json",
-        "Authorization": `Bearer ${token}`,
-      },
-      signal:  controller.signal,
-      body: JSON.stringify({
-        contents: [{ role: "user", parts: [{ text: prompt }] }],
-        generationConfig: {
-          temperature,
-          maxOutputTokens: maxTokens,
-          thinkingConfig: { thinkingBudget: 0 },
-        },
-      }),
-    });
-
-    if (!res.ok) {
-      const body = await res.text().catch(() => "");
-      throw new Error(`HTTP ${res.status}: ${body.slice(0, 200)}`);
-    }
-
-    const data = await res.json();
-    // Response may have multiple parts (thinking + text) — concatenate text parts only
-    const parts = data?.candidates?.[0]?.content?.parts || [];
-    const text = parts
-      .filter(p => p.text !== undefined && !p.thought)
-      .map(p => p.text)
-      .join("");
-    return text.trim();
-  } finally {
-    clearTimeout(timer);
-  }
+  throw new Error(
+    `[llm] no inference backend — Claude unavailable and local brain not configured ` +
+    `(OLLAMA_BASE_URL=${process.env.OLLAMA_BASE_URL || "unset"}). Gemini is retired by policy.`
+  );
 }
 
 /**

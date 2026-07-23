@@ -1,17 +1,20 @@
 #!/usr/bin/env node
 /**
- * runner/vertex.js — Vertex AI Gemini Pro caller
+ * runner/vertex.js — LOCAL brain caller (historically the Vertex/Gemini caller).
  *
- * Shared by generate_checkpoint.js, ponder.js, write_article.js, etc.
- * Uses shared gcp_auth.js for OAuth2 token management.
+ * Shared by generate_checkpoint.js, ponder.js, write_article.js, etc. The name is
+ * kept so the ~35 existing callers are unchanged, but the Gemini/Vertex transport
+ * is GONE: inference policy is Claude, or in its absence LOCAL — never Gemini.
  *
- * No external dependencies — uses only Node.js built-ins (https).
+ * Callers reach Claude via lib/compose.js (compose()/reason()), which falls back
+ * here; this module is therefore the "in its absence local" half of that policy
+ * and throws rather than silently substituting a third-party model.
+ *
+ * No external dependencies — uses only Node.js built-ins.
  */
 
 "use strict";
 
-const https = require("https");
-const { getAccessToken, getProjectConfig } = require("./gcp_auth");
 const { useLocal, localChat } = require("./local_llm");
 const costMeter = require("./lib/cost_meter");
 
@@ -36,75 +39,16 @@ async function callVertex(prompt, maxTokens = 2000, options = {}) {
     return out;
   }
 
-  const token    = await getAccessToken();
-  const { project, location } = getProjectConfig();
-  const model    = options.model || "gemini-2.5-flash";
+  // POLICY: inference is Claude, or in its absence LOCAL — never Gemini. The
+  // Vertex/Gemini path below is retired: reaching it means the local brain is
+  // not configured (OLLAMA_BASE_URL not pointing at localhost), which is a
+  // misconfiguration to fix, not something to paper over with a third-party
+  // model that silently changes voice and quality.
+  throw new Error(
+    "callVertex: no inference backend — Claude unavailable and local brain not configured " +
+    `(OLLAMA_BASE_URL=${process.env.OLLAMA_BASE_URL || "unset"}). Gemini fallback is retired by policy.`
+  );
 
-  const apiPath  = `/v1/projects/${project}/locations/${location}/publishers/google/models/${model}:generateContent`;
-
-  // Thinking tokens share the maxOutputTokens budget in Gemini 2.5.
-  // To preserve the caller's full response budget, add the thinking budget on top.
-  const DEFAULT_THINKING_BUDGET = 1024;
-  const thinkingBudget = options.thinkingBudget !== undefined
-    ? options.thinkingBudget
-    : DEFAULT_THINKING_BUDGET;
-
-  const generationConfig = { temperature: 0.7 };
-  if (thinkingBudget > 0) {
-    generationConfig.maxOutputTokens = maxTokens + thinkingBudget;
-    generationConfig.thinkingConfig = { thinkingBudget };
-  } else {
-    // Do NOT set thinkingConfig when budget=0 — gemini-2.5-pro rejects it
-    generationConfig.maxOutputTokens = maxTokens;
-  }
-
-  const body     = JSON.stringify({
-    contents: [{ role: "user", parts: [{ text: prompt }] }],
-    generationConfig,
-  });
-
-  return new Promise((resolve, reject) => {
-    const req = https.request({
-      hostname: `${location}-aiplatform.googleapis.com`,
-      path: apiPath,
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-        "Authorization": `Bearer ${token}`,
-      },
-    }, res => {
-      let raw = "";
-      res.on("data", c => raw += c);
-      res.on("end", () => {
-        try {
-          const j = JSON.parse(raw);
-          const candidate = j?.candidates?.[0];
-          const finishReason = candidate?.finishReason;
-          if (finishReason === "MAX_TOKENS") {
-            process.stderr.write("[vertex] WARNING: response truncated (MAX_TOKENS)\n");
-          }
-          // Concatenate text parts, skipping thinking parts (thought: true)
-          const parts = candidate?.content?.parts || [];
-          const text = parts
-            .filter(p => p.text !== undefined && !p.thought)
-            .map(p => p.text)
-            .join("");
-          if (!text) throw new Error(`No content in response: ${raw.slice(0, 300)}`);
-          try {
-            const u = j?.usageMetadata || {};
-            costMeter.record({ tag: options.tag || "vertex", model, inTokens: u.promptTokenCount, outTokens: u.candidatesTokenCount, promptChars: prompt.length, outChars: text.length });
-          } catch {}
-          resolve(text.trim());
-        } catch (e) { reject(e); }
-      });
-    });
-    req.setTimeout(300000, () => {
-      req.destroy(new Error('vertex request timeout (300s)'));
-    });
-    req.on("error", reject);
-    req.write(body);
-    req.end();
-  });
 }
 
 module.exports = { callVertex };
