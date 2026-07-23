@@ -229,9 +229,11 @@ class Gemini {
       return null;
     }
 
-    if (referenceImagePath) await this.attachImage(referenceImagePath);
+    // Same rule as generateVideo: promise the model only what actually attached.
+    const attached = referenceImagePath ? await this.attachImage(referenceImagePath) : false;
+    if (referenceImagePath && !attached) console.warn("[gemini] reference image did not attach — generating WITHOUT a character reference");
 
-    const fullPrompt = referenceImagePath
+    const fullPrompt = attached
       ? `Generate an image using the attached image as the exact character reference — same character, same design. ${prompt}`
       : `Generate an image. ${prompt}`;
     await this._typeAndSend(fullPrompt);
@@ -286,8 +288,16 @@ class Gemini {
       return null;
     }
 
-    if (referenceImagePath) await this.attachImage(referenceImagePath);
-    const fullPrompt = referenceImagePath
+    // Build the prompt from whether the reference ACTUALLY attached, not from
+    // whether one was requested. attachImage returns false when the file input
+    // isn't present, and ignoring that sent "use the attached image as the exact
+    // character reference" with nothing attached — Gemini then replies "Please
+    // upload the image(s) for me to generate the video", which this code used to
+    // misreport as "likely no Veo entitlement". Every stance video to date failed
+    // this way.
+    const attached = referenceImagePath ? await this.attachImage(referenceImagePath) : false;
+    if (referenceImagePath && !attached) console.warn("[gemini] reference image did not attach — asking for a video WITHOUT a character reference");
+    const fullPrompt = attached
       ? `Create a video using the attached image as the exact character reference — same character, same design. ${prompt}`
       : `Create a video: ${prompt}`;
     await this._typeAndSend(fullPrompt);
@@ -303,7 +313,7 @@ class Gemini {
     }
     if (!src) {
       const why = await this._lastResponseText();
-      console.warn(`[gemini] no video produced${why ? ` — last response: "${why.slice(0, 140)}"` : ""} (likely no Veo entitlement on this account)`);
+      console.warn(`[gemini] no video produced${why ? ` — last response: "${why.slice(0, 140)}"` : ""} ${/upload|attach|image/i.test(why || "") ? " (Gemini is ASKING FOR AN IMAGE — the reference attach failed, this is not an entitlement problem)" : " (possibly no Veo entitlement on this account)"}`);
       return null;
     }
 

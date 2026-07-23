@@ -21,7 +21,10 @@
  * and exits 0 — the series starts itself the first day generation works.
  *
  * Output:  state/videos/stance_YYYY-MM-DD.mp4 (gitignored)
- * Review:  sent to the admin Telegram chat — nothing is posted publicly yet.
+ * Review:  sent to the admin Telegram chat.
+ * PUBLISH: posts to X and cross-posts to Facebook BY DEFAULT (disable with
+ *          STANCE_VIDEO_POST=0 / STANCE_VIDEO_FB=0). The old "nothing is posted
+ *          publicly yet" note was stale — this goes live when generation works.
  *
  * Invoked daily from the orchestrator maintenance block, detached.
  * Gate: STANCE_VIDEO_ENABLED != 0.
