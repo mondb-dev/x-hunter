@@ -230,7 +230,20 @@ async function webSearchVerifyLocal(claimText) {
       '"framing_analysis":"Is the claim framed validly or misleadingly? 1-2 sentences."}',
     ].join('\n');
 
-    const text = await callVertex(prompt, 1000, { temperature: 0.1 });
+    // Judgement runs on the Gemini WEB APP through the signed-in HelmStack
+    // browser session — no API key, no per-token billing (distinct from the
+    // retired Vertex/Gemini API). A frontier model reading real search results
+    // beats the local 7B, which was scoring well-sourced true claims as
+    // "refuted" around 0.45 and dragging research confidence into "compromised".
+    // Falls back to the local brain so verification degrades rather than blanks.
+    let text = null;
+    try {
+      const { HelmStackClient, Gemini } = require('../../../tools/helmstack-social/src');
+      text = await new Gemini(new HelmStackClient()).ask(prompt, { timeoutMs: 90_000 });
+    } catch (e) {
+      console.warn(`[web_search] gemini web app unavailable (${e.message}) — falling back to local`);
+    }
+    if (!text || !String(text).trim()) text = await callVertex(prompt, 1000, { temperature: 0.1 });
 
     let parsed = {};
     try {

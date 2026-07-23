@@ -149,6 +149,73 @@ class Gemini {
   }
 
   /**
+   * ask(prompt) — TEXT question/answer through the Gemini web app.
+   *
+   * The session-based counterpart to the retired Vertex/Gemini API calls: no API
+   * key, no per-token billing, just the signed-in browser profile. Used for claim
+   * verification, where a frontier model's judgement beats the local 7B brain.
+   *
+   * Responses STREAM, so there is no single "done" event to await — poll the
+   * response text until it stops growing for `settleChecks` consecutive reads,
+   * then return it. Returns the answer string, or null (reason logged) so a
+   * caller can fall back rather than crash.
+   *
+   * @param {string} prompt
+   * @param {object} [opts]
+   * @param {number} [opts.timeoutMs=120000]  hard cap on the whole exchange
+   * @param {number} [opts.maxChars=8000]     cap on the returned answer
+   * @param {number} [opts.settleChecks=3]    identical reads that mean "finished"
+   */
+  async ask(prompt, { timeoutMs = 120_000, maxChars = 8000, settleChecks = 3 } = {}) {
+    await this.ensureTab();
+    if (!(await this.signedIn())) {
+      console.warn("[gemini] no Google session in the HelmStack profile — skipping ask");
+      return null;
+    }
+    // _typeAndSend resolves undefined on success and THROWS on failure.
+    try {
+      await this._typeAndSend(prompt);
+    } catch (e) {
+      console.warn(`[gemini] could not submit the prompt: ${e.message}`);
+      return null;
+    }
+
+    // Read the full last response and wait for it to stop changing.
+    // textContent, NOT innerText: while a reply streams, its spans carry
+    // class="pending" and are visually hidden, so innerText comes back empty (or
+    // just the "Gemini said" screen-reader label) even though the answer is
+    // already in the DOM. That label is prefixed to textContent, so strip it.
+    const readFull = () => this._eval(
+      `(() => {
+        const el = document.querySelector('model-response:last-of-type')
+               || document.querySelector('message-content:last-of-type')
+               || document.querySelector('.markdown');
+        let t = (el && el.textContent || '').trim();
+        t = t.replace(/^\\s*Gemini\\s+(said|replied)\\s*:?\\s*/i, '');
+        return t.slice(0, ${maxChars});
+      })()`
+    ).catch(() => "");
+
+    const deadline = Date.now() + timeoutMs;
+    let last = "", stable = 0;
+    while (Date.now() < deadline) {
+      await sleep(2000);
+      const now = String((await readFull()) || "").trim();
+      if (now && now === last) {
+        if (++stable >= settleChecks) {
+          console.log(`[gemini] ask answered (${now.length} chars)`);
+          return now;
+        }
+      } else {
+        stable = 0;
+        last = now;
+      }
+    }
+    console.warn(`[gemini] ask timed out after ${Math.round(timeoutMs / 1000)}s${last ? ` — partial: "${last.slice(0, 140)}"` : ""}`);
+    return last || null;
+  }
+
+  /**
    * Generate one image. Returns { buffer, width, height } or null (reason logged).
    * @param {string} prompt        image description (style directive included by caller)
    * @param {object} [opts]
