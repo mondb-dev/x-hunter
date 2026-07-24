@@ -1,15 +1,60 @@
 {
-  "generated_at": "2026-07-23T10:24:13.172Z",
+  "generated_at": "2026-07-24T02:54:35.953Z",
   "stats": {
-    "total": 81,
+    "total": 82,
     "correct": 5,
     "wrong": 16,
     "partial": 6,
-    "pending": 42,
+    "pending": 43,
     "expired": 12,
     "accuracy": 19
   },
+  "calibration": {
+    "resolved": 27,
+    "base_rate_pct": 30,
+    "mean_stated_pct": 79,
+    "overconfidence_gap_pts": 49,
+    "brier_raw": 0.3963962962962963,
+    "brier_calibrated": 0.15533333333333332,
+    "buckets": [
+      {
+        "lo": 70,
+        "hi": 80,
+        "n": 15,
+        "statedMean": 0.756,
+        "hitRate": 0.3,
+        "shrunk": 0.29871175523349436
+      },
+      {
+        "lo": 80,
+        "hi": 90,
+        "n": 12,
+        "statedMean": 0.8291666666666666,
+        "hitRate": 0.2916666666666667,
+        "shrunk": 0.2935185185185185
+      }
+    ]
+  },
   "predictions": [
+    {
+      "id": "pred_d775976d",
+      "ts": "2026-07-24T02:54:35.920Z",
+      "axes_count": 3,
+      "top_axes": [
+        "Procedural Governance vs. Substantive Action",
+        "Integrity of Information and Social Media Manipulation",
+        "Societal Impact and Ethical Concerns of AI/Robots"
+      ],
+      "top_axis_edge": "insufficient",
+      "prediction": "PNP's deflection tactics will fail as public demands evidence-based impeachment process, with closer scrutiny on SONA 2026 protest framing this week.",
+      "confidence_pct": 73,
+      "calibrated_pct": 34,
+      "resolution_status": "pending",
+      "deadline_at": "2026-08-23T02:54:35.912Z",
+      "resolved_at": null,
+      "resolution_note": null,
+      "tweet_url": null
+    },
     {
       "id": "pred_1460e3bf",
       "ts": "2026-07-13T15:18:34.407Z",
