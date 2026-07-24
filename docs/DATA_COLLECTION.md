@@ -8,7 +8,7 @@ The system has two parallel collection tiers: a **continuous scraper** (dumb, al
 
 Three independent loops launched by `scraper/start.sh`:
 
-### `collect.js` — every 10 minutes
+### `collect.js` — every 5 minutes
 
 The core ingestion engine. 13-phase pipeline per run:
 
@@ -44,7 +44,7 @@ The core ingestion engine. 13-phase pipeline per run:
 
 Daily cap: 10 follows/day.
 
-### `reply.js` — every 30 minutes
+### `reply.js` — every 10 minutes
 
 Processes the `reply_queue.jsonl` mention backlog: spam pre-filter → thread
 context (HelmStack) → memory recall → Claude classify+draft

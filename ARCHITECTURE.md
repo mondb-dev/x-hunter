@@ -53,7 +53,7 @@ collect.js  reply.js     follows.js
 
 ## Background Loops (Mechanical — No LLM)
 
-### `scraper/collect.js` — every 10 min
+### `scraper/collect.js` — every 5 min
 
 Scrapes the X feed via HelmStack (plus LinkedIn via `runner/linkedin_collect.js`
 and RSS via `scraper/rss_collect.js` feeding the same digest).
@@ -81,7 +81,7 @@ Output: `state/feed_digest.txt`, `state/index.db`
 
 ---
 
-### `scraper/reply.js` — every 30 min
+### `scraper/reply.js` — every 10 min
 
 Processes `state/reply_queue.jsonl` (FIFO, oldest-first). For each pending
 mention:

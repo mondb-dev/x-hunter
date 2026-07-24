@@ -2,8 +2,8 @@
 # scraper/start.sh — start the collect, reply, and follows loops
 #
 # Loops:
-#   collect  — runs collect.js every COLLECT_INTERVAL  seconds (default 10 min)
-#   reply    — runs reply.js   every REPLY_INTERVAL    seconds (default 30 min)
+#   collect  — runs collect.js every COLLECT_INTERVAL  seconds (default 5 min)
+#   reply    — runs reply.js   every REPLY_INTERVAL    seconds (default 10 min)
 #   follows  — runs follows.js every FOLLOWS_INTERVAL  seconds (default 3 hrs)
 #
 # Each loop has its own PID file so stop.sh can kill them independently.
@@ -17,8 +17,8 @@ COLLECT_PID_FILE="$SCRIPT_DIR/scraper.pid"
 REPLY_PID_FILE="$SCRIPT_DIR/reply.pid"
 FOLLOWS_PID_FILE="$SCRIPT_DIR/follows.pid"
 
-COLLECT_INTERVAL="${COLLECT_INTERVAL:-600}"    # 10 minutes
-REPLY_INTERVAL="${REPLY_INTERVAL:-1800}"       # 30 minutes
+COLLECT_INTERVAL="${COLLECT_INTERVAL:-300}"    # 5 minutes  — capture-side freshness floor
+REPLY_INTERVAL="${REPLY_INTERVAL:-600}"        # 10 minutes — drain cadence (posting still throttled by MIN_GAP/MAX_PER_RUN/MAX_PER_DAY in reply.js)
 FOLLOWS_INTERVAL="${FOLLOWS_INTERVAL:-10800}"  # 3 hours
 
 # ── Collect loop ──────────────────────────────────────────────────────────────
