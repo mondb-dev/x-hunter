@@ -125,6 +125,11 @@ Follows (`scraper/follows.js:18,45`): max 3/run, 10/day, 1 min between.
   `/dr` has depth flag (deep|flat). Entry points: X mentions (scraper/reply.js),
   Telegram bot, plan-driven daily (`runner/plan_research.js` — one open plan
   question per day, detached, state in `state/plan_research_state.json`).
+  X-mention research is inline (blocking) by default; `X_ASYNC_RESEARCH=1`
+  detaches it to `scraper/research_worker.js` (result at
+  `state/research_results/<id>.json`, mention held as `status:"researching"`,
+  picked up + posted on a later reply run, 6h TTL) so slow research doesn't
+  starve simple mentions — off until dry-run validated (`reply.js:73-118`).
 - **Stances** `runner/stance_scan.js` (daily, detached, `STANCE_SCAN_ENABLED`):
   RESOLVE up to 2 open stances via web search (was_right feeds ontology via
   `lib/stances` → ontology_delta); FORM 0-2 new stances on named, time-bound,
