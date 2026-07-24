@@ -143,12 +143,12 @@ function runScript(scriptPath, args = '') {
 }
 
 /** Run a node script, logging stdout to runner.log. Failures swallowed. */
-function runScriptLog(scriptPath, args = '', env = {}) {
+function runScriptLog(scriptPath, args = '', env = {}, { timeoutMs = 120_000 } = {}) {
   try {
     const fullEnv = { ...process.env, ...env };
     execSync(`node "${scriptPath}"${args ? ' ' + args : ''} >> "${config.RUNNER_LOG_PATH}" 2>&1`, {
       encoding: 'utf-8',
-      timeout: 120_000,
+      timeout: timeoutMs,
       env: fullEnv,
       shell: true,
       stdio: 'ignore',
@@ -245,7 +245,13 @@ function runSocialPipeline() {
   // LinkedIn post — generate a draft then publish (twice a day)
   if (dueForRun('linkedin_post', 12 * HOUR)) {
     log('social: LinkedIn draft + post');
-    runScriptLog(path.join(PROJECT_ROOT, 'runner/linkedin_draft.js'));
+    // linkedin_draft now runs a pre-draft deep-research pass (~3-5 min) to ground
+    // the post and fix attribution before writing, so it needs more than the
+    // default 120s budget or execSync would kill it mid-research and lose the
+    // post. It self-caps research internally (LI_RESEARCH_TIMEOUT_MS) and falls
+    // back to pack-only, so it always finishes well inside this ceiling. Only
+    // twice a day, so blocking the maintenance block this long is acceptable.
+    runScriptLog(path.join(PROJECT_ROOT, 'runner/linkedin_draft.js'), '', {}, { timeoutMs: 8 * 60 * 1000 });
     runScriptLog(path.join(PROJECT_ROOT, 'runner/linkedin_post.js'));
   }
 

@@ -113,6 +113,49 @@ const FALLBACK_FORMAT = `- Format: 150-350 words, 2-4 short plain paragraphs. Me
     log(`no plan — fallback technique: ${technique.id} (${technique.label})`);
   }
 
+  // Ground the post in VERIFIED research on the exact theme the plan chose, BEFORE
+  // drafting — not the top-axis seed query, which is often broader than the post.
+  // The pack's own web search is a shallow snippet scrape; this is the full
+  // deep-research pipeline (multi-source + claim verification), so the draft is
+  // built on checked facts. It exists specifically to stop framing errors like
+  // attributing Rodrigo Duterte's drug-war killings to a proceeding about Sara
+  // Duterte — the research report states who did what, and the prompt below makes
+  // the drafter hold to it. Standard tier measures ~3-5 min (verification is the
+  // slow part), which is why the orchestrator gives this script an 8-min execSync
+  // budget and this call self-caps at LI_RESEARCH_TIMEOUT_MS. Only twice a day.
+  // Best-effort: bail/timeout/error just drafts from the pack. LINKEDIN_POST_RESEARCH=0 disables.
+  let researchBlock = "";
+  if (process.env.LINKEDIN_POST_RESEARCH !== "0") {
+    const topic = (plan && (plan.theme || plan.topic)) || pack.query;
+    if (topic && String(topic).trim()) {
+      try {
+        log(`researching theme before draft: "${String(topic).slice(0, 90)}"`);
+        const { deepResearch } = require("./deep_research");
+        const t0 = Date.now();
+        // Hard cap so a slow/hung research can never blow the script's execSync
+        // budget in the orchestrator (which would kill the draft and lose the
+        // post). On timeout we abandon the wait and draft from the pack; the
+        // orphaned research promise dies when the process exits after posting.
+        const CAP_MS = Number(process.env.LI_RESEARCH_TIMEOUT_MS) || 5 * 60 * 1000;
+        const r = await Promise.race([
+          deepResearch(String(topic).slice(0, 300), { tier: "standard", maxFetch: 3, allowTree: false, maxVerify: 2 }),
+          new Promise((resolve) => setTimeout(() => resolve({ __timedOut: true }), CAP_MS)),
+        ]);
+        const secs = Math.round((Date.now() - t0) / 1000);
+        if (r && r.__timedOut) log(`research exceeded ${CAP_MS / 1000}s — drafting from pack only`);
+        else if (r && r.bailed) log(`research bailed (${String(r.clarify || "triage").slice(0, 80)}) — drafting from pack only`);
+        else if (r && r.report) {
+          const conf = (r.assessment || {}).confidence_pct;
+          log(`research done in ${secs}s${conf != null ? ` (confidence ${conf}%)` : ""}`);
+          researchBlock =
+            `\nVERIFIED RESEARCH — on this exact theme, checked against sources today${conf != null ? ` (confidence ${conf}%)` : ""}. Your specifics MUST come from here:\n` +
+            `${String(r.report).slice(0, 2500)}\n` +
+            `ATTRIBUTION CHECK before you write: name the RIGHT actor. Do not attribute one person's actions, office, or alleged crimes to another — especially people who share a surname or a party. If the research does not say a named subject did a thing, do not imply this proceeding is about it. Claim only what the research supports; where it is silent or uncertain, say less.\n`;
+        }
+      } catch (e) { log(`research skipped (${e.message}) — drafting from pack only`); }
+    }
+  }
+
   const ENDING_DIRECTIVE = {
     question: "END on a genuine question that invites professional discussion.",
     claim: "END on a flat declarative claim — no closing question.",
@@ -160,8 +203,8 @@ ${axesBlock || "(unavailable)"}
 
 RELEVANT MEMORY (your prior synthesis / observations on this theme — build on it, do not contradict or repeat it verbatim):
 ${recallBlock || "(none)"}
-
-SOURCE MATERIAL (draw the theme from across these — cite specifics):
+${researchBlock}
+SOURCE MATERIAL (background context — the VERIFIED RESEARCH above overrides it on any point of fact or attribution):
 ${pack.text}
 
 Write ONE original LinkedIn post following the voice rules and the ${plan ? "post plan" : "format and opening technique"} above. Return ONLY the post text.`;

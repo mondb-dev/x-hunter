@@ -151,6 +151,24 @@ rather than a drop; the gate **fails open** on its own errors; and an unresolved
 miss publishes anyway with a loud log marker. It runs only when the caller passes
 a `source`, so sourceless output (original tweets) skips it entirely.
 
+### LinkedIn posts — grounded in research before drafting
+
+`linkedin_draft.js` runs a **pre-draft deep-research pass** on the exact theme the
+plan chose (not the broader top-axis seed query), then drafts from the VERIFIED
+report rather than only the shallow content pack. Standard tier, ~3-5 min; posts
+run every 12h, so the orchestrator gives this script an 8-min execSync budget and
+the call self-caps at `LI_RESEARCH_TIMEOUT_MS`. Best-effort — a bail, timeout, or
+error just drafts from the pack. `LINKEDIN_POST_RESEARCH=0` disables it.
+
+It exists to stop FRAMING errors, not just wrong dates. The motivating failure: a
+post faulted Sara Duterte's impeachment for "systematically avoiding" the drug-war
+extrajudicial killings — which are her FATHER Rodrigo's (a separate ICC matter),
+not among Sara's four articles. The research report states who did what, and the
+draft prompt carries an explicit ATTRIBUTION CHECK ("name the RIGHT actor; do not
+attribute one person's actions to another, especially people who share a surname
+or party"). Verified: given the correct research, the drafter now writes the
+distinction correctly and even makes precision the post's point.
+
 ### LinkedIn posts — what the evidence says
 
 The shape A/B (`lib/linkedin_performance.js DIMENSIONS`) is seeded from measured
