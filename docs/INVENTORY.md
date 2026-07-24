@@ -22,7 +22,11 @@ Cycle scheduling (`runner/lib/config.js:17-26`, `runner/cadence.js:37-39`):
 - Posting window `TWEET_START=7` → `TWEET_END=23` local (else downgrade to BROWSE).
 - X suppression flags can downgrade TWEET/QUOTE to BROWSE (orchestrator.js:595-612).
 
-Scraper loops (`scraper/start.sh:21-23`): collect 600s · reply 1800s · follows 10800s.
+Scraper loops (`scraper/start.sh:20-22`): collect 300s · reply 600s · follows 10800s.
+  Reply posting rate stays throttled independently of the loop cadence:
+  `MIN_GAP_MS` 5 min between replies, `MAX_PER_RUN` 3, `MAX_PER_DAY` 10
+  (`scraper/reply.js:73-76`). The min-gap since the last reply is waited out
+  in-process (`reply.js:573-585`), not skipped to the next cycle.
 
 ## 2. The three-model split (who thinks vs who writes)
 

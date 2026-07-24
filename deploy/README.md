@@ -155,8 +155,8 @@ sudo systemctl start sebastian-runner
 systemd
   ├── openclaw-gateway.service  (restarts on crash)
   ├── sebastian-runner.service  (run.sh, restarts on crash)
-  │     ├── scraper/collect.js  (background, every 10 min)
-  │     ├── scraper/reply.js    (background, every 30 min)
+  │     ├── scraper/collect.js  (background, every 5 min)
+  │     ├── scraper/reply.js    (background, every 10 min)
   │     ├── scraper/follows.js  (background, every 3 hours)
   │     └── agent cycle         (every ~20 min via orchestrator.js)
   │           ├── BROWSE ×5     (observe, read, update ontology)

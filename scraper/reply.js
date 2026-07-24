@@ -569,13 +569,18 @@ function logInteraction(data, item, replyText, memoryHints, rootId = null) {
     process.exit(0);
   }
 
-  // Check minimum gap since last reply
+  // Enforce minimum spacing since the last actual reply. Wait out only the
+  // residual gap rather than abandoning the whole run: exiting here costs a
+  // full REPLY_INTERVAL and strands a fresh mention behind an unrelated recent
+  // post (a long research run, in particular, posts late and makes the very
+  // next run bail). MIN_GAP_MS caps the wait at 5 min; the bash loop measures
+  // its interval from run start, so the wait just eats into the next cycle.
   if (interactions.last_reply_at) {
     const elapsed = Date.now() - new Date(interactions.last_reply_at).getTime();
     if (elapsed < MIN_GAP_MS) {
-      const waitMin = Math.ceil((MIN_GAP_MS - elapsed) / 60_000);
-      console.log(`[reply] too soon since last reply (${waitMin}min remaining). skipping.`);
-      process.exit(0);
+      const waitMs = MIN_GAP_MS - elapsed;
+      console.log(`[reply] ${Math.ceil(waitMs / 60_000)}min min-gap remaining since last reply — waiting it out.`);
+      await new Promise(r => setTimeout(r, waitMs));
     }
   }
 

@@ -18,9 +18,9 @@ Three layers run continuously (see [docs/INVENTORY.md](docs/INVENTORY.md) for th
 Browse cycles run every ~30 minutes, auto-adjusted between 15–60 minutes by a metacognition engine (`runner/cadence.js`) that reads signal density, axis velocity, post pressure, and staleness. Each cycle:
 
 1. **Tier 1 — Continuous scraper** (always running independently, `scraper/start.sh`):
-   - `scraper/collect.js` (every 10 min) — feed ingestion via HelmStack: sanitize → RAKE keywords → Jaccard dedup (0.65) → TF-IDF novelty → local-LLM enrichment of top posts → burst detection → SQLite insert + inline embedding → permanent local posts archive
+   - `scraper/collect.js` (every 5 min) — feed ingestion via HelmStack: sanitize → RAKE keywords → Jaccard dedup (0.65) → TF-IDF novelty → local-LLM enrichment of top posts → burst detection → SQLite insert + inline embedding → permanent local posts archive
    - `scraper/follows.js` (every 3 h) — scores follow candidates, classifies via local LLM (30-label taxonomy, trust 1–7); max 3/run, 10/day
-   - `scraper/reply.js` (every 30 min) — drains the mention backlog (captured via live search), verifies claims, routes research-intent mentions into deep research, drafts replies via Claude behind the shared outbound gate
+   - `scraper/reply.js` (every 10 min) — drains the mention backlog (captured via live search), verifies claims, routes research-intent mentions into deep research, drafts replies via Claude behind the shared outbound gate
 
 2. **Tier 2 — AI browse cycle** (every ~15–60 min):
    - 17-step pre-browse pipeline prepares context (`runner/lib/pre_browse.js`: FTS maintenance, topic summary, memory recall, curiosity, axis clustering, RSS collect, discourse scan, source selection, reading queue, deep-dive detection, prefetch)
