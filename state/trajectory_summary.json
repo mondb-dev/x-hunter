@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-24T14:54:44.071Z",
+  "generated_at": "2026-07-24T21:35:56.095Z",
   "windows": [
     "1d",
     "3d",
@@ -52,21 +52,21 @@
     "axis_collective_voice": {
       "current": {
         "score": 0.1599,
-        "confidence": 0.9437
+        "confidence": 0.9417
       },
       "1d": {
         "score_delta": 0,
-        "conf_delta": 0,
+        "conf_delta": -0.002,
         "direction": "→"
       },
       "3d": {
         "score_delta": -0.0196,
-        "conf_delta": 0.0044,
+        "conf_delta": 0.0024,
         "direction": "→"
       },
       "7d": {
         "score_delta": -0.0429,
-        "conf_delta": 0.0012,
+        "conf_delta": -0.0008,
         "direction": "↘"
       }
     },
@@ -430,21 +430,21 @@
     "axis_global_power_realignments_v1": {
       "current": {
         "score": -0.4644,
-        "confidence": 0.95
+        "confidence": 0.948
       },
       "1d": {
         "score_delta": 0,
-        "conf_delta": 0,
+        "conf_delta": -0.002,
         "direction": "→"
       },
       "3d": {
         "score_delta": 0.002,
-        "conf_delta": 0.006,
+        "conf_delta": 0.004,
         "direction": "→"
       },
       "7d": {
         "score_delta": -0.048,
-        "conf_delta": 0.01,
+        "conf_delta": 0.008,
         "direction": "↘"
       }
     },
@@ -933,22 +933,22 @@
     },
     "axis_information_control_v1": {
       "current": {
-        "score": 0.4,
-        "confidence": 0.396
+        "score": 0.3887,
+        "confidence": 0.4135
       },
       "1d": {
-        "score_delta": 0,
-        "conf_delta": -0.002,
+        "score_delta": -0.0113,
+        "conf_delta": 0.0155,
         "direction": "→"
       },
       "3d": {
-        "score_delta": 0.05,
-        "conf_delta": 0.0305,
+        "score_delta": 0.0387,
+        "conf_delta": 0.048,
         "direction": "↗"
       },
       "7d": {
-        "score_delta": 0.2,
-        "conf_delta": 0.1075,
+        "score_delta": 0.1887,
+        "conf_delta": 0.125,
         "direction": "↗"
       }
     },
@@ -1043,6 +1043,15 @@
         "conf_delta": 0.2711,
         "direction": "↘"
       },
+      "7d": null
+    },
+    "axis_reactionary_futurism_v1": {
+      "current": {
+        "score": 0,
+        "confidence": 0
+      },
+      "1d": null,
+      "3d": null,
       "7d": null
     }
   },
