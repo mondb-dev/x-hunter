@@ -41,6 +41,9 @@ const db        = require("./db");
 const analytics = require("./analytics");
 const { describeMedia } = require("../runner/vision");
 const { normalizedExternalUrls, domainsFromUrls, extractUrls } = require("../runner/lib/url_utils");
+// Mention-queue dedup + append: shared with the fast poller (scraper/mentions.js)
+// so both write identical records. collect.js remains the every-5-min fallback.
+const { loadQueuedReplyIds, appendMentionsToReplyQueue } = require("./lib/reply_queue");
 const {
   getUserByUsername,
   getHomeTimeline,
@@ -274,47 +277,8 @@ async function fetchApiReplies(post, topN) {
     .slice(0, topN);
 }
 
-function loadQueuedReplyIds() {
-  const existingIds = new Set();
-  try {
-    const raw = fs.readFileSync(REPLY_QUEUE, "utf-8").trim().split("\n").filter(Boolean);
-    for (const line of raw) {
-      try { existingIds.add(JSON.parse(line).id); } catch {}
-    }
-  } catch {}
-  try {
-    const inter = JSON.parse(fs.readFileSync(path.join(ROOT, "state", "interactions.json"), "utf-8"));
-    for (const r of (inter.replies || [])) {
-      if (r.id) existingIds.add(r.id);
-    }
-  } catch {}
-  return existingIds;
-}
-
-function appendMentionsToReplyQueue(mentions) {
-  const existingIds = loadQueuedReplyIds();
-  const newItems = [];
-  for (const m of mentions) {
-    if (!m.text || !m.id || existingIds.has(m.id)) continue;
-    const stripped = m.text.replace(/@\w+/g, "").replace(/https?:\/\/\S+/g, "").trim();
-    // Lower threshold: a bare @mention with 1-2 words is still worth replying to
-    if (stripped.length < 2) continue;
-    newItems.push(JSON.stringify({
-      id:               m.id,
-      ts:               m.ts,
-      ts_iso:           new Date(m.ts).toISOString(),
-      from_username:    m.username,
-      text:             m.text,
-      quoted_text:      m.quotedText     || "",
-      quoted_username:  m.quotedUsername || "",
-      queued_at:        new Date().toISOString(),
-      status:           "pending",
-    }));
-    existingIds.add(m.id);
-  }
-  if (newItems.length > 0) fs.appendFileSync(REPLY_QUEUE, newItems.join("\n") + "\n");
-  return newItems.length;
-}
+// loadQueuedReplyIds + appendMentionsToReplyQueue now live in ./lib/reply_queue
+// (imported above) — shared with scraper/mentions.js.
 
 // ── DOM extraction ────────────────────────────────────────────────────────────
 async function extractPosts(page) {

@@ -18,6 +18,7 @@ Three layers run continuously (see [docs/INVENTORY.md](docs/INVENTORY.md) for th
 Browse cycles run every ~30 minutes, auto-adjusted between 15–60 minutes by a metacognition engine (`runner/cadence.js`) that reads signal density, axis velocity, post pressure, and staleness. Each cycle:
 
 1. **Tier 1 — Continuous scraper** (always running independently, `scraper/start.sh`):
+   - `scraper/mentions.js` (every 2 min) — fast mention poll: captures @mentions via a dedicated HelmStack tab and triggers a reply run on anything new, so replies don't wait for the next reply tick (disable with `MENTIONS_INTERVAL=0`; collect.js still captures)
    - `scraper/collect.js` (every 5 min) — feed ingestion via HelmStack: sanitize → RAKE keywords → Jaccard dedup (0.65) → TF-IDF novelty → local-LLM enrichment of top posts → burst detection → SQLite insert + inline embedding → permanent local posts archive
    - `scraper/follows.js` (every 3 h) — scores follow candidates, classifies via local LLM (30-label taxonomy, trust 1–7); max 3/run, 10/day
    - `scraper/reply.js` (every 10 min) — drains the mention backlog (captured via live search), verifies claims, routes research-intent mentions into deep research, drafts replies via Claude behind the shared outbound gate
@@ -133,9 +134,11 @@ hunter/
 │   └── builder_vertex.js         ← self-modification builder (Gemini)
 │
 ├── scraper/                      ← continuous background collection (no LLM prose)
+│   ├── mentions.js               ← fast mention poll + reply trigger
 │   ├── collect.js                ← feed ingestion pipeline (HelmStack)
 │   ├── reply.js                  ← mention processing + research-intent routing
 │   ├── follows.js                ← data-driven follow decisions
+│   ├── lib/reply_queue.js        ← shared mention-queue dedup + append
 │   ├── db.js                     ← SQLite schema (posts, keywords, accounts, memory, embeddings)
 │   └── start.sh                  ← launches collect/reply/follows loops
 │

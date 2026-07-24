@@ -6,7 +6,17 @@ The system has two parallel collection tiers: a **continuous scraper** (dumb, al
 
 ## Tier 1: Continuous Feed Scraper (`scraper/`)
 
-Three independent loops launched by `scraper/start.sh`:
+Independent loops launched by `scraper/start.sh`:
+
+### `mentions.js` — every 2 minutes (fast poll)
+
+A lightweight mention-only poller that runs far more often than `collect.js`.
+It captures @mentions (notifications tab + live search) through the shared
+`scraper/lib/reply_queue.js` and, when new mentions are queued, triggers a
+detached `reply.js` run so replies don't wait for the next reply tick. Uses its
+own dedicated HelmStack tab and closes it each run. Non-fatal on any error
+(exit 0). Set `MENTIONS_INTERVAL=0` to disable (collect.js still captures);
+`MENTIONS_TRIGGER_REPLY=0` to capture without triggering replies.
 
 ### `collect.js` — every 5 minutes
 

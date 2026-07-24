@@ -22,11 +22,20 @@ Cycle scheduling (`runner/lib/config.js:17-26`, `runner/cadence.js:37-39`):
 - Posting window `TWEET_START=7` → `TWEET_END=23` local (else downgrade to BROWSE).
 - X suppression flags can downgrade TWEET/QUOTE to BROWSE (orchestrator.js:595-612).
 
-Scraper loops (`scraper/start.sh:20-22`): collect 300s · reply 600s · follows 10800s.
-  Reply posting rate stays throttled independently of the loop cadence:
-  `MIN_GAP_MS` 5 min between replies, `MAX_PER_RUN` 3, `MAX_PER_DAY` 10
-  (`scraper/reply.js:73-76`). The min-gap since the last reply is waited out
-  in-process (`reply.js:573-585`), not skipped to the next cycle.
+Scraper loops (`scraper/start.sh:23-26`): mentions 120s · collect 300s · reply 600s · follows 10800s.
+  - **mentions** (`scraper/mentions.js`) is a fast, lightweight mention poller:
+    own dedicated HelmStack tab, notifications + live-search capture via the
+    shared `scraper/lib/reply_queue.js` (dedup + append; collect.js Phase 12 uses
+    the same module as an every-5-min fallback). On new mentions it triggers a
+    detached reply run so a mention doesn't wait for the next reply tick.
+    `MENTIONS_INTERVAL=0` disables it (collect.js still captures);
+    `MENTIONS_TRIGGER_REPLY=0` = capture only. Failures are non-fatal (exit 0).
+  - Reply posting rate stays throttled independently of the loop cadence:
+    `MIN_GAP_MS` 5 min between replies, `MAX_PER_RUN` 3, `MAX_PER_DAY` 10
+    (`scraper/reply.js:73-76`). The min-gap since the last reply is waited out
+    in-process, not skipped to the next cycle. reply.js is a singleton via a
+    reclaimable run-lock (`state/reply.run.lock`, 20-min stale TTL) so the
+    scheduled run and a poller-triggered run never double-post.
 
 ## 2. The three-model split (who thinks vs who writes)
 
