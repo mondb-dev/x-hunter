@@ -53,6 +53,16 @@ collect.js  reply.js     follows.js
 
 ## Background Loops (Mechanical — No LLM)
 
+### `scraper/mentions.js` — every 2 min (fast poll)
+
+Lightweight mention poller: its own dedicated HelmStack tab, notifications +
+live-search capture through the shared `scraper/lib/reply_queue.js` (dedup +
+append). When it queues something new it triggers a detached `reply.js` run so
+a mention isn't stuck waiting for the next reply tick. Disable with
+`MENTIONS_INTERVAL=0` (collect.js still captures every 5 min as a fallback);
+`MENTIONS_TRIGGER_REPLY=0` captures without triggering. All failures are
+non-fatal (exit 0) so the loop and the rest of the scraper are never affected.
+
 ### `scraper/collect.js` — every 5 min
 
 Scrapes the X feed via HelmStack (plus LinkedIn via `runner/linkedin_collect.js`

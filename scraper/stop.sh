@@ -22,6 +22,7 @@ stop_pid() {
   fi
 }
 
-stop_pid "scraper" "$SCRIPT_DIR/scraper.pid"
-stop_pid "reply"   "$SCRIPT_DIR/reply.pid"
-stop_pid "follows" "$SCRIPT_DIR/follows.pid"
+stop_pid "scraper"  "$SCRIPT_DIR/scraper.pid"
+stop_pid "reply"    "$SCRIPT_DIR/reply.pid"
+stop_pid "follows"  "$SCRIPT_DIR/follows.pid"
+stop_pid "mentions" "$SCRIPT_DIR/mentions.pid"

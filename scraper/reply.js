@@ -118,6 +118,29 @@ function readResearchResult(id) {
 function clearResearchResult(id) {
   try { fs.unlinkSync(path.join(RESEARCH_DIR, `${id}.json`)); } catch {}
 }
+
+// ── Single-run lock ───────────────────────────────────────────────────────────
+// The scheduled reply loop and a poller-triggered run (scraper/mentions.js) can
+// fire close together; this makes reply.js a singleton so only one touches the
+// queue/HelmStack at a time and we never double-post. A lone run always acquires
+// cleanly. Stale locks are reclaimed: dead holder pid, or a lock older than
+// LOCK_STALE_MS (e.g. a SIGKILLed run that couldn't clean up). Released on exit
+// (fires for every process.exit path below; not for SIGKILL — hence staleness).
+const RUN_LOCK      = path.join(ROOT, "state", "reply.run.lock");
+const LOCK_STALE_MS = 20 * 60 * 1000;
+function acquireRunLock() {
+  try {
+    const { pid, ts } = JSON.parse(fs.readFileSync(RUN_LOCK, "utf-8"));
+    let alive = false;
+    try { process.kill(pid, 0); alive = true; } catch (e) { alive = e.code === "EPERM"; }
+    if (alive && ts && (Date.now() - ts) < LOCK_STALE_MS) return false;
+  } catch {}
+  try { fs.writeFileSync(RUN_LOCK, JSON.stringify({ pid: process.pid, ts: Date.now() })); } catch {}
+  process.on("exit", () => {
+    try { if (JSON.parse(fs.readFileSync(RUN_LOCK, "utf-8")).pid === process.pid) fs.unlinkSync(RUN_LOCK); } catch {}
+  });
+  return true;
+}
 // Skip self-mentions. Lowercased for comparison — the old constant
 // ("SebHunts_AI", mixed case, stale handle) could never match.
 const OWN_USERNAME = (process.env.X_USERNAME || "SebastianHunts").toLowerCase();
@@ -604,6 +627,11 @@ function logInteraction(data, item, replyText, memoryHints, rootId = null) {
 // ── Main ──────────────────────────────────────────────────────────────────────
 (async () => {
   console.log("[reply] starting reply queue processor...");
+
+  if (!acquireRunLock()) {
+    console.log("[reply] another reply run is active — skipping this run.");
+    process.exit(0);
+  }
 
   const interactions = loadInteractions();
 
