@@ -15,10 +15,17 @@
  *
  * Rate limits: max 3 replies per run, 5 min between posts, 10 per day cap.
  *
+ * Research-intent mentions normally run deep research inline (blocking this
+ * loop for minutes). With X_ASYNC_RESEARCH=1 they are instead handed to a
+ * detached worker (scraper/research_worker.js); the reply posts on a later run
+ * once state/research_results/<id>.json lands, so simple mentions aren't
+ * starved behind a slow research job.
+ *
  * Usage: node scraper/reply.js
  * Env:   GOOGLE_APPLICATION_CREDENTIALS (service account for Vertex AI)
  *        HelmStack browser API on http://127.0.0.1:7070 (HELMSTACK_AUTH_TOKEN);
  *        HELMSTACK_DRY_RUN=1 drafts + verifies the composer without posting.
+ *        X_ASYNC_RESEARCH=1 runs research off the reply loop (default: inline).
  */
 
 "use strict";
@@ -74,6 +81,43 @@ const MAX_PER_RUN  = 3;
 const MIN_GAP_MS   = 5 * 60 * 1000;  // 5 minutes between replies
 const MAX_PER_DAY  = 10;
 const MAX_AGE_MS   = 48 * 60 * 60 * 1000;  // ignore mentions older than 48h
+
+// ── Async deep-research (X_ASYNC_RESEARCH) ────────────────────────────────────
+// When enabled, a research-intent mention is handed to a detached worker
+// (scraper/research_worker.js) instead of blocking this loop for minutes; the
+// reply posts on a later run once the result file lands. Off by default — the
+// inline (blocking) research path is the fallback and also handles a failed
+// background job so a research mention never goes unanswered.
+const ASYNC_RESEARCH  = process.env.X_ASYNC_RESEARCH === "1";
+const RESEARCH_DIR    = path.join(ROOT, "state", "research_results");
+const RESEARCH_TTL_MS = 6 * 60 * 60 * 1000;  // give up waiting on a stuck job after 6h
+const MAX_DISPATCH_PER_RUN = 2;              // cap concurrent research spawns per run
+
+function dispatchResearch(item, query) {
+  try {
+    fs.mkdirSync(RESEARCH_DIR, { recursive: true });
+    const { spawn } = require("child_process");
+    const child = spawn(process.execPath, [path.join(__dirname, "research_worker.js")], {
+      detached: true,
+      stdio: "ignore",
+      env: { ...process.env, RESEARCH_ITEM_ID: String(item.id), RESEARCH_QUERY: query },
+    });
+    child.unref();
+    return true;
+  } catch (e) {
+    console.error(`[reply] failed to dispatch background research: ${e.message}`);
+    return false;
+  }
+}
+function readResearchResult(id) {
+  try {
+    const r = JSON.parse(fs.readFileSync(path.join(RESEARCH_DIR, `${id}.json`), "utf-8"));
+    return r && r.ready ? r : null;
+  } catch { return null; }
+}
+function clearResearchResult(id) {
+  try { fs.unlinkSync(path.join(RESEARCH_DIR, `${id}.json`)); } catch {}
+}
 // Skip self-mentions. Lowercased for comparison — the old constant
 // ("SebHunts_AI", mixed case, stale handle) could never match.
 const OWN_USERNAME = (process.env.X_USERNAME || "SebastianHunts").toLowerCase();
@@ -595,7 +639,7 @@ function logInteraction(data, item, replyText, memoryHints, rootId = null) {
   let skippedStale = 0, skippedDupe = 0, skippedSelf = 0;
 
   const pending = queue.filter(i => {
-    if (i.status !== "pending" && i.status !== "error") return false;
+    if (i.status !== "pending" && i.status !== "error" && i.status !== "researching") return false;
 
     // Skip self-mentions
     if ((i.from_username || "").toLowerCase() === OWN_USERNAME) {
@@ -644,12 +688,34 @@ function logInteraction(data, item, replyText, memoryHints, rootId = null) {
   }
 
   let repliedThisRun = 0;
+  let dispatchedThisRun = 0;
 
   for (const item of pending) {
     if (repliedThisRun >= MAX_PER_RUN) break;
     if ((interactions.today_count || 0) >= MAX_PER_DAY) break;
 
     console.log(`[reply] processing @${item.from_username}: "${item.text.slice(0, 80)}"`);
+
+    // ── Step 0: Async-research pickup ─────────────────────────────────────
+    // This mention was handed to a background research worker on a prior run.
+    // Don't spend a run slot (or the 5-min gap) until its result is ready.
+    let asyncResult = null;
+    const wasResearching = item.status === "researching";
+    if (wasResearching) {
+      asyncResult = readResearchResult(item.id);
+      if (!asyncResult) {
+        if (item.research_started_at && Date.now() - Date.parse(item.research_started_at) > RESEARCH_TTL_MS) {
+          console.log(`[reply] background research timed out for @${item.from_username} — marking error`);
+          item.status = "error";
+          item.error = "async research timed out";
+        } else {
+          console.log(`[reply] background research still running for @${item.from_username} — check next run`);
+        }
+        continue;  // does NOT count against MAX_PER_RUN or the min-gap
+      }
+      clearResearchResult(item.id);
+      console.log(`[reply] background research ready for @${item.from_username}${asyncResult.url ? " → " + asyncResult.url : ""}`);
+    }
 
     // ── Step 1: Spam pre-filter ────────────────────────────────────────────
     const spamCheck = isSpam(item);
@@ -735,7 +801,24 @@ function logInteraction(data, item, replyText, memoryHints, rootId = null) {
     }
 
     let verdict;
-    if (clarifyResume) {
+    let researchUrl = null;
+    // Async-research pickup finished: apply its answer and skip re-classify.
+    // asyncUsable = a real answer; asyncClarify = triage bailed and the "answer"
+    // is a clarifying question to post (and arm resume for). Anything else
+    // (worker error / empty) falls through to normal classification below.
+    const asyncUsable  = asyncResult && asyncResult.shortAnswer && !asyncResult.error && !asyncResult.bailed;
+    const asyncClarify = asyncResult && asyncResult.bailed && asyncResult.shortAnswer;
+    if (asyncUsable || asyncClarify) {
+      verdict = { verdict: "WORTHY", reply: asyncResult.shortAnswer || "", needs_research: false, sourceUrls: asyncResult.url ? [asyncResult.url] : [] };
+      researchUrl = asyncResult.url || null;
+      liveVerification = null;
+      if (asyncClarify) {
+        const cp = loadClarifyPending();
+        cp[threadContext.rootId || item.id] = { q: item.research_query || item.text, from: item.from_username, ts: new Date().toISOString() };
+        saveClarifyPending(cp);
+      }
+    }
+    if (!verdict && clarifyResume) {
       const mergedQ = `${clarifyResume.q}\n\nClarification from @${item.from_username}: ${item.text}`;
       console.log(`[reply] clarification received — resuming research with: "${item.text.slice(0, 70)}"`);
       try {
@@ -781,9 +864,22 @@ function logInteraction(data, item, replyText, memoryHints, rootId = null) {
 
     // ── Autonomous deep research: if the mention asks a factual question, run
     //    the research tool, publish a report page, and answer with a link. ──
-    let researchUrl = null;
     if (verdict.needs_research && process.env.X_AUTO_RESEARCH === '1' && !dryRun) {
       const q = (verdict.research_query || item.text).trim();
+      if (ASYNC_RESEARCH && !wasResearching && dispatchedThisRun < MAX_DISPATCH_PER_RUN) {
+        // Hand the slow research to a detached worker and move on; the reply
+        // posts on a later run once the result lands. !wasResearching guards
+        // against re-dispatching an item whose background job already failed.
+        if (dispatchResearch(item, q)) {
+          item.status = "researching";
+          item.research_query = q;
+          item.research_started_at = new Date().toISOString();
+          dispatchedThisRun++;
+          writeQueue(queue);
+          console.log(`[reply] research dispatched to background for @${item.from_username} — replying on a later run`);
+          continue;
+        }
+      }
       try {
         console.log(`[reply] research question → deep_research: "${q.slice(0, 90)}"`);
         const { researchAndPublish } = require('../runner/deep_research');
