@@ -1,17 +1,17 @@
 {
   "schema_version": "1.0",
-  "generated_at": "2026-07-25T14:21:45.986Z",
+  "generated_at": "2026-07-25T17:21:50.163Z",
   "method": "mechanical_registry_v1",
-  "profiled_at": "2026-07-25T14:21:53.708Z",
+  "profiled_at": "2026-07-25T17:21:54.178Z",
   "sources": [
     {
       "domain": "theguardian.com",
       "entity": "Theguardian",
       "kind": "news",
       "first_seen_at": "2026-03-27T23:17:00Z",
-      "last_seen_at": "2026-07-25T13:56:29.156Z",
+      "last_seen_at": "2026-07-25T16:57:24.549Z",
       "discovery": {
-        "distinct_urls": 543,
+        "distinct_urls": 546,
         "example_urls": [
           "https://www.theguardian.com/us-news/2026/jun/23/trump-immigration-courthouse-arrest-policy",
           "https://www.theguardian.com/us-news/2026/jun/28/ice-minnesota-defending-democracy",
@@ -20,9 +20,9 @@
           "https://www.theguardian.com/global-development/2026/jun/26/woman-sadia-moalim-ali-three-year-jail-sentence-somalia-online-comments-governement"
         ],
         "origin_counts": {
-          "ontology_evidence": 39,
-          "reading_queue": 514,
-          "journals": 90,
+          "ontology_evidence": 40,
+          "reading_queue": 516,
+          "journals": 98,
           "articles": 2
         },
         "distinct_referring_accounts": 0,
@@ -72,7 +72,7 @@
         "breadth": {
           "score": 0.94,
           "basis": [
-            "distinct_urls:543",
+            "distinct_urls:546",
             "distinct_axes:17",
             "origin_types:4"
           ]
@@ -112,7 +112,7 @@
             "newsroom_domain_pattern",
             "article_path_seen",
             "doi_or_identifier_path_seen",
-            "distinct_urls:543",
+            "distinct_urls:546",
             "distinct_axes:17",
             "origin_types:4",
             "referring_accounts:0",
@@ -285,9 +285,9 @@
       "entity": "Aljazeera",
       "kind": "news",
       "first_seen_at": "2026-06-22T02:45:00Z",
-      "last_seen_at": "2026-07-25T08:16:57.238Z",
+      "last_seen_at": "2026-07-25T15:26:11.257Z",
       "discovery": {
-        "distinct_urls": 325,
+        "distinct_urls": 326,
         "example_urls": [
           "https://www.aljazeera.com/opinions/2026/6/24/south-africas-crises-will-not-be-solved-by-blaming-migrants",
           "https://www.aljazeera.com/video/newsfeed/2026/6/27/newly-released-video-exposes-henry-nowak-killers-lies?traffic_source=rss",
@@ -298,7 +298,7 @@
         "origin_counts": {
           "ontology_evidence": 161,
           "reading_queue": 12,
-          "journals": 422,
+          "journals": 424,
           "articles": 4
         },
         "distinct_referring_accounts": 0,
@@ -354,7 +354,7 @@
         "breadth": {
           "score": 0.94,
           "basis": [
-            "distinct_urls:325",
+            "distinct_urls:326",
             "distinct_axes:24",
             "origin_types:4"
           ]
@@ -393,7 +393,7 @@
           "basis": [
             "newsroom_domain_pattern",
             "article_path_seen",
-            "distinct_urls:325",
+            "distinct_urls:326",
             "distinct_axes:24",
             "origin_types:4",
             "referring_accounts:0",
@@ -694,7 +694,7 @@
       "first_seen_at": "2026-06-22T00:15:00Z",
       "last_seen_at": "2026-07-25T04:34:58.985Z",
       "discovery": {
-        "distinct_urls": 371,
+        "distinct_urls": 373,
         "example_urls": [
           "https://www.nytimes.com/2026/06/19/world/canada/frank-stronach-trial-guilty-sex-charges.html",
           "https://www.nytimes.com/2026/06/27/world/americas/mexican-officials-us-informants.html",
@@ -704,7 +704,7 @@
         ],
         "origin_counts": {
           "ontology_evidence": 13,
-          "reading_queue": 373,
+          "reading_queue": 375,
           "journals": 34
         },
         "distinct_referring_accounts": 0,
@@ -743,7 +743,7 @@
         "breadth": {
           "score": 0.8799999999999999,
           "basis": [
-            "distinct_urls:371",
+            "distinct_urls:373",
             "distinct_axes:7",
             "origin_types:3"
           ]
@@ -782,7 +782,7 @@
           "basis": [
             "newsroom_domain_pattern",
             "article_path_seen",
-            "distinct_urls:371",
+            "distinct_urls:373",
             "distinct_axes:7",
             "origin_types:3",
             "referring_accounts:0",
@@ -1443,7 +1443,7 @@
       "first_seen_at": "2026-06-26T07:05:00Z",
       "last_seen_at": "2026-07-19T20:44:41.291Z",
       "discovery": {
-        "distinct_urls": 314,
+        "distinct_urls": 315,
         "example_urls": [
           "https://www.bbc.co.uk/news/articles/cn8qxz6qypyo",
           "https://www.bbc.co.uk/news/articles/cn075j04pnyo?at_medium=RSS&amp;at_campaign=rss",
@@ -1453,7 +1453,7 @@
         ],
         "origin_counts": {
           "ontology_evidence": 6,
-          "reading_queue": 322,
+          "reading_queue": 323,
           "journals": 14
         },
         "distinct_referring_accounts": 0,
@@ -1488,7 +1488,7 @@
         "breadth": {
           "score": 0.7633333333333332,
           "basis": [
-            "distinct_urls:314",
+            "distinct_urls:315",
             "distinct_axes:4",
             "origin_types:3"
           ]
@@ -1526,7 +1526,7 @@
           "method": "mechanical_v1",
           "basis": [
             "newsroom_domain_pattern",
-            "distinct_urls:314",
+            "distinct_urls:315",
             "distinct_axes:4",
             "origin_types:3",
             "referring_accounts:0",
@@ -2133,7 +2133,7 @@
         ],
         "origin_counts": {
           "ontology_evidence": 48,
-          "reading_queue": 31,
+          "reading_queue": 32,
           "journals": 81
         },
         "distinct_referring_accounts": 0,
@@ -3773,9 +3773,9 @@
       "entity": "T Co",
       "kind": "unknown",
       "first_seen_at": "2016-05-05T18:57:30.000Z",
-      "last_seen_at": "2026-07-25T13:00:02.000Z",
+      "last_seen_at": "2026-07-25T16:56:36.411Z",
       "discovery": {
-        "distinct_urls": 8240,
+        "distinct_urls": 8247,
         "example_urls": [
           "https://t.co/pJSE124ec4",
           "https://t.co/Soz8BXPWaa",
@@ -3784,7 +3784,7 @@
           "https://t.co/cYaqYDRp08"
         ],
         "origin_counts": {
-          "feed_buffer": 5306,
+          "feed_buffer": 5314,
           "feed_buffer_reply": 4831
         },
         "distinct_referring_accounts": 2487,
@@ -3826,7 +3826,7 @@
         "breadth": {
           "score": 0.47,
           "basis": [
-            "distinct_urls:8240",
+            "distinct_urls:8247",
             "distinct_axes:0",
             "origin_types:2"
           ]
@@ -3865,7 +3865,7 @@
           "basis": [
             "unknown_domain_pattern",
             "doi_or_identifier_path_seen",
-            "distinct_urls:8240",
+            "distinct_urls:8247",
             "distinct_axes:0",
             "origin_types:2",
             "referring_accounts:2487",
@@ -4931,7 +4931,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-07-22T14:50:22.244Z",
+        "fetched_at": "2026-07-25T15:21:52.507Z",
         "homepage_url": "https://github.com/",
         "example_url": "https://github.com/BlockRunAI/ClawRouter/?twclid=2bnr8zsvp3b72fbw0yuil7yilw",
         "homepage_status": 200,
@@ -5838,7 +5838,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-07-22T14:50:23.858Z",
+        "fetched_at": "2026-07-25T15:21:52.983Z",
         "homepage_url": "https://relaylab.us/",
         "example_url": "https://relaylab.us/?twclid=26u9kccij1307faosstalj2w2",
         "homepage_status": null,
@@ -6099,7 +6099,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-07-22T14:50:26.415Z",
+        "fetched_at": "2026-07-25T15:21:58.028Z",
         "homepage_url": "https://huawei.com/",
         "example_url": "https://www.huawei.com/en/media-center/transform/24/06-jason-lee?utm_medium=psm&utm_source=twitter&utm_campaign=Transform",
         "homepage_status": 200,
@@ -7371,7 +7371,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-07-22T14:50:26.621Z",
+        "fetched_at": "2026-07-25T15:21:58.264Z",
         "homepage_url": "https://bet88.ph/",
         "example_url": "https://bet88.ph/en/?type=registration&modal=user&ref=xa027&twclid=27gurqyk8ekpo92oqcm3aeuing",
         "homepage_status": 200,
@@ -7407,9 +7407,9 @@
       "entity": "Maventrading",
       "kind": "unknown",
       "first_seen_at": "2026-07-04T21:13:31.000Z",
-      "last_seen_at": "2026-07-25T11:23:18.847Z",
+      "last_seen_at": "2026-07-25T14:35:33.165Z",
       "discovery": {
-        "distinct_urls": 40,
+        "distinct_urls": 41,
         "example_urls": [
           "https://maventrading.com/lp/choose-your-challenge?twt_id=54608379&twclid=24irm75xuuvw6vkz1dgb8ui0sz",
           "https://maventrading.com/challenges/1-step?twt_id=54607786&twclid=24dguyzddfgso39sw5b667t4v6",
@@ -7419,7 +7419,7 @@
         ],
         "origin_counts": {
           "feed_buffer_reply": 11,
-          "feed_buffer": 29
+          "feed_buffer": 30
         },
         "distinct_referring_accounts": 1,
         "sample_referring_accounts": [
@@ -7450,7 +7450,7 @@
         "breadth": {
           "score": 0.47,
           "basis": [
-            "distinct_urls:40",
+            "distinct_urls:41",
             "distinct_axes:0",
             "origin_types:2"
           ]
@@ -7488,7 +7488,7 @@
           "method": "mechanical_v1",
           "basis": [
             "unknown_domain_pattern",
-            "distinct_urls:40",
+            "distinct_urls:41",
             "distinct_axes:0",
             "origin_types:2",
             "referring_accounts:1",
@@ -8133,15 +8133,15 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-07-22T15:20:22.496Z",
+        "fetched_at": "2026-07-25T15:52:07.923Z",
         "homepage_url": "https://bk.com/",
         "example_url": "https://www.bk.com/menu/section/fb06fabe-a285-4fb4-994a-c617a1547ddb?utm_source=X&utm_medium=Social-Social&utm_campaign=Peppercorn-Awareness&utm_content=Peppercorn-IMG-Warning&twclid=24j7ivpacvxqbg2t5it24skrl9",
-        "homepage_status": 200,
-        "example_status": 200,
-        "homepage_final_url": "https://www.bk.com/",
+        "homepage_status": null,
+        "example_status": null,
+        "homepage_final_url": "https://bk.com/",
         "example_final_url": "https://www.bk.com/menu/section/fb06fabe-a285-4fb4-994a-c617a1547ddb?utm_source=X&utm_medium=Social-Social&utm_campaign=Peppercorn-Awareness&utm_content=Peppercorn-IMG-Warning&twclid=24j7ivpacvxqbg2t5it24skrl9",
-        "homepage_content_type": "text/html",
-        "example_content_type": "text/html",
+        "homepage_content_type": "",
+        "example_content_type": "",
         "homepage": {
           "has_meta_author": false,
           "has_published_time": false,
@@ -8260,23 +8260,23 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-07-22T15:20:23.952Z",
+        "fetched_at": "2026-07-25T15:52:19.457Z",
         "homepage_url": "https://hyperagent.com/",
         "example_url": "https://www.hyperagent.com/?promo=FIRST1000&utm_source=twitter&utm_medium=paidsocial&utm_campaign=hyperagent_conversions&utm_content=ag3_fleet&utm_term=ag3_ai_dev_followers&utm_id=recNjFFq2Yg5747V4&twclid=2dzs7nc78iuf64njs9fxab27tl",
-        "homepage_status": 200,
+        "homepage_status": null,
         "example_status": 200,
-        "homepage_final_url": "https://www.hyperagent.com/",
+        "homepage_final_url": "https://hyperagent.com/",
         "example_final_url": "https://www.hyperagent.com/?promo=FIRST1000&utm_source=twitter&utm_medium=paidsocial&utm_campaign=hyperagent_conversions&utm_content=ag3_fleet&utm_term=ag3_ai_dev_followers&utm_id=recNjFFq2Yg5747V4&twclid=2dzs7nc78iuf64njs9fxab27tl",
-        "homepage_content_type": "text/html; charset=utf-8",
+        "homepage_content_type": "",
         "example_content_type": "text/html; charset=utf-8",
         "homepage": {
           "has_meta_author": false,
           "has_published_time": false,
-          "has_canonical": true,
+          "has_canonical": false,
           "has_about_link": false,
           "has_contact_link": false,
           "has_corrections_link": false,
-          "outbound_links_count": 2,
+          "outbound_links_count": 0,
           "opinion_marker": false
         },
         "example": {
@@ -8673,6 +8673,133 @@
       }
     },
     {
+      "domain": "amro-asia.org",
+      "entity": "Amro-Asia",
+      "kind": "unknown",
+      "first_seen_at": "2026-07-05T03:24:16.000Z",
+      "last_seen_at": "2026-07-25T14:18:53.500Z",
+      "discovery": {
+        "distinct_urls": 16,
+        "example_urls": [
+          "https://amro-asia.org/about-us/who-we-are/?utm_source=X&twclid=2n1gu531399vzt4gm709so7oz",
+          "https://amro-asia.org/how-asean3-financial-markets-are-weathering-the-middle-east-energy-shock?utm_source=X&twclid=2eu5cms7gjb0cubg5yvi6lhgue",
+          "https://amro-asia.org/about-us/who-we-are/?utm_source=X&twclid=2dikrgp1osye7ccd7cdxk1tbha",
+          "https://amro-asia.org/about-us/who-we-are/?utm_source=X&twclid=23d7eczpvvuev2eb8qcfa79ah5",
+          "https://amro-asia.org/how-asean3-financial-markets-are-weathering-the-middle-east-energy-shock?utm_source=X&twclid=2dqzzmepgeux7l4bxtfg8r0deq"
+        ],
+        "origin_counts": {
+          "feed_buffer_reply": 8,
+          "feed_buffer": 8
+        },
+        "distinct_referring_accounts": 1,
+        "sample_referring_accounts": [
+          "amro_asia"
+        ],
+        "distinct_axes": []
+      },
+      "claims": {
+        "total": 0,
+        "supported": 0,
+        "refuted": 0,
+        "contested": 0,
+        "unverified": 0,
+        "resolved_count": 0
+      },
+      "structural_features": {
+        "has_search_paths": false,
+        "has_article_paths": false,
+        "has_doi_paths": false
+      },
+      "ratings": {
+        "provenance": {
+          "score": 0.45,
+          "basis": [
+            "unknown_domain_pattern"
+          ]
+        },
+        "breadth": {
+          "score": 0.47,
+          "basis": [
+            "distinct_urls:16",
+            "distinct_axes:0",
+            "origin_types:2"
+          ]
+        },
+        "corroboration": {
+          "score": 0.2833333333333333,
+          "basis": [
+            "referring_accounts:1",
+            "origin_types:2"
+          ]
+        },
+        "track_record": {
+          "score": null,
+          "basis": [
+            "no_resolved_claims_observed"
+          ]
+        },
+        "profile": {
+          "score": 0.33,
+          "confidence": 0.65,
+          "basis": [
+            "meta_author:false",
+            "published_time:true",
+            "canonical:true",
+            "about:false",
+            "contact:false",
+            "corrections:false",
+            "outbound_links:5",
+            "opinion_marker:false"
+          ]
+        },
+        "overall": {
+          "score": 0.43875,
+          "confidence": 0.5066999999999999,
+          "method": "mechanical_v1",
+          "basis": [
+            "unknown_domain_pattern",
+            "distinct_urls:16",
+            "distinct_axes:0",
+            "origin_types:2",
+            "referring_accounts:1",
+            "origin_types:2",
+            "track_record_unavailable"
+          ]
+        }
+      },
+      "profile": {
+        "fetched_at": "2026-07-24T09:23:24.544Z",
+        "homepage_url": "https://amro-asia.org/",
+        "example_url": "https://amro-asia.org/about-us/who-we-are/?utm_source=X&twclid=2n1gu531399vzt4gm709so7oz",
+        "homepage_status": 200,
+        "example_status": 200,
+        "homepage_final_url": "https://amro-asia.org/",
+        "example_final_url": "https://amro-asia.org/about-us/who-we-are/?utm_source=X&twclid=2n1gu531399vzt4gm709so7oz",
+        "homepage_content_type": "text/html; charset=UTF-8",
+        "example_content_type": "text/html; charset=UTF-8",
+        "homepage": {
+          "has_meta_author": false,
+          "has_published_time": true,
+          "has_canonical": true,
+          "has_about_link": false,
+          "has_contact_link": false,
+          "has_corrections_link": false,
+          "outbound_links_count": 5,
+          "opinion_marker": false
+        },
+        "example": {
+          "has_meta_author": false,
+          "has_published_time": true,
+          "has_canonical": true,
+          "has_about_link": false,
+          "has_contact_link": false,
+          "has_corrections_link": false,
+          "outbound_links_count": 5,
+          "opinion_marker": false
+        }
+      }
+    },
+    {
       "domain": "mottandbow.com",
       "entity": "Mottandbow",
       "kind": "unknown",
@@ -8739,16 +8866,16 @@
           ]
         },
         "profile": {
-          "score": 0.11,
+          "score": 0,
           "confidence": 0.55,
           "basis": [
             "meta_author:false",
             "published_time:false",
-            "canonical:true",
+            "canonical:false",
             "about:false",
             "contact:false",
             "corrections:false",
-            "outbound_links:1",
+            "outbound_links:0",
             "opinion_marker:false"
           ]
         },
@@ -8768,15 +8895,15 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-07-22T15:20:26.143Z",
+        "fetched_at": "2026-07-25T15:52:20.924Z",
         "homepage_url": "https://mottandbow.com/",
         "example_url": "https://www.mottandbow.com/collections/mens-denim2-onlyjeansworthbuying?utm_source=twitter&utm_medium=twitter&utm_campaign=%28M%29+Denim+-+USA+-+Prospecting+-+ABO+8+-+2026+VAIO+%5Bcashback%5D&utm_term=%28M%29+Denim+-+USA+-+Broad+1+-+Auto+%5BAll%5D&utm_content=img-md-neeta-buttshot-highquality-D943-V1-B-h27-p2-LP_MDOJ-c%2FNone-irl&twclid=2cc4cnrb0o1hpyal9rg55w07zo",
         "homepage_status": 429,
-        "example_status": 200,
+        "example_status": 429,
         "homepage_final_url": "https://mottandbow.com/",
-        "example_final_url": "https://www.mottandbow.com/en-ph/collections/mens-denim2-onlyjeansworthbuying?utm_source=twitter&utm_medium=twitter&utm_campaign=%28M%29+Denim+-+USA+-+Prospecting+-+ABO+8+-+2026+VAIO+%5Bcashback%5D&utm_term=%28M%29+Denim+-+USA+-+Broad+1+-+Auto+%5BAll%5D&utm_content=img-md-neeta-buttshot-highquality-D943-V1-B-h27-p2-LP_MDOJ-c%2FNone-irl&twclid=2cc4cnrb0o1hpyal9rg55w07zo",
+        "example_final_url": "https://www.mottandbow.com/collections/mens-denim2-onlyjeansworthbuying?utm_source=twitter&utm_medium=twitter&utm_campaign=%28M%29+Denim+-+USA+-+Prospecting+-+ABO+8+-+2026+VAIO+%5Bcashback%5D&utm_term=%28M%29+Denim+-+USA+-+Broad+1+-+Auto+%5BAll%5D&utm_content=img-md-neeta-buttshot-highquality-D943-V1-B-h27-p2-LP_MDOJ-c%2FNone-irl&twclid=2cc4cnrb0o1hpyal9rg55w07zo",
         "homepage_content_type": "text/plain",
-        "example_content_type": "text/html; charset=utf-8",
+        "example_content_type": "text/plain",
         "homepage": {
           "has_meta_author": false,
           "has_published_time": false,
@@ -8790,11 +8917,11 @@
         "example": {
           "has_meta_author": false,
           "has_published_time": false,
-          "has_canonical": true,
+          "has_canonical": false,
           "has_about_link": false,
           "has_contact_link": false,
           "has_corrections_link": false,
-          "outbound_links_count": 1,
+          "outbound_links_count": 0,
           "opinion_marker": false
         }
       }
@@ -9049,133 +9176,6 @@
           "has_contact_link": false,
           "has_corrections_link": false,
           "outbound_links_count": 0,
-          "opinion_marker": false
-        }
-      }
-    },
-    {
-      "domain": "amro-asia.org",
-      "entity": "Amro-Asia",
-      "kind": "unknown",
-      "first_seen_at": "2026-07-05T03:24:16.000Z",
-      "last_seen_at": "2026-07-14T14:38:00.000Z",
-      "discovery": {
-        "distinct_urls": 15,
-        "example_urls": [
-          "https://amro-asia.org/about-us/who-we-are/?utm_source=X&twclid=2n1gu531399vzt4gm709so7oz",
-          "https://amro-asia.org/how-asean3-financial-markets-are-weathering-the-middle-east-energy-shock?utm_source=X&twclid=2eu5cms7gjb0cubg5yvi6lhgue",
-          "https://amro-asia.org/about-us/who-we-are/?utm_source=X&twclid=2dikrgp1osye7ccd7cdxk1tbha",
-          "https://amro-asia.org/about-us/who-we-are/?utm_source=X&twclid=23d7eczpvvuev2eb8qcfa79ah5",
-          "https://amro-asia.org/how-asean3-financial-markets-are-weathering-the-middle-east-energy-shock?utm_source=X&twclid=2dqzzmepgeux7l4bxtfg8r0deq"
-        ],
-        "origin_counts": {
-          "feed_buffer_reply": 8,
-          "feed_buffer": 7
-        },
-        "distinct_referring_accounts": 1,
-        "sample_referring_accounts": [
-          "amro_asia"
-        ],
-        "distinct_axes": []
-      },
-      "claims": {
-        "total": 0,
-        "supported": 0,
-        "refuted": 0,
-        "contested": 0,
-        "unverified": 0,
-        "resolved_count": 0
-      },
-      "structural_features": {
-        "has_search_paths": false,
-        "has_article_paths": false,
-        "has_doi_paths": false
-      },
-      "ratings": {
-        "provenance": {
-          "score": 0.45,
-          "basis": [
-            "unknown_domain_pattern"
-          ]
-        },
-        "breadth": {
-          "score": 0.47,
-          "basis": [
-            "distinct_urls:15",
-            "distinct_axes:0",
-            "origin_types:2"
-          ]
-        },
-        "corroboration": {
-          "score": 0.2833333333333333,
-          "basis": [
-            "referring_accounts:1",
-            "origin_types:2"
-          ]
-        },
-        "track_record": {
-          "score": null,
-          "basis": [
-            "no_resolved_claims_observed"
-          ]
-        },
-        "profile": {
-          "score": 0.33,
-          "confidence": 0.65,
-          "basis": [
-            "meta_author:false",
-            "published_time:true",
-            "canonical:true",
-            "about:false",
-            "contact:false",
-            "corrections:false",
-            "outbound_links:5",
-            "opinion_marker:false"
-          ]
-        },
-        "overall": {
-          "score": 0.43875,
-          "confidence": 0.4842,
-          "method": "mechanical_v1",
-          "basis": [
-            "unknown_domain_pattern",
-            "distinct_urls:15",
-            "distinct_axes:0",
-            "origin_types:2",
-            "referring_accounts:1",
-            "origin_types:2",
-            "track_record_unavailable"
-          ]
-        }
-      },
-      "profile": {
-        "fetched_at": "2026-07-24T09:23:24.544Z",
-        "homepage_url": "https://amro-asia.org/",
-        "example_url": "https://amro-asia.org/about-us/who-we-are/?utm_source=X&twclid=2n1gu531399vzt4gm709so7oz",
-        "homepage_status": 200,
-        "example_status": 200,
-        "homepage_final_url": "https://amro-asia.org/",
-        "example_final_url": "https://amro-asia.org/about-us/who-we-are/?utm_source=X&twclid=2n1gu531399vzt4gm709so7oz",
-        "homepage_content_type": "text/html; charset=UTF-8",
-        "example_content_type": "text/html; charset=UTF-8",
-        "homepage": {
-          "has_meta_author": false,
-          "has_published_time": true,
-          "has_canonical": true,
-          "has_about_link": false,
-          "has_contact_link": false,
-          "has_corrections_link": false,
-          "outbound_links_count": 5,
-          "opinion_marker": false
-        },
-        "example": {
-          "has_meta_author": false,
-          "has_published_time": true,
-          "has_canonical": true,
-          "has_about_link": false,
-          "has_contact_link": false,
-          "has_corrections_link": false,
-          "outbound_links_count": 5,
           "opinion_marker": false
         }
       }
@@ -9657,7 +9657,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-07-22T15:20:26.403Z",
+        "fetched_at": "2026-07-25T15:52:21.372Z",
         "homepage_url": "https://combos.fun/",
         "example_url": "https://combos.fun/?utm_source=X&utm_campaign=promote%3Dcar2&twclid=2aswwo64b7owkoq09axl1gyba6",
         "homepage_status": 403,
@@ -9784,7 +9784,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-07-22T16:20:21.748Z",
+        "fetched_at": "2026-07-25T16:51:50.599Z",
         "homepage_url": "https://valvolineglobal.com/",
         "example_url": "https://www.valvolineglobal.com/en/fifa-national-sweeps/?utm_source=X&utm_medium=paidsocial&utm_campaign=WC26_GM_US_AWE&utm_content=wcsimplified&twclid=299i90helnojknptru820mqim9",
         "homepage_status": 200,
@@ -9912,7 +9912,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-07-22T16:20:23.317Z",
+        "fetched_at": "2026-07-25T16:51:52.535Z",
         "homepage_url": "https://metaphysicalarticles.org/",
         "example_url": "https://www.metaphysicalarticles.org/2025/12/ufos-uap-space-people-disclosure.html?twclid=25s2j2s4i47jn3wcdf6ujpfrmp",
         "homepage_status": 200,
@@ -10040,7 +10040,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-07-22T16:20:26.359Z",
+        "fetched_at": "2026-07-25T16:51:55.717Z",
         "homepage_url": "https://amazon.com/",
         "example_url": "https://www.amazon.com/The-Boys-Season-5/dp/B0FX3G8F44/ref_=dvm_us_c_soc_THBY_tw_rb?twclid=2e4zyrzur7iapo7e8zxfmiz1fu",
         "homepage_status": 200,
@@ -10296,7 +10296,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-07-22T16:20:28.130Z",
+        "fetched_at": "2026-07-25T16:51:56.972Z",
         "homepage_url": "https://falconx.io/",
         "example_url": "https://focal.falconx.io/workflows/discovery/crypto?utm_source=x&utm_medium=ads&utm_campaign=discover&utm_id=discover&twclid=24ydefk7qg32l97smp6icteh83",
         "homepage_status": 200,
@@ -10423,7 +10423,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-07-22T16:50:20.832Z",
+        "fetched_at": "2026-07-25T17:21:51.351Z",
         "homepage_url": "https://fundrise.com/",
         "example_url": "https://fundrise.com/vcx?utm_source=twitter&utm_campaign=vcxsky&twclid=286j5mjx6wqmg12vs5jto11lrf",
         "homepage_status": 405,
@@ -10805,7 +10805,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-07-22T16:50:21.417Z",
+        "fetched_at": "2026-07-25T17:21:52.098Z",
         "homepage_url": "https://avenorigin.com/",
         "example_url": "https://avenorigin.com/?x=twg11&tw=rcafs&tw_click=tw-rcafs-rcafv&twclid=27a9svqvmxrds3k2j1qq8l2dy6",
         "homepage_status": null,
@@ -10932,7 +10932,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-07-22T16:50:23.303Z",
+        "fetched_at": "2026-07-25T17:21:53.570Z",
         "homepage_url": "https://xhawk.ai/",
         "example_url": "https://xhawk.ai/?twclid=218eppqu7okpx25fant8nuhrp1",
         "homepage_status": 200,
@@ -11568,7 +11568,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-07-22T16:50:24.984Z",
+        "fetched_at": "2026-07-25T17:21:54.178Z",
         "homepage_url": "https://tradeodds.io/",
         "example_url": "https://www.tradeodds.io/dashboard?tab=factor-match&utm_source=twitter&utm_medium=cpc&utm_campaign=Factor+Match+Purchase+Campaign+Desk&utm_id=factor+match+purchase+campaign+desk&utm_term=factor+match+purchase+purchase+desk+us&utm_content=ad2&twclid=21dpzozj7vqb86fdz6auuzunmy",
         "homepage_status": 200,
@@ -35687,6 +35687,85 @@
           "has_corrections_link": false,
           "outbound_links_count": 4,
           "opinion_marker": false
+        }
+      }
+    },
+    {
+      "domain": "chatchat.com",
+      "entity": "Chatchat",
+      "kind": "unknown",
+      "first_seen_at": "2026-07-25T07:59:18.388Z",
+      "last_seen_at": "2026-07-25T15:53:20.839Z",
+      "discovery": {
+        "distinct_urls": 2,
+        "example_urls": [
+          "https://chatchat.com/?twclid=22ylkish68xq0yeya22ij7x2j8",
+          "https://chatchat.com/?twclid=263tzsqkhcgp9szeqt65keitkn"
+        ],
+        "origin_counts": {
+          "feed_buffer": 2
+        },
+        "distinct_referring_accounts": 2,
+        "sample_referring_accounts": [
+          "chatandbuild",
+          "chatchat"
+        ],
+        "distinct_axes": []
+      },
+      "claims": {
+        "total": 0,
+        "supported": 0,
+        "refuted": 0,
+        "contested": 0,
+        "unverified": 0,
+        "resolved_count": 0
+      },
+      "structural_features": {
+        "has_search_paths": false,
+        "has_article_paths": false,
+        "has_doi_paths": false
+      },
+      "ratings": {
+        "provenance": {
+          "score": 0.45,
+          "basis": [
+            "unknown_domain_pattern"
+          ]
+        },
+        "breadth": {
+          "score": 0.11833333333333332,
+          "basis": [
+            "distinct_urls:2",
+            "distinct_axes:0",
+            "origin_types:1"
+          ]
+        },
+        "corroboration": {
+          "score": 0.3041666666666667,
+          "basis": [
+            "referring_accounts:2",
+            "origin_types:1"
+          ]
+        },
+        "track_record": {
+          "score": null,
+          "basis": [
+            "no_resolved_claims_observed"
+          ]
+        },
+        "overall": {
+          "score": 0.36377604166666666,
+          "confidence": 0.142225,
+          "method": "mechanical_v1",
+          "basis": [
+            "unknown_domain_pattern",
+            "distinct_urls:2",
+            "distinct_axes:0",
+            "origin_types:1",
+            "referring_accounts:2",
+            "origin_types:1",
+            "track_record_unavailable"
+          ]
         }
       }
     },
@@ -78493,22 +78572,22 @@
       }
     },
     {
-      "domain": "chatchat.com",
-      "entity": "Chatchat",
+      "domain": "securqbit.com",
+      "entity": "Securqbit",
       "kind": "unknown",
-      "first_seen_at": "2026-07-25T07:59:18.388Z",
-      "last_seen_at": "2026-07-25T07:59:18.388Z",
+      "first_seen_at": "2026-07-25T13:17:22.235Z",
+      "last_seen_at": "2026-07-25T13:17:22.235Z",
       "discovery": {
         "distinct_urls": 1,
         "example_urls": [
-          "https://chatchat.com/?twclid=22ylkish68xq0yeya22ij7x2j8"
+          "https://securqbit.com/?twclid=2efyutc3n3nxnqyu1ar67hu69o"
         ],
         "origin_counts": {
           "feed_buffer": 1
         },
         "distinct_referring_accounts": 1,
         "sample_referring_accounts": [
-          "chatandbuild"
+          "securqbit"
         ],
         "distinct_axes": []
       },
@@ -78570,22 +78649,22 @@
       }
     },
     {
-      "domain": "securqbit.com",
-      "entity": "Securqbit",
+      "domain": "80.lv",
+      "entity": "80 Lv",
       "kind": "unknown",
-      "first_seen_at": "2026-07-25T13:17:22.235Z",
-      "last_seen_at": "2026-07-25T13:17:22.235Z",
+      "first_seen_at": "2026-07-25T16:41:15.717Z",
+      "last_seen_at": "2026-07-25T16:41:15.717Z",
       "discovery": {
         "distinct_urls": 1,
         "example_urls": [
-          "https://securqbit.com/?twclid=2efyutc3n3nxnqyu1ar67hu69o"
+          "https://80.lv/articles/this-cyberpunk-cozy-game-allows-you-to-build-your-own-rain-soaked-world?utm_source=pa-x&utm_medium=cpc&twclid=24138z1ynt8psd4xn6ca3421h5"
         ],
         "origin_counts": {
           "feed_buffer": 1
         },
         "distinct_referring_accounts": 1,
         "sample_referring_accounts": [
-          "securqbit"
+          "80level"
         ],
         "distinct_axes": []
       },
