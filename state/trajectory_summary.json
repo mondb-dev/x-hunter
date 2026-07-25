@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-25T06:46:42.056Z",
+  "generated_at": "2026-07-25T11:26:37.441Z",
   "windows": [
     "1d",
     "3d",
@@ -30,21 +30,21 @@
     },
     "axis_power_accountability": {
       "current": {
-        "score": -0.2394,
+        "score": -0.2522,
         "confidence": 0.95
       },
       "1d": {
-        "score_delta": 0,
+        "score_delta": -0.0128,
         "conf_delta": 0,
         "direction": "→"
       },
       "3d": {
-        "score_delta": -0.0121,
+        "score_delta": -0.0249,
         "conf_delta": 0,
-        "direction": "→"
+        "direction": "↘"
       },
       "7d": {
-        "score_delta": -0.0411,
+        "score_delta": -0.0539,
         "conf_delta": 0,
         "direction": "↘"
       }
@@ -472,21 +472,21 @@
     "axis_human_rights_exploitation_v1": {
       "current": {
         "score": -0.4467,
-        "confidence": 0.9499
+        "confidence": 0.9479
       },
       "1d": {
         "score_delta": 0,
-        "conf_delta": 0,
+        "conf_delta": -0.002,
         "direction": "→"
       },
       "3d": {
         "score_delta": -0.0111,
-        "conf_delta": 0.0001,
+        "conf_delta": -0.0019,
         "direction": "→"
       },
       "7d": {
         "score_delta": -0.0128,
-        "conf_delta": 0.0001,
+        "conf_delta": -0.0019,
         "direction": "→"
       }
     },
@@ -976,21 +976,21 @@
     "axis_procedural_governance_accountability_v1": {
       "current": {
         "score": -0.4,
-        "confidence": 0.7853
+        "confidence": 0.7945
       },
       "1d": {
         "score_delta": -0.05,
-        "conf_delta": 0.0147,
+        "conf_delta": 0.0239,
         "direction": "↘"
       },
       "3d": {
         "score_delta": -0.2,
-        "conf_delta": 0.0741,
+        "conf_delta": 0.0833,
         "direction": "↘"
       },
       "7d": {
         "score_delta": -0.35,
-        "conf_delta": 0.3642,
+        "conf_delta": 0.3734,
         "direction": "↘"
       }
     },
@@ -1039,16 +1039,16 @@
     "axis_procedural_governance_substantive_action": {
       "current": {
         "score": -0.25,
-        "confidence": 0.4576
+        "confidence": 0.4715
       },
       "1d": {
         "score_delta": -0.05,
-        "conf_delta": 0.0143,
+        "conf_delta": 0.0282,
         "direction": "↘"
       },
       "3d": {
         "score_delta": -0.15,
-        "conf_delta": 0.1629,
+        "conf_delta": 0.1768,
         "direction": "↘"
       },
       "7d": null
@@ -1069,6 +1069,7 @@
   },
   "notable_count": 8,
   "momentum_axes": [
+    "axis_power_accountability",
     "axis_media_integrity_v1",
     "axis_political_dynasties_meritocracy_v1",
     "axis_environmental_policy_v_economic_v1",
