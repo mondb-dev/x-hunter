@@ -1,8 +1,8 @@
 {
   "schema_version": "1.0",
-  "generated_at": "2026-07-25T20:21:53.049Z",
+  "generated_at": "2026-07-25T21:51:53.899Z",
   "method": "mechanical_registry_v1",
-  "profiled_at": "2026-07-25T20:21:58.010Z",
+  "profiled_at": "2026-07-25T21:51:56.762Z",
   "sources": [
     {
       "domain": "theguardian.com",
@@ -694,7 +694,7 @@
       "first_seen_at": "2026-06-22T00:15:00Z",
       "last_seen_at": "2026-07-25T04:34:58.985Z",
       "discovery": {
-        "distinct_urls": 374,
+        "distinct_urls": 375,
         "example_urls": [
           "https://www.nytimes.com/2026/06/19/world/canada/frank-stronach-trial-guilty-sex-charges.html",
           "https://www.nytimes.com/2026/06/27/world/americas/mexican-officials-us-informants.html",
@@ -704,7 +704,7 @@
         ],
         "origin_counts": {
           "ontology_evidence": 13,
-          "reading_queue": 376,
+          "reading_queue": 377,
           "journals": 34
         },
         "distinct_referring_accounts": 0,
@@ -743,7 +743,7 @@
         "breadth": {
           "score": 0.8799999999999999,
           "basis": [
-            "distinct_urls:374",
+            "distinct_urls:375",
             "distinct_axes:7",
             "origin_types:3"
           ]
@@ -782,7 +782,7 @@
           "basis": [
             "newsroom_domain_pattern",
             "article_path_seen",
-            "distinct_urls:374",
+            "distinct_urls:375",
             "distinct_axes:7",
             "origin_types:3",
             "referring_accounts:0",
@@ -2920,7 +2920,7 @@
       "entity": "Inquirer",
       "kind": "unknown",
       "first_seen_at": "2026-05-09T10:15:15.053Z",
-      "last_seen_at": "2026-07-25T18:26:34.996Z",
+      "last_seen_at": "2026-07-25T20:26:01.928Z",
       "discovery": {
         "distinct_urls": 207,
         "example_urls": [
@@ -2931,8 +2931,8 @@
           "https://newsinfo.inquirer.net/2251702/chr-seeks-swift-passage-of-bills-creating-detention-monitoring-body"
         ],
         "origin_counts": {
-          "ontology_evidence": 93,
-          "journals": 289,
+          "ontology_evidence": 94,
+          "journals": 291,
           "articles": 1
         },
         "distinct_referring_accounts": 0,
@@ -3773,9 +3773,9 @@
       "entity": "T Co",
       "kind": "unknown",
       "first_seen_at": "2016-05-05T18:57:30.000Z",
-      "last_seen_at": "2026-07-25T19:18:52.443Z",
+      "last_seen_at": "2026-07-25T19:33:12.000Z",
       "discovery": {
-        "distinct_urls": 8254,
+        "distinct_urls": 8258,
         "example_urls": [
           "https://t.co/pJSE124ec4",
           "https://t.co/Soz8BXPWaa",
@@ -3784,7 +3784,7 @@
           "https://t.co/cYaqYDRp08"
         ],
         "origin_counts": {
-          "feed_buffer": 5321,
+          "feed_buffer": 5326,
           "feed_buffer_reply": 4831
         },
         "distinct_referring_accounts": 2487,
@@ -3826,7 +3826,7 @@
         "breadth": {
           "score": 0.47,
           "basis": [
-            "distinct_urls:8254",
+            "distinct_urls:8258",
             "distinct_axes:0",
             "origin_types:2"
           ]
@@ -3865,7 +3865,7 @@
           "basis": [
             "unknown_domain_pattern",
             "doi_or_identifier_path_seen",
-            "distinct_urls:8254",
+            "distinct_urls:8258",
             "distinct_axes:0",
             "origin_types:2",
             "referring_accounts:2487",
@@ -4562,9 +4562,9 @@
       "entity": "Steampowered",
       "kind": "unknown",
       "first_seen_at": "2026-04-04T23:34:51.000Z",
-      "last_seen_at": "2026-07-25T19:33:09.868Z",
+      "last_seen_at": "2026-07-25T21:07:49.684Z",
       "discovery": {
-        "distinct_urls": 235,
+        "distinct_urls": 236,
         "example_urls": [
           "https://store.steampowered.com/app/1315180?twclid=2cb8mho5n4udnkq1fnm1yi4kkh",
           "https://store.steampowered.com/app/3321460?utm_campaign=launching&utm_source=X&utm_term=20260319_traffic&utm_medium=us&utm_content=Trailer_view&twclid=22351un15xjmtu22gjwnjp292d",
@@ -4574,7 +4574,7 @@
         ],
         "origin_counts": {
           "feed_buffer_reply": 212,
-          "feed_buffer": 23
+          "feed_buffer": 24
         },
         "distinct_referring_accounts": 37,
         "sample_referring_accounts": [
@@ -4614,7 +4614,7 @@
         "breadth": {
           "score": 0.47,
           "basis": [
-            "distinct_urls:235",
+            "distinct_urls:236",
             "distinct_axes:0",
             "origin_types:2"
           ]
@@ -4652,7 +4652,7 @@
           "method": "mechanical_v1",
           "basis": [
             "unknown_domain_pattern",
-            "distinct_urls:235",
+            "distinct_urls:236",
             "distinct_axes:0",
             "origin_types:2",
             "referring_accounts:37",
@@ -8673,6 +8673,133 @@
       }
     },
     {
+      "domain": "coderabbit.ai",
+      "entity": "Coderabbit Ai",
+      "kind": "unknown",
+      "first_seen_at": "2026-06-09T09:50:16.000Z",
+      "last_seen_at": "2026-07-25T21:19:05.677Z",
+      "discovery": {
+        "distinct_urls": 17,
+        "example_urls": [
+          "https://www.coderabbit.ai/agent?utm_source=twitter&utm_medium=cpc&utm_campaign=brandawareness_slack&twclid=25ohyy1nnhx1vb6p888i79f380",
+          "https://www.coderabbit.ai/agent?utm_source=twitter&utm_medium=cpc&utm_campaign=brandawareness_slack&twclid=289waaptg8g5p8kt9nmjdhtmdm",
+          "https://www.coderabbit.ai/agent?utm_source=twitter&utm_medium=cpc&utm_campaign=brandawareness_slack&twclid=221iix4gf082d85ifrr3eh1dr6",
+          "https://coderabbit.ai/?utm_source=twitter&utm_medium=cpc&utm_campaign=intlretargetingsignup&twclid=2bprglk8wen4ni6d1hxw416sxj",
+          "https://coderabbit.ai/?utm_source=twitter&utm_medium=cpc&utm_campaign=intlprospectingsignup&twclid=23a3why4v3msp82hu0ra2sxiek"
+        ],
+        "origin_counts": {
+          "feed_buffer_reply": 7,
+          "feed_buffer": 10
+        },
+        "distinct_referring_accounts": 1,
+        "sample_referring_accounts": [
+          "coderabbitai"
+        ],
+        "distinct_axes": []
+      },
+      "claims": {
+        "total": 0,
+        "supported": 0,
+        "refuted": 0,
+        "contested": 0,
+        "unverified": 0,
+        "resolved_count": 0
+      },
+      "structural_features": {
+        "has_search_paths": false,
+        "has_article_paths": false,
+        "has_doi_paths": false
+      },
+      "ratings": {
+        "provenance": {
+          "score": 0.45,
+          "basis": [
+            "unknown_domain_pattern"
+          ]
+        },
+        "breadth": {
+          "score": 0.47,
+          "basis": [
+            "distinct_urls:17",
+            "distinct_axes:0",
+            "origin_types:2"
+          ]
+        },
+        "corroboration": {
+          "score": 0.2833333333333333,
+          "basis": [
+            "referring_accounts:1",
+            "origin_types:2"
+          ]
+        },
+        "track_record": {
+          "score": null,
+          "basis": [
+            "no_resolved_claims_observed"
+          ]
+        },
+        "profile": {
+          "score": 0.12,
+          "confidence": 0.55,
+          "basis": [
+            "meta_author:false",
+            "published_time:false",
+            "canonical:false",
+            "about:false",
+            "contact:true",
+            "corrections:false",
+            "outbound_links:0",
+            "opinion_marker:false"
+          ]
+        },
+        "overall": {
+          "score": 0.43875,
+          "confidence": 0.5292,
+          "method": "mechanical_v1",
+          "basis": [
+            "unknown_domain_pattern",
+            "distinct_urls:17",
+            "distinct_axes:0",
+            "origin_types:2",
+            "referring_accounts:1",
+            "origin_types:2",
+            "track_record_unavailable"
+          ]
+        }
+      },
+      "profile": {
+        "fetched_at": "2026-07-24T03:23:11.103Z",
+        "homepage_url": "https://coderabbit.ai/",
+        "example_url": "https://www.coderabbit.ai/agent?utm_source=twitter&utm_medium=cpc&utm_campaign=brandawareness_slack&twclid=25ohyy1nnhx1vb6p888i79f380",
+        "homepage_status": 200,
+        "example_status": 200,
+        "homepage_final_url": "https://www.coderabbit.ai/",
+        "example_final_url": "https://www.coderabbit.ai/agent?utm_source=twitter&utm_medium=cpc&utm_campaign=brandawareness_slack&twclid=25ohyy1nnhx1vb6p888i79f380",
+        "homepage_content_type": "text/html; charset=utf-8",
+        "example_content_type": "text/html; charset=utf-8",
+        "homepage": {
+          "has_meta_author": false,
+          "has_published_time": false,
+          "has_canonical": false,
+          "has_about_link": false,
+          "has_contact_link": true,
+          "has_corrections_link": false,
+          "outbound_links_count": 6,
+          "opinion_marker": false
+        },
+        "example": {
+          "has_meta_author": false,
+          "has_published_time": false,
+          "has_canonical": false,
+          "has_about_link": false,
+          "has_contact_link": false,
+          "has_corrections_link": false,
+          "outbound_links_count": 0,
+          "opinion_marker": false
+        }
+      }
+    },
+    {
       "domain": "amro-asia.org",
       "entity": "Amro-Asia",
       "kind": "unknown",
@@ -9039,133 +9166,6 @@
           "has_contact_link": false,
           "has_corrections_link": false,
           "outbound_links_count": 0,
-          "opinion_marker": false
-        },
-        "example": {
-          "has_meta_author": false,
-          "has_published_time": false,
-          "has_canonical": false,
-          "has_about_link": false,
-          "has_contact_link": false,
-          "has_corrections_link": false,
-          "outbound_links_count": 0,
-          "opinion_marker": false
-        }
-      }
-    },
-    {
-      "domain": "coderabbit.ai",
-      "entity": "Coderabbit Ai",
-      "kind": "unknown",
-      "first_seen_at": "2026-06-09T09:50:16.000Z",
-      "last_seen_at": "2026-07-21T00:59:51.747Z",
-      "discovery": {
-        "distinct_urls": 15,
-        "example_urls": [
-          "https://www.coderabbit.ai/agent?utm_source=twitter&utm_medium=cpc&utm_campaign=brandawareness_slack&twclid=25ohyy1nnhx1vb6p888i79f380",
-          "https://www.coderabbit.ai/agent?utm_source=twitter&utm_medium=cpc&utm_campaign=brandawareness_slack&twclid=289waaptg8g5p8kt9nmjdhtmdm",
-          "https://www.coderabbit.ai/agent?utm_source=twitter&utm_medium=cpc&utm_campaign=brandawareness_slack&twclid=221iix4gf082d85ifrr3eh1dr6",
-          "https://coderabbit.ai/?utm_source=twitter&utm_medium=cpc&utm_campaign=intlretargetingsignup&twclid=2bprglk8wen4ni6d1hxw416sxj",
-          "https://coderabbit.ai/?utm_source=twitter&utm_medium=cpc&utm_campaign=intlprospectingsignup&twclid=23a3why4v3msp82hu0ra2sxiek"
-        ],
-        "origin_counts": {
-          "feed_buffer_reply": 7,
-          "feed_buffer": 8
-        },
-        "distinct_referring_accounts": 1,
-        "sample_referring_accounts": [
-          "coderabbitai"
-        ],
-        "distinct_axes": []
-      },
-      "claims": {
-        "total": 0,
-        "supported": 0,
-        "refuted": 0,
-        "contested": 0,
-        "unverified": 0,
-        "resolved_count": 0
-      },
-      "structural_features": {
-        "has_search_paths": false,
-        "has_article_paths": false,
-        "has_doi_paths": false
-      },
-      "ratings": {
-        "provenance": {
-          "score": 0.45,
-          "basis": [
-            "unknown_domain_pattern"
-          ]
-        },
-        "breadth": {
-          "score": 0.47,
-          "basis": [
-            "distinct_urls:15",
-            "distinct_axes:0",
-            "origin_types:2"
-          ]
-        },
-        "corroboration": {
-          "score": 0.2833333333333333,
-          "basis": [
-            "referring_accounts:1",
-            "origin_types:2"
-          ]
-        },
-        "track_record": {
-          "score": null,
-          "basis": [
-            "no_resolved_claims_observed"
-          ]
-        },
-        "profile": {
-          "score": 0.12,
-          "confidence": 0.55,
-          "basis": [
-            "meta_author:false",
-            "published_time:false",
-            "canonical:false",
-            "about:false",
-            "contact:true",
-            "corrections:false",
-            "outbound_links:0",
-            "opinion_marker:false"
-          ]
-        },
-        "overall": {
-          "score": 0.43875,
-          "confidence": 0.4842,
-          "method": "mechanical_v1",
-          "basis": [
-            "unknown_domain_pattern",
-            "distinct_urls:15",
-            "distinct_axes:0",
-            "origin_types:2",
-            "referring_accounts:1",
-            "origin_types:2",
-            "track_record_unavailable"
-          ]
-        }
-      },
-      "profile": {
-        "fetched_at": "2026-07-24T03:23:11.103Z",
-        "homepage_url": "https://coderabbit.ai/",
-        "example_url": "https://www.coderabbit.ai/agent?utm_source=twitter&utm_medium=cpc&utm_campaign=brandawareness_slack&twclid=25ohyy1nnhx1vb6p888i79f380",
-        "homepage_status": 200,
-        "example_status": 200,
-        "homepage_final_url": "https://www.coderabbit.ai/",
-        "example_final_url": "https://www.coderabbit.ai/agent?utm_source=twitter&utm_medium=cpc&utm_campaign=brandawareness_slack&twclid=25ohyy1nnhx1vb6p888i79f380",
-        "homepage_content_type": "text/html; charset=utf-8",
-        "example_content_type": "text/html; charset=utf-8",
-        "homepage": {
-          "has_meta_author": false,
-          "has_published_time": false,
-          "has_canonical": false,
-          "has_about_link": false,
-          "has_contact_link": true,
-          "has_corrections_link": false,
-          "outbound_links_count": 6,
           "opinion_marker": false
         },
         "example": {
@@ -35753,20 +35753,6 @@
             "no_resolved_claims_observed"
           ]
         },
-        "overall": {
-          "score": 0.36377604166666666,
-          "confidence": 0.142225,
-          "method": "mechanical_v1",
-          "basis": [
-            "unknown_domain_pattern",
-            "distinct_urls:2",
-            "distinct_axes:0",
-            "origin_types:1",
-            "referring_accounts:2",
-            "origin_types:1",
-            "track_record_unavailable"
-          ]
-        },
         "profile": {
           "score": 0.39,
           "confidence": 0.65,
@@ -35779,6 +35765,20 @@
             "corrections:false",
             "outbound_links:11",
             "opinion_marker:false"
+          ]
+        },
+        "overall": {
+          "score": 0.36377604166666666,
+          "confidence": 0.142225,
+          "method": "mechanical_v1",
+          "basis": [
+            "unknown_domain_pattern",
+            "distinct_urls:2",
+            "distinct_axes:0",
+            "origin_types:1",
+            "referring_accounts:2",
+            "origin_types:1",
+            "track_record_unavailable"
           ]
         }
       },
@@ -41428,7 +41428,7 @@
           ]
         },
         "profile": {
-          "score": 0.11,
+          "score": 0.12,
           "confidence": 0.55,
           "basis": [
             "meta_author:false",
@@ -41437,7 +41437,7 @@
             "about:false",
             "contact:false",
             "corrections:false",
-            "outbound_links:1",
+            "outbound_links:2",
             "opinion_marker:false"
           ]
         },
@@ -41457,7 +41457,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-07-22T19:50:29.250Z",
+        "fetched_at": "2026-07-25T21:21:54.896Z",
         "homepage_url": "https://alphacapital.pro/",
         "example_url": "https://alphacapital.pro/pages/performance/?utm_source=twitter&utm_medium=ad1&utm_campaign=ac&twclid=2b8weeqkz95cs1xc59f8v2j7ob",
         "homepage_status": 200,
@@ -41473,7 +41473,7 @@
           "has_about_link": false,
           "has_contact_link": false,
           "has_corrections_link": false,
-          "outbound_links_count": 1,
+          "outbound_links_count": 2,
           "opinion_marker": false
         },
         "example": {
@@ -41483,7 +41483,7 @@
           "has_about_link": false,
           "has_contact_link": false,
           "has_corrections_link": false,
-          "outbound_links_count": 1,
+          "outbound_links_count": 2,
           "opinion_marker": false
         }
       }
@@ -42318,7 +42318,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-07-21T15:12:13.552Z",
+        "fetched_at": "2026-07-25T21:21:56.186Z",
         "homepage_url": "https://tosso.app/",
         "example_url": "https://tosso.app/?twclid=2cvvvss1n13fvd1weioaoinc1",
         "homepage_status": 200,
@@ -42441,7 +42441,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-07-21T15:12:14.957Z",
+        "fetched_at": "2026-07-25T21:21:57.661Z",
         "homepage_url": "https://lunazultequila.com/",
         "example_url": "https://lunazultequila.com/?twclid=25655dk265tpvvyjnscalst7y",
         "homepage_status": 200,
@@ -42564,7 +42564,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-07-22T07:20:08.560Z",
+        "fetched_at": "2026-07-25T21:21:59.582Z",
         "homepage_url": "https://genesissystems.com/",
         "example_url": "https://www.genesissystems.com/contact?utm_source=x&utm_campaign=genericwebtrafficdavead4-4-26&twclid=2av31c1xlvmnruxepagyndsvf6",
         "homepage_status": 200,
@@ -42687,7 +42687,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-07-22T07:20:08.825Z",
+        "fetched_at": "2026-07-25T21:51:54.234Z",
         "homepage_url": "https://vibespace.build/",
         "example_url": "https://vibespace.build/?twclid=29xq7i3v7v3uomihgdn4fscjca",
         "homepage_status": 200,
@@ -42810,7 +42810,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-07-22T07:20:09.373Z",
+        "fetched_at": "2026-07-25T21:51:54.843Z",
         "homepage_url": "https://creativefabrica.com/",
         "example_url": "https://studio.creativefabrica.com/?utm_source=x&utm_medium=tweet&utm_campaign=upscaler-tweet&twclid=27bja55r9p6h4r6hc80bhoqdfs",
         "homepage_status": 403,
@@ -42933,7 +42933,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-07-22T07:20:10.217Z",
+        "fetched_at": "2026-07-25T21:51:55.919Z",
         "homepage_url": "https://weco.ai/",
         "example_url": "https://weco.ai/?twclid=25gaiie710qdx1lq1t1mo2af5v",
         "homepage_status": 200,
@@ -43056,7 +43056,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-07-22T07:50:09.532Z",
+        "fetched_at": "2026-07-25T21:51:56.762Z",
         "homepage_url": "https://simplagents.com/",
         "example_url": "https://simplagents.com/tools/couple-name-mixer/69aa4d444064edf1e4ea388e?twclid=2834nkqxlwo1g7vcbstbjxw4iq",
         "homepage_status": 200,
@@ -78787,6 +78787,83 @@
         "distinct_referring_accounts": 1,
         "sample_referring_accounts": [
           "latyxhq"
+        ],
+        "distinct_axes": []
+      },
+      "claims": {
+        "total": 0,
+        "supported": 0,
+        "refuted": 0,
+        "contested": 0,
+        "unverified": 0,
+        "resolved_count": 0
+      },
+      "structural_features": {
+        "has_search_paths": false,
+        "has_article_paths": false,
+        "has_doi_paths": false
+      },
+      "ratings": {
+        "provenance": {
+          "score": 0.45,
+          "basis": [
+            "unknown_domain_pattern"
+          ]
+        },
+        "breadth": {
+          "score": 0.08916666666666666,
+          "basis": [
+            "distinct_urls:1",
+            "distinct_axes:0",
+            "origin_types:1"
+          ]
+        },
+        "corroboration": {
+          "score": 0.19583333333333333,
+          "basis": [
+            "referring_accounts:1",
+            "origin_types:1"
+          ]
+        },
+        "track_record": {
+          "score": null,
+          "basis": [
+            "no_resolved_claims_observed"
+          ]
+        },
+        "overall": {
+          "score": 0.3472395833333333,
+          "confidence": 0.08135,
+          "method": "mechanical_v1",
+          "basis": [
+            "unknown_domain_pattern",
+            "distinct_urls:1",
+            "distinct_axes:0",
+            "origin_types:1",
+            "referring_accounts:1",
+            "origin_types:1",
+            "track_record_unavailable"
+          ]
+        }
+      }
+    },
+    {
+      "domain": "miku.ph",
+      "entity": "Miku Ph",
+      "kind": "unknown",
+      "first_seen_at": "2026-07-25T21:29:05.896Z",
+      "last_seen_at": "2026-07-25T21:29:05.896Z",
+      "discovery": {
+        "distinct_urls": 1,
+        "example_urls": [
+          "https://miku.ph/?utm_source=x&utm_medium=paid_social&utm_campaign=mikufes_announcement&utm_content=detailed&twclid=21azz5ellpiwotx3k2g9myjumu"
+        ],
+        "origin_counts": {
+          "feed_buffer": 1
+        },
+        "distinct_referring_accounts": 1,
+        "sample_referring_accounts": [
+          "mikuphfanbase"
         ],
         "distinct_axes": []
       },

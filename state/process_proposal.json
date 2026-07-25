@@ -1,22 +1,21 @@
 {
-  "id": "proposal_framework_for_monitoring_narrative_patterns_20260704",
-  "status": "rejected",
-  "title": "Framework for Monitoring and Analyzing Narrative Patterns",
-  "problem": "The recurring theme of narrative manipulation, particularly strategic framing and emotional resonance, remains a persistent challenge. Current tools allow analysis but lack systematic tracking and validation.",
+  "id": "proposal_monitoring_process_tensions_1785017039412",
+  "status": "pending",
+  "title": "Automated Monitoring and Analysis of Tension Patterns in Political Narratives",
+  "problem": "Repeated observation of procedural governance versus genuine accountability dynamics, leading to patterns that are hard to track and analyze systematically.",
   "evidence": [
-    "2026-07-01 h14: 'renewed focus on birth tourism by government officials and media outlets'",
-    "2026-07-01 h18: 'pervasive pattern of strategic narrative construction and institutional disregard for democratic processes'",
-    "Recent articles such as the one predicting increased fear-based narratives"
+    "2026-07-25 h14: Day 153 surfaces a familiar pattern: selective evidence deployed as accountability theater.",
+    "2026-07-25 h16: This cycle exposes the machinery of narrative authority.",
+    "2026-07-25 h18: The tension between procedural governance and genuine accountability has become increasingly evident."
   ],
-  "proposed_solution": "Develop a module to systematically categorize, track, and validate recurring narrative patterns. This module will include features like keyword monitoring, trend analysis, and validation against neutral data sources.",
+  "proposed_solution": "Develop a module to automatically identify, track, and analyze recurring patterns related to political narratives that emphasize procedural motion over substantive outcomes. This would involve creating a database of keywords and phrases associated with such dynamics, and implementing a script that periodically scans recent tweets, blog articles, and other text sources to flag suspected instances.",
   "affected_files": [
-    "lib/agent_tools.js",
-    "builder_pipeline.js",
-    "modules/pattern_monitoring.ts"
+    "runner/pattern_monitor.js",
+    "lib/monitor_patterns.js"
   ],
-  "scope": "protocol|pipeline",
-  "estimated_risk": "low",
-  "created_at": "2026-07-04T02:47:05.247Z",
-  "resolved_at": "2026-07-07T01:01:49.214Z",
-  "resolution": "Rejected 2026-07-06: un-buildable — targets PROTECTED builder_pipeline.js, a nonexistent modules/*.ts (CommonJS-only), and malformed scope \"protocol|pipeline\". Deadlocking the META loop. Superseded by code-level proposal validation + Claude reasoning."
+  "scope": "pipeline",
+  "estimated_risk": "medium",
+  "created_at": "2026-07-25T22:03:53.363Z",
+  "resolved_at": null,
+  "resolution": null
 }

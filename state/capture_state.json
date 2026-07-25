@@ -1,113 +1,96 @@
 {
-  "checked_at": "2026-07-24T21:41:21.067Z",
-  "evidence_24h": 14,
-  "unique_sources": 4,
+  "checked_at": "2026-07-25T21:57:06.580Z",
+  "evidence_24h": 17,
+  "unique_sources": 3,
   "status": "captured",
   "alerts": [
     {
       "type": "source_dominance",
       "severity": "high",
-      "detail": "@unknown accounts for 64% of today's evidence (9/14)",
+      "detail": "@unknown accounts for 88% of today's evidence (15/17)",
       "username": "unknown",
-      "share": 0.643
-    },
-    {
-      "type": "pole_skew",
-      "severity": "moderate",
-      "detail": "79% of evidence pushes \"left\" — risk of one-sided belief drift",
-      "dominant_pole": "left",
-      "share": 0.786
+      "share": 0.882
     }
   ],
-  "summary": "2 capture alert(s) detected:\n[HIGH] @unknown accounts for 64% of today's evidence (9/14)\n[MODERATE] 79% of evidence pushes \"left\" — risk of one-sided belief drift",
+  "summary": "1 capture alert(s) detected:\n[HIGH] @unknown accounts for 88% of today's evidence (15/17)",
   "source_concentration": {
     "unknown": {
       "username": "unknown",
-      "count": 9,
-      "share": 0.643
+      "count": 15,
+      "share": 0.882
     },
-    "news5ph": {
-      "username": "news5ph",
-      "count": 2,
-      "share": 0.143
-    },
-    "gmanews": {
-      "username": "gmanews",
-      "count": 2,
-      "share": 0.143
-    },
-    "marionawfal": {
-      "username": "marionawfal",
+    "philippinestar": {
+      "username": "philippinestar",
       "count": 1,
-      "share": 0.071
+      "share": 0.059
+    },
+    "abscbnnews": {
+      "username": "abscbnnews",
+      "count": 1,
+      "share": 0.059
     }
   },
   "axis_concentration": {
     "axis_procedural_governance_accountability_v1": {
       "axis_id": "axis_procedural_governance_accountability_v1",
       "label": "Procedural Governance vs. Genuine Accountability",
-      "count": 5,
-      "share": 0.357
+      "count": 6,
+      "share": 0.353
     },
     "axis_power_accountability": {
       "axis_id": "axis_power_accountability",
       "label": "Power, Institutions, and Rule of Law",
       "count": 2,
-      "share": 0.143
+      "share": 0.118
     },
-    "axis_human_rights_exploitation_v1": {
-      "axis_id": "axis_human_rights_exploitation_v1",
-      "label": "Human Rights and Exploitation",
+    "axis_political_trust_corruption_v1": {
+      "axis_id": "axis_political_trust_corruption_v1",
+      "label": "Trust in Political Institutions and Anti-Corruption Efforts",
       "count": 2,
-      "share": 0.143
+      "share": 0.118
+    },
+    "axis_ai_societal_impact_v1": {
+      "axis_id": "axis_ai_societal_impact_v1",
+      "label": "Societal Impact and Ethical Concerns of AI/Robots",
+      "count": 2,
+      "share": 0.118
+    },
+    "axis_geopolitical_rhetoric_v1": {
+      "axis_id": "axis_geopolitical_rhetoric_v1",
+      "label": "Geopolitical Rhetoric vs. Humanitarian Concerns",
+      "count": 2,
+      "share": 0.118
     },
     "axis_procedural_governance_substantive_action": {
       "axis_id": "axis_procedural_governance_substantive_action",
       "label": "Procedural Governance vs. Substantive Action",
       "count": 2,
-      "share": 0.143
+      "share": 0.118
     },
-    "axis_media_integrity_v1": {
-      "axis_id": "axis_media_integrity_v1",
-      "label": "Integrity of Information and Social Media Manipulation",
+    "axis_geopolitical_control_narratives": {
+      "axis_id": "axis_geopolitical_control_narratives",
+      "label": "Geopolitical Control Narratives: Asserting Sovereignty vs. International Norms",
       "count": 1,
-      "share": 0.071
-    },
-    "axis_environmental_policy_v_economic_v1": {
-      "axis_id": "axis_environmental_policy_v_economic_v1",
-      "label": "Environmental Policy vs. Economic Development",
-      "count": 1,
-      "share": 0.071
-    },
-    "axis_information_control_v1": {
-      "axis_id": "axis_information_control_v1",
-      "label": "Information Control",
-      "count": 1,
-      "share": 0.071
+      "share": 0.059
     }
   },
   "cluster_concentration": {
     "unknown": {
       "cluster": "unknown",
-      "count": 9,
-      "share": 0.643
+      "count": 15,
+      "share": 0.882
     },
     "breaking_news": {
       "cluster": "breaking_news",
-      "count": 3,
-      "share": 0.214
-    },
-    "accountability_journalism": {
-      "cluster": "accountability_journalism",
       "count": 2,
-      "share": 0.143
+      "share": 0.118
     }
   },
   "pole_balance": {
-    "left": 11,
-    "right": 3,
+    "left": 9,
+    "right": 8,
     "neutral": 0,
-    "left_share": 0.786,
-    "right_share": 0.214
+    "left_share": 0.529,
+    "right_share": 0.471
   }
 }
