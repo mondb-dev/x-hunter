@@ -1,6 +1,6 @@
 # Codebase Inventory — ground truth as of 2026-07-19
 
-Code-derived snapshot (docs/DOCS_SYNC_PLAN.md Phase 0). Every claim below carries its
+Code-derived snapshot (docs/archive/DOCS_SYNC_PLAN.md Phase 0). Every claim below carries its
 source file so future audits are one grep away. When a doc disagrees with this file,
 the doc is wrong or the code moved — re-verify here first.
 

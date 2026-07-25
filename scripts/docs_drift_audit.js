@@ -52,8 +52,12 @@ function extractPathRefs(text) {
   // repo-relative code paths like runner/lib/foo.js, scraper/collect.js, web/app/x.tsx
   const re = /\b((?:runner|scraper|lib|pipelines|workers|tools|scripts|web|src|analyzer)\/[A-Za-z0-9_\-./]+\.(?:js|ts|tsx|sh|py))\b/g;
   const out = new Set();
-  let m;
-  while ((m = re.exec(text))) out.add(m[1]);
+  for (const line of text.split('\n')) {
+    if (/[│├└]/.test(line)) continue; // tree-diagram lines nest paths under a parent dir — not repo-relative
+    let m;
+    while ((m = re.exec(line))) out.add(m[1]);
+    re.lastIndex = 0;
+  }
   return [...out];
 }
 

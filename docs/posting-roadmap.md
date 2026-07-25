@@ -9,14 +9,14 @@ Captured 2026-07-15, updated same day (quote/reply API migration + retweet actio
 - **X repost (retweet)** — `X.retweet()` / `X.unretweet()` via `CreateRetweet`/`DeleteRetweet` mutations (API-only, no UI fallback; "already retweeted" treated as success). Manual/queue entry point: `runner/x_repost.js <url> [--undo] [--topic t]` (self-repost guard, `HELMSTACK_DRY_RUN=1` supported), logs via `posts_log.logRepost` (`type:"repost"` + `source_handle`/`topic` for the future learn-loop).
 - **X images** — `X.postImage()`: browser upload via HelmStack file-input (CDP `setFileInputFiles`) + guarded text insert.
 - **LinkedIn images** — `LinkedIn.postImage()`: voyager media pipeline (register `voyagerVideoDashMediaUploadMetadata?action=upload` → PUT bytes to `singleUploadUrl` → `normShares` with `media:[{category:"IMAGE", mediaUrn, tapTargets:[]}]`). Used because the LI composer is iframe-isolated.
-- **Source images** — `lib/source_image.js`: fetch a source's `og:image` server-side (no CORS) → temp file → cleanup. Attribution `📷 via <source>`.
-- **LinkedIn post learn-loop** — `lib/linkedin_performance.js` + `linkedin_measure.js`: tag each post with an opening technique, scrape reactions+comments, feed technique→engagement back into the draft prompt (explore/exploit).
+- **Source images** — `runner/lib/source_image.js`: fetch a source's `og:image` server-side (no CORS) → temp file → cleanup. Attribution `📷 via <source>`.
+- **LinkedIn post learn-loop** — `runner/lib/linkedin_performance.js` + `linkedin_measure.js`: tag each post with an opening technique, scrape reactions+comments, feed technique→engagement back into the draft prompt (explore/exploit).
 - Fixed `findOwnTweetUrl` navigating to `x.com/undefined` (`this.ownHandle` → `this.handle`).
-- **Image auto-trigger (X)** — `compose_tweet.js` now sets `state/tweet_image_source.txt` autonomously via `lib/lead_source_image.js`: extracts source URLs from the same browse notes the tweet was composed from, scores each by word-overlap relevance to the drafted tweet, and picks the top candidate that actually exposes an og:image (fetch-probe, HTML only). No match → no file → text-only post (unchanged). Deterministic (no extra LLM call); `IMAGE_AUTO_TRIGGER=0` disables. Attribution improved in `source_image.hostLabel`: an X status now credits the author `@handle` (its og:image is the tweet's own media) instead of a bare "x.com".
+- **Image auto-trigger (X)** — `compose_tweet.js` now sets `state/tweet_image_source.txt` autonomously via `runner/lib/lead_source_image.js`: extracts source URLs from the same browse notes the tweet was composed from, scores each by word-overlap relevance to the drafted tweet, and picks the top candidate that actually exposes an og:image (fetch-probe, HTML only). No match → no file → text-only post (unchanged). Deterministic (no extra LLM call); `IMAGE_AUTO_TRIGGER=0` disables. Attribution improved in `source_image.hostLabel`: an X status now credits the author `@handle` (its og:image is the tweet's own media) instead of a bare "x.com".
 
 ## ~~Follow-up 1 — image auto-trigger (small)~~ — DONE (X + LinkedIn)
 
-Both channels now set their image source autonomously via `lib/lead_source_image.js`:
+Both channels now set their image source autonomously via `runner/lib/lead_source_image.js`:
 - **X** — `compose_tweet.js` writes `state/tweet_image_source.txt` from the browse notes.
 - **LinkedIn** — `linkedin_draft.js` calls `pickLeadSource(text, pack.text)` over the content pack and stashes the winner in the outbox item's `meta.image_source` (JSON-persisted, read back by `linkedin_post.js`).
 Both are best-effort (miss → text-only, unchanged), deterministic (no extra LLM call), and gated by `IMAGE_AUTO_TRIGGER=0`.
@@ -35,8 +35,8 @@ Two layers. Layer 1 is done for X (quote via API + retweet action) and LinkedIn 
 - **Facebook share** — NEW + HARD. FB is automation-hostile (observation-only today; trusted-CDP clicks only). Likely defer or last.
 
 ### Layer 2 — the learn-loop (mirror the LinkedIn posting loop) — CORE DONE
-The measure→correlate→select machinery is built as `lib/amplify_performance.js`
-(same architecture as `lib/linkedin_performance.js` / the prediction-calibration loop):
+The measure→correlate→select machinery is built as `runner/lib/amplify_performance.js`
+(same architecture as `runner/lib/linkedin_performance.js` / the prediction-calibration loop):
 - **Tag** — `recordAmplification(ourUrl, {channel, sourceHandle, topic, technique, sourceUrl, measurable})`. Wired at the X repost site (`x_repost.js`, `measurable:false` — a bare retweet has no own engagement surface, so it records WHAT we amplified but never blocks the measure queue) and the X quote site (`post_x_helmstack.js`, `measurable:true`).
 - **Measure** — `runner/amplify_measure.js` (scheduled in `runSocialPipeline`, 12h gate) scrapes each due amplification's engagement: X via the new `X.scrapeTweetEngagement(url)` (parses the combined action-bar aria-label → likes/replies/reposts; live-validated), LinkedIn via the existing `scrapePostEngagement`. `engagement = reactions + comments`.
 - **Correlate + select** — `sourceStats()`/`topicStats()` average engagement per source/topic; `pickAmplifyTarget(candidates)` chooses what to amplify next via force-explore-under-sampled → epsilon-greedy → exploit-highest-avg (unit-tested); `summaryText()` renders the track record. `AMPLIFY_MIN_SAMPLES`/`AMPLIFY_EPSILON` tune it.

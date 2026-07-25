@@ -30,7 +30,7 @@ Builder pipeline picks it up:
 ## What it cannot touch
 
 - `SOUL.md`, `IDENTITY.md`, `AGENTS.md` §1–§11
-- `orchestrator.js`, `lib/agent.js`, `lib/git.js`, `lib/state.js`
+- `runner/orchestrator.js`, `runner/lib/agent.js`, `runner/lib/git.js`, `runner/lib/state.js`
 - `.env`, `builder_pipeline.js`, `builder_vertex.js`
 
 ---

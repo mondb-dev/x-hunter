@@ -128,7 +128,7 @@ Factual claim posts are scored higher regardless of engagement volume — a wron
 
 **Verification**: `verify_one.js` runs on the target post's text. If the claim is refuted or unverified, the reply draft prompt explicitly instructs Sebastian to call it out with the counter-evidence.
 
-**Coherence check** (`lib/outbound_gates.js coherenceGate`, shared by X replies,
+**Coherence check** (`runner/lib/outbound_gates.js coherenceGate`, shared by X replies,
 quote-tweets, amplify, and LinkedIn comments/replies): after the voice +
 fact-check gates, a draft is checked against the SOURCE it answers for an
 *invented contradiction* — implying the source is wrong/misleading when it never
@@ -171,7 +171,7 @@ distinction correctly and even makes precision the post's point.
 
 ### LinkedIn posts — what the evidence says
 
-The shape A/B (`lib/linkedin_performance.js DIMENSIONS`) is seeded from measured
+The shape A/B (`runner/lib/linkedin_performance.js DIMENSIONS`) is seeded from measured
 data, not intuition, because this account's own sample is far too small to learn
 from alone (13 posts, 141 total impressions).
 
@@ -204,7 +204,7 @@ as a first-comment implementation, never as a body URL.
   outlet card or headshot is filler, and a credit line is a norm, not a licence,
   so systematic reuse of press photography is a real exposure for an account
   whose subject is institutional accountability.
-- `chart` (`lib/post_chart.js`) renders an ORIGINAL chart of figures the post
+- `chart` (`runner/lib/post_chart.js`) renders an ORIGINAL chart of figures the post
   already cites: licence-clean, distinctive, and it shows the analysis instead of
   decorating it. **Fabrication guard** — every plotted value must appear verbatim
   in the post or its source material; a proposed number that is not in the text
