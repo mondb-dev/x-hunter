@@ -1,15 +1,60 @@
 {
-  "generated_at": "2026-07-25T07:47:42.258Z",
+  "generated_at": "2026-07-25T09:23:24.814Z",
   "stats": {
-    "total": 82,
+    "total": 83,
     "correct": 5,
     "wrong": 17,
     "partial": 7,
-    "pending": 41,
+    "pending": 42,
     "expired": 12,
     "accuracy": 17
   },
+  "calibration": {
+    "resolved": 29,
+    "base_rate_pct": 29,
+    "mean_stated_pct": 79,
+    "overconfidence_gap_pts": 50,
+    "brier_raw": 0.39426206896551724,
+    "brier_calibrated": 0.1469379310344827,
+    "buckets": [
+      {
+        "lo": 70,
+        "hi": 80,
+        "n": 16,
+        "statedMean": 0.7575,
+        "hitRate": 0.28125,
+        "shrunk": 0.28520114942528735
+      },
+      {
+        "lo": 80,
+        "hi": 90,
+        "n": 13,
+        "statedMean": 0.8307692307692307,
+        "hitRate": 0.3076923076923077,
+        "shrunk": 0.3021346469622332
+      }
+    ]
+  },
   "predictions": [
+    {
+      "id": "pred_f2d76fa7",
+      "ts": "2026-07-25T09:23:24.805Z",
+      "axes_count": 3,
+      "top_axes": [
+        "Procedural Governance vs. Substantive Action",
+        "Integrity of Information and Social Media Manipulation",
+        "Human Rights and Exploitation"
+      ],
+      "top_axis_edge": "insufficient",
+      "prediction": "The Ombudsman's graft charges against lawmakers will face prolonged legal scrutiny, delaying impeachment progress. This week.",
+      "confidence_pct": 65,
+      "calibrated_pct": 30,
+      "resolution_status": "pending",
+      "deadline_at": "2026-08-24T09:23:24.802Z",
+      "resolved_at": null,
+      "resolution_note": null,
+      "tweet_url": null
+    },
     {
       "id": "pred_d775976d",
       "ts": "2026-07-24T02:54:35.920Z",
