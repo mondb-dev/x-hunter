@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-25T02:31:54.036Z",
+  "generated_at": "2026-07-25T04:35:21.087Z",
   "windows": [
     "1d",
     "3d",
@@ -157,21 +157,21 @@
     "axis_media_integrity_v1": {
       "current": {
         "score": 0.4746,
-        "confidence": 0.95
+        "confidence": 0.948
       },
       "1d": {
         "score_delta": 0,
-        "conf_delta": 0,
+        "conf_delta": -0.002,
         "direction": "→"
       },
       "3d": {
         "score_delta": -0.008,
-        "conf_delta": 0,
+        "conf_delta": -0.002,
         "direction": "→"
       },
       "7d": {
         "score_delta": -0.054,
-        "conf_delta": 0,
+        "conf_delta": -0.002,
         "direction": "↘"
       }
     },
@@ -786,22 +786,22 @@
     },
     "axis_geopolitical_control_narratives": {
       "current": {
-        "score": 0.1,
-        "confidence": 0.3072
+        "score": 0.05,
+        "confidence": 0.3311
       },
       "1d": {
-        "score_delta": 0,
-        "conf_delta": -0.002,
-        "direction": "→"
+        "score_delta": -0.05,
+        "conf_delta": 0.0219,
+        "direction": "↘"
       },
       "3d": {
-        "score_delta": 0,
-        "conf_delta": -0.006,
-        "direction": "→"
+        "score_delta": -0.05,
+        "conf_delta": 0.0179,
+        "direction": "↘"
       },
       "7d": {
-        "score_delta": -0.1,
-        "conf_delta": 0.0335,
+        "score_delta": -0.15,
+        "conf_delta": 0.0574,
         "direction": "↘"
       }
     },
@@ -1038,17 +1038,17 @@
     },
     "axis_procedural_governance_substantive_action": {
       "current": {
-        "score": -0.2,
-        "confidence": 0.4433
+        "score": -0.25,
+        "confidence": 0.4576
       },
       "1d": {
-        "score_delta": 0,
-        "conf_delta": 0,
-        "direction": "→"
+        "score_delta": -0.05,
+        "conf_delta": 0.0143,
+        "direction": "↘"
       },
       "3d": {
-        "score_delta": -0.1,
-        "conf_delta": 0.1486,
+        "score_delta": -0.15,
+        "conf_delta": 0.1629,
         "direction": "↘"
       },
       "7d": null
@@ -1072,6 +1072,7 @@
     "axis_media_integrity_v1",
     "axis_political_dynasties_meritocracy_v1",
     "axis_environmental_policy_v_economic_v1",
+    "axis_geopolitical_control_narratives",
     "axis_procedural_governance_accountability",
     "axis_information_control_v1",
     "axis_procedural_governance_accountability_v1"
