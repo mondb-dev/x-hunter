@@ -1,17 +1,17 @@
 {
   "schema_version": "1.0",
-  "generated_at": "2026-07-25T11:21:42.095Z",
+  "generated_at": "2026-07-25T14:21:45.986Z",
   "method": "mechanical_registry_v1",
-  "profiled_at": "2026-07-25T11:21:49.075Z",
+  "profiled_at": "2026-07-25T14:21:53.708Z",
   "sources": [
     {
       "domain": "theguardian.com",
       "entity": "Theguardian",
       "kind": "news",
       "first_seen_at": "2026-03-27T23:17:00Z",
-      "last_seen_at": "2026-07-21T17:55:40.798Z",
+      "last_seen_at": "2026-07-25T13:56:29.156Z",
       "discovery": {
-        "distinct_urls": 539,
+        "distinct_urls": 543,
         "example_urls": [
           "https://www.theguardian.com/us-news/2026/jun/23/trump-immigration-courthouse-arrest-policy",
           "https://www.theguardian.com/us-news/2026/jun/28/ice-minnesota-defending-democracy",
@@ -20,14 +20,15 @@
           "https://www.theguardian.com/global-development/2026/jun/26/woman-sadia-moalim-ali-three-year-jail-sentence-somalia-online-comments-governement"
         ],
         "origin_counts": {
-          "ontology_evidence": 38,
-          "reading_queue": 512,
-          "journals": 82,
+          "ontology_evidence": 39,
+          "reading_queue": 514,
+          "journals": 90,
           "articles": 2
         },
         "distinct_referring_accounts": 0,
         "sample_referring_accounts": [],
         "distinct_axes": [
+          "axis_ai_societal_impact_v1",
           "axis_authoritarian_self_determination_v1",
           "axis_collective_voice",
           "axis_dehumanization_propaganda_v1",
@@ -71,8 +72,8 @@
         "breadth": {
           "score": 0.94,
           "basis": [
-            "distinct_urls:539",
-            "distinct_axes:16",
+            "distinct_urls:543",
+            "distinct_axes:17",
             "origin_types:4"
           ]
         },
@@ -111,8 +112,8 @@
             "newsroom_domain_pattern",
             "article_path_seen",
             "doi_or_identifier_path_seen",
-            "distinct_urls:539",
-            "distinct_axes:16",
+            "distinct_urls:543",
+            "distinct_axes:17",
             "origin_types:4",
             "referring_accounts:0",
             "origin_types:4",
@@ -655,7 +656,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-07-22T13:50:17.488Z",
+        "fetched_at": "2026-07-25T13:51:55.758Z",
         "homepage_url": "https://justice.gov/",
         "example_url": "https://www.justice.gov/usao-ri/pr/two-business-executives-plead-guilty-tech-support-fraud-scheme?twclid=29h44gflnugo1w0tbpbxpo8m7s",
         "homepage_status": 200,
@@ -693,7 +694,7 @@
       "first_seen_at": "2026-06-22T00:15:00Z",
       "last_seen_at": "2026-07-25T04:34:58.985Z",
       "discovery": {
-        "distinct_urls": 369,
+        "distinct_urls": 371,
         "example_urls": [
           "https://www.nytimes.com/2026/06/19/world/canada/frank-stronach-trial-guilty-sex-charges.html",
           "https://www.nytimes.com/2026/06/27/world/americas/mexican-officials-us-informants.html",
@@ -703,7 +704,7 @@
         ],
         "origin_counts": {
           "ontology_evidence": 13,
-          "reading_queue": 371,
+          "reading_queue": 373,
           "journals": 34
         },
         "distinct_referring_accounts": 0,
@@ -742,7 +743,7 @@
         "breadth": {
           "score": 0.8799999999999999,
           "basis": [
-            "distinct_urls:369",
+            "distinct_urls:371",
             "distinct_axes:7",
             "origin_types:3"
           ]
@@ -781,7 +782,7 @@
           "basis": [
             "newsroom_domain_pattern",
             "article_path_seen",
-            "distinct_urls:369",
+            "distinct_urls:371",
             "distinct_axes:7",
             "origin_types:3",
             "referring_accounts:0",
@@ -1404,7 +1405,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-07-22T13:50:18.244Z",
+        "fetched_at": "2026-07-25T13:51:57.351Z",
         "homepage_url": "https://trumprx.gov/",
         "example_url": "http://trumprx.gov/",
         "homepage_status": 200,
@@ -2357,7 +2358,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-07-22T13:50:19.092Z",
+        "fetched_at": "2026-07-25T13:51:58.769Z",
         "homepage_url": "https://youtube.com/",
         "example_url": "https://www.youtube.com/watch?v=s31Wd_dF5hI",
         "homepage_status": 200,
@@ -3212,7 +3213,7 @@
       "entity": "Gmanetwork",
       "kind": "unknown",
       "first_seen_at": "2026-05-18T03:29:41.732Z",
-      "last_seen_at": "2026-07-25T10:56:38.892Z",
+      "last_seen_at": "2026-07-25T11:26:19.818Z",
       "discovery": {
         "distinct_urls": 252,
         "example_urls": [
@@ -3223,8 +3224,8 @@
           "https://www.gmanetwork.com/news/topstories/nation/994080/electronic-copies-evidence-supreme-court/story/"
         ],
         "origin_counts": {
-          "ontology_evidence": 84,
-          "journals": 297
+          "ontology_evidence": 86,
+          "journals": 301
         },
         "distinct_referring_accounts": 0,
         "sample_referring_accounts": [],
@@ -3772,9 +3773,9 @@
       "entity": "T Co",
       "kind": "unknown",
       "first_seen_at": "2016-05-05T18:57:30.000Z",
-      "last_seen_at": "2026-07-25T10:04:01.638Z",
+      "last_seen_at": "2026-07-25T13:00:02.000Z",
       "discovery": {
-        "distinct_urls": 8236,
+        "distinct_urls": 8240,
         "example_urls": [
           "https://t.co/pJSE124ec4",
           "https://t.co/Soz8BXPWaa",
@@ -3783,7 +3784,7 @@
           "https://t.co/cYaqYDRp08"
         ],
         "origin_counts": {
-          "feed_buffer": 5301,
+          "feed_buffer": 5306,
           "feed_buffer_reply": 4831
         },
         "distinct_referring_accounts": 2487,
@@ -3825,7 +3826,7 @@
         "breadth": {
           "score": 0.47,
           "basis": [
-            "distinct_urls:8236",
+            "distinct_urls:8240",
             "distinct_axes:0",
             "origin_types:2"
           ]
@@ -3864,7 +3865,7 @@
           "basis": [
             "unknown_domain_pattern",
             "doi_or_identifier_path_seen",
-            "distinct_urls:8236",
+            "distinct_urls:8240",
             "distinct_axes:0",
             "origin_types:2",
             "referring_accounts:2487",
@@ -4007,7 +4008,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-07-22T13:50:21.001Z",
+        "fetched_at": "2026-07-25T13:52:01.436Z",
         "homepage_url": "https://reut.rs/",
         "example_url": "https://reut.rs/42N9gxi",
         "homepage_status": 401,
@@ -5490,7 +5491,7 @@
           "https://www.reuters.com/site-search/?query=Evidence-based%20claims%2C%20transparent%20sourcing%2C%20honest%20uncertainty%2C%20good-faith%20argu%20Truth%20and%20Evidence%20in%20Public%20Discourse"
         ],
         "origin_counts": {
-          "reading_queue": 12
+          "reading_queue": 13
         },
         "distinct_referring_accounts": 1,
         "sample_referring_accounts": [
@@ -7243,7 +7244,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-07-22T13:20:17.034Z",
+        "fetched_at": "2026-07-25T14:21:48.641Z",
         "homepage_url": "https://jamf.com/",
         "example_url": "https://www.jamf.com/blog/mac-management-security-trends-enterprise-it-2025/?utm_source=twitter&utm_medium=sponsored-social&utm_campaign=am_icf_smas_mms_banner_icp&utm_content=20260213_com_ent-midmkt_p_jmac_blog_6679_SIT&twclid=26vc3aicbe9m10pi19ume82b0z",
         "homepage_status": 200,
@@ -7406,9 +7407,9 @@
       "entity": "Maventrading",
       "kind": "unknown",
       "first_seen_at": "2026-07-04T21:13:31.000Z",
-      "last_seen_at": "2026-07-25T02:57:16.228Z",
+      "last_seen_at": "2026-07-25T11:23:18.847Z",
       "discovery": {
-        "distinct_urls": 39,
+        "distinct_urls": 40,
         "example_urls": [
           "https://maventrading.com/lp/choose-your-challenge?twt_id=54608379&twclid=24irm75xuuvw6vkz1dgb8ui0sz",
           "https://maventrading.com/challenges/1-step?twt_id=54607786&twclid=24dguyzddfgso39sw5b667t4v6",
@@ -7418,7 +7419,7 @@
         ],
         "origin_counts": {
           "feed_buffer_reply": 11,
-          "feed_buffer": 28
+          "feed_buffer": 29
         },
         "distinct_referring_accounts": 1,
         "sample_referring_accounts": [
@@ -7449,7 +7450,7 @@
         "breadth": {
           "score": 0.47,
           "basis": [
-            "distinct_urls:39",
+            "distinct_urls:40",
             "distinct_axes:0",
             "origin_types:2"
           ]
@@ -7487,7 +7488,7 @@
           "method": "mechanical_v1",
           "basis": [
             "unknown_domain_pattern",
-            "distinct_urls:39",
+            "distinct_urls:40",
             "distinct_axes:0",
             "origin_types:2",
             "referring_accounts:1",
@@ -7624,7 +7625,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-07-22T13:20:18.768Z",
+        "fetched_at": "2026-07-25T14:21:49.679Z",
         "homepage_url": "https://nizima-action.com/",
         "example_url": "https://site.nizima-action.com/en/?twclid=2diqibk9zmfi9zdpw7jnuyzo3e",
         "homepage_status": 200,
@@ -7751,7 +7752,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-07-22T13:20:22.105Z",
+        "fetched_at": "2026-07-25T14:21:53.064Z",
         "homepage_url": "https://leronx.org/",
         "example_url": "https://leronx.org/?ref=005&tw=r84nh&tw_click=tw-r84nh-r84ni&twclid=29ffsgobmrsvjmkjlmgcllypv0",
         "homepage_status": 200,
@@ -7761,13 +7762,13 @@
         "homepage_content_type": "text/html; charset=UTF-8",
         "example_content_type": "text/html; charset=UTF-8",
         "homepage": {
-          "has_meta_author": false,
+          "has_meta_author": true,
           "has_published_time": false,
-          "has_canonical": false,
+          "has_canonical": true,
           "has_about_link": true,
           "has_contact_link": true,
           "has_corrections_link": false,
-          "outbound_links_count": 2,
+          "outbound_links_count": 10,
           "opinion_marker": false
         },
         "example": {
@@ -8005,7 +8006,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-07-22T13:20:22.682Z",
+        "fetched_at": "2026-07-25T14:21:53.707Z",
         "homepage_url": "https://app.link/",
         "example_url": "https://chipotle.app.link/rTJVnvMgW1b?%243p=a_twitter&twclid=26fm1l3fbt5tx0wzqe3pjv9fkn",
         "homepage_status": 404,
@@ -38417,6 +38418,130 @@
       }
     },
     {
+      "domain": "hypeddit.com",
+      "entity": "Hypeddit",
+      "kind": "unknown",
+      "first_seen_at": "2026-07-19T08:05:35.939Z",
+      "last_seen_at": "2026-07-25T12:53:09.221Z",
+      "discovery": {
+        "distinct_urls": 3,
+        "example_urls": [
+          "https://hypeddit.com/psychicfeverfromexiletribe/ifyouremine?twclid=23rtj49iasvoyuwyxn3g4hwi03",
+          "https://hypeddit.com/psychicfeverfromexiletribe/ifyouremine?twclid=24chotbibbt8a0guub3ga06stv",
+          "https://hypeddit.com/psychicfeverfromexiletribe/ifyouremine?twclid=2a7yazph72f481c4hyrzo1fp4w"
+        ],
+        "origin_counts": {
+          "feed_buffer": 3
+        },
+        "distinct_referring_accounts": 1,
+        "sample_referring_accounts": [
+          "psyfe_official"
+        ],
+        "distinct_axes": []
+      },
+      "claims": {
+        "total": 0,
+        "supported": 0,
+        "refuted": 0,
+        "contested": 0,
+        "unverified": 0,
+        "resolved_count": 0
+      },
+      "structural_features": {
+        "has_search_paths": false,
+        "has_article_paths": false,
+        "has_doi_paths": false
+      },
+      "ratings": {
+        "provenance": {
+          "score": 0.45,
+          "basis": [
+            "unknown_domain_pattern"
+          ]
+        },
+        "breadth": {
+          "score": 0.1475,
+          "basis": [
+            "distinct_urls:3",
+            "distinct_axes:0",
+            "origin_types:1"
+          ]
+        },
+        "corroboration": {
+          "score": 0.19583333333333333,
+          "basis": [
+            "referring_accounts:1",
+            "origin_types:1"
+          ]
+        },
+        "track_record": {
+          "score": null,
+          "basis": [
+            "no_resolved_claims_observed"
+          ]
+        },
+        "profile": {
+          "score": 0.55,
+          "confidence": 0.75,
+          "basis": [
+            "meta_author:true",
+            "published_time:false",
+            "canonical:true",
+            "about:true",
+            "contact:true",
+            "corrections:false",
+            "outbound_links:1",
+            "opinion_marker:false"
+          ]
+        },
+        "overall": {
+          "score": 0.36000000000000004,
+          "confidence": 0.1386,
+          "method": "mechanical_v1",
+          "basis": [
+            "unknown_domain_pattern",
+            "distinct_urls:3",
+            "distinct_axes:0",
+            "origin_types:1",
+            "referring_accounts:1",
+            "origin_types:1",
+            "track_record_unavailable"
+          ]
+        }
+      },
+      "profile": {
+        "fetched_at": "2026-07-23T04:52:52.189Z",
+        "homepage_url": "https://hypeddit.com/",
+        "example_url": "https://hypeddit.com/psychicfeverfromexiletribe/ifyouremine?twclid=23rtj49iasvoyuwyxn3g4hwi03",
+        "homepage_status": 200,
+        "example_status": 200,
+        "homepage_final_url": "https://hypeddit.com/",
+        "example_final_url": "https://hypeddit.com/psychicfeverfromexiletribe/ifyouremine?twclid=23rtj49iasvoyuwyxn3g4hwi03",
+        "homepage_content_type": "text/html; charset=utf-8",
+        "example_content_type": "text/html; charset=utf-8",
+        "homepage": {
+          "has_meta_author": true,
+          "has_published_time": false,
+          "has_canonical": true,
+          "has_about_link": true,
+          "has_contact_link": true,
+          "has_corrections_link": false,
+          "outbound_links_count": 3,
+          "opinion_marker": false
+        },
+        "example": {
+          "has_meta_author": true,
+          "has_published_time": false,
+          "has_canonical": true,
+          "has_about_link": false,
+          "has_contact_link": false,
+          "has_corrections_link": false,
+          "outbound_links_count": 1,
+          "opinion_marker": false
+        }
+      }
+    },
+    {
       "domain": "rice.edu",
       "entity": "Rice",
       "kind": "unknown",
@@ -40347,7 +40472,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-07-22T05:50:29.991Z",
+        "fetched_at": "2026-07-25T12:24:16.909Z",
         "homepage_url": "https://kfc.com/",
         "example_url": "https://www.kfc.com/menu?utm_source=twitter&utm_medium=social&utm_campaign=kfcvaluefeast&utm_creative=9box&twclid=250lznofqwrkd2iq53t7qffgxo",
         "homepage_status": null,
@@ -40470,7 +40595,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-07-22T06:20:09.724Z",
+        "fetched_at": "2026-07-25T12:24:18.518Z",
         "homepage_url": "https://3c.wiki/",
         "example_url": "https://3c.wiki/3PtZuMY?twclid=2bz0sgqd5e9nj510697vwg5ap7",
         "homepage_status": 200,
@@ -40593,7 +40718,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-07-22T06:20:11.836Z",
+        "fetched_at": "2026-07-25T12:24:20.521Z",
         "homepage_url": "https://lumalabs.ai/",
         "example_url": "https://lumalabs.ai/app?utm_source=x&utm_medium=paid_social&utm_campaign=prospectingX&twclid=27jcpv8qkd9yiwma3uys0cthqd",
         "homepage_status": 200,
@@ -40716,7 +40841,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-07-22T06:20:23.698Z",
+        "fetched_at": "2026-07-25T12:24:33.001Z",
         "homepage_url": "https://statefreedomcaucus.org/",
         "example_url": "https://www.statefreedomcaucus.org/15-strong/?twclid=2epfodwob5z2m8xe9l0e1w4xfa",
         "homepage_status": null,
@@ -40839,7 +40964,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-07-22T06:20:26.385Z",
+        "fetched_at": "2026-07-25T12:51:46.493Z",
         "homepage_url": "https://gamedaymath.com/",
         "example_url": "https://www.gamedaymath.com/pricing?twclid=22wv0ellx5eqlyjtmchr7w8rag",
         "homepage_status": 200,
@@ -41700,7 +41825,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-07-21T13:42:15.258Z",
+        "fetched_at": "2026-07-25T12:51:48.870Z",
         "homepage_url": "https://qodo.ai/",
         "example_url": "https://www.qodo.ai/qodo-lp-ticket-integrations?utm_source=x&utm_medium=paid-social&utm_campaign=feature-ticket-context&utm_content=ad00-jira-context&twclid=26dl4v15r8qnhxeh30sqq0a16f",
         "homepage_status": 200,
@@ -41823,7 +41948,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-07-21T15:12:11.638Z",
+        "fetched_at": "2026-07-25T12:51:50.234Z",
         "homepage_url": "https://tolt.io/",
         "example_url": "https://tolt.io/?twclid=237p9185xj3uh642g9nl6h9env",
         "homepage_status": 200,
@@ -41946,7 +42071,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-07-21T15:12:12.230Z",
+        "fetched_at": "2026-07-25T12:51:51.062Z",
         "homepage_url": "https://keak.com/",
         "example_url": "https://keak.com/?utm_source=openus5&twclid=29uhrfg3hnwkr19ne3n46t1gr2",
         "homepage_status": 200,
@@ -47631,129 +47756,6 @@
           "has_contact_link": false,
           "has_corrections_link": false,
           "outbound_links_count": 0,
-          "opinion_marker": false
-        }
-      }
-    },
-    {
-      "domain": "hypeddit.com",
-      "entity": "Hypeddit",
-      "kind": "unknown",
-      "first_seen_at": "2026-07-19T08:05:35.939Z",
-      "last_seen_at": "2026-07-20T07:39:43.223Z",
-      "discovery": {
-        "distinct_urls": 2,
-        "example_urls": [
-          "https://hypeddit.com/psychicfeverfromexiletribe/ifyouremine?twclid=23rtj49iasvoyuwyxn3g4hwi03",
-          "https://hypeddit.com/psychicfeverfromexiletribe/ifyouremine?twclid=24chotbibbt8a0guub3ga06stv"
-        ],
-        "origin_counts": {
-          "feed_buffer": 2
-        },
-        "distinct_referring_accounts": 1,
-        "sample_referring_accounts": [
-          "psyfe_official"
-        ],
-        "distinct_axes": []
-      },
-      "claims": {
-        "total": 0,
-        "supported": 0,
-        "refuted": 0,
-        "contested": 0,
-        "unverified": 0,
-        "resolved_count": 0
-      },
-      "structural_features": {
-        "has_search_paths": false,
-        "has_article_paths": false,
-        "has_doi_paths": false
-      },
-      "ratings": {
-        "provenance": {
-          "score": 0.45,
-          "basis": [
-            "unknown_domain_pattern"
-          ]
-        },
-        "breadth": {
-          "score": 0.11833333333333332,
-          "basis": [
-            "distinct_urls:2",
-            "distinct_axes:0",
-            "origin_types:1"
-          ]
-        },
-        "corroboration": {
-          "score": 0.19583333333333333,
-          "basis": [
-            "referring_accounts:1",
-            "origin_types:1"
-          ]
-        },
-        "track_record": {
-          "score": null,
-          "basis": [
-            "no_resolved_claims_observed"
-          ]
-        },
-        "profile": {
-          "score": 0.55,
-          "confidence": 0.75,
-          "basis": [
-            "meta_author:true",
-            "published_time:false",
-            "canonical:true",
-            "about:true",
-            "contact:true",
-            "corrections:false",
-            "outbound_links:1",
-            "opinion_marker:false"
-          ]
-        },
-        "overall": {
-          "score": 0.3536197916666667,
-          "confidence": 0.10997499999999999,
-          "method": "mechanical_v1",
-          "basis": [
-            "unknown_domain_pattern",
-            "distinct_urls:2",
-            "distinct_axes:0",
-            "origin_types:1",
-            "referring_accounts:1",
-            "origin_types:1",
-            "track_record_unavailable"
-          ]
-        }
-      },
-      "profile": {
-        "fetched_at": "2026-07-23T04:52:52.189Z",
-        "homepage_url": "https://hypeddit.com/",
-        "example_url": "https://hypeddit.com/psychicfeverfromexiletribe/ifyouremine?twclid=23rtj49iasvoyuwyxn3g4hwi03",
-        "homepage_status": 200,
-        "example_status": 200,
-        "homepage_final_url": "https://hypeddit.com/",
-        "example_final_url": "https://hypeddit.com/psychicfeverfromexiletribe/ifyouremine?twclid=23rtj49iasvoyuwyxn3g4hwi03",
-        "homepage_content_type": "text/html; charset=utf-8",
-        "example_content_type": "text/html; charset=utf-8",
-        "homepage": {
-          "has_meta_author": true,
-          "has_published_time": false,
-          "has_canonical": true,
-          "has_about_link": true,
-          "has_contact_link": true,
-          "has_corrections_link": false,
-          "outbound_links_count": 3,
-          "opinion_marker": false
-        },
-        "example": {
-          "has_meta_author": true,
-          "has_published_time": false,
-          "has_canonical": true,
-          "has_about_link": false,
-          "has_contact_link": false,
-          "has_corrections_link": false,
-          "outbound_links_count": 1,
           "opinion_marker": false
         }
       }
@@ -78507,6 +78509,83 @@
         "distinct_referring_accounts": 1,
         "sample_referring_accounts": [
           "chatandbuild"
+        ],
+        "distinct_axes": []
+      },
+      "claims": {
+        "total": 0,
+        "supported": 0,
+        "refuted": 0,
+        "contested": 0,
+        "unverified": 0,
+        "resolved_count": 0
+      },
+      "structural_features": {
+        "has_search_paths": false,
+        "has_article_paths": false,
+        "has_doi_paths": false
+      },
+      "ratings": {
+        "provenance": {
+          "score": 0.45,
+          "basis": [
+            "unknown_domain_pattern"
+          ]
+        },
+        "breadth": {
+          "score": 0.08916666666666666,
+          "basis": [
+            "distinct_urls:1",
+            "distinct_axes:0",
+            "origin_types:1"
+          ]
+        },
+        "corroboration": {
+          "score": 0.19583333333333333,
+          "basis": [
+            "referring_accounts:1",
+            "origin_types:1"
+          ]
+        },
+        "track_record": {
+          "score": null,
+          "basis": [
+            "no_resolved_claims_observed"
+          ]
+        },
+        "overall": {
+          "score": 0.3472395833333333,
+          "confidence": 0.08135,
+          "method": "mechanical_v1",
+          "basis": [
+            "unknown_domain_pattern",
+            "distinct_urls:1",
+            "distinct_axes:0",
+            "origin_types:1",
+            "referring_accounts:1",
+            "origin_types:1",
+            "track_record_unavailable"
+          ]
+        }
+      }
+    },
+    {
+      "domain": "securqbit.com",
+      "entity": "Securqbit",
+      "kind": "unknown",
+      "first_seen_at": "2026-07-25T13:17:22.235Z",
+      "last_seen_at": "2026-07-25T13:17:22.235Z",
+      "discovery": {
+        "distinct_urls": 1,
+        "example_urls": [
+          "https://securqbit.com/?twclid=2efyutc3n3nxnqyu1ar67hu69o"
+        ],
+        "origin_counts": {
+          "feed_buffer": 1
+        },
+        "distinct_referring_accounts": 1,
+        "sample_referring_accounts": [
+          "securqbit"
         ],
         "distinct_axes": []
       },
