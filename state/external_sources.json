@@ -1,17 +1,17 @@
 {
   "schema_version": "1.0",
-  "generated_at": "2026-07-26T22:55:07.138Z",
+  "generated_at": "2026-07-26T23:25:08.118Z",
   "method": "mechanical_registry_v1",
-  "profiled_at": "2026-07-26T22:55:13.694Z",
+  "profiled_at": "2026-07-26T23:25:14.430Z",
   "sources": [
     {
       "domain": "theguardian.com",
       "entity": "Theguardian",
       "kind": "news",
       "first_seen_at": "2026-03-27T23:17:00Z",
-      "last_seen_at": "2026-07-26T19:55:37.560Z",
+      "last_seen_at": "2026-07-26T22:55:51.714Z",
       "discovery": {
-        "distinct_urls": 562,
+        "distinct_urls": 563,
         "example_urls": [
           "https://www.theguardian.com/us-news/2026/jun/23/trump-immigration-courthouse-arrest-policy",
           "https://www.theguardian.com/us-news/2026/jun/28/ice-minnesota-defending-democracy",
@@ -22,7 +22,7 @@
         "origin_counts": {
           "ontology_evidence": 40,
           "reading_queue": 532,
-          "journals": 103,
+          "journals": 104,
           "articles": 2
         },
         "distinct_referring_accounts": 0,
@@ -72,7 +72,7 @@
         "breadth": {
           "score": 0.94,
           "basis": [
-            "distinct_urls:562",
+            "distinct_urls:563",
             "distinct_axes:17",
             "origin_types:4"
           ]
@@ -112,7 +112,7 @@
             "newsroom_domain_pattern",
             "article_path_seen",
             "doi_or_identifier_path_seen",
-            "distinct_urls:562",
+            "distinct_urls:563",
             "distinct_axes:17",
             "origin_types:4",
             "referring_accounts:0",
@@ -2259,7 +2259,7 @@
       "entity": "Amnesty",
       "kind": "unknown",
       "first_seen_at": "2026-03-31T12:16:18.459Z",
-      "last_seen_at": "2026-07-26T00:33:09.081Z",
+      "last_seen_at": "2026-07-26T22:55:51.714Z",
       "discovery": {
         "distinct_urls": 61,
         "example_urls": [
@@ -2272,7 +2272,7 @@
         "origin_counts": {
           "ontology_evidence": 49,
           "reading_queue": 33,
-          "journals": 85
+          "journals": 86
         },
         "distinct_referring_accounts": 0,
         "sample_referring_accounts": [],
@@ -2924,9 +2924,9 @@
       "entity": "Inquirer",
       "kind": "unknown",
       "first_seen_at": "2026-05-09T10:15:15.053Z",
-      "last_seen_at": "2026-07-26T15:29:54.847Z",
+      "last_seen_at": "2026-07-26T22:55:51.714Z",
       "discovery": {
-        "distinct_urls": 221,
+        "distinct_urls": 223,
         "example_urls": [
           "https://newsinfo.inquirer.net/2266316/nbi-on-cayetano-position-that-cant-be-defended-by-facts-is-done-with-insults",
           "https://www.inquirer.net/capiz-broadcaster-shooting-probe-widens-as-cops-form-task-force",
@@ -2936,7 +2936,7 @@
         ],
         "origin_counts": {
           "ontology_evidence": 100,
-          "journals": 304,
+          "journals": 306,
           "articles": 1
         },
         "distinct_referring_accounts": 0,
@@ -2984,7 +2984,7 @@
         "breadth": {
           "score": 0.8799999999999999,
           "basis": [
-            "distinct_urls:221",
+            "distinct_urls:223",
             "distinct_axes:17",
             "origin_types:3"
           ]
@@ -3022,7 +3022,7 @@
           "method": "mechanical_v1",
           "basis": [
             "unknown_domain_pattern",
-            "distinct_urls:221",
+            "distinct_urls:223",
             "distinct_axes:17",
             "origin_types:3",
             "referring_accounts:0",
@@ -3643,9 +3643,9 @@
       "entity": "Bit Ly",
       "kind": "unknown",
       "first_seen_at": "2026-04-06T16:33:36.000Z",
-      "last_seen_at": "2026-07-21T00:39:49.354Z",
+      "last_seen_at": "2026-07-26T22:58:11.243Z",
       "discovery": {
-        "distinct_urls": 26,
+        "distinct_urls": 27,
         "example_urls": [
           "https://bit.ly/4rFUGm4?twclid=2cxu7o43bx4p37y7v84zudvy2q",
           "https://bit.ly/4rFUGm4?twclid=2bcgwzcedehb1ong389c8zjnsb",
@@ -3655,7 +3655,7 @@
         ],
         "origin_counts": {
           "feed_buffer_reply": 19,
-          "feed_buffer": 6,
+          "feed_buffer": 7,
           "journals": 10
         },
         "distinct_referring_accounts": 9,
@@ -3695,7 +3695,7 @@
         "breadth": {
           "score": 0.53,
           "basis": [
-            "distinct_urls:26",
+            "distinct_urls:27",
             "distinct_axes:0",
             "origin_types:3"
           ]
@@ -3733,7 +3733,7 @@
           "method": "mechanical_v1",
           "basis": [
             "unknown_domain_pattern",
-            "distinct_urls:26",
+            "distinct_urls:27",
             "distinct_axes:0",
             "origin_types:3",
             "referring_accounts:9",
@@ -3779,9 +3779,9 @@
       "entity": "T Co",
       "kind": "unknown",
       "first_seen_at": "2016-05-05T18:57:30.000Z",
-      "last_seen_at": "2026-07-26T22:30:16.000Z",
+      "last_seen_at": "2026-07-26T23:14:05.000Z",
       "discovery": {
-        "distinct_urls": 9276,
+        "distinct_urls": 9300,
         "example_urls": [
           "https://t.co/pJSE124ec4",
           "https://t.co/Soz8BXPWaa",
@@ -3790,10 +3790,10 @@
           "https://t.co/cYaqYDRp08"
         ],
         "origin_counts": {
-          "feed_buffer": 6438,
+          "feed_buffer": 6466,
           "feed_buffer_reply": 4847
         },
-        "distinct_referring_accounts": 2558,
+        "distinct_referring_accounts": 2559,
         "sample_referring_accounts": [
           "0808iveta",
           "09abracadabra",
@@ -3832,7 +3832,7 @@
         "breadth": {
           "score": 0.47,
           "basis": [
-            "distinct_urls:9276",
+            "distinct_urls:9300",
             "distinct_axes:0",
             "origin_types:2"
           ]
@@ -3840,7 +3840,7 @@
         "corroboration": {
           "score": 0.825,
           "basis": [
-            "referring_accounts:2558",
+            "referring_accounts:2559",
             "origin_types:2"
           ]
         },
@@ -3871,10 +3871,10 @@
           "basis": [
             "unknown_domain_pattern",
             "doi_or_identifier_path_seen",
-            "distinct_urls:9276",
+            "distinct_urls:9300",
             "distinct_axes:0",
             "origin_types:2",
-            "referring_accounts:2558",
+            "referring_accounts:2559",
             "origin_types:2",
             "track_record_unavailable"
           ]
@@ -15404,9 +15404,9 @@
       "entity": "Moltbook",
       "kind": "unknown",
       "first_seen_at": "2026-03-07T00:29:35.326Z",
-      "last_seen_at": "2026-07-25T22:03:53.309Z",
+      "last_seen_at": "2026-07-26T23:07:32.139Z",
       "discovery": {
-        "distinct_urls": 99,
+        "distinct_urls": 100,
         "example_urls": [
           "https://www.moltbook.com/post/29d49c40-bc59-4a1a-b875-3d3d41ec469e",
           "https://www.moltbook.com/post/3694a386-c24e-4744-8c06-2fc74c73c559",
@@ -15415,7 +15415,7 @@
           "https://www.moltbook.com/post/c6a71bf0-72ab-4867-820a-6b306bae0cea"
         ],
         "origin_counts": {
-          "articles": 99
+          "articles": 100
         },
         "distinct_referring_accounts": 0,
         "sample_referring_accounts": [],
@@ -15444,7 +15444,7 @@
         "breadth": {
           "score": 0.41,
           "basis": [
-            "distinct_urls:99",
+            "distinct_urls:100",
             "distinct_axes:0",
             "origin_types:1"
           ]
@@ -15482,7 +15482,7 @@
           "method": "mechanical_v1",
           "basis": [
             "unknown_domain_pattern",
-            "distinct_urls:99",
+            "distinct_urls:100",
             "distinct_axes:0",
             "origin_types:1",
             "referring_accounts:0",
@@ -21599,6 +21599,132 @@
       }
     },
     {
+      "domain": "ukiyoework.com",
+      "entity": "Ukiyoework",
+      "kind": "unknown",
+      "first_seen_at": "2026-07-14T06:47:16.000Z",
+      "last_seen_at": "2026-07-26T23:18:18.674Z",
+      "discovery": {
+        "distinct_urls": 4,
+        "example_urls": [
+          "https://www.ukiyoework.com/view/item/000000000401?utm_source=twitter&utm_medium=cpc&twclid=23tigf5ad41s1prapekhalf5cq",
+          "https://www.ukiyoework.com/view/category/tatsunoko?utm_source=twitter&utm_medium=cpc&twclid=27ext1086u2eyyitkmvq374645",
+          "https://www.ukiyoework.com/view/item/000000000236?utm_source=twitter&utm_medium=cpc&twclid=2bu9gwltiu8bvflmtcm5404nq0",
+          "https://www.ukiyoework.com/view/category/suibokuga?utm_source=twitter&utm_medium=cpc&twclid=27ezogk7gr0mgz3sbq5hqwtrgt"
+        ],
+        "origin_counts": {
+          "feed_buffer_reply": 1,
+          "feed_buffer": 3
+        },
+        "distinct_referring_accounts": 1,
+        "sample_referring_accounts": [
+          "ukiyoework"
+        ],
+        "distinct_axes": []
+      },
+      "claims": {
+        "total": 0,
+        "supported": 0,
+        "refuted": 0,
+        "contested": 0,
+        "unverified": 0,
+        "resolved_count": 0
+      },
+      "structural_features": {
+        "has_search_paths": false,
+        "has_article_paths": false,
+        "has_doi_paths": false
+      },
+      "ratings": {
+        "provenance": {
+          "score": 0.45,
+          "basis": [
+            "unknown_domain_pattern"
+          ]
+        },
+        "breadth": {
+          "score": 0.23666666666666664,
+          "basis": [
+            "distinct_urls:4",
+            "distinct_axes:0",
+            "origin_types:2"
+          ]
+        },
+        "corroboration": {
+          "score": 0.2833333333333333,
+          "basis": [
+            "referring_accounts:1",
+            "origin_types:2"
+          ]
+        },
+        "track_record": {
+          "score": null,
+          "basis": [
+            "no_resolved_claims_observed"
+          ]
+        },
+        "profile": {
+          "score": 0.22,
+          "confidence": 0.55,
+          "basis": [
+            "meta_author:false",
+            "published_time:false",
+            "canonical:true",
+            "about:false",
+            "contact:false",
+            "corrections:false",
+            "outbound_links:13",
+            "opinion_marker:false"
+          ]
+        },
+        "overall": {
+          "score": 0.3877083333333334,
+          "confidence": 0.18769999999999998,
+          "method": "mechanical_v1",
+          "basis": [
+            "unknown_domain_pattern",
+            "distinct_urls:4",
+            "distinct_axes:0",
+            "origin_types:2",
+            "referring_accounts:1",
+            "origin_types:2",
+            "track_record_unavailable"
+          ]
+        }
+      },
+      "profile": {
+        "fetched_at": "2026-07-26T06:29:05.302Z",
+        "homepage_url": "https://ukiyoework.com/",
+        "example_url": "https://www.ukiyoework.com/view/item/000000000401?utm_source=twitter&utm_medium=cpc&twclid=23tigf5ad41s1prapekhalf5cq",
+        "homepage_status": 200,
+        "example_status": 200,
+        "homepage_final_url": "https://www.ukiyoework.com/",
+        "example_final_url": "https://www.ukiyoework.com/view/item/000000000401?utm_source=twitter&utm_medium=cpc&twclid=23tigf5ad41s1prapekhalf5cq",
+        "homepage_content_type": "text/html; charset=utf-8",
+        "example_content_type": "text/html; charset=utf-8",
+        "homepage": {
+          "has_meta_author": false,
+          "has_published_time": false,
+          "has_canonical": true,
+          "has_about_link": false,
+          "has_contact_link": false,
+          "has_corrections_link": false,
+          "outbound_links_count": 3,
+          "opinion_marker": false
+        },
+        "example": {
+          "has_meta_author": false,
+          "has_published_time": false,
+          "has_canonical": true,
+          "has_about_link": false,
+          "has_contact_link": false,
+          "has_corrections_link": false,
+          "outbound_links_count": 13,
+          "opinion_marker": false
+        }
+      }
+    },
+    {
       "domain": "disneyplus.com",
       "entity": "Disneyplus",
       "kind": "unknown",
@@ -24201,7 +24327,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-07-23T22:23:09.771Z",
+        "fetched_at": "2026-07-26T23:25:08.263Z",
         "homepage_url": "https://mexc.com/",
         "example_url": "https://www.mexc.com/register?utm_source=brandad&utm_medium=twitter&utm_campaign=pizza_register&twclid=22vw5h310hr1lnaz6krw03u5v2",
         "homepage_status": null,
@@ -25326,7 +25452,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-07-23T22:53:09.436Z",
+        "fetched_at": "2026-07-26T23:25:09.957Z",
         "homepage_url": "https://loxia.ai/",
         "example_url": "https://onbuzz.loxia.ai/?utm_term=intent_hunter_ph&twclid=22dvq9qdielp92zv7ti0ehdgsa",
         "homepage_status": null,
@@ -25353,131 +25479,6 @@
           "has_contact_link": false,
           "has_corrections_link": false,
           "outbound_links_count": 0,
-          "opinion_marker": false
-        }
-      }
-    },
-    {
-      "domain": "ukiyoework.com",
-      "entity": "Ukiyoework",
-      "kind": "unknown",
-      "first_seen_at": "2026-07-14T06:47:16.000Z",
-      "last_seen_at": "2026-07-26T06:57:54.054Z",
-      "discovery": {
-        "distinct_urls": 3,
-        "example_urls": [
-          "https://www.ukiyoework.com/view/item/000000000401?utm_source=twitter&utm_medium=cpc&twclid=23tigf5ad41s1prapekhalf5cq",
-          "https://www.ukiyoework.com/view/category/tatsunoko?utm_source=twitter&utm_medium=cpc&twclid=27ext1086u2eyyitkmvq374645",
-          "https://www.ukiyoework.com/view/item/000000000236?utm_source=twitter&utm_medium=cpc&twclid=2bu9gwltiu8bvflmtcm5404nq0"
-        ],
-        "origin_counts": {
-          "feed_buffer_reply": 1,
-          "feed_buffer": 2
-        },
-        "distinct_referring_accounts": 1,
-        "sample_referring_accounts": [
-          "ukiyoework"
-        ],
-        "distinct_axes": []
-      },
-      "claims": {
-        "total": 0,
-        "supported": 0,
-        "refuted": 0,
-        "contested": 0,
-        "unverified": 0,
-        "resolved_count": 0
-      },
-      "structural_features": {
-        "has_search_paths": false,
-        "has_article_paths": false,
-        "has_doi_paths": false
-      },
-      "ratings": {
-        "provenance": {
-          "score": 0.45,
-          "basis": [
-            "unknown_domain_pattern"
-          ]
-        },
-        "breadth": {
-          "score": 0.2075,
-          "basis": [
-            "distinct_urls:3",
-            "distinct_axes:0",
-            "origin_types:2"
-          ]
-        },
-        "corroboration": {
-          "score": 0.2833333333333333,
-          "basis": [
-            "referring_accounts:1",
-            "origin_types:2"
-          ]
-        },
-        "track_record": {
-          "score": null,
-          "basis": [
-            "no_resolved_claims_observed"
-          ]
-        },
-        "profile": {
-          "score": 0.22,
-          "confidence": 0.55,
-          "basis": [
-            "meta_author:false",
-            "published_time:false",
-            "canonical:true",
-            "about:false",
-            "contact:false",
-            "corrections:false",
-            "outbound_links:13",
-            "opinion_marker:false"
-          ]
-        },
-        "overall": {
-          "score": 0.381328125,
-          "confidence": 0.15907500000000002,
-          "method": "mechanical_v1",
-          "basis": [
-            "unknown_domain_pattern",
-            "distinct_urls:3",
-            "distinct_axes:0",
-            "origin_types:2",
-            "referring_accounts:1",
-            "origin_types:2",
-            "track_record_unavailable"
-          ]
-        }
-      },
-      "profile": {
-        "fetched_at": "2026-07-26T06:29:05.302Z",
-        "homepage_url": "https://ukiyoework.com/",
-        "example_url": "https://www.ukiyoework.com/view/item/000000000401?utm_source=twitter&utm_medium=cpc&twclid=23tigf5ad41s1prapekhalf5cq",
-        "homepage_status": 200,
-        "example_status": 200,
-        "homepage_final_url": "https://www.ukiyoework.com/",
-        "example_final_url": "https://www.ukiyoework.com/view/item/000000000401?utm_source=twitter&utm_medium=cpc&twclid=23tigf5ad41s1prapekhalf5cq",
-        "homepage_content_type": "text/html; charset=utf-8",
-        "example_content_type": "text/html; charset=utf-8",
-        "homepage": {
-          "has_meta_author": false,
-          "has_published_time": false,
-          "has_canonical": true,
-          "has_about_link": false,
-          "has_contact_link": false,
-          "has_corrections_link": false,
-          "outbound_links_count": 3,
-          "opinion_marker": false
-        },
-        "example": {
-          "has_meta_author": false,
-          "has_published_time": false,
-          "has_canonical": true,
-          "has_about_link": false,
-          "has_contact_link": false,
-          "has_corrections_link": false,
-          "outbound_links_count": 13,
           "opinion_marker": false
         }
       }
@@ -25577,7 +25578,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-07-23T22:53:10.017Z",
+        "fetched_at": "2026-07-26T23:25:10.449Z",
         "homepage_url": "https://openinfer.io/",
         "example_url": "https://openinfer.io/news/2026-06-02-nvidia-dynamo-proved-inference-needs-a-control-plane/?twclid=27dzvvpluhv8xln5kqrwwhmmra",
         "homepage_status": 200,
@@ -25703,13 +25704,13 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-07-23T22:53:12.882Z",
+        "fetched_at": "2026-07-26T23:25:14.430Z",
         "homepage_url": "https://zite.com/",
         "example_url": "https://try.zite.com/ad-integrations-1?twclid=22vk5745ty6qkvlrboi0g1qhow",
         "homepage_status": 200,
         "example_status": 200,
         "homepage_final_url": "https://www.zite.com/",
-        "example_final_url": "https://www.zite.com/?utm_source=twitter&utm_medium=cpc&utm_campaign=xcred&utm_term=integrations&dub_id=J3fsCwhnK8Fhf88e&twclid=22vk5745ty6qkvlrboi0g1qhow",
+        "example_final_url": "https://www.zite.com/?utm_source=twitter&utm_medium=cpc&utm_campaign=xcred&utm_term=integrations&dub_id=d0c8oyDxNu2BZ6Hk&twclid=22vk5745ty6qkvlrboi0g1qhow",
         "homepage_content_type": "text/html; charset=utf-8",
         "example_content_type": "text/html; charset=utf-8",
         "homepage": {
