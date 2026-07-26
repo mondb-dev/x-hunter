@@ -1,15 +1,60 @@
 {
-  "generated_at": "2026-07-26T06:30:18.691Z",
+  "generated_at": "2026-07-26T09:30:42.752Z",
   "stats": {
-    "total": 83,
+    "total": 84,
     "correct": 5,
     "wrong": 18,
     "partial": 7,
-    "pending": 41,
+    "pending": 42,
     "expired": 12,
     "accuracy": 17
   },
+  "calibration": {
+    "resolved": 30,
+    "base_rate_pct": 28,
+    "mean_stated_pct": 79,
+    "overconfidence_gap_pts": 51,
+    "brier_raw": 0.40520333333333336,
+    "brier_calibrated": 0.14473333333333332,
+    "buckets": [
+      {
+        "lo": 70,
+        "hi": 80,
+        "n": 16,
+        "statedMean": 0.7575,
+        "hitRate": 0.28125,
+        "shrunk": 0.28194444444444444
+      },
+      {
+        "lo": 80,
+        "hi": 90,
+        "n": 14,
+        "statedMean": 0.8321428571428571,
+        "hitRate": 0.2857142857142857,
+        "shrunk": 0.28484848484848485
+      }
+    ]
+  },
   "predictions": [
+    {
+      "id": "pred_9b8add3d",
+      "ts": "2026-07-26T09:30:42.749Z",
+      "axes_count": 3,
+      "top_axes": [
+        "Procedural Governance vs. Substantive Action",
+        "Power, Institutions, and Rule of Law",
+        "Human Rights and Exploitation"
+      ],
+      "top_axis_edge": "insufficient",
+      "prediction": "Elder protesters and senators will continue to highlight instances of corruption in Taguig infrastructure projects, putting pressure on officials for substantive action. Within 72 hours",
+      "confidence_pct": 65,
+      "calibrated_pct": 28,
+      "resolution_status": "pending",
+      "deadline_at": "2026-08-25T09:30:42.749Z",
+      "resolved_at": null,
+      "resolution_note": null,
+      "tweet_url": null
+    },
     {
       "id": "pred_f2d76fa7",
       "ts": "2026-07-25T09:23:24.805Z",
