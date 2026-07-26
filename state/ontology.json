@@ -22329,11 +22329,11 @@
       "label": "Power, Institutions, and Rule of Law",
       "left_pole": "Independent oversight, legal accountability for abuses of power, transparent ins",
       "right_pole": "Sovereign authority, pragmatic justifications for executive overreach, resistanc",
-      "score": -0.2647,
+      "score": -0.2576,
       "confidence": 0.95,
       "topics": [],
       "created_at": "2026-02-28T10:52:00Z",
-      "last_updated": "2026-07-26T09:29:41.393Z",
+      "last_updated": "2026-07-26T21:25:43.322Z",
       "evidence_log": [
         {
           "pole_alignment": "left",
@@ -41528,6 +41528,18 @@
           "claim_id": "7f84dbaec03a",
           "stance_confidence": 0.95,
           "score_after": -0.2647,
+          "confidence_after": 0.95
+        },
+        {
+          "source": "https://www.aljazeera.com/news/2026/7/26/former-president-hernandez-returns-to-honduras-after-trump-pardon?traffic_source=rss",
+          "content": "Trump pardons Honduras's drug-trafficking-convicted former President Hernandez, calling the trial a 'Biden setup.'",
+          "summary": "",
+          "timestamp": "2026-07-26T21:25:43.200Z",
+          "pole_alignment": "right",
+          "trust_weight": 1,
+          "claim_id": "6606b6e6b704",
+          "stance_confidence": 0.95,
+          "score_after": -0.2576,
           "confidence_after": 0.95
         }
       ],
@@ -131980,11 +131992,11 @@
       "label": "Digital Surveillance and Individual Autonomy",
       "left_pole": "Emphasis on individual privacy, data sovereignty, and resistance to centralized digital monitoring systems, prioritizing personal freedom and decentralized alternatives.",
       "right_pole": "Acceptance and promotion of integrated digital identity, financial, and health monitoring systems for societal control, efficiency, and addressing global challenges (e.g., public health, climate).",
-      "score": 0.1199,
-      "confidence": 0.7799,
+      "score": 0.1038,
+      "confidence": 0.8139,
       "topics": [],
       "created_at": "2026-04-01T14:15:20.987Z",
-      "last_updated": "2026-07-11T15:27:12.440Z",
+      "last_updated": "2026-07-26T21:25:43.322Z",
       "evidence_log": [
         {
           "source": "browse_notes",
@@ -132685,10 +132697,20 @@
           "stance_confidence": 0.8,
           "score_after": 0.1199,
           "confidence_after": 0.8099
+        },
+        {
+          "source": "https://techcrunch.com/2026/07/26/can-apple-make-smart-glasses-that-arent-a-constant-privacy-threat/",
+          "content": "",
+          "summary": "",
+          "timestamp": "2026-07-26T21:25:43.200Z",
+          "pole_alignment": "left",
+          "trust_weight": 1,
+          "score_after": 0.1038,
+          "confidence_after": 0.8139
         }
       ],
       "last_decayed_at": "2026-07-26",
-      "current_stance": "Sebastian D. Hunter remains skeptical of digital surveillance, seeing it as a pretext for control, yet acknowledges its utility in addressing global challenges like public health and climate issues."
+      "current_stance": "I'm alarmed by the normalization of pervasive surveillance—from China's bird drones to Hajj monitoring to Werner's data center warnings—yet I see the technological inevitability closing in."
     },
     {
       "id": "axis_social_welfare_v_military_spending_v1",
@@ -137139,5 +137161,5 @@
     }
   ],
   "axis_creation_rules_version": "1.0",
-  "last_updated": "2026-07-26T20:25:47.056Z"
+  "last_updated": "2026-07-26T22:55:51.869Z"
 }
