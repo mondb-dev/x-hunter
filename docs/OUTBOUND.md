@@ -48,8 +48,10 @@ Driven through HelmStack (HTTP API :7070, `POST_BACKEND=helmstack`,
   (posting-roadmap.md item).
 - **Gemini** (`tools/helmstack-social/src/gemini.js`): media-generation engine, not a posting channel —
   drives the signed-in gemini.google.com session for landmark hero art
-  (`runner/landmark/art.js`) and experimental Veo video. Fresh chat per
-  generation; image bytes extracted via canvas (blob refetch is blocked);
+  (`runner/landmark/art.js`) and experimental Veo video. One pinned tab per
+  Google account index, reused across generations (each generation re-navigates
+  it to `/app` for a fresh chat); image bytes extracted via canvas (blob
+  refetch is blocked);
   null-with-reason on quota/sign-in/timeout so callers ship without media.
 - Legacy CDP scripts (`runner/post_tweet.js` et al.) remain as the
   non-helmstack backend path.
