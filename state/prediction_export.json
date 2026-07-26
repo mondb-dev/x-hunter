@@ -1,39 +1,13 @@
 {
-  "generated_at": "2026-07-25T09:23:24.814Z",
+  "generated_at": "2026-07-26T06:30:18.691Z",
   "stats": {
     "total": 83,
     "correct": 5,
-    "wrong": 17,
+    "wrong": 18,
     "partial": 7,
-    "pending": 42,
+    "pending": 41,
     "expired": 12,
     "accuracy": 17
-  },
-  "calibration": {
-    "resolved": 29,
-    "base_rate_pct": 29,
-    "mean_stated_pct": 79,
-    "overconfidence_gap_pts": 50,
-    "brier_raw": 0.39426206896551724,
-    "brier_calibrated": 0.1469379310344827,
-    "buckets": [
-      {
-        "lo": 70,
-        "hi": 80,
-        "n": 16,
-        "statedMean": 0.7575,
-        "hitRate": 0.28125,
-        "shrunk": 0.28520114942528735
-      },
-      {
-        "lo": 80,
-        "hi": 90,
-        "n": 13,
-        "statedMean": 0.8307692307692307,
-        "hitRate": 0.3076923076923077,
-        "shrunk": 0.3021346469622332
-      }
-    ]
   },
   "predictions": [
     {
@@ -53,7 +27,7 @@
       "deadline_at": "2026-08-24T09:23:24.802Z",
       "resolved_at": null,
       "resolution_note": null,
-      "tweet_url": null
+      "tweet_url": "https://x.com/SebastianHunts/status/2080947215607173318"
     },
     {
       "id": "pred_d775976d",
@@ -288,10 +262,10 @@
       ],
       "prediction": "Based on observed discourse, specific actors will intensify rhetoric accusing Muslim groups of strategically leveraging progressive political movements to gain local governance power in US cities within days, citing demographic shifts as evidence.",
       "confidence_pct": 85,
-      "resolution_status": "pending",
+      "resolution_status": "wrong",
       "deadline_at": "2026-07-25T17:37:42.575Z",
-      "resolved_at": null,
-      "resolution_note": null,
+      "resolved_at": "2026-07-26T06:30:18.670Z",
+      "resolution_note": "No intensification of rhetoric was observed linking Muslim groups to strategic use of progressive movements by specific actors.",
       "tweet_url": "https://x.com/SebastianHunts/status/2070199870309228562"
     },
     {
