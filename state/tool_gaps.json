@@ -1,222 +1,6 @@
 {
   "gaps": [
     {
-      "key": "internal editorial discussions or unpublished guidelines on how fact-checkers op",
-      "need": "Internal editorial discussions or unpublished guidelines on how fact-checkers operationalize the distinction between 'false' and 'misleading' in edge cases",
-      "suggested_tool": "Access to internal style guides or interviews with fact-checking editors",
-      "count": 1,
-      "first_seen": "2026-07-23",
-      "last_seen": "2026-07-23",
-      "last_question": "Should verifications focus on debunking false claims or also confirming/contextualizing true-but-misleading narratives?"
-    },
-    {
-      "key": "quantitative data on claim selection rates by topic/source/party across the thre",
-      "need": "Quantitative data on claim selection rates by topic/source/party across the three organizations",
-      "suggested_tool": "Database query tool or API access to each organization's complete fact-check archive with metadata",
-      "count": 1,
-      "first_seen": "2026-07-23",
-      "last_seen": "2026-07-23",
-      "last_question": "Should verifications focus on debunking false claims or also confirming/contextualizing true-but-misleading narratives?"
-    },
-    {
-      "key": "internal platform guidelines or training materials showing how moderators/system",
-      "need": "Internal platform guidelines or training materials showing how moderators/systems classify 'false' vs 'misleading-but-true' vs 'lacks context'",
-      "suggested_tool": "Access to platform internal documentation or policy enforcement data",
-      "count": 1,
-      "first_seen": "2026-07-23",
-      "last_seen": "2026-07-23",
-      "last_question": "Should verifications focus on debunking false claims or also confirming/contextualizing true-but-misleading narratives?"
-    },
-    {
-      "key": "actual examples of identical content treated differently (labeled vs removed) to",
-      "need": "Actual examples of identical content treated differently (labeled vs removed) to illustrate the boundary",
-      "suggested_tool": "Case study database or content moderation decision archive",
-      "count": 1,
-      "first_seen": "2026-07-23",
-      "last_seen": "2026-07-23",
-      "last_question": "Should verifications focus on debunking false claims or also confirming/contextualizing true-but-misleading narratives?"
-    },
-    {
-      "key": "quantitative data on how often each platform uses removal vs. labeling for diffe",
-      "need": "Quantitative data on how often each platform uses removal vs. labeling for different content categories",
-      "suggested_tool": "Platform transparency reports with granular enforcement action breakdowns",
-      "count": 1,
-      "first_seen": "2026-07-23",
-      "last_seen": "2026-07-23",
-      "last_question": "Should verifications focus on debunking false claims or also confirming/contextualizing true-but-misleading narratives?"
-    },
-    {
-      "key": "access to full text of paywalled academic articles (sage, apa psycnet) that are ",
-      "need": "Access to full text of paywalled academic articles (Sage, APA PsycNet) that are behind bot-protection",
-      "suggested_tool": "Academic database API or institutional access credentials",
-      "count": 1,
-      "first_seen": "2026-07-23",
-      "last_seen": "2026-07-23",
-      "last_question": "Should verifications focus on debunking false claims or also confirming/contextualizing true-but-misleading narratives?"
-    },
-    {
-      "key": "access to full text of peer-reviewed articles behind paywalls (sciencedirect art",
-      "need": "Access to full text of peer-reviewed articles behind paywalls (ScienceDirect article was blocked)",
-      "suggested_tool": "Academic database access or DOI resolver with institutional credentials",
-      "count": 1,
-      "first_seen": "2026-07-23",
-      "last_seen": "2026-07-23",
-      "last_question": "Should verifications focus on debunking false claims or also confirming/contextualizing true-but-misleading narratives?"
-    },
-    {
-      "key": "systematic review or meta-analysis specifically on context-adding vs binary labe",
-      "need": "Systematic review or meta-analysis specifically on context-adding vs binary labeling effectiveness",
-      "suggested_tool": "Academic literature database with advanced filtering (PubMed, Web of Science, etc.)",
-      "count": 1,
-      "first_seen": "2026-07-23",
-      "last_seen": "2026-07-23",
-      "last_question": "Should verifications focus on debunking false claims or also confirming/contextualizing true-but-misleading narratives?"
-    },
-    {
-      "key": "access to full-text academic papers behind paywalls (sage, sciencedirect) that d",
-      "need": "Access to full-text academic papers behind paywalls (SAGE, ScienceDirect) that directly address the research question",
-      "suggested_tool": "academic database access or institutional login capability",
-      "count": 1,
-      "first_seen": "2026-07-23",
-      "last_seen": "2026-07-23",
-      "last_question": "Should verifications focus on debunking false claims or also confirming/contextualizing true-but-misleading narratives?"
-    },
-    {
-      "key": "quantitative meta-analysis data comparing effect sizes of different correction s",
-      "need": "Quantitative meta-analysis data comparing effect sizes of different correction strategies on CIE",
-      "suggested_tool": "access to meta-analytic databases or structured research synthesis tools",
-      "count": 1,
-      "first_seen": "2026-07-23",
-      "last_seen": "2026-07-23",
-      "last_question": "Should verifications focus on debunking false claims or also confirming/contextualizing true-but-misleading narratives?"
-    },
-    {
-      "key": "access to full text of paywalled academic articles blocked by security verificat",
-      "need": "Access to full text of paywalled academic articles blocked by security verification (SAGE, Nature PMC)",
-      "suggested_tool": "Academic database access or institutional login capability",
-      "count": 1,
-      "first_seen": "2026-07-23",
-      "last_seen": "2026-07-23",
-      "last_question": "Should verifications focus on debunking false claims or also confirming/contextualizing true-but-misleading narratives?"
-    },
-    {
-      "key": "direct experimental data comparing contextualization vs debunking approaches acr",
-      "need": "Direct experimental data comparing contextualization vs debunking approaches across partisan groups with trust as moderator",
-      "suggested_tool": "Access to supplementary materials, datasets, or pre-registration documents from relevant studies",
-      "count": 1,
-      "first_seen": "2026-07-23",
-      "last_seen": "2026-07-23",
-      "last_question": "Should verifications focus on debunking false claims or also confirming/contextualizing true-but-misleading narratives?"
-    },
-    {
-      "key": "quantitative operational data from fact-checking organizations on hours/staff re",
-      "need": "Quantitative operational data from fact-checking organizations on hours/staff required per claim type",
-      "suggested_tool": "Access to internal workflow databases or time-tracking systems from fact-checking orgs like Snopes, PolitiFact, Full Fact, or AFP Fact Check",
-      "count": 1,
-      "first_seen": "2026-07-23",
-      "last_seen": "2026-07-23",
-      "last_question": "Should verifications focus on debunking false claims or also confirming/contextualizing true-but-misleading narratives?"
-    },
-    {
-      "key": "academic research with controlled studies measuring resource requirements for co",
-      "need": "Academic research with controlled studies measuring resource requirements for contextualization vs debunking",
-      "suggested_tool": "Academic database access (JSTOR, Web of Science, Scopus) beyond what web search indexes",
-      "count": 1,
-      "first_seen": "2026-07-23",
-      "last_seen": "2026-07-23",
-      "last_question": "Should verifications focus on debunking false claims or also confirming/contextualizing true-but-misleading narratives?"
-    },
-    {
-      "key": "protected/paywalled content from the sage journal article on precarity in fact-c",
-      "need": "Protected/paywalled content from the Sage journal article on precarity in fact-checking work",
-      "suggested_tool": "Academic journal subscription or institutional access to read full text beyond security wall",
-      "count": 1,
-      "first_seen": "2026-07-23",
-      "last_seen": "2026-07-23",
-      "last_question": "Should verifications focus on debunking false claims or also confirming/contextualizing true-but-misleading narratives?"
-    },
-    {
-      "key": "access to full text of paywalled academic papers (pnas nexus article was blocked",
-      "need": "Access to full text of paywalled academic papers (PNAS Nexus article was blocked by security verification, Nature article only showed abstract)",
-      "suggested_tool": "Academic database access or PDF retrieval capability for peer-reviewed journals",
-      "count": 1,
-      "first_seen": "2026-07-23",
-      "last_seen": "2026-07-23",
-      "last_question": "Should verifications focus on debunking false claims or also confirming/contextualizing true-but-misleading narratives?"
-    },
-    {
-      "key": "direct experimental data comparing all three intervention types (third-party, pl",
-      "need": "Direct experimental data comparing all three intervention types (third-party, platform-native, community notes) with standardized metrics for both debunking and contextualizing",
-      "suggested_tool": "Access to supplementary materials, datasets, or meta-analysis databases from published research",
-      "count": 1,
-      "first_seen": "2026-07-23",
-      "last_seen": "2026-07-23",
-      "last_question": "Should verifications focus on debunking false claims or also confirming/contextualizing true-but-misleading narratives?"
-    },
-    {
-      "key": "information about the specific design features and implementation details of pla",
-      "need": "Information about the specific design features and implementation details of platform-native context labels (how they differ from third-party fact-checks in presentation, sourcing, timing)",
-      "suggested_tool": "Platform API documentation or official implementation specifications",
-      "count": 1,
-      "first_seen": "2026-07-23",
-      "last_seen": "2026-07-23",
-      "last_question": "Should verifications focus on debunking false claims or also confirming/contextualizing true-but-misleading narratives?"
-    },
-    {
-      "key": "access to paywalled academic journals with full-text comparative studies on fals",
-      "need": "Access to paywalled academic journals with full-text comparative studies on false vs. misleading content prevalence",
-      "suggested_tool": "Academic database access (JSTOR, Web of Science) or institutional subscription bypass",
-      "count": 1,
-      "first_seen": "2026-07-23",
-      "last_seen": "2026-07-23",
-      "last_question": "Should verifications focus on debunking false claims or also confirming/contextualizing true-but-misleading narratives?"
-    },
-    {
-      "key": "real-time measurement of viral coefficient differences between fabricated and de",
-      "need": "Real-time measurement of viral coefficient differences between fabricated and decontextualized content currently spreading",
-      "suggested_tool": "Platform-level analytics API with content classification and engagement tracking",
-      "count": 1,
-      "first_seen": "2026-07-23",
-      "last_seen": "2026-07-23",
-      "last_question": "Should verifications focus on debunking false claims or also confirming/contextualizing true-but-misleading narratives?"
-    },
-    {
-      "key": "expert interviews or primary research from misinformation researchers on the rel",
-      "need": "Expert interviews or primary research from misinformation researchers on the relative prevalence question",
-      "suggested_tool": "Expert outreach capability or access to researcher networks",
-      "count": 1,
-      "first_seen": "2026-07-23",
-      "last_seen": "2026-07-23",
-      "last_question": "Should verifications focus on debunking false claims or also confirming/contextualizing true-but-misleading narratives?"
-    },
-    {
-      "key": "direct experimental or observational data comparing spread velocity of misleadin",
-      "need": "Direct experimental or observational data comparing spread velocity of misleading-but-true narratives vs outright false claims in controlled conditions",
-      "suggested_tool": "Access to research databases with full-text papers (JSTOR, Web of Science) or academic preprint servers",
-      "count": 1,
-      "first_seen": "2026-07-23",
-      "last_seen": "2026-07-23",
-      "last_question": "Should verifications focus on debunking false claims or also confirming/contextualizing true-but-misleading narratives?"
-    },
-    {
-      "key": "network topology analysis showing structural differences (clustering coefficient",
-      "need": "Network topology analysis showing structural differences (clustering coefficients, betweenness centrality, bridge nodes) between how the two types spread",
-      "suggested_tool": "Social network analysis tool with historical cascade data or computational social science dataset access",
-      "count": 1,
-      "first_seen": "2026-07-23",
-      "last_seen": "2026-07-23",
-      "last_question": "Should verifications focus on debunking false claims or also confirming/contextualizing true-but-misleading narratives?"
-    },
-    {
-      "key": "longitudinal correction effectiveness studies measuring belief persistence after",
-      "need": "Longitudinal correction effectiveness studies measuring belief persistence after debunking for each type",
-      "suggested_tool": "Psychology/communication research database with intervention studies",
-      "count": 1,
-      "first_seen": "2026-07-23",
-      "last_seen": "2026-07-23",
-      "last_question": "Should verifications focus on debunking false claims or also confirming/contextualizing true-but-misleading narratives?"
-    },
-    {
       "key": "systematic meta-analyses or literature reviews comparing debunking vs contextual",
       "need": "Systematic meta-analyses or literature reviews comparing debunking vs contextualization effectiveness across different misinformation types and audience segments",
       "suggested_tool": "Academic database access (PubMed, Google Scholar API, JSTOR) with full-text retrieval",
@@ -898,6 +682,222 @@
       "count": 1,
       "first_seen": "2026-07-25",
       "last_seen": "2026-07-25",
+      "last_question": "Will the prosecution be able to present sufficient evidence against Vice President Sara Duterte during her impeachment trial?"
+    },
+    {
+      "key": "primary source documents of the actual impeachment complaints filed (the full te",
+      "need": "Primary source documents of the actual impeachment complaints filed (the full text of each complaint as submitted to the House)",
+      "suggested_tool": "Direct access to Philippine House of Representatives official document repository or PACER-equivalent system",
+      "count": 1,
+      "first_seen": "2026-07-26",
+      "last_seen": "2026-07-26",
+      "last_question": "Will the prosecution be able to present sufficient evidence against Vice President Sara Duterte during her impeachment trial?"
+    },
+    {
+      "key": "senate impeachment trial proceedings and outcome after house impeachment on febr",
+      "need": "Senate impeachment trial proceedings and outcome after House impeachment on February 5, 2025",
+      "suggested_tool": "Philippine Senate official records or live proceedings database",
+      "count": 1,
+      "first_seen": "2026-07-26",
+      "last_seen": "2026-07-26",
+      "last_question": "Will the prosecution be able to present sufficient evidence against Vice President Sara Duterte during her impeachment trial?"
+    },
+    {
+      "key": "access to actual coa audit reports, notices of disallowance, and house committee",
+      "need": "Access to actual COA audit reports, Notices of Disallowance, and House committee reports as primary documents rather than news summaries",
+      "suggested_tool": "Direct access to Philippine government document repositories (COA website, House of Representatives official records)",
+      "count": 1,
+      "first_seen": "2026-07-26",
+      "last_seen": "2026-07-26",
+      "last_question": "Will the prosecution be able to present sufficient evidence against Vice President Sara Duterte during her impeachment trial?"
+    },
+    {
+      "key": "timeline and procedural status of criminal cases filed - whether charges were ac",
+      "need": "Timeline and procedural status of criminal cases filed - whether charges were actually filed by DOJ/Ombudsman following House recommendations",
+      "suggested_tool": "Court docket/case tracking system or official prosecutorial records database",
+      "count": 1,
+      "first_seen": "2026-07-26",
+      "last_seen": "2026-07-26",
+      "last_question": "Will the prosecution be able to present sufficient evidence against Vice President Sara Duterte during her impeachment trial?"
+    },
+    {
+      "key": "full transcript or video recording of the november 23, 2024 zoom press conferenc",
+      "need": "Full transcript or video recording of the November 23, 2024 Zoom press conference",
+      "suggested_tool": "Video archive access or official transcript repository",
+      "count": 1,
+      "first_seen": "2026-07-26",
+      "last_seen": "2026-07-26",
+      "last_question": "Will the prosecution be able to present sufficient evidence against Vice President Sara Duterte during her impeachment trial?"
+    },
+    {
+      "key": "complete witness list with testimony summaries from house committee hearings",
+      "need": "Complete witness list with testimony summaries from House committee hearings",
+      "suggested_tool": "Access to official House of Representatives hearing records/database",
+      "count": 1,
+      "first_seen": "2026-07-26",
+      "last_seen": "2026-07-26",
+      "last_question": "Will the prosecution be able to present sufficient evidence against Vice President Sara Duterte during her impeachment trial?"
+    },
+    {
+      "key": "nbi investigation report details (methodology, timeline of analysis, specific pr",
+      "need": "NBI investigation report details (methodology, timeline of analysis, specific prior statements found)",
+      "suggested_tool": "Government document repository or FOIA-equivalent request system",
+      "count": 1,
+      "first_seen": "2026-07-26",
+      "last_seen": "2026-07-26",
+      "last_question": "Will the prosecution be able to present sufficient evidence against Vice President Sara Duterte during her impeachment trial?"
+    },
+    {
+      "key": "access to sebastian hunter's actual evidence files, chain of custody logs, and a",
+      "need": "Access to Sebastian Hunter's actual evidence files, chain of custody logs, and authentication certificates to audit them",
+      "suggested_tool": "File system access or document repository tool to review Sebastian's case files directly",
+      "count": 1,
+      "first_seen": "2026-07-26",
+      "last_seen": "2026-07-26",
+      "last_question": "Will the prosecution be able to present sufficient evidence against Vice President Sara Duterte during her impeachment trial?"
+    },
+    {
+      "key": "expert forensic examination reports for the specific evidence in sebastian's cas",
+      "need": "Expert forensic examination reports for the specific evidence in Sebastian's case",
+      "suggested_tool": "Access to forensic lab reports or ability to commission new forensic analysis",
+      "count": 1,
+      "first_seen": "2026-07-26",
+      "last_seen": "2026-07-26",
+      "last_question": "Will the prosecution be able to present sufficient evidence against Vice President Sara Duterte during her impeachment trial?"
+    },
+    {
+      "key": "legal assessment of whether authentication meets specific jurisdiction's admissi",
+      "need": "Legal assessment of whether authentication meets specific jurisdiction's admissibility standards",
+      "suggested_tool": "Legal expert consultation or jurisdiction-specific case law database",
+      "count": 1,
+      "first_seen": "2026-07-26",
+      "last_seen": "2026-07-26",
+      "last_question": "Will the prosecution be able to present sufficient evidence against Vice President Sara Duterte during her impeachment trial?"
+    },
+    {
+      "key": "individual senator voting intentions or public statements on impeachment",
+      "need": "Individual senator voting intentions or public statements on impeachment",
+      "suggested_tool": "Philippine news database or Senate proceedings archive with statement search",
+      "count": 1,
+      "first_seen": "2026-07-26",
+      "last_seen": "2026-07-26",
+      "last_question": "Will the prosecution be able to present sufficient evidence against Vice President Sara Duterte during her impeachment trial?"
+    },
+    {
+      "key": "behind-the-scenes political negotiations or private senator positions",
+      "need": "Behind-the-scenes political negotiations or private senator positions",
+      "suggested_tool": "Insider political reporting access or confidential source interviews",
+      "count": 1,
+      "first_seen": "2026-07-26",
+      "last_seen": "2026-07-26",
+      "last_question": "Will the prosecution be able to present sufficient evidence against Vice President Sara Duterte during her impeachment trial?"
+    },
+    {
+      "key": "full text of past impeachment trial transcripts showing actual defense objection",
+      "need": "Full text of past impeachment trial transcripts showing actual defense objections and evidentiary rulings on classified/sensitive information",
+      "suggested_tool": "Access to Philippine Senate archives or PACER-equivalent legal database with impeachment trial records",
+      "count": 1,
+      "first_seen": "2026-07-26",
+      "last_seen": "2026-07-26",
+      "last_question": "Will the prosecution be able to present sufficient evidence against Vice President Sara Duterte during her impeachment trial?"
+    },
+    {
+      "key": "expert legal analysis or commentary on how executive privilege and national secu",
+      "need": "Expert legal analysis or commentary on how executive privilege and national security classifications interact with impeachment evidence rules in Philippine constitutional law",
+      "suggested_tool": "Academic legal database (Westlaw, LexisNexis equivalent for Philippines) or access to Philippine law review articles",
+      "count": 1,
+      "first_seen": "2026-07-26",
+      "last_seen": "2026-07-26",
+      "last_question": "Will the prosecution be able to present sufficient evidence against Vice President Sara Duterte during her impeachment trial?"
+    },
+    {
+      "key": "specific defense strategy memoranda or legal briefs from previous impeachment ca",
+      "need": "Specific defense strategy memoranda or legal briefs from previous impeachment cases showing argumentation on evidence admissibility",
+      "suggested_tool": "Court filing database or freedom of information requests for impeachment case documents",
+      "count": 1,
+      "first_seen": "2026-07-26",
+      "last_seen": "2026-07-26",
+      "last_question": "Will the prosecution be able to present sufficient evidence against Vice President Sara Duterte during her impeachment trial?"
+    },
+    {
+      "key": "academic or legal analysis of how 'betrayal of public trust' as an impeachable o",
+      "need": "Academic or legal analysis of how 'betrayal of public trust' as an impeachable offense compares evidentiary-wise to concrete statutory crimes",
+      "suggested_tool": "Access to Philippine law journals or constitutional law scholarship databases",
+      "count": 1,
+      "first_seen": "2026-07-26",
+      "last_seen": "2026-07-26",
+      "last_question": "Will the prosecution be able to present sufficient evidence against Vice President Sara Duterte during her impeachment trial?"
+    },
+    {
+      "key": "detailed political party composition of the senate during each impeachment trial",
+      "need": "Detailed political party composition of the Senate during each impeachment trial and how partisan alignment affected votes",
+      "suggested_tool": "Philippine legislative/political database with historical party membership data",
+      "count": 1,
+      "first_seen": "2026-07-26",
+      "last_seen": "2026-07-26",
+      "last_question": "Will the prosecution be able to present sufficient evidence against Vice President Sara Duterte during her impeachment trial?"
+    },
+    {
+      "key": "authoritative judicial or academic interpretation of what 'culpable violation of",
+      "need": "Authoritative judicial or academic interpretation of what 'culpable violation of the Constitution' means as distinct from the other five grounds",
+      "suggested_tool": "Access to Philippine Supreme Court case law database or legal treatises on constitutional law",
+      "count": 1,
+      "first_seen": "2026-07-26",
+      "last_seen": "2026-07-26",
+      "last_question": "Will the prosecution be able to present sufficient evidence against Vice President Sara Duterte during her impeachment trial?"
+    },
+    {
+      "key": "confirmation of whether philippine impeachment jurisprudence or senate rules for",
+      "need": "Confirmation of whether Philippine impeachment jurisprudence or Senate rules formally adopt a specific evidentiary standard (substantial evidence, preponderance, or other)",
+      "suggested_tool": "Access to Senate impeachment rules, Supreme Court decisions on impeachment procedures, or official legal commentary",
+      "count": 1,
+      "first_seen": "2026-07-26",
+      "last_seen": "2026-07-26",
+      "last_question": "Will the prosecution be able to present sufficient evidence against Vice President Sara Duterte during her impeachment trial?"
+    },
+    {
+      "key": "detailed cvs, academic credentials, and case histories of individual house membe",
+      "need": "Detailed CVs, academic credentials, and case histories of individual House members serving as prosecutors",
+      "suggested_tool": "Access to Philippine House of Representatives member database or official congressional biographies",
+      "count": 1,
+      "first_seen": "2026-07-26",
+      "last_seen": "2026-07-26",
+      "last_question": "Will the prosecution be able to present sufficient evidence against Vice President Sara Duterte during her impeachment trial?"
+    },
+    {
+      "key": "verification of bar admission status and litigation records in philippine courts",
+      "need": "Verification of bar admission status and litigation records in Philippine courts",
+      "suggested_tool": "Philippine Supreme Court bar records database or Integrated Bar of the Philippines member lookup",
+      "count": 1,
+      "first_seen": "2026-07-26",
+      "last_seen": "2026-07-26",
+      "last_question": "Will the prosecution be able to present sufficient evidence against Vice President Sara Duterte during her impeachment trial?"
+    },
+    {
+      "key": "details of prosecution's internal strategy documents, witness sequencing plans, ",
+      "need": "Details of prosecution's internal strategy documents, witness sequencing plans, or confidential filings about evidence organization",
+      "suggested_tool": "Access to ICC confidential case filings or prosecution strategy memos",
+      "count": 1,
+      "first_seen": "2026-07-26",
+      "last_seen": "2026-07-26",
+      "last_question": "Will the prosecution be able to present sufficient evidence against Vice President Sara Duterte during her impeachment trial?"
+    },
+    {
+      "key": "assessment of whether five expert witnesses is adequate compared to similar icc ",
+      "need": "Assessment of whether five expert witnesses is adequate compared to similar ICC cases or prosecution best practices",
+      "suggested_tool": "Database of ICC case staffing patterns or expert testimony requirements for crimes against humanity cases",
+      "count": 1,
+      "first_seen": "2026-07-26",
+      "last_seen": "2026-07-26",
+      "last_question": "Will the prosecution be able to present sufficient evidence against Vice President Sara Duterte during her impeachment trial?"
+    },
+    {
+      "key": "current status of the 13,000+ pieces of evidence - how many have been processed,",
+      "need": "Current status of the 13,000+ pieces of evidence - how many have been processed, categorized, and are trial-ready",
+      "suggested_tool": "Access to ICC case management system or prosecution evidence tracking database",
+      "count": 1,
+      "first_seen": "2026-07-26",
+      "last_seen": "2026-07-26",
       "last_question": "Will the prosecution be able to present sufficient evidence against Vice President Sara Duterte during her impeachment trial?"
     }
   ]
