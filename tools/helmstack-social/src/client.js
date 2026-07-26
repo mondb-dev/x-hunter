@@ -88,13 +88,20 @@ class HelmStackClient {
   }
 
   /**
-   * Find an existing tab whose URL matches `matcher` (RegExp/string), else open
-   * one at `openUrl`. Returns the tab id.
+   * Find an existing tab that matches, else open one at `openUrl`. Returns the
+   * tab id. `matcher` is a RegExp/string tested against the tab URL, or a
+   * predicate function receiving the whole tab object.
    */
   async ensureTab(matcher, openUrl) {
-    const re = matcher instanceof RegExp ? matcher : new RegExp(matcher);
+    let test;
+    if (typeof matcher === "function") {
+      test = matcher;
+    } else {
+      const re = matcher instanceof RegExp ? matcher : new RegExp(matcher);
+      test = (t) => re.test(t.url || "");
+    }
     const tabs = await this.listTabs();
-    const existing = tabs.find((t) => re.test(t.url || ""));
+    const existing = tabs.find((t) => test(t));
     if (existing) return existing.id;
     const before = new Set(tabs.map((t) => t.id));
     const after = await this.openTab(openUrl);
