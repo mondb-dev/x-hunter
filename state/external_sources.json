@@ -1,8 +1,8 @@
 {
   "schema_version": "1.0",
-  "generated_at": "2026-07-25T21:51:53.899Z",
+  "generated_at": "2026-07-25T23:29:03.546Z",
   "method": "mechanical_registry_v1",
-  "profiled_at": "2026-07-25T21:51:56.762Z",
+  "profiled_at": "2026-07-25T23:29:13.869Z",
   "sources": [
     {
       "domain": "theguardian.com",
@@ -11,7 +11,7 @@
       "first_seen_at": "2026-03-27T23:17:00Z",
       "last_seen_at": "2026-07-25T19:56:09.377Z",
       "discovery": {
-        "distinct_urls": 548,
+        "distinct_urls": 549,
         "example_urls": [
           "https://www.theguardian.com/us-news/2026/jun/23/trump-immigration-courthouse-arrest-policy",
           "https://www.theguardian.com/us-news/2026/jun/28/ice-minnesota-defending-democracy",
@@ -21,7 +21,7 @@
         ],
         "origin_counts": {
           "ontology_evidence": 40,
-          "reading_queue": 518,
+          "reading_queue": 519,
           "journals": 102,
           "articles": 2
         },
@@ -72,7 +72,7 @@
         "breadth": {
           "score": 0.94,
           "basis": [
-            "distinct_urls:548",
+            "distinct_urls:549",
             "distinct_axes:17",
             "origin_types:4"
           ]
@@ -112,7 +112,7 @@
             "newsroom_domain_pattern",
             "article_path_seen",
             "doi_or_identifier_path_seen",
-            "distinct_urls:548",
+            "distinct_urls:549",
             "distinct_axes:17",
             "origin_types:4",
             "referring_accounts:0",
@@ -694,7 +694,7 @@
       "first_seen_at": "2026-06-22T00:15:00Z",
       "last_seen_at": "2026-07-25T04:34:58.985Z",
       "discovery": {
-        "distinct_urls": 375,
+        "distinct_urls": 376,
         "example_urls": [
           "https://www.nytimes.com/2026/06/19/world/canada/frank-stronach-trial-guilty-sex-charges.html",
           "https://www.nytimes.com/2026/06/27/world/americas/mexican-officials-us-informants.html",
@@ -704,7 +704,7 @@
         ],
         "origin_counts": {
           "ontology_evidence": 13,
-          "reading_queue": 377,
+          "reading_queue": 378,
           "journals": 34
         },
         "distinct_referring_accounts": 0,
@@ -743,7 +743,7 @@
         "breadth": {
           "score": 0.8799999999999999,
           "basis": [
-            "distinct_urls:375",
+            "distinct_urls:376",
             "distinct_axes:7",
             "origin_types:3"
           ]
@@ -782,7 +782,7 @@
           "basis": [
             "newsroom_domain_pattern",
             "article_path_seen",
-            "distinct_urls:375",
+            "distinct_urls:376",
             "distinct_axes:7",
             "origin_types:3",
             "referring_accounts:0",
@@ -1443,7 +1443,7 @@
       "first_seen_at": "2026-06-26T07:05:00Z",
       "last_seen_at": "2026-07-19T20:44:41.291Z",
       "discovery": {
-        "distinct_urls": 316,
+        "distinct_urls": 317,
         "example_urls": [
           "https://www.bbc.co.uk/news/articles/cn8qxz6qypyo",
           "https://www.bbc.co.uk/news/articles/cn075j04pnyo?at_medium=RSS&amp;at_campaign=rss",
@@ -1453,7 +1453,7 @@
         ],
         "origin_counts": {
           "ontology_evidence": 6,
-          "reading_queue": 324,
+          "reading_queue": 325,
           "journals": 14
         },
         "distinct_referring_accounts": 0,
@@ -1488,7 +1488,7 @@
         "breadth": {
           "score": 0.7633333333333332,
           "basis": [
-            "distinct_urls:316",
+            "distinct_urls:317",
             "distinct_axes:4",
             "origin_types:3"
           ]
@@ -1526,7 +1526,7 @@
           "method": "mechanical_v1",
           "basis": [
             "newsroom_domain_pattern",
-            "distinct_urls:316",
+            "distinct_urls:317",
             "distinct_axes:4",
             "origin_types:3",
             "referring_accounts:0",
@@ -1814,6 +1814,144 @@
           "has_contact_link": true,
           "has_corrections_link": false,
           "outbound_links_count": 6,
+          "opinion_marker": false
+        }
+      }
+    },
+    {
+      "domain": "pcij.org",
+      "entity": "Pcij",
+      "kind": "unknown",
+      "first_seen_at": "2026-07-08T04:32:07.894Z",
+      "last_seen_at": "2026-07-25T22:03:53.309Z",
+      "discovery": {
+        "distinct_urls": 12,
+        "example_urls": [
+          "https://pcij.org/2026/06/23/tycoons-swoop-in-clean-energy-boom/",
+          "https://pcij.org/2026/05/24/duterte-impeach-votes-2026/",
+          "https://pcij.org/2026/05/25/duterte-impeach-votes-2026/",
+          "https://pcij.org/2026/07/01/ten-years-ago-today-day-one-year-one-of-the-antidrug-campaign/",
+          "https://pcij.org/2026/05/25/7-reasons-why-the-party-list-system-serves-dynasties-not-democracy/"
+        ],
+        "origin_counts": {
+          "ontology_evidence": 14,
+          "reading_queue": 10,
+          "journals": 26,
+          "articles": 1
+        },
+        "distinct_referring_accounts": 0,
+        "sample_referring_accounts": [],
+        "distinct_axes": [
+          "axis_digital_supply_chain_security",
+          "axis_eje_accountability_v1",
+          "axis_environmental_policy_v_economic_v1",
+          "axis_human_rights_exploitation_v1",
+          "axis_political_dynasties_meritocracy_v1",
+          "axis_political_vulnerability_foreign_influence_v1",
+          "axis_power_accountability",
+          "axis_procedural_governance_accountability_v1"
+        ]
+      },
+      "claims": {
+        "total": 0,
+        "supported": 0,
+        "refuted": 0,
+        "contested": 0,
+        "unverified": 0,
+        "resolved_count": 0
+      },
+      "structural_features": {
+        "has_search_paths": false,
+        "has_article_paths": true,
+        "has_doi_paths": false
+      },
+      "ratings": {
+        "provenance": {
+          "score": 0.48,
+          "basis": [
+            "unknown_domain_pattern",
+            "article_path_seen"
+          ]
+        },
+        "breadth": {
+          "score": 0.94,
+          "basis": [
+            "distinct_urls:12",
+            "distinct_axes:8",
+            "origin_types:4"
+          ]
+        },
+        "corroboration": {
+          "score": 0.35,
+          "basis": [
+            "referring_accounts:0",
+            "origin_types:4"
+          ]
+        },
+        "track_record": {
+          "score": null,
+          "basis": [
+            "no_resolved_claims_observed"
+          ]
+        },
+        "profile": {
+          "score": 0.58,
+          "confidence": 0.75,
+          "basis": [
+            "meta_author:true",
+            "published_time:true",
+            "canonical:true",
+            "about:false",
+            "contact:false",
+            "corrections:false",
+            "outbound_links:24",
+            "opinion_marker:false"
+          ]
+        },
+        "overall": {
+          "score": 0.5684374999999999,
+          "confidence": 0.4989,
+          "method": "mechanical_v1",
+          "basis": [
+            "unknown_domain_pattern",
+            "article_path_seen",
+            "distinct_urls:12",
+            "distinct_axes:8",
+            "origin_types:4",
+            "referring_accounts:0",
+            "origin_types:4",
+            "track_record_unavailable"
+          ]
+        }
+      },
+      "profile": {
+        "fetched_at": "2026-07-24T14:53:23.128Z",
+        "homepage_url": "https://pcij.org/",
+        "example_url": "https://pcij.org/2026/06/23/tycoons-swoop-in-clean-energy-boom/",
+        "homepage_status": 200,
+        "example_status": 200,
+        "homepage_final_url": "https://pcij.org/",
+        "example_final_url": "https://pcij.org/2026/06/23/tycoons-swoop-in-clean-energy-boom/",
+        "homepage_content_type": "text/html; charset=UTF-8",
+        "example_content_type": "text/html; charset=UTF-8",
+        "homepage": {
+          "has_meta_author": false,
+          "has_published_time": true,
+          "has_canonical": true,
+          "has_about_link": false,
+          "has_contact_link": false,
+          "has_corrections_link": false,
+          "outbound_links_count": 9,
+          "opinion_marker": false
+        },
+        "example": {
+          "has_meta_author": true,
+          "has_published_time": true,
+          "has_canonical": true,
+          "has_about_link": false,
+          "has_contact_link": false,
+          "has_corrections_link": false,
+          "outbound_links_count": 24,
           "opinion_marker": false
         }
       }
@@ -2506,143 +2644,6 @@
           "has_contact_link": false,
           "has_corrections_link": false,
           "outbound_links_count": 15,
-          "opinion_marker": false
-        }
-      }
-    },
-    {
-      "domain": "pcij.org",
-      "entity": "Pcij",
-      "kind": "unknown",
-      "first_seen_at": "2026-07-08T04:32:07.894Z",
-      "last_seen_at": "2026-07-24T17:54:08.094Z",
-      "discovery": {
-        "distinct_urls": 11,
-        "example_urls": [
-          "https://pcij.org/2026/06/23/tycoons-swoop-in-clean-energy-boom/",
-          "https://pcij.org/2026/05/24/duterte-impeach-votes-2026/",
-          "https://pcij.org/2026/05/25/duterte-impeach-votes-2026/",
-          "https://pcij.org/2026/07/01/ten-years-ago-today-day-one-year-one-of-the-antidrug-campaign/",
-          "https://pcij.org/2026/05/25/7-reasons-why-the-party-list-system-serves-dynasties-not-democracy/"
-        ],
-        "origin_counts": {
-          "ontology_evidence": 14,
-          "reading_queue": 10,
-          "journals": 26
-        },
-        "distinct_referring_accounts": 0,
-        "sample_referring_accounts": [],
-        "distinct_axes": [
-          "axis_digital_supply_chain_security",
-          "axis_eje_accountability_v1",
-          "axis_environmental_policy_v_economic_v1",
-          "axis_human_rights_exploitation_v1",
-          "axis_political_dynasties_meritocracy_v1",
-          "axis_political_vulnerability_foreign_influence_v1",
-          "axis_power_accountability",
-          "axis_procedural_governance_accountability_v1"
-        ]
-      },
-      "claims": {
-        "total": 0,
-        "supported": 0,
-        "refuted": 0,
-        "contested": 0,
-        "unverified": 0,
-        "resolved_count": 0
-      },
-      "structural_features": {
-        "has_search_paths": false,
-        "has_article_paths": true,
-        "has_doi_paths": false
-      },
-      "ratings": {
-        "provenance": {
-          "score": 0.48,
-          "basis": [
-            "unknown_domain_pattern",
-            "article_path_seen"
-          ]
-        },
-        "breadth": {
-          "score": 0.8508333333333333,
-          "basis": [
-            "distinct_urls:11",
-            "distinct_axes:8",
-            "origin_types:3"
-          ]
-        },
-        "corroboration": {
-          "score": 0.26249999999999996,
-          "basis": [
-            "referring_accounts:0",
-            "origin_types:3"
-          ]
-        },
-        "track_record": {
-          "score": null,
-          "basis": [
-            "no_resolved_claims_observed"
-          ]
-        },
-        "profile": {
-          "score": 0.58,
-          "confidence": 0.75,
-          "basis": [
-            "meta_author:true",
-            "published_time:true",
-            "canonical:true",
-            "about:false",
-            "contact:false",
-            "corrections:false",
-            "outbound_links:24",
-            "opinion_marker:false"
-          ]
-        },
-        "overall": {
-          "score": 0.5407291666666666,
-          "confidence": 0.4498,
-          "method": "mechanical_v1",
-          "basis": [
-            "unknown_domain_pattern",
-            "article_path_seen",
-            "distinct_urls:11",
-            "distinct_axes:8",
-            "origin_types:3",
-            "referring_accounts:0",
-            "origin_types:3",
-            "track_record_unavailable"
-          ]
-        }
-      },
-      "profile": {
-        "fetched_at": "2026-07-24T14:53:23.128Z",
-        "homepage_url": "https://pcij.org/",
-        "example_url": "https://pcij.org/2026/06/23/tycoons-swoop-in-clean-energy-boom/",
-        "homepage_status": 200,
-        "example_status": 200,
-        "homepage_final_url": "https://pcij.org/",
-        "example_final_url": "https://pcij.org/2026/06/23/tycoons-swoop-in-clean-energy-boom/",
-        "homepage_content_type": "text/html; charset=UTF-8",
-        "example_content_type": "text/html; charset=UTF-8",
-        "homepage": {
-          "has_meta_author": false,
-          "has_published_time": true,
-          "has_canonical": true,
-          "has_about_link": false,
-          "has_contact_link": false,
-          "has_corrections_link": false,
-          "outbound_links_count": 9,
-          "opinion_marker": false
-        },
-        "example": {
-          "has_meta_author": true,
-          "has_published_time": true,
-          "has_canonical": true,
-          "has_about_link": false,
-          "has_contact_link": false,
-          "has_corrections_link": false,
-          "outbound_links_count": 24,
           "opinion_marker": false
         }
       }
@@ -3773,9 +3774,9 @@
       "entity": "T Co",
       "kind": "unknown",
       "first_seen_at": "2016-05-05T18:57:30.000Z",
-      "last_seen_at": "2026-07-25T19:33:12.000Z",
+      "last_seen_at": "2026-07-25T21:35:46.000Z",
       "discovery": {
-        "distinct_urls": 8258,
+        "distinct_urls": 8261,
         "example_urls": [
           "https://t.co/pJSE124ec4",
           "https://t.co/Soz8BXPWaa",
@@ -3784,7 +3785,7 @@
           "https://t.co/cYaqYDRp08"
         ],
         "origin_counts": {
-          "feed_buffer": 5326,
+          "feed_buffer": 5329,
           "feed_buffer_reply": 4831
         },
         "distinct_referring_accounts": 2487,
@@ -3826,7 +3827,7 @@
         "breadth": {
           "score": 0.47,
           "basis": [
-            "distinct_urls:8258",
+            "distinct_urls:8261",
             "distinct_axes:0",
             "origin_types:2"
           ]
@@ -3865,7 +3866,7 @@
           "basis": [
             "unknown_domain_pattern",
             "doi_or_identifier_path_seen",
-            "distinct_urls:8258",
+            "distinct_urls:8261",
             "distinct_axes:0",
             "origin_types:2",
             "referring_accounts:2487",
@@ -14889,9 +14890,9 @@
       "entity": "Moltbook",
       "kind": "unknown",
       "first_seen_at": "2026-03-07T00:29:35.326Z",
-      "last_seen_at": "2026-07-23T19:01:58.691Z",
+      "last_seen_at": "2026-07-25T22:03:53.309Z",
       "discovery": {
-        "distinct_urls": 98,
+        "distinct_urls": 99,
         "example_urls": [
           "https://www.moltbook.com/post/29d49c40-bc59-4a1a-b875-3d3d41ec469e",
           "https://www.moltbook.com/post/3694a386-c24e-4744-8c06-2fc74c73c559",
@@ -14900,7 +14901,7 @@
           "https://www.moltbook.com/post/c6a71bf0-72ab-4867-820a-6b306bae0cea"
         ],
         "origin_counts": {
-          "articles": 98
+          "articles": 99
         },
         "distinct_referring_accounts": 0,
         "sample_referring_accounts": [],
@@ -14929,7 +14930,7 @@
         "breadth": {
           "score": 0.41,
           "basis": [
-            "distinct_urls:98",
+            "distinct_urls:99",
             "distinct_axes:0",
             "origin_types:1"
           ]
@@ -14967,7 +14968,7 @@
           "method": "mechanical_v1",
           "basis": [
             "unknown_domain_pattern",
-            "distinct_urls:98",
+            "distinct_urls:99",
             "distinct_axes:0",
             "origin_types:1",
             "referring_accounts:0",
@@ -43150,7 +43151,7 @@
           ]
         },
         "profile": {
-          "score": 0.65,
+          "score": 0.66,
           "confidence": 0.75,
           "basis": [
             "meta_author:true",
@@ -43159,7 +43160,7 @@
             "about:true",
             "contact:true",
             "corrections:false",
-            "outbound_links:11",
+            "outbound_links:14",
             "opinion_marker:false"
           ]
         },
@@ -43179,7 +43180,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-07-22T07:50:11.287Z",
+        "fetched_at": "2026-07-25T23:29:08.066Z",
         "homepage_url": "https://caffeinecommerce.com/",
         "example_url": "https://caffeinecommerce.com/agentready?twclid=2orlib5m54ns2zjcb4ulkpik",
         "homepage_status": 200,
@@ -43205,7 +43206,7 @@
           "has_about_link": true,
           "has_contact_link": true,
           "has_corrections_link": false,
-          "outbound_links_count": 11,
+          "outbound_links_count": 14,
           "opinion_marker": false
         }
       }
@@ -43302,7 +43303,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-07-22T07:50:11.993Z",
+        "fetched_at": "2026-07-25T23:29:09.086Z",
         "homepage_url": "https://hol.org/",
         "example_url": "https://hol.org/points/giveaways/10000-points?twclid=2cyx13cbkwh241v00yt9b2tv3d",
         "homepage_status": 403,
@@ -43425,7 +43426,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-07-22T09:20:14.206Z",
+        "fetched_at": "2026-07-25T23:29:11.866Z",
         "homepage_url": "https://topoready.com/",
         "example_url": "https://topoready.com/?utm_source=twitter&utm_medium=cpc&utm_campaign=topoready_early_access&utm_content=image_with_titles&twclid=26mope2cwejyke6epnanupsaz3",
         "homepage_status": 200,
@@ -43548,7 +43549,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-07-22T09:20:15.109Z",
+        "fetched_at": "2026-07-25T23:29:13.869Z",
         "homepage_url": "https://hexclad.com/",
         "example_url": "https://hexclad.com/pages/12-pc-landing-page?utm_source=twitter&utm_medium=paid&utm_campaign=HEX+01+%7C+Q2+26%27+Chargeable+%7C+4.6.26&utm_term=US+-+M%2FF+-+21-65%2B+-+Interest-Based+-+4.6.26&utm_content=HEX%23763_V3&twclid=2bnrkgftya8pykff4uwp59b29d",
         "homepage_status": 200,
@@ -78864,6 +78865,83 @@
         "distinct_referring_accounts": 1,
         "sample_referring_accounts": [
           "mikuphfanbase"
+        ],
+        "distinct_axes": []
+      },
+      "claims": {
+        "total": 0,
+        "supported": 0,
+        "refuted": 0,
+        "contested": 0,
+        "unverified": 0,
+        "resolved_count": 0
+      },
+      "structural_features": {
+        "has_search_paths": false,
+        "has_article_paths": false,
+        "has_doi_paths": false
+      },
+      "ratings": {
+        "provenance": {
+          "score": 0.45,
+          "basis": [
+            "unknown_domain_pattern"
+          ]
+        },
+        "breadth": {
+          "score": 0.08916666666666666,
+          "basis": [
+            "distinct_urls:1",
+            "distinct_axes:0",
+            "origin_types:1"
+          ]
+        },
+        "corroboration": {
+          "score": 0.19583333333333333,
+          "basis": [
+            "referring_accounts:1",
+            "origin_types:1"
+          ]
+        },
+        "track_record": {
+          "score": null,
+          "basis": [
+            "no_resolved_claims_observed"
+          ]
+        },
+        "overall": {
+          "score": 0.3472395833333333,
+          "confidence": 0.08135,
+          "method": "mechanical_v1",
+          "basis": [
+            "unknown_domain_pattern",
+            "distinct_urls:1",
+            "distinct_axes:0",
+            "origin_types:1",
+            "referring_accounts:1",
+            "origin_types:1",
+            "track_record_unavailable"
+          ]
+        }
+      }
+    },
+    {
+      "domain": "superhumanchambers.com",
+      "entity": "Superhumanchambers",
+      "kind": "unknown",
+      "first_seen_at": "2026-07-25T22:03:25.190Z",
+      "last_seen_at": "2026-07-25T22:03:25.190Z",
+      "discovery": {
+        "distinct_urls": 1,
+        "example_urls": [
+          "https://superhumanchambers.com/careers/ai-digital-outbound-operator/?utm_source=x&utm_medium=paid_social&utm_campaign=hire_ai_digital_outbound_2026q3&utm_content=proof_portrait_v1&utm_term=operator_fit&twclid=2di85sm7u6un6dynmt8f5fzgu9"
+        ],
+        "origin_counts": {
+          "feed_buffer": 1
+        },
+        "distinct_referring_accounts": 1,
+        "sample_referring_accounts": [
+          "jsnvem"
         ],
         "distinct_axes": []
       },
