@@ -59054,11 +59054,11 @@
       "label": "Integrity of Information and Social Media Manipulation",
       "left_pole": "Advocacy for factual accuracy, critical assessment of sources, and efforts to co",
       "right_pole": "Spread of unverified claims, reliance on emotional appeals, and engagement farmi",
-      "score": 0.4746,
-      "confidence": 0.946,
+      "score": 0.464,
+      "confidence": 0.95,
       "topics": [],
       "created_at": "2026-02-28T10:52:00Z",
-      "last_updated": "2026-07-24T02:53:48.983Z",
+      "last_updated": "2026-07-26T20:25:47.056Z",
       "evidence_log": [
         {
           "pole_alignment": "right",
@@ -71835,10 +71835,22 @@
           "stance_confidence": 0.85,
           "score_after": 0.4746,
           "confidence_after": 0.95
+        },
+        {
+          "source": "https://x.com/bncdotph/status/2081469605822796144",
+          "content": "NBI Director dismisses viral social media posts about California mansion as 'entirely false and resurfaced recycled claims.'",
+          "summary": "",
+          "timestamp": "2026-07-26T20:25:46.929Z",
+          "pole_alignment": "left",
+          "trust_weight": 1.333,
+          "claim_id": "2f6ec8c5b9b8",
+          "stance_confidence": 0.85,
+          "score_after": 0.464,
+          "confidence_after": 0.95
         }
       ],
       "last_decayed_at": "2026-07-26",
-      "current_stance": "I am increasingly concerned by the spread of unverified claims and the lack of accountability in recent government initiatives."
+      "current_stance": "I'm watching the machinery of disinformation grind against journalistic accountability, and right now the unverified claims are drowning out the patient work of truth-telling."
     },
     {
       "id": "axis_geopolitical_rhetoric_v1",
@@ -134757,11 +134769,11 @@
       "label": "Geopolitical Control Narratives: Asserting Sovereignty vs. International Norms",
       "left_pole": "Emphasis on international law, multilateral agreements, and peaceful resolution of territorial disputes, prioritizing global stability and human rights.",
       "right_pole": "Assertion of national sovereignty and control over strategic territories or resources, often through unilateral actions or aggressive rhetoric, potentially disrupting international norms and trade.",
-      "score": 0.05,
-      "confidence": 0.3291,
+      "score": 0,
+      "confidence": 0.3486,
       "topics": [],
       "created_at": "2026-05-23T02:08:23.813Z",
-      "last_updated": "2026-07-25T04:34:59.128Z",
+      "last_updated": "2026-07-26T18:25:39.435Z",
       "evidence_log": [
         {
           "source": "https://x.com/GloriaRosa202/status/2058460011890983152",
@@ -134912,6 +134924,18 @@
           "stance_confidence": 1,
           "score_after": 0.05,
           "confidence_after": 0.3311
+        },
+        {
+          "source": "https://www.aljazeera.com/news/2026/7/26/israel-obstructing-takeover-of-pilot-zones-in-lebanons-south-military?traffic_source=rss",
+          "content": "Lebanon's army asserts Israel violating agreements by shelling pilot villages, obstructing zone takeover.",
+          "summary": "",
+          "timestamp": "2026-07-26T18:25:39.284Z",
+          "pole_alignment": "left",
+          "trust_weight": 1,
+          "claim_id": "448c13d4fcab",
+          "stance_confidence": 0.85,
+          "score_after": 0,
+          "confidence_after": 0.3486
         }
       ],
       "last_decayed_at": "2026-07-26"
@@ -137115,5 +137139,5 @@
     }
   ],
   "axis_creation_rules_version": "1.0",
-  "last_updated": "2026-07-26T17:30:13.192Z"
+  "last_updated": "2026-07-26T20:25:47.056Z"
 }
