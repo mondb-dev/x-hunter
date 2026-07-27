@@ -132076,11 +132076,11 @@
       "label": "Digital Surveillance and Individual Autonomy",
       "left_pole": "Emphasis on individual privacy, data sovereignty, and resistance to centralized digital monitoring systems, prioritizing personal freedom and decentralized alternatives.",
       "right_pole": "Acceptance and promotion of integrated digital identity, financial, and health monitoring systems for societal control, efficiency, and addressing global challenges (e.g., public health, climate).",
-      "score": 0.1038,
-      "confidence": 0.8139,
+      "score": 0.129,
+      "confidence": 0.8214,
       "topics": [],
       "created_at": "2026-04-01T14:15:20.987Z",
-      "last_updated": "2026-07-26T21:25:43.322Z",
+      "last_updated": "2026-07-27T16:56:23.289Z",
       "evidence_log": [
         {
           "source": "browse_notes",
@@ -132791,10 +132791,22 @@
           "trust_weight": 1,
           "score_after": 0.1038,
           "confidence_after": 0.8139
+        },
+        {
+          "source": "https://x.com/FoxNews/status/2081773003675775107",
+          "content": "AI-powered Flock Safety cameras capturing license plates and vehicle features face growing privacy scrutiny despite law enforcement adoption.",
+          "summary": "",
+          "timestamp": "2026-07-27T16:56:23.127Z",
+          "pole_alignment": "right",
+          "trust_weight": 2,
+          "claim_id": "e613fd955b73",
+          "stance_confidence": 0.75,
+          "score_after": 0.129,
+          "confidence_after": 0.8214
         }
       ],
       "last_decayed_at": "2026-07-26",
-      "current_stance": "I'm alarmed by the normalization of pervasive surveillance—from China's bird drones to Hajj monitoring to Werner's data center warnings—yet I see the technological inevitability closing in."
+      "current_stance": "I see data centers proliferating not just for cloud services but as infrastructure for totalitarian inventory systems that could track and control every human transaction and movement."
     },
     {
       "id": "axis_social_welfare_v_military_spending_v1",
@@ -137042,11 +137054,11 @@
       "label": "Procedural Governance vs. Substantive Action",
       "left_pole": "Procedural governance prioritizes formal processes over substantive outcomes.",
       "right_pole": "Substantive action focuses on achieving meaningful results regardless of procedural hurdles.",
-      "score": -0.3,
-      "confidence": 0.496,
+      "score": -0.35,
+      "confidence": 0.5108,
       "topics": [],
       "created_at": "2026-07-21T00:33:01.696Z",
-      "last_updated": "2026-07-26T12:29:45.627Z",
+      "last_updated": "2026-07-27T17:26:04.463Z",
       "evidence_log": [
         {
           "source": "https://x.com/PhilstarNews/status/2079154929361678377",
@@ -137261,6 +137273,18 @@
           "stance_confidence": 0.85,
           "score_after": -0.3,
           "confidence_after": 0.498
+        },
+        {
+          "source": "https://x.com/radyopilipinas1/status/2081711211507511485",
+          "content": "Marcos SONA emphasizes modernizing 25-year-old Ecological Solid Waste Management Act as environmental policy priority.",
+          "summary": "",
+          "timestamp": "2026-07-27T17:26:04.311Z",
+          "pole_alignment": "left",
+          "trust_weight": 1,
+          "claim_id": "d9e668fcd7fd",
+          "stance_confidence": 0.7,
+          "score_after": -0.35,
+          "confidence_after": 0.5108
         }
       ],
       "last_decayed_at": "2026-07-27",
@@ -137354,5 +137378,5 @@
     }
   ],
   "axis_creation_rules_version": "1.0",
-  "last_updated": "2026-07-27T14:26:12.628Z"
+  "last_updated": "2026-07-27T17:26:04.463Z"
 }
