@@ -1,8 +1,8 @@
 {
-  "generated_at": "2026-07-27T17:30:31.585Z",
+  "generated_at": "2026-07-27T23:31:44.307Z",
   "stats": {
-    "total": 1043,
-    "supported": 265,
+    "total": 1044,
+    "supported": 266,
     "refuted": 219,
     "contested": 6,
     "unverified": 69,
@@ -5075,6 +5075,60 @@
       "dissenting_sources": [],
       "framing_analysis": "The claim accurately reflects that the Supreme Court declared the impeachment unconstitutional, but it misrepresents the proceedings by framing it around a single complaint rather than four consolidated complaints and adding unverified details regarding unanimity and Senate scheduling.",
       "web_search_summary": "While the Supreme Court did declare the Articles of Impeachment against Vice President Sara Duterte unconstitutional due to the one-year bar rule, the provided sources show the case stemmed from four complaints rather than a single first complaint. Furthermore, the provided text does not support the claims that the decision was unanimous, occurred exactly one year prior, or halted an already scheduled Senate trial.",
+      "investigation_depth": "quick"
+    },
+    {
+      "claim_id": "live_e53fbc2a8e",
+      "claim_text": "BREAKING: TRUMP ON IRAN:\n\n“There are friendly negotiations going on.\n\nIran is saying, \"Please, please, no blockade.\"”",
+      "status": "supported",
+      "confidence_score": 0.67,
+      "display_score": 0.218,
+      "scoring_breakdown": {
+        "source_tier": 0.5,
+        "newsguard": 0.5,
+        "corroboration": 0.9,
+        "evidence_quality": 0.9,
+        "cross_source": 0.5,
+        "web_search": 0.8
+      },
+      "source_handle": "ShaykhSulaiman",
+      "source_tier": null,
+      "evidence_urls": [
+        "https://www.aljazeera.com/news/liveblog/2026/7/27/iran-war-live-iran-halts-retaliatory-strikes-after-pause-in-us-attacks",
+        "https://www.timesnownews.com/world/middle-east/iran-us-israel-war-live-updates-trump-netanyahu-middle-east-conflict-launch-new-strikes-liveblog-155149575",
+        "https://news.sky.com/story/iran-war-latest-trump-us-israel-ceasefire-deal-strait-of-hormuz-blockade-strikes-oil-lebanon-13509565",
+        "https://abcnews.com/International/live-updates/iran-live-updates-tehran-progress-made-strait-hormuz/?id=135110405",
+        "https://edition.cnn.com/2026/07/27/world/live-news/iran-war-trump?post-id=cms3gdozc00003b6u6oh4yq9n"
+      ],
+      "tweet_url": null,
+      "category": null,
+      "related_axis_id": null,
+      "verification_count": 1,
+      "verified_at": "2026-07-27T21:27:35.041Z",
+      "created_at": "2026-07-27T21:27:35.040Z",
+      "original_source": "Donald Trump",
+      "claim_date": "2026-07-27",
+      "supporting_sources": [
+        {
+          "name": "ABC News",
+          "excerpt": "President Donald Trump said there are 'very friendly negotiations' happening with Iran.",
+          "url": null
+        }
+      ],
+      "dissenting_sources": [
+        {
+          "name": "CNN",
+          "excerpt": "Iran’s Foreign Ministry stated that there are no talks underway with the US and that Tehran will never allow the United States to determine timing of war and peace.",
+          "url": null
+        },
+        {
+          "name": "Times of India",
+          "excerpt": "Iran's hardline newspaper urged Tehran to break what it described as a US-led maritime blockade, rather than pleading to stop one.",
+          "url": null
+        }
+      ],
+      "framing_analysis": "The claim accurately reflects Trump's public assertion about negotiations taking place, but frames it as an objective fact when Iranian officials simultaneously denied any talks were occurring.",
+      "web_search_summary": "President Trump did confirm that friendly negotiations were taking place with Iran, aligning with part of the claim. However, the provided search results show that Iran's government denied talks are underway, and the specific quote of Iran saying 'Please, please, no blockade' is not supported by the provided text.",
       "investigation_depth": "quick"
     },
     {
