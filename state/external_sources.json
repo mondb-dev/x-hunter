@@ -1,8 +1,8 @@
 {
   "schema_version": "1.0",
-  "generated_at": "2026-07-27T02:25:10.710Z",
+  "generated_at": "2026-07-27T05:25:11.888Z",
   "method": "mechanical_registry_v1",
-  "profiled_at": "2026-07-27T02:25:27.699Z",
+  "profiled_at": "2026-07-27T05:25:32.714Z",
   "sources": [
     {
       "domain": "theguardian.com",
@@ -11,7 +11,7 @@
       "first_seen_at": "2026-03-27T23:17:00Z",
       "last_seen_at": "2026-07-26T22:55:51.714Z",
       "discovery": {
-        "distinct_urls": 565,
+        "distinct_urls": 566,
         "example_urls": [
           "https://www.theguardian.com/us-news/2026/jun/23/trump-immigration-courthouse-arrest-policy",
           "https://www.theguardian.com/us-news/2026/jun/28/ice-minnesota-defending-democracy",
@@ -21,7 +21,7 @@
         ],
         "origin_counts": {
           "ontology_evidence": 40,
-          "reading_queue": 534,
+          "reading_queue": 535,
           "journals": 104,
           "articles": 2
         },
@@ -72,7 +72,7 @@
         "breadth": {
           "score": 0.94,
           "basis": [
-            "distinct_urls:565",
+            "distinct_urls:566",
             "distinct_axes:17",
             "origin_types:4"
           ]
@@ -112,7 +112,7 @@
             "newsroom_domain_pattern",
             "article_path_seen",
             "doi_or_identifier_path_seen",
-            "distinct_urls:565",
+            "distinct_urls:566",
             "distinct_axes:17",
             "origin_types:4",
             "referring_accounts:0",
@@ -1443,7 +1443,7 @@
       "first_seen_at": "2026-06-26T07:05:00Z",
       "last_seen_at": "2026-07-26T19:55:37.560Z",
       "discovery": {
-        "distinct_urls": 326,
+        "distinct_urls": 327,
         "example_urls": [
           "https://www.bbc.co.uk/news/articles/cn8qxz6qypyo",
           "https://www.bbc.co.uk/news/articles/cn075j04pnyo?at_medium=RSS&amp;at_campaign=rss",
@@ -1453,7 +1453,7 @@
         ],
         "origin_counts": {
           "ontology_evidence": 6,
-          "reading_queue": 334,
+          "reading_queue": 335,
           "journals": 15
         },
         "distinct_referring_accounts": 0,
@@ -1488,7 +1488,7 @@
         "breadth": {
           "score": 0.7633333333333332,
           "basis": [
-            "distinct_urls:326",
+            "distinct_urls:327",
             "distinct_axes:4",
             "origin_types:3"
           ]
@@ -1526,7 +1526,7 @@
           "method": "mechanical_v1",
           "basis": [
             "newsroom_domain_pattern",
-            "distinct_urls:326",
+            "distinct_urls:327",
             "distinct_axes:4",
             "origin_types:3",
             "referring_accounts:0",
@@ -2271,7 +2271,7 @@
         ],
         "origin_counts": {
           "ontology_evidence": 49,
-          "reading_queue": 33,
+          "reading_queue": 34,
           "journals": 86
         },
         "distinct_referring_accounts": 0,
@@ -2924,9 +2924,9 @@
       "entity": "Inquirer",
       "kind": "unknown",
       "first_seen_at": "2026-05-09T10:15:15.053Z",
-      "last_seen_at": "2026-07-26T22:55:51.714Z",
+      "last_seen_at": "2026-07-27T03:26:03.316Z",
       "discovery": {
-        "distinct_urls": 223,
+        "distinct_urls": 224,
         "example_urls": [
           "https://newsinfo.inquirer.net/2266316/nbi-on-cayetano-position-that-cant-be-defended-by-facts-is-done-with-insults",
           "https://www.inquirer.net/capiz-broadcaster-shooting-probe-widens-as-cops-form-task-force",
@@ -2936,7 +2936,7 @@
         ],
         "origin_counts": {
           "ontology_evidence": 100,
-          "journals": 306,
+          "journals": 307,
           "articles": 1
         },
         "distinct_referring_accounts": 0,
@@ -2984,7 +2984,7 @@
         "breadth": {
           "score": 0.8799999999999999,
           "basis": [
-            "distinct_urls:223",
+            "distinct_urls:224",
             "distinct_axes:17",
             "origin_types:3"
           ]
@@ -3022,7 +3022,7 @@
           "method": "mechanical_v1",
           "basis": [
             "unknown_domain_pattern",
-            "distinct_urls:223",
+            "distinct_urls:224",
             "distinct_axes:17",
             "origin_types:3",
             "referring_accounts:0",
@@ -3068,9 +3068,9 @@
       "entity": "Rappler",
       "kind": "unknown",
       "first_seen_at": "2026-06-22T04:04:30.428Z",
-      "last_seen_at": "2026-07-26T10:59:56.789Z",
+      "last_seen_at": "2026-07-27T03:26:03.337Z",
       "discovery": {
-        "distinct_urls": 172,
+        "distinct_urls": 174,
         "example_urls": [
           "https://www.rappler.com/fact-check-no-arrest-warrant-issued-vs-marcoleta",
           "https://www.rappler.com/technology/decoded-tacloban-school-shooting-disinformation-kiko-barzaga-discussions-juvenile-justice-law/",
@@ -3079,8 +3079,8 @@
           "https://www.rappler.com/voices/thought-leaders/vantage-point-bir-tax-amlc-records-billions-questions-sara-duterte-ignore/"
         ],
         "origin_counts": {
-          "ontology_evidence": 90,
-          "journals": 204,
+          "ontology_evidence": 91,
+          "journals": 206,
           "articles": 1
         },
         "distinct_referring_accounts": 0,
@@ -3108,6 +3108,7 @@
           "axis_procedural_governance_accountability_v1",
           "axis_procedural_governance_substantive_action",
           "axis_rapid_disinformation_v1",
+          "axis_reactionary_futurism_v1",
           "axis_selective_outrage"
         ]
       },
@@ -3134,8 +3135,8 @@
         "breadth": {
           "score": 0.8799999999999999,
           "basis": [
-            "distinct_urls:172",
-            "distinct_axes:23",
+            "distinct_urls:174",
+            "distinct_axes:24",
             "origin_types:3"
           ]
         },
@@ -3172,8 +3173,8 @@
           "method": "mechanical_v1",
           "basis": [
             "unknown_domain_pattern",
-            "distinct_urls:172",
-            "distinct_axes:23",
+            "distinct_urls:174",
+            "distinct_axes:24",
             "origin_types:3",
             "referring_accounts:0",
             "origin_types:3",
@@ -3218,9 +3219,9 @@
       "entity": "Gmanetwork",
       "kind": "unknown",
       "first_seen_at": "2026-05-18T03:29:41.732Z",
-      "last_seen_at": "2026-07-27T00:25:52.289Z",
+      "last_seen_at": "2026-07-27T03:26:03.337Z",
       "discovery": {
-        "distinct_urls": 262,
+        "distinct_urls": 264,
         "example_urls": [
           "https://www.gmanetwork.com/news/topstories/nation/994225/explainer-objections-in-a-trial-and-their-role-in-due-process/story/",
           "https://www.gmanetwork.com/news/balitambayan/balita/993931/sen-escudero-sinabing-16-na-boto-ang-kailangan-para-mahatulang-guilty-si-vp-sara-duterte-sa-impea/story/",
@@ -3229,8 +3230,8 @@
           "https://www.gmanetwork.com/news/topstories/nation/994080/electronic-copies-evidence-supreme-court/story/"
         ],
         "origin_counts": {
-          "ontology_evidence": 89,
-          "journals": 312
+          "ontology_evidence": 90,
+          "journals": 313
         },
         "distinct_referring_accounts": 0,
         "sample_referring_accounts": [],
@@ -3278,7 +3279,7 @@
         "breadth": {
           "score": 0.82,
           "basis": [
-            "distinct_urls:262",
+            "distinct_urls:264",
             "distinct_axes:17",
             "origin_types:2"
           ]
@@ -3317,7 +3318,7 @@
           "basis": [
             "unknown_domain_pattern",
             "doi_or_identifier_path_seen",
-            "distinct_urls:262",
+            "distinct_urls:264",
             "distinct_axes:17",
             "origin_types:2",
             "referring_accounts:0",
@@ -3779,9 +3780,9 @@
       "entity": "T Co",
       "kind": "unknown",
       "first_seen_at": "2016-05-05T18:57:30.000Z",
-      "last_seen_at": "2026-07-27T02:02:09.000Z",
+      "last_seen_at": "2026-07-27T04:38:17.000Z",
       "discovery": {
-        "distinct_urls": 9376,
+        "distinct_urls": 9397,
         "example_urls": [
           "https://t.co/pJSE124ec4",
           "https://t.co/Soz8BXPWaa",
@@ -3790,10 +3791,10 @@
           "https://t.co/cYaqYDRp08"
         ],
         "origin_counts": {
-          "feed_buffer": 6560,
+          "feed_buffer": 6600,
           "feed_buffer_reply": 4847
         },
-        "distinct_referring_accounts": 2560,
+        "distinct_referring_accounts": 2561,
         "sample_referring_accounts": [
           "0808iveta",
           "09abracadabra",
@@ -3832,7 +3833,7 @@
         "breadth": {
           "score": 0.47,
           "basis": [
-            "distinct_urls:9376",
+            "distinct_urls:9397",
             "distinct_axes:0",
             "origin_types:2"
           ]
@@ -3840,7 +3841,7 @@
         "corroboration": {
           "score": 0.825,
           "basis": [
-            "referring_accounts:2560",
+            "referring_accounts:2561",
             "origin_types:2"
           ]
         },
@@ -3871,10 +3872,10 @@
           "basis": [
             "unknown_domain_pattern",
             "doi_or_identifier_path_seen",
-            "distinct_urls:9376",
+            "distinct_urls:9397",
             "distinct_axes:0",
             "origin_types:2",
-            "referring_accounts:2560",
+            "referring_accounts:2561",
             "origin_types:2",
             "track_record_unavailable"
           ]
@@ -7287,9 +7288,9 @@
       "entity": "Bet88 Ph",
       "kind": "unknown",
       "first_seen_at": "2026-07-03T16:00:02.000Z",
-      "last_seen_at": "2026-07-27T01:08:09.030Z",
+      "last_seen_at": "2026-07-27T04:33:11.105Z",
       "discovery": {
-        "distinct_urls": 66,
+        "distinct_urls": 67,
         "example_urls": [
           "https://bet88.ph/en/?type=registration&modal=user&ref=xa027&twclid=27gurqyk8ekpo92oqcm3aeuing",
           "https://bet88.ph/en/?type=registration&modal=user&ref=xa023&twclid=25wrsnnpnc7378nutxmyo1v6kj",
@@ -7299,7 +7300,7 @@
         ],
         "origin_counts": {
           "feed_buffer_reply": 28,
-          "feed_buffer": 38
+          "feed_buffer": 39
         },
         "distinct_referring_accounts": 1,
         "sample_referring_accounts": [
@@ -7330,7 +7331,7 @@
         "breadth": {
           "score": 0.47,
           "basis": [
-            "distinct_urls:66",
+            "distinct_urls:67",
             "distinct_axes:0",
             "origin_types:2"
           ]
@@ -7368,7 +7369,7 @@
           "method": "mechanical_v1",
           "basis": [
             "unknown_domain_pattern",
-            "distinct_urls:66",
+            "distinct_urls:67",
             "distinct_axes:0",
             "origin_types:2",
             "referring_accounts:1",
@@ -9000,14 +9001,14 @@
           ]
         },
         "profile": {
-          "score": 0.12,
+          "score": 0,
           "confidence": 0.55,
           "basis": [
             "meta_author:false",
             "published_time:false",
             "canonical:false",
             "about:false",
-            "contact:true",
+            "contact:false",
             "corrections:false",
             "outbound_links:0",
             "opinion_marker:false"
@@ -9029,23 +9030,23 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-07-24T03:23:11.103Z",
+        "fetched_at": "2026-07-27T03:25:22.277Z",
         "homepage_url": "https://coderabbit.ai/",
         "example_url": "https://www.coderabbit.ai/agent?utm_source=twitter&utm_medium=cpc&utm_campaign=brandawareness_slack&twclid=25ohyy1nnhx1vb6p888i79f380",
-        "homepage_status": 200,
+        "homepage_status": null,
         "example_status": 200,
-        "homepage_final_url": "https://www.coderabbit.ai/",
+        "homepage_final_url": "https://coderabbit.ai/",
         "example_final_url": "https://www.coderabbit.ai/agent?utm_source=twitter&utm_medium=cpc&utm_campaign=brandawareness_slack&twclid=25ohyy1nnhx1vb6p888i79f380",
-        "homepage_content_type": "text/html; charset=utf-8",
+        "homepage_content_type": "",
         "example_content_type": "text/html; charset=utf-8",
         "homepage": {
           "has_meta_author": false,
           "has_published_time": false,
           "has_canonical": false,
           "has_about_link": false,
-          "has_contact_link": true,
+          "has_contact_link": false,
           "has_corrections_link": false,
-          "outbound_links_count": 6,
+          "outbound_links_count": 0,
           "opinion_marker": false
         },
         "example": {
@@ -9156,7 +9157,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-07-24T03:23:10.705Z",
+        "fetched_at": "2026-07-27T03:25:22.420Z",
         "homepage_url": "https://bcgame-bet.com/",
         "example_url": "https://bcall-global.bcgame-bet.com/dispatch-v6?i=45zn3497p&utm_medium=twitter&utm_content=%7B%7Bad_name%7D%7D&p=%2Flogin%2Fregist&ch=twitter&pixel_id=or72z&register=tw-or72z-or738&purchase=tw-or72z-or736&twclid=2cjhb3kupxi19emmjqo3fks82g",
         "homepage_status": null,
@@ -10811,7 +10812,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-07-24T04:53:15.451Z",
+        "fetched_at": "2026-07-27T04:55:15.303Z",
         "homepage_url": "https://fx-edge.com/",
         "example_url": "https://fx-edge.com/prop-liquidity/?utm_source=twitter&utm_medium=ppc&utm_campaign=prop_liquidity&twclid=2232cmky8wi7upvvrdlud3bfsm",
         "homepage_status": 200,
@@ -16127,7 +16128,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-07-24T04:53:16.398Z",
+        "fetched_at": "2026-07-27T04:55:16.222Z",
         "homepage_url": "https://shipaton.com/",
         "example_url": "https://www.shipaton.com/events/?utm_source=x&utm_medium=cpc&utm_campaign=shipaton-traffic&twclid=2d8n4jkad805fesk63uxwuffy9",
         "homepage_status": 200,
@@ -19802,7 +19803,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-07-24T04:53:17.352Z",
+        "fetched_at": "2026-07-27T04:55:17.255Z",
         "homepage_url": "https://navax.io/",
         "example_url": "https://navax.io/?twclid=24etxfpdzoav2cgkg5folp34ad",
         "homepage_status": 200,
@@ -27709,7 +27710,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-07-24T01:53:15.291Z",
+        "fetched_at": "2026-07-27T03:25:23.680Z",
         "homepage_url": "https://sourcebot.dev/",
         "example_url": "https://docs.sourcebot.dev/docs/features/mcp-server?twclid=24rnkjjr58b4nqm87glv1o5dr0",
         "homepage_status": 200,
@@ -27835,7 +27836,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-07-24T02:53:12.540Z",
+        "fetched_at": "2026-07-27T03:25:24.385Z",
         "homepage_url": "https://co.jp/",
         "example_url": "https://audition-en.anycolor.co.jp/?twclid=2bmm2ufti869142c85xr0ucr6a",
         "homepage_status": null,
@@ -27961,7 +27962,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-07-24T02:53:15.450Z",
+        "fetched_at": "2026-07-27T03:55:14.515Z",
         "homepage_url": "https://e.lilly/",
         "example_url": "https://e.lilly/4alH5c4?twclid=2ctpaufet268794kpf0u2aweev",
         "homepage_status": 200,
@@ -28085,7 +28086,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-07-24T02:53:15.998Z",
+        "fetched_at": "2026-07-27T03:55:16.546Z",
         "homepage_url": "https://coingecko.com/",
         "example_url": "https://www.coingecko.com/en/api/acquisition/entry-plans?utm_source=twitter&utm_medium=ad&utm_campaign=bau&utm_content=mar26-gt-brand-ad-free-v1&audience_segment=prospecting&twclid=26xrmua0k4othy65876mc0aamh",
         "homepage_status": 200,
@@ -28209,7 +28210,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-07-24T02:53:17.477Z",
+        "fetched_at": "2026-07-27T03:55:16.819Z",
         "homepage_url": "https://onkodex.com/",
         "example_url": "https://onkodex.com/join/?twclid=21aq9xwo1p6ea49gu5skcha56k",
         "homepage_status": 200,
@@ -28333,7 +28334,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-07-24T03:23:14.591Z",
+        "fetched_at": "2026-07-27T03:55:21.325Z",
         "homepage_url": "https://artprice.com/",
         "example_url": "https://www.artprice.com/artprice-news/14183/world-record-a-painting-by-raja-ravi-varma-sold-for-nearly-18-million-dollars-in-mumbai?utm_medium=artprice-news&utm_source=X&utm_campaign=news&utm_content=14183&twclid=23wn7ayvhifg7vr11g3elt7wk3",
         "homepage_status": 200,
@@ -28428,12 +28429,12 @@
           ]
         },
         "profile": {
-          "score": 0.28,
+          "score": 0.18,
           "confidence": 0.55,
           "basis": [
             "meta_author:false",
             "published_time:false",
-            "canonical:true",
+            "canonical:false",
             "about:false",
             "contact:true",
             "corrections:false",
@@ -28457,7 +28458,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-07-24T03:23:17.816Z",
+        "fetched_at": "2026-07-27T04:55:21.507Z",
         "homepage_url": "https://pupgum.com/",
         "example_url": "https://pupgum.com/?discount=X20&utm_source=twitter&utm_medium=cpc&utm_campaign=x04&twclid=2dx55fuulwvv0t6pgl8v4t8syr",
         "homepage_status": 200,
@@ -28479,7 +28480,7 @@
         "example": {
           "has_meta_author": false,
           "has_published_time": false,
-          "has_canonical": true,
+          "has_canonical": false,
           "has_about_link": false,
           "has_contact_link": true,
           "has_corrections_link": false,
@@ -28581,7 +28582,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-07-24T04:23:35.409Z",
+        "fetched_at": "2026-07-27T05:25:25.245Z",
         "homepage_url": "https://spr.ly/",
         "example_url": "http://spr.ly/6017B6mDnt?twclid=2ajcph2gf0va7okmqyb2o5fv6v",
         "homepage_status": 200,
@@ -28705,7 +28706,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-07-24T04:23:38.461Z",
+        "fetched_at": "2026-07-27T05:25:27.739Z",
         "homepage_url": "https://interactivebrokers.com/",
         "example_url": "https://www.interactivebrokers.com/mkt/?src=twitter1516e&url=%2Fen%2Ftrading%2Fmargin.php&twclid=26s33m7076ex8oai4uldw5cov5",
         "homepage_status": 200,
@@ -28829,7 +28830,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-07-24T04:23:43.286Z",
+        "fetched_at": "2026-07-27T05:25:31.585Z",
         "homepage_url": "https://deere.com/",
         "example_url": "https://www.deere.com/en/technology-products/precision-ag-technology/remote-management/operations-center-pro-golf/?twclid=24oqwc0zuejy7hkjph647og8x6",
         "homepage_status": 200,
@@ -28953,7 +28954,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-07-24T04:23:44.438Z",
+        "fetched_at": "2026-07-27T05:25:32.714Z",
         "homepage_url": "https://tolt.com/",
         "example_url": "https://tolt.com/?twclid=24jeerwwldzt1cwgx3ktzfvzm5",
         "homepage_status": 200,
