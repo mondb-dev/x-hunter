@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-27T19:57:09.849Z",
+  "generated_at": "2026-07-27T22:57:01.197Z",
   "windows": [
     "1d",
     "3d",
@@ -30,43 +30,43 @@
     },
     "axis_power_accountability": {
       "current": {
-        "score": -0.2615,
+        "score": -0.2699,
         "confidence": 0.95
       },
       "1d": {
-        "score_delta": -0.0039,
+        "score_delta": -0.0123,
         "conf_delta": 0,
         "direction": "→"
       },
       "3d": {
-        "score_delta": -0.0221,
+        "score_delta": -0.0305,
         "conf_delta": 0,
         "direction": "↘"
       },
       "7d": {
-        "score_delta": -0.052,
+        "score_delta": -0.0604,
         "conf_delta": 0.002,
         "direction": "↘"
       }
     },
     "axis_collective_voice": {
       "current": {
-        "score": 0.1712,
-        "confidence": 0.9444
+        "score": 0.1803,
+        "confidence": 0.9446
       },
       "1d": {
-        "score_delta": 0.021,
-        "conf_delta": 0.0005,
+        "score_delta": 0.0301,
+        "conf_delta": 0.0007,
         "direction": "↗"
       },
       "3d": {
-        "score_delta": 0.0113,
-        "conf_delta": 0.0027,
-        "direction": "→"
+        "score_delta": 0.0204,
+        "conf_delta": 0.0029,
+        "direction": "↗"
       },
       "7d": {
-        "score_delta": -0.0083,
-        "conf_delta": 0.0011,
+        "score_delta": 0.0008,
+        "conf_delta": 0.0013,
         "direction": "→"
       }
     },
@@ -157,21 +157,21 @@
     "axis_media_integrity_v1": {
       "current": {
         "score": 0.464,
-        "confidence": 0.95
+        "confidence": 0.948
       },
       "1d": {
         "score_delta": 0,
-        "conf_delta": 0,
+        "conf_delta": -0.002,
         "direction": "→"
       },
       "3d": {
         "score_delta": -0.0106,
-        "conf_delta": 0,
+        "conf_delta": -0.002,
         "direction": "→"
       },
       "7d": {
         "score_delta": -0.0347,
-        "conf_delta": 0,
+        "conf_delta": -0.002,
         "direction": "↘"
       }
     },
@@ -849,22 +849,22 @@
     },
     "axis_humanitarian_crisis_response": {
       "current": {
-        "score": -0.0603,
-        "confidence": 0.3012
+        "score": -0.1103,
+        "confidence": 0.337
       },
       "1d": {
-        "score_delta": 0,
-        "conf_delta": -0.002,
-        "direction": "→"
+        "score_delta": -0.05,
+        "conf_delta": 0.0338,
+        "direction": "↘"
       },
       "3d": {
-        "score_delta": 0,
-        "conf_delta": -0.006,
-        "direction": "→"
+        "score_delta": -0.05,
+        "conf_delta": 0.0298,
+        "direction": "↘"
       },
       "7d": {
-        "score_delta": -0.05,
-        "conf_delta": 0.0065,
+        "score_delta": -0.1,
+        "conf_delta": 0.0423,
         "direction": "↘"
       }
     },
@@ -1089,6 +1089,7 @@
     "axis_power_accountability",
     "axis_environmental_policy_v_economic_v1",
     "axis_geopolitical_control_narratives",
+    "axis_humanitarian_crisis_response",
     "axis_procedural_governance_accountability_v1",
     "axis_ai_automated_dehumanization_v1"
   ]

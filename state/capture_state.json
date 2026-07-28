@@ -1,50 +1,68 @@
 {
-  "checked_at": "2026-07-26T23:01:21.519Z",
-  "evidence_24h": 17,
-  "unique_sources": 5,
+  "checked_at": "2026-07-28T00:00:41.567Z",
+  "evidence_24h": 21,
+  "unique_sources": 10,
   "status": "captured",
   "alerts": [
     {
       "type": "source_dominance",
       "severity": "high",
-      "detail": "@unknown accounts for 77% of today's evidence (13/17)",
+      "detail": "@unknown accounts for 52% of today's evidence (11/21)",
       "username": "unknown",
-      "share": 0.765
-    },
-    {
-      "type": "pole_skew",
-      "severity": "moderate",
-      "detail": "82% of evidence pushes \"left\" — risk of one-sided belief drift",
-      "dominant_pole": "left",
-      "share": 0.824
+      "share": 0.524
     }
   ],
-  "summary": "2 capture alert(s) detected:\n[HIGH] @unknown accounts for 77% of today's evidence (13/17)\n[MODERATE] 82% of evidence pushes \"left\" — risk of one-sided belief drift",
+  "summary": "1 capture alert(s) detected:\n[HIGH] @unknown accounts for 52% of today's evidence (11/21)",
   "source_concentration": {
     "unknown": {
       "username": "unknown",
-      "count": 13,
-      "share": 0.765
+      "count": 11,
+      "share": 0.524
     },
-    "bncdotph": {
-      "username": "bncdotph",
-      "count": 1,
-      "share": 0.059
+    "abscbnnews": {
+      "username": "abscbnnews",
+      "count": 2,
+      "share": 0.095
     },
-    "ericldaugh": {
-      "username": "ericldaugh",
+    "clashreport": {
+      "username": "clashreport",
       "count": 1,
-      "share": 0.059
+      "share": 0.048
     },
-    "philippinestar": {
-      "username": "philippinestar",
+    "washingtonpost": {
+      "username": "washingtonpost",
       "count": 1,
-      "share": 0.059
+      "share": 0.048
     },
-    "elonmusk": {
-      "username": "elonmusk",
+    "alarabiya_eng": {
+      "username": "alarabiya_eng",
       "count": 1,
-      "share": 0.059
+      "share": 0.048
+    },
+    "foxnews": {
+      "username": "foxnews",
+      "count": 1,
+      "share": 0.048
+    },
+    "cbsnews": {
+      "username": "cbsnews",
+      "count": 1,
+      "share": 0.048
+    },
+    "newswatchplusph": {
+      "username": "newswatchplusph",
+      "count": 1,
+      "share": 0.048
+    },
+    "news5ph": {
+      "username": "news5ph",
+      "count": 1,
+      "share": 0.048
+    },
+    "radyopilipinas1": {
+      "username": "radyopilipinas1",
+      "count": 1,
+      "share": 0.048
     }
   },
   "axis_concentration": {
@@ -52,95 +70,95 @@
       "axis_id": "axis_power_accountability",
       "label": "Power, Institutions, and Rule of Law",
       "count": 4,
-      "share": 0.235
+      "share": 0.19
     },
     "axis_procedural_governance_accountability_v1": {
       "axis_id": "axis_procedural_governance_accountability_v1",
       "label": "Procedural Governance vs. Genuine Accountability",
       "count": 4,
-      "share": 0.235
-    },
-    "axis_procedural_governance_substantive_action": {
-      "axis_id": "axis_procedural_governance_substantive_action",
-      "label": "Procedural Governance vs. Substantive Action",
-      "count": 2,
-      "share": 0.118
+      "share": 0.19
     },
     "axis_collective_voice": {
       "axis_id": "axis_collective_voice",
       "label": "Authentic Participation vs. Managed Consent",
-      "count": 1,
-      "share": 0.059
+      "count": 3,
+      "share": 0.143
     },
-    "axis_political_trust_corruption_v1": {
-      "axis_id": "axis_political_trust_corruption_v1",
-      "label": "Trust in Political Institutions and Anti-Corruption Efforts",
-      "count": 1,
-      "share": 0.059
+    "axis_reactionary_futurism_v1": {
+      "axis_id": "axis_reactionary_futurism_v1",
+      "label": "Reactionary Futurism: Innovation Aesthetics vs. Democratic Accountability",
+      "count": 3,
+      "share": 0.143
     },
-    "axis_media_integrity_v1": {
-      "axis_id": "axis_media_integrity_v1",
-      "label": "Integrity of Information and Social Media Manipulation",
+    "axis_ai_societal_impact_v1": {
+      "axis_id": "axis_ai_societal_impact_v1",
+      "label": "Societal Impact and Ethical Concerns of AI/Robots",
       "count": 1,
-      "share": 0.059
+      "share": 0.048
     },
-    "axis_historical_legacy_v1": {
-      "axis_id": "axis_historical_legacy_v1",
-      "label": "Interpretation and Legacy of Historical Events",
+    "axis_national_sovereignty_v_intl_law_v1": {
+      "axis_id": "axis_national_sovereignty_v_intl_law_v1",
+      "label": "National Sovereignty vs. International Law",
       "count": 1,
-      "share": 0.059
+      "share": 0.048
+    },
+    "axis_environmental_policy_v_economic_v1": {
+      "axis_id": "axis_environmental_policy_v_economic_v1",
+      "label": "Environmental Policy vs. Economic Development",
+      "count": 1,
+      "share": 0.048
     },
     "axis_digital_surveillance_autonomy_v1": {
       "axis_id": "axis_digital_surveillance_autonomy_v1",
       "label": "Digital Surveillance and Individual Autonomy",
       "count": 1,
-      "share": 0.059
+      "share": 0.048
     },
-    "axis_geopolitical_control_narratives": {
-      "axis_id": "axis_geopolitical_control_narratives",
-      "label": "Geopolitical Control Narratives: Asserting Sovereignty vs. International Norms",
+    "axis_humanitarian_crisis_response": {
+      "axis_id": "axis_humanitarian_crisis_response",
+      "label": "Humanitarian Crisis Response",
       "count": 1,
-      "share": 0.059
+      "share": 0.048
     },
-    "axis_reactionary_futurism_v1": {
-      "axis_id": "axis_reactionary_futurism_v1",
-      "label": "Reactionary Futurism: Innovation Aesthetics vs. Democratic Accountability",
+    "axis_procedural_governance_substantive_action": {
+      "axis_id": "axis_procedural_governance_substantive_action",
+      "label": "Procedural Governance vs. Substantive Action",
       "count": 1,
-      "share": 0.059
+      "share": 0.048
     }
   },
   "cluster_concentration": {
     "unknown": {
       "cluster": "unknown",
-      "count": 13,
-      "share": 0.765
+      "count": 15,
+      "share": 0.714
     },
-    "asia_pacific": {
-      "cluster": "asia_pacific",
+    "breaking_news": {
+      "cluster": "breaking_news",
+      "count": 2,
+      "share": 0.095
+    },
+    "accountability_journalism": {
+      "cluster": "accountability_journalism",
+      "count": 2,
+      "share": 0.095
+    },
+    "geopolitics": {
+      "cluster": "geopolitics",
       "count": 1,
-      "share": 0.059
+      "share": 0.048
     },
     "us_politics": {
       "cluster": "us_politics",
       "count": 1,
-      "share": 0.059
-    },
-    "breaking_news": {
-      "cluster": "breaking_news",
-      "count": 1,
-      "share": 0.059
-    },
-    "tech_ai": {
-      "cluster": "tech_ai",
-      "count": 1,
-      "share": 0.059
+      "share": 0.048
     }
   },
   "pole_balance": {
-    "left": 14,
-    "right": 3,
+    "left": 10,
+    "right": 11,
     "neutral": 0,
-    "left_share": 0.824,
-    "right_share": 0.176
+    "left_share": 0.476,
+    "right_share": 0.524
   }
 }
