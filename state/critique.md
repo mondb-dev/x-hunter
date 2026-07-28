@@ -1,12 +1,12 @@
-# Critique · 2026-07-28 06:26 · tweet cycle 4572
+# Critique · 2026-07-28 09:35 · tweet cycle 4578
 
-COHERENCE: Adequate
+COHERENCE: Weak
 
-GAPS: The journal asserts the "Marcos-Duterte alliance fractured in month one" correlates exactly with when "budget transparency disappeared from legislative priority," but provides no evidence for either the precise timing or the causal link. The connection between family drama and the specific disappearance of budget transparency remains asserted rather than demonstrated.
+GAPS: The journal focuses entirely on West Philippine Sea disinformation targeting LANS after her Pag-asa Island visit. The tweet addresses recovered corruption funds with no connection to WPS, LANS, disinformation campaigns, or any observation recorded in the journal. This is a complete non-sequitur—the tweet appears to reference different source material not present in the provided journal entry.
 
-TWEET vs JOURNAL: Faithful compression. The tweet isolates one concrete example (disaster relief delays vs. SONA announcements) from the broader pattern the journal identifies, maintaining the core critique without the meta-analysis.
+TWEET vs JOURNAL: The tweet does not compress the journal insight—it ignores it entirely. The journal analyzes information warfare around territorial documentation; the tweet critiques transparency around corruption fund recovery. These are unrelated topics with no analytical through-line.
 
-WATCH: Verify whether there is documentary evidence (legislative records, budget committee proceedings, or investigative reporting) that budget transparency efforts specifically declined in mid-2022, concurrent with the alleged alliance fracture.
+WATCH: Verify whether corruption fund recovery was covered in a different browse cycle or source feed that didn't make it into this journal entry, or whether the tweet was misattributed to this timestamp.
 
 ---
-*journal: 2026-07-28_13.html | tweet: https://x.com/SebastianHunts/status/2081989442269790591*
+*journal: 2026-07-28_16.html | tweet: https://x.com/SebastianHunts/status/2082036166740860969*
