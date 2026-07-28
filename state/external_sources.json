@@ -1,8 +1,8 @@
 {
   "schema_version": "1.0",
-  "generated_at": "2026-07-27T23:55:27.268Z",
+  "generated_at": "2026-07-28T02:55:21.390Z",
   "method": "mechanical_registry_v1",
-  "profiled_at": "2026-07-27T23:55:33.406Z",
+  "profiled_at": "2026-07-28T02:55:30.056Z",
   "sources": [
     {
       "domain": "theguardian.com",
@@ -11,7 +11,7 @@
       "first_seen_at": "2026-03-27T23:17:00Z",
       "last_seen_at": "2026-07-26T22:55:51.714Z",
       "discovery": {
-        "distinct_urls": 578,
+        "distinct_urls": 580,
         "example_urls": [
           "https://www.theguardian.com/us-news/2026/jun/23/trump-immigration-courthouse-arrest-policy",
           "https://www.theguardian.com/us-news/2026/jun/28/ice-minnesota-defending-democracy",
@@ -21,7 +21,7 @@
         ],
         "origin_counts": {
           "ontology_evidence": 40,
-          "reading_queue": 547,
+          "reading_queue": 549,
           "journals": 104,
           "articles": 2
         },
@@ -72,7 +72,7 @@
         "breadth": {
           "score": 0.94,
           "basis": [
-            "distinct_urls:578",
+            "distinct_urls:580",
             "distinct_axes:17",
             "origin_types:4"
           ]
@@ -112,7 +112,7 @@
             "newsroom_domain_pattern",
             "article_path_seen",
             "doi_or_identifier_path_seen",
-            "distinct_urls:578",
+            "distinct_urls:580",
             "distinct_axes:17",
             "origin_types:4",
             "referring_accounts:0",
@@ -1443,7 +1443,7 @@
       "first_seen_at": "2026-06-26T07:05:00Z",
       "last_seen_at": "2026-07-26T19:55:37.560Z",
       "discovery": {
-        "distinct_urls": 337,
+        "distinct_urls": 339,
         "example_urls": [
           "https://www.bbc.co.uk/news/articles/cn8qxz6qypyo",
           "https://www.bbc.co.uk/news/articles/cn075j04pnyo?at_medium=RSS&amp;at_campaign=rss",
@@ -1453,7 +1453,7 @@
         ],
         "origin_counts": {
           "ontology_evidence": 6,
-          "reading_queue": 345,
+          "reading_queue": 347,
           "journals": 15
         },
         "distinct_referring_accounts": 0,
@@ -1488,7 +1488,7 @@
         "breadth": {
           "score": 0.7633333333333332,
           "basis": [
-            "distinct_urls:337",
+            "distinct_urls:339",
             "distinct_axes:4",
             "origin_types:3"
           ]
@@ -1526,7 +1526,7 @@
           "method": "mechanical_v1",
           "basis": [
             "newsroom_domain_pattern",
-            "distinct_urls:337",
+            "distinct_urls:339",
             "distinct_axes:4",
             "origin_types:3",
             "referring_accounts:0",
@@ -2790,9 +2790,9 @@
       "entity": "T Co",
       "kind": "unknown",
       "first_seen_at": "2016-05-05T18:57:30.000Z",
-      "last_seen_at": "2026-07-27T23:40:25.789Z",
+      "last_seen_at": "2026-07-28T02:40:00.000Z",
       "discovery": {
-        "distinct_urls": 10194,
+        "distinct_urls": 10296,
         "example_urls": [
           "https://t.co/pJSE124ec4",
           "https://t.co/Soz8BXPWaa",
@@ -2801,11 +2801,11 @@
           "https://t.co/cYaqYDRp08"
         ],
         "origin_counts": {
-          "feed_buffer": 7549,
+          "feed_buffer": 7659,
           "feed_buffer_reply": 4851,
           "articles": 1
         },
-        "distinct_referring_accounts": 2601,
+        "distinct_referring_accounts": 2608,
         "sample_referring_accounts": [
           "0808iveta",
           "09abracadabra",
@@ -2844,7 +2844,7 @@
         "breadth": {
           "score": 0.53,
           "basis": [
-            "distinct_urls:10194",
+            "distinct_urls:10296",
             "distinct_axes:0",
             "origin_types:3"
           ]
@@ -2852,7 +2852,7 @@
         "corroboration": {
           "score": 0.9125,
           "basis": [
-            "referring_accounts:2601",
+            "referring_accounts:2608",
             "origin_types:3"
           ]
         },
@@ -2883,10 +2883,10 @@
           "basis": [
             "unknown_domain_pattern",
             "doi_or_identifier_path_seen",
-            "distinct_urls:10194",
+            "distinct_urls:10296",
             "distinct_axes:0",
             "origin_types:3",
-            "referring_accounts:2601",
+            "referring_accounts:2608",
             "origin_types:3",
             "track_record_unavailable"
           ]
@@ -7417,9 +7417,9 @@
       "entity": "Maventrading",
       "kind": "unknown",
       "first_seen_at": "2026-07-04T21:13:31.000Z",
-      "last_seen_at": "2026-07-27T21:48:03.369Z",
+      "last_seen_at": "2026-07-28T02:20:38.342Z",
       "discovery": {
-        "distinct_urls": 44,
+        "distinct_urls": 45,
         "example_urls": [
           "https://maventrading.com/lp/choose-your-challenge?twt_id=54608379&twclid=24irm75xuuvw6vkz1dgb8ui0sz",
           "https://maventrading.com/challenges/1-step?twt_id=54607786&twclid=24dguyzddfgso39sw5b667t4v6",
@@ -7429,7 +7429,7 @@
         ],
         "origin_counts": {
           "feed_buffer_reply": 11,
-          "feed_buffer": 33
+          "feed_buffer": 34
         },
         "distinct_referring_accounts": 1,
         "sample_referring_accounts": [
@@ -7460,7 +7460,7 @@
         "breadth": {
           "score": 0.47,
           "basis": [
-            "distinct_urls:44",
+            "distinct_urls:45",
             "distinct_axes:0",
             "origin_types:2"
           ]
@@ -7498,7 +7498,7 @@
           "method": "mechanical_v1",
           "basis": [
             "unknown_domain_pattern",
-            "distinct_urls:44",
+            "distinct_urls:45",
             "distinct_axes:0",
             "origin_types:2",
             "referring_accounts:1",
@@ -8306,9 +8306,9 @@
       "entity": "Metamask Io",
       "kind": "unknown",
       "first_seen_at": "2026-07-07T06:46:49.000Z",
-      "last_seen_at": "2026-07-27T21:13:04.038Z",
+      "last_seen_at": "2026-07-28T02:40:31.902Z",
       "discovery": {
-        "distinct_urls": 21,
+        "distinct_urls": 22,
         "example_urls": [
           "https://link.metamask.io/swap?amount=32600000000000000&from=eip155%3A1%2Fslip44%3A60&sig_params=amount%2Cfrom&sig=lcKWbD9emSvYcSy4wKZAAZK4IusikSldKuh2SLobJnCxX6_H50c7o4lrxGukMkQAlJXl_Ro-z9GOFjHlijuUSQ&utm_source=twitter&utm_medium=paid-display&utm_campaign=cmp-1529292347-afbf08&twclid=29ubdtem27pe2i7fvtv9x4pcao",
           "https://link.metamask.io/perps?screen=market-list&sig_params=screen%2Ctab&tab=stocks&sig=aInR3xM3SUcBQHLE-VVO1LbcNV0Qmd6Xo8rRegYV-jYgKLETv8inNpaie_rpCvCoM4wfZXhtuj7qfO8n4o5Amw&utm_source=twitter&utm_medium=paid-display&utm_campaign=cmp-155930053-afbf08&twclid=2ar3rkf3t1fe18zlsqm2ysh7e8",
@@ -8318,7 +8318,7 @@
         ],
         "origin_counts": {
           "feed_buffer_reply": 9,
-          "feed_buffer": 12
+          "feed_buffer": 13
         },
         "distinct_referring_accounts": 1,
         "sample_referring_accounts": [
@@ -8349,7 +8349,7 @@
         "breadth": {
           "score": 0.47,
           "basis": [
-            "distinct_urls:21",
+            "distinct_urls:22",
             "distinct_axes:0",
             "origin_types:2"
           ]
@@ -8387,7 +8387,7 @@
           "method": "mechanical_v1",
           "basis": [
             "unknown_domain_pattern",
-            "distinct_urls:21",
+            "distinct_urls:22",
             "distinct_axes:0",
             "origin_types:2",
             "referring_accounts:1",
@@ -8433,9 +8433,9 @@
       "entity": "Travala",
       "kind": "unknown",
       "first_seen_at": "2026-07-07T12:18:51.059Z",
-      "last_seen_at": "2026-07-27T00:03:13.460Z",
+      "last_seen_at": "2026-07-28T01:50:34.890Z",
       "discovery": {
-        "distinct_urls": 20,
+        "distinct_urls": 21,
         "example_urls": [
           "https://www.travala.com/?camp_name=&camp_offer=credit&camp_content=Sign-up-or-log-in-to-receive-%2450-off-flights%2C-hotels-and-activities.&camp_code=BTCASIA50&camp_value=50&utm_campaign=BTCASIA50&utm_medium=by-travala-cpc&utm_source=twitter&twclid=26wz3yk3m5mtcltdzivyfesoom",
           "https://www.travala.com/?camp_name=&camp_offer=credit&camp_content=Sign-up-or-log-in-to-receive-%2450-off-flights%2C-hotels-and-activities.&camp_code=BTCASIA50&camp_value=50&utm_campaign=BTCASIA50&utm_medium=by-travala-cpc&utm_source=twitter&twclid=27hwmpgkfaysz941g6s97hdxaj",
@@ -8444,7 +8444,7 @@
           "https://www.travala.com/?camp_name=&camp_offer=credit&camp_content=Sign-up-or-log-in-to-receive-%2450-off-flights%2C-hotels-and-activities.&camp_code=BTCASIA50&camp_value=50&utm_campaign=BTCASIA50&utm_medium=by-travala-cpc&utm_source=twitter&twclid=2bbhq20cxwi8wz4ld34c9p9zyc"
         ],
         "origin_counts": {
-          "feed_buffer": 16,
+          "feed_buffer": 17,
           "feed_buffer_reply": 4
         },
         "distinct_referring_accounts": 1,
@@ -8476,7 +8476,7 @@
         "breadth": {
           "score": 0.47,
           "basis": [
-            "distinct_urls:20",
+            "distinct_urls:21",
             "distinct_axes:0",
             "origin_types:2"
           ]
@@ -8514,7 +8514,7 @@
           "method": "mechanical_v1",
           "basis": [
             "unknown_domain_pattern",
-            "distinct_urls:20",
+            "distinct_urls:21",
             "distinct_axes:0",
             "origin_types:2",
             "referring_accounts:1",
@@ -9826,6 +9826,133 @@
       }
     },
     {
+      "domain": "fx-edge.com",
+      "entity": "Fx-Edge",
+      "kind": "unknown",
+      "first_seen_at": "2026-07-09T00:16:31.000Z",
+      "last_seen_at": "2026-07-28T00:45:26.620Z",
+      "discovery": {
+        "distinct_urls": 13,
+        "example_urls": [
+          "https://fx-edge.com/prop-liquidity/?utm_source=twitter&utm_medium=ppc&utm_campaign=prop_liquidity&twclid=2232cmky8wi7upvvrdlud3bfsm",
+          "https://fx-edge.com/prop-liquidity/?utm_source=twitter&utm_medium=ppc&utm_campaign=prop_liquidity&twclid=2716a4qyu012n1dd1gtbhbrutw",
+          "https://fx-edge.com/prop-liquidity/?utm_source=twitter&utm_medium=ppc&utm_campaign=prop_liquidity&twclid=2acuomfmw9m0jsizqxikaglwg9",
+          "https://fx-edge.com/prop-liquidity/?utm_source=twitter&utm_medium=ppc&utm_campaign=prop_liquidity&twclid=22n4q4qy73ltflbbrkda5458ob",
+          "https://fx-edge.com/prop-liquidity/?utm_source=twitter&utm_medium=ppc&utm_campaign=prop_liquidity&twclid=2a0n4feu9oylp5rbcqwcvyrfzl"
+        ],
+        "origin_counts": {
+          "feed_buffer_reply": 4,
+          "feed_buffer": 9
+        },
+        "distinct_referring_accounts": 1,
+        "sample_referring_accounts": [
+          "fx_edge"
+        ],
+        "distinct_axes": []
+      },
+      "claims": {
+        "total": 0,
+        "supported": 0,
+        "refuted": 0,
+        "contested": 0,
+        "unverified": 0,
+        "resolved_count": 0
+      },
+      "structural_features": {
+        "has_search_paths": false,
+        "has_article_paths": false,
+        "has_doi_paths": false
+      },
+      "ratings": {
+        "provenance": {
+          "score": 0.45,
+          "basis": [
+            "unknown_domain_pattern"
+          ]
+        },
+        "breadth": {
+          "score": 0.47,
+          "basis": [
+            "distinct_urls:13",
+            "distinct_axes:0",
+            "origin_types:2"
+          ]
+        },
+        "corroboration": {
+          "score": 0.2833333333333333,
+          "basis": [
+            "referring_accounts:1",
+            "origin_types:2"
+          ]
+        },
+        "track_record": {
+          "score": null,
+          "basis": [
+            "no_resolved_claims_observed"
+          ]
+        },
+        "profile": {
+          "score": 0.42000000000000004,
+          "confidence": 0.65,
+          "basis": [
+            "meta_author:false",
+            "published_time:true",
+            "canonical:true",
+            "about:false",
+            "contact:true",
+            "corrections:false",
+            "outbound_links:2",
+            "opinion_marker:false"
+          ]
+        },
+        "overall": {
+          "score": 0.43875,
+          "confidence": 0.4392,
+          "method": "mechanical_v1",
+          "basis": [
+            "unknown_domain_pattern",
+            "distinct_urls:13",
+            "distinct_axes:0",
+            "origin_types:2",
+            "referring_accounts:1",
+            "origin_types:2",
+            "track_record_unavailable"
+          ]
+        }
+      },
+      "profile": {
+        "fetched_at": "2026-07-27T04:55:15.303Z",
+        "homepage_url": "https://fx-edge.com/",
+        "example_url": "https://fx-edge.com/prop-liquidity/?utm_source=twitter&utm_medium=ppc&utm_campaign=prop_liquidity&twclid=2232cmky8wi7upvvrdlud3bfsm",
+        "homepage_status": 200,
+        "example_status": 200,
+        "homepage_final_url": "https://fx-edge.com/",
+        "example_final_url": "https://fx-edge.com/prop-liquidity/?utm_source=twitter&utm_medium=ppc&utm_campaign=prop_liquidity&twclid=2232cmky8wi7upvvrdlud3bfsm",
+        "homepage_content_type": "text/html; charset=UTF-8",
+        "example_content_type": "text/html; charset=UTF-8",
+        "homepage": {
+          "has_meta_author": false,
+          "has_published_time": true,
+          "has_canonical": true,
+          "has_about_link": false,
+          "has_contact_link": true,
+          "has_corrections_link": false,
+          "outbound_links_count": 2,
+          "opinion_marker": false
+        },
+        "example": {
+          "has_meta_author": false,
+          "has_published_time": true,
+          "has_canonical": true,
+          "has_about_link": false,
+          "has_contact_link": true,
+          "has_corrections_link": false,
+          "outbound_links_count": 2,
+          "opinion_marker": false
+        }
+      }
+    },
+    {
       "domain": "gastechevent.com",
       "entity": "Gastechevent",
       "kind": "unknown",
@@ -9948,133 +10075,6 @@
           "has_contact_link": false,
           "has_corrections_link": false,
           "outbound_links_count": 15,
-          "opinion_marker": false
-        }
-      }
-    },
-    {
-      "domain": "fx-edge.com",
-      "entity": "Fx-Edge",
-      "kind": "unknown",
-      "first_seen_at": "2026-07-09T00:16:31.000Z",
-      "last_seen_at": "2026-07-27T11:42:27.189Z",
-      "discovery": {
-        "distinct_urls": 12,
-        "example_urls": [
-          "https://fx-edge.com/prop-liquidity/?utm_source=twitter&utm_medium=ppc&utm_campaign=prop_liquidity&twclid=2232cmky8wi7upvvrdlud3bfsm",
-          "https://fx-edge.com/prop-liquidity/?utm_source=twitter&utm_medium=ppc&utm_campaign=prop_liquidity&twclid=2716a4qyu012n1dd1gtbhbrutw",
-          "https://fx-edge.com/prop-liquidity/?utm_source=twitter&utm_medium=ppc&utm_campaign=prop_liquidity&twclid=2acuomfmw9m0jsizqxikaglwg9",
-          "https://fx-edge.com/prop-liquidity/?utm_source=twitter&utm_medium=ppc&utm_campaign=prop_liquidity&twclid=22n4q4qy73ltflbbrkda5458ob",
-          "https://fx-edge.com/prop-liquidity/?utm_source=twitter&utm_medium=ppc&utm_campaign=prop_liquidity&twclid=2a0n4feu9oylp5rbcqwcvyrfzl"
-        ],
-        "origin_counts": {
-          "feed_buffer_reply": 4,
-          "feed_buffer": 8
-        },
-        "distinct_referring_accounts": 1,
-        "sample_referring_accounts": [
-          "fx_edge"
-        ],
-        "distinct_axes": []
-      },
-      "claims": {
-        "total": 0,
-        "supported": 0,
-        "refuted": 0,
-        "contested": 0,
-        "unverified": 0,
-        "resolved_count": 0
-      },
-      "structural_features": {
-        "has_search_paths": false,
-        "has_article_paths": false,
-        "has_doi_paths": false
-      },
-      "ratings": {
-        "provenance": {
-          "score": 0.45,
-          "basis": [
-            "unknown_domain_pattern"
-          ]
-        },
-        "breadth": {
-          "score": 0.47,
-          "basis": [
-            "distinct_urls:12",
-            "distinct_axes:0",
-            "origin_types:2"
-          ]
-        },
-        "corroboration": {
-          "score": 0.2833333333333333,
-          "basis": [
-            "referring_accounts:1",
-            "origin_types:2"
-          ]
-        },
-        "track_record": {
-          "score": null,
-          "basis": [
-            "no_resolved_claims_observed"
-          ]
-        },
-        "profile": {
-          "score": 0.42000000000000004,
-          "confidence": 0.65,
-          "basis": [
-            "meta_author:false",
-            "published_time:true",
-            "canonical:true",
-            "about:false",
-            "contact:true",
-            "corrections:false",
-            "outbound_links:2",
-            "opinion_marker:false"
-          ]
-        },
-        "overall": {
-          "score": 0.43875,
-          "confidence": 0.4167,
-          "method": "mechanical_v1",
-          "basis": [
-            "unknown_domain_pattern",
-            "distinct_urls:12",
-            "distinct_axes:0",
-            "origin_types:2",
-            "referring_accounts:1",
-            "origin_types:2",
-            "track_record_unavailable"
-          ]
-        }
-      },
-      "profile": {
-        "fetched_at": "2026-07-27T04:55:15.303Z",
-        "homepage_url": "https://fx-edge.com/",
-        "example_url": "https://fx-edge.com/prop-liquidity/?utm_source=twitter&utm_medium=ppc&utm_campaign=prop_liquidity&twclid=2232cmky8wi7upvvrdlud3bfsm",
-        "homepage_status": 200,
-        "example_status": 200,
-        "homepage_final_url": "https://fx-edge.com/",
-        "example_final_url": "https://fx-edge.com/prop-liquidity/?utm_source=twitter&utm_medium=ppc&utm_campaign=prop_liquidity&twclid=2232cmky8wi7upvvrdlud3bfsm",
-        "homepage_content_type": "text/html; charset=UTF-8",
-        "example_content_type": "text/html; charset=UTF-8",
-        "homepage": {
-          "has_meta_author": false,
-          "has_published_time": true,
-          "has_canonical": true,
-          "has_about_link": false,
-          "has_contact_link": true,
-          "has_corrections_link": false,
-          "outbound_links_count": 2,
-          "opinion_marker": false
-        },
-        "example": {
-          "has_meta_author": false,
-          "has_published_time": true,
-          "has_canonical": true,
-          "has_about_link": false,
-          "has_contact_link": true,
-          "has_corrections_link": false,
-          "outbound_links_count": 2,
           "opinion_marker": false
         }
       }
@@ -11738,6 +11738,133 @@
       }
     },
     {
+      "domain": "ukiyoework.com",
+      "entity": "Ukiyoework",
+      "kind": "unknown",
+      "first_seen_at": "2026-07-14T06:47:16.000Z",
+      "last_seen_at": "2026-07-28T02:25:32.724Z",
+      "discovery": {
+        "distinct_urls": 9,
+        "example_urls": [
+          "https://www.ukiyoework.com/view/item/000000000401?utm_source=twitter&utm_medium=cpc&twclid=23tigf5ad41s1prapekhalf5cq",
+          "https://www.ukiyoework.com/view/category/tatsunoko?utm_source=twitter&utm_medium=cpc&twclid=27ext1086u2eyyitkmvq374645",
+          "https://www.ukiyoework.com/view/item/000000000236?utm_source=twitter&utm_medium=cpc&twclid=2bu9gwltiu8bvflmtcm5404nq0",
+          "https://www.ukiyoework.com/view/category/suibokuga?utm_source=twitter&utm_medium=cpc&twclid=27ezogk7gr0mgz3sbq5hqwtrgt",
+          "https://www.ukiyoework.com/view/category/godzilla?utm_source=twitter&utm_medium=cpc&twclid=21k30h8oulyahsnukat5d6his9"
+        ],
+        "origin_counts": {
+          "feed_buffer_reply": 1,
+          "feed_buffer": 8
+        },
+        "distinct_referring_accounts": 1,
+        "sample_referring_accounts": [
+          "ukiyoework"
+        ],
+        "distinct_axes": []
+      },
+      "claims": {
+        "total": 0,
+        "supported": 0,
+        "refuted": 0,
+        "contested": 0,
+        "unverified": 0,
+        "resolved_count": 0
+      },
+      "structural_features": {
+        "has_search_paths": false,
+        "has_article_paths": false,
+        "has_doi_paths": false
+      },
+      "ratings": {
+        "provenance": {
+          "score": 0.45,
+          "basis": [
+            "unknown_domain_pattern"
+          ]
+        },
+        "breadth": {
+          "score": 0.38249999999999995,
+          "basis": [
+            "distinct_urls:9",
+            "distinct_axes:0",
+            "origin_types:2"
+          ]
+        },
+        "corroboration": {
+          "score": 0.2833333333333333,
+          "basis": [
+            "referring_accounts:1",
+            "origin_types:2"
+          ]
+        },
+        "track_record": {
+          "score": null,
+          "basis": [
+            "no_resolved_claims_observed"
+          ]
+        },
+        "profile": {
+          "score": 0.22,
+          "confidence": 0.55,
+          "basis": [
+            "meta_author:false",
+            "published_time:false",
+            "canonical:true",
+            "about:false",
+            "contact:false",
+            "corrections:false",
+            "outbound_links:13",
+            "opinion_marker:false"
+          ]
+        },
+        "overall": {
+          "score": 0.419609375,
+          "confidence": 0.330825,
+          "method": "mechanical_v1",
+          "basis": [
+            "unknown_domain_pattern",
+            "distinct_urls:9",
+            "distinct_axes:0",
+            "origin_types:2",
+            "referring_accounts:1",
+            "origin_types:2",
+            "track_record_unavailable"
+          ]
+        }
+      },
+      "profile": {
+        "fetched_at": "2026-07-26T06:29:05.302Z",
+        "homepage_url": "https://ukiyoework.com/",
+        "example_url": "https://www.ukiyoework.com/view/item/000000000401?utm_source=twitter&utm_medium=cpc&twclid=23tigf5ad41s1prapekhalf5cq",
+        "homepage_status": 200,
+        "example_status": 200,
+        "homepage_final_url": "https://www.ukiyoework.com/",
+        "example_final_url": "https://www.ukiyoework.com/view/item/000000000401?utm_source=twitter&utm_medium=cpc&twclid=23tigf5ad41s1prapekhalf5cq",
+        "homepage_content_type": "text/html; charset=utf-8",
+        "example_content_type": "text/html; charset=utf-8",
+        "homepage": {
+          "has_meta_author": false,
+          "has_published_time": false,
+          "has_canonical": true,
+          "has_about_link": false,
+          "has_contact_link": false,
+          "has_corrections_link": false,
+          "outbound_links_count": 3,
+          "opinion_marker": false
+        },
+        "example": {
+          "has_meta_author": false,
+          "has_published_time": false,
+          "has_canonical": true,
+          "has_about_link": false,
+          "has_contact_link": false,
+          "has_corrections_link": false,
+          "outbound_links_count": 13,
+          "opinion_marker": false
+        }
+      }
+    },
+    {
       "domain": "tradeodds.io",
       "entity": "Tradeodds Io",
       "kind": "unknown",
@@ -12336,7 +12463,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-07-25T01:59:19.645Z",
+        "fetched_at": "2026-07-28T02:25:34.713Z",
         "homepage_url": "https://panzer.quest/",
         "example_url": "https://panzer.quest/?r=twipq1wwa&twclid=29prb4l0osv19xvy30sejzir0",
         "homepage_status": 200,
@@ -15273,133 +15400,6 @@
           "has_contact_link": false,
           "has_corrections_link": false,
           "outbound_links_count": 0,
-          "opinion_marker": false
-        }
-      }
-    },
-    {
-      "domain": "ukiyoework.com",
-      "entity": "Ukiyoework",
-      "kind": "unknown",
-      "first_seen_at": "2026-07-14T06:47:16.000Z",
-      "last_seen_at": "2026-07-27T06:27:07.449Z",
-      "discovery": {
-        "distinct_urls": 8,
-        "example_urls": [
-          "https://www.ukiyoework.com/view/item/000000000401?utm_source=twitter&utm_medium=cpc&twclid=23tigf5ad41s1prapekhalf5cq",
-          "https://www.ukiyoework.com/view/category/tatsunoko?utm_source=twitter&utm_medium=cpc&twclid=27ext1086u2eyyitkmvq374645",
-          "https://www.ukiyoework.com/view/item/000000000236?utm_source=twitter&utm_medium=cpc&twclid=2bu9gwltiu8bvflmtcm5404nq0",
-          "https://www.ukiyoework.com/view/category/suibokuga?utm_source=twitter&utm_medium=cpc&twclid=27ezogk7gr0mgz3sbq5hqwtrgt",
-          "https://www.ukiyoework.com/view/category/godzilla?utm_source=twitter&utm_medium=cpc&twclid=21k30h8oulyahsnukat5d6his9"
-        ],
-        "origin_counts": {
-          "feed_buffer_reply": 1,
-          "feed_buffer": 7
-        },
-        "distinct_referring_accounts": 1,
-        "sample_referring_accounts": [
-          "ukiyoework"
-        ],
-        "distinct_axes": []
-      },
-      "claims": {
-        "total": 0,
-        "supported": 0,
-        "refuted": 0,
-        "contested": 0,
-        "unverified": 0,
-        "resolved_count": 0
-      },
-      "structural_features": {
-        "has_search_paths": false,
-        "has_article_paths": false,
-        "has_doi_paths": false
-      },
-      "ratings": {
-        "provenance": {
-          "score": 0.45,
-          "basis": [
-            "unknown_domain_pattern"
-          ]
-        },
-        "breadth": {
-          "score": 0.3533333333333333,
-          "basis": [
-            "distinct_urls:8",
-            "distinct_axes:0",
-            "origin_types:2"
-          ]
-        },
-        "corroboration": {
-          "score": 0.2833333333333333,
-          "basis": [
-            "referring_accounts:1",
-            "origin_types:2"
-          ]
-        },
-        "track_record": {
-          "score": null,
-          "basis": [
-            "no_resolved_claims_observed"
-          ]
-        },
-        "profile": {
-          "score": 0.22,
-          "confidence": 0.55,
-          "basis": [
-            "meta_author:false",
-            "published_time:false",
-            "canonical:true",
-            "about:false",
-            "contact:false",
-            "corrections:false",
-            "outbound_links:13",
-            "opinion_marker:false"
-          ]
-        },
-        "overall": {
-          "score": 0.41322916666666665,
-          "confidence": 0.30219999999999997,
-          "method": "mechanical_v1",
-          "basis": [
-            "unknown_domain_pattern",
-            "distinct_urls:8",
-            "distinct_axes:0",
-            "origin_types:2",
-            "referring_accounts:1",
-            "origin_types:2",
-            "track_record_unavailable"
-          ]
-        }
-      },
-      "profile": {
-        "fetched_at": "2026-07-26T06:29:05.302Z",
-        "homepage_url": "https://ukiyoework.com/",
-        "example_url": "https://www.ukiyoework.com/view/item/000000000401?utm_source=twitter&utm_medium=cpc&twclid=23tigf5ad41s1prapekhalf5cq",
-        "homepage_status": 200,
-        "example_status": 200,
-        "homepage_final_url": "https://www.ukiyoework.com/",
-        "example_final_url": "https://www.ukiyoework.com/view/item/000000000401?utm_source=twitter&utm_medium=cpc&twclid=23tigf5ad41s1prapekhalf5cq",
-        "homepage_content_type": "text/html; charset=utf-8",
-        "example_content_type": "text/html; charset=utf-8",
-        "homepage": {
-          "has_meta_author": false,
-          "has_published_time": false,
-          "has_canonical": true,
-          "has_about_link": false,
-          "has_contact_link": false,
-          "has_corrections_link": false,
-          "outbound_links_count": 3,
-          "opinion_marker": false
-        },
-        "example": {
-          "has_meta_author": false,
-          "has_published_time": false,
-          "has_canonical": true,
-          "has_about_link": false,
-          "has_contact_link": false,
-          "has_corrections_link": false,
-          "outbound_links_count": 13,
           "opinion_marker": false
         }
       }
@@ -23371,6 +23371,132 @@
       }
     },
     {
+      "domain": "abnormal.ai",
+      "entity": "Abnormal Ai",
+      "kind": "unknown",
+      "first_seen_at": "2026-07-06T23:19:20.973Z",
+      "last_seen_at": "2026-07-28T00:55:25.055Z",
+      "discovery": {
+        "distinct_urls": 7,
+        "example_urls": [
+          "https://abnormal.ai/products/inbound-email-security?utm_source=twitter&utm_medium=paidsocial&twclid=2asl0bbzb83c9oc3nr0k101b56",
+          "https://abnormal.ai/products/inbound-email-security?utm_source=twitter&utm_medium=paidsocial&twclid=27mig9w3yz0tkr9xxz38krqm9q",
+          "https://abnormal.ai/products/inbound-email-security?utm_source=twitter&utm_medium=paidsocial&twclid=285bexv4ubcvgrw792h8hs4ors",
+          "https://abnormal.ai/products/inbound-email-security?utm_source=twitter&utm_medium=paidsocial&twclid=28edy5mdldxr8pu611k2s9zcue",
+          "https://abnormal.ai/products/inbound-email-security?utm_source=twitter&utm_medium=paidsocial&twclid=24wiyx3ubn5acvqufgl5t0jr36"
+        ],
+        "origin_counts": {
+          "feed_buffer": 7
+        },
+        "distinct_referring_accounts": 1,
+        "sample_referring_accounts": [
+          "abnormal"
+        ],
+        "distinct_axes": []
+      },
+      "claims": {
+        "total": 0,
+        "supported": 0,
+        "refuted": 0,
+        "contested": 0,
+        "unverified": 0,
+        "resolved_count": 0
+      },
+      "structural_features": {
+        "has_search_paths": false,
+        "has_article_paths": false,
+        "has_doi_paths": false
+      },
+      "ratings": {
+        "provenance": {
+          "score": 0.45,
+          "basis": [
+            "unknown_domain_pattern"
+          ]
+        },
+        "breadth": {
+          "score": 0.26416666666666666,
+          "basis": [
+            "distinct_urls:7",
+            "distinct_axes:0",
+            "origin_types:1"
+          ]
+        },
+        "corroboration": {
+          "score": 0.19583333333333333,
+          "basis": [
+            "referring_accounts:1",
+            "origin_types:1"
+          ]
+        },
+        "track_record": {
+          "score": null,
+          "basis": [
+            "no_resolved_claims_observed"
+          ]
+        },
+        "profile": {
+          "score": 0.37,
+          "confidence": 0.65,
+          "basis": [
+            "meta_author:false",
+            "published_time:false",
+            "canonical:true",
+            "about:true",
+            "contact:true",
+            "corrections:false",
+            "outbound_links:1",
+            "opinion_marker:false"
+          ]
+        },
+        "overall": {
+          "score": 0.3855208333333333,
+          "confidence": 0.2531,
+          "method": "mechanical_v1",
+          "basis": [
+            "unknown_domain_pattern",
+            "distinct_urls:7",
+            "distinct_axes:0",
+            "origin_types:1",
+            "referring_accounts:1",
+            "origin_types:1",
+            "track_record_unavailable"
+          ]
+        }
+      },
+      "profile": {
+        "fetched_at": "2026-07-27T00:55:19.855Z",
+        "homepage_url": "https://abnormal.ai/",
+        "example_url": "https://abnormal.ai/products/inbound-email-security?utm_source=twitter&utm_medium=paidsocial&twclid=2asl0bbzb83c9oc3nr0k101b56",
+        "homepage_status": 200,
+        "example_status": 200,
+        "homepage_final_url": "https://abnormal.ai/",
+        "example_final_url": "https://abnormal.ai/platform/inbound-email-security?utm_source=twitter&utm_medium=paidsocial&twclid=2asl0bbzb83c9oc3nr0k101b56",
+        "homepage_content_type": "text/html; charset=utf-8",
+        "example_content_type": "text/html; charset=utf-8",
+        "homepage": {
+          "has_meta_author": false,
+          "has_published_time": false,
+          "has_canonical": true,
+          "has_about_link": true,
+          "has_contact_link": true,
+          "has_corrections_link": false,
+          "outbound_links_count": 2,
+          "opinion_marker": false
+        },
+        "example": {
+          "has_meta_author": false,
+          "has_published_time": false,
+          "has_canonical": true,
+          "has_about_link": true,
+          "has_contact_link": true,
+          "has_corrections_link": false,
+          "outbound_links_count": 1,
+          "opinion_marker": false
+        }
+      }
+    },
+    {
       "domain": "jpost.com",
       "entity": "Jpost",
       "kind": "unknown",
@@ -27255,132 +27381,6 @@
       }
     },
     {
-      "domain": "abnormal.ai",
-      "entity": "Abnormal Ai",
-      "kind": "unknown",
-      "first_seen_at": "2026-07-06T23:19:20.973Z",
-      "last_seen_at": "2026-07-26T23:33:09.806Z",
-      "discovery": {
-        "distinct_urls": 6,
-        "example_urls": [
-          "https://abnormal.ai/products/inbound-email-security?utm_source=twitter&utm_medium=paidsocial&twclid=2asl0bbzb83c9oc3nr0k101b56",
-          "https://abnormal.ai/products/inbound-email-security?utm_source=twitter&utm_medium=paidsocial&twclid=27mig9w3yz0tkr9xxz38krqm9q",
-          "https://abnormal.ai/products/inbound-email-security?utm_source=twitter&utm_medium=paidsocial&twclid=285bexv4ubcvgrw792h8hs4ors",
-          "https://abnormal.ai/products/inbound-email-security?utm_source=twitter&utm_medium=paidsocial&twclid=28edy5mdldxr8pu611k2s9zcue",
-          "https://abnormal.ai/products/inbound-email-security?utm_source=twitter&utm_medium=paidsocial&twclid=24wiyx3ubn5acvqufgl5t0jr36"
-        ],
-        "origin_counts": {
-          "feed_buffer": 6
-        },
-        "distinct_referring_accounts": 1,
-        "sample_referring_accounts": [
-          "abnormal"
-        ],
-        "distinct_axes": []
-      },
-      "claims": {
-        "total": 0,
-        "supported": 0,
-        "refuted": 0,
-        "contested": 0,
-        "unverified": 0,
-        "resolved_count": 0
-      },
-      "structural_features": {
-        "has_search_paths": false,
-        "has_article_paths": false,
-        "has_doi_paths": false
-      },
-      "ratings": {
-        "provenance": {
-          "score": 0.45,
-          "basis": [
-            "unknown_domain_pattern"
-          ]
-        },
-        "breadth": {
-          "score": 0.235,
-          "basis": [
-            "distinct_urls:6",
-            "distinct_axes:0",
-            "origin_types:1"
-          ]
-        },
-        "corroboration": {
-          "score": 0.19583333333333333,
-          "basis": [
-            "referring_accounts:1",
-            "origin_types:1"
-          ]
-        },
-        "track_record": {
-          "score": null,
-          "basis": [
-            "no_resolved_claims_observed"
-          ]
-        },
-        "profile": {
-          "score": 0.37,
-          "confidence": 0.65,
-          "basis": [
-            "meta_author:false",
-            "published_time:false",
-            "canonical:true",
-            "about:true",
-            "contact:true",
-            "corrections:false",
-            "outbound_links:1",
-            "opinion_marker:false"
-          ]
-        },
-        "overall": {
-          "score": 0.379140625,
-          "confidence": 0.22447499999999998,
-          "method": "mechanical_v1",
-          "basis": [
-            "unknown_domain_pattern",
-            "distinct_urls:6",
-            "distinct_axes:0",
-            "origin_types:1",
-            "referring_accounts:1",
-            "origin_types:1",
-            "track_record_unavailable"
-          ]
-        }
-      },
-      "profile": {
-        "fetched_at": "2026-07-27T00:55:19.855Z",
-        "homepage_url": "https://abnormal.ai/",
-        "example_url": "https://abnormal.ai/products/inbound-email-security?utm_source=twitter&utm_medium=paidsocial&twclid=2asl0bbzb83c9oc3nr0k101b56",
-        "homepage_status": 200,
-        "example_status": 200,
-        "homepage_final_url": "https://abnormal.ai/",
-        "example_final_url": "https://abnormal.ai/platform/inbound-email-security?utm_source=twitter&utm_medium=paidsocial&twclid=2asl0bbzb83c9oc3nr0k101b56",
-        "homepage_content_type": "text/html; charset=utf-8",
-        "example_content_type": "text/html; charset=utf-8",
-        "homepage": {
-          "has_meta_author": false,
-          "has_published_time": false,
-          "has_canonical": true,
-          "has_about_link": true,
-          "has_contact_link": true,
-          "has_corrections_link": false,
-          "outbound_links_count": 2,
-          "opinion_marker": false
-        },
-        "example": {
-          "has_meta_author": false,
-          "has_published_time": false,
-          "has_canonical": true,
-          "has_about_link": true,
-          "has_contact_link": true,
-          "has_corrections_link": false,
-          "outbound_links_count": 1,
-          "opinion_marker": false
-        }
-      }
-    },
-    {
       "domain": "icmarkets.com",
       "entity": "Icmarkets",
       "kind": "unknown",
@@ -30830,7 +30830,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-07-25T00:29:29.607Z",
+        "fetched_at": "2026-07-28T00:55:24.912Z",
         "homepage_url": "https://zerogex.io/",
         "example_url": "https://zerogex.io/spx-gamma-levels?utm_source=x&utm_medium=paid_social&utm_campaign=levels_awareness&utm_content=trial_direct_hook&twclid=2a4dncr82b7vzedk7ixybb1asi",
         "homepage_status": 200,
@@ -36820,7 +36820,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-07-25T01:59:20.019Z",
+        "fetched_at": "2026-07-28T02:25:35.538Z",
         "homepage_url": "https://ovationproductions.asia/",
         "example_url": "https://ovationproductions.asia/shows?twclid=211tuu4nlnemtbaxblsjggnut",
         "homepage_status": 200,
@@ -37940,7 +37940,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-07-25T00:29:32.660Z",
+        "fetched_at": "2026-07-28T00:55:25.521Z",
         "homepage_url": "https://cuervo.com/",
         "example_url": "https://cuervo.com/?twclid=2cw6oebezormtkrlgtaweck05m",
         "homepage_status": 200,
@@ -38064,7 +38064,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-07-25T00:29:33.473Z",
+        "fetched_at": "2026-07-28T00:55:26.174Z",
         "homepage_url": "https://americanexpress.com/",
         "example_url": "https://www.americanexpress.com/en-us/benefits/membership/experiences/nba/?extlink=dw-us-GABM-PLATSOC_CH_sm-CU_us-BU_GABM-REF_TST_EEP_URL_g_psoc&cpid_g_psoc=&twclid=2dpgv5hu2sysfpt5ld9o2y2ukf",
         "homepage_status": 200,
@@ -38188,7 +38188,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-07-25T00:29:33.578Z",
+        "fetched_at": "2026-07-28T00:55:26.255Z",
         "homepage_url": "https://proalgo.fun/",
         "example_url": "https://proalgo.fun/chat?rez=sy24ria&twclid=29ce9rs2p6qobknj46cgwzi02y",
         "homepage_status": null,
@@ -38683,7 +38683,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-07-25T00:59:18.515Z",
+        "fetched_at": "2026-07-28T01:25:22.211Z",
         "homepage_url": "https://ajc.org/",
         "example_url": "https://www.ajc.org/news/the-iran-strikes-explained-how-we-got-here-and-what-it-means",
         "homepage_status": 200,
@@ -38778,14 +38778,14 @@
           ]
         },
         "profile": {
-          "score": 0.28,
+          "score": 0.4,
           "confidence": 0.65,
           "basis": [
             "meta_author:true",
             "published_time:false",
             "canonical:true",
             "about:false",
-            "contact:false",
+            "contact:true",
             "corrections:false",
             "outbound_links:0",
             "opinion_marker:false"
@@ -38807,7 +38807,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-07-25T00:59:21.031Z",
+        "fetched_at": "2026-07-28T01:25:24.450Z",
         "homepage_url": "https://manageengine.com/",
         "example_url": "https://www.manageengine.com/products/service-desk/?utm_source=Twitter-X&utm_medium=ppc&utm_campaign=SDP-New+Image+Ad-Kws-sep18&twclid=23ga9f8elsw90hcyq7ijyux58l",
         "homepage_status": 200,
@@ -38821,7 +38821,7 @@
           "has_published_time": false,
           "has_canonical": true,
           "has_about_link": false,
-          "has_contact_link": false,
+          "has_contact_link": true,
           "has_corrections_link": false,
           "outbound_links_count": 0,
           "opinion_marker": false
@@ -38931,7 +38931,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-07-25T00:59:23.609Z",
+        "fetched_at": "2026-07-28T01:25:27.040Z",
         "homepage_url": "https://coindesk.com/",
         "example_url": "https://consensus.coindesk.com/?utm_source=x&utm_medium=paid&utm_campaign=CMIA26&utm_content=speakerscarousel&twclid=25wlgerig7ee1h05a2z5wafpgx",
         "homepage_status": 200,
@@ -39055,7 +39055,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-07-25T00:59:24.807Z",
+        "fetched_at": "2026-07-28T01:25:28.709Z",
         "homepage_url": "https://outx.ai/",
         "example_url": "https://outx.ai/a/buyer-intent-tracking?utm_source=twitter&utm_medium=paid&utm_campaign=buyer-intent&utm_content=t-b1-first-200&twclid=28hhz80snfgnotyxefsxxmt9nc",
         "homepage_status": 200,
@@ -39179,7 +39179,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-07-25T01:59:21.199Z",
+        "fetched_at": "2026-07-28T02:25:37.084Z",
         "homepage_url": "https://finviz.com/",
         "example_url": "https://finviz.com/register?affilId=659201043&twclid=237p0oqyf8bhakod3naytz02qh",
         "homepage_status": 200,
@@ -39303,7 +39303,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-07-25T01:59:22.029Z",
+        "fetched_at": "2026-07-28T02:25:37.834Z",
         "homepage_url": "https://surething.io/",
         "example_url": "https://surething.io/chat-index?utm_source=xads&twclid=27yqtzrn5j3zjmadm486py1wgi",
         "homepage_status": 200,
@@ -39427,7 +39427,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-07-25T02:29:20.614Z",
+        "fetched_at": "2026-07-28T02:55:23.564Z",
         "homepage_url": "https://controlweedsnotfarming.com/",
         "example_url": "https://controlweedsnotfarming.com/?utm_source=X&utm_medium=Social&utm_campaign=Remarketing&utm_term=Landing+Page.+Visitors&utm_content=Food+On+Our+Tables&twclid=2ehfqrtyrcni2wc5jyzgjr19ra",
         "homepage_status": 200,
@@ -39551,7 +39551,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-07-25T02:29:22.211Z",
+        "fetched_at": "2026-07-28T02:55:25.578Z",
         "homepage_url": "https://gptdefender.ai/",
         "example_url": "https://www.gptdefender.ai/?utm_source=x&utm_medium=paid_social&utm_campaign=gptdefender_launch&utm_content=variant_a&twclid=24c6hyn5zgh6wesf67pqq4taq8",
         "homepage_status": 200,
@@ -39675,7 +39675,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-07-25T02:29:24.072Z",
+        "fetched_at": "2026-07-28T02:55:27.887Z",
         "homepage_url": "https://usebagel.com/",
         "example_url": "https://usebagel.com/?utm_source=x&utm_medium=cpc&utm_campaign=2026-05_signup_opt&utm_content=best_ad_v1&twclid=21464dp3zurr4fjt3mqswbiz08",
         "homepage_status": 200,
@@ -39799,7 +39799,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-07-25T02:29:24.590Z",
+        "fetched_at": "2026-07-28T02:55:30.056Z",
         "homepage_url": "https://statstobucks.com/",
         "example_url": "https://statstobucks.com/?twclid=2695k76ld5x4gqx77ogha991a0",
         "homepage_status": 200,
@@ -82641,6 +82641,160 @@
         "distinct_referring_accounts": 1,
         "sample_referring_accounts": [
           "elralfchristian"
+        ],
+        "distinct_axes": []
+      },
+      "claims": {
+        "total": 0,
+        "supported": 0,
+        "refuted": 0,
+        "contested": 0,
+        "unverified": 0,
+        "resolved_count": 0
+      },
+      "structural_features": {
+        "has_search_paths": false,
+        "has_article_paths": false,
+        "has_doi_paths": false
+      },
+      "ratings": {
+        "provenance": {
+          "score": 0.45,
+          "basis": [
+            "unknown_domain_pattern"
+          ]
+        },
+        "breadth": {
+          "score": 0.08916666666666666,
+          "basis": [
+            "distinct_urls:1",
+            "distinct_axes:0",
+            "origin_types:1"
+          ]
+        },
+        "corroboration": {
+          "score": 0.19583333333333333,
+          "basis": [
+            "referring_accounts:1",
+            "origin_types:1"
+          ]
+        },
+        "track_record": {
+          "score": null,
+          "basis": [
+            "no_resolved_claims_observed"
+          ]
+        },
+        "overall": {
+          "score": 0.3472395833333333,
+          "confidence": 0.08135,
+          "method": "mechanical_v1",
+          "basis": [
+            "unknown_domain_pattern",
+            "distinct_urls:1",
+            "distinct_axes:0",
+            "origin_types:1",
+            "referring_accounts:1",
+            "origin_types:1",
+            "track_record_unavailable"
+          ]
+        }
+      }
+    },
+    {
+      "domain": "livewebtennis.com",
+      "entity": "Livewebtennis",
+      "kind": "unknown",
+      "first_seen_at": "2026-07-28T01:00:30.167Z",
+      "last_seen_at": "2026-07-28T01:00:30.167Z",
+      "discovery": {
+        "distinct_urls": 1,
+        "example_urls": [
+          "https://livewebtennis.com/?twclid=29nonl4nbu53fv7ejohbads75n"
+        ],
+        "origin_counts": {
+          "feed_buffer": 1
+        },
+        "distinct_referring_accounts": 1,
+        "sample_referring_accounts": [
+          "akhilmatta29342"
+        ],
+        "distinct_axes": []
+      },
+      "claims": {
+        "total": 0,
+        "supported": 0,
+        "refuted": 0,
+        "contested": 0,
+        "unverified": 0,
+        "resolved_count": 0
+      },
+      "structural_features": {
+        "has_search_paths": false,
+        "has_article_paths": false,
+        "has_doi_paths": false
+      },
+      "ratings": {
+        "provenance": {
+          "score": 0.45,
+          "basis": [
+            "unknown_domain_pattern"
+          ]
+        },
+        "breadth": {
+          "score": 0.08916666666666666,
+          "basis": [
+            "distinct_urls:1",
+            "distinct_axes:0",
+            "origin_types:1"
+          ]
+        },
+        "corroboration": {
+          "score": 0.19583333333333333,
+          "basis": [
+            "referring_accounts:1",
+            "origin_types:1"
+          ]
+        },
+        "track_record": {
+          "score": null,
+          "basis": [
+            "no_resolved_claims_observed"
+          ]
+        },
+        "overall": {
+          "score": 0.3472395833333333,
+          "confidence": 0.08135,
+          "method": "mechanical_v1",
+          "basis": [
+            "unknown_domain_pattern",
+            "distinct_urls:1",
+            "distinct_axes:0",
+            "origin_types:1",
+            "referring_accounts:1",
+            "origin_types:1",
+            "track_record_unavailable"
+          ]
+        }
+      }
+    },
+    {
+      "domain": "replyhunter.co",
+      "entity": "Replyhunter Co",
+      "kind": "unknown",
+      "first_seen_at": "2026-07-28T01:20:26.077Z",
+      "last_seen_at": "2026-07-28T01:20:26.077Z",
+      "discovery": {
+        "distinct_urls": 1,
+        "example_urls": [
+          "https://replyhunter.co/signup?twclid=21z8mk0u58ri622kh84ic6wg3j"
+        ],
+        "origin_counts": {
+          "feed_buffer": 1
+        },
+        "distinct_referring_accounts": 1,
+        "sample_referring_accounts": [
+          "roeytechai"
         ],
         "distinct_axes": []
       },
