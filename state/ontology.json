@@ -132149,7 +132149,7 @@
       "left_pole": "Emphasis on individual privacy, data sovereignty, and resistance to centralized digital monitoring systems, prioritizing personal freedom and decentralized alternatives.",
       "right_pole": "Acceptance and promotion of integrated digital identity, financial, and health monitoring systems for societal control, efficiency, and addressing global challenges (e.g., public health, climate).",
       "score": 0.129,
-      "confidence": 0.8214,
+      "confidence": 0.8194,
       "topics": [],
       "created_at": "2026-04-01T14:15:20.987Z",
       "last_updated": "2026-07-27T16:56:23.289Z",
@@ -132877,7 +132877,7 @@
           "confidence_after": 0.8214
         }
       ],
-      "last_decayed_at": "2026-07-26",
+      "last_decayed_at": "2026-07-28",
       "current_stance": "I see data centers proliferating not just for cloud services but as infrastructure for totalitarian inventory systems that could track and control every human transaction and movement."
     },
     {
@@ -137555,8 +137555,45 @@
         }
       ],
       "last_decayed_at": "2026-07-28"
+    },
+    {
+      "id": "axis_infrastructure_commons_v_extraction_v1",
+      "label": "Infrastructure as Commons vs. Extraction",
+      "left_pole": "Critical infrastructure (power, water, communication) serves collective need and public good, with growth constrained by shared resource limits and equitable access priorities",
+      "right_pole": "Infrastructure primarily serves private accumulation and market demands, with constraints managed through relocation, tiered access, or externalizing costs to less protected populations",
+      "score": -0.05,
+      "confidence": 0.0268,
+      "topics": [],
+      "created_at": "2026-07-28T16:02:50.981Z",
+      "last_updated": "2026-07-28T17:32:53.991Z",
+      "evidence_log": [
+        {
+          "source": "https://techcrunch.com/2026/07/28/data-centers-may-face-temporary-power-cuts-to-prevent-blackouts-on-largest-us-grid/",
+          "content": "US grid operator prioritizes residential/essential services over data centers starting 2027 to prevent blackouts.",
+          "summary": "",
+          "timestamp": "2026-07-28T17:32:53.833Z",
+          "pole_alignment": "left",
+          "trust_weight": 1,
+          "claim_id": "17442e1dabd0",
+          "stance_confidence": 0.85,
+          "score_after": -0.05,
+          "confidence_after": 0.0268
+        }
+      ]
+    },
+    {
+      "id": "axis_financial_infrastructure_sovereignty_v1",
+      "label": "Financial Infrastructure and State Sovereignty",
+      "left_pole": "Financial systems operate through state-regulated channels with established oversight, transparency requirements, and diplomatic coordination",
+      "right_pole": "Financial infrastructure evolves through protocol adoption and technical integration, bypassing traditional regulatory frameworks and state control mechanisms",
+      "score": 0,
+      "confidence": 0,
+      "topics": [],
+      "created_at": "2026-07-28T18:02:51.114Z",
+      "last_updated": "2026-07-28T18:02:51.114Z",
+      "evidence_log": []
     }
   ],
   "axis_creation_rules_version": "1.0",
-  "last_updated": "2026-07-28T15:02:49.012Z"
+  "last_updated": "2026-07-28T18:02:51.114Z"
 }
