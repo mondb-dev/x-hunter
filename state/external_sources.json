@@ -1,8 +1,8 @@
 {
   "schema_version": "1.0",
-  "generated_at": "2026-07-29T11:41:55.383Z",
+  "generated_at": "2026-07-29T14:41:58.221Z",
   "method": "mechanical_registry_v1",
-  "profiled_at": "2026-07-29T11:42:00.855Z",
+  "profiled_at": "2026-07-29T14:42:04.651Z",
   "sources": [
     {
       "domain": "theguardian.com",
@@ -11,7 +11,7 @@
       "first_seen_at": "2026-03-27T23:17:00Z",
       "last_seen_at": "2026-07-26T22:55:51.714Z",
       "discovery": {
-        "distinct_urls": 600,
+        "distinct_urls": 602,
         "example_urls": [
           "https://www.theguardian.com/us-news/2026/jun/23/trump-immigration-courthouse-arrest-policy",
           "https://www.theguardian.com/us-news/2026/jun/28/ice-minnesota-defending-democracy",
@@ -21,7 +21,7 @@
         ],
         "origin_counts": {
           "ontology_evidence": 40,
-          "reading_queue": 570,
+          "reading_queue": 572,
           "journals": 104,
           "articles": 2
         },
@@ -72,7 +72,7 @@
         "breadth": {
           "score": 0.94,
           "basis": [
-            "distinct_urls:600",
+            "distinct_urls:602",
             "distinct_axes:17",
             "origin_types:4"
           ]
@@ -112,7 +112,7 @@
             "newsroom_domain_pattern",
             "article_path_seen",
             "doi_or_identifier_path_seen",
-            "distinct_urls:600",
+            "distinct_urls:602",
             "distinct_axes:17",
             "origin_types:4",
             "referring_accounts:0",
@@ -122,7 +122,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-07-26T12:29:10.826Z",
+        "fetched_at": "2026-07-29T12:41:58.773Z",
         "homepage_url": "https://theguardian.com/",
         "example_url": "https://www.theguardian.com/us-news/2026/jun/23/trump-immigration-courthouse-arrest-policy",
         "homepage_status": 200,
@@ -694,7 +694,7 @@
       "first_seen_at": "2026-06-22T00:15:00Z",
       "last_seen_at": "2026-07-28T22:02:45.177Z",
       "discovery": {
-        "distinct_urls": 409,
+        "distinct_urls": 410,
         "example_urls": [
           "https://www.nytimes.com/2026/06/19/world/canada/frank-stronach-trial-guilty-sex-charges.html",
           "https://www.nytimes.com/2026/06/27/world/americas/mexican-officials-us-informants.html",
@@ -704,7 +704,7 @@
         ],
         "origin_counts": {
           "ontology_evidence": 13,
-          "reading_queue": 411,
+          "reading_queue": 412,
           "journals": 35
         },
         "distinct_referring_accounts": 0,
@@ -743,7 +743,7 @@
         "breadth": {
           "score": 0.8799999999999999,
           "basis": [
-            "distinct_urls:409",
+            "distinct_urls:410",
             "distinct_axes:7",
             "origin_types:3"
           ]
@@ -782,7 +782,7 @@
           "basis": [
             "newsroom_domain_pattern",
             "article_path_seen",
-            "distinct_urls:409",
+            "distinct_urls:410",
             "distinct_axes:7",
             "origin_types:3",
             "referring_accounts:0",
@@ -1284,7 +1284,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-07-26T12:29:14.624Z",
+        "fetched_at": "2026-07-29T12:41:59.727Z",
         "homepage_url": "https://house.gov/",
         "example_url": "https://www.house.gov/",
         "homepage_status": 200,
@@ -1443,7 +1443,7 @@
       "first_seen_at": "2026-06-26T07:05:00Z",
       "last_seen_at": "2026-07-26T19:55:37.560Z",
       "discovery": {
-        "distinct_urls": 354,
+        "distinct_urls": 356,
         "example_urls": [
           "https://www.bbc.co.uk/news/articles/cn8qxz6qypyo",
           "https://www.bbc.co.uk/news/articles/cn075j04pnyo?at_medium=RSS&amp;at_campaign=rss",
@@ -1453,7 +1453,7 @@
         ],
         "origin_counts": {
           "ontology_evidence": 6,
-          "reading_queue": 362,
+          "reading_queue": 364,
           "journals": 15
         },
         "distinct_referring_accounts": 0,
@@ -1488,7 +1488,7 @@
         "breadth": {
           "score": 0.7633333333333332,
           "basis": [
-            "distinct_urls:354",
+            "distinct_urls:356",
             "distinct_axes:4",
             "origin_types:3"
           ]
@@ -1526,7 +1526,7 @@
           "method": "mechanical_v1",
           "basis": [
             "newsroom_domain_pattern",
-            "distinct_urls:354",
+            "distinct_urls:356",
             "distinct_axes:4",
             "origin_types:3",
             "referring_accounts:0",
@@ -1536,7 +1536,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-07-26T13:59:10.198Z",
+        "fetched_at": "2026-07-29T14:11:59.961Z",
         "homepage_url": "https://bbc.co.uk/",
         "example_url": "https://www.bbc.co.uk/news/articles/cn8qxz6qypyo",
         "homepage_status": 200,
@@ -2620,7 +2620,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-07-26T12:29:16.233Z",
+        "fetched_at": "2026-07-29T12:42:01.058Z",
         "homepage_url": "https://apnews.com/",
         "example_url": "https://apnews.com/hub/iran",
         "homepage_status": 200,
@@ -2790,9 +2790,9 @@
       "entity": "T Co",
       "kind": "unknown",
       "first_seen_at": "2016-05-05T18:57:30.000Z",
-      "last_seen_at": "2026-07-29T11:02:25.596Z",
+      "last_seen_at": "2026-07-29T13:23:46.000Z",
       "discovery": {
-        "distinct_urls": 11595,
+        "distinct_urls": 11616,
         "example_urls": [
           "https://t.co/pJSE124ec4",
           "https://t.co/Soz8BXPWaa",
@@ -2801,7 +2801,7 @@
           "https://t.co/cYaqYDRp08"
         ],
         "origin_counts": {
-          "feed_buffer": 9050,
+          "feed_buffer": 9073,
           "feed_buffer_reply": 4868,
           "articles": 1
         },
@@ -2844,7 +2844,7 @@
         "breadth": {
           "score": 0.53,
           "basis": [
-            "distinct_urls:11595",
+            "distinct_urls:11616",
             "distinct_axes:0",
             "origin_types:3"
           ]
@@ -2883,7 +2883,7 @@
           "basis": [
             "unknown_domain_pattern",
             "doi_or_identifier_path_seen",
-            "distinct_urls:11595",
+            "distinct_urls:11616",
             "distinct_axes:0",
             "origin_types:3",
             "referring_accounts:2698",
@@ -2893,7 +2893,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-07-26T12:29:17.873Z",
+        "fetched_at": "2026-07-29T12:42:02.175Z",
         "homepage_url": "https://t.co/",
         "example_url": "https://t.co/pJSE124ec4",
         "homepage_status": 200,
@@ -4670,7 +4670,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-07-26T13:59:12.511Z",
+        "fetched_at": "2026-07-29T14:12:02.081Z",
         "homepage_url": "https://grok.com/",
         "example_url": "https://grok.com/imagine/post/9b92ff60-ec59-45db-8a35-8e1b743e5339",
         "homepage_status": 200,
@@ -4706,9 +4706,9 @@
       "entity": "Steampowered",
       "kind": "unknown",
       "first_seen_at": "2026-04-04T23:34:51.000Z",
-      "last_seen_at": "2026-07-29T11:07:18.379Z",
+      "last_seen_at": "2026-07-29T12:42:18.881Z",
       "discovery": {
-        "distinct_urls": 260,
+        "distinct_urls": 261,
         "example_urls": [
           "https://store.steampowered.com/app/1315180?twclid=2cb8mho5n4udnkq1fnm1yi4kkh",
           "https://store.steampowered.com/app/3321460?utm_campaign=launching&utm_source=X&utm_term=20260319_traffic&utm_medium=us&utm_content=Trailer_view&twclid=22351un15xjmtu22gjwnjp292d",
@@ -4718,7 +4718,7 @@
         ],
         "origin_counts": {
           "feed_buffer_reply": 212,
-          "feed_buffer": 48
+          "feed_buffer": 49
         },
         "distinct_referring_accounts": 40,
         "sample_referring_accounts": [
@@ -4758,7 +4758,7 @@
         "breadth": {
           "score": 0.47,
           "basis": [
-            "distinct_urls:260",
+            "distinct_urls:261",
             "distinct_axes:0",
             "origin_types:2"
           ]
@@ -4796,7 +4796,7 @@
           "method": "mechanical_v1",
           "basis": [
             "unknown_domain_pattern",
-            "distinct_urls:260",
+            "distinct_urls:261",
             "distinct_axes:0",
             "origin_types:2",
             "referring_accounts:40",
@@ -6239,7 +6239,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-07-26T13:59:13.566Z",
+        "fetched_at": "2026-07-29T14:12:03.233Z",
         "homepage_url": "https://rockstargames.com/",
         "example_url": "https://www.rockstargames.com/gta-online?utm_source=Twitter&utm_medium=p_social&utm_campaign=506-kch-pre-release-gift-20260702&utm_content=uk-eng&twclid=21k9dspaz1uqc236nsfftz24wo",
         "homepage_status": 200,
@@ -6368,7 +6368,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-07-26T13:59:15.159Z",
+        "fetched_at": "2026-07-29T14:12:05.175Z",
         "homepage_url": "https://theepochtimes.com/",
         "example_url": "https://www.theepochtimes.com/china/former-chinese-military-doctor-leaks-ccp-plan-to-use-taiwanese-troops-as-organ-bank-5871639?utm_medium=DigitalMkt&utm_source=twitter&utm_campaign=content_FormerChineseMilitary-karen-20250827&utm_content=img-2_FormerChineseMilitary&utm_term=new-pagevisitor&gl=reg&twclid=2387x75uji9nq8gmjpy9cer691",
         "homepage_status": 200,
@@ -6488,7 +6488,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-07-26T14:29:12.179Z",
+        "fetched_at": "2026-07-29T14:41:58.882Z",
         "homepage_url": "https://wikipedia.org/",
         "example_url": "https://en.wikipedia.org/wiki/2026_Iran_war",
         "homepage_status": 200,
@@ -7291,9 +7291,9 @@
       "entity": "Bet88 Ph",
       "kind": "unknown",
       "first_seen_at": "2026-07-03T16:00:02.000Z",
-      "last_seen_at": "2026-07-29T07:14:51.653Z",
+      "last_seen_at": "2026-07-29T13:12:19.313Z",
       "discovery": {
-        "distinct_urls": 72,
+        "distinct_urls": 73,
         "example_urls": [
           "https://bet88.ph/en/?type=registration&modal=user&ref=xa027&twclid=27gurqyk8ekpo92oqcm3aeuing",
           "https://bet88.ph/en/?type=registration&modal=user&ref=xa023&twclid=25wrsnnpnc7378nutxmyo1v6kj",
@@ -7303,7 +7303,7 @@
         ],
         "origin_counts": {
           "feed_buffer_reply": 28,
-          "feed_buffer": 44
+          "feed_buffer": 45
         },
         "distinct_referring_accounts": 1,
         "sample_referring_accounts": [
@@ -7334,7 +7334,7 @@
         "breadth": {
           "score": 0.47,
           "basis": [
-            "distinct_urls:72",
+            "distinct_urls:73",
             "distinct_axes:0",
             "origin_types:2"
           ]
@@ -7372,7 +7372,7 @@
           "method": "mechanical_v1",
           "basis": [
             "unknown_domain_pattern",
-            "distinct_urls:72",
+            "distinct_urls:73",
             "distinct_axes:0",
             "origin_types:2",
             "referring_accounts:1",
@@ -7418,9 +7418,9 @@
       "entity": "Maventrading",
       "kind": "unknown",
       "first_seen_at": "2026-07-04T21:13:31.000Z",
-      "last_seen_at": "2026-07-28T19:10:54.237Z",
+      "last_seen_at": "2026-07-29T13:52:22.203Z",
       "discovery": {
-        "distinct_urls": 48,
+        "distinct_urls": 49,
         "example_urls": [
           "https://maventrading.com/lp/choose-your-challenge?twt_id=54608379&twclid=24irm75xuuvw6vkz1dgb8ui0sz",
           "https://maventrading.com/challenges/1-step?twt_id=54607786&twclid=24dguyzddfgso39sw5b667t4v6",
@@ -7430,7 +7430,7 @@
         ],
         "origin_counts": {
           "feed_buffer_reply": 11,
-          "feed_buffer": 37
+          "feed_buffer": 38
         },
         "distinct_referring_accounts": 1,
         "sample_referring_accounts": [
@@ -7461,7 +7461,7 @@
         "breadth": {
           "score": 0.47,
           "basis": [
-            "distinct_urls:48",
+            "distinct_urls:49",
             "distinct_axes:0",
             "origin_types:2"
           ]
@@ -7499,7 +7499,7 @@
           "method": "mechanical_v1",
           "basis": [
             "unknown_domain_pattern",
-            "distinct_urls:48",
+            "distinct_urls:49",
             "distinct_axes:0",
             "origin_types:2",
             "referring_accounts:1",
@@ -15630,7 +15630,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-07-26T14:29:14.392Z",
+        "fetched_at": "2026-07-29T14:42:02.095Z",
         "homepage_url": "https://par.bz/",
         "example_url": "https://par.bz/nep?twclid=2cqyfqbi1emcrdcv6yo3eddsrk",
         "homepage_status": 403,
@@ -19807,7 +19807,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-07-26T12:59:09.241Z",
+        "fetched_at": "2026-07-29T13:11:58.336Z",
         "homepage_url": "https://oracle.com/",
         "example_url": "https://www.oracle.com/database/?source=%3Aad%3Aso%3Atw%3Adg%3Aa_nas%3A%3ARC_TWTR260205P00003C00005%3AEnd_Data_Risk&SC=%3Aad%3Aso%3Atw%3Adg%3Aa_nas%3A%3ARC_TWTR260205P00003C00005%3AEnd_Data_Risk&twclid=2b7h3vpee1s0pq1u9507vf4n1e",
         "homepage_status": 403,
@@ -19934,7 +19934,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-07-26T12:59:10.135Z",
+        "fetched_at": "2026-07-29T13:11:59.302Z",
         "homepage_url": "https://temu.com/",
         "example_url": "https://www.temu.com/kuiper/un1.html?subj=feed-un&_bg_fs=1&_p_mat1_type=1&_p_jump_id=725&_x_vst_scene=adg&gids=538325&_p_rfs=1&_x_ads_channel=twitter&twclid=29gpd1jhyu86nybj5gna95l3tw",
         "homepage_status": 200,
@@ -20061,7 +20061,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-07-26T12:59:13.731Z",
+        "fetched_at": "2026-07-29T13:12:03.084Z",
         "homepage_url": "https://la28.org/",
         "example_url": "https://hospitality.la28.org/en?utm_source=x&utm_medium=paid_social&utm_campaign=emg_onlocation_la-olympics-b2c_aw_ecomm_paid-social_x_x_nu_us&twclid=2dvfag01sx2wxc4fmpjts9gb7p",
         "homepage_status": 200,
@@ -20188,7 +20188,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-07-26T12:59:15.705Z",
+        "fetched_at": "2026-07-29T13:12:05.017Z",
         "homepage_url": "https://atlassian.com/",
         "example_url": "https://www.atlassian.com/software/rovo?utm_source=twitter&utm_medium=paid-social&utm_campaign=P%3Arovo%7CO%3Appm%7CV%3Atwitter%7CG%3Aus%7CL%3Aen%7CF%3Aaware%7CT%3Aprospecting%7CZ%3Astandard-image%7CI%3Aimc-rovo-iyryk%7CA%3Aimage%7CD%3Aalld&utm_content=P%3Arovo%7CO%3Appm%7CV%3Atwitter%7CG%3Aus%7CL%3Aen%7CF%3Aaware%7CT%3Aprospecting%7CZ%3Astandard-image%7CI%3Aimc-rovo-iyryk%7CA%3Aimage%7CD%3Aalld%7CU%3Ahandles_image-core-brand-default-onepromptaway-1200x628-na-na-aipowered&twclid=256sbqrmpm1kmygbwj39syq8d2",
         "homepage_status": 200,
@@ -20315,7 +20315,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-07-26T14:29:14.890Z",
+        "fetched_at": "2026-07-29T14:42:03.656Z",
         "homepage_url": "https://myblockchainweek.com/",
         "example_url": "https://myblockchainweek.com/buy-ticket?twclid=21nicpg0ek4tfxn16u0mxc14r1",
         "homepage_status": 200,
@@ -20331,7 +20331,7 @@
           "has_about_link": false,
           "has_contact_link": false,
           "has_corrections_link": false,
-          "outbound_links_count": 33,
+          "outbound_links_count": 34,
           "opinion_marker": false
         },
         "example": {
@@ -20951,7 +20951,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-07-26T14:29:15.777Z",
+        "fetched_at": "2026-07-29T14:42:04.651Z",
         "homepage_url": "https://celsius.com/",
         "example_url": "https://www.celsius.com/buy-locate/?utm_medium=paidsocial&utm_campaign=pillars&utm_content=musicfestival&twclid=2ejkfis7fdkuksuqyzg68f5wfq",
         "homepage_status": 200,
