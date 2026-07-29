@@ -130,8 +130,20 @@ function findChromeBin() {
  * startBrowser()
  * Stop any existing Chrome on CDP port, then launch fresh.
  * Poll CDP for readiness.
+ *
+ * Launches CHROME_BIN (see .env), which must NOT be /Applications/Google Chrome.app:
+ * that bundle id (com.google.Chrome) is shared with the desktop browser, and while
+ * a headless process from it is alive macOS LaunchServices routes the user's Chrome
+ * launch to this windowless process instead of opening a window. Chrome for Testing
+ * has its own bundle id (com.google.chrome.for.testing), so the two coexist.
+ *
+ * CDP_AUTOSTART=0 disables autostart entirely (kill switch); default is on.
  */
 function startBrowser() {
+  if (process.env.CDP_AUTOSTART === '0') {
+    log('startBrowser skipped (CDP_AUTOSTART=0)');
+    return;
+  }
   killChrome();
   sleep(1000);
 
@@ -210,6 +222,10 @@ function checkBrowser() {
  * Poll checkBrowser() every 2s until ready or timeout.
  */
 function waitForBrowserService(timeoutSec = 30) {
+  // With autostart disabled the browser is down by design — don't burn the
+  // timeout polling for it, and don't report "not ready": callers treat that as
+  // a fault and downgrade TWEET/QUOTE cycles to BROWSE, suppressing posts.
+  if (process.env.CDP_AUTOSTART === '0') return true;
   let elapsed = 0;
   while (elapsed < timeoutSec) {
     if (checkBrowser()) {
@@ -228,6 +244,8 @@ function waitForBrowserService(timeoutSec = 30) {
  * 3-attempt escalation: check → start browser → poll.
  */
 function ensureBrowser() {
+  // See startBrowser(): with CDP_AUTOSTART=0 the browser is down by design.
+  if (process.env.CDP_AUTOSTART === '0') return true;
   for (let attempt = 0; attempt < 3; attempt++) {
     if (checkBrowser()) {
       if (attempt > 0) log(`browser recovered after ${attempt} restart(s)`);

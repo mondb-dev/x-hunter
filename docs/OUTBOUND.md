@@ -19,6 +19,38 @@ Every outbound surface passes the same bar via `passOutbound(text, opts)`:
   claims); corrects when possible, else rejects; **fails OPEN** on LLM error so
   an outage never blocks posting. Composes via compose.js (Claude).
 
+### Quotation gate (`runner/lib/voice_filter.js` → `checkQuotations`)
+
+Direct quotations of 4+ words must appear verbatim in the post being quoted.
+Unlike `factcheck`, this **fails CLOSED**: if the source text can't be recovered,
+the quotation is rejected rather than allowed through. Elided quotes (`"a … b"`)
+pass when every retained fragment is in the source; shorter spans are treated as
+scare quotes and skipped. Enforced at three points:
+
+1. `runner/compose_quote.js` — source text is looked up by tweet ID via
+   `lib/feed_lookup.js` (it previously sliced the digest by offset, which silently
+   yielded the wrong entry or none, and an empty source made the coherence gate a
+   no-op). ~4% of recent quote targets aren't in the feed buffer at all, so an
+   unrecoverable source degrades the coherence check rather than killing the
+   cycle — unless the commentary contains a quotation, which then SKIPs.
+2. `runner/voice_filter.js --quote` — the Ollama rewrite now receives the quoted
+   post in its prompt, is told never to invent quotations, and its output is
+   re-checked; a revision that adds an unverified quote falls back to the
+   original. The pre-existing word-overlap similarity guard cannot catch this —
+   appending a fabricated sentence keeps nearly all the original's words.
+3. `runner/lib/post_x_helmstack.js` / `runner/post_quote.js` — last check before
+   the post goes out, on both the live HelmStack path and the legacy CDP path.
+
+Why it exists: on 2026-07-28 (quote cycle 4593) a quote-tweet shipped with an
+invented verbatim quotation attributed to a named public figure, attached to an
+unrelated post of theirs. The `critique` step diagnosed it correctly but runs
+*after* publishing.
+
+**Re-quote dedupe**: `compose_quote.js` skips a source already quoted within
+`REQUOTE_WINDOW_DAYS` (30), matched by tweet ID across x.com/twitter.com forms.
+The outbox's content-hash dedupe does not cover this — same target, different
+commentary, hashes differently.
+
 ## Outbox queue (`runner/lib/outbox.js`)
 
 Channel-agnostic posting queue in `state/outbox.db` (better-sqlite3, WAL),

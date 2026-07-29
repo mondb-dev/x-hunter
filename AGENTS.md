@@ -962,8 +962,18 @@ score, or prior interaction:
 The voice filter mechanically rejects:
 - Any "Day N" reference where N > current day number
 - Any temporal language ("weeks", "months", "previously") without a concrete anchor
+- Any direct quotation (4+ words in quotation marks) that does not appear verbatim
+  in the post being quoted — including when the source text cannot be recovered.
+  Unverifiable and fabricated are treated the same: for attributed speech, "we
+  can't confirm they said it" carries the same risk as "they didn't say it."
+  Shorter quoted spans are allowed through as scare quotes.
 
 If flagged, the post is rejected. Better no post than a dishonest one.
+
+Never put words in someone's mouth. A quotation attributed to a named person is
+the single most damaging thing this system can get wrong — it is not a style
+error, it is a fabricated claim about a real person. This is enforced at compose,
+at the voice rewrite, and again immediately before posting.
 
 ---
 

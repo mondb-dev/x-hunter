@@ -49,13 +49,20 @@ else
 fi
 
 # ── Ensure Chrome browser is running ─────────────────────────────────────────
-echo "[run] Ensuring Chrome browser is running on CDP port ${CDP_PORT:-18801}..."
-if ! curl -sf "http://127.0.0.1:${CDP_PORT:-18801}/json/version" -o /dev/null --max-time 3; then
+# Uses CHROME_BIN from .env (Chrome for Testing). It must NOT be
+# /Applications/Google Chrome.app: that bundle id is shared with the desktop
+# browser, and while a headless process from it is alive macOS routes the user's
+# Chrome launch to this windowless process, so their browser never opens a window.
+# CDP_AUTOSTART=0 disables autostart entirely (kill switch); default is on.
+if [ "${CDP_AUTOSTART:-1}" = "0" ]; then
+  echo "[run] CDP Chrome autostart disabled (CDP_AUTOSTART=0) — skipping"
+elif ! curl -sf "http://127.0.0.1:${CDP_PORT:-18801}/json/version" -o /dev/null --max-time 3; then
+  echo "[run] Ensuring Chrome browser is running on CDP port ${CDP_PORT:-18801}..."
   if sudo systemctl restart sebastian-browser.service 2>/dev/null; then
     sleep 5
   else
-    CHROME_BIN=$(command -v google-chrome-stable || command -v google-chrome || command -v chromium \
-      || echo "/Applications/Google Chrome.app/Contents/MacOS/Google Chrome")
+    CHROME_BIN="${CHROME_BIN:-$(command -v google-chrome-stable || command -v google-chrome || command -v chromium \
+      || echo "/Applications/Google Chrome.app/Contents/MacOS/Google Chrome")}"
     CHROME_PROFILE="${CHROME_USER_DATA_DIR:-$HOME/.config/google-chrome/x-hunter}"
     if [ -f "$CHROME_BIN" ] || command -v "$CHROME_BIN" &>/dev/null; then
       # Kill any stale CDP instance on this port (Mac: lsof; Linux: fuser)
@@ -199,16 +206,25 @@ restart_gateway() {
 
 # Start browser + poll Chrome CDP port until responsive (replaces fixed sleeps)
 start_browser() {
-  # Kill stale Chrome on the CDP port then restart it
-  local CHROME_BIN
-  CHROME_BIN=$(command -v google-chrome-stable || command -v google-chrome || command -v chromium \
-    || echo "/Applications/Google Chrome.app/Contents/MacOS/Google Chrome")
+  # Respects CDP_AUTOSTART (default 0) — see the ensure-block near the top for
+  # why this Chrome is no longer kept running: it hijacks desktop Chrome launches.
+  if [ "${CDP_AUTOSTART:-1}" = "0" ]; then
+    echo "[run] start_browser skipped (CDP_AUTOSTART=0)"
+    return 0
+  fi
+  # Kill stale Chrome on the CDP port then restart it.
+  # Distinct local name: `local CHROME_BIN` would shadow the exported .env value
+  # before the ${CHROME_BIN:-...} fallback is evaluated, so the env setting would
+  # never win and we'd relaunch /Applications/Google Chrome.app.
+  local _chrome_bin
+  _chrome_bin="${CHROME_BIN:-$(command -v google-chrome-stable || command -v google-chrome || command -v chromium \
+    || echo "/Applications/Google Chrome.app/Contents/MacOS/Google Chrome")}"
   local CHROME_PROFILE="${CHROME_USER_DATA_DIR:-$HOME/.config/google-chrome/x-hunter}"
   lsof -ti:"${CDP_PORT:-18801}" 2>/dev/null | xargs kill -9 2>/dev/null || \
     fuser -k "${CDP_PORT:-18801}/tcp" 2>/dev/null || true
   sleep 1
-  if [ -f "$CHROME_BIN" ] || command -v "$CHROME_BIN" &>/dev/null; then
-    "$CHROME_BIN" --remote-debugging-port="${CDP_PORT:-18801}" \
+  if [ -f "$_chrome_bin" ] || command -v "$_chrome_bin" &>/dev/null; then
+    "$_chrome_bin" --remote-debugging-port="${CDP_PORT:-18801}" \
       --user-data-dir="$CHROME_PROFILE" \
       --no-first-run --no-default-browser-check --headless=new \
       --disable-dev-shm-usage --disable-background-networking \
@@ -267,6 +283,11 @@ wait_for_browser_service() {
 
 # Ensure browser is healthy: check → restart if broken → retry up to 3 times
 ensure_browser() {
+  # With autostart off the CDP browser is intentionally down; without this
+  # short-circuit the loop below would burn 3 × 30s polling for it every cycle.
+  if [ "${CDP_AUTOSTART:-1}" = "0" ]; then
+    return 0
+  fi
   local attempt=0
   while [ $attempt -lt 3 ]; do
     if check_browser; then
@@ -406,7 +427,7 @@ while true; do
   # For BROWSE cycles, check CDP *and* gateway port before starting the agent.
   # check_browser() only verifies CDP (18801); gateway (18789) can be down separately
   # (e.g., mid-cycle crash of a previous cycle) causing "tab not found" errors.
-  if [ "$CYCLE_TYPE" = "BROWSE" ]; then
+  if [ "$CYCLE_TYPE" = "BROWSE" ] && [ "${CDP_AUTOSTART:-1}" != "0" ]; then
     if ! check_browser; then
       echo "[run] browser CDP down before browse cycle — restarting gateway + browser"
       restart_gateway
@@ -427,7 +448,9 @@ while true; do
   if [ "$CYCLE_TYPE" = "TWEET" ] || [ "$CYCLE_TYPE" = "QUOTE" ]; then
     reset_session x-hunter-tweet  # always flush tweet agent session
   fi
-  # ensure_browser needed for TWEET and QUOTE — both post via CDP (post_tweet.js / post_quote.js)
+  # ensure_browser was needed when TWEET/QUOTE posted via CDP. With
+  # POST_BACKEND=helmstack (.env) posting goes through the HelmStack API instead,
+  # so this is a no-op unless CDP_AUTOSTART=1 restores the legacy path.
   if [ "$CYCLE_TYPE" = "TWEET" ] || [ "$CYCLE_TYPE" = "QUOTE" ]; then
     ensure_browser
   fi
@@ -437,12 +460,17 @@ while true; do
   if [ $(( CYCLE % 6 )) -eq 0 ]; then
     reset_session x-hunter
     restart_gateway
-    start_browser
-    if wait_for_browser_service 30; then
-      echo "[run] browser healthy after reset"
-    else
-      echo "[run] WARNING: browser not ready after reset — downgrading TWEET/QUOTE to BROWSE"
-      CYCLE_TYPE="BROWSE"
+    if [ "${CDP_AUTOSTART:-1}" != "0" ]; then
+      start_browser
+      if wait_for_browser_service 30; then
+        echo "[run] browser healthy after reset"
+      else
+        # Guarded: with autostart off the browser is down by design, and this
+        # branch would otherwise downgrade every 6th TWEET/QUOTE cycle to BROWSE
+        # — silently suppressing posts. Posting goes through HelmStack, not CDP.
+        echo "[run] WARNING: browser not ready after reset — downgrading TWEET/QUOTE to BROWSE"
+        CYCLE_TYPE="BROWSE"
+      fi
     fi
     echo "[run] x-hunter session + gateway restarted (context flush cycle $CYCLE)"
   fi

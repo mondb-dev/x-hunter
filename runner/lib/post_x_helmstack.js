@@ -174,7 +174,15 @@ async function runQuote({ draftFile, resultFile, attemptFile, cycle }) {
     return 1;
   }
   if (quoteText.length > 280) { console.error(`[${tag}] commentary too long (${quoteText.length})`); return 1; }
-  const vfErrors = voiceFilter.check(quoteText);
+  // Recover what the quoted post actually said so voice_filter can verify any
+  // direct quotation in the commentary against it. requireQuoteSource makes an
+  // unrecoverable source fatal rather than silently skipping the check — a
+  // fabricated quotation attributed to a named person is the failure we're
+  // guarding (quote cycle 4593, 2026-07-28).
+  let sourceText = null;
+  try { sourceText = (require("./feed_lookup").lookup(sourceUrl) || {}).text || null; } catch {}
+  if (!sourceText) console.log(`[${tag}] source text not in feed buffer — quotations cannot be verified`);
+  const vfErrors = voiceFilter.check(quoteText, { source: sourceText, requireQuoteSource: true });
   if (vfErrors.length) {
     console.error(`[${tag}] voice_filter rejected: ${vfErrors.join("; ")}`);
     writeAttempt(attemptFile, { kind: "quote", outcome: "failed", reason: "voice_filter", cycle });

@@ -6,10 +6,17 @@
     <string>com.sebastian.browser</string>
 
     <key>ProgramArguments</key>
+    <!-- Chrome for Testing, NOT /Applications/Google Chrome.app.
+         The desktop browser and that bundle share the bundle identifier
+         com.google.Chrome, so while a headless process from it is alive macOS
+         LaunchServices routes the user's Chrome launch to this windowless
+         process and their browser never opens a window. Chrome for Testing has
+         its own id (com.google.chrome.for.testing), so both run side by side.
+         Profile is a matching sibling dir seeded from the old one's cookies. -->
     <array>
-        <string>/Applications/Google Chrome.app/Contents/MacOS/Google Chrome</string>
+        <string>/Users/mondb/.local/bin/chrome-hunter</string>
         <string>--remote-debugging-port=18801</string>
-        <string>--user-data-dir=/Users/mondb/.config/google-chrome/x-hunter</string>
+        <string>--user-data-dir=/Users/mondb/.config/chrome-for-testing/x-hunter</string>
         <string>--no-first-run</string>
         <string>--no-default-browser-check</string>
         <string>--headless=new</string>

@@ -12,14 +12,87 @@
 const path   = require('path');
 const config = require('./config');
 
+/** Fold text to a comparable form: quote/dash variants unified, punctuation dropped. */
+function normalizeForQuote(s) {
+  return String(s || '')
+    .replace(/[‘’‛′]/g, "'")
+    .replace(/[“”‟″]/g, '"')
+    .toLowerCase()
+    .replace(/[^a-z0-9']+/g, ' ')
+    .trim();
+}
+
+// Quoted spans short enough to be scare quotes or a label ("political prisoners")
+// rather than attributed speech. Below this word count we don't demand a source.
+const QUOTE_MIN_WORDS = 4;
+
+/**
+ * Reject direct quotations that do not appear in the source being quoted.
+ *
+ * WHY (2026-07-28, quote cycle 4593): the Ollama voice pass rewrote
+ * "Diokno refutes Cayetano's deflection..." into 'Diokno cut through Cayetano's
+ * deflection cleanly. "Hindi ito about bank secrecy — ..."', inventing a verbatim
+ * quotation and attributing it to a real named person. Nothing downstream checked
+ * quotation marks against the source, so it published. The existing similarity
+ * guard could not catch it: adding a sentence keeps most original words.
+ *
+ * An unverifiable quotation is treated as fabricated. That is deliberate — for
+ * attributed speech, "we could not confirm they said it" and "they did not say
+ * it" carry the same publishing risk.
+ *
+ * @param {string} draftText - the commentary about to be published
+ * @param {string|null} sourceText - what the quoted post actually said (null = unavailable)
+ * @returns {string[]} array of error messages (empty = pass)
+ */
+function checkQuotations(draftText, sourceText) {
+  const errors = [];
+  const spans = [...String(draftText || '').matchAll(/["“‟]([^"“”‟]{1,300})["”]/g)]
+    .map(m => m[1].trim())
+    .filter(Boolean);
+  if (!spans.length) return errors;
+
+  const haystack = normalizeForQuote(sourceText);
+
+  for (const span of spans) {
+    const norm = normalizeForQuote(span);
+    if (norm.split(' ').filter(Boolean).length < QUOTE_MIN_WORDS) continue;
+
+    const preview = span.length > 60 ? `${span.slice(0, 60)}…` : span;
+    if (!haystack) {
+      errors.push(`Unverifiable quotation: "${preview}" — no source text available to check it against`);
+      continue;
+    }
+    // Elided quotations ("foo ... bar") are fine as long as every retained
+    // fragment appears in the source. Split before normalizing — normalization
+    // drops the ellipsis itself.
+    const fragments = span.split(/\s*(?:\.\.\.|…|\[\.\.\.\])\s*/)
+      .map(normalizeForQuote)
+      .filter(f => f.split(' ').filter(Boolean).length >= 2);
+    const missing = fragments.length
+      ? fragments.filter(f => !haystack.includes(f))
+      : (haystack.includes(norm) ? [] : [norm]);
+    if (missing.length) {
+      errors.push(`Fabricated quotation: "${preview}" does not appear in the source post`);
+    }
+  }
+  return errors;
+}
+
 /**
  * Check a draft text for grounding violations.
  * @param {string} draftText - the tweet/quote text to check
+ * @param {{source?: string|null, requireQuoteSource?: boolean}} [opts]
+ *   source - text of the post being quoted/replied to; enables quotation checking
+ *   requireQuoteSource - run quotation checks even when source is absent (quote mode)
  * @returns {string[]} array of error messages (empty = pass)
  */
-function check(draftText) {
+function check(draftText, opts = {}) {
   if (typeof draftText !== 'string') return [];
   const errors = [];
+
+  if (opts.source || opts.requireQuoteSource) {
+    errors.push(...checkQuotations(draftText, opts.source || null));
+  }
 
   const currentDayNumber = Math.floor(
     (Date.now() - new Date(config.AGENT_START_DATE + 'T00:00:00Z').getTime()) / 86400000
@@ -89,4 +162,4 @@ function check(draftText) {
   return errors;
 }
 
-module.exports = { check };
+module.exports = { check, checkQuotations };

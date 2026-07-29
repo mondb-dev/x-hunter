@@ -37,6 +37,8 @@ const DRAFT_FILE = path.join(ROOT, "state", isQuote ? "quote_draft.txt" : "tweet
 const ONTO_FILE  = path.join(ROOT, "state", "ontology.json");
 
 const { generate: llmGenerate } = require("./llm.js");
+const { checkQuotations } = require("./lib/voice_filter");
+const feedLookup = require("./lib/feed_lookup");
 
 // ── Voice persona (from SOUL.md) ──────────────────────────────────────────────
 const PERSONA = `Sebastian D. Hunter is a curious, skeptical observer of public discourse.
@@ -347,9 +349,27 @@ What he never does at this tier:
     process.exit(0);
   }
 
+  // ── Quote mode: recover what the quoted post actually said ────────────
+  // The editor below rewrites commentary that will be published beside that
+  // post's card. Without the source in front of it, it has invented verbatim
+  // quotations and attributed them to the named speaker (quote cycle 4593).
+  let sourceText = null;
+  if (isQuote && preservedPrefix) {
+    try { sourceText = (feedLookup.lookup(preservedPrefix) || {}).text || null; } catch { /* non-fatal */ }
+    if (!sourceText) console.log("[voice_filter] source post not in feed buffer — quotations cannot be verified");
+  }
+
   // ── Early grounding check on ORIGINAL draft (AGENTS.md §18.5) ─────────
   // Must run before Ollama — fallthrough paths exit with the original intact,
   // so the original itself must be clean.
+  if (isQuote) {
+    const origQuoteErrors = checkQuotations(tweetText, sourceText);
+    if (origQuoteErrors.length) {
+      console.log(`[voice_filter] GROUNDING REJECTION (original): ${origQuoteErrors.join("; ")}`);
+      fs.writeFileSync(DRAFT_FILE, "SKIP", "utf-8");
+      process.exit(0);
+    }
+  }
   const currentDayNum = Math.floor(
     (Date.now() - new Date(config.AGENT_START_DATE + "T00:00:00Z").getTime()) / 86400000
   ) + 1;
@@ -396,6 +416,12 @@ What he never does at this tier:
     very_strongly: "be direct, precise, and pointed. Say exactly what you think. This is where you're most compelling — not because you're loud, but because you're sure and you can show why.",
   }[conviction.tier];
 
+  // In quote mode the commentary publishes next to the quoted post. Show the
+  // editor that post so it revises against what was actually said.
+  const sourceBlock = (isQuote && sourceText)
+    ? `\nTHE POST BEING QUOTED (the reader sees this as a card beside the commentary) — verbatim:\n"${sourceText}"\n`
+    : "";
+
   const prompt =
 `You are a voice editor for Sebastian D. Hunter's tweets.
 
@@ -406,7 +432,7 @@ ${stance}
 
 ── CONVICTION: ${conviction.tier.toUpperCase().replace("_", " ")} ──
 ${conviction.voiceDirective}
-
+${sourceBlock}
 ORIGINAL TWEET DRAFT:
 "${tweetText}"
 
@@ -417,6 +443,8 @@ If the draft already sounds like Sebastian at this conviction level, return it u
 
 Rules:
 - Keep the core insight intact. Do not change what the tweet is about.
+- NEVER put words in quotation marks that someone did not say. Do not invent, paraphrase-into-quotes, or sharpen a quotation. If the draft has no direct quote, do not add one. Quotation marks are only for wording that appears verbatim in the post being quoted above.
+- Do not add facts, numbers, dates, or specifics that are not already in the draft. You are editing voice, not reporting.
 - The conviction tier tells you HOW to say it — how sharply, how much to concede, how much space to use.
 - If his axes show he leans a certain way on this topic, the tweet should reflect that lean naturally — not by stating the score, but through how he frames and reacts to the observation.
 - Keep it under ${conviction.maxChars} characters (leave room for the journal URL).
@@ -501,6 +529,18 @@ Rules:
     console.log(`[voice_filter] GROUNDING REJECTION: vague temporal claim without anchor — rejecting draft`);
     fs.writeFileSync(DRAFT_FILE, "SKIP", "utf-8");
     process.exit(0);
+  }
+
+  // ── Reject invented quotations in the REVISION (quote cycle 4593) ──────
+  // The similarity proxy below cannot catch this: appending a fabricated
+  // quoted sentence keeps nearly all of the original's words. The original
+  // already passed this same check above, so falling back to it is safe.
+  if (isQuote) {
+    const revQuoteErrors = checkQuotations(revised, sourceText);
+    if (revQuoteErrors.length) {
+      console.log(`[voice_filter] revision introduced an unverified quotation (${revQuoteErrors.join("; ")}) — keeping original`);
+      process.exit(0);
+    }
   }
 
   // Don't accept if it's radically different (cosine similarity proxy)

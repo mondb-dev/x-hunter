@@ -9,7 +9,7 @@ the doc is wrong or the code moved — re-verify here first.
 | Agent (`~/Library/LaunchAgents`) | Runs | Notes |
 |---|---|---|
 | `com.sebastian.runner` | `bash runner/run.sh` (KeepAlive) | init → `runner/orchestrator.js` main loop; logs `runner/runner.log` |
-| `com.sebastian.browser` | Chrome `--remote-debugging-port=18801` | legacy CDP Chrome — still used by residual CDP posting paths and `helmstack_bootstrap.js` cookie transplant |
+| `com.sebastian.browser` | `~/.local/bin/chrome-hunter --remote-debugging-port=18801` | legacy CDP Chrome, KeepAlive. Runs **Chrome for Testing** (`com.google.chrome.for.testing`) via a wrapper script — never `/Applications/Google Chrome.app`, whose `com.google.Chrome` bundle id is shared with the user's desktop browser and makes a headless instance swallow their Chrome launches. Binary/profile from `CHROME_BIN` + `CHROME_USER_DATA_DIR` (.env), honored by `runner/lib/browser.js:launchChrome` and `runner/run.sh:64`. `CDP_AUTOSTART=0` kills autostart (`run.sh:57`, `lib/browser.js:startBrowser/ensureBrowser/waitForBrowserService`, `orchestrator.js:701,720`) |
 | `com.sebastian.hunter-helmstack` | HelmStack app (dedicated `hunter-helmstack` profile) | browser substrate; HTTP API `:7070` (`HELMSTACK_URL`) |
 | `com.sebastian.telegram-bot` | `node runner/telegram_bot.js` | admin commands incl. `/dr` deep research |
 | `ai.openclaw.x-hunter` | openclaw gateway | **legacy** — run.sh:195 says "openclaw gateway removed"; agent now runs via `runner/lib/gemini_agent.js` directly. Plist still loaded; candidate for disabling. |
@@ -99,6 +99,16 @@ Follows (`scraper/follows.js:18,45`): max 3/run, 10/day, 1 min between.
 - **Shared gates** `runner/lib/outbound_gates.js` — every outbound surface passes
   `voice` (voice_filter) + `factcheck` (composes via compose.js → Claude); fact-check
   fails OPEN on LLM error.
+- **Quotation gate** `runner/lib/voice_filter.js:checkQuotations` — quoted spans of
+  ≥`QUOTE_MIN_WORDS` (4) must appear verbatim in the quoted source; **fails CLOSED**
+  (unrecoverable source ⇒ reject). Enforced at `runner/compose_quote.js`,
+  `runner/voice_filter.js --quote` (pre- and post-rewrite), and before posting in
+  `runner/lib/post_x_helmstack.js:runQuote` + `runner/post_quote.js`.
+- **Source text lookup** `runner/lib/feed_lookup.js` — recovers a scraped post's own
+  text by tweet ID from `state/feed_buffer.jsonl` via 1MB backward chunk scan,
+  `MAX_SCAN` 64MB; `FEED_BUFFER_PATH` overrides the path for worktrees.
+- **Re-quote dedupe** `runner/compose_quote.js:REQUOTE_WINDOW_DAYS` (30) — blocks
+  re-quoting a source already in `posts_log.json` within the window (by tweet ID).
 - **X engine**: `tools/helmstack-social` package (X + LinkedIn engines);
   `POST_BACKEND=helmstack` (.env:98). Tweets via CreateTweet GraphQL; quotes/replies
   via API; reposts via CreateRetweet; X Articles ported to HelmStack. Adapter:
