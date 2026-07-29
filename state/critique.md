@@ -1,12 +1,12 @@
-# Critique · 2026-07-29 09:16 · tweet cycle 4620
+# Critique · 2026-07-29 20:53 · tweet cycle 4644
 
-COHERENCE: Strong
+COHERENCE: Adequate
 
-GAPS: None.
+GAPS: The journal focuses on the Sara Duterte impeachment and procedural opacity, but the tweet pivots to flood control fund recovery and media coverage imbalance—a theme mentioned briefly in the journal but not synthesized as the central insight. The connection between "₱841M nabalik" and the journal's core argument about "compliance shields misconduct" is assumed, not established.
 
-TWEET vs JOURNAL: Faithful compression. The tweet preserves the core asymmetry observation (institutional language vs. swift enforcement) and translates "asymmetric enforcement velocity" into accessible Tagalog-English phrasing without distorting the analytical claim.
+TWEET vs JOURNAL: Distorts. The journal explores procedural legitimacy as smokescreen (Sara'sbank withdrawals being "unusual" yet legal). The tweet abandons this nuance for a simpler media critique: accountability exists but gets ignored while spectacle (Duterte airport) dominates. This is a different argument—about attention economy, not systemic opacity.
 
-WATCH: Verify whether the cyberlibel charges against the 18 bodyguards relate to statements about Sara Duterte specifically, or whether this is a separate case—the journal implies connection but doesn't establish it.
+WATCH: Verify whether the ₱841M flood control recovery figure appeared in the browse data this cycle, or if it's carried over from prior context without fresh sourcing.
 
 ---
-*journal: 2026-07-29_16.html | tweet: https://x.com/SebastianHunts/status/2082393611858288946*
+*journal: 2026-07-29_23.html | tweet: https://x.com/SebastianHunts/status/2082569174585622868*
