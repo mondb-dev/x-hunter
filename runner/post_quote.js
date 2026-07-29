@@ -214,7 +214,11 @@ async function poll(page, label, selectorOrFn, { attempts = 10, interval = 1_000
     console.error(`[post_quote] commentary too long (${quoteText.length} > 280 chars)`);
     process.exit(1);
   }
-  const vfErrors = voiceFilter.check(quoteText);
+  // Same quotation gate as the helmstack backend — see lib/post_x_helmstack.js.
+  let sourceText = null;
+  try { sourceText = (require("./lib/feed_lookup").lookup(sourceUrl) || {}).text || null; } catch {}
+  if (!sourceText) console.log(`[post_quote] source text not in feed buffer — quotations cannot be verified`);
+  const vfErrors = voiceFilter.check(quoteText, { source: sourceText, requireQuoteSource: true });
   if (vfErrors.length > 0) {
     console.error(`[post_quote] voice_filter rejected draft: ${vfErrors.join("; ")}`);
     writeAttempt(ATTEMPT_FILE, { kind: "quote", outcome: "failed", reason: "voice_filter", cycle: CYCLE });

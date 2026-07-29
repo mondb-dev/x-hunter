@@ -695,7 +695,10 @@ function runOneCycle() {
       }
     } catch {}
 
-    if (!checkBrowser()) {
+    // CDP_AUTOSTART=0 keeps the CDP Chrome down on purpose (see
+    // lib/browser.js startBrowser()); without this guard every browse cycle
+    // would burn 15s restarting a browser that is meant to stay off.
+    if (process.env.CDP_AUTOSTART !== '0' && !checkBrowser()) {
       log('browser CDP down before browse cycle — restarting browser');
       startBrowser();
       sleepSec(15);
@@ -714,7 +717,7 @@ function runOneCycle() {
   }
 
   // ── Periodic browser restart (every 6 cycles = ~3h) ──────────────────
-  if (cycle % 6 === 0) {
+  if (cycle % 6 === 0 && process.env.CDP_AUTOSTART !== '0') {
     startBrowser();
     if (waitForBrowserService(30)) {
       log('browser healthy after reset');

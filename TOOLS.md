@@ -141,7 +141,30 @@ embeddings), `prediction_log.jsonl`, `cost_ledger.jsonl` + `cost_config.json` +
 - **Engines**: `tools/helmstack-social` (X + LinkedIn)
 - **Dry-run**: `HELMSTACK_DRY_RUN=1` runs everything up to the Post click
 - **Legacy**: Chrome CDP `:18801` (`com.sebastian.browser`) — residual
-  utilities + `runner/helmstack_bootstrap.js` cookie transplant
+  utilities + `runner/helmstack_bootstrap.js` cookie transplant. Always-on
+  (`KeepAlive`), same as before.
+
+  **Must run Chrome for Testing, never `/Applications/Google Chrome.app`.**
+  That bundle shares its identifier (`com.google.Chrome`) with the user's desktop
+  browser, so while a `--headless=new` process from it is alive, macOS
+  LaunchServices routes a normal Chrome launch to the windowless process — the
+  desktop browser silently never opens a window. A separate `--user-data-dir`
+  does not help; the collision is at the bundle level. Chrome for Testing has its
+  own id (`com.google.chrome.for.testing`), so the two coexist.
+
+  | Setting | Value |
+  |---|---|
+  | `CHROME_BIN` (.env) | `~/.local/bin/chrome-hunter` — wrapper `exec`ing the CfT binary |
+  | `CHROME_USER_DATA_DIR` (.env) | `~/.config/chrome-for-testing/x-hunter` |
+  | `CDP_AUTOSTART` (.env) | `1`; set `0` as a kill switch to stop all autostart |
+
+  The wrapper exists because Chrome resolves `../Frameworks` from its own path —
+  a symlink to the binary breaks `dlopen` — while the real path contains spaces,
+  which `set -a; source .env` in `run.sh` cannot handle unquoted.
+
+  Old profile (`~/.config/google-chrome/x-hunter`, Chrome 150) is left in place;
+  the new one was seeded from its `Default/Cookies`. Don't point CfT 146 at the
+  old profile directly — Chrome refuses a profile written by a newer version.
 - **Feedback**: dogfooding notes go to gitignored `helmstack/notes/`
 
 ---

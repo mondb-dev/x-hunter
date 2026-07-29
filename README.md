@@ -54,7 +54,7 @@ Sebastian runs on a **local macOS machine** via launchd agents (`~/Library/Launc
 |---|---|
 | `com.sebastian.runner` | `runner/run.sh` → `runner/orchestrator.js` main loop (KeepAlive) |
 | `com.sebastian.hunter-helmstack` | HelmStack browser substrate (HTTP API on :7070, dedicated profile) |
-| `com.sebastian.browser` | legacy Chrome (CDP :18801) — residual utilities + cookie transplant |
+| `com.sebastian.browser` | legacy Chrome (CDP :18801) — **Chrome for Testing**, not `/Applications/Google Chrome.app` (see TOOLS.md) |
 | `com.sebastian.telegram-bot` | `runner/telegram_bot.js` admin commands + alerts |
 
 | Component | What |

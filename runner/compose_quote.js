@@ -38,9 +38,28 @@ const loadContext      = require('./lib/prompts/context');
 const buildQuotePrompt = require('./lib/prompts/quote');
 const { compose }      = require('./lib/compose');
 const { passOutbound } = require('./lib/outbound_gates');
+const feedLookup       = require('./lib/feed_lookup');
+const { checkQuotations } = require('./lib/voice_filter');
 
 const DRAFT_PATH = config.QUOTE_DRAFT_PATH || path.join(config.STATE_DIR, 'quote_draft.txt');
 const log = (m) => console.log(`[compose_quote] ${m}`);
+
+// How far back a previously quoted post still blocks re-quoting it.
+const REQUOTE_WINDOW_DAYS = 30;
+
+/** True if we've already quote-tweeted this post inside the re-quote window. */
+function alreadyQuoted(url) {
+  const id = feedLookup.tweetIdFrom(url);
+  if (!id) return false;
+  try {
+    const posts = JSON.parse(fs.readFileSync(config.POSTS_LOG_PATH, 'utf-8')).posts || [];
+    const cutoff = Date.now() - REQUOTE_WINDOW_DAYS * 86400000;
+    return posts.some(p =>
+      p && p.source_url && feedLookup.tweetIdFrom(p.source_url) === id &&
+      new Date(p.posted_at || 0).getTime() >= cutoff
+    );
+  } catch { return false; }
+}
 
 function currentCycle() {
   try { return JSON.parse(fs.readFileSync(path.join(config.STATE_DIR, 'cycle_counter.json'), 'utf-8')).cycle; }
@@ -99,24 +118,42 @@ function dayNumberFrom(today) {
     fs.writeFileSync(DRAFT_PATH, 'SKIP\n'); process.exit(0);
   }
 
+  // Don't quote the same post twice — cycle 4593 re-quoted a tweet already
+  // quoted 31h earlier, and on a completely different subject the second time.
+  if (alreadyQuoted(url)) {
+    log(`already quoted ${url} — SKIP`);
+    fs.writeFileSync(DRAFT_PATH, 'SKIP\n'); process.exit(0);
+  }
+
   // Shared gate: fact-check the commentary (voice_filter + critique run later in
   // postQuoteTweet). Corrects stale facts or rejects. maxLen is the platform
   // reality (~280 for the commentary tweet; the quoted post is a separate card)
   // even though the prompt targets ~240 for density.
-  // Recover the quoted post's own text from the digest so the coherence gate
-  // has a source to check the commentary against (the reader sees that post as a
-  // card, so a misread of it is published too). Best-effort: no match → the gate
-  // is skipped rather than guessing.
+  //
+  // Recover the quoted post's own text so the coherence gate has a source to
+  // check the commentary against (the reader sees that post as a card, so a
+  // misread of it is published too). Looked up by tweet ID from the feed buffer
+  // — the previous approach sliced 600 chars before the URL in the digest, which
+  // silently yielded the wrong entry or nothing at all.
+  //
+  // Not every target is in the buffer (~4% of recent quote targets came from
+  // elsewhere), so an unrecoverable source degrades the coherence check rather
+  // than killing the cycle — EXCEPT when the commentary quotes the source
+  // directly. An unverifiable attributed quotation is treated as fabricated.
   let sourceText = '';
-  try {
-    const dg = String(ctx.digest || '');
-    const i = dg.indexOf(url);
-    if (i !== -1) sourceText = dg.slice(Math.max(0, i - 600), i).split(/\n(?=\s*\[)/).pop() || '';
-  } catch { /* non-fatal */ }
+  try { sourceText = (feedLookup.lookup(url) || {}).text || ''; } catch { /* non-fatal */ }
+  if (!sourceText) {
+    const quoteErrors = checkQuotations(commentary, null);
+    if (quoteErrors.length) {
+      log(`${quoteErrors.join('; ')} — SKIP`);
+      fs.writeFileSync(DRAFT_PATH, 'SKIP\n'); process.exit(0);
+    }
+    log(`source post text unavailable for ${url} — coherence gate degraded (no quotations to verify)`);
+  }
 
   const gated = await passOutbound(commentary, {
     gates: ['factcheck'], maxLen: 280, tag: 'quote',
-    source: sourceText || null,
+    source: sourceText,
   });
   if (!gated.ok) { log(`gate rejected: ${gated.reason} — SKIP`); fs.writeFileSync(DRAFT_PATH, 'SKIP\n'); process.exit(0); }
   if (gated.coherence) log(`coherence flag: ${gated.coherence.why}`);
