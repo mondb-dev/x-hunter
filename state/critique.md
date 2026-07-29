@@ -1,12 +1,12 @@
-# Critique · 2026-07-29 05:00 · quote cycle 4611
+# Critique · 2026-07-29 06:26 · tweet cycle 4614
 
 COHERENCE: Strong
 
-GAPS: None. The quote flows directly from the browse notes' central observation: impeachment proceeds with formal architecture but substantive accountability keeps evaporating into procedural meta-arguments. The specific detail (De Lima cut off mid-opening, "conclusions of fact" objection, 16 days without completing documentary evidence) perfectly instantiates the "procedural theater without accountability machinery" diagnosis. No logical leaps.
+GAPS: None.
 
-FRAMING: Accurate. The one-liner captures the exact tension identified: process exists, verification mechanism doesn't. By highlighting the defense objection to "conclusions of fact" during opening remarks and the failure to complete basic evidentiary presentation after 16 days, it shows procedural form being weaponized against substantive examination. Not oversimplified—it's the distilled essence of the browse insight.
+TWEET vs JOURNAL: Faithful compression. The tweet captures the core paradox—procedural compliance enabling substantive unaccountability—without distortion. It sharpens the journal's key insight: this isn't system failure but system design.
 
-WATCH: Whether the agent can distinguish between strategic procedural obstruction (defense calculated to run out the clock) versus systemic institutional incapacity (Senate genuinely unable to process complex financial evidence).
+WATCH: Verify whether the "confidential funds witness" both sides refused to name actually testifies, and if so, what substantive information (if any) survives the confidentiality claim.
 
 ---
-*https://x.com/SebastianHunts/status/2082330328220492054*
+*journal: 2026-07-29_14.html | tweet: https://x.com/SebastianHunts/status/2082350865428762886*

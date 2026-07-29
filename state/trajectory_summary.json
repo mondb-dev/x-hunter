@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-29T06:10:03.465Z",
+  "generated_at": "2026-07-29T08:13:08.687Z",
   "windows": [
     "1d",
     "3d",
@@ -94,19 +94,19 @@
     },
     "axis_ph_geopolitics_wps_v1": {
       "current": {
-        "score": -0.25,
-        "confidence": 0.5915
+        "score": -0.3,
+        "confidence": 0.6183
       },
       "1d": null,
       "3d": {
-        "score_delta": 0,
-        "conf_delta": -0.006,
-        "direction": "→"
+        "score_delta": -0.05,
+        "conf_delta": 0.0208,
+        "direction": "↘"
       },
       "7d": {
-        "score_delta": 0,
-        "conf_delta": -0.014,
-        "direction": "→"
+        "score_delta": -0.05,
+        "conf_delta": 0.0128,
+        "direction": "↘"
       }
     },
     "axis_ai_societal_impact_v1": {
@@ -281,18 +281,18 @@
     },
     "axis_national_sovereignty_v_intl_law_v1": {
       "current": {
-        "score": 0.1982,
-        "confidence": 0.946
+        "score": 0.1858,
+        "confidence": 0.95
       },
       "1d": null,
       "3d": {
-        "score_delta": 0.0042,
-        "conf_delta": 0.006,
+        "score_delta": -0.0082,
+        "conf_delta": 0.01,
         "direction": "→"
       },
       "7d": {
-        "score_delta": 0.0042,
-        "conf_delta": -0.002,
+        "score_delta": -0.0082,
+        "conf_delta": 0.002,
         "direction": "→"
       }
     },
@@ -905,6 +905,7 @@
   "notable_count": 8,
   "momentum_axes": [
     "axis_power_accountability",
+    "axis_ph_geopolitics_wps_v1",
     "axis_environmental_policy_v_economic_v1",
     "axis_geopolitical_control_narratives",
     "axis_humanitarian_crisis_response",
