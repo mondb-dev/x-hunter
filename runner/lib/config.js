@@ -26,7 +26,15 @@ module.exports = {
   TWEET_END:   envInt('TWEET_END', 23),    // latest hour (exclusive)
 
   // ── Ports ─────────────────────────────────────────────────────────────────
-  GATEWAY_PORT: 18789,         // openclaw gatels Protocol port
+  GATEWAY_PORT: 18789,                  // openclaw gateway
+  // Chrome DevTools Protocol port. Was missing entirely (the line above had
+  // absorbed its trailing comment), so config.CDP_PORT read undefined and
+  // lib/browser.js launched Chrome with --remote-debugging-port=undefined,
+  // polled http://127.0.0.1:undefined/, and killed nothing via
+  // `lsof -ti :undefined`. startBrowser() therefore never worked — the browser
+  // stayed up only because the launchd agent's KeepAlive respawned it.
+  // run.sh sets CDP_PORT=18801 but does not export it before exec'ing node.
+  CDP_PORT: envInt('CDP_PORT', 18801),
 
   // ── Dates ─────────────────────────────────────────────────────────────────
   AGENT_START_DATE: '2026-02-23',
