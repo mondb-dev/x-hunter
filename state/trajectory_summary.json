@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-29T08:13:08.687Z",
+  "generated_at": "2026-07-29T10:13:40.667Z",
   "windows": [
     "1d",
     "3d",
@@ -128,19 +128,19 @@
     },
     "axis_media_integrity_v1": {
       "current": {
-        "score": 0.4669,
+        "score": 0.4537,
         "confidence": 0.95
       },
       "1d": null,
       "3d": {
-        "score_delta": 0.0029,
+        "score_delta": -0.0103,
         "conf_delta": 0,
         "direction": "→"
       },
       "7d": {
-        "score_delta": -0.0157,
+        "score_delta": -0.0289,
         "conf_delta": 0,
-        "direction": "→"
+        "direction": "↘"
       }
     },
     "axis_geopolitical_rhetoric_v1": {
@@ -400,18 +400,18 @@
     },
     "axis_digital_supply_chain_security": {
       "current": {
-        "score": 0.2038,
-        "confidence": 0.6453
+        "score": 0.2232,
+        "confidence": 0.6772
       },
       "1d": null,
       "3d": {
-        "score_delta": 0,
-        "conf_delta": -0.006,
+        "score_delta": 0.0194,
+        "conf_delta": 0.0259,
         "direction": "→"
       },
       "7d": {
-        "score_delta": 0,
-        "conf_delta": -0.014,
+        "score_delta": 0.0194,
+        "conf_delta": 0.0179,
         "direction": "→"
       }
     },
@@ -639,17 +639,17 @@
     "axis_geopolitical_control_narratives": {
       "current": {
         "score": -0.05,
-        "confidence": 0.3655
+        "confidence": 0.3635
       },
       "1d": null,
       "3d": {
         "score_delta": -0.05,
-        "conf_delta": 0.0169,
+        "conf_delta": 0.0149,
         "direction": "↘"
       },
       "7d": {
         "score_delta": -0.15,
-        "conf_delta": 0.0523,
+        "conf_delta": 0.0503,
         "direction": "↘"
       }
     },
@@ -774,35 +774,35 @@
     },
     "axis_rapid_disinformation_v1": {
       "current": {
-        "score": 0.2,
-        "confidence": 0.1914
+        "score": 0.25,
+        "confidence": 0.2562
       },
       "1d": null,
       "3d": {
-        "score_delta": 0,
-        "conf_delta": -0.006,
-        "direction": "→"
+        "score_delta": 0.05,
+        "conf_delta": 0.0588,
+        "direction": "↗"
       },
       "7d": {
-        "score_delta": 0,
-        "conf_delta": -0.014,
-        "direction": "→"
+        "score_delta": 0.05,
+        "conf_delta": 0.0508,
+        "direction": "↗"
       }
     },
     "axis_procedural_governance_accountability_v1": {
       "current": {
-        "score": -0.55,
-        "confidence": 0.8543
+        "score": -0.5753,
+        "confidence": 0.857
       },
       "1d": null,
       "3d": {
-        "score_delta": -0.1,
-        "conf_delta": 0.0317,
+        "score_delta": -0.1253,
+        "conf_delta": 0.0344,
         "direction": "↘"
       },
       "7d": {
-        "score_delta": -0.35,
-        "conf_delta": 0.1431,
+        "score_delta": -0.3753,
+        "conf_delta": 0.1458,
         "direction": "↘"
       }
     },
@@ -910,6 +910,7 @@
     "axis_geopolitical_control_narratives",
     "axis_humanitarian_crisis_response",
     "axis_selective_outrage",
+    "axis_rapid_disinformation_v1",
     "axis_procedural_governance_accountability_v1",
     "axis_ai_automated_dehumanization_v1",
     "axis_procedural_governance_substantive_action"

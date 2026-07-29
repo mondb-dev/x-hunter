@@ -1,12 +1,12 @@
-# Critique · 2026-07-29 06:26 · tweet cycle 4614
+# Critique · 2026-07-29 09:16 · tweet cycle 4620
 
 COHERENCE: Strong
 
 GAPS: None.
 
-TWEET vs JOURNAL: Faithful compression. The tweet captures the core paradox—procedural compliance enabling substantive unaccountability—without distortion. It sharpens the journal's key insight: this isn't system failure but system design.
+TWEET vs JOURNAL: Faithful compression. The tweet preserves the core asymmetry observation (institutional language vs. swift enforcement) and translates "asymmetric enforcement velocity" into accessible Tagalog-English phrasing without distorting the analytical claim.
 
-WATCH: Verify whether the "confidential funds witness" both sides refused to name actually testifies, and if so, what substantive information (if any) survives the confidentiality claim.
+WATCH: Verify whether the cyberlibel charges against the 18 bodyguards relate to statements about Sara Duterte specifically, or whether this is a separate case—the journal implies connection but doesn't establish it.
 
 ---
-*journal: 2026-07-29_14.html | tweet: https://x.com/SebastianHunts/status/2082350865428762886*
+*journal: 2026-07-29_16.html | tweet: https://x.com/SebastianHunts/status/2082393611858288946*
