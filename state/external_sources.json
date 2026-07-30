@@ -1,17 +1,17 @@
 {
   "schema_version": "1.0",
-  "generated_at": "2026-07-30T20:21:21.919Z",
+  "generated_at": "2026-07-30T23:21:26.425Z",
   "method": "mechanical_registry_v1",
-  "profiled_at": "2026-07-30T20:21:28.623Z",
+  "profiled_at": "2026-07-30T23:21:49.487Z",
   "sources": [
     {
       "domain": "theguardian.com",
       "entity": "Theguardian",
       "kind": "news",
       "first_seen_at": "2026-03-27T23:17:00Z",
-      "last_seen_at": "2026-07-26T22:55:51.714Z",
+      "last_seen_at": "2026-07-30T21:22:11.470Z",
       "discovery": {
-        "distinct_urls": 622,
+        "distinct_urls": 626,
         "example_urls": [
           "https://www.theguardian.com/us-news/2026/jun/23/trump-immigration-courthouse-arrest-policy",
           "https://www.theguardian.com/us-news/2026/jun/28/ice-minnesota-defending-democracy",
@@ -20,9 +20,9 @@
           "https://www.theguardian.com/global-development/2026/jun/26/woman-sadia-moalim-ali-three-year-jail-sentence-somalia-online-comments-governement"
         ],
         "origin_counts": {
-          "ontology_evidence": 40,
-          "reading_queue": 592,
-          "journals": 104,
+          "ontology_evidence": 41,
+          "reading_queue": 594,
+          "journals": 106,
           "articles": 2
         },
         "distinct_referring_accounts": 0,
@@ -72,7 +72,7 @@
         "breadth": {
           "score": 0.94,
           "basis": [
-            "distinct_urls:622",
+            "distinct_urls:626",
             "distinct_axes:17",
             "origin_types:4"
           ]
@@ -112,7 +112,7 @@
             "newsroom_domain_pattern",
             "article_path_seen",
             "doi_or_identifier_path_seen",
-            "distinct_urls:622",
+            "distinct_urls:626",
             "distinct_axes:17",
             "origin_types:4",
             "referring_accounts:0",
@@ -285,9 +285,9 @@
       "entity": "Aljazeera",
       "kind": "news",
       "first_seen_at": "2026-06-22T02:45:00Z",
-      "last_seen_at": "2026-07-30T19:52:03.658Z",
+      "last_seen_at": "2026-07-30T22:52:11.642Z",
       "discovery": {
-        "distinct_urls": 346,
+        "distinct_urls": 347,
         "example_urls": [
           "https://www.aljazeera.com/opinions/2026/6/24/south-africas-crises-will-not-be-solved-by-blaming-migrants",
           "https://www.aljazeera.com/video/newsfeed/2026/6/27/newly-released-video-exposes-henry-nowak-killers-lies?traffic_source=rss",
@@ -296,9 +296,9 @@
           "https://www.aljazeera.com/video/newsfeed/2026/7/1/why-is-maga-in-meltdown-over-the-supreme-court-birthright-ruling-2?traffic_source=rss"
         ],
         "origin_counts": {
-          "ontology_evidence": 169,
+          "ontology_evidence": 172,
           "reading_queue": 13,
-          "journals": 442,
+          "journals": 444,
           "articles": 4
         },
         "distinct_referring_accounts": 0,
@@ -355,7 +355,7 @@
         "breadth": {
           "score": 0.94,
           "basis": [
-            "distinct_urls:346",
+            "distinct_urls:347",
             "distinct_axes:25",
             "origin_types:4"
           ]
@@ -394,7 +394,7 @@
           "basis": [
             "newsroom_domain_pattern",
             "article_path_seen",
-            "distinct_urls:346",
+            "distinct_urls:347",
             "distinct_axes:25",
             "origin_types:4",
             "referring_accounts:0",
@@ -693,9 +693,9 @@
       "entity": "Nytimes",
       "kind": "news",
       "first_seen_at": "2026-06-22T00:15:00Z",
-      "last_seen_at": "2026-07-28T22:02:45.177Z",
+      "last_seen_at": "2026-07-30T21:22:11.470Z",
       "discovery": {
-        "distinct_urls": 423,
+        "distinct_urls": 426,
         "example_urls": [
           "https://www.nytimes.com/2026/06/19/world/canada/frank-stronach-trial-guilty-sex-charges.html",
           "https://www.nytimes.com/2026/06/27/world/americas/mexican-officials-us-informants.html",
@@ -704,9 +704,9 @@
           "https://www.nytimes.com/2026/07/05/world/middleeast/iran-grand-mosalla-khamenei.html"
         ],
         "origin_counts": {
-          "ontology_evidence": 13,
-          "reading_queue": 425,
-          "journals": 35
+          "ontology_evidence": 14,
+          "reading_queue": 427,
+          "journals": 36
         },
         "distinct_referring_accounts": 0,
         "sample_referring_accounts": [],
@@ -716,6 +716,7 @@
           "axis_geopolitical_rhetoric_v1",
           "axis_global_power_realignments_v1",
           "axis_human_rights_exploitation_v1",
+          "axis_humanitarian_crisis_response",
           "axis_national_sovereignty_v_intl_law_v1",
           "axis_power_accountability"
         ]
@@ -744,8 +745,8 @@
         "breadth": {
           "score": 0.8799999999999999,
           "basis": [
-            "distinct_urls:423",
-            "distinct_axes:7",
+            "distinct_urls:426",
+            "distinct_axes:8",
             "origin_types:3"
           ]
         },
@@ -763,7 +764,7 @@
           ]
         },
         "profile": {
-          "score": 0,
+          "score": 0.16,
           "confidence": 0.55,
           "basis": [
             "meta_author:false",
@@ -771,7 +772,7 @@
             "canonical:false",
             "about:false",
             "contact:false",
-            "corrections:false",
+            "corrections:true",
             "outbound_links:0",
             "opinion_marker:false"
           ]
@@ -783,8 +784,8 @@
           "basis": [
             "newsroom_domain_pattern",
             "article_path_seen",
-            "distinct_urls:423",
-            "distinct_axes:7",
+            "distinct_urls:426",
+            "distinct_axes:8",
             "origin_types:3",
             "referring_accounts:0",
             "origin_types:3",
@@ -793,7 +794,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-07-27T22:55:34.951Z",
+        "fetched_at": "2026-07-30T23:21:28.126Z",
         "homepage_url": "https://nytimes.com/",
         "example_url": "https://www.nytimes.com/2026/06/19/world/canada/frank-stronach-trial-guilty-sex-charges.html",
         "homepage_status": 200,
@@ -808,8 +809,8 @@
           "has_canonical": true,
           "has_about_link": false,
           "has_contact_link": false,
-          "has_corrections_link": false,
-          "outbound_links_count": 0,
+          "has_corrections_link": true,
+          "outbound_links_count": 5,
           "opinion_marker": true
         },
         "example": {
@@ -1444,7 +1445,7 @@
       "first_seen_at": "2026-06-26T07:05:00Z",
       "last_seen_at": "2026-07-26T19:55:37.560Z",
       "discovery": {
-        "distinct_urls": 371,
+        "distinct_urls": 372,
         "example_urls": [
           "https://www.bbc.co.uk/news/articles/cn8qxz6qypyo",
           "https://www.bbc.co.uk/news/articles/cn075j04pnyo?at_medium=RSS&amp;at_campaign=rss",
@@ -1454,7 +1455,7 @@
         ],
         "origin_counts": {
           "ontology_evidence": 6,
-          "reading_queue": 380,
+          "reading_queue": 381,
           "journals": 15
         },
         "distinct_referring_accounts": 0,
@@ -1489,7 +1490,7 @@
         "breadth": {
           "score": 0.7633333333333332,
           "basis": [
-            "distinct_urls:371",
+            "distinct_urls:372",
             "distinct_axes:4",
             "origin_types:3"
           ]
@@ -1527,7 +1528,7 @@
           "method": "mechanical_v1",
           "basis": [
             "newsroom_domain_pattern",
-            "distinct_urls:371",
+            "distinct_urls:372",
             "distinct_axes:4",
             "origin_types:3",
             "referring_accounts:0",
@@ -1664,7 +1665,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-07-27T22:55:54.963Z",
+        "fetched_at": "2026-07-30T23:21:48.136Z",
         "homepage_url": "https://washingtonpost.com/",
         "example_url": "https://www.washingtonpost.com/world/2026/04/13/us-iran-blockade-strait-hormuz-oil/",
         "homepage_status": null,
@@ -1788,7 +1789,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-07-27T22:55:55.653Z",
+        "fetched_at": "2026-07-30T23:21:48.869Z",
         "homepage_url": "https://bbc.com/",
         "example_url": "https://www.bbc.com/news/articles/cgmdw4vn7y2o?at_medium=RSS&amp;at_campaign=rss",
         "homepage_status": 200,
@@ -1824,7 +1825,7 @@
       "entity": "Pcij",
       "kind": "unknown",
       "first_seen_at": "2026-07-08T04:32:07.894Z",
-      "last_seen_at": "2026-07-30T19:52:03.658Z",
+      "last_seen_at": "2026-07-30T20:22:07.284Z",
       "discovery": {
         "distinct_urls": 13,
         "example_urls": [
@@ -1835,9 +1836,9 @@
           "https://pcij.org/2026/05/25/7-reasons-why-the-party-list-system-serves-dynasties-not-democracy/"
         ],
         "origin_counts": {
-          "ontology_evidence": 17,
+          "ontology_evidence": 18,
           "reading_queue": 11,
-          "journals": 34,
+          "journals": 35,
           "articles": 1
         },
         "distinct_referring_accounts": 0,
@@ -2091,7 +2092,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-07-27T22:55:56.646Z",
+        "fetched_at": "2026-07-30T23:21:49.487Z",
         "homepage_url": "https://google.com/",
         "example_url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQG8zTjzNOXrSBZwvSTLobfen2T2Mfxyn8MYVxW4sIU6cWottxkV4pJs_p6fwS7LJGs_vuED8LS-hCfYDaWBVPP6g5GilaCYMrJml-ow5K6SCv_H_b1Dl2x1bJE8PTS68J1lar6YIqGro0gdLxt0MIOMv-l1vVmmO0WJQtLSOEieMA6I7dl7eRgRC0BRXQWnC1DBXjH9CBNLq5ag1EbSnkyImyoNmXyv0qV7VQUvoAHc5OC2odagG5YXdhPj4Im_aZZUwd8=",
         "homepage_status": 200,
@@ -2261,9 +2262,9 @@
       "entity": "Amnesty",
       "kind": "unknown",
       "first_seen_at": "2026-03-31T12:16:18.459Z",
-      "last_seen_at": "2026-07-29T16:51:40.630Z",
+      "last_seen_at": "2026-07-30T22:52:11.642Z",
       "discovery": {
-        "distinct_urls": 68,
+        "distinct_urls": 69,
         "example_urls": [
           "https://www.amnesty.org/en/latest/news/2026/06/burkina-serge-oulon/",
           "https://www.amnesty.org/en/latest/news/2026/06/car-bozize/",
@@ -2272,14 +2273,15 @@
           "https://www.amnesty.org/en/latest/news/2026/06/usa-four-months-after-horrific-minab-school-airstrike"
         ],
         "origin_counts": {
-          "ontology_evidence": 51,
-          "reading_queue": 37,
-          "journals": 91
+          "ontology_evidence": 52,
+          "reading_queue": 38,
+          "journals": 92
         },
         "distinct_referring_accounts": 0,
         "sample_referring_accounts": [],
         "distinct_axes": [
           "axis_authoritarian_self_determination_v1",
+          "axis_collective_voice",
           "axis_environmental_policy_v_economic_v1",
           "axis_human_rights_exploitation_v1",
           "axis_humanitarian_crisis_response",
@@ -2313,8 +2315,8 @@
         "breadth": {
           "score": 0.8799999999999999,
           "basis": [
-            "distinct_urls:68",
-            "distinct_axes:8",
+            "distinct_urls:69",
+            "distinct_axes:9",
             "origin_types:3"
           ]
         },
@@ -2352,8 +2354,8 @@
           "basis": [
             "unknown_domain_pattern",
             "article_path_seen",
-            "distinct_urls:68",
-            "distinct_axes:8",
+            "distinct_urls:69",
+            "distinct_axes:9",
             "origin_types:3",
             "referring_accounts:0",
             "origin_types:3",
@@ -2793,9 +2795,9 @@
       "entity": "T Co",
       "kind": "unknown",
       "first_seen_at": "2016-05-05T18:57:30.000Z",
-      "last_seen_at": "2026-07-30T15:59:46.000Z",
+      "last_seen_at": "2026-07-30T21:35:00.000Z",
       "discovery": {
-        "distinct_urls": 11905,
+        "distinct_urls": 11907,
         "example_urls": [
           "https://t.co/pJSE124ec4",
           "https://t.co/Soz8BXPWaa",
@@ -2804,7 +2806,7 @@
           "https://t.co/cYaqYDRp08"
         ],
         "origin_counts": {
-          "feed_buffer": 9392,
+          "feed_buffer": 9398,
           "feed_buffer_reply": 4877,
           "articles": 1
         },
@@ -2847,7 +2849,7 @@
         "breadth": {
           "score": 0.53,
           "basis": [
-            "distinct_urls:11905",
+            "distinct_urls:11907",
             "distinct_axes:0",
             "origin_types:3"
           ]
@@ -2886,7 +2888,7 @@
           "basis": [
             "unknown_domain_pattern",
             "doi_or_identifier_path_seen",
-            "distinct_urls:11905",
+            "distinct_urls:11907",
             "distinct_axes:0",
             "origin_types:3",
             "referring_accounts:2714",
@@ -3066,9 +3068,9 @@
       "entity": "Inquirer",
       "kind": "unknown",
       "first_seen_at": "2026-05-09T10:15:15.053Z",
-      "last_seen_at": "2026-07-30T12:21:46.714Z",
+      "last_seen_at": "2026-07-30T22:52:11.642Z",
       "discovery": {
-        "distinct_urls": 234,
+        "distinct_urls": 235,
         "example_urls": [
           "https://newsinfo.inquirer.net/2266316/nbi-on-cayetano-position-that-cant-be-defended-by-facts-is-done-with-insults",
           "https://www.inquirer.net/capiz-broadcaster-shooting-probe-widens-as-cops-form-task-force",
@@ -3077,8 +3079,8 @@
           "https://newsinfo.inquirer.net/2251702/chr-seeks-swift-passage-of-bills-creating-detention-monitoring-body"
         ],
         "origin_counts": {
-          "ontology_evidence": 104,
-          "journals": 317,
+          "ontology_evidence": 105,
+          "journals": 318,
           "articles": 1
         },
         "distinct_referring_accounts": 0,
@@ -3126,7 +3128,7 @@
         "breadth": {
           "score": 0.8799999999999999,
           "basis": [
-            "distinct_urls:234",
+            "distinct_urls:235",
             "distinct_axes:17",
             "origin_types:3"
           ]
@@ -3164,7 +3166,7 @@
           "method": "mechanical_v1",
           "basis": [
             "unknown_domain_pattern",
-            "distinct_urls:234",
+            "distinct_urls:235",
             "distinct_axes:17",
             "origin_types:3",
             "referring_accounts:0",
@@ -3647,19 +3649,19 @@
       "entity": "Techcrunch",
       "kind": "unknown",
       "first_seen_at": "2026-06-22T23:31:00Z",
-      "last_seen_at": "2026-07-30T19:52:03.640Z",
+      "last_seen_at": "2026-07-30T22:52:11.619Z",
       "discovery": {
-        "distinct_urls": 89,
+        "distinct_urls": 92,
         "example_urls": [
+          "https://techcrunch.com/2026/07/30/judge-says-trump-admin-still-lacks-evidence-for-anthropic-supply-chain-risk-label/",
           "https://techcrunch.com/2026/06/22/shareholders-sue-ubers-board-over-sexual-assaults-other-incidents/",
           "https://techcrunch.com/2026/06/25/notion-mail-shuts-down-amid-agent-takeover/",
           "https://techcrunch.com/2026/06/29/in-major-privacy-win-supreme-court-rules-geofence-warrants-are-protected-by-privacy-rights/",
-          "https://techcrunch.com/2026/07/09/block-reaches-45m-settlement-with-46-states-over-cash-app-fraud-probe/",
-          "https://techcrunch.com/2026/07/28/ebay-reaches-56m-settlement-with-e-commerce-newsletter-writers-it-terrorized-in-2019/"
+          "https://techcrunch.com/2026/07/09/block-reaches-45m-settlement-with-46-states-over-cash-app-fraud-probe/"
         ],
         "origin_counts": {
-          "ontology_evidence": 35,
-          "journals": 100
+          "ontology_evidence": 36,
+          "journals": 104
         },
         "distinct_referring_accounts": 0,
         "sample_referring_accounts": [],
@@ -3671,6 +3673,7 @@
           "axis_digital_supply_chain_security",
           "axis_digital_surveillance_autonomy_v1",
           "axis_environmental_policy_v_economic_v1",
+          "axis_epistemic_integrity",
           "axis_global_power_realignments_v1",
           "axis_human_rights_exploitation_v1",
           "axis_information_control_v1",
@@ -3703,8 +3706,8 @@
         "breadth": {
           "score": 0.82,
           "basis": [
-            "distinct_urls:89",
-            "distinct_axes:13",
+            "distinct_urls:92",
+            "distinct_axes:14",
             "origin_types:2"
           ]
         },
@@ -3742,8 +3745,8 @@
           "basis": [
             "unknown_domain_pattern",
             "article_path_seen",
-            "distinct_urls:89",
-            "distinct_axes:13",
+            "distinct_urls:92",
+            "distinct_axes:14",
             "origin_types:2",
             "referring_accounts:0",
             "origin_types:2",
@@ -4709,9 +4712,9 @@
       "entity": "Steampowered",
       "kind": "unknown",
       "first_seen_at": "2026-04-04T23:34:51.000Z",
-      "last_seen_at": "2026-07-30T04:44:13.532Z",
+      "last_seen_at": "2026-07-30T23:13:17.637Z",
       "discovery": {
-        "distinct_urls": 264,
+        "distinct_urls": 265,
         "example_urls": [
           "https://store.steampowered.com/app/1315180?twclid=2cb8mho5n4udnkq1fnm1yi4kkh",
           "https://store.steampowered.com/app/3321460?utm_campaign=launching&utm_source=X&utm_term=20260319_traffic&utm_medium=us&utm_content=Trailer_view&twclid=22351un15xjmtu22gjwnjp292d",
@@ -4721,7 +4724,7 @@
         ],
         "origin_counts": {
           "feed_buffer_reply": 212,
-          "feed_buffer": 52
+          "feed_buffer": 53
         },
         "distinct_referring_accounts": 41,
         "sample_referring_accounts": [
@@ -4761,7 +4764,7 @@
         "breadth": {
           "score": 0.47,
           "basis": [
-            "distinct_urls:264",
+            "distinct_urls:265",
             "distinct_axes:0",
             "origin_types:2"
           ]
@@ -4799,7 +4802,7 @@
           "method": "mechanical_v1",
           "basis": [
             "unknown_domain_pattern",
-            "distinct_urls:264",
+            "distinct_urls:265",
             "distinct_axes:0",
             "origin_types:2",
             "referring_accounts:41",
@@ -31848,7 +31851,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-07-27T21:25:34.862Z",
+        "fetched_at": "2026-07-30T21:51:34.484Z",
         "homepage_url": "https://prophecyviewpoint.com/",
         "example_url": "https://www.prophecyviewpoint.com/htdocs/16a-Secret%20Rapture-Part%20I.htm?twclid=297aa0b56gu0z1vkj3ccaj3t3o",
         "homepage_status": 200,
@@ -37589,7 +37592,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-07-27T18:55:31.216Z",
+        "fetched_at": "2026-07-30T21:21:24.175Z",
         "homepage_url": "https://gopuff.com/",
         "example_url": "https://www.gopuff.com/go/ai?twclid=2df5moz835ertdpa0tqci700x9",
         "homepage_status": 403,
@@ -37714,7 +37717,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-07-27T18:55:36.368Z",
+        "fetched_at": "2026-07-30T21:21:29.312Z",
         "homepage_url": "https://lend.xyz/",
         "example_url": "https://app.lend.xyz/op/3?twclid=238nk3jmrq3apwjk6xspl8fcb8",
         "homepage_status": 200,
@@ -38089,7 +38092,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-07-26T00:59:04.062Z",
+        "fetched_at": "2026-07-30T21:21:32.694Z",
         "homepage_url": "https://syntharena.ai/",
         "example_url": "https://www.syntharena.ai/entry?twclid=2emc3tzeokvv9ehw1ce10dw26g",
         "homepage_status": 200,
@@ -38214,7 +38217,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-07-27T20:25:43.666Z",
+        "fetched_at": "2026-07-30T21:21:37.488Z",
         "homepage_url": "https://alphawire.xyz/",
         "example_url": "https://alphawire.xyz/?twclid=2p71crxbbvb07f2xbxdculv89",
         "homepage_status": 200,
@@ -38464,7 +38467,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-07-27T21:25:35.880Z",
+        "fetched_at": "2026-07-30T21:51:34.983Z",
         "homepage_url": "https://clickhouse.com/",
         "example_url": "https://clickhouse.com/blog/cloudflare?utm_campaign=twitter-awareness-apac-tier-2&utm_source=Twitter&utm_medium=paid-social&twclid=2e6nwzr1alswe5w301ver5l71",
         "homepage_status": 200,
@@ -38589,7 +38592,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-07-27T19:55:39.354Z",
+        "fetched_at": "2026-07-30T21:51:42.961Z",
         "homepage_url": "https://czapp.com/",
         "example_url": "https://www.czapp.com/analyst-insights/grains-rally-on-black-sea-disruptions-weather-concerns/?utm_source=twitter&utm_medium=social&utm_term=opinion&utm_content=organic&twclid=26m34d56qe4fs7irm1mj3xf0rk",
         "homepage_status": 200,
@@ -41935,7 +41938,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-07-27T19:56:00.188Z",
+        "fetched_at": "2026-07-30T21:51:43.910Z",
         "homepage_url": "https://nlh.poker/",
         "example_url": "https://nlh.poker/?twclid=262uxn33gt8exvvydht5w6p34m",
         "homepage_status": 200,
@@ -42029,6 +42032,20 @@
             "no_resolved_claims_observed"
           ]
         },
+        "profile": {
+          "score": 0.24,
+          "confidence": 0.55,
+          "basis": [
+            "meta_author:false",
+            "published_time:false",
+            "canonical:true",
+            "about:false",
+            "contact:true",
+            "corrections:false",
+            "outbound_links:2",
+            "opinion_marker:false"
+          ]
+        },
         "overall": {
           "score": 0.36000000000000004,
           "confidence": 0.1386,
@@ -42042,6 +42059,37 @@
             "origin_types:1",
             "track_record_unavailable"
           ]
+        }
+      },
+      "profile": {
+        "fetched_at": "2026-07-30T22:51:27.224Z",
+        "homepage_url": "https://veracityai.co/",
+        "example_url": "https://veracityai.co/?twclid=26723v6ydxnir3iq5dm2y4l7ts",
+        "homepage_status": 200,
+        "example_status": 200,
+        "homepage_final_url": "https://veracityai.co/",
+        "example_final_url": "https://veracityai.co/?twclid=26723v6ydxnir3iq5dm2y4l7ts",
+        "homepage_content_type": "text/html; charset=utf-8",
+        "example_content_type": "text/html; charset=utf-8",
+        "homepage": {
+          "has_meta_author": false,
+          "has_published_time": false,
+          "has_canonical": true,
+          "has_about_link": false,
+          "has_contact_link": true,
+          "has_corrections_link": false,
+          "outbound_links_count": 2,
+          "opinion_marker": false
+        },
+        "example": {
+          "has_meta_author": false,
+          "has_published_time": false,
+          "has_canonical": true,
+          "has_about_link": false,
+          "has_contact_link": true,
+          "has_corrections_link": false,
+          "outbound_links_count": 2,
+          "opinion_marker": false
         }
       }
     },
@@ -42138,7 +42186,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-07-27T19:56:00.702Z",
+        "fetched_at": "2026-07-30T22:51:27.764Z",
         "homepage_url": "https://ticketmaster.sg/",
         "example_url": "https://ticketmaster.sg/activity/detail/26sg_byeonwooseok?twclid=2baa8aqtdtolubyiun5bbmoscv",
         "homepage_status": 401,
@@ -42386,7 +42434,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-07-27T20:25:38.295Z",
+        "fetched_at": "2026-07-30T22:51:31.435Z",
         "homepage_url": "https://hlj.com/",
         "example_url": "https://shop.hlj.com/4vXkD2G?twclid=25l0g4eufvnqww5h4zbm7nc8dk",
         "homepage_status": 200,
@@ -42510,7 +42558,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-07-27T20:25:38.886Z",
+        "fetched_at": "2026-07-30T22:51:31.886Z",
         "homepage_url": "https://simba.sg/",
         "example_url": "https://simba.sg/home?twclid=246gm13qkkeak3bq6hmc879ar",
         "homepage_status": 200,
@@ -42662,6 +42710,85 @@
           "has_corrections_link": false,
           "outbound_links_count": 0,
           "opinion_marker": false
+        }
+      }
+    },
+    {
+      "domain": "80.lv",
+      "entity": "80 Lv",
+      "kind": "unknown",
+      "first_seen_at": "2026-07-25T16:41:15.717Z",
+      "last_seen_at": "2026-07-30T20:28:13.435Z",
+      "discovery": {
+        "distinct_urls": 3,
+        "example_urls": [
+          "https://80.lv/articles/this-cyberpunk-cozy-game-allows-you-to-build-your-own-rain-soaked-world?utm_source=pa-x&utm_medium=cpc&twclid=24138z1ynt8psd4xn6ca3421h5",
+          "https://80.lv/articles/full-body-hand-facial-motion-capture-from-any-video-in-blender?utm_source=pa-x&utm_medium=cpc&twclid=24pjq04wg39h2xjcb31xo7m6c3",
+          "https://80.lv/articles/realistic-torso-deformation-with-rbf-muscle-rig?utm_source=pa-x&utm_medium=cpc&twclid=29tpso9x1r5kp8la08uohw2gsu"
+        ],
+        "origin_counts": {
+          "feed_buffer": 3
+        },
+        "distinct_referring_accounts": 1,
+        "sample_referring_accounts": [
+          "80level"
+        ],
+        "distinct_axes": []
+      },
+      "claims": {
+        "total": 0,
+        "supported": 0,
+        "refuted": 0,
+        "contested": 0,
+        "unverified": 0,
+        "resolved_count": 0
+      },
+      "structural_features": {
+        "has_search_paths": false,
+        "has_article_paths": false,
+        "has_doi_paths": false
+      },
+      "ratings": {
+        "provenance": {
+          "score": 0.45,
+          "basis": [
+            "unknown_domain_pattern"
+          ]
+        },
+        "breadth": {
+          "score": 0.1475,
+          "basis": [
+            "distinct_urls:3",
+            "distinct_axes:0",
+            "origin_types:1"
+          ]
+        },
+        "corroboration": {
+          "score": 0.19583333333333333,
+          "basis": [
+            "referring_accounts:1",
+            "origin_types:1"
+          ]
+        },
+        "track_record": {
+          "score": null,
+          "basis": [
+            "no_resolved_claims_observed"
+          ]
+        },
+        "overall": {
+          "score": 0.36000000000000004,
+          "confidence": 0.1386,
+          "method": "mechanical_v1",
+          "basis": [
+            "unknown_domain_pattern",
+            "distinct_urls:3",
+            "distinct_axes:0",
+            "origin_types:1",
+            "referring_accounts:1",
+            "origin_types:1",
+            "track_record_unavailable"
+          ]
         }
       }
     },
@@ -52545,84 +52672,6 @@
         "distinct_referring_accounts": 1,
         "sample_referring_accounts": [
           "atfxglobal"
-        ],
-        "distinct_axes": []
-      },
-      "claims": {
-        "total": 0,
-        "supported": 0,
-        "refuted": 0,
-        "contested": 0,
-        "unverified": 0,
-        "resolved_count": 0
-      },
-      "structural_features": {
-        "has_search_paths": false,
-        "has_article_paths": false,
-        "has_doi_paths": false
-      },
-      "ratings": {
-        "provenance": {
-          "score": 0.45,
-          "basis": [
-            "unknown_domain_pattern"
-          ]
-        },
-        "breadth": {
-          "score": 0.11833333333333332,
-          "basis": [
-            "distinct_urls:2",
-            "distinct_axes:0",
-            "origin_types:1"
-          ]
-        },
-        "corroboration": {
-          "score": 0.19583333333333333,
-          "basis": [
-            "referring_accounts:1",
-            "origin_types:1"
-          ]
-        },
-        "track_record": {
-          "score": null,
-          "basis": [
-            "no_resolved_claims_observed"
-          ]
-        },
-        "overall": {
-          "score": 0.3536197916666667,
-          "confidence": 0.10997499999999999,
-          "method": "mechanical_v1",
-          "basis": [
-            "unknown_domain_pattern",
-            "distinct_urls:2",
-            "distinct_axes:0",
-            "origin_types:1",
-            "referring_accounts:1",
-            "origin_types:1",
-            "track_record_unavailable"
-          ]
-        }
-      }
-    },
-    {
-      "domain": "80.lv",
-      "entity": "80 Lv",
-      "kind": "unknown",
-      "first_seen_at": "2026-07-25T16:41:15.717Z",
-      "last_seen_at": "2026-07-29T05:27:13.060Z",
-      "discovery": {
-        "distinct_urls": 2,
-        "example_urls": [
-          "https://80.lv/articles/this-cyberpunk-cozy-game-allows-you-to-build-your-own-rain-soaked-world?utm_source=pa-x&utm_medium=cpc&twclid=24138z1ynt8psd4xn6ca3421h5",
-          "https://80.lv/articles/full-body-hand-facial-motion-capture-from-any-video-in-blender?utm_source=pa-x&utm_medium=cpc&twclid=24pjq04wg39h2xjcb31xo7m6c3"
-        ],
-        "origin_counts": {
-          "feed_buffer": 2
-        },
-        "distinct_referring_accounts": 1,
-        "sample_referring_accounts": [
-          "80level"
         ],
         "distinct_axes": []
       },
