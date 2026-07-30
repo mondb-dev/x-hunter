@@ -1,8 +1,8 @@
 {
   "schema_version": "1.0",
-  "generated_at": "2026-07-30T00:51:02.162Z",
+  "generated_at": "2026-07-30T02:21:03.691Z",
   "method": "mechanical_registry_v1",
-  "profiled_at": "2026-07-30T00:51:08.569Z",
+  "profiled_at": "2026-07-30T02:21:08.204Z",
   "sources": [
     {
       "domain": "theguardian.com",
@@ -11,7 +11,7 @@
       "first_seen_at": "2026-03-27T23:17:00Z",
       "last_seen_at": "2026-07-26T22:55:51.714Z",
       "discovery": {
-        "distinct_urls": 609,
+        "distinct_urls": 610,
         "example_urls": [
           "https://www.theguardian.com/us-news/2026/jun/23/trump-immigration-courthouse-arrest-policy",
           "https://www.theguardian.com/us-news/2026/jun/28/ice-minnesota-defending-democracy",
@@ -21,7 +21,7 @@
         ],
         "origin_counts": {
           "ontology_evidence": 40,
-          "reading_queue": 579,
+          "reading_queue": 580,
           "journals": 104,
           "articles": 2
         },
@@ -72,7 +72,7 @@
         "breadth": {
           "score": 0.94,
           "basis": [
-            "distinct_urls:609",
+            "distinct_urls:610",
             "distinct_axes:17",
             "origin_types:4"
           ]
@@ -112,7 +112,7 @@
             "newsroom_domain_pattern",
             "article_path_seen",
             "doi_or_identifier_path_seen",
-            "distinct_urls:609",
+            "distinct_urls:610",
             "distinct_axes:17",
             "origin_types:4",
             "referring_accounts:0",
@@ -285,9 +285,9 @@
       "entity": "Aljazeera",
       "kind": "news",
       "first_seen_at": "2026-06-22T02:45:00Z",
-      "last_seen_at": "2026-07-29T22:51:37.700Z",
+      "last_seen_at": "2026-07-30T01:51:49.757Z",
       "discovery": {
-        "distinct_urls": 342,
+        "distinct_urls": 343,
         "example_urls": [
           "https://www.aljazeera.com/opinions/2026/6/24/south-africas-crises-will-not-be-solved-by-blaming-migrants",
           "https://www.aljazeera.com/video/newsfeed/2026/6/27/newly-released-video-exposes-henry-nowak-killers-lies?traffic_source=rss",
@@ -296,9 +296,9 @@
           "https://www.aljazeera.com/video/newsfeed/2026/7/1/why-is-maga-in-meltdown-over-the-supreme-court-birthright-ruling-2?traffic_source=rss"
         ],
         "origin_counts": {
-          "ontology_evidence": 167,
+          "ontology_evidence": 168,
           "reading_queue": 13,
-          "journals": 438,
+          "journals": 439,
           "articles": 4
         },
         "distinct_referring_accounts": 0,
@@ -355,7 +355,7 @@
         "breadth": {
           "score": 0.94,
           "basis": [
-            "distinct_urls:342",
+            "distinct_urls:343",
             "distinct_axes:25",
             "origin_types:4"
           ]
@@ -394,7 +394,7 @@
           "basis": [
             "newsroom_domain_pattern",
             "article_path_seen",
-            "distinct_urls:342",
+            "distinct_urls:343",
             "distinct_axes:25",
             "origin_types:4",
             "referring_accounts:0",
@@ -1444,7 +1444,7 @@
       "first_seen_at": "2026-06-26T07:05:00Z",
       "last_seen_at": "2026-07-26T19:55:37.560Z",
       "discovery": {
-        "distinct_urls": 361,
+        "distinct_urls": 362,
         "example_urls": [
           "https://www.bbc.co.uk/news/articles/cn8qxz6qypyo",
           "https://www.bbc.co.uk/news/articles/cn075j04pnyo?at_medium=RSS&amp;at_campaign=rss",
@@ -1454,7 +1454,7 @@
         ],
         "origin_counts": {
           "ontology_evidence": 6,
-          "reading_queue": 370,
+          "reading_queue": 371,
           "journals": 15
         },
         "distinct_referring_accounts": 0,
@@ -1489,7 +1489,7 @@
         "breadth": {
           "score": 0.7633333333333332,
           "basis": [
-            "distinct_urls:361",
+            "distinct_urls:362",
             "distinct_axes:4",
             "origin_types:3"
           ]
@@ -1527,7 +1527,7 @@
           "method": "mechanical_v1",
           "basis": [
             "newsroom_domain_pattern",
-            "distinct_urls:361",
+            "distinct_urls:362",
             "distinct_axes:4",
             "origin_types:3",
             "referring_accounts:0",
@@ -2792,9 +2792,9 @@
       "entity": "T Co",
       "kind": "unknown",
       "first_seen_at": "2016-05-05T18:57:30.000Z",
-      "last_seen_at": "2026-07-30T00:09:08.169Z",
+      "last_seen_at": "2026-07-30T01:25:12.000Z",
       "discovery": {
-        "distinct_urls": 11785,
+        "distinct_urls": 11799,
         "example_urls": [
           "https://t.co/pJSE124ec4",
           "https://t.co/Soz8BXPWaa",
@@ -2803,7 +2803,7 @@
           "https://t.co/cYaqYDRp08"
         ],
         "origin_counts": {
-          "feed_buffer": 9257,
+          "feed_buffer": 9282,
           "feed_buffer_reply": 4874,
           "articles": 1
         },
@@ -2846,7 +2846,7 @@
         "breadth": {
           "score": 0.53,
           "basis": [
-            "distinct_urls:11785",
+            "distinct_urls:11799",
             "distinct_axes:0",
             "origin_types:3"
           ]
@@ -2885,7 +2885,7 @@
           "basis": [
             "unknown_domain_pattern",
             "doi_or_identifier_path_seen",
-            "distinct_urls:11785",
+            "distinct_urls:11799",
             "distinct_axes:0",
             "origin_types:3",
             "referring_accounts:2713",
@@ -3209,9 +3209,9 @@
       "entity": "Rappler",
       "kind": "unknown",
       "first_seen_at": "2026-06-22T04:04:30.428Z",
-      "last_seen_at": "2026-07-30T00:21:36.816Z",
+      "last_seen_at": "2026-07-30T01:51:49.733Z",
       "discovery": {
-        "distinct_urls": 197,
+        "distinct_urls": 198,
         "example_urls": [
           "https://www.rappler.com/fact-check-no-arrest-warrant-issued-vs-marcoleta",
           "https://www.rappler.com/technology/decoded-tacloban-school-shooting-disinformation-kiko-barzaga-discussions-juvenile-justice-law/",
@@ -3221,7 +3221,7 @@
         ],
         "origin_counts": {
           "ontology_evidence": 100,
-          "journals": 229,
+          "journals": 230,
           "articles": 1
         },
         "distinct_referring_accounts": 0,
@@ -3276,7 +3276,7 @@
         "breadth": {
           "score": 0.8799999999999999,
           "basis": [
-            "distinct_urls:197",
+            "distinct_urls:198",
             "distinct_axes:24",
             "origin_types:3"
           ]
@@ -3314,7 +3314,7 @@
           "method": "mechanical_v1",
           "basis": [
             "unknown_domain_pattern",
-            "distinct_urls:197",
+            "distinct_urls:198",
             "distinct_axes:24",
             "origin_types:3",
             "referring_accounts:0",
@@ -3360,9 +3360,9 @@
       "entity": "Gmanetwork",
       "kind": "unknown",
       "first_seen_at": "2026-05-18T03:29:41.732Z",
-      "last_seen_at": "2026-07-29T15:21:39.906Z",
+      "last_seen_at": "2026-07-30T01:51:49.733Z",
       "discovery": {
-        "distinct_urls": 294,
+        "distinct_urls": 295,
         "example_urls": [
           "https://www.gmanetwork.com/news/topstories/nation/994225/explainer-objections-in-a-trial-and-their-role-in-due-process/story/",
           "https://www.gmanetwork.com/news/balitambayan/balita/993931/sen-escudero-sinabing-16-na-boto-ang-kailangan-para-mahatulang-guilty-si-vp-sara-duterte-sa-impea/story/",
@@ -3372,7 +3372,7 @@
         ],
         "origin_counts": {
           "ontology_evidence": 99,
-          "journals": 343
+          "journals": 344
         },
         "distinct_referring_accounts": 0,
         "sample_referring_accounts": [],
@@ -3421,7 +3421,7 @@
         "breadth": {
           "score": 0.82,
           "basis": [
-            "distinct_urls:294",
+            "distinct_urls:295",
             "distinct_axes:18",
             "origin_types:2"
           ]
@@ -3460,7 +3460,7 @@
           "basis": [
             "unknown_domain_pattern",
             "doi_or_identifier_path_seen",
-            "distinct_urls:294",
+            "distinct_urls:295",
             "distinct_axes:18",
             "origin_types:2",
             "referring_accounts:0",
@@ -19052,7 +19052,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-07-27T01:55:11.456Z",
+        "fetched_at": "2026-07-30T02:21:04.522Z",
         "homepage_url": "https://fantheone.com/",
         "example_url": "https://fantheone.com/download?twclid=2ffn21z0ebyxzqvqa4nwehpql",
         "homepage_status": 200,
@@ -21709,7 +21709,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-07-27T00:55:19.855Z",
+        "fetched_at": "2026-07-30T01:51:05.737Z",
         "homepage_url": "https://abnormal.ai/",
         "example_url": "https://abnormal.ai/products/inbound-email-security?utm_source=twitter&utm_medium=paidsocial&twclid=2asl0bbzb83c9oc3nr0k101b56",
         "homepage_status": 200,
@@ -24976,7 +24976,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-07-27T01:55:13.273Z",
+        "fetched_at": "2026-07-30T02:21:06.723Z",
         "homepage_url": "https://hubs.la/",
         "example_url": "https://hubs.la/Q044Rgs40?twclid=2dj6mgj4wttl7kn2ssc6dwffaw",
         "homepage_status": 200,
@@ -27608,7 +27608,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-07-27T00:55:13.051Z",
+        "fetched_at": "2026-07-30T01:51:08.689Z",
         "homepage_url": "https://seotrends.pro/",
         "example_url": "https://www.seotrends.pro/register?ref=promo&twclid=2boi27d8dao8t8jau1ht2f5vjk",
         "homepage_status": 200,
@@ -27705,16 +27705,16 @@
           ]
         },
         "profile": {
-          "score": 0.3,
+          "score": 0,
           "confidence": 0.55,
           "basis": [
             "meta_author:false",
             "published_time:false",
-            "canonical:true",
+            "canonical:false",
             "about:false",
-            "contact:true",
+            "contact:false",
             "corrections:false",
-            "outbound_links:8",
+            "outbound_links:0",
             "opinion_marker:false"
           ]
         },
@@ -27734,33 +27734,33 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-07-27T00:55:14.303Z",
+        "fetched_at": "2026-07-30T01:51:09.506Z",
         "homepage_url": "https://alppouch.com/",
         "example_url": "https://alppouch.com/products/drifters-lemon-raspberry-nicotine-pouches?variant=45695862079684&utm_source=twitter&twclid=2f0tn2lk34ykymzkyz3xx7lfzj&tw_adsetid=55002677&tw_campaign=41318448&utm_content=dpa-carousel-drifters&utm_campaign=cs-dpa-carousel-sales-alp-pouch&utm_medium=paid_social&tw_source=twitter&utm_term=55002677",
-        "homepage_status": 200,
-        "example_status": 200,
+        "homepage_status": 429,
+        "example_status": 429,
         "homepage_final_url": "https://alppouch.com/",
         "example_final_url": "https://alppouch.com/products/drifters-lemon-raspberry-nicotine-pouches?variant=45695862079684&utm_source=twitter&twclid=2f0tn2lk34ykymzkyz3xx7lfzj&tw_adsetid=55002677&tw_campaign=41318448&utm_content=dpa-carousel-drifters&utm_campaign=cs-dpa-carousel-sales-alp-pouch&utm_medium=paid_social&tw_source=twitter&utm_term=55002677",
-        "homepage_content_type": "text/html; charset=utf-8",
-        "example_content_type": "text/html; charset=utf-8",
+        "homepage_content_type": "text/plain",
+        "example_content_type": "text/plain",
         "homepage": {
           "has_meta_author": false,
           "has_published_time": false,
-          "has_canonical": true,
+          "has_canonical": false,
           "has_about_link": false,
-          "has_contact_link": true,
+          "has_contact_link": false,
           "has_corrections_link": false,
-          "outbound_links_count": 9,
+          "outbound_links_count": 0,
           "opinion_marker": false
         },
         "example": {
           "has_meta_author": false,
           "has_published_time": false,
-          "has_canonical": true,
+          "has_canonical": false,
           "has_about_link": false,
-          "has_contact_link": true,
+          "has_contact_link": false,
           "has_corrections_link": false,
-          "outbound_links_count": 8,
+          "outbound_links_count": 0,
           "opinion_marker": false
         }
       }
@@ -27860,7 +27860,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-07-27T00:55:18.173Z",
+        "fetched_at": "2026-07-30T01:51:12.438Z",
         "homepage_url": "https://happyseeds.ai/",
         "example_url": "https://link.happyseeds.ai/hs2?twclid=23gsc44gehebnjbbfpce6085rj",
         "homepage_status": 200,
@@ -28144,6 +28144,132 @@
       }
     },
     {
+      "domain": "miku.ph",
+      "entity": "Miku Ph",
+      "kind": "unknown",
+      "first_seen_at": "2026-07-25T21:29:05.896Z",
+      "last_seen_at": "2026-07-30T02:19:09.518Z",
+      "discovery": {
+        "distinct_urls": 6,
+        "example_urls": [
+          "https://miku.ph/?utm_source=x&utm_medium=paid_social&utm_campaign=mikufes_announcement&utm_content=detailed&twclid=21azz5ellpiwotx3k2g9myjumu",
+          "https://miku.ph/?utm_source=x&utm_medium=paid_social&utm_campaign=mikufes_announcement&utm_term=merch&utm_content=happi&twclid=2duhcp2oetw9nuz525xfd588y7",
+          "https://miku.ph/?utm_source=x&utm_medium=paid_social&utm_campaign=mikufes_announcement&utm_term=merch&utm_content=happi&twclid=2923nxhyrk92bjszv0ks08bqk4",
+          "https://miku.ph/?utm_source=x&utm_medium=paid_social&utm_campaign=mikufes_announcement&utm_content=guest&twclid=2atkfjxba9ytgqijjkdi232eck",
+          "https://miku.ph/?utm_source=x&utm_medium=paid_social&utm_campaign=mikufes_announcement&utm_content=single&twclid=23c43h6lesajkqye7s36y6j03a"
+        ],
+        "origin_counts": {
+          "feed_buffer": 6
+        },
+        "distinct_referring_accounts": 1,
+        "sample_referring_accounts": [
+          "mikuphfanbase"
+        ],
+        "distinct_axes": []
+      },
+      "claims": {
+        "total": 0,
+        "supported": 0,
+        "refuted": 0,
+        "contested": 0,
+        "unverified": 0,
+        "resolved_count": 0
+      },
+      "structural_features": {
+        "has_search_paths": false,
+        "has_article_paths": false,
+        "has_doi_paths": false
+      },
+      "ratings": {
+        "provenance": {
+          "score": 0.45,
+          "basis": [
+            "unknown_domain_pattern"
+          ]
+        },
+        "breadth": {
+          "score": 0.235,
+          "basis": [
+            "distinct_urls:6",
+            "distinct_axes:0",
+            "origin_types:1"
+          ]
+        },
+        "corroboration": {
+          "score": 0.19583333333333333,
+          "basis": [
+            "referring_accounts:1",
+            "origin_types:1"
+          ]
+        },
+        "track_record": {
+          "score": null,
+          "basis": [
+            "no_resolved_claims_observed"
+          ]
+        },
+        "profile": {
+          "score": 0.1,
+          "confidence": 0.55,
+          "basis": [
+            "meta_author:false",
+            "published_time:false",
+            "canonical:true",
+            "about:false",
+            "contact:false",
+            "corrections:false",
+            "outbound_links:0",
+            "opinion_marker:false"
+          ]
+        },
+        "overall": {
+          "score": 0.379140625,
+          "confidence": 0.22447499999999998,
+          "method": "mechanical_v1",
+          "basis": [
+            "unknown_domain_pattern",
+            "distinct_urls:6",
+            "distinct_axes:0",
+            "origin_types:1",
+            "referring_accounts:1",
+            "origin_types:1",
+            "track_record_unavailable"
+          ]
+        }
+      },
+      "profile": {
+        "fetched_at": "2026-07-30T02:21:07.038Z",
+        "homepage_url": "https://miku.ph/",
+        "example_url": "https://miku.ph/?utm_source=x&utm_medium=paid_social&utm_campaign=mikufes_announcement&utm_content=detailed&twclid=21azz5ellpiwotx3k2g9myjumu",
+        "homepage_status": 200,
+        "example_status": 200,
+        "homepage_final_url": "https://miku.ph/",
+        "example_final_url": "https://miku.ph/?utm_source=x&utm_medium=paid_social&utm_campaign=mikufes_announcement&utm_content=detailed&twclid=21azz5ellpiwotx3k2g9myjumu",
+        "homepage_content_type": "text/html; charset=utf-8",
+        "example_content_type": "text/html; charset=utf-8",
+        "homepage": {
+          "has_meta_author": false,
+          "has_published_time": false,
+          "has_canonical": true,
+          "has_about_link": false,
+          "has_contact_link": false,
+          "has_corrections_link": false,
+          "outbound_links_count": 0,
+          "opinion_marker": false
+        },
+        "example": {
+          "has_meta_author": false,
+          "has_published_time": false,
+          "has_canonical": true,
+          "has_about_link": false,
+          "has_contact_link": false,
+          "has_corrections_link": false,
+          "outbound_links_count": 0,
+          "opinion_marker": false
+        }
+      }
+    },
+    {
       "domain": "33club.jp",
       "entity": "33club Jp",
       "kind": "unknown",
@@ -28362,7 +28488,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-07-27T01:55:14.456Z",
+        "fetched_at": "2026-07-30T02:21:08.204Z",
         "homepage_url": "https://understandingwar.org/",
         "example_url": "https://understandingwar.org/research/middle-east/the-war-in-iran-operational-progress-but-challenges-remain/",
         "homepage_status": 200,
@@ -34323,132 +34449,6 @@
         "example_final_url": "https://bingoplus.com/?palcode=2077999381702086656&twclid=28n3e8dzy2r55kg6u29i1aw2go",
         "homepage_content_type": "text/html",
         "example_content_type": "text/html",
-        "homepage": {
-          "has_meta_author": false,
-          "has_published_time": false,
-          "has_canonical": true,
-          "has_about_link": false,
-          "has_contact_link": false,
-          "has_corrections_link": false,
-          "outbound_links_count": 0,
-          "opinion_marker": false
-        },
-        "example": {
-          "has_meta_author": false,
-          "has_published_time": false,
-          "has_canonical": true,
-          "has_about_link": false,
-          "has_contact_link": false,
-          "has_corrections_link": false,
-          "outbound_links_count": 0,
-          "opinion_marker": false
-        }
-      }
-    },
-    {
-      "domain": "miku.ph",
-      "entity": "Miku Ph",
-      "kind": "unknown",
-      "first_seen_at": "2026-07-25T21:29:05.896Z",
-      "last_seen_at": "2026-07-26T09:22:55.859Z",
-      "discovery": {
-        "distinct_urls": 5,
-        "example_urls": [
-          "https://miku.ph/?utm_source=x&utm_medium=paid_social&utm_campaign=mikufes_announcement&utm_content=detailed&twclid=21azz5ellpiwotx3k2g9myjumu",
-          "https://miku.ph/?utm_source=x&utm_medium=paid_social&utm_campaign=mikufes_announcement&utm_term=merch&utm_content=happi&twclid=2duhcp2oetw9nuz525xfd588y7",
-          "https://miku.ph/?utm_source=x&utm_medium=paid_social&utm_campaign=mikufes_announcement&utm_term=merch&utm_content=happi&twclid=2923nxhyrk92bjszv0ks08bqk4",
-          "https://miku.ph/?utm_source=x&utm_medium=paid_social&utm_campaign=mikufes_announcement&utm_content=guest&twclid=2atkfjxba9ytgqijjkdi232eck",
-          "https://miku.ph/?utm_source=x&utm_medium=paid_social&utm_campaign=mikufes_announcement&utm_content=single&twclid=23c43h6lesajkqye7s36y6j03a"
-        ],
-        "origin_counts": {
-          "feed_buffer": 5
-        },
-        "distinct_referring_accounts": 1,
-        "sample_referring_accounts": [
-          "mikuphfanbase"
-        ],
-        "distinct_axes": []
-      },
-      "claims": {
-        "total": 0,
-        "supported": 0,
-        "refuted": 0,
-        "contested": 0,
-        "unverified": 0,
-        "resolved_count": 0
-      },
-      "structural_features": {
-        "has_search_paths": false,
-        "has_article_paths": false,
-        "has_doi_paths": false
-      },
-      "ratings": {
-        "provenance": {
-          "score": 0.45,
-          "basis": [
-            "unknown_domain_pattern"
-          ]
-        },
-        "breadth": {
-          "score": 0.20583333333333334,
-          "basis": [
-            "distinct_urls:5",
-            "distinct_axes:0",
-            "origin_types:1"
-          ]
-        },
-        "corroboration": {
-          "score": 0.19583333333333333,
-          "basis": [
-            "referring_accounts:1",
-            "origin_types:1"
-          ]
-        },
-        "track_record": {
-          "score": null,
-          "basis": [
-            "no_resolved_claims_observed"
-          ]
-        },
-        "profile": {
-          "score": 0.1,
-          "confidence": 0.55,
-          "basis": [
-            "meta_author:false",
-            "published_time:false",
-            "canonical:true",
-            "about:false",
-            "contact:false",
-            "corrections:false",
-            "outbound_links:0",
-            "opinion_marker:false"
-          ]
-        },
-        "overall": {
-          "score": 0.37276041666666665,
-          "confidence": 0.19585000000000002,
-          "method": "mechanical_v1",
-          "basis": [
-            "unknown_domain_pattern",
-            "distinct_urls:5",
-            "distinct_axes:0",
-            "origin_types:1",
-            "referring_accounts:1",
-            "origin_types:1",
-            "track_record_unavailable"
-          ]
-        }
-      },
-      "profile": {
-        "fetched_at": "2026-07-26T06:59:06.146Z",
-        "homepage_url": "https://miku.ph/",
-        "example_url": "https://miku.ph/?utm_source=x&utm_medium=paid_social&utm_campaign=mikufes_announcement&utm_content=detailed&twclid=21azz5ellpiwotx3k2g9myjumu",
-        "homepage_status": 200,
-        "example_status": 200,
-        "homepage_final_url": "https://miku.ph/",
-        "example_final_url": "https://miku.ph/?utm_source=x&utm_medium=paid_social&utm_campaign=mikufes_announcement&utm_content=detailed&twclid=21azz5ellpiwotx3k2g9myjumu",
-        "homepage_content_type": "text/html; charset=utf-8",
-        "example_content_type": "text/html; charset=utf-8",
         "homepage": {
           "has_meta_author": false,
           "has_published_time": false,
@@ -52875,6 +52875,84 @@
         "distinct_referring_accounts": 1,
         "sample_referring_accounts": [
           "fryzmir"
+        ],
+        "distinct_axes": []
+      },
+      "claims": {
+        "total": 0,
+        "supported": 0,
+        "refuted": 0,
+        "contested": 0,
+        "unverified": 0,
+        "resolved_count": 0
+      },
+      "structural_features": {
+        "has_search_paths": false,
+        "has_article_paths": false,
+        "has_doi_paths": false
+      },
+      "ratings": {
+        "provenance": {
+          "score": 0.45,
+          "basis": [
+            "unknown_domain_pattern"
+          ]
+        },
+        "breadth": {
+          "score": 0.11833333333333332,
+          "basis": [
+            "distinct_urls:2",
+            "distinct_axes:0",
+            "origin_types:1"
+          ]
+        },
+        "corroboration": {
+          "score": 0.19583333333333333,
+          "basis": [
+            "referring_accounts:1",
+            "origin_types:1"
+          ]
+        },
+        "track_record": {
+          "score": null,
+          "basis": [
+            "no_resolved_claims_observed"
+          ]
+        },
+        "overall": {
+          "score": 0.3536197916666667,
+          "confidence": 0.10997499999999999,
+          "method": "mechanical_v1",
+          "basis": [
+            "unknown_domain_pattern",
+            "distinct_urls:2",
+            "distinct_axes:0",
+            "origin_types:1",
+            "referring_accounts:1",
+            "origin_types:1",
+            "track_record_unavailable"
+          ]
+        }
+      }
+    },
+    {
+      "domain": "minepi.com",
+      "entity": "Minepi",
+      "kind": "unknown",
+      "first_seen_at": "2026-07-27T21:28:00.863Z",
+      "last_seen_at": "2026-07-30T02:19:13.137Z",
+      "discovery": {
+        "distinct_urls": 2,
+        "example_urls": [
+          "https://minepi.com/vibe-code/?utm_source=X&utm_medium=x_vibe&utm_content=3B-3&twclid=2ceupjbcdlmh4nm420zbcujkx5",
+          "https://minepi.com/vibe-code/?utm_source=X&utm_medium=x_vibe&utm_content=5C-2&twclid=26mt7e9gpj1w90q2rg8fuwdd24"
+        ],
+        "origin_counts": {
+          "feed_buffer": 2
+        },
+        "distinct_referring_accounts": 1,
+        "sample_referring_accounts": [
+          "picoreteam"
         ],
         "distinct_axes": []
       },
@@ -82994,83 +83072,6 @@
         "distinct_referring_accounts": 1,
         "sample_referring_accounts": [
           "aigwomensopen"
-        ],
-        "distinct_axes": []
-      },
-      "claims": {
-        "total": 0,
-        "supported": 0,
-        "refuted": 0,
-        "contested": 0,
-        "unverified": 0,
-        "resolved_count": 0
-      },
-      "structural_features": {
-        "has_search_paths": false,
-        "has_article_paths": false,
-        "has_doi_paths": false
-      },
-      "ratings": {
-        "provenance": {
-          "score": 0.45,
-          "basis": [
-            "unknown_domain_pattern"
-          ]
-        },
-        "breadth": {
-          "score": 0.08916666666666666,
-          "basis": [
-            "distinct_urls:1",
-            "distinct_axes:0",
-            "origin_types:1"
-          ]
-        },
-        "corroboration": {
-          "score": 0.19583333333333333,
-          "basis": [
-            "referring_accounts:1",
-            "origin_types:1"
-          ]
-        },
-        "track_record": {
-          "score": null,
-          "basis": [
-            "no_resolved_claims_observed"
-          ]
-        },
-        "overall": {
-          "score": 0.3472395833333333,
-          "confidence": 0.08135,
-          "method": "mechanical_v1",
-          "basis": [
-            "unknown_domain_pattern",
-            "distinct_urls:1",
-            "distinct_axes:0",
-            "origin_types:1",
-            "referring_accounts:1",
-            "origin_types:1",
-            "track_record_unavailable"
-          ]
-        }
-      }
-    },
-    {
-      "domain": "minepi.com",
-      "entity": "Minepi",
-      "kind": "unknown",
-      "first_seen_at": "2026-07-27T21:28:00.863Z",
-      "last_seen_at": "2026-07-27T21:28:00.863Z",
-      "discovery": {
-        "distinct_urls": 1,
-        "example_urls": [
-          "https://minepi.com/vibe-code/?utm_source=X&utm_medium=x_vibe&utm_content=3B-3&twclid=2ceupjbcdlmh4nm420zbcujkx5"
-        ],
-        "origin_counts": {
-          "feed_buffer": 1
-        },
-        "distinct_referring_accounts": 1,
-        "sample_referring_accounts": [
-          "picoreteam"
         ],
         "distinct_axes": []
       },
