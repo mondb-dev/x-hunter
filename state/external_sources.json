@@ -1,8 +1,8 @@
 {
   "schema_version": "1.0",
-  "generated_at": "2026-07-30T14:21:15.699Z",
+  "generated_at": "2026-07-30T17:21:17.549Z",
   "method": "mechanical_registry_v1",
-  "profiled_at": "2026-07-30T14:21:31.188Z",
+  "profiled_at": "2026-07-30T17:21:29.678Z",
   "sources": [
     {
       "domain": "theguardian.com",
@@ -11,7 +11,7 @@
       "first_seen_at": "2026-03-27T23:17:00Z",
       "last_seen_at": "2026-07-26T22:55:51.714Z",
       "discovery": {
-        "distinct_urls": 618,
+        "distinct_urls": 620,
         "example_urls": [
           "https://www.theguardian.com/us-news/2026/jun/23/trump-immigration-courthouse-arrest-policy",
           "https://www.theguardian.com/us-news/2026/jun/28/ice-minnesota-defending-democracy",
@@ -21,7 +21,7 @@
         ],
         "origin_counts": {
           "ontology_evidence": 40,
-          "reading_queue": 588,
+          "reading_queue": 590,
           "journals": 104,
           "articles": 2
         },
@@ -72,7 +72,7 @@
         "breadth": {
           "score": 0.94,
           "basis": [
-            "distinct_urls:618",
+            "distinct_urls:620",
             "distinct_axes:17",
             "origin_types:4"
           ]
@@ -112,7 +112,7 @@
             "newsroom_domain_pattern",
             "article_path_seen",
             "doi_or_identifier_path_seen",
-            "distinct_urls:618",
+            "distinct_urls:620",
             "distinct_axes:17",
             "origin_types:4",
             "referring_accounts:0",
@@ -695,7 +695,7 @@
       "first_seen_at": "2026-06-22T00:15:00Z",
       "last_seen_at": "2026-07-28T22:02:45.177Z",
       "discovery": {
-        "distinct_urls": 420,
+        "distinct_urls": 421,
         "example_urls": [
           "https://www.nytimes.com/2026/06/19/world/canada/frank-stronach-trial-guilty-sex-charges.html",
           "https://www.nytimes.com/2026/06/27/world/americas/mexican-officials-us-informants.html",
@@ -705,7 +705,7 @@
         ],
         "origin_counts": {
           "ontology_evidence": 13,
-          "reading_queue": 422,
+          "reading_queue": 423,
           "journals": 35
         },
         "distinct_referring_accounts": 0,
@@ -744,7 +744,7 @@
         "breadth": {
           "score": 0.8799999999999999,
           "basis": [
-            "distinct_urls:420",
+            "distinct_urls:421",
             "distinct_axes:7",
             "origin_types:3"
           ]
@@ -783,7 +783,7 @@
           "basis": [
             "newsroom_domain_pattern",
             "article_path_seen",
-            "distinct_urls:420",
+            "distinct_urls:421",
             "distinct_axes:7",
             "origin_types:3",
             "referring_accounts:0",
@@ -1444,7 +1444,7 @@
       "first_seen_at": "2026-06-26T07:05:00Z",
       "last_seen_at": "2026-07-26T19:55:37.560Z",
       "discovery": {
-        "distinct_urls": 367,
+        "distinct_urls": 369,
         "example_urls": [
           "https://www.bbc.co.uk/news/articles/cn8qxz6qypyo",
           "https://www.bbc.co.uk/news/articles/cn075j04pnyo?at_medium=RSS&amp;at_campaign=rss",
@@ -1454,7 +1454,7 @@
         ],
         "origin_counts": {
           "ontology_evidence": 6,
-          "reading_queue": 376,
+          "reading_queue": 378,
           "journals": 15
         },
         "distinct_referring_accounts": 0,
@@ -1489,7 +1489,7 @@
         "breadth": {
           "score": 0.7633333333333332,
           "basis": [
-            "distinct_urls:367",
+            "distinct_urls:369",
             "distinct_axes:4",
             "origin_types:3"
           ]
@@ -1527,7 +1527,7 @@
           "method": "mechanical_v1",
           "basis": [
             "newsroom_domain_pattern",
-            "distinct_urls:367",
+            "distinct_urls:369",
             "distinct_axes:4",
             "origin_types:3",
             "referring_accounts:0",
@@ -1926,7 +1926,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-07-27T15:25:25.818Z",
+        "fetched_at": "2026-07-30T15:51:18.182Z",
         "homepage_url": "https://pcij.org/",
         "example_url": "https://pcij.org/2026/06/23/tycoons-swoop-in-clean-energy-boom/",
         "homepage_status": 200,
@@ -2792,9 +2792,9 @@
       "entity": "T Co",
       "kind": "unknown",
       "first_seen_at": "2016-05-05T18:57:30.000Z",
-      "last_seen_at": "2026-07-30T11:06:34.000Z",
+      "last_seen_at": "2026-07-30T15:59:46.000Z",
       "discovery": {
-        "distinct_urls": 11899,
+        "distinct_urls": 11903,
         "example_urls": [
           "https://t.co/pJSE124ec4",
           "https://t.co/Soz8BXPWaa",
@@ -2803,7 +2803,7 @@
           "https://t.co/cYaqYDRp08"
         ],
         "origin_counts": {
-          "feed_buffer": 9386,
+          "feed_buffer": 9390,
           "feed_buffer_reply": 4877,
           "articles": 1
         },
@@ -2846,7 +2846,7 @@
         "breadth": {
           "score": 0.53,
           "basis": [
-            "distinct_urls:11899",
+            "distinct_urls:11903",
             "distinct_axes:0",
             "origin_types:3"
           ]
@@ -2885,7 +2885,7 @@
           "basis": [
             "unknown_domain_pattern",
             "doi_or_identifier_path_seen",
-            "distinct_urls:11899",
+            "distinct_urls:11903",
             "distinct_axes:0",
             "origin_types:3",
             "referring_accounts:2714",
@@ -3360,9 +3360,9 @@
       "entity": "Gmanetwork",
       "kind": "unknown",
       "first_seen_at": "2026-05-18T03:29:41.732Z",
-      "last_seen_at": "2026-07-30T13:59:11.080Z",
+      "last_seen_at": "2026-07-30T16:51:47.949Z",
       "discovery": {
-        "distinct_urls": 307,
+        "distinct_urls": 312,
         "example_urls": [
           "https://www.gmanetwork.com/news/topstories/nation/994225/explainer-objections-in-a-trial-and-their-role-in-due-process/story/",
           "https://www.gmanetwork.com/news/balitambayan/balita/993931/sen-escudero-sinabing-16-na-boto-ang-kailangan-para-mahatulang-guilty-si-vp-sara-duterte-sa-impea/story/",
@@ -3371,8 +3371,8 @@
           "https://www.gmanetwork.com/news/topstories/nation/994080/electronic-copies-evidence-supreme-court/story/"
         ],
         "origin_counts": {
-          "ontology_evidence": 102,
-          "journals": 356
+          "ontology_evidence": 104,
+          "journals": 361
         },
         "distinct_referring_accounts": 0,
         "sample_referring_accounts": [],
@@ -3421,7 +3421,7 @@
         "breadth": {
           "score": 0.82,
           "basis": [
-            "distinct_urls:307",
+            "distinct_urls:312",
             "distinct_axes:18",
             "origin_types:2"
           ]
@@ -3460,7 +3460,7 @@
           "basis": [
             "unknown_domain_pattern",
             "doi_or_identifier_path_seen",
-            "distinct_urls:307",
+            "distinct_urls:312",
             "distinct_axes:18",
             "origin_types:2",
             "referring_accounts:0",
@@ -7293,9 +7293,9 @@
       "entity": "Bet88 Ph",
       "kind": "unknown",
       "first_seen_at": "2026-07-03T16:00:02.000Z",
-      "last_seen_at": "2026-07-29T21:53:58.285Z",
+      "last_seen_at": "2026-07-30T15:03:09.507Z",
       "discovery": {
-        "distinct_urls": 74,
+        "distinct_urls": 75,
         "example_urls": [
           "https://bet88.ph/en/?type=registration&modal=user&ref=xa027&twclid=27gurqyk8ekpo92oqcm3aeuing",
           "https://bet88.ph/en/?type=registration&modal=user&ref=xa023&twclid=25wrsnnpnc7378nutxmyo1v6kj",
@@ -7305,7 +7305,7 @@
         ],
         "origin_counts": {
           "feed_buffer_reply": 28,
-          "feed_buffer": 46
+          "feed_buffer": 47
         },
         "distinct_referring_accounts": 1,
         "sample_referring_accounts": [
@@ -7336,7 +7336,7 @@
         "breadth": {
           "score": 0.47,
           "basis": [
-            "distinct_urls:74",
+            "distinct_urls:75",
             "distinct_axes:0",
             "origin_types:2"
           ]
@@ -7374,7 +7374,7 @@
           "method": "mechanical_v1",
           "basis": [
             "unknown_domain_pattern",
-            "distinct_urls:74",
+            "distinct_urls:75",
             "distinct_axes:0",
             "origin_types:2",
             "referring_accounts:1",
@@ -19682,7 +19682,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-07-27T15:25:28.542Z",
+        "fetched_at": "2026-07-30T15:51:20.710Z",
         "homepage_url": "https://icmarkets.com/",
         "example_url": "https://www.icmarkets.com/global/en/trade-stocks/?utm_source=twitter&utm_medium=twitter&utm_campaign=tw_en_ph_cv_pr&utm_term=TWITTER_TIMELINE&utm_content=stocks&camp=94092&twclid=2bjzvwwjt6m7l7xogk0tzlhrmm",
         "homepage_status": 200,
@@ -20444,7 +20444,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-07-27T16:55:27.429Z",
+        "fetched_at": "2026-07-30T17:21:18.856Z",
         "homepage_url": "https://slynora.com/",
         "example_url": "https://www.slynora.com/products/non-slip-thick-sole-cloud-slides-for-men?utm_source=twitter&utm_campaign=41804910&twclid=2dusafrlugnqx0tw8g5vfsrw0n",
         "homepage_status": 403,
@@ -34485,7 +34485,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-07-27T13:55:29.127Z",
+        "fetched_at": "2026-07-30T15:21:15.906Z",
         "homepage_url": "https://bingoplus.com/",
         "example_url": "https://bingoplus.com/?palcode=2077999381702086656&twclid=28n3e8dzy2r55kg6u29i1aw2go",
         "homepage_status": 200,
@@ -34608,7 +34608,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-07-27T13:55:30.101Z",
+        "fetched_at": "2026-07-30T15:21:17.595Z",
         "homepage_url": "https://straitstimes.com/",
         "example_url": "https://straitstimes.com/",
         "homepage_status": 200,
@@ -34731,7 +34731,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-07-27T13:55:30.984Z",
+        "fetched_at": "2026-07-30T15:21:17.994Z",
         "homepage_url": "https://brennancenter.org/",
         "example_url": "https://www.brennancenter.org/",
         "homepage_status": 200,
@@ -34854,7 +34854,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-07-27T14:25:28.546Z",
+        "fetched_at": "2026-07-30T15:21:22.821Z",
         "homepage_url": "https://thesandersfirmpc.com/",
         "example_url": "https://thesandersfirmpc.com/evidentiary-inversion-when-internal-investigations-manufacture-misconduct/",
         "homepage_status": 200,
@@ -34977,7 +34977,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-07-27T14:25:30.048Z",
+        "fetched_at": "2026-07-30T15:51:21.484Z",
         "homepage_url": "https://hindustantimes.com/",
         "example_url": "https://www.hindustantimes.com/cities/lucknow-news/saffron-cash-for-crores-probe-into-ram-mandir-donation-scam-widens-to-employees-150-sevadars-under-scanner-101718873733575.html",
         "homepage_status": 200,
@@ -35100,7 +35100,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-07-27T14:25:31.918Z",
+        "fetched_at": "2026-07-30T15:51:22.714Z",
         "homepage_url": "https://britannica.com/",
         "example_url": "https://www.britannica.com/event/2026-Iran-War",
         "homepage_status": 403,
@@ -35223,7 +35223,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-07-27T14:25:33.062Z",
+        "fetched_at": "2026-07-30T16:51:17.634Z",
         "homepage_url": "https://icc-cpi.int/",
         "example_url": "https://icc-cpi.int/news/icc-concludes-confirmation-charges-hearing-el-hishri-case",
         "homepage_status": 403,
@@ -35347,7 +35347,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-07-27T15:25:28.794Z",
+        "fetched_at": "2026-07-30T16:51:18.319Z",
         "homepage_url": "https://abs-cbn.com/",
         "example_url": "https://news.abs-cbn.com/news/2026/06/09/nbi-dismisses-kickback-claims-as-hearsay",
         "homepage_status": 403,
@@ -35374,6 +35374,131 @@
           "has_contact_link": false,
           "has_corrections_link": false,
           "outbound_links_count": 0,
+          "opinion_marker": false
+        }
+      }
+    },
+    {
+      "domain": "thefastmode.com",
+      "entity": "Thefastmode",
+      "kind": "unknown",
+      "first_seen_at": "2026-07-21T08:49:55.450Z",
+      "last_seen_at": "2026-07-30T16:53:11.440Z",
+      "discovery": {
+        "distinct_urls": 3,
+        "example_urls": [
+          "https://www.thefastmode.com/technology-solutions/49624-ai-powered-connectivity-apac-charts-a-unified-path-to-a-smarter-digital-future?twclid=281yms0e71cmmk7m5khtvm4j4n",
+          "https://www.thefastmode.com/technology-and-solution-trends/49810-huawei-partners-unveil-thailand-ai-ecosystem-initiative-to-accelerate-asean-ai-hub-vision?twclid=21g790l2obcn19xuqoxxwspgck",
+          "https://www.thefastmode.com/technology-and-solution-trends/49810-huawei-partners-unveil-thailand-ai-ecosystem-initiative-to-accelerate-asean-ai-hub-vision?twclid=2aubrga0i1yos9xrwoxmremec6"
+        ],
+        "origin_counts": {
+          "feed_buffer": 3
+        },
+        "distinct_referring_accounts": 2,
+        "sample_referring_accounts": [
+          "huawei",
+          "huaweiapac"
+        ],
+        "distinct_axes": []
+      },
+      "claims": {
+        "total": 0,
+        "supported": 0,
+        "refuted": 0,
+        "contested": 0,
+        "unverified": 0,
+        "resolved_count": 0
+      },
+      "structural_features": {
+        "has_search_paths": false,
+        "has_article_paths": false,
+        "has_doi_paths": false
+      },
+      "ratings": {
+        "provenance": {
+          "score": 0.45,
+          "basis": [
+            "unknown_domain_pattern"
+          ]
+        },
+        "breadth": {
+          "score": 0.1475,
+          "basis": [
+            "distinct_urls:3",
+            "distinct_axes:0",
+            "origin_types:1"
+          ]
+        },
+        "corroboration": {
+          "score": 0.3041666666666667,
+          "basis": [
+            "referring_accounts:2",
+            "origin_types:1"
+          ]
+        },
+        "track_record": {
+          "score": null,
+          "basis": [
+            "no_resolved_claims_observed"
+          ]
+        },
+        "overall": {
+          "score": 0.37015625,
+          "confidence": 0.17085,
+          "method": "mechanical_v1",
+          "basis": [
+            "unknown_domain_pattern",
+            "distinct_urls:3",
+            "distinct_axes:0",
+            "origin_types:1",
+            "referring_accounts:2",
+            "origin_types:1",
+            "track_record_unavailable"
+          ]
+        },
+        "profile": {
+          "score": 0.84,
+          "confidence": 0.85,
+          "basis": [
+            "meta_author:true",
+            "published_time:true",
+            "canonical:true",
+            "about:true",
+            "contact:true",
+            "corrections:false",
+            "outbound_links:20",
+            "opinion_marker:false"
+          ]
+        }
+      },
+      "profile": {
+        "fetched_at": "2026-07-30T17:21:22.019Z",
+        "homepage_url": "https://thefastmode.com/",
+        "example_url": "https://www.thefastmode.com/technology-solutions/49624-ai-powered-connectivity-apac-charts-a-unified-path-to-a-smarter-digital-future?twclid=281yms0e71cmmk7m5khtvm4j4n",
+        "homepage_status": 200,
+        "example_status": 200,
+        "homepage_final_url": "https://www.thefastmode.com/",
+        "example_final_url": "https://www.thefastmode.com/technology-solutions/49624-ai-powered-connectivity-apac-charts-a-unified-path-to-a-smarter-digital-future?twclid=281yms0e71cmmk7m5khtvm4j4n",
+        "homepage_content_type": "text/html; charset=utf-8",
+        "example_content_type": "text/html; charset=UTF-8",
+        "homepage": {
+          "has_meta_author": true,
+          "has_published_time": false,
+          "has_canonical": true,
+          "has_about_link": true,
+          "has_contact_link": true,
+          "has_corrections_link": false,
+          "outbound_links_count": 19,
+          "opinion_marker": false
+        },
+        "example": {
+          "has_meta_author": true,
+          "has_published_time": true,
+          "has_canonical": true,
+          "has_about_link": true,
+          "has_contact_link": true,
+          "has_corrections_link": false,
+          "outbound_links_count": 20,
           "opinion_marker": false
         }
       }
@@ -35442,6 +35567,20 @@
             "no_resolved_claims_observed"
           ]
         },
+        "profile": {
+          "score": 0.12,
+          "confidence": 0.55,
+          "basis": [
+            "meta_author:false",
+            "published_time:false",
+            "canonical:false",
+            "about:false",
+            "contact:true",
+            "corrections:false",
+            "outbound_links:0",
+            "opinion_marker:false"
+          ]
+        },
         "overall": {
           "score": 0.37015625,
           "confidence": 0.17085,
@@ -35455,6 +35594,37 @@
             "origin_types:1",
             "track_record_unavailable"
           ]
+        }
+      },
+      "profile": {
+        "fetched_at": "2026-07-30T16:51:20.137Z",
+        "homepage_url": "https://kuvi.ai/",
+        "example_url": "https://altura.kuvi.ai/leaderboard?twclid=22146c8rer0fhb7658qzfblh0s",
+        "homepage_status": 200,
+        "example_status": 200,
+        "homepage_final_url": "https://kuvi.ai/",
+        "example_final_url": "https://altura.kuvi.ai/leaderboard?twclid=22146c8rer0fhb7658qzfblh0s",
+        "homepage_content_type": "text/html",
+        "example_content_type": "text/html; charset=utf-8",
+        "homepage": {
+          "has_meta_author": false,
+          "has_published_time": false,
+          "has_canonical": true,
+          "has_about_link": false,
+          "has_contact_link": true,
+          "has_corrections_link": false,
+          "outbound_links_count": 0,
+          "opinion_marker": false
+        },
+        "example": {
+          "has_meta_author": false,
+          "has_published_time": false,
+          "has_canonical": false,
+          "has_about_link": false,
+          "has_contact_link": false,
+          "has_corrections_link": false,
+          "outbound_links_count": 0,
+          "opinion_marker": false
         }
       }
     },
@@ -35551,7 +35721,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-07-27T15:25:29.546Z",
+        "fetched_at": "2026-07-30T16:51:21.108Z",
         "homepage_url": "https://abscbn.news/",
         "example_url": "https://abscbn.news/4cXfLnd",
         "homepage_status": 403,
@@ -35675,7 +35845,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-07-27T15:55:30.685Z",
+        "fetched_at": "2026-07-30T17:21:27.301Z",
         "homepage_url": "https://thedispatch.com/",
         "example_url": "https://thedispatch.com/article/slavery-christianity-judaism/?twclid=224n5l3gu5l6wy53cctpntxjmr",
         "homepage_status": 200,
@@ -35799,7 +35969,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-07-27T15:55:33.502Z",
+        "fetched_at": "2026-07-30T17:21:29.678Z",
         "homepage_url": "https://scienceandculture.com/",
         "example_url": "https://scienceandculture.com/2026/04/cosmic-orphans-no-more-stephen-meyer-on-the-meaning-of-the-artemis-ii-mission/?twclid=2rnhdm9vyiuko1egq7pyr6uby",
         "homepage_status": 200,
@@ -39313,85 +39483,6 @@
           "has_corrections_link": false,
           "outbound_links_count": 2,
           "opinion_marker": false
-        }
-      }
-    },
-    {
-      "domain": "thefastmode.com",
-      "entity": "Thefastmode",
-      "kind": "unknown",
-      "first_seen_at": "2026-07-21T08:49:55.450Z",
-      "last_seen_at": "2026-07-29T15:07:29.826Z",
-      "discovery": {
-        "distinct_urls": 2,
-        "example_urls": [
-          "https://www.thefastmode.com/technology-solutions/49624-ai-powered-connectivity-apac-charts-a-unified-path-to-a-smarter-digital-future?twclid=281yms0e71cmmk7m5khtvm4j4n",
-          "https://www.thefastmode.com/technology-and-solution-trends/49810-huawei-partners-unveil-thailand-ai-ecosystem-initiative-to-accelerate-asean-ai-hub-vision?twclid=21g790l2obcn19xuqoxxwspgck"
-        ],
-        "origin_counts": {
-          "feed_buffer": 2
-        },
-        "distinct_referring_accounts": 2,
-        "sample_referring_accounts": [
-          "huawei",
-          "huaweiapac"
-        ],
-        "distinct_axes": []
-      },
-      "claims": {
-        "total": 0,
-        "supported": 0,
-        "refuted": 0,
-        "contested": 0,
-        "unverified": 0,
-        "resolved_count": 0
-      },
-      "structural_features": {
-        "has_search_paths": false,
-        "has_article_paths": false,
-        "has_doi_paths": false
-      },
-      "ratings": {
-        "provenance": {
-          "score": 0.45,
-          "basis": [
-            "unknown_domain_pattern"
-          ]
-        },
-        "breadth": {
-          "score": 0.11833333333333332,
-          "basis": [
-            "distinct_urls:2",
-            "distinct_axes:0",
-            "origin_types:1"
-          ]
-        },
-        "corroboration": {
-          "score": 0.3041666666666667,
-          "basis": [
-            "referring_accounts:2",
-            "origin_types:1"
-          ]
-        },
-        "track_record": {
-          "score": null,
-          "basis": [
-            "no_resolved_claims_observed"
-          ]
-        },
-        "overall": {
-          "score": 0.36377604166666666,
-          "confidence": 0.142225,
-          "method": "mechanical_v1",
-          "basis": [
-            "unknown_domain_pattern",
-            "distinct_urls:2",
-            "distinct_axes:0",
-            "origin_types:1",
-            "referring_accounts:2",
-            "origin_types:1",
-            "track_record_unavailable"
-          ]
         }
       }
     },
