@@ -1,8 +1,8 @@
 {
   "schema_version": "1.0",
-  "generated_at": "2026-07-29T23:21:01.399Z",
+  "generated_at": "2026-07-30T00:51:02.162Z",
   "method": "mechanical_registry_v1",
-  "profiled_at": "2026-07-29T23:21:09.144Z",
+  "profiled_at": "2026-07-30T00:51:08.569Z",
   "sources": [
     {
       "domain": "theguardian.com",
@@ -11,7 +11,7 @@
       "first_seen_at": "2026-03-27T23:17:00Z",
       "last_seen_at": "2026-07-26T22:55:51.714Z",
       "discovery": {
-        "distinct_urls": 608,
+        "distinct_urls": 609,
         "example_urls": [
           "https://www.theguardian.com/us-news/2026/jun/23/trump-immigration-courthouse-arrest-policy",
           "https://www.theguardian.com/us-news/2026/jun/28/ice-minnesota-defending-democracy",
@@ -21,7 +21,7 @@
         ],
         "origin_counts": {
           "ontology_evidence": 40,
-          "reading_queue": 578,
+          "reading_queue": 579,
           "journals": 104,
           "articles": 2
         },
@@ -72,7 +72,7 @@
         "breadth": {
           "score": 0.94,
           "basis": [
-            "distinct_urls:608",
+            "distinct_urls:609",
             "distinct_axes:17",
             "origin_types:4"
           ]
@@ -112,7 +112,7 @@
             "newsroom_domain_pattern",
             "article_path_seen",
             "doi_or_identifier_path_seen",
-            "distinct_urls:608",
+            "distinct_urls:609",
             "distinct_axes:17",
             "origin_types:4",
             "referring_accounts:0",
@@ -1444,7 +1444,7 @@
       "first_seen_at": "2026-06-26T07:05:00Z",
       "last_seen_at": "2026-07-26T19:55:37.560Z",
       "discovery": {
-        "distinct_urls": 360,
+        "distinct_urls": 361,
         "example_urls": [
           "https://www.bbc.co.uk/news/articles/cn8qxz6qypyo",
           "https://www.bbc.co.uk/news/articles/cn075j04pnyo?at_medium=RSS&amp;at_campaign=rss",
@@ -1454,7 +1454,7 @@
         ],
         "origin_counts": {
           "ontology_evidence": 6,
-          "reading_queue": 369,
+          "reading_queue": 370,
           "journals": 15
         },
         "distinct_referring_accounts": 0,
@@ -1489,7 +1489,7 @@
         "breadth": {
           "score": 0.7633333333333332,
           "basis": [
-            "distinct_urls:360",
+            "distinct_urls:361",
             "distinct_axes:4",
             "origin_types:3"
           ]
@@ -1527,7 +1527,7 @@
           "method": "mechanical_v1",
           "basis": [
             "newsroom_domain_pattern",
-            "distinct_urls:360",
+            "distinct_urls:361",
             "distinct_axes:4",
             "origin_types:3",
             "referring_accounts:0",
@@ -2792,9 +2792,9 @@
       "entity": "T Co",
       "kind": "unknown",
       "first_seen_at": "2016-05-05T18:57:30.000Z",
-      "last_seen_at": "2026-07-29T21:54:39.000Z",
+      "last_seen_at": "2026-07-30T00:09:08.169Z",
       "discovery": {
-        "distinct_urls": 11777,
+        "distinct_urls": 11785,
         "example_urls": [
           "https://t.co/pJSE124ec4",
           "https://t.co/Soz8BXPWaa",
@@ -2803,11 +2803,11 @@
           "https://t.co/cYaqYDRp08"
         ],
         "origin_counts": {
-          "feed_buffer": 9244,
+          "feed_buffer": 9257,
           "feed_buffer_reply": 4874,
           "articles": 1
         },
-        "distinct_referring_accounts": 2712,
+        "distinct_referring_accounts": 2713,
         "sample_referring_accounts": [
           "0808iveta",
           "09abracadabra",
@@ -2846,7 +2846,7 @@
         "breadth": {
           "score": 0.53,
           "basis": [
-            "distinct_urls:11777",
+            "distinct_urls:11785",
             "distinct_axes:0",
             "origin_types:3"
           ]
@@ -2854,7 +2854,7 @@
         "corroboration": {
           "score": 0.9125,
           "basis": [
-            "referring_accounts:2712",
+            "referring_accounts:2713",
             "origin_types:3"
           ]
         },
@@ -2885,10 +2885,10 @@
           "basis": [
             "unknown_domain_pattern",
             "doi_or_identifier_path_seen",
-            "distinct_urls:11777",
+            "distinct_urls:11785",
             "distinct_axes:0",
             "origin_types:3",
-            "referring_accounts:2712",
+            "referring_accounts:2713",
             "origin_types:3",
             "track_record_unavailable"
           ]
@@ -3209,9 +3209,9 @@
       "entity": "Rappler",
       "kind": "unknown",
       "first_seen_at": "2026-06-22T04:04:30.428Z",
-      "last_seen_at": "2026-07-29T15:21:39.906Z",
+      "last_seen_at": "2026-07-30T00:21:36.816Z",
       "discovery": {
-        "distinct_urls": 195,
+        "distinct_urls": 197,
         "example_urls": [
           "https://www.rappler.com/fact-check-no-arrest-warrant-issued-vs-marcoleta",
           "https://www.rappler.com/technology/decoded-tacloban-school-shooting-disinformation-kiko-barzaga-discussions-juvenile-justice-law/",
@@ -3221,7 +3221,7 @@
         ],
         "origin_counts": {
           "ontology_evidence": 100,
-          "journals": 227,
+          "journals": 229,
           "articles": 1
         },
         "distinct_referring_accounts": 0,
@@ -3276,7 +3276,7 @@
         "breadth": {
           "score": 0.8799999999999999,
           "basis": [
-            "distinct_urls:195",
+            "distinct_urls:197",
             "distinct_axes:24",
             "origin_types:3"
           ]
@@ -3314,7 +3314,7 @@
           "method": "mechanical_v1",
           "basis": [
             "unknown_domain_pattern",
-            "distinct_urls:195",
+            "distinct_urls:197",
             "distinct_axes:24",
             "origin_types:3",
             "referring_accounts:0",
@@ -9575,6 +9575,133 @@
       }
     },
     {
+      "domain": "utspaycashback.com",
+      "entity": "Utspaycashback",
+      "kind": "unknown",
+      "first_seen_at": "2026-05-21T14:10:00.000Z",
+      "last_seen_at": "2026-07-30T00:34:05.986Z",
+      "discovery": {
+        "distinct_urls": 14,
+        "example_urls": [
+          "https://www.utspaycashback.com/?twclid=2650deq3k4trsekhk3xdbpt9o7",
+          "https://www.utspaycashback.com/",
+          "https://www.utspaycashback.com/en/",
+          "https://www.utspaycashback.com/?twclid=292o3qrnsgky7onjhs2eapiz8g",
+          "https://www.utspaycashback.com/en/?twclid=2a22fdkdzakde312aqu78i88sn"
+        ],
+        "origin_counts": {
+          "feed_buffer_reply": 14,
+          "feed_buffer": 11
+        },
+        "distinct_referring_accounts": 1,
+        "sample_referring_accounts": [
+          "utspay_official"
+        ],
+        "distinct_axes": []
+      },
+      "claims": {
+        "total": 0,
+        "supported": 0,
+        "refuted": 0,
+        "contested": 0,
+        "unverified": 0,
+        "resolved_count": 0
+      },
+      "structural_features": {
+        "has_search_paths": false,
+        "has_article_paths": false,
+        "has_doi_paths": false
+      },
+      "ratings": {
+        "provenance": {
+          "score": 0.45,
+          "basis": [
+            "unknown_domain_pattern"
+          ]
+        },
+        "breadth": {
+          "score": 0.47,
+          "basis": [
+            "distinct_urls:14",
+            "distinct_axes:0",
+            "origin_types:2"
+          ]
+        },
+        "corroboration": {
+          "score": 0.2833333333333333,
+          "basis": [
+            "referring_accounts:1",
+            "origin_types:2"
+          ]
+        },
+        "track_record": {
+          "score": null,
+          "basis": [
+            "no_resolved_claims_observed"
+          ]
+        },
+        "profile": {
+          "score": 0.4,
+          "confidence": 0.65,
+          "basis": [
+            "meta_author:false",
+            "published_time:true",
+            "canonical:true",
+            "about:false",
+            "contact:false",
+            "corrections:false",
+            "outbound_links:35",
+            "opinion_marker:false"
+          ]
+        },
+        "overall": {
+          "score": 0.43875,
+          "confidence": 0.4617,
+          "method": "mechanical_v1",
+          "basis": [
+            "unknown_domain_pattern",
+            "distinct_urls:14",
+            "distinct_axes:0",
+            "origin_types:2",
+            "referring_accounts:1",
+            "origin_types:2",
+            "track_record_unavailable"
+          ]
+        }
+      },
+      "profile": {
+        "fetched_at": "2026-07-27T09:25:23.088Z",
+        "homepage_url": "https://utspaycashback.com/",
+        "example_url": "https://www.utspaycashback.com/?twclid=2650deq3k4trsekhk3xdbpt9o7",
+        "homepage_status": 200,
+        "example_status": 200,
+        "homepage_final_url": "https://www.utspaycashback.com/en/",
+        "example_final_url": "https://www.utspaycashback.com/?twclid=2650deq3k4trsekhk3xdbpt9o7",
+        "homepage_content_type": "text/html; charset=UTF-8",
+        "example_content_type": "text/html; charset=UTF-8",
+        "homepage": {
+          "has_meta_author": false,
+          "has_published_time": true,
+          "has_canonical": true,
+          "has_about_link": false,
+          "has_contact_link": false,
+          "has_corrections_link": false,
+          "outbound_links_count": 35,
+          "opinion_marker": false
+        },
+        "example": {
+          "has_meta_author": false,
+          "has_published_time": true,
+          "has_canonical": true,
+          "has_about_link": false,
+          "has_contact_link": false,
+          "has_corrections_link": false,
+          "outbound_links_count": 35,
+          "opinion_marker": false
+        }
+      }
+    },
+    {
       "domain": "fx-edge.com",
       "entity": "Fx-Edge",
       "kind": "unknown",
@@ -9951,133 +10078,6 @@
           "has_contact_link": false,
           "has_corrections_link": false,
           "outbound_links_count": 0,
-          "opinion_marker": false
-        }
-      }
-    },
-    {
-      "domain": "utspaycashback.com",
-      "entity": "Utspaycashback",
-      "kind": "unknown",
-      "first_seen_at": "2026-05-21T14:10:00.000Z",
-      "last_seen_at": "2026-07-29T14:57:23.519Z",
-      "discovery": {
-        "distinct_urls": 13,
-        "example_urls": [
-          "https://www.utspaycashback.com/?twclid=2650deq3k4trsekhk3xdbpt9o7",
-          "https://www.utspaycashback.com/",
-          "https://www.utspaycashback.com/en/",
-          "https://www.utspaycashback.com/?twclid=292o3qrnsgky7onjhs2eapiz8g",
-          "https://www.utspaycashback.com/en/?twclid=2a22fdkdzakde312aqu78i88sn"
-        ],
-        "origin_counts": {
-          "feed_buffer_reply": 14,
-          "feed_buffer": 10
-        },
-        "distinct_referring_accounts": 1,
-        "sample_referring_accounts": [
-          "utspay_official"
-        ],
-        "distinct_axes": []
-      },
-      "claims": {
-        "total": 0,
-        "supported": 0,
-        "refuted": 0,
-        "contested": 0,
-        "unverified": 0,
-        "resolved_count": 0
-      },
-      "structural_features": {
-        "has_search_paths": false,
-        "has_article_paths": false,
-        "has_doi_paths": false
-      },
-      "ratings": {
-        "provenance": {
-          "score": 0.45,
-          "basis": [
-            "unknown_domain_pattern"
-          ]
-        },
-        "breadth": {
-          "score": 0.47,
-          "basis": [
-            "distinct_urls:13",
-            "distinct_axes:0",
-            "origin_types:2"
-          ]
-        },
-        "corroboration": {
-          "score": 0.2833333333333333,
-          "basis": [
-            "referring_accounts:1",
-            "origin_types:2"
-          ]
-        },
-        "track_record": {
-          "score": null,
-          "basis": [
-            "no_resolved_claims_observed"
-          ]
-        },
-        "profile": {
-          "score": 0.4,
-          "confidence": 0.65,
-          "basis": [
-            "meta_author:false",
-            "published_time:true",
-            "canonical:true",
-            "about:false",
-            "contact:false",
-            "corrections:false",
-            "outbound_links:35",
-            "opinion_marker:false"
-          ]
-        },
-        "overall": {
-          "score": 0.43875,
-          "confidence": 0.4392,
-          "method": "mechanical_v1",
-          "basis": [
-            "unknown_domain_pattern",
-            "distinct_urls:13",
-            "distinct_axes:0",
-            "origin_types:2",
-            "referring_accounts:1",
-            "origin_types:2",
-            "track_record_unavailable"
-          ]
-        }
-      },
-      "profile": {
-        "fetched_at": "2026-07-27T09:25:23.088Z",
-        "homepage_url": "https://utspaycashback.com/",
-        "example_url": "https://www.utspaycashback.com/?twclid=2650deq3k4trsekhk3xdbpt9o7",
-        "homepage_status": 200,
-        "example_status": 200,
-        "homepage_final_url": "https://www.utspaycashback.com/en/",
-        "example_final_url": "https://www.utspaycashback.com/?twclid=2650deq3k4trsekhk3xdbpt9o7",
-        "homepage_content_type": "text/html; charset=UTF-8",
-        "example_content_type": "text/html; charset=UTF-8",
-        "homepage": {
-          "has_meta_author": false,
-          "has_published_time": true,
-          "has_canonical": true,
-          "has_about_link": false,
-          "has_contact_link": false,
-          "has_corrections_link": false,
-          "outbound_links_count": 35,
-          "opinion_marker": false
-        },
-        "example": {
-          "has_meta_author": false,
-          "has_published_time": true,
-          "has_canonical": true,
-          "has_about_link": false,
-          "has_contact_link": false,
-          "has_corrections_link": false,
-          "outbound_links_count": 35,
           "opinion_marker": false
         }
       }
@@ -11739,6 +11739,133 @@
       }
     },
     {
+      "domain": "interserver.net",
+      "entity": "Interserver",
+      "kind": "unknown",
+      "first_seen_at": "2026-05-22T03:27:37.000Z",
+      "last_seen_at": "2026-07-30T00:29:08.877Z",
+      "discovery": {
+        "distinct_urls": 10,
+        "example_urls": [
+          "https://www.interserver.net/vps/?twclid=29rh8w2who6jt1ovqguffmygqn",
+          "https://www.interserver.net/vps/?twclid=249ibste62u6gvf5jsf0xqer00",
+          "https://www.interserver.net/vps/?utm_source=twitter&utm_medium=cpc&utm_campaign=vps-sales-ad3&twclid=2bbezy98yja2epnkh65tcck3h2",
+          "https://www.interserver.net/vps/?utm_source=twitter&utm_medium=cpc&utm_campaign=vps-sales-ad3&twclid=2d9s4oztq4z0s0m72y7tm5emqp",
+          "https://www.interserver.net/vps/?utm_source=twitter&utm_medium=cpc&utm_campaign=vps-sales-ad2&twclid=26x02v6lws46kalc4itxv86p18"
+        ],
+        "origin_counts": {
+          "feed_buffer_reply": 5,
+          "feed_buffer": 5
+        },
+        "distinct_referring_accounts": 1,
+        "sample_referring_accounts": [
+          "interserver"
+        ],
+        "distinct_axes": []
+      },
+      "claims": {
+        "total": 0,
+        "supported": 0,
+        "refuted": 0,
+        "contested": 0,
+        "unverified": 0,
+        "resolved_count": 0
+      },
+      "structural_features": {
+        "has_search_paths": false,
+        "has_article_paths": false,
+        "has_doi_paths": false
+      },
+      "ratings": {
+        "provenance": {
+          "score": 0.45,
+          "basis": [
+            "unknown_domain_pattern"
+          ]
+        },
+        "breadth": {
+          "score": 0.4116666666666667,
+          "basis": [
+            "distinct_urls:10",
+            "distinct_axes:0",
+            "origin_types:2"
+          ]
+        },
+        "corroboration": {
+          "score": 0.2833333333333333,
+          "basis": [
+            "referring_accounts:1",
+            "origin_types:2"
+          ]
+        },
+        "track_record": {
+          "score": null,
+          "basis": [
+            "no_resolved_claims_observed"
+          ]
+        },
+        "profile": {
+          "score": 0.28,
+          "confidence": 0.65,
+          "basis": [
+            "meta_author:false",
+            "published_time:false",
+            "canonical:true",
+            "about:true",
+            "contact:false",
+            "corrections:false",
+            "outbound_links:4",
+            "opinion_marker:false"
+          ]
+        },
+        "overall": {
+          "score": 0.42598958333333337,
+          "confidence": 0.35945000000000005,
+          "method": "mechanical_v1",
+          "basis": [
+            "unknown_domain_pattern",
+            "distinct_urls:10",
+            "distinct_axes:0",
+            "origin_types:2",
+            "referring_accounts:1",
+            "origin_types:2",
+            "track_record_unavailable"
+          ]
+        }
+      },
+      "profile": {
+        "fetched_at": "2026-07-27T07:55:19.865Z",
+        "homepage_url": "https://interserver.net/",
+        "example_url": "https://www.interserver.net/vps/?twclid=29rh8w2who6jt1ovqguffmygqn",
+        "homepage_status": 200,
+        "example_status": 200,
+        "homepage_final_url": "https://www.interserver.net/",
+        "example_final_url": "https://www.interserver.net/vps/?twclid=29rh8w2who6jt1ovqguffmygqn",
+        "homepage_content_type": "text/html; charset=UTF-8",
+        "example_content_type": "text/html; charset=UTF-8",
+        "homepage": {
+          "has_meta_author": false,
+          "has_published_time": false,
+          "has_canonical": true,
+          "has_about_link": true,
+          "has_contact_link": false,
+          "has_corrections_link": false,
+          "outbound_links_count": 4,
+          "opinion_marker": false
+        },
+        "example": {
+          "has_meta_author": false,
+          "has_published_time": false,
+          "has_canonical": true,
+          "has_about_link": true,
+          "has_contact_link": false,
+          "has_corrections_link": false,
+          "outbound_links_count": 4,
+          "opinion_marker": false
+        }
+      }
+    },
+    {
       "domain": "mikmak.ai",
       "entity": "Mikmak Ai",
       "kind": "unknown",
@@ -12119,133 +12246,6 @@
           "has_contact_link": false,
           "has_corrections_link": false,
           "outbound_links_count": 7,
-          "opinion_marker": false
-        }
-      }
-    },
-    {
-      "domain": "interserver.net",
-      "entity": "Interserver",
-      "kind": "unknown",
-      "first_seen_at": "2026-05-22T03:27:37.000Z",
-      "last_seen_at": "2026-07-27T19:03:04.203Z",
-      "discovery": {
-        "distinct_urls": 9,
-        "example_urls": [
-          "https://www.interserver.net/vps/?twclid=29rh8w2who6jt1ovqguffmygqn",
-          "https://www.interserver.net/vps/?twclid=249ibste62u6gvf5jsf0xqer00",
-          "https://www.interserver.net/vps/?utm_source=twitter&utm_medium=cpc&utm_campaign=vps-sales-ad3&twclid=2bbezy98yja2epnkh65tcck3h2",
-          "https://www.interserver.net/vps/?utm_source=twitter&utm_medium=cpc&utm_campaign=vps-sales-ad3&twclid=2d9s4oztq4z0s0m72y7tm5emqp",
-          "https://www.interserver.net/vps/?utm_source=twitter&utm_medium=cpc&utm_campaign=vps-sales-ad2&twclid=26x02v6lws46kalc4itxv86p18"
-        ],
-        "origin_counts": {
-          "feed_buffer_reply": 5,
-          "feed_buffer": 4
-        },
-        "distinct_referring_accounts": 1,
-        "sample_referring_accounts": [
-          "interserver"
-        ],
-        "distinct_axes": []
-      },
-      "claims": {
-        "total": 0,
-        "supported": 0,
-        "refuted": 0,
-        "contested": 0,
-        "unverified": 0,
-        "resolved_count": 0
-      },
-      "structural_features": {
-        "has_search_paths": false,
-        "has_article_paths": false,
-        "has_doi_paths": false
-      },
-      "ratings": {
-        "provenance": {
-          "score": 0.45,
-          "basis": [
-            "unknown_domain_pattern"
-          ]
-        },
-        "breadth": {
-          "score": 0.38249999999999995,
-          "basis": [
-            "distinct_urls:9",
-            "distinct_axes:0",
-            "origin_types:2"
-          ]
-        },
-        "corroboration": {
-          "score": 0.2833333333333333,
-          "basis": [
-            "referring_accounts:1",
-            "origin_types:2"
-          ]
-        },
-        "track_record": {
-          "score": null,
-          "basis": [
-            "no_resolved_claims_observed"
-          ]
-        },
-        "profile": {
-          "score": 0.28,
-          "confidence": 0.65,
-          "basis": [
-            "meta_author:false",
-            "published_time:false",
-            "canonical:true",
-            "about:true",
-            "contact:false",
-            "corrections:false",
-            "outbound_links:4",
-            "opinion_marker:false"
-          ]
-        },
-        "overall": {
-          "score": 0.419609375,
-          "confidence": 0.330825,
-          "method": "mechanical_v1",
-          "basis": [
-            "unknown_domain_pattern",
-            "distinct_urls:9",
-            "distinct_axes:0",
-            "origin_types:2",
-            "referring_accounts:1",
-            "origin_types:2",
-            "track_record_unavailable"
-          ]
-        }
-      },
-      "profile": {
-        "fetched_at": "2026-07-27T07:55:19.865Z",
-        "homepage_url": "https://interserver.net/",
-        "example_url": "https://www.interserver.net/vps/?twclid=29rh8w2who6jt1ovqguffmygqn",
-        "homepage_status": 200,
-        "example_status": 200,
-        "homepage_final_url": "https://www.interserver.net/",
-        "example_final_url": "https://www.interserver.net/vps/?twclid=29rh8w2who6jt1ovqguffmygqn",
-        "homepage_content_type": "text/html; charset=UTF-8",
-        "example_content_type": "text/html; charset=UTF-8",
-        "homepage": {
-          "has_meta_author": false,
-          "has_published_time": false,
-          "has_canonical": true,
-          "has_about_link": true,
-          "has_contact_link": false,
-          "has_corrections_link": false,
-          "outbound_links_count": 4,
-          "opinion_marker": false
-        },
-        "example": {
-          "has_meta_author": false,
-          "has_published_time": false,
-          "has_canonical": true,
-          "has_about_link": true,
-          "has_contact_link": false,
-          "has_corrections_link": false,
-          "outbound_links_count": 4,
           "opinion_marker": false
         }
       }
@@ -14397,6 +14397,132 @@
       }
     },
     {
+      "domain": "hypeddit.com",
+      "entity": "Hypeddit",
+      "kind": "unknown",
+      "first_seen_at": "2026-07-19T08:05:35.939Z",
+      "last_seen_at": "2026-07-29T23:54:05.264Z",
+      "discovery": {
+        "distinct_urls": 15,
+        "example_urls": [
+          "https://hypeddit.com/psychicfeverfromexiletribe/ifyouremine?twclid=23rtj49iasvoyuwyxn3g4hwi03",
+          "https://hypeddit.com/psychicfeverfromexiletribe/ifyouremine?twclid=24chotbibbt8a0guub3ga06stv",
+          "https://hypeddit.com/psychicfeverfromexiletribe/ifyouremine?twclid=2a7yazph72f481c4hyrzo1fp4w",
+          "https://hypeddit.com/psychicfeverfromexiletribe/ifyouremine?twclid=2a7oaffgj6eyoqu5s5roa8vbuh",
+          "https://hypeddit.com/psychicfeverfromexiletribe/ifyouremine?twclid=290de28r840lrd277sw9rf7u49"
+        ],
+        "origin_counts": {
+          "feed_buffer": 15
+        },
+        "distinct_referring_accounts": 1,
+        "sample_referring_accounts": [
+          "psyfe_official"
+        ],
+        "distinct_axes": []
+      },
+      "claims": {
+        "total": 0,
+        "supported": 0,
+        "refuted": 0,
+        "contested": 0,
+        "unverified": 0,
+        "resolved_count": 0
+      },
+      "structural_features": {
+        "has_search_paths": false,
+        "has_article_paths": false,
+        "has_doi_paths": false
+      },
+      "ratings": {
+        "provenance": {
+          "score": 0.45,
+          "basis": [
+            "unknown_domain_pattern"
+          ]
+        },
+        "breadth": {
+          "score": 0.41,
+          "basis": [
+            "distinct_urls:15",
+            "distinct_axes:0",
+            "origin_types:1"
+          ]
+        },
+        "corroboration": {
+          "score": 0.19583333333333333,
+          "basis": [
+            "referring_accounts:1",
+            "origin_types:1"
+          ]
+        },
+        "track_record": {
+          "score": null,
+          "basis": [
+            "no_resolved_claims_observed"
+          ]
+        },
+        "profile": {
+          "score": 0.55,
+          "confidence": 0.75,
+          "basis": [
+            "meta_author:true",
+            "published_time:false",
+            "canonical:true",
+            "about:true",
+            "contact:true",
+            "corrections:false",
+            "outbound_links:1",
+            "opinion_marker:false"
+          ]
+        },
+        "overall": {
+          "score": 0.417421875,
+          "confidence": 0.46372500000000005,
+          "method": "mechanical_v1",
+          "basis": [
+            "unknown_domain_pattern",
+            "distinct_urls:15",
+            "distinct_axes:0",
+            "origin_types:1",
+            "referring_accounts:1",
+            "origin_types:1",
+            "track_record_unavailable"
+          ]
+        }
+      },
+      "profile": {
+        "fetched_at": "2026-07-29T06:42:30.453Z",
+        "homepage_url": "https://hypeddit.com/",
+        "example_url": "https://hypeddit.com/psychicfeverfromexiletribe/ifyouremine?twclid=23rtj49iasvoyuwyxn3g4hwi03",
+        "homepage_status": 200,
+        "example_status": 200,
+        "homepage_final_url": "https://hypeddit.com/",
+        "example_final_url": "https://hypeddit.com/psychicfeverfromexiletribe/ifyouremine?twclid=23rtj49iasvoyuwyxn3g4hwi03",
+        "homepage_content_type": "text/html; charset=utf-8",
+        "example_content_type": "text/html; charset=utf-8",
+        "homepage": {
+          "has_meta_author": true,
+          "has_published_time": false,
+          "has_canonical": true,
+          "has_about_link": true,
+          "has_contact_link": true,
+          "has_corrections_link": false,
+          "outbound_links_count": 3,
+          "opinion_marker": false
+        },
+        "example": {
+          "has_meta_author": true,
+          "has_published_time": false,
+          "has_canonical": true,
+          "has_about_link": false,
+          "has_contact_link": false,
+          "has_corrections_link": false,
+          "outbound_links_count": 1,
+          "opinion_marker": false
+        }
+      }
+    },
+    {
       "domain": "teslahubs.com",
       "entity": "Teslahubs",
       "kind": "unknown",
@@ -14644,132 +14770,6 @@
           "has_contact_link": false,
           "has_corrections_link": false,
           "outbound_links_count": 0,
-          "opinion_marker": false
-        }
-      }
-    },
-    {
-      "domain": "hypeddit.com",
-      "entity": "Hypeddit",
-      "kind": "unknown",
-      "first_seen_at": "2026-07-19T08:05:35.939Z",
-      "last_seen_at": "2026-07-28T22:10:55.914Z",
-      "discovery": {
-        "distinct_urls": 14,
-        "example_urls": [
-          "https://hypeddit.com/psychicfeverfromexiletribe/ifyouremine?twclid=23rtj49iasvoyuwyxn3g4hwi03",
-          "https://hypeddit.com/psychicfeverfromexiletribe/ifyouremine?twclid=24chotbibbt8a0guub3ga06stv",
-          "https://hypeddit.com/psychicfeverfromexiletribe/ifyouremine?twclid=2a7yazph72f481c4hyrzo1fp4w",
-          "https://hypeddit.com/psychicfeverfromexiletribe/ifyouremine?twclid=2a7oaffgj6eyoqu5s5roa8vbuh",
-          "https://hypeddit.com/psychicfeverfromexiletribe/ifyouremine?twclid=290de28r840lrd277sw9rf7u49"
-        ],
-        "origin_counts": {
-          "feed_buffer": 14
-        },
-        "distinct_referring_accounts": 1,
-        "sample_referring_accounts": [
-          "psyfe_official"
-        ],
-        "distinct_axes": []
-      },
-      "claims": {
-        "total": 0,
-        "supported": 0,
-        "refuted": 0,
-        "contested": 0,
-        "unverified": 0,
-        "resolved_count": 0
-      },
-      "structural_features": {
-        "has_search_paths": false,
-        "has_article_paths": false,
-        "has_doi_paths": false
-      },
-      "ratings": {
-        "provenance": {
-          "score": 0.45,
-          "basis": [
-            "unknown_domain_pattern"
-          ]
-        },
-        "breadth": {
-          "score": 0.41,
-          "basis": [
-            "distinct_urls:14",
-            "distinct_axes:0",
-            "origin_types:1"
-          ]
-        },
-        "corroboration": {
-          "score": 0.19583333333333333,
-          "basis": [
-            "referring_accounts:1",
-            "origin_types:1"
-          ]
-        },
-        "track_record": {
-          "score": null,
-          "basis": [
-            "no_resolved_claims_observed"
-          ]
-        },
-        "profile": {
-          "score": 0.55,
-          "confidence": 0.75,
-          "basis": [
-            "meta_author:true",
-            "published_time:false",
-            "canonical:true",
-            "about:true",
-            "contact:true",
-            "corrections:false",
-            "outbound_links:1",
-            "opinion_marker:false"
-          ]
-        },
-        "overall": {
-          "score": 0.417421875,
-          "confidence": 0.44122500000000003,
-          "method": "mechanical_v1",
-          "basis": [
-            "unknown_domain_pattern",
-            "distinct_urls:14",
-            "distinct_axes:0",
-            "origin_types:1",
-            "referring_accounts:1",
-            "origin_types:1",
-            "track_record_unavailable"
-          ]
-        }
-      },
-      "profile": {
-        "fetched_at": "2026-07-29T06:42:30.453Z",
-        "homepage_url": "https://hypeddit.com/",
-        "example_url": "https://hypeddit.com/psychicfeverfromexiletribe/ifyouremine?twclid=23rtj49iasvoyuwyxn3g4hwi03",
-        "homepage_status": 200,
-        "example_status": 200,
-        "homepage_final_url": "https://hypeddit.com/",
-        "example_final_url": "https://hypeddit.com/psychicfeverfromexiletribe/ifyouremine?twclid=23rtj49iasvoyuwyxn3g4hwi03",
-        "homepage_content_type": "text/html; charset=utf-8",
-        "example_content_type": "text/html; charset=utf-8",
-        "homepage": {
-          "has_meta_author": true,
-          "has_published_time": false,
-          "has_canonical": true,
-          "has_about_link": true,
-          "has_contact_link": true,
-          "has_corrections_link": false,
-          "outbound_links_count": 3,
-          "opinion_marker": false
-        },
-        "example": {
-          "has_meta_author": true,
-          "has_published_time": false,
-          "has_canonical": true,
-          "has_about_link": false,
-          "has_contact_link": false,
-          "has_corrections_link": false,
-          "outbound_links_count": 1,
           "opinion_marker": false
         }
       }
@@ -25601,7 +25601,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-07-26T23:25:08.263Z",
+        "fetched_at": "2026-07-30T00:21:01.585Z",
         "homepage_url": "https://mexc.com/",
         "example_url": "https://www.mexc.com/register?utm_source=brandad&utm_medium=twitter&utm_campaign=pizza_register&twclid=22vw5h310hr1lnaz6krw03u5v2",
         "homepage_status": null,
@@ -26601,7 +26601,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-07-26T23:25:09.957Z",
+        "fetched_at": "2026-07-30T00:21:03.389Z",
         "homepage_url": "https://loxia.ai/",
         "example_url": "https://onbuzz.loxia.ai/?utm_term=intent_hunter_ph&twclid=22dvq9qdielp92zv7ti0ehdgsa",
         "homepage_status": null,
@@ -26852,7 +26852,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-07-26T23:25:10.449Z",
+        "fetched_at": "2026-07-30T00:21:03.639Z",
         "homepage_url": "https://openinfer.io/",
         "example_url": "https://openinfer.io/news/2026-06-02-nvidia-dynamo-proved-inference-needs-a-control-plane/?twclid=27dzvvpluhv8xln5kqrwwhmmra",
         "homepage_status": 200,
@@ -26978,13 +26978,13 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-07-26T23:25:14.430Z",
+        "fetched_at": "2026-07-30T00:21:06.945Z",
         "homepage_url": "https://zite.com/",
         "example_url": "https://try.zite.com/ad-integrations-1?twclid=22vk5745ty6qkvlrboi0g1qhow",
         "homepage_status": 200,
         "example_status": 200,
         "homepage_final_url": "https://www.zite.com/",
-        "example_final_url": "https://www.zite.com/?utm_source=twitter&utm_medium=cpc&utm_campaign=xcred&utm_term=integrations&dub_id=d0c8oyDxNu2BZ6Hk&twclid=22vk5745ty6qkvlrboi0g1qhow",
+        "example_final_url": "https://www.zite.com/?utm_source=twitter&utm_medium=cpc&utm_campaign=xcred&utm_term=integrations&dub_id=B7VaC0WyH4uZQPJE&twclid=22vk5745ty6qkvlrboi0g1qhow",
         "homepage_content_type": "text/html; charset=utf-8",
         "example_content_type": "text/html; charset=utf-8",
         "homepage": {
@@ -27104,7 +27104,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-07-27T00:25:12.995Z",
+        "fetched_at": "2026-07-30T00:51:04.061Z",
         "homepage_url": "https://grayzonewarfare.com/",
         "example_url": "https://www.grayzonewarfare.com/?twclid=230bsti1ugak1ht0ipkmwplfde",
         "homepage_status": 200,
@@ -27230,7 +27230,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-07-27T00:25:15.027Z",
+        "fetched_at": "2026-07-30T00:51:06.619Z",
         "homepage_url": "https://bron.org/",
         "example_url": "https://go.bron.org/analytics?twclid=21xfmrfi5gvde5oc65teiw0ea1",
         "homepage_status": 200,
@@ -27356,7 +27356,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-07-27T00:25:16.163Z",
+        "fetched_at": "2026-07-30T00:51:08.185Z",
         "homepage_url": "https://getpolyscope.com/",
         "example_url": "https://getpolyscope.com/?twclid=23d1n8q57spajkavshlbwt8gzs",
         "homepage_status": 200,
@@ -27482,7 +27482,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-07-27T00:25:16.448Z",
+        "fetched_at": "2026-07-30T00:51:08.569Z",
         "homepage_url": "https://simple.life/",
         "example_url": "https://simple.life/survey/tai-chi-walking?utm_source=twitter&utm_medium=cpc&utm_campaign=MB%3AOS_Web_All_Main_Purchase_Auto_US_w%2Fo_30.04.26_TaiChiWalkingGS_NewAds_9x16_Broad_25_CPM&twclid=29t6xjk72sn6e9tdvqx781kng4",
         "homepage_status": 200,

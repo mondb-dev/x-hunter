@@ -1,156 +1,154 @@
 {
-  "checked_at": "2026-07-29T00:40:38.849Z",
-  "evidence_24h": 17,
+  "checked_at": "2026-07-30T00:56:16.029Z",
+  "evidence_24h": 19,
   "unique_sources": 8,
   "status": "captured",
   "alerts": [
     {
       "type": "source_dominance",
       "severity": "high",
-      "detail": "@unknown accounts for 59% of today's evidence (10/17)",
+      "detail": "@unknown accounts for 58% of today's evidence (11/19)",
       "username": "unknown",
-      "share": 0.588
-    },
-    {
-      "type": "pole_skew",
-      "severity": "high",
-      "detail": "100% of evidence pushes \"left\" — risk of one-sided belief drift",
-      "dominant_pole": "left",
-      "share": 1
+      "share": 0.579
     }
   ],
-  "summary": "2 capture alert(s) detected:\n[HIGH] @unknown accounts for 59% of today's evidence (10/17)\n[HIGH] 100% of evidence pushes \"left\" — risk of one-sided belief drift",
+  "summary": "1 capture alert(s) detected:\n[HIGH] @unknown accounts for 58% of today's evidence (11/19)",
   "source_concentration": {
     "unknown": {
       "username": "unknown",
-      "count": 10,
-      "share": 0.588
+      "count": 11,
+      "share": 0.579
     },
-    "marcofoster_": {
-      "username": "marcofoster_",
-      "count": 1,
-      "share": 0.059
+    "rt_com": {
+      "username": "rt_com",
+      "count": 2,
+      "share": 0.105
     },
-    "furkangozukara": {
-      "username": "furkangozukara",
+    "philstarnews": {
+      "username": "philstarnews",
       "count": 1,
-      "share": 0.059
+      "share": 0.053
     },
-    "ptvph": {
-      "username": "ptvph",
+    "pgmnofficial": {
+      "username": "pgmnofficial",
       "count": 1,
-      "share": 0.059
+      "share": 0.053
     },
-    "inquirerdotnet": {
-      "username": "inquirerdotnet",
+    "rapplerdotcom": {
+      "username": "rapplerdotcom",
       "count": 1,
-      "share": 0.059
+      "share": 0.053
     },
-    "tvpatrol": {
-      "username": "tvpatrol",
+    "ajenglish": {
+      "username": "ajenglish",
       "count": 1,
-      "share": 0.059
+      "share": 0.053
+    },
+    "sethxyrill": {
+      "username": "sethxyrill",
+      "count": 1,
+      "share": 0.053
     },
     "foxnews": {
       "username": "foxnews",
       "count": 1,
-      "share": 0.059
-    },
-    "defense_civil25": {
-      "username": "defense_civil25",
-      "count": 1,
-      "share": 0.059
+      "share": 0.053
     }
   },
   "axis_concentration": {
-    "axis_procedural_governance_substantive_action": {
-      "axis_id": "axis_procedural_governance_substantive_action",
-      "label": "Procedural Governance vs. Substantive Action",
-      "count": 4,
-      "share": 0.235
-    },
     "axis_power_accountability": {
       "axis_id": "axis_power_accountability",
       "label": "Power, Institutions, and Rule of Law",
       "count": 3,
-      "share": 0.176
+      "share": 0.158
+    },
+    "axis_media_integrity_v1": {
+      "axis_id": "axis_media_integrity_v1",
+      "label": "Integrity of Information and Social Media Manipulation",
+      "count": 3,
+      "share": 0.158
+    },
+    "axis_rapid_disinformation_v1": {
+      "axis_id": "axis_rapid_disinformation_v1",
+      "label": "Rapid Disinformation",
+      "count": 3,
+      "share": 0.158
     },
     "axis_procedural_governance_accountability_v1": {
       "axis_id": "axis_procedural_governance_accountability_v1",
       "label": "Procedural Governance vs. Genuine Accountability",
-      "count": 2,
-      "share": 0.118
+      "count": 3,
+      "share": 0.158
     },
-    "axis_collective_voice": {
-      "axis_id": "axis_collective_voice",
-      "label": "Authentic Participation vs. Managed Consent",
+    "axis_procedural_governance_substantive_action": {
+      "axis_id": "axis_procedural_governance_substantive_action",
+      "label": "Procedural Governance vs. Substantive Action",
+      "count": 2,
+      "share": 0.105
+    },
+    "axis_ph_geopolitics_wps_v1": {
+      "axis_id": "axis_ph_geopolitics_wps_v1",
+      "label": "Philippine Geopolitical Alignment in the West Philippine Sea",
       "count": 1,
-      "share": 0.059
+      "share": 0.053
+    },
+    "axis_national_sovereignty_v_intl_law_v1": {
+      "axis_id": "axis_national_sovereignty_v_intl_law_v1",
+      "label": "National Sovereignty vs. International Law",
+      "count": 1,
+      "share": 0.053
     },
     "axis_human_rights_exploitation_v1": {
       "axis_id": "axis_human_rights_exploitation_v1",
       "label": "Human Rights and Exploitation",
       "count": 1,
-      "share": 0.059
+      "share": 0.053
     },
-    "axis_political_vulnerability_foreign_influence_v1": {
-      "axis_id": "axis_political_vulnerability_foreign_influence_v1",
-      "label": "Political Vulnerability & Foreign Influence",
+    "axis_digital_supply_chain_security": {
+      "axis_id": "axis_digital_supply_chain_security",
+      "label": "Digital Supply Chain Security and Vulnerabilities",
       "count": 1,
-      "share": 0.059
+      "share": 0.053
     },
-    "axis_geopolitical_control_narratives": {
-      "axis_id": "axis_geopolitical_control_narratives",
-      "label": "Geopolitical Control Narratives: Asserting Sovereignty vs. International Norms",
+    "axis_environmental_policy_v_economic_v1": {
+      "axis_id": "axis_environmental_policy_v_economic_v1",
+      "label": "Environmental Policy vs. Economic Development",
       "count": 1,
-      "share": 0.059
-    },
-    "axis_humanitarian_crisis_response": {
-      "axis_id": "axis_humanitarian_crisis_response",
-      "label": "Humanitarian Crisis Response",
-      "count": 1,
-      "share": 0.059
-    },
-    "axis_selective_outrage": {
-      "axis_id": "axis_selective_outrage",
-      "label": "Selective Outrage",
-      "count": 1,
-      "share": 0.059
-    },
-    "axis_information_control_v1": {
-      "axis_id": "axis_information_control_v1",
-      "label": "Information Control",
-      "count": 1,
-      "share": 0.059
+      "share": 0.053
     }
   },
   "cluster_concentration": {
     "unknown": {
       "cluster": "unknown",
-      "count": 13,
-      "share": 0.765
+      "count": 12,
+      "share": 0.632
+    },
+    "accountability_journalism": {
+      "cluster": "accountability_journalism",
+      "count": 2,
+      "share": 0.105
+    },
+    "disinformation": {
+      "cluster": "disinformation",
+      "count": 2,
+      "share": 0.105
+    },
+    "geopolitics": {
+      "cluster": "geopolitics",
+      "count": 1,
+      "share": 0.053
     },
     "breaking_news": {
       "cluster": "breaking_news",
-      "count": 2,
-      "share": 0.118
-    },
-    "conspiracy": {
-      "cluster": "conspiracy",
       "count": 1,
-      "share": 0.059
-    },
-    "us_politics": {
-      "cluster": "us_politics",
-      "count": 1,
-      "share": 0.059
+      "share": 0.053
     }
   },
   "pole_balance": {
-    "left": 17,
-    "right": 0,
+    "left": 12,
+    "right": 7,
     "neutral": 0,
-    "left_share": 1,
-    "right_share": 0
+    "left_share": 0.632,
+    "right_share": 0.368
   }
 }
