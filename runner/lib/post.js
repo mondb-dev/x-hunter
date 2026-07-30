@@ -45,16 +45,41 @@ const MAX_QUOTES_PER_DAY = 2;
 /**
  * Count how many posts of a given type were made today.
  */
+/**
+ * How many posts of `type` went out today — counted by DISTINCT tweet_url, not
+ * by row.
+ *
+ * posts_log.json contains duplicate rows: the same tweet_url written twice, ms
+ * apart, with different content and mismatched cycle numbers (967 rows vs 699
+ * distinct URLs as of 2026-07-30). Counting rows made a single real quote read
+ * as 2/2 against MAX_QUOTES_PER_DAY and silently blocked every quote cycle for
+ * the rest of the day. Deduping here fixes the symptom; the double-append that
+ * produces the phantom rows is a separate bug still to be traced.
+ *
+ * Rows with no tweet_url (drafts, non-X posts) are counted individually, since
+ * there is no identity to dedupe them on.
+ */
 function todayPostCount(type) {
   try {
     const logPath = path.join(config.STATE_DIR, 'posts_log.json');
     const raw = fs.readFileSync(logPath, 'utf-8');
     const data = JSON.parse(raw);
     const posts = Array.isArray(data) ? data : (data.posts || []);
+    // NOTE: UTC date, while cycle scheduling uses local time — "today" for this
+    // cap runs 08:00→08:00 local at UTC+8, not local midnight to midnight.
     const todayStr = new Date().toISOString().slice(0, 10);
-    return posts.filter(p =>
+    const todays = posts.filter(p =>
       p.type === type && p.posted_at && p.posted_at.startsWith(todayStr)
-    ).length;
+    );
+    const seen = new Set();
+    let count = 0;
+    for (const p of todays) {
+      if (!p.tweet_url) { count++; continue; }
+      if (seen.has(p.tweet_url)) continue;
+      seen.add(p.tweet_url);
+      count++;
+    }
+    return count;
   } catch { return 0; }
 }
 

@@ -43,6 +43,31 @@ const { passOutbound } = require('./lib/outbound_gates');
 const DRAFT_PATH = config.TWEET_DRAFT_PATH || path.join(config.STATE_DIR, 'tweet_draft.txt');
 const log = (m) => console.log(`[compose_tweet] ${m}`);
 
+// Body budget. The journal URL is appended after the gate: 240 + newline + a
+// 23-char t.co link = 264, inside X's 280 with room to spare.
+const MAX_LEN = 240;
+// Below this a trimmed tweet has lost its point — better to skip than to post
+// a fragment.
+const MIN_USABLE_LEN = 100;
+
+/**
+ * trimToLength(text, max) → string|null
+ * Shorten on a natural boundary: prefer ending at the last complete sentence
+ * inside the budget, else cut at the last whole word and add an ellipsis.
+ * Returns null when the result would be too short to be worth posting.
+ */
+function trimToLength(text, max) {
+  if (text.length <= max) return text;
+  const sentenceEnd = text.slice(0, max).search(/[^.!?]*$/);
+  if (sentenceEnd > MIN_USABLE_LEN) {
+    const upToSentence = text.slice(0, sentenceEnd).trim();
+    if (upToSentence.length >= MIN_USABLE_LEN) return upToSentence;
+  }
+  const cut = text.slice(0, max - 1).replace(/\s+\S*$/, '').trim();
+  if (cut.length < MIN_USABLE_LEN) return null;
+  return `${cut}…`;
+}
+
 function currentCycle() {
   try { return JSON.parse(fs.readFileSync(path.join(config.STATE_DIR, 'cycle_counter.json'), 'utf-8')).cycle; }
   catch { return 1; }
@@ -97,12 +122,45 @@ function dayNumberFrom(today) {
     raw = await compose(prompt, { maxTokens: 400, tag: 'tweet' });
   } catch (e) { log(`compose failed: ${e.message}`); process.exit(0); }
 
-  const line1 = (raw || '').split('\n').map(s => s.trim()).filter(Boolean)[0] || '';
-  const clean = line1.replace(/^["']|["']$/g, '').trim();
+  const firstLine = t => (t || '').split('\n').map(s => s.trim()).filter(Boolean)[0] || '';
+  let clean = firstLine(raw).replace(/^["']|["']$/g, '').trim();
   // Write an explicit SKIP (mirrors the agent's contract; postRegularTweet skips
   // on draft==='SKIP') so a deliberate no-tweet is a decision, not a missing file.
   if (!clean || clean.toUpperCase() === 'SKIP') { log('compose returned SKIP/empty'); fs.writeFileSync(DRAFT_PATH, 'SKIP\n'); process.exit(0); }
-  if (clean.length > 240) { log(`compose too long (${clean.length} chars) — SKIP`); fs.writeFileSync(DRAFT_PATH, 'SKIP\n'); process.exit(0); }
+
+  // ── Over-length recovery ────────────────────────────────────────────────────
+  // MAX_LEN is 240, not 280, because the journal URL is appended after this gate
+  // (240 + newline + 23-char t.co = 264, inside X's 280 with headroom).
+  //
+  // This used to be a hard SKIP, which threw away the whole posting cycle on a
+  // single instruction-following miss — the prompt asks for 230 and Claude came
+  // back with 277 on cycle 4668, costing a tweet slot for 30 minutes. Note the
+  // downstream gates CANNOT save an over-length draft: passOutbound's maxLen only
+  // constrains a factcheck *correction*, and voice_filter's hard limit is 280, so
+  // a 277-char draft passes both and only fails at X once the URL is appended.
+  // Hence: retry once with the miss quantified, then trim on a boundary.
+  if (clean.length > MAX_LEN) {
+    log(`compose too long (${clean.length} chars) — one corrective retry`);
+    try {
+      const retryPrompt =
+        `${prompt}\n\nYour previous draft was ${clean.length} characters, ` +
+        `${clean.length - MAX_LEN} over the limit. Rewrite it under ${MAX_LEN - 10} ` +
+        `characters. Keep the specific actor, claim, number and any @handle — cut ` +
+        `adjectives, qualifiers and throat-clearing, never the evidence.`;
+      const retry = firstLine(await compose(retryPrompt, { maxTokens: 400, tag: 'tweet-retry' }))
+        .replace(/^["']|["']$/g, '').trim();
+      if (retry && retry.toUpperCase() !== 'SKIP' && retry.length < clean.length) {
+        log(`retry produced ${retry.length} chars`);
+        clean = retry;
+      }
+    } catch (e) { log(`retry failed (${e.message}) — falling through to trim`); }
+  }
+
+  if (clean.length > MAX_LEN) {
+    const trimmed = trimToLength(clean, MAX_LEN);
+    if (trimmed) { log(`trimmed ${clean.length} → ${trimmed.length} chars`); clean = trimmed; }
+    else { log(`still ${clean.length} chars and untrimmable — SKIP`); fs.writeFileSync(DRAFT_PATH, 'SKIP\n'); process.exit(0); }
+  }
 
   // Shared fact-check gate (voice_filter + critique_tweet run downstream in post.js).
   const gated = await passOutbound(clean, { gates: ['factcheck'], maxLen: 240, tag: 'tweet' });
