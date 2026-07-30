@@ -1,14 +1,11 @@
 #!/usr/bin/env node
 /**
- * runner/lib/compose.js — the "Claude terminal" composition-inference backend.
+ * runner/lib/compose.js — the Claude inference backend. THE inference backend.
  *
- * Sebastian's non-agent brain runs on a small local model (qwen2.5-agent, ~7B —
- * see the LLM-backend notes), which is fine for scoring/gating but produces weak
- * *outbound* prose. This module lets the outputs that the world actually sees —
- * X replies/posts/quotes, LinkedIn posts/comments, and long-form articles — be
- * composed by the Claude Code CLI (`claude -p`) instead, while everything else
- * (relevance scoring, coherence critique, fact-check gates, planning) stays on
- * the cheap local model.
+ * INFERENCE POLICY: Claude is the only LLM. There is no local model, no Vertex,
+ * no Gemini. Every generation path in the system terminates here — compose() and
+ * reason() for the two prompt styles, composeJSON() for schema-constrained
+ * output, and vertex.js callVertex() as a compatibility shim for legacy callers.
  *
  * WHY the CLI and not an API SDK: the user drives Claude through the terminal
  * (their existing auth lives in ~/.claude), there's no extra key to manage, and
@@ -17,17 +14,21 @@
  * behaves as a pure, cheap text generator (~$0.001/call, ~3-4s) rather than a
  * full agent (~$0.11/call from the ~18k-token agent system prompt).
  *
- *   compose(prompt, opts)   → Promise<string>   routed text (Claude or fallback)
- *   claudeCompose(prompt,o) → Promise<string>   Claude CLI only (throws on error)
- *   useClaudeCompose()      → boolean           is the Claude backend enabled?
+ *   compose(prompt, opts)     → Promise<string>  outbound prose
+ *   reason(prompt, opts)      → Promise<string>  cognition/JSON stages
+ *   composeJSON(prompt, s, o) → Promise<object>  schema-constrained JSON
+ *   claudeCompose(prompt, o)  → Promise<string>  single attempt, no retry
  *
- * ENABLE: set COMPOSE_BACKEND=claude (or CLAUDE_COMPOSE=1) in hunter's .env.
- *   Default is OFF — with the flag unset, compose() is byte-for-byte the old
- *   callVertex() path, so wiring it in changes nothing until the switch is set.
+ * RETRY: with no second backend, a transient Claude failure is a lost cycle, so
+ * compose()/reason() retry on the errors that are actually transient — 529
+ * "Overloaded" and kill-timeouts — with exponential backoff. Quota exhaustion
+ * ("out of extra usage") is NOT retried: it resets on a multi-hour window, so
+ * in-cycle retries only burn time. See docs/INVENTORY.md → inference.
  *
  * TUNE (.env, all optional):
  *   CLAUDE_COMPOSE_MODEL       Claude alias/id (default: sonnet). opts.claudeModel wins.
  *   CLAUDE_COMPOSE_TIMEOUT_MS  per-call kill timeout (default: 120000).
+ *   CLAUDE_RETRIES             attempts per call on transient errors (default: 3).
  *   CLAUDE_BIN                 path to the claude binary (default: "claude" on PATH).
  *
  * No external deps — Node built-ins only.
@@ -46,10 +47,46 @@ const DEFAULT_SYSTEM =
   'exactly. Output ONLY the requested text — no preamble, no sign-off, no meta ' +
   'commentary, no markdown code fences, no explanation of what you did or why.';
 
-/** True when outputs should be composed by the Claude terminal instead of the local/Vertex brain. */
-function useClaudeCompose() {
-  const b = (process.env.COMPOSE_BACKEND || '').toLowerCase();
-  return b === 'claude' || process.env.CLAUDE_COMPOSE === '1';
+// Claude is the only backend, so these are constants now. They are kept as
+// functions because ~10 callers branch on them; the branches are dead but
+// harmless, and removing them is a separate mechanical pass.
+/** @deprecated Claude is the only inference backend — always true. */
+function useClaudeCompose() { return true; }
+
+/**
+ * Transient failures worth retrying: upstream capacity (529) and our own kill
+ * timeout, which in practice is a slow 529 retry chain inside the CLI. Quota
+ * exhaustion is deliberately excluded — it resets on a multi-hour window, so
+ * retrying inside a cycle just burns wall-clock before the same failure.
+ */
+function isTransient(err) {
+  const m = String(err && err.message || '');
+  if (/out of extra usage|usage limit/i.test(m)) return false;
+  return /529|overloaded|compose timeout|ETIMEDOUT|ECONNRESET|socket hang up/i.test(m);
+}
+
+const sleep = ms => new Promise(r => setTimeout(r, ms));
+
+/**
+ * withRetry(fn, tag) → Promise<any>
+ * Runs fn(), retrying transient failures with exponential backoff + jitter.
+ * Non-transient errors surface immediately.
+ */
+async function withRetry(fn, tag = 'claude') {
+  const attempts = Number(process.env.CLAUDE_RETRIES) || 3;
+  let last;
+  for (let i = 1; i <= attempts; i++) {
+    try {
+      return await fn();
+    } catch (e) {
+      last = e;
+      if (i === attempts || !isTransient(e)) break;
+      const backoff = Math.round(1000 * 2 ** (i - 1) * (1 + Math.random()));
+      console.warn(`[${tag}] transient failure (${e.message.slice(0, 120)}) — retry ${i}/${attempts - 1} in ${backoff}ms`);
+      await sleep(backoff);
+    }
+  }
+  throw last;
 }
 
 /**
@@ -121,42 +158,61 @@ function claudeCompose(prompt, opts = {}) {
 
 /**
  * compose(prompt, opts) → Promise<string>
- * Unified composition entry. Drop-in for the callVertex() calls on output paths.
+ * Unified composition entry for outbound prose. Retries transient Claude
+ * failures, then throws — there is no second backend to fall back to, and a
+ * silent substitution is exactly what the "Claude only" policy forbids.
  *
- *  - Claude backend enabled → route to claudeCompose(); on ANY failure fall back
- *    to callVertex() (local qwen / Gemini) so an outage never blocks a post,
- *    unless opts.fallback === false.
- *  - Backend disabled → straight to callVertex(): identical to the prior behaviour.
+ * Callers that treat a failed generation as "skip this cycle" should catch;
+ * callers that must not post degraded text should let it throw.
  *
  * opts:
- *   maxTokens       token budget for the callVertex path         (default 2000)
- *   model           model id for the callVertex/Vertex path      (e.g. "gemini-2.5-flash")
- *   claudeModel     Claude alias/id for the Claude path          (default env/'sonnet')
- *   system          Claude system prompt override                (default DEFAULT_SYSTEM)
- *   temperature     passed to callVertex                         (fallback path)
- *   thinkingBudget  passed to callVertex                         (fallback path)
- *   timeoutMs       Claude kill timeout
- *   fallback        false → surface Claude errors instead of falling back (default true)
- *   tag             log label                                    (default 'compose')
+ *   claudeModel     Claude alias/id                (default env/'sonnet')
+ *   system          system prompt override         (default DEFAULT_SYSTEM)
+ *   timeoutMs       kill timeout per attempt
+ *   tag             log label                      (default 'compose')
  */
 async function compose(prompt, opts = {}) {
-  const { maxTokens = 2000, fallback = true, tag = 'compose' } = opts;
+  const { tag = 'compose' } = opts;
+  return withRetry(() => claudeCompose(prompt, opts), tag);
+}
 
-  if (useClaudeCompose()) {
-    try {
-      return await claudeCompose(prompt, opts);
-    } catch (e) {
-      if (!fallback) throw e;
-      console.warn(`[${tag}] claude compose failed (${e.message}) — falling back to callVertex`);
-    }
+/**
+ * composeJSON(prompt, schema, opts) → Promise<object>
+ * Schema-constrained JSON. Replaces the Ollama grammar-constrained path
+ * (`format: <schema>`), which guaranteed parseable output at the transport
+ * layer. Claude has no such guarantee, so we do it in three layers: state the
+ * schema in the prompt, strip code fences, and retry once on a parse failure
+ * with the parse error fed back in.
+ *
+ * `schema` is a JSON Schema object — same shape the Ollama path took, so
+ * existing SCHEMA constants pass through unchanged.
+ */
+async function composeJSON(prompt, schema, opts = {}) {
+  const { tag = 'composeJSON' } = opts;
+  const schemaText = JSON.stringify(schema, null, 2);
+  const base =
+    `${prompt}\n\n` +
+    `Return ONLY a JSON object conforming to this JSON Schema. No prose, no ` +
+    `markdown fences, no commentary:\n${schemaText}`;
+
+  const parse = (raw) => {
+    const cleaned = String(raw)
+      .replace(/^\s*```[a-z]*\s*\n?/i, '')
+      .replace(/\n?\s*```\s*$/i, '')
+      .trim();
+    return JSON.parse(cleaned);
+  };
+
+  const first = await compose(base, { ...opts, system: opts.system || REASON_SYSTEM, tag });
+  try {
+    return parse(first);
+  } catch (e) {
+    console.warn(`[${tag}] JSON parse failed (${e.message}) — one corrective retry`);
+    const retryPrompt =
+      `${base}\n\nYour previous response was NOT valid JSON (${e.message}). ` +
+      `Return the corrected raw JSON object only.`;
+    return parse(await compose(retryPrompt, { ...opts, system: opts.system || REASON_SYSTEM, tag }));
   }
-
-  const { callVertex } = require('../vertex');
-  const vertexOpts = {};
-  if (opts.model)                       vertexOpts.model = opts.model;
-  if (opts.temperature !== undefined)   vertexOpts.temperature = opts.temperature;
-  if (opts.thinkingBudget !== undefined) vertexOpts.thinkingBudget = opts.thinkingBudget;
-  return callVertex(prompt, maxTokens, vertexOpts);
 }
 
 // ── reason(): Claude as the REASONING backend for the cognition stack ─────────
@@ -174,51 +230,38 @@ const REASON_SYSTEM =
   'or after. When it asks for a specific single token or word, output only that. ' +
   'Honor every stated rule (e.g. capability limits, forbidden actions).';
 
-/** True when the cognition/reasoning stages should route to the Claude terminal. */
-function useClaudeThink() {
-  const b = (process.env.THINK_BACKEND || '').toLowerCase();
-  return b === 'claude' || process.env.CLAUDE_THINK === '1';
-}
+/** @deprecated Claude is the only inference backend — always true. */
+function useClaudeThink() { return true; }
 
 /**
  * reason(prompt, opts) → Promise<string>
- * Drop-in for the cognition-path callVertex() calls. Routes to the Claude
- * terminal when THINK_BACKEND=claude; on ANY failure falls back to callVertex
- * (local qwen) so a Claude outage never stalls the daily cognition, unless
- * opts.fallback === false. Backend off → identical to the old callVertex path.
+ * The cognition-path entry (ponder, deep_dive, decision, planner, tracker,
+ * process_reflection, evaluate_vocation, reflect). Same transport as compose(),
+ * different system prompt and a longer default timeout — these prompts are
+ * bigger and the stages are a daily batch, so latency is cheap here.
  *
- * opts: maxTokens (callVertex budget, default 4096), model (vertex fallback
- *   model id), claudeModel (default env CLAUDE_THINK_MODEL/'sonnet'), system,
- *   temperature, thinkingBudget, timeoutMs, fallback, tag.
+ * Retries transient failures, then throws. No fallback backend exists.
+ *
+ * opts: claudeModel (default env CLAUDE_THINK_MODEL/'sonnet'), system,
+ *   timeoutMs (default env CLAUDE_THINK_TIMEOUT_MS/180000), tag.
  */
 async function reason(prompt, opts = {}) {
-  const { maxTokens = 4096, fallback = true, tag = 'reason' } = opts;
-
-  if (useClaudeThink()) {
-    try {
-      const out = await claudeCompose(prompt, {
-        system: opts.system || REASON_SYSTEM,
-        claudeModel: opts.claudeModel || process.env.CLAUDE_THINK_MODEL || 'sonnet',
-        timeoutMs: opts.timeoutMs || Number(process.env.CLAUDE_THINK_TIMEOUT_MS) || 180_000,
-      });
-      // Claude sometimes wraps JSON in ```json fences despite instructions; strip
-      // leading/trailing code fences so callers' JSON.parse/regex works cleanly.
-      return String(out).replace(/^\s*```[a-z]*\s*\n?/i, '').replace(/\n?\s*```\s*$/i, '').trim();
-    } catch (e) {
-      if (!fallback) throw e;
-      console.warn(`[${tag}] claude reason failed (${e.message}) — falling back to callVertex`);
-    }
-  }
-
-  const { callVertex } = require('../vertex');
-  const vertexOpts = {};
-  if (opts.model)                        vertexOpts.model = opts.model;
-  if (opts.temperature !== undefined)    vertexOpts.temperature = opts.temperature;
-  if (opts.thinkingBudget !== undefined) vertexOpts.thinkingBudget = opts.thinkingBudget;
-  return callVertex(prompt, maxTokens, vertexOpts);
+  const { tag = 'reason' } = opts;
+  const out = await withRetry(() => claudeCompose(prompt, {
+    ...opts,
+    system: opts.system || REASON_SYSTEM,
+    claudeModel: opts.claudeModel || process.env.CLAUDE_THINK_MODEL || 'sonnet',
+    timeoutMs: opts.timeoutMs || Number(process.env.CLAUDE_THINK_TIMEOUT_MS) || 180_000,
+  }), tag);
+  // Claude sometimes wraps JSON in ```json fences despite instructions; strip
+  // leading/trailing code fences so callers' JSON.parse/regex works cleanly.
+  return String(out).replace(/^\s*```[a-z]*\s*\n?/i, '').replace(/\n?\s*```\s*$/i, '').trim();
 }
 
-module.exports = { compose, reason, claudeCompose, useClaudeCompose, useClaudeThink, DEFAULT_SYSTEM };
+module.exports = {
+  compose, reason, composeJSON, claudeCompose, withRetry,
+  useClaudeCompose, useClaudeThink, DEFAULT_SYSTEM, REASON_SYSTEM,
+};
 
 // ── CLI: quick manual test — `node runner/lib/compose.js "your prompt"` ─────────
 if (require.main === module) {

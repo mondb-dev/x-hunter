@@ -11,7 +11,6 @@
 const fs = require('fs');
 const path = require('path');
 const config = require('./config');
-const { useLocal } = require('../local_llm');
 const { browserSearch } = require('./browser_search');
 
 const PROJECT_ROOT = config.PROJECT_ROOT;
@@ -423,71 +422,16 @@ const TOOL_EXECUTORS = {
     if (!query) return 'Error: query is required';
     log(`web_search → ${query}`);
 
-    // Fully-local path: search via the agent's own Chrome (no Vertex grounding).
-    if (useLocal()) {
-      try {
-        const results = await browserSearch(query, { maxResults: 6 });
-        if (!results.length) return `No web results found for "${query}". The tool IS available — try a different query.`;
-        return `Web search results for "${query}":\n\n` +
-          results.map((r, i) => `${i + 1}. ${r.title}\n   ${r.url}\n   ${r.snippet}`).join('\n\n');
-      } catch (err) {
-        return `web_search error: ${err.message}. The tool IS available — this was a transient error.`;
-      }
-    }
-
-    // Use Vertex AI grounding with Google Search
+    // Search via the agent's own Chrome. The Vertex/Gemini grounding path that
+    // used to run when useLocal() was false is gone with the rest of the Gemini
+    // transport — Claude is the only model, and it has no search grounding, so
+    // the browser IS the search backend now.
     try {
-      const { getAccessToken, getProjectConfig } = require('../gcp_auth');
-      const token = await getAccessToken();
-      const { project, location } = getProjectConfig();
-      const model = 'gemini-2.5-flash';
-      const url = `https://${location}-aiplatform.googleapis.com/v1/projects/${project}/locations/${location}/publishers/google/models/${model}:generateContent`;
-
-      const controller = new AbortController();
-      const timer = setTimeout(() => controller.abort(), 30_000); // 30s timeout
-
-      try {
-        const res = await fetch(url, {
-          method: 'POST',
-          headers: {
-            'Content-Type': 'application/json',
-            'Authorization': `Bearer ${token}`,
-          },
-          signal: controller.signal,
-          body: JSON.stringify({
-            contents: [{ role: 'user', parts: [{ text: query }] }],
-            tools: [{ google_search: {} }],
-            generationConfig: { temperature: 0.1, maxOutputTokens: 4096, thinkingConfig: { thinkingBudget: 0 } },
-          }),
-        });
-
-        if (!res.ok) {
-          const body = await res.text();
-          log(`web_search HTTP ${res.status}: ${body.slice(0, 200)}`);
-          return `web_search returned HTTP ${res.status}. The tool IS available — this was a transient API error. Try again with a different query or proceed without it.`;
-        }
-
-        const data = await res.json();
-        const parts = data?.candidates?.[0]?.content?.parts || [];
-        const text = parts.filter(p => p.text && !p.thought).map(p => p.text).join('');
-        // Extract grounding metadata — sources are the most useful part
-        const grounding = data?.candidates?.[0]?.groundingMetadata;
-        let groundingInfo = '';
-        if (grounding?.groundingChunks) {
-          groundingInfo = '\n\nSources:\n' + grounding.groundingChunks
-            .filter(c => c.web)
-            .map(c => `- ${c.web.title || 'Untitled'}: ${c.web.uri}`)
-            .join('\n');
-        }
-        if (grounding?.searchEntryPoint?.renderedContent) {
-          groundingInfo += '\n\n(Google Search grounding active)';
-        }
-        return (text + groundingInfo) || 'No results found.';
-      } finally {
-        clearTimeout(timer);
-      }
+      const results = await browserSearch(query, { maxResults: 6 });
+      if (!results.length) return `No web results found for "${query}". The tool IS available — try a different query.`;
+      return `Web search results for "${query}":\n\n` +
+        results.map((r, i) => `${i + 1}. ${r.title}\n   ${r.url}\n   ${r.snippet}`).join('\n\n');
     } catch (err) {
-      if (err.name === 'AbortError') return 'web_search timed out (30s). The tool IS available — try a shorter query.';
       return `web_search error: ${err.message}. The tool IS available — this was a transient error.`;
     }
   },

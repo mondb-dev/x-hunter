@@ -1,54 +1,49 @@
 #!/usr/bin/env node
 /**
- * runner/vertex.js — LOCAL brain caller (historically the Vertex/Gemini caller).
+ * runner/vertex.js — compatibility shim. The name is historical (this was the
+ * Vertex/Gemini caller, then the local-Ollama caller); the transport is now
+ * Claude, like everything else.
  *
- * Shared by generate_checkpoint.js, ponder.js, write_article.js, etc. The name is
- * kept so the ~35 existing callers are unchanged, but the Gemini/Vertex transport
- * is GONE: inference policy is Claude, or in its absence LOCAL — never Gemini.
+ * INFERENCE POLICY: Claude is the only LLM. Gemini/Vertex was retired first, the
+ * local Ollama brain second. This module exists solely so the ~16 legacy callers
+ * of callVertex() keep working unchanged; new code should require lib/compose.js
+ * and call compose() or reason() directly.
  *
- * Callers reach Claude via lib/compose.js (compose()/reason()), which falls back
- * here; this module is therefore the "in its absence local" half of that policy
- * and throws rather than silently substituting a third-party model.
+ * It delegates to claudeCompose() rather than compose() on purpose: compose()
+ * used to fall back HERE, and routing this through it would be circular.
  *
  * No external dependencies — uses only Node.js built-ins.
  */
 
 "use strict";
 
-const { useLocal, localChat } = require("./local_llm");
-const costMeter = require("./lib/cost_meter");
+const { claudeCompose, withRetry, REASON_SYSTEM } = require("./lib/compose");
 
 /**
  * callVertex(prompt, maxTokens, options)
  *
- * Calls Vertex AI with the given prompt.
- * Returns the text content string.
+ * Generates text via Claude. Returns the text content string.
  *
- * options.model         - model ID (default: gemini-2.5-flash)
- * options.thinkingBudget - if set and > 0, sets thinking token budget
+ * The maxTokens argument is accepted and ignored — `claude -p` has no output
+ * token cap to set, and every caller passed it as a budget hint rather than a
+ * hard requirement. It is kept in the signature so callers need no edits.
+ *
+ * options.temperature - accepted and ignored (no CLI equivalent)
+ * options.tag         - cost-meter label (default: "brain")
+ * options.system      - system prompt override (default: REASON_SYSTEM)
+ * options.timeoutMs   - per-attempt kill timeout
  */
 async function callVertex(prompt, maxTokens = 2000, options = {}) {
-  // Local backend: route the entire non-agent brain to Ollama when OLLAMA_BASE_URL
-  // points at a local server. Interface is unchanged for all ~35 callers.
-  if (useLocal()) {
-    const out = await localChat(prompt, {
-      maxTokens,
-      temperature: options.temperature ?? 0.7,
-    });
-    try { costMeter.record({ tag: options.tag || "brain", model: "local", promptChars: prompt.length, outChars: (out || "").length }); } catch {}
-    return out;
-  }
-
-  // POLICY: inference is Claude, or in its absence LOCAL — never Gemini. The
-  // Vertex/Gemini path below is retired: reaching it means the local brain is
-  // not configured (OLLAMA_BASE_URL not pointing at localhost), which is a
-  // misconfiguration to fix, not something to paper over with a third-party
-  // model that silently changes voice and quality.
-  throw new Error(
-    "callVertex: no inference backend — Claude unavailable and local brain not configured " +
-    `(OLLAMA_BASE_URL=${process.env.OLLAMA_BASE_URL || "unset"}). Gemini fallback is retired by policy.`
-  );
-
+  const tag = options.tag || "brain";
+  const out = await withRetry(() => claudeCompose(prompt, {
+    system:      options.system || REASON_SYSTEM,
+    claudeModel: options.claudeModel,
+    timeoutMs:   options.timeoutMs,
+    tag,
+  }), tag);
+  // claudeCompose already records token-accurate usage; this second record would
+  // double-count, so cost accounting lives there and not here.
+  return out;
 }
 
 module.exports = { callVertex };

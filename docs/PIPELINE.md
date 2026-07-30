@@ -14,7 +14,7 @@ orchestrator BROWSE cycle
     comment_candidates, discourse_scan, discourse_digest, external source
     discovery + profiling, source_selector, reading_queue, deep_dive_detector,
     prefetch, source-label classification
-  → agent (qwen2.5-agent via gemini_agent.js) — browse assigned lead, journal,
+  → single_pass_browse.js (Claude) — browse assigned lead, journal,
     write ontology_delta.json (silent hours: sprint work mode — see below)
   → social pipeline — LinkedIn + X engagement tasks (HelmStack)
   → cleanup_tabs.js
@@ -23,7 +23,7 @@ orchestrator BROWSE cycle
        2. per-session source dedup (seenSourcesThisRun)
        3. self-echo check
        4. claim fingerprint dedup (SHA-1, 6h window)
-       5. stance validation (local LLM, min conf 0.50)
+       5. stance validation (Claude, min conf 0.50)
        6. diversity constraint (dominant pole >70% → half weight; >90% → skip)
        7. score/confidence recompute (runner/lib/belief_calibration.js —
           recency-weighted mean, half-life 100; conf = 0.95·(1−e^(−ws/35)))

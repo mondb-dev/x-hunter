@@ -44,6 +44,6 @@ The runner itself deploys by `git pull` on the local machine (no CI).
 The SQLite→Postgres async-migration log, VM-era infrastructure notes, and the
 old per-cycle LLM budget that used to live in this file described the
 GCP-VM/Gemini era (pre-June 2026) and were removed in the 2026-07 docs sync.
-The system now runs locally under launchd with a local qwen2.5-agent brain,
+The system now runs locally under launchd with Claude as its only LLM,
 Claude-composed outbound prose, and nomic-embed-text embeddings — see the root
 ARCHITECTURE.md and docs/INVENTORY.md.

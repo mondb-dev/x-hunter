@@ -21,7 +21,7 @@ flowchart LR
         subgraph CYCLE["Browse cycle · 15–60 min (cadence)"]
             direction TB
             SCR["Scraper\nstate/index.db SQLite\nposts · keywords · memory"]
-            AGT["Browse agent\nqwen2.5-agent (Ollama)\nobserves · journals · delta"]
+            AGT["Browse agent\nClaude (claude -p)\nobserves · journals · delta"]
             BLF["Belief system\nontology.json · axes\ngates + calibration"]
             CUR["Curiosity / discourse\n/ trending direction"]
         end
@@ -125,7 +125,7 @@ flowchart LR
 |---|---|
 | **Inputs** | X + LinkedIn + Facebook/RSS feeds via HelmStack; web search (curiosity, deep research, claim verification) |
 | **Scraper** | Sanitize → RAKE → Jaccard dedup → TF-IDF novelty → local-LLM enrichment → cluster + burst detection → scored digest → SQLite + permanent local posts archive |
-| **Browse cycle** | 17-step pre-browse → local qwen2.5-agent reads digest + memory → journals + ontology delta → evidence gates (`apply_ontology_delta.js`) → axes updated via `belief_calibration.js` |
+| **Browse cycle** | 17-step pre-browse → Claude reads digest + memory → journals + ontology delta → evidence gates (`apply_ontology_delta.js`) → axes updated via `belief_calibration.js` |
 | **Research** | Deep research (mentions, Telegram `/dr`, daily plan questions) → reports / X threads / X Articles; stances + predictions feed back into the ontology |
 | **Outbound** | Claude composes → voice + fact-check gates → outbox queue → HelmStack channel engines (X GraphQL, LinkedIn voyager/UI); amplification learn-loop reposts/reshares and measures results |
 | **Cloud** | Cloud Run workers (verify — Gemini, publish, memory) |

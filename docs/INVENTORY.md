@@ -37,16 +37,36 @@ Scraper loops (`scraper/start.sh:23-26`): mentions 120s · collect 300s · reply
     reclaimable run-lock (`state/reply.run.lock`, 20-min stale TTL) so the
     scheduled run and a poller-triggered run never double-post.
 
-## 2. The three-model split (who thinks vs who writes)
+## 2. Inference: Claude only
+
+**POLICY: Claude is the only LLM.** Gemini/Vertex was retired first, the local
+Ollama brain second (2026-07-30, after the model store was wiped and every local
+path 404'd for ~2.3 days). There is no fallback backend by design — a silent
+substitution to a weaker model is what this policy exists to prevent.
+
+Everything funnels through `runner/lib/compose.js`:
+
+| Entry point | Use | Notes |
+|---|---|---|
+| `compose(prompt, opts)` | outbound prose | `DEFAULT_SYSTEM`, ~120s timeout |
+| `reason(prompt, opts)` | cognition / JSON stages | `REASON_SYSTEM`, ~180s timeout, strips ``` fences |
+| `composeJSON(prompt, schema, opts)` | schema-constrained JSON | replaces Ollama's `format:` grammar; prompt-level schema + one corrective retry on parse failure |
+| `claudeCompose(prompt, opts)` | single attempt, no retry | the primitive |
+| `callVertex(prompt, maxTokens, opts)` | **compat shim only** | `runner/vertex.js` → `claudeCompose`. ~16 legacy callers. New code should not use it. `maxTokens`/`temperature` accepted and ignored — no CLI equivalent |
+
+`withRetry()` retries **529 Overloaded** and kill-timeouts with exponential
+backoff + jitter (`CLAUDE_RETRIES`, default 3). It deliberately does **not**
+retry quota exhaustion ("out of extra usage"), which resets on a multi-hour
+window — in-cycle retries only burn wall-clock (`compose.js isTransient()`).
 
 | Role | Model | Where |
 |---|---|---|
-| Agent brain (browse/journal/ontology) | **qwen2.5-agent** local via Ollama (`BROWSE_MODEL`, `.env`) | `runner/lib/gemini_agent.js` — legacy filename; it's an OpenAI-compatible chat loop on `OLLAMA_BASE_URL` (localhost:11434), Vertex only if that URL points at aiplatform (`gemini_agent.js:18-20`) |
-| Scoring / gating / planning / voice rewrite | **Claude, else local qwen2.5-agent** | `runner/llm.js generate()` — POLICY: Claude first via `lib/compose`, local fallback, **Gemini transport removed**. `runner/vertex.js callVertex()` is now local-only and THROWS instead of falling back to Gemini. Pass `localOnly:true` to skip Claude in hot scoring loops (a `claude -p` spawn measures ~4s). |
-| Outbound prose (tweets, quotes, replies, LinkedIn, articles) | **Claude CLI** (`claude -p`, `COMPOSE_BACKEND=claude`) | `runner/lib/compose.js` — full system-prompt override, no tools; local fallback |
-| Deep-research reasoning (plan, refine, synth) | **Claude CLI** (`THINK_BACKEND=claude`) | `runner/deep_research.js` header |
-| Embeddings (768-dim) | **nomic-embed-text** local (`LOCAL_EMBED_MODEL`) | `runner/local_llm.js:22`; Vertex `text-embedding-004` fallback path retained in `runner/llm.js` |
-| Claim verification (local intelligence scripts) | **HelmStack browser search + Gemini WEB APP** (session-based, no API key), local qwen fallback | `runner/intelligence/lib/web_search.js webSearchVerifyLocal` — search via `lib/helmstack_fetch searchWeb` (CDP scraper as fallback), judgement via `Gemini.ask()` in `tools/helmstack-social/src/gemini.js`. ~22s/claim. The Vertex/Gemini API path is retired. `workers/verify/index.js:137` (Cloud Run) is separate and still Vertex. |
+| Agent brain (browse/journal/ontology) | **Claude** via single-pass browse | `runner/single_pass_browse.js` — one `composeJSON` call against `BROWSE_SCHEMA`. The 40-turn agentic loop is **retired**: `runner/lib/gemini_agent.js` is a fast-failing stub so callers drop to their direct-compose fallbacks |
+| Scoring / gating / planning / voice rewrite | **Claude** | `runner/llm.js generate()` → `compose()`. Throws if Claude is unavailable; there is no local path and no `localOnly` option any more |
+| Outbound prose (tweets, quotes, replies, LinkedIn, articles) | **Claude CLI** (`claude -p`) | `runner/lib/compose.js` — full system-prompt override, no tools, no MCP |
+| Deep-research reasoning (plan, refine, synth) | **Claude CLI** | `runner/deep_research.js` header |
+| Embeddings (768-dim) | **DISABLED** — Claude has no embedding endpoint | `runner/llm.js embed()` returns `null` unconditionally. Callers degrade to keyword search (`recall.js` → sqlite fts5). Stored vectors are inert (nomic-embed-text space, nothing produces new ones). Re-enabling = pick a provider + `backfill_embeddings.js` to re-embed the corpus |
+| Claim verification (local intelligence scripts) | **HelmStack browser search + Gemini WEB APP** (session-based, no API key) | `runner/intelligence/lib/web_search.js webSearchVerify` — search via `lib/helmstack_fetch searchWeb` (CDP scraper as fallback), judgement via `Gemini.ask()` in `tools/helmstack-social/src/gemini.js`. ~22s/claim. The Vertex API grounding path is **deleted**. `workers/verify/index.js:137` (Cloud Run) is separate and still Vertex |
 | Media/vision description | **Claude** (multimodal) | `runner/vision.js` — image passed as a base64 CONTENT BLOCK over `claude -p --input-format stream-json` (no tools; the Read-an-image-path route needs the Read tool, which trips `tool_use ids must be unique`). Mime is sniffed from magic bytes, not trusted from the scrape. `VISION_CONCURRENCY` (2), `VISION_TIMEOUT_MS`, `CLAUDE_VISION_MODEL`. Vertex/Gemini transport removed. |
 | Article covers | **No model** — attributed og:image from a cited/evidence source (Imagen retired 2026-07) | `runner/article_art.js` (reuses `lib/lead_source_image` + `lib/source_image`) |
 | Landmark hero art | **Gemini web app** via HelmStack browser session (signed-in Google account, no API key; Imagen retired 2026-07) | `tools/helmstack-social/src/gemini.js` engine ← `runner/landmark/art.js`; video generation scaffolded (needs Veo entitlement on the signed-in account) |
@@ -62,13 +82,13 @@ discourse_scan → discourse_digest → external_source_discovery →
 external_source_profile → source_selector → reading_queue → deep_dive_detector →
 prefetch → source-label classification. (Old "14-step" count is stale.)
 
-**Browse**: `agentRun` (orchestrator.js:17 → gemini_agent) with qwen; writes
+**Browse**: `single_pass_browse.js` (one Claude `composeJSON` call); writes
 `browse_notes.md` + `ontology_delta.json`. Social pipeline (LinkedIn+X activity via
 HelmStack) runs on BROWSE cycles (orchestrator.js:185).
 
 **Evidence gates** (`runner/apply_ontology_delta.js`): source validity → per-session
 source dedup → self-echo → claim fingerprint (SHA-1, 6h window, :409) → stance
-validation (Ollama, min conf 0.50, :69) → diversity constraint (dominant pole >70%
+validation (Claude, min conf 0.50, :69) → diversity constraint (dominant pole >70%
 → weight 0.5; >90% → skip, :57-61) → score recompute via
 `runner/lib/belief_calibration.js` → drift cap ±0.05/day (:109) → confidence decay
 0.002/day (:632-644).
@@ -85,8 +105,8 @@ formula): score = recency-weighted mean, half-life 100 entries
 **Curiosity** (`runner/curiosity.js:50`): confidence ceiling 0.82.
 
 **Scraper collect** (`scraper/collect.js`): sanitize → RAKE → dedup (Jaccard 0.65,
-`scraper/analytics.js:136`) → TF-IDF novelty → local-LLM enrichment (post.gemini_meta
-field name is legacy; enrichment runs on the local model via `_llmGenerate`) →
+`scraper/analytics.js:136`) → TF-IDF novelty → LLM enrichment (post.gemini_meta
+field name is legacy; enrichment runs on Claude via `_llmGenerate`) →
 burst detection → SQLite insert + inline embedding → permanent local posts archive (`state/posts_archive/YYYY-MM.jsonl`; replaced BigQuery in the GCP exit, 2026-07).
 Follows (`scraper/follows.js:18,45`): max 3/run, 10/day, 1 min between.
 
@@ -204,14 +224,15 @@ Follows (`scraper/follows.js:18,45`): max 3/run, 10/day, 1 min between.
 
 HelmStack HTTP API `:7070` (`HELMSTACK_URL`/`HELMSTACK_AUTH_TOKEN`) · X GraphQL
 (CreateTweet/CreateRetweet) via helmstack-social · LinkedIn voyager + UI drive ·
-Ollama localhost:11434 · Vertex AI (workers/verify, builder, fallback paths) ·
+Claude CLI (`claude -p`, local auth in `~/.claude`) · Vertex AI (workers/verify,
+builder only — no runner path) ·
 Arweave via Irys (Solana-funded; SOLANA_* keys) · Moltbook API
 · Telegram bot API · Vercel deploy hook · Cloud Run worker URLs
 (VERIFY_WORKER_URL, PUBLISH_WORKER_URL) · GitHub push per cycle.
 
 Env vars in live `.env` (names only): see `.env.example`; notable current ones —
-BROWSE_MODEL, META_MODEL, OLLAMA_BASE_URL/OLLAMA_MODEL, LOCAL_CHAT_MODEL,
-LOCAL_EMBED_MODEL, COMPOSE_BACKEND, CLAUDE_COMPOSE_MODEL, CLAUDE_ARTICLE_MODEL,
+COMPOSE_BACKEND, CLAUDE_COMPOSE_MODEL, CLAUDE_ARTICLE_MODEL, CLAUDE_RETRIES,
+CLAUDE_COMPOSE_TIMEOUT_MS, CLAUDE_THINK_TIMEOUT_MS, CLAUDE_BIN,
 THINK_BACKEND, CLAUDE_THINK_MODEL, BUILDER_BACKEND, CLAUDE_BUILDER_MODEL,
 CLAUDE_BUILDER_TIMEOUT_MS, POST_BACKEND=helmstack, HELMSTACK_URL,
 HELMSTACK_AUTH_TOKEN, OUTBOX_X, X_AUTO_RESEARCH, X_DEEP_TREE, TWEET_START/END.
@@ -222,8 +243,11 @@ HELMSTACK_AUTH_TOKEN, OUTBOX_X, X_AUTO_RESEARCH, X_DEEP_TREE, TWEET_START/END.
   post_claims_thread/delete_tweet/post_and_pin/inject_cookies/check_notifs) —
   retained as legacy POST_BACKEND path + utilities; live path is HelmStack.
 - `ai.openclaw.x-hunter` launchd agent — gateway removed from run.sh flow.
-- `runner/lib/gemini_agent.js`, `scraper/embed.js` headers still say
-  Gemini/text-embedding-004 — misleading comments, local models in practice.
-- `post.gemini_meta` field in scraper — legacy name for local-LLM enrichment.
+- `runner/vertex.js` / `runner/lib/gemini_agent.js` keep Gemini-era filenames;
+  both are Claude-era shims now (compat shim / retired stub).
+- `post.gemini_meta` field in scraper — legacy name for LLM enrichment.
+- `scraper/embed.js` header still says text-embedding-004; embeddings are OFF.
+- `BROWSE_MODEL`/`META_MODEL`/`POST_MODEL`/`OLLAMA_*`/`LOCAL_*` may linger in
+  `.env` — inert, nothing reads them since the Claude-only cutover.
 - Old ×0.025/0.98 confidence formula — superseded by belief_calibration.js
   (recalibrate_beliefs.js was the one-time migration).

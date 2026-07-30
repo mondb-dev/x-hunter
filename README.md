@@ -12,7 +12,7 @@ A continuous social-listening and directed-research engine that watches discours
 Three layers run continuously (see [docs/INVENTORY.md](docs/INVENTORY.md) for the code-anchored ground truth):
 
 - **Mechanical layer** — Node.js scripts handle all scraping, browser automation (via the **HelmStack** substrate), data processing, posting, and git. No LLM.
-- **Reasoning layer** — a **local qwen2.5-agent model** (Ollama) reads pre-digested text, interprets it against tracked axes, and writes journals + ontology deltas (`runner/lib/gemini_agent.js` — legacy filename, Ollama loop). Scoring, gating, and planning also run locally (`runner/local_llm.js`).
+- **Reasoning layer** — **Claude** (`claude -p`) reads pre-digested text, interprets it against tracked axes, and writes journals + ontology deltas (`runner/single_pass_browse.js`, one schema-constrained call). Scoring, gating, and planning run on Claude too, via `runner/lib/compose.js`. Claude is the only LLM — there is no local model and no fallback backend.
 - **Composition layer** — everything the world actually reads (tweets, quotes, replies, LinkedIn posts, articles) is composed by the **Claude CLI** (`runner/lib/compose.js`, `COMPOSE_BACKEND=claude`). Deep-research reasoning also runs on Claude (`THINK_BACKEND=claude`).
 
 Browse cycles run every ~30 minutes, auto-adjusted between 15–60 minutes by a metacognition engine (`runner/cadence.js`) that reads signal density, axis velocity, post pressure, and staleness. Each cycle:
@@ -20,7 +20,7 @@ Browse cycles run every ~30 minutes, auto-adjusted between 15–60 minutes by a 
 1. **Tier 1 — Continuous scraper** (always running independently, `scraper/start.sh`):
    - `scraper/mentions.js` (every 2 min) — fast mention poll: captures @mentions via a dedicated HelmStack tab and triggers a reply run on anything new, so replies don't wait for the next reply tick (disable with `MENTIONS_INTERVAL=0`; collect.js still captures)
    - `scraper/collect.js` (every 5 min) — feed ingestion via HelmStack: sanitize → RAKE keywords → Jaccard dedup (0.65) → TF-IDF novelty → local-LLM enrichment of top posts → burst detection → SQLite insert + inline embedding → permanent local posts archive
-   - `scraper/follows.js` (every 3 h) — scores follow candidates, classifies via local LLM (30-label taxonomy, trust 1–7); max 3/run, 10/day
+   - `scraper/follows.js` (every 3 h) — scores follow candidates, classifies via Claude (30-label taxonomy, trust 1–7); max 3/run, 10/day
    - `scraper/reply.js` (every 10 min) — drains the mention backlog (captured via live search), verifies claims, routes research-intent mentions into deep research, drafts replies via Claude behind the shared outbound gate
 
 2. **Tier 2 — AI browse cycle** (every ~15–60 min):
@@ -59,11 +59,11 @@ Sebastian runs on a **local macOS machine** via launchd agents (`~/Library/Launc
 
 | Component | What |
 |---|---|
-| Agent brain | qwen2.5-agent via Ollama (localhost:11434) |
+| Agent brain | Claude via `claude -p` (auth in `~/.claude`) |
 | Outbound prose | Claude CLI (`claude -p`) via `runner/lib/compose.js` |
 | Claim-verify + publish + memory workers | Cloud Run (`workers/verify` — Gemini 2.5 Flash via Vertex, `workers/publish`, `workers/memory`) |
 | Database | SQLite `state/index.db` (7-day posts window) + `state/outbox.db`; permanent post history in `state/posts_archive/` (append-only NDJSON, monthly files) |
-| Embeddings | nomic-embed-text (768-dim) local via Ollama |
+| Embeddings | **disabled** — Claude has no embedding endpoint; recall degrades to sqlite fts5 |
 | Website | Vercel (Next.js) — built from repo content via `web/scripts/prebuild.js` on push to main |
 | Archival | Arweave via Irys (Solana-funded): journals, checkpoints, articles, evidence source URLs |
 
@@ -85,8 +85,8 @@ See `.env.example` for the full list. Key vars:
 
 | Variable | Purpose |
 |---|---|
-| `BROWSE_MODEL` / `LOCAL_CHAT_MODEL` | local reasoning model (qwen2.5-agent) |
-| `OLLAMA_BASE_URL` | Ollama endpoint (localhost:11434) |
+| `CLAUDE_COMPOSE_MODEL` / `CLAUDE_THINK_MODEL` | Claude alias per path (default `sonnet`) |
+| `CLAUDE_RETRIES` | attempts on transient Claude errors (529/timeout); default 3 |
 | `LOCAL_EMBED_MODEL` | embedding model (nomic-embed-text) |
 | `COMPOSE_BACKEND` / `THINK_BACKEND` / `BUILDER_BACKEND` = `claude` | route outbound prose / research reasoning / self-mod builds to the Claude CLI |
 | `POST_BACKEND=helmstack` | posting via the helmstack-social engines |
@@ -109,7 +109,7 @@ hunter/
 │   ├── orchestrator.js           ← main cycle loop (BROWSE/QUOTE/TWEET + daily blocks)
 │   ├── cadence.js                ← metacognition engine (cycle timing/type)
 │   ├── lib/                      ← ~60 modules; highlights:
-│   │   ├── gemini_agent.js       ← agent loop on Ollama (legacy filename)
+│   │   ├── gemini_agent.js       ← RETIRED stub (agent loop; legacy filename)
 │   │   ├── compose.js            ← Claude CLI composition backend
 │   │   ├── pre_browse.js         ← 17-step pre-cycle pipeline
 │   │   ├── post_browse.js        ← post-cycle: archive, claims, signals, replies

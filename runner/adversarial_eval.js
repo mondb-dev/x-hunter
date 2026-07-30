@@ -4,7 +4,7 @@
  * runner/adversarial_eval.js — adversarial evaluator for published posts
  *
  * Runs after each TWEET cycle. Evaluates the post from a skeptical perspective
- * using Ollama (local model — different evaluator from Gemini, surfaces systematic bias).
+ * via llm.generate() (Claude — the only inference backend).
  *
  * Checks:
  *   1. FACTUAL_CLAIM — does the post make a specific factual claim?
@@ -39,7 +39,7 @@ const EVAL_LAST     = path.join(STATE, "adversarial_eval_last.json");
 const isDryRun  = process.argv.includes("--dry-run");
 const postIdArg = (() => { const i = process.argv.indexOf("--post-id"); return i !== -1 ? process.argv[i+1] : null; })();
 
-// Cooldown: max one eval per 2h to avoid Ollama queue backup
+// Cooldown: max one eval per 2h — this is advisory analysis, not worth the spend
 const COOLDOWN_MS = 2 * 60 * 60 * 1000;
 const STAMP       = path.join(STATE, ".last_adversarial_eval");
 
@@ -84,21 +84,17 @@ function getTopAxes(n = 5) {
     }));
 }
 
-// ── Ollama call ───────────────────────────────────────────────────────────────
-async function callOllama(prompt) {
-  const { execSync } = require("child_process");
-  const model = process.env.OLLAMA_MODEL || "qwen2.5:7b";
-
+// ── Model call ────────────────────────────────────────────────────────────────
+// Was a raw `curl` to localhost:11434 that bypassed the shared client entirely.
+// Now goes through llm.generate() like every other caller, so it inherits the
+// Claude transport, retry, and cost metering. Still returns null (rather than
+// throwing) on failure — adversarial eval is advisory and skipping is correct.
+async function callModel(prompt) {
   try {
-    const payload = JSON.stringify({ model, prompt, stream: false, options: { temperature: 0.1, num_predict: 400 } });
-    const result = execSync(
-      `curl -s http://localhost:11434/api/generate -d '${payload.replace(/'/g, "'\\''")}'`,
-      { timeout: 45_000, encoding: "utf-8" }
-    );
-    const parsed = JSON.parse(result);
-    return parsed.response?.trim() || "";
+    const { generate } = require("./llm");
+    return await generate(prompt, { temperature: 0.1, maxTokens: 400, tag: "adversarial_eval" });
   } catch (e) {
-    console.warn("[adversarial_eval] Ollama unavailable:", e.message.slice(0, 80));
+    console.warn("[adversarial_eval] inference unavailable:", e.message.slice(0, 80));
     return null;
   }
 }
@@ -151,11 +147,11 @@ AXIS_MATCH: [Yes/No — is the post's position consistent with the relevant axis
 
   console.log(`[adversarial_eval] evaluating post: "${(post.content || "").slice(0, 60)}..."`);
 
-  const raw    = await callOllama(prompt);
+  const raw    = await callModel(prompt);
   const result = parseEval(raw);
 
   if (!result) {
-    console.log("[adversarial_eval] Ollama unavailable — skipping");
+    console.log("[adversarial_eval] inference unavailable — skipping");
     process.exit(0);
   }
 

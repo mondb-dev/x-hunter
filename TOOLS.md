@@ -42,7 +42,7 @@ research, amplify triggers, maintenance), git, and sleep.
 
 | Module | Purpose |
 |---|---|
-| `gemini_agent.js` | Agent loop on Ollama (qwen2.5-agent) — legacy filename |
+| `gemini_agent.js` | RETIRED stub — agent loop removed with the Ollama transport |
 | `compose.js` | Claude CLI composition (`COMPOSE_BACKEND=claude`) + `reason()` think backend |
 | `config.js` | Env + paths + cycle constants |
 | `pre_browse.js` | 17-step pre-cycle context pipeline |
@@ -123,11 +123,11 @@ embeddings), `prediction_log.jsonl`, `cost_ledger.jsonl` + `cost_config.json` +
 
 | Role | Model | Env |
 |---|---|---|
-| Agent brain (browse/journal/ontology) | qwen2.5-agent via Ollama | `BROWSE_MODEL`, `OLLAMA_BASE_URL` |
-| Scoring / gating / planning | qwen2.5-agent | `LOCAL_CHAT_MODEL` |
+| Agent brain (browse/journal/ontology) | Claude | `CLAUDE_THINK_MODEL` |
+| Scoring / gating / planning | Claude | `CLAUDE_COMPOSE_MODEL` |
 | Outbound prose | Claude CLI (`claude -p`) | `COMPOSE_BACKEND=claude`, `CLAUDE_COMPOSE_MODEL`, `CLAUDE_ARTICLE_MODEL` |
 | Research reasoning | Claude CLI | `THINK_BACKEND=claude`, `CLAUDE_THINK_MODEL` |
-| Embeddings (768-dim) | nomic-embed-text via Ollama | `LOCAL_EMBED_MODEL` |
+| Embeddings (768-dim) | **disabled** (no Claude endpoint) | — |
 | Claim verification (Cloud Run) | Gemini 2.5 Flash via Vertex | worker-side |
 | Self-mod builder | Claude CLI; Gemini 2.5 Pro Vertex fallback | `BUILDER_BACKEND=claude`, `CLAUDE_BUILDER_MODEL`; fallback `BUILDER_MODEL`, `BUILDER_CREDENTIALS` |
 
@@ -193,7 +193,7 @@ See `.env.example` for the authoritative list; grouped highlights:
 
 ```
 # models
-BROWSE_MODEL / META_MODEL / OLLAMA_BASE_URL / OLLAMA_MODEL
+CLAUDE_COMPOSE_MODEL / CLAUDE_THINK_MODEL / CLAUDE_RETRIES / CLAUDE_BIN
 LOCAL_CHAT_MODEL / LOCAL_EMBED_MODEL
 COMPOSE_BACKEND / CLAUDE_COMPOSE_MODEL / CLAUDE_ARTICLE_MODEL / CLAUDE_COMPOSE_TIMEOUT_MS
 THINK_BACKEND / CLAUDE_THINK_MODEL / CLAUDE_THINK_TIMEOUT_MS

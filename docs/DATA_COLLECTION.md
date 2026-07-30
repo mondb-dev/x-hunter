@@ -27,7 +27,7 @@ The core ingestion engine. 13-phase pipeline per run:
 3. **RAKE scoring**: keyword extraction per post + composite `total` score from: HN-style time-decay gravity + trust lookup (`trust_graph.json`) + ontology axis word alignment.
 4. **Jaccard dedup**: removes near-duplicate stories at 0.65 similarity threshold.
 5. **TF-IDF novelty**: computes IDF from last 4h corpus, re-scores posts — `total += novelty × 0.4`, re-sorts.
-5c. **LLM enrichment** (top 20 posts only): calls the local model (qwen2.5-agent) per post with a structured extraction prompt. Attaches `post.gemini_meta` — legacy field name — `{ entities, claim, stance, credibility_signals, axis_relevance }`. Failures silently skipped; RAKE retained as the initial fast filter.
+5c. **LLM enrichment** (top 20 posts only): calls Claude per post with a structured extraction prompt. Attaches `post.gemini_meta` — legacy field name — `{ entities, claim, stance, credibility_signals, axis_relevance }`. Failures silently skipped; RAKE retained as the initial fast filter.
 6. **Dynamic limits**: reads `state/cadence.json` → `signal_density` + `belief_velocity` → determines `topPosts` (15–50) and `replyFetchCount` (5–15).
 7. **Media capture**: screenshots up to 10 posts with images/video via `el.screenshot()`.
 7b. **Inline embedding**: embeds up to 20 top posts (by score) immediately after SQLite insert via `embed()` → `db.storeEmbedding("post", ...)`. Eliminates post-embedding gap.
@@ -66,7 +66,7 @@ DEEP_RESEARCH.md). Limits: 3/run, 5 min gap, 10/day.
 
 ## Tier 2: AI Browse Cycle (`runner/`)
 
-The local agent (qwen2.5-agent via `runner/lib/gemini_agent.js` — legacy filename) runs every ~30 min (auto-adjusted 15–60 min by the metacognition engine). Before each cycle, `runner/lib/pre_browse.js` executes a 17-step preparation pipeline.
+The browse pass (Claude via `runner/single_pass_browse.js`) runs every ~30 min (auto-adjusted 15–60 min by the metacognition engine). Before each cycle, `runner/lib/pre_browse.js` executes a 17-step preparation pipeline.
 
 ### Pre-Browse Pipeline (`runner/lib/pre_browse.js`)
 
@@ -100,7 +100,7 @@ Post-browse, the runner merges the agent-written `state/ontology_delta.json` int
 2. **Per-session source dedup** (`seenSourcesThisRun` Set): each URL may update at most one axis per browse session. Prevents pseudo-replication from inflating confidence.
 3. **Self-echo check**: entries sourced from Sebastian's own posts/tweets are rejected.
 4. **Claim fingerprinting** (`computeClaimFingerprint`): SHA-1 on normalised/stopword-stripped tokens → 12-char hex `claim_id`. Within a 6h window, duplicate `claim_id` entries are skipped regardless of source. Prevents a single news event reported by multiple outlets from spiking axis confidence.
-5. **Stance validation**: Ollama confirms claimed `pole_alignment` matches entry content (min 0.50 confidence).
+5. **Stance validation**: Claude confirms claimed `pole_alignment` matches entry content (min 0.50 confidence).
 6. **Diversity constraint**: if one pole exceeds 70% of today's entries for an axis, weight is halved; above 90%, the entry is skipped entirely.
 7. **Score/confidence recompute (on updated axes only)** — centralized in `runner/lib/belief_calibration.js`:
    - `score` = recency-weighted trust-weighted mean over the evidence_log (entry N back weighted `0.5^(N/100)`, `BELIEF_RECENCY_HALFLIFE`) — recent evidence dominates, so long-lived axes keep moving
@@ -130,7 +130,7 @@ Fires every 12th BROWSE cycle (~4 hours). Determines *what to research next* via
 1. **discourse** — someone challenged Sebastian's thinking → builds 3 search angles from their topic
 2. **contradiction** — two established belief axes have opposing score signs + overlapping label keywords → investigates the tension
 3. **uncertainty_axis** — picks axis with highest `gain = (1 - confidence) × polarization × recency_decay × staleness_boost` below confidence ceiling (0.82)
-4. **trending** — Ollama (`qwen2.5:7b`) selects from top 5 keywords of last 4h; falls back to `top[0]`
+4. **trending** — Claude selects from top 5 keywords of last 4h; falls back to `top[0]`
 
 Outputs 3 rotating search angle URLs to `state/curiosity_directive.txt`:
 - Angle 1: main search terms (`x.com/search?q=...&f=live`)
@@ -228,7 +228,7 @@ Database: `state/index.db`
 | `accounts` | Per-account aggregates: post_count, avg_score, avg_velocity, top_keywords, follow_score, followed, **trust** (integer 1–7; populated by `follows.js` at follow time; backfilled via `backfill_trust.js`; recalibrated weekly by `runner/lib/daily.js`) |
 | `memory` | Indexed journal/checkpoint/article entries with Arweave tx_id |
 | `memory_fts` | FTS5 over memory (type, title, text_content, keywords) |
-| `embeddings` | 768-dim `nomic-embed-text` vectors (local via Ollama; Vertex `text-embedding-004` fallback path retained) keyed by (entity_type, entity_id); used for semantic recall. Memory: 100% coverage; posts: embedded inline at collect time. |
+| `embeddings` | **Stale/inert.** 768-dim `nomic-embed-text` vectors keyed by (entity_type, entity_id). Embedding generation is DISABLED (Claude has no embedding endpoint), so nothing new is written and semantic recall falls back to sqlite fts5. Rows are kept for a future re-embed migration. |
 
 Pruning: posts + keywords older than 7 days deleted on `db.prune()`. All posts are also appended to `state/posts_archive/` (append-only NDJSON, never pruned) for permanent longitudinal history.
 
@@ -266,7 +266,7 @@ X feed (HelmStack/API) + LinkedIn feed + RSS
 
 AI browse cycle
   → pre_browse.js (17 steps) → prefetch_url.js (target URL resolution)
-  → local agent (qwen2.5-agent) reads feed_digest.txt + curiosity_directive.txt + topic_summary.txt
+  → Claude reads feed_digest.txt + curiosity_directive.txt + topic_summary.txt
   → writes browse_notes.md + ontology_delta.json
   → apply_ontology_delta.js: gate validation (dedup + fingerprint + calibration + decay)
   → journals/YYYY-MM-DD_HH.html
@@ -333,7 +333,7 @@ Daily (once/24h via runner/lib/daily.js)
 
 - `builder_pipeline.js`, `builder_call.js`, `capture_detection.js` — all empty stubs, unimplemented.
 - `cadence.js` is the **metacognition engine** (filename is misleading). Reads agent-written directives from `state/cadence.json`, computes environmental signals (`signal_density`, `belief_velocity`, `post_pressure`, `staleness`), merges them (agent overrides take priority, guardrails enforced), and writes back to `state/cadence.json`. Auto-adjusts cycle timing (900–3600s).
-- Semantic embeddings: memory 100% covered; posts embedded inline at collect time. Model: `nomic-embed-text` (768-dim) local via Ollama (`LOCAL_EMBED_MODEL`); Vertex fallback path retained in `runner/llm.js`. No manual backfill needed going forward.
+- Semantic embeddings: **disabled**. `runner/llm.js embed()` returns null (Claude has no embedding endpoint), so no new vectors are produced and recall degrades to sqlite fts5 keyword search. Existing vectors are in the `nomic-embed-text` space and are inert; re-enabling means choosing a provider and running `backfill_embeddings.js` over the corpus.
 - Evidence summaries: 82.5% populated as of 2026-04-16. Remaining entries being filled via `runner/backfill_evidence_summaries.js`. Re-run `backfill_embeddings.js --memory` after completion to embed the new summaries.
 - Trust scores: populated by `follows.js` at follow time + `backfill_trust.js` (already run; avg 3.33, range 1–7, 3,866 accounts). Weekly recalibration fires via `runner/lib/daily.js`.
 - Posts archive: BigQuery streaming was retired in the GCP exit (2026-07) — the free tier rejects streaming inserts, so it was silently dropping rows. `bqInsertPost()` in `collect.js` (name kept for the call site) now appends the same row shape to `state/posts_archive/YYYY-MM.jsonl`; a future warehouse can bulk-load these files.

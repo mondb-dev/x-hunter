@@ -12,7 +12,7 @@
  *   state/ontology_delta.json       (schema per prompts/browse.js — merged by
  *                                    apply_ontology_delta.js in postBrowse)
  *
- * Invoked by the orchestrator (when useLocal()) instead of agentRun:
+ * Invoked by the orchestrator as the only browse path (the agentic loop is retired):
  *   node runner/single_pass_browse.js --today 2026-07-03 --hour 22 --day 130
  *
  * Exits 0 if the journal was written, 1 otherwise. Non-fatal to the cycle.
@@ -34,7 +34,6 @@ if (fs.existsSync(path.join(ROOT, '.env'))) {
 }
 
 const config = require('./lib/config');
-const { localChatJSON } = require('./local_llm'); // local-only path; schema-constrained JSON
 
 // Grammar schema — guarantees parseable, well-shaped output from small models.
 const BROWSE_SCHEMA = {
@@ -267,20 +266,13 @@ async function main() {
   const prompt = buildPrompt({ day, today, hour, leadContent });
   let data;
   try {
-    // Browse observation is the core belief-forming inference. Run it on the
-    // Claude terminal when THINK_BACKEND=claude (far better synthesis + reliable
-    // JSON), falling back to the grammar-constrained local path on any failure.
-    const { useClaudeThink, reason } = require('./lib/compose');
-    if (useClaudeThink()) {
-      try {
-        const raw = await reason(prompt, { maxTokens: 4000, tag: 'browse', fallback: false });
-        data = JSON.parse(raw);
-        log('browse inferred via Claude');
-      } catch (e) {
-        log(`claude browse failed (${e.message}) — falling back to local schema JSON`);
-      }
-    }
-    if (!data) data = await localChatJSON(prompt, BROWSE_SCHEMA, { temperature: 0.4 });
+    // Browse observation is the core belief-forming inference. Claude is the
+    // only backend; composeJSON handles the schema constraint that the old
+    // Ollama `format:` grammar used to enforce at the transport layer, and
+    // retries a malformed response once before giving up.
+    const { composeJSON } = require('./lib/compose');
+    data = await composeJSON(prompt, BROWSE_SCHEMA, { tag: 'browse' });
+    log('browse inferred via Claude');
   } catch (e) { log(`LLM/JSON error: ${e.message}`); return 1; }
 
   try {

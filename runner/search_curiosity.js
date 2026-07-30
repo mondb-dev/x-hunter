@@ -3,7 +3,8 @@
  * runner/search_curiosity.js — web-search expansion for curiosity directives
  *
  * Reads the current curiosity_directive.txt, extracts the RESEARCH FOCUS topic,
- * runs a grounded Gemini web search, and adds the top 3 result URLs to
+ * runs a browser web search and has Claude pick the best results, adding the top
+ * 3 result URLs to
  * state/reading_queue.jsonl. This gives the browse agent actual web sources
  * to visit — not just X posts about the topic.
  *
@@ -24,7 +25,6 @@ const fs     = require("fs");
 const path   = require("path");
 const crypto = require("crypto");
 const config = require("./lib/config");
-const { getTokenForKey, getProjectConfig } = require("./gcp_auth.js");
 
 const ROOT       = config.PROJECT_ROOT;
 const STATE_DIR  = config.STATE_DIR;
@@ -87,69 +87,65 @@ async function main() {
 
   console.log(`[search_curiosity] searching for: "${focus}"`);
 
-  // Use Gemini with google_search tool — same pattern as verify_one.js
-  const prompt = `You are a research assistant helping Sebastian D. Hunter, an autonomous AI agent
-that forms beliefs through continuous observation. Sebastian is currently researching: "${focus}".
+  // Claude has no search grounding, so the SEARCH is the browser (HelmStack
+  // session, CDP scraper as fallback) and Claude only ranks/annotates what the
+  // search actually returned. URLs therefore always come from real results —
+  // the model never invents one, which was the failure mode of the old grounded
+  // Gemini path when grounding came back empty.
+  let urls = [];
+  try {
+    const { searchWeb } = require("./lib/helmstack_fetch");
+    const { browserSearch } = require("./lib/browser_search");
 
-Find 3 high-quality, specific web pages (news articles, research papers, official reports, or
-authoritative analyses) that would give Sebastian primary-source evidence about this topic.
+    let results = await searchWeb(focus, { max: 10 }).catch(() => []);
+    if (!results.length) results = await browserSearch(focus, { maxResults: 10 }).catch(() => []);
+    if (!results.length) throw new Error("no search results");
+
+    const candidates = results
+      .filter(r => r.url && /^https?:/.test(r.url))
+      .slice(0, 10)
+      .map((r, i) => `${i + 1}. ${r.title || "(untitled)"}\n   ${r.url}\n   ${r.snippet || ""}`)
+      .join("\n");
+
+    const prompt = `Sebastian D. Hunter, an autonomous agent that forms beliefs through continuous
+observation, is researching: "${focus}".
+
+Below are real web search results. Pick the ${MAX_URLS} that would give him the best
+primary-source evidence on this topic.
 
 Prioritise: news wire services, academic sources, official government sources, reputable
 investigative journalism. Avoid: opinion blogs, social media, aggregators.
 
-For each result, provide the direct URL to the specific article or document.
+SEARCH RESULTS:
+${candidates}
 
-Respond in JSON:
-{
-  "urls": [
-    { "url": "https://...", "title": "...", "why": "one sentence on why this is relevant" },
-    { "url": "https://...", "title": "...", "why": "..." },
-    { "url": "https://...", "title": "...", "why": "..." }
-  ]
-}`;
+Return ONLY the chosen entries, copying each URL EXACTLY as given above. Never invent a URL.`;
 
-  let urls = [];
-  try {
-    const { project, location } = getProjectConfig();
-    const apiKey = process.env.BUILDER_CREDENTIALS || process.env.GOOGLE_APPLICATION_CREDENTIALS;
-    if (!apiKey) throw new Error("no GCP credentials found");
+    const { composeJSON } = require("./lib/compose");
+    const picked = await composeJSON(prompt, {
+      type: "object",
+      properties: {
+        urls: {
+          type: "array",
+          items: {
+            type: "object",
+            properties: { url: { type: "string" }, title: { type: "string" }, why: { type: "string" } },
+            required: ["url", "why"],
+          },
+        },
+      },
+      required: ["urls"],
+    }, { tag: "search_curiosity" });
 
-    const token = await getTokenForKey(apiKey);
-    const apiUrl = `https://${location}-aiplatform.googleapis.com/v1/projects/${project}/locations/${location}/publishers/google/models/gemini-2.5-flash:generateContent`;
-
-    const res = await fetch(apiUrl, {
-      method: "POST",
-      headers: { "Content-Type": "application/json", "Authorization": `Bearer ${token}` },
-      body: JSON.stringify({
-        contents: [{ role: "user", parts: [{ text: prompt }] }],
-        tools: [{ google_search: {} }],
-        generationConfig: { temperature: 0.1, maxOutputTokens: 1024, thinkingConfig: { thinkingBudget: 0 } },
-      }),
-    });
-
-    if (!res.ok) throw new Error(`HTTP ${res.status}`);
-    const data = await res.json();
-
-    // Extract grounding URLs first (most reliable)
-    const grounding = data?.candidates?.[0]?.groundingMetadata;
-    const groundingUrls = (grounding?.groundingChunks || [])
-      .filter(c => c.web?.uri)
-      .map(c => ({ url: c.web.uri, title: c.web.title || focus, why: "grounded search result" }))
+    // Hard guard: only accept URLs that appeared in the real search results.
+    const allowed = new Set(results.map(r => r.url));
+    urls = (picked.urls || [])
+      .filter(u => u.url && allowed.has(u.url))
       .slice(0, MAX_URLS);
 
-    if (groundingUrls.length > 0) {
-      urls = groundingUrls;
-    } else {
-      // Fall back to JSON in model text
-      const parts = data?.candidates?.[0]?.content?.parts || [];
-      const text = parts.filter(p => p.text && !p.thought).map(p => p.text).join("");
-      const match = text.match(/\{[\s\S]*\}/);
-      if (match) {
-        const parsed = JSON.parse(match[0]);
-        urls = (parsed.urls || [])
-          .filter(u => u.url && u.url.startsWith("http"))
-          .slice(0, MAX_URLS);
-      }
+    if (!urls.length && results.length) {
+      console.log("[search_curiosity] model returned no valid URL — falling back to top results");
+      urls = results.slice(0, MAX_URLS).map(r => ({ url: r.url, title: r.title || focus, why: "top search result" }));
     }
   } catch (err) {
     console.error(`[search_curiosity] search failed: ${err.message}`);

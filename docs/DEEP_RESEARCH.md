@@ -3,7 +3,7 @@
 `runner/deep_research.js` — a Claude-driven research tool composed from the
 agent's existing retrieval tools. All inference (triage, plan, refine, synth)
 runs on the Claude terminal via `lib/compose.reason()` (`THINK_BACKEND=claude`),
-falling back to the local brain.
+with no fallback backend (Claude is the only LLM).
 
 ## Pipeline
 

@@ -33,7 +33,7 @@ scare quotes and skipped. Enforced at three points:
    no-op). ~4% of recent quote targets aren't in the feed buffer at all, so an
    unrecoverable source degrades the coherence check rather than killing the
    cycle — unless the commentary contains a quotation, which then SKIPs.
-2. `runner/voice_filter.js --quote` — the Ollama rewrite now receives the quoted
+2. `runner/voice_filter.js --quote` — the Claude rewrite now receives the quoted
    post in its prompt, is told never to invent quotations, and its output is
    re-checked; a revision that adds an unverified quote falls back to the
    original. The pre-existing word-overlap similarity guard cannot catch this —

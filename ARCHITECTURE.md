@@ -12,10 +12,10 @@ There are three distinct layers:
 - **Mechanical layer** — Node.js scripts that handle all scraping, browser
   automation (via the HelmStack substrate + the `tools/helmstack-social`
   engines), data processing, posting, and git. No LLM.
-- **Reasoning layer** — a local **qwen2.5-agent** model via Ollama
-  (`runner/lib/gemini_agent.js` — legacy filename; it is an OpenAI-compatible
-  chat loop against `OLLAMA_BASE_URL`) reads pre-digested text files, thinks,
-  and writes text files. Scoring/gating/planning run on the same local model.
+- **Reasoning layer** — **Claude** via the `claude -p` CLI
+  (`runner/single_pass_browse.js` → `runner/lib/compose.js`) reads pre-digested
+  text files, thinks, and writes text files. Scoring/gating/planning run on
+  Claude too. It is the only LLM in the system; there is no fallback backend.
 - **Composition layer** — public-facing prose (tweets, quotes, replies,
   LinkedIn posts, articles) is composed by the **Claude CLI**
   (`runner/lib/compose.js`, `COMPOSE_BACKEND=claude`); deep-research reasoning
@@ -583,12 +583,12 @@ follow_score = avg_velocity × 0.35
 |---|---|
 | Browser automation | HelmStack substrate (HTTP API :7070) + `tools/helmstack-social` X/LinkedIn engines; legacy Chrome CDP retained for residual utilities |
 | Database | SQLite via `better-sqlite3` — WAL mode, FTS5 full-text search (`state/index.db`, `state/outbox.db`); permanent post history in `state/posts_archive/` (local NDJSON, never pruned) |
-| LLM (agent brain) | local qwen2.5-agent via Ollama (`runner/lib/gemini_agent.js` — legacy filename) |
+| LLM (agent brain) | Claude (`runner/single_pass_browse.js` → `lib/compose.js`) |
 | LLM (outbound prose) | Claude CLI via `runner/lib/compose.js` (`COMPOSE_BACKEND=claude`); deep-research reasoning via `THINK_BACKEND=claude` |
-| LLM (scoring/gates/critique) | local qwen2.5-agent (`runner/local_llm.js`) |
+| LLM (scoring/gates/critique) | Claude (`runner/llm.js` → `lib/compose.js`) |
 | LLM (self-mod builder) | Claude CLI (`BUILDER_BACKEND=claude` in `runner/builder_vertex.js`); Gemini 2.5 Pro Vertex fallback |
 | LLM (cloud workers) | Gemini 2.5 Flash via Vertex — `workers/verify` claim verification |
-| Embeddings | nomic-embed-text 768-dim local via Ollama |
+| Embeddings | **disabled** — no Claude embedding endpoint; recall falls back to fts5 |
 | Permanent storage | Arweave via Irys L2 (SOL-funded, `@irys/sdk`) — journals, checkpoints, articles, evidence sources |
 | Web frontend | Next.js at sebastianhunter.fun (Vercel, built from repo content) |
 | Orchestration | `run.sh` (init) → `orchestrator.js` (Node.js main loop, SIGTERM-safe); **launchd** (`com.sebastian.runner`, KeepAlive) |
