@@ -319,6 +319,53 @@ Respond as plain text (not JSON).`;
   }
 }
 
+// ── Self-verification ─────────────────────────────────────────────────────────
+
+/**
+ * reverifyDoneTasks(sprintId) → { checked, reopened }
+ *
+ * Sebastian re-runs the completion test on his own board every cycle. For each
+ * task marked done, the recorded artifact is resolved again; if it no longer
+ * passes, the task is reopened to in_progress.
+ *
+ * A task holds "done" only for as long as its evidence holds up. That closes
+ * three gaps a one-time check leaves open:
+ *   - completions recorded before verification existed (20 of 20 tasks on this
+ *     board were unbacked when the check was introduced),
+ *   - artifacts that disappear afterwards — a deleted draft, a removed post,
+ *   - a sprint auto-completing because every task merely *looked* done.
+ */
+async function reverifyDoneTasks(sprintId) {
+  const tasks = await Promise.resolve(sprintDb.getTasks(sprintId));
+  const done  = tasks.filter(t => t.status === "done");
+  if (done.length === 0) return { checked: 0, reopened: 0 };
+
+  const publishedUrls = loadPublishedUrls();
+  let reopened = 0;
+  for (const t of done) {
+    const v = verifyArtifact(t.output_ref, { publishedUrls });
+    if (v.ok) continue;
+    await Promise.resolve(sprintDb.updateTaskStatus(t.id, "in_progress", null));
+    reopened++;
+    console.log(`[sprint/tracker] REOPENED task ${t.id} "${String(t.title).slice(0, 50)}" — ${v.reason} (${v.ref || "no artifact"})`);
+  }
+
+  // Housekeeping: tasks demoted before completed_date was cleared on status
+  // change still carry a completion date they never earned. Clear them so the
+  // column means one thing — this task is done, on this date.
+  const stale = tasks.filter(t => t.status !== "done" && t.completed_date && !done.some(d => d.id === t.id));
+  for (const t of stale) {
+    await Promise.resolve(sprintDb.updateTaskStatus(t.id, t.status, null));
+    console.log(`[sprint/tracker] cleared stale completed_date on task ${t.id} (status ${t.status})`);
+  }
+
+  console.log(
+    `[sprint/tracker] self-verify: ${done.length} done task(s) checked, ` +
+    `${done.length - reopened} still backed by a real artifact, ${reopened} reopened`
+  );
+  return { checked: done.length, reopened };
+}
+
 // ── Main tracking logic ───────────────────────────────────────────────────────
 
 /**
@@ -334,6 +381,14 @@ async function runDailyTracking(planId) {
     console.log("[sprint/tracker] no active sprint — skipping tracking");
     return { action: "no_sprint" };
   }
+
+  // Re-verify the whole board FIRST, before anything reads task statuses. Every
+  // task currently marked done has its artifact re-resolved; anything that no
+  // longer checks out is reopened. This runs unattended every cycle, so "done"
+  // is a continuously held claim rather than a one-time assertion — it catches
+  // completions that were never backed, and artifacts that have since vanished
+  // (file deleted, post taken down).
+  await reverifyDoneTasks(currentSprint.id);
 
   const tasks   = await Promise.resolve(sprintDb.getTasks(currentSprint.id));
   const signals = gatherTodaySignals();

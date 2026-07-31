@@ -188,10 +188,20 @@ function addTask({ sprint_id, title, description, task_type, priority, estimated
 }
 
 function updateTaskStatus(task_id, status, output_ref) {
-  const completed_date = status === "done" ? new Date().toISOString().slice(0, 10) : null;
-  db.prepare(
-    "UPDATE tasks SET status = ?, output_ref = COALESCE(?, output_ref), completed_date = COALESCE(?, completed_date) WHERE id = ?"
-  ).run(status, output_ref || null, completed_date, task_id);
+  // completed_date tracks "done" exactly: set on completion, CLEARED when a task
+  // moves back off done. It used to be COALESCE'd, so a task reopened by the
+  // self-verify sweep kept a completion date it no longer had.
+  // output_ref stays COALESCE'd on purpose — a reopened task keeps the reference
+  // that failed, so the bad artifact remains visible instead of silently blanking.
+  if (status === "done") {
+    db.prepare(
+      "UPDATE tasks SET status = ?, output_ref = COALESCE(?, output_ref), completed_date = ? WHERE id = ?"
+    ).run(status, output_ref || null, new Date().toISOString().slice(0, 10), task_id);
+  } else {
+    db.prepare(
+      "UPDATE tasks SET status = ?, output_ref = COALESCE(?, output_ref), completed_date = NULL WHERE id = ?"
+    ).run(status, output_ref || null, task_id);
+  }
 }
 
 // Strings the LLM sometimes emits in place of an actual artifact path.

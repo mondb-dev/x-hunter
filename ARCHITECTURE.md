@@ -483,6 +483,17 @@ nothing → the task is **demoted to `in_progress`** and logged, so it stays on 
 board. The verified reference is stored in `tasks.output_ref`, which is what
 "done" now means: a thing you can open.
 
+**Sebastian re-runs the test on himself.** `reverifyDoneTasks()` is the first
+step of every daily tracking run: every task currently marked `done` has its
+artifact re-resolved, and anything that no longer passes is reopened. So `done`
+is a claim held continuously, not asserted once — which also catches artifacts
+that vanish later (a deleted draft, a removed post) and stops a sprint
+auto-completing on tasks that merely looked finished. The sweep is idempotent:
+a second pass over a verified board reopens nothing.
+
+`completed_date` is cleared when a task leaves `done` (it used to be `COALESCE`d,
+so reopened tasks kept a completion date they never earned).
+
 This replaced a tracker that passed `null` for the artifact and accepted the
 model's judgement outright. The audit that motivated it (`node
 runner/sprint/verify_artifact.js`) found **20 of 20** done tasks unbacked — 12
