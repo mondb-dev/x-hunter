@@ -32,6 +32,7 @@ const STATE = path.join(ROOT, "state");
 const { reason } = require("../lib/compose");
 const { loadSprintDb } = require("../lib/db_backend");
 const { CAPABILITIES } = require("../lib/capabilities");
+const { isTemplate } = require("./verify_artifact");
 const sprintDb         = loadSprintDb();
 
 // ── Helpers ───────────────────────────────────────────────────────────────────
@@ -109,8 +110,16 @@ function validateSprintTasks(tasks, weekLabel) {
       continue;
     }
 
+    // post_x / post_linkedin are exempt: their artifact is the posted URL, which
+    // only exists after the fact and is filled in (and verified) by the tracker.
     if ((t.task_type === "write" || t.task_type === "publish") && !hasRealArtifact(t)) {
       errors.push(`${weekLabel}: "${title}" (${t.task_type}) is missing a concrete artifact path — every write/publish task must name a file path or URL pattern`);
+    }
+
+    // A templated artifact is worse than none: it looks like evidence, stores as
+    // evidence, and fails verification later. Reject it at planning time.
+    if (t.artifact && isTemplate(t.artifact)) {
+      errors.push(`${weekLabel}: "${title}" has a templated artifact ("${t.artifact}") — write a real path or null, never a placeholder`);
     }
 
     if (OPEN_ENDED_TITLE_RE.test(title)) {
@@ -124,6 +133,18 @@ function validateSprintTasks(tasks, weekLabel) {
       seenFingerprints.set(fp, title);
     }
   }
+
+  // Every sprint has to reach an audience on both channels. Without this the
+  // planner drifts into research/write/reflect loops that never publish, which
+  // is how a "verification campaign" ran for weeks with nothing posted.
+  const types = new Set(tasks.map(t => t.task_type));
+  if (!types.has("post_x")) {
+    errors.push(`${weekLabel}: no post_x task — every sprint must publish at least once on X`);
+  }
+  if (!types.has("post_linkedin")) {
+    errors.push(`${weekLabel}: no post_linkedin task — every sprint must publish at least once on LinkedIn`);
+  }
+
   return errors;
 }
 
@@ -294,7 +315,18 @@ fine ONLY if follower counts are being recorded. "Establish methodology" / "Refi
 process goals, not deliverables — pair them with a concrete artifact (e.g., "methodology section
 in articles/reports/Report_1.md").
 
-**5. Be realistic.** One AI agent, one week. Ground choices in what's LIVE in discourse right now.
+**5. Every sprint MUST ship publicly.** Include at least one post_x task AND at least one
+post_linkedin task in each week. Research and drafts that never reach an audience are not a
+sprint outcome — Sebastian's work exists to be published. Name the specific angle or claim the
+post will carry, not "share an update". Leave their artifact null: the tracker records the real
+posted URL and verifies it against the posts log before the task can count as done.
+
+**6. "Done" is verified, not asserted.** A task is only completed when its artifact resolves —
+a real posted URL found in the posts log, or a file that exists on disk. Never write a templated
+artifact (no "YYYY-MM-DD", no angle-bracket placeholders, no unsubstituted week numbers): those
+fail verification and the task will be reopened.
+
+**7. Be realistic.** One AI agent, one week. Ground choices in what's LIVE in discourse right now.
 
 Respond in this exact JSON format:
 {
@@ -307,10 +339,10 @@ Respond in this exact JSON format:
         {
           "title": "Concrete task name",
           "description": "What exactly to do and what 'done' looks like",
-          "task_type": "research|write|publish|engage|reflect",
+          "task_type": "research|write|publish|post_x|post_linkedin|engage|reflect",
           "priority": 1,
           "estimated_hours": 4,
-          "artifact": "articles/reports/Report_1.md or null if no file output"
+          "artifact": "articles/reports/Report_1.md, or null if this task produces no file. For post_x/post_linkedin leave it null — the tracker fills in the real posted URL."
         }
       ]
     }
@@ -389,10 +421,10 @@ Respond in this exact JSON format:
     {
       "title": "Concrete task name",
       "description": "What exactly to do",
-      "task_type": "research|write|publish|engage|reflect",
+      "task_type": "research|write|publish|post_x|post_linkedin|engage|reflect",
       "priority": 1,
       "estimated_hours": 4,
-      "artifact": "articles/reports/Report_${nextWeek}.md or null if no file output"
+      "artifact": "articles/reports/Report_${nextWeek}.md, or null if this task produces no file. For post_x/post_linkedin leave it null — the tracker fills in the real posted URL."
     }
   ]
 }`;

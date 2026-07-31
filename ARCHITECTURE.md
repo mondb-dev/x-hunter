@@ -465,6 +465,35 @@ Writes: daily/posts_assessment_YYYY-MM-DD.md   (full critique, archived)
 The posting directive is injected into tweet and quote-tweet prompts the
 following day, so Sebastian reads it before composing.
 
+### Sprint Task Completion — verified, not asserted
+
+`runner/sprint/tracker.js` runs daily, gathers "signals" from the day's output
+(posts, journals, `[SPRINT: id]` tags) and asks Claude to match them to open
+tasks. That match is a **claim**, not a completion.
+
+Before a task may reach `done`, `runner/sprint/verify_artifact.js` must resolve
+the artifact the model named:
+
+- an **x.com / linkedin.com URL** that appears in `state/posts_log.json` — i.e.
+  something the system actually published, and
+- or a **file path** that exists in the repo.
+
+Missing, templated (`articles/YYYY-MM-DD.md`, `status/<id>`), or pointing at
+nothing → the task is **demoted to `in_progress`** and logged, so it stays on the
+board. The verified reference is stored in `tasks.output_ref`, which is what
+"done" now means: a thing you can open.
+
+This replaced a tracker that passed `null` for the artifact and accepted the
+model's judgement outright. The audit that motivated it (`node
+runner/sprint/verify_artifact.js`) found **20 of 20** done tasks unbacked — 12
+with no artifact and 8 whose references resolved to nothing, including
+unsubstituted templates and an account name that wasn't Sebastian's.
+
+**Every sprint must publish.** `sprint/planner.js` requires at least one
+`post_x` and one `post_linkedin` task per week, and rejects templated artifacts
+at planning time; validation errors are fed back for a re-plan. Without it the
+planner drifts into research/write/reflect loops that never reach an audience.
+
 ### Silent-Hours Sprint Execution
 
 During silent hours (UTC 23-07), browse cycles are redirected toward sprint

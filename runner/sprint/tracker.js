@@ -27,6 +27,7 @@ const STATE = path.join(ROOT, "state");
 
 const { reason } = require("../lib/compose");
 const { loadSprintDb } = require("../lib/db_backend");
+const { verifyArtifact, loadPublishedUrls } = require("./verify_artifact");
 const sprintDb         = loadSprintDb();
 
 // ── Helpers ───────────────────────────────────────────────────────────────────
@@ -245,6 +246,10 @@ IMPORTANT MATCHING RULES:
 - When in doubt, do NOT match. Unmatched signals are fine. False positives are worse than misses.
 - A task is "done" ONLY if the signal represents FULL completion (e.g., a manifesto was published
   and it's actually about the stated topic). Otherwise mark "in_progress" at most.
+- "done" additionally REQUIRES a real "artifact" — the URL that was posted or the file that was
+  written. It is checked against the posts log and the filesystem after you answer, and a task
+  whose artifact does not resolve is demoted to "in_progress". Never invent, guess, or template
+  an artifact (no "YYYY-MM-DD", no "<id>"): copy it verbatim from the signal, or return null.
 
 Respond in JSON:
 {
@@ -253,7 +258,8 @@ Respond in JSON:
       "task_id": 123,
       "signal_index": 1,
       "new_status": "in_progress|done",
-      "accomplishment": "brief factual description — only what the evidence literally shows"
+      "accomplishment": "brief factual description — only what the evidence literally shows",
+      "artifact": "the CONCRETE thing this produced — a full x.com/linkedin.com URL, or a repo-relative file path. Copy it EXACTLY from the signal. Use null if the signal names no concrete output."
     }
   ],
   "unmatched_signals": [
@@ -338,17 +344,40 @@ async function runDailyTracking(planId) {
   if (signals.length > 0 && tasks.some(t => t.status !== "done")) {
     const result = await matchSignalsToTasks(signals, tasks);
 
-    // Apply matches
+    // Apply matches — but "done" has to be EARNED. The model's judgement is a
+    // claim; verifyArtifact is what turns it into a fact. A done-claim whose
+    // artifact doesn't resolve (missing, templated, a URL never actually posted,
+    // a file that isn't there) is demoted to in_progress and logged, so the task
+    // stays visible on the board instead of quietly disappearing as complete.
+    const publishedUrls = loadPublishedUrls();
     for (const m of (result.matches || [])) {
-      await Promise.resolve(sprintDb.updateTaskStatus(m.task_id, m.new_status, null));
+      let status = m.new_status;
+      let artifact = null;
+
+      if (status === "done") {
+        const v = verifyArtifact(m.artifact, { publishedUrls });
+        if (v.ok) {
+          artifact = v.ref;
+          console.log(`[sprint/tracker] task ${m.task_id} artifact verified (${v.kind}): ${v.ref}`);
+        } else {
+          status = "in_progress";
+          console.log(`[sprint/tracker] task ${m.task_id} claimed done but artifact ${v.reason} (${v.ref || "null"}) — demoted to in_progress`);
+        }
+      } else if (m.artifact) {
+        // Not a completion claim, but record a real reference if one came back.
+        const v = verifyArtifact(m.artifact, { publishedUrls });
+        if (v.ok) artifact = v.ref;
+      }
+
+      await Promise.resolve(sprintDb.updateTaskStatus(m.task_id, status, artifact));
       await Promise.resolve(sprintDb.addAccomplishment({
         plan_id:     planId,
         task_id:     m.task_id,
         date:        d,
         description: m.accomplishment,
-        evidence:    signals[m.signal_index - 1]?.description || null,
+        evidence:    artifact || signals[m.signal_index - 1]?.description || null,
       }));
-      console.log(`[sprint/tracker] task ${m.task_id} → ${m.new_status}: ${m.accomplishment}`);
+      console.log(`[sprint/tracker] task ${m.task_id} → ${status}: ${m.accomplishment}`);
     }
 
     // Record unmatched but noteworthy signals
