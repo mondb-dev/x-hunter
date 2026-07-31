@@ -1,8 +1,8 @@
 {
   "schema_version": "1.0",
-  "generated_at": "2026-07-31T05:21:44.036Z",
+  "generated_at": "2026-07-31T09:36:28.846Z",
   "method": "mechanical_registry_v1",
-  "profiled_at": "2026-07-31T05:22:06.784Z",
+  "profiled_at": "2026-07-31T09:36:44.923Z",
   "sources": [
     {
       "domain": "theguardian.com",
@@ -11,7 +11,7 @@
       "first_seen_at": "2026-03-27T23:17:00Z",
       "last_seen_at": "2026-07-31T01:28:51.978Z",
       "discovery": {
-        "distinct_urls": 631,
+        "distinct_urls": 633,
         "example_urls": [
           "https://www.theguardian.com/us-news/2026/jun/23/trump-immigration-courthouse-arrest-policy",
           "https://www.theguardian.com/us-news/2026/jun/28/ice-minnesota-defending-democracy",
@@ -21,7 +21,7 @@
         ],
         "origin_counts": {
           "ontology_evidence": 41,
-          "reading_queue": 598,
+          "reading_queue": 601,
           "journals": 106,
           "articles": 3
         },
@@ -72,7 +72,7 @@
         "breadth": {
           "score": 0.94,
           "basis": [
-            "distinct_urls:631",
+            "distinct_urls:633",
             "distinct_axes:17",
             "origin_types:4"
           ]
@@ -112,7 +112,7 @@
             "newsroom_domain_pattern",
             "article_path_seen",
             "doi_or_identifier_path_seen",
-            "distinct_urls:631",
+            "distinct_urls:633",
             "distinct_axes:17",
             "origin_types:4",
             "referring_accounts:0",
@@ -218,14 +218,14 @@
           ]
         },
         "profile": {
-          "score": 0.64,
-          "confidence": 0.65,
+          "score": 0.38,
+          "confidence": 0.55,
           "basis": [
             "meta_author:false",
             "published_time:false",
             "canonical:true",
-            "about:true",
-            "contact:true",
+            "about:false",
+            "contact:false",
             "corrections:true",
             "outbound_links:18",
             "opinion_marker:false"
@@ -249,23 +249,23 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-07-28T05:25:30.411Z",
+        "fetched_at": "2026-07-31T07:20:58.752Z",
         "homepage_url": "https://ojp.gov/",
         "example_url": "https://bjs.ojp.gov/library/publications/violent-victimization-race-or-hispanic-origin-2008-2012",
-        "homepage_status": 200,
+        "homepage_status": null,
         "example_status": 404,
-        "homepage_final_url": "https://www.ojp.gov/",
+        "homepage_final_url": "https://ojp.gov/",
         "example_final_url": "https://bjs.ojp.gov/library/publications/violent-victimization-race-or-hispanic-origin-2008-2012",
-        "homepage_content_type": "text/html; charset=UTF-8",
+        "homepage_content_type": "",
         "example_content_type": "text/html; charset=UTF-8",
         "homepage": {
           "has_meta_author": false,
           "has_published_time": false,
-          "has_canonical": true,
-          "has_about_link": true,
-          "has_contact_link": true,
-          "has_corrections_link": true,
-          "outbound_links_count": 22,
+          "has_canonical": false,
+          "has_about_link": false,
+          "has_contact_link": false,
+          "has_corrections_link": false,
+          "outbound_links_count": 0,
           "opinion_marker": false
         },
         "example": {
@@ -695,7 +695,7 @@
       "first_seen_at": "2026-06-22T00:15:00Z",
       "last_seen_at": "2026-07-30T21:22:11.470Z",
       "discovery": {
-        "distinct_urls": 429,
+        "distinct_urls": 431,
         "example_urls": [
           "https://www.nytimes.com/2026/06/19/world/canada/frank-stronach-trial-guilty-sex-charges.html",
           "https://www.nytimes.com/2026/06/27/world/americas/mexican-officials-us-informants.html",
@@ -705,7 +705,7 @@
         ],
         "origin_counts": {
           "ontology_evidence": 14,
-          "reading_queue": 430,
+          "reading_queue": 433,
           "journals": 36
         },
         "distinct_referring_accounts": 0,
@@ -745,7 +745,7 @@
         "breadth": {
           "score": 0.8799999999999999,
           "basis": [
-            "distinct_urls:429",
+            "distinct_urls:431",
             "distinct_axes:8",
             "origin_types:3"
           ]
@@ -784,7 +784,7 @@
           "basis": [
             "newsroom_domain_pattern",
             "article_path_seen",
-            "distinct_urls:429",
+            "distinct_urls:431",
             "distinct_axes:8",
             "origin_types:3",
             "referring_accounts:0",
@@ -1076,16 +1076,17 @@
       "entity": "Doi",
       "kind": "academic",
       "first_seen_at": "2026-07-13T06:03:13.000Z",
-      "last_seen_at": "2026-07-13T17:28:40.850Z",
+      "last_seen_at": "2026-07-31T09:07:48.789Z",
       "discovery": {
-        "distinct_urls": 2,
+        "distinct_urls": 3,
         "example_urls": [
           "https://doi.org/10.1002/ped4.70061?twclid=2p92o0thcwkaxz6o70plj8t4q",
-          "https://doi.org/10.1002/ped4.70061?twclid=2e8cuab281hyoulc7u4h9bd94u"
+          "https://doi.org/10.1002/ped4.70061?twclid=2e8cuab281hyoulc7u4h9bd94u",
+          "https://doi.org/10.1002/ped4.70053?twclid=226xgmhprn4ouuwep14jfalrrq"
         ],
         "origin_counts": {
           "reading_queue": 6,
-          "feed_buffer": 1,
+          "feed_buffer": 2,
           "feed_buffer_reply": 1
         },
         "distinct_referring_accounts": 1,
@@ -1115,9 +1116,9 @@
           ]
         },
         "breadth": {
-          "score": 0.2383333333333333,
+          "score": 0.26749999999999996,
           "basis": [
-            "distinct_urls:2",
+            "distinct_urls:3",
             "distinct_axes:0",
             "origin_types:3"
           ]
@@ -1150,12 +1151,12 @@
           ]
         },
         "overall": {
-          "score": 0.7056510416666667,
-          "confidence": 0.15092499999999998,
+          "score": 0.71203125,
+          "confidence": 0.17955,
           "method": "mechanical_v1",
           "basis": [
             "academic_domain_pattern",
-            "distinct_urls:2",
+            "distinct_urls:3",
             "distinct_axes:0",
             "origin_types:3",
             "referring_accounts:1",
@@ -1445,7 +1446,7 @@
       "first_seen_at": "2026-06-26T07:05:00Z",
       "last_seen_at": "2026-07-26T19:55:37.560Z",
       "discovery": {
-        "distinct_urls": 375,
+        "distinct_urls": 377,
         "example_urls": [
           "https://www.bbc.co.uk/news/articles/cn8qxz6qypyo",
           "https://www.bbc.co.uk/news/articles/cn075j04pnyo?at_medium=RSS&amp;at_campaign=rss",
@@ -1455,7 +1456,7 @@
         ],
         "origin_counts": {
           "ontology_evidence": 6,
-          "reading_queue": 384,
+          "reading_queue": 386,
           "journals": 15
         },
         "distinct_referring_accounts": 0,
@@ -1490,7 +1491,7 @@
         "breadth": {
           "score": 0.7633333333333332,
           "basis": [
-            "distinct_urls:375",
+            "distinct_urls:377",
             "distinct_axes:4",
             "origin_types:3"
           ]
@@ -1528,7 +1529,7 @@
           "method": "mechanical_v1",
           "basis": [
             "newsroom_domain_pattern",
-            "distinct_urls:375",
+            "distinct_urls:377",
             "distinct_axes:4",
             "origin_types:3",
             "referring_accounts:0",
@@ -1712,7 +1713,7 @@
           "https://www.bbc.com/news/articles/cp3xqkxp3x5o?at_medium=RSS&amp;at_campaign=rss"
         ],
         "origin_counts": {
-          "reading_queue": 31
+          "reading_queue": 32
         },
         "distinct_referring_accounts": 0,
         "sample_referring_accounts": [],
@@ -2364,7 +2365,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-07-28T05:25:31.455Z",
+        "fetched_at": "2026-07-31T07:21:00.748Z",
         "homepage_url": "https://amnesty.org/",
         "example_url": "https://www.amnesty.org/en/latest/news/2026/06/burkina-serge-oulon/",
         "homepage_status": 200,
@@ -2759,7 +2760,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-07-28T05:25:32.444Z",
+        "fetched_at": "2026-07-31T07:21:02.166Z",
         "homepage_url": "https://hrw.org/",
         "example_url": "https://www.hrw.org/news/2026/06/18/support-builds-to-protect-children-from-crimes-against-humanity",
         "homepage_status": 200,
@@ -2795,9 +2796,9 @@
       "entity": "T Co",
       "kind": "unknown",
       "first_seen_at": "2016-05-05T18:57:30.000Z",
-      "last_seen_at": "2026-07-31T04:12:00.000Z",
+      "last_seen_at": "2026-07-31T08:27:36.192Z",
       "discovery": {
-        "distinct_urls": 11938,
+        "distinct_urls": 11965,
         "example_urls": [
           "https://t.co/pJSE124ec4",
           "https://t.co/Soz8BXPWaa",
@@ -2806,7 +2807,7 @@
           "https://t.co/cYaqYDRp08"
         ],
         "origin_counts": {
-          "feed_buffer": 9436,
+          "feed_buffer": 9466,
           "feed_buffer_reply": 4877,
           "articles": 1
         },
@@ -2849,7 +2850,7 @@
         "breadth": {
           "score": 0.53,
           "basis": [
-            "distinct_urls:11938",
+            "distinct_urls:11965",
             "distinct_axes:0",
             "origin_types:3"
           ]
@@ -2888,7 +2889,7 @@
           "basis": [
             "unknown_domain_pattern",
             "doi_or_identifier_path_seen",
-            "distinct_urls:11938",
+            "distinct_urls:11965",
             "distinct_axes:0",
             "origin_types:3",
             "referring_accounts:2714",
@@ -3176,7 +3177,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-07-28T05:25:33.491Z",
+        "fetched_at": "2026-07-31T07:21:06.848Z",
         "homepage_url": "https://inquirer.net/",
         "example_url": "https://newsinfo.inquirer.net/2266316/nbi-on-cayetano-position-that-cant-be-defended-by-facts-is-done-with-insults",
         "homepage_status": 200,
@@ -3212,9 +3213,9 @@
       "entity": "Rappler",
       "kind": "unknown",
       "first_seen_at": "2026-06-22T04:04:30.428Z",
-      "last_seen_at": "2026-07-31T04:52:17.719Z",
+      "last_seen_at": "2026-07-31T09:07:09.768Z",
       "discovery": {
-        "distinct_urls": 205,
+        "distinct_urls": 208,
         "example_urls": [
           "https://www.rappler.com/fact-check-no-arrest-warrant-issued-vs-marcoleta",
           "https://www.rappler.com/technology/decoded-tacloban-school-shooting-disinformation-kiko-barzaga-discussions-juvenile-justice-law/",
@@ -3223,8 +3224,8 @@
           "https://www.rappler.com/voices/thought-leaders/vantage-point-bir-tax-amlc-records-billions-questions-sara-duterte-ignore/"
         ],
         "origin_counts": {
-          "ontology_evidence": 104,
-          "journals": 237,
+          "ontology_evidence": 105,
+          "journals": 240,
           "articles": 1
         },
         "distinct_referring_accounts": 0,
@@ -3280,7 +3281,7 @@
         "breadth": {
           "score": 0.8799999999999999,
           "basis": [
-            "distinct_urls:205",
+            "distinct_urls:208",
             "distinct_axes:25",
             "origin_types:3"
           ]
@@ -3318,7 +3319,7 @@
           "method": "mechanical_v1",
           "basis": [
             "unknown_domain_pattern",
-            "distinct_urls:205",
+            "distinct_urls:208",
             "distinct_axes:25",
             "origin_types:3",
             "referring_accounts:0",
@@ -3364,9 +3365,9 @@
       "entity": "Gmanetwork",
       "kind": "unknown",
       "first_seen_at": "2026-05-18T03:29:41.732Z",
-      "last_seen_at": "2026-07-31T03:22:27.914Z",
+      "last_seen_at": "2026-07-31T09:07:09.768Z",
       "discovery": {
-        "distinct_urls": 315,
+        "distinct_urls": 320,
         "example_urls": [
           "https://www.gmanetwork.com/news/topstories/nation/994225/explainer-objections-in-a-trial-and-their-role-in-due-process/story/",
           "https://www.gmanetwork.com/news/balitambayan/balita/993931/sen-escudero-sinabing-16-na-boto-ang-kailangan-para-mahatulang-guilty-si-vp-sara-duterte-sa-impea/story/",
@@ -3375,8 +3376,8 @@
           "https://www.gmanetwork.com/news/topstories/nation/994080/electronic-copies-evidence-supreme-court/story/"
         ],
         "origin_counts": {
-          "ontology_evidence": 104,
-          "journals": 364
+          "ontology_evidence": 105,
+          "journals": 369
         },
         "distinct_referring_accounts": 0,
         "sample_referring_accounts": [],
@@ -3425,7 +3426,7 @@
         "breadth": {
           "score": 0.82,
           "basis": [
-            "distinct_urls:315",
+            "distinct_urls:320",
             "distinct_axes:18",
             "origin_types:2"
           ]
@@ -3464,7 +3465,7 @@
           "basis": [
             "unknown_domain_pattern",
             "doi_or_identifier_path_seen",
-            "distinct_urls:315",
+            "distinct_urls:320",
             "distinct_axes:18",
             "origin_types:2",
             "referring_accounts:0",
@@ -3793,9 +3794,9 @@
       "entity": "Bit Ly",
       "kind": "unknown",
       "first_seen_at": "2026-04-06T16:33:36.000Z",
-      "last_seen_at": "2026-07-28T21:05:46.731Z",
+      "last_seen_at": "2026-07-31T07:32:34.132Z",
       "discovery": {
-        "distinct_urls": 28,
+        "distinct_urls": 29,
         "example_urls": [
           "https://bit.ly/4rFUGm4?twclid=2cxu7o43bx4p37y7v84zudvy2q",
           "https://bit.ly/4rFUGm4?twclid=2bcgwzcedehb1ong389c8zjnsb",
@@ -3805,7 +3806,7 @@
         ],
         "origin_counts": {
           "feed_buffer_reply": 19,
-          "feed_buffer": 8,
+          "feed_buffer": 9,
           "journals": 10
         },
         "distinct_referring_accounts": 9,
@@ -3845,7 +3846,7 @@
         "breadth": {
           "score": 0.53,
           "basis": [
-            "distinct_urls:28",
+            "distinct_urls:29",
             "distinct_axes:0",
             "origin_types:3"
           ]
@@ -3883,7 +3884,7 @@
           "method": "mechanical_v1",
           "basis": [
             "unknown_domain_pattern",
-            "distinct_urls:28",
+            "distinct_urls:29",
             "distinct_axes:0",
             "origin_types:3",
             "referring_accounts:9",
@@ -6627,7 +6628,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-07-28T07:01:59.117Z",
+        "fetched_at": "2026-07-31T07:51:10.061Z",
         "homepage_url": "https://tr.ee/",
         "example_url": "https://tr.ee/wndhL7?twclid=22lr9koznm9ghbdy0s9178q7j0",
         "homepage_status": 200,
@@ -6918,9 +6919,9 @@
       "entity": "Byteplus",
       "kind": "unknown",
       "first_seen_at": "2026-04-15T13:30:37.000Z",
-      "last_seen_at": "2026-07-29T17:53:53.276Z",
+      "last_seen_at": "2026-07-31T05:23:33.124Z",
       "discovery": {
-        "distinct_urls": 115,
+        "distinct_urls": 116,
         "example_urls": [
           "https://www.byteplus.com/en/contact-us/ai-cloud-products?utm_source=x&utm_medium=cpc&utm_campaign=leads_submit_eu_english_20260415_celene&utm_term=20260415_image_leads&utm_content=tecdo&twclid=24somkg02k4fm60up4bq87nhwy",
           "https://www.byteplus.com/en/activity/codingplan?utm_source=x&utm_medium=cpc&utm_campaign=codingplan_signup_eu_english_20260415_yuki&utm_term=20260415_image_codingplan&utm_content=tecdo&twclid=2dnuttry4m02uyeswjtnkyw6cq",
@@ -6930,7 +6931,7 @@
         ],
         "origin_counts": {
           "feed_buffer_reply": 100,
-          "feed_buffer": 15
+          "feed_buffer": 16
         },
         "distinct_referring_accounts": 1,
         "sample_referring_accounts": [
@@ -6961,7 +6962,7 @@
         "breadth": {
           "score": 0.47,
           "basis": [
-            "distinct_urls:115",
+            "distinct_urls:116",
             "distinct_axes:0",
             "origin_types:2"
           ]
@@ -6999,7 +7000,7 @@
           "method": "mechanical_v1",
           "basis": [
             "unknown_domain_pattern",
-            "distinct_urls:115",
+            "distinct_urls:116",
             "distinct_axes:0",
             "origin_types:2",
             "referring_accounts:1",
@@ -8184,6 +8185,133 @@
       }
     },
     {
+      "domain": "travala.com",
+      "entity": "Travala",
+      "kind": "unknown",
+      "first_seen_at": "2026-07-07T12:18:51.059Z",
+      "last_seen_at": "2026-07-31T05:23:28.291Z",
+      "discovery": {
+        "distinct_urls": 24,
+        "example_urls": [
+          "https://www.travala.com/?camp_name=&camp_offer=credit&camp_content=Sign-up-or-log-in-to-receive-%2450-off-flights%2C-hotels-and-activities.&camp_code=BTCASIA50&camp_value=50&utm_campaign=BTCASIA50&utm_medium=by-travala-cpc&utm_source=twitter&twclid=26wz3yk3m5mtcltdzivyfesoom",
+          "https://www.travala.com/?camp_name=&camp_offer=credit&camp_content=Sign-up-or-log-in-to-receive-%2450-off-flights%2C-hotels-and-activities.&camp_code=BTCASIA50&camp_value=50&utm_campaign=BTCASIA50&utm_medium=by-travala-cpc&utm_source=twitter&twclid=27hwmpgkfaysz941g6s97hdxaj",
+          "https://www.travala.com/?camp_name=COINFESTASIA2026&camp_offer=credit&camp_content=Sign-up-or-log-in-to-receive-%2450-off-flights%2C-hotels-and-activities.&camp_code=COINFESTASIA2026&camp_value=50&twclid=294v9257q2r0tg4r9ly3pj1y4e",
+          "https://www.travala.com/?camp_name=COINFESTASIA2026&camp_offer=credit&camp_content=Sign-up-or-log-in-to-receive-%2450-off-flights%2C-hotels-and-activities.&camp_code=COINFESTASIA2026&camp_value=50&twclid=2b6tiv0rornjsaszcrq273c8h7",
+          "https://www.travala.com/?camp_name=&camp_offer=credit&camp_content=Sign-up-or-log-in-to-receive-%2450-off-flights%2C-hotels-and-activities.&camp_code=BTCASIA50&camp_value=50&utm_campaign=BTCASIA50&utm_medium=by-travala-cpc&utm_source=twitter&twclid=2bbhq20cxwi8wz4ld34c9p9zyc"
+        ],
+        "origin_counts": {
+          "feed_buffer": 20,
+          "feed_buffer_reply": 4
+        },
+        "distinct_referring_accounts": 1,
+        "sample_referring_accounts": [
+          "travalacom"
+        ],
+        "distinct_axes": []
+      },
+      "claims": {
+        "total": 0,
+        "supported": 0,
+        "refuted": 0,
+        "contested": 0,
+        "unverified": 0,
+        "resolved_count": 0
+      },
+      "structural_features": {
+        "has_search_paths": false,
+        "has_article_paths": false,
+        "has_doi_paths": false
+      },
+      "ratings": {
+        "provenance": {
+          "score": 0.45,
+          "basis": [
+            "unknown_domain_pattern"
+          ]
+        },
+        "breadth": {
+          "score": 0.47,
+          "basis": [
+            "distinct_urls:24",
+            "distinct_axes:0",
+            "origin_types:2"
+          ]
+        },
+        "corroboration": {
+          "score": 0.2833333333333333,
+          "basis": [
+            "referring_accounts:1",
+            "origin_types:2"
+          ]
+        },
+        "track_record": {
+          "score": null,
+          "basis": [
+            "no_resolved_claims_observed"
+          ]
+        },
+        "profile": {
+          "score": 0.1,
+          "confidence": 0.55,
+          "basis": [
+            "meta_author:false",
+            "published_time:false",
+            "canonical:true",
+            "about:false",
+            "contact:false",
+            "corrections:false",
+            "outbound_links:0",
+            "opinion_marker:false"
+          ]
+        },
+        "overall": {
+          "score": 0.43875,
+          "confidence": 0.5742,
+          "method": "mechanical_v1",
+          "basis": [
+            "unknown_domain_pattern",
+            "distinct_urls:24",
+            "distinct_axes:0",
+            "origin_types:2",
+            "referring_accounts:1",
+            "origin_types:2",
+            "track_record_unavailable"
+          ]
+        }
+      },
+      "profile": {
+        "fetched_at": "2026-07-30T09:51:11.210Z",
+        "homepage_url": "https://travala.com/",
+        "example_url": "https://www.travala.com/?camp_name=&camp_offer=credit&camp_content=Sign-up-or-log-in-to-receive-%2450-off-flights%2C-hotels-and-activities.&camp_code=BTCASIA50&camp_value=50&utm_campaign=BTCASIA50&utm_medium=by-travala-cpc&utm_source=twitter&twclid=26wz3yk3m5mtcltdzivyfesoom",
+        "homepage_status": 200,
+        "example_status": 200,
+        "homepage_final_url": "https://www.travala.com/",
+        "example_final_url": "https://www.travala.com/?camp_name=&camp_offer=credit&camp_content=Sign-up-or-log-in-to-receive-%2450-off-flights%2C-hotels-and-activities.&camp_code=BTCASIA50&camp_value=50&utm_campaign=BTCASIA50&utm_medium=by-travala-cpc&utm_source=twitter&twclid=26wz3yk3m5mtcltdzivyfesoom",
+        "homepage_content_type": "text/html; charset=utf-8",
+        "example_content_type": "text/html; charset=utf-8",
+        "homepage": {
+          "has_meta_author": false,
+          "has_published_time": false,
+          "has_canonical": true,
+          "has_about_link": false,
+          "has_contact_link": false,
+          "has_corrections_link": false,
+          "outbound_links_count": 0,
+          "opinion_marker": false
+        },
+        "example": {
+          "has_meta_author": false,
+          "has_published_time": false,
+          "has_canonical": true,
+          "has_about_link": false,
+          "has_contact_link": false,
+          "has_corrections_link": false,
+          "outbound_links_count": 0,
+          "opinion_marker": false
+        }
+      }
+    },
+    {
       "domain": "app.link",
       "entity": "App Link",
       "kind": "unknown",
@@ -8429,133 +8557,6 @@
           "has_meta_author": false,
           "has_published_time": false,
           "has_canonical": false,
-          "has_about_link": false,
-          "has_contact_link": false,
-          "has_corrections_link": false,
-          "outbound_links_count": 0,
-          "opinion_marker": false
-        }
-      }
-    },
-    {
-      "domain": "travala.com",
-      "entity": "Travala",
-      "kind": "unknown",
-      "first_seen_at": "2026-07-07T12:18:51.059Z",
-      "last_seen_at": "2026-07-29T05:01:48.748Z",
-      "discovery": {
-        "distinct_urls": 23,
-        "example_urls": [
-          "https://www.travala.com/?camp_name=&camp_offer=credit&camp_content=Sign-up-or-log-in-to-receive-%2450-off-flights%2C-hotels-and-activities.&camp_code=BTCASIA50&camp_value=50&utm_campaign=BTCASIA50&utm_medium=by-travala-cpc&utm_source=twitter&twclid=26wz3yk3m5mtcltdzivyfesoom",
-          "https://www.travala.com/?camp_name=&camp_offer=credit&camp_content=Sign-up-or-log-in-to-receive-%2450-off-flights%2C-hotels-and-activities.&camp_code=BTCASIA50&camp_value=50&utm_campaign=BTCASIA50&utm_medium=by-travala-cpc&utm_source=twitter&twclid=27hwmpgkfaysz941g6s97hdxaj",
-          "https://www.travala.com/?camp_name=COINFESTASIA2026&camp_offer=credit&camp_content=Sign-up-or-log-in-to-receive-%2450-off-flights%2C-hotels-and-activities.&camp_code=COINFESTASIA2026&camp_value=50&twclid=294v9257q2r0tg4r9ly3pj1y4e",
-          "https://www.travala.com/?camp_name=COINFESTASIA2026&camp_offer=credit&camp_content=Sign-up-or-log-in-to-receive-%2450-off-flights%2C-hotels-and-activities.&camp_code=COINFESTASIA2026&camp_value=50&twclid=2b6tiv0rornjsaszcrq273c8h7",
-          "https://www.travala.com/?camp_name=&camp_offer=credit&camp_content=Sign-up-or-log-in-to-receive-%2450-off-flights%2C-hotels-and-activities.&camp_code=BTCASIA50&camp_value=50&utm_campaign=BTCASIA50&utm_medium=by-travala-cpc&utm_source=twitter&twclid=2bbhq20cxwi8wz4ld34c9p9zyc"
-        ],
-        "origin_counts": {
-          "feed_buffer": 19,
-          "feed_buffer_reply": 4
-        },
-        "distinct_referring_accounts": 1,
-        "sample_referring_accounts": [
-          "travalacom"
-        ],
-        "distinct_axes": []
-      },
-      "claims": {
-        "total": 0,
-        "supported": 0,
-        "refuted": 0,
-        "contested": 0,
-        "unverified": 0,
-        "resolved_count": 0
-      },
-      "structural_features": {
-        "has_search_paths": false,
-        "has_article_paths": false,
-        "has_doi_paths": false
-      },
-      "ratings": {
-        "provenance": {
-          "score": 0.45,
-          "basis": [
-            "unknown_domain_pattern"
-          ]
-        },
-        "breadth": {
-          "score": 0.47,
-          "basis": [
-            "distinct_urls:23",
-            "distinct_axes:0",
-            "origin_types:2"
-          ]
-        },
-        "corroboration": {
-          "score": 0.2833333333333333,
-          "basis": [
-            "referring_accounts:1",
-            "origin_types:2"
-          ]
-        },
-        "track_record": {
-          "score": null,
-          "basis": [
-            "no_resolved_claims_observed"
-          ]
-        },
-        "profile": {
-          "score": 0.1,
-          "confidence": 0.55,
-          "basis": [
-            "meta_author:false",
-            "published_time:false",
-            "canonical:true",
-            "about:false",
-            "contact:false",
-            "corrections:false",
-            "outbound_links:0",
-            "opinion_marker:false"
-          ]
-        },
-        "overall": {
-          "score": 0.43875,
-          "confidence": 0.5742,
-          "method": "mechanical_v1",
-          "basis": [
-            "unknown_domain_pattern",
-            "distinct_urls:23",
-            "distinct_axes:0",
-            "origin_types:2",
-            "referring_accounts:1",
-            "origin_types:2",
-            "track_record_unavailable"
-          ]
-        }
-      },
-      "profile": {
-        "fetched_at": "2026-07-30T09:51:11.210Z",
-        "homepage_url": "https://travala.com/",
-        "example_url": "https://www.travala.com/?camp_name=&camp_offer=credit&camp_content=Sign-up-or-log-in-to-receive-%2450-off-flights%2C-hotels-and-activities.&camp_code=BTCASIA50&camp_value=50&utm_campaign=BTCASIA50&utm_medium=by-travala-cpc&utm_source=twitter&twclid=26wz3yk3m5mtcltdzivyfesoom",
-        "homepage_status": 200,
-        "example_status": 200,
-        "homepage_final_url": "https://www.travala.com/",
-        "example_final_url": "https://www.travala.com/?camp_name=&camp_offer=credit&camp_content=Sign-up-or-log-in-to-receive-%2450-off-flights%2C-hotels-and-activities.&camp_code=BTCASIA50&camp_value=50&utm_campaign=BTCASIA50&utm_medium=by-travala-cpc&utm_source=twitter&twclid=26wz3yk3m5mtcltdzivyfesoom",
-        "homepage_content_type": "text/html; charset=utf-8",
-        "example_content_type": "text/html; charset=utf-8",
-        "homepage": {
-          "has_meta_author": false,
-          "has_published_time": false,
-          "has_canonical": true,
-          "has_about_link": false,
-          "has_contact_link": false,
-          "has_corrections_link": false,
-          "outbound_links_count": 0,
-          "opinion_marker": false
-        },
-        "example": {
-          "has_meta_author": false,
-          "has_published_time": false,
-          "has_canonical": true,
           "has_about_link": false,
           "has_contact_link": false,
           "has_corrections_link": false,
@@ -15416,6 +15417,133 @@
       }
     },
     {
+      "domain": "betterstack.com",
+      "entity": "Betterstack",
+      "kind": "unknown",
+      "first_seen_at": "2026-05-16T09:46:55.000Z",
+      "last_seen_at": "2026-07-31T07:42:33.784Z",
+      "discovery": {
+        "distinct_urls": 8,
+        "example_urls": [
+          "https://betterstack.com/incident-management?twclid=23e9xf4wt9fpugvwab34523yyy",
+          "https://betterstack.com/vs-datadog?twclid=2efierv2a67y6kjxnmf4n7nhlj",
+          "https://betterstack.com/vs-datadog?twclid=29p5h4eg2pivfadeywmumlogay",
+          "https://betterstack.com/vs-datadog?twclid=27qhom05i4d7bsrr2yolyftopo",
+          "https://betterstack.com/vs-datadog?twclid=26z7313uy2ftln7dc3uekxemov"
+        ],
+        "origin_counts": {
+          "feed_buffer_reply": 6,
+          "feed_buffer": 2
+        },
+        "distinct_referring_accounts": 1,
+        "sample_referring_accounts": [
+          "betterstackhq"
+        ],
+        "distinct_axes": []
+      },
+      "claims": {
+        "total": 0,
+        "supported": 0,
+        "refuted": 0,
+        "contested": 0,
+        "unverified": 0,
+        "resolved_count": 0
+      },
+      "structural_features": {
+        "has_search_paths": false,
+        "has_article_paths": false,
+        "has_doi_paths": false
+      },
+      "ratings": {
+        "provenance": {
+          "score": 0.45,
+          "basis": [
+            "unknown_domain_pattern"
+          ]
+        },
+        "breadth": {
+          "score": 0.3533333333333333,
+          "basis": [
+            "distinct_urls:8",
+            "distinct_axes:0",
+            "origin_types:2"
+          ]
+        },
+        "corroboration": {
+          "score": 0.2833333333333333,
+          "basis": [
+            "referring_accounts:1",
+            "origin_types:2"
+          ]
+        },
+        "track_record": {
+          "score": null,
+          "basis": [
+            "no_resolved_claims_observed"
+          ]
+        },
+        "profile": {
+          "score": 0.17,
+          "confidence": 0.55,
+          "basis": [
+            "meta_author:false",
+            "published_time:false",
+            "canonical:true",
+            "about:false",
+            "contact:false",
+            "corrections:false",
+            "outbound_links:7",
+            "opinion_marker:false"
+          ]
+        },
+        "overall": {
+          "score": 0.41322916666666665,
+          "confidence": 0.30219999999999997,
+          "method": "mechanical_v1",
+          "basis": [
+            "unknown_domain_pattern",
+            "distinct_urls:8",
+            "distinct_axes:0",
+            "origin_types:2",
+            "referring_accounts:1",
+            "origin_types:2",
+            "track_record_unavailable"
+          ]
+        }
+      },
+      "profile": {
+        "fetched_at": "2026-07-29T23:21:05.903Z",
+        "homepage_url": "https://betterstack.com/",
+        "example_url": "https://betterstack.com/incident-management?twclid=23e9xf4wt9fpugvwab34523yyy",
+        "homepage_status": 200,
+        "example_status": 200,
+        "homepage_final_url": "https://betterstack.com/",
+        "example_final_url": "https://betterstack.com/incident-management?twclid=23e9xf4wt9fpugvwab34523yyy",
+        "homepage_content_type": "text/html; charset=utf-8",
+        "example_content_type": "text/html; charset=utf-8",
+        "homepage": {
+          "has_meta_author": false,
+          "has_published_time": false,
+          "has_canonical": true,
+          "has_about_link": false,
+          "has_contact_link": false,
+          "has_corrections_link": false,
+          "outbound_links_count": 8,
+          "opinion_marker": false
+        },
+        "example": {
+          "has_meta_author": false,
+          "has_published_time": false,
+          "has_canonical": true,
+          "has_about_link": false,
+          "has_contact_link": false,
+          "has_corrections_link": false,
+          "outbound_links_count": 7,
+          "opinion_marker": false
+        }
+      }
+    },
+    {
       "domain": "serus.ai",
       "entity": "Serus Ai",
       "kind": "unknown",
@@ -17187,133 +17315,6 @@
       }
     },
     {
-      "domain": "betterstack.com",
-      "entity": "Betterstack",
-      "kind": "unknown",
-      "first_seen_at": "2026-05-16T09:46:55.000Z",
-      "last_seen_at": "2026-07-13T18:38:46.081Z",
-      "discovery": {
-        "distinct_urls": 7,
-        "example_urls": [
-          "https://betterstack.com/incident-management?twclid=23e9xf4wt9fpugvwab34523yyy",
-          "https://betterstack.com/vs-datadog?twclid=2efierv2a67y6kjxnmf4n7nhlj",
-          "https://betterstack.com/vs-datadog?twclid=29p5h4eg2pivfadeywmumlogay",
-          "https://betterstack.com/vs-datadog?twclid=27qhom05i4d7bsrr2yolyftopo",
-          "https://betterstack.com/vs-datadog?twclid=26z7313uy2ftln7dc3uekxemov"
-        ],
-        "origin_counts": {
-          "feed_buffer_reply": 6,
-          "feed_buffer": 1
-        },
-        "distinct_referring_accounts": 1,
-        "sample_referring_accounts": [
-          "betterstackhq"
-        ],
-        "distinct_axes": []
-      },
-      "claims": {
-        "total": 0,
-        "supported": 0,
-        "refuted": 0,
-        "contested": 0,
-        "unverified": 0,
-        "resolved_count": 0
-      },
-      "structural_features": {
-        "has_search_paths": false,
-        "has_article_paths": false,
-        "has_doi_paths": false
-      },
-      "ratings": {
-        "provenance": {
-          "score": 0.45,
-          "basis": [
-            "unknown_domain_pattern"
-          ]
-        },
-        "breadth": {
-          "score": 0.32416666666666666,
-          "basis": [
-            "distinct_urls:7",
-            "distinct_axes:0",
-            "origin_types:2"
-          ]
-        },
-        "corroboration": {
-          "score": 0.2833333333333333,
-          "basis": [
-            "referring_accounts:1",
-            "origin_types:2"
-          ]
-        },
-        "track_record": {
-          "score": null,
-          "basis": [
-            "no_resolved_claims_observed"
-          ]
-        },
-        "profile": {
-          "score": 0.17,
-          "confidence": 0.55,
-          "basis": [
-            "meta_author:false",
-            "published_time:false",
-            "canonical:true",
-            "about:false",
-            "contact:false",
-            "corrections:false",
-            "outbound_links:7",
-            "opinion_marker:false"
-          ]
-        },
-        "overall": {
-          "score": 0.4068489583333333,
-          "confidence": 0.273575,
-          "method": "mechanical_v1",
-          "basis": [
-            "unknown_domain_pattern",
-            "distinct_urls:7",
-            "distinct_axes:0",
-            "origin_types:2",
-            "referring_accounts:1",
-            "origin_types:2",
-            "track_record_unavailable"
-          ]
-        }
-      },
-      "profile": {
-        "fetched_at": "2026-07-29T23:21:05.903Z",
-        "homepage_url": "https://betterstack.com/",
-        "example_url": "https://betterstack.com/incident-management?twclid=23e9xf4wt9fpugvwab34523yyy",
-        "homepage_status": 200,
-        "example_status": 200,
-        "homepage_final_url": "https://betterstack.com/",
-        "example_final_url": "https://betterstack.com/incident-management?twclid=23e9xf4wt9fpugvwab34523yyy",
-        "homepage_content_type": "text/html; charset=utf-8",
-        "example_content_type": "text/html; charset=utf-8",
-        "homepage": {
-          "has_meta_author": false,
-          "has_published_time": false,
-          "has_canonical": true,
-          "has_about_link": false,
-          "has_contact_link": false,
-          "has_corrections_link": false,
-          "outbound_links_count": 8,
-          "opinion_marker": false
-        },
-        "example": {
-          "has_meta_author": false,
-          "has_published_time": false,
-          "has_canonical": true,
-          "has_about_link": false,
-          "has_contact_link": false,
-          "has_corrections_link": false,
-          "outbound_links_count": 7,
-          "opinion_marker": false
-        }
-      }
-    },
-    {
       "domain": "agora.io",
       "entity": "Agora Io",
       "kind": "unknown",
@@ -18171,7 +18172,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-07-28T07:02:00.066Z",
+        "fetched_at": "2026-07-31T07:51:11.083Z",
         "homepage_url": "https://agentstakes.gg/",
         "example_url": "https://agentstakes.gg/?twclid=2cp3uw3rrtvzfe93ubg50npzc5",
         "homepage_status": 200,
@@ -34271,6 +34272,132 @@
       }
     },
     {
+      "domain": "simba.sg",
+      "entity": "Simba Sg",
+      "kind": "unknown",
+      "first_seen_at": "2026-07-13T16:58:40.909Z",
+      "last_seen_at": "2026-07-31T08:02:34.120Z",
+      "discovery": {
+        "distinct_urls": 5,
+        "example_urls": [
+          "https://simba.sg/home?twclid=246gm13qkkeak3bq6hmc879ar",
+          "https://simba.sg/broadband?twclid=263lercxhlqpt3f5k37y6e8h8x",
+          "https://simba.sg/home?utm_source=x&utm_medium=paid_social&twclid=2ai1rami0qu8qwrfit3wc7bhv6",
+          "https://simba.sg/home?utm_source=x&utm_medium=paid_social&utm_campaign=spiderman&utm_content=video&twclid=2e5yuqueakn3f72okp3hd2s5yx",
+          "https://simba.sg/home?utm_source=x&utm_medium=paid_social&utm_campaign=spiderman&utm_content=video-interest&twclid=22uvvenbddlus40aq4kckl9u7t"
+        ],
+        "origin_counts": {
+          "feed_buffer": 5
+        },
+        "distinct_referring_accounts": 1,
+        "sample_referring_accounts": [
+          "simbatelecomsg"
+        ],
+        "distinct_axes": []
+      },
+      "claims": {
+        "total": 0,
+        "supported": 0,
+        "refuted": 0,
+        "contested": 0,
+        "unverified": 0,
+        "resolved_count": 0
+      },
+      "structural_features": {
+        "has_search_paths": false,
+        "has_article_paths": false,
+        "has_doi_paths": false
+      },
+      "ratings": {
+        "provenance": {
+          "score": 0.45,
+          "basis": [
+            "unknown_domain_pattern"
+          ]
+        },
+        "breadth": {
+          "score": 0.20583333333333334,
+          "basis": [
+            "distinct_urls:5",
+            "distinct_axes:0",
+            "origin_types:1"
+          ]
+        },
+        "corroboration": {
+          "score": 0.19583333333333333,
+          "basis": [
+            "referring_accounts:1",
+            "origin_types:1"
+          ]
+        },
+        "track_record": {
+          "score": null,
+          "basis": [
+            "no_resolved_claims_observed"
+          ]
+        },
+        "profile": {
+          "score": 0,
+          "confidence": 0.55,
+          "basis": [
+            "meta_author:false",
+            "published_time:false",
+            "canonical:false",
+            "about:false",
+            "contact:false",
+            "corrections:false",
+            "outbound_links:0",
+            "opinion_marker:false"
+          ]
+        },
+        "overall": {
+          "score": 0.37276041666666665,
+          "confidence": 0.19585000000000002,
+          "method": "mechanical_v1",
+          "basis": [
+            "unknown_domain_pattern",
+            "distinct_urls:5",
+            "distinct_axes:0",
+            "origin_types:1",
+            "referring_accounts:1",
+            "origin_types:1",
+            "track_record_unavailable"
+          ]
+        }
+      },
+      "profile": {
+        "fetched_at": "2026-07-30T22:51:31.886Z",
+        "homepage_url": "https://simba.sg/",
+        "example_url": "https://simba.sg/home?twclid=246gm13qkkeak3bq6hmc879ar",
+        "homepage_status": 200,
+        "example_status": 200,
+        "homepage_final_url": "https://simba.sg/",
+        "example_final_url": "https://simba.sg/home?twclid=246gm13qkkeak3bq6hmc879ar",
+        "homepage_content_type": "text/html; charset=UTF-8",
+        "example_content_type": "text/html; charset=UTF-8",
+        "homepage": {
+          "has_meta_author": false,
+          "has_published_time": false,
+          "has_canonical": false,
+          "has_about_link": false,
+          "has_contact_link": false,
+          "has_corrections_link": false,
+          "outbound_links_count": 0,
+          "opinion_marker": false
+        },
+        "example": {
+          "has_meta_author": false,
+          "has_published_time": false,
+          "has_canonical": false,
+          "has_about_link": false,
+          "has_contact_link": false,
+          "has_corrections_link": false,
+          "outbound_links_count": 0,
+          "opinion_marker": false
+        }
+      }
+    },
+    {
       "domain": "org.ph",
       "entity": "Org Ph",
       "kind": "unknown",
@@ -37844,7 +37971,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-07-28T08:31:59.023Z",
+        "fetched_at": "2026-07-31T09:06:13.226Z",
         "homepage_url": "https://ptgaming.ph/",
         "example_url": "https://www.ptgaming.ph/?twclid=21n3lg1hcl64ox73kjyr4lggz9",
         "homepage_status": 200,
@@ -41291,14 +41418,14 @@
           ]
         },
         "profile": {
-          "score": 0.22,
+          "score": 0,
           "confidence": 0.55,
           "basis": [
             "meta_author:false",
             "published_time:false",
-            "canonical:true",
+            "canonical:false",
             "about:false",
-            "contact:true",
+            "contact:false",
             "corrections:false",
             "outbound_links:0",
             "opinion_marker:false"
@@ -41320,31 +41447,31 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-07-28T05:55:28.620Z",
+        "fetched_at": "2026-07-31T07:51:11.784Z",
         "homepage_url": "https://puffco.com/",
         "example_url": "https://www.puffco.com/products/pivot?variant=41821292986427&utm_source=x&utm_medium=image&utm_campaign=pivotperformance&twclid=22js3uwacrdv5fujiqoibvb4yl",
-        "homepage_status": 200,
-        "example_status": 200,
-        "homepage_final_url": "https://www.puffco.com/",
+        "homepage_status": 429,
+        "example_status": 429,
+        "homepage_final_url": "https://puffco.com/",
         "example_final_url": "https://www.puffco.com/products/pivot?variant=41821292986427&utm_source=x&utm_medium=image&utm_campaign=pivotperformance&twclid=22js3uwacrdv5fujiqoibvb4yl",
-        "homepage_content_type": "text/html; charset=utf-8",
-        "example_content_type": "text/html; charset=utf-8",
+        "homepage_content_type": "text/plain",
+        "example_content_type": "text/plain",
         "homepage": {
           "has_meta_author": false,
           "has_published_time": false,
-          "has_canonical": true,
+          "has_canonical": false,
           "has_about_link": false,
-          "has_contact_link": true,
+          "has_contact_link": false,
           "has_corrections_link": false,
-          "outbound_links_count": 1,
+          "outbound_links_count": 0,
           "opinion_marker": false
         },
         "example": {
           "has_meta_author": false,
           "has_published_time": false,
-          "has_canonical": true,
+          "has_canonical": false,
           "has_about_link": false,
-          "has_contact_link": true,
+          "has_contact_link": false,
           "has_corrections_link": false,
           "outbound_links_count": 0,
           "opinion_marker": false
@@ -41444,12 +41571,12 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-07-28T05:55:31.085Z",
+        "fetched_at": "2026-07-31T07:51:13.428Z",
         "homepage_url": "https://bitdefender.com/",
         "example_url": "https://www.bitdefender.com/en-us/blog/labs/inside-the-apac-malvertising-ecosystem?cid=soc%7Cc%7Ctw%7Ch4slab&twclid=24ele6gmae6psqawfai2l9njkb",
         "homepage_status": 200,
         "example_status": 200,
-        "homepage_final_url": "https://www.bitdefender.com/en-ph/",
+        "homepage_final_url": "https://www.bitdefender.com/en-sg/",
         "example_final_url": "https://www.bitdefender.com/en-us/blog/labs/inside-the-apac-malvertising-ecosystem?cid=soc%7Cc%7Ctw%7Ch4slab&twclid=24ele6gmae6psqawfai2l9njkb",
         "homepage_content_type": "text/html;charset=utf-8",
         "example_content_type": "text/html; charset=utf-8",
@@ -41568,7 +41695,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-07-28T05:55:33.397Z",
+        "fetched_at": "2026-07-31T09:06:18.064Z",
         "homepage_url": "https://statefarm.com/",
         "example_url": "https://www.statefarm.com/lp/getstatefarm?cmpid=soc%3Aomd&camp=100000904&site=x&plac=200000904&crea=300000904&twclid=24cmx2d7zq9uhrq1lzj54oo09o",
         "homepage_status": 200,
@@ -41692,12 +41819,12 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-07-28T05:55:34.060Z",
+        "fetched_at": "2026-07-31T09:06:21.972Z",
         "homepage_url": "https://microsoft.com/",
         "example_url": "https://aiskillsnavigator.microsoft.com/playlists/precreated/precreatedplaylist-5c7b0157552e5e3c61288a3e006a0769d854dc7f8417860644dad0857f93285e",
         "homepage_status": 200,
         "example_status": 200,
-        "homepage_final_url": "https://www.microsoft.com/en-ph",
+        "homepage_final_url": "https://www.microsoft.com/en-sg",
         "example_final_url": "https://aiskillsnavigator.microsoft.com/playlists/precreated/precreatedplaylist-5c7b0157552e5e3c61288a3e006a0769d854dc7f8417860644dad0857f93285e",
         "homepage_content_type": "text/html; charset=utf-8",
         "example_content_type": "text/html",
@@ -41708,7 +41835,7 @@
           "has_about_link": false,
           "has_contact_link": false,
           "has_corrections_link": false,
-          "outbound_links_count": 7,
+          "outbound_links_count": 5,
           "opinion_marker": false
         },
         "example": {
@@ -41816,12 +41943,12 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-07-28T07:02:02.528Z",
+        "fetched_at": "2026-07-31T09:06:28.513Z",
         "homepage_url": "https://dell.com/",
         "example_url": "https://www.dell.com/en-us/shop/dell-laptops/xps-14-laptop/spd/xps-da14260-laptop?twclid=2b95mzwodix16nm7kii2sz7zvh",
         "homepage_status": 200,
         "example_status": 200,
-        "homepage_final_url": "https://www.dell.com/en-ph",
+        "homepage_final_url": "https://www.dell.com/en-sg",
         "example_final_url": "https://www.dell.com/en-us/shop/dell-laptops/xps-14-laptop/spd/xps-da14260-laptop?twclid=2b95mzwodix16nm7kii2sz7zvh",
         "homepage_content_type": "text/html; charset=utf-8",
         "example_content_type": "text/html; charset=utf-8",
@@ -42312,7 +42439,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-07-28T07:02:12.346Z",
+        "fetched_at": "2026-07-31T09:36:37.163Z",
         "homepage_url": "https://fiba.basketball/",
         "example_url": "https://www.fiba.basketball/en/events/fiba-basketball-world-cup-2027-asian-qualifiers/news/teams-confirmed-for-the-fiba-basketball-world-cup-2027-asian-qualifiers-second-round?fbclid=IwY2xjawS5zNpleHRuA2FlbQIxMABicmlkETBSRXVqVE03dkMwOVZYSFFIc3J0YwZhcHBfaWQQMjIyMDM5MTc4ODIwMDg5MgABHnNpKrOyCvwKpu-6IklyvVCJjLgnfwDLK_E2LBbT_BFY0A0sDKeVHGKD8gO7_aem_x6hSMw-gbXxwzVRTcScvdQ&twclid=28yyrktcdmkop0el0m83yyzd3b",
         "homepage_status": 200,
@@ -42468,130 +42595,6 @@
       }
     },
     {
-      "domain": "simba.sg",
-      "entity": "Simba Sg",
-      "kind": "unknown",
-      "first_seen_at": "2026-07-13T16:58:40.909Z",
-      "last_seen_at": "2026-07-17T23:25:22.691Z",
-      "discovery": {
-        "distinct_urls": 3,
-        "example_urls": [
-          "https://simba.sg/home?twclid=246gm13qkkeak3bq6hmc879ar",
-          "https://simba.sg/broadband?twclid=263lercxhlqpt3f5k37y6e8h8x",
-          "https://simba.sg/home?utm_source=x&utm_medium=paid_social&twclid=2ai1rami0qu8qwrfit3wc7bhv6"
-        ],
-        "origin_counts": {
-          "feed_buffer": 3
-        },
-        "distinct_referring_accounts": 1,
-        "sample_referring_accounts": [
-          "simbatelecomsg"
-        ],
-        "distinct_axes": []
-      },
-      "claims": {
-        "total": 0,
-        "supported": 0,
-        "refuted": 0,
-        "contested": 0,
-        "unverified": 0,
-        "resolved_count": 0
-      },
-      "structural_features": {
-        "has_search_paths": false,
-        "has_article_paths": false,
-        "has_doi_paths": false
-      },
-      "ratings": {
-        "provenance": {
-          "score": 0.45,
-          "basis": [
-            "unknown_domain_pattern"
-          ]
-        },
-        "breadth": {
-          "score": 0.1475,
-          "basis": [
-            "distinct_urls:3",
-            "distinct_axes:0",
-            "origin_types:1"
-          ]
-        },
-        "corroboration": {
-          "score": 0.19583333333333333,
-          "basis": [
-            "referring_accounts:1",
-            "origin_types:1"
-          ]
-        },
-        "track_record": {
-          "score": null,
-          "basis": [
-            "no_resolved_claims_observed"
-          ]
-        },
-        "profile": {
-          "score": 0,
-          "confidence": 0.55,
-          "basis": [
-            "meta_author:false",
-            "published_time:false",
-            "canonical:false",
-            "about:false",
-            "contact:false",
-            "corrections:false",
-            "outbound_links:0",
-            "opinion_marker:false"
-          ]
-        },
-        "overall": {
-          "score": 0.36000000000000004,
-          "confidence": 0.1386,
-          "method": "mechanical_v1",
-          "basis": [
-            "unknown_domain_pattern",
-            "distinct_urls:3",
-            "distinct_axes:0",
-            "origin_types:1",
-            "referring_accounts:1",
-            "origin_types:1",
-            "track_record_unavailable"
-          ]
-        }
-      },
-      "profile": {
-        "fetched_at": "2026-07-30T22:51:31.886Z",
-        "homepage_url": "https://simba.sg/",
-        "example_url": "https://simba.sg/home?twclid=246gm13qkkeak3bq6hmc879ar",
-        "homepage_status": 200,
-        "example_status": 200,
-        "homepage_final_url": "https://simba.sg/",
-        "example_final_url": "https://simba.sg/home?twclid=246gm13qkkeak3bq6hmc879ar",
-        "homepage_content_type": "text/html; charset=UTF-8",
-        "example_content_type": "text/html; charset=UTF-8",
-        "homepage": {
-          "has_meta_author": false,
-          "has_published_time": false,
-          "has_canonical": false,
-          "has_about_link": false,
-          "has_contact_link": false,
-          "has_corrections_link": false,
-          "outbound_links_count": 0,
-          "opinion_marker": false
-        },
-        "example": {
-          "has_meta_author": false,
-          "has_published_time": false,
-          "has_canonical": false,
-          "has_about_link": false,
-          "has_contact_link": false,
-          "has_corrections_link": false,
-          "outbound_links_count": 0,
-          "opinion_marker": false
-        }
-      }
-    },
-    {
       "domain": "alibabacloud.com",
       "entity": "Alibabacloud",
       "kind": "unknown",
@@ -42684,12 +42687,12 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-07-28T07:31:58.433Z",
+        "fetched_at": "2026-07-31T09:36:39.899Z",
         "homepage_url": "https://alibabacloud.com/",
         "example_url": "https://int.alibabacloud.com/m/1000415566/?twclid=2apk5c9e68i609gi3tyok8605n",
         "homepage_status": 200,
         "example_status": 200,
-        "homepage_final_url": "https://www.alibabacloud.com/en?_p_lc=13",
+        "homepage_final_url": "https://www.alibabacloud.com/en?_p_lc=1",
         "example_final_url": "https://www.alibabacloud.com/en/campaign/ai-landing-page-token?_p_lc=1&utm_content=m_1000415566",
         "homepage_content_type": "text/html; charset=utf-8",
         "example_content_type": "text/html; charset=utf-8",
@@ -42791,6 +42794,51 @@
             "origin_types:1",
             "track_record_unavailable"
           ]
+        },
+        "profile": {
+          "score": 0.54,
+          "confidence": 0.75,
+          "basis": [
+            "meta_author:false",
+            "published_time:true",
+            "canonical:true",
+            "about:true",
+            "contact:false",
+            "corrections:false",
+            "outbound_links:15",
+            "opinion_marker:false"
+          ]
+        }
+      },
+      "profile": {
+        "fetched_at": "2026-07-31T09:36:41.749Z",
+        "homepage_url": "https://80.lv/",
+        "example_url": "https://80.lv/articles/this-cyberpunk-cozy-game-allows-you-to-build-your-own-rain-soaked-world?utm_source=pa-x&utm_medium=cpc&twclid=24138z1ynt8psd4xn6ca3421h5",
+        "homepage_status": 200,
+        "example_status": 200,
+        "homepage_final_url": "https://80.lv/",
+        "example_final_url": "https://80.lv/articles/this-cyberpunk-cozy-game-allows-you-to-build-your-own-rain-soaked-world?utm_source=pa-x&utm_medium=cpc&twclid=24138z1ynt8psd4xn6ca3421h5",
+        "homepage_content_type": "text/html; charset=utf-8",
+        "example_content_type": "text/html; charset=utf-8",
+        "homepage": {
+          "has_meta_author": false,
+          "has_published_time": true,
+          "has_canonical": true,
+          "has_about_link": true,
+          "has_contact_link": false,
+          "has_corrections_link": false,
+          "outbound_links_count": 13,
+          "opinion_marker": false
+        },
+        "example": {
+          "has_meta_author": false,
+          "has_published_time": true,
+          "has_canonical": true,
+          "has_about_link": true,
+          "has_contact_link": false,
+          "has_corrections_link": false,
+          "outbound_links_count": 15,
+          "opinion_marker": false
         }
       }
     },
@@ -42887,7 +42935,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-07-27T20:25:48.153Z",
+        "fetched_at": "2026-07-31T09:36:44.923Z",
         "homepage_url": "https://latyx.io/",
         "example_url": "https://app.latyx.io/?utm_source=x&utm_medium=paid_social&utm_campaign=x_proof_pilot_2026q3&utm_content=a01_paste_understand&community=x_kw_crypto_risk&twclid=2dpf4orm5mjnll44til1alkjte",
         "homepage_status": 200,
@@ -52333,6 +52381,84 @@
       }
     },
     {
+      "domain": "rocketsim.app",
+      "entity": "Rocketsim App",
+      "kind": "unknown",
+      "first_seen_at": "2026-07-13T17:38:48.816Z",
+      "last_seen_at": "2026-07-31T08:22:34.165Z",
+      "discovery": {
+        "distinct_urls": 2,
+        "example_urls": [
+          "https://www.rocketsim.app/?utm_source=twitter-ads&utm_medium=paid.ad&utm_content=slow_animations&ref=x_ad_slow_animations&source=twitter-ads&utm_campaign=awareness&ad_id=0ogexujwh3&twclid=2311v2p29nybb8nqhuz7g5yp9q",
+          "https://www.rocketsim.app/?utm_source=twitter-ads&utm_medium=paid.ad&utm_content=simulator_camera&ref=x_ad_simulator_camera&source=twitter-ads&ad_id=y2sc8l96z4&twclid=2ajmfbyspswf63vvlkjcdmzmso"
+        ],
+        "origin_counts": {
+          "feed_buffer": 2
+        },
+        "distinct_referring_accounts": 1,
+        "sample_referring_accounts": [
+          "twannl"
+        ],
+        "distinct_axes": []
+      },
+      "claims": {
+        "total": 0,
+        "supported": 0,
+        "refuted": 0,
+        "contested": 0,
+        "unverified": 0,
+        "resolved_count": 0
+      },
+      "structural_features": {
+        "has_search_paths": false,
+        "has_article_paths": false,
+        "has_doi_paths": false
+      },
+      "ratings": {
+        "provenance": {
+          "score": 0.45,
+          "basis": [
+            "unknown_domain_pattern"
+          ]
+        },
+        "breadth": {
+          "score": 0.11833333333333332,
+          "basis": [
+            "distinct_urls:2",
+            "distinct_axes:0",
+            "origin_types:1"
+          ]
+        },
+        "corroboration": {
+          "score": 0.19583333333333333,
+          "basis": [
+            "referring_accounts:1",
+            "origin_types:1"
+          ]
+        },
+        "track_record": {
+          "score": null,
+          "basis": [
+            "no_resolved_claims_observed"
+          ]
+        },
+        "overall": {
+          "score": 0.3536197916666667,
+          "confidence": 0.10997499999999999,
+          "method": "mechanical_v1",
+          "basis": [
+            "unknown_domain_pattern",
+            "distinct_urls:2",
+            "distinct_axes:0",
+            "origin_types:1",
+            "referring_accounts:1",
+            "origin_types:1",
+            "track_record_unavailable"
+          ]
+        }
+      }
+    },
+    {
       "domain": "voice.fun",
       "entity": "Voice Fun",
       "kind": "unknown",
@@ -53610,6 +53736,84 @@
         "distinct_referring_accounts": 1,
         "sample_referring_accounts": [
           "getatext_"
+        ],
+        "distinct_axes": []
+      },
+      "claims": {
+        "total": 0,
+        "supported": 0,
+        "refuted": 0,
+        "contested": 0,
+        "unverified": 0,
+        "resolved_count": 0
+      },
+      "structural_features": {
+        "has_search_paths": false,
+        "has_article_paths": false,
+        "has_doi_paths": false
+      },
+      "ratings": {
+        "provenance": {
+          "score": 0.45,
+          "basis": [
+            "unknown_domain_pattern"
+          ]
+        },
+        "breadth": {
+          "score": 0.11833333333333332,
+          "basis": [
+            "distinct_urls:2",
+            "distinct_axes:0",
+            "origin_types:1"
+          ]
+        },
+        "corroboration": {
+          "score": 0.19583333333333333,
+          "basis": [
+            "referring_accounts:1",
+            "origin_types:1"
+          ]
+        },
+        "track_record": {
+          "score": null,
+          "basis": [
+            "no_resolved_claims_observed"
+          ]
+        },
+        "overall": {
+          "score": 0.3536197916666667,
+          "confidence": 0.10997499999999999,
+          "method": "mechanical_v1",
+          "basis": [
+            "unknown_domain_pattern",
+            "distinct_urls:2",
+            "distinct_axes:0",
+            "origin_types:1",
+            "referring_accounts:1",
+            "origin_types:1",
+            "track_record_unavailable"
+          ]
+        }
+      }
+    },
+    {
+      "domain": "fisherinvestments.com",
+      "entity": "Fisherinvestments",
+      "kind": "unknown",
+      "first_seen_at": "2026-07-31T07:52:35.687Z",
+      "last_seen_at": "2026-07-31T09:12:49.099Z",
+      "discovery": {
+        "distinct_urls": 2,
+        "example_urls": [
+          "https://www.fisherinvestments.com/en-sg/campaigns/dgri/1a?PC=TWISG00A99&CC=0JQR&twclid=278s6pbm4i14yd7vwyz1o527yu",
+          "https://www.fisherinvestments.com/en-sg/campaigns/fmr/1b?PC=TWISG00A99&CC=0JHZ&twclid=26mgogalaoulzppvr6c0suvnk6"
+        ],
+        "origin_counts": {
+          "feed_buffer": 2
+        },
+        "distinct_referring_accounts": 1,
+        "sample_referring_accounts": [
+          "fisherinvestsg"
         ],
         "distinct_axes": []
       },
@@ -80861,83 +81065,6 @@
       }
     },
     {
-      "domain": "rocketsim.app",
-      "entity": "Rocketsim App",
-      "kind": "unknown",
-      "first_seen_at": "2026-07-13T17:38:48.816Z",
-      "last_seen_at": "2026-07-13T17:38:48.816Z",
-      "discovery": {
-        "distinct_urls": 1,
-        "example_urls": [
-          "https://www.rocketsim.app/?utm_source=twitter-ads&utm_medium=paid.ad&utm_content=slow_animations&ref=x_ad_slow_animations&source=twitter-ads&utm_campaign=awareness&ad_id=0ogexujwh3&twclid=2311v2p29nybb8nqhuz7g5yp9q"
-        ],
-        "origin_counts": {
-          "feed_buffer": 1
-        },
-        "distinct_referring_accounts": 1,
-        "sample_referring_accounts": [
-          "twannl"
-        ],
-        "distinct_axes": []
-      },
-      "claims": {
-        "total": 0,
-        "supported": 0,
-        "refuted": 0,
-        "contested": 0,
-        "unverified": 0,
-        "resolved_count": 0
-      },
-      "structural_features": {
-        "has_search_paths": false,
-        "has_article_paths": false,
-        "has_doi_paths": false
-      },
-      "ratings": {
-        "provenance": {
-          "score": 0.45,
-          "basis": [
-            "unknown_domain_pattern"
-          ]
-        },
-        "breadth": {
-          "score": 0.08916666666666666,
-          "basis": [
-            "distinct_urls:1",
-            "distinct_axes:0",
-            "origin_types:1"
-          ]
-        },
-        "corroboration": {
-          "score": 0.19583333333333333,
-          "basis": [
-            "referring_accounts:1",
-            "origin_types:1"
-          ]
-        },
-        "track_record": {
-          "score": null,
-          "basis": [
-            "no_resolved_claims_observed"
-          ]
-        },
-        "overall": {
-          "score": 0.3472395833333333,
-          "confidence": 0.08135,
-          "method": "mechanical_v1",
-          "basis": [
-            "unknown_domain_pattern",
-            "distinct_urls:1",
-            "distinct_axes:0",
-            "origin_types:1",
-            "referring_accounts:1",
-            "origin_types:1",
-            "track_record_unavailable"
-          ]
-        }
-      }
-    },
-    {
       "domain": "alphawalk.ai",
       "entity": "Alphawalk Ai",
       "kind": "unknown",
@@ -84265,6 +84392,545 @@
         "distinct_referring_accounts": 1,
         "sample_referring_accounts": [
           "suappai"
+        ],
+        "distinct_axes": []
+      },
+      "claims": {
+        "total": 0,
+        "supported": 0,
+        "refuted": 0,
+        "contested": 0,
+        "unverified": 0,
+        "resolved_count": 0
+      },
+      "structural_features": {
+        "has_search_paths": false,
+        "has_article_paths": false,
+        "has_doi_paths": false
+      },
+      "ratings": {
+        "provenance": {
+          "score": 0.45,
+          "basis": [
+            "unknown_domain_pattern"
+          ]
+        },
+        "breadth": {
+          "score": 0.08916666666666666,
+          "basis": [
+            "distinct_urls:1",
+            "distinct_axes:0",
+            "origin_types:1"
+          ]
+        },
+        "corroboration": {
+          "score": 0.19583333333333333,
+          "basis": [
+            "referring_accounts:1",
+            "origin_types:1"
+          ]
+        },
+        "track_record": {
+          "score": null,
+          "basis": [
+            "no_resolved_claims_observed"
+          ]
+        },
+        "overall": {
+          "score": 0.3472395833333333,
+          "confidence": 0.08135,
+          "method": "mechanical_v1",
+          "basis": [
+            "unknown_domain_pattern",
+            "distinct_urls:1",
+            "distinct_axes:0",
+            "origin_types:1",
+            "referring_accounts:1",
+            "origin_types:1",
+            "track_record_unavailable"
+          ]
+        }
+      }
+    },
+    {
+      "domain": "supabird.io",
+      "entity": "Supabird Io",
+      "kind": "unknown",
+      "first_seen_at": "2026-07-31T07:27:40.016Z",
+      "last_seen_at": "2026-07-31T07:27:40.016Z",
+      "discovery": {
+        "distinct_urls": 1,
+        "example_urls": [
+          "https://supabird.io/?utm_source=x&utm_medium=paid_social&utm_content=ad2&twclid=288t10g6go2rbk6ngoa3tlh8q7"
+        ],
+        "origin_counts": {
+          "feed_buffer": 1
+        },
+        "distinct_referring_accounts": 1,
+        "sample_referring_accounts": [
+          "hustle_fred"
+        ],
+        "distinct_axes": []
+      },
+      "claims": {
+        "total": 0,
+        "supported": 0,
+        "refuted": 0,
+        "contested": 0,
+        "unverified": 0,
+        "resolved_count": 0
+      },
+      "structural_features": {
+        "has_search_paths": false,
+        "has_article_paths": false,
+        "has_doi_paths": false
+      },
+      "ratings": {
+        "provenance": {
+          "score": 0.45,
+          "basis": [
+            "unknown_domain_pattern"
+          ]
+        },
+        "breadth": {
+          "score": 0.08916666666666666,
+          "basis": [
+            "distinct_urls:1",
+            "distinct_axes:0",
+            "origin_types:1"
+          ]
+        },
+        "corroboration": {
+          "score": 0.19583333333333333,
+          "basis": [
+            "referring_accounts:1",
+            "origin_types:1"
+          ]
+        },
+        "track_record": {
+          "score": null,
+          "basis": [
+            "no_resolved_claims_observed"
+          ]
+        },
+        "overall": {
+          "score": 0.3472395833333333,
+          "confidence": 0.08135,
+          "method": "mechanical_v1",
+          "basis": [
+            "unknown_domain_pattern",
+            "distinct_urls:1",
+            "distinct_axes:0",
+            "origin_types:1",
+            "referring_accounts:1",
+            "origin_types:1",
+            "track_record_unavailable"
+          ]
+        }
+      }
+    },
+    {
+      "domain": "token2049.com",
+      "entity": "Token2049",
+      "kind": "unknown",
+      "first_seen_at": "2026-07-31T07:27:44.856Z",
+      "last_seen_at": "2026-07-31T07:27:44.856Z",
+      "discovery": {
+        "distinct_urls": 1,
+        "example_urls": [
+          "https://token2049.com/singapore?utm_source=x&utm_medium=paid&utm_campaign=wv-prospecting-sg26&utm_content=video1&twclid=29u1efbjkayi9qxmailf4fkkld"
+        ],
+        "origin_counts": {
+          "feed_buffer": 1
+        },
+        "distinct_referring_accounts": 1,
+        "sample_referring_accounts": [
+          "token2049"
+        ],
+        "distinct_axes": []
+      },
+      "claims": {
+        "total": 0,
+        "supported": 0,
+        "refuted": 0,
+        "contested": 0,
+        "unverified": 0,
+        "resolved_count": 0
+      },
+      "structural_features": {
+        "has_search_paths": false,
+        "has_article_paths": false,
+        "has_doi_paths": false
+      },
+      "ratings": {
+        "provenance": {
+          "score": 0.45,
+          "basis": [
+            "unknown_domain_pattern"
+          ]
+        },
+        "breadth": {
+          "score": 0.08916666666666666,
+          "basis": [
+            "distinct_urls:1",
+            "distinct_axes:0",
+            "origin_types:1"
+          ]
+        },
+        "corroboration": {
+          "score": 0.19583333333333333,
+          "basis": [
+            "referring_accounts:1",
+            "origin_types:1"
+          ]
+        },
+        "track_record": {
+          "score": null,
+          "basis": [
+            "no_resolved_claims_observed"
+          ]
+        },
+        "overall": {
+          "score": 0.3472395833333333,
+          "confidence": 0.08135,
+          "method": "mechanical_v1",
+          "basis": [
+            "unknown_domain_pattern",
+            "distinct_urls:1",
+            "distinct_axes:0",
+            "origin_types:1",
+            "referring_accounts:1",
+            "origin_types:1",
+            "track_record_unavailable"
+          ]
+        }
+      }
+    },
+    {
+      "domain": "go.th",
+      "entity": "Go Th",
+      "kind": "unknown",
+      "first_seen_at": "2026-07-31T07:57:36.271Z",
+      "last_seen_at": "2026-07-31T07:57:36.271Z",
+      "discovery": {
+        "distinct_urls": 1,
+        "example_urls": [
+          "https://www.am2026thailand.go.th/?twclid=28ek72d0vmv9q1f5iztbgc0jmm"
+        ],
+        "origin_counts": {
+          "feed_buffer": 1
+        },
+        "distinct_referring_accounts": 1,
+        "sample_referring_accounts": [
+          "am2026thailand"
+        ],
+        "distinct_axes": []
+      },
+      "claims": {
+        "total": 0,
+        "supported": 0,
+        "refuted": 0,
+        "contested": 0,
+        "unverified": 0,
+        "resolved_count": 0
+      },
+      "structural_features": {
+        "has_search_paths": false,
+        "has_article_paths": false,
+        "has_doi_paths": false
+      },
+      "ratings": {
+        "provenance": {
+          "score": 0.45,
+          "basis": [
+            "unknown_domain_pattern"
+          ]
+        },
+        "breadth": {
+          "score": 0.08916666666666666,
+          "basis": [
+            "distinct_urls:1",
+            "distinct_axes:0",
+            "origin_types:1"
+          ]
+        },
+        "corroboration": {
+          "score": 0.19583333333333333,
+          "basis": [
+            "referring_accounts:1",
+            "origin_types:1"
+          ]
+        },
+        "track_record": {
+          "score": null,
+          "basis": [
+            "no_resolved_claims_observed"
+          ]
+        },
+        "overall": {
+          "score": 0.3472395833333333,
+          "confidence": 0.08135,
+          "method": "mechanical_v1",
+          "basis": [
+            "unknown_domain_pattern",
+            "distinct_urls:1",
+            "distinct_axes:0",
+            "origin_types:1",
+            "referring_accounts:1",
+            "origin_types:1",
+            "track_record_unavailable"
+          ]
+        }
+      }
+    },
+    {
+      "domain": "cmcmarkets.com",
+      "entity": "Cmcmarkets",
+      "kind": "unknown",
+      "first_seen_at": "2026-07-31T08:07:36.201Z",
+      "last_seen_at": "2026-07-31T08:07:36.201Z",
+      "discovery": {
+        "distinct_urls": 1,
+        "example_urls": [
+          "https://www.cmcmarkets.com/en-sg/lp/20th-anniversary?d=hide-h&utm_source=twitter&utm_medium=paid-social&utm_campaign=sg-en-bau&utm_content=markets-20-anniversary&twclid=28zpiuge8j4nkzbzj3cm0i6pzk"
+        ],
+        "origin_counts": {
+          "feed_buffer": 1
+        },
+        "distinct_referring_accounts": 1,
+        "sample_referring_accounts": [
+          "cmcmarketssg"
+        ],
+        "distinct_axes": []
+      },
+      "claims": {
+        "total": 0,
+        "supported": 0,
+        "refuted": 0,
+        "contested": 0,
+        "unverified": 0,
+        "resolved_count": 0
+      },
+      "structural_features": {
+        "has_search_paths": false,
+        "has_article_paths": false,
+        "has_doi_paths": false
+      },
+      "ratings": {
+        "provenance": {
+          "score": 0.45,
+          "basis": [
+            "unknown_domain_pattern"
+          ]
+        },
+        "breadth": {
+          "score": 0.08916666666666666,
+          "basis": [
+            "distinct_urls:1",
+            "distinct_axes:0",
+            "origin_types:1"
+          ]
+        },
+        "corroboration": {
+          "score": 0.19583333333333333,
+          "basis": [
+            "referring_accounts:1",
+            "origin_types:1"
+          ]
+        },
+        "track_record": {
+          "score": null,
+          "basis": [
+            "no_resolved_claims_observed"
+          ]
+        },
+        "overall": {
+          "score": 0.3472395833333333,
+          "confidence": 0.08135,
+          "method": "mechanical_v1",
+          "basis": [
+            "unknown_domain_pattern",
+            "distinct_urls:1",
+            "distinct_axes:0",
+            "origin_types:1",
+            "referring_accounts:1",
+            "origin_types:1",
+            "track_record_unavailable"
+          ]
+        }
+      }
+    },
+    {
+      "domain": "ahrefs.com",
+      "entity": "Ahrefs",
+      "kind": "unknown",
+      "first_seen_at": "2026-07-31T08:37:36.430Z",
+      "last_seen_at": "2026-07-31T08:37:36.430Z",
+      "discovery": {
+        "distinct_urls": 1,
+        "example_urls": [
+          "https://ahrefs.com/brand-radar?utm_source=x-ads&utm_medium=cpc&utm_campaign=br_video&twclid=218va24x0f7r6y2v2e9snmirkl"
+        ],
+        "origin_counts": {
+          "feed_buffer": 1
+        },
+        "distinct_referring_accounts": 1,
+        "sample_referring_accounts": [
+          "ahrefs"
+        ],
+        "distinct_axes": []
+      },
+      "claims": {
+        "total": 0,
+        "supported": 0,
+        "refuted": 0,
+        "contested": 0,
+        "unverified": 0,
+        "resolved_count": 0
+      },
+      "structural_features": {
+        "has_search_paths": false,
+        "has_article_paths": false,
+        "has_doi_paths": false
+      },
+      "ratings": {
+        "provenance": {
+          "score": 0.45,
+          "basis": [
+            "unknown_domain_pattern"
+          ]
+        },
+        "breadth": {
+          "score": 0.08916666666666666,
+          "basis": [
+            "distinct_urls:1",
+            "distinct_axes:0",
+            "origin_types:1"
+          ]
+        },
+        "corroboration": {
+          "score": 0.19583333333333333,
+          "basis": [
+            "referring_accounts:1",
+            "origin_types:1"
+          ]
+        },
+        "track_record": {
+          "score": null,
+          "basis": [
+            "no_resolved_claims_observed"
+          ]
+        },
+        "overall": {
+          "score": 0.3472395833333333,
+          "confidence": 0.08135,
+          "method": "mechanical_v1",
+          "basis": [
+            "unknown_domain_pattern",
+            "distinct_urls:1",
+            "distinct_axes:0",
+            "origin_types:1",
+            "referring_accounts:1",
+            "origin_types:1",
+            "track_record_unavailable"
+          ]
+        }
+      }
+    },
+    {
+      "domain": "embraer.com",
+      "entity": "Embraer",
+      "kind": "unknown",
+      "first_seen_at": "2026-07-31T09:27:51.122Z",
+      "last_seen_at": "2026-07-31T09:27:51.122Z",
+      "discovery": {
+        "distinct_urls": 1,
+        "example_urls": [
+          "https://www.embraer.com/en/?utm_source=twitter&utm_medium=cpc&utm_campaign=ic_tw_eng_farnborough-airshow-2026&utm_content=tw_eng_corp_p1-p2_video_kc-flight&utm_term=tw_eng_farnborough-airshow-2026_corp_p1-p2&twclid=28uccx6120phdczv7ovj7twpzo"
+        ],
+        "origin_counts": {
+          "feed_buffer": 1
+        },
+        "distinct_referring_accounts": 1,
+        "sample_referring_accounts": [
+          "embraer"
+        ],
+        "distinct_axes": []
+      },
+      "claims": {
+        "total": 0,
+        "supported": 0,
+        "refuted": 0,
+        "contested": 0,
+        "unverified": 0,
+        "resolved_count": 0
+      },
+      "structural_features": {
+        "has_search_paths": false,
+        "has_article_paths": false,
+        "has_doi_paths": false
+      },
+      "ratings": {
+        "provenance": {
+          "score": 0.45,
+          "basis": [
+            "unknown_domain_pattern"
+          ]
+        },
+        "breadth": {
+          "score": 0.08916666666666666,
+          "basis": [
+            "distinct_urls:1",
+            "distinct_axes:0",
+            "origin_types:1"
+          ]
+        },
+        "corroboration": {
+          "score": 0.19583333333333333,
+          "basis": [
+            "referring_accounts:1",
+            "origin_types:1"
+          ]
+        },
+        "track_record": {
+          "score": null,
+          "basis": [
+            "no_resolved_claims_observed"
+          ]
+        },
+        "overall": {
+          "score": 0.3472395833333333,
+          "confidence": 0.08135,
+          "method": "mechanical_v1",
+          "basis": [
+            "unknown_domain_pattern",
+            "distinct_urls:1",
+            "distinct_axes:0",
+            "origin_types:1",
+            "referring_accounts:1",
+            "origin_types:1",
+            "track_record_unavailable"
+          ]
+        }
+      }
+    },
+    {
+      "domain": "personalityhub.ai",
+      "entity": "Personalityhub Ai",
+      "kind": "unknown",
+      "first_seen_at": "2026-07-31T09:32:51.583Z",
+      "last_seen_at": "2026-07-31T09:32:51.583Z",
+      "discovery": {
+        "distinct_urls": 1,
+        "example_urls": [
+          "https://personalityhub.ai/64personality?u_lan=en&utm_source=twitter&twclid=2bhro0mhvpov4qrrubs59ud8sz"
+        ],
+        "origin_counts": {
+          "feed_buffer": 1
+        },
+        "distinct_referring_accounts": 1,
+        "sample_referring_accounts": [
+          "personalityhub"
         ],
         "distinct_axes": []
       },
