@@ -1,17 +1,17 @@
 {
   "schema_version": "1.0",
-  "generated_at": "2026-07-31T00:51:29.508Z",
+  "generated_at": "2026-07-31T02:22:23.563Z",
   "method": "mechanical_registry_v1",
-  "profiled_at": "2026-07-31T00:51:35.532Z",
+  "profiled_at": "2026-07-31T02:22:35.683Z",
   "sources": [
     {
       "domain": "theguardian.com",
       "entity": "Theguardian",
       "kind": "news",
       "first_seen_at": "2026-03-27T23:17:00Z",
-      "last_seen_at": "2026-07-30T21:22:11.470Z",
+      "last_seen_at": "2026-07-31T01:28:51.978Z",
       "discovery": {
-        "distinct_urls": 627,
+        "distinct_urls": 629,
         "example_urls": [
           "https://www.theguardian.com/us-news/2026/jun/23/trump-immigration-courthouse-arrest-policy",
           "https://www.theguardian.com/us-news/2026/jun/28/ice-minnesota-defending-democracy",
@@ -21,9 +21,9 @@
         ],
         "origin_counts": {
           "ontology_evidence": 41,
-          "reading_queue": 595,
+          "reading_queue": 596,
           "journals": 106,
-          "articles": 2
+          "articles": 3
         },
         "distinct_referring_accounts": 0,
         "sample_referring_accounts": [],
@@ -72,7 +72,7 @@
         "breadth": {
           "score": 0.94,
           "basis": [
-            "distinct_urls:627",
+            "distinct_urls:629",
             "distinct_axes:17",
             "origin_types:4"
           ]
@@ -112,7 +112,7 @@
             "newsroom_domain_pattern",
             "article_path_seen",
             "doi_or_identifier_path_seen",
-            "distinct_urls:627",
+            "distinct_urls:629",
             "distinct_axes:17",
             "origin_types:4",
             "referring_accounts:0",
@@ -695,7 +695,7 @@
       "first_seen_at": "2026-06-22T00:15:00Z",
       "last_seen_at": "2026-07-30T21:22:11.470Z",
       "discovery": {
-        "distinct_urls": 426,
+        "distinct_urls": 427,
         "example_urls": [
           "https://www.nytimes.com/2026/06/19/world/canada/frank-stronach-trial-guilty-sex-charges.html",
           "https://www.nytimes.com/2026/06/27/world/americas/mexican-officials-us-informants.html",
@@ -705,7 +705,7 @@
         ],
         "origin_counts": {
           "ontology_evidence": 14,
-          "reading_queue": 427,
+          "reading_queue": 428,
           "journals": 36
         },
         "distinct_referring_accounts": 0,
@@ -745,7 +745,7 @@
         "breadth": {
           "score": 0.8799999999999999,
           "basis": [
-            "distinct_urls:426",
+            "distinct_urls:427",
             "distinct_axes:8",
             "origin_types:3"
           ]
@@ -784,7 +784,7 @@
           "basis": [
             "newsroom_domain_pattern",
             "article_path_seen",
-            "distinct_urls:426",
+            "distinct_urls:427",
             "distinct_axes:8",
             "origin_types:3",
             "referring_accounts:0",
@@ -1445,7 +1445,7 @@
       "first_seen_at": "2026-06-26T07:05:00Z",
       "last_seen_at": "2026-07-26T19:55:37.560Z",
       "discovery": {
-        "distinct_urls": 373,
+        "distinct_urls": 374,
         "example_urls": [
           "https://www.bbc.co.uk/news/articles/cn8qxz6qypyo",
           "https://www.bbc.co.uk/news/articles/cn075j04pnyo?at_medium=RSS&amp;at_campaign=rss",
@@ -1455,7 +1455,7 @@
         ],
         "origin_counts": {
           "ontology_evidence": 6,
-          "reading_queue": 382,
+          "reading_queue": 383,
           "journals": 15
         },
         "distinct_referring_accounts": 0,
@@ -1490,7 +1490,7 @@
         "breadth": {
           "score": 0.7633333333333332,
           "basis": [
-            "distinct_urls:373",
+            "distinct_urls:374",
             "distinct_axes:4",
             "origin_types:3"
           ]
@@ -1528,7 +1528,7 @@
           "method": "mechanical_v1",
           "basis": [
             "newsroom_domain_pattern",
-            "distinct_urls:373",
+            "distinct_urls:374",
             "distinct_axes:4",
             "origin_types:3",
             "referring_accounts:0",
@@ -2795,9 +2795,9 @@
       "entity": "T Co",
       "kind": "unknown",
       "first_seen_at": "2016-05-05T18:57:30.000Z",
-      "last_seen_at": "2026-07-30T21:35:00.000Z",
+      "last_seen_at": "2026-07-31T01:30:17.000Z",
       "discovery": {
-        "distinct_urls": 11907,
+        "distinct_urls": 11917,
         "example_urls": [
           "https://t.co/pJSE124ec4",
           "https://t.co/Soz8BXPWaa",
@@ -2806,7 +2806,7 @@
           "https://t.co/cYaqYDRp08"
         ],
         "origin_counts": {
-          "feed_buffer": 9398,
+          "feed_buffer": 9413,
           "feed_buffer_reply": 4877,
           "articles": 1
         },
@@ -2849,7 +2849,7 @@
         "breadth": {
           "score": 0.53,
           "basis": [
-            "distinct_urls:11907",
+            "distinct_urls:11917",
             "distinct_axes:0",
             "origin_types:3"
           ]
@@ -2888,7 +2888,7 @@
           "basis": [
             "unknown_domain_pattern",
             "doi_or_identifier_path_seen",
-            "distinct_urls:11907",
+            "distinct_urls:11917",
             "distinct_axes:0",
             "origin_types:3",
             "referring_accounts:2714",
@@ -3068,9 +3068,9 @@
       "entity": "Inquirer",
       "kind": "unknown",
       "first_seen_at": "2026-05-09T10:15:15.053Z",
-      "last_seen_at": "2026-07-30T22:52:11.642Z",
+      "last_seen_at": "2026-07-31T01:52:14.529Z",
       "discovery": {
-        "distinct_urls": 235,
+        "distinct_urls": 237,
         "example_urls": [
           "https://newsinfo.inquirer.net/2266316/nbi-on-cayetano-position-that-cant-be-defended-by-facts-is-done-with-insults",
           "https://www.inquirer.net/capiz-broadcaster-shooting-probe-widens-as-cops-form-task-force",
@@ -3080,7 +3080,7 @@
         ],
         "origin_counts": {
           "ontology_evidence": 105,
-          "journals": 318,
+          "journals": 320,
           "articles": 1
         },
         "distinct_referring_accounts": 0,
@@ -3128,7 +3128,7 @@
         "breadth": {
           "score": 0.8799999999999999,
           "basis": [
-            "distinct_urls:235",
+            "distinct_urls:237",
             "distinct_axes:17",
             "origin_types:3"
           ]
@@ -3166,7 +3166,7 @@
           "method": "mechanical_v1",
           "basis": [
             "unknown_domain_pattern",
-            "distinct_urls:235",
+            "distinct_urls:237",
             "distinct_axes:17",
             "origin_types:3",
             "referring_accounts:0",
@@ -3212,9 +3212,9 @@
       "entity": "Rappler",
       "kind": "unknown",
       "first_seen_at": "2026-06-22T04:04:30.428Z",
-      "last_seen_at": "2026-07-30T10:51:54.002Z",
+      "last_seen_at": "2026-07-31T01:52:14.529Z",
       "discovery": {
-        "distinct_urls": 201,
+        "distinct_urls": 202,
         "example_urls": [
           "https://www.rappler.com/fact-check-no-arrest-warrant-issued-vs-marcoleta",
           "https://www.rappler.com/technology/decoded-tacloban-school-shooting-disinformation-kiko-barzaga-discussions-juvenile-justice-law/",
@@ -3224,7 +3224,7 @@
         ],
         "origin_counts": {
           "ontology_evidence": 102,
-          "journals": 233,
+          "journals": 234,
           "articles": 1
         },
         "distinct_referring_accounts": 0,
@@ -3279,7 +3279,7 @@
         "breadth": {
           "score": 0.8799999999999999,
           "basis": [
-            "distinct_urls:201",
+            "distinct_urls:202",
             "distinct_axes:24",
             "origin_types:3"
           ]
@@ -3317,7 +3317,7 @@
           "method": "mechanical_v1",
           "basis": [
             "unknown_domain_pattern",
-            "distinct_urls:201",
+            "distinct_urls:202",
             "distinct_axes:24",
             "origin_types:3",
             "referring_accounts:0",
@@ -3509,9 +3509,9 @@
       "entity": "Philstar",
       "kind": "unknown",
       "first_seen_at": "2026-05-20T06:57:31.760Z",
-      "last_seen_at": "2026-07-28T17:32:53.811Z",
+      "last_seen_at": "2026-07-31T01:52:14.549Z",
       "discovery": {
-        "distinct_urls": 123,
+        "distinct_urls": 124,
         "example_urls": [
           "https://www.philstar.com/headlines/2026/06/24/2537506/mike-defensor-face-trafficking-complaint-over-pasig-ktv-bar-raid",
           "https://www.philstar.com/headlines/2026/06/24/2537509/ched-tells-ateneo-explain-drowning-baterbonia-adili-or-face-sanctions",
@@ -3520,14 +3520,15 @@
           "https://www.philstar.com/headlines/2026/06/28/2538295/icc-freezes-money-seized-duterte"
         ],
         "origin_counts": {
-          "ontology_evidence": 67,
-          "journals": 166
+          "ontology_evidence": 68,
+          "journals": 167
         },
         "distinct_referring_accounts": 0,
         "sample_referring_accounts": [],
         "distinct_axes": [
           "axis_authoritarian_self_determination_v1",
           "axis_dehumanization_propaganda_v1",
+          "axis_information_control_v1",
           "axis_national_sovereignty_v_intl_law_v1",
           "axis_ph_geopolitics_wps_v1",
           "axis_political_moral_conduct_v1",
@@ -3564,8 +3565,8 @@
         "breadth": {
           "score": 0.82,
           "basis": [
-            "distinct_urls:123",
-            "distinct_axes:12",
+            "distinct_urls:124",
+            "distinct_axes:13",
             "origin_types:2"
           ]
         },
@@ -3603,8 +3604,8 @@
           "basis": [
             "unknown_domain_pattern",
             "article_path_seen",
-            "distinct_urls:123",
-            "distinct_axes:12",
+            "distinct_urls:124",
+            "distinct_axes:13",
             "origin_types:2",
             "referring_accounts:0",
             "origin_types:2",
@@ -7424,9 +7425,9 @@
       "entity": "Maventrading",
       "kind": "unknown",
       "first_seen_at": "2026-07-04T21:13:31.000Z",
-      "last_seen_at": "2026-07-30T19:38:13.180Z",
+      "last_seen_at": "2026-07-31T01:18:27.721Z",
       "discovery": {
-        "distinct_urls": 50,
+        "distinct_urls": 51,
         "example_urls": [
           "https://maventrading.com/lp/choose-your-challenge?twt_id=54608379&twclid=24irm75xuuvw6vkz1dgb8ui0sz",
           "https://maventrading.com/challenges/1-step?twt_id=54607786&twclid=24dguyzddfgso39sw5b667t4v6",
@@ -7436,7 +7437,7 @@
         ],
         "origin_counts": {
           "feed_buffer_reply": 11,
-          "feed_buffer": 39
+          "feed_buffer": 40
         },
         "distinct_referring_accounts": 1,
         "sample_referring_accounts": [
@@ -7467,7 +7468,7 @@
         "breadth": {
           "score": 0.47,
           "basis": [
-            "distinct_urls:50",
+            "distinct_urls:51",
             "distinct_axes:0",
             "origin_types:2"
           ]
@@ -7505,7 +7506,7 @@
           "method": "mechanical_v1",
           "basis": [
             "unknown_domain_pattern",
-            "distinct_urls:50",
+            "distinct_urls:51",
             "distinct_axes:0",
             "origin_types:2",
             "referring_accounts:1",
@@ -8055,6 +8056,133 @@
       }
     },
     {
+      "domain": "coderabbit.ai",
+      "entity": "Coderabbit Ai",
+      "kind": "unknown",
+      "first_seen_at": "2026-06-09T09:50:16.000Z",
+      "last_seen_at": "2026-07-31T01:23:21.367Z",
+      "discovery": {
+        "distinct_urls": 24,
+        "example_urls": [
+          "https://www.coderabbit.ai/agent?utm_source=twitter&utm_medium=cpc&utm_campaign=brandawareness_slack&twclid=25ohyy1nnhx1vb6p888i79f380",
+          "https://www.coderabbit.ai/agent?utm_source=twitter&utm_medium=cpc&utm_campaign=brandawareness_slack&twclid=289waaptg8g5p8kt9nmjdhtmdm",
+          "https://www.coderabbit.ai/agent?utm_source=twitter&utm_medium=cpc&utm_campaign=brandawareness_slack&twclid=221iix4gf082d85ifrr3eh1dr6",
+          "https://coderabbit.ai/?utm_source=twitter&utm_medium=cpc&utm_campaign=intlretargetingsignup&twclid=2bprglk8wen4ni6d1hxw416sxj",
+          "https://coderabbit.ai/?utm_source=twitter&utm_medium=cpc&utm_campaign=intlprospectingsignup&twclid=23a3why4v3msp82hu0ra2sxiek"
+        ],
+        "origin_counts": {
+          "feed_buffer_reply": 7,
+          "feed_buffer": 17
+        },
+        "distinct_referring_accounts": 1,
+        "sample_referring_accounts": [
+          "coderabbitai"
+        ],
+        "distinct_axes": []
+      },
+      "claims": {
+        "total": 0,
+        "supported": 0,
+        "refuted": 0,
+        "contested": 0,
+        "unverified": 0,
+        "resolved_count": 0
+      },
+      "structural_features": {
+        "has_search_paths": false,
+        "has_article_paths": false,
+        "has_doi_paths": false
+      },
+      "ratings": {
+        "provenance": {
+          "score": 0.45,
+          "basis": [
+            "unknown_domain_pattern"
+          ]
+        },
+        "breadth": {
+          "score": 0.47,
+          "basis": [
+            "distinct_urls:24",
+            "distinct_axes:0",
+            "origin_types:2"
+          ]
+        },
+        "corroboration": {
+          "score": 0.2833333333333333,
+          "basis": [
+            "referring_accounts:1",
+            "origin_types:2"
+          ]
+        },
+        "track_record": {
+          "score": null,
+          "basis": [
+            "no_resolved_claims_observed"
+          ]
+        },
+        "profile": {
+          "score": 0.12,
+          "confidence": 0.55,
+          "basis": [
+            "meta_author:false",
+            "published_time:false",
+            "canonical:false",
+            "about:false",
+            "contact:true",
+            "corrections:false",
+            "outbound_links:0",
+            "opinion_marker:false"
+          ]
+        },
+        "overall": {
+          "score": 0.43875,
+          "confidence": 0.5742,
+          "method": "mechanical_v1",
+          "basis": [
+            "unknown_domain_pattern",
+            "distinct_urls:24",
+            "distinct_axes:0",
+            "origin_types:2",
+            "referring_accounts:1",
+            "origin_types:2",
+            "track_record_unavailable"
+          ]
+        }
+      },
+      "profile": {
+        "fetched_at": "2026-07-30T03:51:04.357Z",
+        "homepage_url": "https://coderabbit.ai/",
+        "example_url": "https://www.coderabbit.ai/agent?utm_source=twitter&utm_medium=cpc&utm_campaign=brandawareness_slack&twclid=25ohyy1nnhx1vb6p888i79f380",
+        "homepage_status": 200,
+        "example_status": 200,
+        "homepage_final_url": "https://www.coderabbit.ai/",
+        "example_final_url": "https://www.coderabbit.ai/agent?utm_source=twitter&utm_medium=cpc&utm_campaign=brandawareness_slack&twclid=25ohyy1nnhx1vb6p888i79f380",
+        "homepage_content_type": "text/html; charset=utf-8",
+        "example_content_type": "text/html; charset=utf-8",
+        "homepage": {
+          "has_meta_author": false,
+          "has_published_time": false,
+          "has_canonical": false,
+          "has_about_link": false,
+          "has_contact_link": true,
+          "has_corrections_link": false,
+          "outbound_links_count": 6,
+          "opinion_marker": false
+        },
+        "example": {
+          "has_meta_author": false,
+          "has_published_time": false,
+          "has_canonical": false,
+          "has_about_link": false,
+          "has_contact_link": false,
+          "has_corrections_link": false,
+          "outbound_links_count": 0,
+          "opinion_marker": false
+        }
+      }
+    },
+    {
       "domain": "app.link",
       "entity": "App Link",
       "kind": "unknown",
@@ -8294,133 +8422,6 @@
           "has_contact_link": false,
           "has_corrections_link": false,
           "outbound_links_count": 0,
-          "opinion_marker": false
-        },
-        "example": {
-          "has_meta_author": false,
-          "has_published_time": false,
-          "has_canonical": false,
-          "has_about_link": false,
-          "has_contact_link": false,
-          "has_corrections_link": false,
-          "outbound_links_count": 0,
-          "opinion_marker": false
-        }
-      }
-    },
-    {
-      "domain": "coderabbit.ai",
-      "entity": "Coderabbit Ai",
-      "kind": "unknown",
-      "first_seen_at": "2026-06-09T09:50:16.000Z",
-      "last_seen_at": "2026-07-29T14:57:33.201Z",
-      "discovery": {
-        "distinct_urls": 23,
-        "example_urls": [
-          "https://www.coderabbit.ai/agent?utm_source=twitter&utm_medium=cpc&utm_campaign=brandawareness_slack&twclid=25ohyy1nnhx1vb6p888i79f380",
-          "https://www.coderabbit.ai/agent?utm_source=twitter&utm_medium=cpc&utm_campaign=brandawareness_slack&twclid=289waaptg8g5p8kt9nmjdhtmdm",
-          "https://www.coderabbit.ai/agent?utm_source=twitter&utm_medium=cpc&utm_campaign=brandawareness_slack&twclid=221iix4gf082d85ifrr3eh1dr6",
-          "https://coderabbit.ai/?utm_source=twitter&utm_medium=cpc&utm_campaign=intlretargetingsignup&twclid=2bprglk8wen4ni6d1hxw416sxj",
-          "https://coderabbit.ai/?utm_source=twitter&utm_medium=cpc&utm_campaign=intlprospectingsignup&twclid=23a3why4v3msp82hu0ra2sxiek"
-        ],
-        "origin_counts": {
-          "feed_buffer_reply": 7,
-          "feed_buffer": 16
-        },
-        "distinct_referring_accounts": 1,
-        "sample_referring_accounts": [
-          "coderabbitai"
-        ],
-        "distinct_axes": []
-      },
-      "claims": {
-        "total": 0,
-        "supported": 0,
-        "refuted": 0,
-        "contested": 0,
-        "unverified": 0,
-        "resolved_count": 0
-      },
-      "structural_features": {
-        "has_search_paths": false,
-        "has_article_paths": false,
-        "has_doi_paths": false
-      },
-      "ratings": {
-        "provenance": {
-          "score": 0.45,
-          "basis": [
-            "unknown_domain_pattern"
-          ]
-        },
-        "breadth": {
-          "score": 0.47,
-          "basis": [
-            "distinct_urls:23",
-            "distinct_axes:0",
-            "origin_types:2"
-          ]
-        },
-        "corroboration": {
-          "score": 0.2833333333333333,
-          "basis": [
-            "referring_accounts:1",
-            "origin_types:2"
-          ]
-        },
-        "track_record": {
-          "score": null,
-          "basis": [
-            "no_resolved_claims_observed"
-          ]
-        },
-        "profile": {
-          "score": 0.12,
-          "confidence": 0.55,
-          "basis": [
-            "meta_author:false",
-            "published_time:false",
-            "canonical:false",
-            "about:false",
-            "contact:true",
-            "corrections:false",
-            "outbound_links:0",
-            "opinion_marker:false"
-          ]
-        },
-        "overall": {
-          "score": 0.43875,
-          "confidence": 0.5742,
-          "method": "mechanical_v1",
-          "basis": [
-            "unknown_domain_pattern",
-            "distinct_urls:23",
-            "distinct_axes:0",
-            "origin_types:2",
-            "referring_accounts:1",
-            "origin_types:2",
-            "track_record_unavailable"
-          ]
-        }
-      },
-      "profile": {
-        "fetched_at": "2026-07-30T03:51:04.357Z",
-        "homepage_url": "https://coderabbit.ai/",
-        "example_url": "https://www.coderabbit.ai/agent?utm_source=twitter&utm_medium=cpc&utm_campaign=brandawareness_slack&twclid=25ohyy1nnhx1vb6p888i79f380",
-        "homepage_status": 200,
-        "example_status": 200,
-        "homepage_final_url": "https://www.coderabbit.ai/",
-        "example_final_url": "https://www.coderabbit.ai/agent?utm_source=twitter&utm_medium=cpc&utm_campaign=brandawareness_slack&twclid=25ohyy1nnhx1vb6p888i79f380",
-        "homepage_content_type": "text/html; charset=utf-8",
-        "example_content_type": "text/html; charset=utf-8",
-        "homepage": {
-          "has_meta_author": false,
-          "has_published_time": false,
-          "has_canonical": false,
-          "has_about_link": false,
-          "has_contact_link": true,
-          "has_corrections_link": false,
-          "outbound_links_count": 6,
           "opinion_marker": false
         },
         "example": {
@@ -16684,9 +16685,9 @@
       "entity": "Moltbook",
       "kind": "unknown",
       "first_seen_at": "2026-03-07T00:29:35.326Z",
-      "last_seen_at": "2026-07-27T23:40:25.789Z",
+      "last_seen_at": "2026-07-31T01:28:51.978Z",
       "discovery": {
-        "distinct_urls": 101,
+        "distinct_urls": 102,
         "example_urls": [
           "https://www.moltbook.com/post/29d49c40-bc59-4a1a-b875-3d3d41ec469e",
           "https://www.moltbook.com/post/3694a386-c24e-4744-8c06-2fc74c73c559",
@@ -16695,7 +16696,7 @@
           "https://www.moltbook.com/post/c6a71bf0-72ab-4867-820a-6b306bae0cea"
         ],
         "origin_counts": {
-          "articles": 101
+          "articles": 102
         },
         "distinct_referring_accounts": 0,
         "sample_referring_accounts": [],
@@ -16724,7 +16725,7 @@
         "breadth": {
           "score": 0.41,
           "basis": [
-            "distinct_urls:101",
+            "distinct_urls:102",
             "distinct_axes:0",
             "origin_types:1"
           ]
@@ -16762,7 +16763,7 @@
           "method": "mechanical_v1",
           "basis": [
             "unknown_domain_pattern",
-            "distinct_urls:101",
+            "distinct_urls:102",
             "distinct_axes:0",
             "origin_types:1",
             "referring_accounts:0",
@@ -21745,6 +21746,132 @@
       }
     },
     {
+      "domain": "miku.ph",
+      "entity": "Miku Ph",
+      "kind": "unknown",
+      "first_seen_at": "2026-07-25T21:29:05.896Z",
+      "last_seen_at": "2026-07-31T01:03:21.575Z",
+      "discovery": {
+        "distinct_urls": 8,
+        "example_urls": [
+          "https://miku.ph/?utm_source=x&utm_medium=paid_social&utm_campaign=mikufes_announcement&utm_content=detailed&twclid=21azz5ellpiwotx3k2g9myjumu",
+          "https://miku.ph/?utm_source=x&utm_medium=paid_social&utm_campaign=mikufes_announcement&utm_term=merch&utm_content=happi&twclid=2duhcp2oetw9nuz525xfd588y7",
+          "https://miku.ph/?utm_source=x&utm_medium=paid_social&utm_campaign=mikufes_announcement&utm_term=merch&utm_content=happi&twclid=2923nxhyrk92bjszv0ks08bqk4",
+          "https://miku.ph/?utm_source=x&utm_medium=paid_social&utm_campaign=mikufes_announcement&utm_content=guest&twclid=2atkfjxba9ytgqijjkdi232eck",
+          "https://miku.ph/?utm_source=x&utm_medium=paid_social&utm_campaign=mikufes_announcement&utm_content=single&twclid=23c43h6lesajkqye7s36y6j03a"
+        ],
+        "origin_counts": {
+          "feed_buffer": 8
+        },
+        "distinct_referring_accounts": 1,
+        "sample_referring_accounts": [
+          "mikuphfanbase"
+        ],
+        "distinct_axes": []
+      },
+      "claims": {
+        "total": 0,
+        "supported": 0,
+        "refuted": 0,
+        "contested": 0,
+        "unverified": 0,
+        "resolved_count": 0
+      },
+      "structural_features": {
+        "has_search_paths": false,
+        "has_article_paths": false,
+        "has_doi_paths": false
+      },
+      "ratings": {
+        "provenance": {
+          "score": 0.45,
+          "basis": [
+            "unknown_domain_pattern"
+          ]
+        },
+        "breadth": {
+          "score": 0.29333333333333333,
+          "basis": [
+            "distinct_urls:8",
+            "distinct_axes:0",
+            "origin_types:1"
+          ]
+        },
+        "corroboration": {
+          "score": 0.19583333333333333,
+          "basis": [
+            "referring_accounts:1",
+            "origin_types:1"
+          ]
+        },
+        "track_record": {
+          "score": null,
+          "basis": [
+            "no_resolved_claims_observed"
+          ]
+        },
+        "profile": {
+          "score": 0.1,
+          "confidence": 0.55,
+          "basis": [
+            "meta_author:false",
+            "published_time:false",
+            "canonical:true",
+            "about:false",
+            "contact:false",
+            "corrections:false",
+            "outbound_links:0",
+            "opinion_marker:false"
+          ]
+        },
+        "overall": {
+          "score": 0.39190104166666667,
+          "confidence": 0.281725,
+          "method": "mechanical_v1",
+          "basis": [
+            "unknown_domain_pattern",
+            "distinct_urls:8",
+            "distinct_axes:0",
+            "origin_types:1",
+            "referring_accounts:1",
+            "origin_types:1",
+            "track_record_unavailable"
+          ]
+        }
+      },
+      "profile": {
+        "fetched_at": "2026-07-30T02:21:07.038Z",
+        "homepage_url": "https://miku.ph/",
+        "example_url": "https://miku.ph/?utm_source=x&utm_medium=paid_social&utm_campaign=mikufes_announcement&utm_content=detailed&twclid=21azz5ellpiwotx3k2g9myjumu",
+        "homepage_status": 200,
+        "example_status": 200,
+        "homepage_final_url": "https://miku.ph/",
+        "example_final_url": "https://miku.ph/?utm_source=x&utm_medium=paid_social&utm_campaign=mikufes_announcement&utm_content=detailed&twclid=21azz5ellpiwotx3k2g9myjumu",
+        "homepage_content_type": "text/html; charset=utf-8",
+        "example_content_type": "text/html; charset=utf-8",
+        "homepage": {
+          "has_meta_author": false,
+          "has_published_time": false,
+          "has_canonical": true,
+          "has_about_link": false,
+          "has_contact_link": false,
+          "has_corrections_link": false,
+          "outbound_links_count": 0,
+          "opinion_marker": false
+        },
+        "example": {
+          "has_meta_author": false,
+          "has_published_time": false,
+          "has_canonical": true,
+          "has_about_link": false,
+          "has_contact_link": false,
+          "has_corrections_link": false,
+          "outbound_links_count": 0,
+          "opinion_marker": false
+        }
+      }
+    },
+    {
       "domain": "geopoliticalfutures.com",
       "entity": "Geopoliticalfutures",
       "kind": "unknown",
@@ -24254,132 +24381,6 @@
           "has_meta_author": false,
           "has_published_time": false,
           "has_canonical": false,
-          "has_about_link": false,
-          "has_contact_link": false,
-          "has_corrections_link": false,
-          "outbound_links_count": 0,
-          "opinion_marker": false
-        }
-      }
-    },
-    {
-      "domain": "miku.ph",
-      "entity": "Miku Ph",
-      "kind": "unknown",
-      "first_seen_at": "2026-07-25T21:29:05.896Z",
-      "last_seen_at": "2026-07-30T19:28:13.014Z",
-      "discovery": {
-        "distinct_urls": 7,
-        "example_urls": [
-          "https://miku.ph/?utm_source=x&utm_medium=paid_social&utm_campaign=mikufes_announcement&utm_content=detailed&twclid=21azz5ellpiwotx3k2g9myjumu",
-          "https://miku.ph/?utm_source=x&utm_medium=paid_social&utm_campaign=mikufes_announcement&utm_term=merch&utm_content=happi&twclid=2duhcp2oetw9nuz525xfd588y7",
-          "https://miku.ph/?utm_source=x&utm_medium=paid_social&utm_campaign=mikufes_announcement&utm_term=merch&utm_content=happi&twclid=2923nxhyrk92bjszv0ks08bqk4",
-          "https://miku.ph/?utm_source=x&utm_medium=paid_social&utm_campaign=mikufes_announcement&utm_content=guest&twclid=2atkfjxba9ytgqijjkdi232eck",
-          "https://miku.ph/?utm_source=x&utm_medium=paid_social&utm_campaign=mikufes_announcement&utm_content=single&twclid=23c43h6lesajkqye7s36y6j03a"
-        ],
-        "origin_counts": {
-          "feed_buffer": 7
-        },
-        "distinct_referring_accounts": 1,
-        "sample_referring_accounts": [
-          "mikuphfanbase"
-        ],
-        "distinct_axes": []
-      },
-      "claims": {
-        "total": 0,
-        "supported": 0,
-        "refuted": 0,
-        "contested": 0,
-        "unverified": 0,
-        "resolved_count": 0
-      },
-      "structural_features": {
-        "has_search_paths": false,
-        "has_article_paths": false,
-        "has_doi_paths": false
-      },
-      "ratings": {
-        "provenance": {
-          "score": 0.45,
-          "basis": [
-            "unknown_domain_pattern"
-          ]
-        },
-        "breadth": {
-          "score": 0.26416666666666666,
-          "basis": [
-            "distinct_urls:7",
-            "distinct_axes:0",
-            "origin_types:1"
-          ]
-        },
-        "corroboration": {
-          "score": 0.19583333333333333,
-          "basis": [
-            "referring_accounts:1",
-            "origin_types:1"
-          ]
-        },
-        "track_record": {
-          "score": null,
-          "basis": [
-            "no_resolved_claims_observed"
-          ]
-        },
-        "profile": {
-          "score": 0.1,
-          "confidence": 0.55,
-          "basis": [
-            "meta_author:false",
-            "published_time:false",
-            "canonical:true",
-            "about:false",
-            "contact:false",
-            "corrections:false",
-            "outbound_links:0",
-            "opinion_marker:false"
-          ]
-        },
-        "overall": {
-          "score": 0.3855208333333333,
-          "confidence": 0.2531,
-          "method": "mechanical_v1",
-          "basis": [
-            "unknown_domain_pattern",
-            "distinct_urls:7",
-            "distinct_axes:0",
-            "origin_types:1",
-            "referring_accounts:1",
-            "origin_types:1",
-            "track_record_unavailable"
-          ]
-        }
-      },
-      "profile": {
-        "fetched_at": "2026-07-30T02:21:07.038Z",
-        "homepage_url": "https://miku.ph/",
-        "example_url": "https://miku.ph/?utm_source=x&utm_medium=paid_social&utm_campaign=mikufes_announcement&utm_content=detailed&twclid=21azz5ellpiwotx3k2g9myjumu",
-        "homepage_status": 200,
-        "example_status": 200,
-        "homepage_final_url": "https://miku.ph/",
-        "example_final_url": "https://miku.ph/?utm_source=x&utm_medium=paid_social&utm_campaign=mikufes_announcement&utm_content=detailed&twclid=21azz5ellpiwotx3k2g9myjumu",
-        "homepage_content_type": "text/html; charset=utf-8",
-        "example_content_type": "text/html; charset=utf-8",
-        "homepage": {
-          "has_meta_author": false,
-          "has_published_time": false,
-          "has_canonical": true,
-          "has_about_link": false,
-          "has_contact_link": false,
-          "has_corrections_link": false,
-          "outbound_links_count": 0,
-          "opinion_marker": false
-        },
-        "example": {
-          "has_meta_author": false,
-          "has_published_time": false,
-          "has_canonical": true,
           "has_about_link": false,
           "has_contact_link": false,
           "has_corrections_link": false,
@@ -31975,7 +31976,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-07-28T00:55:24.912Z",
+        "fetched_at": "2026-07-31T01:51:36.574Z",
         "homepage_url": "https://zerogex.io/",
         "example_url": "https://zerogex.io/spx-gamma-levels?utm_source=x&utm_medium=paid_social&utm_campaign=levels_awareness&utm_content=trial_direct_hook&twclid=2a4dncr82b7vzedk7ixybb1asi",
         "homepage_status": 200,
@@ -39087,7 +39088,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-07-28T00:55:25.521Z",
+        "fetched_at": "2026-07-31T01:51:37.052Z",
         "homepage_url": "https://cuervo.com/",
         "example_url": "https://cuervo.com/?twclid=2cw6oebezormtkrlgtaweck05m",
         "homepage_status": 200,
@@ -39211,7 +39212,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-07-28T00:55:26.174Z",
+        "fetched_at": "2026-07-31T01:51:38.221Z",
         "homepage_url": "https://americanexpress.com/",
         "example_url": "https://www.americanexpress.com/en-us/benefits/membership/experiences/nba/?extlink=dw-us-GABM-PLATSOC_CH_sm-CU_us-BU_GABM-REF_TST_EEP_URL_g_psoc&cpid_g_psoc=&twclid=2dpgv5hu2sysfpt5ld9o2y2ukf",
         "homepage_status": 200,
@@ -39335,7 +39336,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-07-28T00:55:26.255Z",
+        "fetched_at": "2026-07-31T01:51:38.305Z",
         "homepage_url": "https://proalgo.fun/",
         "example_url": "https://proalgo.fun/chat?rez=sy24ria&twclid=29ce9rs2p6qobknj46cgwzi02y",
         "homepage_status": null,
@@ -39582,7 +39583,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-07-28T01:25:22.211Z",
+        "fetched_at": "2026-07-31T02:22:25.302Z",
         "homepage_url": "https://ajc.org/",
         "example_url": "https://www.ajc.org/news/the-iran-strikes-explained-how-we-got-here-and-what-it-means",
         "homepage_status": 200,
@@ -39706,7 +39707,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-07-28T01:25:24.450Z",
+        "fetched_at": "2026-07-31T02:22:29.868Z",
         "homepage_url": "https://manageengine.com/",
         "example_url": "https://www.manageengine.com/products/service-desk/?utm_source=Twitter-X&utm_medium=ppc&utm_campaign=SDP-New+Image+Ad-Kws-sep18&twclid=23ga9f8elsw90hcyq7ijyux58l",
         "homepage_status": 200,
@@ -39830,7 +39831,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-07-28T01:25:27.040Z",
+        "fetched_at": "2026-07-31T02:22:34.238Z",
         "homepage_url": "https://coindesk.com/",
         "example_url": "https://consensus.coindesk.com/?utm_source=x&utm_medium=paid&utm_campaign=CMIA26&utm_content=speakerscarousel&twclid=25wlgerig7ee1h05a2z5wafpgx",
         "homepage_status": 200,
@@ -39846,7 +39847,7 @@
           "has_about_link": true,
           "has_contact_link": true,
           "has_corrections_link": false,
-          "outbound_links_count": 15,
+          "outbound_links_count": 16,
           "opinion_marker": false
         },
         "example": {
@@ -39954,7 +39955,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-07-28T01:25:28.709Z",
+        "fetched_at": "2026-07-31T02:22:35.682Z",
         "homepage_url": "https://outx.ai/",
         "example_url": "https://outx.ai/a/buyer-intent-tracking?utm_source=twitter&utm_medium=paid&utm_campaign=buyer-intent&utm_content=t-b1-first-200&twclid=28hhz80snfgnotyxefsxxmt9nc",
         "homepage_status": 200,
