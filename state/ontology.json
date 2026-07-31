@@ -136685,11 +136685,11 @@
       "label": "Rapid Disinformation",
       "left_pole": "Quickly verified and accurate information",
       "right_pole": "Unverified and rapidly disseminated claims",
-      "score": 0.3,
-      "confidence": 0.3132,
+      "score": 0.35,
+      "confidence": 0.3311,
       "topics": [],
       "created_at": "2026-07-13T00:10:59.798Z",
-      "last_updated": "2026-07-30T09:21:55.232Z",
+      "last_updated": "2026-07-31T04:52:17.914Z",
       "evidence_log": [
         {
           "source": "https://x.com/RT_com/status/2077106304095531013",
@@ -136807,6 +136807,18 @@
           "stance_confidence": 1,
           "score_after": 0.3,
           "confidence_after": 0.3132
+        },
+        {
+          "source": "https://www.rappler.com/newsbreak/fact-check/ai-generated-video-rodrigo-duterte-release-july-2026/",
+          "content": "AI-generated deepfake video falsely claims Duterte will be released from ICC detention in July 2026, with no official announcement confirming this.",
+          "summary": "",
+          "timestamp": "2026-07-31T04:52:17.719Z",
+          "pole_alignment": "right",
+          "trust_weight": 1,
+          "claim_id": "9eb401df7168",
+          "stance_confidence": 1,
+          "score_after": 0.35,
+          "confidence_after": 0.3311
         }
       ],
       "last_decayed_at": "2026-07-29"
@@ -138205,11 +138217,11 @@
       "label": "Infrastructure as Commons vs. Extraction",
       "left_pole": "Critical infrastructure (power, water, communication) serves collective need and public good, with growth constrained by shared resource limits and equitable access priorities",
       "right_pole": "Infrastructure primarily serves private accumulation and market demands, with constraints managed through relocation, tiered access, or externalizing costs to less protected populations",
-      "score": 0,
-      "confidence": 0.1026,
+      "score": 0.05,
+      "confidence": 0.1265,
       "topics": [],
       "created_at": "2026-07-28T16:02:50.981Z",
-      "last_updated": "2026-07-30T19:52:03.801Z",
+      "last_updated": "2026-07-31T03:22:28.557Z",
       "evidence_log": [
         {
           "source": "https://techcrunch.com/2026/07/28/data-centers-may-face-temporary-power-cuts-to-prevent-blackouts-on-largest-us-grid/",
@@ -138246,6 +138258,18 @@
           "stance_confidence": 0.95,
           "score_after": 0,
           "confidence_after": 0.1026
+        },
+        {
+          "source": "https://www.rappler.com/philippines/luzon/floodwalls-guiguinto-river-impact-on-kangkong-farmers/",
+          "content": "Flood control projects along Guiguinto River displace kangkong farmers and introduce saltwater intrusion, prioritizing infrastructure narrative over livelihood protection.",
+          "summary": "",
+          "timestamp": "2026-07-31T03:22:27.965Z",
+          "pole_alignment": "right",
+          "trust_weight": 1,
+          "claim_id": "1e74b519bc4f",
+          "stance_confidence": 0.75,
+          "score_after": 0.05,
+          "confidence_after": 0.1265
         }
       ],
       "last_decayed_at": "2026-07-30"
@@ -138264,5 +138288,5 @@
     }
   ],
   "axis_creation_rules_version": "1.0",
-  "last_updated": "2026-07-31T02:23:15.010Z"
+  "last_updated": "2026-07-31T05:22:44.247Z"
 }

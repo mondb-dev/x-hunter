@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-31T01:52:48.586Z",
+  "generated_at": "2026-07-31T04:52:54.774Z",
   "windows": [
     "1d",
     "3d",
@@ -111,17 +111,17 @@
     },
     "axis_ai_societal_impact_v1": {
       "current": {
-        "score": 0.3902,
+        "score": 0.3943,
         "confidence": 0.9499
       },
       "1d": {
-        "score_delta": 0.0041,
+        "score_delta": 0.0082,
         "conf_delta": 0.006,
         "direction": "→"
       },
       "3d": null,
       "7d": {
-        "score_delta": 0.003,
+        "score_delta": 0.0071,
         "conf_delta": 0,
         "direction": "→"
       }
@@ -774,18 +774,18 @@
     },
     "axis_rapid_disinformation_v1": {
       "current": {
-        "score": 0.3,
-        "confidence": 0.3132
+        "score": 0.35,
+        "confidence": 0.3311
       },
       "1d": {
-        "score_delta": 0.05,
-        "conf_delta": 0.0185,
+        "score_delta": 0.1,
+        "conf_delta": 0.0364,
         "direction": "↗"
       },
       "3d": null,
       "7d": {
-        "score_delta": 0.1,
-        "conf_delta": 0.1118,
+        "score_delta": 0.15,
+        "conf_delta": 0.1297,
         "direction": "↗"
       }
     },
@@ -889,14 +889,23 @@
     },
     "axis_infrastructure_commons_v_extraction_v1": {
       "current": {
-        "score": 0,
-        "confidence": 0.1026
+        "score": 0.05,
+        "confidence": 0.1265
       },
       "1d": {
-        "score_delta": 0.05,
-        "conf_delta": 0.0798,
+        "score_delta": 0.1,
+        "conf_delta": 0.1037,
         "direction": "↗"
       },
+      "3d": null,
+      "7d": null
+    },
+    "axis_ai_autonomous_action_governance_v1": {
+      "current": {
+        "score": 0,
+        "confidence": 0
+      },
+      "1d": null,
       "3d": null,
       "7d": null
     }
