@@ -1,8 +1,8 @@
 {
   "schema_version": "1.0",
-  "generated_at": "2026-07-30T23:21:26.425Z",
+  "generated_at": "2026-07-31T00:51:29.508Z",
   "method": "mechanical_registry_v1",
-  "profiled_at": "2026-07-30T23:21:49.487Z",
+  "profiled_at": "2026-07-31T00:51:35.532Z",
   "sources": [
     {
       "domain": "theguardian.com",
@@ -11,7 +11,7 @@
       "first_seen_at": "2026-03-27T23:17:00Z",
       "last_seen_at": "2026-07-30T21:22:11.470Z",
       "discovery": {
-        "distinct_urls": 626,
+        "distinct_urls": 627,
         "example_urls": [
           "https://www.theguardian.com/us-news/2026/jun/23/trump-immigration-courthouse-arrest-policy",
           "https://www.theguardian.com/us-news/2026/jun/28/ice-minnesota-defending-democracy",
@@ -21,7 +21,7 @@
         ],
         "origin_counts": {
           "ontology_evidence": 41,
-          "reading_queue": 594,
+          "reading_queue": 595,
           "journals": 106,
           "articles": 2
         },
@@ -72,7 +72,7 @@
         "breadth": {
           "score": 0.94,
           "basis": [
-            "distinct_urls:626",
+            "distinct_urls:627",
             "distinct_axes:17",
             "origin_types:4"
           ]
@@ -112,7 +112,7 @@
             "newsroom_domain_pattern",
             "article_path_seen",
             "doi_or_identifier_path_seen",
-            "distinct_urls:626",
+            "distinct_urls:627",
             "distinct_axes:17",
             "origin_types:4",
             "referring_accounts:0",
@@ -285,9 +285,9 @@
       "entity": "Aljazeera",
       "kind": "news",
       "first_seen_at": "2026-06-22T02:45:00Z",
-      "last_seen_at": "2026-07-30T22:52:11.642Z",
+      "last_seen_at": "2026-07-31T00:22:08.923Z",
       "discovery": {
-        "distinct_urls": 347,
+        "distinct_urls": 350,
         "example_urls": [
           "https://www.aljazeera.com/opinions/2026/6/24/south-africas-crises-will-not-be-solved-by-blaming-migrants",
           "https://www.aljazeera.com/video/newsfeed/2026/6/27/newly-released-video-exposes-henry-nowak-killers-lies?traffic_source=rss",
@@ -298,7 +298,7 @@
         "origin_counts": {
           "ontology_evidence": 172,
           "reading_queue": 13,
-          "journals": 444,
+          "journals": 447,
           "articles": 4
         },
         "distinct_referring_accounts": 0,
@@ -355,7 +355,7 @@
         "breadth": {
           "score": 0.94,
           "basis": [
-            "distinct_urls:347",
+            "distinct_urls:350",
             "distinct_axes:25",
             "origin_types:4"
           ]
@@ -394,7 +394,7 @@
           "basis": [
             "newsroom_domain_pattern",
             "article_path_seen",
-            "distinct_urls:347",
+            "distinct_urls:350",
             "distinct_axes:25",
             "origin_types:4",
             "referring_accounts:0",
@@ -451,7 +451,7 @@
           "https://careers.cbp.gov/s/connect-to-recruiter?campaignid=701SJ00000BV0tR&utm_source=X&utm_medium=paid_social&utm_campaign=MGC_B5SXtXt5J5T&twclid=2f2100ywgvzunnowbnhrpi34g1"
         ],
         "origin_counts": {
-          "reading_queue": 13,
+          "reading_queue": 14,
           "feed_buffer_reply": 7
         },
         "distinct_referring_accounts": 1,
@@ -576,7 +576,7 @@
           "https://www.justice.gov/usao-ri/pr/two-business-executives-plead-guilty-tech-support-fraud-scheme?twclid=2f42440xock41qvr5cwo18o539"
         ],
         "origin_counts": {
-          "reading_queue": 13,
+          "reading_queue": 14,
           "feed_buffer_reply": 2,
           "feed_buffer": 1
         },
@@ -838,7 +838,7 @@
         ],
         "origin_counts": {
           "ontology_evidence": 1,
-          "reading_queue": 10
+          "reading_queue": 11
         },
         "distinct_referring_accounts": 0,
         "sample_referring_accounts": [],
@@ -1445,7 +1445,7 @@
       "first_seen_at": "2026-06-26T07:05:00Z",
       "last_seen_at": "2026-07-26T19:55:37.560Z",
       "discovery": {
-        "distinct_urls": 372,
+        "distinct_urls": 373,
         "example_urls": [
           "https://www.bbc.co.uk/news/articles/cn8qxz6qypyo",
           "https://www.bbc.co.uk/news/articles/cn075j04pnyo?at_medium=RSS&amp;at_campaign=rss",
@@ -1455,7 +1455,7 @@
         ],
         "origin_counts": {
           "ontology_evidence": 6,
-          "reading_queue": 381,
+          "reading_queue": 382,
           "journals": 15
         },
         "distinct_referring_accounts": 0,
@@ -1490,7 +1490,7 @@
         "breadth": {
           "score": 0.7633333333333332,
           "basis": [
-            "distinct_urls:372",
+            "distinct_urls:373",
             "distinct_axes:4",
             "origin_types:3"
           ]
@@ -1528,7 +1528,7 @@
           "method": "mechanical_v1",
           "basis": [
             "newsroom_domain_pattern",
-            "distinct_urls:372",
+            "distinct_urls:373",
             "distinct_axes:4",
             "origin_types:3",
             "referring_accounts:0",
@@ -2195,13 +2195,13 @@
           ]
         },
         "profile": {
-          "score": 0.36,
-          "confidence": 0.65,
+          "score": 0.22,
+          "confidence": 0.55,
           "basis": [
             "meta_author:false",
             "published_time:false",
             "canonical:true",
-            "about:true",
+            "about:false",
             "contact:false",
             "corrections:false",
             "outbound_links:18",
@@ -2226,7 +2226,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-07-27T23:25:37.112Z",
+        "fetched_at": "2026-07-31T00:21:34.071Z",
         "homepage_url": "https://cbsnews.com/",
         "example_url": "https://www.cbsnews.com/news/us-naval-blockade-iran-ports-2026/",
         "homepage_status": 200,
@@ -2239,10 +2239,10 @@
           "has_meta_author": false,
           "has_published_time": false,
           "has_canonical": true,
-          "has_about_link": true,
+          "has_about_link": false,
           "has_contact_link": false,
           "has_corrections_link": false,
-          "outbound_links_count": 21,
+          "outbound_links_count": 18,
           "opinion_marker": false
         },
         "example": {
@@ -2262,9 +2262,9 @@
       "entity": "Amnesty",
       "kind": "unknown",
       "first_seen_at": "2026-03-31T12:16:18.459Z",
-      "last_seen_at": "2026-07-30T22:52:11.642Z",
+      "last_seen_at": "2026-07-30T23:22:22.463Z",
       "discovery": {
-        "distinct_urls": 69,
+        "distinct_urls": 70,
         "example_urls": [
           "https://www.amnesty.org/en/latest/news/2026/06/burkina-serge-oulon/",
           "https://www.amnesty.org/en/latest/news/2026/06/car-bozize/",
@@ -2273,9 +2273,9 @@
           "https://www.amnesty.org/en/latest/news/2026/06/usa-four-months-after-horrific-minab-school-airstrike"
         ],
         "origin_counts": {
-          "ontology_evidence": 52,
-          "reading_queue": 38,
-          "journals": 92
+          "ontology_evidence": 53,
+          "reading_queue": 39,
+          "journals": 93
         },
         "distinct_referring_accounts": 0,
         "sample_referring_accounts": [],
@@ -2315,7 +2315,7 @@
         "breadth": {
           "score": 0.8799999999999999,
           "basis": [
-            "distinct_urls:69",
+            "distinct_urls:70",
             "distinct_axes:9",
             "origin_types:3"
           ]
@@ -2354,7 +2354,7 @@
           "basis": [
             "unknown_domain_pattern",
             "article_path_seen",
-            "distinct_urls:69",
+            "distinct_urls:70",
             "distinct_axes:9",
             "origin_types:3",
             "referring_accounts:0",
@@ -3032,7 +3032,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-07-27T23:25:37.141Z",
+        "fetched_at": "2026-07-31T00:21:34.121Z",
         "homepage_url": "https://com.ph/",
         "example_url": "https://x.tv5.com.ph/news/national/read/arrest-warrants-issued-vs-discayas-over-malversation-graft-charges-tied-to-flood-control-projects-malolos-court",
         "homepage_status": null,
@@ -3363,9 +3363,9 @@
       "entity": "Gmanetwork",
       "kind": "unknown",
       "first_seen_at": "2026-05-18T03:29:41.732Z",
-      "last_seen_at": "2026-07-30T16:51:47.949Z",
+      "last_seen_at": "2026-07-31T00:22:08.923Z",
       "discovery": {
-        "distinct_urls": 312,
+        "distinct_urls": 314,
         "example_urls": [
           "https://www.gmanetwork.com/news/topstories/nation/994225/explainer-objections-in-a-trial-and-their-role-in-due-process/story/",
           "https://www.gmanetwork.com/news/balitambayan/balita/993931/sen-escudero-sinabing-16-na-boto-ang-kailangan-para-mahatulang-guilty-si-vp-sara-duterte-sa-impea/story/",
@@ -3375,7 +3375,7 @@
         ],
         "origin_counts": {
           "ontology_evidence": 104,
-          "journals": 361
+          "journals": 363
         },
         "distinct_referring_accounts": 0,
         "sample_referring_accounts": [],
@@ -3424,7 +3424,7 @@
         "breadth": {
           "score": 0.82,
           "basis": [
-            "distinct_urls:312",
+            "distinct_urls:314",
             "distinct_axes:18",
             "origin_types:2"
           ]
@@ -3463,7 +3463,7 @@
           "basis": [
             "unknown_domain_pattern",
             "doi_or_identifier_path_seen",
-            "distinct_urls:312",
+            "distinct_urls:314",
             "distinct_axes:18",
             "origin_types:2",
             "referring_accounts:0",
@@ -17788,7 +17788,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-07-27T23:25:37.505Z",
+        "fetched_at": "2026-07-31T00:21:37.619Z",
         "homepage_url": "https://abey.com/",
         "example_url": "https://abey.com/?twclid=245i7ob4cgmg7v7epadtxl7ku4",
         "homepage_status": 200,
@@ -32099,7 +32099,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-07-27T23:25:38.058Z",
+        "fetched_at": "2026-07-31T00:21:38.033Z",
         "homepage_url": "https://cosmiconnect.cloud/",
         "example_url": "https://cosmiconnect.cloud/?twclid=2a51rc40kq7fu8e1y0mc17bu1j",
         "homepage_status": 403,
@@ -36717,7 +36717,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-07-27T23:55:28.304Z",
+        "fetched_at": "2026-07-31T00:51:30.500Z",
         "homepage_url": "https://thoughtcrimeradio.net/",
         "example_url": "https://thoughtcrimeradio.net/2019/07/study-finds-transgender-autism-link/",
         "homepage_status": 200,
@@ -38715,7 +38715,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-07-27T23:55:29.946Z",
+        "fetched_at": "2026-07-31T00:51:32.084Z",
         "homepage_url": "https://georgetown.edu/",
         "example_url": "https://gjia.georgetown.edu/2026/03/26/the-war-against-iran-and-global-risks-tell-me-how-this-ends/",
         "homepage_status": 200,
@@ -38819,7 +38819,7 @@
             "about:false",
             "contact:false",
             "corrections:false",
-            "outbound_links:19",
+            "outbound_links:17",
             "opinion_marker:false"
           ]
         },
@@ -38839,7 +38839,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-07-27T23:55:31.347Z",
+        "fetched_at": "2026-07-31T00:51:33.257Z",
         "homepage_url": "https://fandango.com/",
         "example_url": "https://www.fandango.com/lee-cronins-the-mummy-2026-244052/movie-overview?twclid=2buocyfoltepc4nr5ab0l6j90t",
         "homepage_status": 200,
@@ -38855,7 +38855,7 @@
           "has_about_link": false,
           "has_contact_link": false,
           "has_corrections_link": false,
-          "outbound_links_count": 25,
+          "outbound_links_count": 21,
           "opinion_marker": false
         },
         "example": {
@@ -38865,7 +38865,7 @@
           "has_about_link": false,
           "has_contact_link": false,
           "has_corrections_link": false,
-          "outbound_links_count": 19,
+          "outbound_links_count": 17,
           "opinion_marker": false
         }
       }
@@ -38963,7 +38963,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-07-27T23:55:33.406Z",
+        "fetched_at": "2026-07-31T00:51:35.532Z",
         "homepage_url": "https://typeform.com/",
         "example_url": "https://form.typeform.com/to/rQ99Fjtn?utm_source=mediabuyer&twclid=294n0eht0qoq4ibz93o6uvw95v",
         "homepage_status": 200,
