@@ -1,17 +1,17 @@
 {
   "schema_version": "1.0",
-  "generated_at": "2026-08-01T13:24:23.145Z",
+  "generated_at": "2026-08-01T16:24:23.948Z",
   "method": "mechanical_registry_v1",
-  "profiled_at": "2026-08-01T13:24:32.918Z",
+  "profiled_at": "2026-08-01T16:24:28.210Z",
   "sources": [
     {
       "domain": "theguardian.com",
       "entity": "Theguardian",
       "kind": "news",
       "first_seen_at": "2026-03-27T23:17:00Z",
-      "last_seen_at": "2026-08-01T12:55:03.656Z",
+      "last_seen_at": "2026-08-01T14:25:06.548Z",
       "discovery": {
-        "distinct_urls": 652,
+        "distinct_urls": 655,
         "example_urls": [
           "https://www.theguardian.com/us-news/2026/jun/23/trump-immigration-courthouse-arrest-policy",
           "https://www.theguardian.com/us-news/2026/jun/28/ice-minnesota-defending-democracy",
@@ -21,8 +21,8 @@
         ],
         "origin_counts": {
           "ontology_evidence": 41,
-          "reading_queue": 618,
-          "journals": 109,
+          "reading_queue": 620,
+          "journals": 110,
           "articles": 3
         },
         "distinct_referring_accounts": 0,
@@ -72,7 +72,7 @@
         "breadth": {
           "score": 0.94,
           "basis": [
-            "distinct_urls:652",
+            "distinct_urls:655",
             "distinct_axes:17",
             "origin_types:4"
           ]
@@ -112,7 +112,7 @@
             "newsroom_domain_pattern",
             "article_path_seen",
             "doi_or_identifier_path_seen",
-            "distinct_urls:652",
+            "distinct_urls:655",
             "distinct_axes:17",
             "origin_types:4",
             "referring_accounts:0",
@@ -285,9 +285,9 @@
       "entity": "Aljazeera",
       "kind": "news",
       "first_seen_at": "2026-06-22T02:45:00Z",
-      "last_seen_at": "2026-08-01T05:20:24.569Z",
+      "last_seen_at": "2026-08-01T15:55:04.644Z",
       "discovery": {
-        "distinct_urls": 353,
+        "distinct_urls": 354,
         "example_urls": [
           "https://www.aljazeera.com/opinions/2026/6/24/south-africas-crises-will-not-be-solved-by-blaming-migrants",
           "https://www.aljazeera.com/video/newsfeed/2026/6/27/newly-released-video-exposes-henry-nowak-killers-lies?traffic_source=rss",
@@ -296,9 +296,9 @@
           "https://www.aljazeera.com/video/newsfeed/2026/7/1/why-is-maga-in-meltdown-over-the-supreme-court-birthright-ruling-2?traffic_source=rss"
         ],
         "origin_counts": {
-          "ontology_evidence": 172,
+          "ontology_evidence": 173,
           "reading_queue": 14,
-          "journals": 450,
+          "journals": 451,
           "articles": 4
         },
         "distinct_referring_accounts": 0,
@@ -355,7 +355,7 @@
         "breadth": {
           "score": 0.94,
           "basis": [
-            "distinct_urls:353",
+            "distinct_urls:354",
             "distinct_axes:25",
             "origin_types:4"
           ]
@@ -394,7 +394,7 @@
           "basis": [
             "newsroom_domain_pattern",
             "article_path_seen",
-            "distinct_urls:353",
+            "distinct_urls:354",
             "distinct_axes:25",
             "origin_types:4",
             "referring_accounts:0",
@@ -695,7 +695,7 @@
       "first_seen_at": "2026-06-22T00:15:00Z",
       "last_seen_at": "2026-08-01T08:20:11.076Z",
       "discovery": {
-        "distinct_urls": 449,
+        "distinct_urls": 450,
         "example_urls": [
           "https://www.nytimes.com/2026/06/19/world/canada/frank-stronach-trial-guilty-sex-charges.html",
           "https://www.nytimes.com/2026/06/27/world/americas/mexican-officials-us-informants.html",
@@ -705,7 +705,7 @@
         ],
         "origin_counts": {
           "ontology_evidence": 16,
-          "reading_queue": 449,
+          "reading_queue": 450,
           "journals": 38
         },
         "distinct_referring_accounts": 0,
@@ -747,7 +747,7 @@
         "breadth": {
           "score": 0.8799999999999999,
           "basis": [
-            "distinct_urls:449",
+            "distinct_urls:450",
             "distinct_axes:10",
             "origin_types:3"
           ]
@@ -786,7 +786,7 @@
           "basis": [
             "newsroom_domain_pattern",
             "article_path_seen",
-            "distinct_urls:449",
+            "distinct_urls:450",
             "distinct_axes:10",
             "origin_types:3",
             "referring_accounts:0",
@@ -1089,7 +1089,7 @@
           "https://singaporeglobalnetwork.gov.sg/stories/tech/why-i-quit-college-at-22-to-launch-a-biotech-startup-in-singapore/?utm_source=x&utm_medium=social&utm_campaign=sg-paid-ao-traffic&utm_content=armaan-dhanda&twclid=2epj25tilhtb65igot07prztga"
         ],
         "origin_counts": {
-          "reading_queue": 5,
+          "reading_queue": 6,
           "feed_buffer": 1
         },
         "distinct_referring_accounts": 1,
@@ -1169,7 +1169,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-07-29T15:50:59.999Z",
+        "fetched_at": "2026-08-01T15:54:26.305Z",
         "homepage_url": "https://gov.sg/",
         "example_url": "https://singaporeglobalnetwork.gov.sg/stories/tech/why-i-quit-college-at-22-to-launch-a-biotech-startup-in-singapore/?utm_source=x&utm_medium=social&utm_campaign=sg-paid-ao-traffic&utm_content=armaan-dhanda&twclid=2epj25tilhtb65igot07prztga",
         "homepage_status": 200,
@@ -1459,7 +1459,7 @@
         ],
         "origin_counts": {
           "ontology_evidence": 6,
-          "reading_queue": 395,
+          "reading_queue": 396,
           "journals": 15
         },
         "distinct_referring_accounts": 0,
@@ -1542,7 +1542,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-07-29T14:11:59.961Z",
+        "fetched_at": "2026-08-01T14:24:25.283Z",
         "homepage_url": "https://bbc.co.uk/",
         "example_url": "https://www.bbc.co.uk/news/articles/cn8qxz6qypyo",
         "homepage_status": 200,
@@ -2266,9 +2266,9 @@
       "entity": "Gmanetwork",
       "kind": "unknown",
       "first_seen_at": "2026-05-18T03:29:41.732Z",
-      "last_seen_at": "2026-08-01T12:55:03.684Z",
+      "last_seen_at": "2026-08-01T14:25:06.548Z",
       "discovery": {
-        "distinct_urls": 334,
+        "distinct_urls": 336,
         "example_urls": [
           "https://www.gmanetwork.com/news/topstories/nation/994225/explainer-objections-in-a-trial-and-their-role-in-due-process/story/",
           "https://www.gmanetwork.com/news/balitambayan/balita/993931/sen-escudero-sinabing-16-na-boto-ang-kailangan-para-mahatulang-guilty-si-vp-sara-duterte-sa-impea/story/",
@@ -2278,7 +2278,7 @@
         ],
         "origin_counts": {
           "ontology_evidence": 107,
-          "journals": 383,
+          "journals": 385,
           "articles": 3
         },
         "distinct_referring_accounts": 0,
@@ -2328,7 +2328,7 @@
         "breadth": {
           "score": 0.8799999999999999,
           "basis": [
-            "distinct_urls:334",
+            "distinct_urls:336",
             "distinct_axes:18",
             "origin_types:3"
           ]
@@ -2367,7 +2367,7 @@
           "basis": [
             "unknown_domain_pattern",
             "doi_or_identifier_path_seen",
-            "distinct_urls:334",
+            "distinct_urls:336",
             "distinct_axes:18",
             "origin_types:3",
             "referring_accounts:0",
@@ -3081,9 +3081,9 @@
       "entity": "T Co",
       "kind": "unknown",
       "first_seen_at": "2016-05-05T18:57:30.000Z",
-      "last_seen_at": "2026-08-01T12:50:45.000Z",
+      "last_seen_at": "2026-08-01T13:35:00.000Z",
       "discovery": {
-        "distinct_urls": 12170,
+        "distinct_urls": 12172,
         "example_urls": [
           "https://t.co/pJSE124ec4",
           "https://t.co/Soz8BXPWaa",
@@ -3092,7 +3092,7 @@
           "https://t.co/cYaqYDRp08"
         ],
         "origin_counts": {
-          "feed_buffer": 9693,
+          "feed_buffer": 9695,
           "feed_buffer_reply": 4882,
           "articles": 1
         },
@@ -3135,7 +3135,7 @@
         "breadth": {
           "score": 0.53,
           "basis": [
-            "distinct_urls:12170",
+            "distinct_urls:12172",
             "distinct_axes:0",
             "origin_types:3"
           ]
@@ -3174,7 +3174,7 @@
           "basis": [
             "unknown_domain_pattern",
             "doi_or_identifier_path_seen",
-            "distinct_urls:12170",
+            "distinct_urls:12172",
             "distinct_axes:0",
             "origin_types:3",
             "referring_accounts:2718",
@@ -3220,9 +3220,9 @@
       "entity": "Inquirer",
       "kind": "unknown",
       "first_seen_at": "2026-05-09T10:15:15.053Z",
-      "last_seen_at": "2026-08-01T12:55:03.656Z",
+      "last_seen_at": "2026-08-01T15:55:04.617Z",
       "discovery": {
-        "distinct_urls": 252,
+        "distinct_urls": 254,
         "example_urls": [
           "https://newsinfo.inquirer.net/2266316/nbi-on-cayetano-position-that-cant-be-defended-by-facts-is-done-with-insults",
           "https://www.inquirer.net/capiz-broadcaster-shooting-probe-widens-as-cops-form-task-force",
@@ -3232,7 +3232,7 @@
         ],
         "origin_counts": {
           "ontology_evidence": 108,
-          "journals": 335,
+          "journals": 337,
           "articles": 1
         },
         "distinct_referring_accounts": 0,
@@ -3281,7 +3281,7 @@
         "breadth": {
           "score": 0.8799999999999999,
           "basis": [
-            "distinct_urls:252",
+            "distinct_urls:254",
             "distinct_axes:18",
             "origin_types:3"
           ]
@@ -3319,7 +3319,7 @@
           "method": "mechanical_v1",
           "basis": [
             "unknown_domain_pattern",
-            "distinct_urls:252",
+            "distinct_urls:254",
             "distinct_axes:18",
             "origin_types:3",
             "referring_accounts:0",
@@ -4686,7 +4686,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-07-29T14:12:02.081Z",
+        "fetched_at": "2026-08-01T14:24:27.929Z",
         "homepage_url": "https://grok.com/",
         "example_url": "https://grok.com/imagine/post/9b92ff60-ec59-45db-8a35-8e1b743e5339",
         "homepage_status": 200,
@@ -6255,7 +6255,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-07-29T14:12:03.233Z",
+        "fetched_at": "2026-08-01T14:24:29.664Z",
         "homepage_url": "https://rockstargames.com/",
         "example_url": "https://www.rockstargames.com/gta-online?utm_source=Twitter&utm_medium=p_social&utm_campaign=506-kch-pre-release-gift-20260702&utm_content=uk-eng&twclid=21k9dspaz1uqc236nsfftz24wo",
         "homepage_status": 200,
@@ -6384,7 +6384,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-07-29T14:12:05.175Z",
+        "fetched_at": "2026-08-01T14:24:30.971Z",
         "homepage_url": "https://theepochtimes.com/",
         "example_url": "https://www.theepochtimes.com/china/former-chinese-military-doctor-leaks-ccp-plan-to-use-taiwanese-troops-as-organ-bank-5871639?utm_medium=DigitalMkt&utm_source=twitter&utm_campaign=content_FormerChineseMilitary-karen-20250827&utm_content=img-2_FormerChineseMilitary&utm_term=new-pagevisitor&gl=reg&twclid=2387x75uji9nq8gmjpy9cer691",
         "homepage_status": 200,
@@ -6504,7 +6504,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-07-29T14:41:58.882Z",
+        "fetched_at": "2026-08-01T14:54:24.255Z",
         "homepage_url": "https://wikipedia.org/",
         "example_url": "https://en.wikipedia.org/wiki/2026_Iran_war",
         "homepage_status": 200,
@@ -13246,7 +13246,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-07-29T15:51:00.783Z",
+        "fetched_at": "2026-08-01T15:54:27.210Z",
         "homepage_url": "https://anymark.co/",
         "example_url": "https://anymark.co/?utm_source=x&utm_campaign=x771&twclid=293t0nesyim9m91au5fqoaj5s8",
         "homepage_status": 200,
@@ -15900,15 +15900,15 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-07-29T14:42:02.095Z",
+        "fetched_at": "2026-08-01T14:54:44.261Z",
         "homepage_url": "https://par.bz/",
         "example_url": "https://par.bz/nep?twclid=2cqyfqbi1emcrdcv6yo3eddsrk",
-        "homepage_status": 403,
-        "example_status": 403,
-        "homepage_final_url": "https://www.play-asia.com/?parbz=",
-        "example_final_url": "https://www.play-asia.com/?parbz=nep",
-        "homepage_content_type": "text/html; charset=UTF-8",
-        "example_content_type": "text/html; charset=UTF-8",
+        "homepage_status": null,
+        "example_status": null,
+        "homepage_final_url": "https://par.bz/",
+        "example_final_url": "https://par.bz/nep?twclid=2cqyfqbi1emcrdcv6yo3eddsrk",
+        "homepage_content_type": "",
+        "example_content_type": "",
         "homepage": {
           "has_meta_author": false,
           "has_published_time": false,
@@ -17036,7 +17036,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-07-29T15:51:02.334Z",
+        "fetched_at": "2026-08-01T15:54:29.193Z",
         "homepage_url": "https://moltbook.com/",
         "example_url": "https://www.moltbook.com/post/29d49c40-bc59-4a1a-b875-3d3d41ec469e",
         "homepage_status": 200,
@@ -17134,7 +17134,7 @@
           ]
         },
         "profile": {
-          "score": 0.6000000000000001,
+          "score": 0.54,
           "confidence": 0.75,
           "basis": [
             "meta_author:true",
@@ -17143,7 +17143,7 @@
             "about:true",
             "contact:true",
             "corrections:false",
-            "outbound_links:6",
+            "outbound_links:0",
             "opinion_marker:false"
           ]
         },
@@ -17163,7 +17163,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-07-29T15:51:04.778Z",
+        "fetched_at": "2026-08-01T15:54:30.941Z",
         "homepage_url": "https://framia.pro/",
         "example_url": "https://framia.pro/?utm_source=x&utm_campaign=twitter_adsmarch_framia_14_20260331&utm_medium=paid_social&twclid=2e6c8vey7aaz8sdwedu4gd0jgx",
         "homepage_status": 200,
@@ -17186,10 +17186,10 @@
           "has_meta_author": true,
           "has_published_time": false,
           "has_canonical": true,
-          "has_about_link": true,
-          "has_contact_link": true,
+          "has_about_link": false,
+          "has_contact_link": false,
           "has_corrections_link": false,
-          "outbound_links_count": 6,
+          "outbound_links_count": 0,
           "opinion_marker": false
         }
       }
@@ -20331,7 +20331,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-07-29T14:42:03.656Z",
+        "fetched_at": "2026-08-01T14:54:44.812Z",
         "homepage_url": "https://myblockchainweek.com/",
         "example_url": "https://myblockchainweek.com/buy-ticket?twclid=21nicpg0ek4tfxn16u0mxc14r1",
         "homepage_status": 200,
@@ -20347,7 +20347,7 @@
           "has_about_link": false,
           "has_contact_link": false,
           "has_corrections_link": false,
-          "outbound_links_count": 34,
+          "outbound_links_count": 33,
           "opinion_marker": false
         },
         "example": {
@@ -20712,7 +20712,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-07-29T06:42:35.482Z",
+        "fetched_at": "2026-08-01T14:54:46.414Z",
         "homepage_url": "https://magnesiacore.ca/",
         "example_url": "https://magnesiacore.ca/?twclid=2qgbs9f8iaihnc4sp9sjc540j",
         "homepage_status": 200,
@@ -20967,7 +20967,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-07-29T14:42:04.651Z",
+        "fetched_at": "2026-08-01T16:24:25.282Z",
         "homepage_url": "https://celsius.com/",
         "example_url": "https://www.celsius.com/buy-locate/?utm_medium=paidsocial&utm_campaign=pillars&utm_content=musicfestival&twclid=2ejkfis7fdkuksuqyzg68f5wfq",
         "homepage_status": 200,
@@ -22603,7 +22603,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-07-29T07:11:54.832Z",
+        "fetched_at": "2026-08-01T16:24:25.682Z",
         "homepage_url": "https://vast.ai/",
         "example_url": "https://vast.ai/developers/sdk?utm_source=x&utm_medium=paid&utm_campaign=cloud_agents&twclid=293vnkv04bn84l1eoqab2a2ekc",
         "homepage_status": 200,
@@ -25866,7 +25866,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-07-29T07:11:54.435Z",
+        "fetched_at": "2026-08-01T16:24:27.920Z",
         "homepage_url": "https://edrforhome.com/",
         "example_url": "https://edrforhome.com/membership/?twclid=26i4bdgzrzez7ck8e18f8jebf7",
         "homepage_status": 200,
@@ -25991,7 +25991,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-07-29T07:11:55.143Z",
+        "fetched_at": "2026-08-01T16:24:28.210Z",
         "homepage_url": "https://afterprime.com/",
         "example_url": "https://afterprime.com/trade/eurusd?utm_source=twitter&utm_campaign=tofu&utm_medium=video&twclid=2623ygrxed4wh1418d13xdzmrn",
         "homepage_status": 403,

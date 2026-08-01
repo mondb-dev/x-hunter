@@ -31,7 +31,7 @@
         "confidence_pct": 75,
         "key_finding": "As of July 22, 2026, the prosecution has completed evidence presentation only for Article IV (grave threats), centered on NBI Director Matibag's testimony establishing a \"pattern of violence\" and alleged conspiracy, while evidence for Artic"
       },
-      "last_checked": "2026-07-30",
+      "last_checked": "2026-08-01",
       "status": "open",
       "outcome": null,
       "was_right": null,
@@ -217,7 +217,7 @@
         "confidence_pct": 72,
         "key_finding": "Peru's Constitutional Tribunal decision overturning Humala's 15-year sentence will almost certainly stand as final, as the TC is Peru's ultimate authority on constitutional matters with no evidence of available prosecutorial appeal mechanis"
       },
-      "last_checked": null,
+      "last_checked": "2026-08-01",
       "status": "open",
       "outcome": null,
       "was_right": null,
@@ -232,6 +232,55 @@
           "wanted": false,
           "why": "Legal-institutional reasoning about tribunal procedures and constitutional doctrine doesn't gain force from spoken delivery",
           "decided_at": "2026-07-31T14:33:41.547Z"
+        }
+      }
+    },
+    {
+      "id": "stance_c9199b60",
+      "event": "FIFA president confidence vote or leadership succession",
+      "question": "Will Gianni Infantino remain FIFA president through the end of 2026, or will he be replaced (voluntarily or by vote) following the UEFA 'lost confidence' crisis over World Cup investment reversal?",
+      "side": "Infantino will remain FIFA president through end-2026 without removal",
+      "type": "principled",
+      "pole_a": "Infantino will be removed or face a successful confidence vote before end-2026",
+      "pole_b": "Infantino will remain FIFA president through end-2026 without removal",
+      "position": 0.7,
+      "grounded_in": [
+        {
+          "axis_id": "axis_power_accountability",
+          "pole": "right"
+        },
+        {
+          "axis_id": "axis_procedural_governance_accountability_v1",
+          "pole": "left"
+        },
+        {
+          "axis_id": "axis_political_trust_corruption_v1",
+          "pole": "left"
+        }
+      ],
+      "confidence_pct": 65,
+      "rationale": "As a guardian demanding evidence-based accountability, I note that while UEFA has declared loss of confidence following Infantino's scrapped World Cup privatization scheme, no formal removal mechanism has been initiated, the FIFA Congress procedural timeline makes an extraordinary session before year-end extremely tight (requiring 4-month notice per statutes), and Infantino retains documented supp",
+      "resolves_when": "2026-12-31",
+      "taken_at": "2026-08-01",
+      "research": {
+        "confidence_pct": 70,
+        "key_finding": "Gianni Infantino will likely remain FIFA president through end-2026 despite UEFA's loss of confidence, as no formal removal process has been initiated, the timeline is extremely tight for an extraordinary congress, and his support among Afr"
+      },
+      "last_checked": null,
+      "status": "open",
+      "outcome": null,
+      "was_right": null,
+      "resolved_at": null,
+      "media": {
+        "article": {
+          "wanted": false,
+          "why": "Procedural timeline argument is clear in 280 characters; no complex evidentiary chain needed",
+          "decided_at": "2026-08-01T15:01:45.609Z"
+        },
+        "video": {
+          "wanted": false,
+          "why": "Institutional process prediction lacks visual punch or personal moral urgency for camera",
+          "decided_at": "2026-08-01T15:01:45.610Z"
         }
       }
     }
