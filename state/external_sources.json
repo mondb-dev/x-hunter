@@ -1,17 +1,17 @@
 {
   "schema_version": "1.0",
-  "generated_at": "2026-08-01T16:24:23.948Z",
+  "generated_at": "2026-08-01T19:24:28.774Z",
   "method": "mechanical_registry_v1",
-  "profiled_at": "2026-08-01T16:24:28.210Z",
+  "profiled_at": "2026-08-01T19:24:35.823Z",
   "sources": [
     {
       "domain": "theguardian.com",
       "entity": "Theguardian",
       "kind": "news",
       "first_seen_at": "2026-03-27T23:17:00Z",
-      "last_seen_at": "2026-08-01T14:25:06.548Z",
+      "last_seen_at": "2026-08-01T18:55:26.857Z",
       "discovery": {
-        "distinct_urls": 655,
+        "distinct_urls": 656,
         "example_urls": [
           "https://www.theguardian.com/us-news/2026/jun/23/trump-immigration-courthouse-arrest-policy",
           "https://www.theguardian.com/us-news/2026/jun/28/ice-minnesota-defending-democracy",
@@ -20,9 +20,9 @@
           "https://www.theguardian.com/global-development/2026/jun/26/woman-sadia-moalim-ali-three-year-jail-sentence-somalia-online-comments-governement"
         ],
         "origin_counts": {
-          "ontology_evidence": 41,
-          "reading_queue": 620,
-          "journals": 110,
+          "ontology_evidence": 42,
+          "reading_queue": 621,
+          "journals": 111,
           "articles": 3
         },
         "distinct_referring_accounts": 0,
@@ -72,7 +72,7 @@
         "breadth": {
           "score": 0.94,
           "basis": [
-            "distinct_urls:655",
+            "distinct_urls:656",
             "distinct_axes:17",
             "origin_types:4"
           ]
@@ -112,7 +112,7 @@
             "newsroom_domain_pattern",
             "article_path_seen",
             "doi_or_identifier_path_seen",
-            "distinct_urls:655",
+            "distinct_urls:656",
             "distinct_axes:17",
             "origin_types:4",
             "referring_accounts:0",
@@ -285,9 +285,9 @@
       "entity": "Aljazeera",
       "kind": "news",
       "first_seen_at": "2026-06-22T02:45:00Z",
-      "last_seen_at": "2026-08-01T15:55:04.644Z",
+      "last_seen_at": "2026-08-01T16:25:09.772Z",
       "discovery": {
-        "distinct_urls": 354,
+        "distinct_urls": 355,
         "example_urls": [
           "https://www.aljazeera.com/opinions/2026/6/24/south-africas-crises-will-not-be-solved-by-blaming-migrants",
           "https://www.aljazeera.com/video/newsfeed/2026/6/27/newly-released-video-exposes-henry-nowak-killers-lies?traffic_source=rss",
@@ -298,7 +298,7 @@
         "origin_counts": {
           "ontology_evidence": 173,
           "reading_queue": 14,
-          "journals": 451,
+          "journals": 453,
           "articles": 4
         },
         "distinct_referring_accounts": 0,
@@ -355,7 +355,7 @@
         "breadth": {
           "score": 0.94,
           "basis": [
-            "distinct_urls:354",
+            "distinct_urls:355",
             "distinct_axes:25",
             "origin_types:4"
           ]
@@ -394,7 +394,7 @@
           "basis": [
             "newsroom_domain_pattern",
             "article_path_seen",
-            "distinct_urls:354",
+            "distinct_urls:355",
             "distinct_axes:25",
             "origin_types:4",
             "referring_accounts:0",
@@ -695,7 +695,7 @@
       "first_seen_at": "2026-06-22T00:15:00Z",
       "last_seen_at": "2026-08-01T08:20:11.076Z",
       "discovery": {
-        "distinct_urls": 450,
+        "distinct_urls": 451,
         "example_urls": [
           "https://www.nytimes.com/2026/06/19/world/canada/frank-stronach-trial-guilty-sex-charges.html",
           "https://www.nytimes.com/2026/06/27/world/americas/mexican-officials-us-informants.html",
@@ -705,7 +705,7 @@
         ],
         "origin_counts": {
           "ontology_evidence": 16,
-          "reading_queue": 450,
+          "reading_queue": 451,
           "journals": 38
         },
         "distinct_referring_accounts": 0,
@@ -747,7 +747,7 @@
         "breadth": {
           "score": 0.8799999999999999,
           "basis": [
-            "distinct_urls:450",
+            "distinct_urls:451",
             "distinct_axes:10",
             "origin_types:3"
           ]
@@ -786,7 +786,7 @@
           "basis": [
             "newsroom_domain_pattern",
             "article_path_seen",
-            "distinct_urls:450",
+            "distinct_urls:451",
             "distinct_axes:10",
             "origin_types:3",
             "referring_accounts:0",
@@ -1449,7 +1449,7 @@
       "first_seen_at": "2026-06-26T07:05:00Z",
       "last_seen_at": "2026-07-26T19:55:37.560Z",
       "discovery": {
-        "distinct_urls": 386,
+        "distinct_urls": 388,
         "example_urls": [
           "https://www.bbc.co.uk/news/articles/cn8qxz6qypyo",
           "https://www.bbc.co.uk/news/articles/cn075j04pnyo?at_medium=RSS&amp;at_campaign=rss",
@@ -1459,7 +1459,7 @@
         ],
         "origin_counts": {
           "ontology_evidence": 6,
-          "reading_queue": 396,
+          "reading_queue": 398,
           "journals": 15
         },
         "distinct_referring_accounts": 0,
@@ -1494,7 +1494,7 @@
         "breadth": {
           "score": 0.7633333333333332,
           "basis": [
-            "distinct_urls:386",
+            "distinct_urls:388",
             "distinct_axes:4",
             "origin_types:3"
           ]
@@ -1532,7 +1532,7 @@
           "method": "mechanical_v1",
           "basis": [
             "newsroom_domain_pattern",
-            "distinct_urls:386",
+            "distinct_urls:388",
             "distinct_axes:4",
             "origin_types:3",
             "referring_accounts:0",
@@ -2266,9 +2266,9 @@
       "entity": "Gmanetwork",
       "kind": "unknown",
       "first_seen_at": "2026-05-18T03:29:41.732Z",
-      "last_seen_at": "2026-08-01T14:25:06.548Z",
+      "last_seen_at": "2026-08-01T18:55:26.833Z",
       "discovery": {
-        "distinct_urls": 336,
+        "distinct_urls": 337,
         "example_urls": [
           "https://www.gmanetwork.com/news/topstories/nation/994225/explainer-objections-in-a-trial-and-their-role-in-due-process/story/",
           "https://www.gmanetwork.com/news/balitambayan/balita/993931/sen-escudero-sinabing-16-na-boto-ang-kailangan-para-mahatulang-guilty-si-vp-sara-duterte-sa-impea/story/",
@@ -2278,7 +2278,7 @@
         ],
         "origin_counts": {
           "ontology_evidence": 107,
-          "journals": 385,
+          "journals": 386,
           "articles": 3
         },
         "distinct_referring_accounts": 0,
@@ -2328,7 +2328,7 @@
         "breadth": {
           "score": 0.8799999999999999,
           "basis": [
-            "distinct_urls:336",
+            "distinct_urls:337",
             "distinct_axes:18",
             "origin_types:3"
           ]
@@ -2367,7 +2367,7 @@
           "basis": [
             "unknown_domain_pattern",
             "doi_or_identifier_path_seen",
-            "distinct_urls:336",
+            "distinct_urls:337",
             "distinct_axes:18",
             "origin_types:3",
             "referring_accounts:0",
@@ -2377,7 +2377,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-07-29T18:50:58.083Z",
+        "fetched_at": "2026-08-01T18:54:29.116Z",
         "homepage_url": "https://gmanetwork.com/",
         "example_url": "https://www.gmanetwork.com/news/topstories/nation/994225/explainer-objections-in-a-trial-and-their-role-in-due-process/story/",
         "homepage_status": 200,
@@ -2425,7 +2425,7 @@
         ],
         "origin_counts": {
           "ontology_evidence": 54,
-          "reading_queue": 39,
+          "reading_queue": 40,
           "journals": 95
         },
         "distinct_referring_accounts": 0,
@@ -3081,9 +3081,9 @@
       "entity": "T Co",
       "kind": "unknown",
       "first_seen_at": "2016-05-05T18:57:30.000Z",
-      "last_seen_at": "2026-08-01T13:35:00.000Z",
+      "last_seen_at": "2026-08-01T17:00:23.000Z",
       "discovery": {
-        "distinct_urls": 12172,
+        "distinct_urls": 12175,
         "example_urls": [
           "https://t.co/pJSE124ec4",
           "https://t.co/Soz8BXPWaa",
@@ -3092,7 +3092,7 @@
           "https://t.co/cYaqYDRp08"
         ],
         "origin_counts": {
-          "feed_buffer": 9695,
+          "feed_buffer": 9698,
           "feed_buffer_reply": 4882,
           "articles": 1
         },
@@ -3135,7 +3135,7 @@
         "breadth": {
           "score": 0.53,
           "basis": [
-            "distinct_urls:12172",
+            "distinct_urls:12175",
             "distinct_axes:0",
             "origin_types:3"
           ]
@@ -3174,7 +3174,7 @@
           "basis": [
             "unknown_domain_pattern",
             "doi_or_identifier_path_seen",
-            "distinct_urls:12172",
+            "distinct_urls:12175",
             "distinct_axes:0",
             "origin_types:3",
             "referring_accounts:2718",
@@ -3517,9 +3517,9 @@
       "entity": "Philstar",
       "kind": "unknown",
       "first_seen_at": "2026-05-20T06:57:31.760Z",
-      "last_seen_at": "2026-08-01T09:55:03.913Z",
+      "last_seen_at": "2026-08-01T18:55:26.857Z",
       "discovery": {
-        "distinct_urls": 127,
+        "distinct_urls": 130,
         "example_urls": [
           "https://www.philstar.com/headlines/2026/06/24/2537506/mike-defensor-face-trafficking-complaint-over-pasig-ktv-bar-raid",
           "https://www.philstar.com/headlines/2026/06/24/2537509/ched-tells-ateneo-explain-drowning-baterbonia-adili-or-face-sanctions",
@@ -3528,8 +3528,8 @@
           "https://www.philstar.com/headlines/2026/06/28/2538295/icc-freezes-money-seized-duterte"
         ],
         "origin_counts": {
-          "ontology_evidence": 68,
-          "journals": 170
+          "ontology_evidence": 70,
+          "journals": 173
         },
         "distinct_referring_accounts": 0,
         "sample_referring_accounts": [],
@@ -3573,7 +3573,7 @@
         "breadth": {
           "score": 0.82,
           "basis": [
-            "distinct_urls:127",
+            "distinct_urls:130",
             "distinct_axes:13",
             "origin_types:2"
           ]
@@ -3612,7 +3612,7 @@
           "basis": [
             "unknown_domain_pattern",
             "article_path_seen",
-            "distinct_urls:127",
+            "distinct_urls:130",
             "distinct_axes:13",
             "origin_types:2",
             "referring_accounts:0",
@@ -7525,7 +7525,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-07-29T17:21:00.485Z",
+        "fetched_at": "2026-08-01T17:24:26.641Z",
         "homepage_url": "https://maventrading.com/",
         "example_url": "https://maventrading.com/lp/choose-your-challenge?twt_id=54608379&twclid=24irm75xuuvw6vkz1dgb8ui0sz",
         "homepage_status": 200,
@@ -21093,7 +21093,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-07-29T17:21:03.198Z",
+        "fetched_at": "2026-08-01T17:24:27.786Z",
         "homepage_url": "https://cosmos.so/",
         "example_url": "https://cosmos.so/?twclid=27q4rkz0yboutgym0rd9nr51gc",
         "homepage_status": 200,
@@ -21219,7 +21219,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-07-29T16:50:54.493Z",
+        "fetched_at": "2026-08-01T17:24:30.104Z",
         "homepage_url": "https://easesourcing.com/",
         "example_url": "https://www.easesourcing.com/?utm_source=twitter&utm_medium=cpc&utm_campaign=eu260327&twclid=2c9z6424e0kfmv2lyfp3g2o0yr",
         "homepage_status": 200,
@@ -21345,7 +21345,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-07-29T16:50:56.048Z",
+        "fetched_at": "2026-08-01T17:24:31.832Z",
         "homepage_url": "https://artyfacts.ai/",
         "example_url": "https://www.artyfacts.ai/?utm_source=x&utm_medium=paid_social&utm_campaign=waitlist_traffic&utm_content=capture_demo&utm_term=variantA&twclid=2e7ew786ao2fxw0qm1wxfdqe3b",
         "homepage_status": 200,
@@ -21471,7 +21471,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-07-29T16:50:56.894Z",
+        "fetched_at": "2026-08-01T17:54:29.484Z",
         "homepage_url": "https://subspace.build/",
         "example_url": "https://subspace.build/?utm_source=x&utm_campaign=memory_card_trick&twclid=26pw69bugqoexf6jq5nzgivo8r",
         "homepage_status": 200,
@@ -21597,7 +21597,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-07-29T16:50:57.907Z",
+        "fetched_at": "2026-08-01T17:54:30.364Z",
         "homepage_url": "https://peppermint.com/",
         "example_url": "https://peppermint.com/landing-page?utm_source=twitter_landing&utm_medium=paid_social&utm_campaign=ai-memory-x&utm_content=ag1-peppermint-remembers&twclid=24xl0c5ogt12h51rk4eehxo4ge",
         "homepage_status": 200,
@@ -21974,7 +21974,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-07-29T17:21:09.932Z",
+        "fetched_at": "2026-08-01T17:54:35.708Z",
         "homepage_url": "https://geopoliticalfutures.com/",
         "example_url": "https://www.geopoliticalfutures.com/article/the-strait-of-hormuz-reopens-with-conditions/",
         "homepage_status": 200,
@@ -22099,7 +22099,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-07-29T17:21:13.130Z",
+        "fetched_at": "2026-08-01T17:54:37.420Z",
         "homepage_url": "https://redstate.com/",
         "example_url": "https://redstate.com/mike_miller/2026/06/25/ro-khanna-clashes-with-maria-bartiromo-over-the-save-america-act-calls-it-voter-suppression-n2088497",
         "homepage_status": 200,
@@ -22225,7 +22225,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-07-29T18:21:06.266Z",
+        "fetched_at": "2026-08-01T18:54:32.718Z",
         "homepage_url": "https://dlvr.it/",
         "example_url": "http://dlvr.it/TRwWsL",
         "homepage_status": 200,
@@ -22351,7 +22351,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-07-29T18:21:07.495Z",
+        "fetched_at": "2026-08-01T18:54:33.600Z",
         "homepage_url": "https://absinthe.network/",
         "example_url": "https://boost.absinthe.network/8hhp-sfkk/home?utm_source=x&utm_medium=cpc&utm_campaign=Absinthe&utm_id=sero&utm_content=Mar26&twclid=25502jccgfzmkpf20p6sbvaj8t",
         "homepage_status": 200,
@@ -22477,7 +22477,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-07-29T18:21:19.076Z",
+        "fetched_at": "2026-08-01T18:54:45.168Z",
         "homepage_url": "https://onnicotine.com/",
         "example_url": "https://www.onnicotine.com/?twclid=230cc01l01rnnwfflnn397ispz",
         "homepage_status": null,
@@ -23359,7 +23359,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-07-29T18:21:19.869Z",
+        "fetched_at": "2026-08-01T19:24:30.154Z",
         "homepage_url": "https://enter.pro/",
         "example_url": "https://enter.pro/?utm_source=x&utm_medium=paid_social&utm_campaign=twitter_adsmarch_enter_13_0260403&twclid=21y4m3veyg3qz1wzl60cdelnk1",
         "homepage_status": 200,
@@ -23485,7 +23485,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-07-29T18:51:01.045Z",
+        "fetched_at": "2026-08-01T19:24:32.934Z",
         "homepage_url": "https://intro.co/",
         "example_url": "https://intro.co/marketplace?topic=Career+%26+Business&tag%5B%5D=Marketing+%26+Growth&utm_source=twitter_ads&utm_campaign=Prospecting_Traffic_20260402&utm_medium=Broad_AllOS_25-54_CPC_ExpertPageView_Growth-03-26-26_20260402&utm_term=230_Static_03-26-26-Growth-Concept-20d-AI-Clueless-To-AI-Confident_PLP-Marketplace-Business-Marketing_April-2026&source=intropaid&twclid=268r32sn6j3tec3xu57anl3fij",
         "homepage_status": 200,
@@ -23611,7 +23611,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-07-29T18:51:03.025Z",
+        "fetched_at": "2026-08-01T19:24:34.870Z",
         "homepage_url": "https://patsnap.com/",
         "example_url": "https://eureka.patsnap.com/mse-landing?from=mktcampaign_mse_ads_x_formuvideo-asia2en2&twclid=29qq6c80v43jc7y7o992xnzaaf",
         "homepage_status": 200,
@@ -23737,7 +23737,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-07-29T18:51:04.908Z",
+        "fetched_at": "2026-08-01T19:24:35.823Z",
         "homepage_url": "https://raybrowser.com/",
         "example_url": "https://raybrowser.com/?twclid=2f1xntsosgc648xbloi17s8fyh",
         "homepage_status": 200,
