@@ -32,7 +32,7 @@ const { preTweet } = require('./lib/pre_tweet');
 const { assess: cadenceAssess, readDirectives, consumeOverride } = require('./cadence');
 const { postRegularTweet, postQuoteTweet } = require('./lib/post');
 const { commitAndPush, triggerVercelDeploy } = require('./lib/git');
-const { runDaily } = require('./lib/daily');
+const { runDaily, pruneClaudeDebugLogs } = require('./lib/daily');
 const notify = require('./lib/notify');
 const { isXSuppressed, suppressionReason } = require('./lib/x_control');
 const { useClaudeCompose } = require('./lib/compose');
@@ -1156,6 +1156,15 @@ function runOneCycle() {
     // ── Human request ─────────────────────────────────────────────────────
     try { notify.checkHumanRequest(); } catch (e) { log(`human_request check failed: ${e.message}`); }
   }
+
+  // ── Disk guard: EVERY cycle, not daily ─────────────────────────────────
+  // Claude Code writes a ~5.5 MB debug trace per `claude -p` spawn into
+  // ~/.claude/debug and never prunes them. Measured here: ~1.3 GB/hour,
+  // ~32 GB/day. That took the disk from 40 GB free to 2 GB (99%) twice on
+  // 2026-08-01. A full disk on a system committing git and writing sqlite every
+  // cycle risks corrupt writes, not merely failed ones — so this runs on the
+  // cycle clock, which is the clock the logs are actually generated on.
+  try { pruneClaudeDebugLogs(); } catch (e) { log(`claude debug prune failed: ${e.message}`); }
 
   // ── Daily maintenance (self-gated, runs after ANY cycle type) ──────────
   runDaily({

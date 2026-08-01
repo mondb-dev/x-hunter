@@ -293,14 +293,6 @@ function sprint() {
  * inodes — critical because the running shell holds fd open on runner.log.
  */
 function housekeeping({ today, vercelDeployHook }) {
-  // Claude Code writes a multi-MB debug trace per `claude -p` spawn into
-  // ~/.claude/debug and never prunes them. The runner spawns claude many times
-  // per cycle, so this grows ~17 GB/day — it took the disk from 40 GB free to
-  // 2 GB in under two days on 2026-08-01 and came within hours of corrupting
-  // the sqlite writes mid-cycle. The runner creates them, so the runner clears
-  // them. Keep 2 days for post-mortems; delete the rest.
-  pruneClaudeDebugLogs(2);
-
   // feed_digest.txt — time-based 72h rotation runs every 2h from post_browse.js.
   // This is a safety-net line cap in case the trim stamp gets stale.
   trimFile(config.FEED_DIGEST_PATH, config.DIGEST_MAX_LINES);
@@ -352,33 +344,65 @@ function housekeeping({ today, vercelDeployHook }) {
  * Trim a file to maxLines using tail + mv (matches bash pattern for digest).
  */
 /**
- * pruneClaudeDebugLogs(keepDays) → number of files deleted
+ * pruneClaudeDebugLogs(opts) → number of files deleted
  *
- * Deletes ~/.claude/debug/*.txt older than keepDays. These are Claude Code CLI
- * session traces (init/hook/LSP chatter) with no value once the session ends.
+ * Deletes ~/.claude/debug/*.txt — Claude Code CLI session traces (init/hook/LSP
+ * chatter) with no value once the session ends.
+ *
+ * TWO limits, because age alone does not hold here. Measured rate on this box is
+ * ~242 files/hour at ~5.5 MB each — about 1.3 GB/hour, 32 GB/day. A day-based
+ * retention (the first version of this used 2 days) would allow ~64 GB and
+ * prunes nothing during the window that actually matters: the first clear freed
+ * 33 GB and the directory was back to 17 GB seventeen hours later.
+ *
+ * So: drop anything older than maxAgeHours, then if the directory is STILL over
+ * maxTotalBytes, keep deleting oldest-first until it fits. The size cap is the
+ * real guarantee — it holds whatever the spawn rate turns out to be.
+ *
  * Scoped deliberately narrow: only that directory, only .txt, never
  * ~/.claude/projects — which holds session transcripts AND the persistent
  * memory files under projects/<project>/memory/.
  */
-function pruneClaudeDebugLogs(keepDays = 2) {
+function pruneClaudeDebugLogs(opts = {}) {
+  // Back-compat: a bare number used to mean "keep this many days".
+  if (typeof opts === 'number') opts = { maxAgeHours: opts * 24 };
+  const maxAgeHours  = opts.maxAgeHours  ?? 6;
+  const maxTotalBytes = opts.maxTotalBytes ?? 2 * 1024 * 1024 * 1024; // 2 GB
+
   const dir = path.join(os.homedir(), '.claude', 'debug');
   if (!exists(dir)) return 0;
   try {
-    const cutoff = Date.now() - keepDays * 86_400_000;
+    const cutoff = Date.now() - maxAgeHours * 3_600_000;
     let deleted = 0, freed = 0;
+    const survivors = [];
+
     for (const name of fs.readdirSync(dir)) {
       if (!name.endsWith('.txt')) continue;
       const fp = path.join(dir, name);
       try {
         const st = fs.statSync(fp);
-        if (st.mtimeMs >= cutoff) continue;
-        freed += st.size;
-        fs.unlinkSync(fp);
-        deleted++;
+        if (st.mtimeMs < cutoff) {
+          freed += st.size;
+          fs.unlinkSync(fp);
+          deleted++;
+        } else {
+          survivors.push({ fp, size: st.size, mtime: st.mtimeMs });
+        }
       } catch { /* file vanished mid-sweep — fine */ }
     }
+
+    // Size cap: oldest-first until the directory fits the budget.
+    let total = survivors.reduce((n, f) => n + f.size, 0);
+    if (total > maxTotalBytes) {
+      survivors.sort((a, b) => a.mtime - b.mtime);
+      for (const f of survivors) {
+        if (total <= maxTotalBytes) break;
+        try { fs.unlinkSync(f.fp); total -= f.size; freed += f.size; deleted++; } catch { /* gone */ }
+      }
+    }
+
     if (deleted > 0) {
-      log(`pruned ${deleted} Claude debug log(s) older than ${keepDays}d — freed ${(freed / 1024 / 1024 / 1024).toFixed(2)} GB`);
+      log(`pruned ${deleted} Claude debug log(s) (>${maxAgeHours}h or over ${(maxTotalBytes / 1024 ** 3).toFixed(1)} GB cap) — freed ${(freed / 1024 ** 3).toFixed(2)} GB`);
     }
     return deleted;
   } catch (e) {

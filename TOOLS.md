@@ -56,7 +56,7 @@ research, amplify triggers, maintenance), git, and sleep.
 | `cost_meter.js` / `operating_cost.js` | LLM spend ledger + burn-rate self-model |
 | `capabilities.js` | Registry of what Sebastian can actually do (grounds planning) |
 | `helmstack.js` | HelmStack client wrapper (HTTP API :7070) |
-| `daily.js` | Daily block: report, article, checkpoint, ponder, sprint, housekeeping (incl. `pruneClaudeDebugLogs` — ~/.claude/debug grows ~17 GB/day unpruned) |
+| `daily.js` | Daily block: report, article, checkpoint, ponder, sprint, housekeeping. Exports `pruneClaudeDebugLogs` (age + size cap) — called EVERY cycle from orchestrator.js, not daily: ~/.claude/debug grows ~1.3 GB/hour unpruned |
 | `git.js` | git add/commit/push after every cycle + Vercel hook |
 | `verify_claim.js` | Shared claim-verification wrapper (Cloud Run worker) |
 | `prompts/` | Prompt builders (browse, tweet, quote, claims, context) |
