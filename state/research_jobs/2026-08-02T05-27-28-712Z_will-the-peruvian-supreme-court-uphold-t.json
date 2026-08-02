@@ -1,0 +1,678 @@
+{
+  "job_id": "2026-08-02T05-27-28-712Z_will-the-peruvian-supreme-court-uphold-t",
+  "question": "Will the Peruvian Supreme Court uphold the appellate court's overturn of Alberto Fujimori's 15-year corruption sentence, or will prosecutors successfully reinstate his conviction on final appeal?",
+  "tier": "deep",
+  "status": "done",
+  "root": {
+    "title": "Fujimori Final Appeal Outcome",
+    "question": "Will the Peruvian Supreme Court uphold the appellate court's overturn of Alberto Fujimori's 15-year corruption sentence, or will prosecutors successfully reinstate his conviction on final appeal?",
+    "direction": "Break into: (1) understanding the current legal status and timeline, (2) analyzing the appellate court's reasoning for overturning, (3) examining the prosecution's appeal arguments, (4) assessing Supreme Court precedent and composition, (5) tracking recent developments and expert predictions",
+    "research_areas": [
+      "Peruvian Supreme Court jurisprudence on corruption cases",
+      "Timeline of Fujimori's legal proceedings",
+      "Appellate court decision rationale",
+      "Prosecution appeal strategy",
+      "Political context and judicial independence"
+    ],
+    "tools_hint": [
+      "recall",
+      "posts",
+      "search",
+      "fetch"
+    ],
+    "success_criterion": "Comprehensive assessment of likelihood based on legal arguments, court precedent, procedural timeline, and expert legal analysis",
+    "depends_on": [],
+    "children": [
+      {
+        "title": "Current Legal Status and Timeline",
+        "question": "What is the current procedural status of Fujimori's case, including the appellate court's decision date, the prosecution's appeal filing, and the Supreme Court's expected timeline?",
+        "direction": "Search for recent news on Fujimori case timeline, appellate decision date, appeal filing status, and Supreme Court calendar",
+        "research_areas": [
+          "Recent court filings and decisions",
+          "Prosecution appeal deadline and filing status",
+          "Supreme Court docket and hearing schedule",
+          "Case procedural history"
+        ],
+        "tools_hint": [
+          "search",
+          "fetch",
+          "recall",
+          "posts"
+        ],
+        "success_criterion": "Clear timeline with dates of appellate decision, appeal filing, and expected Supreme Court ruling",
+        "depends_on": [],
+        "id": "1.1",
+        "status": "answered",
+        "findings": [],
+        "answer": "**No evidence gathered.** The research contains no information about appellate court decisions, prosecution appeal filings, or Supreme Court timelines related to Fujimori's case. The sub-findings only document his December 2023 release and September 2024 death, with no procedural status details about any ongoing or pending legal proceedings.\n\n**Confidence: N/A** - cannot answer from available evidence.",
+        "children": [
+          {
+            "parent_id": "1.1",
+            "title": "Fujimori's Health and Humanitarian Release Status",
+            "question": "What is Fujimori's current health status, detention situation, and any humanitarian release arrangements that might be affected by the Supreme Court decision?",
+            "direction": "Document whether Fujimori is currently detained or released, his health condition, and how the Supreme Court ruling would affect his immediate situation",
+            "research_areas": [
+              "Fujimori current detention status",
+              "humanitarian pardon history",
+              "health conditions",
+              "release conditions"
+            ],
+            "tools_hint": [
+              "search",
+              "fetch"
+            ],
+            "success_criterion": "Current factual status of Fujimori's detention/release and how it relates to the pending appeal",
+            "depends_on": [
+              "1.1"
+            ],
+            "children": [],
+            "id": "1.1.1",
+            "status": "answered",
+            "findings": [
+              {
+                "tool": "search",
+                "input": "Alberto Fujimori current detention status health 2024",
+                "result": "(no web results for \"Alberto Fujimori current detention status health 2024\")"
+              },
+              {
+                "tool": "search",
+                "input": "Fujimori humanitarian pardon release Supreme Court Peru 2024",
+                "result": "1. Pardon of Alberto Fujimori - Wikipedia\n   https://en.wikipedia.org/wiki/Pardon_of_Alberto_Fujimori\n   The Constitutional Court of Peru, in a 4-3 ruling on 17 March 2022, reinstated the pardon, although it was not clear if or when he may be released. [13] On 8 April 2022, the Inter-American Court of Human Rights overruled the Constitutional Court and ordered Peru not to release Fujimori. [14]\n2. Pardon of Alberto Fujimori - Wikipedia\n   https://en.wikipedia.org/wiki/Pardon_of_Alberto_Fujimori\n   The Constitutional Court of Peru, in a 4-3 ruling on 17 March 2022, reinstated the pardon, although it was not clear if or when he may be released. [13] On 8 April 2022, the Inter-American Court of Human Rights overruled the Constitutional Court and ordered Peru not to release Fujimori. [14]\n3. Alberto Fujimori - Wikipedia\n   https://en.wikipedia.org/wiki/Alberto_Fujimori\n   Alberto Kenya Fujimori Inomoto[c] (26 [d] July 1938—11 September 2024) was a Peruvian politician, professor, and engineer who served as the president of Peru from 1990 to 2000. [6] During Fujimori's tenure, the Peruvian Armed Forces repressed the far-left guerrilla group Shining Path, halting the group's actions while also killing thousands of civilians. [7] Fujimori became known for his ...\n4. Alberto Fujimori - Wikipedia\n   https://en.wikipedia.org/wiki/Alberto_Fujimori\n   Alberto Kenya Fujimori Inomoto[c] (26 [d] July 1938—11 September 2024) was a Peruvian politician, professor, and engineer who served as the president of Peru from 1990 to 2000. [6] During Fujimori's tenure, the Peruvian Armed Forces repressed the far-left guerrilla group Shining Path, halting the group's actions while also killing thousands of civilians. [7] Fujimori became known for his ...\n5. Peru: Supreme Court confirms constitutionality of annulment of Fujimori ...\n   https://andina.pe/Ingles/noticia-peru-supreme-court-confirms-constitutionality-of-annulment-of-fujimoris-pardon-781376.aspx\n   Peru's Supreme Court confirmed the constitutionality of the annulment of the humanitarian pardon granted to former Peruvian President Alberto Fujimori on December 24, 2017. Therefore, he will be judged on the Pativilca case. The National Criminal Court resolved that the Supreme Resolution No. 281 ...\n6. Peru: Supreme Court confirms constitutionality of annulment of Fujimori ...\n   https://andina.pe/Ingles/noticia-peru-supreme-court-confirms-constitutionality-of-annulment-of-fujimoris-pardon-781376.aspx\n   Peru's Supreme Court confirmed the constitutionality of the annulment of the humanitarian pardon granted to former Peruvian President Alberto Fujimori on December 24, 2017. Therefore, he will be judged on the Pativilca case. The National Criminal Court resolved that the Supreme Resolution No. 281 ..."
+              },
+              {
+                "tool": "fetch",
+                "input": "https://www.bbc.com/news/world-latin-america-67972583",
+                "result": "Error 404 - Oops, the page you're looking for is no longer hereTry searching for it insteadSite searchWe can't find the page you're looking for. If you've typed the URL into your browser, check that you entered it correctly. If you reached this page via our site or search, please let us know by emailing comhelp.bbc@bbc.com.Our team will investigate this feedback but will not reply directly.More from BBCJust nowMountaineer Nirmal Purja killed in Pakistan avalanche, his company saysThe renowned mountaineer was known for scaling the world's 14 highest peaks in just over six months in 2019.Just now34 mins agoCrews finish digging ditches around wildfireFirefighters create breaks up to 12m wide (39ft) to stop any flames or embers spreading.34 mins ago35 mins agoCouncil expecting £4.8m loss from housing projectConstruction began at the council's former headquarters after its staff moved out 10 years ago.35 mins ago35 mins agoParents save on school uniforms at city swap shopParents take home school uniform for free at a pop-up that organisers hope can become a regular event.35 mins ago36 mins agoBowls is for the young, says 99-year-old club starThe veteran believes attracting younger people to the sport is becoming a \"challenge\".36 mins ago37 mins agoCampaigners lose court fight over warehouse schemeCampaign group Staunch say they are \"extremely disappointed by the outcome\" of a judicial review.37 mins ago38 mins agoAbbey seeks £50,000 to complete £5m renovationPeople and businesses are being asked to buy a nameplate to help \"fund its future\".38 mins ago38 mins agoHundreds of dead fish in river linked to heatwaveThe Environment Agency believes the fish were killed as a result of the heat and drain water.38 mins ago39 mins agoFarmer swaps onions for grapes to future-proof businessThe third-generation farmer says his chalk-rich soil is similar to that of France's Champagne region.39 mins ago"
+              },
+              {
+                "tool": "search",
+                "input": "Fujimori prison release date health condition December 2023 January 2024",
+                "result": "1. Peru's Ex-President Alberto Fujimori Leaves Prison After 16 ... - HNGN\n   https://www.hngn.com/articles/254659/20231206/peru-ex-president-alberto-fujimor-leaves-prison-after-16-years-for-human-rights-abuses-after-pardon-reinstated.htm\n   LIMA, PERU - DECEMBER 06: Former president of Peru Alberto Fujimori exits in a car the Barbadillo prison after being released on December 06, 2023 in Lima, Peru. On Tuesday, Peru's Constitutional Tribunal ordered the immediate release of former president Alberto Fujimori who is serving a 25 years sentence in connection with the death squad slayings of 25 Peruvians in the 1990s. This pardon ...\n2. Peru's Ex-President Alberto Fujimori Leaves Prison After 16 ... - HNGN\n   https://www.hngn.com/articles/254659/20231206/peru-ex-president-alberto-fujimor-leaves-prison-after-16-years-for-human-rights-abuses-after-pardon-reinstated.htm\n   LIMA, PERU - DECEMBER 06: Former president of Peru Alberto Fujimori exits in a car the Barbadillo prison after being released on December 06, 2023 in Lima, Peru. On Tuesday, Peru's Constitutional Tribunal ordered the immediate release of former president Alberto Fujimori who is serving a 25 years sentence in connection with the death squad slayings of 25 Peruvians in the 1990s. This pardon ...\n3. Peru's former President Alberto Fujimori released from prison\n   https://edition.cnn.com/2023/12/06/americas/former-peru-president-fujimori-released-prison-intl\n   Former president of Peru Alberto Fujimori in a car with son Kenji Fujimori and daughter Keiko Fujimori after his release on December 6, 2023, in Lima, Peru.\n4. Peru's former President Alberto Fujimori released from prison\n   https://edition.cnn.com/2023/12/06/americas/former-peru-president-fujimori-released-prison-intl\n   Former president of Peru Alberto Fujimori in a car with son Kenji Fujimori and daughter Keiko Fujimori after his release on December 6, 2023, in Lima, Peru.\n5. Pardon of Alberto Fujimori - Wikipedia\n   https://en.wikipedia.org/wiki/Pardon_of_Alberto_Fujimori\n   On 8 April 2022, the Inter-American Court of Human Rights overruled the Constitutional Court and ordered Peru not to release Fujimori. [14] On 5 December 2023, the Constitutional Court of Peru ordered the release of the former president from prison.\n6. Pardon of Alberto Fujimori - Wikipedia\n   https://en.wikipedia.org/wiki/Pardon_of_Alberto_Fujimori\n   On 8 April 2022, the Inter-American Court of Human Rights overruled the Constitutional Court and ordered Peru not to release Fujimori. [14] On 5 December 2023, the Constitutional Court of Peru ordered the release of the former president from prison."
+              },
+              {
+                "tool": "fetch",
+                "input": "https://en.wikipedia.org/wiki/Alberto_Fujimori",
+                "result": "From Wikipedia, the free encyclopedia\n \n \n \n \n \nPresident of Peru from 1990 to 2000\n\nIn this Hispanic American name, the first or paternal surname is Fujimori and the second or maternal family name is Inomoto.\n\nHis ExcellencyAlberto FujimoriFujimori in 1991President of Peru[a]In office28 July 1990 – 22 November 2000[b]Prime Minister\nSee list\n Juan Carlos Hurtado Miller\n Carlos Torres y Torres Lara\n Alfonso de los Heros\n Óscar de la Puente Raygada\n Alfonso Bustamante\n Efraín Goldenberg\n Dante Córdova Blanco\n Alberto Pandolfi\n Javier Valle Riestra\n Víctor Joy Way\n Alberto Bustamante Belaúnde\n Federico Salas\n\nVice President\n1st Vice President\n Máximo San Román(1990–1992)\n Vacant(1992–1995)\n Ricardo Márquez Flores(1995–2000)\n Francisco Tudela(July–November 2000)\n\n2nd Vice President\n Carlos García y García(1990–1992)\n Vacant(1992–1995)\n César Paredes Canto(1995–2000)\n Ricardo Márquez Flores(July–November 2000)\n\nPreceded byAlan GarcíaSucceeded byValentín PaniaguaPresident of the National Assembly of RectorsIn office1987–1989Preceded byManuel Zevallos VeraSucceeded byCarlos Chirinos VillanuevaRector of the National Agrarian UniversityIn office1984–1989Preceded byUnknownSucceeded byAlfonso Flores Mere\nPersonal detailsBornAlberto Kenya Fujimori Inomoto(1938-07-26)26 July 1938Lima, PeruDied11 September 2024(2024-09-11) (aged 86)Lima, PeruResting placeCampo Fe Huachipa CemeteryCitizenshipPeruJapanPartyChange 90 (1990–1998)Sí Cumple (1998–2010)People's New Party (2007–2013, in Japan)Popular Force (2024)Other politicalaffiliationsNew Majority (1992–1998, non-affiliated member)Peru 2000 (1999–2001)Alliance for the Future (2005–2010)Change 21 (2018–2019)Spouses\n\nSusana Higuchi\n ​ ​(m. 1974; div. 1995)​\n\nSatomi Kataoka ​(m. 2006)​\n\nChildren4, including Keiko and KenjiRelativesSantiago Fujimori (brother)Alma materNational Agrarian University (BS)University of StrasbourgUniversity of Wisconsin–Milwaukee (MS)SignatureWebsitealberto.fujimori.peCriminal informationCriminal statusConvicted[3]Criminal chargeHuman rights abuses, murder, kidnapping, embezzlement, abuse of power, bribery and corruptionPenalty25 years in prison (Human rights abuses, murder and kidnapping charges)Six years in prison (Abuse of power charges)Seven-and-a-half years in prison (Embezzlement charges)Six years in prison (Corruption and bribery charges)\n\nAlberto Kenya Fujimori Inomoto[c] (26[d] July 1938—11 September 2024) was a Peruvian politician, professor, and engineer who served as the president of Peru from 1990 to 2000.[6] During Fujimori's tenure, the Peruvian Armed Forces repressed the far-left guerrilla group Shining Path, halting the group's actions while also killing thousands of civilians.[7] Fujimori became known for his neoliberal political and economic ideology of Fujimorism, which pushed a free market economy and social conservatism. He also collaborated with the head of the National Intelligence Service (SIN), Vladimiro Montesinos, to consolidate power and eliminate political opponents. Fujimori's presidency was marked by authoritarian measures, excessive use of propaganda, entrenched political corruption, multiple cases of extrajudicial killings, and human rights violations.\n\nBorn in Lima, Fujimori was the country's first president of Japanese descent, and was an agronomist and university rector prior to entering politics. Fujimori emerged as a politician during the midst of the internal conflict in Peru, the Peruvian Lost Decade, and the ensuing violence caused by the"
+              },
+              {
+                "tool": "fetch",
+                "input": "https://edition.cnn.com/2023/12/06/americas/former-peru-president-fujimori-released-prison-intl",
+                "result": "(could not fetch https://edition.cnn.com/2023/12/06/americas/former-peru-president-fujimori-released-prison-intl)"
+              },
+              {
+                "tool": "search",
+                "input": "Alberto Fujimori death September 2024",
+                "result": "(no web results for \"Alberto Fujimori death September 2024\")"
+              },
+              {
+                "tool": "search",
+                "input": "Alberto Fujimori health status December 2023 humanitarian pardon",
+                "result": "1. Pardon of Alberto Fujimori - Wikipedia\n   https://en.wikipedia.org/wiki/Pardon_of_Alberto_Fujimori\n   On 11 December 2017, Fujimori requested a pardon for humanitarian reasons. A medical board composed of Juan Postigo, Víctor Sánchez and Guido Hernández recommended pardoning the former president due to a \"progressive, degenerative and incurable disease\". [27][28] On 23 December, Fujimori was transferred from the Diroes prison to a clinic. [29] On 24 December, the Press Office of the ...\n2. Pardon of Alberto Fujimori - Wikipedia\n   https://en.wikipedia.org/wiki/Pardon_of_Alberto_Fujimori\n   On 11 December 2017, Fujimori requested a pardon for humanitarian reasons. A medical board composed of Juan Postigo, Víctor Sánchez and Guido Hernández recommended pardoning the former president due to a \"progressive, degenerative and incurable disease\". [27][28] On 23 December, Fujimori was transferred from the Diroes prison to a clinic. [29] On 24 December, the Press Office of the ...\n3. Peru - December 2023 | The Global State of Democracy - ide, a\n   https://www.idea.int/democracytracker/report/peru/december-2023\n   Peru - December 2023 Constitutional Court upheld pardon to Alberto Fujimori Peru's Constitutional Court upheld the controversial 2017 pardon granted to former President Alberto Fujimori by former President Pedro Pablo Kuczynski. The 85-year-old former president's health has been mentioned as the basis for this pardon.\n4. Peru - December 2023 | The Global State of Democracy - ide, a\n   https://www.idea.int/democracytracker/report/peru/december-2023\n   Peru - December 2023 Constitutional Court upheld pardon to Alberto Fujimori Peru's Constitutional Court upheld the controversial 2017 pardon granted to former President Alberto Fujimori by former President Pedro Pablo Kuczynski. The 85-year-old former president's health has been mentioned as the basis for this pardon.\n5. Alberto Fujimori - Wikipedia\n   https://en.wikipedia.org/wiki/Alberto_Fujimori\n   Fujimori was sentenced to 25 years in prison, but was pardoned by president Pedro Pablo Kuczynski in 2017, and was officially released in December 2023 following several years of legal proceedings regarding the legality of his pardon. He died in September 2024, nine months after his release.\n6. Alberto Fujimori - Wikipedia\n   https://en.wikipedia.org/wiki/Alberto_Fujimori\n   Fujimori was sentenced to 25 years in prison, but was pardoned by president Pedro Pablo Kuczynski in 2017, and was officially released in December 2023 following several years of legal proceedings regarding the legality of his pardon. He died in September 2024, nine months after his release."
+              },
+              {
+                "tool": "search",
+                "input": "Peru Supreme Court Fujimori decision 2024 2025 2026",
+                "result": "(no web results for \"Peru Supreme Court Fujimori decision 2024 2025 2026\")"
+              },
+              {
+                "tool": "fetch",
+                "input": "https://en.wikipedia.org/wiki/Pardon_of_Alberto_Fujimori",
+                "result": "(could not fetch https://en.wikipedia.org/wiki/Pardon_of_Alberto_Fujimori)"
+              }
+            ],
+            "answer": "Based on the evidence, Alberto Fujimori died on September 11, 2024, at age 86 in Lima, Peru (Wikipedia). Prior to his death, he had been released from prison on December 6, 2023, after Peru's Constitutional Tribunal ordered his immediate release following reinstatement of a humanitarian pardon originally granted in 2017 for a \"progressive, degenerative and incurable disease\" (HNGN, Wikipedia). The pardon had been contested, with the Inter-American Court of Human Rights ordering Peru not to release him in April 2022, but the Constitutional Court's December 2023 decision resulted in his actual release after serving 16 years of a 25-year sentence for human rights abuses. **Confidence: High** - multiple sources confirm death date and prior release circumstances."
+          }
+        ]
+      },
+      {
+        "title": "Appellate Court Overturn Reasoning",
+        "question": "What legal grounds did the appellate court cite for overturning Fujimori's 15-year corruption sentence?",
+        "direction": "Find the appellate court's written decision or official summaries explaining their rationale for overturning the conviction",
+        "research_areas": [
+          "Appellate court decision text",
+          "Legal basis for overturn (procedural vs substantive)",
+          "Evidentiary issues cited",
+          "Due process arguments",
+          "Statute of limitations or other technical grounds"
+        ],
+        "tools_hint": [
+          "search",
+          "fetch"
+        ],
+        "success_criterion": "Detailed explanation of the specific legal reasoning and grounds for overturning the conviction",
+        "depends_on": [
+          "Current Legal Status and Timeline"
+        ],
+        "id": "1.2",
+        "status": "answered",
+        "findings": [],
+        "answer": "# Answer\n\n**No evidence available.** The sub-findings provided discuss international human rights implications in U.S. Supreme Court decisions (cgrs.uclawsf.edu, esplawyers.com, supreme.justia.com), not the appellate grounds for overturning Alberto Fujimori's corruption sentence in Peru. The evidence gathering yielded no relevant information on this specific Peruvian case.\n\n**Confidence: None** - cannot answer from the evidence provided.",
+        "children": [
+          {
+            "parent_id": "1.2",
+            "title": "International Human Rights Implications",
+            "question": "What role do international human rights considerations and organizations play in this case, and how might they influence the Supreme Court's decision?",
+            "direction": "Assess whether international pressure, human rights court rulings, or treaty obligations create additional context for the Supreme Court's decision",
+            "research_areas": [
+              "international human rights law",
+              "Inter-American Court involvement",
+              "UN human rights bodies",
+              "international legal obligations"
+            ],
+            "tools_hint": [
+              "search",
+              "fetch"
+            ],
+            "success_criterion": "Documentation of any international human rights dimensions and their potential influence on the domestic legal process",
+            "depends_on": [
+              "1.2"
+            ],
+            "children": [],
+            "id": "1.2.1",
+            "status": "answered",
+            "findings": [
+              {
+                "tool": "search",
+                "input": "international human rights organizations Supreme Court case influence treaty obligations",
+                "result": "1. What Role the Supreme Court Plays in Treaties With Other Nations\n   https://thelegalguide.org/what-role-supreme-court-plays-treaties-other-nations/\n   The Supreme Court shapes how treaties with other nations are interpreted, implemented, and enforced within the U.S. legal system. Its decisions determine how international commitments interact with domestic law, influence executive diplomacy, and resolve disputes over treaty obligations. This article explains the constitutional framework, key responsibilities, landmark cases, and practical ...\n2. What Role the Supreme Court Plays in Treaties With Other Nations\n   https://thelegalguide.org/what-role-supreme-court-plays-treaties-other-nations/\n   The Supreme Court shapes how treaties with other nations are interpreted, implemented, and enforced within the U.S. legal system. Its decisions determine how international commitments interact with domestic law, influence executive diplomacy, and resolve disputes over treaty obligations. This article explains the constitutional framework, key responsibilities, landmark cases, and practical ...\n3. How the U.S. Supreme Court's Decisions Shape International Law\n   https://bclawreview.org/u-s-supreme-courts-decisions/\n   The U.S. Supreme Court's influence extends far beyond national borders, shaping international law in multiple ways. Its rulings on human rights, trade, criminal law, and treaties set legal standards followed by governments and global institutions.\n4. How the U.S. Supreme Court's Decisions Shape International Law\n   https://bclawreview.org/u-s-supreme-courts-decisions/\n   The U.S. Supreme Court's influence extends far beyond national borders, shaping international law in multiple ways. Its rulings on human rights, trade, criminal law, and treaties set legal standards followed by governments and global institutions.\n5. The Role of International Law in U.S. Court Rulings: Key Insights and Cases\n   https://esplawyers.com/judicial-developments/international-law-in-u-s-court-rulings\n   Additionally, courts consider international human rights treaties in cases involving civil liberties and immigration. Though international law is not always binding domestically without congressional approval, it serves as persuasive authority guiding judicial reasoning.\n6. The Role of International Law in U.S. Court Rulings: Key Insights and Cases\n   https://esplawyers.com/judicial-developments/international-law-in-u-s-court-rulings\n   Additionally, courts consider international human rights treaties in cases involving civil liberties and immigration. Though international law is not always binding domestically without congressional approval, it serves as persuasive authority guiding judicial reasoning."
+              },
+              {
+                "tool": "search",
+                "input": "European Court of Human Rights Inter-American Court rulings influence US Supreme Court decisions",
+                "result": "1. PDF The Inter-American Court of Human Rights and the European Court of ...\n   https://www.palermo.edu/derecho/pdf/publicaciones/Paper-Bertoni.pdf\n   10 freedom of expression decisions rendered in the last decade. This article also discusses to what extent the jurisprudence of the European Court of Human Rights has influenced the decisions of its American counterpart, concluding that the impact of the European Court's jurisprudence has been significant. Finally, this article highlights that some influence of Inter-American decisions can ...\n2. PDF The Inter-American Court of Human Rights and the European Court of ...\n   https://www.palermo.edu/derecho/pdf/publicaciones/Paper-Bertoni.pdf\n   10 freedom of expression decisions rendered in the last decade. This article also discusses to what extent the jurisprudence of the European Court of Human Rights has influenced the decisions of its American counterpart, concluding that the impact of the European Court's jurisprudence has been significant. Finally, this article highlights that some influence of Inter-American decisions can ...\n3. How the European Court and the Inter-American Court protect human rights\n   https://rrypglobal.com/en/European-Court-and-the-Inter-American-Court/\n   Comparison between the European Court and the Inter-American Court in the regional protection of human rights.\n4. How the European Court and the Inter-American Court protect human rights\n   https://rrypglobal.com/en/European-Court-and-the-Inter-American-Court/\n   Comparison between the European Court and the Inter-American Court in the regional protection of human rights.\n5. References to the US Supreme Court Decisions in the Judgments of the ...\n   https://www.academia.edu/41843614/References_to_the_US_Supreme_Court_Decisions_in_the_Judgments_of_the_European_Court_of_Human_Rights\n   Finally, the communication between the European Court of Human Rights and the US Supreme Court is characterized by a clear asymmetry, in the sense that the judgments of the Strasbourg Court were referred to in just a few decisions of the American court.\n6. References to the US Supreme Court Decisions in the Judgments of the ...\n   https://www.academia.edu/41843614/References_to_the_US_Supreme_Court_Decisions_in_the_Judgments_of_the_European_Court_of_Human_Rights\n   Finally, the communication between the European Court of Human Rights and the US Supreme Court is characterized by a clear asymmetry, in the sense that the judgments of the Strasbourg Court were referred to in just a few decisions of the American court."
+              },
+              {
+                "tool": "search",
+                "input": "amicus briefs international human rights organizations Supreme Court recent cases",
+                "result": "1. Amicus Curiae Briefs - American Bar Association\n   https://www.americanbar.org/groups/committees/amicus/\n   The Standing Committee on Amicus Curiae Briefs reviews all amicus curiae briefs drafted for filing in the name of the ABA.\n2. Amicus Curiae Briefs - American Bar Association\n   https://www.americanbar.org/groups/committees/amicus/\n   The Standing Committee on Amicus Curiae Briefs reviews all amicus curiae briefs drafted for filing in the name of the ABA.\n3. AHLC | Cases | Amicus Briefs - humanistleglacenter\n   https://www.humanistlegalcenter.org/amicusbriefs\n   The AHLC regularly files amicus curiae (\"friend of the court\") briefs in pivotal state and federal cases, including in the U.S. Supreme Court. Through these briefs, we provide the judiciary with critical humanistic perspectives and expert legal analysis, directly influencing the outcomes of landmark cases concerning religious freedom, marriage equality, reproductive health access, civil rights ...\n4. AHLC | Cases | Amicus Briefs - humanistleglacenter\n   https://www.humanistlegalcenter.org/amicusbriefs\n   The AHLC regularly files amicus curiae (\"friend of the court\") briefs in pivotal state and federal cases, including in the U.S. Supreme Court. Through these briefs, we provide the judiciary with critical humanistic perspectives and expert legal analysis, directly influencing the outcomes of landmark cases concerning religious freedom, marriage equality, reproductive health access, civil rights ...\n5. Amicus Briefs - CJA\n   https://cja.org/what-we-do/litigation/amicus-briefs/\n   CJA authors or signs amicus curiae briefs in support of human rights cases filed by other individuals or organizations, where decisions in these cases could have a wide-ranging impact on our work and on the evolution of human rights law. Our amicus briefs provide substantive written arguments on legal issues on which we have expertise, and address topics ranging from the abuse of prisoners at ...\n6. Amicus Briefs - CJA\n   https://cja.org/what-we-do/litigation/amicus-briefs/\n   CJA authors or signs amicus curiae briefs in support of human rights cases filed by other individuals or organizations, where decisions in these cases could have a wide-ranging impact on our work and on the evolution of human rights law. Our amicus briefs provide substantive written arguments on legal issues on which we have expertise, and address topics ranging from the abuse of prisoners at ..."
+              },
+              {
+                "tool": "search",
+                "input": "United Nations human rights treaty obligations Supreme Court constitutional interpretation",
+                "result": "1. What Role the Supreme Court Plays in Treaties With Other Nations\n   https://thelegalguide.org/what-role-supreme-court-plays-treaties-other-nations/\n   The Supreme Court shapes how treaties with other nations are interpreted, implemented, and enforced within the U.S. legal system. Its decisions determine how international commitments interact with domestic law, influence executive diplomacy, and resolve disputes over treaty obligations. This article explains the constitutional framework, key responsibilities, landmark cases, and practical ...\n2. What Role the Supreme Court Plays in Treaties With Other Nations\n   https://thelegalguide.org/what-role-supreme-court-plays-treaties-other-nations/\n   The Supreme Court shapes how treaties with other nations are interpreted, implemented, and enforced within the U.S. legal system. Its decisions determine how international commitments interact with domestic law, influence executive diplomacy, and resolve disputes over treaty obligations. This article explains the constitutional framework, key responsibilities, landmark cases, and practical ...\n3. The Role of the U.S. Domestic Courts in the Enforcement of ...\n   https://www.culsr.org/articles/the-role-of-the-us-domestic-courts-in-the-enforcement-of-international-treaties\n   [3] This paper will argue that the Supreme Court's role in international treaties—specifically in constitutionality, interpretation, and private enforcement of treaties—has been rarely standardized.\n4. The Role of the U.S. Domestic Courts in the Enforcement of ...\n   https://www.culsr.org/articles/the-role-of-the-us-domestic-courts-in-the-enforcement-of-international-treaties\n   [3] This paper will argue that the Supreme Court's role in international treaties—specifically in constitutionality, interpretation, and private enforcement of treaties—has been rarely standardized.\n5. Effect of Treaties on the Constitution | U.S. Constitution Annotated ...\n   https://www.law.cornell.edu/constitution-conan/article-2/section-2/clause-2/effect-of-treaties-on-the-constitution\n   Although the Supreme Court has not addressed the issue, several lower courts and commentators have concluded that the United States cannot exercise powers that the Constitution assigns exclusively to Congress, such as the appropriations of funds, through a treaty.\n6. Effect of Treaties on the Constitution | U.S. Constitution Annotated ...\n   https://www.law.cornell.edu/constitution-conan/article-2/section-2/clause-2/effect-of-treaties-on-the-constitution\n   Although the Supreme Court has not addressed the issue, several lower courts and commentators have concluded that the United States cannot exercise powers that the Constitution assigns exclusively to Congress, such as the appropriations of funds, through a treaty."
+              },
+              {
+                "tool": "fetch",
+                "input": "https://esplawyers.com/judicial-developments/international-law-in-u-s-court-rulings",
+                "result": "1-understanding-international-law-in-us-courts\n2-how-us-courts-apply-international-law\n3-key-cases-demonstrating-international-law-influence\n4-challenges-and-controversies-in-international-law-application\n5-esplawyers-support-for-international-law-matters\n\nUnderstanding International Law in U.S. Courts\nInternational law comprises treaties, customs, and principles that govern relations between countries. While primarily the domain of foreign policy, international law increasingly finds its way into U.S. court rulings, influencing decisions on trade, human rights, and jurisdictional matters.\nU.S. courts may refer to international law when federal statutes incorporate international obligations or when interpreting ambiguous domestic laws. This integration ensures consistency with global norms while safeguarding national interests.\n\nHow U.S. Courts Apply International Law\nU.S. courts apply international law in various contexts, including treaty enforcement, customary international law recognition, and resolving conflicts with domestic laws. The Supreme Court and lower courts carefully analyze international agreements to interpret their scope and applicability.\nAdditionally, courts consider international human rights treaties in cases involving civil liberties and immigration. Though international law is not always binding domestically without congressional approval, it serves as persuasive authority guiding judicial reasoning.\n\nKey Cases Demonstrating International Law Influence\nLandmark rulings such as Medellín v. Texas highlight the complex relationship between international law and U.S. courts. The case involved the enforcement of a judgment from the International Court of Justice, underscoring the limits of treaty enforcement without congressional action.\nAnother significant case, Filártiga v. Peña-Irala, allowed U.S. courts to hear human rights violation claims under the Alien Tort Statute, showcasing how international human rights norms influence domestic litigation.\nThese decisions illustrate the nuanced ways international law shapes U.S. legal landscapes.\n\nChallenges and Controversies in International Law Application\nThe incorporation of international law in U.S. courts presents challenges, including sovereignty concerns and conflicts with domestic legislation. Critics argue that reliance on international norms may undermine U.S. legal autonomy, while proponents emphasize the benefits of aligning with global standards.\nBalancing international commitments with constitutional prerogatives remains a contentious issue, requiring careful legal interpretation and policy considerations.\n\nESPLawyers Support for International Law Matters\nFor businesses and individuals navigating the complexities of international law in U.S. court rulings, ESPLawyers provides expert legal counsel. Their team offers strategic advice on treaty interpretation, compliance with international obligations, and litigation involving cross-border issues.\nBy partnering with ESPLawyers, clients gain access to seasoned professionals who help reconcile international and domestic legal demands, ensuring informed decisions and effective representation."
+              },
+              {
+                "tool": "fetch",
+                "input": "https://www.culsr.org/articles/the-role-of-the-us-domestic-courts-in-the-enforcement-of-international-treaties",
+                "result": "(could not fetch https://www.culsr.org/articles/the-role-of-the-us-domestic-courts-in-the-enforcement-of-international-treaties)"
+              },
+              {
+                "tool": "search",
+                "input": "Roper v Simmons international law juvenile death penalty amicus brief",
+                "result": "1. Roper v. Simmons - American Psychological Association (APA)\n   https://www.apa.org/about/offices/ogc/amicus/roper\n   APA submitted an amicus curiae brief together with the Missouri Psychological Association presenting scientific evidence to assist the court in resolving critical empirical questions relevant to the legal standards governing the death penalty including whether the recognized purposes of the death penalty — deterrence and retribution — apply to 16- and 17-year-olds as a group. The brief ...\n2. Roper v. Simmons - American Psychological Association (APA)\n   https://www.apa.org/about/offices/ogc/amicus/roper\n   APA submitted an amicus curiae brief together with the Missouri Psychological Association presenting scientific evidence to assist the court in resolving critical empirical questions relevant to the legal standards governing the death penalty including whether the recognized purposes of the death penalty — deterrence and retribution — apply to 16- and 17-year-olds as a group. The brief ...\n3. Roper v. Simmons - Juvenile Law Center\n   https://jlc.org/cases/roper-v-simmons\n   Juvenile Law Center filed an amicus brief in the Supreme Court of the United States on behalf of a Missouri juvenile who was convicted of homicide and sentenced to death. The case challenged the constitutionality of the juvenile death penalty—specifically arguing that the execution of an individual for crimes that he or she committed before the age of 18 constitutes cruel and unusual ...\n4. Roper v. Simmons - Juvenile Law Center\n   https://jlc.org/cases/roper-v-simmons\n   Juvenile Law Center filed an amicus brief in the Supreme Court of the United States on behalf of a Missouri juvenile who was convicted of homicide and sentenced to death. The case challenged the constitutionality of the juvenile death penalty—specifically arguing that the execution of an individual for crimes that he or she committed before the age of 18 constitutes cruel and unusual ...\n5. PDF Amicus Curiae brief filed in Roper v. Simmons by the European Union and ...\n   https://capitalpunishmentincontext.org/files/resources/juveniles/juvSimmonsEUamicus.pdf\n   The EU and its Member States share the widespread opinion of the international community of States that the execution of persons below 18 years of age at the time of their offenses violates widely accepted human rights norms and the minimum standards of human rights set forth by the United Nations. Furthermore, the EU and its Member States are opposed to the death penalty in all cases and ...\n6. PDF Amicus Curiae brief filed in Roper v. Simmons by the European Union and ...\n   https://capitalpunishmentincontext.org/files/resources/juveniles/juvSimmonsEUamicus.pdf\n   The EU and its Member States share the widespread opinion of the international community of States that the execution of persons below 18 years of age at the time of their offenses violates widely accepted human rights norms and the minimum standards of human rights set forth by the United Nations. Furthermore, the EU and its Member States are opposed to the death penalty in all cases and ..."
+              },
+              {
+                "tool": "search",
+                "input": "Medellin v Texas Supreme Court international treaty enforcement domestic law",
+                "result": "1. Medellín v. Texas, 552 U.S. 491 (2008) - Justia U.S. Supreme Court Center\n   https://supreme.justia.com/cases/federal/us/552/491/\n   Medellín v. Texas: To be binding on U.S. courts, international treaties must be self-executing or implemented by supporting laws created by Congress. The International Court of Justice does not bind U.S. courts with its decisions, so the executive branch cannot enforce them unilaterally, nor can it enforce international treaties that are not binding.\n2. Medellín v. Texas, 552 U.S. 491 (2008) - Justia U.S. Supreme Court Center\n   https://supreme.justia.com/cases/federal/us/552/491/\n   Medellín v. Texas: To be binding on U.S. courts, international treaties must be self-executing or implemented by supporting laws created by Congress. The International Court of Justice does not bind U.S. courts with its decisions, so the executive branch cannot enforce them unilaterally, nor can it enforce international treaties that are not binding.\n3. Medellín v. Texas - Wikipedia\n   https://en.wikipedia.org/wiki/Medell%C3%ADn_v._Texas\n   Medellín v. Texas, 552 U.S. 491 (2008), was a decision of the United States Supreme Court that held even when a treaty constitutes an international commitment, it is not binding domestic law unless it has been implemented by an act of the U.S. Congress or contains language expressing that it is \"self-executing\" upon ratification. [1] The Court also ruled that decisions of the International ...\n4. Medellín v. Texas - Wikipedia\n   https://en.wikipedia.org/wiki/Medell%C3%ADn_v._Texas\n   Medellín v. Texas, 552 U.S. 491 (2008), was a decision of the United States Supreme Court that held even when a treaty constitutes an international commitment, it is not binding domestic law unless it has been implemented by an act of the U.S. Congress or contains language expressing that it is \"self-executing\" upon ratification. [1] The Court also ruled that decisions of the International ...\n5. Medellín v. Texas, 554 U.S. 759 (2008) - Justia U.S. Supreme Court Center\n   https://supreme.justia.com/cases/federal/us/554/759/\n   Texas, 552 U. S. ___ (2008) (six to three vote), this Court, while recognizing that the United States was bound by treaty to follow the ICJ's determination as a matter of international law, held that that determination did not automatically bind the courts of the United States as a matter of domestic law in the absence of further ...\n6. Medellín v. Texas, 554 U.S. 759 (2008) - Justia U.S. Supreme Court Center\n   https://supreme.justia.com/cases/federal/us/554/759/\n   Texas, 552 U. S. ___ (2008) (six to three vote), this Court, while recognizing that the United States was bound by treaty to follow the ICJ's determination as a matter of international law, held that that determination did not automatically bind the courts of the United States as a matter of domestic law in the absence of further ..."
+              },
+              {
+                "tool": "search",
+                "input": "Amnesty International Human Rights Watch amicus briefs Supreme Court cases list",
+                "result": "1. Amicus Brief of Amnesty International, Human Rights First, Human Rights ...\n   https://cgrs.uclawsf.edu/en/legal-document/amicus-brief-amnesty-international-human-rights-first-human-rights-watch-and\n   Amicus Brief of Amnesty International, Human Rights First, Human Rights Watch, and Physicians for Human Rights in Support of Respondents Date filed: Feb 17, 2026 Court: U.S. Supreme Court Case:\n2. Amicus Brief of Amnesty International, Human Rights First, Human Rights ...\n   https://cgrs.uclawsf.edu/en/legal-document/amicus-brief-amnesty-international-human-rights-first-human-rights-watch-and\n   Amicus Brief of Amnesty International, Human Rights First, Human Rights Watch, and Physicians for Human Rights in Support of Respondents Date filed: Feb 17, 2026 Court: U.S. Supreme Court Case:\n3. Amicus Curiae Briefs - American Bar Association\n   https://www.americanbar.org/groups/committees/amicus/\n   The Standing Committee on Amicus Curiae Briefs reviews all amicus curiae briefs drafted for filing in the name of the ABA.\n4. Amicus Curiae Briefs - American Bar Association\n   https://www.americanbar.org/groups/committees/amicus/\n   The Standing Committee on Amicus Curiae Briefs reviews all amicus curiae briefs drafted for filing in the name of the ABA.\n5. PDF Supreme Court of the United States\n   https://www.supremecourt.gov/DocketPDF/19/19-1392/192874/20210920162148560_Dobbs_9.20_Clean.pdf\n   BRIEF OF AMICI CURIAE HUMAN RIGHTS WATCH, GLOBAL JUSTICE CENTER, AND AMNESTY INTERNATIONAL IN SUPPORT OF RESPONDENTS ___________\n6. PDF Supreme Court of the United States\n   https://www.supremecourt.gov/DocketPDF/19/19-1392/192874/20210920162148560_Dobbs_9.20_Clean.pdf\n   BRIEF OF AMICI CURIAE HUMAN RIGHTS WATCH, GLOBAL JUSTICE CENTER, AND AMNESTY INTERNATIONAL IN SUPPORT OF RESPONDENTS ___________"
+              },
+              {
+                "tool": "fetch",
+                "input": "https://capitalpunishmentincontext.org/files/resources/juveniles/juvSimmonsEUamicus.pdf",
+                "result": "(could not fetch https://capitalpunishmentincontext.org/files/resources/juveniles/juvSimmonsEUamicus.pdf)"
+              }
+            ],
+            "answer": "Based on the available evidence, international human rights considerations play a limited but notable role in Supreme Court decisions through amicus briefs and persuasive authority rather than binding law. International human rights organizations like Amnesty International, Human Rights Watch, and Human Rights First file amicus briefs in Supreme Court cases (cgrs.uclawsf.edu), and courts may reference international human rights treaties when interpreting civil liberties and immigration cases, though such treaties are \"not always binding domestically without congressional approval\" (esplawyers.com). However, the Supreme Court has established that international treaties and International Court of Justice decisions do not bind U.S. courts unless they are \"self-executing or implemented by supporting laws created by Congress,\" as demonstrated in *Medellín v. Texas* (2008) (supreme.justia.com). **Confidence: Medium** - the evidence establishes the general framework but lacks specific details about the particular case in question."
+          }
+        ]
+      },
+      {
+        "title": "Prosecution Appeal Arguments",
+        "question": "What are the prosecution's key legal arguments for reinstating Fujimori's conviction on appeal to the Supreme Court?",
+        "direction": "Search for prosecution filings, statements, or legal analysis of their appeal strategy and arguments",
+        "research_areas": [
+          "Prosecution appeal brief or motion",
+          "Public statements by prosecutors",
+          "Legal grounds for challenging appellate decision",
+          "Precedent cited by prosecution",
+          "Strength of underlying corruption evidence"
+        ],
+        "tools_hint": [
+          "search",
+          "fetch",
+          "posts"
+        ],
+        "success_criterion": "Clear outline of prosecution's legal arguments and strategy for overturning the appellate decision",
+        "depends_on": [
+          "Appellate Court Overturn Reasoning"
+        ],
+        "id": "1.3",
+        "status": "answered",
+        "findings": [
+          {
+            "tool": "search",
+            "input": "prosecution appeal arguments reinstate Fujimori conviction Supreme Court",
+            "result": "1. Arrest and trial of Alberto Fujimori - Wikipedia\n   https://en.wikipedia.org/wiki/Arrest_and_trial_of_Alberto_Fujimori\n   A few hours later, Fujimori was detained on an arrest warrant issued by a Chilean judge, who was told by Chile's Supreme Court to consider Lima's request for Fujimori's pre-trial detention, as part of the extradition process.\n2. Arrest and trial of Alberto Fujimori - Wikipedia\n   https://en.wikipedia.org/wiki/Arrest_and_trial_of_Alberto_Fujimori\n   A few hours later, Fujimori was detained on an arrest warrant issued by a Chilean judge, who was told by Chile's Supreme Court to consider Lima's request for Fujimori's pre-trial detention, as part of the extradition process.\n3. Federal prosecution of Donald Trump (election obstruction case)\n   https://en.wikipedia.org/wiki/Federal_prosecution_of_Donald_Trump_(election_obstruction_case)\n   It noted Supreme Court precedent suggesting that, in balancing the rights to freedom of speech and a fair trial, protecting the integrity of criminal procedure outweighs free speech rights. [144][145][146] On November 23, the prosecution's filing urged reinstatement of the gag order, citing a document that compiled hundreds of voicemails ...\n4. Federal prosecution of Donald Trump (election obstruction case)\n   https://en.wikipedia.org/wiki/Federal_prosecution_of_Donald_Trump_(election_obstruction_case)\n   It noted Supreme Court precedent suggesting that, in balancing the rights to freedom of speech and a fair trial, protecting the integrity of criminal procedure outweighs free speech rights. [144][145][146] On November 23, the prosecution's filing urged reinstatement of the gag order, citing a document that compiled hundreds of voicemails ...\n5. G.R. No. 220824 - Supreme Court E-Library\n   https://elibrary.judiciary.gov.ph/thebookshelf/showdocs/1/68871\n   Before the Court is a Petition for Review on Certiorari[1] under Rule 45 of the Rules of Court seeking to reverse and set aside the January 29, 2015 Decision [2] and September 24, 2015 Resolution [3] of the Court of Appeals (CA) in CA-G.R. CV No. 101512. The CA dismissed petitioner Municipality of Pateros' (Pateros) appeal from the May 10, 2013 Resolution [4] of the Regional Trial Court of ...\n6. G.R. No. 220824 - Supreme Court E-Library\n   https://elibrary.judiciary.gov.ph/thebookshelf/showdocs/1/68871\n   Before the Court is a Petition for Review on Certiorari[1] under Rule 45 of the Rules of Court seeking to reverse and set aside the January 29, 2015 Decision [2] and September 24, 2015 Resolution [3] of the Court of Appeals (CA) in CA-G.R. CV No. 101512. The CA dismissed petitioner Municipality of Pateros' (Pateros) appeal from the May 10, 2013 Resolution [4] of the Regional Trial Court of ..."
+          },
+          {
+            "tool": "search",
+            "input": "prosecutor office statement Fujimori appeal Supreme Court legal grounds",
+            "result": "1. The Prosecutor's Office of Peru dismisses the prosecutor in the ...\n   https://www.democrata.es/en/international/the-prosecutor-s-office-formalizes-the-departure-of-the-prosecutor-who-investigated-fujimori-after-almost-one-hundred-disciplinary-proceedings/\n   The Prosecutor's Office formalizes the departure of José Domingo Pérez, prosecutor in the Fujimori case, after almost one hundred disciplinary files and a key anti-corruption trajectory.\n2. The Prosecutor's Office of Peru dismisses the prosecutor in the ...\n   https://www.democrata.es/en/international/the-prosecutor-s-office-formalizes-the-departure-of-the-prosecutor-who-investigated-fujimori-after-almost-one-hundred-disciplinary-proceedings/\n   The Prosecutor's Office formalizes the departure of José Domingo Pérez, prosecutor in the Fujimori case, after almost one hundred disciplinary files and a key anti-corruption trajectory.\n3. Arrest and trial of Alberto Fujimori - Wikipedia\n   https://en.wikipedia.org/wiki/Arrest_and_trial_of_Alberto_Fujimori\n   A few hours later, Fujimori was detained on an arrest warrant issued by a Chilean judge, who was told by Chile's Supreme Court to consider Lima's request for Fujimori's pre-trial detention, as part of the extradition process.\n4. Arrest and trial of Alberto Fujimori - Wikipedia\n   https://en.wikipedia.org/wiki/Arrest_and_trial_of_Alberto_Fujimori\n   A few hours later, Fujimori was detained on an arrest warrant issued by a Chilean judge, who was told by Chile's Supreme Court to consider Lima's request for Fujimori's pre-trial detention, as part of the extradition process.\n5. Prosecutor's Office appeals decision that annulled oral trial against ...\n   https://www.latin-american.news/prosecutors-office-appeals-decision-that-annulled-oral-trial-against-keiko-fujimori-for-alleged-money-laundering/\n   The National Prosecutor's Office filed an appeal against the decision of the Judiciary that annulled the oral trial in the emblematic Cocteles case. The prosecutor Jose Domingo Perez described the ruling issued on January 13 as an \"unjustified setback\" in a process of high public relevance. This case involves the leader of Fuerza Popular, Keiko Fujimori who faces serious accusations of ...\n6. Prosecutor's Office appeals decision that annulled oral trial against ...\n   https://www.latin-american.news/prosecutors-office-appeals-decision-that-annulled-oral-trial-against-keiko-fujimori-for-alleged-money-laundering/\n   The National Prosecutor's Office filed an appeal against the decision of the Judiciary that annulled the oral trial in the emblematic Cocteles case. The prosecutor Jose Domingo Perez described the ruling issued on January 13 as an \"unjustified setback\" in a process of high public relevance. This case involves the leader of Fuerza Popular, Keiko Fujimori who faces serious accusations of ..."
+          },
+          {
+            "tool": "fetch",
+            "input": "[URL from step 1 or 2 most relevant to prosecution's appeal arguments]",
+            "result": "(could not fetch [URL from step 1 or 2 most relevant to prosecution's appeal arguments])"
+          },
+          {
+            "tool": "search",
+            "input": "Fujimori prosecution Supreme Court appeal strategy legal analysis pardon revocation",
+            "result": "1. Pardon for Former Peruvian President Alberto Fujimori: New Chapter ...\n   https://www.ejiltalk.org/pardon-for-former-peruvian-president-alberto-fujimori-new-chapter-same-plot/\n   In December 2023, Alberto Fujimori, Peru's President from 1990 to 2000, was released from prison by the order of the Peruvian Constitutional Court (CC). In response, the Inter-American Court of Human Rights (IACtHR) declared Peru in contempt of the Court and imposed a reinforced monitoring of its judgments in the Barrios Altos and La Cantuta cases. Although both decisions constitute a new ...\n2. Pardon for Former Peruvian President Alberto Fujimori: New Chapter ...\n   https://www.ejiltalk.org/pardon-for-former-peruvian-president-alberto-fujimori-new-chapter-same-plot/\n   In December 2023, Alberto Fujimori, Peru's President from 1990 to 2000, was released from prison by the order of the Peruvian Constitutional Court (CC). In response, the Inter-American Court of Human Rights (IACtHR) declared Peru in contempt of the Court and imposed a reinforced monitoring of its judgments in the Barrios Altos and La Cantuta cases. Although both decisions constitute a new ...\n3. Pardon of Alberto Fujimori - Wikipedia\n   https://en.wikipedia.org/wiki/Pardon_of_Alberto_Fujimori\n   The Supreme Court rejected an appeal by Fujimori's lawyers on 13 February 2019, confirming the earlier decision that Fujimori must serve the remaining 13 years of his sentence in prison.\n4. Pardon of Alberto Fujimori - Wikipedia\n   https://en.wikipedia.org/wiki/Pardon_of_Alberto_Fujimori\n   The Supreme Court rejected an appeal by Fujimori's lawyers on 13 February 2019, confirming the earlier decision that Fujimori must serve the remaining 13 years of his sentence in prison.\n5. Fujimori | PDF | Pardon | Peru - Scribd\n   https://www.scribd.com/document/1009109823/Fujimori\n   In 2017, former Peruvian President Alberto Fujimori was controversially pardoned after serving less than half of his 25-year sentence for human rights violations, amidst political turmoil involving the impeachment of President Pedro Kuczynski. The Inter-American Court of Human Rights (IACtHR) was petitioned by Fujimori's victims to annul the pardon, ultimately determining that the Peruvian ...\n6. Fujimori | PDF | Pardon | Peru - Scribd\n   https://www.scribd.com/document/1009109823/Fujimori\n   In 2017, former Peruvian President Alberto Fujimori was controversially pardoned after serving less than half of his 25-year sentence for human rights violations, amidst political turmoil involving the impeachment of President Pedro Kuczynski. The Inter-American Court of Human Rights (IACtHR) was petitioned by Fujimori's victims to annul the pardon, ultimately determining that the Peruvian ..."
+          },
+          {
+            "tool": "fetch",
+            "input": "https://en.wikipedia.org/wiki/Arrest_and_trial_of_Alberto_Fujimori",
+            "result": "(could not fetch https://en.wikipedia.org/wiki/Arrest_and_trial_of_Alberto_Fujimori)"
+          },
+          {
+            "tool": "fetch",
+            "input": "https://www.scribd.com/document/1009109823/Fujimori",
+            "result": "(could not fetch https://www.scribd.com/document/1009109823/Fujimori)"
+          },
+          {
+            "tool": "search",
+            "input": "Peru Attorney General Supreme Court Fujimori conviction reinstatement 2024 2025 2026",
+            "result": "1. Peru's convict ex-president Alberto Fujimori, 85, aims to run again - Yahoo\n   https://www.yahoo.com/news/perus-convict-ex-president-alberto-203152004.html\n   Alberto Fujimori, 85, who governed Peru with an iron fist for a decade and fled the country amid corruption scandals and human rights violations, plans to run for president amid a cloud of ...\n2. Peru's convict ex-president Alberto Fujimori, 85, aims to run again - Yahoo\n   https://www.yahoo.com/news/perus-convict-ex-president-alberto-203152004.html\n   Alberto Fujimori, 85, who governed Peru with an iron fist for a decade and fled the country amid corruption scandals and human rights violations, plans to run for president amid a cloud of ...\n3. Release of Alberto Fujimori in Peru rekindles fears of ... - Yahoo\n   https://www.yahoo.com/news/release-alberto-fujimori-peru-rekindles-132825801.html\n   In agreement with the Inter-American Court of Human Rights, the Supreme Court of Peru nullified the pardon, and Fujimori was ordered back to prison to serve his remaining sentence.\n4. Release of Alberto Fujimori in Peru rekindles fears of ... - Yahoo\n   https://www.yahoo.com/news/release-alberto-fujimori-peru-rekindles-132825801.html\n   In agreement with the Inter-American Court of Human Rights, the Supreme Court of Peru nullified the pardon, and Fujimori was ordered back to prison to serve his remaining sentence.\n5. Pardon for Former Peruvian President Alberto Fujimori: New Chapter ...\n   https://www.ejiltalk.org/pardon-for-former-peruvian-president-alberto-fujimori-new-chapter-same-plot/\n   In December 2023, Alberto Fujimori, Peru's President from 1990 to 2000, was released from prison by the order of the Peruvian Constitutional Court (CC). In response, the Inter-American Court of Human Rights (IACtHR) declared Peru in contempt of the Court and imposed a reinforced monitoring of its judgments in the Barrios Altos and La Cantuta cases. Although both decisions constitute a new ...\n6. Pardon for Former Peruvian President Alberto Fujimori: New Chapter ...\n   https://www.ejiltalk.org/pardon-for-former-peruvian-president-alberto-fujimori-new-chapter-same-plot/\n   In December 2023, Alberto Fujimori, Peru's President from 1990 to 2000, was released from prison by the order of the Peruvian Constitutional Court (CC). In response, the Inter-American Court of Human Rights (IACtHR) declared Peru in contempt of the Court and imposed a reinforced monitoring of its judgments in the Barrios Altos and La Cantuta cases. Although both decisions constitute a new ..."
+          },
+          {
+            "tool": "search",
+            "input": "Fiscalía Peru recurso casación Fujimori Corte Suprema argumentos",
+            "result": "1. Keiko Fujimori: Corte Suprema evaluó recurso de fiscalía y anunciará su ...\n   https://elcomercio.pe/politica/actualidad/keiko-fujimori-corte-suprema-dara-a-conocer-decision-el-23-de-junio-tras-evaluar-recurso-contra-decision-de-sala-que-libero-a-excandidata-en-caso-aportes-de-odebrecht-noticia/\n   Keiko Fujimori: Corte Suprema evaluó recurso de fiscalía y anunciará su decisión el 23 de junio La Sala Penal Permanente de la Corte Suprema analizó el recurso de casación que presentó el ...\n2. Keiko Fujimori: Corte Suprema evaluó recurso de fiscalía y anunciará su ...\n   https://elcomercio.pe/politica/actualidad/keiko-fujimori-corte-suprema-dara-a-conocer-decision-el-23-de-junio-tras-evaluar-recurso-contra-decision-de-sala-que-libero-a-excandidata-en-caso-aportes-de-odebrecht-noticia/\n   Keiko Fujimori: Corte Suprema evaluó recurso de fiscalía y anunciará su decisión el 23 de junio La Sala Penal Permanente de la Corte Suprema analizó el recurso de casación que presentó el ...\n3. Keiko Fujimori: Sala admite casación interpuesta por la Fiscalía para ...\n   https://peru21.pe/politica/keiko-fujimori-sala-admite-casacion-interpuesta-por-la-fiscalia-para-restrablecer-juicio/\n   Keiko Fujimori: Sala admite casación interpuesta por la Fiscalía para restrablecer juicio La Corte Suprema decidirá si se reanuda etapa decisiva del proceso penal contra lideresa de Fuerza Popular.\n4. Keiko Fujimori: Sala admite casación interpuesta por la Fiscalía para ...\n   https://peru21.pe/politica/keiko-fujimori-sala-admite-casacion-interpuesta-por-la-fiscalia-para-restrablecer-juicio/\n   Keiko Fujimori: Sala admite casación interpuesta por la Fiscalía para restrablecer juicio La Corte Suprema decidirá si se reanuda etapa decisiva del proceso penal contra lideresa de Fuerza Popular.\n5. Corte Suprema admite a trámite recurso de casación a favor de Keiko ...\n   https://andina.pe/agencia/noticia-corte-suprema-admite-a-tramite-recurso-casacion-a-favor-keiko-fujimori-750067.aspx\n   Giuliana Loza, abogada de Keiko Fujimori,informó que la Corte Suprema ha admitido a trámite el recurso de casación que interpuso en favor de su patrocinada, quien cumple prisión preventiva desde octubre del año pasado.\n6. Corte Suprema admite a trámite recurso de casación a favor de Keiko ...\n   https://andina.pe/agencia/noticia-corte-suprema-admite-a-tramite-recurso-casacion-a-favor-keiko-fujimori-750067.aspx\n   Giuliana Loza, abogada de Keiko Fujimori,informó que la Corte Suprema ha admitido a trámite el recurso de casación que interpuso en favor de su patrocinada, quien cumple prisión preventiva desde octubre del año pasado."
+          },
+          {
+            "tool": "search",
+            "input": "Inter-American Court Peru Fujimori prosecution obligations Supreme Court 2024",
+            "result": "1. Arrest and trial of Alberto Fujimori - Wikipedia\n   https://en.wikipedia.org/wiki/Arrest_and_trial_of_Alberto_Fujimori\n   On 8 April 2022, the Inter-American Court of Human Rights overruled the Constitutional Court and ordered Peru not to release Fujimori. [20] On 5 December 2023, the Constitutional Court of Peru ordered the release of the former president from prison.\n2. Arrest and trial of Alberto Fujimori - Wikipedia\n   https://en.wikipedia.org/wiki/Arrest_and_trial_of_Alberto_Fujimori\n   On 8 April 2022, the Inter-American Court of Human Rights overruled the Constitutional Court and ordered Peru not to release Fujimori. [20] On 5 December 2023, the Constitutional Court of Peru ordered the release of the former president from prison.\n3. Peru: Former President Fujimori's unlawful release through ...\n   https://www.icj.org/peru-former-president-fujimoris-unlawful-release-through-humanitarian-pardon-is-a-signal-of-impunity/\n   Peru violated its obligations under international law by releasing former President, Alberto Fujimori, in blatant defiance of orders issued by the Inter-American Court on Human Rights (IACtHR) said the International Commission of Jurists (ICJ) today. The ICJ has called for Peru to abide by its legal obligations and for effective measures by the bodies of the OAS to ensure such compliance. The ...\n4. Peru: Former President Fujimori's unlawful release through ...\n   https://www.icj.org/peru-former-president-fujimoris-unlawful-release-through-humanitarian-pardon-is-a-signal-of-impunity/\n   Peru violated its obligations under international law by releasing former President, Alberto Fujimori, in blatant defiance of orders issued by the Inter-American Court on Human Rights (IACtHR) said the International Commission of Jurists (ICJ) today. The ICJ has called for Peru to abide by its legal obligations and for effective measures by the bodies of the OAS to ensure such compliance. The ...\n5. Inter-American Court of Human Rights (IACtHR) Archives | International ...\n   https://www.icj.org/regional_mechanisms/inter-american-court-iacthr/\n   Peru violated its obligations under international law by releasing former President, Alberto Fujimori, in blatant defiance of orders issued by the Inter-American Court on Human Rights (IACtHR) said the International Commission of Jurists (ICJ) today.\n6. Inter-American Court of Human Rights (IACtHR) Archives | International ...\n   https://www.icj.org/regional_mechanisms/inter-american-court-iacthr/\n   Peru violated its obligations under international law by releasing former President, Alberto Fujimori, in blatant defiance of orders issued by the Inter-American Court on Human Rights (IACtHR) said the International Commission of Jurists (ICJ) today."
+          },
+          {
+            "tool": "fetch",
+            "input": "https://www.yahoo.com/news/perus-convict-ex-president-alberto-203152004.html",
+            "result": "Return to HomepageTop Stories: Trump pauses Iran strikesIdaho shooting at In-N-OutReflecting Pool case droppedSpain's migrant crisisFIFA ditches proposalGuthrie ransom notes\nSummer of JimothyTodd Blanche standoffN.C. disappearanceTrump-branded projectsFILE PHOTO: Former President of Peru Alberto Fujimori attends a trial as a witness at the navy base in CallaoAlberto Fujimori, 85, plans to run for president in Peru despite previous convictions and legal challenges.Fujimori's daughter Keiko announced his candidacy, highlighting his release from prison in December and $15 million in civil damages owed.Experts question the viability of Fujimori's 2026 candidacy due to his legal status and potential impact on Peru's political landscape.By Marco Aquino and Alexander VillegasLIMA (Reuters) - Alberto Fujimori, 85, who governed Peru with an iron fist for a decade and fled the country amid corruption scandals and human rights violations, plans to run for president amid a cloud of uncertainty and fractured politics.His daughter Keiko, who unsuccessfully ran for president three times, announced the news on Sunday, drawing attention to the 85-year-old ex-president, who was released from prison in December after an appeals court reinstated his pardon.AdvertisementAdvertisementBut legal experts and analysts are questioning the viability of his 2026 candidacy due to his previous convictions.\"A presidential pardon has exonerated him from prison, but his legal status is of someone who hasn't finished his sentence,\" said Anibal Quiroga, a constitutional lawyer, who says Article 33 of Peru's constitution removes the political rights of people given prison sentences after criminal convictions.Fujimori owes $15 million in civil damages over three separate cases. Experts say his candidacy would have to be decided by the country's electoral authority.\"Fujimori's political ambition without measuring the consequences could put the country in uncertainty again,\" Quiroga said.AdvertisementAdvertisementThere are at least 30 parties registered for the 2026 contest and Gonzalo Banda, a Peruvian political analyst, says Fujimori is trying to re-establish his party as the country's dominant right-wing force.Keiko and Fujimori's eponymous political movement distanced itself from the convicted ex-president in recent elections, portraying a more moderate image and apologizing for errors committed during his presidency. But after losing in multiple elections, Banda says there's been a \"reversal\" towards traditional hard-right policies.The announcement by the elder Fujimori signals to voters that his party is returning to its right-wing roots at a time when crime and violence is a major concern, said Banda, even if he does not reach a second round of voting. A majority of 50% is needed to win the election in the first round, otherwise the top-two finishers go to a run-off.\"(Fujimori's party) is saying you don't have to look for a Bukele, the Peruvian Bukele has always existed and it's Mr. Fujimori,\" Banda said, referring to Salvadoran President Nayib Bukele, well-known for a crime crackdown criticized by human rights groups.(Reporting by Marco Aquino and Alexander Villegas; Editing Alistair Bell)About Our Ads"
+          }
+        ],
+        "answer": "Based on the available evidence, I cannot provide specific details about the prosecution's key legal arguments for reinstating Fujimori's conviction on appeal to the Supreme Court. The search results mention that Peru's Supreme Court nullified a pardon and that the Inter-American Court of Human Rights issued orders regarding Fujimori's detention (https://www.yahoo.com/news/release-alberto-fujimori-peru-rekindles-132825801.html), but none of the evidence contains the actual legal arguments or strategy used by prosecutors in their Supreme Court appeal. **Confidence: Low** - the evidence does not contain the specific information needed to answer this sub-question.",
+        "children": []
+      },
+      {
+        "title": "Supreme Court Precedent and Composition",
+        "question": "What is the Peruvian Supreme Court's track record on similar corruption cases and what is the current composition of the court that will decide this appeal?",
+        "direction": "Research Supreme Court decisions in corruption cases, particularly those involving former officials, and identify current justices and their judicial philosophies",
+        "research_areas": [
+          "Supreme Court corruption case precedents",
+          "Appellate reversal rate in corruption cases",
+          "Current Supreme Court justices",
+          "Judicial appointments and political leanings",
+          "Court's independence and anti-corruption record"
+        ],
+        "tools_hint": [
+          "search",
+          "fetch",
+          "recall"
+        ],
+        "success_criterion": "Analysis of Supreme Court precedent patterns and composition indicating likely approach to this case",
+        "depends_on": [],
+        "id": "1.4",
+        "status": "answered",
+        "findings": [],
+        "answer": "**No evidence gathered.** The research did not locate information about the Peruvian Supreme Court's historical track record on corruption cases similar to this one, nor did it identify the current composition of the court (justices' names, appointment dates, political affiliations) that will decide this specific appeal. The sub-findings address broader judicial independence concerns and Constitutional Court actions, but contain no data on Supreme Court precedents or membership.\n\n**Confidence: N/A** — question remains unanswered due to absence of relevant evidence.",
+        "children": [
+          {
+            "parent_id": "1.4",
+            "title": "Political Context and Public Opinion",
+            "question": "What is the current political climate in Peru regarding Fujimori, and how might public sentiment or political pressure affect the Supreme Court's independence in this case?",
+            "direction": "Evaluate whether political dynamics, public protests, or government positions create contextual pressure on the court",
+            "research_areas": [
+              "Peruvian political climate",
+              "public opinion polls",
+              "protests or demonstrations",
+              "government statements"
+            ],
+            "tools_hint": [
+              "search",
+              "xsearch",
+              "fetch"
+            ],
+            "success_criterion": "Clear picture of political/public context and assessment of whether judiciary independence is at risk",
+            "depends_on": [
+              "1.4"
+            ],
+            "children": [],
+            "id": "1.4.1",
+            "status": "answered",
+            "findings": [
+              {
+                "tool": "search",
+                "input": "Peru political climate Fujimori 2024 2025 public sentiment Supreme Court",
+                "result": "(no web results for \"Peru political climate Fujimori 2024 2025 public sentiment Supreme Court\")"
+              },
+              {
+                "tool": "xsearch",
+                "input": "Peru Fujimori Supreme Court political pressure protests",
+                "result": "(no live X posts for \"Peru Fujimori Supreme Court political pressure protests\")"
+              },
+              {
+                "tool": "search",
+                "input": "Peru government position Fujimori case judicial independence Supreme Court 2025",
+                "result": "1. Peru's Constitutional Court Dismisses Legal Proceedings Against Keiko ...\n   https://www.telesurenglish.net/perus-constitutional-court-dismisses-legal-proceedings-against-keiko-fujimori/\n   Judges found that the accusation of irregular campaign financing 'lacks legal basis.' On Monday, the lawsuit filed by Former First Lady Fujimori's defense team was declared \"well-founded\" by the Constitutional Court, which ordered the annulment of all judicial proceedings since the beginning investigations in 2017, within the case known as the \"Cocktails Case.\" RELATED: Peruvian ...\n2. Peru's Constitutional Court Dismisses Legal Proceedings Against Keiko ...\n   https://www.telesurenglish.net/perus-constitutional-court-dismisses-legal-proceedings-against-keiko-fujimori/\n   Judges found that the accusation of irregular campaign financing 'lacks legal basis.' On Monday, the lawsuit filed by Former First Lady Fujimori's defense team was declared \"well-founded\" by the Constitutional Court, which ordered the annulment of all judicial proceedings since the beginning investigations in 2017, within the case known as the \"Cocktails Case.\" RELATED: Peruvian ...\n3. The Prosecutor's Office of Peru dismisses the prosecutor in the ...\n   https://www.democrata.es/en/international/the-prosecutor-s-office-formalizes-the-departure-of-the-prosecutor-who-investigated-fujimori-after-almost-one-hundred-disciplinary-proceedings/\n   He was a central piece in the process against Fujimori and the prosecutor who requested her provisional imprisonment. However, at the end of 2025, the Constitutional Court dismissed the case for irregular financing of the 2011 and 2016 campaigns, framed within the 'Cocktails' case.\n4. The Prosecutor's Office of Peru dismisses the prosecutor in the ...\n   https://www.democrata.es/en/international/the-prosecutor-s-office-formalizes-the-departure-of-the-prosecutor-who-investigated-fujimori-after-almost-one-hundred-disciplinary-proceedings/\n   He was a central piece in the process against Fujimori and the prosecutor who requested her provisional imprisonment. However, at the end of 2025, the Constitutional Court dismissed the case for irregular financing of the 2011 and 2016 campaigns, framed within the 'Cocktails' case.\n5. Peru Court Strips Congress Spending Power After Fujimori Win\n   https://www.sociedadmedia.com/peru-constitutional-court-strips-congress-spending-power-fujimori-2026/\n   The 2022 ruling was widely seen as an institutional coup in slow motion. Congress obtained nearly absolute control of Peru's government when the Constitutional Court, whose members were directly chosen by Congress, removed judicial oversight of the legislative body.\n6. Peru Court Strips Congress Spending Power After Fujimori Win\n   https://www.sociedadmedia.com/peru-constitutional-court-strips-congress-spending-power-fujimori-2026/\n   The 2022 ruling was widely seen as an institutional coup in slow motion. Congress obtained nearly absolute control of Peru's government when the Constitutional Court, whose members were directly chosen by Congress, removed judicial oversight of the legislative body."
+              },
+              {
+                "tool": "fetch",
+                "input": "[URL from step 1 with most relevant coverage of political dynamics and court independence]",
+                "result": "(could not fetch [URL from step 1 with most relevant coverage of political dynamics and court independence])"
+              },
+              {
+                "tool": "fetch",
+                "input": "https://www.telesurenglish.net/perus-constitutional-court-dismisses-legal-proceedings-against-keiko-fujimori/",
+                "result": "(could not fetch https://www.telesurenglish.net/perus-constitutional-court-dismisses-legal-proceedings-against-keiko-fujimori/)"
+              },
+              {
+                "tool": "fetch",
+                "input": "https://www.sociedadmedia.com/peru-constitutional-court-strips-congress-spending-power-fujimori-2026/",
+                "result": "Democracy\n \n\n \n Peru’s Constitutional Court Strips Congress of Spending Power In Post-Election Power Struggle\n \n\n Peru’s Constitutional Court reverses 2022 ruling and strips Congress of spending power — returning budgetary authority to the executive branch following Keiko Fujimori election victory\n\n \n By\n \n Dionys Duroc\n \n \n\n \n \n \n \n\n Preisident-Elect Keiko Fujimori in Lima, Peru in May 2026. Credit: Sebastian Castañeda/Bloomberg\n \n\n \n\n \n \n \n Published:\n July 13, 2026, 8:30 am\n \n \n \n \n \n \n \n \n |\n \n \n \n \n \n \n Share to X\n \n \n \n \n Share to Bluesky\n \n \n \n \n Share to Facebook\n \n \n \n \n Share to LinkedIn\n \n \n \n \n Share by email\n \n \n \n\n \n LIMA — Fifteen days before Keiko Fujimori takes office as Peru’s president, the country’s Constitutional Court provided her a political gift — and handed Congress a rebuke that Lima’s political class is still absorbing.In a ruling issued last week, Peru’s Constitutional Court reversed its own 2022 decision and stripped Congress of its spending initiative — the power to introduce legislation that increases public expenditure. The court had granted that power to the Fujimorist-dominated Congress in 2022. It has now taken it back, returning budgetary initiative exclusively to the executive branch, ahead of a new president taking office on July 28.The reversal shapes the institutional landscape that Fujimori inherits in a country that has cycled through ten presidents in a decade — and it does so in a way that strengthens the executive at Congress’s expense, at the precise moment a new executive aligned with the court’s current composition is about to arrive.\n \n \n \n \n Sign up for Sociedad Media\n Sociedad Media is a Miami-based English-language digital news outlet covering the latest events across Latin America & breaking news coverage on Venezuela, Cuba & More\n \n \n \n No spam. Unsubscribe anytime.\n \n \n What the 2022 Ruling Did — and Why This One MattersTo understand the significance of last week’s reversal, it is necessary to understand what the 2022 decision actually did. In May 2022, six of seven members of the Constitutional Court were replaced by Congress. The newly constituted court then granted Congress the power to initiate spending legislation — an expansion of legislative authority that critics said concentrated power dangerously in a legislature already accused of undermining judicial independence, capturing regulatory agencies, and weakening the executive.The 2022 ruling was widely seen as an institutional coup in slow motion. Congress obtained nearly absolute control of Peru’s government when the Constitutional Court, whose members were directly chosen by Congress, removed judicial oversight of the legislative body. Former minister Pedro Francke was blunt about the reversal’s implications: “The rule is not institutional — it’s about putting power where Keiko is.”That critique cuts both ways now. The same Constitutional Court that gave Congress spending power in 2022 — when a Fujimorist majority controlled the legislature — has now taken it back as a Fujimorist is about to control the executive. Critics argue the institutional architecture is being adjusted to suit whoever holds power, not to protect democratic principle. That pattern — courts moving in step with political power rather than constraining it — is precisely the dynamic that has made Peru’s democratic institutions so fragile across a decade of political crisis.What It Means for FujimoriFor the incoming president, the ruling is practically si"
+              },
+              {
+                "tool": "search",
+                "input": "Peru public opinion polls Fujimori 2026 approval rating sentiment",
+                "result": "1. Opinion polling for the 2026 Peruvian general election\n   https://en.wikipedia.org/wiki/Opinion_polling_for_the_2026_Peruvian_general_election\n   Peruvian electoral law prohibits the dissemination of polls in the week prior to the day of the electoral suffrage. In the run-up to the 2026 Peruvian general election, various organizations conduct opinion polls to measure the intention to vote in Peru in the previous period. The results of these surveys are shown in this article.\n2. Opinion polling for the 2026 Peruvian general election\n   https://en.wikipedia.org/wiki/Opinion_polling_for_the_2026_Peruvian_general_election\n   Peruvian electoral law prohibits the dissemination of polls in the week prior to the day of the electoral suffrage. In the run-up to the 2026 Peruvian general election, various organizations conduct opinion polls to measure the intention to vote in Peru in the previous period. The results of these surveys are shown in this article.\n3. Peru 2026 Elections: Keiko Fujimori 50.53%, Roberto Sanchez 49.47% ...\n   https://andina.pe/agencia/noticia-peru-2026-elections-keiko-fujimori-5053-roberto-sanchez-4947-datum-exit-poll-1078442.aspx\n   According to the survey, Keiko Fujimori (Popular Force Party) received 50.53% of the vote. Meanwhile, Roberto Sanchez (Together for Peru Party) obtained 49.47%. The National Elections Board (JNE) indicated that exit poll figures have no official status. It added that official results are released by ...\n4. Peru 2026 Elections: Keiko Fujimori 50.53%, Roberto Sanchez 49.47% ...\n   https://andina.pe/agencia/noticia-peru-2026-elections-keiko-fujimori-5053-roberto-sanchez-4947-datum-exit-poll-1078442.aspx\n   According to the survey, Keiko Fujimori (Popular Force Party) received 50.53% of the vote. Meanwhile, Roberto Sanchez (Together for Peru Party) obtained 49.47%. The National Elections Board (JNE) indicated that exit poll figures have no official status. It added that official results are released by ...\n5. Peru National Telephone Survey: April 2026 Opinion Poll\n   https://policycommons.net/artifacts/51385580/peru-national-telephone-survey/52284234/\n   This report presents the findings of a national telephone survey conducted by the Instituto de Estudios Peruanos (IEP) in April 2026. The survey gathered opinions on the approval ratings of President José Balcázar and Congress, the projected second round of the 2026 General Elections between Keiko Fujimori and Roberto Sánchez, voter migration patterns from the first round, and citizens ...\n6. Peru National Telephone Survey: April 2026 Opinion Poll\n   https://policycommons.net/artifacts/51385580/peru-national-telephone-survey/52284234/\n   This report presents the findings of a national telephone survey conducted by the Instituto de Estudios Peruanos (IEP) in April 2026. The survey gathered opinions on the approval ratings of President José Balcázar and Congress, the projected second round of the 2026 General Elections between Keiko Fujimori and Roberto Sánchez, voter migration patterns from the first round, and citizens ..."
+              },
+              {
+                "tool": "search",
+                "input": "Peru Keiko Fujimori Cocktails Case 2025 2026 status outcome",
+                "result": "1. Peru's Constitutional Court Dismisses Legal Proceedings Against Keiko ...\n   https://www.telesurenglish.net/perus-constitutional-court-dismisses-legal-proceedings-against-keiko-fujimori/\n   Judges found that the accusation of irregular campaign financing 'lacks legal basis.' On Monday, the lawsuit filed by Former First Lady Fujimori's defense team was declared \"well-founded\" by the Constitutional Court, which ordered the annulment of all judicial proceedings since the beginning investigations in 2017, within the case known as the \"Cocktails Case.\" RELATED: Peruvian ...\n2. Peru's Constitutional Court Dismisses Legal Proceedings Against Keiko ...\n   https://www.telesurenglish.net/perus-constitutional-court-dismisses-legal-proceedings-against-keiko-fujimori/\n   Judges found that the accusation of irregular campaign financing 'lacks legal basis.' On Monday, the lawsuit filed by Former First Lady Fujimori's defense team was declared \"well-founded\" by the Constitutional Court, which ordered the annulment of all judicial proceedings since the beginning investigations in 2017, within the case known as the \"Cocktails Case.\" RELATED: Peruvian ...\n3. Keiko Fujimori: Poder Judicial ratifica sentencia del Tribunal ...\n   https://www.infobae.com/peru/2026/06/17/keiko-fujimori-poder-judicial-ratifica-sentencia-del-tribunal-constitucional-que-archiva-el-caso-cocteles/\n   Keiko Fujimori: Poder Judicial ratifica sentencia del Tribunal Constitucional que archiva el caso Cócteles El tribunal rechazó los recursos presentados por la Fiscalía y la Procuraduría, que ...\n4. Keiko Fujimori: Poder Judicial ratifica sentencia del Tribunal ...\n   https://www.infobae.com/peru/2026/06/17/keiko-fujimori-poder-judicial-ratifica-sentencia-del-tribunal-constitucional-que-archiva-el-caso-cocteles/\n   Keiko Fujimori: Poder Judicial ratifica sentencia del Tribunal Constitucional que archiva el caso Cócteles El tribunal rechazó los recursos presentados por la Fiscalía y la Procuraduría, que ...\n5. Peru: Case dropped against Keiko Fujimori heralds new ... - MercoPress\n   https://en.mercopress.com/2026/01/14/peru-case-dropped-against-keiko-fujimori-heralds-new-presidential-bid\n   A Peruvian court has dismissed all charges in the 'Cocktails' case against former Presidential candidate Keiko Fujimori, clearing the way for the Fuerza Popular leader to make another try this year.\n6. Peru: Case dropped against Keiko Fujimori heralds new ... - MercoPress\n   https://en.mercopress.com/2026/01/14/peru-case-dropped-against-keiko-fujimori-heralds-new-presidential-bid\n   A Peruvian court has dismissed all charges in the 'Cocktails' case against former Presidential candidate Keiko Fujimori, clearing the way for the Fuerza Popular leader to make another try this year."
+              },
+              {
+                "tool": "search",
+                "input": "Peru judicial independence concerns Constitutional Court Supreme Court 2026",
+                "result": "1. Venice Commission (2026) - Peru : Opinion on a set of constitutional ...\n   https://www.scribd.com/document/1050418490/Venice-Commission-2026-Peru-Opinion-on-a-set-of-constitutional-and-legislative-reforms-concerning-the-Judiciary\n   The Venice Commission's opinion addresses a set of constitutional and legislative reforms concerning the judiciary in Peru, highlighting ongoing political pressures and the need for judicial independence. The reforms include changes to the appointment and career of judges, disciplinary proceedings, and impeachment processes, reflecting a long-standing agenda for judicial reform in the country ...\n2. Venice Commission (2026) - Peru : Opinion on a set of constitutional ...\n   https://www.scribd.com/document/1050418490/Venice-Commission-2026-Peru-Opinion-on-a-set-of-constitutional-and-legislative-reforms-concerning-the-Judiciary\n   The Venice Commission's opinion addresses a set of constitutional and legislative reforms concerning the judiciary in Peru, highlighting ongoing political pressures and the need for judicial independence. The reforms include changes to the appointment and career of judges, disciplinary proceedings, and impeachment processes, reflecting a long-standing agenda for judicial reform in the country ...\n3. Peru - Opinion on a set of constitutional and legislative reforms ...\n   https://www.coe.int/en/web/venice-commission/-/opinion-1269\n   1269/2025 Requested by: President of the Judicial Branch, Supreme Court of Peru Adoption: 03/2026 Diminuer la taille du texte Augmenter la taille du texte Imprimer la page 2026-01-19T04:46:00\n4. Peru - Opinion on a set of constitutional and legislative reforms ...\n   https://www.coe.int/en/web/venice-commission/-/opinion-1269\n   1269/2025 Requested by: President of the Judicial Branch, Supreme Court of Peru Adoption: 03/2026 Diminuer la taille du texte Augmenter la taille du texte Imprimer la page 2026-01-19T04:46:00\n5. Peru: UN experts deplore reprisals against Judge Ordóñez\n   https://www.ohchr.org/en/press-releases/2026/05/peru-un-experts-deplore-reprisals-against-judge-ordonez\n   During the hearing titled \"The State of Judicial Independence in the Americas\" before the Inter-American Commission on Human Rights (IACHR) in November 2024, Judge Oswaldo Ordóñez, President of the First Constitutional Chamber of Lima, spoke on behalf of the National Association of Magistrates of Peru and as a member of Latin American ...\n6. Peru: UN experts deplore reprisals against Judge Ordóñez\n   https://www.ohchr.org/en/press-releases/2026/05/peru-un-experts-deplore-reprisals-against-judge-ordonez\n   During the hearing titled \"The State of Judicial Independence in the Americas\" before the Inter-American Commission on Human Rights (IACHR) in November 2024, Judge Oswaldo Ordóñez, President of the First Constitutional Chamber of Lima, spoke on behalf of the National Association of Magistrates of Peru and as a member of Latin American ..."
+              },
+              {
+                "tool": "fetch",
+                "input": "https://www.ohcr.org/en/press-releases/2026/05/peru-un-experts-deplore-reprisals-against-judge-ordonez",
+                "result": "(could not fetch https://www.ohcr.org/en/press-releases/2026/05/peru-un-experts-deplore-reprisals-against-judge-ordonez)"
+              }
+            ],
+            "answer": "Based on the available evidence, Peru's political climate in 2026 shows significant concerns about judicial independence, with Keiko Fujimori having won the presidency (50.53% vs. 49.47%) and the Constitutional Court already ruling in her favor by dismissing the \"Cocktails Case\" against her. The Venice Commission (2026) documented \"ongoing political pressures\" on Peru's judiciary and addressed concerns about judicial independence in constitutional reforms (source: Scribd/Venice Commission report), while the Constitutional Court strategically reversed its own 2022 decision to strip Congress of spending power just 15 days before Fujimori took office, suggesting institutional realignment around the incoming administration (source: sociedadmedia.com). **Confidence: Medium** — evidence shows institutional patterns but lacks direct polling on public sentiment regarding Supreme Court independence in this specific case."
+          }
+        ]
+      },
+      {
+        "title": "Recent Developments and Expert Predictions",
+        "question": "What are the most recent developments in the case and what are legal experts and observers predicting about the Supreme Court's likely decision?",
+        "direction": "Search for latest news, expert commentary, legal analysis, and predictions from Peruvian legal scholars and journalists covering the case",
+        "research_areas": [
+          "Recent news updates on the case",
+          "Legal expert opinions and predictions",
+          "Academic legal analysis",
+          "Political pressure and public sentiment",
+          "International human rights perspectives"
+        ],
+        "tools_hint": [
+          "search",
+          "fetch",
+          "posts",
+          "xsearch"
+        ],
+        "success_criterion": "Current expert consensus or range of predictions with supporting reasoning",
+        "depends_on": [
+          "Current Legal Status and Timeline",
+          "Prosecution Appeal Arguments",
+          "Supreme Court Precedent and Composition"
+        ],
+        "id": "1.5",
+        "status": "answered",
+        "findings": [
+          {
+            "tool": "search",
+            "input": "Peru Supreme Court Fujimori case latest developments 2024 2025",
+            "result": "1. The Prosecutor's Office of Peru dismisses the prosecutor in the ...\n   https://www.democrata.es/en/international/the-prosecutor-s-office-formalizes-the-departure-of-the-prosecutor-who-investigated-fujimori-after-almost-one-hundred-disciplinary-proceedings/\n   He was a central piece in the process against Fujimori and the prosecutor who requested her provisional imprisonment. However, at the end of 2025, the Constitutional Court dismissed the case for irregular financing of the 2011 and 2016 campaigns, framed within the 'Cocktails' case.\n2. The Prosecutor's Office of Peru dismisses the prosecutor in the ...\n   https://www.democrata.es/en/international/the-prosecutor-s-office-formalizes-the-departure-of-the-prosecutor-who-investigated-fujimori-after-almost-one-hundred-disciplinary-proceedings/\n   He was a central piece in the process against Fujimori and the prosecutor who requested her provisional imprisonment. However, at the end of 2025, the Constitutional Court dismissed the case for irregular financing of the 2011 and 2016 campaigns, framed within the 'Cocktails' case.\n3. Peru's Constitutional Court Dismisses Legal Proceedings Against Keiko ...\n   https://www.telesurenglish.net/perus-constitutional-court-dismisses-legal-proceedings-against-keiko-fujimori/\n   Judges found that the accusation of irregular campaign financing 'lacks legal basis.' On Monday, the lawsuit filed by Former First Lady Fujimori's defense team was declared \"well-founded\" by the Constitutional Court, which ordered the annulment of all judicial proceedings since the beginning investigations in 2017, within the case known as the \"Cocktails Case.\" RELATED: Peruvian ...\n4. Peru's Constitutional Court Dismisses Legal Proceedings Against Keiko ...\n   https://www.telesurenglish.net/perus-constitutional-court-dismisses-legal-proceedings-against-keiko-fujimori/\n   Judges found that the accusation of irregular campaign financing 'lacks legal basis.' On Monday, the lawsuit filed by Former First Lady Fujimori's defense team was declared \"well-founded\" by the Constitutional Court, which ordered the annulment of all judicial proceedings since the beginning investigations in 2017, within the case known as the \"Cocktails Case.\" RELATED: Peruvian ...\n5. Peruvian Court Halts $17 Million Money Laundering Case\n   https://www.riotimesonline.com/peruvian-court-halts-17-million-money-laundering-case-against-fujimori/\n   The trial, which began in 2024, accused Fujimori of receiving approximately $17 million in illegal funds from Brazilian construction giant Odebrecht and other entities to finance her 2011 and 2016 presidential campaigns. This legal development carries significant implications for Peru's political future.\n6. Peruvian Court Halts $17 Million Money Laundering Case\n   https://www.riotimesonline.com/peruvian-court-halts-17-million-money-laundering-case-against-fujimori/\n   The trial, which began in 2024, accused Fujimori of receiving approximately $17 million in illegal funds from Brazilian construction giant Odebrecht and other entities to finance her 2011 and 2016 presidential campaigns. This legal development carries significant implications for Peru's political future."
+          },
+          {
+            "tool": "search",
+            "input": "Peruvian legal experts predictions Supreme Court Fujimori decision análisis jurídico",
+            "result": "1. Análisis jurídico de la sentencia a Fujimori - Scribd\n   https://es.scribd.com/document/54984315/Analisis-Sentencia-Caso-Fujimori-REJ-2010\n   Peruvian Supreme Court on 7 April 2009 against the former president Alberto Kenya Fujimori Fujimori. To do so, we will focus on the two key issues that were at the forefront of the arguments put forward in the final decision of the Special Chamber. On one hand, the possible legal qualification of the facts as crimes under international law\n2. Análisis jurídico de la sentencia a Fujimori - Scribd\n   https://es.scribd.com/document/54984315/Analisis-Sentencia-Caso-Fujimori-REJ-2010\n   Peruvian Supreme Court on 7 April 2009 against the former president Alberto Kenya Fujimori Fujimori. To do so, we will focus on the two key issues that were at the forefront of the arguments put forward in the final decision of the Special Chamber. On one hand, the possible legal qualification of the facts as crimes under international law\n3. Análisis del Caso Fujimori en Derecho Penal\n   https://es.scribd.com/document/514566429/Analisis-Caso-Alberto-Fujimori\n   El documento analiza la decisión de la Corte Suprema peruana en el caso de Alberto Fujimori a la luz del Derecho Internacional de los Derechos Humanos. La decisión representa un paso importante para cumplir con las obligaciones de tutelar los derechos fundamentales y ejecutar las sentencias de la Corte Interamericana en los casos de Barrios Altos y La Cantuta. La decisión demuestra la ...\n4. Análisis del Caso Fujimori en Derecho Penal\n   https://es.scribd.com/document/514566429/Analisis-Caso-Alberto-Fujimori\n   El documento analiza la decisión de la Corte Suprema peruana en el caso de Alberto Fujimori a la luz del Derecho Internacional de los Derechos Humanos. La decisión representa un paso importante para cumplir con las obligaciones de tutelar los derechos fundamentales y ejecutar las sentencias de la Corte Interamericana en los casos de Barrios Altos y La Cantuta. La decisión demuestra la ...\n5. La sentencia del Tribunal Constitucional del Perú sobre el indulto ...\n   https://agendaestadodederecho.com/la-sentencia-del-tribunal-constitucional-del-peru-sobre-el-indulto-humanitario-a-alberto-fujimori/\n   La decisión del Tribunal Constitucional peruano y una nueva resolución de la Corte IDH Contra estas decisiones judiciales, la defensa legal de Alberto Fujimori interpuso varias acciones constitucionales que buscaban reactivar el indulto concedido al expresidente el año 2017 y, en consecuencia, que salga de prisión.\n6. La sentencia del Tribunal Constitucional del Perú sobre el indulto ...\n   https://agendaestadodederecho.com/la-sentencia-del-tribunal-constitucional-del-peru-sobre-el-indulto-humanitario-a-alberto-fujimori/\n   La decisión del Tribunal Constitucional peruano y una nueva resolución de la Corte IDH Contra estas decisiones judiciales, la defensa legal de Alberto Fujimori interpuso varias acciones constitucionales que buscaban reactivar el indulto concedido al expresidente el año 2017 y, en consecuencia, que salga de prisión."
+          },
+          {
+            "tool": "xsearch",
+            "input": "Peru Corte Suprema Fujimori predicción decisión",
+            "result": "(no live X posts for \"Peru Corte Suprema Fujimori predicción decisión\")"
+          },
+          {
+            "tool": "fetch",
+            "input": "[URL from most authoritative/recent source found in step 1 or 2]",
+            "result": "(could not fetch [URL from most authoritative/recent source found in step 1 or 2])"
+          },
+          {
+            "tool": "fetch",
+            "input": "https://www.riotimesonline.com/peruvian-court-halts-17-million-money-laundering-case-against-fujimori/",
+            "result": "Peru\n \n\n Peruvian Court Halts $17 Million Money Laundering Case Against Fujimori\n\n \n \n By Juan Martinez\n ·\n January 14, 2025\n ·\n 2 min read\n \n \n\n \n \n \n\n \n \n \n \n \n \n A Peruvian court’s decision to dismiss the high-profile money laundering trial against Keiko Fujimori has sent shockwaves through the nation’s political sphere. The ruling, announced on January 13, 2025, effectively halts proceedings against the three-time presidential candidate and daughter of former President Alberto Fujimori.\nJudge Mercedes Caballero cited procedural flaws in the indictment as the reason for the dismissal. The trial, which began in 2024, accused Fujimori of receiving approximately $17 million in illegal funds from Brazilian construction giant Odebrecht and other entities to finance her 2011 and 2016 presidential campaigns.\nThis legal development carries significant implications for Peru’s political future. Fujimori, who leads the influential right-wing Popular Force party, faced potential consequences of up to 30 years in prison and a 15-year ban on holding public office. The dismissal now opens the possibility for her participation in the 2026 elections.\nThe case’s dismissal stems from a recent Constitutional Court ruling that excluded a co-defendant due to violations of the right to defense. This decision has broader implications, as it applies to both those who requested to benefit from the ruling and those who did not.\n Peruvian Court Halts $17 Million Money Laundering Case Against Fujimori. (Photo Internet reproduction)One-stop referenceCompany IntelligenceEvery listed company in Latin America — financials, ownership and structure for 1,450+ companies across 26 exchanges, in one place.Browse the directory →RTAsk Rio Times17 years of Latin America reporting, on demand.Open full Ask Rio Times →Open the full Ask Rio Times →RTAsk Rio Times17 years of Latin America reporting, on demand.Tap a question, or type your own — the answer appears right here.Open the full Ask Rio Times →\nPeruvian Court Halts $17 Million Money Laundering Case Against Fujimori\nProsecutor Jose Domingo Perez has announced plans to appeal the court’s decision, signaling that this legal saga may be far from over. The case now returns to its intermediate stage, where the court will reevaluate the evidence presented by the Public Prosecutor’s Office.\nThis turn of events highlights the ongoing challenges Peru faces in addressing corruption allegations against high-profile political figures. It also underscores the delicate balance between ensuring due process and pursuing accountability in a nation still grappling with the legacy of past political scandals.\nThis article was produced by The Rio Times’ automated newsroom system. How we use AI · Report an errorIn depthPeru 2026 runoff: deep analysisRead More from The Rio TimesBuenaventura San Gabriel Mine Lifts Peru Gold OutputPetroperu Talara Refinery Hit by Stoppages as Debt Costs MountOllanta Humala Released After Peru Court Annuls Conviction\n \n \n The Rio Times · Power Map\n See who really holds power in Latin America\n Click to open the Power Map →\n \n \n\n \n \n Related Articles\n \n Markets\n Buenaventura San Gabriel Mine Lifts Peru Gold Output\n August 1, 2026 · 4 min read\n \n \n Markets\n Petroperu Talara Refinery Hit by Stoppages as Debt Costs Mount\n August 1, 2026 · 6 min read\n \n \n Latin America\n Ollanta Humala Released After Peru Court Annuls Conviction\n August 1, 2026 · 4 min read\n \n \n Life & Culture\n Leoncio Bueno, Peru’s Proletarian Poet, Die"
+          },
+          {
+            "tool": "fetch",
+            "input": "https://agendaestadodederecho.com/la-sentencia-del-tribunal-constitucional-del-peru-sobre-el-indulto-humanitario-a-alberto-fujimori/",
+            "result": "(could not fetch https://agendaestadodederecho.com/la-sentencia-del-tribunal-constitucional-del-peru-sobre-el-indulto-humanitario-a-alberto-fujimori/)"
+          },
+          {
+            "tool": "search",
+            "input": "Peru Supreme Court review Constitutional Court Fujimori dismissal 2025 2026",
+            "result": "1. Peru's Constitutional Court Dismisses Legal Proceedings Against Keiko ...\n   https://www.telesurenglish.net/perus-constitutional-court-dismisses-legal-proceedings-against-keiko-fujimori/\n   Judges found that the accusation of irregular campaign financing 'lacks legal basis.' On Monday, the lawsuit filed by Former First Lady Fujimori's defense team was declared \"well-founded\" by the Constitutional Court, which ordered the annulment of all judicial proceedings since the beginning investigations in 2017, within the case known as the \"Cocktails Case.\" RELATED: Peruvian ...\n2. Peru's Constitutional Court Dismisses Legal Proceedings Against Keiko ...\n   https://www.telesurenglish.net/perus-constitutional-court-dismisses-legal-proceedings-against-keiko-fujimori/\n   Judges found that the accusation of irregular campaign financing 'lacks legal basis.' On Monday, the lawsuit filed by Former First Lady Fujimori's defense team was declared \"well-founded\" by the Constitutional Court, which ordered the annulment of all judicial proceedings since the beginning investigations in 2017, within the case known as the \"Cocktails Case.\" RELATED: Peruvian ...\n3. Peru's Keiko Fujimori announces fourth bid for presidency\n   https://www.newswatchplus.ph/2025/10/31/perus-keiko-fujimori-announces-fourth-bid-for-presidency/\n   Peru's constitutional court last week dismissed an investigation into Keiko Fujimori over alleged illegal campaign funds in 2011 and 2016, ruling that the money-laundering charges were added to Peru's penal code in November 2016 and cannot be applied retroactively.\n4. Peru's Keiko Fujimori announces fourth bid for presidency\n   https://www.newswatchplus.ph/2025/10/31/perus-keiko-fujimori-announces-fourth-bid-for-presidency/\n   Peru's constitutional court last week dismissed an investigation into Keiko Fujimori over alleged illegal campaign funds in 2011 and 2016, ruling that the money-laundering charges were added to Peru's penal code in November 2016 and cannot be applied retroactively.\n5. Peru's Keiko Fujimori Announces Fourth Bid for Presidency\n   https://www.usnews.com/news/world/articles/2025-10-30/perus-keiko-fujimori-announces-fourth-bid-for-presidency\n   Peru's constitutional court last week dismissed an investigation into Keiko Fujimori over alleged illegal campaign funds in 2011 and 2016, ruling that the money-laundering charges were added to ...\n6. Peru's Keiko Fujimori Announces Fourth Bid for Presidency\n   https://www.usnews.com/news/world/articles/2025-10-30/perus-keiko-fujimori-announces-fourth-bid-for-presidency\n   Peru's constitutional court last week dismissed an investigation into Keiko Fujimori over alleged illegal campaign funds in 2011 and 2016, ruling that the money-laundering charges were added to ..."
+          },
+          {
+            "tool": "search",
+            "input": "Peru legal experts Constitutional Court Fujimori case procedural flaws analysis 2025",
+            "result": "1. Peru's Constitutional Court Dismisses Legal Proceedings Against Keiko ...\n   https://www.telesurenglish.net/perus-constitutional-court-dismisses-legal-proceedings-against-keiko-fujimori/\n   Judges found that the accusation of irregular campaign financing 'lacks legal basis.' On Monday, the lawsuit filed by Former First Lady Fujimori's defense team was declared \"well-founded\" by the Constitutional Court, which ordered the annulment of all judicial proceedings since the beginning investigations in 2017, within the case known as the \"Cocktails Case.\" RELATED: Peruvian ...\n2. Peru's Constitutional Court Dismisses Legal Proceedings Against Keiko ...\n   https://www.telesurenglish.net/perus-constitutional-court-dismisses-legal-proceedings-against-keiko-fujimori/\n   Judges found that the accusation of irregular campaign financing 'lacks legal basis.' On Monday, the lawsuit filed by Former First Lady Fujimori's defense team was declared \"well-founded\" by the Constitutional Court, which ordered the annulment of all judicial proceedings since the beginning investigations in 2017, within the case known as the \"Cocktails Case.\" RELATED: Peruvian ...\n3. Peruvian Court Halts $17 Million Money Laundering Case\n   https://www.riotimesonline.com/peruvian-court-halts-17-million-money-laundering-case-against-fujimori/\n   A Peruvian court's decision to dismiss the high-profile money laundering trial against Keiko Fujimori has sent shockwaves through the nation's political sphere. The ruling, announced on January 13, 2025, effectively halts proceedings against the three-time presidential candidate and daughter of former President Alberto Fujimori. Judge Mercedes Caballero cited procedural flaws in the ...\n4. Peruvian Court Halts $17 Million Money Laundering Case\n   https://www.riotimesonline.com/peruvian-court-halts-17-million-money-laundering-case-against-fujimori/\n   A Peruvian court's decision to dismiss the high-profile money laundering trial against Keiko Fujimori has sent shockwaves through the nation's political sphere. The ruling, announced on January 13, 2025, effectively halts proceedings against the three-time presidential candidate and daughter of former President Alberto Fujimori. Judge Mercedes Caballero cited procedural flaws in the ...\n5. Fujimori off the hook thanks to the Constitutional Tribunal\n   https://perusupportgroup.org.uk/2025/10/fujimori-off-the-hook-thanks-to-the-constitutional-tribunal/\n   This week the Constitutional Tribunal (TC) pronounced on the so-called 'cocktails case', exonerating Keiko Fujimori of blame and shelving all the accusations against her. Other politicians accused of receiving illicit handouts from Odebrecht and other Brazilian construction companies, including Ollanta Humala and Susana Villarán, hope to benefit from this legal precedent. The judicial ...\n6. Fujimori off the hook thanks to the Constitutional Tribunal\n   https://perusupportgroup.org.uk/2025/10/fujimori-off-the-hook-thanks-to-the-constitutional-tribunal/\n   This week the Constitutional Tribunal (TC) pronounced on the so-called 'cocktails case', exonerating Keiko Fujimori of blame and shelving all the accusations against her. Other politicians accused of receiving illicit handouts from Odebrecht and other Brazilian construction companies, including Ollanta Humala and Susana Villarán, hope to benefit from this legal precedent. The judicial ..."
+          },
+          {
+            "tool": "search",
+            "input": "fiscal Perú apelación Corte Suprema caso Fujimori 2025 argumentos",
+            "result": "1. Poder Judicial del Perú - pj.gob.pe\n   https://www.pj.gob.pe/wps/wcm/connect/cortesuprema/s_cortes_suprema_home/as_inicio/as_enlaces_destacados/as_imagen_prensa/as_notas_noticias/2025/cs_n-tribunal-deja-al-voto-apelacion-resolucion-anulo-juicio-keiko-fujimori-otros-lavado-de-activos\n   DEFENSAS A su vez, la abogada de Keiko Fujimori, Giulliana Loza Avalos, expuso que los jueces que emitieron la resolución apelada cumplieron en ser garantes de la ley y del Estado constitucional de Derecho porque la acusación fiscal en este caso no implica vulneración solo de Chlimper, sino de todos los procesados.\n2. Poder Judicial del Perú - pj.gob.pe\n   https://www.pj.gob.pe/wps/wcm/connect/cortesuprema/s_cortes_suprema_home/as_inicio/as_enlaces_destacados/as_imagen_prensa/as_notas_noticias/2025/cs_n-tribunal-deja-al-voto-apelacion-resolucion-anulo-juicio-keiko-fujimori-otros-lavado-de-activos\n   DEFENSAS A su vez, la abogada de Keiko Fujimori, Giulliana Loza Avalos, expuso que los jueces que emitieron la resolución apelada cumplieron en ser garantes de la ley y del Estado constitucional de Derecho porque la acusación fiscal en este caso no implica vulneración solo de Chlimper, sino de todos los procesados.\n3. Poder Judicial del Perú - pj.gob.pe\n   https://www.pj.gob.pe/wps/wcm/connect/cortesuprema/s_cortes_suprema_home/as_inicio/as_enlaces_destacados/as_imagen_prensa/as_notas_noticias/2025/cs_n-juicio-oral-fujimori-13012025\n   Respecto al fallo a favor de Chlimper, el Ministerio Publico presentó un recurso de reposición, el cual fue declarado infundado por el colegiado, mientras que en el caso de Fujimori y los otros 32 acusados, la Fiscalía anunció que presentará un recurso de apelación. Lima, 13 de enero del 2025\n4. Poder Judicial del Perú - pj.gob.pe\n   https://www.pj.gob.pe/wps/wcm/connect/cortesuprema/s_cortes_suprema_home/as_inicio/as_enlaces_destacados/as_imagen_prensa/as_notas_noticias/2025/cs_n-juicio-oral-fujimori-13012025\n   Respecto al fallo a favor de Chlimper, el Ministerio Publico presentó un recurso de reposición, el cual fue declarado infundado por el colegiado, mientras que en el caso de Fujimori y los otros 32 acusados, la Fiscalía anunció que presentará un recurso de apelación. Lima, 13 de enero del 2025\n5. PDF Pleno. Sentencia 35/2025\n   https://tc.gob.pe/jurisprudencia/2025/00661-2020-HC.pdf\n   Suprema 281-2017, de fecha 24 de diciembre de 20174, que concede, entre otros, indulto por razones humanitarias al sentenciado don Alberto Fujimori Fujimori y fundado el pedido de la parte civil de no aplicar el indulto por razones humanitarias al beneficiario; (ii) Resolución 46, de fecha 13 de febrero de 20195, que confirma la Resolución 10; y (iii) Resolución 48, de fecha 13 de febrero ...\n6. PDF Pleno. Sentencia 35/2025\n   https://tc.gob.pe/jurisprudencia/2025/00661-2020-HC.pdf\n   Suprema 281-2017, de fecha 24 de diciembre de 20174, que concede, entre otros, indulto por razones humanitarias al sentenciado don Alberto Fujimori Fujimori y fundado el pedido de la parte civil de no aplicar el indulto por razones humanitarias al beneficiario; (ii) Resolución 46, de fecha 13 de febrero de 20195, que confirma la Resolución 10; y (iii) Resolución 48, de fecha 13 de febrero ..."
+          },
+          {
+            "tool": "fetch",
+            "input": "https://tc.gob.pe/jurisprudencia/2025/00661-2020-HC.pdf",
+            "result": "(could not fetch https://tc.gob.pe/jurisprudencia/2025/00661-2020-HC.pdf)"
+          }
+        ],
+        "answer": "The most recent development is that Peru's Constitutional Court dismissed the money laundering case against Keiko Fujimori in late 2024/early 2025, citing procedural flaws and lack of legal basis in the prosecution's case regarding irregular campaign financing from 2011 and 2016 (https://www.telesurenglish.net and https://www.riotimesonline.com). Subsequently, a trial court judge halted the proceedings on January 13, 2025, and the prosecution appealed this dismissal to the Supreme Court, which has the case under advisement (https://www.pj.gob.pe). The available evidence does not contain specific predictions from legal experts about the Supreme Court's likely decision on the prosecution's appeal, though the defense argues the lower court properly upheld constitutional protections.\n\n**Confidence: Medium** - Recent factual developments are well-documented, but expert predictions about the Supreme Court outcome are not present in the evidence.",
+        "children": []
+      }
+    ],
+    "id": "1",
+    "status": "answered",
+    "findings": [],
+    "answer": "**Answer:**\n\nCannot be answered from the provided evidence. All five sub-findings report \"no evidence gathered,\" \"no evidence available,\" or \"cannot answer from the evidence provided\" regarding the appellate court's overturn of Fujimori's 15-year corruption sentence, prosecution appeals, or Supreme Court proceedings on this specific case. The only documented developments concern Keiko Fujimori's separate money laundering case (2024-2025) and Alberto Fujimori's December 2023 release and September 2024 death, with no information about any pending Supreme Court review of his corruption conviction.\n\n**Confidence: None** – the research yielded no relevant evidence on this sub-question."
+  },
+  "ledger": {
+    "marked_terms": [
+      {
+        "term": "Constitutional Tribunal vs Constitutional Court",
+        "why": "Wikipedia uses 'Constitutional Court' while HNGN article uses 'Constitutional Tribunal' for the same body - need clarity on correct terminology"
+      },
+      {
+        "term": "HNGN",
+        "why": "Unknown news outlet (hngn.com) - credibility unestablished, appears to be only source for December 2023 release details"
+      },
+      {
+        "term": "Cocktails Case",
+        "why": "Referenced as the case annulled by Constitutional Court in 2017-2025 timeframe, but we don't understand what it involves or its relationship to Supreme Court cases"
+      },
+      {
+        "term": "spending initiative / budgetary authority reversal",
+        "why": "The Constitutional Court's July 2026 ruling is described as a 'political gift' to Fujimori, but unclear how this relates to Supreme Court independence or judicial pressure"
+      },
+      {
+        "term": "sociedadmedia.com",
+        "why": "Unknown news source - need to assess credibility tier before relying on its characterization of Constitutional Court ruling as politically motivated"
+      },
+      {
+        "term": "thelegalguide.org",
+        "why": "This source appears multiple times in search results but unclear if it's T2 established institution or T4 content farm - need to verify credibility before relying on its claims about Supreme Court treaty interpretation"
+      },
+      {
+        "term": "esplawyers.com",
+        "why": "Fetched content from this site about international law in US courts, but appears to be a law firm promotional site - may be T4 (selling services) rather than authoritative source"
+      },
+      {
+        "term": "customary international law recognition",
+        "why": "Technical legal concept mentioned in fetched content - need to understand whether this is distinct from treaty law and how Supreme Court treats it differently in human rights context"
+      },
+      {
+        "term": "Constitutional Court (CC) vs Supreme Court jurisdiction",
+        "why": "Dossier mentions Constitutional Court ordered release in Dec 2023, but question asks about Supreme Court appeal - unclear which court has jurisdiction over what aspect of the case"
+      },
+      {
+        "term": "Barrios Altos and La Cantuta cases",
+        "why": "IACtHR monitoring relates to these specific cases but unclear if these are the convictions at issue in the Supreme Court appeal"
+      },
+      {
+        "term": "reinforced monitoring",
+        "why": "IACtHR imposed this on Peru but unclear what specific legal obligations this creates for the prosecution to appeal"
+      },
+      {
+        "term": "Constitutional Court dismissal at end of 2025",
+        "why": "First source (democrata.es) states dismissal at 'end of 2025' but riotimesonline.com says January 13, 2025 - timeline discrepancy needs clarification"
+      },
+      {
+        "term": "Judge Mercedes Caballero",
+        "why": "Named as decision-maker but unclear if this is Constitutional Court judge or trial court judge - role and authority unclear"
+      },
+      {
+        "term": "procedural flaws in the indictment",
+        "why": "Critical basis for dismissal but no specific details provided on what the flaws were or their legal significance"
+      }
+    ],
+    "verify_points": [
+      {
+        "claim": "Alberto Fujimori died on 11 September 2024",
+        "source": "https://en.wikipedia.org/wiki/Alberto_Fujimori",
+        "importance": 3
+      },
+      {
+        "claim": "Fujimori was released from Barbadillo prison on December 6, 2023 after Constitutional Tribunal ordered immediate release",
+        "source": "https://www.hngn.com/articles/254659/ (T4 source)",
+        "importance": 3
+      },
+      {
+        "claim": "Peru's Constitutional Court reversed its own 2022 decision in July 2026 and stripped Congress of spending initiative, returning budgetary authority to the executive branch",
+        "source": "https://www.sociedadmedia.com/peru-constitutional-court-strips-congress-spending-power-fujimori-2026/",
+        "importance": 3
+      },
+      {
+        "claim": "The Constitutional Court ordered the annulment of all judicial proceedings since 2017 in the 'Cocktails Case' against Keiko Fujimori",
+        "source": "https://www.telesurenglish.net/perus-constitutional-court-dismisses-legal-proceedings-against-keiko-fujimori/ (snippet only)",
+        "importance": 3
+      },
+      {
+        "claim": "Keiko Fujimori won the election and takes office as Peru's president around July 28, 2026",
+        "source": "https://www.sociedadmedia.com/peru-constitutional-court-strips-congress-spending-power-fujimori-2026/",
+        "importance": 3
+      },
+      {
+        "claim": "In December 2023, Alberto Fujimori was released from prison by order of the Peruvian Constitutional Court",
+        "source": "https://www.ejiltalk.org/pardon-for-former-peruvian-president-alberto-fujimori-new-chapter-same-plot/",
+        "importance": 3
+      },
+      {
+        "claim": "The Constitutional Court dismissed the case for irregular financing of the 2011 and 2016 campaigns at the end of 2025",
+        "source": "https://www.democrata.es/en/international/the-prosecutor-s-office-formalizes-the-departure-of-the-prosecutor-who-investigated-fujimori-after-almost-one-hundred-disciplinary-proceedings/",
+        "importance": 3
+      },
+      {
+        "claim": "Judge Mercedes Caballero cited procedural flaws in the indictment as the reason for dismissal on January 13, 2025",
+        "source": "https://www.riotimesonline.com/peruvian-court-halts-17-million-money-laundering-case-against-fujimori/",
+        "importance": 3
+      },
+      {
+        "claim": "Inter-American Court of Human Rights overruled the Constitutional Court on 8 April 2022 and ordered Peru not to release Fujimori",
+        "source": "https://en.wikipedia.org/wiki/Pardon_of_Alberto_Fujimori",
+        "importance": 2
+      },
+      {
+        "claim": "The Constitutional Court ruling occurred 'fifteen days before Keiko Fujimori takes office' (approximately July 13, 2026)",
+        "source": "https://www.sociedadmedia.com/peru-constitutional-court-strips-congress-spending-power-fujimori-2026/",
+        "importance": 2
+      },
+      {
+        "claim": "U.S. courts may refer to international law when federal statutes incorporate international obligations or when interpreting ambiguous domestic laws",
+        "source": "https://esplawyers.com/judicial-developments/international-law-in-u-s-court-rulings",
+        "importance": 2
+      },
+      {
+        "claim": "The Inter-American Court of Human Rights declared Peru in contempt of the Court in response to Fujimori's release",
+        "source": "https://www.ejiltalk.org/pardon-for-former-peruvian-president-alberto-fujimori-new-chapter-same-plot/",
+        "importance": 2
+      },
+      {
+        "claim": "José Domingo Pérez was dismissed as prosecutor in the Fujimori case after almost one hundred disciplinary files",
+        "source": "https://www.democrata.es/en/international/the-prosecutor-s-office-formalizes-the-departure-of-the-prosecutor-who-investigated-fujimori-after-almost-one-hundred-disciplinary-proceedings/",
+        "importance": 2
+      },
+      {
+        "claim": "Fujimori faced potential consequences of up to 30 years in prison and a 15-year ban on holding public office",
+        "source": "https://www.riotimesonline.com/peruvian-court-halts-17-million-money-laundering-case-against-fujimori/",
+        "importance": 2
+      },
+      {
+        "claim": "The case accused Fujimori of receiving approximately $17 million in illegal funds from Odebrecht and other entities",
+        "source": "https://www.riotimesonline.com/peruvian-court-halts-17-million-money-laundering-case-against-fujimori/",
+        "importance": 2
+      },
+      {
+        "claim": "The jurisprudence of the European Court of Human Rights has significantly influenced the Inter-American Court of Human Rights decisions",
+        "source": "https://www.palermo.edu/derecho/pdf/publicaciones/Paper-Bertoni.pdf",
+        "importance": 1
+      }
+    ],
+    "tool_gaps": [
+      {
+        "need": "Official Peruvian government records or court filings regarding the December 2023 release order and any subsequent Supreme Court actions",
+        "suggested_tool": "Access to Peruvian legal databases or official government portals"
+      },
+      {
+        "need": "Academic or expert analysis of Peruvian judicial independence trends and political influence on courts",
+        "suggested_tool": "Access to academic databases, think tank reports, or Latin American studies journals"
+      },
+      {
+        "need": "Historical context on Supreme Court vs Constitutional Court dynamics in Peru and their respective independence records",
+        "suggested_tool": "Legal/constitutional analysis databases or Peru-specific judicial monitoring organizations"
+      },
+      {
+        "need": "Access to actual Supreme Court case briefs and opinions to verify specific citations of international human rights law and organizational amicus participation",
+        "suggested_tool": "Legal database access (e.g., SCOTUSblog case pages, official Supreme Court docket, Westlaw/LexisNexis)"
+      },
+      {
+        "need": "Expert legal analysis on current Supreme Court justices' individual positions on international human rights law citation",
+        "suggested_tool": "Academic legal journal database or expert interview capability"
+      },
+      {
+        "need": "Access to official Peruvian court filings, prosecutor's briefs, or Supreme Court dockets with the actual legal arguments presented",
+        "suggested_tool": "Legal database access (PACER-equivalent for Peru) or official judiciary/prosecutor website scraper"
+      },
+      {
+        "need": "Spanish-language Peruvian legal news sources and official government statements that may not be indexed in English web search",
+        "suggested_tool": "Peruvian news aggregator or Spanish-language legal database"
+      },
+      {
+        "need": "Supreme Court judges' voting patterns and ideological leanings on corruption cases",
+        "suggested_tool": "Access to Peruvian Supreme Court database or legal analytics platform"
+      },
+      {
+        "need": "Full text of Constitutional Court ruling explaining procedural flaws",
+        "suggested_tool": "Access to Peruvian Constitutional Court official rulings database"
+      },
+      {
+        "need": "Expert legal commentary from Peruvian constitutional law scholars on likely Supreme Court outcome",
+        "suggested_tool": "Academic database or direct access to Peruvian law journals/expert interviews"
+      }
+    ]
+  }
+}
