@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-02T00:56:28.572Z",
+  "generated_at": "2026-08-02T03:56:05.488Z",
   "windows": [
     "1d",
     "3d",
@@ -114,22 +114,22 @@
     },
     "axis_ph_geopolitics_wps_v1": {
       "current": {
-        "score": -0.3,
-        "confidence": 0.6103
+        "score": -0.35,
+        "confidence": 0.6368
       },
       "1d": {
-        "score_delta": 0,
-        "conf_delta": -0.002,
-        "direction": "→"
+        "score_delta": -0.05,
+        "conf_delta": 0.0245,
+        "direction": "↘"
       },
       "3d": {
-        "score_delta": 0,
-        "conf_delta": -0.008,
-        "direction": "→"
+        "score_delta": -0.05,
+        "conf_delta": 0.0185,
+        "direction": "↘"
       },
       "7d": {
-        "score_delta": -0.05,
-        "conf_delta": 0.0128,
+        "score_delta": -0.1,
+        "conf_delta": 0.0393,
         "direction": "↘"
       }
     },
@@ -177,21 +177,21 @@
     },
     "axis_geopolitical_rhetoric_v1": {
       "current": {
-        "score": 0.1424,
+        "score": 0.1509,
         "confidence": 0.95
       },
       "1d": {
-        "score_delta": -0.0114,
+        "score_delta": -0.0029,
         "conf_delta": 0.014,
         "direction": "→"
       },
       "3d": {
-        "score_delta": -0.0114,
+        "score_delta": -0.0029,
         "conf_delta": 0.01,
         "direction": "→"
       },
       "7d": {
-        "score_delta": -0.0114,
+        "score_delta": -0.0029,
         "conf_delta": 0.002,
         "direction": "→"
       }
@@ -975,22 +975,22 @@
     },
     "axis_procedural_governance_accountability_v1": {
       "current": {
-        "score": -0.6319,
-        "confidence": 0.8801
+        "score": -0.6369,
+        "confidence": 0.8821
       },
       "1d": {
-        "score_delta": -0.0211,
-        "conf_delta": 0.0085,
+        "score_delta": -0.0261,
+        "conf_delta": 0.0105,
         "direction": "↘"
       },
       "3d": {
-        "score_delta": -0.0383,
-        "conf_delta": 0.0155,
+        "score_delta": -0.0433,
+        "conf_delta": 0.0175,
         "direction": "↘"
       },
       "7d": {
-        "score_delta": -0.1819,
-        "conf_delta": 0.0575,
+        "score_delta": -0.1869,
+        "conf_delta": 0.0595,
         "direction": "↘"
       }
     },
@@ -1060,21 +1060,21 @@
     "axis_reactionary_futurism_v1": {
       "current": {
         "score": 0.2,
-        "confidence": 0.1722
+        "confidence": 0.1702
       },
       "1d": {
         "score_delta": 0.05,
-        "conf_delta": 0.0225,
+        "conf_delta": 0.0205,
         "direction": "↗"
       },
       "3d": {
         "score_delta": 0.1,
-        "conf_delta": 0.0517,
+        "conf_delta": 0.0497,
         "direction": "↗"
       },
       "7d": {
         "score_delta": 0.15,
-        "conf_delta": 0.1194,
+        "conf_delta": 0.1174,
         "direction": "↗"
       }
     },
@@ -1116,19 +1116,6 @@
       },
       "7d": null
     },
-    "axis_ai_autonomous_action_governance_v1": {
-      "current": {
-        "score": 0,
-        "confidence": 0
-      },
-      "1d": {
-        "score_delta": 0,
-        "conf_delta": 0,
-        "direction": "→"
-      },
-      "3d": null,
-      "7d": null
-    },
     "axis_state_power_monetization_v1": {
       "current": {
         "score": 0,
@@ -1141,6 +1128,7 @@
   },
   "notable_count": 8,
   "momentum_axes": [
+    "axis_ph_geopolitics_wps_v1",
     "axis_political_dynasties_meritocracy_v1",
     "axis_geopolitical_control_narratives",
     "axis_procedural_governance_accountability",
