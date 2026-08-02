@@ -1,11 +1,11 @@
 {
-  "generated_at": "2026-08-02T02:31:03.631Z",
+  "generated_at": "2026-08-02T02:35:37.266Z",
   "stats": {
-    "total": 1097,
-    "supported": 291,
-    "refuted": 222,
+    "total": 1102,
+    "supported": 294,
+    "refuted": 223,
     "contested": 6,
-    "unverified": 94,
+    "unverified": 95,
     "expired": 484
   },
   "claims": [
@@ -4057,6 +4057,59 @@
       "dissenting_sources": [],
       "framing_analysis": "The claim accurately reflects the findings and statements reported by multiple news outlets regarding Ombudsman Remulla's comments.",
       "web_search_summary": "The provided sources confirm that Ombudsman Jesus Crispin Remulla stated on Saturday, August 1, 2026, that his office anticipated the Sandiganbayan's decision granting bail to former Sen. Ramon 'Bong' Revilla Jr. in his malversation case. Inquirer.net also reported that Remulla suggested efforts or work may have been made to secure the bail grant.",
+      "investigation_depth": "quick"
+    },
+    {
+      "claim_id": "live_20619be583",
+      "claim_text": "US and Iran close to 14-point deal including reopening Strait of Hormuz",
+      "status": "supported",
+      "confidence_score": 0.69,
+      "display_score": 0.424,
+      "scoring_breakdown": {
+        "source_tier": 0.5,
+        "newsguard": 0.5,
+        "corroboration": 0.9,
+        "evidence_quality": 0.9,
+        "cross_source": 0.5,
+        "web_search": 1
+      },
+      "source_handle": null,
+      "source_tier": null,
+      "evidence_urls": [
+        "https://www.cnn.com/2026/06/17/middleeast/us-iran-war-mou-text-intl",
+        "https://www.cnn.com/2026/06/17/middleeast/us-iran-war-mou-text-intl",
+        "https://gulfnews.com/world/mena/near-final-14-point-us-iran-peace-deal-hormuz-reopening-sanctions-relief-nuclear-talks-in-focus-1.500576885",
+        "https://gulfnews.com/world/mena/near-final-14-point-us-iran-peace-deal-hormuz-reopening-sanctions-relief-nuclear-talks-in-focus-1.500576885",
+        "https://www.news18.com/world/us-iran-peace-deal-14-point-draft-agreement-strait-of-hormuz-sanctions-relief-frozen-assets-nuclear-talks-ceasefire-june-19-switzerland-war-end-ws-l-10149620.html"
+      ],
+      "tweet_url": null,
+      "category": null,
+      "related_axis_id": "axis_global_economic_stability_v1",
+      "verification_count": 1,
+      "verified_at": "2026-08-02T02:35:37.221Z",
+      "created_at": "2026-08-02T02:35:37.217Z",
+      "original_source": "CNN",
+      "claim_date": "2026-06-17",
+      "supporting_sources": [
+        {
+          "name": "CNN",
+          "excerpt": "A senior US administration official read out the 14-point agreement detailing provisions for reopening the Strait of Hormuz and easing financial restrictions on Iran.",
+          "url": null
+        },
+        {
+          "name": "Gulf News",
+          "excerpt": "The near-final 14-point draft outlines an immediate ceasefire and the reopening of the Strait of Hormuz for shipping.",
+          "url": null
+        },
+        {
+          "name": "News18",
+          "excerpt": "The draft US-Iran peace pact includes sanctions relief, release of frozen assets, and the reopening of the Strait of Hormuz.",
+          "url": null
+        }
+      ],
+      "dissenting_sources": [],
+      "framing_analysis": "The claim is framed accurately and directly reflects the reported contents of the 14-point draft agreement.",
+      "web_search_summary": "Multiple news outlets report that a 14-point draft agreement between the US and Iran has been detailed, which directly includes provisions for reopening the Strait of Hormuz. The reporting confirms key elements of the deal such as sanctions waivers, financial relief, and shipping access.",
       "investigation_depth": "quick"
     },
     {
@@ -14905,6 +14958,59 @@
       "investigation_depth": "quick"
     },
     {
+      "claim_id": "live_4f0ca7037a",
+      "claim_text": "China's real estate market crashed to 20-year low with about 25% of market gone",
+      "status": "supported",
+      "confidence_score": 0.62,
+      "display_score": 0.403,
+      "scoring_breakdown": {
+        "source_tier": 0.5,
+        "newsguard": 0.5,
+        "corroboration": 0.7,
+        "evidence_quality": 0.7,
+        "cross_source": 0.5,
+        "web_search": 1
+      },
+      "source_handle": null,
+      "source_tier": null,
+      "evidence_urls": [
+        "https://thedeepdive.ca/chinas-housing-crash-just-wiped-out-20-years-of-price-growth/",
+        "https://thedeepdive.ca/chinas-housing-crash-just-wiped-out-20-years-of-price-growth/",
+        "https://x.com/Unveiled_ChinaX/status/2048956542893068507",
+        "https://x.com/Unveiled_ChinaX/status/2048956542893068507",
+        "https://panasiabiz.com/116105/chinas-property-empire-crumbles-25-price-crash-shocks-global-markets/"
+      ],
+      "tweet_url": null,
+      "category": null,
+      "related_axis_id": "axis_global_economic_stability_v1",
+      "verification_count": 1,
+      "verified_at": "2026-08-02T02:33:22.783Z",
+      "created_at": "2026-08-02T02:33:22.782Z",
+      "original_source": "Bank for International Settlements (BIS)",
+      "claim_date": "2026",
+      "supporting_sources": [
+        {
+          "name": "The Deep Dive",
+          "excerpt": "Reported that China's real residential property price index sat at a 20-year low in Q1 2026 after factoring in inflation.",
+          "url": null
+        },
+        {
+          "name": "PanAsiaBiz",
+          "excerpt": "Reported that China's real estate market fell by 25% since 2021, erasing substantial market value and developer stability.",
+          "url": null
+        },
+        {
+          "name": "Unveiled China (X)",
+          "excerpt": "Reported a 23% real decline in market value since late 2021, bringing the housing market to a 20-year low.",
+          "url": null
+        }
+      ],
+      "dissenting_sources": [],
+      "framing_analysis": "The claim accurately reflects the statistical findings of a ~25% inflation-adjusted loss reaching a 20-year low since 2021. However, reporting emphasizes that this was a four-year slow-motion contraction rather than a sudden overnight crash.",
+      "web_search_summary": "According to reports citing Bank for International Settlements data, China's real residential property price index fell to a 20-year low in early 2026 once inflation is factored in. The market experienced an inflation-adjusted decline of 23% to 25% since its peak in late 2021, wiping out approximately a quarter of its real value.",
+      "investigation_depth": "quick"
+    },
+    {
       "claim_id": "claim_85",
       "claim_text": "Israeli military planes are unable to fly due to the largest swarm of bees in recorded history.",
       "status": "supported",
@@ -16400,6 +16506,54 @@
       "dissenting_sources": [],
       "framing_analysis": "The claim is framed validly but appears incomplete, cutting off mid-sentence. The complete context from sources shows Remulla not only expected the decision but also suggested impropriety ('mukhang natrabaho'), which adds significant context not captured in the incomplete claim text.",
       "web_search_summary": "The claim is partially accurate. Ombudsman Remulla did speak about Bong Revilla's bail and stated he expected (inaasahan) the Sandiganbayan's decision to grant bail. However, the claim appears incomplete as it cuts off mid-sentence. The search results confirm Remulla made statements on a radio program about expecting this outcome and suggested the case appeared to have been 'worked on' (natrabaho).",
+      "investigation_depth": "quick"
+    },
+    {
+      "claim_id": "live_c2c4f48b86",
+      "claim_text": "Chinese household debt dropped for first time since 1994",
+      "status": "supported",
+      "confidence_score": 0.6,
+      "display_score": 0.397,
+      "scoring_breakdown": {
+        "source_tier": 0.5,
+        "newsguard": 0.5,
+        "corroboration": 0.7,
+        "evidence_quality": 0.7,
+        "cross_source": 0.5,
+        "web_search": 0.8
+      },
+      "source_handle": null,
+      "source_tier": null,
+      "evidence_urls": [
+        "https://www.scmp.com/economy/china-economy/article/3362491/chinas-debt-ratio-dips-households-cut-borrowing-and-firms-slash-investment-report",
+        "https://www.scmp.com/economy/china-economy/article/3362491/chinas-debt-ratio-dips-households-cut-borrowing-and-firms-slash-investment-report",
+        "https://eu.36kr.com/en/p/3899499146823301",
+        "https://eu.36kr.com/en/p/3899499146823301",
+        "https://tradingeconomics.com/china/households-debt-to-gdp"
+      ],
+      "tweet_url": null,
+      "category": null,
+      "related_axis_id": "axis_global_economic_stability_v1",
+      "verification_count": 1,
+      "verified_at": "2026-08-02T02:33:42.999Z",
+      "created_at": "2026-08-02T02:33:42.999Z",
+      "original_source": null,
+      "claim_date": "2024",
+      "supporting_sources": [
+        {
+          "name": "36Kr",
+          "excerpt": "China's household loans recorded a net decrease of 366.8 billion yuan in H1 2024, marking the first cumulative half-year decline since official statistics became available.",
+          "url": null
+        },
+        {
+          "name": "South China Morning Post",
+          "excerpt": "China's debt-to-GDP ratio fell in the second quarter as households cut borrowing, marking a drop for the first time since 2022.",
+          "url": null
+        }
+      ],
+      "dissenting_sources": [],
+      "framing_analysis": "The claim correctly captures a historic decline in Chinese household debt, but framing the benchmark specifically as 'since 1994' is unverified by the provided results, which measure the drop against 2022 or since official record-keeping began.",
+      "web_search_summary": "Chinese household debt and loans did experience a historic decline, marking the first cumulative half-year net drop since official statistics became available. However, the provided search results do not reference the year 1994, instead citing data tracking back to 2006 or measuring debt-to-GDP ratio dips relative to 2022.",
       "investigation_depth": "quick"
     },
     {
@@ -22587,6 +22741,54 @@
       "dissenting_sources": [],
       "framing_analysis": "The claim accurately represents the '1 in 10' finding but incorrectly attributes it to Pulse Asia when the survey was actually conducted by Momentum Research/National Momentum Survey. This misattribution is a factual error that undermines the claim's credibility.",
       "web_search_summary": "The claim incorrectly attributes the survey to Pulse Asia, when the actual source was a different research firm called Momentum Research or National Momentum Survey. Multiple sources confirm that 13% (roughly 1 in 10) of Filipinos closely follow the impeachment trial, while 68% are aware of it, but the survey organization cited in the claim is wrong.",
+      "investigation_depth": "quick"
+    },
+    {
+      "claim_id": "live_2ca18f7115",
+      "claim_text": "Philippine inflation reached 7.2% in May 2026, highest in three years",
+      "status": "refuted",
+      "confidence_score": 0.45,
+      "display_score": 0.352,
+      "scoring_breakdown": {
+        "source_tier": 0.5,
+        "newsguard": 0.5,
+        "corroboration": 0,
+        "evidence_quality": 0.5,
+        "cross_source": 0.5,
+        "web_search": -1
+      },
+      "source_handle": null,
+      "source_tier": null,
+      "evidence_urls": [
+        "https://businessmirror.com.ph/2026/05/05/inflation-surges-to-7-2-highest-in-over-three-years/",
+        "https://businessmirror.com.ph/2026/05/05/inflation-surges-to-7-2-highest-in-over-three-years/",
+        "https://psa.gov.ph/content/summary-inflation-report-consumer-price-index-2018100-may-2026",
+        "https://psa.gov.ph/content/summary-inflation-report-consumer-price-index-2018100-may-2026",
+        "https://tribune.net.ph/2026/05/06/philippine-inflation-hits-three-year-high-in-april"
+      ],
+      "tweet_url": null,
+      "category": null,
+      "related_axis_id": "axis_global_economic_stability_v1",
+      "verification_count": 1,
+      "verified_at": "2026-08-02T02:33:02.453Z",
+      "created_at": "2026-08-02T02:33:02.450Z",
+      "original_source": "Unknown",
+      "claim_date": "2026-05",
+      "supporting_sources": [],
+      "dissenting_sources": [
+        {
+          "name": "Philippine Statistics Authority",
+          "excerpt": "The Philippines' headline inflation or overall inflation eased to 6.8 percent in May 2026 from 7.2 percent in April 2026.",
+          "url": null
+        },
+        {
+          "name": "BusinessMirror",
+          "excerpt": "The country's inflation rate climbed to 7.2 percent in April, its highest level in over three years, the Philippine Statistics Authority said on Tuesday.",
+          "url": null
+        }
+      ],
+      "framing_analysis": "The claim incorrectly attributes the three-year high inflation rate of 7.2% recorded in April 2026 to the month of May 2026, during which inflation actually declined.",
+      "web_search_summary": "The claim is false because Philippine inflation reached 7.2% in April 2026, not May 2026. Official data from the Philippine Statistics Authority shows that inflation actually eased to 6.8% in May 2026.",
       "investigation_depth": "quick"
     },
     {
@@ -29411,6 +29613,49 @@
       "dissenting_sources": [],
       "framing_analysis": "The claim presents a binary choice between budget misuse and extrajudicial killings as focal points, but without access to the actual content of the impeachment articles or detailed reporting on their substance, it's impossible to verify whether this framing accurately reflects the prosecution's strategy or priorities.",
       "web_search_summary": "The search results confirm House prosecutors are handling impeachment proceedings against Vice President Sara Duterte with multiple articles of impeachment, but do not provide sufficient detail about the specific focus or content of those articles. While budget-related issues and extrajudicial killings may be among the allegations, the available excerpts do not clearly state which issue is the primary focus.",
+      "investigation_depth": "quick"
+    },
+    {
+      "claim_id": "live_b0bf4ec2eb",
+      "claim_text": "Federal Reserve injected $7,585,000,000 into markets on May 5, 2026 at 9 AM ET",
+      "status": "unverified",
+      "confidence_score": 0.4,
+      "display_score": 0.337,
+      "scoring_breakdown": {
+        "source_tier": 0.5,
+        "newsguard": 0.5,
+        "corroboration": 0,
+        "evidence_quality": 0.5,
+        "cross_source": 0.5,
+        "web_search": 0.5
+      },
+      "source_handle": null,
+      "source_tier": null,
+      "evidence_urls": [
+        "https://x.com/DefiWimar/status/2051583631924117859",
+        "https://x.com/DefiWimar/status/2051583631924117859",
+        "https://seekingalpha.com/article/4921836-july-2026-trading-outlook-fiscal-flows-and-fed-interest-rates",
+        "https://seekingalpha.com/article/4921836-july-2026-trading-outlook-fiscal-flows-and-fed-interest-rates",
+        "https://www.ainvest.com/news/fed-74-6b-repo-facility-surge-implications-2026-monetary-policy-2601/"
+      ],
+      "tweet_url": null,
+      "category": null,
+      "related_axis_id": "axis_global_economic_stability_v1",
+      "verification_count": 1,
+      "verified_at": "2026-08-02T02:32:42.142Z",
+      "created_at": "2026-08-02T02:32:42.140Z",
+      "original_source": "DefiWimar on X (@DefiWimar)",
+      "claim_date": "2026-05-05",
+      "supporting_sources": [
+        {
+          "name": "DefiWimar on X",
+          "excerpt": "Reported that the Fed would inject $7,585,000,000.00 into markets at 9 AM ET tied to an oil crisis and volatility.",
+          "url": null
+        }
+      ],
+      "dissenting_sources": [],
+      "framing_analysis": "The claim presents an unverified social media post as an established factual headline, attributing market actions to an oil crisis without supporting official documentation.",
+      "web_search_summary": "The claim originates entirely from a single unverified social media post on X and lacks backing from official central bank announcements or credible financial reporting. Based strictly on the provided search results, there is insufficient evidence to confirm or refute the alleged $7.585 billion injection.",
       "investigation_depth": "quick"
     },
     {

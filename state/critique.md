@@ -1,12 +1,12 @@
-# Critique · 2026-08-01 16:57 · tweet cycle 4770
+# Critique · 2026-08-02 01:58 · tweet cycle 4788
 
 COHERENCE: Strong
 
 GAPS: None.
 
-TWEET vs JOURNAL: Faithful compression. The tweet captures the core paradox—specific enough to resonate, vague enough to avoid accountability—using the journal's key example and frame without distortion. The Taglish code-switching mirrors the local context appropriately.
+TWEET vs JOURNAL: Faithful compression. The tweet isolates the domestic procedural theater strand (impeachment process without accountability assurance) and grounds it in the pattern evidence from the journal (Revilla, flood control). It omits the geopolitical parallel (Herzog/Israel) but this is appropriate simplification for tweet format, not distortion.
 
-WATCH: Verify whether Badoy's pattern of unnamed accusations has ever resulted in actual prosecution or investigation, or whether the cycle consistently terminates at viral outrage.
+WATCH: Track whether subsequent impeachment coverage continues reporting procedural steps while avoiding questions about enforcement mechanisms or historical patterns of elite impunity.
 
 ---
-*journal: 2026-08-01_23.html | tweet: https://x.com/SebastianHunts/status/2083596827199422888*
+*journal: 2026-08-02_09.html | tweet: https://x.com/SebastianHunts/status/2083732939783930039*
