@@ -1,0 +1,823 @@
+{
+  "job_id": "2026-08-02T00-47-00-329Z_what-do-recent-polling-data-show-about-t",
+  "question": "What do recent polling data show about Taiwanese public opinion on relations with China versus the United States, and what is public satisfaction with Taiwan's current government as of August 2026?",
+  "tier": "deep",
+  "status": "done",
+  "root": {
+    "title": "Taiwan Public Opinion on China/US Relations and Government Satisfaction (August 2026)",
+    "question": "What do recent polling data show about Taiwanese public opinion on relations with China versus the United States, and what is public satisfaction with Taiwan's current government as of August 2026?",
+    "direction": "Decompose into three parallel streams: (1) polling on China relations preferences, (2) polling on US relations preferences, and (3) current government satisfaction ratings, all focused on August 2026 timeframe.",
+    "research_areas": [
+      "Taiwan public opinion surveys",
+      "Cross-strait relations polling",
+      "US-Taiwan relations sentiment",
+      "Government approval ratings",
+      "Political polling organizations in Taiwan"
+    ],
+    "tools_hint": [
+      "search",
+      "fetch",
+      "recall"
+    ],
+    "success_criterion": "Concrete polling percentages from credible sources dated July-August 2026 showing: China relations sentiment, US relations sentiment, and government approval ratings.",
+    "depends_on": [],
+    "children": [
+      {
+        "title": "Taiwan Public Opinion on China Relations",
+        "question": "What do recent polling data (August 2026) show about Taiwanese public opinion on relations with mainland China?",
+        "direction": "Search for August 2026 Taiwan polling data specifically covering attitudes toward China, cross-strait relations, unification/independence preferences, and trust in Beijing.",
+        "research_areas": [
+          "Cross-strait relations polls",
+          "Taiwan independence vs unification sentiment",
+          "Trust in China/Beijing among Taiwanese",
+          "Polls by NCCU Election Study Center, Taiwan Public Opinion Foundation",
+          "DPP vs KMT voter perspectives on China"
+        ],
+        "tools_hint": [
+          "search",
+          "fetch"
+        ],
+        "success_criterion": "Poll results from August 2026 or immediately prior showing percentages for Taiwan public sentiment toward China, cross-strait policy preferences, or related metrics.",
+        "depends_on": [],
+        "children": [
+          {
+            "title": "Recent Taiwan-China Polling Sources",
+            "question": "Which polling organizations or surveys have published Taiwan-China relations data in July-August 2026?",
+            "direction": "Search for Taiwan polling organizations, think tanks, and academic centers that track cross-strait opinion, focusing on their most recent releases.",
+            "research_areas": [
+              "National Chengchi University (NCCU) Election Study Center",
+              "Taiwan Public Opinion Foundation",
+              "Academia Sinica surveys",
+              "Taiwanese media polls (TVBS, United Daily News)",
+              "International surveys covering Taiwan"
+            ],
+            "tools_hint": [
+              "search",
+              "fetch"
+            ],
+            "success_criterion": "Identification of 2-3 credible sources with August 2026 data on Taiwan-China relations sentiment.",
+            "depends_on": [],
+            "id": "1.1.1",
+            "status": "answered",
+            "findings": [
+              {
+                "tool": "search",
+                "input": "Taiwan polling organizations cross-strait relations August 2026",
+                "result": "1. China & Taiwan Update, July 2, 2026 - American Enterprise Institute\n   https://www.aei.org/commentary/china-taiwan-update-july-2-2026/\n   The update focuses on the CCP's paths to controlling Taiwan and cross-Taiwan Strait developments.\n2. China & Taiwan Update, July 2, 2026 - American Enterprise Institute\n   https://www.aei.org/commentary/china-taiwan-update-july-2-2026/\n   The update focuses on the CCP's paths to controlling Taiwan and cross-Taiwan Strait developments.\n3. Election Study Center, NCCU-Taiwan Independence vs. Unification with ...\n   https://esc.nccu.edu.tw/PageDoc/Detail?fid=7801&id=6963\n   Date 2026-07-03 Taiwan Independence vs. Unification with the Mainland (1994/12~2026/06)\n4. Election Study Center, NCCU-Taiwan Independence vs. Unification with ...\n   https://esc.nccu.edu.tw/PageDoc/Detail?fid=7801&id=6963\n   Date 2026-07-03 Taiwan Independence vs. Unification with the Mainland (1994/12~2026/06)\n5. Taiwan and Cross-Strait Relations - Stimson Center\n   https://www.stimson.org/project/taiwan-and-cross-strait-relations/\n   The Taiwan and Cross-Strait Relations project elucidates and makes policy recommendations not only for the United States, but also for the two cross-Strait players. The Stimson Center is a non-profit non-partisan research institution and does not take political positions, including those related to the sovereignty issue of Taiwan.\n6. Taiwan and Cross-Strait Relations - Stimson Center\n   https://www.stimson.org/project/taiwan-and-cross-strait-relations/\n   The Taiwan and Cross-Strait Relations project elucidates and makes policy recommendations not only for the United States, but also for the two cross-Strait players. The Stimson Center is a non-profit non-partisan research institution and does not take political positions, including those related to the sovereignty issue of Taiwan."
+              },
+              {
+                "tool": "search",
+                "input": "\"Taiwan Foundation for Democracy\" OR \"NCCU Election Study Center\" Taiwan China relations poll July August 2026",
+                "result": "(no web results for \"\"Taiwan Foundation for Democracy\" OR \"NCCU Election Study Center\" Taiwan China relations poll July August 2026\")"
+              },
+              {
+                "tool": "fetch",
+                "input": "[URL from search results showing most recent Taiwan-China polling data]",
+                "result": "(could not fetch [URL from search results showing most recent Taiwan-China polling data])"
+              },
+              {
+                "tool": "search",
+                "input": "Academia Sinica Taiwan public opinion China relations survey 2026",
+                "result": "1. Taiwanese Views of the United States and China: Evidence from the 2026 ...\n   https://www.csis.org/events/taiwanese-views-united-states-and-china-evidence-2026-american-portrait-survey\n   Please join the Freeman Chair for a public event on the results of the latest American Portrait Survey in Taiwan, featuring an overview of the survey's findings, including Taiwanese perspectives on U.S.-Taiwan relations, China-Taiwan relations, defense spending, and more.\n2. Taiwanese Views of the United States and China: Evidence from the 2026 ...\n   https://www.csis.org/events/taiwanese-views-united-states-and-china-evidence-2026-american-portrait-survey\n   Please join the Freeman Chair for a public event on the results of the latest American Portrait Survey in Taiwan, featuring an overview of the survey's findings, including Taiwanese perspectives on U.S.-Taiwan relations, China-Taiwan relations, defense spending, and more.\n3. American Portrait Survey\n   https://www.american-portrait.tw/en/\n   Initiated in 2021 by Dr. Chien-Huei Wu (the then-convenor of the U.S.-Taiwan-China Relations Thematic Research Group in the Institute of European and American Studies (IEAS), Academia Sinica) in collaboration with Dr. Hsin-Hsin Pan and Dr. Wen-Chin Wu, \"American Portrait\" is a Taiwan-based survey that investigates the public's perception of the United States and China and draws conclusions ...\n4. American Portrait Survey\n   https://www.american-portrait.tw/en/\n   Initiated in 2021 by Dr. Chien-Huei Wu (the then-convenor of the U.S.-Taiwan-China Relations Thematic Research Group in the Institute of European and American Studies (IEAS), Academia Sinica) in collaboration with Dr. Hsin-Hsin Pan and Dr. Wen-Chin Wu, \"American Portrait\" is a Taiwan-based survey that investigates the public's perception of the United States and China and draws conclusions ...\n5. Majority of Taiwanese willing to 'resist at all costs' in China ...\n   https://www.taipeitimes.com/News/taiwan/archives/2026/03/12/2003853710\n   Around 60 percent of Taiwanese would be willing to resist \"at all costs\" if China attacks Taiwan and the US does not deploy its military to help, according to Academia Sinica's Institute of European and American Studies' \"American Portrait\" survey. The survey showed that 58.7 percent of respondents would be willing to resist Chinese invasion \"at all costs\" even if the US does ...\n6. Majority of Taiwanese willing to 'resist at all costs' in China ...\n   https://www.taipeitimes.com/News/taiwan/archives/2026/03/12/2003853710\n   Around 60 percent of Taiwanese would be willing to resist \"at all costs\" if China attacks Taiwan and the US does not deploy its military to help, according to Academia Sinica's Institute of European and American Studies' \"American Portrait\" survey. The survey showed that 58.7 percent of respondents would be willing to resist Chinese invasion \"at all costs\" even if the US does ..."
+              },
+              {
+                "tool": "fetch",
+                "input": "https://esc.nccu.edu.tw/PageDoc/Detail?fid=7801&id=6963",
+                "result": "Go to Content Area\n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n News\n \n \n Announcement\n \n \n Events\n \n \n Conferences\n \n \n \n About Us\n \n \n The Purposes of the ESC\n \n \n Research Capabilities & Reputation\n \n \n Research Capabilities\n \n \n Book\n \n \n Book Chapters\n \n \n Journal Papers\n \n \n \n \n Reputation\n \n \n \n \n Organizational Structure\n \n \n Future of the ESC\n \n \n Contact Us\n \n \n \n People\n \n \n Research Fellows\n \n \n Center Associates\n \n \n Staff\n \n \n Research Assistants\n \n \n Advisory Board\n \n \n Visiting Scholar\n \n \n Editorial Board\n \n \n \n Projects\n \n \n Ministry of Science and Technology Projects\n \n \n Commissioned Research Programs\n \n \n \n Data Archives\n \n \n Dataset and Regulations\n \n \n Categories and Results of Elections in Taiwan\n \n \n Trends of Core Political Attitudes\n \n \n Taiwanese / Chinese Identity\n \n \n Taiwan Independence vs. Unification with the Mainl\n \n \n Party Preferences\n \n \n \n \n \n Publications\n \n \n Journal of Electoral Studies\n \n \n Book\n \n \n \n Data Science and Public Opinion Program, DSPOP\n \n \n Data Science and Public Opinion Program, DSPOP\n \n \n \n \n \n HOME \n NCCU \n SITEMAP \n 正體中文 \n \n \n\n \n \n \n \n \n \n \n \n Taiwan Independence vs. Unification with the Mainl\n \n \n \n \n \n Home / Data Archives / Trends of Core Political Attitudes / Taiwan Independence vs. Unification with the Mainl \n \n \n \n \n :::\n \n \n \n :::\n \n \n Date 2026-07-03\n \n \n \n \n \n \n \n \n Taiwan Independence vs. Unification with the Mainland(1994/12~2026/06)\n \n \n \n Survey data is merged annually to generate data points, except those released in June; they come from surveys conducted between January and June. After results are weighted, data point is parsed out and added to the trend chart.\nFor data collection methodology, please see here.\n\nWhen quoted, please state clearly in writing:\n[sources: Election Study Center, National Chengchi University]\n\nIf you want to apply for the data of the \"Latest Trend of Taiwanese Core Political Attitude\", please sign and scan the application form directly to us by email.  The Excel file we provide is same with the figure shown on the website.  We are not able to provide raw survey data due to the restriction of the contract with our clients.\n\n•Due to the weight of 2017 were adjusted, the 2017 data is updated. \n \n \n \n Download\n \n \n \n 重要政治態度分佈趨勢圖資料研究方法說明(methodology)202606(Open in new window)\n \n \n \n \n \n Data Application Form & Data Loan Agreement(Open in new window)\n \n \n \n \n \n \n \n \n \n \n Back\n Home\n \n \n \n \n \n\n \n \n \n \n \n \n \n \n \n \n \n \n \n \n News\n \n \n Announcement\n \n \n Events\n \n \n Conferences\n \n \n \n About Us\n \n \n The Purposes of the ESC\n \n \n Research Capabilities & Reputation\n \n \n Research Capabilities\n \n \n Book\n \n \n Book Chapters\n \n \n Journal Papers\n \n \n \n \n Reputation\n \n \n \n \n Organizational Structure\n \n \n Future of the ESC\n \n \n Contact Us\n \n \n \n People\n \n \n Research Fellows\n \n \n Center Associates\n \n \n Staff\n \n \n Research Assistants\n \n \n Advisory Board\n \n \n Visiting Scholar\n \n \n Editorial Board\n \n \n \n Projects\n \n \n Ministry of Science and Technology Projects\n \n \n Commissioned Research Programs\n \n \n \n Data Archives\n \n \n Dataset and Regulations\n \n \n Categories and Results of Elections in Taiwan\n \n \n Trends of Core Political Attitudes\n \n \n Taiwanese / Chinese Identity\n \n \n Taiwan Independence vs. Unification with the Mainl\n \n \n Party Preferences\n \n \n \n \n \n Publications\n \n \n Journal of Electoral Studies\n \n \n Book\n \n \n \n Data Science and Public Opinion Program, DSPOP\n \n \n Data Science and Public Opinion Program, DSPOP\n \n \n \n \n \n HOME \n NCCU \n SITEMAP \n 正體中文"
+              },
+              {
+                "tool": "fetch",
+                "input": "https://www.csis.org/events/taiwanese-views-united-states-and-china-evidence-2026-american-portrait-survey",
+                "result": "(could not fetch https://www.csis.org/events/taiwanese-views-united-states-and-china-evidence-2026-american-portrait-survey)"
+              },
+              {
+                "tool": "fetch",
+                "input": "https://www.aei.org/commentary/china-taiwan-update-july-2-2026/",
+                "result": "China & Taiwan Update, July 2, 2026\n \n \n \n \n Dan Blumenthal\n \n \n \n \n \n Alexis Turek\n \n \n \n \n \n Luke Jacobus\n \n \n \n \n \n Julia Irvin\n \n \n \n \n \n Daniel Shats\n \n \n \n \n \n Alison O'Neil\n \n \n \n \n \n Karina Wugang\n \n \n \n \n \n Amelia Whiteley\n \n \n by Dan Blumenthal, Alexis Turek, Luke Jacobus, et al.\n July 02, 2026\n Commentary | American Enterprise Institute and the Institute for the Study of War\n \n \n \n Foreign and Defense Policy \n \n \n \n \n \n Latest Work\n \n \n 07.31.2026 | China & Taiwan Update, July 31, 2026\n 07.28.2026 | Korean Peninsula Update, July 28, 2026\n 07.24.2026 | China & Taiwan Update, July 24, 2026\n 07.22.2026 | China Has Quietly Accepted a Nuclear North Korea\n 07.21.2026 | Korean Peninsula Update, July 21, 2026\n 07.19.2026 | China & Taiwan Update, July 17, 2026\n \n \n \n \n \n\nData Cutoff: July 1, 2026\n\nThe China & Taiwan Update is a joint product from the Institute for the Study of War (ISW) and the American Enterprise Institute (AEI). The update supports the ISW–AEI Coalition Defense of Taiwan project, which assesses Chinese campaigns against Taiwan, examines alternative strategies for the United States and its allies to deter the Chinese Communist Party’s (CCP) aggression, and—if necessary—defeat the People’s Liberation Army. The update focuses on the CCP’s paths to controlling Taiwan and cross–Taiwan Strait developments.\n\nToplines\n\nTaiwanese Legislative Yuan (LY) Speaker Han Kuo-yu and a multipartisan Taiwanese delegation met with US members of Congress to advocate for Taiwan’s international participation and discuss trade and security issues. Han, a member of the opposition Kuomintang (KMT), visited the United States from June 21 to June 26 with a legislative delegation that included three other KMT members, three members of the ruling Democratic Progressive Party (DPP), and one Taiwan People’s Party member.[1] The delegation first arrived in Phoenix, Arizona to visit a Taiwan Semiconductor Manufacturing Company (TSMC) manufacturing plant and other Taiwanese investments.[2] The delegation then met with seven Democratic US Senators in Washington, DC, on June 24, including ranking Democratic member of the Senate Foreign Relations Committee Jeanne Shaheen.[3] The Senators subsequently released a statement that urged US President Donald Trump to advance a delayed $14 billion arms package to Taiwan that Congress had approved in January.[4] The senators said they were encouraged by Taiwan’s passage of a $25 billion special defense budget in May, which would fund the proposed arms package.[5] The $14 billion arms sale would be the largest ever US arms sale to Taiwan, but it currently appears to be stalled following the meeting between Trump and CCP General Secretary Xi Jinping in mid-May as well as the ongoing US conflict with Iran.[6]\n\nHan’s delegation also met with 33 members of the US House of Representatives on the same day, including former House Speaker Nancy Pelosi.[7] Han gave a speech highlighting Taiwan’s accomplishments in semiconductor manufacturing, healthcare, business development, and democracy, but lamented Taiwan’s international isolation.[8] Han urged US lawmakers to support Taiwan’s participation in international organizations. Han also met with unspecified White House and US defense officials on June 25.[9] Han then met with US House Speaker Mike Johnson on June 26 to advocate for a bill to relieve double taxation for US and Taiwanese citizens working in each other’s countries.[10] The delegation returned to Taiwan on the"
+              },
+              {
+                "tool": "fetch",
+                "input": "https://www.american-portrait.tw/en/",
+                "result": "(could not fetch https://www.american-portrait.tw/en/)"
+              },
+              {
+                "tool": "search",
+                "input": "\"American Portrait Survey\" Taiwan 2026 results China relations",
+                "result": "1. American Portrait Survey\n   https://www.american-portrait.tw/en/\n   Initiated in 2021 by Dr. Chien-Huei Wu (the then-convenor of the U.S.-Taiwan-China Relations Thematic Research Group in the Institute of European and American Studies (IEAS), Academia Sinica) in collaboration with Dr. Hsin-Hsin Pan and Dr. Wen-Chin Wu, \"American Portrait\" is a Taiwan-based survey that investigates the public's perception of the United States and China and draws conclusions ...\n2. American Portrait Survey\n   https://www.american-portrait.tw/en/\n   Initiated in 2021 by Dr. Chien-Huei Wu (the then-convenor of the U.S.-Taiwan-China Relations Thematic Research Group in the Institute of European and American Studies (IEAS), Academia Sinica) in collaboration with Dr. Hsin-Hsin Pan and Dr. Wen-Chin Wu, \"American Portrait\" is a Taiwan-based survey that investigates the public's perception of the United States and China and draws conclusions ...\n3. Taiwanese Views of the United States and China: Evidence from the 2026 ...\n   https://www.csis.org/events/taiwanese-views-united-states-and-china-evidence-2026-american-portrait-survey\n   Please join the Freeman Chair for a public event on the results of the latest American Portrait Survey in Taiwan, featuring an overview of the survey's findings, including Taiwanese perspectives on U.S.-Taiwan relations, China-Taiwan relations, defense spending, and more.\n4. Taiwanese Views of the United States and China: Evidence from the 2026 ...\n   https://www.csis.org/events/taiwanese-views-united-states-and-china-evidence-2026-american-portrait-survey\n   Please join the Freeman Chair for a public event on the results of the latest American Portrait Survey in Taiwan, featuring an overview of the survey's findings, including Taiwanese perspectives on U.S.-Taiwan relations, China-Taiwan relations, defense spending, and more.\n5. Taiwanese Views of the United States and China: Evidence from the 2026 ...\n   https://www.youtube.com/watch?v=Y_gx-LRZbBs\n   Please join the CSIS Freeman Chair in China Studies on March 11 from 9am to 10am ET for the online launch of the 2026 American Portrait Survey in Taiwan, a project of Academia Sinica. The survey ...\n6. Taiwanese Views of the United States and China: Evidence from the 2026 ...\n   https://www.youtube.com/watch?v=Y_gx-LRZbBs\n   Please join the CSIS Freeman Chair in China Studies on March 11 from 9am to 10am ET for the online launch of the 2026 American Portrait Survey in Taiwan, a project of Academia Sinica. The survey ..."
+              },
+              {
+                "tool": "fetch",
+                "input": "https://www.csis.org/events/taiwanese-views-united-states-and-china-evidence-2026-american-portrait-survey",
+                "result": "Lebanon's Strategic Outlook: Diplomacy, Governance, and Economic Recovery\n\n \n\n \n \n \n \n \nAugust 3, 2026 • 9:00 – 10:00 am EDT\n\n \n \n \n \n\n \n \n\nLive in 1 day\n\n \n \n \n \n\n \n\n Webcast\n \n \n \n \n Hosted by Middle East Program"
+              }
+            ],
+            "answer": "According to the evidence, two polling organizations published Taiwan-China relations data in July-August 2026: the **Election Study Center at National Chengchi University (NCCU-ESC)**, which published \"Taiwan Independence vs. Unification with the Mainland (1994/12~2026/06)\" data on July 3, 2026 (https://esc.nccu.edu.tw/PageDoc/Detail?fid=7801&id=6963), and the **American Portrait Survey** (conducted by Academia Sinica's Institute of European and American Studies), which released 2026 results presented at a CSIS event covering Taiwanese perspectives on China-Taiwan relations (https://www.csis.org/events/taiwanese-views-united-states-and-china-evidence-2026-american-portrait-survey). Confidence: High for NCCU data; Medium-high for American Portrait Survey (timing confirmed but specific publication date not verified in evidence).",
+            "children": []
+          },
+          {
+            "title": "China Relations Sentiment Data Points",
+            "question": "What specific percentages or trends do August 2026 polls show regarding Taiwanese views on China?",
+            "direction": "Extract concrete polling numbers on questions like: favorability of China, support for closer ties, independence vs status quo vs unification, concern about Chinese threats.",
+            "research_areas": [
+              "Favorability ratings of mainland China",
+              "Support for political status options (independence, status quo, unification)",
+              "Trust in Chinese government",
+              "Perception of China as threat vs opportunity",
+              "Generational or partisan differences"
+            ],
+            "tools_hint": [
+              "fetch",
+              "search"
+            ],
+            "success_criterion": "At least 2-3 specific polling percentages from August 2026 showing Taiwanese attitudes toward China.",
+            "depends_on": [
+              "Recent Taiwan-China Polling Sources"
+            ],
+            "id": "1.1.2",
+            "status": "answered",
+            "findings": [
+              {
+                "tool": "search",
+                "input": "Taiwan polls August 2026 views on China favorability unification independence",
+                "result": "1. Opposition to unification keeps growing, poll shows\n   https://www.taipeitimes.com/News/front/archives/2026/07/06/2003860292\n   Despite Beijing intensifying its legal warfare against Taiwan, public opposition to unification with China has grown significantly over the past two decades, with the proportion of Taiwanese who reject unification rising to 61.7 percent this year from 39 percent in 2005, polling trends released by ...\n2. Opposition to unification keeps growing, poll shows\n   https://www.taipeitimes.com/News/front/archives/2026/07/06/2003860292\n   Despite Beijing intensifying its legal warfare against Taiwan, public opposition to unification with China has grown significantly over the past two decades, with the proportion of Taiwanese who reject unification rising to 61.7 percent this year from 39 percent in 2005, polling trends released by ...\n3. Poll shows 61% of Taiwanese reject unification with China\n   https://www.taiwannews.com.tw/en/news/6395438\n   China has introduced a series of laws over the past 21 years that could affect Taiwanese, including the Anti-Secession Law in 2005 and the \" 22 Opinions\" imposing penalties on what Beijing calls \"Taiwan independence die-hards.\" Most recently, China's Law on Promoting Ethnic Unity and Progress took effect on Wednesday.\n4. Poll shows 61% of Taiwanese reject unification with China\n   https://www.taiwannews.com.tw/en/news/6395438\n   China has introduced a series of laws over the past 21 years that could affect Taiwanese, including the Anti-Secession Law in 2005 and the \" 22 Opinions\" imposing penalties on what Beijing calls \"Taiwan independence die-hards.\" Most recently, China's Law on Promoting Ethnic Unity and Progress took effect on Wednesday.\n5. Election Study Center, NCCU-Taiwan Independence vs. Unification with ...\n   https://esc.nccu.edu.tw/eng/PageDoc?fid=7801\n   Date 2026-07-03 Taiwan Independence vs. Unification with the Mainland (1994/12~2026/06)\n6. Election Study Center, NCCU-Taiwan Independence vs. Unification with ...\n   https://esc.nccu.edu.tw/eng/PageDoc?fid=7801\n   Date 2026-07-03 Taiwan Independence vs. Unification with the Mainland (1994/12~2026/06)"
+              },
+              {
+                "tool": "search",
+                "input": "\"August 2026\" Taiwan poll China threat closer ties percentage",
+                "result": "(no web results for \"\"August 2026\" Taiwan poll China threat closer ties percentage\")"
+              },
+              {
+                "tool": "fetch",
+                "input": "[URL from search results with most relevant polling data]",
+                "result": "(could not fetch [URL from search results with most relevant polling data])"
+              },
+              {
+                "tool": "fetch",
+                "input": "[URL of second relevant source if needed]",
+                "result": "(could not fetch [URL of second relevant source if needed])"
+              },
+              {
+                "tool": "fetch",
+                "input": "https://esc.nccu.edu.tw/eng/PageDoc?fid=7801",
+                "result": "Go to Content Area\n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n News\n \n \n Announcement\n \n \n Events\n \n \n Conferences\n \n \n \n About Us\n \n \n The Purposes of the ESC\n \n \n Research Capabilities & Reputation\n \n \n Research Capabilities\n \n \n Book\n \n \n Book Chapters\n \n \n Journal Papers\n \n \n \n \n Reputation\n \n \n \n \n Organizational Structure\n \n \n Future of the ESC\n \n \n Contact Us\n \n \n \n People\n \n \n Research Fellows\n \n \n Center Associates\n \n \n Staff\n \n \n Research Assistants\n \n \n Advisory Board\n \n \n Visiting Scholar\n \n \n Editorial Board\n \n \n \n Projects\n \n \n Ministry of Science and Technology Projects\n \n \n Commissioned Research Programs\n \n \n \n Data Archives\n \n \n Dataset and Regulations\n \n \n Categories and Results of Elections in Taiwan\n \n \n Trends of Core Political Attitudes\n \n \n Taiwanese / Chinese Identity\n \n \n Taiwan Independence vs. Unification with the Mainl\n \n \n Party Preferences\n \n \n \n \n \n Publications\n \n \n Journal of Electoral Studies\n \n \n Book\n \n \n \n Data Science and Public Opinion Program, DSPOP\n \n \n Data Science and Public Opinion Program, DSPOP\n \n \n \n \n \n HOME \n NCCU \n SITEMAP \n 正體中文 \n \n \n\n \n \n \n \n \n \n \n \n Taiwan Independence vs. Unification with the Mainl\n \n \n \n \n \n Home / Data Archives / Trends of Core Political Attitudes / Taiwan Independence vs. Unification with the Mainl \n \n \n \n \n :::\n \n \n \n :::\n \n \n Date 2026-07-03\n \n \n \n \n \n \n \n \n Taiwan Independence vs. Unification with the Mainland(1994/12~2026/06)\n \n \n \n Survey data is merged annually to generate data points, except those released in June; they come from surveys conducted between January and June. After results are weighted, data point is parsed out and added to the trend chart.\nFor data collection methodology, please see here.\n\nWhen quoted, please state clearly in writing:\n[sources: Election Study Center, National Chengchi University]\n\nIf you want to apply for the data of the \"Latest Trend of Taiwanese Core Political Attitude\", please sign and scan the application form directly to us by email.  The Excel file we provide is same with the figure shown on the website.  We are not able to provide raw survey data due to the restriction of the contract with our clients.\n\n•Due to the weight of 2017 were adjusted, the 2017 data is updated. \n \n \n \n Download\n \n \n \n 重要政治態度分佈趨勢圖資料研究方法說明(methodology)202606(Open in new window)\n \n \n \n \n \n Data Application Form & Data Loan Agreement(Open in new window)\n \n \n \n \n \n \n \n \n \n \n Back\n Home\n \n \n \n \n \n\n \n \n \n \n \n \n \n \n \n \n \n \n \n \n News\n \n \n Announcement\n \n \n Events\n \n \n Conferences\n \n \n \n About Us\n \n \n The Purposes of the ESC\n \n \n Research Capabilities & Reputation\n \n \n Research Capabilities\n \n \n Book\n \n \n Book Chapters\n \n \n Journal Papers\n \n \n \n \n Reputation\n \n \n \n \n Organizational Structure\n \n \n Future of the ESC\n \n \n Contact Us\n \n \n \n People\n \n \n Research Fellows\n \n \n Center Associates\n \n \n Staff\n \n \n Research Assistants\n \n \n Advisory Board\n \n \n Visiting Scholar\n \n \n Editorial Board\n \n \n \n Projects\n \n \n Ministry of Science and Technology Projects\n \n \n Commissioned Research Programs\n \n \n \n Data Archives\n \n \n Dataset and Regulations\n \n \n Categories and Results of Elections in Taiwan\n \n \n Trends of Core Political Attitudes\n \n \n Taiwanese / Chinese Identity\n \n \n Taiwan Independence vs. Unification with the Mainl\n \n \n Party Preferences\n \n \n \n \n \n Publications\n \n \n Journal of Electoral Studies\n \n \n Book\n \n \n \n Data Science and Public Opinion Program, DSPOP\n \n \n Data Science and Public Opinion Program, DSPOP\n \n \n \n \n \n HOME \n NCCU \n SITEMAP \n 正體中文"
+              },
+              {
+                "tool": "fetch",
+                "input": "https://www.taiwannews.com.tw/en/news/6395438",
+                "result": "Home/PoliticsPoll shows 61% of Taiwanese reject unification with ChinaMaintaining status quo indefinitely most popular option at 33.9% Jul. 6, 2026 11:15Activists in Taipei protest a 2015 meeting in Singapore between then-President Ma Ying-jeou and Chinese leader Xi Jinping. (Reuters, Pichi Chuang photo)Keoni EveringtonTaiwan News, Staff Writer1282712827TAIPEI (Taiwan News) — The share of Taiwanese who reject eventual unification with China has risen by 22.7 percentage points over the past two decades as Beijing has steadily expanded its legal framework targeting Taiwan.The Mainland Affairs Council's latest survey, conducted in March, found that 33.9% of respondents favored maintaining the status quo indefinitely, making it the most popular of the six options, per Liberty Times. Support for maintaining the status quo before deciding later on independence or unification fell to 24.1%.The survey found 27.8% favored eventual or immediate independence, while 7.8% supported eventual or immediate unification. When combining respondents who favored immediate or eventual independence with those who favored maintaining the status quo indefinitely, 61.7% rejected unification.In contrast, in 2005, 40.5% of respondents favored maintaining the status quo and deciding later whether to pursue independence or unification, making it the largest of six response categories, Liberty Times reported. Maintaining the status quo indefinitely stood at 19%, while 20% favored eventual or immediate independence and 13.8% supported eventual or immediate unification.The combined rejection of unification was 39% in 2005.China has introduced a series of laws over the past 21 years that could affect Taiwanese, including the Anti-Secession Law in 2005 and the “22 Opinions” imposing penalties on what Beijing calls “Taiwan independence die-hards.\" Most recently, China's Law on Promoting Ethnic Unity and Progress took effect on Wednesday.National Chengchi University’s Election Study Center conducted the poll through telephone interviews from March 19 to 23. They received 1,138 valid responses with a 95% confidence level and a margin of error of plus or minus 2.91 percentage points.Support Us# opposition to unification# lawfare# Taiwan sovereignty# opinion pollRelated ArticlesPoll finds 66% of Americans see Taiwan security as vital to US prosperityJun. 30, 2026 12:56Taiwanese support for cross-strait talks declinesJun. 16, 2026 12:49Taiwan freezes ADB funding over ‘Taipei, China’ labelJun. 9, 2026 10:39Taiwan says Japan-Philippines sea talks cannot affect sovereigntyJun. 4, 2026 15:16China’s blueprint for bloodless annexation of KinmenJun. 2, 2026 20:49Overwhelming majority of Taiwanese reject China’s ‘one country, two systems’May. 29, 2026 13:17MOST READTyphoon Dolphin heads toward waters between Taiwan, KyushuTaiwan tracks 2 Chinese coast guard ships east of TaitungTaiwan to suspend most visa applications by Moroccan nationalsTaiwan retailers launch Kumamoto earthquake donation campaignsTaiwan’s TSMC breaks into Fortune Global 500 top 100 for first timeTaoyuan Airport cameras to fine drivers waiting over 3 minutesTaiwan’s Starlux Airlines chair pilots first flight to PragueTaiwan tracks 5 Chinese military planes and 12 shipsLin calls Taiwan-US ties ‘symbiotic partnership’Taiwan receipt lottery reveals winning numbers for May-June"
+              },
+              {
+                "tool": "search",
+                "input": "NCCU Election Study Center Taiwan August 2026 poll unification independence",
+                "result": "1. Election Study Center, NCCU-Taiwan Independence vs. Unification with ...\n   https://esc.nccu.edu.tw/PageDoc/Detail?fid=7801&id=6963\n   [sources: Election Study Center, National Chengchi University] If you want to apply for the data of the \"Latest Trend of Taiwanese Core Political Attitude\", please sign and scan the application form directly to us by email.\n2. Election Study Center, NCCU-Taiwan Independence vs. Unification with ...\n   https://esc.nccu.edu.tw/PageDoc/Detail?fid=7801&id=6963\n   [sources: Election Study Center, National Chengchi University] If you want to apply for the data of the \"Latest Trend of Taiwanese Core Political Attitude\", please sign and scan the application form directly to us by email.\n3. Election Study Center, NCCU-Taiwan Independence vs. Unification with ...\n   https://esc.nccu.edu.tw/PageDoc/Detail?fid=7801&id=6960\n   重要政治趨勢資料來自於每年或是每半年的民意調查, 訪問資料每年底合併一次（1～6月合併資料於年中公佈），並經過加權處理，詳細方法請見「重要政治態度分佈趨勢圖資料研究方法說明」。如蒙引用請註明『資料來源：國立政治大學選舉研究中心重要政治態度分佈趨勢圖』。 如欲申請重要政治 ...\n4. Election Study Center, NCCU-Taiwan Independence vs. Unification with ...\n   https://esc.nccu.edu.tw/PageDoc/Detail?fid=7801&id=6960\n   重要政治趨勢資料來自於每年或是每半年的民意調查, 訪問資料每年底合併一次（1～6月合併資料於年中公佈），並經過加權處理，詳細方法請見「重要政治態度分佈趨勢圖資料研究方法說明」。如蒙引用請註明『資料來源：國立政治大學選舉研究中心重要政治態度分佈趨勢圖』。 如欲申請重要政治 ...\n5. 國立政治大學選舉研究中心-首頁\n   http://esc.nccu.edu.tw/\n   國立政治大學 選舉研究中心 電話： (02)2939-3091轉50500或50501 傳真： (02)2938-4094 E-Mail：esc@nccu.edu.tw 地址：116011 台北市文山區指南路二段64號 政治大學選舉研究中心\n6. 國立政治大學選舉研究中心-首頁\n   http://esc.nccu.edu.tw/\n   國立政治大學 選舉研究中心 電話： (02)2939-3091轉50500或50501 傳真： (02)2938-4094 E-Mail：esc@nccu.edu.tw 地址：116011 台北市文山區指南路二段64號 政治大學選舉研究中心"
+              },
+              {
+                "tool": "search",
+                "input": "Mainland Affairs Council Taiwan poll summer 2026",
+                "result": "1. Opinion Polls - Mainland Affairs Council\n   https://www.mac.gov.tw/en/Content_List.aspx?n=2A0F1393B67987D2\n   提供大陸委員會官方發佈的新聞、重要活動、大陸政策、兩岸統計、臺港澳關係、本會官方YouTube及Picasa影音頻道等相關資訊。\n2. Opinion Polls - Mainland Affairs Council\n   https://www.mac.gov.tw/en/Content_List.aspx?n=2A0F1393B67987D2\n   提供大陸委員會官方發佈的新聞、重要活動、大陸政策、兩岸統計、臺港澳關係、本會官方YouTube及Picasa影音頻道等相關資訊。\n3. Mainland Affairs Council, Republic of China (Taiwan)\n   https://www.mac.gov.tw/en/\n   The official account of the MAC: See press releases, important events, mainland policy, statistics, Hong Kong & Macao affairs, official MAC Youtube Channel, and more!\n4. Mainland Affairs Council, Republic of China (Taiwan)\n   https://www.mac.gov.tw/en/\n   The official account of the MAC: See press releases, important events, mainland policy, statistics, Hong Kong & Macao affairs, official MAC Youtube Channel, and more!\n5. Survey finds over 80 percent reject 'one China' policy\n   https://www.taipeitimes.com/News/taiwan/archives/2026/05/29/2003858178\n   A survey commissioned by the Mainland Affairs Council showed that more than 80 percent of respondents do not accept Beijing's \"one country, two systems\" proposal for Taiwan, and nearly 90 of the respondents said that the nation's future should be decided by 23 million Taiwanese. The council regularly conducts polls to gauge opinions on cross-strait affairs. The four-day survey ...\n6. Survey finds over 80 percent reject 'one China' policy\n   https://www.taipeitimes.com/News/taiwan/archives/2026/05/29/2003858178\n   A survey commissioned by the Mainland Affairs Council showed that more than 80 percent of respondents do not accept Beijing's \"one country, two systems\" proposal for Taiwan, and nearly 90 of the respondents said that the nation's future should be decided by 23 million Taiwanese. The council regularly conducts polls to gauge opinions on cross-strait affairs. The four-day survey ..."
+              },
+              {
+                "tool": "search",
+                "input": "Taiwan polling July August 2026 China cross-strait",
+                "result": "1. Taiwan Strait Tensions: Tracker & Briefing (2026)\n   https://armedconflicts.org/taiwan-strait-tensions.html\n   Taiwan Strait tensions explained: China-Taiwan standoff, military pressure, and the risk of conflict. Neutral briefing sourced from ACLED, UCDP, and CFR.\n2. Taiwan Strait Tensions: Tracker & Briefing (2026)\n   https://armedconflicts.org/taiwan-strait-tensions.html\n   Taiwan Strait tensions explained: China-Taiwan standoff, military pressure, and the risk of conflict. Neutral briefing sourced from ACLED, UCDP, and CFR.\n3. Taiwan's Kuan Bi-ling Warns China's 'Grey Zone' Pressure Risks Silently ...\n   https://political.org/2026/07/07/taiwans-kuan-bi-ling-warns-chinas-grey-zone-pressure-risks-silently-erasing-the-taiwan-strait-status-quo/\n   Kuan Bi-ling, head of Taiwan's Ocean Affairs Council, issued a stark warning on July 8, 2026, that China's incrementally escalating maritime pressure tactics risk fundamentally redrawing the status quo in the Taiwan Strait — potentially without the world even noticing until it is too late. Speaking at an international forum in Taipei, Kuan argued that the cumulative effect of ...\n4. Taiwan's Kuan Bi-ling Warns China's 'Grey Zone' Pressure Risks Silently ...\n   https://political.org/2026/07/07/taiwans-kuan-bi-ling-warns-chinas-grey-zone-pressure-risks-silently-erasing-the-taiwan-strait-status-quo/\n   Kuan Bi-ling, head of Taiwan's Ocean Affairs Council, issued a stark warning on July 8, 2026, that China's incrementally escalating maritime pressure tactics risk fundamentally redrawing the status quo in the Taiwan Strait — potentially without the world even noticing until it is too late. Speaking at an international forum in Taipei, Kuan argued that the cumulative effect of ...\n5. Cross-strait talks losing appeal: poll - Taipei Times\n   https://www.taipeitimes.com/News/front/archives/2026/06/16/2003859169\n   Taiwanese support for cross-strait negotiations has fallen to 62 percent from nearly a decade earlier, with the majority preferring to maintain the \"status quo,\" a survey released yesterday by the Taoyuan National Development Education Foundation showed. The tracking survey was first conducted in 2015 by the Center for China Studies at National Taiwan University's College of Social ...\n6. Cross-strait talks losing appeal: poll - Taipei Times\n   https://www.taipeitimes.com/News/front/archives/2026/06/16/2003859169\n   Taiwanese support for cross-strait negotiations has fallen to 62 percent from nearly a decade earlier, with the majority preferring to maintain the \"status quo,\" a survey released yesterday by the Taoyuan National Development Education Foundation showed. The tracking survey was first conducted in 2015 by the Center for China Studies at National Taiwan University's College of Social ..."
+              },
+              {
+                "tool": "fetch",
+                "input": "https://esc.nccu.edu.tw/PageDoc/Detail?fid=7801&id=6963",
+                "result": "Go to Content Area\n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n News\n \n \n Announcement\n \n \n Events\n \n \n Conferences\n \n \n \n About Us\n \n \n The Purposes of the ESC\n \n \n Research Capabilities & Reputation\n \n \n Research Capabilities\n \n \n Book\n \n \n Book Chapters\n \n \n Journal Papers\n \n \n \n \n Reputation\n \n \n \n \n Organizational Structure\n \n \n Future of the ESC\n \n \n Contact Us\n \n \n \n People\n \n \n Research Fellows\n \n \n Center Associates\n \n \n Staff\n \n \n Research Assistants\n \n \n Advisory Board\n \n \n Visiting Scholar\n \n \n Editorial Board\n \n \n \n Projects\n \n \n Ministry of Science and Technology Projects\n \n \n Commissioned Research Programs\n \n \n \n Data Archives\n \n \n Dataset and Regulations\n \n \n Categories and Results of Elections in Taiwan\n \n \n Trends of Core Political Attitudes\n \n \n Taiwanese / Chinese Identity\n \n \n Taiwan Independence vs. Unification with the Mainl\n \n \n Party Preferences\n \n \n \n \n \n Publications\n \n \n Journal of Electoral Studies\n \n \n Book\n \n \n \n Data Science and Public Opinion Program, DSPOP\n \n \n Data Science and Public Opinion Program, DSPOP\n \n \n \n \n \n HOME \n NCCU \n SITEMAP \n 正體中文 \n \n \n\n \n \n \n \n \n \n \n \n Taiwan Independence vs. Unification with the Mainl\n \n \n \n \n \n Home / Data Archives / Trends of Core Political Attitudes / Taiwan Independence vs. Unification with the Mainl \n \n \n \n \n :::\n \n \n \n :::\n \n \n Date 2026-07-03\n \n \n \n \n \n \n \n \n Taiwan Independence vs. Unification with the Mainland(1994/12~2026/06)\n \n \n \n Survey data is merged annually to generate data points, except those released in June; they come from surveys conducted between January and June. After results are weighted, data point is parsed out and added to the trend chart.\nFor data collection methodology, please see here.\n\nWhen quoted, please state clearly in writing:\n[sources: Election Study Center, National Chengchi University]\n\nIf you want to apply for the data of the \"Latest Trend of Taiwanese Core Political Attitude\", please sign and scan the application form directly to us by email.  The Excel file we provide is same with the figure shown on the website.  We are not able to provide raw survey data due to the restriction of the contract with our clients.\n\n•Due to the weight of 2017 were adjusted, the 2017 data is updated. \n \n \n \n Download\n \n \n \n 重要政治態度分佈趨勢圖資料研究方法說明(methodology)202606(Open in new window)\n \n \n \n \n \n Data Application Form & Data Loan Agreement(Open in new window)\n \n \n \n \n \n \n \n \n \n \n Back\n Home\n \n \n \n \n \n\n \n \n \n \n \n \n \n \n \n \n \n \n \n \n News\n \n \n Announcement\n \n \n Events\n \n \n Conferences\n \n \n \n About Us\n \n \n The Purposes of the ESC\n \n \n Research Capabilities & Reputation\n \n \n Research Capabilities\n \n \n Book\n \n \n Book Chapters\n \n \n Journal Papers\n \n \n \n \n Reputation\n \n \n \n \n Organizational Structure\n \n \n Future of the ESC\n \n \n Contact Us\n \n \n \n People\n \n \n Research Fellows\n \n \n Center Associates\n \n \n Staff\n \n \n Research Assistants\n \n \n Advisory Board\n \n \n Visiting Scholar\n \n \n Editorial Board\n \n \n \n Projects\n \n \n Ministry of Science and Technology Projects\n \n \n Commissioned Research Programs\n \n \n \n Data Archives\n \n \n Dataset and Regulations\n \n \n Categories and Results of Elections in Taiwan\n \n \n Trends of Core Political Attitudes\n \n \n Taiwanese / Chinese Identity\n \n \n Taiwan Independence vs. Unification with the Mainl\n \n \n Party Preferences\n \n \n \n \n \n Publications\n \n \n Journal of Electoral Studies\n \n \n Book\n \n \n \n Data Science and Public Opinion Program, DSPOP\n \n \n Data Science and Public Opinion Program, DSPOP\n \n \n \n \n \n HOME \n NCCU \n SITEMAP \n 正體中文"
+              }
+            ],
+            "answer": "Based on the available evidence, I cannot provide specific polling percentages from August 2026. The most recent polling data available is from **July 2026** (not August), showing that **61.7% of Taiwanese rejected unification with China** (combining those favoring independence or maintaining the status quo indefinitely), while only **7.8% supported eventual or immediate unification**, according to the Mainland Affairs Council's survey conducted in March 2026 and reported in July (https://www.taipeitimes.com/News/front/archives/2026/07/06/2003860292 and https://www.taiwannews.com.tw/en/news/6395438). **Confidence: Medium** - the data exists but is from July 2026 reporting on a March 2026 survey, not specifically August 2026 as requested.",
+            "children": []
+          }
+        ],
+        "id": "1.1",
+        "status": "answered",
+        "findings": [],
+        "answer": "Based on the available evidence, **no specific polling data from August 2026** was identified. The most recent data comes from **July 2026**, when the Mainland Affairs Council reported that **61.7% of Taiwanese rejected unification with China** (favoring independence or indefinite status quo) while only **7.8% supported eventual or immediate unification**, based on a March 2026 survey (https://www.taipeitimes.com/News/front/archives/2026/07/06/2003860292). **Confidence: Low** - the question specifically asks for August 2026 data, which was not found in the evidence; the cited July data is the closest available but does not meet the temporal requirement."
+      },
+      {
+        "title": "Taiwan Public Opinion on US Relations",
+        "question": "What do recent polling data (August 2026) show about Taiwanese public opinion on relations with the United States?",
+        "direction": "Search for August 2026 Taiwan polling data specifically covering attitudes toward the US, trust in American support, favorability of US relations, and preferences for US engagement.",
+        "research_areas": [
+          "Taiwan-US relations polling",
+          "Favorability of United States in Taiwan",
+          "Trust in US security commitments",
+          "Support for closer US-Taiwan ties",
+          "Polls on US arms sales and defense cooperation"
+        ],
+        "tools_hint": [
+          "search",
+          "fetch"
+        ],
+        "success_criterion": "Poll results from August 2026 or immediately prior showing percentages for Taiwan public sentiment toward the US, trust in US support, or related metrics.",
+        "depends_on": [],
+        "children": [
+          {
+            "title": "Recent Taiwan-US Polling Sources",
+            "question": "Which polling organizations or surveys have published Taiwan-US relations data in July-August 2026?",
+            "direction": "Search for the same reputable Taiwan polling sources but focusing on their US relations questions and recent releases.",
+            "research_areas": [
+              "NCCU surveys on US favorability",
+              "Taiwan Public Opinion Foundation US-related questions",
+              "Pew Research Center Taiwan surveys",
+              "TVBS or media polls on US relations",
+              "Think tank reports on Taiwan-US ties"
+            ],
+            "tools_hint": [
+              "search",
+              "fetch"
+            ],
+            "success_criterion": "Identification of 2-3 credible sources with August 2026 data on Taiwan-US relations sentiment.",
+            "depends_on": [],
+            "id": "1.2.1",
+            "status": "answered",
+            "findings": [
+              {
+                "tool": "search",
+                "input": "Taiwan US relations poll survey July August 2026",
+                "result": "1. New Taiwan Polls Show Strong 'Pro-US' Sentiment and Majority Ready to ...\n   https://www.visiontimes.com/2026/03/13/new-taiwan-polls-show-strong-pro-us-sentiment-and-majority-ready-to-resist-china.html\n   Should Taiwanese people favor the United States or China? If the U.S. military does not come to Taiwan's defense, would the public still be willing to resist a Chinese Communist Party (CCP) invasion? Two new public opinion polls in Taiwan reveal the public's stance. A survey by the TVBS Poll Center shows that as many as 77 percent of respondents believe being pro-U.S. is important for ...\n2. New Taiwan Polls Show Strong 'Pro-US' Sentiment and Majority Ready to ...\n   https://www.visiontimes.com/2026/03/13/new-taiwan-polls-show-strong-pro-us-sentiment-and-majority-ready-to-resist-china.html\n   Should Taiwanese people favor the United States or China? If the U.S. military does not come to Taiwan's defense, would the public still be willing to resist a Chinese Communist Party (CCP) invasion? Two new public opinion polls in Taiwan reveal the public's stance. A survey by the TVBS Poll Center shows that as many as 77 percent of respondents believe being pro-U.S. is important for ...\n3. Many Americans say Taiwan vital to US security - Taipei Times\n   https://www.taipeitimes.com/News/front/archives/2026/07/01/2003860028\n   Nearly two-thirds of Americans believe Taiwan's security is important for US security and prosperity, the results of the 2026 Reagan Institute Summer Survey released on Monday showed. Sixty-six percent of respondents said they agreed that Taiwan's security matters to the US, including 72 percent of Republicans and 62 percent of Democrats, according to the survey conducted by the California ...\n4. Many Americans say Taiwan vital to US security - Taipei Times\n   https://www.taipeitimes.com/News/front/archives/2026/07/01/2003860028\n   Nearly two-thirds of Americans believe Taiwan's security is important for US security and prosperity, the results of the 2026 Reagan Institute Summer Survey released on Monday showed. Sixty-six percent of respondents said they agreed that Taiwan's security matters to the US, including 72 percent of Republicans and 62 percent of Democrats, according to the survey conducted by the California ...\n5. Taiwan polls & surveys | YouGov\n   https://yougov.com/en-us/topics/place/Taiwan\n   Explore the latest YouGov polling, survey results and articles about Taiwan.\n6. Taiwan polls & surveys | YouGov\n   https://yougov.com/en-us/topics/place/Taiwan\n   Explore the latest YouGov polling, survey results and articles about Taiwan."
+              },
+              {
+                "tool": "search",
+                "input": "Taiwan Foundation for Democracy poll US relations August 2026",
+                "result": "1. TAIWAN FOUNDATION for DEMOCRACY | Grants\n   https://www.tfd.org.tw/en/grants/fellowships\n   Eligibility by Category 1. International Visiting Fellowship You are a well-established scholar or expert in the field of democracy or human rights devoted to the promotion and building of democracy and human rights. You intend to undertake research related to Taiwan's democracy or human rights or engage in a democracy or human rights promotion project. You are not a citizen of Taiwan.\n2. TAIWAN FOUNDATION for DEMOCRACY | Grants\n   https://www.tfd.org.tw/en/grants/fellowships\n   Eligibility by Category 1. International Visiting Fellowship You are a well-established scholar or expert in the field of democracy or human rights devoted to the promotion and building of democracy and human rights. You intend to undertake research related to Taiwan's democracy or human rights or engage in a democracy or human rights promotion project. You are not a citizen of Taiwan.\n3. 2026 Reagan Institute Summer Survey - reaganfoundation.org\n   https://www.reaganfoundation.org/reagan-institute/centers/freedom-democracy/survey/2026-reagan-institute-summer-survey\n   The 2026 Reagan Institute Summer Survey is a public opinion poll that assists elected officials, policymakers, and key stakeholders with understanding how Americans view an array of foreign policy and national security matters.\n4. 2026 Reagan Institute Summer Survey - reaganfoundation.org\n   https://www.reaganfoundation.org/reagan-institute/centers/freedom-democracy/survey/2026-reagan-institute-summer-survey\n   The 2026 Reagan Institute Summer Survey is a public opinion poll that assists elected officials, policymakers, and key stakeholders with understanding how Americans view an array of foreign policy and national security matters.\n5. 民調中心 | Tvbs\n   https://www.tvbs.com.tw/poll-center\n   民調中心 TVBS民調中心將不定期公佈台灣政治、社會、經濟、民生等議題之民意調查，歡迎民眾隨時上網查閱最新民調報告。 TVBS Poll Center will provide public opinion polls regarding current Taiwanese politic, social, economic issues. Please log on to find out the latest poll.\n6. 民調中心 | Tvbs\n   https://www.tvbs.com.tw/poll-center\n   民調中心 TVBS民調中心將不定期公佈台灣政治、社會、經濟、民生等議題之民意調查，歡迎民眾隨時上網查閱最新民調報告。 TVBS Poll Center will provide public opinion polls regarding current Taiwanese politic, social, economic issues. Please log on to find out the latest poll."
+              },
+              {
+                "tool": "search",
+                "input": "TVBS poll Taiwan America relations summer 2026",
+                "result": "1. New Polls Show Taiwan Strongly Favors US Alliance Over Beijing\n   https://www.visiontimes.com/2026/03/15/new-polls-show-taiwan-strongly-favors-us-alliance-over-china.html\n   Two recent public opinion surveys reveal the choices of the Taiwanese people. A poll by the TVBS Poll Center shows that as many as 77 percent of respondents believe maintaining good relations with the U.S. is important for Taiwan, while 47 percent think the same about mainland China.\n2. New Polls Show Taiwan Strongly Favors US Alliance Over Beijing\n   https://www.visiontimes.com/2026/03/15/new-polls-show-taiwan-strongly-favors-us-alliance-over-china.html\n   Two recent public opinion surveys reveal the choices of the Taiwanese people. A poll by the TVBS Poll Center shows that as many as 77 percent of respondents believe maintaining good relations with the U.S. is important for Taiwan, while 47 percent think the same about mainland China.\n3. 民調中心 | Tvbs\n   https://www.tvbs.com.tw/poll-center\n   民調中心 TVBS民調中心將不定期公佈台灣政治、社會、經濟、民生等議題之民意調查，歡迎民眾隨時上網查閱最新民調報告。 TVBS Poll Center will provide public opinion polls regarding current Taiwanese politic, social, economic issues. Please log on to find out the latest poll.\n4. 民調中心 | Tvbs\n   https://www.tvbs.com.tw/poll-center\n   民調中心 TVBS民調中心將不定期公佈台灣政治、社會、經濟、民生等議題之民意調查，歡迎民眾隨時上網查閱最新民調報告。 TVBS Poll Center will provide public opinion polls regarding current Taiwanese politic, social, economic issues. Please log on to find out the latest poll.\n5. New Taiwan Polls Show Strong 'Pro-US' Sentiment and Majority Ready to ...\n   https://www.visiontimes.com/2026/03/13/new-taiwan-polls-show-strong-pro-us-sentiment-and-majority-ready-to-resist-china.html\n   Two new public opinion polls in Taiwan reveal the public's stance. A survey by the TVBS Poll Center shows that as many as 77 percent of respondents believe being pro-U.S. is important for Taiwan, while 47 percent say being pro-China is important.\n6. New Taiwan Polls Show Strong 'Pro-US' Sentiment and Majority Ready to ...\n   https://www.visiontimes.com/2026/03/13/new-taiwan-polls-show-strong-pro-us-sentiment-and-majority-ready-to-resist-china.html\n   Two new public opinion polls in Taiwan reveal the public's stance. A survey by the TVBS Poll Center shows that as many as 77 percent of respondents believe being pro-U.S. is important for Taiwan, while 47 percent say being pro-China is important."
+              },
+              {
+                "tool": "fetch",
+                "input": "[URL from most promising search result]",
+                "result": "(could not fetch [URL from most promising search result])"
+              },
+              {
+                "tool": "fetch",
+                "input": "https://www.taipeitimes.com/News/front/archives/2026/07/01/2003860028",
+                "result": "Front Page\n Taiwan News\n Business\n Editorial & Opinion\n Sports\n World News\n Features\n Bilingual Pages\n SearchSearch\n \n \n \n \n \n \n All\n Front Page\n Taiwan News\n Business\n Editorial & Opinion\n Sports\n World News\n Features\n Bilingual Pages\n \n \n July 4, 2026 - August 2, 2026\n \n GO\n \n \n \n\n \n \n \n \n \n \n\n \n \n \n \n Home\n Front Page\n \n \n Wed, Jul 01, 2026 page1\n \n \n \n Many Americans say Taiwan vital to US security\n \n GENERATION GAP: \n On nearly every issue, younger respondents were 20 to 30 percentage points less likely than older one to express concern about China \n \n Staff writer, with CNA\n \n \n Add TT as Preferred Source\n \n \n \n \n \n \n\n Nearly two-thirds of Americans believe Taiwan’s security is important for US security and prosperity, the results of the 2026 Reagan Institute Summer Survey released on Monday showed.Sixty-six percent of respondents said they agreed that Taiwan’s security matters to the US, including 72 percent of Republicans and 62 percent of Democrats, according to the survey conducted by the California-based Ronald Reagan Presidential Foundation and Institute.The survey found that bipartisan consensus around China-related issues is one of the strongest areas of agreement among Americans on foreign policy challenges.\n \n \n \n Taiwanese and US flags flutter outside the National Chungshan Institute of Science and Technology in Taoyuan on March 30.\n Photo: Cheng I-hwa, AFP\n Seventy-four percent of respondents said they were concerned that China could attempt to take Taiwan by force, 75 percent were concerned over China’s military buildup and 74 percent were concerned over its human rights abuses, the survey showed.The concerns extended to foreign policy preferences, with 59 percent of respondents saying that the US should publicly pressure China to release political prisoners such as media mogul Jimmy Lai (黎智英), founder of the now-shuttered Hong Kong newspaper Apple Daily (蘋果日報), even if doing so increased bilateral tensions, the report said. \n \n US domestic issues linked to China drew even higher levels of concern.More than four in five respondents (82 percent) said they were concerned about China’s role in the flow of fentanyl into the US, including 85 percent of Democrats and 82 percent of Republicans.Other top concerns included Chinese purchases of US land (80 percent), Beijing’s ability to spy on Americans (81 percent), and technology theft and unfair trade practices (79 percent).Views were more divided over US President Donald Trump’s approach to China, the survey showed.Following Trump’s May summit with Chinese President Xi Jinping (習近平), 44 percent of respondents said the administration’s policy was “about right,” including 59 percent of Republicans.Democrats were more divided, with 37 percent saying the administration was not tough enough on China and 32 percent saying the White House’s approach was about right.Only 12 percent of respondents overall said the administration had been too tough on Beijing, the report showed.The survey also found a clear generational divide, with concern over China increasing with age. On nearly every issue measured, the youngest respondents were 20 to 30 percentage points less likely than their oldest counterparts to express concern.However, human rights issues showed a smaller age gap. Concern over China’s censorship, surveillance and restrictions on free expression was shared by 73 percent of the youngest respondents and 75 percent of the oldest.On human rights abuses in Hong Kong and against U"
+              },
+              {
+                "tool": "fetch",
+                "input": "https://www.reaganfoundation.org/reagan-institute/centers/freedom-democracy/survey/2026-reagan-institute-summer-survey",
+                "result": "OverviewThe 2026 Reagan Institute Summer Survey is a public opinion poll that assists elected officials, policymakers, and key stakeholders with understanding how Americans view an array of foreign policy and national security matters.President Ronald Reagan believed that U.S. leadership in the world—backed by American strength—was the surest guarantor of peace. As the nation celebrates its 250th birthday, the 2026 Reagan Institute Summer Survey finds that the American people still hold to the core of that conviction. Americans want the United States to lead in the world. They say a strong military is essential to keeping the peace. And they believe that the United States has been a force for good in the world over its 250 years.This survey also sounds a warning: the bipartisan consensus that has underpinned America’s global leadership is showing signs of polarization. For most of the past decade, Democrats and Republicans differed only modestly on the degree of their belief in an internationalist foreign policy. This year, that has changed. Democratic support for U.S. leadership and for the benefits of American engagement has cooled sharply, while Republican support has held firm. The polarization cuts both ways: on NATO, Republicans have grown more skeptical, while Democratic support has held firm. Americans have not abandoned global leadership, but positions once shared across the aisle are at risk of becoming the domain of one party at a time—depending on who occupies the White House.Yet this survey also uncovers areas where bipartisan support for U.S. foreign policy goals remains firm. Americans of both parties see the threat from China with remarkable clarity—and increasingly as a danger to their own communities rather than a distant abstraction. Majorities across the political spectrum still believe in America’s moral obligation to stand up for freedom abroad. And younger Americans, despite registering lower concern about many foreign threats, are among the most enthusiastic supporters of U.S. global engagement. The task for today’s leaders is to recognize that the consensus behind American leadership is not self-sustaining—and to make the case for it anew.The MAGA Movement’s Next GenerationThe 2026 Reagan Institute Summer Survey tested the narrative that younger members of the MAGA movement are more skeptical of American engagement abroad, commissioning an oversample of self-identified MAGA Republicans under the age of 30. On nearly every measure, young MAGA Republicans hold the same foreign policy views as the movement as a whole: a rejection of isolationism and a commitment to America’s leadership role on the global stage. Almost three-quarters (72%) of MAGA Republicans under 30 want the United States to be more engaged and take the lead in international events, against just 19% who prefer to pull back—a margin of nearly four to one. Eighty-five percent agree that a strong military is essential to peace and prosperity. These are not the markings of a generation wanting America to retreat from the world. They are the convictions of a cohort that, like the rest of the MAGA movement, believes American strength and engagement serve both the nation and the cause of freedom.On today's most pressing geopolitical challenges, young MAGA Republicans land where the rest of the movement does. On Iran, clear majorities of each group approve of this year's U.S. military actions (73% of those under 30, 89% of all MAGA Republicans), and major"
+              },
+              {
+                "tool": "search",
+                "input": "Reagan Institute survey Taiwan June July 2026 release date",
+                "result": "1. 2026 Reagan Institute Summer Survey | The Ronald Reagan Presidential ...\n   https://www.reaganfoundation.org/reagan-institute/centers/freedom-democracy/survey/2026-reagan-institute-summer-survey\n   The 2026 Reagan Institute Summer Survey is a public opinion poll that assists elected officials, policymakers, and key stakeholders with understanding how Americans view an array of foreign policy and national security matters.\n2. 2026 Reagan Institute Summer Survey | The Ronald Reagan Presidential ...\n   https://www.reaganfoundation.org/reagan-institute/centers/freedom-democracy/survey/2026-reagan-institute-summer-survey\n   The 2026 Reagan Institute Summer Survey is a public opinion poll that assists elected officials, policymakers, and key stakeholders with understanding how Americans view an array of foreign policy and national security matters.\n3. 民調：2/3 美國受訪者認為，台灣安全攸關美國安全繁榮 | TechNews 科技新報\n   https://technews.tw/2026/06/30/2026-reagan-institute-summer-survey/\n   美國「雷根總統基金會暨紀念中心」最新民調指出，三分之二美國受訪者認為，台灣安全攸關美國自身的安全與繁榮，另有 74% 受訪者關切中國可能奪取台灣。 雷根總統基金會暨紀念中心（The Ronald Reagan Presidential Foundation and Institute）29日發布的夏...\n4. 民調：2/3 美國受訪者認為，台灣安全攸關美國安全繁榮 | TechNews 科技新報\n   https://technews.tw/2026/06/30/2026-reagan-institute-summer-survey/\n   美國「雷根總統基金會暨紀念中心」最新民調指出，三分之二美國受訪者認為，台灣安全攸關美國自身的安全與繁榮，另有 74% 受訪者關切中國可能奪取台灣。 雷根總統基金會暨紀念中心（The Ronald Reagan Presidential Foundation and Institute）29日發布的夏...\n5. PDF U.s. National Survey of Foreign Policy Attitudes on Behalf of The ...\n   https://www.reaganfoundation.org/cms/assets/1782414649-reagan-institute-summer-survey-2026-overall-toplines.pdf\n   10. The U.S. is better served by withdrawing from international affairs and focusing more attention on problems here at home. June 2026 81% 46 June 2025 85% 49 May 2024 78% 41 June 2023 76% 33 June 2026 81% 49 June 2025 83% 50 May 2024 77% 44 *June 2023 74% 38 35 18 11\n6. PDF U.s. National Survey of Foreign Policy Attitudes on Behalf of The ...\n   https://www.reaganfoundation.org/cms/assets/1782414649-reagan-institute-summer-survey-2026-overall-toplines.pdf\n   10. The U.S. is better served by withdrawing from international affairs and focusing more attention on problems here at home. June 2026 81% 46 June 2025 85% 49 May 2024 78% 41 June 2023 76% 33 June 2026 81% 49 June 2025 83% 50 May 2024 77% 44 *June 2023 74% 38 35 18 11"
+              },
+              {
+                "tool": "search",
+                "input": "Pew Research Taiwan US relations poll July August 2026",
+                "result": "1. Taiwan - Pew Research Center\n   https://www.pewresearch.org/collections/taiwan/\n   As the 2026 Midterms Approach, Economy Is Front and Center Americans are now almost evenly split over which party they most agree with on economic policies: 37% say the Democrats, while 36% say the GOP.\n2. Taiwan - Pew Research Center\n   https://www.pewresearch.org/collections/taiwan/\n   As the 2026 Midterms Approach, Economy Is Front and Center Americans are now almost evenly split over which party they most agree with on economic policies: 37% say the Democrats, while 36% say the GOP.\n3. Pew Research Center | Nonpartisan, nonadvocacy, public opinion polling ...\n   https://www.pewresearch.org/\n   Numbers, Facts and Trends Shaping Your World ABOUT PEW RESEARCH CENTER Pew Research Center is a nonpartisan, nonadvocacy fact tank that informs the public about the issues, attitudes and trends shaping the world. It does not take policy positions. The Center conducts public opinion polling, demographic research, computational social science research and other data-driven research. Pew Research ...\n4. Pew Research Center | Nonpartisan, nonadvocacy, public opinion polling ...\n   https://www.pewresearch.org/\n   Numbers, Facts and Trends Shaping Your World ABOUT PEW RESEARCH CENTER Pew Research Center is a nonpartisan, nonadvocacy fact tank that informs the public about the issues, attitudes and trends shaping the world. It does not take policy positions. The Center conducts public opinion polling, demographic research, computational social science research and other data-driven research. Pew Research ...\n5. PDF Updated March 30, 2026 Taiwan: Background and U.S. Relations\n   https://www.congress.gov/crs_external_products/IF/PDF/IF10275/IF10275.86.pdf\n   Pursuant to the Taiwan Relations Act, the United States carries out relations with Taiwan through the American Institute in Taiwan (AIT), a nonprofit corporation that operates under a contract with the U.S. Department of State. AIT's Taipei Main Office performs many of the same functions as an embassy and is staffed by U.S. government personnel. Among the act's security provisions are that ...\n6. PDF Updated March 30, 2026 Taiwan: Background and U.S. Relations\n   https://www.congress.gov/crs_external_products/IF/PDF/IF10275/IF10275.86.pdf\n   Pursuant to the Taiwan Relations Act, the United States carries out relations with Taiwan through the American Institute in Taiwan (AIT), a nonprofit corporation that operates under a contract with the U.S. Department of State. AIT's Taipei Main Office performs many of the same functions as an embassy and is staffed by U.S. government personnel. Among the act's security provisions are that ..."
+              },
+              {
+                "tool": "search",
+                "input": "Academia Sinica Taiwan survey US relations summer 2026",
+                "result": "1. Taiwanese Views of the United States and China: Evidence from the 2026 ...\n   https://www.csis.org/events/taiwanese-views-united-states-and-china-evidence-2026-american-portrait-survey\n   Please join the CSIS Freeman Chair in China Studies on March 11 from 9am to 10am ET for the online launch of the 2026 American Portrait Survey in Taiwan, a project of Academia Sinica. The survey's findings shed light on Taiwanese perspectives regarding U.S.-Taiwan relations, China-Taiwan relations, defense spending and deterrence, credibility of the U.S. security commitment to Taiwan ...\n2. Taiwanese Views of the United States and China: Evidence from the 2026 ...\n   https://www.csis.org/events/taiwanese-views-united-states-and-china-evidence-2026-american-portrait-survey\n   Please join the CSIS Freeman Chair in China Studies on March 11 from 9am to 10am ET for the online launch of the 2026 American Portrait Survey in Taiwan, a project of Academia Sinica. The survey's findings shed light on Taiwanese perspectives regarding U.S.-Taiwan relations, China-Taiwan relations, defense spending and deterrence, credibility of the U.S. security commitment to Taiwan ...\n3. American Portrait Survey\n   https://www.american-portrait.tw/en/\n   Initiated in 2021 by Dr. Chien-Huei Wu (the then-convenor of the U.S.-Taiwan-China Relations Thematic Research Group in the Institute of European and American Studies (IEAS), Academia Sinica) in collaboration with Dr. Hsin-Hsin Pan and Dr. Wen-Chin Wu, \"American Portrait\" is a Taiwan-based survey that investigates the public's perception of the United States and China and draws conclusions ...\n4. American Portrait Survey\n   https://www.american-portrait.tw/en/\n   Initiated in 2021 by Dr. Chien-Huei Wu (the then-convenor of the U.S.-Taiwan-China Relations Thematic Research Group in the Institute of European and American Studies (IEAS), Academia Sinica) in collaboration with Dr. Hsin-Hsin Pan and Dr. Wen-Chin Wu, \"American Portrait\" is a Taiwan-based survey that investigates the public's perception of the United States and China and draws conclusions ...\n5. Majority willing to resist China in attack, survey finds\n   https://www.taipeitimes.com/News/front/archives/2026/03/13/2003853732\n   Nearly 60 percent of Taiwanese polled said they would be willing to resist \"at all costs\" if China attacks Taiwan and the US does not deploy forces to help, an Academia Sinica survey released yesterday found. The Institute of European and American Studies' \"American Portrait\" survey found that 58.7 percent of respondents would be willing to resist a Chinese invasion \"at all costs ...\n6. Majority willing to resist China in attack, survey finds\n   https://www.taipeitimes.com/News/front/archives/2026/03/13/2003853732\n   Nearly 60 percent of Taiwanese polled said they would be willing to resist \"at all costs\" if China attacks Taiwan and the US does not deploy forces to help, an Academia Sinica survey released yesterday found. The Institute of European and American Studies' \"American Portrait\" survey found that 58.7 percent of respondents would be willing to resist a Chinese invasion \"at all costs ..."
+              },
+              {
+                "tool": "fetch",
+                "input": "https://www.reaganfoundation.org/cms/assets/1782414649-reagan-institute-summer-survey-2026-overall-toplines.pdf",
+                "result": "(could not fetch https://www.reaganfoundation.org/cms/assets/1782414649-reagan-institute-summer-survey-2026-overall-toplines.pdf)"
+              }
+            ],
+            "answer": "Based on the evidence, the **Reagan Institute** (Ronald Reagan Presidential Foundation and Institute) published Taiwan-US relations data in **late June/early July 2026**. Their 2026 Summer Survey, released on June 29, 2026 (reported in Taipei Times on July 1, 2026), found that 66% of Americans believe Taiwan's security is important for US security and prosperity (https://www.taipeitimes.com/News/front/archives/2026/07/01/2003860028 and https://www.reaganfoundation.org/reagan-institute/centers/freedom-democracy/survey/2026-reagan-institute-summer-survey). No evidence was found for polling organizations publishing Taiwan-US relations data specifically in August 2026. **Confidence: Medium** - clear evidence for late June/early July publication, but August timeframe lacks evidence.",
+            "children": []
+          },
+          {
+            "title": "US Relations Sentiment Data Points",
+            "question": "What specific percentages or trends do August 2026 polls show regarding Taiwanese views on the United States?",
+            "direction": "Extract concrete polling numbers on questions like: favorability of US, trust in US security guarantees, support for US arms sales, preference for closer US ties.",
+            "research_areas": [
+              "Favorability ratings of United States",
+              "Trust in US defense commitments",
+              "Support for US military presence/cooperation",
+              "Perception of US reliability",
+              "Comparative preference: US vs China alignment"
+            ],
+            "tools_hint": [
+              "fetch",
+              "search"
+            ],
+            "success_criterion": "At least 2-3 specific polling percentages from August 2026 showing Taiwanese attitudes toward the US.",
+            "depends_on": [
+              "Recent Taiwan-US Polling Sources"
+            ],
+            "id": "1.2.2",
+            "status": "answered",
+            "findings": [
+              {
+                "tool": "search",
+                "input": "Taiwan polls August 2026 views United States favorability trust",
+                "result": "1. Political Favorability Tracker 2026 — Party, Institutions & Politicians\n   https://uspollingdata.com/polls/favorability-tracker/\n   Political favorability ratings August 2026: party favorability, Congress approval, Supreme Court ratings, Trump 38% approval. Full politician ratings, historical trends, and partisan crosstabs. Updated monthly.\n2. Political Favorability Tracker 2026 — Party, Institutions & Politicians\n   https://uspollingdata.com/polls/favorability-tracker/\n   Political favorability ratings August 2026: party favorability, Congress approval, Supreme Court ratings, Trump 38% approval. Full politician ratings, historical trends, and partisan crosstabs. Updated monthly.\n3. New Taiwan Polls Show Strong 'Pro-US' Sentiment and Majority Ready to ...\n   https://www.visiontimes.com/2026/03/13/new-taiwan-polls-show-strong-pro-us-sentiment-and-majority-ready-to-resist-china.html\n   Should Taiwanese people favor the United States or China? If the U.S. military does not come to Taiwan's defense, would the public still be willing to resist a Chinese Communist Party (CCP) invasion? Two new public opinion polls in Taiwan reveal the public's stance. A survey by the TVBS Poll Center shows that as many as 77 percent of respondents believe being pro-U.S. is important for ...\n4. New Taiwan Polls Show Strong 'Pro-US' Sentiment and Majority Ready to ...\n   https://www.visiontimes.com/2026/03/13/new-taiwan-polls-show-strong-pro-us-sentiment-and-majority-ready-to-resist-china.html\n   Should Taiwanese people favor the United States or China? If the U.S. military does not come to Taiwan's defense, would the public still be willing to resist a Chinese Communist Party (CCP) invasion? Two new public opinion polls in Taiwan reveal the public's stance. A survey by the TVBS Poll Center shows that as many as 77 percent of respondents believe being pro-U.S. is important for ...\n5. Election Study Center, NCCU-Taiwan Independence vs. Unification with ...\n   https://esc.nccu.edu.tw/PageDoc/Detail?fid=7801&id=6963\n   Date 2026-07-03 Taiwan Independence vs. Unification with the Mainland (1994/12~2026/06)\n6. Election Study Center, NCCU-Taiwan Independence vs. Unification with ...\n   https://esc.nccu.edu.tw/PageDoc/Detail?fid=7801&id=6963\n   Date 2026-07-03 Taiwan Independence vs. Unification with the Mainland (1994/12~2026/06)"
+              },
+              {
+                "tool": "search",
+                "input": "Taiwan public opinion survey August 2026 US security guarantees arms sales",
+                "result": "1. Institute for National Defense and Security Research-Taiwan National ...\n   https://www.indsr.org.tw/en/safetyInvestigation?uid=46\n   《The Diplomat》-Can Crisis Preparedness Information Move Taiwanese From Awareness to Action? —— 2026.01.05 New Findings from US-Taiwan Public Opinion Surveys: Shared Confidence, Diverging Expectations in the Taiwan Strait —— 2025.12.15\n2. Institute for National Defense and Security Research-Taiwan National ...\n   https://www.indsr.org.tw/en/safetyInvestigation?uid=46\n   《The Diplomat》-Can Crisis Preparedness Information Move Taiwanese From Awareness to Action? —— 2026.01.05 New Findings from US-Taiwan Public Opinion Surveys: Shared Confidence, Diverging Expectations in the Taiwan Strait —— 2025.12.15\n3. Trump effect? Taiwan poll reveals deep doubts about US military ...\n   https://www.scmp.com/news/china/politics/article/3350926/trump-effect-taiwan-poll-reveals-deep-doubts-about-us-military-protection\n   The results highlighted mounting scepticism on the island over Washington's security guarantees, according to the survey released on Monday by the Taipei-based Democracy Foundation. The poll ...\n4. Trump effect? Taiwan poll reveals deep doubts about US military ...\n   https://www.scmp.com/news/china/politics/article/3350926/trump-effect-taiwan-poll-reveals-deep-doubts-about-us-military-protection\n   The results highlighted mounting scepticism on the island over Washington's security guarantees, according to the survey released on Monday by the Taipei-based Democracy Foundation. The poll ...\n5. Survey Reveals How Taiwanese Citizens View National Security\n   https://fsi.stanford.edu/news/survey-reveals-how-taiwanese-citizens-view-national-security\n   Using data from \"American Portrait,\" a Taiwan-based survey that investigates the public's perception of the United States and China, political economist Wen Chin Wu of Academia Sinica unpacks how the Taiwanese public feels about security, self-defense, and reliance on external partners.\n6. Survey Reveals How Taiwanese Citizens View National Security\n   https://fsi.stanford.edu/news/survey-reveals-how-taiwanese-citizens-view-national-security\n   Using data from \"American Portrait,\" a Taiwan-based survey that investigates the public's perception of the United States and China, political economist Wen Chin Wu of Academia Sinica unpacks how the Taiwanese public feels about security, self-defense, and reliance on external partners."
+              },
+              {
+                "tool": "fetch",
+                "input": "https://www.taiwanpolls.org/august-2026-survey",
+                "result": "(could not fetch https://www.taiwanpolls.org/august-2026-survey)"
+              },
+              {
+                "tool": "search",
+                "input": "\"August 2026\" Taiwan poll percentage United States relations closer ties",
+                "result": "(no web results for \"\"August 2026\" Taiwan poll percentage United States relations closer ties\")"
+              },
+              {
+                "tool": "fetch",
+                "input": "https://esc.nccu.edu.tw/PageDoc/Detail?fid=7801&id=6963",
+                "result": "Go to Content Area\n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n News\n \n \n Announcement\n \n \n Events\n \n \n Conferences\n \n \n \n About Us\n \n \n The Purposes of the ESC\n \n \n Research Capabilities & Reputation\n \n \n Research Capabilities\n \n \n Book\n \n \n Book Chapters\n \n \n Journal Papers\n \n \n \n \n Reputation\n \n \n \n \n Organizational Structure\n \n \n Future of the ESC\n \n \n Contact Us\n \n \n \n People\n \n \n Research Fellows\n \n \n Center Associates\n \n \n Staff\n \n \n Research Assistants\n \n \n Advisory Board\n \n \n Visiting Scholar\n \n \n Editorial Board\n \n \n \n Projects\n \n \n Ministry of Science and Technology Projects\n \n \n Commissioned Research Programs\n \n \n \n Data Archives\n \n \n Dataset and Regulations\n \n \n Categories and Results of Elections in Taiwan\n \n \n Trends of Core Political Attitudes\n \n \n Taiwanese / Chinese Identity\n \n \n Taiwan Independence vs. Unification with the Mainl\n \n \n Party Preferences\n \n \n \n \n \n Publications\n \n \n Journal of Electoral Studies\n \n \n Book\n \n \n \n Data Science and Public Opinion Program, DSPOP\n \n \n Data Science and Public Opinion Program, DSPOP\n \n \n \n \n \n HOME \n NCCU \n SITEMAP \n 正體中文 \n \n \n\n \n \n \n \n \n \n \n \n Taiwan Independence vs. Unification with the Mainl\n \n \n \n \n \n Home / Data Archives / Trends of Core Political Attitudes / Taiwan Independence vs. Unification with the Mainl \n \n \n \n \n :::\n \n \n \n :::\n \n \n Date 2026-07-03\n \n \n \n \n \n \n \n \n Taiwan Independence vs. Unification with the Mainland(1994/12~2026/06)\n \n \n \n Survey data is merged annually to generate data points, except those released in June; they come from surveys conducted between January and June. After results are weighted, data point is parsed out and added to the trend chart.\nFor data collection methodology, please see here.\n\nWhen quoted, please state clearly in writing:\n[sources: Election Study Center, National Chengchi University]\n\nIf you want to apply for the data of the \"Latest Trend of Taiwanese Core Political Attitude\", please sign and scan the application form directly to us by email.  The Excel file we provide is same with the figure shown on the website.  We are not able to provide raw survey data due to the restriction of the contract with our clients.\n\n•Due to the weight of 2017 were adjusted, the 2017 data is updated. \n \n \n \n Download\n \n \n \n 重要政治態度分佈趨勢圖資料研究方法說明(methodology)202606(Open in new window)\n \n \n \n \n \n Data Application Form & Data Loan Agreement(Open in new window)\n \n \n \n \n \n \n \n \n \n \n Back\n Home\n \n \n \n \n \n\n \n \n \n \n \n \n \n \n \n \n \n \n \n \n News\n \n \n Announcement\n \n \n Events\n \n \n Conferences\n \n \n \n About Us\n \n \n The Purposes of the ESC\n \n \n Research Capabilities & Reputation\n \n \n Research Capabilities\n \n \n Book\n \n \n Book Chapters\n \n \n Journal Papers\n \n \n \n \n Reputation\n \n \n \n \n Organizational Structure\n \n \n Future of the ESC\n \n \n Contact Us\n \n \n \n People\n \n \n Research Fellows\n \n \n Center Associates\n \n \n Staff\n \n \n Research Assistants\n \n \n Advisory Board\n \n \n Visiting Scholar\n \n \n Editorial Board\n \n \n \n Projects\n \n \n Ministry of Science and Technology Projects\n \n \n Commissioned Research Programs\n \n \n \n Data Archives\n \n \n Dataset and Regulations\n \n \n Categories and Results of Elections in Taiwan\n \n \n Trends of Core Political Attitudes\n \n \n Taiwanese / Chinese Identity\n \n \n Taiwan Independence vs. Unification with the Mainl\n \n \n Party Preferences\n \n \n \n \n \n Publications\n \n \n Journal of Electoral Studies\n \n \n Book\n \n \n \n Data Science and Public Opinion Program, DSPOP\n \n \n Data Science and Public Opinion Program, DSPOP\n \n \n \n \n \n HOME \n NCCU \n SITEMAP \n 正體中文"
+              },
+              {
+                "tool": "fetch",
+                "input": "https://www.scmp.com/news/china/politics/article/3350926/trump-effect-taiwan-poll-reveals-deep-doubts-about-us-military-protection",
+                "result": "AdvertisementTaiwanChinaPoliticsTrump effect? Taiwan poll reveals deep doubts about US military protectionResults also suggest a more pragmatic public mood on cross-strait relations, with many respondents favouring dialogue over confrontation3-MIN READ3-MIN55 ListenLawrence Chungin TaipeiPublished: 10:00am, 22 Apr 2026Half of Taiwanese not only doubt the US would send troops to defend Taiwan in the event of a cross-strait conflict but also question whether American weapons would prove effective, a poll this week has revealed.The results highlighted mounting scepticism on the island over Washington’s security guarantees, according to the survey released on Monday by the Taipei-based Democracy Foundation.The poll found that 57 per cent of respondents did not believe the US would send troops to defend the island if war broke out in the Taiwan Strait – and thereby risk direct conflict with mainland China.Less than a quarter said they believed Washington would help militarily.Asked if US forces could provide timely and effective military assistance in a crisis, 55.6 per cent said no – versus 31.5 per cent who believed they could.Confidence in US-made weapons was equally low: 49 per cent lacked faith in their defensive power, while just over a third expressed confidence.AdvertisementSelect VoiceSelect Speed0.8x0.9x1.0x1.1x1.2x1.5x1.75x00:0000:001.00x"
+              },
+              {
+                "tool": "fetch",
+                "input": "https://www.visiontimes.com/2026/03/13/new-taiwan-polls-show-strong-pro-us-sentiment-and-majority-ready-to-resist-china.html",
+                "result": "The photo shows overseas Chinese in Orange County, California, celebrating National Day by setting up flags of the Republic of China (Taiwan) and the United States on the lawn of the Irvine City Hall. (Image: Central News Agency)\n \n \n\n \n \n \nShould Taiwanese people favor the United States or China? If the U.S. military does not come to Taiwan’s defense, would the public still be willing to resist a Chinese Communist Party (CCP) invasion? Two new public opinion polls in Taiwan reveal the public’s stance.\n\nA survey by the TVBS Poll Center shows that as many as 77 percent of respondents believe being pro-U.S. is important for Taiwan, while 47 percent say being pro-China is important. Meanwhile, a poll by Academia Sinica indicates that more than half of respondents are willing to resist a CCP invasion at any cost and support purchasing weapons from the United States.\n\n‘Pro-US’ becomes a broad social consensus\n\nAccording to a report by Today News, the TVBS Poll Center conducted surveys asking which of Taiwan’s three major political parties is most pro-U.S. and whether Taiwanese people prefer being pro-U.S. or pro-China.\n\nPublic perceptions of the foreign policy direction of Taiwan’s three major parties are quite clear:\n\n82 percent believe the Democratic Progressive Party (DPP) is pro-U.S., while  five percent think it is anti-U.S.\n\nOnly 26 percent think the Kuomintang (KMT) is pro-U.S., while 48 percent believe it is anti-U.S.\n\nRegarding the Taiwan People’s Party (TPP), 24 percent believe it is pro-U.S., while 42 percent think it leans anti-U.S.\n\nOn how Taiwan should manage relations with the United States and China, the poll suggests that “pro-U.S.” has become a strong social consensus.\n\n77 percent say being pro-U.S. is important for Taiwan\n\n13 percent say it is not important\n\n10 percent have no opinion\n\n \n \n \n Success\n You are now signed up for our newsletter\n \n \n Success\n Check your email to complete sign up\n \n \n\nIn contrast:\n\n47 percent say being pro-China is important\n\n39 percent say it is not important\n\n13 percent have no opinion\n\nSupporters holding national flags cheer during an election campaign rally of Kuomintang (KMT) in New Taipei City on January 12, 2024. (Image: I-Hwa CHENG / AFP)\n\nWu Jingyi: KMT and TPP losing centrist voters\n\nPolitical commentator Wu Jingyi wrote on Facebook on March 12 that the latest TVBS poll is “a heavy blow” to Taiwan’s political landscape.\n\nShe noted that 77 percent of respondents across the political spectrum see being pro-U.S. as vital to Taiwan, while only 13 percent oppose it, far exceeding the 47 percent who identify with a pro-China stance—a gap of 30 percentage points.\n\nShe said this result echoes a Taiwan Public Opinion Foundation poll from November 2025, which found nearly 70 percent oppose unification with China. Together, the polls suggest mainstream public opinion is dismantling the narrative of “one family across the Taiwan Strait.”\n\nWu argues the shift reflects a structural transformation in Taiwanese society where security, values, and economic interests are increasingly aligned. She said the trend is not blind admiration of the United States, but a pragmatic choice.\n\nWu also criticized Taiwan’s opposition parties, saying they mistakenly believe anti-U.S. rhetoric can energize their grassroots supporters. Instead, she argued, it risks alienating centrist and younger voters.\n\nShe said that the phrase “one family across the Strait,” often used by former TPP chairman Ko Wen-je, has lost reson"
+              },
+              {
+                "tool": "fetch",
+                "input": "https://www.indsr.org.tw/en/safetyInvestigation?uid=46",
+                "result": "Taiwan National Defense Surveys\n \n \n \n \n \n \n \n \n \n\n \n :::\n \n \n \n \n Home\n \n \n \n Publications \n \n \n Taiwan National Defense Surveys\n \n\n \n \n Latest updates\n \n \n \n \n \n INDSR Releases the May 2026 Taiwan National Defense and Security Public Opinion Survey Data for External Application\n \n —— 2026.07.30\n \n \n \n \n \n \n INDSR Releases the March 2026 Taiwan National Defense and Security Public Opinion Survey Data for External Application\n \n —— 2026.05.14\n \n \n \n \n \n \n 《Pacific Forum》- Strengthening resilience against the “Invisible War”\n \n —— 2026.02.24\n \n \n \n \n \n \n INDSR Releases the November 2025 Taiwan National Defense and Security Public Opinion Survey Data for External Application\n \n —— 2026.02.03\n \n \n \n \n \n \n 《Taipei Times》-Does Taiwan’s National Public Safety Guide Enhance Citizens’ Sense of Capability?\n \n —— 2026.01.21\n \n \n \n \n \n \n 《The Diplomat》-Can Crisis Preparedness Information Move Taiwanese From Awareness to Action?\n \n —— 2026.01.05\n \n \n \n \n \n \n New Findings from US–Taiwan Public Opinion Surveys: Shared Confidence, Diverging Expectations in the Taiwan Strait\n \n —— 2025.12.15\n \n \n \n \n \n \n INDSR Releases the August 2025 Taiwan National Defense and Security Public Opinion Survey Data for External Application\n \n —— 2025.12.09\n \n \n \n \n \n \n INDSR Releases Data from the June 2025 Taiwan National Defense and Security Survey (Online Survey)\n \n —— 2025.09.25\n \n \n \n \n \n \n March 2025 Taiwan Defense Survey Data Now Available\n \n —— 2025.04.29\n \n \n\n \n \n Recent publications\n \n \n \n \n \n \n TNDS\n \n Views\n 1457\n \n \n \n \n How To Get Public Behind Taiwan’s New Military Reservist Training Program\n \n \n \n 2022.05.17\n Kuan-chen Lee\n \n \n \n \n \n \n \n \n \n TNDS\n \n Views\n 1519\n \n \n \n \n NAVIGATING SECURITY CHALLENGES AND GEOPOLITICAL SHIFTS:ASSESSING TAIWANESE PUBLIC PERSPECTIVES ON DEFENSE AND FOREIGN POLICY\n \n \n \n 2024.12.12\n Kuan-chen Lee / Christina Chen\n \n \n \n \n \n \n \n \n \n TNDS\n \n Views\n 2435\n \n \n \n \n TAIWANESE SUPPORT FOR NATIONAL DEFENSE: INSIGHTS FROM PUBLIC OPINION SURVEYS\n \n \n \n 2024.05.17\n Kuan-chen Lee\n \n \n \n \n \n \n \n \n \n TNDS\n \n Views\n 1594\n \n \n \n \n How to Increase Public Support for Defense Budget: An Observation from Survey\n \n \n \n 2023.04.21\n Kuan-chen Lee / Christina Chen / Ciao Lin Deng\n \n \n \n \n \n \n \n \n \n TNDS\n \n Views\n 1728\n \n \n \n \n Beyond Pro-US and Peace with China: Taiwan’s Strategic Choice to Strengthen Its National Defense\n \n \n \n 2023.06.02\n Kuan-chen Lee\n \n \n \n \n \n \n \n \n \n TNDS\n \n Views\n 1511\n \n \n \n \n Public Opinion on “Strengthening Our National Defense Capabilities” Facing CCP Military Exercises Around Taiwan\n \n \n \n 2023.02.10\n Kuan-chen Lee\n \n \n \n \n \n \n \n\n \n 【About us】In the face of China’s increasingly assertive United Front tactics in the economy and society and the growing threat of military force, as well as the challenges of Taiwan’s international status, Taiwan’s government needs to adapt its defense strategy and policies. In addition, it is also important for Taiwan’s government to track citizens’ awareness of national defense and their views on defense matters. Therefore, starting in 2021, the Institute for National Defense and Security Research (INDSR) has commissioned the Election Study Center of National Chengchi University to conduct the Taiwan National Defense Survey (TNDS). It is hoped that through the accumulation and scientific analysis of data, the TNDS will provide reliable and unbiased public opinion data on defense matters to Taiwan’s government and society. As a national think tank, following the principles of data openness a"
+              },
+              {
+                "tool": "search",
+                "input": "TVBS Poll Center Taiwan August 2026 United States favorability",
+                "result": "1. 民調中心 | Tvbs\n   https://www.tvbs.com.tw/poll-center\n   TVBS民調中心將不定期公佈台灣政治、社會、經濟、民生等議題之民意調查，歡迎民眾隨時上網查閱最新民調報告。 TVBS Poll Center will provide public opinion polls regarding current Taiwanese politic, social, economic issues.\n2. 民調中心 | Tvbs\n   https://www.tvbs.com.tw/poll-center\n   TVBS民調中心將不定期公佈台灣政治、社會、經濟、民生等議題之民意調查，歡迎民眾隨時上網查閱最新民調報告。 TVBS Poll Center will provide public opinion polls regarding current Taiwanese politic, social, economic issues.\n3. New Taiwan Polls Show Strong 'Pro-US' Sentiment and Majority Ready to ...\n   https://www.visiontimes.com/2026/03/13/new-taiwan-polls-show-strong-pro-us-sentiment-and-majority-ready-to-resist-china.html\n   Should Taiwanese people favor the United States or China? If the U.S. military does not come to Taiwan's defense, would the public still be willing to resist a Chinese Communist Party (CCP) invasion? Two new public opinion polls in Taiwan reveal the public's stance. A survey by the TVBS Poll Center shows that as many as 77 percent of respondents believe being pro-U.S. is important for ...\n4. New Taiwan Polls Show Strong 'Pro-US' Sentiment and Majority Ready to ...\n   https://www.visiontimes.com/2026/03/13/new-taiwan-polls-show-strong-pro-us-sentiment-and-majority-ready-to-resist-china.html\n   Should Taiwanese people favor the United States or China? If the U.S. military does not come to Taiwan's defense, would the public still be willing to resist a Chinese Communist Party (CCP) invasion? Two new public opinion polls in Taiwan reveal the public's stance. A survey by the TVBS Poll Center shows that as many as 77 percent of respondents believe being pro-U.S. is important for ...\n5. Tvbs 民意調查中心\n   https://campaign.tvbs.com.tw/project/poll_center_close/poll_center_close.html\n   政黨及任何人於投票日前十日起至投票時間截止前，不得以任何方式，發布有關候選人或選舉之民意調查資料，亦不得加以報導、散布、評論或引述。 TVBS 民調中心謝謝您的支持!\n6. Tvbs 民意調查中心\n   https://campaign.tvbs.com.tw/project/poll_center_close/poll_center_close.html\n   政黨及任何人於投票日前十日起至投票時間截止前，不得以任何方式，發布有關候選人或選舉之民意調查資料，亦不得加以報導、散布、評論或引述。 TVBS 民調中心謝謝您的支持!"
+              },
+              {
+                "tool": "fetch",
+                "input": "https://www.visiontimes.com/2026/03/13/new-taiwan-polls-show-strong-pro-us-sentiment-and-majority-ready-to-resist-china.html",
+                "result": "The photo shows overseas Chinese in Orange County, California, celebrating National Day by setting up flags of the Republic of China (Taiwan) and the United States on the lawn of the Irvine City Hall. (Image: Central News Agency)\n \n \n\n \n \n \nShould Taiwanese people favor the United States or China? If the U.S. military does not come to Taiwan’s defense, would the public still be willing to resist a Chinese Communist Party (CCP) invasion? Two new public opinion polls in Taiwan reveal the public’s stance.\n\nA survey by the TVBS Poll Center shows that as many as 77 percent of respondents believe being pro-U.S. is important for Taiwan, while 47 percent say being pro-China is important. Meanwhile, a poll by Academia Sinica indicates that more than half of respondents are willing to resist a CCP invasion at any cost and support purchasing weapons from the United States.\n\n‘Pro-US’ becomes a broad social consensus\n\nAccording to a report by Today News, the TVBS Poll Center conducted surveys asking which of Taiwan’s three major political parties is most pro-U.S. and whether Taiwanese people prefer being pro-U.S. or pro-China.\n\nPublic perceptions of the foreign policy direction of Taiwan’s three major parties are quite clear:\n\n82 percent believe the Democratic Progressive Party (DPP) is pro-U.S., while  five percent think it is anti-U.S.\n\nOnly 26 percent think the Kuomintang (KMT) is pro-U.S., while 48 percent believe it is anti-U.S.\n\nRegarding the Taiwan People’s Party (TPP), 24 percent believe it is pro-U.S., while 42 percent think it leans anti-U.S.\n\nOn how Taiwan should manage relations with the United States and China, the poll suggests that “pro-U.S.” has become a strong social consensus.\n\n77 percent say being pro-U.S. is important for Taiwan\n\n13 percent say it is not important\n\n10 percent have no opinion\n\n \n \n \n Success\n You are now signed up for our newsletter\n \n \n Success\n Check your email to complete sign up\n \n \n\nIn contrast:\n\n47 percent say being pro-China is important\n\n39 percent say it is not important\n\n13 percent have no opinion\n\nSupporters holding national flags cheer during an election campaign rally of Kuomintang (KMT) in New Taipei City on January 12, 2024. (Image: I-Hwa CHENG / AFP)\n\nWu Jingyi: KMT and TPP losing centrist voters\n\nPolitical commentator Wu Jingyi wrote on Facebook on March 12 that the latest TVBS poll is “a heavy blow” to Taiwan’s political landscape.\n\nShe noted that 77 percent of respondents across the political spectrum see being pro-U.S. as vital to Taiwan, while only 13 percent oppose it, far exceeding the 47 percent who identify with a pro-China stance—a gap of 30 percentage points.\n\nShe said this result echoes a Taiwan Public Opinion Foundation poll from November 2025, which found nearly 70 percent oppose unification with China. Together, the polls suggest mainstream public opinion is dismantling the narrative of “one family across the Taiwan Strait.”\n\nWu argues the shift reflects a structural transformation in Taiwanese society where security, values, and economic interests are increasingly aligned. She said the trend is not blind admiration of the United States, but a pragmatic choice.\n\nWu also criticized Taiwan’s opposition parties, saying they mistakenly believe anti-U.S. rhetoric can energize their grassroots supporters. Instead, she argued, it risks alienating centrist and younger voters.\n\nShe said that the phrase “one family across the Strait,” often used by former TPP chairman Ko Wen-je, has lost reson"
+              }
+            ],
+            "answer": "The evidence does not contain polls specifically from August 2026 showing Taiwanese views on the United States. The closest available data are from earlier in 2026: a TVBS Poll Center survey (March 2026) found 77% of respondents believed being pro-U.S. was important for Taiwan, while a Democracy Foundation poll (April 2026) revealed significant skepticism—57% doubted the U.S. would send troops to defend Taiwan, and 49% lacked confidence in U.S.-made weapons (sources: visiontimes.com and scmp.com). Confidence: Low, as no August 2026 polling data was found in the evidence.",
+            "children": []
+          }
+        ],
+        "id": "1.2",
+        "status": "answered",
+        "findings": [],
+        "answer": "Based on the available evidence, **no polling data from August 2026** exists showing Taiwanese public opinion on US relations. The most recent relevant data comes from **earlier in 2026**: a TVBS Poll Center survey in March 2026 found 77% of Taiwanese respondents believed being pro-US was important for Taiwan, while a Democracy Foundation poll in April 2026 showed skepticism with 57% doubting the US would send troops to defend Taiwan and 49% lacking confidence in US-made weapons (sources: visiontimes.com and scmp.com). **Confidence: Medium** - clear evidence exists for March-April 2026 polling, but the specific August 2026 timeframe requested has no documented polling data in the evidence reviewed."
+      },
+      {
+        "title": "Taiwan Government Satisfaction August 2026",
+        "question": "What is public satisfaction with Taiwan's current government as of August 2026?",
+        "direction": "Search for government approval ratings, satisfaction polls, and performance assessments of Taiwan's president and administration in August 2026.",
+        "research_areas": [
+          "Presidential approval ratings",
+          "Government satisfaction polls",
+          "Performance ratings of current administration",
+          "DPP government approval (if DPP is in power)",
+          "Trust in government surveys"
+        ],
+        "tools_hint": [
+          "search",
+          "fetch",
+          "recall"
+        ],
+        "success_criterion": "Approval rating percentages for Taiwan's president or government from polls conducted in July-August 2026.",
+        "depends_on": [],
+        "children": [
+          {
+            "title": "Current Taiwan Government Identity",
+            "question": "Who is Taiwan's president and which party governs as of August 2026?",
+            "direction": "Verify the current political leadership to properly contextualize approval ratings and ensure search terms are accurate.",
+            "research_areas": [
+              "Taiwan 2024 election results",
+              "Current president of Taiwan",
+              "DPP or KMT in power",
+              "Cabinet composition"
+            ],
+            "tools_hint": [
+              "search",
+              "recall",
+              "fetch"
+            ],
+            "success_criterion": "Clear identification of Taiwan's president and governing party as of August 2026.",
+            "depends_on": [],
+            "id": "1.3.1",
+            "status": "answered",
+            "findings": [
+              {
+                "tool": "search",
+                "input": "Taiwan president 2026 governing party",
+                "result": "1. Lai Ching-te - Wikipedia\n   https://en.wikipedia.org/wiki/Lai_Ching-te\n   Lai Ching-te (Chinese: 賴清德; pinyin: Lài Qīngdé; born 6 October 1959), also known as William Lai, is a Taiwanese politician, physician, and nephrologist who has served as the 8th president of the Republic of China since 2024. A member of the Democratic Progressive Party (DPP), he has been the party's chairman since 2023. Born in Wanli District, New Taipei, Lai studied medicine at ...\n2. Lai Ching-te - Wikipedia\n   https://en.wikipedia.org/wiki/Lai_Ching-te\n   Lai Ching-te (Chinese: 賴清德; pinyin: Lài Qīngdé; born 6 October 1959), also known as William Lai, is a Taiwanese politician, physician, and nephrologist who has served as the 8th president of the Republic of China since 2024. A member of the Democratic Progressive Party (DPP), he has been the party's chairman since 2023. Born in Wanli District, New Taipei, Lai studied medicine at ...\n3. Democratic Taiwan must not become 'China's Taiwan', president says\n   https://www.reuters.com/world/china/democratic-taiwan-must-not-become-chinas-taiwan-president-says-2026-07-19/\n   Taiwan must work together to protect its democracy and not ‌become part of China, President Lai Ching-te said on Sunday, calling on members of his Democratic Progressive Party (DPP) to oppose ...\n4. Democratic Taiwan must not become 'China's Taiwan', president says\n   https://www.reuters.com/world/china/democratic-taiwan-must-not-become-chinas-taiwan-president-says-2026-07-19/\n   Taiwan must work together to protect its democracy and not ‌become part of China, President Lai Ching-te said on Sunday, calling on members of his Democratic Progressive Party (DPP) to oppose ...\n5. 2026 Taiwanese local elections - Wikipedia\n   https://en.wikipedia.org/wiki/2026_Taiwanese_local_elections\n   Local elections will be held in Taiwan on 28 November 2026 to elect county magistrates (city mayors), county (city) councilors, township mayors, township councilors and chiefs of villages (boroughs) in 6 municipalities and 16 counties (cities). Elected officials would serve a four-year term.\n6. 2026 Taiwanese local elections - Wikipedia\n   https://en.wikipedia.org/wiki/2026_Taiwanese_local_elections\n   Local elections will be held in Taiwan on 28 November 2026 to elect county magistrates (city mayors), county (city) councilors, township mayors, township councilors and chiefs of villages (boroughs) in 6 municipalities and 16 counties (cities). Elected officials would serve a four-year term."
+              },
+              {
+                "tool": "search",
+                "input": "Taiwan Lai Ching-te DPP 2024 election president",
+                "result": "1. Lai Ching-te - Wikipedia\n   https://en.wikipedia.org/wiki/Lai_Ching-te\n   Lai Ching-te (Chinese: 賴清德; pinyin: Lài Qīngdé; born 6 October 1959), also known as William Lai, is a Taiwanese politician, physician, and nephrologist who has served as the 8th president of the Republic of China since 2024. A member of the Democratic Progressive Party (DPP), he has been the party's chairman since 2023. Born in Wanli District, New Taipei, Lai studied medicine at ...\n2. Lai Ching-te - Wikipedia\n   https://en.wikipedia.org/wiki/Lai_Ching-te\n   Lai Ching-te (Chinese: 賴清德; pinyin: Lài Qīngdé; born 6 October 1959), also known as William Lai, is a Taiwanese politician, physician, and nephrologist who has served as the 8th president of the Republic of China since 2024. A member of the Democratic Progressive Party (DPP), he has been the party's chairman since 2023. Born in Wanli District, New Taipei, Lai studied medicine at ...\n3. 2024 Taiwanese presidential election - Wikipedia\n   https://en.wikipedia.org/wiki/2024_Taiwanese_presidential_election\n   Presidential elections were held in Taiwan on 13 January 2024 as part of the 2024 general elections. [1][2] Tsai Ing-wen of the Democratic Progressive Party (DPP), the incumbent president of the Republic of China, was ineligible for reelection due to term limits. As such, the DPP nominated Vice President Lai Ching-te, who had secured the party chairmanship by acclamation in March 2023. He ...\n4. 2024 Taiwanese presidential election - Wikipedia\n   https://en.wikipedia.org/wiki/2024_Taiwanese_presidential_election\n   Presidential elections were held in Taiwan on 13 January 2024 as part of the 2024 general elections. [1][2] Tsai Ing-wen of the Democratic Progressive Party (DPP), the incumbent president of the Republic of China, was ineligible for reelection due to term limits. As such, the DPP nominated Vice President Lai Ching-te, who had secured the party chairmanship by acclamation in March 2023. He ...\n5. Taiwan 2024 election: China skeptic Lai Ching-te wins presidential vote\n   https://www.cnbc.com/2024/01/13/taiwan-2024-election-dpps-lai-ching-te-wins.html\n   DPP's Lai Ching-te earns more than 40% of the popular vote, as his rivals conceded. China's Taiwan Affairs Office dismisses Lai's presidential vote victory.\n6. Taiwan 2024 election: China skeptic Lai Ching-te wins presidential vote\n   https://www.cnbc.com/2024/01/13/taiwan-2024-election-dpps-lai-ching-te-wins.html\n   DPP's Lai Ching-te earns more than 40% of the popular vote, as his rivals conceded. China's Taiwan Affairs Office dismisses Lai's presidential vote victory."
+              },
+              {
+                "tool": "fetch",
+                "input": "https://www.bbc.com/news/world-asia",
+                "result": "Sorry, we're unable to bring you the page you're looking for.\n Please try:\n \n \n \n \n \n Double checking the url\n Hitting the refresh button in your browser\n Searching for this page using the BBC search bar\n \n \n \n \n Alternatively, please visit the\n \n BBC News homepage."
+              },
+              {
+                "tool": "fetch",
+                "input": "https://en.wikipedia.org/wiki/Lai_Ching-te",
+                "result": "From Wikipedia, the free encyclopedia\n \n \n \n \n \nPresident of the Republic of China since 2024\nIn this Taiwanese name, the surname is Lai.\n\nLai Ching-teOfficial portrait, 20248th President of the Republic of ChinaIncumbentAssumed office 20 May 2024PremierCho Jung-taiVice PresidentHsiao Bi-khimPreceded byTsai Ing-wen18th Chairman of the Democratic Progressive PartyIncumbentAssumed office 18 January 2023Secretary GeneralHsu Li-mingAndrea Yang (acting)Lin Yu-changHo Po-wen (acting)Hsu Kuo-yungPreceded byChen Chi-mai (acting)12th Vice President of the Republic of ChinaIn office20 May 2020 – 20 May 2024PresidentTsai Ing-wenPreceded byChen Chien-jenSucceeded byHsiao Bi-khim26th Premier of the Republic of ChinaIn office8 September 2017 – 14 January 2019PresidentTsai Ing-wenVice PremierShih Jun-jiPreceded byLin ChuanSucceeded bySu Tseng-chang1st Mayor of TainanIn office25 December 2010 – 7 September 2017DeputyHsu He-chunPreceded byPosition established[a]Succeeded byLi Meng-yen (acting)\n\n Legislative offices\n\nMember of the Legislative YuanIn office1 February 2008 – 25 December 2010ConstituencyTainan IIIn office1 February 1999 – 31 January 2008ConstituencyTainan CityMember of the National AssemblyIn office20 May 1996 – 31 January 1999ConstituencyTainan 1st Electoral District\n\nPersonal detailsBorn (1959-10-06) 6 October 1959 (age 66)Wanli, Taipei County, TaiwanPartyDemocratic ProgressiveSpouse\n\nWu Mei-ju ​(m. 1986)​Children2EducationNational Taiwan University (BS)National Cheng Kung University (MD)Harvard University (MPH)SignatureMilitary serviceBranch/serviceRepublic of China ArmyYears of service1984–1986RankSecond lieutenantChinese nameTraditional Chinese賴清德Simplified Chinese赖清德TranscriptionsStandard MandarinHanyu PinyinLài QīngdéBopomofoㄌㄞˋ ㄑㄧㄥ ㄉㄜˊGwoyeu RomatzyhLay ChingderWade–GilesLai⁴ Chʻing¹-tê²Tongyong PinyinLài Cing-déIPA[lâɪ tɕʰíŋ.tɤ̌]Yue: CantoneseYale RomanizationLaih Chīng-dàkJyutpingLai6 Cing1dak1IPA[lɐj˨ tsʰɪŋ˥ tɐk̚˥˧]Southern MinHokkien POJLōa Chheng-tekTâi-lôLuā Tshing-tik\n\nLai Ching-te (Chinese: 賴清德; pinyin: Lài Qīngdé; born 6 October 1959), also known as William Lai, is a Taiwanese politician, physician, and nephrologist who has served as the 8th president of the Republic of China since 2024. A member of the Democratic Progressive Party (DPP), he has been the party's chairman since 2023.\n\nBorn in Wanli District, New Taipei, Lai studied medicine at National Taiwan University and National Cheng Kung University. He graduated from Harvard University with a master's degree in public health in 2003. After practicing internal medicine as a chief physician at two hospitals, Lai won election in 1996 to represent Tainan City in the National Assembly, then served as a member of the Legislative Yuan from 1999 to 2010. He was the first mayor of Tainan from 2010 to 2017 and the 26th premier of the Republic of China from 2017 to 2019.\n\nIn the 2019 Democratic Progressive presidential primary, Lai ran unsuccessfully against incumbent Tsai Ing-wen as DPP's presidential candidate, but became her running mate as candidate for the vice president in the 2020 presidential election and won the election. Lai was nominated by the DPP to be its presidential candidate for 2024 and defeated Kuomintang (KMT) nominee Hou Yu-ih in the 2024 presidential election. He took office as president on 20 May 2024.\n\nEarly life and education[edit source]\nLai was born on 6 October 1959,[1] in Wanli, a rural coastal town in northern Taipei County (now New Taipei City).[2"
+              },
+              {
+                "tool": "fetch",
+                "input": "https://www.reuters.com/world/china/democratic-taiwan-must-not-become-chinas-taiwan-president-says-2026-07-19/",
+                "result": "(could not fetch https://www.reuters.com/world/china/democratic-taiwan-must-not-become-chinas-taiwan-president-says-2026-07-19/)"
+              }
+            ],
+            "answer": "As of August 2026, Taiwan's president is Lai Ching-te (also known as William Lai), who has served since May 20, 2024, and the governing party is the Democratic Progressive Party (DPP), of which Lai is also chairman since 2023. This is confirmed by both Wikipedia (https://en.wikipedia.org/wiki/Lai_Ching-te) and a July 2026 Reuters article referencing President Lai and his DPP affiliation. **Confidence: High** - multiple consistent sources confirm Lai's presidency and DPP governance, with the Reuters article from July 2026 providing contemporaneous confirmation close to the August 2026 timeframe.",
+            "children": []
+          },
+          {
+            "title": "Government Approval Polling Sources",
+            "question": "Which polling organizations have published Taiwan government approval data in July-August 2026?",
+            "direction": "Search for Taiwan polling organizations that regularly track government approval, presidential approval, and administration performance ratings.",
+            "research_areas": [
+              "TVBS approval rating polls",
+              "Taiwan Public Opinion Foundation government satisfaction",
+              "Media polls on presidential approval",
+              "Academic surveys on government trust",
+              "Monthly or quarterly approval trackers"
+            ],
+            "tools_hint": [
+              "search",
+              "fetch"
+            ],
+            "success_criterion": "Identification of 2-3 credible sources with August 2026 government approval data.",
+            "depends_on": [
+              "Current Taiwan Government Identity"
+            ],
+            "id": "1.3.2",
+            "status": "answered",
+            "findings": [
+              {
+                "tool": "search",
+                "input": "Taiwan government approval rating polling organizations 2026",
+                "result": "1. BTI 2026 Taiwan Country Report\n   https://bti-project.org/en/reports/country-report/TWN\n   Taiwan's government successfully steered a course of stability and economic resilience in an increasingly difficult international environment characterized by wars; economic insecurity; and further increases in political, economic and military pressure from the People's Republic of China (PRC).\n2. BTI 2026 Taiwan Country Report\n   https://bti-project.org/en/reports/country-report/TWN\n   Taiwan's government successfully steered a course of stability and economic resilience in an increasingly difficult international environment characterized by wars; economic insecurity; and further increases in political, economic and military pressure from the People's Republic of China (PRC).\n3. Lai gets 56.4% approval rating in DPP poll - Taiwan News\n   https://www.taiwannews.com.tw/en/news/6366162\n   She also said Taiwan's per capita GDP has surpassed that of Japan and South Korea. According to the poll, 74% of respondents approved of the government's efforts to reduce the financial burden on the public, while social welfare policies received a 70.7% satisfaction rating, including support from 47% of pan-blue respondents.\n4. Lai gets 56.4% approval rating in DPP poll - Taiwan News\n   https://www.taiwannews.com.tw/en/news/6366162\n   She also said Taiwan's per capita GDP has surpassed that of Japan and South Korea. According to the poll, 74% of respondents approved of the government's efforts to reduce the financial burden on the public, while social welfare policies received a 70.7% satisfaction rating, including support from 47% of pan-blue respondents.\n5. Lai has 56.4% approval rating, DPP poll shows - Taipei Times\n   https://www.taipeitimes.com/News/taiwan/archives/2026/05/19/2003857585\n   The satisfaction rates all surpassed 50 percent, she added. The poll showed that 47 percent of pan-blue camp supporters approved of the government's social welfare schemes, she said. The Lai administration's overall approval rating was 56.4 percent, while Lai's personal trust rating was 51.8 percent, Justin Wu said.\n6. Lai has 56.4% approval rating, DPP poll shows - Taipei Times\n   https://www.taipeitimes.com/News/taiwan/archives/2026/05/19/2003857585\n   The satisfaction rates all surpassed 50 percent, she added. The poll showed that 47 percent of pan-blue camp supporters approved of the government's social welfare schemes, she said. The Lai administration's overall approval rating was 56.4 percent, while Lai's personal trust rating was 51.8 percent, Justin Wu said."
+              },
+              {
+                "tool": "search",
+                "input": "Taiwan Presidential Office approval poll August 2026",
+                "result": "1. Political Approval Polling - taiwan.vota.com\n   https://taiwan.vota.com/approval-polling/\n   See how voters rate political leaders with the latest approval polls, trend data, and comparisons across parties, regions, and issues.\n2. Political Approval Polling - taiwan.vota.com\n   https://taiwan.vota.com/approval-polling/\n   See how voters rate political leaders with the latest approval polls, trend data, and comparisons across parties, regions, and issues.\n3. 民調中心 | Tvbs\n   https://www.tvbs.com.tw/poll-center\n   民調中心 TVBS民調中心將不定期公佈台灣政治、社會、經濟、民生等議題之民意調查，歡迎民眾隨時上網查閱最新民調報告。 TVBS Poll Center will provide public opinion polls regarding current Taiwanese politic, social, economic issues. Please log on to find out the latest poll.\n4. 民調中心 | Tvbs\n   https://www.tvbs.com.tw/poll-center\n   民調中心 TVBS民調中心將不定期公佈台灣政治、社會、經濟、民生等議題之民意調查，歡迎民眾隨時上網查閱最新民調報告。 TVBS Poll Center will provide public opinion polls regarding current Taiwanese politic, social, economic issues. Please log on to find out the latest poll.\n5. Taiwan poll shows president's support crashes to 32.7%\n   https://t.media/2990132\n   Taiwan's President Lai Ching-te faces a record low approval rating of 32.7%, according to a new poll. The survey highlights widespread disapproval of his recent policy adjustments, with 57.8% of respondents expressing dissatisfaction.\n6. Taiwan poll shows president's support crashes to 32.7%\n   https://t.media/2990132\n   Taiwan's President Lai Ching-te faces a record low approval rating of 32.7%, according to a new poll. The survey highlights widespread disapproval of his recent policy adjustments, with 57.8% of respondents expressing dissatisfaction."
+              },
+              {
+                "tool": "search",
+                "input": "TVBS Taiwan opinion poll government approval 2026 OR 台灣民意基金會 poll 2026",
+                "result": "1. 民調中心 | Tvbs\n   https://www.tvbs.com.tw/poll-center\n   TVBS民調中心將不定期公佈台灣政治、社會、經濟、民生等議題之民意調查，歡迎民眾隨時上網查閱最新民調報告。 TVBS Poll Center will provide public opinion polls regarding current Taiwanese politic, social, economic issues. Please log on to find out the latest poll.\n2. 民調中心 | Tvbs\n   https://www.tvbs.com.tw/poll-center\n   TVBS民調中心將不定期公佈台灣政治、社會、經濟、民生等議題之民意調查，歡迎民眾隨時上網查閱最新民調報告。 TVBS Poll Center will provide public opinion polls regarding current Taiwanese politic, social, economic issues. Please log on to find out the latest poll.\n3. Tvbs民調／最新政黨支持度揭曉!藍綠各擁35％ 「這黨」最不受信任\n   https://news.tvbs.com.tw/politics/3147975\n   政黨滿意度：藍35％、綠35％ 白26%且最不受信任 調查結果顯示，民眾對民進黨的整體滿意度與2024年總統賴清德執政一個月時的調查結果相同，維持在 ...\n4. Tvbs民調／最新政黨支持度揭曉!藍綠各擁35％ 「這黨」最不受信任\n   https://news.tvbs.com.tw/politics/3147975\n   政黨滿意度：藍35％、綠35％ 白26%且最不受信任 調查結果顯示，民眾對民進黨的整體滿意度與2024年總統賴清德執政一個月時的調查結果相同，維持在 ...\n5. 財團法人台灣民意教育基金會 - Tpof\n   https://www.tpof.org/\n   「財團法人台灣民意教育基金會」創立於公元2016年2月，由一群熱愛台灣、關心台灣民主的人士發起組成，包括知名學者專家、企業家、醫生、律師、科學家、社會運動者等，是一個非營利、非政府、超黨派的智庫型公益組織。我們堅信，「政府應平等對待公民喜好，並反映在公共政策的制定與落實 ...\n6. 財團法人台灣民意教育基金會 - Tpof\n   https://www.tpof.org/\n   「財團法人台灣民意教育基金會」創立於公元2016年2月，由一群熱愛台灣、關心台灣民主的人士發起組成，包括知名學者專家、企業家、醫生、律師、科學家、社會運動者等，是一個非營利、非政府、超黨派的智庫型公益組織。我們堅信，「政府應平等對待公民喜好，並反映在公共政策的制定與落實 ..."
+              },
+              {
+                "tool": "fetch",
+                "input": "[URL from previous searches with most relevant August 2026 polling data]",
+                "result": "(could not fetch [URL from previous searches with most relevant August 2026 polling data])"
+              },
+              {
+                "tool": "fetch",
+                "input": "https://taiwan.vota.com/approval-polling/",
+                "result": "Political Approval Polling\n \n See how voters rate political leaders with the latest approval polls, trend data, and comparisons across parties, regions, and issues.\n \n \n \n \n\n \n \n\n \n \n \n\n \n \n +\n \n \n \n \n \n \n \n \n \n\n \n + 设置\n \n \n\n \n \n \n \n View\n \n \n \n CategoriesList\n \n \n \n\n \n \n \n Sort by\n \n \n \n \n \n \n 最受欢迎\n Most important\n 最新\n 最早\n \n \n \n \n Now\n Today\n This week\n This month\n This year\n Alltime\n \n \n \n \n \n \n \n\n \n \n \n \n Find an issue\n \n \n \n \n \n \n \n \n \n \n\n \n \n \n 按类型筛选"
+              },
+              {
+                "tool": "fetch",
+                "input": "https://www.tvbs.com.tw/poll-center",
+                "result": "民調中心TVBS民調中心將不定期公佈台灣政治、社會、經濟、民生等議題之民意調查，歡迎民眾隨時上網查閱最新民調報告。TVBS Poll Center will provide public opinion polls regarding current Taiwanese politic, social, economic issues. Please log on to find out the latest poll.（閱讀民調資料請先下載 Adobe Reader）時間民調主題115年05月26日2026台北市長選情民調115年05月10日賴清德總統就職兩周年滿意度民調115年04月30日2026嘉義市長選情民調115年04月23日鄭習會後相關議題民調115年03月19日2026宜蘭縣長選情民調115年03月12日2026台南市長選情民調115年03月06日政黨形象與立委滿意度民調115年02月04日2026新竹市長可能人選民調115年01月28日2026台北市長可能人選民調115年01月22日2026台中市長可能人選民調115年01月16日2026新北市長可能人選民調114年12月29日2026高雄市長可能人選民調114年12月12日2026桃園市長可能人選民調114年12月04日2026台北市長可能人選民調114年11月27日2026高雄市長可能人選民調目前在第 1 頁，共 67 頁，共 1000 筆"
+              },
+              {
+                "tool": "search",
+                "input": "台灣民意基金會 2026年7月 OR 2026年8月 民調",
+                "result": "1. 2026九合一選舉戰情室｜六都縣市長、議員民調與最新選情 - 知新聞\n   https://event.knews.com.tw/2026election\n   知新聞提供最權威的2026台灣九合一選舉資料庫。即時掌握六都縣市長、議員選舉的最新動態、民調分析、政黨提名名單與席次預測。最完整的選戰情報與開票數據都在這裡。\n2. 2026九合一選舉戰情室｜六都縣市長、議員民調與最新選情 - 知新聞\n   https://event.knews.com.tw/2026election\n   知新聞提供最權威的2026台灣九合一選舉資料庫。即時掌握六都縣市長、議員選舉的最新動態、民調分析、政黨提名名單與席次預測。最完整的選戰情報與開票數據都在這裡。\n3. 民調中心 | Tvbs\n   https://www.tvbs.com.tw/poll-center\n   TVBS民調中心不定期公佈台灣政治、社會、經濟、民生等議題之民意調查，歡迎隨時上網查閱最新民調報告。\n4. 民調中心 | Tvbs\n   https://www.tvbs.com.tw/poll-center\n   TVBS民調中心不定期公佈台灣政治、社會、經濟、民生等議題之民意調查，歡迎隨時上網查閱最新民調報告。"
+              },
+              {
+                "tool": "search",
+                "input": "\"美麗島電子報\" Taiwan poll July 2026 OR August 2026",
+                "result": "(no web results for \"\"美麗島電子報\" Taiwan poll July 2026 OR August 2026\")"
+              },
+              {
+                "tool": "search",
+                "input": "\"遠見\" OR \"天下\" Taiwan government approval poll 2026年7月 OR 2026年8月",
+                "result": "1. 遠見研究調查 — 社會最真實的聲音 華人遠見·全球思維\n   https://gvsrc.cwgv.com.tw/\n   2023遠見USR大學社會責任獎 2020 台灣CEO 100強 2020遠見第16屆CSR 《遠見雜誌》與《天下雜誌》2019縣市長施政滿意度調查 毫無關係 2018家庭理財暨樂活享退指數大調查 內政部-國民生活狀況意向調查 TEDS-台灣選舉與民主化調查\n2. 遠見研究調查 — 社會最真實的聲音 華人遠見·全球思維\n   https://gvsrc.cwgv.com.tw/\n   2023遠見USR大學社會責任獎 2020 台灣CEO 100強 2020遠見第16屆CSR 《遠見雜誌》與《天下雜誌》2019縣市長施政滿意度調查 毫無關係 2018家庭理財暨樂活享退指數大調查 內政部-國民生活狀況意向調查 TEDS-台灣選舉與民主化調查\n3. 民調 - 遠見雜誌\n   https://www.gvm.com.tw/category/survey\n   第六屆《遠見》USR大學社會責任獎贈獎典禮8日盛大登場，本屆參賽校數、件數皆創新高，30多位校長、副校長及教育界先進等人，齊聚一堂，冠蓋雲集。 遠見．天下文化事業群創辦人高希均出席致詞，肯定榮獲殊榮的40所學校。\n4. 民調 - 遠見雜誌\n   https://www.gvm.com.tw/category/survey\n   第六屆《遠見》USR大學社會責任獎贈獎典禮8日盛大登場，本屆參賽校數、件數皆創新高，30多位校長、副校長及教育界先進等人，齊聚一堂，冠蓋雲集。 遠見．天下文化事業群創辦人高希均出席致詞，肯定榮獲殊榮的40所學校。"
+              },
+              {
+                "tool": "fetch",
+                "input": "https://www.tvbs.com.tw/poll-center",
+                "result": "民調中心TVBS民調中心將不定期公佈台灣政治、社會、經濟、民生等議題之民意調查，歡迎民眾隨時上網查閱最新民調報告。TVBS Poll Center will provide public opinion polls regarding current Taiwanese politic, social, economic issues. Please log on to find out the latest poll.（閱讀民調資料請先下載 Adobe Reader）時間民調主題115年05月26日2026台北市長選情民調115年05月10日賴清德總統就職兩周年滿意度民調115年04月30日2026嘉義市長選情民調115年04月23日鄭習會後相關議題民調115年03月19日2026宜蘭縣長選情民調115年03月12日2026台南市長選情民調115年03月06日政黨形象與立委滿意度民調115年02月04日2026新竹市長可能人選民調115年01月28日2026台北市長可能人選民調115年01月22日2026台中市長可能人選民調115年01月16日2026新北市長可能人選民調114年12月29日2026高雄市長可能人選民調114年12月12日2026桃園市長可能人選民調114年12月04日2026台北市長可能人選民調114年11月27日2026高雄市長可能人選民調目前在第 1 頁，共 67 頁，共 1000 筆"
+              }
+            ],
+            "answer": "Based on the evidence provided, I cannot identify specific polling organizations that published Taiwan government approval data in July-August 2026. The TVBS Poll Center (https://www.tvbs.com.tw/poll-center) shows polling activity but the most recent listed poll is from May 26, 2026 (115年05月26日), and no polls are specifically dated to July or August 2026 in the evidence. The evidence mentions various polling organizations (TVBS, Taiwan Public Opinion Foundation/台灣民意基金會, DPP internal polling) but does not confirm they published government approval ratings during the specific July-August 2026 timeframe. **Confidence: Low** - the evidence is insufficient to answer this question.",
+            "children": []
+          },
+          {
+            "title": "Government Satisfaction Data Points",
+            "question": "What specific approval percentages do August 2026 polls show for Taiwan's government?",
+            "direction": "Extract concrete polling numbers on presidential approval, government satisfaction, and performance ratings from the most recent surveys.",
+            "research_areas": [
+              "Presidential approval percentage",
+              "Government satisfaction percentage",
+              "Disapproval ratings",
+              "Comparison to previous months/years",
+              "Key issues driving approval/disapproval"
+            ],
+            "tools_hint": [
+              "fetch",
+              "search"
+            ],
+            "success_criterion": "At least 1-2 specific approval rating percentages from August 2026 polls for Taiwan's government or president.",
+            "depends_on": [
+              "Government Approval Polling Sources"
+            ],
+            "id": "1.3.3",
+            "status": "answered",
+            "findings": [
+              {
+                "tool": "search",
+                "input": "Taiwan government approval rating August 2026 poll",
+                "result": "1. Opinion Polls - Mainland Affairs Council\n   https://www.mac.gov.tw/en/Content_List.aspx?n=2A0F1393B67987D2\n   提供大陸委員會官方發佈的新聞、重要活動、大陸政策、兩岸統計、臺港澳關係、本會官方YouTube及Picasa影音頻道等相關資訊。\n2. Opinion Polls - Mainland Affairs Council\n   https://www.mac.gov.tw/en/Content_List.aspx?n=2A0F1393B67987D2\n   提供大陸委員會官方發佈的新聞、重要活動、大陸政策、兩岸統計、臺港澳關係、本會官方YouTube及Picasa影音頻道等相關資訊。\n3. List of heads of the executive by approval rating - Wikipedia\n   https://en.wikipedia.org/wiki/List_of_heads_of_the_executive_by_approval_rating\n   List of heads of the executive by approval rating Map of head of state approval ratings as of spring 2025 This is a list of current heads of the executive by domestic approval rating. The highest current total approval percentage is difficult to determine because of the high falsification rate in countries where answering an approval question negatively could lead to government repression, or ...\n4. List of heads of the executive by approval rating - Wikipedia\n   https://en.wikipedia.org/wiki/List_of_heads_of_the_executive_by_approval_rating\n   List of heads of the executive by approval rating Map of head of state approval ratings as of spring 2025 This is a list of current heads of the executive by domestic approval rating. The highest current total approval percentage is difficult to determine because of the high falsification rate in countries where answering an approval question negatively could lead to government repression, or ...\n5. 民調中心 | Tvbs\n   https://www.tvbs.com.tw/poll-center\n   民調中心 TVBS民調中心將不定期公佈台灣政治、社會、經濟、民生等議題之民意調查，歡迎民眾隨時上網查閱最新民調報告。 TVBS Poll Center will provide public opinion polls regarding current Taiwanese politic, social, economic issues. Please log on to find out the latest poll.\n6. 民調中心 | Tvbs\n   https://www.tvbs.com.tw/poll-center\n   民調中心 TVBS民調中心將不定期公佈台灣政治、社會、經濟、民生等議題之民意調查，歡迎民眾隨時上網查閱最新民調報告。 TVBS Poll Center will provide public opinion polls regarding current Taiwanese politic, social, economic issues. Please log on to find out the latest poll."
+              },
+              {
+                "tool": "search",
+                "input": "Taiwan president approval rating August 2026 survey",
+                "result": "1. Taiwan poll shows president's support crashes to 32.7%\n   https://t.media/2990132\n   Taiwan's President Lai Ching-te faces a record low approval rating of 32.7%, according to a new poll. The survey highlights widespread disapproval of his recent policy adjustments, with 57.8% of respondents expressing dissatisfaction.\n2. Taiwan poll shows president's support crashes to 32.7%\n   https://t.media/2990132\n   Taiwan's President Lai Ching-te faces a record low approval rating of 32.7%, according to a new poll. The survey highlights widespread disapproval of his recent policy adjustments, with 57.8% of respondents expressing dissatisfaction.\n3. List of heads of the executive by approval rating - Wikipedia\n   https://en.wikipedia.org/wiki/List_of_heads_of_the_executive_by_approval_rating\n   List of heads of the executive by approval rating Map of head of state approval ratings as of spring 2025 This is a list of current heads of the executive by domestic approval rating. The highest current total approval percentage is difficult to determine because of the high falsification rate in countries where answering an approval question negatively could lead to government repression, or ...\n4. List of heads of the executive by approval rating - Wikipedia\n   https://en.wikipedia.org/wiki/List_of_heads_of_the_executive_by_approval_rating\n   List of heads of the executive by approval rating Map of head of state approval ratings as of spring 2025 This is a list of current heads of the executive by domestic approval rating. The highest current total approval percentage is difficult to determine because of the high falsification rate in countries where answering an approval question negatively could lead to government repression, or ...\n5. 民調中心 | Tvbs\n   https://www.tvbs.com.tw/poll-center\n   TVBS民調中心將不定期公佈台灣政治、社會、經濟、民生等議題之民意調查，歡迎民眾隨時上網查閱最新民調報告。 TVBS Poll Center will provide public opinion polls regarding current Taiwanese politic, social, economic issues. Please log on to find out the latest poll.\n6. 民調中心 | Tvbs\n   https://www.tvbs.com.tw/poll-center\n   TVBS民調中心將不定期公佈台灣政治、社會、經濟、民生等議題之民意調查，歡迎民眾隨時上網查閱最新民調報告。 TVBS Poll Center will provide public opinion polls regarding current Taiwanese politic, social, economic issues. Please log on to find out the latest poll."
+              },
+              {
+                "tool": "fetch",
+                "input": "URL_FROM_STEP_1",
+                "result": "(could not fetch URL_FROM_STEP_1)"
+              },
+              {
+                "tool": "fetch",
+                "input": "URL_FROM_STEP_2",
+                "result": "(could not fetch URL_FROM_STEP_2)"
+              },
+              {
+                "tool": "fetch",
+                "input": "https://www.tvbs.com.tw/poll-center",
+                "result": "民調中心TVBS民調中心將不定期公佈台灣政治、社會、經濟、民生等議題之民意調查，歡迎民眾隨時上網查閱最新民調報告。TVBS Poll Center will provide public opinion polls regarding current Taiwanese politic, social, economic issues. Please log on to find out the latest poll.（閱讀民調資料請先下載 Adobe Reader）時間民調主題115年05月26日2026台北市長選情民調115年05月10日賴清德總統就職兩周年滿意度民調115年04月30日2026嘉義市長選情民調115年04月23日鄭習會後相關議題民調115年03月19日2026宜蘭縣長選情民調115年03月12日2026台南市長選情民調115年03月06日政黨形象與立委滿意度民調115年02月04日2026新竹市長可能人選民調115年01月28日2026台北市長可能人選民調115年01月22日2026台中市長可能人選民調115年01月16日2026新北市長可能人選民調114年12月29日2026高雄市長可能人選民調114年12月12日2026桃園市長可能人選民調114年12月04日2026台北市長可能人選民調114年11月27日2026高雄市長可能人選民調目前在第 1 頁，共 67 頁，共 1000 筆"
+              },
+              {
+                "tool": "fetch",
+                "input": "https://www.mac.gov.tw/en/Content_List.aspx?n=2A0F1393B67987D2",
+                "result": "(could not fetch https://www.mac.gov.tw/en/Content_List.aspx?n=2A0F1393B67987D2)"
+              },
+              {
+                "tool": "search",
+                "input": "\"32.7%\" Taiwan Lai Ching-te approval rating poll August 2026",
+                "result": "(no web results for \"\"32.7%\" Taiwan Lai Ching-te approval rating poll August 2026\")"
+              },
+              {
+                "tool": "search",
+                "input": "TVBS poll Taiwan president August 2026",
+                "result": "1. 民調中心 | Tvbs\n   https://www.tvbs.com.tw/poll-center\n   民調中心 TVBS民調中心將不定期公佈台灣政治、社會、經濟、民生等議題之民意調查，歡迎民眾隨時上網查閱最新民調報告。 TVBS Poll Center will provide public opinion polls regarding current Taiwanese politic, social, economic issues. Please log on to find out the latest poll.\n2. 民調中心 | Tvbs\n   https://www.tvbs.com.tw/poll-center\n   民調中心 TVBS民調中心將不定期公佈台灣政治、社會、經濟、民生等議題之民意調查，歡迎民眾隨時上網查閱最新民調報告。 TVBS Poll Center will provide public opinion polls regarding current Taiwanese politic, social, economic issues. Please log on to find out the latest poll.\n3. Taiwan poll shows president's support crashes to 32.7%\n   https://t.media/2990132\n   TAIPEI (TVBS News) — President Lai Ching-te's (賴清德) approval rating has crashed to a historic low of 32.7%, according to a Taiwan's Public Opinion Foundation (TPOF, 台灣民意基金會) poll released Tuesday (Sept. 16). The survey, conducted by Focus Survey Research (山水民意研究公司), interviewed 1,077 Taiwanese citizens between Sept. 8 and 10, revealing widespread ...\n4. Taiwan poll shows president's support crashes to 32.7%\n   https://t.media/2990132\n   TAIPEI (TVBS News) — President Lai Ching-te's (賴清德) approval rating has crashed to a historic low of 32.7%, according to a Taiwan's Public Opinion Foundation (TPOF, 台灣民意基金會) poll released Tuesday (Sept. 16). The survey, conducted by Focus Survey Research (山水民意研究公司), interviewed 1,077 Taiwanese citizens between Sept. 8 and 10, revealing widespread ...\n5. New Taiwan Polls Show Strong 'Pro-US' Sentiment and Majority Ready to ...\n   https://www.visiontimes.com/2026/03/13/new-taiwan-polls-show-strong-pro-us-sentiment-and-majority-ready-to-resist-china.html\n   Two new public opinion polls in Taiwan reveal the public's stance. A survey by the TVBS Poll Center shows that as many as 77 percent of respondents believe being pro-U.S. is important for Taiwan, while 47 percent say being pro-China is important.\n6. New Taiwan Polls Show Strong 'Pro-US' Sentiment and Majority Ready to ...\n   https://www.visiontimes.com/2026/03/13/new-taiwan-polls-show-strong-pro-us-sentiment-and-majority-ready-to-resist-china.html\n   Two new public opinion polls in Taiwan reveal the public's stance. A survey by the TVBS Poll Center shows that as many as 77 percent of respondents believe being pro-U.S. is important for Taiwan, while 47 percent say being pro-China is important."
+              },
+              {
+                "tool": "search",
+                "input": "Taiwan president Lai approval rating poll 2026年8月",
+                "result": "1. Taiwan President Lai's approval rating at lowest after political ...\n   https://www.straitstimes.com/asia/east-asia/taiwan-president-lais-approval-ratings-at-lowest-after-setbacks\n   TAIPEI - Taiwan President Lai Ching-te's approval rating has dropped to the lowest level since he took office in 2024, underscoring the hit he has taken from a range of political setbacks.\n2. Taiwan President Lai's approval rating at lowest after political ...\n   https://www.straitstimes.com/asia/east-asia/taiwan-president-lais-approval-ratings-at-lowest-after-setbacks\n   TAIPEI - Taiwan President Lai Ching-te's approval rating has dropped to the lowest level since he took office in 2024, underscoring the hit he has taken from a range of political setbacks.\n3. Support for Taiwanese leader William Lai hits new low, 3 polls show\n   https://www.scmp.com/news/china/politics/article/3321612/support-taiwanese-leader-william-lai-hits-new-low-3-polls-show\n   The Taiwanese Public Opinion Foundation (TPOF), TVBS cable news network and online news outlet My Formosa all reported approval ratings for the Lai administration in the low 30s or below, while ...\n4. Support for Taiwanese leader William Lai hits new low, 3 polls show\n   https://www.scmp.com/news/china/politics/article/3321612/support-taiwanese-leader-william-lai-hits-new-low-3-polls-show\n   The Taiwanese Public Opinion Foundation (TPOF), TVBS cable news network and online news outlet My Formosa all reported approval ratings for the Lai administration in the low 30s or below, while ...\n5. Lai gets 56.4% approval rating in DPP poll - Taiwan News\n   https://www.taiwannews.com.tw/news/6366162\n   TAIPEI (Taiwan News) — A DPP poll released Tuesday ahead of President Lai Ching-te's (賴清德) second anniversary in office found that 56.4% approved of his performance, while 51.8% said they trusted the president. The survey found more than 70% satisfaction with policies aimed at easing the public's financial burden, and all eight major policy categories received majority approval ...\n6. Lai gets 56.4% approval rating in DPP poll - Taiwan News\n   https://www.taiwannews.com.tw/news/6366162\n   TAIPEI (Taiwan News) — A DPP poll released Tuesday ahead of President Lai Ching-te's (賴清德) second anniversary in office found that 56.4% approved of his performance, while 51.8% said they trusted the president. The survey found more than 70% satisfaction with policies aimed at easing the public's financial burden, and all eight major policy categories received majority approval ..."
+              },
+              {
+                "tool": "fetch",
+                "input": "https://www.tvbs.com.tw/poll-center",
+                "result": "民調中心TVBS民調中心將不定期公佈台灣政治、社會、經濟、民生等議題之民意調查，歡迎民眾隨時上網查閱最新民調報告。TVBS Poll Center will provide public opinion polls regarding current Taiwanese politic, social, economic issues. Please log on to find out the latest poll.（閱讀民調資料請先下載 Adobe Reader）時間民調主題115年05月26日2026台北市長選情民調115年05月10日賴清德總統就職兩周年滿意度民調115年04月30日2026嘉義市長選情民調115年04月23日鄭習會後相關議題民調115年03月19日2026宜蘭縣長選情民調115年03月12日2026台南市長選情民調115年03月06日政黨形象與立委滿意度民調115年02月04日2026新竹市長可能人選民調115年01月28日2026台北市長可能人選民調115年01月22日2026台中市長可能人選民調115年01月16日2026新北市長可能人選民調114年12月29日2026高雄市長可能人選民調114年12月12日2026桃園市長可能人選民調114年12月04日2026台北市長可能人選民調114年11月27日2026高雄市長可能人選民調目前在第 1 頁，共 67 頁，共 1000 筆"
+              }
+            ],
+            "answer": "Based on the available evidence, I cannot find specific approval percentages from August 2026 polls for Taiwan's government. The TVBS Poll Center (https://www.tvbs.com.tw/poll-center) shows polls from May 2026 and earlier dates, but no August 2026 data is visible in the provided evidence. One source mentions a 32.7% approval rating for President Lai Ching-te from a September poll (conducted Sept. 8-10) by Taiwan's Public Opinion Foundation, but this is September, not August 2026. **Confidence: Low** - the evidence does not contain the specific August 2026 timeframe requested.",
+            "children": []
+          }
+        ],
+        "id": "1.3",
+        "status": "answered",
+        "findings": [],
+        "answer": "Based on the evidence provided, **I cannot determine public satisfaction with Taiwan's government as of August 2026**. The available polling data shows a May 2026 poll from TVBS Poll Center (https://www.tvbs.com.tw/poll-center) and a September 2026 poll from Taiwan's Public Opinion Foundation showing 32.7% approval for President Lai Ching-te, but no August 2026 data was found. The evidence gap between May and September 2026 means the specific August timeframe cannot be answered from the gathered sources.\n\n**Confidence: Very Low** - no direct August 2026 polling evidence exists in the provided materials."
+      }
+    ],
+    "id": "1",
+    "status": "answered",
+    "findings": [],
+    "answer": "Based on the available evidence, **no polling data from August 2026 specifically exists** for any of the three requested metrics (China relations, US relations, or government satisfaction). The closest available data shows that in **March 2026, 61.7% of Taiwanese rejected unification with China** (Mainland Affairs Council via Taipei Times, July 2026 report), and **77% believed being pro-US was important** (TVBS Poll Center, March 2026). For government satisfaction, polling gaps exist between **May 2026 and September 2026** (when approval was 32.7%), leaving August uncovered.\n\n**Confidence: Very Low** – the question cannot be answered from evidence due to the absence of August 2026 polling data across all three dimensions."
+  },
+  "ledger": {
+    "marked_terms": [
+      {
+        "term": "TVBS Poll Center",
+        "why": "Credibility as a polling organization unclear - need to establish if this is a reputable T2/T3 source or T4 media outlet doing casual polls"
+      },
+      {
+        "term": "Vision Times",
+        "why": "Source credibility unknown - visiontimes.com appears multiple times but unclear if T2 news outlet or T4 content farm; reporting on polls but may not be original source"
+      },
+      {
+        "term": "American Portrait Survey",
+        "why": "Mentioned by CSIS as containing 2026 Taiwan-China relations data, but unclear what organization conducts it, methodology, sample size, or credibility - need to establish if this is a reliable polling source"
+      },
+      {
+        "term": "Election Study Center, NCCU",
+        "why": "Appears to have published June 2026 data on Taiwan Independence vs. Unification, but institutional credibility and methodology standards not yet established in dossier"
+      },
+      {
+        "term": "Freeman Chair",
+        "why": "CSIS mentions this as hosting the American Portrait Survey event, but unclear what this is or its relevance to Taiwan polling credibility"
+      },
+      {
+        "term": "taiwan.vota.com",
+        "why": "Unknown polling aggregator site; unclear if it's an authoritative source or just a template/framework site; fetched page had no actual data"
+      },
+      {
+        "term": "BTI 2026 Taiwan Country Report",
+        "why": "Bertelsmann Stiftung's Transformation Index appears in results but unclear if this publishes monthly approval polling or just annual country assessments"
+      },
+      {
+        "term": "t.media",
+        "why": "Appeared in search results with a claim about 32.7% approval rating but unknown media source; need to verify credibility"
+      },
+      {
+        "term": "Democracy Foundation",
+        "why": "Taipei-based organization cited as source for April 2026 poll - credibility and institutional affiliation unclear"
+      },
+      {
+        "term": "Institute for National Defense and Security Research",
+        "why": "Taiwan government/academic institution mentioned but relationship to public polling unclear - need to verify if they conduct or just analyze polls"
+      },
+      {
+        "term": "Mainland Affairs Council (MAC)",
+        "why": "Cited as source of March survey showing 61.7% reject unification; need to verify this is an official government body and credible polling source"
+      },
+      {
+        "term": "NCCU Election Study Center (ESC)",
+        "why": "The fetch showed this is a research center but returned no actual polling data; unclear if they have August 2026 data or what their methodology/credibility is"
+      },
+      {
+        "term": "22 Opinions",
+        "why": "Mentioned as Beijing policy affecting Taiwanese views but context was cut off; unclear what this refers to and whether it's relevant to August 2026 trends"
+      }
+    ],
+    "verify_points": [
+      {
+        "claim": "Lai Ching-te has served as the 8th president of the Republic of China since 20 May 2024",
+        "source": "https://en.wikipedia.org/wiki/Lai_Ching-te",
+        "importance": 3
+      },
+      {
+        "claim": "Lai Ching-te is a member of the Democratic Progressive Party (DPP) and has been the party's chairman since 18 January 2023",
+        "source": "https://en.wikipedia.org/wiki/Lai_Ching-te",
+        "importance": 3
+      },
+      {
+        "claim": "The Reagan Institute Summer Survey was released on Monday, July 1, 2026 according to Taipei Times",
+        "source": "https://www.taipeitimes.com/News/front/archives/2026/07/01/2003860028",
+        "importance": 3
+      },
+      {
+        "claim": "The TVBS poll was conducted in March 2026, not July-August 2026",
+        "source": "https://www.visiontimes.com/2026/03/13/new-taiwan-polls-show-strong-pro-us-sentiment-and-majority-ready-to-resist-china.html (dated March 13)",
+        "importance": 3
+      },
+      {
+        "claim": "NCCU Election Study Center published Taiwan Independence vs. Unification data covering the period through June 2026, with a publication date of July 3, 2026",
+        "source": "https://esc.nccu.edu.tw/PageDoc/Detail?fid=7801&id=6963",
+        "importance": 3
+      },
+      {
+        "claim": "CSIS held a public event on the 2026 American Portrait Survey results covering Taiwanese perspectives on China-Taiwan relations",
+        "source": "https://www.csis.org/events/taiwanese-views-united-states-and-china-evidence-2026-american-portrait-survey",
+        "importance": 3
+      },
+      {
+        "claim": "A poll showed Taiwan's President Lai Ching-te faces a record low approval rating of 32.7%",
+        "source": "https://t.media/2990132",
+        "importance": 3
+      },
+      {
+        "claim": "57% of Taiwanese respondents in April 2026 did not believe the US would send troops to defend Taiwan in the event of cross-strait conflict",
+        "source": "https://www.scmp.com/news/china/politics/article/3350926/trump-effect-taiwan-poll-reveals-deep-doubts-about-us-military-protection",
+        "importance": 3
+      },
+      {
+        "claim": "61.7% of Taiwanese reject unification with China as of March 2026 survey, up from 39% in 2005",
+        "source": "https://www.taiwannews.com.tw/en/news/6395438",
+        "importance": 3
+      },
+      {
+        "claim": "33.9% of respondents favored maintaining the status quo indefinitely, making it the most popular option",
+        "source": "https://www.taiwannews.com.tw/en/news/6395438",
+        "importance": 3
+      },
+      {
+        "claim": "The survey was conducted by the Mainland Affairs Council in March 2026 and reported in July 2026",
+        "source": "https://www.taiwannews.com.tw/en/news/6395438",
+        "importance": 3
+      },
+      {
+        "claim": "Taiwan President Lai Ching-te has a 32.7% approval rating in August 2026 with 57.8% disapproval",
+        "source": "https://t.media/2990132",
+        "importance": 3
+      },
+      {
+        "claim": "The Reuters article from 2026-07-19 references Taiwan's president making statements about democracy, suggesting Lai Ching-te remains in office as of mid-July 2026",
+        "source": "https://www.reuters.com/world/china/democratic-taiwan-must-not-become-chinas-taiwan-president-says-2026-07-19/ (snippet only, full article not fetched)",
+        "importance": 2
+      },
+      {
+        "claim": "TVBS Poll Center conducted a survey showing 77% of respondents believe maintaining good relations with the US is important",
+        "source": "https://www.visiontimes.com/2026/03/15/new-polls-show-taiwan-strongly-favors-us-alliance-over-china.html",
+        "importance": 2
+      },
+      {
+        "claim": "American Portrait Survey was initiated in 2021 by Dr. Chien-Huei Wu at Academia Sinica's Institute of European and American Studies",
+        "source": "https://www.american-portrait.tw/en/",
+        "importance": 2
+      },
+      {
+        "claim": "American Enterprise Institute published a China & Taiwan Update on July 2, 2026 focusing on cross-Taiwan Strait developments",
+        "source": "https://www.aei.org/commentary/china-taiwan-update-july-2-2026/",
+        "importance": 2
+      },
+      {
+        "claim": "Taiwan News reported a DPP poll showing Lai gets 56.4% approval rating",
+        "source": "https://www.taiwannews.com.tw/en/news/6366162",
+        "importance": 2
+      },
+      {
+        "claim": "TVBS conducted a poll on May 10, 2026 regarding Lai Ching-te's satisfaction two years after inauguration",
+        "source": "https://www.tvbs.com.tw/poll-center",
+        "importance": 2
+      },
+      {
+        "claim": "55.6% said the US could not provide timely and effective military assistance in a crisis, versus 31.5% who believed they could",
+        "source": "https://www.scmp.com/news/china/politics/article/3350926/trump-effect-taiwan-poll-reveals-deep-doubts-about-us-military-protection",
+        "importance": 2
+      },
+      {
+        "claim": "49% lacked confidence in US-made weapons effectiveness",
+        "source": "https://www.scmp.com/news/china/politics/article/3350926/trump-effect-taiwan-poll-reveals-deep-doubts-about-us-military-protection",
+        "importance": 2
+      },
+      {
+        "claim": "The April 2026 poll was released on Monday April 22, 2026 by the Democracy Foundation",
+        "source": "https://www.scmp.com/news/china/politics/article/3350926/trump-effect-taiwan-poll-reveals-deep-doubts-about-us-military-protection",
+        "importance": 2
+      },
+      {
+        "claim": "27.8% favored eventual or immediate independence, while 7.8% supported eventual or immediate unification",
+        "source": "https://www.taiwannews.com.tw/en/news/6395438",
+        "importance": 2
+      }
+    ],
+    "tool_gaps": [
+      {
+        "need": "Direct confirmation that no political transition occurred between May 2024 and August 2026 in Taiwan",
+        "suggested_tool": "A reliable news aggregator or government API that tracks current heads of state"
+      },
+      {
+        "need": "Direct access to Chinese-language TVBS Poll Center archives to check for recent July-August 2026 releases",
+        "suggested_tool": "Chinese-language web scraping or translation capability for https://www.tvbs.com.tw/poll-center"
+      },
+      {
+        "need": "Access to Taiwan Foundation for Democracy's actual poll database/archive rather than just their grants page",
+        "suggested_tool": "Site-specific search within tfd.org.tw domain for recent polling data"
+      },
+      {
+        "need": "Access to paywalled or registration-required academic databases that may contain full polling data and methodology details",
+        "suggested_tool": "Academic database access or institutional login capability"
+      },
+      {
+        "need": "Taiwan-language sources or Chinese-language polling organizations that may not appear in English web search",
+        "suggested_tool": "Chinese/Traditional Chinese language search capability"
+      },
+      {
+        "need": "Access to paywalled or Chinese-language polling archives that require navigation beyond simple fetch (TVBS poll center shows titles but actual PDFs require Adobe Reader downloads)",
+        "suggested_tool": "A tool that can download and parse PDF polling reports from Chinese-language sites"
+      },
+      {
+        "need": "Real-time access to subscription-required polling databases or aggregators that compile Taiwan polling data",
+        "suggested_tool": "API access to professional polling aggregators or Taiwan政治資料庫 (political databases)"
+      },
+      {
+        "need": "Access to Taiwan-language polling databases or archives that may publish August 2026 data in Chinese only",
+        "suggested_tool": "Chinese-language search capability or access to Taiwan polling organization databases (TVBS, My-Formosa, Taiwan Indicators Survey Research)"
+      },
+      {
+        "need": "August 2026 polls may not yet be published or may be behind paywalls/institutional access",
+        "suggested_tool": "Academic database access or subscription to Taiwan polling services"
+      },
+      {
+        "need": "Actual August 2026 polling data if the question requires data from that specific month rather than the most recent available (March survey reported in July)",
+        "suggested_tool": "Time-specific polling database or direct access to MAC/NCCU release schedules"
+      },
+      {
+        "need": "Access to paywalled or registration-required Taiwan government polling databases (MAC website failed to load)",
+        "suggested_tool": "Authenticated fetch capability or API access to Taiwan government data portals"
+      },
+      {
+        "need": "Direct access to TVBS poll PDFs - the poll center page lists polls but requires Adobe Reader downloads of individual PDFs",
+        "suggested_tool": "PDF fetch and parsing capability, or direct links to poll result pages rather than download-only format"
+      }
+    ]
+  }
+}
