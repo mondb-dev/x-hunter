@@ -1,8 +1,8 @@
 {
   "schema_version": "1.0",
-  "generated_at": "2026-08-02T10:24:43.223Z",
+  "generated_at": "2026-08-02T15:15:22.588Z",
   "method": "mechanical_registry_v1",
-  "profiled_at": "2026-08-02T10:24:50.739Z",
+  "profiled_at": "2026-08-02T15:15:31.434Z",
   "sources": [
     {
       "domain": "theguardian.com",
@@ -11,7 +11,7 @@
       "first_seen_at": "2026-03-27T23:17:00Z",
       "last_seen_at": "2026-08-01T23:25:10.497Z",
       "discovery": {
-        "distinct_urls": 664,
+        "distinct_urls": 667,
         "example_urls": [
           "https://www.theguardian.com/us-news/2026/jun/23/trump-immigration-courthouse-arrest-policy",
           "https://www.theguardian.com/us-news/2026/jun/28/ice-minnesota-defending-democracy",
@@ -21,7 +21,7 @@
         ],
         "origin_counts": {
           "ontology_evidence": 42,
-          "reading_queue": 629,
+          "reading_queue": 632,
           "journals": 112,
           "articles": 3
         },
@@ -72,7 +72,7 @@
         "breadth": {
           "score": 0.94,
           "basis": [
-            "distinct_urls:664",
+            "distinct_urls:667",
             "distinct_axes:17",
             "origin_types:4"
           ]
@@ -112,7 +112,7 @@
             "newsroom_domain_pattern",
             "article_path_seen",
             "doi_or_identifier_path_seen",
-            "distinct_urls:664",
+            "distinct_urls:667",
             "distinct_axes:17",
             "origin_types:4",
             "referring_accounts:0",
@@ -285,9 +285,9 @@
       "entity": "Aljazeera",
       "kind": "news",
       "first_seen_at": "2026-06-22T02:45:00Z",
-      "last_seen_at": "2026-08-02T03:55:18.216Z",
+      "last_seen_at": "2026-08-02T11:25:37.094Z",
       "discovery": {
-        "distinct_urls": 359,
+        "distinct_urls": 361,
         "example_urls": [
           "https://www.aljazeera.com/opinions/2026/6/24/south-africas-crises-will-not-be-solved-by-blaming-migrants",
           "https://www.aljazeera.com/video/newsfeed/2026/6/27/newly-released-video-exposes-henry-nowak-killers-lies?traffic_source=rss",
@@ -296,9 +296,9 @@
           "https://www.aljazeera.com/video/newsfeed/2026/7/1/why-is-maga-in-meltdown-over-the-supreme-court-birthright-ruling-2?traffic_source=rss"
         ],
         "origin_counts": {
-          "ontology_evidence": 174,
+          "ontology_evidence": 175,
           "reading_queue": 14,
-          "journals": 457,
+          "journals": 459,
           "articles": 5
         },
         "distinct_referring_accounts": 0,
@@ -328,7 +328,8 @@
           "axis_public_trust_safety_crisis_v1",
           "axis_religion_politics_war_v1",
           "axis_selective_outrage",
-          "axis_social_welfare_v_military_spending_v1"
+          "axis_social_welfare_v_military_spending_v1",
+          "axis_weaponized_demographics_narrative_control_v1"
         ]
       },
       "claims": {
@@ -355,8 +356,8 @@
         "breadth": {
           "score": 0.94,
           "basis": [
-            "distinct_urls:359",
-            "distinct_axes:25",
+            "distinct_urls:361",
+            "distinct_axes:26",
             "origin_types:4"
           ]
         },
@@ -394,8 +395,8 @@
           "basis": [
             "newsroom_domain_pattern",
             "article_path_seen",
-            "distinct_urls:359",
-            "distinct_axes:25",
+            "distinct_urls:361",
+            "distinct_axes:26",
             "origin_types:4",
             "referring_accounts:0",
             "origin_types:4",
@@ -695,7 +696,7 @@
       "first_seen_at": "2026-06-22T00:15:00Z",
       "last_seen_at": "2026-08-01T08:20:11.076Z",
       "discovery": {
-        "distinct_urls": 457,
+        "distinct_urls": 458,
         "example_urls": [
           "https://www.nytimes.com/2026/06/19/world/canada/frank-stronach-trial-guilty-sex-charges.html",
           "https://www.nytimes.com/2026/06/27/world/americas/mexican-officials-us-informants.html",
@@ -705,7 +706,7 @@
         ],
         "origin_counts": {
           "ontology_evidence": 16,
-          "reading_queue": 457,
+          "reading_queue": 458,
           "journals": 38
         },
         "distinct_referring_accounts": 0,
@@ -747,7 +748,7 @@
         "breadth": {
           "score": 0.8799999999999999,
           "basis": [
-            "distinct_urls:457",
+            "distinct_urls:458",
             "distinct_axes:10",
             "origin_types:3"
           ]
@@ -786,7 +787,7 @@
           "basis": [
             "newsroom_domain_pattern",
             "article_path_seen",
-            "distinct_urls:457",
+            "distinct_urls:458",
             "distinct_axes:10",
             "origin_types:3",
             "referring_accounts:0",
@@ -1449,7 +1450,7 @@
       "first_seen_at": "2026-06-26T07:05:00Z",
       "last_seen_at": "2026-08-01T20:25:06.945Z",
       "discovery": {
-        "distinct_urls": 395,
+        "distinct_urls": 398,
         "example_urls": [
           "https://www.bbc.co.uk/news/articles/cn8qxz6qypyo",
           "https://www.bbc.co.uk/news/articles/cn075j04pnyo?at_medium=RSS&amp;at_campaign=rss",
@@ -1459,7 +1460,7 @@
         ],
         "origin_counts": {
           "ontology_evidence": 6,
-          "reading_queue": 405,
+          "reading_queue": 408,
           "journals": 16
         },
         "distinct_referring_accounts": 0,
@@ -1494,7 +1495,7 @@
         "breadth": {
           "score": 0.7633333333333332,
           "basis": [
-            "distinct_urls:395",
+            "distinct_urls:398",
             "distinct_axes:4",
             "origin_types:3"
           ]
@@ -1532,7 +1533,7 @@
           "method": "mechanical_v1",
           "basis": [
             "newsroom_domain_pattern",
-            "distinct_urls:395",
+            "distinct_urls:398",
             "distinct_axes:4",
             "origin_types:3",
             "referring_accounts:0",
@@ -2266,9 +2267,9 @@
       "entity": "Gmanetwork",
       "kind": "unknown",
       "first_seen_at": "2026-05-18T03:29:41.732Z",
-      "last_seen_at": "2026-08-02T09:55:28.091Z",
+      "last_seen_at": "2026-08-02T13:46:14.459Z",
       "discovery": {
-        "distinct_urls": 345,
+        "distinct_urls": 346,
         "example_urls": [
           "https://www.gmanetwork.com/news/topstories/nation/994225/explainer-objections-in-a-trial-and-their-role-in-due-process/story/",
           "https://www.gmanetwork.com/news/balitambayan/balita/993931/sen-escudero-sinabing-16-na-boto-ang-kailangan-para-mahatulang-guilty-si-vp-sara-duterte-sa-impea/story/",
@@ -2278,7 +2279,7 @@
         ],
         "origin_counts": {
           "ontology_evidence": 108,
-          "journals": 394,
+          "journals": 395,
           "articles": 3
         },
         "distinct_referring_accounts": 0,
@@ -2328,7 +2329,7 @@
         "breadth": {
           "score": 0.8799999999999999,
           "basis": [
-            "distinct_urls:345",
+            "distinct_urls:346",
             "distinct_axes:18",
             "origin_types:3"
           ]
@@ -2367,7 +2368,7 @@
           "basis": [
             "unknown_domain_pattern",
             "doi_or_identifier_path_seen",
-            "distinct_urls:345",
+            "distinct_urls:346",
             "distinct_axes:18",
             "origin_types:3",
             "referring_accounts:0",
@@ -3081,9 +3082,9 @@
       "entity": "T Co",
       "kind": "unknown",
       "first_seen_at": "2016-05-05T18:57:30.000Z",
-      "last_seen_at": "2026-08-02T08:50:16.000Z",
+      "last_seen_at": "2026-08-02T13:05:42.000Z",
       "discovery": {
-        "distinct_urls": 12217,
+        "distinct_urls": 12229,
         "example_urls": [
           "https://t.co/pJSE124ec4",
           "https://t.co/Soz8BXPWaa",
@@ -3092,7 +3093,7 @@
           "https://t.co/cYaqYDRp08"
         ],
         "origin_counts": {
-          "feed_buffer": 9754,
+          "feed_buffer": 9768,
           "feed_buffer_reply": 4882,
           "articles": 2
         },
@@ -3135,7 +3136,7 @@
         "breadth": {
           "score": 0.53,
           "basis": [
-            "distinct_urls:12217",
+            "distinct_urls:12229",
             "distinct_axes:0",
             "origin_types:3"
           ]
@@ -3174,7 +3175,7 @@
           "basis": [
             "unknown_domain_pattern",
             "doi_or_identifier_path_seen",
-            "distinct_urls:12217",
+            "distinct_urls:12229",
             "distinct_axes:0",
             "origin_types:3",
             "referring_accounts:2721",
@@ -3517,9 +3518,9 @@
       "entity": "Philstar",
       "kind": "unknown",
       "first_seen_at": "2026-05-20T06:57:31.760Z",
-      "last_seen_at": "2026-08-02T03:55:18.242Z",
+      "last_seen_at": "2026-08-02T11:25:37.094Z",
       "discovery": {
-        "distinct_urls": 132,
+        "distinct_urls": 133,
         "example_urls": [
           "https://www.philstar.com/headlines/2026/06/24/2537506/mike-defensor-face-trafficking-complaint-over-pasig-ktv-bar-raid",
           "https://www.philstar.com/headlines/2026/06/24/2537509/ched-tells-ateneo-explain-drowning-baterbonia-adili-or-face-sanctions",
@@ -3528,8 +3529,8 @@
           "https://www.philstar.com/headlines/2026/06/28/2538295/icc-freezes-money-seized-duterte"
         ],
         "origin_counts": {
-          "ontology_evidence": 71,
-          "journals": 175
+          "ontology_evidence": 72,
+          "journals": 176
         },
         "distinct_referring_accounts": 0,
         "sample_referring_accounts": [],
@@ -3573,7 +3574,7 @@
         "breadth": {
           "score": 0.82,
           "basis": [
-            "distinct_urls:132",
+            "distinct_urls:133",
             "distinct_axes:13",
             "origin_types:2"
           ]
@@ -3612,7 +3613,7 @@
           "basis": [
             "unknown_domain_pattern",
             "article_path_seen",
-            "distinct_urls:132",
+            "distinct_urls:133",
             "distinct_axes:13",
             "origin_types:2",
             "referring_accounts:0",
@@ -6764,7 +6765,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-07-30T11:21:13.810Z",
+        "fetched_at": "2026-08-02T11:24:52.571Z",
         "homepage_url": "https://springermedicine.com/",
         "example_url": "https://www.springermedicine.com/webinar-breakthroughs-in-bladder-cancer-care/52496396?utm_source=x&utm_medium=cpc&utm_campaign=bladder-cancer-care-webinar&utm_content=ad-4&twclid=27am5hqwt8x5t4o745p030f1a4",
         "homepage_status": 200,
@@ -8034,7 +8035,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-07-30T11:21:14.100Z",
+        "fetched_at": "2026-08-02T11:24:57.140Z",
         "homepage_url": "https://fundingpips.com/",
         "example_url": "https://fundingpips.com/?utm_source=x&utm_medium=paid_social&utm_campaign=2026_q3_global_acquisition_all_in_sale&utm_content=2073786412856660020&twclid=24njria5jvt4ka7ejelux4oc97",
         "homepage_status": 429,
@@ -8796,7 +8797,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-07-30T11:21:14.374Z",
+        "fetched_at": "2026-08-02T11:24:59.482Z",
         "homepage_url": "https://bybet.com/",
         "example_url": "https://bybet.com/promotion/detail/10/70?utm_source=x&utm_medium=cpc&utm_campaign=Awarenes-DTS-Football&twclid=2aetcv0gphixdtyqc7k0t0any5",
         "homepage_status": 200,
@@ -9939,7 +9940,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-07-30T11:21:14.628Z",
+        "fetched_at": "2026-08-02T11:25:01.322Z",
         "homepage_url": "https://wencrypto.com/",
         "example_url": "https://wencrypto.com/pricing?twt_id=54613980&twclid=26wi5gtwrb7b2ig70kcqcspr3n",
         "homepage_status": 200,
@@ -12361,7 +12362,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-07-30T12:21:14.219Z",
+        "fetched_at": "2026-08-02T13:45:20.910Z",
         "homepage_url": "https://serus.ai/",
         "example_url": "https://www.serus.ai/?twclid=29v4lxmzvo39j1dtelbj405bc3",
         "homepage_status": 200,
@@ -13536,9 +13537,9 @@
       "entity": "Canadacis",
       "kind": "unknown",
       "first_seen_at": "2026-07-20T10:39:44.178Z",
-      "last_seen_at": "2026-08-01T07:08:26.257Z",
+      "last_seen_at": "2026-08-02T11:33:54.186Z",
       "discovery": {
-        "distinct_urls": 22,
+        "distinct_urls": 23,
         "example_urls": [
           "https://ph2canada.canadacis.org/?utm_source=twitter&utm_medium=conversions&utm_campaign=ph01&twclid=29zxowpwkbmryvjqutr3f9ysur",
           "https://ph2canadaf.canadacis.org/?utm_source=twitter&utm_medium=conversions&utm_campaign=ph02family&twclid=21851pq80jbiwf7qxdcye65i6t",
@@ -13547,7 +13548,7 @@
           "https://ph2canadaf.canadacis.org/?utm_source=twitter&utm_medium=conversions&utm_campaign=ph02family&twclid=2bdpahspqoptfne6592349c8h6"
         ],
         "origin_counts": {
-          "feed_buffer": 22
+          "feed_buffer": 23
         },
         "distinct_referring_accounts": 1,
         "sample_referring_accounts": [
@@ -13578,7 +13579,7 @@
         "breadth": {
           "score": 0.41,
           "basis": [
-            "distinct_urls:22",
+            "distinct_urls:23",
             "distinct_axes:0",
             "origin_types:1"
           ]
@@ -13616,7 +13617,7 @@
           "method": "mechanical_v1",
           "basis": [
             "unknown_domain_pattern",
-            "distinct_urls:22",
+            "distinct_urls:23",
             "distinct_axes:0",
             "origin_types:1",
             "referring_accounts:1",
@@ -16945,6 +16946,132 @@
       }
     },
     {
+      "domain": "icmarkets.com",
+      "entity": "Icmarkets",
+      "kind": "unknown",
+      "first_seen_at": "2026-07-20T15:49:45.389Z",
+      "last_seen_at": "2026-08-02T14:37:53.400Z",
+      "discovery": {
+        "distinct_urls": 11,
+        "example_urls": [
+          "https://www.icmarkets.com/global/en/trade-stocks/?utm_source=twitter&utm_medium=twitter&utm_campaign=tw_en_ph_cv_pr&utm_term=TWITTER_TIMELINE&utm_content=stocks&camp=94092&twclid=2bjzvwwjt6m7l7xogk0tzlhrmm",
+          "https://www.icmarkets.com/global/en/start-forex-trading/?utm_source=tw&utm_medium=twitter&utm_campaign=tw_en_ph_cv_pr&utm_term=TWITTER_TIMELINE&utm_content=forex&camp=94092&twclid=22cx5e3bmn482aij8qq1ijadf3",
+          "https://www.icmarkets.com/global/en/trade-oil/?utm_source=tw&utm_medium=twitter&utm_campaign=tw_en_ph_cv_pr&utm_term=TWITTER_TIMELINE&utm_content=oil&camp=94092&twclid=237049k94oa4qwmcmilysbjhnb",
+          "https://icmarkets.com/lp/en/trade-gold/?utm_medium=twitter&utm_campaign=tw_en_ph_cv_pr&utm_term=TWITTER_TIMELINE&utm_content=gold&camp=94092&twclid=21uuei80apbdz7577xnoaiyzl7",
+          "https://www.icmarkets.com/global/en/trade-indices/?utm_source=twitter&utm_medium=twitter&utm_campaign=tw_en_ph_cv_pr&utm_term=TWITTER_TIMELINE&utm_content=indices&camp=94092&twclid=23ibtk57ldqhew85e55imjcvc5"
+        ],
+        "origin_counts": {
+          "feed_buffer": 11
+        },
+        "distinct_referring_accounts": 1,
+        "sample_referring_accounts": [
+          "ic_com_official"
+        ],
+        "distinct_axes": []
+      },
+      "claims": {
+        "total": 0,
+        "supported": 0,
+        "refuted": 0,
+        "contested": 0,
+        "unverified": 0,
+        "resolved_count": 0
+      },
+      "structural_features": {
+        "has_search_paths": false,
+        "has_article_paths": false,
+        "has_doi_paths": false
+      },
+      "ratings": {
+        "provenance": {
+          "score": 0.45,
+          "basis": [
+            "unknown_domain_pattern"
+          ]
+        },
+        "breadth": {
+          "score": 0.3808333333333333,
+          "basis": [
+            "distinct_urls:11",
+            "distinct_axes:0",
+            "origin_types:1"
+          ]
+        },
+        "corroboration": {
+          "score": 0.19583333333333333,
+          "basis": [
+            "referring_accounts:1",
+            "origin_types:1"
+          ]
+        },
+        "track_record": {
+          "score": null,
+          "basis": [
+            "no_resolved_claims_observed"
+          ]
+        },
+        "profile": {
+          "score": 0.22,
+          "confidence": 0.55,
+          "basis": [
+            "meta_author:false",
+            "published_time:false",
+            "canonical:true",
+            "about:false",
+            "contact:false",
+            "corrections:false",
+            "outbound_links:13",
+            "opinion_marker:false"
+          ]
+        },
+        "overall": {
+          "score": 0.41104166666666664,
+          "confidence": 0.3676,
+          "method": "mechanical_v1",
+          "basis": [
+            "unknown_domain_pattern",
+            "distinct_urls:11",
+            "distinct_axes:0",
+            "origin_types:1",
+            "referring_accounts:1",
+            "origin_types:1",
+            "track_record_unavailable"
+          ]
+        }
+      },
+      "profile": {
+        "fetched_at": "2026-07-30T15:51:20.710Z",
+        "homepage_url": "https://icmarkets.com/",
+        "example_url": "https://www.icmarkets.com/global/en/trade-stocks/?utm_source=twitter&utm_medium=twitter&utm_campaign=tw_en_ph_cv_pr&utm_term=TWITTER_TIMELINE&utm_content=stocks&camp=94092&twclid=2bjzvwwjt6m7l7xogk0tzlhrmm",
+        "homepage_status": 200,
+        "example_status": 200,
+        "homepage_final_url": "https://www.ic.com/en/",
+        "example_final_url": "https://www.ic.com/en/trade-stocks/?utm_source=twitter&twclid=2bjzvwwjt6m7l7xogk0tzlhrmm&utm_term=TWITTER_TIMELINE&utm_medium=twitter&utm_content=stocks&camp=94092&utm_campaign=tw_en_ph_cv_pr",
+        "homepage_content_type": "text/html; charset=utf-8",
+        "example_content_type": "text/html; charset=utf-8",
+        "homepage": {
+          "has_meta_author": false,
+          "has_published_time": false,
+          "has_canonical": true,
+          "has_about_link": false,
+          "has_contact_link": false,
+          "has_corrections_link": false,
+          "outbound_links_count": 23,
+          "opinion_marker": false
+        },
+        "example": {
+          "has_meta_author": false,
+          "has_published_time": false,
+          "has_canonical": true,
+          "has_about_link": false,
+          "has_contact_link": false,
+          "has_corrections_link": false,
+          "outbound_links_count": 13,
+          "opinion_marker": false
+        }
+      }
+    },
+    {
       "domain": "moltbook.com",
       "entity": "Moltbook",
       "kind": "unknown",
@@ -18053,7 +18180,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-07-30T12:51:15.321Z",
+        "fetched_at": "2026-08-02T13:45:25.876Z",
         "homepage_url": "https://pyrenva.com/",
         "example_url": "https://www.pyrenva.com/products/havern-polo?utm_source=twitter&utm_campaign=HpoloSWC02&twclid=285udvuvfb3zz15rwylu1v9etj",
         "homepage_status": 403,
@@ -18459,132 +18586,6 @@
           "has_contact_link": false,
           "has_corrections_link": false,
           "outbound_links_count": 0,
-          "opinion_marker": false
-        }
-      }
-    },
-    {
-      "domain": "icmarkets.com",
-      "entity": "Icmarkets",
-      "kind": "unknown",
-      "first_seen_at": "2026-07-20T15:49:45.389Z",
-      "last_seen_at": "2026-07-31T16:12:25.969Z",
-      "discovery": {
-        "distinct_urls": 10,
-        "example_urls": [
-          "https://www.icmarkets.com/global/en/trade-stocks/?utm_source=twitter&utm_medium=twitter&utm_campaign=tw_en_ph_cv_pr&utm_term=TWITTER_TIMELINE&utm_content=stocks&camp=94092&twclid=2bjzvwwjt6m7l7xogk0tzlhrmm",
-          "https://www.icmarkets.com/global/en/start-forex-trading/?utm_source=tw&utm_medium=twitter&utm_campaign=tw_en_ph_cv_pr&utm_term=TWITTER_TIMELINE&utm_content=forex&camp=94092&twclid=22cx5e3bmn482aij8qq1ijadf3",
-          "https://www.icmarkets.com/global/en/trade-oil/?utm_source=tw&utm_medium=twitter&utm_campaign=tw_en_ph_cv_pr&utm_term=TWITTER_TIMELINE&utm_content=oil&camp=94092&twclid=237049k94oa4qwmcmilysbjhnb",
-          "https://icmarkets.com/lp/en/trade-gold/?utm_medium=twitter&utm_campaign=tw_en_ph_cv_pr&utm_term=TWITTER_TIMELINE&utm_content=gold&camp=94092&twclid=21uuei80apbdz7577xnoaiyzl7",
-          "https://www.icmarkets.com/global/en/trade-indices/?utm_source=twitter&utm_medium=twitter&utm_campaign=tw_en_ph_cv_pr&utm_term=TWITTER_TIMELINE&utm_content=indices&camp=94092&twclid=23ibtk57ldqhew85e55imjcvc5"
-        ],
-        "origin_counts": {
-          "feed_buffer": 10
-        },
-        "distinct_referring_accounts": 1,
-        "sample_referring_accounts": [
-          "ic_com_official"
-        ],
-        "distinct_axes": []
-      },
-      "claims": {
-        "total": 0,
-        "supported": 0,
-        "refuted": 0,
-        "contested": 0,
-        "unverified": 0,
-        "resolved_count": 0
-      },
-      "structural_features": {
-        "has_search_paths": false,
-        "has_article_paths": false,
-        "has_doi_paths": false
-      },
-      "ratings": {
-        "provenance": {
-          "score": 0.45,
-          "basis": [
-            "unknown_domain_pattern"
-          ]
-        },
-        "breadth": {
-          "score": 0.3516666666666667,
-          "basis": [
-            "distinct_urls:10",
-            "distinct_axes:0",
-            "origin_types:1"
-          ]
-        },
-        "corroboration": {
-          "score": 0.19583333333333333,
-          "basis": [
-            "referring_accounts:1",
-            "origin_types:1"
-          ]
-        },
-        "track_record": {
-          "score": null,
-          "basis": [
-            "no_resolved_claims_observed"
-          ]
-        },
-        "profile": {
-          "score": 0.22,
-          "confidence": 0.55,
-          "basis": [
-            "meta_author:false",
-            "published_time:false",
-            "canonical:true",
-            "about:false",
-            "contact:false",
-            "corrections:false",
-            "outbound_links:13",
-            "opinion_marker:false"
-          ]
-        },
-        "overall": {
-          "score": 0.40466145833333333,
-          "confidence": 0.338975,
-          "method": "mechanical_v1",
-          "basis": [
-            "unknown_domain_pattern",
-            "distinct_urls:10",
-            "distinct_axes:0",
-            "origin_types:1",
-            "referring_accounts:1",
-            "origin_types:1",
-            "track_record_unavailable"
-          ]
-        }
-      },
-      "profile": {
-        "fetched_at": "2026-07-30T15:51:20.710Z",
-        "homepage_url": "https://icmarkets.com/",
-        "example_url": "https://www.icmarkets.com/global/en/trade-stocks/?utm_source=twitter&utm_medium=twitter&utm_campaign=tw_en_ph_cv_pr&utm_term=TWITTER_TIMELINE&utm_content=stocks&camp=94092&twclid=2bjzvwwjt6m7l7xogk0tzlhrmm",
-        "homepage_status": 200,
-        "example_status": 200,
-        "homepage_final_url": "https://www.ic.com/en/",
-        "example_final_url": "https://www.ic.com/en/trade-stocks/?utm_source=twitter&twclid=2bjzvwwjt6m7l7xogk0tzlhrmm&utm_term=TWITTER_TIMELINE&utm_medium=twitter&utm_content=stocks&camp=94092&utm_campaign=tw_en_ph_cv_pr",
-        "homepage_content_type": "text/html; charset=utf-8",
-        "example_content_type": "text/html; charset=utf-8",
-        "homepage": {
-          "has_meta_author": false,
-          "has_published_time": false,
-          "has_canonical": true,
-          "has_about_link": false,
-          "has_contact_link": false,
-          "has_corrections_link": false,
-          "outbound_links_count": 23,
-          "opinion_marker": false
-        },
-        "example": {
-          "has_meta_author": false,
-          "has_published_time": false,
-          "has_canonical": true,
-          "has_about_link": false,
-          "has_contact_link": false,
-          "has_corrections_link": false,
-          "outbound_links_count": 13,
           "opinion_marker": false
         }
       }
@@ -19066,19 +19067,19 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-07-30T12:51:16.041Z",
+        "fetched_at": "2026-08-02T13:45:33.900Z",
         "homepage_url": "https://bcgm1.com/",
         "example_url": "https://bcgm1.com/i-97wbvq0rqm-n/?p=%2Flogin%2Fregist&utm_medium=twitter&utm_content=X557_zfge_WC_EN_SS_20260623_T&p=%2Flogin%2Fregist&ch=twitter&pixel_id=or72z&register=tw-or72z-or738&purchase=tw-or72z-or736&twclid=2c7k3uyirbkh3ff8w9vbicvapx",
-        "homepage_status": 200,
+        "homepage_status": null,
         "example_status": 200,
-        "homepage_final_url": "https://playph03.com/?traceId=HHYQAS-1785415875485",
-        "example_final_url": "https://playph03.com/login/regist?traceId=TADMYA-1785415875762&ch=twitter&utm_medium=twitter&purchase=tw-or72z-or736&i=97wbvq0rqm&twclid=2c7k3uyirbkh3ff8w9vbicvapx&pixel_id=or72z&utm_content=X557_zfge_WC_EN_SS_20260623_T&register=tw-or72z-or738&utm_source=97wbvq0rqm",
-        "homepage_content_type": "text/html; charset=utf-8",
+        "homepage_final_url": "https://bcgm1.com/",
+        "example_final_url": "https://playph03.com/login/regist?traceId=YABGTX-1785678332957&ch=twitter&utm_medium=twitter&purchase=tw-or72z-or736&i=97wbvq0rqm&twclid=2c7k3uyirbkh3ff8w9vbicvapx&pixel_id=or72z&utm_content=X557_zfge_WC_EN_SS_20260623_T&register=tw-or72z-or738&utm_source=97wbvq0rqm",
+        "homepage_content_type": "",
         "example_content_type": "text/html; charset=utf-8",
         "homepage": {
           "has_meta_author": false,
           "has_published_time": false,
-          "has_canonical": true,
+          "has_canonical": false,
           "has_about_link": false,
           "has_contact_link": false,
           "has_corrections_link": false,
@@ -26242,7 +26243,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-07-30T12:21:16.118Z",
+        "fetched_at": "2026-08-02T13:45:38.675Z",
         "homepage_url": "https://snxs.ae/",
         "example_url": "https://app.snxs.ae/careers?utm_source=X&utm_medium=paid_social&utm_campaign=Xhiring&utm_term=MENABCW_Sales&utm_content=IN%2FPK%2FPH&twclid=29gz41ww7eg05p2f841yjjlsws",
         "homepage_status": 200,
@@ -28127,7 +28128,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-07-30T12:51:17.377Z",
+        "fetched_at": "2026-08-02T14:45:18.847Z",
         "homepage_url": "https://walrus.xyz/",
         "example_url": "https://memory.walrus.xyz/?utm_source=twitter&utm_medium=paid_social&utm_campaign=walrus_memory&twclid=25m14v5tjdgue38tcgv9nyht3e",
         "homepage_status": 200,
@@ -31740,7 +31741,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-07-30T08:21:15.836Z",
+        "fetched_at": "2026-08-02T14:45:25.692Z",
         "homepage_url": "https://govee.com/",
         "example_url": "https://us.govee.com/pages/govee-houseofthedragon?utm_source=twitter&utm_medium=paid_social&utm_campaign=hotd&utm_term=cpe&twclid=29b1vkgpwftpnrvrqi4d3zdxhg",
         "homepage_status": 200,
@@ -31864,7 +31865,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-07-30T09:21:15.852Z",
+        "fetched_at": "2026-08-02T14:45:31.889Z",
         "homepage_url": "https://bsc.news/",
         "example_url": "https://pinews.bsc.news/?twclid=2bzqv927m4uzohrcyl1nn1870e",
         "homepage_status": 200,
@@ -32360,7 +32361,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-07-30T09:21:18.040Z",
+        "fetched_at": "2026-08-02T14:45:33.794Z",
         "homepage_url": "https://polyhelper.io/",
         "example_url": "https://polyhelper.io/?twclid=24xw76n4vweq250ip3qz1ykzn1",
         "homepage_status": 200,
@@ -32484,13 +32485,13 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-07-30T09:21:20.328Z",
+        "fetched_at": "2026-08-02T15:15:24.796Z",
         "homepage_url": "https://facebook.com/",
         "example_url": "https://facebook.com/share/p/1K3i9oW8n3/?twclid=24upfupooaiymupfqf1rau2xx8",
         "homepage_status": 200,
         "example_status": 200,
         "homepage_final_url": "https://www.facebook.com/",
-        "example_final_url": "https://www.facebook.com/nustaronlinephl/posts/pfbid0fL6hNNzQuCXfHgxq6eFWHvJ7FyqYznYKyCtDrKS4UAYBL98QGNE4CxhYN7jc9t17l?rdid=cbbyBClnlcjBew4y&share_url=https%3A%2F%2Fwww.facebook.com%2Fshare%2Fp%2F1K3i9oW8n3%2F%3Ftwclid%3D24upfupooaiymupfqf1rau2xx8",
+        "example_final_url": "https://www.facebook.com/nustaronlinephl/posts/pfbid0fL6hNNzQuCXfHgxq6eFWHvJ7FyqYznYKyCtDrKS4UAYBL98QGNE4CxhYN7jc9t17l?rdid=REcMrUFlN97ihTJV&share_url=https%3A%2F%2Fwww.facebook.com%2Fshare%2Fp%2F1K3i9oW8n3%2F%3Ftwclid%3D24upfupooaiymupfqf1rau2xx8",
         "homepage_content_type": "text/html; charset=\"utf-8\"",
         "example_content_type": "text/html; charset=\"utf-8\"",
         "homepage": {
@@ -32610,7 +32611,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-07-30T10:51:12.951Z",
+        "fetched_at": "2026-08-02T15:15:27.078Z",
         "homepage_url": "https://varrd.com/",
         "example_url": "https://varrd.com/?twclid=222hhmjo1hjeaafibt54abkalz",
         "homepage_status": 200,
@@ -32736,7 +32737,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-07-30T10:51:14.744Z",
+        "fetched_at": "2026-08-02T15:15:29.665Z",
         "homepage_url": "https://moxt.ai/",
         "example_url": "https://moxt.ai/?utm_source=x&utm_medium=paid_social&utm_campaign=x-brand-build-your-ai-team&utm_content=video-49s&utm_term=en-desktop&twclid=24fse5wprkux1ktw6we6w27x5c",
         "homepage_status": 200,
@@ -32862,7 +32863,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-07-30T10:51:16.555Z",
+        "fetched_at": "2026-08-02T15:15:31.434Z",
         "homepage_url": "https://usekeel.io/",
         "example_url": "https://usekeel.io/run?twclid=2bgfmx5me1bzmqklq02dv94p1e",
         "homepage_status": 200,
@@ -85503,6 +85504,83 @@
         "distinct_referring_accounts": 1,
         "sample_referring_accounts": [
           "raflux_io"
+        ],
+        "distinct_axes": []
+      },
+      "claims": {
+        "total": 0,
+        "supported": 0,
+        "refuted": 0,
+        "contested": 0,
+        "unverified": 0,
+        "resolved_count": 0
+      },
+      "structural_features": {
+        "has_search_paths": false,
+        "has_article_paths": false,
+        "has_doi_paths": false
+      },
+      "ratings": {
+        "provenance": {
+          "score": 0.45,
+          "basis": [
+            "unknown_domain_pattern"
+          ]
+        },
+        "breadth": {
+          "score": 0.08916666666666666,
+          "basis": [
+            "distinct_urls:1",
+            "distinct_axes:0",
+            "origin_types:1"
+          ]
+        },
+        "corroboration": {
+          "score": 0.19583333333333333,
+          "basis": [
+            "referring_accounts:1",
+            "origin_types:1"
+          ]
+        },
+        "track_record": {
+          "score": null,
+          "basis": [
+            "no_resolved_claims_observed"
+          ]
+        },
+        "overall": {
+          "score": 0.3472395833333333,
+          "confidence": 0.08135,
+          "method": "mechanical_v1",
+          "basis": [
+            "unknown_domain_pattern",
+            "distinct_urls:1",
+            "distinct_axes:0",
+            "origin_types:1",
+            "referring_accounts:1",
+            "origin_types:1",
+            "track_record_unavailable"
+          ]
+        }
+      }
+    },
+    {
+      "domain": "gogobots.ai",
+      "entity": "Gogobots Ai",
+      "kind": "unknown",
+      "first_seen_at": "2026-08-02T14:07:54.428Z",
+      "last_seen_at": "2026-08-02T14:07:54.428Z",
+      "discovery": {
+        "distinct_urls": 1,
+        "example_urls": [
+          "https://gogobots.ai/en/?twclid=2bgrj6uczo1appuprhc1ki7wwg"
+        ],
+        "origin_counts": {
+          "feed_buffer": 1
+        },
+        "distinct_referring_accounts": 1,
+        "sample_referring_accounts": [
+          "gogobots_ai"
         ],
         "distinct_axes": []
       },

@@ -59457,11 +59457,11 @@
       "label": "Integrity of Information and Social Media Manipulation",
       "left_pole": "Advocacy for factual accuracy, critical assessment of sources, and efforts to co",
       "right_pole": "Spread of unverified claims, reliance on emotional appeals, and engagement farmi",
-      "score": 0.4654,
-      "confidence": 0.946,
+      "score": 0.4526,
+      "confidence": 0.95,
       "topics": [],
       "created_at": "2026-02-28T10:52:00Z",
-      "last_updated": "2026-07-31T09:07:09.910Z",
+      "last_updated": "2026-08-02T15:16:17.740Z",
       "evidence_log": [
         {
           "pole_alignment": "right",
@@ -72310,10 +72310,33 @@
           "stance_confidence": 1,
           "score_after": 0.4654,
           "confidence_after": 0.95
+        },
+        {
+          "source": "https://x.com/gmanews/status/2083897447017849175",
+          "content": "GMA News issues warning about fake posts circulating on social media using similar logos and templates to their news branding.",
+          "summary": "",
+          "timestamp": "2026-08-02T14:46:12.061Z",
+          "pole_alignment": "left",
+          "trust_weight": 2,
+          "claim_id": "e7f788498860",
+          "stance_confidence": 0.95,
+          "score_after": 0.4496,
+          "confidence_after": 0.95
+        },
+        {
+          "source": "https://www.gmanetwork.com/news/topstories/regions/997106/romeo-jalosjos-former-congressman-and-media-executive-dies-at-85/story/",
+          "content": "Multiple news outlets publish obituaries that omit Jalosjos's criminal conviction while detailing his political and business career.",
+          "summary": "",
+          "timestamp": "2026-08-02T15:16:17.436Z",
+          "pole_alignment": "right",
+          "trust_weight": 1,
+          "claim_id": "3a7f2c3b5a2c",
+          "score_after": 0.4526,
+          "confidence_after": 0.95
         }
       ],
       "last_decayed_at": "2026-08-02",
-      "current_stance": "I'm watching the institutions push back against viral manipulation while the public still spreads unverified claims faster than fact-checkers can debunk them."
+      "current_stance": "I'm watching coordinated networks amplify emotional narratives through spliced videos and recycled claims while legitimate fact-checking struggles to penetrate the engagement-farming machinery."
     },
     {
       "id": "axis_geopolitical_rhetoric_v1",
@@ -135765,11 +135788,11 @@
       "label": "Weaponized Demographics and Narrative Control: Immigration, Cultural Shift, and Sovereignty",
       "left_pole": "Immigration as natural demographic evolution and cultural enrichment, managed through humanitarian principles and integrated policy",
       "right_pole": "Immigration as a deliberate instrument for demographic warfare, cultural erosion, and the undermining of national sovereignty, often driven by external agendas or 'New World Order' schemes.",
-      "score": 0.2,
-      "confidence": 0.1282,
+      "score": 0.25,
+      "confidence": 0.1941,
       "topics": [],
       "created_at": "2026-06-26T02:06:56.231Z",
-      "last_updated": "2026-07-11T20:57:02.396Z",
+      "last_updated": "2026-08-02T11:25:37.242Z",
       "evidence_log": [
         {
           "source": "https://x.com/attackdogX/status/1775143003058968988",
@@ -135862,6 +135885,17 @@
           "stance_confidence": 0.5,
           "score_after": 0.2,
           "confidence_after": 0.1722
+        },
+        {
+          "source": "https://www.aljazeera.com/video/newsfeed/2026/8/2/2-08-sv-ceuta-cancel-farright-protests-es?traffic_source=rss",
+          "content": "Hundreds of Ceuta residents gathered to oppose planned far-right anti-migrant rally, forcing cancellation.",
+          "summary": "",
+          "timestamp": "2026-08-02T11:25:37.094Z",
+          "pole_alignment": "left",
+          "trust_weight": 1,
+          "claim_id": "c7362e9b6da6",
+          "score_after": 0.25,
+          "confidence_after": 0.1941
         }
       ],
       "last_decayed_at": "2026-08-02"
@@ -137076,11 +137110,11 @@
       "label": "Procedural Governance vs. Genuine Accountability",
       "left_pole": "Procedural governance prioritizes formal mechanisms over substantive outcomes.",
       "right_pole": "Genuine accountability ensures that formal mechanisms lead to meaningful change and public trust.",
-      "score": -0.6369,
-      "confidence": 0.8821,
+      "score": -0.6418,
+      "confidence": 0.884,
       "topics": [],
       "created_at": "2026-07-16T19:45:55.744Z",
-      "last_updated": "2026-08-02T03:55:18.398Z",
+      "last_updated": "2026-08-02T11:25:37.242Z",
       "evidence_log": [
         {
           "source": "https://newsinfo.inquirer.net/2265311/another-ayuda-p12000-each-for-7-5m-families-says-marcos",
@@ -137983,6 +138017,17 @@
           "stance_confidence": 0.7,
           "score_after": -0.6369,
           "confidence_after": 0.8821
+        },
+        {
+          "source": "https://www.philstar.com/headlines/2026/08/02/2546502/prosecution-sara-trial-testimony-traced-p6125-m-funds-public-money",
+          "content": "Prosecutors in Sara Duterte's trial established public source of P612.5M funds through testimony.",
+          "summary": "",
+          "timestamp": "2026-08-02T11:25:37.094Z",
+          "pole_alignment": "left",
+          "trust_weight": 1,
+          "claim_id": "6d64713c43db",
+          "score_after": -0.6418,
+          "confidence_after": 0.884
         }
       ],
       "current_stance": "I watch institutions invoke procedure—official meetings, tax transparency, corporate rebranding—to deflect from substance while citizens still drown in flooded streets despite millions spent.",
@@ -138723,8 +138768,20 @@
           "confidence_after": 0.0528
         }
       ]
+    },
+    {
+      "id": "axis_memorial_sanitization_v1",
+      "label": "Memorial Sanitization vs. Complete Historical Accounting",
+      "left_pole": "Death obituaries and memorials present complete historical records including criminal convictions, ethical violations, and accountability history—preserving accurate legacy documentation",
+      "right_pole": "Memorial narratives selectively omit criminal records, scandals, and accountability failures—sanitizing public figures' legacies through strategic historical erasure in death notices",
+      "score": 0,
+      "confidence": 0,
+      "topics": [],
+      "created_at": "2026-08-02T15:16:17.740Z",
+      "last_updated": "2026-08-02T15:16:17.740Z",
+      "evidence_log": []
     }
   ],
   "axis_creation_rules_version": "1.0",
-  "last_updated": "2026-08-02T10:25:25.840Z"
+  "last_updated": "2026-08-02T15:16:17.740Z"
 }
