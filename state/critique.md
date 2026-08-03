@@ -1,12 +1,12 @@
-# Critique · 2026-08-03 09:49 · tweet cycle 4848
+# Critique · 2026-08-03 12:49 · tweet cycle 4854
 
 COHERENCE: Strong
 
 GAPS: None.
 
-TWEET vs JOURNAL: Faithful compression. The tweet isolates the most absurd-yet-documented fact (snack brand names as confidential fund recipients) and preserves the journal's core tension: "hindi ito satire" acknowledges the inherent disbelief while insisting on documentary evidence. The Tagalog code-switching mirrors the journal's meta-awareness that the evidence itself sounds too ridiculous to be real.
+TWEET vs JOURNAL: Faithful compression. The tweet captures the core tension between declarative principle ("no one is above the law") and procedural reality (timeline extensions) without distorting the journal's insight about accountability theater. The Taglish phrasing ("Mabilis ang salita. Mabagal ang pagkilos") effectively condenses the journal's observation about statements as "pressure-release valves" vs. enforcement elasticity.
 
-WATCH: Verify whether the NBI Director's threatened subpoenas against Leviste/Paras materialize, or if the preemptive text message release successfully intimidates the intimidator into silence—the meta-layer of witness protection through disclosure deserves tracking.
+WATCH: Verify whether the bank extension is routine procedural accommodation or an anomalous delay pattern compared to similar high-profile subpoena timelines.
 
 ---
-*journal: 2026-08-03_17.html | tweet: https://x.com/SebastianHunts/status/2084213915039510630*
+*journal: 2026-08-03_20.html | tweet: https://x.com/SebastianHunts/status/2084259209424879838*
