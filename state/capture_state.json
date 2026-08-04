@@ -1,139 +1,154 @@
 {
-  "checked_at": "2026-08-03T02:52:09.267Z",
-  "evidence_24h": 23,
-  "unique_sources": 6,
+  "checked_at": "2026-08-04T03:22:27.844Z",
+  "evidence_24h": 32,
+  "unique_sources": 8,
   "status": "captured",
   "alerts": [
     {
       "type": "source_dominance",
       "severity": "high",
-      "detail": "@unknown accounts for 78% of today's evidence (18/23)",
+      "detail": "@unknown accounts for 59% of today's evidence (19/32)",
       "username": "unknown",
-      "share": 0.783
+      "share": 0.594
     }
   ],
-  "summary": "1 capture alert(s) detected:\n[HIGH] @unknown accounts for 78% of today's evidence (18/23)",
+  "summary": "1 capture alert(s) detected:\n[HIGH] @unknown accounts for 59% of today's evidence (19/32)",
   "source_concentration": {
     "unknown": {
       "username": "unknown",
-      "count": 18,
-      "share": 0.783
+      "count": 19,
+      "share": 0.594
     },
-    "philippinestar": {
-      "username": "philippinestar",
-      "count": 1,
-      "share": 0.043
+    "news5ph": {
+      "username": "news5ph",
+      "count": 4,
+      "share": 0.125
     },
     "gmanews": {
       "username": "gmanews",
-      "count": 1,
-      "share": 0.043
+      "count": 3,
+      "share": 0.094
     },
-    "whitehouse": {
-      "username": "whitehouse",
-      "count": 1,
-      "share": 0.043
+    "abscbnnews": {
+      "username": "abscbnnews",
+      "count": 2,
+      "share": 0.063
     },
-    "wateralwayswet": {
-      "username": "wateralwayswet",
+    "bncdotph": {
+      "username": "bncdotph",
       "count": 1,
-      "share": 0.043
+      "share": 0.031
     },
-    "globeeyenews": {
-      "username": "globeeyenews",
+    "inquirerdotnet": {
+      "username": "inquirerdotnet",
       "count": 1,
-      "share": 0.043
+      "share": 0.031
+    },
+    "rapplerdotcom": {
+      "username": "rapplerdotcom",
+      "count": 1,
+      "share": 0.031
+    },
+    "foxnews": {
+      "username": "foxnews",
+      "count": 1,
+      "share": 0.031
     }
   },
   "axis_concentration": {
     "axis_power_accountability": {
       "axis_id": "axis_power_accountability",
       "label": "Power, Institutions, and Rule of Law",
-      "count": 5,
-      "share": 0.217
+      "count": 10,
+      "share": 0.313
     },
     "axis_procedural_governance_accountability_v1": {
       "axis_id": "axis_procedural_governance_accountability_v1",
       "label": "Procedural Governance vs. Genuine Accountability",
-      "count": 4,
-      "share": 0.174
+      "count": 5,
+      "share": 0.156
     },
     "axis_media_integrity_v1": {
       "axis_id": "axis_media_integrity_v1",
       "label": "Integrity of Information and Social Media Manipulation",
+      "count": 4,
+      "share": 0.125
+    },
+    "axis_procedural_governance_accountability": {
+      "axis_id": "axis_procedural_governance_accountability",
+      "label": "Procedural Governance vs. Genuine Accountability",
       "count": 3,
-      "share": 0.13
+      "share": 0.094
     },
     "axis_procedural_governance_substantive_action": {
       "axis_id": "axis_procedural_governance_substantive_action",
       "label": "Procedural Governance vs. Substantive Action",
-      "count": 3,
-      "share": 0.13
+      "count": 2,
+      "share": 0.063
     },
-    "axis_geopolitical_rhetoric_v1": {
-      "axis_id": "axis_geopolitical_rhetoric_v1",
-      "label": "Geopolitical Rhetoric vs. Humanitarian Concerns",
+    "axis_political_trust_corruption_v1": {
+      "axis_id": "axis_political_trust_corruption_v1",
+      "label": "Trust in Political Institutions and Anti-Corruption Efforts",
       "count": 1,
-      "share": 0.043
+      "share": 0.031
     },
-    "axis_political_dynasties_meritocracy_v1": {
-      "axis_id": "axis_political_dynasties_meritocracy_v1",
-      "label": "Political Dynasties and Meritocracy",
+    "axis_ai_societal_impact_v1": {
+      "axis_id": "axis_ai_societal_impact_v1",
+      "label": "Societal Impact and Ethical Concerns of AI/Robots",
       "count": 1,
-      "share": 0.043
+      "share": 0.031
     },
-    "axis_authoritarian_self_determination_v1": {
-      "axis_id": "axis_authoritarian_self_determination_v1",
-      "label": "Authoritarian Control vs. Individual/Collective Self-Determination",
+    "axis_public_trust_safety_crisis_v1": {
+      "axis_id": "axis_public_trust_safety_crisis_v1",
+      "label": "Public Trust in Safety and Crisis Communication",
       "count": 1,
-      "share": 0.043
+      "share": 0.031
     },
-    "axis_political_moral_conduct_v1": {
-      "axis_id": "axis_political_moral_conduct_v1",
-      "label": "Political Integrity and Moral Conduct in Public Service",
+    "axis_environmental_policy_v_economic_v1": {
+      "axis_id": "axis_environmental_policy_v_economic_v1",
+      "label": "Environmental Policy vs. Economic Development",
       "count": 1,
-      "share": 0.043
+      "share": 0.031
     },
-    "axis_human_rights_exploitation_v1": {
-      "axis_id": "axis_human_rights_exploitation_v1",
-      "label": "Human Rights and Exploitation",
+    "axis_information_control_v1": {
+      "axis_id": "axis_information_control_v1",
+      "label": "Information Control",
       "count": 1,
-      "share": 0.043
-    },
-    "axis_weaponized_demographics_narrative_control_v1": {
-      "axis_id": "axis_weaponized_demographics_narrative_control_v1",
-      "label": "Weaponized Demographics and Narrative Control: Immigration, Cultural Shift, and Sovereignty",
-      "count": 1,
-      "share": 0.043
+      "share": 0.031
     }
   },
   "cluster_concentration": {
     "unknown": {
       "cluster": "unknown",
       "count": 19,
-      "share": 0.826
+      "share": 0.594
     },
     "breaking_news": {
       "cluster": "breaking_news",
-      "count": 2,
-      "share": 0.087
+      "count": 6,
+      "share": 0.188
     },
-    "government_official": {
-      "cluster": "government_official",
-      "count": 1,
-      "share": 0.043
+    "accountability_journalism": {
+      "cluster": "accountability_journalism",
+      "count": 5,
+      "share": 0.156
     },
     "asia_pacific": {
       "cluster": "asia_pacific",
       "count": 1,
-      "share": 0.043
+      "share": 0.031
+    },
+    "us_politics": {
+      "cluster": "us_politics",
+      "count": 1,
+      "share": 0.031
     }
   },
   "pole_balance": {
-    "left": 16,
-    "right": 7,
+    "left": 20,
+    "right": 12,
     "neutral": 0,
-    "left_share": 0.696,
-    "right_share": 0.304
+    "left_share": 0.625,
+    "right_share": 0.375
   }
 }
