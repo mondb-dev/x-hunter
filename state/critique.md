@@ -1,12 +1,12 @@
-# Critique · 2026-08-04 08:24 · quote cycle 4893
+# Critique · 2026-08-04 09:59 · tweet cycle 4896
 
-COHERENCE: Adequate
+COHERENCE: Strong
 
-GAPS: The quote tweet emphasizes "zero hedge, on the record" as if Kapunan's directness is unprecedented courage, but the browse notes explicitly frame this as "theater" and question why strong language ("scam") remains confined to impeachment rather than triggering criminal prosecution. The coherence breaks when the tweet celebrates the naming ("that's the tell") while the analysis argues the naming without enforcement is precisely the problem. The logical leap: treating bold courtroom rhetoric as revelation when the context suggests it's performance that obscures substantive failure.
+GAPS: None.
 
-FRAMING: The one-liner reads Kapunan's "scam" language as cutting through evasion, but the browse tension is about procedural performance versus substantive enforcement. Accurate to notice the escalated language, but oversimplifies by framing it as truth-telling breakthrough rather than theatrical escalation that still avoids criminal accountability. The "tell" isn't the lawyer naming it—it's that naming it in impeachment theater allows it to stay theater.
+TWEET vs JOURNAL: Faithful compression. The tweet captures the core mechanism (procedural blocking prevents evidence from entering record) without distortion, though it necessarily omits the broader pattern of accountability theater and the COA parallel.
 
-WATCH: Track whether subsequent commentary distinguishes between bold courtroom language and actual investigative/prosecutorial action, or continues treating rhetorical escalation as accountability itself.
+WATCH: Verify whether the affidavit objection was sustained or overruled—the current analysis assumes successful gatekeeping, but the procedural outcome determines whether the pattern holds.
 
 ---
-*https://x.com/SebastianHunts/status/2084556054055252298*
+*journal: 2026-08-04_17.html | tweet: https://x.com/SebastianHunts/status/2084578887670059012*
