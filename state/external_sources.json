@@ -1,8 +1,8 @@
 {
   "schema_version": "1.0",
-  "generated_at": "2026-08-04T12:26:07.714Z",
+  "generated_at": "2026-08-04T15:26:12.170Z",
   "method": "mechanical_registry_v1",
-  "profiled_at": "2026-08-04T12:26:13.103Z",
+  "profiled_at": "2026-08-04T15:26:28.512Z",
   "sources": [
     {
       "domain": "theguardian.com",
@@ -11,7 +11,7 @@
       "first_seen_at": "2026-03-27T23:17:00Z",
       "last_seen_at": "2026-08-01T23:25:10.497Z",
       "discovery": {
-        "distinct_urls": 695,
+        "distinct_urls": 697,
         "example_urls": [
           "https://www.theguardian.com/us-news/2026/jun/23/trump-immigration-courthouse-arrest-policy",
           "https://www.theguardian.com/us-news/2026/jun/28/ice-minnesota-defending-democracy",
@@ -21,7 +21,7 @@
         ],
         "origin_counts": {
           "ontology_evidence": 42,
-          "reading_queue": 661,
+          "reading_queue": 663,
           "journals": 112,
           "articles": 3
         },
@@ -72,7 +72,7 @@
         "breadth": {
           "score": 0.94,
           "basis": [
-            "distinct_urls:695",
+            "distinct_urls:697",
             "distinct_axes:17",
             "origin_types:4"
           ]
@@ -112,7 +112,7 @@
             "newsroom_domain_pattern",
             "article_path_seen",
             "doi_or_identifier_path_seen",
-            "distinct_urls:695",
+            "distinct_urls:697",
             "distinct_axes:17",
             "origin_types:4",
             "referring_accounts:0",
@@ -122,7 +122,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-08-01T12:54:22.877Z",
+        "fetched_at": "2026-08-04T13:26:09.723Z",
         "homepage_url": "https://theguardian.com/",
         "example_url": "https://www.theguardian.com/us-news/2026/jun/23/trump-immigration-courthouse-arrest-policy",
         "homepage_status": 200,
@@ -697,7 +697,7 @@
       "first_seen_at": "2026-06-22T00:15:00Z",
       "last_seen_at": "2026-08-01T08:20:11.076Z",
       "discovery": {
-        "distinct_urls": 474,
+        "distinct_urls": 475,
         "example_urls": [
           "https://www.nytimes.com/2026/06/19/world/canada/frank-stronach-trial-guilty-sex-charges.html",
           "https://www.nytimes.com/2026/06/27/world/americas/mexican-officials-us-informants.html",
@@ -707,7 +707,7 @@
         ],
         "origin_counts": {
           "ontology_evidence": 16,
-          "reading_queue": 480,
+          "reading_queue": 482,
           "journals": 38
         },
         "distinct_referring_accounts": 0,
@@ -749,7 +749,7 @@
         "breadth": {
           "score": 0.8799999999999999,
           "basis": [
-            "distinct_urls:474",
+            "distinct_urls:475",
             "distinct_axes:10",
             "origin_types:3"
           ]
@@ -788,7 +788,7 @@
           "basis": [
             "newsroom_domain_pattern",
             "article_path_seen",
-            "distinct_urls:474",
+            "distinct_urls:475",
             "distinct_axes:10",
             "origin_types:3",
             "referring_accounts:0",
@@ -1209,7 +1209,7 @@
       "first_seen_at": "2026-06-26T07:05:00Z",
       "last_seen_at": "2026-08-03T02:54:32.258Z",
       "discovery": {
-        "distinct_urls": 417,
+        "distinct_urls": 419,
         "example_urls": [
           "https://www.bbc.co.uk/news/articles/cn8qxz6qypyo",
           "https://www.bbc.co.uk/news/articles/cn075j04pnyo?at_medium=RSS&amp;at_campaign=rss",
@@ -1219,7 +1219,7 @@
         ],
         "origin_counts": {
           "ontology_evidence": 6,
-          "reading_queue": 427,
+          "reading_queue": 429,
           "journals": 16,
           "articles": 1
         },
@@ -1255,7 +1255,7 @@
         "breadth": {
           "score": 0.8233333333333333,
           "basis": [
-            "distinct_urls:417",
+            "distinct_urls:419",
             "distinct_axes:4",
             "origin_types:4"
           ]
@@ -1274,14 +1274,14 @@
           ]
         },
         "profile": {
-          "score": 0.58,
+          "score": 0.7,
           "confidence": 0.75,
           "basis": [
             "meta_author:true",
             "published_time:true",
             "canonical:true",
             "about:false",
-            "contact:false",
+            "contact:true",
             "corrections:false",
             "outbound_links:17",
             "opinion_marker:false"
@@ -1293,7 +1293,7 @@
           "method": "mechanical_v1",
           "basis": [
             "newsroom_domain_pattern",
-            "distinct_urls:417",
+            "distinct_urls:419",
             "distinct_axes:4",
             "origin_types:4",
             "referring_accounts:0",
@@ -1303,7 +1303,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-08-01T14:24:25.283Z",
+        "fetched_at": "2026-08-04T14:56:13.247Z",
         "homepage_url": "https://bbc.co.uk/",
         "example_url": "https://www.bbc.co.uk/news/articles/cn8qxz6qypyo",
         "homepage_status": 200,
@@ -1317,9 +1317,9 @@
           "has_published_time": false,
           "has_canonical": true,
           "has_about_link": false,
-          "has_contact_link": false,
+          "has_contact_link": true,
           "has_corrections_link": false,
-          "outbound_links_count": 13,
+          "outbound_links_count": 16,
           "opinion_marker": false
         },
         "example": {
@@ -1424,7 +1424,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-08-01T12:54:23.876Z",
+        "fetched_at": "2026-08-04T13:26:10.681Z",
         "homepage_url": "https://house.gov/",
         "example_url": "https://www.house.gov/",
         "homepage_status": 200,
@@ -2915,7 +2915,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-08-01T12:54:24.419Z",
+        "fetched_at": "2026-08-04T13:26:11.355Z",
         "homepage_url": "https://apnews.com/",
         "example_url": "https://apnews.com/hub/iran",
         "homepage_status": 200,
@@ -3085,9 +3085,9 @@
       "entity": "T Co",
       "kind": "unknown",
       "first_seen_at": "2016-05-05T18:57:30.000Z",
-      "last_seen_at": "2026-08-04T11:15:13.000Z",
+      "last_seen_at": "2026-08-04T12:45:14.000Z",
       "discovery": {
-        "distinct_urls": 12315,
+        "distinct_urls": 12319,
         "example_urls": [
           "https://t.co/pJSE124ec4",
           "https://t.co/Soz8BXPWaa",
@@ -3096,7 +3096,7 @@
           "https://t.co/cYaqYDRp08"
         ],
         "origin_counts": {
-          "feed_buffer": 9882,
+          "feed_buffer": 9887,
           "feed_buffer_reply": 4883,
           "articles": 3
         },
@@ -3139,7 +3139,7 @@
         "breadth": {
           "score": 0.53,
           "basis": [
-            "distinct_urls:12315",
+            "distinct_urls:12319",
             "distinct_axes:0",
             "origin_types:3"
           ]
@@ -3178,7 +3178,7 @@
           "basis": [
             "unknown_domain_pattern",
             "doi_or_identifier_path_seen",
-            "distinct_urls:12315",
+            "distinct_urls:12319",
             "distinct_axes:0",
             "origin_types:3",
             "referring_accounts:2721",
@@ -3188,7 +3188,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-08-01T12:54:25.435Z",
+        "fetched_at": "2026-08-04T13:26:12.319Z",
         "homepage_url": "https://t.co/",
         "example_url": "https://t.co/pJSE124ec4",
         "homepage_status": 200,
@@ -4824,7 +4824,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-08-01T14:24:27.929Z",
+        "fetched_at": "2026-08-04T14:56:16.303Z",
         "homepage_url": "https://grok.com/",
         "example_url": "https://grok.com/imagine/post/9b92ff60-ec59-45db-8a35-8e1b743e5339",
         "homepage_status": 200,
@@ -6262,7 +6262,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-08-01T14:24:29.664Z",
+        "fetched_at": "2026-08-04T14:56:18.305Z",
         "homepage_url": "https://rockstargames.com/",
         "example_url": "https://www.rockstargames.com/gta-online?utm_source=Twitter&utm_medium=p_social&utm_campaign=506-kch-pre-release-gift-20260702&utm_content=uk-eng&twclid=21k9dspaz1uqc236nsfftz24wo",
         "homepage_status": 200,
@@ -6391,7 +6391,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-08-01T14:24:30.971Z",
+        "fetched_at": "2026-08-04T14:56:20.874Z",
         "homepage_url": "https://theepochtimes.com/",
         "example_url": "https://www.theepochtimes.com/china/former-chinese-military-doctor-leaks-ccp-plan-to-use-taiwanese-troops-as-organ-bank-5871639?utm_medium=DigitalMkt&utm_source=twitter&utm_campaign=content_FormerChineseMilitary-karen-20250827&utm_content=img-2_FormerChineseMilitary&utm_term=new-pagevisitor&gl=reg&twclid=2387x75uji9nq8gmjpy9cer691",
         "homepage_status": 200,
@@ -6511,7 +6511,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-08-01T14:54:24.255Z",
+        "fetched_at": "2026-08-04T15:26:14.821Z",
         "homepage_url": "https://wikipedia.org/",
         "example_url": "https://en.wikipedia.org/wiki/2026_Iran_war",
         "homepage_status": 200,
@@ -10485,6 +10485,133 @@
       }
     },
     {
+      "domain": "doorzo.com",
+      "entity": "Doorzo",
+      "kind": "unknown",
+      "first_seen_at": "2026-07-05T22:00:01.000Z",
+      "last_seen_at": "2026-08-04T12:29:03.051Z",
+      "discovery": {
+        "distinct_urls": 12,
+        "example_urls": [
+          "https://www.doorzo.com/en/landing/newall?utm_source=x_en_testanime_V&utm_medium=banner&utm_campaign=online_download&fbclid=fbclid&twclid=2bzgffsg16g7kpszr2gx684udk",
+          "https://www.doorzo.com/en/landing/newall?utm_source=x_en_test_pic&utm_medium=banner&utm_campaign=online_download&fbclid=fbclid&twclid=22cmahu8l2z8qcqdpgj6ux74gr",
+          "https://www.doorzo.com/en/landing/newall?utm_source=x_en_test_V&utm_medium=banner&utm_campaign=online_download&fbclid=fbclid&twclid=288c7wvtyde88euaafw2dws431",
+          "https://www.doorzo.com/en/landing/newall?utm_source=x_en_testanime_V&utm_medium=banner&utm_campaign=online_download&fbclid=fbclid&twclid=2p6cjnwqz115nps7jrf27boli",
+          "https://www.doorzo.com/en/landing/kawaii?utm_source=x_en_sanriogoods_video&utm_medium=banner&utm_campaign=online_download&fbclid=fbclid&twclid=235dcqfavqplhol939w7u84rbd"
+        ],
+        "origin_counts": {
+          "feed_buffer_reply": 2,
+          "feed_buffer": 10
+        },
+        "distinct_referring_accounts": 1,
+        "sample_referring_accounts": [
+          "doorzo_service"
+        ],
+        "distinct_axes": []
+      },
+      "claims": {
+        "total": 0,
+        "supported": 0,
+        "refuted": 0,
+        "contested": 0,
+        "unverified": 0,
+        "resolved_count": 0
+      },
+      "structural_features": {
+        "has_search_paths": false,
+        "has_article_paths": false,
+        "has_doi_paths": false
+      },
+      "ratings": {
+        "provenance": {
+          "score": 0.45,
+          "basis": [
+            "unknown_domain_pattern"
+          ]
+        },
+        "breadth": {
+          "score": 0.47,
+          "basis": [
+            "distinct_urls:12",
+            "distinct_axes:0",
+            "origin_types:2"
+          ]
+        },
+        "corroboration": {
+          "score": 0.2833333333333333,
+          "basis": [
+            "referring_accounts:1",
+            "origin_types:2"
+          ]
+        },
+        "track_record": {
+          "score": null,
+          "basis": [
+            "no_resolved_claims_observed"
+          ]
+        },
+        "profile": {
+          "score": 0,
+          "confidence": 0.55,
+          "basis": [
+            "meta_author:false",
+            "published_time:false",
+            "canonical:false",
+            "about:false",
+            "contact:false",
+            "corrections:false",
+            "outbound_links:0",
+            "opinion_marker:false"
+          ]
+        },
+        "overall": {
+          "score": 0.43875,
+          "confidence": 0.4167,
+          "method": "mechanical_v1",
+          "basis": [
+            "unknown_domain_pattern",
+            "distinct_urls:12",
+            "distinct_axes:0",
+            "origin_types:2",
+            "referring_accounts:1",
+            "origin_types:2",
+            "track_record_unavailable"
+          ]
+        }
+      },
+      "profile": {
+        "fetched_at": "2026-08-01T23:24:37.089Z",
+        "homepage_url": "https://doorzo.com/",
+        "example_url": "https://www.doorzo.com/en/landing/newall?utm_source=x_en_testanime_V&utm_medium=banner&utm_campaign=online_download&fbclid=fbclid&twclid=2bzgffsg16g7kpszr2gx684udk",
+        "homepage_status": 200,
+        "example_status": 200,
+        "homepage_final_url": "https://www.doorzo.com/en/",
+        "example_final_url": "https://www.doorzo.com/en/landing/newall?utm_source=x_en_testanime_V&utm_medium=banner&utm_campaign=online_download&fbclid=fbclid&twclid=2bzgffsg16g7kpszr2gx684udk",
+        "homepage_content_type": "text/html;charset=utf-8",
+        "example_content_type": "text/html;charset=utf-8",
+        "homepage": {
+          "has_meta_author": false,
+          "has_published_time": false,
+          "has_canonical": false,
+          "has_about_link": false,
+          "has_contact_link": false,
+          "has_corrections_link": false,
+          "outbound_links_count": 0,
+          "opinion_marker": false
+        },
+        "example": {
+          "has_meta_author": false,
+          "has_published_time": false,
+          "has_canonical": false,
+          "has_about_link": false,
+          "has_contact_link": false,
+          "has_corrections_link": false,
+          "outbound_links_count": 0,
+          "opinion_marker": false
+        }
+      }
+    },
+    {
       "domain": "metaphysicalarticles.org",
       "entity": "Metaphysicalarticles",
       "kind": "unknown",
@@ -11124,133 +11251,6 @@
       }
     },
     {
-      "domain": "doorzo.com",
-      "entity": "Doorzo",
-      "kind": "unknown",
-      "first_seen_at": "2026-07-05T22:00:01.000Z",
-      "last_seen_at": "2026-08-04T10:49:03.403Z",
-      "discovery": {
-        "distinct_urls": 11,
-        "example_urls": [
-          "https://www.doorzo.com/en/landing/newall?utm_source=x_en_testanime_V&utm_medium=banner&utm_campaign=online_download&fbclid=fbclid&twclid=2bzgffsg16g7kpszr2gx684udk",
-          "https://www.doorzo.com/en/landing/newall?utm_source=x_en_test_pic&utm_medium=banner&utm_campaign=online_download&fbclid=fbclid&twclid=22cmahu8l2z8qcqdpgj6ux74gr",
-          "https://www.doorzo.com/en/landing/newall?utm_source=x_en_test_V&utm_medium=banner&utm_campaign=online_download&fbclid=fbclid&twclid=288c7wvtyde88euaafw2dws431",
-          "https://www.doorzo.com/en/landing/newall?utm_source=x_en_testanime_V&utm_medium=banner&utm_campaign=online_download&fbclid=fbclid&twclid=2p6cjnwqz115nps7jrf27boli",
-          "https://www.doorzo.com/en/landing/kawaii?utm_source=x_en_sanriogoods_video&utm_medium=banner&utm_campaign=online_download&fbclid=fbclid&twclid=235dcqfavqplhol939w7u84rbd"
-        ],
-        "origin_counts": {
-          "feed_buffer_reply": 2,
-          "feed_buffer": 9
-        },
-        "distinct_referring_accounts": 1,
-        "sample_referring_accounts": [
-          "doorzo_service"
-        ],
-        "distinct_axes": []
-      },
-      "claims": {
-        "total": 0,
-        "supported": 0,
-        "refuted": 0,
-        "contested": 0,
-        "unverified": 0,
-        "resolved_count": 0
-      },
-      "structural_features": {
-        "has_search_paths": false,
-        "has_article_paths": false,
-        "has_doi_paths": false
-      },
-      "ratings": {
-        "provenance": {
-          "score": 0.45,
-          "basis": [
-            "unknown_domain_pattern"
-          ]
-        },
-        "breadth": {
-          "score": 0.4408333333333333,
-          "basis": [
-            "distinct_urls:11",
-            "distinct_axes:0",
-            "origin_types:2"
-          ]
-        },
-        "corroboration": {
-          "score": 0.2833333333333333,
-          "basis": [
-            "referring_accounts:1",
-            "origin_types:2"
-          ]
-        },
-        "track_record": {
-          "score": null,
-          "basis": [
-            "no_resolved_claims_observed"
-          ]
-        },
-        "profile": {
-          "score": 0,
-          "confidence": 0.55,
-          "basis": [
-            "meta_author:false",
-            "published_time:false",
-            "canonical:false",
-            "about:false",
-            "contact:false",
-            "corrections:false",
-            "outbound_links:0",
-            "opinion_marker:false"
-          ]
-        },
-        "overall": {
-          "score": 0.43236979166666667,
-          "confidence": 0.388075,
-          "method": "mechanical_v1",
-          "basis": [
-            "unknown_domain_pattern",
-            "distinct_urls:11",
-            "distinct_axes:0",
-            "origin_types:2",
-            "referring_accounts:1",
-            "origin_types:2",
-            "track_record_unavailable"
-          ]
-        }
-      },
-      "profile": {
-        "fetched_at": "2026-08-01T23:24:37.089Z",
-        "homepage_url": "https://doorzo.com/",
-        "example_url": "https://www.doorzo.com/en/landing/newall?utm_source=x_en_testanime_V&utm_medium=banner&utm_campaign=online_download&fbclid=fbclid&twclid=2bzgffsg16g7kpszr2gx684udk",
-        "homepage_status": 200,
-        "example_status": 200,
-        "homepage_final_url": "https://www.doorzo.com/en/",
-        "example_final_url": "https://www.doorzo.com/en/landing/newall?utm_source=x_en_testanime_V&utm_medium=banner&utm_campaign=online_download&fbclid=fbclid&twclid=2bzgffsg16g7kpszr2gx684udk",
-        "homepage_content_type": "text/html;charset=utf-8",
-        "example_content_type": "text/html;charset=utf-8",
-        "homepage": {
-          "has_meta_author": false,
-          "has_published_time": false,
-          "has_canonical": false,
-          "has_about_link": false,
-          "has_contact_link": false,
-          "has_corrections_link": false,
-          "outbound_links_count": 0,
-          "opinion_marker": false
-        },
-        "example": {
-          "has_meta_author": false,
-          "has_published_time": false,
-          "has_canonical": false,
-          "has_about_link": false,
-          "has_contact_link": false,
-          "has_corrections_link": false,
-          "outbound_links_count": 0,
-          "opinion_marker": false
-        }
-      }
-    },
-    {
       "domain": "shipaton.com",
       "entity": "Shipaton",
       "kind": "unknown",
@@ -11764,9 +11764,9 @@
       "entity": "Spotify",
       "kind": "unknown",
       "first_seen_at": "2026-07-07T00:39:10.768Z",
-      "last_seen_at": "2026-08-03T22:58:25.627Z",
+      "last_seen_at": "2026-08-04T14:04:06.349Z",
       "discovery": {
-        "distinct_urls": 17,
+        "distinct_urls": 18,
         "example_urls": [
           "https://open.spotify.com/track/1lRDfbkJbPZGLaVpHbGjjK?si=0bafd2d0d3d04734&twclid=25onvjxx2lh8042z4br4k46xqz",
           "https://open.spotify.com/track/54YbODRJbbw9D5dBhBArRb?context=spotify%3Aplaylist%3A37i9dQZF1DZ06evO3etwop&si=7da9dbda0e1140df&twclid=28yjytbj4govr0k96tdk2h40y5",
@@ -11775,7 +11775,7 @@
           "https://open.spotify.com/track/1EPmoZSyjqOWAAmoymPIzc?context=spotify%3Aplaylist%3A37i9dQZF1DZ06evO3etwop&si=aedcecc65f624627&twclid=26lb3y6utbk0mdv8j6o6o3eg05"
         ],
         "origin_counts": {
-          "feed_buffer": 17
+          "feed_buffer": 18
         },
         "distinct_referring_accounts": 2,
         "sample_referring_accounts": [
@@ -11807,7 +11807,7 @@
         "breadth": {
           "score": 0.41,
           "basis": [
-            "distinct_urls:17",
+            "distinct_urls:18",
             "distinct_axes:0",
             "origin_types:1"
           ]
@@ -11841,11 +11841,11 @@
         },
         "overall": {
           "score": 0.42757812500000003,
-          "confidence": 0.540975,
+          "confidence": 0.563475,
           "method": "mechanical_v1",
           "basis": [
             "unknown_domain_pattern",
-            "distinct_urls:17",
+            "distinct_urls:18",
             "distinct_axes:0",
             "origin_types:1",
             "referring_accounts:2",
@@ -15907,15 +15907,15 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-08-01T14:54:44.261Z",
+        "fetched_at": "2026-08-04T15:26:17.961Z",
         "homepage_url": "https://par.bz/",
         "example_url": "https://par.bz/nep?twclid=2cqyfqbi1emcrdcv6yo3eddsrk",
-        "homepage_status": null,
-        "example_status": null,
-        "homepage_final_url": "https://par.bz/",
-        "example_final_url": "https://par.bz/nep?twclid=2cqyfqbi1emcrdcv6yo3eddsrk",
-        "homepage_content_type": "",
-        "example_content_type": "",
+        "homepage_status": 403,
+        "example_status": 403,
+        "homepage_final_url": "https://www.play-asia.com/?parbz=",
+        "example_final_url": "https://www.play-asia.com/?parbz=nep",
+        "homepage_content_type": "text/html; charset=UTF-8",
+        "example_content_type": "text/html; charset=UTF-8",
         "homepage": {
           "has_meta_author": false,
           "has_published_time": false,
@@ -19956,7 +19956,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-08-01T13:24:24.228Z",
+        "fetched_at": "2026-08-04T13:56:19.290Z",
         "homepage_url": "https://oracle.com/",
         "example_url": "https://www.oracle.com/database/?source=%3Aad%3Aso%3Atw%3Adg%3Aa_nas%3A%3ARC_TWTR260205P00003C00005%3AEnd_Data_Risk&SC=%3Aad%3Aso%3Atw%3Adg%3Aa_nas%3A%3ARC_TWTR260205P00003C00005%3AEnd_Data_Risk&twclid=2b7h3vpee1s0pq1u9507vf4n1e",
         "homepage_status": 403,
@@ -20083,14 +20083,14 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-08-01T13:24:26.064Z",
+        "fetched_at": "2026-08-04T13:56:37.553Z",
         "homepage_url": "https://temu.com/",
         "example_url": "https://www.temu.com/kuiper/un1.html?subj=feed-un&_bg_fs=1&_p_mat1_type=1&_p_jump_id=725&_x_vst_scene=adg&gids=538325&_p_rfs=1&_x_ads_channel=twitter&twclid=29gpd1jhyu86nybj5gna95l3tw",
-        "homepage_status": 200,
+        "homepage_status": null,
         "example_status": 200,
-        "homepage_final_url": "https://www.temu.com/",
+        "homepage_final_url": "https://temu.com/",
         "example_final_url": "https://www.temu.com/kuiper/un1.html?subj=feed-un&_bg_fs=1&_p_mat1_type=1&_p_jump_id=725&_x_vst_scene=adg&gids=538325&_p_rfs=1&_x_ads_channel=twitter&twclid=29gpd1jhyu86nybj5gna95l3tw",
-        "homepage_content_type": "text/html",
+        "homepage_content_type": "",
         "example_content_type": "text/html",
         "homepage": {
           "has_meta_author": false,
@@ -20181,13 +20181,13 @@
           ]
         },
         "profile": {
-          "score": 0.14,
-          "confidence": 0.65,
+          "score": 0,
+          "confidence": 0.55,
           "basis": [
             "meta_author:false",
             "published_time:false",
             "canonical:false",
-            "about:true",
+            "about:false",
             "contact:false",
             "corrections:false",
             "outbound_links:0",
@@ -20210,23 +20210,23 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-08-01T13:24:31.063Z",
+        "fetched_at": "2026-08-04T13:56:57.559Z",
         "homepage_url": "https://la28.org/",
         "example_url": "https://hospitality.la28.org/en?utm_source=x&utm_medium=paid_social&utm_campaign=emg_onlocation_la-olympics-b2c_aw_ecomm_paid-social_x_x_nu_us&twclid=2dvfag01sx2wxc4fmpjts9gb7p",
-        "homepage_status": 200,
+        "homepage_status": null,
         "example_status": null,
         "homepage_final_url": "https://la28.org/",
         "example_final_url": "https://hospitality.la28.org/en?utm_source=x&utm_medium=paid_social&utm_campaign=emg_onlocation_la-olympics-b2c_aw_ecomm_paid-social_x_x_nu_us&twclid=2dvfag01sx2wxc4fmpjts9gb7p",
-        "homepage_content_type": "text/html;charset=utf-8",
+        "homepage_content_type": "",
         "example_content_type": "",
         "homepage": {
           "has_meta_author": false,
           "has_published_time": false,
-          "has_canonical": true,
-          "has_about_link": true,
+          "has_canonical": false,
+          "has_about_link": false,
           "has_contact_link": false,
           "has_corrections_link": false,
-          "outbound_links_count": 14,
+          "outbound_links_count": 0,
           "opinion_marker": false
         },
         "example": {
@@ -20337,7 +20337,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-08-01T13:24:32.918Z",
+        "fetched_at": "2026-08-04T13:57:13.270Z",
         "homepage_url": "https://atlassian.com/",
         "example_url": "https://www.atlassian.com/software/rovo?utm_source=twitter&utm_medium=paid-social&utm_campaign=P%3Arovo%7CO%3Appm%7CV%3Atwitter%7CG%3Aus%7CL%3Aen%7CF%3Aaware%7CT%3Aprospecting%7CZ%3Astandard-image%7CI%3Aimc-rovo-iyryk%7CA%3Aimage%7CD%3Aalld&utm_content=P%3Arovo%7CO%3Appm%7CV%3Atwitter%7CG%3Aus%7CL%3Aen%7CF%3Aaware%7CT%3Aprospecting%7CZ%3Astandard-image%7CI%3Aimc-rovo-iyryk%7CA%3Aimage%7CD%3Aalld%7CU%3Ahandles_image-core-brand-default-onepromptaway-1200x628-na-na-aipowered&twclid=256sbqrmpm1kmygbwj39syq8d2",
         "homepage_status": 200,
@@ -20464,7 +20464,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-08-01T14:54:44.812Z",
+        "fetched_at": "2026-08-04T15:26:26.073Z",
         "homepage_url": "https://myblockchainweek.com/",
         "example_url": "https://myblockchainweek.com/buy-ticket?twclid=21nicpg0ek4tfxn16u0mxc14r1",
         "homepage_status": 200,
@@ -20845,7 +20845,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-08-01T14:54:46.414Z",
+        "fetched_at": "2026-08-04T15:26:28.512Z",
         "homepage_url": "https://magnesiacore.ca/",
         "example_url": "https://magnesiacore.ca/?twclid=2qgbs9f8iaihnc4sp9sjc540j",
         "homepage_status": 200,
