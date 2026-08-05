@@ -440,25 +440,38 @@ section("LinkedIn A/B scoring");
       else fail("precision weighting", `avg ${avg} closer to fluke ${resLo.toFixed(2)} than reliable ${resHi.toFixed(2)}`);
     }
 
-    // (3) Confound control: question_hook only ever ran in a HOT context
+    // (3) Confound control: statement_hook only ever ran in a HOT context
     //     (weekend) and stat_hook in a COLD one (weekday), but each UNDER/OVER
     //     performs its own context. Residual scoring must rank stat_hook above
-    //     question_hook even though question_hook has the higher ABSOLUTE rate.
+    //     statement_hook even though statement_hook has the higher ABSOLUTE rate.
+    //
+    //     NB: the arm names must stay in sync with DIMENSIONS.technique in
+    //     runner/lib/linkedin_performance.js — scoreDimensions drops unknown
+    //     techniques, so a stale name here reads as `undefined.avgScore` and
+    //     throws, taking every later section down with it. (That is exactly what
+    //     happened when e4d888128 retired `question_hook` and left this test
+    //     pointing at it.)
     {
       const wk = (technique, rate) => ({ technique, day: "weekend", impressions: 1000, engagement: rate * 10 });
       const wd = (technique, rate) => ({ technique, day: "weekday", impressions: 1000, engagement: rate * 10 });
       const posts = [
-        wk("question_hook", 8), wk("question_hook", 8), wk("question_hook", 8),
+        wk("statement_hook", 8), wk("statement_hook", 8), wk("statement_hook", 8),
         wk("contrarian_hook", 14), wk("contrarian_hook", 14),           // hot-context filler
         wd("stat_hook", 5), wd("stat_hook", 5), wd("stat_hook", 5),
         wd("scene_hook", 2), wd("scene_hook", 2),                       // cold-context filler
       ];
-      const s = perf.scoreDimensions(posts);
-      const q = s.technique.question_hook.avgScore;
-      const st = s.technique.stat_hook.avgScore;
-      const absWinner = 8 > 5; // question_hook has the higher raw rate
-      if (absWinner && st > q && q < 0) pass(`confound control: stat_hook ${st} ranked above question_hook ${q} despite lower raw rate (residual beats absolute)`);
-      else fail("confound control", `expected stat_hook(${st}) > question_hook(${q}) with question_hook below its context`);
+      const known = perf.DIMENSIONS ? perf.DIMENSIONS.technique : null;
+      const stale = known ? [...new Set(posts.map((p) => p.technique))].filter((t) => !known.includes(t)) : [];
+      if (stale.length) {
+        fail("confound control", `test uses technique(s) not in DIMENSIONS.technique: ${stale.join(", ")}`);
+      } else {
+        const s = perf.scoreDimensions(posts);
+        const q = s.technique.statement_hook.avgScore;
+        const st = s.technique.stat_hook.avgScore;
+        const absWinner = 8 > 5; // statement_hook has the higher raw rate
+        if (absWinner && st > q && q < 0) pass(`confound control: stat_hook ${st} ranked above statement_hook ${q} despite lower raw rate (residual beats absolute)`);
+        else fail("confound control", `expected stat_hook(${st}) > statement_hook(${q}) with statement_hook below its context`);
+      }
     }
 
     // (4) Graceful degradation: the real production store is currently all
@@ -488,6 +501,91 @@ section("LinkedIn A/B scoring");
   }
 }
 
+// ── LinkedIn engagement wiring ────────────────────────────────────────────────
+// Regression guard for a bug that silently killed LinkedIn engagement for a
+// month: engage() ranked candidates with `score: score(p)` and no `await`, so
+// with an async scorer `p.score` was a Promise, `Promise >= minScore` was always
+// false, and `ranked` was always empty. The job ran on schedule and no-oped, and
+// nothing in the logs said "broken" — it just said 0.
+section("LinkedIn engagement wiring");
+{
+  const { LinkedIn } = require(path.join(ROOT, "tools/helmstack-social/src"));
+
+  // Drive engage()'s ranking/action path with a stub client — no network.
+  function stubEngine({ scorer, posts }) {
+    const li = Object.create(LinkedIn.prototype);
+    li.log = () => {};
+    li.ownHandleHint = "";
+    li.opened = [];
+    li.fetchFeedCandidates = async () => posts;
+    li.scrapeFeed = async () => posts;
+    li.openPost = async (url) => { li.opened.push(url); return true; };
+    li.like = async () => true;
+    li.comment = async () => ({ ok: true });
+    return li;
+  }
+
+  const POSTS = [
+    { author: "A", text: "media framing of the impeachment vote", permalink: "https://x/u1" },
+    { author: "B", text: "congratulations on the new role", permalink: "https://x/u2" },
+  ];
+  const onTopic = (p) => /impeachment|framing/.test(p.text);
+
+  (async () => {
+    // (1) The actual regression: an ASYNC scorer must still rank.
+    {
+      const li = stubEngine({ posts: POSTS });
+      const r = await li.engage({
+        score: async (p) => (onTopic(p) ? 3 : 0),
+        minScore: 2, maxLikes: 3, maxComments: 0,
+      });
+      if (r.ranked === 1 && r.likes === 1) pass("async scorer: 1 of 2 posts ranked and liked (the await regression)");
+      else fail("async scorer", `expected ranked=1 likes=1, got ranked=${r.ranked} likes=${r.likes}`);
+    }
+
+    // (2) A sync scorer must keep working — the fix must not regress the old path.
+    {
+      const li = stubEngine({ posts: POSTS });
+      const r = await li.engage({
+        score: (p) => (onTopic(p) ? 3 : 0),
+        minScore: 2, maxLikes: 3, maxComments: 0,
+      });
+      if (r.ranked === 1 && r.likes === 1) pass("sync scorer still ranks (no regression on the old contract)");
+      else fail("sync scorer", `expected ranked=1 likes=1, got ranked=${r.ranked} likes=${r.likes}`);
+    }
+
+    // (3) API-sourced candidates carry no DOM idx — engage() must open the
+    //     permalink before acting, or every action silently targets nothing.
+    {
+      const li = stubEngine({ posts: POSTS });
+      await li.engage({
+        score: async (p) => (onTopic(p) ? 3 : 0),
+        minScore: 2, maxLikes: 1, maxComments: 0,
+      });
+      if (li.opened.length === 1 && li.opened[0] === "https://x/u1") pass("API candidates open their permalink before acting");
+      else fail("permalink open", `expected 1 open of u1, got ${JSON.stringify(li.opened)}`);
+    }
+
+    // (4) Scores below the gate must not be engaged at all.
+    {
+      const li = stubEngine({ posts: POSTS });
+      const r = await li.engage({
+        score: async () => 1,
+        minScore: 2, maxLikes: 3, maxComments: 0,
+      });
+      if (r.ranked === 0 && r.likes === 0) pass("relevance gate: all-below-threshold engages nothing");
+      else fail("relevance gate", `expected 0/0, got ranked=${r.ranked} likes=${r.likes}`);
+    }
+
+  })().catch((e) => fail("LinkedIn engagement wiring", e.message))
+      .finally(() => {
+        // This section is the only async one, so it owns the summary — the
+        // synchronous tail below would otherwise print before these finish.
+        printSummary();
+        if (IS_CI && failed > 0) process.exit(1);
+      });
+}
+
 // ── Summary ───────────────────────────────────────────────────────────────────
 
 function printSummary() {
@@ -502,6 +600,5 @@ function printSummary() {
   process.stdout.write("─".repeat(64) + "\n");
 }
 
-printSummary();
-
-if (IS_CI && failed > 0) process.exit(1);
+// NOTE: the summary is printed by the async "LinkedIn engagement wiring" section
+// above (in its .finally), so that its results are counted before we report.
