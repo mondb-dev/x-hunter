@@ -1,8 +1,8 @@
 {
   "schema_version": "1.0",
-  "generated_at": "2026-08-05T03:37:56.147Z",
+  "generated_at": "2026-08-05T06:38:02.118Z",
   "method": "mechanical_registry_v1",
-  "profiled_at": "2026-08-05T03:38:07.011Z",
+  "profiled_at": "2026-08-05T06:38:10.745Z",
   "sources": [
     {
       "domain": "theguardian.com",
@@ -11,7 +11,7 @@
       "first_seen_at": "2026-03-27T23:17:00Z",
       "last_seen_at": "2026-08-01T23:25:10.497Z",
       "discovery": {
-        "distinct_urls": 703,
+        "distinct_urls": 705,
         "example_urls": [
           "https://www.theguardian.com/us-news/2026/jun/23/trump-immigration-courthouse-arrest-policy",
           "https://www.theguardian.com/us-news/2026/jun/28/ice-minnesota-defending-democracy",
@@ -21,7 +21,7 @@
         ],
         "origin_counts": {
           "ontology_evidence": 42,
-          "reading_queue": 669,
+          "reading_queue": 671,
           "journals": 112,
           "articles": 3
         },
@@ -72,7 +72,7 @@
         "breadth": {
           "score": 0.94,
           "basis": [
-            "distinct_urls:703",
+            "distinct_urls:705",
             "distinct_axes:17",
             "origin_types:4"
           ]
@@ -112,7 +112,7 @@
             "newsroom_domain_pattern",
             "article_path_seen",
             "doi_or_identifier_path_seen",
-            "distinct_urls:703",
+            "distinct_urls:705",
             "distinct_axes:17",
             "origin_types:4",
             "referring_accounts:0",
@@ -697,7 +697,7 @@
       "first_seen_at": "2026-06-22T00:15:00Z",
       "last_seen_at": "2026-08-01T08:20:11.076Z",
       "discovery": {
-        "distinct_urls": 479,
+        "distinct_urls": 481,
         "example_urls": [
           "https://www.nytimes.com/2026/06/19/world/canada/frank-stronach-trial-guilty-sex-charges.html",
           "https://www.nytimes.com/2026/06/27/world/americas/mexican-officials-us-informants.html",
@@ -707,7 +707,7 @@
         ],
         "origin_counts": {
           "ontology_evidence": 16,
-          "reading_queue": 486,
+          "reading_queue": 488,
           "journals": 38
         },
         "distinct_referring_accounts": 0,
@@ -749,7 +749,7 @@
         "breadth": {
           "score": 0.8799999999999999,
           "basis": [
-            "distinct_urls:479",
+            "distinct_urls:481",
             "distinct_axes:10",
             "origin_types:3"
           ]
@@ -788,7 +788,7 @@
           "basis": [
             "newsroom_domain_pattern",
             "article_path_seen",
-            "distinct_urls:479",
+            "distinct_urls:481",
             "distinct_axes:10",
             "origin_types:3",
             "referring_accounts:0",
@@ -2405,9 +2405,9 @@
       "entity": "Gmanetwork",
       "kind": "unknown",
       "first_seen_at": "2026-05-18T03:29:41.732Z",
-      "last_seen_at": "2026-08-05T01:38:36.275Z",
+      "last_seen_at": "2026-08-05T06:08:41.063Z",
       "discovery": {
-        "distinct_urls": 370,
+        "distinct_urls": 375,
         "example_urls": [
           "https://www.gmanetwork.com/news/topstories/nation/994225/explainer-objections-in-a-trial-and-their-role-in-due-process/story/",
           "https://www.gmanetwork.com/news/balitambayan/balita/993931/sen-escudero-sinabing-16-na-boto-ang-kailangan-para-mahatulang-guilty-si-vp-sara-duterte-sa-impea/story/",
@@ -2416,9 +2416,9 @@
           "https://www.gmanetwork.com/news/topstories/nation/994080/electronic-copies-evidence-supreme-court/story/"
         ],
         "origin_counts": {
-          "ontology_evidence": 121,
-          "journals": 418,
-          "articles": 3
+          "ontology_evidence": 125,
+          "journals": 423,
+          "articles": 4
         },
         "distinct_referring_accounts": 0,
         "sample_referring_accounts": [],
@@ -2428,6 +2428,7 @@
           "axis_epistemic_integrity",
           "axis_geopolitical_control_narratives",
           "axis_humanitarian_crisis_response",
+          "axis_information_control_v1",
           "axis_media_integrity_v1",
           "axis_national_sovereignty_v_intl_law_v1",
           "axis_ph_geopolitics_wps_v1",
@@ -2467,8 +2468,8 @@
         "breadth": {
           "score": 0.8799999999999999,
           "basis": [
-            "distinct_urls:370",
-            "distinct_axes:18",
+            "distinct_urls:375",
+            "distinct_axes:19",
             "origin_types:3"
           ]
         },
@@ -2506,8 +2507,8 @@
           "basis": [
             "unknown_domain_pattern",
             "doi_or_identifier_path_seen",
-            "distinct_urls:370",
-            "distinct_axes:18",
+            "distinct_urls:375",
+            "distinct_axes:19",
             "origin_types:3",
             "referring_accounts:0",
             "origin_types:3",
@@ -2548,6 +2549,149 @@
       }
     },
     {
+      "domain": "philstar.com",
+      "entity": "Philstar",
+      "kind": "unknown",
+      "first_seen_at": "2026-05-20T06:57:31.760Z",
+      "last_seen_at": "2026-08-05T03:46:16.697Z",
+      "discovery": {
+        "distinct_urls": 140,
+        "example_urls": [
+          "https://www.philstar.com/headlines/2026/06/24/2537506/mike-defensor-face-trafficking-complaint-over-pasig-ktv-bar-raid",
+          "https://www.philstar.com/headlines/2026/06/24/2537509/ched-tells-ateneo-explain-drowning-baterbonia-adili-or-face-sanctions",
+          "https://www.philstar.com/headlines/2026/06/25/2537757/mary-grace-piattos-listed-witness-duterte-impeachment-trial",
+          "https://www.philstar.com/headlines/2026/06/27/2538049/all-set-june-28-white-ribbon-march",
+          "https://www.philstar.com/headlines/2026/06/28/2538295/icc-freezes-money-seized-duterte"
+        ],
+        "origin_counts": {
+          "ontology_evidence": 77,
+          "journals": 185,
+          "articles": 1
+        },
+        "distinct_referring_accounts": 0,
+        "sample_referring_accounts": [],
+        "distinct_axes": [
+          "axis_authoritarian_self_determination_v1",
+          "axis_dehumanization_propaganda_v1",
+          "axis_information_control_v1",
+          "axis_media_integrity_v1",
+          "axis_national_sovereignty_v_intl_law_v1",
+          "axis_ph_geopolitics_wps_v1",
+          "axis_political_moral_conduct_v1",
+          "axis_political_trust_corruption_v1",
+          "axis_power_accountability",
+          "axis_procedural_governance_accountability_v1",
+          "axis_procedural_governance_substantive_action",
+          "axis_procedural_governance_v1",
+          "axis_public_trust_safety_crisis_v1",
+          "axis_social_welfare_v_military_spending_v1"
+        ]
+      },
+      "claims": {
+        "total": 0,
+        "supported": 0,
+        "refuted": 0,
+        "contested": 0,
+        "unverified": 0,
+        "resolved_count": 0
+      },
+      "structural_features": {
+        "has_search_paths": false,
+        "has_article_paths": true,
+        "has_doi_paths": false
+      },
+      "ratings": {
+        "provenance": {
+          "score": 0.48,
+          "basis": [
+            "unknown_domain_pattern",
+            "article_path_seen"
+          ]
+        },
+        "breadth": {
+          "score": 0.8799999999999999,
+          "basis": [
+            "distinct_urls:140",
+            "distinct_axes:14",
+            "origin_types:3"
+          ]
+        },
+        "corroboration": {
+          "score": 0.26249999999999996,
+          "basis": [
+            "referring_accounts:0",
+            "origin_types:3"
+          ]
+        },
+        "track_record": {
+          "score": null,
+          "basis": [
+            "no_resolved_claims_observed"
+          ]
+        },
+        "profile": {
+          "score": 0.58,
+          "confidence": 0.75,
+          "basis": [
+            "meta_author:true",
+            "published_time:true",
+            "canonical:true",
+            "about:false",
+            "contact:false",
+            "corrections:false",
+            "outbound_links:35",
+            "opinion_marker:false"
+          ]
+        },
+        "overall": {
+          "score": 0.547109375,
+          "confidence": 0.6584249999999999,
+          "method": "mechanical_v1",
+          "basis": [
+            "unknown_domain_pattern",
+            "article_path_seen",
+            "distinct_urls:140",
+            "distinct_axes:14",
+            "origin_types:3",
+            "referring_accounts:0",
+            "origin_types:3",
+            "track_record_unavailable"
+          ]
+        }
+      },
+      "profile": {
+        "fetched_at": "2026-08-04T04:46:22.556Z",
+        "homepage_url": "https://philstar.com/",
+        "example_url": "https://www.philstar.com/headlines/2026/06/24/2537506/mike-defensor-face-trafficking-complaint-over-pasig-ktv-bar-raid",
+        "homepage_status": 200,
+        "example_status": 200,
+        "homepage_final_url": "https://www.philstar.com/",
+        "example_final_url": "https://www.philstar.com/headlines/2026/06/24/2537506/mike-defensor-face-trafficking-complaint-over-pasig-ktv-bar-raid",
+        "homepage_content_type": "text/html; charset=utf8",
+        "example_content_type": "text/html; charset=utf8",
+        "homepage": {
+          "has_meta_author": true,
+          "has_published_time": false,
+          "has_canonical": true,
+          "has_about_link": false,
+          "has_contact_link": false,
+          "has_corrections_link": false,
+          "outbound_links_count": 76,
+          "opinion_marker": false
+        },
+        "example": {
+          "has_meta_author": true,
+          "has_published_time": true,
+          "has_canonical": true,
+          "has_about_link": false,
+          "has_contact_link": false,
+          "has_corrections_link": false,
+          "outbound_links_count": 35,
+          "opinion_marker": false
+        }
+      }
+    },
+    {
       "domain": "amnesty.org",
       "entity": "Amnesty",
       "kind": "unknown",
@@ -2564,7 +2708,7 @@
         ],
         "origin_counts": {
           "ontology_evidence": 57,
-          "reading_queue": 45,
+          "reading_queue": 46,
           "journals": 101
         },
         "distinct_referring_accounts": 0,
@@ -3085,9 +3229,9 @@
       "entity": "T Co",
       "kind": "unknown",
       "first_seen_at": "2016-05-05T18:57:30.000Z",
-      "last_seen_at": "2026-08-05T02:40:41.348Z",
+      "last_seen_at": "2026-08-05T04:00:11.000Z",
       "discovery": {
-        "distinct_urls": 12335,
+        "distinct_urls": 12338,
         "example_urls": [
           "https://t.co/pJSE124ec4",
           "https://t.co/Soz8BXPWaa",
@@ -3096,7 +3240,7 @@
           "https://t.co/cYaqYDRp08"
         ],
         "origin_counts": {
-          "feed_buffer": 9903,
+          "feed_buffer": 9907,
           "feed_buffer_reply": 4883,
           "articles": 3
         },
@@ -3139,7 +3283,7 @@
         "breadth": {
           "score": 0.53,
           "basis": [
-            "distinct_urls:12335",
+            "distinct_urls:12338",
             "distinct_axes:0",
             "origin_types:3"
           ]
@@ -3178,7 +3322,7 @@
           "basis": [
             "unknown_domain_pattern",
             "doi_or_identifier_path_seen",
-            "distinct_urls:12335",
+            "distinct_urls:12338",
             "distinct_axes:0",
             "origin_types:3",
             "referring_accounts:2721",
@@ -3224,7 +3368,7 @@
       "entity": "Inquirer",
       "kind": "unknown",
       "first_seen_at": "2026-05-09T10:15:15.053Z",
-      "last_seen_at": "2026-08-04T08:56:41.153Z",
+      "last_seen_at": "2026-08-05T03:46:16.697Z",
       "discovery": {
         "distinct_urls": 273,
         "example_urls": [
@@ -3237,7 +3381,7 @@
         "origin_counts": {
           "ontology_evidence": 114,
           "journals": 356,
-          "articles": 1
+          "articles": 4
         },
         "distinct_referring_accounts": 0,
         "sample_referring_accounts": [],
@@ -3369,9 +3513,9 @@
       "entity": "Rappler",
       "kind": "unknown",
       "first_seen_at": "2026-06-22T04:04:30.428Z",
-      "last_seen_at": "2026-08-05T01:38:36.275Z",
+      "last_seen_at": "2026-08-05T06:08:41.063Z",
       "discovery": {
-        "distinct_urls": 237,
+        "distinct_urls": 239,
         "example_urls": [
           "https://www.rappler.com/fact-check-no-arrest-warrant-issued-vs-marcoleta",
           "https://www.rappler.com/technology/decoded-tacloban-school-shooting-disinformation-kiko-barzaga-discussions-juvenile-justice-law/",
@@ -3380,9 +3524,9 @@
           "https://www.rappler.com/voices/thought-leaders/vantage-point-bir-tax-amlc-records-billions-questions-sara-duterte-ignore/"
         ],
         "origin_counts": {
-          "ontology_evidence": 118,
-          "journals": 267,
-          "articles": 1
+          "ontology_evidence": 119,
+          "journals": 268,
+          "articles": 4
         },
         "distinct_referring_accounts": 0,
         "sample_referring_accounts": [],
@@ -3413,7 +3557,8 @@
           "axis_procedural_governance_substantive_action",
           "axis_rapid_disinformation_v1",
           "axis_reactionary_futurism_v1",
-          "axis_selective_outrage"
+          "axis_selective_outrage",
+          "axis_state_power_monetization_v1"
         ]
       },
       "claims": {
@@ -3439,8 +3584,8 @@
         "breadth": {
           "score": 0.8799999999999999,
           "basis": [
-            "distinct_urls:237",
-            "distinct_axes:27",
+            "distinct_urls:239",
+            "distinct_axes:28",
             "origin_types:3"
           ]
         },
@@ -3477,8 +3622,8 @@
           "method": "mechanical_v1",
           "basis": [
             "unknown_domain_pattern",
-            "distinct_urls:237",
-            "distinct_axes:27",
+            "distinct_urls:239",
+            "distinct_axes:28",
             "origin_types:3",
             "referring_accounts:0",
             "origin_types:3",
@@ -3514,148 +3659,6 @@
           "has_contact_link": false,
           "has_corrections_link": true,
           "outbound_links_count": 6,
-          "opinion_marker": false
-        }
-      }
-    },
-    {
-      "domain": "philstar.com",
-      "entity": "Philstar",
-      "kind": "unknown",
-      "first_seen_at": "2026-05-20T06:57:31.760Z",
-      "last_seen_at": "2026-08-04T08:56:41.153Z",
-      "discovery": {
-        "distinct_urls": 140,
-        "example_urls": [
-          "https://www.philstar.com/headlines/2026/06/24/2537506/mike-defensor-face-trafficking-complaint-over-pasig-ktv-bar-raid",
-          "https://www.philstar.com/headlines/2026/06/24/2537509/ched-tells-ateneo-explain-drowning-baterbonia-adili-or-face-sanctions",
-          "https://www.philstar.com/headlines/2026/06/25/2537757/mary-grace-piattos-listed-witness-duterte-impeachment-trial",
-          "https://www.philstar.com/headlines/2026/06/27/2538049/all-set-june-28-white-ribbon-march",
-          "https://www.philstar.com/headlines/2026/06/28/2538295/icc-freezes-money-seized-duterte"
-        ],
-        "origin_counts": {
-          "ontology_evidence": 77,
-          "journals": 185
-        },
-        "distinct_referring_accounts": 0,
-        "sample_referring_accounts": [],
-        "distinct_axes": [
-          "axis_authoritarian_self_determination_v1",
-          "axis_dehumanization_propaganda_v1",
-          "axis_information_control_v1",
-          "axis_media_integrity_v1",
-          "axis_national_sovereignty_v_intl_law_v1",
-          "axis_ph_geopolitics_wps_v1",
-          "axis_political_moral_conduct_v1",
-          "axis_political_trust_corruption_v1",
-          "axis_power_accountability",
-          "axis_procedural_governance_accountability_v1",
-          "axis_procedural_governance_substantive_action",
-          "axis_procedural_governance_v1",
-          "axis_public_trust_safety_crisis_v1",
-          "axis_social_welfare_v_military_spending_v1"
-        ]
-      },
-      "claims": {
-        "total": 0,
-        "supported": 0,
-        "refuted": 0,
-        "contested": 0,
-        "unverified": 0,
-        "resolved_count": 0
-      },
-      "structural_features": {
-        "has_search_paths": false,
-        "has_article_paths": true,
-        "has_doi_paths": false
-      },
-      "ratings": {
-        "provenance": {
-          "score": 0.48,
-          "basis": [
-            "unknown_domain_pattern",
-            "article_path_seen"
-          ]
-        },
-        "breadth": {
-          "score": 0.82,
-          "basis": [
-            "distinct_urls:140",
-            "distinct_axes:14",
-            "origin_types:2"
-          ]
-        },
-        "corroboration": {
-          "score": 0.175,
-          "basis": [
-            "referring_accounts:0",
-            "origin_types:2"
-          ]
-        },
-        "track_record": {
-          "score": null,
-          "basis": [
-            "no_resolved_claims_observed"
-          ]
-        },
-        "profile": {
-          "score": 0.58,
-          "confidence": 0.75,
-          "basis": [
-            "meta_author:true",
-            "published_time:true",
-            "canonical:true",
-            "about:false",
-            "contact:false",
-            "corrections:false",
-            "outbound_links:35",
-            "opinion_marker:false"
-          ]
-        },
-        "overall": {
-          "score": 0.52578125,
-          "confidence": 0.63795,
-          "method": "mechanical_v1",
-          "basis": [
-            "unknown_domain_pattern",
-            "article_path_seen",
-            "distinct_urls:140",
-            "distinct_axes:14",
-            "origin_types:2",
-            "referring_accounts:0",
-            "origin_types:2",
-            "track_record_unavailable"
-          ]
-        }
-      },
-      "profile": {
-        "fetched_at": "2026-08-04T04:46:22.556Z",
-        "homepage_url": "https://philstar.com/",
-        "example_url": "https://www.philstar.com/headlines/2026/06/24/2537506/mike-defensor-face-trafficking-complaint-over-pasig-ktv-bar-raid",
-        "homepage_status": 200,
-        "example_status": 200,
-        "homepage_final_url": "https://www.philstar.com/",
-        "example_final_url": "https://www.philstar.com/headlines/2026/06/24/2537506/mike-defensor-face-trafficking-complaint-over-pasig-ktv-bar-raid",
-        "homepage_content_type": "text/html; charset=utf8",
-        "example_content_type": "text/html; charset=utf8",
-        "homepage": {
-          "has_meta_author": true,
-          "has_published_time": false,
-          "has_canonical": true,
-          "has_about_link": false,
-          "has_contact_link": false,
-          "has_corrections_link": false,
-          "outbound_links_count": 76,
-          "opinion_marker": false
-        },
-        "example": {
-          "has_meta_author": true,
-          "has_published_time": true,
-          "has_canonical": true,
-          "has_about_link": false,
-          "has_contact_link": false,
-          "has_corrections_link": false,
-          "outbound_links_count": 35,
           "opinion_marker": false
         }
       }
@@ -8169,7 +8172,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-08-02T03:54:40.329Z",
+        "fetched_at": "2026-08-05T04:37:59.861Z",
         "homepage_url": "https://coderabbit.ai/",
         "example_url": "https://www.coderabbit.ai/agent?utm_source=twitter&utm_medium=cpc&utm_campaign=brandawareness_slack&twclid=25ohyy1nnhx1vb6p888i79f380",
         "homepage_status": 200,
@@ -9185,7 +9188,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-08-02T03:54:40.484Z",
+        "fetched_at": "2026-08-05T04:37:59.966Z",
         "homepage_url": "https://bcgame-bet.com/",
         "example_url": "https://bcall-global.bcgame-bet.com/dispatch-v6?i=45zn3497p&utm_medium=twitter&utm_content=%7B%7Bad_name%7D%7D&p=%2Flogin%2Fregist&ch=twitter&pixel_id=or72z&register=tw-or72z-or738&purchase=tw-or72z-or736&twclid=2cjhb3kupxi19emmjqo3fks82g",
         "homepage_status": null,
@@ -9439,7 +9442,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-08-02T05:24:47.078Z",
+        "fetched_at": "2026-08-05T06:08:04.194Z",
         "homepage_url": "https://fx-edge.com/",
         "example_url": "https://fx-edge.com/prop-liquidity/?utm_source=twitter&utm_medium=ppc&utm_campaign=prop_liquidity&twclid=2232cmky8wi7upvvrdlud3bfsm",
         "homepage_status": 200,
@@ -11328,7 +11331,7 @@
             "about:false",
             "contact:false",
             "corrections:false",
-            "outbound_links:49",
+            "outbound_links:55",
             "opinion_marker:false"
           ]
         },
@@ -11348,7 +11351,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-08-02T05:24:50.707Z",
+        "fetched_at": "2026-08-05T06:08:05.072Z",
         "homepage_url": "https://shipaton.com/",
         "example_url": "https://www.shipaton.com/events/?utm_source=x&utm_medium=cpc&utm_campaign=shipaton-traffic&twclid=2d8n4jkad805fesk63uxwuffy9",
         "homepage_status": 200,
@@ -11364,7 +11367,7 @@
           "has_about_link": false,
           "has_contact_link": false,
           "has_corrections_link": false,
-          "outbound_links_count": 37,
+          "outbound_links_count": 38,
           "opinion_marker": false
         },
         "example": {
@@ -11374,7 +11377,7 @@
           "has_about_link": false,
           "has_contact_link": false,
           "has_corrections_link": false,
-          "outbound_links_count": 49,
+          "outbound_links_count": 55,
           "opinion_marker": false
         }
       }
@@ -17337,9 +17340,9 @@
       "entity": "Moltbook",
       "kind": "unknown",
       "first_seen_at": "2026-03-07T00:29:35.326Z",
-      "last_seen_at": "2026-08-04T03:26:49.101Z",
+      "last_seen_at": "2026-08-05T03:46:16.697Z",
       "discovery": {
-        "distinct_urls": 106,
+        "distinct_urls": 107,
         "example_urls": [
           "https://www.moltbook.com/post/29d49c40-bc59-4a1a-b875-3d3d41ec469e",
           "https://www.moltbook.com/post/3694a386-c24e-4744-8c06-2fc74c73c559",
@@ -17348,7 +17351,7 @@
           "https://www.moltbook.com/post/c6a71bf0-72ab-4867-820a-6b306bae0cea"
         ],
         "origin_counts": {
-          "articles": 106
+          "articles": 107
         },
         "distinct_referring_accounts": 0,
         "sample_referring_accounts": [],
@@ -17377,7 +17380,7 @@
         "breadth": {
           "score": 0.41,
           "basis": [
-            "distinct_urls:106",
+            "distinct_urls:107",
             "distinct_axes:0",
             "origin_types:1"
           ]
@@ -17415,7 +17418,7 @@
           "method": "mechanical_v1",
           "basis": [
             "unknown_domain_pattern",
-            "distinct_urls:106",
+            "distinct_urls:107",
             "distinct_axes:0",
             "origin_types:1",
             "referring_accounts:0",
@@ -20720,7 +20723,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-08-02T05:25:01.186Z",
+        "fetched_at": "2026-08-05T06:08:06.861Z",
         "homepage_url": "https://navax.io/",
         "example_url": "https://navax.io/?twclid=24etxfpdzoav2cgkg5folp34ad",
         "homepage_status": 200,
@@ -25376,7 +25379,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-08-01T23:54:32.634Z",
+        "fetched_at": "2026-08-05T04:38:01.049Z",
         "homepage_url": "https://pixelsuite.ai/",
         "example_url": "https://www.pixelsuite.ai/?twclid=21t2mc2zkr7fbld6fej146r5rz",
         "homepage_status": 404,
@@ -25501,7 +25504,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-08-01T23:54:35.421Z",
+        "fetched_at": "2026-08-05T04:38:03.539Z",
         "homepage_url": "https://theograce.com/",
         "example_url": "https://www.theograce.com/products/terry-diamond-heart-necklace-with-engraved-names-in-gold-plating?utm_term=Guitar&utm_id=41178982&utm_medium=cpc&utm_campaign=US_ALL_twitter_cpc_Display_MD26_M4W_Still&utm_source=twitter&utm_content=MD26&twclid=2dnpihgths0rs7qj2dk5rkgxbo",
         "homepage_status": 200,
@@ -25626,7 +25629,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-08-01T23:54:36.901Z",
+        "fetched_at": "2026-08-05T05:07:58.313Z",
         "homepage_url": "https://suno.com/",
         "example_url": "https://suno.com/?wpsrc=Twitter&utm_source=Twitter&utm_medium=cpc&twclid=262jn9t05wzgtlibjiyo9sypsn",
         "homepage_status": 200,
@@ -25751,7 +25754,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-08-01T23:54:38.842Z",
+        "fetched_at": "2026-08-05T05:08:00.238Z",
         "homepage_url": "https://kurate.org/",
         "example_url": "https://kurate.org/?twclid=297nodwqt8tc962gjnxn3ym0jb",
         "homepage_status": 200,
@@ -25876,7 +25879,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-08-02T00:54:58.752Z",
+        "fetched_at": "2026-08-05T05:08:00.275Z",
         "homepage_url": "https://mexc.com/",
         "example_url": "https://www.mexc.com/register?utm_source=brandad&utm_medium=twitter&utm_campaign=pizza_register&twclid=22vw5h310hr1lnaz6krw03u5v2",
         "homepage_status": null,
@@ -26126,7 +26129,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-08-02T00:55:01.997Z",
+        "fetched_at": "2026-08-05T05:08:02.398Z",
         "homepage_url": "https://havelsan.com/",
         "example_url": "https://www.havelsan.com/en/products/eyeminer-video-analytic-system-iot?utm_source=x&utm_medium=PaidSocial&utm_campaign=eyeminer_traffic&twclid=26xxdxm61rvq0o921lrv322jio",
         "homepage_status": null,
@@ -26501,7 +26504,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-08-02T00:55:04.210Z",
+        "fetched_at": "2026-08-05T06:08:08.907Z",
         "homepage_url": "https://hubs.ly/",
         "example_url": "https://eu1.hubs.ly/H0wRBM_0?twclid=228g94ew2dkgzbh2vwlnrvcczu",
         "homepage_status": 200,
@@ -26722,14 +26725,14 @@
           ]
         },
         "profile": {
-          "score": 0,
-          "confidence": 0.55,
+          "score": 0.26,
+          "confidence": 0.65,
           "basis": [
             "meta_author:false",
             "published_time:false",
             "canonical:false",
-            "about:false",
-            "contact:false",
+            "about:true",
+            "contact:true",
             "corrections:false",
             "outbound_links:0",
             "opinion_marker:false"
@@ -26751,23 +26754,23 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-08-02T00:55:05.598Z",
+        "fetched_at": "2026-08-05T06:38:05.039Z",
         "homepage_url": "https://loxia.ai/",
         "example_url": "https://onbuzz.loxia.ai/?utm_term=intent_hunter_ph&twclid=22dvq9qdielp92zv7ti0ehdgsa",
-        "homepage_status": null,
+        "homepage_status": 200,
         "example_status": 200,
         "homepage_final_url": "https://loxia.ai/",
         "example_final_url": "https://onbuzz.loxia.ai/?utm_term=intent_hunter_ph&twclid=22dvq9qdielp92zv7ti0ehdgsa",
-        "homepage_content_type": "",
+        "homepage_content_type": "text/html; charset=utf-8",
         "example_content_type": "text/html",
         "homepage": {
           "has_meta_author": false,
           "has_published_time": false,
-          "has_canonical": false,
-          "has_about_link": false,
-          "has_contact_link": false,
+          "has_canonical": true,
+          "has_about_link": true,
+          "has_contact_link": true,
           "has_corrections_link": false,
-          "outbound_links_count": 0,
+          "outbound_links_count": 2,
           "opinion_marker": false
         },
         "example": {
@@ -26876,7 +26879,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-08-02T01:24:59.566Z",
+        "fetched_at": "2026-08-05T06:38:06.421Z",
         "homepage_url": "https://aivaexchange.com/",
         "example_url": "https://aivaexchange.com/ask-question.php?utm_source=x&utm_country=philippines&twclid=28uf5p6omvi8pcfkjm2wqnduj2",
         "homepage_status": 200,
@@ -27002,7 +27005,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-08-02T01:25:00.300Z",
+        "fetched_at": "2026-08-05T06:38:07.374Z",
         "homepage_url": "https://openinfer.io/",
         "example_url": "https://openinfer.io/news/2026-06-02-nvidia-dynamo-proved-inference-needs-a-control-plane/?twclid=27dzvvpluhv8xln5kqrwwhmmra",
         "homepage_status": 200,
@@ -27128,13 +27131,13 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-08-02T01:25:04.224Z",
+        "fetched_at": "2026-08-05T06:38:10.745Z",
         "homepage_url": "https://zite.com/",
         "example_url": "https://try.zite.com/ad-integrations-1?twclid=22vk5745ty6qkvlrboi0g1qhow",
         "homepage_status": 200,
         "example_status": 200,
         "homepage_final_url": "https://www.zite.com/",
-        "example_final_url": "https://www.zite.com/?utm_source=twitter&utm_medium=cpc&utm_campaign=xcred&utm_term=integrations&dub_id=q8y2EaWC1mBpsmSD&twclid=22vk5745ty6qkvlrboi0g1qhow",
+        "example_final_url": "https://www.zite.com/?utm_source=twitter&utm_medium=cpc&utm_campaign=xcred&utm_term=integrations&dub_id=7qWyRAQbTuaaha1s&twclid=22vk5745ty6qkvlrboi0g1qhow",
         "homepage_content_type": "text/html; charset=utf-8",
         "example_content_type": "text/html; charset=utf-8",
         "homepage": {

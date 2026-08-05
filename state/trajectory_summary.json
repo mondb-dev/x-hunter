@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-05T03:08:07.212Z",
+  "generated_at": "2026-08-05T05:08:50.908Z",
   "windows": [
     "1d",
     "3d",
@@ -30,21 +30,21 @@
     },
     "axis_power_accountability": {
       "current": {
-        "score": -0.2801,
+        "score": -0.2811,
         "confidence": 0.95
       },
       "1d": {
-        "score_delta": -0.0336,
+        "score_delta": -0.0346,
         "conf_delta": 0,
         "direction": "↘"
       },
       "3d": {
-        "score_delta": -0.0427,
+        "score_delta": -0.0437,
         "conf_delta": 0,
         "direction": "↘"
       },
       "7d": {
-        "score_delta": 0.0022,
+        "score_delta": 0.0012,
         "conf_delta": 0,
         "direction": "→"
       }
@@ -156,22 +156,22 @@
     },
     "axis_media_integrity_v1": {
       "current": {
-        "score": 0.4267,
-        "confidence": 0.948
+        "score": 0.4164,
+        "confidence": 0.95
       },
       "1d": {
-        "score_delta": 0,
-        "conf_delta": -0.002,
+        "score_delta": -0.0103,
+        "conf_delta": 0,
         "direction": "→"
       },
       "3d": {
-        "score_delta": -0.0387,
-        "conf_delta": 0.002,
+        "score_delta": -0.049,
+        "conf_delta": 0.004,
         "direction": "↘"
       },
       "7d": {
-        "score_delta": -0.0373,
-        "conf_delta": 0.004,
+        "score_delta": -0.0476,
+        "conf_delta": 0.006,
         "direction": "↘"
       }
     },
@@ -933,64 +933,64 @@
     },
     "axis_information_control_v1": {
       "current": {
-        "score": 0.4779,
-        "confidence": 0.5292
+        "score": 0.4743,
+        "confidence": 0.5638
       },
       "1d": {
-        "score_delta": -0.05,
-        "conf_delta": 0.0248,
+        "score_delta": -0.0536,
+        "conf_delta": 0.0594,
         "direction": "↘"
       },
       "3d": {
-        "score_delta": -0.0098,
-        "conf_delta": 0.051,
+        "score_delta": -0.0134,
+        "conf_delta": 0.0856,
         "direction": "→"
       },
       "7d": {
-        "score_delta": 0.125,
-        "conf_delta": 0.1081,
+        "score_delta": 0.1214,
+        "conf_delta": 0.1427,
         "direction": "↗"
       }
     },
     "axis_rapid_disinformation_v1": {
       "current": {
-        "score": 0.35,
-        "confidence": 0.3211
+        "score": 0.4,
+        "confidence": 0.3655
       },
       "1d": {
-        "score_delta": 0,
-        "conf_delta": -0.002,
-        "direction": "→"
+        "score_delta": 0.05,
+        "conf_delta": 0.0424,
+        "direction": "↗"
       },
       "3d": {
-        "score_delta": 0,
-        "conf_delta": -0.006,
-        "direction": "→"
+        "score_delta": 0.05,
+        "conf_delta": 0.0384,
+        "direction": "↗"
       },
       "7d": {
-        "score_delta": 0.15,
-        "conf_delta": 0.1297,
+        "score_delta": 0.2,
+        "conf_delta": 0.1741,
         "direction": "↗"
       }
     },
     "axis_procedural_governance_accountability_v1": {
       "current": {
-        "score": -0.6096,
-        "confidence": 0.907
+        "score": -0.5992,
+        "confidence": 0.9138
       },
       "1d": {
-        "score_delta": 0.0217,
-        "conf_delta": 0.008,
+        "score_delta": 0.0321,
+        "conf_delta": 0.0148,
         "direction": "↗"
       },
       "3d": {
-        "score_delta": 0.0223,
-        "conf_delta": 0.0269,
+        "score_delta": 0.0327,
+        "conf_delta": 0.0337,
         "direction": "↗"
       },
       "7d": {
-        "score_delta": -0.0596,
-        "conf_delta": 0.0527,
+        "score_delta": -0.0492,
+        "conf_delta": 0.0595,
         "direction": "↘"
       }
     },
@@ -1183,6 +1183,7 @@
     "axis_data_privacy_decentralization_v1",
     "axis_weaponized_demographics_narrative_control_v1",
     "axis_procedural_governance_accountability",
+    "axis_rapid_disinformation_v1",
     "axis_procedural_governance_substantive_action",
     "axis_reactionary_futurism_v1",
     "axis_infrastructure_commons_v_extraction_v1"
