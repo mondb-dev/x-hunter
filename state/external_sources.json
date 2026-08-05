@@ -1,8 +1,8 @@
 {
   "schema_version": "1.0",
-  "generated_at": "2026-08-05T17:53:56.257Z",
+  "generated_at": "2026-08-05T20:53:59.002Z",
   "method": "mechanical_registry_v1",
-  "profiled_at": "2026-08-05T17:54:01.002Z",
+  "profiled_at": "2026-08-05T20:54:08.983Z",
   "sources": [
     {
       "domain": "theguardian.com",
@@ -11,7 +11,7 @@
       "first_seen_at": "2026-03-27T23:17:00Z",
       "last_seen_at": "2026-08-01T23:25:10.497Z",
       "discovery": {
-        "distinct_urls": 711,
+        "distinct_urls": 713,
         "example_urls": [
           "https://www.theguardian.com/us-news/2026/jun/23/trump-immigration-courthouse-arrest-policy",
           "https://www.theguardian.com/us-news/2026/jun/28/ice-minnesota-defending-democracy",
@@ -21,7 +21,7 @@
         ],
         "origin_counts": {
           "ontology_evidence": 42,
-          "reading_queue": 677,
+          "reading_queue": 679,
           "journals": 112,
           "articles": 3
         },
@@ -72,7 +72,7 @@
         "breadth": {
           "score": 0.94,
           "basis": [
-            "distinct_urls:711",
+            "distinct_urls:713",
             "distinct_axes:17",
             "origin_types:4"
           ]
@@ -112,7 +112,7 @@
             "newsroom_domain_pattern",
             "article_path_seen",
             "doi_or_identifier_path_seen",
-            "distinct_urls:711",
+            "distinct_urls:713",
             "distinct_axes:17",
             "origin_types:4",
             "referring_accounts:0",
@@ -533,7 +533,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-08-02T19:15:22.729Z",
+        "fetched_at": "2026-08-05T19:23:59.658Z",
         "homepage_url": "https://cbp.gov/",
         "example_url": "https://careers.cbp.gov/s/connect-to-recruiter?campaignid=701SJ00000BV0tR&utm_source=X&utm_medium=paid_social&utm_campaign=MGC_C5SXt125J11T&twclid=24uhcrvlvs0lo9d4mk5w8lgcjg",
         "homepage_status": 200,
@@ -707,7 +707,7 @@
         ],
         "origin_counts": {
           "ontology_evidence": 16,
-          "reading_queue": 493,
+          "reading_queue": 494,
           "journals": 38
         },
         "distinct_referring_accounts": 0,
@@ -1048,7 +1048,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-08-02T19:15:25.845Z",
+        "fetched_at": "2026-08-05T19:24:02.648Z",
         "homepage_url": "https://census.gov/",
         "example_url": "https://www.census.gov/",
         "homepage_status": 200,
@@ -1209,7 +1209,7 @@
       "first_seen_at": "2026-06-26T07:05:00Z",
       "last_seen_at": "2026-08-03T02:54:32.258Z",
       "discovery": {
-        "distinct_urls": 429,
+        "distinct_urls": 431,
         "example_urls": [
           "https://www.bbc.co.uk/news/articles/cn8qxz6qypyo",
           "https://www.bbc.co.uk/news/articles/cn075j04pnyo?at_medium=RSS&amp;at_campaign=rss",
@@ -1219,7 +1219,7 @@
         ],
         "origin_counts": {
           "ontology_evidence": 6,
-          "reading_queue": 440,
+          "reading_queue": 442,
           "journals": 16,
           "articles": 1
         },
@@ -1255,7 +1255,7 @@
         "breadth": {
           "score": 0.8233333333333333,
           "basis": [
-            "distinct_urls:429",
+            "distinct_urls:431",
             "distinct_axes:4",
             "origin_types:4"
           ]
@@ -1293,7 +1293,7 @@
           "method": "mechanical_v1",
           "basis": [
             "newsroom_domain_pattern",
-            "distinct_urls:429",
+            "distinct_urls:431",
             "distinct_axes:4",
             "origin_types:4",
             "referring_accounts:0",
@@ -1832,7 +1832,7 @@
       "entity": "Pcij",
       "kind": "unknown",
       "first_seen_at": "2026-07-08T04:32:07.894Z",
-      "last_seen_at": "2026-08-02T21:16:12.924Z",
+      "last_seen_at": "2026-08-05T20:24:47.138Z",
       "discovery": {
         "distinct_urls": 13,
         "example_urls": [
@@ -1843,15 +1843,17 @@
           "https://pcij.org/2026/05/25/7-reasons-why-the-party-list-system-serves-dynasties-not-democracy/"
         ],
         "origin_counts": {
-          "ontology_evidence": 21,
+          "ontology_evidence": 25,
           "reading_queue": 14,
-          "journals": 43,
+          "journals": 47,
           "articles": 1
         },
         "distinct_referring_accounts": 0,
         "sample_referring_accounts": [],
         "distinct_axes": [
+          "axis_accountability_temporality_v1",
           "axis_digital_supply_chain_security",
+          "axis_digital_surveillance_autonomy_v1",
           "axis_eje_accountability_v1",
           "axis_environmental_policy_v_economic_v1",
           "axis_human_rights_exploitation_v1",
@@ -1887,7 +1889,7 @@
           "score": 0.94,
           "basis": [
             "distinct_urls:13",
-            "distinct_axes:9",
+            "distinct_axes:11",
             "origin_types:4"
           ]
         },
@@ -1926,7 +1928,7 @@
             "unknown_domain_pattern",
             "article_path_seen",
             "distinct_urls:13",
-            "distinct_axes:9",
+            "distinct_axes:11",
             "origin_types:4",
             "referring_accounts:0",
             "origin_types:4",
@@ -2553,9 +2555,9 @@
       "entity": "Philstar",
       "kind": "unknown",
       "first_seen_at": "2026-05-20T06:57:31.760Z",
-      "last_seen_at": "2026-08-05T03:46:16.697Z",
+      "last_seen_at": "2026-08-05T18:54:39.823Z",
       "discovery": {
-        "distinct_urls": 140,
+        "distinct_urls": 143,
         "example_urls": [
           "https://www.philstar.com/headlines/2026/06/24/2537506/mike-defensor-face-trafficking-complaint-over-pasig-ktv-bar-raid",
           "https://www.philstar.com/headlines/2026/06/24/2537509/ched-tells-ateneo-explain-drowning-baterbonia-adili-or-face-sanctions",
@@ -2564,8 +2566,8 @@
           "https://www.philstar.com/headlines/2026/06/28/2538295/icc-freezes-money-seized-duterte"
         ],
         "origin_counts": {
-          "ontology_evidence": 77,
-          "journals": 185,
+          "ontology_evidence": 79,
+          "journals": 188,
           "articles": 1
         },
         "distinct_referring_accounts": 0,
@@ -2573,6 +2575,7 @@
         "distinct_axes": [
           "axis_authoritarian_self_determination_v1",
           "axis_dehumanization_propaganda_v1",
+          "axis_digital_surveillance_autonomy_v1",
           "axis_information_control_v1",
           "axis_media_integrity_v1",
           "axis_national_sovereignty_v_intl_law_v1",
@@ -2611,8 +2614,8 @@
         "breadth": {
           "score": 0.8799999999999999,
           "basis": [
-            "distinct_urls:140",
-            "distinct_axes:14",
+            "distinct_urls:143",
+            "distinct_axes:15",
             "origin_types:3"
           ]
         },
@@ -2650,8 +2653,8 @@
           "basis": [
             "unknown_domain_pattern",
             "article_path_seen",
-            "distinct_urls:140",
-            "distinct_axes:14",
+            "distinct_urls:143",
+            "distinct_axes:15",
             "origin_types:3",
             "referring_accounts:0",
             "origin_types:3",
@@ -2696,9 +2699,9 @@
       "entity": "Amnesty",
       "kind": "unknown",
       "first_seen_at": "2026-03-31T12:16:18.459Z",
-      "last_seen_at": "2026-08-05T14:24:38.653Z",
+      "last_seen_at": "2026-08-05T18:54:39.823Z",
       "discovery": {
-        "distinct_urls": 73,
+        "distinct_urls": 75,
         "example_urls": [
           "https://www.amnesty.org/en/latest/news/2026/06/burkina-serge-oulon/",
           "https://www.amnesty.org/en/latest/news/2026/06/car-bozize/",
@@ -2707,9 +2710,9 @@
           "https://www.amnesty.org/en/latest/news/2026/06/usa-four-months-after-horrific-minab-school-airstrike"
         ],
         "origin_counts": {
-          "ontology_evidence": 58,
-          "reading_queue": 46,
-          "journals": 102
+          "ontology_evidence": 59,
+          "reading_queue": 47,
+          "journals": 103
         },
         "distinct_referring_accounts": 0,
         "sample_referring_accounts": [],
@@ -2719,6 +2722,7 @@
           "axis_environmental_policy_v_economic_v1",
           "axis_human_rights_exploitation_v1",
           "axis_humanitarian_crisis_response",
+          "axis_immigration_policy_v_national_control_v1",
           "axis_information_control_v1",
           "axis_national_sovereignty_v_intl_law_v1",
           "axis_power_accountability",
@@ -2749,8 +2753,8 @@
         "breadth": {
           "score": 0.8799999999999999,
           "basis": [
-            "distinct_urls:73",
-            "distinct_axes:9",
+            "distinct_urls:75",
+            "distinct_axes:10",
             "origin_types:3"
           ]
         },
@@ -2788,8 +2792,8 @@
           "basis": [
             "unknown_domain_pattern",
             "article_path_seen",
-            "distinct_urls:73",
-            "distinct_axes:9",
+            "distinct_urls:75",
+            "distinct_axes:10",
             "origin_types:3",
             "referring_accounts:0",
             "origin_types:3",
@@ -3229,9 +3233,9 @@
       "entity": "T Co",
       "kind": "unknown",
       "first_seen_at": "2016-05-05T18:57:30.000Z",
-      "last_seen_at": "2026-08-05T12:22:00.000Z",
+      "last_seen_at": "2026-08-05T15:05:14.000Z",
       "discovery": {
-        "distinct_urls": 12347,
+        "distinct_urls": 12358,
         "example_urls": [
           "https://t.co/pJSE124ec4",
           "https://t.co/Soz8BXPWaa",
@@ -3240,7 +3244,7 @@
           "https://t.co/cYaqYDRp08"
         ],
         "origin_counts": {
-          "feed_buffer": 9919,
+          "feed_buffer": 9930,
           "feed_buffer_reply": 4883,
           "articles": 3
         },
@@ -3283,7 +3287,7 @@
         "breadth": {
           "score": 0.53,
           "basis": [
-            "distinct_urls:12347",
+            "distinct_urls:12358",
             "distinct_axes:0",
             "origin_types:3"
           ]
@@ -3322,7 +3326,7 @@
           "basis": [
             "unknown_domain_pattern",
             "doi_or_identifier_path_seen",
-            "distinct_urls:12347",
+            "distinct_urls:12358",
             "distinct_axes:0",
             "origin_types:3",
             "referring_accounts:2722",
@@ -3668,9 +3672,9 @@
       "entity": "Techcrunch",
       "kind": "unknown",
       "first_seen_at": "2026-06-22T23:31:00Z",
-      "last_seen_at": "2026-08-05T15:54:38.012Z",
+      "last_seen_at": "2026-08-05T18:54:39.823Z",
       "discovery": {
-        "distinct_urls": 105,
+        "distinct_urls": 106,
         "example_urls": [
           "https://techcrunch.com/2026/07/30/judge-says-trump-admin-still-lacks-evidence-for-anthropic-supply-chain-risk-label/",
           "https://techcrunch.com/2026/06/22/shareholders-sue-ubers-board-over-sexual-assaults-other-incidents/",
@@ -3679,7 +3683,7 @@
           "https://techcrunch.com/2026/07/09/block-reaches-45m-settlement-with-46-states-over-cash-app-fraud-probe/"
         ],
         "origin_counts": {
-          "ontology_evidence": 44,
+          "ontology_evidence": 45,
           "journals": 119
         },
         "distinct_referring_accounts": 0,
@@ -3728,7 +3732,7 @@
         "breadth": {
           "score": 0.82,
           "basis": [
-            "distinct_urls:105",
+            "distinct_urls:106",
             "distinct_axes:17",
             "origin_types:2"
           ]
@@ -3767,7 +3771,7 @@
           "basis": [
             "unknown_domain_pattern",
             "article_path_seen",
-            "distinct_urls:105",
+            "distinct_urls:106",
             "distinct_axes:17",
             "origin_types:2",
             "referring_accounts:0",
@@ -7447,9 +7451,9 @@
       "entity": "Maventrading",
       "kind": "unknown",
       "first_seen_at": "2026-07-04T21:13:31.000Z",
-      "last_seen_at": "2026-08-04T11:34:13.897Z",
+      "last_seen_at": "2026-08-05T19:58:31.687Z",
       "discovery": {
-        "distinct_urls": 58,
+        "distinct_urls": 59,
         "example_urls": [
           "https://maventrading.com/lp/choose-your-challenge?twt_id=54608379&twclid=24irm75xuuvw6vkz1dgb8ui0sz",
           "https://maventrading.com/challenges/1-step?twt_id=54607786&twclid=24dguyzddfgso39sw5b667t4v6",
@@ -7459,7 +7463,7 @@
         ],
         "origin_counts": {
           "feed_buffer_reply": 11,
-          "feed_buffer": 47
+          "feed_buffer": 48
         },
         "distinct_referring_accounts": 1,
         "sample_referring_accounts": [
@@ -7490,7 +7494,7 @@
         "breadth": {
           "score": 0.47,
           "basis": [
-            "distinct_urls:58",
+            "distinct_urls:59",
             "distinct_axes:0",
             "origin_types:2"
           ]
@@ -7528,7 +7532,7 @@
           "method": "mechanical_v1",
           "basis": [
             "unknown_domain_pattern",
-            "distinct_urls:58",
+            "distinct_urls:59",
             "distinct_axes:0",
             "origin_types:2",
             "referring_accounts:1",
@@ -8717,9 +8721,9 @@
       "entity": "Bybet",
       "kind": "unknown",
       "first_seen_at": "2026-07-03T10:17:00.000Z",
-      "last_seen_at": "2026-07-14T16:39:59.000Z",
+      "last_seen_at": "2026-08-05T19:28:31.856Z",
       "discovery": {
-        "distinct_urls": 19,
+        "distinct_urls": 20,
         "example_urls": [
           "https://bybet.com/promotion/detail/10/70?utm_source=x&utm_medium=cpc&utm_campaign=Awarenes-DTS-Football&twclid=2aetcv0gphixdtyqc7k0t0any5",
           "https://bybet.com/promotion/detail/10/70?utm_source=x&utm_medium=cpc&utm_campaign=Awarenes-DTS-Football&twclid=28pmtq8gne93fer1uf6zicjua6",
@@ -8729,7 +8733,7 @@
         ],
         "origin_counts": {
           "feed_buffer_reply": 10,
-          "feed_buffer": 9
+          "feed_buffer": 10
         },
         "distinct_referring_accounts": 1,
         "sample_referring_accounts": [
@@ -8760,7 +8764,7 @@
         "breadth": {
           "score": 0.47,
           "basis": [
-            "distinct_urls:19",
+            "distinct_urls:20",
             "distinct_axes:0",
             "origin_types:2"
           ]
@@ -8798,7 +8802,7 @@
           "method": "mechanical_v1",
           "basis": [
             "unknown_domain_pattern",
-            "distinct_urls:19",
+            "distinct_urls:20",
             "distinct_axes:0",
             "origin_types:2",
             "referring_accounts:1",
@@ -10618,6 +10622,133 @@
       }
     },
     {
+      "domain": "shipaton.com",
+      "entity": "Shipaton",
+      "kind": "unknown",
+      "first_seen_at": "2026-07-07T10:24:13.000Z",
+      "last_seen_at": "2026-08-05T19:23:29.761Z",
+      "discovery": {
+        "distinct_urls": 12,
+        "example_urls": [
+          "https://www.shipaton.com/events/?utm_source=x&utm_medium=cpc&utm_campaign=shipaton-traffic&twclid=2d8n4jkad805fesk63uxwuffy9",
+          "https://www.shipaton.com/?utm_source=x&utm_medium=cpc&utm_campaign=shipaton-traffic&twclid=22je13dnlq18zl09zml4n51co3",
+          "https://www.shipaton.com/?utm_source=x&utm_medium=cpc&utm_campaign=shipaton-traffic&twclid=26yl3o4snlo387h02mw4kh4yfe",
+          "https://www.shipaton.com/?utm_source=x&utm_medium=cpc&utm_campaign=shipaton-traffic&twclid=230e39i0w7hfcdaim51menkq4k",
+          "https://www.shipaton.com/?utm_source=x&utm_medium=cpc&utm_campaign=shipaton-traffic&twclid=2etlnjrf4bcnefsrgl7rph92ot"
+        ],
+        "origin_counts": {
+          "feed_buffer_reply": 2,
+          "feed_buffer": 10
+        },
+        "distinct_referring_accounts": 1,
+        "sample_referring_accounts": [
+          "revenuecat"
+        ],
+        "distinct_axes": []
+      },
+      "claims": {
+        "total": 0,
+        "supported": 0,
+        "refuted": 0,
+        "contested": 0,
+        "unverified": 0,
+        "resolved_count": 0
+      },
+      "structural_features": {
+        "has_search_paths": false,
+        "has_article_paths": false,
+        "has_doi_paths": false
+      },
+      "ratings": {
+        "provenance": {
+          "score": 0.45,
+          "basis": [
+            "unknown_domain_pattern"
+          ]
+        },
+        "breadth": {
+          "score": 0.47,
+          "basis": [
+            "distinct_urls:12",
+            "distinct_axes:0",
+            "origin_types:2"
+          ]
+        },
+        "corroboration": {
+          "score": 0.2833333333333333,
+          "basis": [
+            "referring_accounts:1",
+            "origin_types:2"
+          ]
+        },
+        "track_record": {
+          "score": null,
+          "basis": [
+            "no_resolved_claims_observed"
+          ]
+        },
+        "profile": {
+          "score": 0.22,
+          "confidence": 0.55,
+          "basis": [
+            "meta_author:false",
+            "published_time:false",
+            "canonical:true",
+            "about:false",
+            "contact:false",
+            "corrections:false",
+            "outbound_links:55",
+            "opinion_marker:false"
+          ]
+        },
+        "overall": {
+          "score": 0.43875,
+          "confidence": 0.4167,
+          "method": "mechanical_v1",
+          "basis": [
+            "unknown_domain_pattern",
+            "distinct_urls:12",
+            "distinct_axes:0",
+            "origin_types:2",
+            "referring_accounts:1",
+            "origin_types:2",
+            "track_record_unavailable"
+          ]
+        }
+      },
+      "profile": {
+        "fetched_at": "2026-08-05T06:08:05.072Z",
+        "homepage_url": "https://shipaton.com/",
+        "example_url": "https://www.shipaton.com/events/?utm_source=x&utm_medium=cpc&utm_campaign=shipaton-traffic&twclid=2d8n4jkad805fesk63uxwuffy9",
+        "homepage_status": 200,
+        "example_status": 200,
+        "homepage_final_url": "https://www.shipaton.com/",
+        "example_final_url": "https://www.shipaton.com/events?utm_source=x&utm_medium=cpc&utm_campaign=shipaton-traffic&twclid=2d8n4jkad805fesk63uxwuffy9",
+        "homepage_content_type": "text/html; charset=utf-8",
+        "example_content_type": "text/html; charset=utf-8",
+        "homepage": {
+          "has_meta_author": false,
+          "has_published_time": false,
+          "has_canonical": true,
+          "has_about_link": false,
+          "has_contact_link": false,
+          "has_corrections_link": false,
+          "outbound_links_count": 38,
+          "opinion_marker": false
+        },
+        "example": {
+          "has_meta_author": false,
+          "has_published_time": false,
+          "has_canonical": true,
+          "has_about_link": false,
+          "has_contact_link": false,
+          "has_corrections_link": false,
+          "outbound_links_count": 55,
+          "opinion_marker": false
+        }
+      }
+    },
+    {
       "domain": "metaphysicalarticles.org",
       "entity": "Metaphysicalarticles",
       "kind": "unknown",
@@ -11252,133 +11383,6 @@
           "has_contact_link": false,
           "has_corrections_link": false,
           "outbound_links_count": 0,
-          "opinion_marker": false
-        }
-      }
-    },
-    {
-      "domain": "shipaton.com",
-      "entity": "Shipaton",
-      "kind": "unknown",
-      "first_seen_at": "2026-07-07T10:24:13.000Z",
-      "last_seen_at": "2026-08-03T12:23:14.449Z",
-      "discovery": {
-        "distinct_urls": 11,
-        "example_urls": [
-          "https://www.shipaton.com/events/?utm_source=x&utm_medium=cpc&utm_campaign=shipaton-traffic&twclid=2d8n4jkad805fesk63uxwuffy9",
-          "https://www.shipaton.com/?utm_source=x&utm_medium=cpc&utm_campaign=shipaton-traffic&twclid=22je13dnlq18zl09zml4n51co3",
-          "https://www.shipaton.com/?utm_source=x&utm_medium=cpc&utm_campaign=shipaton-traffic&twclid=26yl3o4snlo387h02mw4kh4yfe",
-          "https://www.shipaton.com/?utm_source=x&utm_medium=cpc&utm_campaign=shipaton-traffic&twclid=230e39i0w7hfcdaim51menkq4k",
-          "https://www.shipaton.com/?utm_source=x&utm_medium=cpc&utm_campaign=shipaton-traffic&twclid=2etlnjrf4bcnefsrgl7rph92ot"
-        ],
-        "origin_counts": {
-          "feed_buffer_reply": 2,
-          "feed_buffer": 9
-        },
-        "distinct_referring_accounts": 1,
-        "sample_referring_accounts": [
-          "revenuecat"
-        ],
-        "distinct_axes": []
-      },
-      "claims": {
-        "total": 0,
-        "supported": 0,
-        "refuted": 0,
-        "contested": 0,
-        "unverified": 0,
-        "resolved_count": 0
-      },
-      "structural_features": {
-        "has_search_paths": false,
-        "has_article_paths": false,
-        "has_doi_paths": false
-      },
-      "ratings": {
-        "provenance": {
-          "score": 0.45,
-          "basis": [
-            "unknown_domain_pattern"
-          ]
-        },
-        "breadth": {
-          "score": 0.4408333333333333,
-          "basis": [
-            "distinct_urls:11",
-            "distinct_axes:0",
-            "origin_types:2"
-          ]
-        },
-        "corroboration": {
-          "score": 0.2833333333333333,
-          "basis": [
-            "referring_accounts:1",
-            "origin_types:2"
-          ]
-        },
-        "track_record": {
-          "score": null,
-          "basis": [
-            "no_resolved_claims_observed"
-          ]
-        },
-        "profile": {
-          "score": 0.22,
-          "confidence": 0.55,
-          "basis": [
-            "meta_author:false",
-            "published_time:false",
-            "canonical:true",
-            "about:false",
-            "contact:false",
-            "corrections:false",
-            "outbound_links:55",
-            "opinion_marker:false"
-          ]
-        },
-        "overall": {
-          "score": 0.43236979166666667,
-          "confidence": 0.388075,
-          "method": "mechanical_v1",
-          "basis": [
-            "unknown_domain_pattern",
-            "distinct_urls:11",
-            "distinct_axes:0",
-            "origin_types:2",
-            "referring_accounts:1",
-            "origin_types:2",
-            "track_record_unavailable"
-          ]
-        }
-      },
-      "profile": {
-        "fetched_at": "2026-08-05T06:08:05.072Z",
-        "homepage_url": "https://shipaton.com/",
-        "example_url": "https://www.shipaton.com/events/?utm_source=x&utm_medium=cpc&utm_campaign=shipaton-traffic&twclid=2d8n4jkad805fesk63uxwuffy9",
-        "homepage_status": 200,
-        "example_status": 200,
-        "homepage_final_url": "https://www.shipaton.com/",
-        "example_final_url": "https://www.shipaton.com/events?utm_source=x&utm_medium=cpc&utm_campaign=shipaton-traffic&twclid=2d8n4jkad805fesk63uxwuffy9",
-        "homepage_content_type": "text/html; charset=utf-8",
-        "example_content_type": "text/html; charset=utf-8",
-        "homepage": {
-          "has_meta_author": false,
-          "has_published_time": false,
-          "has_canonical": true,
-          "has_about_link": false,
-          "has_contact_link": false,
-          "has_corrections_link": false,
-          "outbound_links_count": 38,
-          "opinion_marker": false
-        },
-        "example": {
-          "has_meta_author": false,
-          "has_published_time": false,
-          "has_canonical": true,
-          "has_about_link": false,
-          "has_contact_link": false,
-          "has_corrections_link": false,
-          "outbound_links_count": 55,
           "opinion_marker": false
         }
       }
@@ -28518,7 +28522,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-08-02T20:45:27.913Z",
+        "fetched_at": "2026-08-05T20:54:00.069Z",
         "homepage_url": "https://33club.jp/",
         "example_url": "https://33club.jp/products/nemo-fork-ring?variant=46892599967970&clientID=62f4a231-8887-48a3-8fae-75a9a62844a4&twclid=24wasfuapkpxt9qa7gtb8s2o6y",
         "homepage_status": 200,
@@ -29767,7 +29771,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-08-02T20:45:30.421Z",
+        "fetched_at": "2026-08-05T20:54:01.354Z",
         "homepage_url": "https://dynamicocean.net/",
         "example_url": "https://dynamicocean.net/?twclid=2576n00y5l1125y8xeb3lcwmz1",
         "homepage_status": 200,
@@ -31257,12 +31261,12 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-08-02T08:54:46.551Z",
+        "fetched_at": "2026-08-05T18:53:58.449Z",
         "homepage_url": "https://thefabulous.co/",
         "example_url": "https://start.thefabulous.co/onboarding/fab-initial-tw?utm_source=twitter&utm_medium=paid&utm_campaign=41232969&utm_content=54677002&twclid=2sflbfppx41vhym58cf0xiqtt",
         "homepage_status": 200,
         "example_status": 403,
-        "homepage_final_url": "https://v.thefabulous.co/home-fable-hero/",
+        "homepage_final_url": "https://v.thefabulous.co/home-mobile-cta/",
         "example_final_url": "https://start.thefabulous.co/onboarding/fab-initial-tw?utm_source=twitter&utm_medium=paid&utm_campaign=41232969&utm_content=54677002&twclid=2sflbfppx41vhym58cf0xiqtt",
         "homepage_content_type": "text/html; charset=utf-8",
         "example_content_type": "text/html; charset=UTF-8",
@@ -31381,7 +31385,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-08-02T10:24:48.766Z",
+        "fetched_at": "2026-08-05T18:54:00.125Z",
         "homepage_url": "https://focusfeatures.com/",
         "example_url": "https://www.focusfeatures.com/obsession?twclid=2edvdkjskb18lt46rkzi6fpirn",
         "homepage_status": 200,
@@ -31505,7 +31509,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-08-02T10:24:49.872Z",
+        "fetched_at": "2026-08-05T18:54:00.905Z",
         "homepage_url": "https://energyalert.org/",
         "example_url": "https://energyalert.org/speed-to-power/?twclid=29c3xdnaadwruhur8bny93vxj7",
         "homepage_status": 200,
@@ -31629,7 +31633,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-08-02T10:24:50.739Z",
+        "fetched_at": "2026-08-05T18:54:01.195Z",
         "homepage_url": "https://lenovo.com/",
         "example_url": "https://www.lenovo.com/fifa?twclid=28bun2tvvdii9atmnb69jedydn",
         "homepage_status": 403,
@@ -31753,7 +31757,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-08-02T14:45:25.692Z",
+        "fetched_at": "2026-08-05T19:24:05.368Z",
         "homepage_url": "https://govee.com/",
         "example_url": "https://us.govee.com/pages/govee-houseofthedragon?utm_source=twitter&utm_medium=paid_social&utm_campaign=hotd&utm_term=cpe&twclid=29b1vkgpwftpnrvrqi4d3zdxhg",
         "homepage_status": 200,
@@ -31877,7 +31881,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-08-02T14:45:31.889Z",
+        "fetched_at": "2026-08-05T19:24:08.373Z",
         "homepage_url": "https://bsc.news/",
         "example_url": "https://pinews.bsc.news/?twclid=2bzqv927m4uzohrcyl1nn1870e",
         "homepage_status": 200,
@@ -32373,7 +32377,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-08-02T14:45:33.794Z",
+        "fetched_at": "2026-08-05T20:24:00.601Z",
         "homepage_url": "https://polyhelper.io/",
         "example_url": "https://polyhelper.io/?twclid=24xw76n4vweq250ip3qz1ykzn1",
         "homepage_status": 200,
@@ -32497,13 +32501,13 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-08-02T15:15:24.796Z",
+        "fetched_at": "2026-08-05T20:24:02.257Z",
         "homepage_url": "https://facebook.com/",
         "example_url": "https://facebook.com/share/p/1K3i9oW8n3/?twclid=24upfupooaiymupfqf1rau2xx8",
         "homepage_status": 200,
         "example_status": 200,
         "homepage_final_url": "https://www.facebook.com/",
-        "example_final_url": "https://www.facebook.com/nustaronlinephl/posts/pfbid0fL6hNNzQuCXfHgxq6eFWHvJ7FyqYznYKyCtDrKS4UAYBL98QGNE4CxhYN7jc9t17l?rdid=REcMrUFlN97ihTJV&share_url=https%3A%2F%2Fwww.facebook.com%2Fshare%2Fp%2F1K3i9oW8n3%2F%3Ftwclid%3D24upfupooaiymupfqf1rau2xx8",
+        "example_final_url": "https://www.facebook.com/nustaronlinephl/posts/pfbid0fL6hNNzQuCXfHgxq6eFWHvJ7FyqYznYKyCtDrKS4UAYBL98QGNE4CxhYN7jc9t17l?rdid=JXoF5QWUYLyX3X8g&share_url=https%3A%2F%2Fwww.facebook.com%2Fshare%2Fp%2F1K3i9oW8n3%2F%3Ftwclid%3D24upfupooaiymupfqf1rau2xx8",
         "homepage_content_type": "text/html; charset=\"utf-8\"",
         "example_content_type": "text/html; charset=\"utf-8\"",
         "homepage": {
@@ -32623,7 +32627,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-08-02T15:15:27.078Z",
+        "fetched_at": "2026-08-05T20:24:03.615Z",
         "homepage_url": "https://varrd.com/",
         "example_url": "https://varrd.com/?twclid=222hhmjo1hjeaafibt54abkalz",
         "homepage_status": 200,
@@ -32749,7 +32753,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-08-02T15:15:29.665Z",
+        "fetched_at": "2026-08-05T20:24:04.636Z",
         "homepage_url": "https://moxt.ai/",
         "example_url": "https://moxt.ai/?utm_source=x&utm_medium=paid_social&utm_campaign=x-brand-build-your-ai-team&utm_content=video-49s&utm_term=en-desktop&twclid=24fse5wprkux1ktw6we6w27x5c",
         "homepage_status": 200,
@@ -32875,7 +32879,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-08-02T15:15:31.434Z",
+        "fetched_at": "2026-08-05T20:54:03.575Z",
         "homepage_url": "https://usekeel.io/",
         "example_url": "https://usekeel.io/run?twclid=2bgfmx5me1bzmqklq02dv94p1e",
         "homepage_status": 200,
@@ -33001,7 +33005,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-08-02T16:15:26.245Z",
+        "fetched_at": "2026-08-05T20:54:08.983Z",
         "homepage_url": "https://codenewsletter.ai/",
         "example_url": "https://codenewsletter.ai/subscribe?utm_source=twitter_ads_flal_1_claude_code_v2&twclid=2efow5tezir2vqfxf73rgau0vh",
         "homepage_status": 200,
