@@ -63,4 +63,27 @@ const CHARACTER_DIRECTIVE =
 
 const CHARACTER_REFERENCE_IMAGE = require("path").join(__dirname, "assets", "sebastian_character.png");
 
-module.exports = { STYLE_DIRECTIVE, NEGATIVE_PROMPT, CHARACTER_DIRECTIVE, CHARACTER_REFERENCE_IMAGE };
+/**
+ * Sebastian's canonical SPOKEN voice for the daily stance video (runner/
+ * stance_video.js). Veo (via the Gemini web app, no API/seed/audio-reference)
+ * has no voice-lock mechanism — the only lever is the text description, and
+ * that text must be BYTE-IDENTICAL every generation. Before this constant
+ * existed, the brief-writing LLM re-authored the voice description from
+ * scratch each day ("a light, dry, deadpan voice" one day, something else the
+ * next), which was itself a source of drift on top of Veo's own per-generation
+ * variance. stance_video.js must splice this string into the video_prompt
+ * verbatim — never let the brief LLM paraphrase it.
+ *
+ * Operator decision 2026-08-05: Filipino-accented English, matching Sebastian's
+ * established written Taglish voice (see the TAGALOG RULE in runner/lib/
+ * prompts/tweet.js, thread.js, claims.js, quote.js) rather than a neutral/
+ * American accent.
+ */
+const VOICE_DIRECTIVE =
+  "a calm, unhurried, Filipino-accented English voice — light in pitch, dry and " +
+  "deadpan in delivery, the register of someone stating a conclusion, not " +
+  "performing outrage. No vocal fry, no upspeak, no announcer cadence. If the " +
+  "line mixes in Tagalog words or phrases, they carry the same natural Filipino " +
+  "accent as the English — no code-switch in accent, only in vocabulary.";
+
+module.exports = { STYLE_DIRECTIVE, NEGATIVE_PROMPT, CHARACTER_DIRECTIVE, CHARACTER_REFERENCE_IMAGE, VOICE_DIRECTIVE };

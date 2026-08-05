@@ -86,7 +86,10 @@ orchestrator QUOTE/TWEET cycle          (posting window 07–23 local)
   character delivers his current stance to camera, on location; spoken line
   confidence-calibrated + outbound-gated → Veo clip via the Gemini web engine
   → `state/videos/` + Telegram review. Self-gating until the signed-in account
-  has a Veo entitlement (`STANCE_VIDEO_ENABLED`).
+  has a Veo entitlement (`STANCE_VIDEO_ENABLED`). Voice is locked to a fixed
+  `VOICE_DIRECTIVE` (`image_style.js`) spliced in by code, not authored by the
+  brief LLM — see INVENTORY.md for why. Taglish for PH-rooted subjects, English
+  otherwise, same accent either way.
 
 **Status:** Running ✓
 

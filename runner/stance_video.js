@@ -16,6 +16,16 @@
  * public. The clip is generated through the Gemini web engine (Veo speaks the
  * line; Veo 3 renders dialogue + ambient audio).
  *
+ * VOICE CONSISTENCY (operator decision 2026-08-05): Veo has no voice-lock —
+ * no API, no seed, no reference audio, just a text prompt — so the brief LLM
+ * used to re-author the voice description from scratch each day, which was
+ * itself a source of drift. The voice is now `image_style.js VOICE_DIRECTIVE`,
+ * a fixed string spliced into every video_prompt verbatim (buildVideoPrompt
+ * below); the brief LLM only picks topic/location/language/spoken_line, never
+ * the voice text. Language follows the same TAGALOG RULE as tweets/threads
+ * (see lib/prompts/tweet.js): PH-rooted topics speak in Taglish, everything
+ * else in English — same accent (VOICE_DIRECTIVE) either way.
+ *
  * Honest gating: video generation needs a Veo entitlement on the Google
  * account signed into the HelmStack browser. Until then this logs the reason
  * and exits 0 — the series starts itself the first day generation works.
@@ -106,6 +116,21 @@ function pickSubject() {
 
 // ── 2. Script brief via the think backend ────────────────────────────────────
 
+// Builds the actual Veo prompt in CODE, not the LLM — VOICE_DIRECTIVE must be
+// byte-identical every generation (see the VOICE CONSISTENCY note up top).
+// Re-callable after gating corrects spoken_line, so there's no fragile
+// string-replace against LLM-authored prose.
+function buildVideoPrompt({ location, spoken_line }) {
+  const { CHARACTER_DIRECTIVE, VOICE_DIRECTIVE } = require("./image_style");
+  return (
+    `Stylized animation, wide cinematic 16:9. ${CHARACTER_DIRECTIVE} ` +
+    `He is standing in: ${location}. He looks into the camera and says, in ` +
+    `${VOICE_DIRECTIVE}: "${spoken_line}" — include the quoted line verbatim. ` +
+    `One slow camera push-in, ambient location sound, moody palette matching ` +
+    `the subject, no on-screen text, no human faces.`
+  );
+}
+
 async function composeBrief(subject) {
   const { reason } = require("./lib/compose");
   const { CHARACTER_DIRECTIVE } = require("./image_style");
@@ -125,20 +150,25 @@ async function composeBrief(subject) {
     `certainty ONLY to the stated confidence: below 50% say "I think"/"leaning"; 50-75% say it`,
     `plainly; above 75% say it firmly. No hashtags, no jargon, no "as an AI".`,
     ``,
-    `Output ONLY raw JSON:`,
+    `TAGALOG RULE (same rule his tweets/threads follow — see lib/prompts/tweet.js): if the`,
+    `subject is primarily about the Philippines, Filipino politics, PH governance, OFW issues,`,
+    `or Filipino culture — write the spoken_line in natural spoken Taglish (Tagalog-English`,
+    `code-switch, the way Filipinos actually talk), NEVER formal/textbook Tagalog. Otherwise`,
+    `— international/geopolitical/non-PH subjects — write in English. Either way the voice`,
+    `(accent, pacing) is fixed elsewhere; you are only choosing the WORDS.`,
+    ``,
+    `Output ONLY raw JSON — do NOT include a voice or camera description, that is added in code:`,
     `{"topic": "<3-6 words>", "location": "<concrete place tied to the subject, 3-8 words>",`,
-    `"spoken_line": "<the line he says>", "video_prompt": "<one Veo prompt: stylized animation,`,
-    `wide cinematic 16:9, the canonical chick character per the character sheet standing in the`,
-    `location, he looks into the camera and says in a light, dry, deadpan voice: '<spoken_line>'`,
-    `— include the quoted line verbatim; one slow camera push-in, ambient location sound, moody`,
-    `palette matching the topic, no on-screen text, no human faces>"}`,
+    `"language": "<'taglish' or 'english', per the TAGALOG RULE above>",`,
+    `"spoken_line": "<the line he says, in that language, max 25 words>"}`,
   ].join("\n");
 
   const raw = await reason(prompt, { maxTokens: 900, tag: "stance_video" });
   const m = String(raw).match(/\{[\s\S]*\}/);
   if (!m) throw new Error(`brief not JSON: ${String(raw).slice(0, 120)}`);
   const brief = JSON.parse(m[0]);
-  if (!brief.video_prompt || !brief.spoken_line) throw new Error("brief missing spoken_line/video_prompt");
+  if (!brief.spoken_line || !brief.location) throw new Error("brief missing spoken_line/location");
+  brief.video_prompt = buildVideoPrompt(brief);
   return brief;
 }
 
@@ -202,10 +232,10 @@ async function main() {
   const gated = await gateSpokenLine(brief.spoken_line);
   if (!gated) return;
   if (gated !== brief.spoken_line) {
-    brief.video_prompt = brief.video_prompt.replace(brief.spoken_line, gated);
     brief.spoken_line = gated;
+    brief.video_prompt = buildVideoPrompt(brief); // rebuild, don't string-replace LLM prose
   }
-  log(`topic: ${brief.topic} | location: ${brief.location}`);
+  log(`topic: ${brief.topic} | location: ${brief.location} | language: ${brief.language || "?"}`);
   log(`line: "${brief.spoken_line}"`);
 
   if (DRY) { log("dry-run: skipping generation"); return; }
@@ -269,9 +299,15 @@ async function main() {
     } catch (e) { log(`FB cross-post error (non-fatal): ${e.message}`); }
   }
 
-  fs.writeFileSync(STAMP, JSON.stringify({ last_success: today(), topic: brief.topic, line: brief.spoken_line, path: outPath, x_url: postedUrl, fb_posted: fbPosted }, null, 2));
+  fs.writeFileSync(STAMP, JSON.stringify({ last_success: today(), topic: brief.topic, language: brief.language, line: brief.spoken_line, path: outPath, x_url: postedUrl, fb_posted: fbPosted }, null, 2));
 }
 
-main()
-  .then(() => process.exit(0))
-  .catch((e) => { console.error(`[stance_video] non-fatal: ${e.message}`); process.exit(0); });
+module.exports = { buildVideoPrompt, pickSubject };
+
+// Guarded so run_tests.js can require() this file (to exercise buildVideoPrompt)
+// without kicking off a real run — main() only fires when invoked as a script.
+if (require.main === module) {
+  main()
+    .then(() => process.exit(0))
+    .catch((e) => { console.error(`[stance_video] non-fatal: ${e.message}`); process.exit(0); });
+}

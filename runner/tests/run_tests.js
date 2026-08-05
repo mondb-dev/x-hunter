@@ -501,6 +501,44 @@ section("LinkedIn A/B scoring");
   }
 }
 
+// ── Daily stance video: locked voice ──────────────────────────────────────────
+// Regression guard for operator decision 2026-08-05: Veo has no voice-lock (no
+// API/seed/reference-audio, just a text prompt), so the brief-writing LLM used
+// to re-author the voice description from scratch every day — itself a source
+// of drift on top of Veo's own per-generation variance. The fix moved the voice
+// description out of the LLM's hands into `image_style.js VOICE_DIRECTIVE`, a
+// fixed string `stance_video.js buildVideoPrompt()` splices in verbatim. If a
+// future edit lets the LLM author that clause again, this won't catch the
+// prose drifting — it catches the STRUCTURAL regression of two prompts (e.g.
+// before/after a gate correction rewrites spoken_line) ending up with two
+// different voice clauses, which is exactly what the string-replace it replaced
+// was vulnerable to.
+section("Daily stance video: locked voice");
+{
+  const { buildVideoPrompt } = require(path.join(RUNNER, "stance_video.js"));
+  const { VOICE_DIRECTIVE, CHARACTER_DIRECTIVE } = require(path.join(RUNNER, "image_style.js"));
+
+  const a = buildVideoPrompt({ location: "a rainy border checkpoint", spoken_line: "Nations need real borders." });
+  const b = buildVideoPrompt({ location: "a flooded Bulacan street", spoken_line: "Sixteen days in, one article of impeachment down." });
+
+  if (a.includes(VOICE_DIRECTIVE) && b.includes(VOICE_DIRECTIVE)) {
+    pass("voice clause is the fixed VOICE_DIRECTIVE verbatim, not LLM prose");
+  } else {
+    fail("voice clause", "buildVideoPrompt output does not contain VOICE_DIRECTIVE verbatim");
+  }
+
+  // The two prompts differ only in location/spoken_line — the voice+character
+  // clauses (everything else) must be byte-identical across subjects/languages.
+  const strip = (s, line) => s.replace(line, "<LINE>");
+  const aFixed = strip(a, "Nations need real borders.").replace("a rainy border checkpoint", "<LOC>");
+  const bFixed = strip(b, "Sixteen days in, one article of impeachment down.").replace("a flooded Bulacan street", "<LOC>");
+  if (aFixed === bFixed) pass("voice+character clause is byte-identical across two different subjects");
+  else fail("voice+character clause", "prompts diverge outside location/spoken_line — voice is not locked");
+
+  if (a.includes(CHARACTER_DIRECTIVE)) pass("character sheet still embedded alongside the locked voice");
+  else fail("character sheet", "buildVideoPrompt dropped CHARACTER_DIRECTIVE");
+}
+
 // ── LinkedIn engagement wiring ────────────────────────────────────────────────
 // Regression guard for a bug that silently killed LinkedIn engagement for a
 // month: engage() ranked candidates with `score: score(p)` and no `await`, so

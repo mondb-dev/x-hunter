@@ -195,7 +195,14 @@ Follows (`scraper/follows.js:18,45`): max 3/run, 10/day, 1 min between.
   entitlement; output `state/videos/`, review via Telegram. Character: the canonical green-chick-with-pixel-shades
   (`CHARACTER_DIRECTIVE` in `runner/image_style.js`, reference asset
   `runner/assets/sebastian_character.png` — from his live LinkedIn avatar,
-  operator decision 2026-07-20).
+  operator decision 2026-07-20). **Voice** (operator decision 2026-08-05):
+  Veo has no voice-lock (no API/seed/reference-audio — text prompt only), so
+  the voice is `VOICE_DIRECTIVE` in `runner/image_style.js`, a fixed
+  Filipino-accented-English description spliced into every prompt verbatim by
+  `buildVideoPrompt()` — the brief LLM never authors the voice text, only
+  topic/location/language/spoken_line. Language follows the same TAGALOG RULE
+  as tweets/threads (`runner/lib/prompts/tweet.js`): PH-rooted subjects speak
+  in Taglish, everything else in English, same accent either way.
 - **Costs** `runner/lib/cost_meter.js` (per-LLM-call ledger →
   `state/cost_ledger.jsonl`, rollup by model/tag) + `runner/lib/operating_cost.js`
   (LLM + fixed costs from `state/cost_config.json` + SOL-wallet storage runway →
@@ -233,6 +240,8 @@ Arweave via Irys (Solana-funded; SOLANA_* keys) · Moltbook API
 Env vars in live `.env` (names only): see `.env.example`; notable current ones —
 COMPOSE_BACKEND, CLAUDE_COMPOSE_MODEL, CLAUDE_ARTICLE_MODEL, CLAUDE_RETRIES,
 CLAUDE_COMPOSE_TIMEOUT_MS, CLAUDE_THINK_TIMEOUT_MS, CLAUDE_BIN,
+CLAUDE_CONFIG_DIR (runner's own Claude credential store — unset means every
+`claude -p` spawn authenticates as the operator and shares one usage quota),
 THINK_BACKEND, CLAUDE_THINK_MODEL, BUILDER_BACKEND, CLAUDE_BUILDER_MODEL,
 CLAUDE_BUILDER_TIMEOUT_MS, POST_BACKEND=helmstack, HELMSTACK_URL,
 HELMSTACK_AUTH_TOKEN, OUTBOX_X, X_AUTO_RESEARCH, X_DEEP_TREE, TWEET_START/END.
