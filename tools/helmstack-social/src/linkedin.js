@@ -849,8 +849,13 @@ class LinkedIn {
     const posts = await this.scrapeFeed({ limit: scrapeLimit });
     this.log(`scraped ${posts.length} feed post(s)`);
 
-    const ranked = posts
-      .map((p) => ({ ...p, key: keyOf(p), score: score(p) }))
+    // `score` may be async (the LLM relevance scorer is) — await it. Without the
+    // await, `p.score` is a Promise, `Promise >= minScore` is always false, and
+    // `ranked` is silently always empty. Parity with the X engine.
+    const scored = await Promise.all(
+      posts.map(async (p) => ({ ...p, key: keyOf(p), score: await score(p) }))
+    );
+    const ranked = scored
       .filter((p) => !seen.has(p.key) && p.score >= minScore)
       .sort((a, b) => b.score - a.score);
     this.log(`${ranked.length} relevant, un-engaged post(s) (min score ${minScore})`);
