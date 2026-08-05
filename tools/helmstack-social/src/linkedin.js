@@ -12,11 +12,21 @@
  *                 iframes, so UI automation is unreliable. We instead call
  *                 LinkedIn's own contentcreation API with a same-origin fetch
  *                 (session cookies ride along; CSRF token comes from JSESSIONID).
- *   ENGAGEMENT  — feed posts are top-frame div[role=listitem] blocks with hashed
- *                 class names and no data-urn, so we select by role/aria-label/text
- *                 and stamp data-hs-idx during scrape to target actions reliably.
- *                 The comment submit button is text "Comment" with NO aria-label
- *                 (the action-bar toggle *has* aria-label "Comment").
+ *   ENGAGEMENT  — candidates come from the voyager feed API (fetchFeedCandidates),
+ *                 not the DOM: the rendered feed only ever holds ~3 post cards for
+ *                 this session (it hits the footer after 3; neither scrolling nor
+ *                 &page=N loads more), while the API returns ~26 with full bodies.
+ *                 engage() then opens each target's permalink (openPost) and acts
+ *                 on the DOM there, falling back to scrapeFeed if the API is blocked.
+ *   DOM ACTIONS — post containers have hashed class names and no data-urn, so we
+ *                 select by role/aria-label/text and stamp data-hs-idx to target
+ *                 actions reliably. The two surfaces differ: a FEED card is
+ *                 div[role=listitem] with a "Reaction button state …" like button;
+ *                 a PERMALINK is div[role=article] with an exactly-"React Like"
+ *                 one. The comment submit button is text "Comment" with NO
+ *                 aria-label (the action-bar toggle *has* aria-label "Comment").
+ *   SCROLLING   — body is overflow:hidden and the document does not scroll; use
+ *                 _scrollBy/_scrollTop, never window.scrollBy (a silent no-op).
  */
 
 const FEED_URL = "https://www.linkedin.com/feed/";
@@ -40,6 +50,50 @@ class LinkedIn {
 
   async _eval(body, timeout = 20000) {
     return this.c.evaluate(this.tab, `(function(){${body}\n})()`, { timeout });
+  }
+
+  /**
+   * JS snippet returning LinkedIn's real scroll container.
+   *
+   * LinkedIn sets `body { overflow-y: hidden }` and scrolls an inner element —
+   * on the feed, `document.documentElement.scrollHeight === window.innerHeight`,
+   * so `window.scrollBy`/`scrollTo` are silent no-ops and the feed's lazy-load
+   * never fires (the DOM stays at its initial ~3 cards forever). Find the actual
+   * scroller by geometry, never by class name: the markup is obfuscated
+   * (`class="e19c424c _6ef54a2d …"`) and those hashes change without notice.
+   *
+   * Falls back to the scrollingElement so this stays correct if LinkedIn ever
+   * reverts to a normally-scrolling document.
+   */
+  static get _SCROLLER_JS() {
+    return `(function(){
+      var se=document.scrollingElement||document.documentElement;
+      if(se && se.scrollHeight > se.clientHeight+200) return se;
+      var best=null, bestDelta=0;
+      var cands=[].slice.call(document.querySelectorAll('main, [role=main], div, section'));
+      for(var i=0;i<cands.length;i++){
+        var e=cands[i], delta=e.scrollHeight-e.clientHeight;
+        if(delta<200 || e.clientHeight<200) continue;
+        var oy=getComputedStyle(e).overflowY;
+        if(!/auto|scroll/.test(oy)) continue;
+        if(delta>bestDelta){ bestDelta=delta; best=e; }
+      }
+      return best||se;
+    })()`;
+  }
+
+  /** Scroll the real container down by `px` (accepts 'innerHeight*1.5'-style expressions). */
+  async _scrollBy(px) {
+    return this._eval(
+      `var s=${LinkedIn._SCROLLER_JS}; var before=s.scrollTop;
+       s.scrollTop = s.scrollTop + (${px});
+       return JSON.stringify({before:before, after:s.scrollTop, max:s.scrollHeight});`
+    ).catch(() => null);
+  }
+
+  /** Scroll the real container back to `top` (default 0). */
+  async _scrollTop(top = 0) {
+    return this._eval(`var s=${LinkedIn._SCROLLER_JS}; s.scrollTop=${top}; return '1';`).catch(() => null);
   }
 
   // ── Session / tab ───────────────────────────────────────────────────────────
@@ -152,6 +206,102 @@ class LinkedIn {
   }
 
   /**
+   * Feed candidates via LinkedIn's own voyager API (same same-origin authenticated
+   * fetch as post()), NOT the DOM.
+   *
+   * Why: the rendered feed only ever holds ~3 post cards for this session — it
+   * scrolls to the footer after 3 and neither scrolling nor `&page=N` loads more
+   * (LinkedIn appears to serve a minimal page to the HelmStack user-agent). The
+   * same account's `updatesV2?q=feed` returns ~26 fully-populated posts. Scoring
+   * 3 near-random cards is why engagement found nothing relevant even once the
+   * scorer bug was fixed; this is the pool the relevance gate actually needs.
+   *
+   * Returns richer records than scrapeFeed (full commentary text, not the
+   * truncated card innerText), so relevance scoring reads real post bodies.
+   * @returns {Promise<Array<{urn:string, author:string, text:string, permalink:string}>>}
+   */
+  async fetchFeedCandidates({ limit = 25 } = {}) {
+    const expr = `(async function(){
+      var m=document.cookie.match(/JSESSIONID="?([^";]+)"?/);
+      if(!m) return JSON.stringify({error:"no_csrf_cookie"});
+      try{
+        var r=await fetch("https://www.linkedin.com/voyager/api/feed/updatesV2?q=feed&count=${Math.max(1, Math.min(100, limit))}",{
+          credentials:"include",
+          headers:{"csrf-token":m[1],"accept":"application/vnd.linkedin.normalized+json+2.1","x-restli-protocol-version":"2.0.0"}
+        });
+        if(!r.ok) return JSON.stringify({error:"http_"+r.status});
+        var j=await r.json();
+        var out=[];
+        (j.included||[]).forEach(function(o){
+          if(o["$type"]!=="com.linkedin.voyager.feed.render.UpdateV2") return;
+          var text=(o.commentary&&o.commentary.text&&o.commentary.text.text)||"";
+          var urn=(o.updateMetadata&&o.updateMetadata.urn)||"";
+          var author=(o.actor&&o.actor.name&&o.actor.name.text)||"";
+          if(!text.trim()||!/^urn:li:activity:/.test(urn)) return;
+          out.push({urn:urn, author:author, text:text, permalink:"https://www.linkedin.com/feed/update/"+urn+"/"});
+        });
+        return JSON.stringify({posts:out});
+      }catch(e){ return JSON.stringify({error:e.message}); }
+    })()`;
+    let res = {};
+    try { res = JSON.parse(await this.c.evaluate(this.tab, expr, { timeout: 45000 })); }
+    catch (e) { this.log(`feed API failed (${e.message})`); return []; }
+    if (res.error) { this.log(`feed API: ${res.error}`); return []; }
+    let posts = res.posts || [];
+    if (this.ownHandleHint) {
+      posts = posts.filter((p) => !(p.author || "").toLowerCase().includes(this.ownHandleHint));
+    }
+    return posts;
+  }
+
+  /**
+   * Open a post permalink and stamp its card `data-hs-idx="0"` so the existing
+   * index-based like()/comment() work against it unchanged. Needed because
+   * API-sourced candidates aren't in the feed DOM.
+   * @returns {Promise<boolean>} false when the post card never rendered.
+   */
+  async openPost(permalink, { attempts = 6, interval = 1500 } = {}) {
+    await this.c.navigate(this.tab, permalink);
+    await this.c.waitReady(this.tab, { tag: "linkedin" }).catch(() => {});
+    // Poll rather than sleeping a fixed interval: the action bar hydrates well
+    // after readyState, and a single fixed wait raced it (~1 in 3 opens failed
+    // with no_comment_btn, then succeeded on the next call for the same post).
+    let ok = false;
+    for (let i = 0; i < attempts; i++) {
+      await sleep(i === 0 ? 1500 : interval);
+      ok = await this._stampPost();
+      if (ok === true) break;
+    }
+    if (ok !== true) this.log(`openPost: ${ok || "eval_failed"} (${permalink.slice(-24)})`);
+    return ok === true;
+  }
+
+  /** Stamp the permalink's post container as idx 0. @returns {Promise<true|string>} */
+  async _stampPost() {
+    return this._eval(
+      `var prev=document.querySelector('[data-hs-idx]'); if(prev) prev.removeAttribute('data-hs-idx');
+       // A permalink renders the post as div[role=article] — NOT the feed's
+       // div[role=listitem] (there are zero of those here). Anchor on the post's
+       // own Comment toggle and walk up to the nearest div that contains both the
+       // reaction bar and the comment editor, preferring role=article.
+       var cb=document.querySelector('button[aria-label=Comment]');
+       if(!cb) return 'no_comment_btn';
+       var e=cb.parentElement, target=null, depth=0;
+       while(e && depth<12){
+         if(e.tagName==='DIV' && e.querySelector('.ql-editor, div[role=textbox]')
+            && e.querySelector('button[aria-label=\\"React Like\\"]')){
+           target=e;
+           if(e.getAttribute('role')==='article') break; // most stable anchor
+         }
+         e=e.parentElement; depth++;
+       }
+       if(!target) return 'no_container';
+       target.setAttribute('data-hs-idx','0');
+       return true;`
+    ).catch(() => false);
+  }
+
+  /**
    * Scrape a post permalink's engagement counts (for the post-performance loop).
    * Impressions are only rendered on the owner's own posts (the analytics line
    * under the post) — 0 for posts you don't own or when LinkedIn hides it.
@@ -161,7 +311,7 @@ class LinkedIn {
     await this.c.navigate(this.tab, url);
     await this.c.waitReady(this.tab, { tag: "linkedin" }).catch(() => {});
     await sleep(3500);
-    await this.c.evaluate(this.tab, "window.scrollBy(0, 450)").catch(() => {});
+    await this._scrollBy(450);
     await sleep(1200);
     const raw = await this._eval(
       `var out={reactions:null,comments:null,reposts:null,impressions:null};
@@ -192,10 +342,10 @@ class LinkedIn {
   async scrapeFeed({ limit = 12 } = {}) {
     await this.gotoFeed();
     for (let i = 0; i < 3; i++) {
-      await this.c.evaluate(this.tab, "window.scrollBy(0, window.innerHeight*1.5)").catch(() => {});
+      await this._scrollBy("window.innerHeight*1.5");
       await sleep(1500);
     }
-    await this.c.evaluate(this.tab, "window.scrollTo(0,0)").catch(() => {});
+    await this._scrollTop(0);
     await sleep(800);
 
     const raw = await this._eval(
@@ -246,7 +396,7 @@ class LinkedIn {
   async scrapeNotifications({ limit = 20 } = {}) {
     await this.c.navigate(this.tab, "https://www.linkedin.com/notifications/");
     await sleep(3500);
-    await this.c.evaluate(this.tab, "window.scrollBy(0, 800)").catch(() => {});
+    await this._scrollBy(800);
     await sleep(1200);
     const raw = await this._eval(
       `var cards=[].slice.call(document.querySelectorAll('article, .nt-card'));
@@ -291,7 +441,7 @@ class LinkedIn {
     await this.c.navigate(this.tab, href).catch(() => {});
     await sleep(4000);
     // The comment thread renders below the fold; nudge it into view.
-    await this.c.evaluate(this.tab, "window.scrollBy(0, 400)").catch(() => {});
+    await this._scrollBy(400);
     await sleep(1200);
     // No editor exists until an opener is clicked (the showCommentBox URL param
     // isn't honored on direct nav). For a comment/mention → click a "Reply"
@@ -361,9 +511,13 @@ class LinkedIn {
   async like(idx, { dryRun = false } = {}) {
     if (dryRun) return true;
     const ok = await this._eval(
-      `var li=document.querySelector('div[data-hs-idx=\"${idx}\"]');
+      `var li=document.querySelector('[data-hs-idx=\"${idx}\"]');
        if(!li) return false;
-       var b=li.querySelector('button[aria-label^=\"Reaction button state\"]');
+       // Feed cards label this "Reaction button state …"; a post permalink labels
+       // it exactly "React Like". Match that exactly so the per-comment
+       // "React Like to <name>'s comment" buttons can never be hit.
+       var b=li.querySelector('button[aria-label^=\"Reaction button state\"]')
+             || li.querySelector('button[aria-label=\"React Like\"]');
        if(!b) return false;
        if(/liked|selected/i.test(b.getAttribute('aria-label')||'') || b.getAttribute('aria-pressed')==='true') return 'already';
        b.click(); return true;`
@@ -378,7 +532,7 @@ class LinkedIn {
    */
   async comment(idx, text, { dryRun = false } = {}) {
     const opened = await this._eval(
-      `var li=document.querySelector('div[data-hs-idx=\"${idx}\"]');
+      `var li=document.querySelector('[data-hs-idx=\"${idx}\"]');
        if(!li) return 'no_post';
        var c=li.querySelector('button[aria-label=Comment]');
        if(!c) return 'no_comment_btn';
@@ -388,7 +542,7 @@ class LinkedIn {
     await sleep(1800);
 
     const focused = await this._eval(
-      `var li=document.querySelector('div[data-hs-idx=\"${idx}\"]');
+      `var li=document.querySelector('[data-hs-idx=\"${idx}\"]');
        if(!li) return false;
        var ed=li.querySelector('.ql-editor') || li.querySelector('div[role=textbox]');
        if(!ed) return false; ed.focus(); return true;`
@@ -404,7 +558,7 @@ class LinkedIn {
     await sleep(1200);
 
     const got = await this._eval(
-      `var li=document.querySelector('div[data-hs-idx=\"${idx}\"]');
+      `var li=document.querySelector('[data-hs-idx=\"${idx}\"]');
        var ed=li && (li.querySelector('.ql-editor')||li.querySelector('div[role=textbox]'));
        return ed ? (ed.innerText||'').trim() : '';`
     );
@@ -412,7 +566,7 @@ class LinkedIn {
 
     if (dryRun) {
       await this._eval(
-        `var li=document.querySelector('div[data-hs-idx=\"${idx}\"]');
+        `var li=document.querySelector('[data-hs-idx=\"${idx}\"]');
          var ed=li && (li.querySelector('.ql-editor')||li.querySelector('div[role=textbox]'));
          if(ed){ed.focus();document.execCommand('selectAll');document.execCommand('delete');}
          return true;`
@@ -423,7 +577,7 @@ class LinkedIn {
     // Submit button: text "Comment" with NO aria-label (distinguishes it from the
     // action-bar toggle, aria-label "Comment", and reply submits, text "Reply").
     const clicked = await this._eval(
-      `var li=document.querySelector('div[data-hs-idx=\"${idx}\"]');
+      `var li=document.querySelector('[data-hs-idx=\"${idx}\"]');
        if(!li) return false;
        var b=[].slice.call(li.querySelectorAll('button')).find(function(x){
          return (x.innerText||'').trim()==='Comment' && !(x.getAttribute('aria-label')||'').trim()
@@ -435,7 +589,7 @@ class LinkedIn {
     await sleep(2500);
 
     const cleared = await this._eval(
-      `var li=document.querySelector('div[data-hs-idx=\"${idx}\"]');
+      `var li=document.querySelector('[data-hs-idx=\"${idx}\"]');
        var ed=li && (li.querySelector('.ql-editor')||li.querySelector('div[role=textbox]'));
        return ed ? (ed.innerText||'').trim().length===0 : true;`
     ).catch(() => true);
@@ -461,7 +615,7 @@ class LinkedIn {
   async reshare(idx, { dryRun = false } = {}) {
     // Open the Repost dropdown on the target post.
     const opened = await this._eval(
-      `var li=document.querySelector('div[data-hs-idx=\"${idx}\"]');
+      `var li=document.querySelector('[data-hs-idx=\"${idx}\"]');
        if(!li) return 'no_post';
        li.scrollIntoView({block:'center'});
        var b=[].slice.call(li.querySelectorAll('button')).find(function(x){ return (x.getAttribute('aria-label')||'')==='Repost'; });
@@ -563,7 +717,7 @@ class LinkedIn {
       if (st.rendered > 0 && !st.present) return { ok: true };
       if (!st.rendered) continue;
       if (dryRun) { this.log("DRY RUN — reshare located on profile, not deleting"); return { ok: false, reason: "dry_run", dryRun: true }; }
-      await this.c.evaluate(this.tab, "window.scrollTo(0, 120)").catch(() => {});
+      await this._scrollTop(120);
       await sleep(900);
       const cc = parse(await this.c.evaluate(this.tab, caretJs).catch(() => "null"));
       if (!cc) continue;
@@ -623,10 +777,10 @@ class LinkedIn {
     await this.c.waitReady(this.tab, { tag: "linkedin" }).catch(() => {});
     await sleep(3000);
     for (let i = 0; i < 2; i++) {
-      await this.c.evaluate(this.tab, "window.scrollBy(0, window.innerHeight)").catch(() => {});
+      await this._scrollBy("window.innerHeight");
       await sleep(1500);
     }
-    await this.c.evaluate(this.tab, "window.scrollTo(0,0)").catch(() => {});
+    await this._scrollTop(0);
     await sleep(700);
 
     const raw = await this._eval(
@@ -751,7 +905,7 @@ class LinkedIn {
     await this.c.navigate(this.tab, profileUrl);
     await this.c.waitReady(this.tab, { tag: "linkedin" }).catch(() => {});
     await sleep(3500);
-    await this.c.evaluate(this.tab, "window.scrollTo(0,0)").catch(() => {});
+    await this._scrollTop(0);
     await sleep(500);
 
     // 1. Connect on the top card?
@@ -843,22 +997,54 @@ class LinkedIn {
       maxLikes = 3,
       maxComments = 1,
       scrapeLimit = 12,
+      useFeedApi = true,
       dryRun = false,
     } = hooks;
 
-    const posts = await this.scrapeFeed({ limit: scrapeLimit });
-    this.log(`scraped ${posts.length} feed post(s)`);
+    // Candidate pool: prefer the voyager feed API (~26 posts, full bodies) over
+    // the DOM (~3 truncated cards). Fall back to scraping if the API is blocked,
+    // so engagement degrades rather than stopping.
+    let posts = [];
+    let viaApi = false;
+    if (useFeedApi) {
+      posts = await this.fetchFeedCandidates({ limit: Math.max(scrapeLimit, 25) });
+      viaApi = posts.length > 0;
+    }
+    if (!viaApi) {
+      posts = await this.scrapeFeed({ limit: scrapeLimit });
+      this.log(`scraped ${posts.length} feed post(s) (DOM${useFeedApi ? " — API returned none" : ""})`);
+    } else {
+      this.log(`${posts.length} feed candidate(s) via API`);
+    }
 
-    const ranked = posts
-      .map((p) => ({ ...p, key: keyOf(p), score: score(p) }))
+    // `score` may be async (the LLM relevance scorer is) — await it. Without the
+    // await, `p.score` is a Promise, `Promise >= minScore` is always false, and
+    // `ranked` is silently always empty. Parity with the X engine.
+    const scored = await Promise.all(
+      posts.map(async (p) => ({ ...p, key: keyOf(p), score: await score(p) }))
+    );
+    const ranked = scored
       .filter((p) => !seen.has(p.key) && p.score >= minScore)
       .sort((a, b) => b.score - a.score);
     this.log(`${ranked.length} relevant, un-engaged post(s) (min score ${minScore})`);
 
+    // API candidates carry a permalink but no DOM index — open the post first so
+    // the existing index-based like()/comment() have a card to act on. DOM-scraped
+    // candidates already have a live `idx` on the feed page, so they act in place.
+    const target = async (p) => {
+      if (!viaApi) return typeof p.idx === "number" ? p.idx : null;
+      if (!p.permalink) return null;
+      // Opening the post is read-only, so dry runs navigate too — that's what
+      // makes a dry run actually exercise the like/comment path end to end.
+      return (await this.openPost(p.permalink)) ? 0 : null;
+    };
+
     let likes = 0;
     for (const p of ranked.slice(0, maxLikes)) {
       if (p.liked) { seen.add(p.key); continue; }
-      if (await this.like(p.idx, { dryRun })) {
+      const idx = await target(p);
+      if (idx === null) { this.log(`could not open post by @${p.author || "?"} — skipping`); continue; }
+      if (await this.like(idx, { dryRun })) {
         likes++; seen.add(p.key);
         this.log(`${dryRun ? "[dry] " : ""}liked @${p.author || "?"} (score ${p.score})`);
         if (!dryRun && onLike) await onLike(p, { score: p.score });
@@ -870,7 +1056,9 @@ class LinkedIn {
       for (const p of ranked.slice(0, maxComments)) {
         const text = await generateComment(p);
         if (!text) continue;
-        const res = await this.comment(p.idx, text, { dryRun });
+        const idx = await target(p);
+        if (idx === null) { this.log(`could not open post by @${p.author || "?"} — skipping comment`); continue; }
+        const res = await this.comment(idx, text, { dryRun });
         if (res.dryRun) { this.log(`[dry] would comment on @${p.author || "?"}: "${text.slice(0, 60)}..."`); comments++; continue; }
         if (res.ok) {
           comments++; seen.add(p.key);

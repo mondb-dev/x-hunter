@@ -127,6 +127,21 @@ Measure → correlate → select, for reposts/quotes/reshares:
 - `runner/lib/amplify_performance.js` — correlates source/topic → engagement to
   bias the next pick.
 
+## Feed engagement (like / comment)
+
+- `runner/x_engage.js` / `runner/linkedin_engage.js` — score feed candidates on
+  belief-axis relevance (local LLM, 0–3, gate `LI_RELEVANCE_MIN`, default 2),
+  like the top `LI_MAX_LIKES` (3) and comment on `LI_MAX_COMMENTS` (1). Comments
+  are claim-verified, composed on-voice, then voice/fact-check gated.
+- LinkedIn candidates come from the **voyager feed API**
+  (`LinkedIn.fetchFeedCandidates`), not the rendered DOM: the feed only ever
+  renders ~3 cards for this session, while the API returns ~26 with full post
+  bodies. `engage()` opens each target's permalink (`LinkedIn.openPost`) and acts
+  there; it falls back to `scrapeFeed` if the API is unavailable. Set
+  `useFeedApi: false` to force the DOM path.
+- Both engines score asynchronously — `engage()` **must** `await` the scorer.
+  Regression-tested in `runner/tests/run_tests.js` → "LinkedIn engagement wiring".
+
 ## Networking
 
 - LinkedIn: **Follow-first** for cold search targets; Connect only for warm
