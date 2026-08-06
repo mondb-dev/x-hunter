@@ -1,8 +1,8 @@
 {
   "schema_version": "1.0",
-  "generated_at": "2026-08-05T20:53:59.002Z",
+  "generated_at": "2026-08-05T23:54:02.283Z",
   "method": "mechanical_registry_v1",
-  "profiled_at": "2026-08-05T20:54:08.983Z",
+  "profiled_at": "2026-08-05T23:54:24.574Z",
   "sources": [
     {
       "domain": "theguardian.com",
@@ -11,7 +11,7 @@
       "first_seen_at": "2026-03-27T23:17:00Z",
       "last_seen_at": "2026-08-01T23:25:10.497Z",
       "discovery": {
-        "distinct_urls": 713,
+        "distinct_urls": 715,
         "example_urls": [
           "https://www.theguardian.com/us-news/2026/jun/23/trump-immigration-courthouse-arrest-policy",
           "https://www.theguardian.com/us-news/2026/jun/28/ice-minnesota-defending-democracy",
@@ -21,7 +21,7 @@
         ],
         "origin_counts": {
           "ontology_evidence": 42,
-          "reading_queue": 679,
+          "reading_queue": 681,
           "journals": 112,
           "articles": 3
         },
@@ -72,7 +72,7 @@
         "breadth": {
           "score": 0.94,
           "basis": [
-            "distinct_urls:713",
+            "distinct_urls:715",
             "distinct_axes:17",
             "origin_types:4"
           ]
@@ -112,7 +112,7 @@
             "newsroom_domain_pattern",
             "article_path_seen",
             "doi_or_identifier_path_seen",
-            "distinct_urls:713",
+            "distinct_urls:715",
             "distinct_axes:17",
             "origin_types:4",
             "referring_accounts:0",
@@ -697,7 +697,7 @@
       "first_seen_at": "2026-06-22T00:15:00Z",
       "last_seen_at": "2026-08-01T08:20:11.076Z",
       "discovery": {
-        "distinct_urls": 486,
+        "distinct_urls": 488,
         "example_urls": [
           "https://www.nytimes.com/2026/06/19/world/canada/frank-stronach-trial-guilty-sex-charges.html",
           "https://www.nytimes.com/2026/06/27/world/americas/mexican-officials-us-informants.html",
@@ -707,7 +707,7 @@
         ],
         "origin_counts": {
           "ontology_evidence": 16,
-          "reading_queue": 494,
+          "reading_queue": 496,
           "journals": 38
         },
         "distinct_referring_accounts": 0,
@@ -749,7 +749,7 @@
         "breadth": {
           "score": 0.8799999999999999,
           "basis": [
-            "distinct_urls:486",
+            "distinct_urls:488",
             "distinct_axes:10",
             "origin_types:3"
           ]
@@ -768,7 +768,7 @@
           ]
         },
         "profile": {
-          "score": 0.16,
+          "score": 0,
           "confidence": 0.55,
           "basis": [
             "meta_author:false",
@@ -776,7 +776,7 @@
             "canonical:false",
             "about:false",
             "contact:false",
-            "corrections:true",
+            "corrections:false",
             "outbound_links:0",
             "opinion_marker:false"
           ]
@@ -788,7 +788,7 @@
           "basis": [
             "newsroom_domain_pattern",
             "article_path_seen",
-            "distinct_urls:486",
+            "distinct_urls:488",
             "distinct_axes:10",
             "origin_types:3",
             "referring_accounts:0",
@@ -798,7 +798,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-08-02T23:45:27.094Z",
+        "fetched_at": "2026-08-05T23:54:02.924Z",
         "homepage_url": "https://nytimes.com/",
         "example_url": "https://www.nytimes.com/2026/06/19/world/canada/frank-stronach-trial-guilty-sex-charges.html",
         "homepage_status": 200,
@@ -813,8 +813,8 @@
           "has_canonical": true,
           "has_about_link": false,
           "has_contact_link": false,
-          "has_corrections_link": true,
-          "outbound_links_count": 5,
+          "has_corrections_link": false,
+          "outbound_links_count": 0,
           "opinion_marker": true
         },
         "example": {
@@ -1209,7 +1209,7 @@
       "first_seen_at": "2026-06-26T07:05:00Z",
       "last_seen_at": "2026-08-03T02:54:32.258Z",
       "discovery": {
-        "distinct_urls": 431,
+        "distinct_urls": 432,
         "example_urls": [
           "https://www.bbc.co.uk/news/articles/cn8qxz6qypyo",
           "https://www.bbc.co.uk/news/articles/cn075j04pnyo?at_medium=RSS&amp;at_campaign=rss",
@@ -1219,7 +1219,7 @@
         ],
         "origin_counts": {
           "ontology_evidence": 6,
-          "reading_queue": 442,
+          "reading_queue": 443,
           "journals": 16,
           "articles": 1
         },
@@ -1255,7 +1255,7 @@
         "breadth": {
           "score": 0.8233333333333333,
           "basis": [
-            "distinct_urls:431",
+            "distinct_urls:432",
             "distinct_axes:4",
             "origin_types:4"
           ]
@@ -1293,7 +1293,7 @@
           "method": "mechanical_v1",
           "basis": [
             "newsroom_domain_pattern",
-            "distinct_urls:431",
+            "distinct_urls:432",
             "distinct_axes:4",
             "origin_types:4",
             "referring_accounts:0",
@@ -1672,7 +1672,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-08-02T23:45:47.104Z",
+        "fetched_at": "2026-08-05T23:54:22.932Z",
         "homepage_url": "https://washingtonpost.com/",
         "example_url": "https://www.washingtonpost.com/world/2026/04/13/us-iran-blockade-strait-hormuz-oil/",
         "homepage_status": null,
@@ -1796,7 +1796,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-08-02T23:45:47.808Z",
+        "fetched_at": "2026-08-05T23:54:23.606Z",
         "homepage_url": "https://bbc.com/",
         "example_url": "https://www.bbc.com/news/articles/cgmdw4vn7y2o?at_medium=RSS&amp;at_campaign=rss",
         "homepage_status": 200,
@@ -1832,7 +1832,7 @@
       "entity": "Pcij",
       "kind": "unknown",
       "first_seen_at": "2026-07-08T04:32:07.894Z",
-      "last_seen_at": "2026-08-05T20:24:47.138Z",
+      "last_seen_at": "2026-08-05T21:54:45.744Z",
       "discovery": {
         "distinct_urls": 13,
         "example_urls": [
@@ -1843,9 +1843,9 @@
           "https://pcij.org/2026/05/25/7-reasons-why-the-party-list-system-serves-dynasties-not-democracy/"
         ],
         "origin_counts": {
-          "ontology_evidence": 25,
+          "ontology_evidence": 28,
           "reading_queue": 14,
-          "journals": 47,
+          "journals": 49,
           "articles": 1
         },
         "distinct_referring_accounts": 0,
@@ -2101,7 +2101,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-08-02T23:45:48.463Z",
+        "fetched_at": "2026-08-05T23:54:24.574Z",
         "homepage_url": "https://google.com/",
         "example_url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQG8zTjzNOXrSBZwvSTLobfen2T2Mfxyn8MYVxW4sIU6cWottxkV4pJs_p6fwS7LJGs_vuED8LS-hCfYDaWBVPP6g5GilaCYMrJml-ow5K6SCv_H_b1Dl2x1bJE8PTS68J1lar6YIqGro0gdLxt0MIOMv-l1vVmmO0WJQtLSOEieMA6I7dl7eRgRC0BRXQWnC1DBXjH9CBNLq5ag1EbSnkyImyoNmXyv0qV7VQUvoAHc5OC2odagG5YXdhPj4Im_aZZUwd8=",
         "homepage_status": 200,
@@ -3233,9 +3233,9 @@
       "entity": "T Co",
       "kind": "unknown",
       "first_seen_at": "2016-05-05T18:57:30.000Z",
-      "last_seen_at": "2026-08-05T15:05:14.000Z",
+      "last_seen_at": "2026-08-05T22:28:53.000Z",
       "discovery": {
-        "distinct_urls": 12358,
+        "distinct_urls": 12369,
         "example_urls": [
           "https://t.co/pJSE124ec4",
           "https://t.co/Soz8BXPWaa",
@@ -3244,7 +3244,7 @@
           "https://t.co/cYaqYDRp08"
         ],
         "origin_counts": {
-          "feed_buffer": 9930,
+          "feed_buffer": 9945,
           "feed_buffer_reply": 4883,
           "articles": 3
         },
@@ -3287,7 +3287,7 @@
         "breadth": {
           "score": 0.53,
           "basis": [
-            "distinct_urls:12358",
+            "distinct_urls:12369",
             "distinct_axes:0",
             "origin_types:3"
           ]
@@ -3326,7 +3326,7 @@
           "basis": [
             "unknown_domain_pattern",
             "doi_or_identifier_path_seen",
-            "distinct_urls:12358",
+            "distinct_urls:12369",
             "distinct_axes:0",
             "origin_types:3",
             "referring_accounts:2722",
@@ -3372,9 +3372,9 @@
       "entity": "Inquirer",
       "kind": "unknown",
       "first_seen_at": "2026-05-09T10:15:15.053Z",
-      "last_seen_at": "2026-08-05T03:46:16.697Z",
+      "last_seen_at": "2026-08-05T21:54:45.718Z",
       "discovery": {
-        "distinct_urls": 273,
+        "distinct_urls": 274,
         "example_urls": [
           "https://newsinfo.inquirer.net/2266316/nbi-on-cayetano-position-that-cant-be-defended-by-facts-is-done-with-insults",
           "https://www.inquirer.net/capiz-broadcaster-shooting-probe-widens-as-cops-form-task-force",
@@ -3384,7 +3384,7 @@
         ],
         "origin_counts": {
           "ontology_evidence": 114,
-          "journals": 356,
+          "journals": 357,
           "articles": 4
         },
         "distinct_referring_accounts": 0,
@@ -3433,7 +3433,7 @@
         "breadth": {
           "score": 0.8799999999999999,
           "basis": [
-            "distinct_urls:273",
+            "distinct_urls:274",
             "distinct_axes:18",
             "origin_types:3"
           ]
@@ -3471,7 +3471,7 @@
           "method": "mechanical_v1",
           "basis": [
             "unknown_domain_pattern",
-            "distinct_urls:273",
+            "distinct_urls:274",
             "distinct_axes:18",
             "origin_types:3",
             "referring_accounts:0",
@@ -3672,9 +3672,9 @@
       "entity": "Techcrunch",
       "kind": "unknown",
       "first_seen_at": "2026-06-22T23:31:00Z",
-      "last_seen_at": "2026-08-05T18:54:39.823Z",
+      "last_seen_at": "2026-08-05T21:54:45.744Z",
       "discovery": {
-        "distinct_urls": 106,
+        "distinct_urls": 107,
         "example_urls": [
           "https://techcrunch.com/2026/07/30/judge-says-trump-admin-still-lacks-evidence-for-anthropic-supply-chain-risk-label/",
           "https://techcrunch.com/2026/06/22/shareholders-sue-ubers-board-over-sexual-assaults-other-incidents/",
@@ -3683,8 +3683,8 @@
           "https://techcrunch.com/2026/07/09/block-reaches-45m-settlement-with-46-states-over-cash-app-fraud-probe/"
         ],
         "origin_counts": {
-          "ontology_evidence": 45,
-          "journals": 119
+          "ontology_evidence": 46,
+          "journals": 120
         },
         "distinct_referring_accounts": 0,
         "sample_referring_accounts": [],
@@ -3732,7 +3732,7 @@
         "breadth": {
           "score": 0.82,
           "basis": [
-            "distinct_urls:106",
+            "distinct_urls:107",
             "distinct_axes:17",
             "origin_types:2"
           ]
@@ -3771,7 +3771,7 @@
           "basis": [
             "unknown_domain_pattern",
             "article_path_seen",
-            "distinct_urls:106",
+            "distinct_urls:107",
             "distinct_axes:17",
             "origin_types:2",
             "referring_accounts:0",
@@ -13044,6 +13044,133 @@
       }
     },
     {
+      "domain": "proxy-cheap.com",
+      "entity": "Proxy-Cheap",
+      "kind": "unknown",
+      "first_seen_at": "2026-07-08T16:12:40.000Z",
+      "last_seen_at": "2026-08-05T21:18:32.997Z",
+      "discovery": {
+        "distinct_urls": 9,
+        "example_urls": [
+          "https://www.proxy-cheap.com/?twclid=241rx3okk7tuov8hduxv4r27su",
+          "https://www.proxy-cheap.com/?twclid=2dkicnbroskp3mzawf8lfz9fot",
+          "https://www.proxy-cheap.com/?twclid=28210jabvqtzu70c0jmxkja89e",
+          "https://www.proxy-cheap.com/?twclid=21emsm0lj07wdgt8fjg7v6l9su",
+          "https://www.proxy-cheap.com/?twclid=265gyz2h3nkf7kltn9dkzf3r5w"
+        ],
+        "origin_counts": {
+          "feed_buffer_reply": 1,
+          "feed_buffer": 8
+        },
+        "distinct_referring_accounts": 1,
+        "sample_referring_accounts": [
+          "proxycheap"
+        ],
+        "distinct_axes": []
+      },
+      "claims": {
+        "total": 0,
+        "supported": 0,
+        "refuted": 0,
+        "contested": 0,
+        "unverified": 0,
+        "resolved_count": 0
+      },
+      "structural_features": {
+        "has_search_paths": false,
+        "has_article_paths": false,
+        "has_doi_paths": false
+      },
+      "ratings": {
+        "provenance": {
+          "score": 0.45,
+          "basis": [
+            "unknown_domain_pattern"
+          ]
+        },
+        "breadth": {
+          "score": 0.38249999999999995,
+          "basis": [
+            "distinct_urls:9",
+            "distinct_axes:0",
+            "origin_types:2"
+          ]
+        },
+        "corroboration": {
+          "score": 0.2833333333333333,
+          "basis": [
+            "referring_accounts:1",
+            "origin_types:2"
+          ]
+        },
+        "track_record": {
+          "score": null,
+          "basis": [
+            "no_resolved_claims_observed"
+          ]
+        },
+        "profile": {
+          "score": 0.19,
+          "confidence": 0.55,
+          "basis": [
+            "meta_author:false",
+            "published_time:false",
+            "canonical:true",
+            "about:false",
+            "contact:false",
+            "corrections:false",
+            "outbound_links:9",
+            "opinion_marker:false"
+          ]
+        },
+        "overall": {
+          "score": 0.419609375,
+          "confidence": 0.330825,
+          "method": "mechanical_v1",
+          "basis": [
+            "unknown_domain_pattern",
+            "distinct_urls:9",
+            "distinct_axes:0",
+            "origin_types:2",
+            "referring_accounts:1",
+            "origin_types:2",
+            "track_record_unavailable"
+          ]
+        }
+      },
+      "profile": {
+        "fetched_at": "2026-08-05T00:08:00.787Z",
+        "homepage_url": "https://proxy-cheap.com/",
+        "example_url": "https://www.proxy-cheap.com/?twclid=241rx3okk7tuov8hduxv4r27su",
+        "homepage_status": 200,
+        "example_status": 200,
+        "homepage_final_url": "https://www.proxy-cheap.com/",
+        "example_final_url": "https://www.proxy-cheap.com/?twclid=241rx3okk7tuov8hduxv4r27su",
+        "homepage_content_type": "text/html; charset=utf-8",
+        "example_content_type": "text/html; charset=utf-8",
+        "homepage": {
+          "has_meta_author": false,
+          "has_published_time": false,
+          "has_canonical": true,
+          "has_about_link": false,
+          "has_contact_link": false,
+          "has_corrections_link": false,
+          "outbound_links_count": 9,
+          "opinion_marker": false
+        },
+        "example": {
+          "has_meta_author": false,
+          "has_published_time": false,
+          "has_canonical": true,
+          "has_about_link": false,
+          "has_contact_link": false,
+          "has_corrections_link": false,
+          "outbound_links_count": 9,
+          "opinion_marker": false
+        }
+      }
+    },
+    {
       "domain": "imbue.com",
       "entity": "Imbue",
       "kind": "unknown",
@@ -16452,133 +16579,6 @@
           "has_contact_link": true,
           "has_corrections_link": false,
           "outbound_links_count": 14,
-          "opinion_marker": false
-        }
-      }
-    },
-    {
-      "domain": "proxy-cheap.com",
-      "entity": "Proxy-Cheap",
-      "kind": "unknown",
-      "first_seen_at": "2026-07-08T16:12:40.000Z",
-      "last_seen_at": "2026-08-04T11:49:01.892Z",
-      "discovery": {
-        "distinct_urls": 8,
-        "example_urls": [
-          "https://www.proxy-cheap.com/?twclid=241rx3okk7tuov8hduxv4r27su",
-          "https://www.proxy-cheap.com/?twclid=2dkicnbroskp3mzawf8lfz9fot",
-          "https://www.proxy-cheap.com/?twclid=28210jabvqtzu70c0jmxkja89e",
-          "https://www.proxy-cheap.com/?twclid=21emsm0lj07wdgt8fjg7v6l9su",
-          "https://www.proxy-cheap.com/?twclid=265gyz2h3nkf7kltn9dkzf3r5w"
-        ],
-        "origin_counts": {
-          "feed_buffer_reply": 1,
-          "feed_buffer": 7
-        },
-        "distinct_referring_accounts": 1,
-        "sample_referring_accounts": [
-          "proxycheap"
-        ],
-        "distinct_axes": []
-      },
-      "claims": {
-        "total": 0,
-        "supported": 0,
-        "refuted": 0,
-        "contested": 0,
-        "unverified": 0,
-        "resolved_count": 0
-      },
-      "structural_features": {
-        "has_search_paths": false,
-        "has_article_paths": false,
-        "has_doi_paths": false
-      },
-      "ratings": {
-        "provenance": {
-          "score": 0.45,
-          "basis": [
-            "unknown_domain_pattern"
-          ]
-        },
-        "breadth": {
-          "score": 0.3533333333333333,
-          "basis": [
-            "distinct_urls:8",
-            "distinct_axes:0",
-            "origin_types:2"
-          ]
-        },
-        "corroboration": {
-          "score": 0.2833333333333333,
-          "basis": [
-            "referring_accounts:1",
-            "origin_types:2"
-          ]
-        },
-        "track_record": {
-          "score": null,
-          "basis": [
-            "no_resolved_claims_observed"
-          ]
-        },
-        "profile": {
-          "score": 0.19,
-          "confidence": 0.55,
-          "basis": [
-            "meta_author:false",
-            "published_time:false",
-            "canonical:true",
-            "about:false",
-            "contact:false",
-            "corrections:false",
-            "outbound_links:9",
-            "opinion_marker:false"
-          ]
-        },
-        "overall": {
-          "score": 0.41322916666666665,
-          "confidence": 0.30219999999999997,
-          "method": "mechanical_v1",
-          "basis": [
-            "unknown_domain_pattern",
-            "distinct_urls:8",
-            "distinct_axes:0",
-            "origin_types:2",
-            "referring_accounts:1",
-            "origin_types:2",
-            "track_record_unavailable"
-          ]
-        }
-      },
-      "profile": {
-        "fetched_at": "2026-08-05T00:08:00.787Z",
-        "homepage_url": "https://proxy-cheap.com/",
-        "example_url": "https://www.proxy-cheap.com/?twclid=241rx3okk7tuov8hduxv4r27su",
-        "homepage_status": 200,
-        "example_status": 200,
-        "homepage_final_url": "https://www.proxy-cheap.com/",
-        "example_final_url": "https://www.proxy-cheap.com/?twclid=241rx3okk7tuov8hduxv4r27su",
-        "homepage_content_type": "text/html; charset=utf-8",
-        "example_content_type": "text/html; charset=utf-8",
-        "homepage": {
-          "has_meta_author": false,
-          "has_published_time": false,
-          "has_canonical": true,
-          "has_about_link": false,
-          "has_contact_link": false,
-          "has_corrections_link": false,
-          "outbound_links_count": 9,
-          "opinion_marker": false
-        },
-        "example": {
-          "has_meta_author": false,
-          "has_published_time": false,
-          "has_canonical": true,
-          "has_about_link": false,
-          "has_contact_link": false,
-          "has_corrections_link": false,
-          "outbound_links_count": 9,
           "opinion_marker": false
         }
       }
@@ -28428,6 +28428,132 @@
       }
     },
     {
+      "domain": "80.lv",
+      "entity": "80 Lv",
+      "kind": "unknown",
+      "first_seen_at": "2026-07-25T16:41:15.717Z",
+      "last_seen_at": "2026-08-05T21:03:31.211Z",
+      "discovery": {
+        "distinct_urls": 6,
+        "example_urls": [
+          "https://80.lv/articles/this-cyberpunk-cozy-game-allows-you-to-build-your-own-rain-soaked-world?utm_source=pa-x&utm_medium=cpc&twclid=24138z1ynt8psd4xn6ca3421h5",
+          "https://80.lv/articles/full-body-hand-facial-motion-capture-from-any-video-in-blender?utm_source=pa-x&utm_medium=cpc&twclid=24pjq04wg39h2xjcb31xo7m6c3",
+          "https://80.lv/articles/realistic-torso-deformation-with-rbf-muscle-rig?utm_source=pa-x&utm_medium=cpc&twclid=29tpso9x1r5kp8la08uohw2gsu",
+          "https://80.lv/articles/jesse-miettinen-s-the-last-of-us-like-generator-finally-launches?utm_source=pa-x&utm_medium=cpc&twclid=26cqfuhyc4w3w7wtzwg060bdyx",
+          "https://80.lv/articles/the-forgotten-metal-technique-behind-2008-s-iron-man?utm_source=pa-x&utm_medium=cpc&twclid=2dzgarhis82p5j356vdwjzmrg0"
+        ],
+        "origin_counts": {
+          "feed_buffer": 6
+        },
+        "distinct_referring_accounts": 1,
+        "sample_referring_accounts": [
+          "80level"
+        ],
+        "distinct_axes": []
+      },
+      "claims": {
+        "total": 0,
+        "supported": 0,
+        "refuted": 0,
+        "contested": 0,
+        "unverified": 0,
+        "resolved_count": 0
+      },
+      "structural_features": {
+        "has_search_paths": false,
+        "has_article_paths": false,
+        "has_doi_paths": false
+      },
+      "ratings": {
+        "provenance": {
+          "score": 0.45,
+          "basis": [
+            "unknown_domain_pattern"
+          ]
+        },
+        "breadth": {
+          "score": 0.235,
+          "basis": [
+            "distinct_urls:6",
+            "distinct_axes:0",
+            "origin_types:1"
+          ]
+        },
+        "corroboration": {
+          "score": 0.19583333333333333,
+          "basis": [
+            "referring_accounts:1",
+            "origin_types:1"
+          ]
+        },
+        "track_record": {
+          "score": null,
+          "basis": [
+            "no_resolved_claims_observed"
+          ]
+        },
+        "profile": {
+          "score": 0.54,
+          "confidence": 0.75,
+          "basis": [
+            "meta_author:false",
+            "published_time:true",
+            "canonical:true",
+            "about:true",
+            "contact:false",
+            "corrections:false",
+            "outbound_links:15",
+            "opinion_marker:false"
+          ]
+        },
+        "overall": {
+          "score": 0.379140625,
+          "confidence": 0.22447499999999998,
+          "method": "mechanical_v1",
+          "basis": [
+            "unknown_domain_pattern",
+            "distinct_urls:6",
+            "distinct_axes:0",
+            "origin_types:1",
+            "referring_accounts:1",
+            "origin_types:1",
+            "track_record_unavailable"
+          ]
+        }
+      },
+      "profile": {
+        "fetched_at": "2026-08-03T10:15:47.927Z",
+        "homepage_url": "https://80.lv/",
+        "example_url": "https://80.lv/articles/this-cyberpunk-cozy-game-allows-you-to-build-your-own-rain-soaked-world?utm_source=pa-x&utm_medium=cpc&twclid=24138z1ynt8psd4xn6ca3421h5",
+        "homepage_status": 200,
+        "example_status": 200,
+        "homepage_final_url": "https://80.lv/",
+        "example_final_url": "https://80.lv/articles/this-cyberpunk-cozy-game-allows-you-to-build-your-own-rain-soaked-world?utm_source=pa-x&utm_medium=cpc&twclid=24138z1ynt8psd4xn6ca3421h5",
+        "homepage_content_type": "text/html; charset=utf-8",
+        "example_content_type": "text/html; charset=utf-8",
+        "homepage": {
+          "has_meta_author": false,
+          "has_published_time": true,
+          "has_canonical": true,
+          "has_about_link": true,
+          "has_contact_link": false,
+          "has_corrections_link": false,
+          "outbound_links_count": 13,
+          "opinion_marker": false
+        },
+        "example": {
+          "has_meta_author": false,
+          "has_published_time": true,
+          "has_canonical": true,
+          "has_about_link": true,
+          "has_contact_link": false,
+          "has_corrections_link": false,
+          "outbound_links_count": 15,
+          "opinion_marker": false
+        }
+      }
+    },
+    {
       "domain": "33club.jp",
       "entity": "33club Jp",
       "kind": "unknown",
@@ -32005,7 +32131,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-08-02T22:15:30.409Z",
+        "fetched_at": "2026-08-05T22:24:03.298Z",
         "homepage_url": "https://prophecyviewpoint.com/",
         "example_url": "https://www.prophecyviewpoint.com/htdocs/16a-Secret%20Rapture-Part%20I.htm?twclid=297aa0b56gu0z1vkj3ccaj3t3o",
         "homepage_status": 200,
@@ -33131,7 +33257,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-08-02T16:15:27.913Z",
+        "fetched_at": "2026-08-05T21:54:00.265Z",
         "homepage_url": "https://buildordie.ai/",
         "example_url": "https://buildordie.ai/?twclid=2dk5bzhoclutd1xq1e7jd5z6rq",
         "homepage_status": 530,
@@ -33257,7 +33383,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-08-02T16:45:20.428Z",
+        "fetched_at": "2026-08-05T21:54:01.357Z",
         "homepage_url": "https://constella.app/",
         "example_url": "https://constella.app/?twclid=27y7gzef47njy1aqk6w8xg9x6q",
         "homepage_status": 200,
@@ -33383,7 +33509,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-08-02T16:45:21.091Z",
+        "fetched_at": "2026-08-05T21:54:02.067Z",
         "homepage_url": "https://karma.domains/",
         "example_url": "https://karma.domains/app/?utm_source=x.com&utm_medium=cpc&utm_campaign=targeting&utm_content=interests_seo",
         "homepage_status": 403,
@@ -33509,7 +33635,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-08-02T16:45:23.545Z",
+        "fetched_at": "2026-08-05T21:54:04.461Z",
         "homepage_url": "https://propercloth.com/",
         "example_url": "https://propercloth.com/dress-shirts/jackson-blue-red-and-yellow-country-plaid-580653.html?utm_source=X&twclid=2auvzg6t8okkwlcwbl0m6jjjpm&utm_content=TWITTER_TIMELINE&utm_campaign=41332274&utm_medium=paidsocial&utm_term=twitter",
         "homepage_status": 200,
@@ -33635,7 +33761,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-08-02T16:45:26.882Z",
+        "fetched_at": "2026-08-05T22:24:06.936Z",
         "homepage_url": "https://robinhood.com/",
         "example_url": "https://robinhood.com/us/en/about/crypto/?twclid=29pd7fgrhb1gsdhy8smyxe6kbg",
         "homepage_status": 200,
@@ -33761,7 +33887,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-08-02T17:45:24.089Z",
+        "fetched_at": "2026-08-05T22:24:10.435Z",
         "homepage_url": "https://novelmint.ai/",
         "example_url": "https://novelmint.ai/?twclid=24swsjnpk4f6tjvwc81a9jb0ee",
         "homepage_status": 200,
@@ -33887,7 +34013,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-08-02T17:45:27.767Z",
+        "fetched_at": "2026-08-05T22:24:14.608Z",
         "homepage_url": "https://instacart.com/",
         "example_url": "https://www.instacart.com/store/brands/budweiser?ic_source=social&ic_campaignid=2026&twclid=2dlv3d1a0x9ht77bw7gqwrn3ou",
         "homepage_status": 200,
@@ -34013,7 +34139,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-08-02T17:45:29.862Z",
+        "fetched_at": "2026-08-05T23:24:03.838Z",
         "homepage_url": "https://tow.dev/",
         "example_url": "https://tow.dev/?utm_source=twitter&utm_medium=cpc&utm_campaign=launch&utm_id=twitter_launch&twclid=26xxdbf1ybv4rz2smsfk823weq",
         "homepage_status": 200,
@@ -34139,7 +34265,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-08-02T18:15:23.665Z",
+        "fetched_at": "2026-08-05T23:24:05.478Z",
         "homepage_url": "https://cisco.com/",
         "example_url": "https://www.cisco.com/site/us/en/solutions/artificial-intelligence/agentic-ops/cisco-cloud-control/index.html?twclid=2duz592pw3kdegqcvwn4z7b0qh",
         "homepage_status": 200,
@@ -34265,7 +34391,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-08-02T20:45:33.457Z",
+        "fetched_at": "2026-08-05T23:24:07.487Z",
         "homepage_url": "https://figma.bot/",
         "example_url": "https://figma.bot/4erZ585?twclid=2c31nfwdd6xvlc3otoa9aoi4sv",
         "homepage_status": 200,
@@ -34281,7 +34407,7 @@
           "has_about_link": false,
           "has_contact_link": true,
           "has_corrections_link": false,
-          "outbound_links_count": 96,
+          "outbound_links_count": 95,
           "opinion_marker": false
         },
         "example": {
@@ -34391,7 +34517,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-08-02T18:15:28.765Z",
+        "fetched_at": "2026-08-05T23:24:10.592Z",
         "homepage_url": "https://telega.io/",
         "example_url": "https://telega.io/package/?r=Vz7qIZLvWm_r&utm_source=dsp_banner&utm_medium=cpc&utm_campaign=X%5BALL%5BS%5BD%5BM%5BAds%5BTGads%7Cs%7Cdsp_banner%7Cm%7Ccpc%7Cc%7C103%7Cct%7C102&twclid=29ffqq0bpqjb2yxu5ppn3bdkms",
         "homepage_status": 200,
@@ -34796,132 +34922,6 @@
           "has_contact_link": false,
           "has_corrections_link": false,
           "outbound_links_count": 0,
-          "opinion_marker": false
-        }
-      }
-    },
-    {
-      "domain": "80.lv",
-      "entity": "80 Lv",
-      "kind": "unknown",
-      "first_seen_at": "2026-07-25T16:41:15.717Z",
-      "last_seen_at": "2026-08-04T00:08:27.267Z",
-      "discovery": {
-        "distinct_urls": 5,
-        "example_urls": [
-          "https://80.lv/articles/this-cyberpunk-cozy-game-allows-you-to-build-your-own-rain-soaked-world?utm_source=pa-x&utm_medium=cpc&twclid=24138z1ynt8psd4xn6ca3421h5",
-          "https://80.lv/articles/full-body-hand-facial-motion-capture-from-any-video-in-blender?utm_source=pa-x&utm_medium=cpc&twclid=24pjq04wg39h2xjcb31xo7m6c3",
-          "https://80.lv/articles/realistic-torso-deformation-with-rbf-muscle-rig?utm_source=pa-x&utm_medium=cpc&twclid=29tpso9x1r5kp8la08uohw2gsu",
-          "https://80.lv/articles/jesse-miettinen-s-the-last-of-us-like-generator-finally-launches?utm_source=pa-x&utm_medium=cpc&twclid=26cqfuhyc4w3w7wtzwg060bdyx",
-          "https://80.lv/articles/the-forgotten-metal-technique-behind-2008-s-iron-man?utm_source=pa-x&utm_medium=cpc&twclid=2dzgarhis82p5j356vdwjzmrg0"
-        ],
-        "origin_counts": {
-          "feed_buffer": 5
-        },
-        "distinct_referring_accounts": 1,
-        "sample_referring_accounts": [
-          "80level"
-        ],
-        "distinct_axes": []
-      },
-      "claims": {
-        "total": 0,
-        "supported": 0,
-        "refuted": 0,
-        "contested": 0,
-        "unverified": 0,
-        "resolved_count": 0
-      },
-      "structural_features": {
-        "has_search_paths": false,
-        "has_article_paths": false,
-        "has_doi_paths": false
-      },
-      "ratings": {
-        "provenance": {
-          "score": 0.45,
-          "basis": [
-            "unknown_domain_pattern"
-          ]
-        },
-        "breadth": {
-          "score": 0.20583333333333334,
-          "basis": [
-            "distinct_urls:5",
-            "distinct_axes:0",
-            "origin_types:1"
-          ]
-        },
-        "corroboration": {
-          "score": 0.19583333333333333,
-          "basis": [
-            "referring_accounts:1",
-            "origin_types:1"
-          ]
-        },
-        "track_record": {
-          "score": null,
-          "basis": [
-            "no_resolved_claims_observed"
-          ]
-        },
-        "profile": {
-          "score": 0.54,
-          "confidence": 0.75,
-          "basis": [
-            "meta_author:false",
-            "published_time:true",
-            "canonical:true",
-            "about:true",
-            "contact:false",
-            "corrections:false",
-            "outbound_links:15",
-            "opinion_marker:false"
-          ]
-        },
-        "overall": {
-          "score": 0.37276041666666665,
-          "confidence": 0.19585000000000002,
-          "method": "mechanical_v1",
-          "basis": [
-            "unknown_domain_pattern",
-            "distinct_urls:5",
-            "distinct_axes:0",
-            "origin_types:1",
-            "referring_accounts:1",
-            "origin_types:1",
-            "track_record_unavailable"
-          ]
-        }
-      },
-      "profile": {
-        "fetched_at": "2026-08-03T10:15:47.927Z",
-        "homepage_url": "https://80.lv/",
-        "example_url": "https://80.lv/articles/this-cyberpunk-cozy-game-allows-you-to-build-your-own-rain-soaked-world?utm_source=pa-x&utm_medium=cpc&twclid=24138z1ynt8psd4xn6ca3421h5",
-        "homepage_status": 200,
-        "example_status": 200,
-        "homepage_final_url": "https://80.lv/",
-        "example_final_url": "https://80.lv/articles/this-cyberpunk-cozy-game-allows-you-to-build-your-own-rain-soaked-world?utm_source=pa-x&utm_medium=cpc&twclid=24138z1ynt8psd4xn6ca3421h5",
-        "homepage_content_type": "text/html; charset=utf-8",
-        "example_content_type": "text/html; charset=utf-8",
-        "homepage": {
-          "has_meta_author": false,
-          "has_published_time": true,
-          "has_canonical": true,
-          "has_about_link": true,
-          "has_contact_link": false,
-          "has_corrections_link": false,
-          "outbound_links_count": 13,
-          "opinion_marker": false
-        },
-        "example": {
-          "has_meta_author": false,
-          "has_published_time": true,
-          "has_canonical": true,
-          "has_about_link": true,
-          "has_contact_link": false,
-          "has_corrections_link": false,
-          "outbound_links_count": 15,
           "opinion_marker": false
         }
       }
