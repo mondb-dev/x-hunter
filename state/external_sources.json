@@ -1,8 +1,8 @@
 {
   "schema_version": "1.0",
-  "generated_at": "2026-08-06T03:54:07.993Z",
+  "generated_at": "2026-08-06T05:54:15.795Z",
   "method": "mechanical_registry_v1",
-  "profiled_at": "2026-08-06T03:54:18.793Z",
+  "profiled_at": "2026-08-06T05:54:17.058Z",
   "sources": [
     {
       "domain": "theguardian.com",
@@ -697,7 +697,7 @@
       "first_seen_at": "2026-06-22T00:15:00Z",
       "last_seen_at": "2026-08-01T08:20:11.076Z",
       "discovery": {
-        "distinct_urls": 489,
+        "distinct_urls": 490,
         "example_urls": [
           "https://www.nytimes.com/2026/06/19/world/canada/frank-stronach-trial-guilty-sex-charges.html",
           "https://www.nytimes.com/2026/06/27/world/americas/mexican-officials-us-informants.html",
@@ -707,7 +707,7 @@
         ],
         "origin_counts": {
           "ontology_evidence": 16,
-          "reading_queue": 497,
+          "reading_queue": 498,
           "journals": 38
         },
         "distinct_referring_accounts": 0,
@@ -749,7 +749,7 @@
         "breadth": {
           "score": 0.8799999999999999,
           "basis": [
-            "distinct_urls:489",
+            "distinct_urls:490",
             "distinct_axes:10",
             "origin_types:3"
           ]
@@ -788,7 +788,7 @@
           "basis": [
             "newsroom_domain_pattern",
             "article_path_seen",
-            "distinct_urls:489",
+            "distinct_urls:490",
             "distinct_axes:10",
             "origin_types:3",
             "referring_accounts:0",
@@ -1209,7 +1209,7 @@
       "first_seen_at": "2026-06-26T07:05:00Z",
       "last_seen_at": "2026-08-03T02:54:32.258Z",
       "discovery": {
-        "distinct_urls": 433,
+        "distinct_urls": 434,
         "example_urls": [
           "https://www.bbc.co.uk/news/articles/cn8qxz6qypyo",
           "https://www.bbc.co.uk/news/articles/cn075j04pnyo?at_medium=RSS&amp;at_campaign=rss",
@@ -1219,7 +1219,7 @@
         ],
         "origin_counts": {
           "ontology_evidence": 6,
-          "reading_queue": 444,
+          "reading_queue": 445,
           "journals": 16,
           "articles": 1
         },
@@ -1255,7 +1255,7 @@
         "breadth": {
           "score": 0.8233333333333333,
           "basis": [
-            "distinct_urls:433",
+            "distinct_urls:434",
             "distinct_axes:4",
             "origin_types:4"
           ]
@@ -1293,7 +1293,7 @@
           "method": "mechanical_v1",
           "basis": [
             "newsroom_domain_pattern",
-            "distinct_urls:433",
+            "distinct_urls:434",
             "distinct_axes:4",
             "origin_types:4",
             "referring_accounts:0",
@@ -3233,9 +3233,9 @@
       "entity": "T Co",
       "kind": "unknown",
       "first_seen_at": "2016-05-05T18:57:30.000Z",
-      "last_seen_at": "2026-08-06T03:20:13.000Z",
+      "last_seen_at": "2026-08-06T05:22:43.000Z",
       "discovery": {
-        "distinct_urls": 12507,
+        "distinct_urls": 12537,
         "example_urls": [
           "https://t.co/pJSE124ec4",
           "https://t.co/Soz8BXPWaa",
@@ -3244,7 +3244,7 @@
           "https://t.co/cYaqYDRp08"
         ],
         "origin_counts": {
-          "feed_buffer": 10096,
+          "feed_buffer": 10130,
           "feed_buffer_reply": 4894,
           "articles": 3
         },
@@ -3287,7 +3287,7 @@
         "breadth": {
           "score": 0.53,
           "basis": [
-            "distinct_urls:12507",
+            "distinct_urls:12537",
             "distinct_axes:0",
             "origin_types:3"
           ]
@@ -3326,7 +3326,7 @@
           "basis": [
             "unknown_domain_pattern",
             "doi_or_identifier_path_seen",
-            "distinct_urls:12507",
+            "distinct_urls:12537",
             "distinct_axes:0",
             "origin_types:3",
             "referring_accounts:2729",
@@ -7451,9 +7451,9 @@
       "entity": "Maventrading",
       "kind": "unknown",
       "first_seen_at": "2026-07-04T21:13:31.000Z",
-      "last_seen_at": "2026-08-06T00:08:34.459Z",
+      "last_seen_at": "2026-08-06T04:48:44.572Z",
       "discovery": {
-        "distinct_urls": 60,
+        "distinct_urls": 61,
         "example_urls": [
           "https://maventrading.com/lp/choose-your-challenge?twt_id=54608379&twclid=24irm75xuuvw6vkz1dgb8ui0sz",
           "https://maventrading.com/challenges/1-step?twt_id=54607786&twclid=24dguyzddfgso39sw5b667t4v6",
@@ -7463,7 +7463,7 @@
         ],
         "origin_counts": {
           "feed_buffer_reply": 11,
-          "feed_buffer": 49
+          "feed_buffer": 50
         },
         "distinct_referring_accounts": 1,
         "sample_referring_accounts": [
@@ -7494,7 +7494,7 @@
         "breadth": {
           "score": 0.47,
           "basis": [
-            "distinct_urls:60",
+            "distinct_urls:61",
             "distinct_axes:0",
             "origin_types:2"
           ]
@@ -7532,7 +7532,7 @@
           "method": "mechanical_v1",
           "basis": [
             "unknown_domain_pattern",
-            "distinct_urls:60",
+            "distinct_urls:61",
             "distinct_axes:0",
             "origin_types:2",
             "referring_accounts:1",
@@ -9987,6 +9987,133 @@
       }
     },
     {
+      "domain": "shipaton.com",
+      "entity": "Shipaton",
+      "kind": "unknown",
+      "first_seen_at": "2026-07-07T10:24:13.000Z",
+      "last_seen_at": "2026-08-06T05:33:55.981Z",
+      "discovery": {
+        "distinct_urls": 14,
+        "example_urls": [
+          "https://www.shipaton.com/events/?utm_source=x&utm_medium=cpc&utm_campaign=shipaton-traffic&twclid=2d8n4jkad805fesk63uxwuffy9",
+          "https://www.shipaton.com/?utm_source=x&utm_medium=cpc&utm_campaign=shipaton-traffic&twclid=22je13dnlq18zl09zml4n51co3",
+          "https://www.shipaton.com/?utm_source=x&utm_medium=cpc&utm_campaign=shipaton-traffic&twclid=26yl3o4snlo387h02mw4kh4yfe",
+          "https://www.shipaton.com/?utm_source=x&utm_medium=cpc&utm_campaign=shipaton-traffic&twclid=230e39i0w7hfcdaim51menkq4k",
+          "https://www.shipaton.com/?utm_source=x&utm_medium=cpc&utm_campaign=shipaton-traffic&twclid=2etlnjrf4bcnefsrgl7rph92ot"
+        ],
+        "origin_counts": {
+          "feed_buffer_reply": 2,
+          "feed_buffer": 12
+        },
+        "distinct_referring_accounts": 1,
+        "sample_referring_accounts": [
+          "revenuecat"
+        ],
+        "distinct_axes": []
+      },
+      "claims": {
+        "total": 0,
+        "supported": 0,
+        "refuted": 0,
+        "contested": 0,
+        "unverified": 0,
+        "resolved_count": 0
+      },
+      "structural_features": {
+        "has_search_paths": false,
+        "has_article_paths": false,
+        "has_doi_paths": false
+      },
+      "ratings": {
+        "provenance": {
+          "score": 0.45,
+          "basis": [
+            "unknown_domain_pattern"
+          ]
+        },
+        "breadth": {
+          "score": 0.47,
+          "basis": [
+            "distinct_urls:14",
+            "distinct_axes:0",
+            "origin_types:2"
+          ]
+        },
+        "corroboration": {
+          "score": 0.2833333333333333,
+          "basis": [
+            "referring_accounts:1",
+            "origin_types:2"
+          ]
+        },
+        "track_record": {
+          "score": null,
+          "basis": [
+            "no_resolved_claims_observed"
+          ]
+        },
+        "profile": {
+          "score": 0.22,
+          "confidence": 0.55,
+          "basis": [
+            "meta_author:false",
+            "published_time:false",
+            "canonical:true",
+            "about:false",
+            "contact:false",
+            "corrections:false",
+            "outbound_links:55",
+            "opinion_marker:false"
+          ]
+        },
+        "overall": {
+          "score": 0.43875,
+          "confidence": 0.4617,
+          "method": "mechanical_v1",
+          "basis": [
+            "unknown_domain_pattern",
+            "distinct_urls:14",
+            "distinct_axes:0",
+            "origin_types:2",
+            "referring_accounts:1",
+            "origin_types:2",
+            "track_record_unavailable"
+          ]
+        }
+      },
+      "profile": {
+        "fetched_at": "2026-08-05T06:08:05.072Z",
+        "homepage_url": "https://shipaton.com/",
+        "example_url": "https://www.shipaton.com/events/?utm_source=x&utm_medium=cpc&utm_campaign=shipaton-traffic&twclid=2d8n4jkad805fesk63uxwuffy9",
+        "homepage_status": 200,
+        "example_status": 200,
+        "homepage_final_url": "https://www.shipaton.com/",
+        "example_final_url": "https://www.shipaton.com/events?utm_source=x&utm_medium=cpc&utm_campaign=shipaton-traffic&twclid=2d8n4jkad805fesk63uxwuffy9",
+        "homepage_content_type": "text/html; charset=utf-8",
+        "example_content_type": "text/html; charset=utf-8",
+        "homepage": {
+          "has_meta_author": false,
+          "has_published_time": false,
+          "has_canonical": true,
+          "has_about_link": false,
+          "has_contact_link": false,
+          "has_corrections_link": false,
+          "outbound_links_count": 38,
+          "opinion_marker": false
+        },
+        "example": {
+          "has_meta_author": false,
+          "has_published_time": false,
+          "has_canonical": true,
+          "has_about_link": false,
+          "has_contact_link": false,
+          "has_corrections_link": false,
+          "outbound_links_count": 55,
+          "opinion_marker": false
+        }
+      }
+    },
+    {
       "domain": "combos.fun",
       "entity": "Combos Fun",
       "kind": "unknown",
@@ -10363,133 +10490,6 @@
           "has_contact_link": false,
           "has_corrections_link": false,
           "outbound_links_count": 15,
-          "opinion_marker": false
-        }
-      }
-    },
-    {
-      "domain": "shipaton.com",
-      "entity": "Shipaton",
-      "kind": "unknown",
-      "first_seen_at": "2026-07-07T10:24:13.000Z",
-      "last_seen_at": "2026-08-06T01:08:45.727Z",
-      "discovery": {
-        "distinct_urls": 13,
-        "example_urls": [
-          "https://www.shipaton.com/events/?utm_source=x&utm_medium=cpc&utm_campaign=shipaton-traffic&twclid=2d8n4jkad805fesk63uxwuffy9",
-          "https://www.shipaton.com/?utm_source=x&utm_medium=cpc&utm_campaign=shipaton-traffic&twclid=22je13dnlq18zl09zml4n51co3",
-          "https://www.shipaton.com/?utm_source=x&utm_medium=cpc&utm_campaign=shipaton-traffic&twclid=26yl3o4snlo387h02mw4kh4yfe",
-          "https://www.shipaton.com/?utm_source=x&utm_medium=cpc&utm_campaign=shipaton-traffic&twclid=230e39i0w7hfcdaim51menkq4k",
-          "https://www.shipaton.com/?utm_source=x&utm_medium=cpc&utm_campaign=shipaton-traffic&twclid=2etlnjrf4bcnefsrgl7rph92ot"
-        ],
-        "origin_counts": {
-          "feed_buffer_reply": 2,
-          "feed_buffer": 11
-        },
-        "distinct_referring_accounts": 1,
-        "sample_referring_accounts": [
-          "revenuecat"
-        ],
-        "distinct_axes": []
-      },
-      "claims": {
-        "total": 0,
-        "supported": 0,
-        "refuted": 0,
-        "contested": 0,
-        "unverified": 0,
-        "resolved_count": 0
-      },
-      "structural_features": {
-        "has_search_paths": false,
-        "has_article_paths": false,
-        "has_doi_paths": false
-      },
-      "ratings": {
-        "provenance": {
-          "score": 0.45,
-          "basis": [
-            "unknown_domain_pattern"
-          ]
-        },
-        "breadth": {
-          "score": 0.47,
-          "basis": [
-            "distinct_urls:13",
-            "distinct_axes:0",
-            "origin_types:2"
-          ]
-        },
-        "corroboration": {
-          "score": 0.2833333333333333,
-          "basis": [
-            "referring_accounts:1",
-            "origin_types:2"
-          ]
-        },
-        "track_record": {
-          "score": null,
-          "basis": [
-            "no_resolved_claims_observed"
-          ]
-        },
-        "profile": {
-          "score": 0.22,
-          "confidence": 0.55,
-          "basis": [
-            "meta_author:false",
-            "published_time:false",
-            "canonical:true",
-            "about:false",
-            "contact:false",
-            "corrections:false",
-            "outbound_links:55",
-            "opinion_marker:false"
-          ]
-        },
-        "overall": {
-          "score": 0.43875,
-          "confidence": 0.4392,
-          "method": "mechanical_v1",
-          "basis": [
-            "unknown_domain_pattern",
-            "distinct_urls:13",
-            "distinct_axes:0",
-            "origin_types:2",
-            "referring_accounts:1",
-            "origin_types:2",
-            "track_record_unavailable"
-          ]
-        }
-      },
-      "profile": {
-        "fetched_at": "2026-08-05T06:08:05.072Z",
-        "homepage_url": "https://shipaton.com/",
-        "example_url": "https://www.shipaton.com/events/?utm_source=x&utm_medium=cpc&utm_campaign=shipaton-traffic&twclid=2d8n4jkad805fesk63uxwuffy9",
-        "homepage_status": 200,
-        "example_status": 200,
-        "homepage_final_url": "https://www.shipaton.com/",
-        "example_final_url": "https://www.shipaton.com/events?utm_source=x&utm_medium=cpc&utm_campaign=shipaton-traffic&twclid=2d8n4jkad805fesk63uxwuffy9",
-        "homepage_content_type": "text/html; charset=utf-8",
-        "example_content_type": "text/html; charset=utf-8",
-        "homepage": {
-          "has_meta_author": false,
-          "has_published_time": false,
-          "has_canonical": true,
-          "has_about_link": false,
-          "has_contact_link": false,
-          "has_corrections_link": false,
-          "outbound_links_count": 38,
-          "opinion_marker": false
-        },
-        "example": {
-          "has_meta_author": false,
-          "has_published_time": false,
-          "has_canonical": true,
-          "has_about_link": false,
-          "has_contact_link": false,
-          "has_corrections_link": false,
-          "outbound_links_count": 55,
           "opinion_marker": false
         }
       }
@@ -12278,6 +12278,133 @@
       }
     },
     {
+      "domain": "serus.ai",
+      "entity": "Serus Ai",
+      "kind": "unknown",
+      "first_seen_at": "2026-05-20T13:22:39.544Z",
+      "last_seen_at": "2026-08-06T05:28:44.351Z",
+      "discovery": {
+        "distinct_urls": 10,
+        "example_urls": [
+          "https://www.serus.ai/?twclid=29v4lxmzvo39j1dtelbj405bc3",
+          "https://serus.ai/?utm_source=twitter&utm_medium=paid&utm_campaign=tof-sales&utm_term=us-cta&utm_content=dark-web-2&twclid=2e71yd0vi30e5xy0ou59gjk4x4",
+          "https://serus.ai/?utm_source=twitter&utm_medium=paid&utm_campaign=tof-sales&utm_term=europe&utm_content=vulnerability&twclid=2bwkwsfk5w6pkaojrcpfgp00bd",
+          "https://app.serus.ai/?utm_source=twitter&utm_medium=paid&utm_campaign=tof-sales&utm_term=remarket&utm_content=phone&twclid=2n4k46a3eoyy66y9awb8xw5pa",
+          "https://serus.ai/?utm_source=twitter&utm_medium=paid&utm_campaign=tof-sales&utm_term=europe&utm_content=about&twclid=23ygjxaktwvu4wg0xd7n3qlo20"
+        ],
+        "origin_counts": {
+          "feed_buffer": 8,
+          "feed_buffer_reply": 2
+        },
+        "distinct_referring_accounts": 1,
+        "sample_referring_accounts": [
+          "serus_ai"
+        ],
+        "distinct_axes": []
+      },
+      "claims": {
+        "total": 0,
+        "supported": 0,
+        "refuted": 0,
+        "contested": 0,
+        "unverified": 0,
+        "resolved_count": 0
+      },
+      "structural_features": {
+        "has_search_paths": false,
+        "has_article_paths": false,
+        "has_doi_paths": false
+      },
+      "ratings": {
+        "provenance": {
+          "score": 0.45,
+          "basis": [
+            "unknown_domain_pattern"
+          ]
+        },
+        "breadth": {
+          "score": 0.4116666666666667,
+          "basis": [
+            "distinct_urls:10",
+            "distinct_axes:0",
+            "origin_types:2"
+          ]
+        },
+        "corroboration": {
+          "score": 0.2833333333333333,
+          "basis": [
+            "referring_accounts:1",
+            "origin_types:2"
+          ]
+        },
+        "track_record": {
+          "score": null,
+          "basis": [
+            "no_resolved_claims_observed"
+          ]
+        },
+        "profile": {
+          "score": 0.22,
+          "confidence": 0.55,
+          "basis": [
+            "meta_author:false",
+            "published_time:false",
+            "canonical:true",
+            "about:false",
+            "contact:true",
+            "corrections:false",
+            "outbound_links:0",
+            "opinion_marker:false"
+          ]
+        },
+        "overall": {
+          "score": 0.42598958333333337,
+          "confidence": 0.35945000000000005,
+          "method": "mechanical_v1",
+          "basis": [
+            "unknown_domain_pattern",
+            "distinct_urls:10",
+            "distinct_axes:0",
+            "origin_types:2",
+            "referring_accounts:1",
+            "origin_types:2",
+            "track_record_unavailable"
+          ]
+        }
+      },
+      "profile": {
+        "fetched_at": "2026-08-05T14:23:54.077Z",
+        "homepage_url": "https://serus.ai/",
+        "example_url": "https://www.serus.ai/?twclid=29v4lxmzvo39j1dtelbj405bc3",
+        "homepage_status": 200,
+        "example_status": 200,
+        "homepage_final_url": "https://www.serus.ai/",
+        "example_final_url": "https://www.serus.ai/?twclid=29v4lxmzvo39j1dtelbj405bc3",
+        "homepage_content_type": "text/html",
+        "example_content_type": "text/html",
+        "homepage": {
+          "has_meta_author": false,
+          "has_published_time": false,
+          "has_canonical": true,
+          "has_about_link": false,
+          "has_contact_link": true,
+          "has_corrections_link": false,
+          "outbound_links_count": 0,
+          "opinion_marker": false
+        },
+        "example": {
+          "has_meta_author": false,
+          "has_published_time": false,
+          "has_canonical": true,
+          "has_about_link": false,
+          "has_contact_link": true,
+          "has_corrections_link": false,
+          "outbound_links_count": 0,
+          "opinion_marker": false
+        }
+      }
+    },
+    {
       "domain": "interserver.net",
       "entity": "Interserver",
       "kind": "unknown",
@@ -12663,133 +12790,6 @@
       }
     },
     {
-      "domain": "serus.ai",
-      "entity": "Serus Ai",
-      "kind": "unknown",
-      "first_seen_at": "2026-05-20T13:22:39.544Z",
-      "last_seen_at": "2026-08-02T00:08:38.348Z",
-      "discovery": {
-        "distinct_urls": 9,
-        "example_urls": [
-          "https://www.serus.ai/?twclid=29v4lxmzvo39j1dtelbj405bc3",
-          "https://serus.ai/?utm_source=twitter&utm_medium=paid&utm_campaign=tof-sales&utm_term=us-cta&utm_content=dark-web-2&twclid=2e71yd0vi30e5xy0ou59gjk4x4",
-          "https://serus.ai/?utm_source=twitter&utm_medium=paid&utm_campaign=tof-sales&utm_term=europe&utm_content=vulnerability&twclid=2bwkwsfk5w6pkaojrcpfgp00bd",
-          "https://app.serus.ai/?utm_source=twitter&utm_medium=paid&utm_campaign=tof-sales&utm_term=remarket&utm_content=phone&twclid=2n4k46a3eoyy66y9awb8xw5pa",
-          "https://serus.ai/?utm_source=twitter&utm_medium=paid&utm_campaign=tof-sales&utm_term=europe&utm_content=about&twclid=23ygjxaktwvu4wg0xd7n3qlo20"
-        ],
-        "origin_counts": {
-          "feed_buffer": 7,
-          "feed_buffer_reply": 2
-        },
-        "distinct_referring_accounts": 1,
-        "sample_referring_accounts": [
-          "serus_ai"
-        ],
-        "distinct_axes": []
-      },
-      "claims": {
-        "total": 0,
-        "supported": 0,
-        "refuted": 0,
-        "contested": 0,
-        "unverified": 0,
-        "resolved_count": 0
-      },
-      "structural_features": {
-        "has_search_paths": false,
-        "has_article_paths": false,
-        "has_doi_paths": false
-      },
-      "ratings": {
-        "provenance": {
-          "score": 0.45,
-          "basis": [
-            "unknown_domain_pattern"
-          ]
-        },
-        "breadth": {
-          "score": 0.38249999999999995,
-          "basis": [
-            "distinct_urls:9",
-            "distinct_axes:0",
-            "origin_types:2"
-          ]
-        },
-        "corroboration": {
-          "score": 0.2833333333333333,
-          "basis": [
-            "referring_accounts:1",
-            "origin_types:2"
-          ]
-        },
-        "track_record": {
-          "score": null,
-          "basis": [
-            "no_resolved_claims_observed"
-          ]
-        },
-        "profile": {
-          "score": 0.22,
-          "confidence": 0.55,
-          "basis": [
-            "meta_author:false",
-            "published_time:false",
-            "canonical:true",
-            "about:false",
-            "contact:true",
-            "corrections:false",
-            "outbound_links:0",
-            "opinion_marker:false"
-          ]
-        },
-        "overall": {
-          "score": 0.419609375,
-          "confidence": 0.330825,
-          "method": "mechanical_v1",
-          "basis": [
-            "unknown_domain_pattern",
-            "distinct_urls:9",
-            "distinct_axes:0",
-            "origin_types:2",
-            "referring_accounts:1",
-            "origin_types:2",
-            "track_record_unavailable"
-          ]
-        }
-      },
-      "profile": {
-        "fetched_at": "2026-08-05T14:23:54.077Z",
-        "homepage_url": "https://serus.ai/",
-        "example_url": "https://www.serus.ai/?twclid=29v4lxmzvo39j1dtelbj405bc3",
-        "homepage_status": 200,
-        "example_status": 200,
-        "homepage_final_url": "https://www.serus.ai/",
-        "example_final_url": "https://www.serus.ai/?twclid=29v4lxmzvo39j1dtelbj405bc3",
-        "homepage_content_type": "text/html",
-        "example_content_type": "text/html",
-        "homepage": {
-          "has_meta_author": false,
-          "has_published_time": false,
-          "has_canonical": true,
-          "has_about_link": false,
-          "has_contact_link": true,
-          "has_corrections_link": false,
-          "outbound_links_count": 0,
-          "opinion_marker": false
-        },
-        "example": {
-          "has_meta_author": false,
-          "has_published_time": false,
-          "has_canonical": true,
-          "has_about_link": false,
-          "has_contact_link": true,
-          "has_corrections_link": false,
-          "outbound_links_count": 0,
-          "opinion_marker": false
-        }
-      }
-    },
-    {
       "domain": "bitget.com",
       "entity": "Bitget",
       "kind": "unknown",
@@ -12885,7 +12885,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-08-03T05:45:35.070Z",
+        "fetched_at": "2026-08-06T05:54:15.907Z",
         "homepage_url": "https://bitget.com/",
         "example_url": "https://partner.bitget.com/bg/SMTwittercfd?twclid=2dlbmypv93aoxlr6pzrilrub21",
         "homepage_status": null,
@@ -13012,7 +13012,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-08-03T05:45:36.309Z",
+        "fetched_at": "2026-08-06T05:54:16.615Z",
         "homepage_url": "https://sentinels.gg/",
         "example_url": "https://shop.sentinels.gg/collections/sen-metallics?twclid=2eikc5h5also5tonotr2q4ciq6",
         "homepage_status": 200,
@@ -13896,7 +13896,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-08-03T04:15:33.474Z",
+        "fetched_at": "2026-08-06T04:24:14.962Z",
         "homepage_url": "https://panzer.quest/",
         "example_url": "https://panzer.quest/?r=twipq1wwa&twclid=29prb4l0osv19xvy30sejzir0",
         "homepage_status": 200,
@@ -16552,7 +16552,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-08-03T05:45:36.510Z",
+        "fetched_at": "2026-08-06T05:54:16.814Z",
         "homepage_url": "https://aitradingbotreview.com/",
         "example_url": "https://aitradingbotreview.com/cointech2u-okx-testimonial/?utm_source=x&utm_medium=cpc&utm_campaign=ct2u_cici_testimonial_v1&utm_content=v3_architecture&twclid=29n2yshl33pi6gwhsndaezd9zg",
         "homepage_status": 200,
@@ -18195,7 +18195,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-08-03T05:45:36.749Z",
+        "fetched_at": "2026-08-06T05:54:17.058Z",
         "homepage_url": "https://puter.com/",
         "example_url": "https://developer.puter.com/?utm_source=x&utm_medium=paid_social&utm_campaign=backend_ai&twclid=27ht9opz02h3rp1i1jsomffb4m",
         "homepage_status": 200,
@@ -36634,7 +36634,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-08-02T21:15:33.359Z",
+        "fetched_at": "2026-08-06T04:24:18.518Z",
         "homepage_url": "https://thedispatch.com/",
         "example_url": "https://thedispatch.com/article/slavery-christianity-judaism/?twclid=224n5l3gu5l6wy53cctpntxjmr",
         "homepage_status": 200,
@@ -36758,7 +36758,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-08-02T22:15:33.310Z",
+        "fetched_at": "2026-08-06T04:24:19.867Z",
         "homepage_url": "https://scienceandculture.com/",
         "example_url": "https://scienceandculture.com/2026/04/cosmic-orphans-no-more-stephen-meyer-on-the-meaning-of-the-artemis-ii-mission/?twclid=2rnhdm9vyiuko1egq7pyr6uby",
         "homepage_status": 200,
@@ -36882,7 +36882,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-08-02T22:15:37.105Z",
+        "fetched_at": "2026-08-06T04:24:22.560Z",
         "homepage_url": "https://19fortyfive.com/",
         "example_url": "https://www.19fortyfive.com/2026/04/we-touched-the-super-guppy-nasas-whale-shaped-cargo-plane-has-a-25-foot-wide-internal-diameter-swallowed-apollo-rocket-stages-whole-and-only-one-still-flies/?twclid=23xrrcgqxanqbvkiqbsyzs1ox8",
         "homepage_status": 200,
@@ -37006,7 +37006,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-08-02T22:45:25.951Z",
+        "fetched_at": "2026-08-06T05:24:15.173Z",
         "homepage_url": "https://usatoday.com/",
         "example_url": "https://www.usatoday.com/story/sponsor-story/collegium-pharmaceutical/2026/05/05/paris-hilton-on-adhd-advocacy-and-support-in-the-workplace/89244166007/?twclid=28p40ybg70zs0nzujyc1b1b5mt",
         "homepage_status": 200,
@@ -37130,7 +37130,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-08-02T22:45:27.599Z",
+        "fetched_at": "2026-08-06T05:24:15.510Z",
         "homepage_url": "https://axios.com/",
         "example_url": "https://www.axios.com/2026/04/21/axios-event-future-of-health-summit-2026?twclid=26ijftyq8roj3woqxoi4hprufc",
         "homepage_status": 403,
@@ -37254,7 +37254,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-08-02T22:45:31.647Z",
+        "fetched_at": "2026-08-06T05:24:18.868Z",
         "homepage_url": "https://trendmicro.com/",
         "example_url": "https://newsroom.trendmicro.com/2026-03-23-Trend-Micros-Enterprise-Business-is-now-TrendAI-TM?utm_source=twitter_paid&utm_medium=social&utm_campaign=ent_corporate_aw_gl_int_rebrand&utm_content=carouse&twclid=2cmz9tfo72r6gek4sy5lql8osu",
         "homepage_status": 200,
@@ -37378,7 +37378,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-08-02T22:45:33.091Z",
+        "fetched_at": "2026-08-06T05:24:20.803Z",
         "homepage_url": "https://nigerianobservernews.com/",
         "example_url": "https://nigerianobservernews.com/2026/06/igbinedion-university-stuns-world-clinches-huawei-ict-global-crown-women-in-tech-award/",
         "homepage_status": 200,
