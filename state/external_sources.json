@@ -1,8 +1,8 @@
 {
   "schema_version": "1.0",
-  "generated_at": "2026-08-07T02:54:39.174Z",
+  "generated_at": "2026-08-07T04:24:43.038Z",
   "method": "mechanical_registry_v1",
-  "profiled_at": "2026-08-07T02:54:43.914Z",
+  "profiled_at": "2026-08-07T04:24:46.498Z",
   "sources": [
     {
       "domain": "theguardian.com",
@@ -11,7 +11,7 @@
       "first_seen_at": "2026-03-27T23:17:00Z",
       "last_seen_at": "2026-08-01T23:25:10.497Z",
       "discovery": {
-        "distinct_urls": 732,
+        "distinct_urls": 733,
         "example_urls": [
           "https://www.theguardian.com/us-news/2026/jun/23/trump-immigration-courthouse-arrest-policy",
           "https://www.theguardian.com/us-news/2026/jun/28/ice-minnesota-defending-democracy",
@@ -21,7 +21,7 @@
         ],
         "origin_counts": {
           "ontology_evidence": 42,
-          "reading_queue": 699,
+          "reading_queue": 700,
           "journals": 112,
           "articles": 3
         },
@@ -72,7 +72,7 @@
         "breadth": {
           "score": 0.94,
           "basis": [
-            "distinct_urls:732",
+            "distinct_urls:733",
             "distinct_axes:17",
             "origin_types:4"
           ]
@@ -112,7 +112,7 @@
             "newsroom_domain_pattern",
             "article_path_seen",
             "doi_or_identifier_path_seen",
-            "distinct_urls:732",
+            "distinct_urls:733",
             "distinct_axes:17",
             "origin_types:4",
             "referring_accounts:0",
@@ -707,7 +707,7 @@
         ],
         "origin_counts": {
           "ontology_evidence": 16,
-          "reading_queue": 508,
+          "reading_queue": 509,
           "journals": 38
         },
         "distinct_referring_accounts": 0,
@@ -1209,7 +1209,7 @@
       "first_seen_at": "2026-06-26T07:05:00Z",
       "last_seen_at": "2026-08-03T02:54:32.258Z",
       "discovery": {
-        "distinct_urls": 445,
+        "distinct_urls": 446,
         "example_urls": [
           "https://www.bbc.co.uk/news/articles/cn8qxz6qypyo",
           "https://www.bbc.co.uk/news/articles/cn075j04pnyo?at_medium=RSS&amp;at_campaign=rss",
@@ -1219,7 +1219,7 @@
         ],
         "origin_counts": {
           "ontology_evidence": 6,
-          "reading_queue": 456,
+          "reading_queue": 457,
           "journals": 16,
           "articles": 1
         },
@@ -1255,7 +1255,7 @@
         "breadth": {
           "score": 0.8233333333333333,
           "basis": [
-            "distinct_urls:445",
+            "distinct_urls:446",
             "distinct_axes:4",
             "origin_types:4"
           ]
@@ -1293,7 +1293,7 @@
           "method": "mechanical_v1",
           "basis": [
             "newsroom_domain_pattern",
-            "distinct_urls:445",
+            "distinct_urls:446",
             "distinct_axes:4",
             "origin_types:4",
             "referring_accounts:0",
@@ -3233,9 +3233,9 @@
       "entity": "T Co",
       "kind": "unknown",
       "first_seen_at": "2016-05-05T18:57:30.000Z",
-      "last_seen_at": "2026-08-06T23:19:43.000Z",
+      "last_seen_at": "2026-08-07T04:03:15.000Z",
       "discovery": {
-        "distinct_urls": 12592,
+        "distinct_urls": 12596,
         "example_urls": [
           "https://t.co/pJSE124ec4",
           "https://t.co/Soz8BXPWaa",
@@ -3244,7 +3244,7 @@
           "https://t.co/cYaqYDRp08"
         ],
         "origin_counts": {
-          "feed_buffer": 10189,
+          "feed_buffer": 10195,
           "feed_buffer_reply": 4896,
           "articles": 3
         },
@@ -3287,7 +3287,7 @@
         "breadth": {
           "score": 0.53,
           "basis": [
-            "distinct_urls:12592",
+            "distinct_urls:12596",
             "distinct_axes:0",
             "origin_types:3"
           ]
@@ -3326,7 +3326,7 @@
           "basis": [
             "unknown_domain_pattern",
             "doi_or_identifier_path_seen",
-            "distinct_urls:12592",
+            "distinct_urls:12596",
             "distinct_axes:0",
             "origin_types:3",
             "referring_accounts:2730",
@@ -39625,7 +39625,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-08-04T04:16:10.484Z",
+        "fetched_at": "2026-08-07T04:24:45.119Z",
         "homepage_url": "https://sustainabilityeconomics.com/",
         "example_url": "https://webinar.sustainabilityeconomics.com/?twclid=2av9ysefynmg8hdk3bmd2bpw7h",
         "homepage_status": 200,
@@ -44057,20 +44057,6 @@
             "no_resolved_claims_observed"
           ]
         },
-        "overall": {
-          "score": 0.36000000000000004,
-          "confidence": 0.1386,
-          "method": "mechanical_v1",
-          "basis": [
-            "unknown_domain_pattern",
-            "distinct_urls:3",
-            "distinct_axes:0",
-            "origin_types:1",
-            "referring_accounts:1",
-            "origin_types:1",
-            "track_record_unavailable"
-          ]
-        },
         "profile": {
           "score": 0.28,
           "confidence": 0.65,
@@ -44083,6 +44069,20 @@
             "corrections:false",
             "outbound_links:10",
             "opinion_marker:false"
+          ]
+        },
+        "overall": {
+          "score": 0.36000000000000004,
+          "confidence": 0.1386,
+          "method": "mechanical_v1",
+          "basis": [
+            "unknown_domain_pattern",
+            "distinct_urls:3",
+            "distinct_axes:0",
+            "origin_types:1",
+            "referring_accounts:1",
+            "origin_types:1",
+            "track_record_unavailable"
           ]
         }
       },
@@ -44335,7 +44335,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-08-04T01:16:06.595Z",
+        "fetched_at": "2026-08-07T03:54:41.642Z",
         "homepage_url": "https://superhumanchambers.com/",
         "example_url": "https://superhumanchambers.com/careers/ai-digital-outbound-operator/?utm_source=x&utm_medium=paid_social&utm_campaign=hire_ai_digital_outbound_2026q3&utm_content=proof_portrait_v1&utm_term=operator_fit&twclid=2di85sm7u6un6dynmt8f5fzgu9",
         "homepage_status": 200,
@@ -44459,7 +44459,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-08-04T01:16:07.137Z",
+        "fetched_at": "2026-08-07T03:54:42.036Z",
         "homepage_url": "https://qrindex.org/",
         "example_url": "https://qrindex.org/?twclid=24um41mtui293u0o4uvv0npasx",
         "homepage_status": 200,
@@ -44583,7 +44583,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-08-04T01:16:11.193Z",
+        "fetched_at": "2026-08-07T03:54:45.955Z",
         "homepage_url": "https://geni.us/",
         "example_url": "https://geni.us/BitcoinNation?twclid=24fcosa9inu5c1v4re7y92fmou",
         "homepage_status": 200,
@@ -44707,7 +44707,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-08-04T01:46:06.405Z",
+        "fetched_at": "2026-08-07T03:54:47.652Z",
         "homepage_url": "https://jetbrains.com/",
         "example_url": "https://surveys.jetbrains.com/s3/px-state-of-php-2026?utm_source=twitter&utm_medium=cpc&utm_campaign=apac_west_en_dc_tw_phpstorm_state_of_php_2026_na_video&twclid=23jq4cs5apzjavaziudc0vsy6f",
         "homepage_status": 200,
@@ -44814,6 +44814,51 @@
             "origin_types:1",
             "track_record_unavailable"
           ]
+        },
+        "profile": {
+          "score": 0.26,
+          "confidence": 0.65,
+          "basis": [
+            "meta_author:false",
+            "published_time:false",
+            "canonical:false",
+            "about:true",
+            "contact:true",
+            "corrections:false",
+            "outbound_links:0",
+            "opinion_marker:false"
+          ]
+        }
+      },
+      "profile": {
+        "fetched_at": "2026-08-07T04:24:45.547Z",
+        "homepage_url": "https://github.io/",
+        "example_url": "https://yinxinghuan.github.io/sky-leap/index.html?twclid=2bkc4pwqkq0x4x8zjkumybliim",
+        "homepage_status": 200,
+        "example_status": 200,
+        "homepage_final_url": "https://pages.github.com/",
+        "example_final_url": "https://yinxinghuan.github.io/sky-leap/index.html?twclid=2bkc4pwqkq0x4x8zjkumybliim",
+        "homepage_content_type": "text/html; charset=utf-8",
+        "example_content_type": "text/html; charset=utf-8",
+        "homepage": {
+          "has_meta_author": false,
+          "has_published_time": false,
+          "has_canonical": true,
+          "has_about_link": true,
+          "has_contact_link": true,
+          "has_corrections_link": false,
+          "outbound_links_count": 20,
+          "opinion_marker": false
+        },
+        "example": {
+          "has_meta_author": false,
+          "has_published_time": false,
+          "has_canonical": false,
+          "has_about_link": false,
+          "has_contact_link": false,
+          "has_corrections_link": false,
+          "outbound_links_count": 0,
+          "opinion_marker": false
         }
       }
     },
@@ -44910,7 +44955,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-08-04T01:46:07.434Z",
+        "fetched_at": "2026-08-07T04:24:46.221Z",
         "homepage_url": "https://minepi.com/",
         "example_url": "https://minepi.com/vibe-code/?utm_source=X&utm_medium=x_vibe&utm_content=3B-3&twclid=2ceupjbcdlmh4nm420zbcujkx5",
         "homepage_status": 200,
@@ -45017,6 +45062,51 @@
             "origin_types:1",
             "track_record_unavailable"
           ]
+        },
+        "profile": {
+          "score": 0,
+          "confidence": 0.55,
+          "basis": [
+            "meta_author:false",
+            "published_time:false",
+            "canonical:false",
+            "about:false",
+            "contact:false",
+            "corrections:false",
+            "outbound_links:0",
+            "opinion_marker:false"
+          ]
+        }
+      },
+      "profile": {
+        "fetched_at": "2026-08-07T04:24:46.498Z",
+        "homepage_url": "https://muscle-booster.io/",
+        "example_url": "https://plan.muscle-booster.io/?utm_source=Twitter&utm_medium=cpc&utm_campaign=0024_MBw-UA_WW-BL_LC_ABO_all_1d_ma25%2B_Broad__twitter-military-go15ttm_all_06.08.26_Purchase&campaign_id=42110369&adgroup_id=56065459&ad_id=2084569938015224291&branch-name=military_workout&link-id=go15ttm&gender=male&twclid=21459fca9jpb8k48iswpvgmy09",
+        "homepage_status": 200,
+        "example_status": 200,
+        "homepage_final_url": "https://plan.muscle-booster.io/",
+        "example_final_url": "https://plan.muscle-booster.io/?utm_source=Twitter&utm_medium=cpc&utm_campaign=0024_MBw-UA_WW-BL_LC_ABO_all_1d_ma25%2B_Broad__twitter-military-go15ttm_all_06.08.26_Purchase&campaign_id=42110369&adgroup_id=56065459&ad_id=2084569938015224291&branch-name=military_workout&link-id=go15ttm&gender=male&twclid=21459fca9jpb8k48iswpvgmy09",
+        "homepage_content_type": "text/html",
+        "example_content_type": "text/html",
+        "homepage": {
+          "has_meta_author": false,
+          "has_published_time": false,
+          "has_canonical": false,
+          "has_about_link": false,
+          "has_contact_link": false,
+          "has_corrections_link": false,
+          "outbound_links_count": 0,
+          "opinion_marker": false
+        },
+        "example": {
+          "has_meta_author": false,
+          "has_published_time": false,
+          "has_canonical": false,
+          "has_about_link": false,
+          "has_contact_link": false,
+          "has_corrections_link": false,
+          "outbound_links_count": 0,
+          "opinion_marker": false
         }
       }
     },
