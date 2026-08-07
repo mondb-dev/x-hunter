@@ -1,8 +1,8 @@
 {
   "schema_version": "1.0",
-  "generated_at": "2026-08-07T14:54:55.191Z",
+  "generated_at": "2026-08-07T17:55:15.006Z",
   "method": "mechanical_registry_v1",
-  "profiled_at": "2026-08-07T14:55:07.463Z",
+  "profiled_at": "2026-08-07T17:55:21.031Z",
   "sources": [
     {
       "domain": "theguardian.com",
@@ -11,7 +11,7 @@
       "first_seen_at": "2026-03-27T23:17:00Z",
       "last_seen_at": "2026-08-01T23:25:10.497Z",
       "discovery": {
-        "distinct_urls": 740,
+        "distinct_urls": 742,
         "example_urls": [
           "https://www.theguardian.com/us-news/2026/jun/23/trump-immigration-courthouse-arrest-policy",
           "https://www.theguardian.com/us-news/2026/jun/28/ice-minnesota-defending-democracy",
@@ -21,7 +21,7 @@
         ],
         "origin_counts": {
           "ontology_evidence": 42,
-          "reading_queue": 707,
+          "reading_queue": 709,
           "journals": 112,
           "articles": 3
         },
@@ -72,7 +72,7 @@
         "breadth": {
           "score": 0.94,
           "basis": [
-            "distinct_urls:740",
+            "distinct_urls:742",
             "distinct_axes:17",
             "origin_types:4"
           ]
@@ -112,7 +112,7 @@
             "newsroom_domain_pattern",
             "article_path_seen",
             "doi_or_identifier_path_seen",
-            "distinct_urls:740",
+            "distinct_urls:742",
             "distinct_axes:17",
             "origin_types:4",
             "referring_accounts:0",
@@ -697,7 +697,7 @@
       "first_seen_at": "2026-06-22T00:15:00Z",
       "last_seen_at": "2026-08-01T08:20:11.076Z",
       "discovery": {
-        "distinct_urls": 503,
+        "distinct_urls": 505,
         "example_urls": [
           "https://www.nytimes.com/2026/06/19/world/canada/frank-stronach-trial-guilty-sex-charges.html",
           "https://www.nytimes.com/2026/06/27/world/americas/mexican-officials-us-informants.html",
@@ -707,7 +707,7 @@
         ],
         "origin_counts": {
           "ontology_evidence": 16,
-          "reading_queue": 514,
+          "reading_queue": 516,
           "journals": 38
         },
         "distinct_referring_accounts": 0,
@@ -749,7 +749,7 @@
         "breadth": {
           "score": 0.8799999999999999,
           "basis": [
-            "distinct_urls:503",
+            "distinct_urls:505",
             "distinct_axes:10",
             "origin_types:3"
           ]
@@ -788,7 +788,7 @@
           "basis": [
             "newsroom_domain_pattern",
             "article_path_seen",
-            "distinct_urls:503",
+            "distinct_urls:505",
             "distinct_axes:10",
             "origin_types:3",
             "referring_accounts:0",
@@ -1092,7 +1092,7 @@
           "https://singaporeglobalnetwork.gov.sg/stories/tech/why-i-quit-college-at-22-to-launch-a-biotech-startup-in-singapore/?utm_source=x&utm_medium=social&utm_campaign=sg-paid-ao-traffic&utm_content=armaan-dhanda&twclid=2epj25tilhtb65igot07prztga"
         ],
         "origin_counts": {
-          "reading_queue": 7,
+          "reading_queue": 8,
           "feed_buffer": 1
         },
         "distinct_referring_accounts": 1,
@@ -1172,7 +1172,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-08-04T16:26:14.065Z",
+        "fetched_at": "2026-08-07T17:25:18.890Z",
         "homepage_url": "https://gov.sg/",
         "example_url": "https://singaporeglobalnetwork.gov.sg/stories/tech/why-i-quit-college-at-22-to-launch-a-biotech-startup-in-singapore/?utm_source=x&utm_medium=social&utm_campaign=sg-paid-ao-traffic&utm_content=armaan-dhanda&twclid=2epj25tilhtb65igot07prztga",
         "homepage_status": 200,
@@ -1210,7 +1210,7 @@
       "first_seen_at": "2026-06-26T07:05:00Z",
       "last_seen_at": "2026-08-03T02:54:32.258Z",
       "discovery": {
-        "distinct_urls": 450,
+        "distinct_urls": 452,
         "example_urls": [
           "https://www.bbc.co.uk/news/articles/cn8qxz6qypyo",
           "https://www.bbc.co.uk/news/articles/cn075j04pnyo?at_medium=RSS&amp;at_campaign=rss",
@@ -1220,7 +1220,7 @@
         ],
         "origin_counts": {
           "ontology_evidence": 6,
-          "reading_queue": 461,
+          "reading_queue": 464,
           "journals": 16,
           "articles": 1
         },
@@ -1256,7 +1256,7 @@
         "breadth": {
           "score": 0.8233333333333333,
           "basis": [
-            "distinct_urls:450",
+            "distinct_urls:452",
             "distinct_axes:4",
             "origin_types:4"
           ]
@@ -1275,14 +1275,14 @@
           ]
         },
         "profile": {
-          "score": 0.7,
+          "score": 0.58,
           "confidence": 0.75,
           "basis": [
             "meta_author:true",
             "published_time:true",
             "canonical:true",
             "about:false",
-            "contact:true",
+            "contact:false",
             "corrections:false",
             "outbound_links:17",
             "opinion_marker:false"
@@ -1294,7 +1294,7 @@
           "method": "mechanical_v1",
           "basis": [
             "newsroom_domain_pattern",
-            "distinct_urls:450",
+            "distinct_urls:452",
             "distinct_axes:4",
             "origin_types:4",
             "referring_accounts:0",
@@ -1304,7 +1304,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-08-04T14:56:13.247Z",
+        "fetched_at": "2026-08-07T15:55:13.444Z",
         "homepage_url": "https://bbc.co.uk/",
         "example_url": "https://www.bbc.co.uk/news/articles/cn8qxz6qypyo",
         "homepage_status": 200,
@@ -1318,9 +1318,9 @@
           "has_published_time": false,
           "has_canonical": true,
           "has_about_link": false,
-          "has_contact_link": true,
+          "has_contact_link": false,
           "has_corrections_link": false,
-          "outbound_links_count": 16,
+          "outbound_links_count": 13,
           "opinion_marker": false
         },
         "example": {
@@ -3236,7 +3236,7 @@
       "first_seen_at": "2016-05-05T18:57:30.000Z",
       "last_seen_at": "2026-08-07T13:45:00.000Z",
       "discovery": {
-        "distinct_urls": 12620,
+        "distinct_urls": 12623,
         "example_urls": [
           "https://t.co/pJSE124ec4",
           "https://t.co/Soz8BXPWaa",
@@ -3245,7 +3245,7 @@
           "https://t.co/cYaqYDRp08"
         ],
         "origin_counts": {
-          "feed_buffer": 10224,
+          "feed_buffer": 10227,
           "feed_buffer_reply": 4896,
           "articles": 3
         },
@@ -3288,7 +3288,7 @@
         "breadth": {
           "score": 0.53,
           "basis": [
-            "distinct_urls:12620",
+            "distinct_urls:12623",
             "distinct_axes:0",
             "origin_types:3"
           ]
@@ -3327,7 +3327,7 @@
           "basis": [
             "unknown_domain_pattern",
             "doi_or_identifier_path_seen",
-            "distinct_urls:12620",
+            "distinct_urls:12623",
             "distinct_axes:0",
             "origin_types:3",
             "referring_accounts:2730",
@@ -4835,7 +4835,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-08-04T14:56:16.303Z",
+        "fetched_at": "2026-08-07T15:55:15.363Z",
         "homepage_url": "https://grok.com/",
         "example_url": "https://grok.com/imagine/post/9b92ff60-ec59-45db-8a35-8e1b743e5339",
         "homepage_status": 200,
@@ -6273,7 +6273,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-08-04T14:56:18.305Z",
+        "fetched_at": "2026-08-07T15:55:16.282Z",
         "homepage_url": "https://rockstargames.com/",
         "example_url": "https://www.rockstargames.com/gta-online?utm_source=Twitter&utm_medium=p_social&utm_campaign=506-kch-pre-release-gift-20260702&utm_content=uk-eng&twclid=21k9dspaz1uqc236nsfftz24wo",
         "homepage_status": 200,
@@ -6402,7 +6402,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-08-04T14:56:20.874Z",
+        "fetched_at": "2026-08-07T15:55:17.749Z",
         "homepage_url": "https://theepochtimes.com/",
         "example_url": "https://www.theepochtimes.com/china/former-chinese-military-doctor-leaks-ccp-plan-to-use-taiwanese-troops-as-organ-bank-5871639?utm_medium=DigitalMkt&utm_source=twitter&utm_campaign=content_FormerChineseMilitary-karen-20250827&utm_content=img-2_FormerChineseMilitary&utm_term=new-pagevisitor&gl=reg&twclid=2387x75uji9nq8gmjpy9cer691",
         "homepage_status": 200,
@@ -6522,7 +6522,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-08-04T15:26:14.821Z",
+        "fetched_at": "2026-08-07T16:25:14.488Z",
         "homepage_url": "https://wikipedia.org/",
         "example_url": "https://en.wikipedia.org/wiki/2026_Iran_war",
         "homepage_status": 200,
@@ -13771,7 +13771,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-08-04T16:26:15.539Z",
+        "fetched_at": "2026-08-07T17:25:19.769Z",
         "homepage_url": "https://anymark.co/",
         "example_url": "https://anymark.co/?utm_source=x&utm_campaign=x771&twclid=293t0nesyim9m91au5fqoaj5s8",
         "homepage_status": 200,
@@ -16299,7 +16299,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-08-04T15:26:17.961Z",
+        "fetched_at": "2026-08-07T16:25:18.228Z",
         "homepage_url": "https://par.bz/",
         "example_url": "https://par.bz/nep?twclid=2cqyfqbi1emcrdcv6yo3eddsrk",
         "homepage_status": 403,
@@ -17561,7 +17561,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-08-04T16:26:17.413Z",
+        "fetched_at": "2026-08-07T17:25:21.357Z",
         "homepage_url": "https://moltbook.com/",
         "example_url": "https://www.moltbook.com/post/29d49c40-bc59-4a1a-b875-3d3d41ec469e",
         "homepage_status": 200,
@@ -17659,7 +17659,7 @@
           ]
         },
         "profile": {
-          "score": 0.54,
+          "score": 0.6000000000000001,
           "confidence": 0.75,
           "basis": [
             "meta_author:true",
@@ -17668,7 +17668,7 @@
             "about:true",
             "contact:true",
             "corrections:false",
-            "outbound_links:0",
+            "outbound_links:6",
             "opinion_marker:false"
           ]
         },
@@ -17688,7 +17688,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-08-04T16:26:20.073Z",
+        "fetched_at": "2026-08-07T17:25:22.834Z",
         "homepage_url": "https://framia.pro/",
         "example_url": "https://framia.pro/?utm_source=x&utm_campaign=twitter_adsmarch_framia_14_20260331&utm_medium=paid_social&twclid=2e6c8vey7aaz8sdwedu4gd0jgx",
         "homepage_status": 200,
@@ -17711,10 +17711,10 @@
           "has_meta_author": true,
           "has_published_time": false,
           "has_canonical": true,
-          "has_about_link": false,
-          "has_contact_link": false,
+          "has_about_link": true,
+          "has_contact_link": true,
           "has_corrections_link": false,
-          "outbound_links_count": 0,
+          "outbound_links_count": 6,
           "opinion_marker": false
         }
       }
@@ -20602,7 +20602,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-08-04T15:26:26.073Z",
+        "fetched_at": "2026-08-07T16:25:18.741Z",
         "homepage_url": "https://myblockchainweek.com/",
         "example_url": "https://myblockchainweek.com/buy-ticket?twclid=21nicpg0ek4tfxn16u0mxc14r1",
         "homepage_status": 200,
@@ -20983,7 +20983,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-08-04T15:26:28.512Z",
+        "fetched_at": "2026-08-07T16:25:20.609Z",
         "homepage_url": "https://magnesiacore.ca/",
         "example_url": "https://magnesiacore.ca/?twclid=2qgbs9f8iaihnc4sp9sjc540j",
         "homepage_status": 200,
@@ -21238,7 +21238,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-08-04T16:56:15.230Z",
+        "fetched_at": "2026-08-07T17:55:16.363Z",
         "homepage_url": "https://celsius.com/",
         "example_url": "https://www.celsius.com/buy-locate/?utm_medium=paidsocial&utm_campaign=pillars&utm_content=musicfestival&twclid=2ejkfis7fdkuksuqyzg68f5wfq",
         "homepage_status": 200,
@@ -22857,6 +22857,51 @@
             "origin_types:2",
             "track_record_unavailable"
           ]
+        },
+        "profile": {
+          "score": 0.19,
+          "confidence": 0.55,
+          "basis": [
+            "meta_author:false",
+            "published_time:false",
+            "canonical:false",
+            "about:false",
+            "contact:true",
+            "corrections:false",
+            "outbound_links:7",
+            "opinion_marker:false"
+          ]
+        }
+      },
+      "profile": {
+        "fetched_at": "2026-08-07T17:55:16.913Z",
+        "homepage_url": "https://attio.com/",
+        "example_url": "https://attio.com/p/crm-031515110905/?utm_source=twitter_ads&utm_medium=paidsocial&utm_campaign=Prospecting&utm_content=0226_singleimage_2602_AskAttioUI-and-device-AskMore_v2_Light_n_a_n_a_1080x1080&twclid=271iqk60c3hmf5z7qzfjlyoijm",
+        "homepage_status": 200,
+        "example_status": 200,
+        "homepage_final_url": "https://attio.com/",
+        "example_final_url": "https://attio.com/p/crm-031515110905?utm_source=twitter_ads&utm_medium=paidsocial&utm_campaign=Prospecting&utm_content=0226_singleimage_2602_AskAttioUI-and-device-AskMore_v2_Light_n_a_n_a_1080x1080&twclid=271iqk60c3hmf5z7qzfjlyoijm",
+        "homepage_content_type": "text/html; charset=utf-8",
+        "example_content_type": "text/html; charset=utf-8",
+        "homepage": {
+          "has_meta_author": false,
+          "has_published_time": false,
+          "has_canonical": false,
+          "has_about_link": false,
+          "has_contact_link": true,
+          "has_corrections_link": false,
+          "outbound_links_count": 0,
+          "opinion_marker": false
+        },
+        "example": {
+          "has_meta_author": false,
+          "has_published_time": false,
+          "has_canonical": false,
+          "has_about_link": false,
+          "has_contact_link": false,
+          "has_corrections_link": false,
+          "outbound_links_count": 7,
+          "opinion_marker": false
         }
       }
     },
@@ -22955,7 +23000,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-08-04T16:56:18.219Z",
+        "fetched_at": "2026-08-07T17:55:19.450Z",
         "homepage_url": "https://edrforhome.com/",
         "example_url": "https://edrforhome.com/membership/?twclid=26i4bdgzrzez7ck8e18f8jebf7",
         "homepage_status": 200,
@@ -23052,7 +23097,7 @@
           ]
         },
         "profile": {
-          "score": 0.41,
+          "score": 0.42,
           "confidence": 0.65,
           "basis": [
             "meta_author:false",
@@ -23061,7 +23106,7 @@
             "about:true",
             "contact:true",
             "corrections:false",
-            "outbound_links:5",
+            "outbound_links:6",
             "opinion_marker:false"
           ]
         },
@@ -23081,7 +23126,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-08-04T16:56:18.737Z",
+        "fetched_at": "2026-08-07T17:55:21.031Z",
         "homepage_url": "https://vast.ai/",
         "example_url": "https://vast.ai/developers/sdk?utm_source=x&utm_medium=paid&utm_campaign=cloud_agents&twclid=293vnkv04bn84l1eoqab2a2ekc",
         "homepage_status": 200,
@@ -23097,7 +23142,7 @@
           "has_about_link": true,
           "has_contact_link": true,
           "has_corrections_link": false,
-          "outbound_links_count": 4,
+          "outbound_links_count": 5,
           "opinion_marker": false
         },
         "example": {
@@ -23107,7 +23152,7 @@
           "has_about_link": true,
           "has_contact_link": true,
           "has_corrections_link": false,
-          "outbound_links_count": 5,
+          "outbound_links_count": 6,
           "opinion_marker": false
         }
       }
