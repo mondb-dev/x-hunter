@@ -615,6 +615,55 @@ section("LinkedIn engagement wiring");
       else fail("relevance gate", `expected 0/0, got ranked=${r.ranked} likes=${r.likes}`);
     }
 
+    // (5) Scoring-outage semantics. The second silent kill of LinkedIn
+    //     engagement (2026-07-05 → 2026-08-08) was the scorer's `catch { return
+    //     0; }`: ~25 concurrent `claude -p` spawns all blew a 30s timeout, every
+    //     post scored 0, and the run reported a healthy-looking "0 relevant".
+    //     A failed call must skip (-1) and be counted, never score.
+    {
+      const llmPath = require.resolve(path.join(ROOT, "runner/llm.js"));
+      const crPath = require.resolve(path.join(ROOT, "runner/lib/content_relevance.js"));
+      const realLlm = require.cache[llmPath];
+      const stubLlm = (generate) => {
+        delete require.cache[crPath];
+        require.cache[llmPath] = { id: llmPath, filename: llmPath, loaded: true, exports: { generate } };
+        return require(crPath);
+      };
+
+      try {
+        const post = { text: "media framing of the impeachment vote" };
+
+        const cr = stubLlm(async () => { throw new Error("claude compose timeout after 90000ms"); });
+        const dead = cr.makeScorer([]);
+        const s = await dead(post);
+        if (s === -1 && dead.stats.failed === 1 && dead.stats.scored === 0) pass("scoring failure skips (-1) and is counted, never scores 0");
+        else fail("scoring failure", `expected -1 with failed=1, got ${s} stats=${JSON.stringify(dead.stats)}`);
+
+        const cr2 = stubLlm(async () => "3");
+        const live = cr2.makeScorer([]);
+        const s2 = await live(post);
+        if (s2 === 3 && live.stats.scored === 1 && live.stats.failed === 0) pass("healthy scorer returns the rating and counts it");
+        else fail("healthy scorer", `expected 3 with scored=1, got ${s2} stats=${JSON.stringify(live.stats)}`);
+
+        // (6) The engines score a whole batch with Promise.all, so the bound has
+        //     to live in the scorer: unbounded fan-out is what blew the timeout.
+        let active = 0, peak = 0;
+        await Promise.all(Array.from({ length: 25 }, () => cr2.scoreLimit(async () => {
+          active++; peak = Math.max(peak, active);
+          await new Promise((r) => setTimeout(r, 5));
+          active--;
+        })));
+        if (peak <= cr2.SCORE_CONCURRENCY) pass(`scoring pool caps concurrency at ${cr2.SCORE_CONCURRENCY} (peak ${peak} over 25 calls)`);
+        else fail("scoring concurrency", `peak ${peak} exceeded cap ${cr2.SCORE_CONCURRENCY}`);
+
+        if (cr2.SCORE_TIMEOUT_MS >= 60_000) pass(`scoring timeout has CLI headroom (${cr2.SCORE_TIMEOUT_MS}ms)`);
+        else fail("scoring timeout", `${cr2.SCORE_TIMEOUT_MS}ms is too tight for a claude -p spawn`);
+      } finally {
+        if (realLlm) require.cache[llmPath] = realLlm; else delete require.cache[llmPath];
+        delete require.cache[crPath];
+      }
+    }
+
   })().catch((e) => fail("LinkedIn engagement wiring", e.message))
       .finally(() => {
         // This section is the only async one, so it owns the summary — the

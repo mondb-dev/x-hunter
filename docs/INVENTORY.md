@@ -142,6 +142,10 @@ Follows (`scraper/follows.js:18,45`): max 3/run, 10/day, 1 min between.
   `fb_figures.js`, `runner/fb_collect.js`); share loop pending (posting-roadmap).
 - **Images**: `runner/lib/lead_source_image.js` — auto-trigger source og:image on
   composed tweets/LinkedIn drafts; excludes X URLs; requires page-level coherence.
+- **Feed-engagement relevance**: `runner/lib/content_relevance.js` — LLM 0–3 scorer
+  shared by `x_engage`/`x_amplify`/`linkedin_engage`, behind a process-wide pool
+  (`RELEVANCE_CONCURRENCY` 4, `RELEVANCE_TIMEOUT_MS` 90000, `content_relevance.js:32-33,54`).
+  Failed scores return -1 (skip) and count on `scorer.stats.failed`.
 - **Amplification learn-loop**: `runner/x_amplify.js` (bandit repost trigger,
   1/run, relevance-min 2), `runner/linkedin_amplify.js` (reshare parallel),
   `runner/amplify_measure.js` (score amplifications >24h old, max 8/run),

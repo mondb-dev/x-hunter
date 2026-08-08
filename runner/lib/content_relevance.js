@@ -1,21 +1,57 @@
 'use strict';
 /**
  * runner/lib/content_relevance.js — shared relevance scoring + content guards for
- * outbound X actions (replies in x_engage, amplification in x_amplify). Extracted
- * so both paths share one scorer instead of drifting copies.
+ * outbound engagement (x_engage replies, x_amplify, linkedin_engage). Extracted
+ * so those paths share one scorer instead of drifting copies.
  *
  *   isSensitiveContent(text) / isSatireOrJoke(text)  hard-skip guards
  *   loadAxisKeywords()                               belief-axis vocabulary (tie-break)
- *   makeScorer(keywords)                             async (post) -> number
+ *   makeScorer(keywords)                             async (post) -> number, with .stats
+ *   scoreLimit(fn) / SCORE_TIMEOUT_MS                shared LLM call budget
  *
- * The score is an LLM (local qwen) relevance rating 0-3 (+ a small keyword-hit
- * tie-breaker); guarded content returns -1. Same rubric x_engage has always used.
+ * The score is an LLM relevance rating 0-3 (+ a small keyword-hit tie-breaker);
+ * guarded content and unscorable posts return -1. Same rubric x_engage has
+ * always used.
+ *
+ * CALL BUDGET. Scoring runs through Claude's CLI (one subprocess per call, ~5s
+ * warm), and the engines score a whole scraped batch with Promise.all. Unbounded
+ * that meant ~25 concurrent `claude -p` spawns racing a 30s timeout inherited
+ * from the retired local brain: every call timed out, every post scored 0, and
+ * linkedin_engage logged a clean "0 relevant" for two months (2026-07-05 →
+ * 2026-08-08). Measured on the runner host: 1 call 5.2s, 8 concurrent 27.6s. So
+ * calls are funnelled through one process-wide semaphore and given a timeout
+ * with real headroom.
  */
 
 const fs = require('fs');
 const path = require('path');
 
 const ONTOLOGY = path.join(path.resolve(__dirname, '..', '..'), 'state', 'ontology.json');
+
+// Per-call kill timeout and max concurrent scoring calls. See CALL BUDGET above.
+const SCORE_TIMEOUT_MS = Number.parseInt(process.env.RELEVANCE_TIMEOUT_MS || '', 10) || 90_000;
+const SCORE_CONCURRENCY = Number.parseInt(process.env.RELEVANCE_CONCURRENCY || '', 10) || 4;
+
+/** Semaphore: run at most `max` tasks at once, queueing the rest FIFO. */
+function makeLimiter(max) {
+  let active = 0;
+  const queue = [];
+  const release = () => { active--; const run = queue.shift(); if (run) run(); };
+  return (fn) => new Promise((resolve, reject) => {
+    const run = () => {
+      active++;
+      Promise.resolve().then(fn).then(
+        (v) => { release(); resolve(v); },
+        (e) => { release(); reject(e); },
+      );
+    };
+    if (active < max) run(); else queue.push(run);
+  });
+}
+
+// One pool per process, shared by every scorer built here and in linkedin_engage,
+// so a single engine run cannot fan out past SCORE_CONCURRENCY.
+const scoreLimit = makeLimiter(SCORE_CONCURRENCY);
 
 function isSensitiveContent(text) {
   const t = String(text || '').toLowerCase();
@@ -48,11 +84,18 @@ function loadAxisKeywords() {
 
 /**
  * Build an async scorer: (post) -> relevance number. Guarded content -> -1.
- * LLM-driven (local qwen); keyword hits only tie-break equal-relevance posts.
+ * LLM-driven; keyword hits only tie-break equal-relevance posts.
+ *
+ * A scoring call that fails returns -1 (skip), not 0, and is counted on
+ * `scorer.stats.failed` — a 0 is a judgement ("irrelevant") and an outage must
+ * not be able to impersonate one. Callers should log the counter so a dead
+ * backend reads as a warning instead of a plausible "nothing was relevant".
  */
 function makeScorer(keywords) {
   const { generate: llmGenerate } = require('../llm');
-  return async (post) => {
+  const stats = { scored: 0, failed: 0 };
+
+  const scorer = async (post) => {
     const text = (post.text || '').trim();
     if (!text) return -1;
     if (isSensitiveContent(text) || isSatireOrJoke(text)) return -1; // hard-skip
@@ -63,20 +106,29 @@ function makeScorer(keywords) {
 
     let rel = 0;
     try {
-      const raw = await llmGenerate(
+      const raw = await scoreLimit(() => llmGenerate(
         `You rate posts for Sebastian Hunter, who analyzes how narratives are constructed in public discourse: political messaging, media framing, propaganda, spin, institutional accountability, manipulation of public opinion.\n\n` +
         `Rate ONLY the substantive relevance to those themes. Greetings, blessings, motivational quotes, personal life, jokes, ads, and sports = 0 even if they mention people. A post must actually engage with power, politics, media, or truth-claims to score 2-3.\n\n` +
         `Answer with a SINGLE digit:\n0 = irrelevant, 1 = tangential mention, 2 = relevant, 3 = squarely on-topic.\n\n` +
         `POST: "${text.slice(0, 400)}"\n\nDigit:`,
-        { temperature: 0, maxTokens: 5, timeoutMs: 30_000 }
-      );
+        { temperature: 0, maxTokens: 5, timeoutMs: SCORE_TIMEOUT_MS }
+      ));
       const m = String(raw).match(/[0-3]/);
       rel = m ? Number(m[0]) : 0;
-    } catch {
-      rel = hits > 0 ? 1 : 0; // LLM down → fall back to lexical signal
+      stats.scored++;
+    } catch (err) {
+      stats.failed++;
+      stats.lastError = err.message;
+      return -1; // unscorable → skip, never engage on a guessed score
     }
     return rel + Math.min(hits, 2) * 0.1;
   };
+
+  scorer.stats = stats;
+  return scorer;
 }
 
-module.exports = { isSensitiveContent, isSatireOrJoke, loadAxisKeywords, makeScorer };
+module.exports = {
+  isSensitiveContent, isSatireOrJoke, loadAxisKeywords, makeScorer,
+  scoreLimit, SCORE_TIMEOUT_MS, SCORE_CONCURRENCY,
+};

@@ -130,9 +130,18 @@ Measure → correlate → select, for reposts/quotes/reshares:
 ## Feed engagement (like / comment)
 
 - `runner/x_engage.js` / `runner/linkedin_engage.js` — score feed candidates on
-  belief-axis relevance (local LLM, 0–3, gate `LI_RELEVANCE_MIN`, default 2),
+  belief-axis relevance (LLM, 0–3, gate `LI_RELEVANCE_MIN`, default 2),
   like the top `LI_MAX_LIKES` (3) and comment on `LI_MAX_COMMENTS` (1). Comments
   are claim-verified, composed on-voice, then voice/fact-check gated.
+- **Scoring call budget** (`runner/lib/content_relevance.js`): every score is a
+  `claude -p` subprocess (~5s warm), and the engines score a whole batch with
+  `Promise.all`, so calls go through one process-wide semaphore —
+  `RELEVANCE_CONCURRENCY` (4) — with a `RELEVANCE_TIMEOUT_MS` (90s) kill timeout.
+  Unbounded, a 25-post LinkedIn batch spawned 25 at once and every call blew the
+  old 30s timeout (measured on the runner host: 1 call 5.2s, 8 concurrent 27.6s).
+  A failed score returns **-1 (skip), not 0** — an outage must not be able to
+  impersonate the judgement "irrelevant" — and is counted on `scorer.stats`,
+  which both engines log as `WARN scoring failed on N/M post(s)`.
 - LinkedIn candidates come from the **voyager feed API**
   (`LinkedIn.fetchFeedCandidates`), not the rendered DOM: the feed only ever
   renders ~3 cards for this session, while the API returns ~26 with full post

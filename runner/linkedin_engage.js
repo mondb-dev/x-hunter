@@ -53,27 +53,42 @@ function isSatireOrJoke(text) {
 }
 
 // ── LLM relevance scoring (0-3) — parity with x_engage ──────────────────────────
-// Was keyword-hit counting against axis vocabulary (scored ~everything low); a
-// small local model judges topical relevance far more robustly. Scoring stays on
-// the local brain (cheap); composition uses Claude.
+// Was keyword-hit counting against axis vocabulary (scored ~everything low); an
+// LLM judges topical relevance far more robustly. Runs through the shared
+// scoring pool in lib/content_relevance (bounded concurrency + a timeout sized
+// for the Claude CLI) — see the CALL BUDGET note there for why that matters:
+// this scorer used the retired local brain's 30s timeout, and once every call
+// started timing out its `return 0` made a dead backend look like a feed with
+// nothing relevant in it. Failures now return -1 and are counted.
 function makeScorer() {
   const { generate: llmGenerate } = require("./llm");
-  return async (post) => {
+  const { scoreLimit, SCORE_TIMEOUT_MS } = require("./lib/content_relevance");
+  const stats = { scored: 0, failed: 0 };
+
+  const scorer = async (post) => {
     const text = (post.text || "").trim();
     if (!text) return -1;
     if (isSensitiveContent(text) || isSatireOrJoke(text)) return -1; // hard-skip
     try {
-      const raw = await llmGenerate(
+      const raw = await scoreLimit(() => llmGenerate(
         `You rate LinkedIn posts for Sebastian Hunter, who analyzes how narratives are constructed in public discourse: political messaging, media framing, propaganda, institutional accountability, information integrity.\n\n` +
         `Rate ONLY substantive relevance to those themes. Job updates, congratulations, motivational quotes, personal milestones, generic business advice, and ads = 0 even if well-written. A post must actually engage with power, politics, media, policy, or truth-claims to score 2-3.\n\n` +
         `Answer with a SINGLE digit:\n0 = irrelevant, 1 = tangential, 2 = relevant, 3 = squarely on-topic.\n\n` +
         `POST: "${text.slice(0, 400)}"\n\nDigit:`,
-        { temperature: 0, maxTokens: 5, timeoutMs: 30_000 }
-      );
+        { temperature: 0, maxTokens: 5, timeoutMs: SCORE_TIMEOUT_MS }
+      ));
       const m = String(raw).match(/[0-3]/);
+      stats.scored++;
       return m ? Number(m[0]) : 0;
-    } catch { return 0; }
+    } catch (err) {
+      stats.failed++;
+      stats.lastError = err.message;
+      return -1; // unscorable → skip, never engage on a guessed score
+    }
   };
+
+  scorer.stats = stats;
+  return scorer;
 }
 
 // ── On-voice comment generation (grounded + verified + gated, parity w/ X reply) ─
@@ -137,9 +152,10 @@ async function generateComment(post) {
 
   log(`relevance scoring: LLM 0-3 (min ${RELEVANCE_MIN})`);
   const seen = loadLedger();
+  const scorer = makeScorer();
 
   const result = await li.engage({
-    score: makeScorer(),
+    score: scorer,
     generateComment,
     onLike: async (p) => logLinkedIn({ type: "linkedin_like", target_author: p.author, target_url: p.permalink, cycle: CYCLE }),
     onComment: async (p, text) => logLinkedIn({ type: "linkedin_comment", content: text, target_author: p.author, target_url: p.permalink, cycle: CYCLE }),
@@ -151,6 +167,11 @@ async function generateComment(post) {
   });
 
   if (!DRY_RUN) saveLedger(seen); // dry-runs must not mark posts as engaged
+  // A scoring outage silently zeroes every candidate — say so rather than let
+  // the run report a plausible-looking "0 relevant".
+  if (scorer.stats.failed) {
+    log(`WARN scoring failed on ${scorer.stats.failed}/${scorer.stats.failed + scorer.stats.scored} post(s) — last: ${scorer.stats.lastError}`);
+  }
   log(`done — ${result.likes} like(s), ${result.comments} comment(s)${DRY_RUN ? " (dry run)" : ""}`);
   process.exit(0);
 })().catch((err) => { log(`fatal: ${err.message}`); process.exit(0); });

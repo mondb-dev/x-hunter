@@ -126,9 +126,10 @@ async function generateReply(post) {
   const keywords = loadAxisKeywords();
   log(`relevance vocabulary: ${keywords.length} terms`);
   const seen = loadLedger();
+  const scorer = makeScorer(keywords);
 
   const result = await x.engage({
-    score: makeScorer(keywords),
+    score: scorer,
     generateReply,
     onLike: async (p) => logInteraction({ type: "x_like", tweet_url: p.url, handle: p.handle, cycle: CYCLE }),
     onReply: async (p, text) => logInteraction({ type: "x_reply", tweet_url: p.url, handle: p.handle, our_reply: text, cycle: CYCLE }),
@@ -140,6 +141,9 @@ async function generateReply(post) {
   });
 
   if (!DRY_RUN) saveLedger(seen); // dry-runs must not mark posts as engaged
+  if (scorer.stats.failed) {
+    log(`WARN scoring failed on ${scorer.stats.failed}/${scorer.stats.failed + scorer.stats.scored} post(s) — last: ${scorer.stats.lastError}`);
+  }
   log(`done — ${result.likes} like(s), ${result.replies} reply(ies)${DRY_RUN ? " (dry run)" : ""}`);
   await x.close().catch(() => {});   // close the dedicated tab so tabs don't accumulate
   process.exit(0);

@@ -109,6 +109,9 @@ async function composeCommentary(post) {
       if (s >= RELEVANCE_MIN) scored.push({ ...p, relevance: s });
     }
     log(`${scored.length}/${fresh.length} candidate(s) cleared relevance ≥ ${RELEVANCE_MIN}`);
+    if (score.stats.failed) {
+      log(`WARN scoring failed on ${score.stats.failed}/${score.stats.failed + score.stats.scored} post(s) — last: ${score.stats.lastError}`);
+    }
     if (!scored.length) { await x.close().catch(() => {}); process.exit(0); }
 
     // Bandit pick over sources: force-explore under-sampled, else exploit the
