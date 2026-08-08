@@ -1,8 +1,8 @@
 {
   "schema_version": "1.0",
-  "generated_at": "2026-08-08T11:30:46.320Z",
+  "generated_at": "2026-08-08T14:30:46.465Z",
   "method": "mechanical_registry_v1",
-  "profiled_at": "2026-08-08T11:30:53.831Z",
+  "profiled_at": "2026-08-08T14:31:04.487Z",
   "sources": [
     {
       "domain": "theguardian.com",
@@ -11,7 +11,7 @@
       "first_seen_at": "2026-03-27T23:17:00Z",
       "last_seen_at": "2026-08-08T06:25:54.104Z",
       "discovery": {
-        "distinct_urls": 750,
+        "distinct_urls": 752,
         "example_urls": [
           "https://www.theguardian.com/us-news/2026/jun/23/trump-immigration-courthouse-arrest-policy",
           "https://www.theguardian.com/us-news/2026/jun/28/ice-minnesota-defending-democracy",
@@ -21,7 +21,7 @@
         ],
         "origin_counts": {
           "ontology_evidence": 42,
-          "reading_queue": 717,
+          "reading_queue": 719,
           "journals": 114,
           "articles": 4
         },
@@ -72,7 +72,7 @@
         "breadth": {
           "score": 0.94,
           "basis": [
-            "distinct_urls:750",
+            "distinct_urls:752",
             "distinct_axes:17",
             "origin_types:4"
           ]
@@ -112,7 +112,7 @@
             "newsroom_domain_pattern",
             "article_path_seen",
             "doi_or_identifier_path_seen",
-            "distinct_urls:750",
+            "distinct_urls:752",
             "distinct_axes:17",
             "origin_types:4",
             "referring_accounts:0",
@@ -285,7 +285,7 @@
       "entity": "Aljazeera",
       "kind": "news",
       "first_seen_at": "2026-06-22T02:45:00Z",
-      "last_seen_at": "2026-08-08T11:01:28.069Z",
+      "last_seen_at": "2026-08-08T11:31:27.808Z",
       "discovery": {
         "distinct_urls": 384,
         "example_urls": [
@@ -296,9 +296,9 @@
           "https://www.aljazeera.com/video/newsfeed/2026/7/1/why-is-maga-in-meltdown-over-the-supreme-court-birthright-ruling-2?traffic_source=rss"
         ],
         "origin_counts": {
-          "ontology_evidence": 179,
+          "ontology_evidence": 180,
           "reading_queue": 16,
-          "journals": 482,
+          "journals": 483,
           "articles": 7
         },
         "distinct_referring_accounts": 0,
@@ -318,6 +318,7 @@
           "axis_human_rights_exploitation_v1",
           "axis_humanitarian_crisis_response",
           "axis_information_control_v1",
+          "axis_infrastructure_commons_v_extraction_v1",
           "axis_media_integrity_v1",
           "axis_national_sovereignty_v_intl_law_v1",
           "axis_political_moral_conduct_v1",
@@ -358,7 +359,7 @@
           "score": 0.94,
           "basis": [
             "distinct_urls:384",
-            "distinct_axes:27",
+            "distinct_axes:28",
             "origin_types:4"
           ]
         },
@@ -397,7 +398,7 @@
             "newsroom_domain_pattern",
             "article_path_seen",
             "distinct_urls:384",
-            "distinct_axes:27",
+            "distinct_axes:28",
             "origin_types:4",
             "referring_accounts:0",
             "origin_types:4",
@@ -697,7 +698,7 @@
       "first_seen_at": "2026-06-22T00:15:00Z",
       "last_seen_at": "2026-08-01T08:20:11.076Z",
       "discovery": {
-        "distinct_urls": 510,
+        "distinct_urls": 511,
         "example_urls": [
           "https://www.nytimes.com/2026/06/19/world/canada/frank-stronach-trial-guilty-sex-charges.html",
           "https://www.nytimes.com/2026/06/27/world/americas/mexican-officials-us-informants.html",
@@ -707,7 +708,7 @@
         ],
         "origin_counts": {
           "ontology_evidence": 16,
-          "reading_queue": 521,
+          "reading_queue": 522,
           "journals": 38
         },
         "distinct_referring_accounts": 0,
@@ -749,7 +750,7 @@
         "breadth": {
           "score": 0.8799999999999999,
           "basis": [
-            "distinct_urls:510",
+            "distinct_urls:511",
             "distinct_axes:10",
             "origin_types:3"
           ]
@@ -788,7 +789,7 @@
           "basis": [
             "newsroom_domain_pattern",
             "article_path_seen",
-            "distinct_urls:510",
+            "distinct_urls:511",
             "distinct_axes:10",
             "origin_types:3",
             "referring_accounts:0",
@@ -1210,7 +1211,7 @@
       "first_seen_at": "2026-06-26T07:05:00Z",
       "last_seen_at": "2026-08-07T21:29:16.276Z",
       "discovery": {
-        "distinct_urls": 459,
+        "distinct_urls": 461,
         "example_urls": [
           "https://www.bbc.co.uk/news/articles/cn8qxz6qypyo",
           "https://www.bbc.co.uk/news/articles/cn075j04pnyo?at_medium=RSS&amp;at_campaign=rss",
@@ -1220,7 +1221,7 @@
         ],
         "origin_counts": {
           "ontology_evidence": 6,
-          "reading_queue": 470,
+          "reading_queue": 472,
           "journals": 17,
           "articles": 1
         },
@@ -1256,7 +1257,7 @@
         "breadth": {
           "score": 0.8233333333333333,
           "basis": [
-            "distinct_urls:459",
+            "distinct_urls:461",
             "distinct_axes:4",
             "origin_types:4"
           ]
@@ -1294,7 +1295,7 @@
           "method": "mechanical_v1",
           "basis": [
             "newsroom_domain_pattern",
-            "distinct_urls:459",
+            "distinct_urls:461",
             "distinct_axes:4",
             "origin_types:4",
             "referring_accounts:0",
@@ -2408,9 +2409,9 @@
       "entity": "Gmanetwork",
       "kind": "unknown",
       "first_seen_at": "2026-05-18T03:29:41.732Z",
-      "last_seen_at": "2026-08-08T11:01:28.088Z",
+      "last_seen_at": "2026-08-08T14:01:34.202Z",
       "discovery": {
-        "distinct_urls": 387,
+        "distinct_urls": 390,
         "example_urls": [
           "https://www.gmanetwork.com/news/topstories/nation/994225/explainer-objections-in-a-trial-and-their-role-in-due-process/story/",
           "https://www.gmanetwork.com/news/balitambayan/balita/993931/sen-escudero-sinabing-16-na-boto-ang-kailangan-para-mahatulang-guilty-si-vp-sara-duterte-sa-impea/story/",
@@ -2419,8 +2420,8 @@
           "https://www.gmanetwork.com/news/topstories/nation/994080/electronic-copies-evidence-supreme-court/story/"
         ],
         "origin_counts": {
-          "ontology_evidence": 132,
-          "journals": 434,
+          "ontology_evidence": 133,
+          "journals": 437,
           "articles": 4
         },
         "distinct_referring_accounts": 0,
@@ -2472,7 +2473,7 @@
         "breadth": {
           "score": 0.8799999999999999,
           "basis": [
-            "distinct_urls:387",
+            "distinct_urls:390",
             "distinct_axes:20",
             "origin_types:3"
           ]
@@ -2511,7 +2512,7 @@
           "basis": [
             "unknown_domain_pattern",
             "doi_or_identifier_path_seen",
-            "distinct_urls:387",
+            "distinct_urls:390",
             "distinct_axes:20",
             "origin_types:3",
             "referring_accounts:0",
@@ -3235,9 +3236,9 @@
       "entity": "T Co",
       "kind": "unknown",
       "first_seen_at": "2016-05-05T18:57:30.000Z",
-      "last_seen_at": "2026-08-08T05:30:17.000Z",
+      "last_seen_at": "2026-08-08T11:56:18.000Z",
       "discovery": {
-        "distinct_urls": 12646,
+        "distinct_urls": 12658,
         "example_urls": [
           "https://t.co/pJSE124ec4",
           "https://t.co/Soz8BXPWaa",
@@ -3246,7 +3247,7 @@
           "https://t.co/cYaqYDRp08"
         ],
         "origin_counts": {
-          "feed_buffer": 10254,
+          "feed_buffer": 10267,
           "feed_buffer_reply": 4896,
           "articles": 3
         },
@@ -3289,7 +3290,7 @@
         "breadth": {
           "score": 0.53,
           "basis": [
-            "distinct_urls:12646",
+            "distinct_urls:12658",
             "distinct_axes:0",
             "origin_types:3"
           ]
@@ -3328,7 +3329,7 @@
           "basis": [
             "unknown_domain_pattern",
             "doi_or_identifier_path_seen",
-            "distinct_urls:12646",
+            "distinct_urls:12658",
             "distinct_axes:0",
             "origin_types:3",
             "referring_accounts:2731",
@@ -3374,9 +3375,9 @@
       "entity": "Inquirer",
       "kind": "unknown",
       "first_seen_at": "2026-05-09T10:15:15.053Z",
-      "last_seen_at": "2026-08-08T00:28:47.046Z",
+      "last_seen_at": "2026-08-08T14:01:34.202Z",
       "discovery": {
-        "distinct_urls": 276,
+        "distinct_urls": 280,
         "example_urls": [
           "https://newsinfo.inquirer.net/2266316/nbi-on-cayetano-position-that-cant-be-defended-by-facts-is-done-with-insults",
           "https://www.inquirer.net/capiz-broadcaster-shooting-probe-widens-as-cops-form-task-force",
@@ -3385,8 +3386,8 @@
           "https://newsinfo.inquirer.net/2251702/chr-seeks-swift-passage-of-bills-creating-detention-monitoring-body"
         ],
         "origin_counts": {
-          "ontology_evidence": 115,
-          "journals": 359,
+          "ontology_evidence": 116,
+          "journals": 363,
           "articles": 4
         },
         "distinct_referring_accounts": 0,
@@ -3435,7 +3436,7 @@
         "breadth": {
           "score": 0.8799999999999999,
           "basis": [
-            "distinct_urls:276",
+            "distinct_urls:280",
             "distinct_axes:18",
             "origin_types:3"
           ]
@@ -3473,7 +3474,7 @@
           "method": "mechanical_v1",
           "basis": [
             "unknown_domain_pattern",
-            "distinct_urls:276",
+            "distinct_urls:280",
             "distinct_axes:18",
             "origin_types:3",
             "referring_accounts:0",
@@ -6782,7 +6783,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-08-05T11:54:55.555Z",
+        "fetched_at": "2026-08-08T12:30:47.656Z",
         "homepage_url": "https://springermedicine.com/",
         "example_url": "https://www.springermedicine.com/webinar-breakthroughs-in-bladder-cancer-care/52496396?utm_source=x&utm_medium=cpc&utm_campaign=bladder-cancer-care-webinar&utm_content=ad-4&twclid=27am5hqwt8x5t4o745p030f1a4",
         "homepage_status": 200,
@@ -8052,7 +8053,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-08-05T11:54:55.851Z",
+        "fetched_at": "2026-08-08T12:30:47.923Z",
         "homepage_url": "https://fundingpips.com/",
         "example_url": "https://fundingpips.com/?utm_source=x&utm_medium=paid_social&utm_campaign=2026_q3_global_acquisition_all_in_sale&utm_content=2073786412856660020&twclid=24njria5jvt4ka7ejelux4oc97",
         "homepage_status": 429,
@@ -8814,7 +8815,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-08-05T11:54:56.071Z",
+        "fetched_at": "2026-08-08T12:30:48.178Z",
         "homepage_url": "https://bybet.com/",
         "example_url": "https://bybet.com/promotion/detail/10/70?utm_source=x&utm_medium=cpc&utm_campaign=Awarenes-DTS-Football&twclid=2aetcv0gphixdtyqc7k0t0any5",
         "homepage_status": 200,
@@ -9957,7 +9958,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-08-05T11:54:56.306Z",
+        "fetched_at": "2026-08-08T12:30:48.397Z",
         "homepage_url": "https://wencrypto.com/",
         "example_url": "https://wencrypto.com/pricing?twt_id=54613980&twclid=26wi5gtwrb7b2ig70kcqcspr3n",
         "homepage_status": 200,
@@ -12375,7 +12376,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-08-05T14:23:54.077Z",
+        "fetched_at": "2026-08-08T14:30:47.704Z",
         "homepage_url": "https://serus.ai/",
         "example_url": "https://www.serus.ai/?twclid=29v4lxmzvo39j1dtelbj405bc3",
         "homepage_status": 200,
@@ -12529,6 +12530,133 @@
           "has_contact_link": false,
           "has_corrections_link": false,
           "outbound_links_count": 4,
+          "opinion_marker": false
+        }
+      }
+    },
+    {
+      "domain": "bitget.com",
+      "entity": "Bitget",
+      "kind": "unknown",
+      "first_seen_at": "2026-07-06T16:20:33.820Z",
+      "last_seen_at": "2026-08-08T11:52:05.091Z",
+      "discovery": {
+        "distinct_urls": 10,
+        "example_urls": [
+          "https://partner.bitget.com/bg/SMTwittercfd?twclid=2dlbmypv93aoxlr6pzrilrub21",
+          "https://www.bitget.com/events/activities/new/ed02b9702a6c52e5a684217195d65e32?channelCode=regd&vipCode=s45x&twclid=282w7z5ggr3a2dcyd1h8s4aa16",
+          "https://www.bitget.com/promotion/stock?channelCode=regd&vipCode=6q53&twclid=2adirie4qy37i3yepn5mbehim",
+          "https://www.bitget.com/promotion/stock?channelCode=regd&vipCode=6q53&twclid=298wy4zjofw27yud2ri5tibtgn",
+          "https://www.bitget.com/promotion/stock?channelCode=regd&vipCode=6q53&twclid=2e7gufznsslo5usvtfb3fuwach"
+        ],
+        "origin_counts": {
+          "feed_buffer": 8,
+          "feed_buffer_reply": 2
+        },
+        "distinct_referring_accounts": 1,
+        "sample_referring_accounts": [
+          "bitget_tradfi"
+        ],
+        "distinct_axes": []
+      },
+      "claims": {
+        "total": 0,
+        "supported": 0,
+        "refuted": 0,
+        "contested": 0,
+        "unverified": 0,
+        "resolved_count": 0
+      },
+      "structural_features": {
+        "has_search_paths": false,
+        "has_article_paths": false,
+        "has_doi_paths": false
+      },
+      "ratings": {
+        "provenance": {
+          "score": 0.45,
+          "basis": [
+            "unknown_domain_pattern"
+          ]
+        },
+        "breadth": {
+          "score": 0.4116666666666667,
+          "basis": [
+            "distinct_urls:10",
+            "distinct_axes:0",
+            "origin_types:2"
+          ]
+        },
+        "corroboration": {
+          "score": 0.2833333333333333,
+          "basis": [
+            "referring_accounts:1",
+            "origin_types:2"
+          ]
+        },
+        "track_record": {
+          "score": null,
+          "basis": [
+            "no_resolved_claims_observed"
+          ]
+        },
+        "profile": {
+          "score": 0,
+          "confidence": 0.55,
+          "basis": [
+            "meta_author:false",
+            "published_time:false",
+            "canonical:false",
+            "about:false",
+            "contact:false",
+            "corrections:false",
+            "outbound_links:0",
+            "opinion_marker:false"
+          ]
+        },
+        "overall": {
+          "score": 0.42598958333333337,
+          "confidence": 0.35945000000000005,
+          "method": "mechanical_v1",
+          "basis": [
+            "unknown_domain_pattern",
+            "distinct_urls:10",
+            "distinct_axes:0",
+            "origin_types:2",
+            "referring_accounts:1",
+            "origin_types:2",
+            "track_record_unavailable"
+          ]
+        }
+      },
+      "profile": {
+        "fetched_at": "2026-08-06T05:54:15.907Z",
+        "homepage_url": "https://bitget.com/",
+        "example_url": "https://partner.bitget.com/bg/SMTwittercfd?twclid=2dlbmypv93aoxlr6pzrilrub21",
+        "homepage_status": null,
+        "example_status": null,
+        "homepage_final_url": "https://bitget.com/",
+        "example_final_url": "https://partner.bitget.com/bg/SMTwittercfd?twclid=2dlbmypv93aoxlr6pzrilrub21",
+        "homepage_content_type": "",
+        "example_content_type": "",
+        "homepage": {
+          "has_meta_author": false,
+          "has_published_time": false,
+          "has_canonical": false,
+          "has_about_link": false,
+          "has_contact_link": false,
+          "has_corrections_link": false,
+          "outbound_links_count": 0,
+          "opinion_marker": false
+        },
+        "example": {
+          "has_meta_author": false,
+          "has_published_time": false,
+          "has_canonical": false,
+          "has_about_link": false,
+          "has_contact_link": false,
+          "has_corrections_link": false,
+          "outbound_links_count": 0,
           "opinion_marker": false
         }
       }
@@ -12914,133 +13042,6 @@
           "has_contact_link": false,
           "has_corrections_link": false,
           "outbound_links_count": 7,
-          "opinion_marker": false
-        }
-      }
-    },
-    {
-      "domain": "bitget.com",
-      "entity": "Bitget",
-      "kind": "unknown",
-      "first_seen_at": "2026-07-06T16:20:33.820Z",
-      "last_seen_at": "2026-07-29T07:10:01.426Z",
-      "discovery": {
-        "distinct_urls": 9,
-        "example_urls": [
-          "https://partner.bitget.com/bg/SMTwittercfd?twclid=2dlbmypv93aoxlr6pzrilrub21",
-          "https://www.bitget.com/events/activities/new/ed02b9702a6c52e5a684217195d65e32?channelCode=regd&vipCode=s45x&twclid=282w7z5ggr3a2dcyd1h8s4aa16",
-          "https://www.bitget.com/promotion/stock?channelCode=regd&vipCode=6q53&twclid=2adirie4qy37i3yepn5mbehim",
-          "https://www.bitget.com/promotion/stock?channelCode=regd&vipCode=6q53&twclid=298wy4zjofw27yud2ri5tibtgn",
-          "https://www.bitget.com/promotion/stock?channelCode=regd&vipCode=6q53&twclid=2e7gufznsslo5usvtfb3fuwach"
-        ],
-        "origin_counts": {
-          "feed_buffer": 7,
-          "feed_buffer_reply": 2
-        },
-        "distinct_referring_accounts": 1,
-        "sample_referring_accounts": [
-          "bitget_tradfi"
-        ],
-        "distinct_axes": []
-      },
-      "claims": {
-        "total": 0,
-        "supported": 0,
-        "refuted": 0,
-        "contested": 0,
-        "unverified": 0,
-        "resolved_count": 0
-      },
-      "structural_features": {
-        "has_search_paths": false,
-        "has_article_paths": false,
-        "has_doi_paths": false
-      },
-      "ratings": {
-        "provenance": {
-          "score": 0.45,
-          "basis": [
-            "unknown_domain_pattern"
-          ]
-        },
-        "breadth": {
-          "score": 0.38249999999999995,
-          "basis": [
-            "distinct_urls:9",
-            "distinct_axes:0",
-            "origin_types:2"
-          ]
-        },
-        "corroboration": {
-          "score": 0.2833333333333333,
-          "basis": [
-            "referring_accounts:1",
-            "origin_types:2"
-          ]
-        },
-        "track_record": {
-          "score": null,
-          "basis": [
-            "no_resolved_claims_observed"
-          ]
-        },
-        "profile": {
-          "score": 0,
-          "confidence": 0.55,
-          "basis": [
-            "meta_author:false",
-            "published_time:false",
-            "canonical:false",
-            "about:false",
-            "contact:false",
-            "corrections:false",
-            "outbound_links:0",
-            "opinion_marker:false"
-          ]
-        },
-        "overall": {
-          "score": 0.419609375,
-          "confidence": 0.330825,
-          "method": "mechanical_v1",
-          "basis": [
-            "unknown_domain_pattern",
-            "distinct_urls:9",
-            "distinct_axes:0",
-            "origin_types:2",
-            "referring_accounts:1",
-            "origin_types:2",
-            "track_record_unavailable"
-          ]
-        }
-      },
-      "profile": {
-        "fetched_at": "2026-08-06T05:54:15.907Z",
-        "homepage_url": "https://bitget.com/",
-        "example_url": "https://partner.bitget.com/bg/SMTwittercfd?twclid=2dlbmypv93aoxlr6pzrilrub21",
-        "homepage_status": null,
-        "example_status": null,
-        "homepage_final_url": "https://bitget.com/",
-        "example_final_url": "https://partner.bitget.com/bg/SMTwittercfd?twclid=2dlbmypv93aoxlr6pzrilrub21",
-        "homepage_content_type": "",
-        "example_content_type": "",
-        "homepage": {
-          "has_meta_author": false,
-          "has_published_time": false,
-          "has_canonical": false,
-          "has_about_link": false,
-          "has_contact_link": false,
-          "has_corrections_link": false,
-          "outbound_links_count": 0,
-          "opinion_marker": false
-        },
-        "example": {
-          "has_meta_author": false,
-          "has_published_time": false,
-          "has_canonical": false,
-          "has_about_link": false,
-          "has_contact_link": false,
-          "has_corrections_link": false,
-          "outbound_links_count": 0,
           "opinion_marker": false
         }
       }
@@ -18324,7 +18325,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-08-05T14:23:55.010Z",
+        "fetched_at": "2026-08-08T14:30:48.818Z",
         "homepage_url": "https://pyrenva.com/",
         "example_url": "https://www.pyrenva.com/products/havern-polo?utm_source=twitter&utm_campaign=HpoloSWC02&twclid=285udvuvfb3zz15rwylu1v9etj",
         "homepage_status": 403,
@@ -19308,12 +19309,12 @@
           ]
         },
         "profile": {
-          "score": 0,
+          "score": 0.1,
           "confidence": 0.55,
           "basis": [
             "meta_author:false",
             "published_time:false",
-            "canonical:false",
+            "canonical:true",
             "about:false",
             "contact:false",
             "corrections:false",
@@ -19337,19 +19338,19 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-08-05T14:23:57.493Z",
+        "fetched_at": "2026-08-08T14:30:59.389Z",
         "homepage_url": "https://bcgm1.com/",
         "example_url": "https://bcgm1.com/i-97wbvq0rqm-n/?p=%2Flogin%2Fregist&utm_medium=twitter&utm_content=X557_zfge_WC_EN_SS_20260623_T&p=%2Flogin%2Fregist&ch=twitter&pixel_id=or72z&register=tw-or72z-or738&purchase=tw-or72z-or736&twclid=2c7k3uyirbkh3ff8w9vbicvapx",
-        "homepage_status": 200,
-        "example_status": null,
-        "homepage_final_url": "https://playph03.com/?traceId=ENWIMN-1785939835212",
-        "example_final_url": "https://bcgm1.com/i-97wbvq0rqm-n/?p=%2Flogin%2Fregist&utm_medium=twitter&utm_content=X557_zfge_WC_EN_SS_20260623_T&p=%2Flogin%2Fregist&ch=twitter&pixel_id=or72z&register=tw-or72z-or738&purchase=tw-or72z-or736&twclid=2c7k3uyirbkh3ff8w9vbicvapx",
-        "homepage_content_type": "text/html; charset=utf-8",
-        "example_content_type": "",
+        "homepage_status": null,
+        "example_status": 200,
+        "homepage_final_url": "https://bcgm1.com/",
+        "example_final_url": "https://playph03.com/login/regist?traceId=HQBGXC-1786199458960&ch=twitter&utm_medium=twitter&purchase=tw-or72z-or736&i=97wbvq0rqm&twclid=2c7k3uyirbkh3ff8w9vbicvapx&pixel_id=or72z&utm_content=X557_zfge_WC_EN_SS_20260623_T&register=tw-or72z-or738&utm_source=97wbvq0rqm",
+        "homepage_content_type": "",
+        "example_content_type": "text/html; charset=utf-8",
         "homepage": {
           "has_meta_author": false,
           "has_published_time": false,
-          "has_canonical": true,
+          "has_canonical": false,
           "has_about_link": false,
           "has_contact_link": false,
           "has_corrections_link": false,
@@ -19359,7 +19360,7 @@
         "example": {
           "has_meta_author": false,
           "has_published_time": false,
-          "has_canonical": false,
+          "has_canonical": true,
           "has_about_link": false,
           "has_contact_link": false,
           "has_corrections_link": false,
@@ -23631,7 +23632,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-08-05T14:24:03.377Z",
+        "fetched_at": "2026-08-08T14:31:04.487Z",
         "homepage_url": "https://spanel.io/",
         "example_url": "https://www.spanel.io/pricing.html?twclid=2arqqjpqxtpmtbpl4vdri6fkg9",
         "homepage_status": 200,
@@ -25765,7 +25766,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-08-05T04:38:01.049Z",
+        "fetched_at": "2026-08-08T13:00:47.667Z",
         "homepage_url": "https://pixelsuite.ai/",
         "example_url": "https://www.pixelsuite.ai/?twclid=21t2mc2zkr7fbld6fej146r5rz",
         "homepage_status": 404,
@@ -25890,7 +25891,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-08-05T04:38:03.539Z",
+        "fetched_at": "2026-08-08T13:00:51.640Z",
         "homepage_url": "https://theograce.com/",
         "example_url": "https://www.theograce.com/products/terry-diamond-heart-necklace-with-engraved-names-in-gold-plating?utm_term=Guitar&utm_id=41178982&utm_medium=cpc&utm_campaign=US_ALL_twitter_cpc_Display_MD26_M4W_Still&utm_source=twitter&utm_content=MD26&twclid=2dnpihgths0rs7qj2dk5rkgxbo",
         "homepage_status": 200,
@@ -26015,7 +26016,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-08-05T05:07:58.313Z",
+        "fetched_at": "2026-08-08T13:00:52.786Z",
         "homepage_url": "https://suno.com/",
         "example_url": "https://suno.com/?wpsrc=Twitter&utm_source=Twitter&utm_medium=cpc&twclid=262jn9t05wzgtlibjiyo9sypsn",
         "homepage_status": 200,
@@ -26265,7 +26266,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-08-05T05:08:00.238Z",
+        "fetched_at": "2026-08-08T13:00:54.697Z",
         "homepage_url": "https://kurate.org/",
         "example_url": "https://kurate.org/?twclid=297nodwqt8tc962gjnxn3ym0jb",
         "homepage_status": 200,
@@ -26390,7 +26391,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-08-05T05:08:00.275Z",
+        "fetched_at": "2026-08-08T14:00:46.837Z",
         "homepage_url": "https://mexc.com/",
         "example_url": "https://www.mexc.com/register?utm_source=brandad&utm_medium=twitter&utm_campaign=pizza_register&twclid=22vw5h310hr1lnaz6krw03u5v2",
         "homepage_status": null,
@@ -26611,7 +26612,7 @@
           ]
         },
         "profile": {
-          "score": 0.33,
+          "score": 0.34,
           "confidence": 0.65,
           "basis": [
             "meta_author:true",
@@ -26620,7 +26621,7 @@
             "about:false",
             "contact:false",
             "corrections:false",
-            "outbound_links:5",
+            "outbound_links:6",
             "opinion_marker:false"
           ]
         },
@@ -26640,7 +26641,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-08-05T05:08:02.398Z",
+        "fetched_at": "2026-08-08T14:00:49.285Z",
         "homepage_url": "https://havelsan.com/",
         "example_url": "https://www.havelsan.com/en/products/eyeminer-video-analytic-system-iot?utm_source=x&utm_medium=PaidSocial&utm_campaign=eyeminer_traffic&twclid=26xxdxm61rvq0o921lrv322jio",
         "homepage_status": null,
@@ -26666,7 +26667,7 @@
           "has_about_link": false,
           "has_contact_link": false,
           "has_corrections_link": false,
-          "outbound_links_count": 5,
+          "outbound_links_count": 6,
           "opinion_marker": false
         }
       }
@@ -26890,7 +26891,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-08-05T07:38:05.626Z",
+        "fetched_at": "2026-08-08T14:00:53.477Z",
         "homepage_url": "https://tcg-corner.com/",
         "example_url": "https://tcg-corner.com/collections/yu-gi-oh-single-card-asia-english?twclid=27yx2e0fgqiy624v4romjbkz0h",
         "homepage_status": 200,
@@ -27015,7 +27016,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-08-05T06:08:08.907Z",
+        "fetched_at": "2026-08-08T14:00:56.097Z",
         "homepage_url": "https://hubs.ly/",
         "example_url": "https://eu1.hubs.ly/H0wRBM_0?twclid=228g94ew2dkgzbh2vwlnrvcczu",
         "homepage_status": 200,
