@@ -1,14 +1,97 @@
 {
-  "checked_at": "2026-08-07T04:30:07.861Z",
-  "evidence_24h": 0,
-  "alerts": [],
-  "source_concentration": {},
-  "axis_concentration": {},
-  "pole_balance": {
-    "left": 0,
-    "right": 0,
-    "neutral": 0
+  "checked_at": "2026-08-08T05:50:00.706Z",
+  "evidence_24h": 7,
+  "unique_sources": 3,
+  "status": "captured",
+  "alerts": [
+    {
+      "type": "source_dominance",
+      "severity": "high",
+      "detail": "@unknown accounts for 71% of today's evidence (5/7)",
+      "username": "unknown",
+      "share": 0.714
+    },
+    {
+      "type": "pole_skew",
+      "severity": "moderate",
+      "detail": "71% of evidence pushes \"left\" — risk of one-sided belief drift",
+      "dominant_pole": "left",
+      "share": 0.714
+    }
+  ],
+  "summary": "2 capture alert(s) detected:\n[HIGH] @unknown accounts for 71% of today's evidence (5/7)\n[MODERATE] 71% of evidence pushes \"left\" — risk of one-sided belief drift",
+  "source_concentration": {
+    "unknown": {
+      "username": "unknown",
+      "count": 5,
+      "share": 0.714
+    },
+    "inquirerdotnet": {
+      "username": "inquirerdotnet",
+      "count": 1,
+      "share": 0.143
+    },
+    "philippinestar": {
+      "username": "philippinestar",
+      "count": 1,
+      "share": 0.143
+    }
   },
-  "status": "clean",
-  "summary": "No evidence collected in the last 24h — nothing to assess."
+  "axis_concentration": {
+    "axis_procedural_governance_accountability_v1": {
+      "axis_id": "axis_procedural_governance_accountability_v1",
+      "label": "Procedural Governance vs. Genuine Accountability",
+      "count": 2,
+      "share": 0.286
+    },
+    "axis_power_accountability": {
+      "axis_id": "axis_power_accountability",
+      "label": "Power, Institutions, and Rule of Law",
+      "count": 1,
+      "share": 0.143
+    },
+    "axis_ai_workflow_approach_v1": {
+      "axis_id": "axis_ai_workflow_approach_v1",
+      "label": "AI Workflow Approach: Efficiency/Automation vs. Strategic Integration",
+      "count": 1,
+      "share": 0.143
+    },
+    "axis_geopolitical_control_narratives": {
+      "axis_id": "axis_geopolitical_control_narratives",
+      "label": "Geopolitical Control Narratives: Asserting Sovereignty vs. International Norms",
+      "count": 1,
+      "share": 0.143
+    },
+    "axis_procedural_governance_substantive_action": {
+      "axis_id": "axis_procedural_governance_substantive_action",
+      "label": "Procedural Governance vs. Substantive Action",
+      "count": 1,
+      "share": 0.143
+    },
+    "axis_infrastructure_commons_v_extraction_v1": {
+      "axis_id": "axis_infrastructure_commons_v_extraction_v1",
+      "label": "Infrastructure as Commons vs. Extraction",
+      "count": 1,
+      "share": 0.143
+    }
+  },
+  "cluster_concentration": {
+    "unknown": {
+      "cluster": "unknown",
+      "count": 5,
+      "share": 0.714
+    },
+    "breaking_news": {
+      "cluster": "breaking_news",
+      "count": 2,
+      "share": 0.286
+    }
+  },
+  "pole_balance": {
+    "left": 5,
+    "right": 2,
+    "neutral": 0,
+    "left_share": 0.714,
+    "right_share": 0.286
+  }
 }
