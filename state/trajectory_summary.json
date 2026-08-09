@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-09T05:02:35.316Z",
+  "generated_at": "2026-08-09T08:02:23.429Z",
   "windows": [
     "1d",
     "3d",
@@ -597,23 +597,23 @@
     },
     "axis_environmental_policy_v_economic_v1": {
       "current": {
-        "score": -0.197,
-        "confidence": 0.6746
+        "score": -0.2142,
+        "confidence": 0.6823
       },
       "1d": {
-        "score_delta": 0.0266,
-        "conf_delta": 0.012,
-        "direction": "↗"
+        "score_delta": 0.0094,
+        "conf_delta": 0.0197,
+        "direction": "→"
       },
       "3d": {
-        "score_delta": 0.0266,
-        "conf_delta": 0.008,
-        "direction": "↗"
+        "score_delta": 0.0094,
+        "conf_delta": 0.0157,
+        "direction": "→"
       },
       "7d": {
-        "score_delta": 0.0368,
-        "conf_delta": 0.0247,
-        "direction": "↗"
+        "score_delta": 0.0196,
+        "conf_delta": 0.0324,
+        "direction": "→"
       }
     },
     "axis_consumer_product_environmental_impact_v1": {
@@ -1039,21 +1039,21 @@
     "axis_procedural_governance_substantive_action": {
       "current": {
         "score": -0.85,
-        "confidence": 0.7821
+        "confidence": 0.7869
       },
       "1d": {
         "score_delta": -0.05,
-        "conf_delta": 0.015,
+        "conf_delta": 0.0198,
         "direction": "↘"
       },
       "3d": {
         "score_delta": -0.1,
-        "conf_delta": 0.0203,
+        "conf_delta": 0.0251,
         "direction": "↘"
       },
       "7d": {
         "score_delta": -0.25,
-        "conf_delta": 0.0972,
+        "conf_delta": 0.102,
         "direction": "↘"
       }
     },
@@ -1080,23 +1080,23 @@
     },
     "axis_technological_innovation_vs_social_equity_v1": {
       "current": {
-        "score": 0,
-        "confidence": 0.0388
+        "score": 0.05,
+        "confidence": 0.1026
       },
       "1d": {
-        "score_delta": 0,
-        "conf_delta": -0.002,
-        "direction": "→"
+        "score_delta": 0.05,
+        "conf_delta": 0.0618,
+        "direction": "↗"
       },
       "3d": {
-        "score_delta": 0,
-        "conf_delta": -0.006,
-        "direction": "→"
+        "score_delta": 0.05,
+        "conf_delta": 0.0578,
+        "direction": "↗"
       },
       "7d": {
-        "score_delta": 0,
-        "conf_delta": -0.014,
-        "direction": "→"
+        "score_delta": 0.05,
+        "conf_delta": 0.0498,
+        "direction": "↗"
       }
     },
     "axis_infrastructure_commons_v_extraction_v1": {
@@ -1143,18 +1143,18 @@
     },
     "axis_accountability_temporality_v1": {
       "current": {
-        "score": 0.1,
-        "confidence": 0.1283
+        "score": 0.15,
+        "confidence": 0.1572
       },
       "1d": {
-        "score_delta": 0,
-        "conf_delta": -0.002,
-        "direction": "→"
+        "score_delta": 0.05,
+        "conf_delta": 0.0269,
+        "direction": "↗"
       },
       "3d": {
-        "score_delta": 0,
-        "conf_delta": -0.006,
-        "direction": "→"
+        "score_delta": 0.05,
+        "conf_delta": 0.0229,
+        "direction": "↗"
       },
       "7d": null
     },
@@ -1174,6 +1174,24 @@
         "direction": "→"
       },
       "7d": null
+    },
+    "axis_infrastructure_displacement_accountability_v1": {
+      "current": {
+        "score": 0,
+        "confidence": 0
+      },
+      "1d": null,
+      "3d": null,
+      "7d": null
+    },
+    "axis_crisis_visibility_hierarchy_v1": {
+      "current": {
+        "score": 0,
+        "confidence": 0
+      },
+      "1d": null,
+      "3d": null,
+      "7d": null
     }
   },
   "notable_count": 8,
@@ -1184,6 +1202,7 @@
     "axis_humanitarian_crisis_response",
     "axis_procedural_governance_accountability_v1",
     "axis_procedural_governance_substantive_action",
+    "axis_technological_innovation_vs_social_equity_v1",
     "axis_infrastructure_commons_v_extraction_v1"
   ]
 }

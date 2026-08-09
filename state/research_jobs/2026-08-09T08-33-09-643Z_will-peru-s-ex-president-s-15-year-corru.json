@@ -1,0 +1,401 @@
+{
+  "job_id": "2026-08-09T08-33-09-643Z_will-peru-s-ex-president-s-15-year-corru",
+  "question": "Will Peru's ex-president's 15-year corruption sentence overturn be upheld on final appeal, or will prosecutors successfully reinstate conviction?",
+  "tier": "deep",
+  "status": "running",
+  "root": {
+    "title": "Peru Ex-President Corruption Appeal Outcome",
+    "question": "Will Peru's ex-president's 15-year corruption sentence overturn be upheld on final appeal, or will prosecutors successfully reinstate conviction?",
+    "direction": "Identify the specific ex-president and case, then trace the judicial timeline from original conviction through overturn to current appeal status, finally assess legal arguments and likely outcome",
+    "research_areas": [
+      "Identity of Peruvian ex-president with 15-year corruption sentence",
+      "Timeline of conviction, appeal, and overturn",
+      "Current status of final appeal proceedings",
+      "Prosecutorial arguments for reinstatement",
+      "Defense arguments for upholding overturn",
+      "Peruvian judicial precedent and legal framework"
+    ],
+    "tools_hint": [
+      "recall",
+      "posts",
+      "search",
+      "fetch"
+    ],
+    "success_criterion": "Clear identification of case, complete judicial timeline, understanding of current appeal status and legal positions, evidence-based prediction of outcome",
+    "depends_on": [],
+    "children": [
+      {
+        "title": "Case Identification",
+        "question": "Which specific Peruvian ex-president has a 15-year corruption sentence that was overturned and is now subject to final appeal?",
+        "direction": "Search recent news about Peruvian ex-presidents, corruption convictions, 15-year sentences, and appeals to identify the individual and case details",
+        "research_areas": [
+          "Recent Peruvian ex-president corruption cases",
+          "15-year corruption sentences in Peru",
+          "Overturned convictions under appeal",
+          "Names: Fujimori, Humala, Toledo, Kuczynski, Castillo"
+        ],
+        "tools_hint": [
+          "recall",
+          "posts",
+          "search"
+        ],
+        "success_criterion": "Confirmed name of ex-president, specific charges, original conviction date, and case name/number",
+        "depends_on": [],
+        "children": [
+          {
+            "parent_id": "1.1",
+            "title": "Recent Developments and News Coverage",
+            "question": "What are the most recent developments, news reports, and updates regarding this case within the last 6 months?",
+            "direction": "Search for recent news articles, press releases, and media coverage to ensure we have the latest information on the appeal status and any new developments",
+            "research_areas": [
+              "Recent news coverage",
+              "Latest court filings",
+              "Media reports on appeal proceedings",
+              "Recent statements from involved parties"
+            ],
+            "tools_hint": [
+              "search",
+              "fetch"
+            ],
+            "success_criterion": "Retrieved and analyzed at least 5-10 recent news articles from reputable sources covering developments in the past 6 months",
+            "depends_on": [
+              "1.1"
+            ],
+            "children": [],
+            "id": "1.1.1",
+            "status": "answered",
+            "findings": [
+              {
+                "tool": "search",
+                "input": "most recent developments news updates case last 6 months",
+                "result": "1. Supreme Court Case Tracker — Cases, Decisions & Analysis\n   https://www.supremecourtcasetracker.com/\n   Track the Court's live docket with source-backed case coverage, justice votes, and plain-English analysis of every decision.\n2. Supreme Court Case Tracker — Cases, Decisions & Analysis\n   https://www.supremecourtcasetracker.com/\n   Track the Court's live docket with source-backed case coverage, justice votes, and plain-English analysis of every decision.\n3. Current Mass Tort Cases: News and Updates (2026)\n   https://www.consumershield.com/articles/mass-torts\n   Current Mass Tort Cases: News and Updates (2026) Stay updated on September 2025's major mass torts, including Uber sexual assault, Pfizer's Depo Provera, Roundup, Talcum, and more key developments.\n4. Current Mass Tort Cases: News and Updates (2026)\n   https://www.consumershield.com/articles/mass-torts\n   Current Mass Tort Cases: News and Updates (2026) Stay updated on September 2025's major mass torts, including Uber sexual assault, Pfizer's Depo Provera, Roundup, Talcum, and more key developments.\n5. Nancy Guthrie case hits 6 months − timeline of her kidnapping ... - MSN\n   https://www.msn.com/en-us/news/other/nancy-guthrie-case-hits-6-months-timeline-of-her-kidnapping-search-updates/ar-AA298WAh\n   From the day Savannah Guthrie's mom was last seen to every update in the case, here's what we know six months after her abduction.\n6. Nancy Guthrie case hits 6 months − timeline of her kidnapping ... - MSN\n   https://www.msn.com/en-us/news/other/nancy-guthrie-case-hits-6-months-timeline-of-her-kidnapping-search-updates/ar-AA298WAh\n   From the day Savannah Guthrie's mom was last seen to every update in the case, here's what we know six months after her abduction."
+              },
+              {
+                "tool": "search",
+                "input": "appeal status latest news 2024",
+                "result": "1. Case Status Inquiry 3.0\n   https://services.ca.judiciary.gov.ph/\n   Case Status Inquiry Disclaimer The electronic content in this microsite may contain computer-generated errors or other deviations from the official printed documents. In case of discrepancies between the official print and electronic versions, the official print version prevails.\n2. Case Status Inquiry 3.0\n   https://services.ca.judiciary.gov.ph/\n   Case Status Inquiry Disclaimer The electronic content in this microsite may contain computer-generated errors or other deviations from the official printed documents. In case of discrepancies between the official print and electronic versions, the official print version prevails.\n3. Check your claim, decision review, or appeal status\n   https://www.va.gov/claim-or-appeal-status/\n   Find out how to check the status of certain VA claims, decision reviews, or appeals online.\n4. Check your claim, decision review, or appeal status\n   https://www.va.gov/claim-or-appeal-status/\n   Find out how to check the status of certain VA claims, decision reviews, or appeals online.\n5. Appellate News | Today's Latest Stories | Reuters\n   https://www.reuters.com/legal/appellate/\n   A federal appeals court on Friday ruled that the former CEO of Steward Health Care cannot sue members of a U.S. Senate panel for subpoenaing him in 2024 to testify about the hospital operator's ...\n6. Appellate News | Today's Latest Stories | Reuters\n   https://www.reuters.com/legal/appellate/\n   A federal appeals court on Friday ruled that the former CEO of Steward Health Care cannot sue members of a U.S. Senate panel for subpoenaing him in 2024 to testify about the hospital operator's ..."
+              },
+              {
+                "tool": "fetch",
+                "input": "https://[URL from search results - most relevant recent article]",
+                "result": "(could not fetch https://[URL from search results - most relevant recent article])"
+              },
+              {
+                "tool": "fetch",
+                "input": "https://[URL from search results - second most relevant article]",
+                "result": "(could not fetch https://[URL from search results - second most relevant article])"
+              },
+              {
+                "tool": "fetch",
+                "input": "https://www.msn.com/en-us/news/other/nancy-guthrie-case-hits-6-months-timeline-of-her-kidnapping-search-updates/ar-AA298WAh",
+                "result": "(could not fetch https://www.msn.com/en-us/news/other/nancy-guthrie-case-hits-6-months-timeline-of-her-kidnapping-search-updates/ar-AA298WAh)"
+              },
+              {
+                "tool": "fetch",
+                "input": "https://www.reuters.com/legal/appellate/",
+                "result": "(could not fetch https://www.reuters.com/legal/appellate/)"
+              },
+              {
+                "tool": "recall",
+                "input": "case name parties defendant plaintiff",
+                "result": "(no memory match)"
+              },
+              {
+                "tool": "recall",
+                "input": "court appeal lawsuit litigation",
+                "result": "(no memory match)"
+              },
+              {
+                "tool": "recall",
+                "input": "Sebastian Hunter research focus topic",
+                "result": "(no memory match)"
+              }
+            ],
+            "answer": "I cannot answer this sub-question from the provided evidence. The search results returned only generic legal tracking websites and unrelated cases (Nancy Guthrie kidnapping, mass torts, Steward Health Care CEO), with no specific case identified in the evidence. All fetch attempts failed, and memory recalls returned no matches for case name, parties, or research focus. Without knowing which specific case is being researched, I cannot determine recent developments from the last 6 months.\n\n**Confidence: No answer possible from available evidence.**"
+          }
+        ],
+        "id": "1.1",
+        "status": "answered",
+        "findings": [],
+        "answer": "I cannot answer this sub-question from the available evidence. The sub-findings explicitly state that no relevant evidence was gathered about any Peruvian ex-president with a corruption sentence, and all search/fetch attempts failed to return applicable information. No case name, parties, or specific details about Peruvian legal proceedings were found in the evidence reviewed.\n\n**Confidence: No answer possible - zero relevant evidence available.**"
+      },
+      {
+        "title": "Judicial Timeline",
+        "question": "What is the complete timeline from original conviction through overturn to the current final appeal stage?",
+        "direction": "Map out key dates: when was the original 15-year sentence issued, by which court, when and why was it overturned, which court overturned it, and when did the final appeal process begin",
+        "research_areas": [
+          "Original trial court and conviction date",
+          "Grounds for initial conviction",
+          "Appellate court overturn decision and reasoning",
+          "Date of overturn ruling",
+          "Supreme Court or final appeal filing date",
+          "Current procedural stage"
+        ],
+        "tools_hint": [
+          "search",
+          "fetch"
+        ],
+        "success_criterion": "Chronological sequence of all major judicial decisions with dates, courts, and key reasoning for each stage",
+        "depends_on": [
+          "Case Identification"
+        ],
+        "children": [],
+        "id": "1.2",
+        "status": "running",
+        "findings": [],
+        "answer": null
+      },
+      {
+        "title": "Current Appeal Status",
+        "question": "What is the current procedural status of the final appeal - has it been argued, is a decision pending, or has it been scheduled?",
+        "direction": "Find most recent reporting on the appeal proceedings, including hearing dates, oral arguments, submission deadlines, and expected decision timeline",
+        "research_areas": [
+          "Recent news on the appeal",
+          "Court calendar and hearing schedules",
+          "Statements from prosecutors or defense",
+          "Procedural motions or filings",
+          "Expected decision date"
+        ],
+        "tools_hint": [
+          "search",
+          "fetch",
+          "posts",
+          "xsearch"
+        ],
+        "success_criterion": "Current procedural stage, whether arguments have been heard, and timeline for decision if available",
+        "depends_on": [
+          "Case Identification"
+        ],
+        "children": [],
+        "id": "1.3",
+        "status": "answered",
+        "findings": [
+          {
+            "tool": "search",
+            "input": "final appeal procedural status oral arguments hearing date decision pending 2024",
+            "result": "1. Supreme Court Case Tracker — Cases, Decisions & Analysis\n   https://www.supremecourtcasetracker.com/\n   Track current U.S. Supreme Court cases — live docket status, oral arguments, opinions, justice votes, and plain-English, source-backed analysis of every decision.\n2. Supreme Court Case Tracker — Cases, Decisions & Analysis\n   https://www.supremecourtcasetracker.com/\n   Track current U.S. Supreme Court cases — live docket status, oral arguments, opinions, justice votes, and plain-English, source-backed analysis of every decision.\n3. 1209-Oral Hearing - United States Patent and Trademark Office\n   https://www.uspto.gov/web/offices/pac/mpep/s1209.html\n   ¶ 12.279.03 Request to Present Oral Arguments The examiner requests the opportunity to present arguments at the oral hearing. Examiner Note: 1. For use if the notice of appeal was filed on or after January 23, 2012. 2. Use this form paragraph only if an oral hearing has been requested by appellant and the primary examiner intends to present an oral argument. 3. This form paragraph must be ...\n4. 1209-Oral Hearing - United States Patent and Trademark Office\n   https://www.uspto.gov/web/offices/pac/mpep/s1209.html\n   ¶ 12.279.03 Request to Present Oral Arguments The examiner requests the opportunity to present arguments at the oral hearing. Examiner Note: 1. For use if the notice of appeal was filed on or after January 23, 2012. 2. Use this form paragraph only if an oral hearing has been requested by appellant and the primary examiner intends to present an oral argument. 3. This form paragraph must be ...\n5. 1214-Procedure Following Decision by Board\n   https://www.uspto.gov/web/offices/pac/mpep/s1214.html\n   37 CFR 41.54 Action following decision. After decision by the Board, jurisdiction over an application or patent under ex parte reexamination proceeding passes to the examiner, subject to appellant's right of appeal or other review, for such further action by appellant or by the examiner, as the condition of the application or patent under ex parte reexamination proceeding may require, to carry ...\n6. 1214-Procedure Following Decision by Board\n   https://www.uspto.gov/web/offices/pac/mpep/s1214.html\n   37 CFR 41.54 Action following decision. After decision by the Board, jurisdiction over an application or patent under ex parte reexamination proceeding passes to the examiner, subject to appellant's right of appeal or other review, for such further action by appellant or by the examiner, as the condition of the application or patent under ex parte reexamination proceeding may require, to carry ..."
+          },
+          {
+            "tool": "fetch",
+            "input": "https://www.supremecourt.gov/oral_arguments/argument_calendars.aspx",
+            "result": "404 - Page Not Found\n \n Sorry, the page you are looking for does not exist or has been moved.\n — Return to Homepage"
+          },
+          {
+            "tool": "search",
+            "input": "appellate court oral argument calendar decision pending 2024 recent",
+            "result": "1. Calendars and Lists - Supreme Court of the United States\n   https://www.supremecourt.gov/oral_arguments/calendarsandlists.aspx\n   Supreme Court Calendar (October Term 2026) (PDF) Supreme Court Calendar (October Term 2025) (PDF) - (Current Term) Supreme Court Calendar (October Term 2024) (PDF) Earlier Terms Argument Calendar October Term 2026\n2. Calendars and Lists - Supreme Court of the United States\n   https://www.supremecourt.gov/oral_arguments/calendarsandlists.aspx\n   Supreme Court Calendar (October Term 2026) (PDF) Supreme Court Calendar (October Term 2025) (PDF) - (Current Term) Supreme Court Calendar (October Term 2024) (PDF) Earlier Terms Argument Calendar October Term 2026\n3. Oral Arguments Calendar - United States Court of Appeals for the Ninth ...\n   https://www.ca9.uscourts.gov/cases/calendar/\n   Court Sessions documents are published once a year and include the month, date, and location that court will be in session. No case numbers or hearing information is included here. For specific hearing details, select a location from the Calendar below.\n4. Oral Arguments Calendar - United States Court of Appeals for the Ninth ...\n   https://www.ca9.uscourts.gov/cases/calendar/\n   Court Sessions documents are published once a year and include the month, date, and location that court will be in session. No case numbers or hearing information is included here. For specific hearing details, select a location from the Calendar below.\n5. Oral Argument Calendars/Listen Live | United States Court of Appeals\n   https://www.ca11.uscourts.gov/index.php/oral-argument-calendars\n   Calendars are posted 4 weeks before oral argument sessions and special hearings, and revised as necessary to reflect changes. Oral arguments held in open court in all court locations are live streamed. Audio recordings of oral arguments are posted on the Court's website as soon as practicable after the date of argument.\n6. Oral Argument Calendars/Listen Live | United States Court of Appeals\n   https://www.ca11.uscourts.gov/index.php/oral-argument-calendars\n   Calendars are posted 4 weeks before oral argument sessions and special hearings, and revised as necessary to reflect changes. Oral arguments held in open court in all court locations are live streamed. Audio recordings of oral arguments are posted on the Court's website as soon as practicable after the date of argument."
+          },
+          {
+            "tool": "fetch",
+            "input": "[URL from search results with most recent appeal status]",
+            "result": "(could not fetch [URL from search results with most recent appeal status])"
+          },
+          {
+            "tool": "fetch",
+            "input": "https://www.supremecourt.gov/oral_arguments/calendarsandlists.aspx",
+            "result": "(could not fetch https://www.supremecourt.gov/oral_arguments/calendarsandlists.aspx)"
+          },
+          {
+            "tool": "fetch",
+            "input": "https://www.ca9.uscourts.gov/cases/calendar/",
+            "result": "Oral Arguments CalendarCourt Sessions documents are published once a year and include the month, date, and location that court will be in session. No case numbers or hearing information is included here. For specific hearing details, select a location from the Calendar below.See yearly printable calendar here.Search HearingsSearch by case title or number:SunMonTueWedThuFriSat26\n 27\n 28\n 29\n 30\n San Francisco31\n 1\n 2\n 3\n Seattle4\n PasadenaSeattle5\n PasadenaSeattle6\n PasadenaSeattle7\n PasadenaSeattle8\n 9\n 10\n San FranciscoAnchorageReno11\n San FranciscoAnchorageReno12\n San FranciscoAnchorageReno13\n San FranciscoAnchorageReno14\n San FranciscoReno15\n 16\n 17\n 18\n 19\n 20\n 21\n 22\n 23\n 24\n 25\n Pasadena26\n 27\n Pasadena28\n Seattle29\n 30\n 31\n San Francisco1\n San Francisco2\n San Francisco3\n San Francisco4\n San Francisco5\n \nLast updated July 30, 2026"
+          },
+          {
+            "tool": "recall",
+            "input": "final appeal case name parties docket",
+            "result": "(no memory match)"
+          },
+          {
+            "tool": "recall",
+            "input": "Sebastian Hunter research topic subject litigation",
+            "result": "(no memory match)"
+          },
+          {
+            "tool": "recall",
+            "input": "appeal oral arguments hearing scheduled pending decision",
+            "result": "(no memory match)"
+          }
+        ],
+        "answer": "**Unable to determine from evidence provided.** The evidence contains only generic appellate court calendar pages (Supreme Court and Ninth Circuit) without specific case information. No case name, docket number, or party names were provided in the sub-question or successfully recalled from memory, making it impossible to locate the specific appeal's procedural status. **Confidence: Cannot assess** – the evidence does not address any identifiable final appeal."
+      },
+      {
+        "title": "Prosecution Arguments",
+        "question": "What are the prosecutors' key legal arguments for reinstating the 15-year corruption conviction?",
+        "direction": "Review prosecutorial briefs, statements, and legal filings to understand their case for why the overturn was erroneous and conviction should be reinstated",
+        "research_areas": [
+          "Prosecutorial appeal brief arguments",
+          "Evidence claims the lower court improperly disregarded",
+          "Legal precedent cited by prosecutors",
+          "Alleged errors in overturn ruling",
+          "Constitutional or procedural arguments",
+          "Public statements by attorney general or prosecutors"
+        ],
+        "tools_hint": [
+          "search",
+          "fetch"
+        ],
+        "success_criterion": "Detailed understanding of 3-5 main prosecutorial arguments with supporting legal reasoning",
+        "depends_on": [
+          "Case Identification",
+          "Judicial Timeline"
+        ],
+        "children": [],
+        "id": "1.4",
+        "status": "pending",
+        "findings": [],
+        "answer": null
+      },
+      {
+        "title": "Defense Arguments",
+        "question": "What are the defense's key legal arguments for upholding the overturn and maintaining the ex-president's acquittal?",
+        "direction": "Examine defense filings, legal briefs, and public statements to understand their case for why the overturn was correct and should be upheld",
+        "research_areas": [
+          "Defense response brief arguments",
+          "Due process or evidentiary claims",
+          "Legal precedent cited by defense",
+          "Arguments supporting overturn reasoning",
+          "Constitutional rights arguments",
+          "Defense attorney public statements"
+        ],
+        "tools_hint": [
+          "search",
+          "fetch"
+        ],
+        "success_criterion": "Detailed understanding of 3-5 main defense arguments with supporting legal reasoning",
+        "depends_on": [
+          "Case Identification",
+          "Judicial Timeline"
+        ],
+        "children": [],
+        "id": "1.5",
+        "status": "pending",
+        "findings": [],
+        "answer": null
+      },
+      {
+        "title": "Legal Analysis and Outcome Prediction",
+        "question": "Based on Peruvian legal precedent, the strength of arguments, and expert commentary, what is the likely outcome of the final appeal?",
+        "direction": "Synthesize legal expert opinions, similar case precedents, strength of prosecution vs defense arguments, and political/judicial context to assess probable ruling",
+        "research_areas": [
+          "Legal expert commentary on the case",
+          "Similar Peruvian corruption appeal precedents",
+          "Supreme Court tendencies in corruption cases",
+          "Strength assessment of prosecution evidence",
+          "Procedural soundness of overturn",
+          "Political pressure or independence factors",
+          "Recent polling or legal betting markets if available"
+        ],
+        "tools_hint": [
+          "search",
+          "fetch",
+          "posts",
+          "xsearch"
+        ],
+        "success_criterion": "Evidence-based probability assessment (reinstatement vs upholding overturn) with supporting rationale from legal experts and precedent",
+        "depends_on": [
+          "Judicial Timeline",
+          "Prosecution Arguments",
+          "Defense Arguments",
+          "Current Appeal Status"
+        ],
+        "children": [
+          {
+            "parent_id": "1.6",
+            "title": "Peruvian Legal Precedent",
+            "question": "What is the historical track record of similar corruption appeals in Peru's judicial system, particularly in cases involving former presidents?",
+            "direction": "Research Peru's judicial history with corruption cases involving high-ranking officials to understand precedent patterns",
+            "research_areas": [
+              "Historical corruption case outcomes in Peru",
+              "Appellate court reversal rates",
+              "Cases involving former presidents",
+              "Judicial independence concerns"
+            ],
+            "tools_hint": [
+              "search",
+              "fetch"
+            ],
+            "success_criterion": "Identified at least 3-5 comparable cases with outcomes and patterns that inform likelihood of current case outcome",
+            "depends_on": [
+              "1.1",
+              "1.2"
+            ],
+            "children": [],
+            "id": "1.6.1",
+            "status": "pending",
+            "findings": [],
+            "answer": null
+          },
+          {
+            "parent_id": "1.6",
+            "title": "Expert Legal Commentary",
+            "question": "What are independent legal experts, scholars, and analysts saying about the likely outcome of this appeal?",
+            "direction": "Gather expert opinions and analysis from legal scholars, former judges, and Peru legal experts",
+            "research_areas": [
+              "Legal expert commentary",
+              "Academic analysis",
+              "Former judicial officials' perspectives",
+              "International legal observers' views"
+            ],
+            "tools_hint": [
+              "search",
+              "fetch",
+              "xsearch"
+            ],
+            "success_criterion": "Collected perspectives from at least 3-5 independent legal experts with relevant expertise",
+            "depends_on": [
+              "1.4",
+              "1.5",
+              "1.6"
+            ],
+            "children": [],
+            "id": "1.6.2",
+            "status": "pending",
+            "findings": [],
+            "answer": null
+          }
+        ],
+        "id": "1.6",
+        "status": "pending",
+        "findings": [],
+        "answer": null
+      }
+    ],
+    "id": "1",
+    "status": "running",
+    "findings": [],
+    "answer": null
+  },
+  "ledger": {
+    "marked_terms": [
+      {
+        "term": "this case",
+        "why": "The question references 'this case' but no specific case has been identified in the gathered materials - critical ambiguity that prevents answering the question"
+      },
+      {
+        "term": "Supreme Court Case Tracker",
+        "why": "Referenced as a source but no actual case data was retrieved from it - unclear if this is an authoritative tracking service or content aggregator"
+      }
+    ],
+    "verify_points": [
+      {
+        "claim": "The Ninth Circuit oral arguments calendar shows sessions scheduled through August 2026 with specific locations (San Francisco, Pasadena, Seattle, Anchorage, Reno)",
+        "source": "https://www.ca9.uscourts.gov/cases/calendar/",
+        "importance": 1
+      }
+    ],
+    "tool_gaps": [
+      {
+        "need": "The identity of the specific case being researched - without this fundamental context, no tools can retrieve relevant recent developments",
+        "suggested_tool": "A conversation history or research project context tool that would show what Sebastian has been investigating"
+      },
+      {
+        "need": "Cannot determine which specific case 'the final appeal' refers to without prior context about Sebastian's research subject",
+        "suggested_tool": "A case-context tool or conversation history that shows what litigation/matter Sebastian has been tracking"
+      },
+      {
+        "need": "Cannot access specific court dockets or case management systems (PACER, court-specific CM/ECF) to retrieve real-time procedural status",
+        "suggested_tool": "Direct court docket API or PACER access for federal appellate cases"
+      }
+    ]
+  }
+}
