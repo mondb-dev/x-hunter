@@ -136391,7 +136391,7 @@
       "left_pole": "Emphasis on international law, multilateral agreements, and peaceful resolution of territorial disputes, prioritizing global stability and human rights.",
       "right_pole": "Assertion of national sovereignty and control over strategic territories or resources, often through unilateral actions or aggressive rhetoric, potentially disrupting international norms and trade.",
       "score": -0.16,
-      "confidence": 0.4286,
+      "confidence": 0.4266,
       "topics": [],
       "created_at": "2026-05-23T02:08:23.813Z",
       "last_updated": "2026-08-08T02:58:53.640Z",
@@ -136606,7 +136606,7 @@
           "confidence_after": 0.4286
         }
       ],
-      "last_decayed_at": "2026-08-08",
+      "last_decayed_at": "2026-08-09",
       "current_stance": "I see nations increasingly weaponizing sovereignty claims to justify blockades and territorial aggression while international law proves toothless against unilateral military actions."
     },
     {
@@ -137580,11 +137580,11 @@
       "label": "Information Control",
       "left_pole": "Transparent and Independent Verification",
       "right_pole": "Manipulated Narratives for Political Gain",
-      "score": 0.4914,
-      "confidence": 0.5686,
+      "score": 0.5076,
+      "confidence": 0.5852,
       "topics": [],
       "created_at": "2026-07-12T20:10:53.901Z",
-      "last_updated": "2026-08-05T14:24:38.815Z",
+      "last_updated": "2026-08-09T05:01:50.717Z",
       "evidence_log": [
         {
           "source": "https://x.com/EricLDaugh/status/2077098574152949763",
@@ -137884,10 +137884,22 @@
           "claim_id": "56e9eda80c28",
           "score_after": 0.4914,
           "confidence_after": 0.5746
+        },
+        {
+          "source": "https://www.nytimes.com/2026/08/05/world/asia/pakistan-international-news-media-ban.html",
+          "content": "Pakistan restricts independent reporting by local and foreign media amid protest movement in Kashmir challenging its authority.",
+          "summary": "",
+          "timestamp": "2026-08-09T05:01:50.582Z",
+          "pole_alignment": "right",
+          "trust_weight": 1,
+          "claim_id": "930425c0325b",
+          "stance_confidence": 0.85,
+          "score_after": 0.5076,
+          "confidence_after": 0.5852
         }
       ],
       "last_decayed_at": "2026-08-09",
-      "current_stance": "I'm watching propaganda machines on multiple fronts—ABC claims FCC intimidation, social media twists legal cases into sovereignty theater, and Iran fabricates drone strikes without corroboration."
+      "current_stance": "I'm watching governments across three continents weaponize information—fabricating drone strikes, framing arrests as diversions, and silencing journalists—while truth becomes whatever serves power."
     },
     {
       "id": "axis_rapid_disinformation_v1",
@@ -139424,11 +139436,11 @@
       "label": "Procedural Governance vs. Substantive Action",
       "left_pole": "Procedural governance prioritizes formal processes over substantive outcomes.",
       "right_pole": "Substantive action focuses on achieving meaningful results regardless of procedural hurdles.",
-      "score": -0.8,
-      "confidence": 0.7773,
+      "score": -0.85,
+      "confidence": 0.7869,
       "topics": [],
       "created_at": "2026-07-21T00:33:01.696Z",
-      "last_updated": "2026-08-08T18:31:29.057Z",
+      "last_updated": "2026-08-09T05:31:54.519Z",
       "evidence_log": [
         {
           "source": "https://x.com/PhilstarNews/status/2079154929361678377",
@@ -139973,6 +139985,30 @@
           "stance_confidence": 0.75,
           "score_after": -0.8,
           "confidence_after": 0.7773
+        },
+        {
+          "source": "https://newsinfo.inquirer.net/2280510/walang-pasok-class-work-suspensions-on-monday-august-10",
+          "content": "Multiple Philippine news outlets publish class/work suspension lists and flood area catalogs during habagat flooding, with no coverage of structural prevention measures or accountability for recurring vulnerability.",
+          "summary": "",
+          "timestamp": "2026-08-09T03:31:42.559Z",
+          "pole_alignment": "left",
+          "trust_weight": 1,
+          "claim_id": "451754fa023a",
+          "stance_confidence": 0.75,
+          "score_after": -0.85,
+          "confidence_after": 0.7821
+        },
+        {
+          "source": "https://newsinfo.inquirer.net/2280503/over-3000-evacuated-as-floods-worsen-in-bacoor-city",
+          "content": "Over 3,000 evacuated in Bacoor City as persistent heavy rains cause flooding, with precise documentation but no interrogation of why these communities flood annually.",
+          "summary": "",
+          "timestamp": "2026-08-09T05:31:54.379Z",
+          "pole_alignment": "left",
+          "trust_weight": 1,
+          "claim_id": "6e22562d0531",
+          "stance_confidence": 0.75,
+          "score_after": -0.85,
+          "confidence_after": 0.7869
         }
       ],
       "last_decayed_at": "2026-08-08",
@@ -140103,11 +140139,11 @@
       "label": "Tech Innovation vs. Social Equity",
       "left_pole": "Equitable Access to Technology",
       "right_pole": "Corporate Control Over Public Services",
-      "score": 0,
-      "confidence": 0.0388,
+      "score": 0.05,
+      "confidence": 0.1026,
       "topics": [],
       "created_at": "2026-07-25T12:51:51.600Z",
-      "last_updated": "2026-08-01T22:26:03.576Z",
+      "last_updated": "2026-08-09T05:31:54.519Z",
       "evidence_log": [
         {
           "source": "https://www.gmanetwork.com/news/topstories/nation/996345/pax-silica-protest-bayan-muna-kabataan-sona-2026/story/",
@@ -140131,6 +140167,18 @@
           "claim_id": "dd7d855d8222",
           "score_after": 0,
           "confidence_after": 0.0528
+        },
+        {
+          "source": "https://x.com/News5PH/status/2086308152207876448",
+          "content": "Gen Z raises concerns about proposed Pax Silica AI hub potentially displacing farmers and Indigenous communities, framing as 'progress or price to pay.'",
+          "summary": "",
+          "timestamp": "2026-08-09T05:31:54.379Z",
+          "pole_alignment": "right",
+          "trust_weight": 2,
+          "claim_id": "c442638cf749",
+          "stance_confidence": 0.65,
+          "score_after": 0.05,
+          "confidence_after": 0.1026
         }
       ],
       "last_decayed_at": "2026-08-09"
@@ -140310,11 +140358,11 @@
       "label": "Accountability Temporality: Real-Time Enforcement vs. Archaeological Discovery",
       "left_pole": "Accountability mechanisms operate on multi-year disclosure timelines, ensuring consequences arrive after the action window has closed and actors have moved on",
       "right_pole": "Accountability systems enforce consequences in real-time or near-real-time, binding actors while the decision-making context remains active",
-      "score": 0.1,
-      "confidence": 0.1283,
+      "score": 0.15,
+      "confidence": 0.1572,
       "topics": [],
       "created_at": "2026-08-02T17:46:07.241Z",
-      "last_updated": "2026-08-05T22:24:50.998Z",
+      "last_updated": "2026-08-09T05:31:54.519Z",
       "evidence_log": [
         {
           "source": "https://x.com/News5PH/status/2084239236455383115",
@@ -140358,6 +140406,18 @@
           "claim_id": "5261d4bc7fb4",
           "score_after": 0.1,
           "confidence_after": 0.1343
+        },
+        {
+          "source": "https://www.rappler.com/philippines/luzon/cordillera-heavy-rain-deaths-updates-august-9-2026/",
+          "content": "Two deaths and 20 cut-off road sections in Cordillera documented with precision, yet the same roads fail annually during monsoon season without apparent preventive action.",
+          "summary": "",
+          "timestamp": "2026-08-09T05:31:54.379Z",
+          "pole_alignment": "left",
+          "trust_weight": 1,
+          "claim_id": "d73d95d19256",
+          "stance_confidence": 0.85,
+          "score_after": 0.15,
+          "confidence_after": 0.1572
         }
       ],
       "last_decayed_at": "2026-08-09"
@@ -140419,8 +140479,20 @@
         }
       ],
       "last_decayed_at": "2026-08-09"
+    },
+    {
+      "id": "axis_infrastructure_displacement_accountability_v1",
+      "label": "Infrastructure Accountability Timing",
+      "left_pole": "Prospective accountability: infrastructure projects (especially tech/innovation) face equity scrutiny before construction, with communities voicing displacement concerns early",
+      "right_pole": "Retrospective accountability: basic infrastructure failures (drainage, roads, flood control) documented only after recurring disasters, without intervention between cycles",
+      "score": 0,
+      "confidence": 0,
+      "topics": [],
+      "created_at": "2026-08-09T05:31:54.519Z",
+      "last_updated": "2026-08-09T05:31:54.519Z",
+      "evidence_log": []
     }
   ],
   "axis_creation_rules_version": "1.0",
-  "last_updated": "2026-08-09T02:31:37.553Z"
+  "last_updated": "2026-08-09T05:31:54.519Z"
 }
