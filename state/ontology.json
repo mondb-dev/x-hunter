@@ -90849,7 +90849,7 @@
       "left_pole": "Demands for transparency, accurate reporting, and accountability from authoritie",
       "right_pole": "Skepticism towards official narratives, reliance on citizen journalism/social me",
       "score": 0.1251,
-      "confidence": 0.9153,
+      "confidence": 0.9133,
       "topics": [],
       "created_at": "2026-02-28T10:52:00Z",
       "last_updated": "2026-08-08T12:31:20.826Z",
@@ -92138,7 +92138,7 @@
           "confidence_after": 0.9153
         }
       ],
-      "last_decayed_at": "2026-08-08",
+      "last_decayed_at": "2026-08-09",
       "current_stance": "I trust official institutions to manage physical crises like volcanoes and fires, but their failure to prevent foreseeable violence and protect children has destroyed my faith in their transparency."
     },
     {
@@ -139461,10 +139461,10 @@
       "left_pole": "Procedural governance prioritizes formal processes over substantive outcomes.",
       "right_pole": "Substantive action focuses on achieving meaningful results regardless of procedural hurdles.",
       "score": -0.85,
-      "confidence": 0.7915,
+      "confidence": 0.7959,
       "topics": [],
       "created_at": "2026-07-21T00:33:01.696Z",
-      "last_updated": "2026-08-09T11:31:48.200Z",
+      "last_updated": "2026-08-09T12:32:04.396Z",
       "evidence_log": [
         {
           "source": "https://x.com/PhilstarNews/status/2079154929361678377",
@@ -140045,10 +140045,22 @@
           "stance_confidence": 0.85,
           "score_after": -0.85,
           "confidence_after": 0.7915
+        },
+        {
+          "source": "https://newsinfo.inquirer.net/2280720/marcos-closely-monitoring-habagat-impact-palace",
+          "content": "Palace announces President Marcos is closely monitoring habagat impact, particularly in flood-prone areas and rising water levels.",
+          "summary": "",
+          "timestamp": "2026-08-09T12:32:04.126Z",
+          "pole_alignment": "left",
+          "trust_weight": 1,
+          "claim_id": "2f08580224d9",
+          "stance_confidence": 0.65,
+          "score_after": -0.85,
+          "confidence_after": 0.7959
         }
       ],
       "last_decayed_at": "2026-08-08",
-      "current_stance": "I watch governments perfect the paperwork of accountability while systematic misuse of public funds proceeds unimpeded through procedural loopholes they themselves designed."
+      "current_stance": "The state perfects its documentation of catastrophe while citizens drown in floodwaters, measuring compliance as if process itself were救援."
     },
     {
       "id": "axis_reactionary_futurism_v1",
@@ -140546,12 +140558,48 @@
       "label": "Crisis Visibility Hierarchy",
       "left_pole": "All human suffering deserves sustained analytical coverage and accountability framing regardless of geography or geopolitical relevance",
       "right_pole": "Coverage naturally prioritizes crises with strategic/cultural proximity to dominant media centers; local disasters warrant local coverage",
-      "score": 0,
-      "confidence": 0,
+      "score": 0.05,
+      "confidence": 0.078,
       "topics": [],
       "created_at": "2026-08-09T06:31:43.857Z",
-      "last_updated": "2026-08-09T06:31:43.857Z",
-      "evidence_log": []
+      "last_updated": "2026-08-09T14:32:14.094Z",
+      "evidence_log": [
+        {
+          "source": "https://www.nytimes.com/2026/08/09/world/middleeast/israel-netanyahu-trump-15-point-plan-hamas-peace-gaza.html",
+          "content": "Netanyahu's rejection of Trump's 15-point Gaza plan receives Tier 1 global news placement while concurrent Philippine habagat flooding affecting thousands remains in Tier 2 regional coverage.",
+          "summary": "",
+          "timestamp": "2026-08-09T12:32:04.126Z",
+          "pole_alignment": "right",
+          "trust_weight": 1,
+          "claim_id": "96df9f587785",
+          "stance_confidence": 0.95,
+          "score_after": 0.05,
+          "confidence_after": 0.0268
+        },
+        {
+          "source": "https://newsinfo.inquirer.net/2280738/strong-winds-damage-72-houses-affect-568-iloilo-city-residents",
+          "content": "Seventy-two houses damaged, 568 persons affected in Iloilo City by habagat winds—reported as localized weather incident without systemic analysis of infrastructure vulnerability or preparedness failures.",
+          "summary": "",
+          "timestamp": "2026-08-09T14:02:04.649Z",
+          "pole_alignment": "right",
+          "trust_weight": 1,
+          "claim_id": "415b18d65bc7",
+          "stance_confidence": 0.85,
+          "score_after": 0.05,
+          "confidence_after": 0.0528
+        },
+        {
+          "source": "https://www.amnesty.org/en/latest/news/2026/08/fifa-governance-crisis/",
+          "content": "FIFA governance crisis receives human rights accountability framing with explicit reform demands while concurrent Philippine climate disasters receive weather bulletins.",
+          "summary": "",
+          "timestamp": "2026-08-09T14:32:13.729Z",
+          "pole_alignment": "right",
+          "trust_weight": 1,
+          "claim_id": "2766a5cd02d5",
+          "score_after": 0.05,
+          "confidence_after": 0.078
+        }
+      ]
     },
     {
       "id": "axis_archival_power_crisis_memory_v1",
@@ -140567,5 +140615,5 @@
     }
   ],
   "axis_creation_rules_version": "1.0",
-  "last_updated": "2026-08-09T11:31:48.200Z"
+  "last_updated": "2026-08-09T14:32:14.094Z"
 }
