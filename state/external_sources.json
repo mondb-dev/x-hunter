@@ -1,17 +1,17 @@
 {
   "schema_version": "1.0",
-  "generated_at": "2026-08-09T05:31:11.198Z",
+  "generated_at": "2026-08-09T07:01:12.725Z",
   "method": "mechanical_registry_v1",
-  "profiled_at": "2026-08-09T05:31:17.233Z",
+  "profiled_at": "2026-08-09T07:01:16.585Z",
   "sources": [
     {
       "domain": "theguardian.com",
       "entity": "Theguardian",
       "kind": "news",
       "first_seen_at": "2026-03-27T23:17:00Z",
-      "last_seen_at": "2026-08-09T02:01:40.495Z",
+      "last_seen_at": "2026-08-09T06:31:43.719Z",
       "discovery": {
-        "distinct_urls": 762,
+        "distinct_urls": 764,
         "example_urls": [
           "https://www.theguardian.com/us-news/2026/jun/23/trump-immigration-courthouse-arrest-policy",
           "https://www.theguardian.com/us-news/2026/jun/28/ice-minnesota-defending-democracy",
@@ -20,9 +20,9 @@
           "https://www.theguardian.com/global-development/2026/jun/26/woman-sadia-moalim-ali-three-year-jail-sentence-somalia-online-comments-governement"
         ],
         "origin_counts": {
-          "ontology_evidence": 42,
-          "reading_queue": 729,
-          "journals": 115,
+          "ontology_evidence": 43,
+          "reading_queue": 730,
+          "journals": 116,
           "articles": 4
         },
         "distinct_referring_accounts": 0,
@@ -33,6 +33,7 @@
           "axis_collective_voice",
           "axis_dehumanization_propaganda_v1",
           "axis_economic_indicators_reliability_v1",
+          "axis_environmental_policy_v_economic_v1",
           "axis_geopolitical_rhetoric_v1",
           "axis_global_economic_stability_v1",
           "axis_global_power_realignments_v1",
@@ -72,8 +73,8 @@
         "breadth": {
           "score": 0.94,
           "basis": [
-            "distinct_urls:762",
-            "distinct_axes:17",
+            "distinct_urls:764",
+            "distinct_axes:18",
             "origin_types:4"
           ]
         },
@@ -112,8 +113,8 @@
             "newsroom_domain_pattern",
             "article_path_seen",
             "doi_or_identifier_path_seen",
-            "distinct_urls:762",
-            "distinct_axes:17",
+            "distinct_urls:764",
+            "distinct_axes:18",
             "origin_types:4",
             "referring_accounts:0",
             "origin_types:4",
@@ -285,9 +286,9 @@
       "entity": "Aljazeera",
       "kind": "news",
       "first_seen_at": "2026-06-22T02:45:00Z",
-      "last_seen_at": "2026-08-09T00:31:47.900Z",
+      "last_seen_at": "2026-08-09T06:31:43.697Z",
       "discovery": {
-        "distinct_urls": 390,
+        "distinct_urls": 391,
         "example_urls": [
           "https://www.aljazeera.com/opinions/2026/6/24/south-africas-crises-will-not-be-solved-by-blaming-migrants",
           "https://www.aljazeera.com/video/newsfeed/2026/6/27/newly-released-video-exposes-henry-nowak-killers-lies?traffic_source=rss",
@@ -298,7 +299,7 @@
         "origin_counts": {
           "ontology_evidence": 181,
           "reading_queue": 16,
-          "journals": 489,
+          "journals": 490,
           "articles": 7
         },
         "distinct_referring_accounts": 0,
@@ -358,7 +359,7 @@
         "breadth": {
           "score": 0.94,
           "basis": [
-            "distinct_urls:390",
+            "distinct_urls:391",
             "distinct_axes:28",
             "origin_types:4"
           ]
@@ -397,7 +398,7 @@
           "basis": [
             "newsroom_domain_pattern",
             "article_path_seen",
-            "distinct_urls:390",
+            "distinct_urls:391",
             "distinct_axes:28",
             "origin_types:4",
             "referring_accounts:0",
@@ -696,9 +697,9 @@
       "entity": "Nytimes",
       "kind": "news",
       "first_seen_at": "2026-06-22T00:15:00Z",
-      "last_seen_at": "2026-08-09T05:01:50.582Z",
+      "last_seen_at": "2026-08-09T06:31:43.697Z",
       "discovery": {
-        "distinct_urls": 515,
+        "distinct_urls": 516,
         "example_urls": [
           "https://www.nytimes.com/2026/06/19/world/canada/frank-stronach-trial-guilty-sex-charges.html",
           "https://www.nytimes.com/2026/06/27/world/americas/mexican-officials-us-informants.html",
@@ -708,8 +709,8 @@
         ],
         "origin_counts": {
           "ontology_evidence": 18,
-          "reading_queue": 528,
-          "journals": 40
+          "reading_queue": 529,
+          "journals": 41
         },
         "distinct_referring_accounts": 0,
         "sample_referring_accounts": [],
@@ -750,7 +751,7 @@
         "breadth": {
           "score": 0.8799999999999999,
           "basis": [
-            "distinct_urls:515",
+            "distinct_urls:516",
             "distinct_axes:10",
             "origin_types:3"
           ]
@@ -789,7 +790,7 @@
           "basis": [
             "newsroom_domain_pattern",
             "article_path_seen",
-            "distinct_urls:515",
+            "distinct_urls:516",
             "distinct_axes:10",
             "origin_types:3",
             "referring_accounts:0",
@@ -3236,9 +3237,9 @@
       "entity": "T Co",
       "kind": "unknown",
       "first_seen_at": "2016-05-05T18:57:30.000Z",
-      "last_seen_at": "2026-08-09T04:26:39.000Z",
+      "last_seen_at": "2026-08-09T05:41:53.000Z",
       "discovery": {
-        "distinct_urls": 12722,
+        "distinct_urls": 12729,
         "example_urls": [
           "https://t.co/pJSE124ec4",
           "https://t.co/Soz8BXPWaa",
@@ -3247,7 +3248,7 @@
           "https://t.co/cYaqYDRp08"
         ],
         "origin_counts": {
-          "feed_buffer": 10336,
+          "feed_buffer": 10348,
           "feed_buffer_reply": 4896,
           "articles": 3
         },
@@ -3290,7 +3291,7 @@
         "breadth": {
           "score": 0.53,
           "basis": [
-            "distinct_urls:12722",
+            "distinct_urls:12729",
             "distinct_axes:0",
             "origin_types:3"
           ]
@@ -3329,7 +3330,7 @@
           "basis": [
             "unknown_domain_pattern",
             "doi_or_identifier_path_seen",
-            "distinct_urls:12722",
+            "distinct_urls:12729",
             "distinct_axes:0",
             "origin_types:3",
             "referring_accounts:2732",
@@ -3375,9 +3376,9 @@
       "entity": "Inquirer",
       "kind": "unknown",
       "first_seen_at": "2026-05-09T10:15:15.053Z",
-      "last_seen_at": "2026-08-09T05:01:50.562Z",
+      "last_seen_at": "2026-08-09T06:31:43.697Z",
       "discovery": {
-        "distinct_urls": 294,
+        "distinct_urls": 295,
         "example_urls": [
           "https://newsinfo.inquirer.net/2266316/nbi-on-cayetano-position-that-cant-be-defended-by-facts-is-done-with-insults",
           "https://www.inquirer.net/capiz-broadcaster-shooting-probe-widens-as-cops-form-task-force",
@@ -3386,8 +3387,8 @@
           "https://newsinfo.inquirer.net/2251702/chr-seeks-swift-passage-of-bills-creating-detention-monitoring-body"
         ],
         "origin_counts": {
-          "ontology_evidence": 121,
-          "journals": 375,
+          "ontology_evidence": 122,
+          "journals": 377,
           "articles": 4
         },
         "distinct_referring_accounts": 0,
@@ -3436,7 +3437,7 @@
         "breadth": {
           "score": 0.8799999999999999,
           "basis": [
-            "distinct_urls:294",
+            "distinct_urls:295",
             "distinct_axes:18",
             "origin_types:3"
           ]
@@ -3474,7 +3475,7 @@
           "method": "mechanical_v1",
           "basis": [
             "unknown_domain_pattern",
-            "distinct_urls:294",
+            "distinct_urls:295",
             "distinct_axes:18",
             "origin_types:3",
             "referring_accounts:0",
@@ -3520,9 +3521,9 @@
       "entity": "Rappler",
       "kind": "unknown",
       "first_seen_at": "2026-06-22T04:04:30.428Z",
-      "last_seen_at": "2026-08-08T07:52:30.602Z",
+      "last_seen_at": "2026-08-09T05:31:54.379Z",
       "discovery": {
-        "distinct_urls": 242,
+        "distinct_urls": 243,
         "example_urls": [
           "https://www.rappler.com/fact-check-no-arrest-warrant-issued-vs-marcoleta",
           "https://www.rappler.com/technology/decoded-tacloban-school-shooting-disinformation-kiko-barzaga-discussions-juvenile-justice-law/",
@@ -3531,8 +3532,8 @@
           "https://www.rappler.com/voices/thought-leaders/vantage-point-bir-tax-amlc-records-billions-questions-sara-duterte-ignore/"
         ],
         "origin_counts": {
-          "ontology_evidence": 121,
-          "journals": 271,
+          "ontology_evidence": 122,
+          "journals": 272,
           "articles": 4
         },
         "distinct_referring_accounts": 0,
@@ -3591,7 +3592,7 @@
         "breadth": {
           "score": 0.8799999999999999,
           "basis": [
-            "distinct_urls:242",
+            "distinct_urls:243",
             "distinct_axes:28",
             "origin_types:3"
           ]
@@ -3629,7 +3630,7 @@
           "method": "mechanical_v1",
           "basis": [
             "unknown_domain_pattern",
-            "distinct_urls:242",
+            "distinct_urls:243",
             "distinct_axes:28",
             "origin_types:3",
             "referring_accounts:0",
@@ -12630,7 +12631,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-08-06T05:54:15.907Z",
+        "fetched_at": "2026-08-09T06:31:04.702Z",
         "homepage_url": "https://bitget.com/",
         "example_url": "https://partner.bitget.com/bg/SMTwittercfd?twclid=2dlbmypv93aoxlr6pzrilrub21",
         "homepage_status": null,
@@ -13142,7 +13143,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-08-06T05:54:16.615Z",
+        "fetched_at": "2026-08-09T06:31:05.881Z",
         "homepage_url": "https://sentinels.gg/",
         "example_url": "https://shop.sentinels.gg/collections/sen-metallics?twclid=2eikc5h5also5tonotr2q4ciq6",
         "homepage_status": 200,
@@ -16555,7 +16556,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-08-06T05:54:16.814Z",
+        "fetched_at": "2026-08-09T06:31:06.162Z",
         "homepage_url": "https://aitradingbotreview.com/",
         "example_url": "https://aitradingbotreview.com/cointech2u-okx-testimonial/?utm_source=x&utm_medium=cpc&utm_campaign=ct2u_cici_testimonial_v1&utm_content=v3_architecture&twclid=29n2yshl33pi6gwhsndaezd9zg",
         "homepage_status": 200,
@@ -18198,7 +18199,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-08-06T05:54:17.058Z",
+        "fetched_at": "2026-08-09T06:31:06.537Z",
         "homepage_url": "https://puter.com/",
         "example_url": "https://developer.puter.com/?utm_source=x&utm_medium=paid_social&utm_campaign=backend_ai&twclid=27ht9opz02h3rp1i1jsomffb4m",
         "homepage_status": 200,
@@ -35776,7 +35777,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-08-06T02:24:08.109Z",
+        "fetched_at": "2026-08-09T07:01:13.184Z",
         "homepage_url": "https://brennancenter.org/",
         "example_url": "https://www.brennancenter.org/",
         "homepage_status": 200,
@@ -35899,7 +35900,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-08-06T02:24:10.176Z",
+        "fetched_at": "2026-08-09T07:01:14.634Z",
         "homepage_url": "https://thesandersfirmpc.com/",
         "example_url": "https://thesandersfirmpc.com/evidentiary-inversion-when-internal-investigations-manufacture-misconduct/",
         "homepage_status": 200,
@@ -35993,7 +35994,7 @@
           ]
         },
         "profile": {
-          "score": 0.4,
+          "score": 0.35000000000000003,
           "confidence": 0.65,
           "basis": [
             "meta_author:false",
@@ -36002,7 +36003,7 @@
             "about:false",
             "contact:false",
             "corrections:false",
-            "outbound_links:22",
+            "outbound_links:7",
             "opinion_marker:false"
           ]
         },
@@ -36022,7 +36023,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-08-06T02:24:11.629Z",
+        "fetched_at": "2026-08-09T07:01:15.368Z",
         "homepage_url": "https://hindustantimes.com/",
         "example_url": "https://www.hindustantimes.com/cities/lucknow-news/saffron-cash-for-crores-probe-into-ram-mandir-donation-scam-widens-to-employees-150-sevadars-under-scanner-101718873733575.html",
         "homepage_status": 200,
@@ -36048,7 +36049,7 @@
           "has_about_link": false,
           "has_contact_link": false,
           "has_corrections_link": false,
-          "outbound_links_count": 22,
+          "outbound_links_count": 7,
           "opinion_marker": false
         }
       }
@@ -36145,7 +36146,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-08-06T02:54:09.739Z",
+        "fetched_at": "2026-08-09T07:01:16.585Z",
         "homepage_url": "https://britannica.com/",
         "example_url": "https://www.britannica.com/event/2026-Iran-War",
         "homepage_status": 403,
