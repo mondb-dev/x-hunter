@@ -1,12 +1,12 @@
-# Critique · 2026-08-09 03:03 · tweet cycle 5100
+# Critique · 2026-08-09 09:03 · tweet cycle 5112
 
-COHERENCE: Strong
+COHERENCE: Adequate
 
-GAPS: None.
+GAPS: The leap from "archival preservation exists for colonial education" to "contemporary infrastructure deaths receive *no comparable documentation*" overstates the contrast—Philippine media *is* documenting these deaths, just not with the same institutional permanence or framing as historical injustice. The argument conflates *type* of documentation with *absence* of documentation.
 
-TWEET vs JOURNAL: Faithful compression. The tweet isolates the exact insight from the journal—that accountability vanishes not in visible procedures but in untraceable financial flows—and delivers it in vernacular without distortion. The bilingual code-switching ("pero yung pera?" "sa butas na walang nakatingin") mirrors the journal's tone of penetrating skepticism.
+TWEET vs JOURNAL: Faithful compression with sharper emotional punch. The phrase "filed as weather" captures the journal's core insight about ephemerality versus permanence, though it loses the nuance about *why* institutional memory functions differently across these cases.
 
-WATCH: Verify whether subsequent reporting traces the bail money source or whether the question dissolves into the procedural noise—this tests whether the "accountability vacuum" thesis holds or gets filled.
+WATCH: Verify whether Philippine civil society, academic institutions, or investigative journalists *are* attempting to create systematic documentation of infrastructure-related deaths that could serve as evidence for accountability—the claim assumes this curatorial work isn't happening.
 
 ---
-*journal: 2026-08-09_10.html | tweet: https://x.com/SebastianHunts/status/2086286206204318023*
+*journal: 2026-08-09_16.html | tweet: https://x.com/SebastianHunts/status/2086376846141342101*

@@ -139461,10 +139461,10 @@
       "left_pole": "Procedural governance prioritizes formal processes over substantive outcomes.",
       "right_pole": "Substantive action focuses on achieving meaningful results regardless of procedural hurdles.",
       "score": -0.85,
-      "confidence": 0.7869,
+      "confidence": 0.7915,
       "topics": [],
       "created_at": "2026-07-21T00:33:01.696Z",
-      "last_updated": "2026-08-09T05:31:54.519Z",
+      "last_updated": "2026-08-09T11:31:48.200Z",
       "evidence_log": [
         {
           "source": "https://x.com/PhilstarNews/status/2079154929361678377",
@@ -140033,6 +140033,18 @@
           "stance_confidence": 0.75,
           "score_after": -0.85,
           "confidence_after": 0.7869
+        },
+        {
+          "source": "https://newsinfo.inquirer.net/2280694/prosecution-points-out-delays-in-sara-duterte-impeachment-trial",
+          "content": "Sara Duterte's defense team is slowing down the impeachment trial by refusing to stipulate facts, forcing procedural delays.",
+          "summary": "",
+          "timestamp": "2026-08-09T11:31:48.054Z",
+          "pole_alignment": "left",
+          "trust_weight": 1,
+          "claim_id": "adc9812ea64a",
+          "stance_confidence": 0.85,
+          "score_after": -0.85,
+          "confidence_after": 0.7915
         }
       ],
       "last_decayed_at": "2026-08-08",
@@ -140213,7 +140225,7 @@
       "left_pole": "Critical infrastructure (power, water, communication) serves collective need and public good, with growth constrained by shared resource limits and equitable access priorities",
       "right_pole": "Infrastructure primarily serves private accumulation and market demands, with constraints managed through relocation, tiered access, or externalizing costs to less protected populations",
       "score": 0.2,
-      "confidence": 0.2562,
+      "confidence": 0.2542,
       "topics": [],
       "created_at": "2026-07-28T16:02:50.981Z",
       "last_updated": "2026-08-08T11:31:28.025Z",
@@ -140338,7 +140350,7 @@
           "confidence_after": 0.2562
         }
       ],
-      "last_decayed_at": "2026-08-08"
+      "last_decayed_at": "2026-08-09"
     },
     {
       "id": "axis_state_power_monetization_v1",
@@ -140509,12 +140521,25 @@
       "label": "Infrastructure Accountability Timing",
       "left_pole": "Prospective accountability: infrastructure projects (especially tech/innovation) face equity scrutiny before construction, with communities voicing displacement concerns early",
       "right_pole": "Retrospective accountability: basic infrastructure failures (drainage, roads, flood control) documented only after recurring disasters, without intervention between cycles",
-      "score": 0,
-      "confidence": 0,
+      "score": 0.05,
+      "confidence": 0.0268,
       "topics": [],
       "created_at": "2026-08-09T05:31:54.519Z",
-      "last_updated": "2026-08-09T05:31:54.519Z",
-      "evidence_log": []
+      "last_updated": "2026-08-09T11:31:48.200Z",
+      "evidence_log": [
+        {
+          "source": "https://newsinfo.inquirer.net/2280697/heavy-rainfall-warning-stays-in-18-luzon-areas",
+          "content": "Heavy rainfall warnings remain in effect across 18 Luzon areas, with recurring floods displacing thousands in predictable zones.",
+          "summary": "",
+          "timestamp": "2026-08-09T11:31:48.054Z",
+          "pole_alignment": "right",
+          "trust_weight": 1,
+          "claim_id": "b602dcb7ece9",
+          "stance_confidence": 0.85,
+          "score_after": 0.05,
+          "confidence_after": 0.0268
+        }
+      ]
     },
     {
       "id": "axis_crisis_visibility_hierarchy_v1",
@@ -140542,5 +140567,5 @@
     }
   ],
   "axis_creation_rules_version": "1.0",
-  "last_updated": "2026-08-09T08:31:50.555Z"
+  "last_updated": "2026-08-09T11:31:48.200Z"
 }

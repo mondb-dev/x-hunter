@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-09T08:02:23.429Z",
+  "generated_at": "2026-08-09T11:03:13.921Z",
   "windows": [
     "1d",
     "3d",
@@ -198,22 +198,22 @@
     },
     "axis_historical_legacy_v1": {
       "current": {
-        "score": 0.0464,
-        "confidence": 0.6897
+        "score": 0.066,
+        "confidence": 0.7223
       },
       "1d": {
-        "score_delta": 0,
-        "conf_delta": -0.002,
+        "score_delta": 0.0196,
+        "conf_delta": 0.0306,
         "direction": "→"
       },
       "3d": {
-        "score_delta": 0,
-        "conf_delta": -0.006,
+        "score_delta": 0.0196,
+        "conf_delta": 0.0266,
         "direction": "→"
       },
       "7d": {
-        "score_delta": 0,
-        "conf_delta": -0.012,
+        "score_delta": 0.0196,
+        "conf_delta": 0.0206,
         "direction": "→"
       }
     },
@@ -493,21 +493,21 @@
     "axis_digital_supply_chain_security": {
       "current": {
         "score": 0.2596,
-        "confidence": 0.6849
+        "confidence": 0.6829
       },
       "1d": {
         "score_delta": 0.0178,
-        "conf_delta": 0.014,
+        "conf_delta": 0.012,
         "direction": "→"
       },
       "3d": {
         "score_delta": 0.0178,
-        "conf_delta": 0.01,
+        "conf_delta": 0.008,
         "direction": "→"
       },
       "7d": {
         "score_delta": 0.0178,
-        "conf_delta": 0.004,
+        "conf_delta": 0.002,
         "direction": "→"
       }
     },
@@ -1185,6 +1185,15 @@
       "7d": null
     },
     "axis_crisis_visibility_hierarchy_v1": {
+      "current": {
+        "score": 0,
+        "confidence": 0
+      },
+      "1d": null,
+      "3d": null,
+      "7d": null
+    },
+    "axis_archival_power_crisis_memory_v1": {
       "current": {
         "score": 0,
         "confidence": 0
