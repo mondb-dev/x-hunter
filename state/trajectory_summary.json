@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-10T13:04:22.941Z",
+  "generated_at": "2026-08-10T16:02:52.073Z",
   "windows": [
     "1d",
     "3d",
@@ -156,21 +156,21 @@
     },
     "axis_media_integrity_v1": {
       "current": {
-        "score": 0.414,
+        "score": 0.4172,
         "confidence": 0.95
       },
       "1d": {
-        "score_delta": -0.0077,
+        "score_delta": -0.0045,
         "conf_delta": 0,
         "direction": "→"
       },
       "3d": {
-        "score_delta": -0.0024,
+        "score_delta": 0.0008,
         "conf_delta": 0,
         "direction": "→"
       },
       "7d": {
-        "score_delta": -0.0308,
+        "score_delta": -0.0276,
         "conf_delta": 0,
         "direction": "↘"
       }
@@ -1017,23 +1017,23 @@
     },
     "axis_ai_automated_dehumanization_v1": {
       "current": {
-        "score": 0.1,
-        "confidence": 0.0417
+        "score": 0.15,
+        "confidence": 0.0945
       },
       "1d": {
-        "score_delta": 0,
-        "conf_delta": -0.002,
-        "direction": "→"
+        "score_delta": 0.05,
+        "conf_delta": 0.0508,
+        "direction": "↗"
       },
       "3d": {
-        "score_delta": 0,
-        "conf_delta": -0.008,
-        "direction": "→"
+        "score_delta": 0.05,
+        "conf_delta": 0.0448,
+        "direction": "↗"
       },
       "7d": {
-        "score_delta": 0,
-        "conf_delta": -0.012,
-        "direction": "→"
+        "score_delta": 0.05,
+        "conf_delta": 0.0408,
+        "direction": "↗"
       }
     },
     "axis_procedural_governance_substantive_action": {
@@ -1060,21 +1060,21 @@
     "axis_reactionary_futurism_v1": {
       "current": {
         "score": 0.2,
-        "confidence": 0.2562
+        "confidence": 0.2542
       },
       "1d": {
         "score_delta": -0.05,
-        "conf_delta": 0.0201,
+        "conf_delta": 0.0181,
         "direction": "↘"
       },
       "3d": {
         "score_delta": -0.1,
-        "conf_delta": 0.0408,
+        "conf_delta": 0.0388,
         "direction": "↘"
       },
       "7d": {
         "score_delta": 0,
-        "conf_delta": 0.088,
+        "conf_delta": 0.086,
         "direction": "→"
       }
     },
@@ -1165,16 +1165,16 @@
     "axis_ai_legal_accountability_v1": {
       "current": {
         "score": 0.05,
-        "confidence": 0.1265
+        "confidence": 0.1245
       },
       "1d": {
         "score_delta": 0.05,
-        "conf_delta": 0.0299,
+        "conf_delta": 0.0279,
         "direction": "↗"
       },
       "3d": {
         "score_delta": 0.05,
-        "conf_delta": 0.0239,
+        "conf_delta": 0.0219,
         "direction": "↗"
       },
       "7d": null
@@ -1195,11 +1195,11 @@
     "axis_crisis_visibility_hierarchy_v1": {
       "current": {
         "score": 0.05,
-        "confidence": 0.078
+        "confidence": 0.076
       },
       "1d": {
         "score_delta": 0.05,
-        "conf_delta": 0.078,
+        "conf_delta": 0.076,
         "direction": "↗"
       },
       "3d": null,
@@ -1231,6 +1231,7 @@
     "axis_geopolitical_control_narratives",
     "axis_humanitarian_crisis_response",
     "axis_procedural_governance_accountability_v1",
+    "axis_ai_automated_dehumanization_v1",
     "axis_procedural_governance_substantive_action",
     "axis_technological_innovation_vs_social_equity_v1",
     "axis_infrastructure_commons_v_extraction_v1",
