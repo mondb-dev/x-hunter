@@ -49,10 +49,12 @@ function logInteraction(entry) {
 }
 
 // Content guards + axis relevance scoring live in lib/content_relevance (shared
-// with x_amplify). makeScorer returns an LLM (local qwen) 0-3 relevance rating
-// (+ keyword-hit tie-break); guarded content scores -1.
+// with x_amplify). makeScorer returns an LLM 0-3 relevance rating (+ keyword-hit
+// tie-break); guarded content scores -1. The engine scores a few posts at a time
+// (engage's scoreConcurrency), not the whole timeline at once — the scorer is a
+// Claude CLI subprocess and a full fan-out times every call out.
 
-// ── On-voice reply generation (verify-gate + local LLM + fact-check) ─────────
+// ── On-voice reply generation (verify-gate + fact-check) ────────────────────
 async function generateReply(post) {
   // Verify the target post's central claim before engaging (ported from the
   // legacy proactive_reply CDP path). Skip posts whose claim can't be

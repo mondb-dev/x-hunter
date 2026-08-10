@@ -8,7 +8,8 @@
  * the scrape/like/comment; this file decides what matters and what to say.
  *
  * Env: HELMSTACK_AUTH_TOKEN (required), HELMSTACK_DRY_RUN=1,
- *      LI_MAX_LIKES (3), LI_MAX_COMMENTS (1), LI_RELEVANCE_MIN (2).
+ *      LI_MAX_LIKES (3), LI_MAX_COMMENTS (1), LI_RELEVANCE_MIN (2),
+ *      LI_SCORE_CONCURRENCY (3).
  */
 
 "use strict";
@@ -29,6 +30,9 @@ const DRY_RUN = process.env.HELMSTACK_DRY_RUN === "1";
 const MAX_LIKES = Number.parseInt(process.env.LI_MAX_LIKES || "3", 10);
 const MAX_COMMENTS = Number.parseInt(process.env.LI_MAX_COMMENTS || "1", 10);
 const RELEVANCE_MIN = Number.parseInt(process.env.LI_RELEVANCE_MIN || "2", 10);
+// Scoring is one Claude CLI subprocess per candidate and the feed API returns
+// ~25 — keep the fan-out small enough that each call finishes inside its timeout.
+const SCORE_CONCURRENCY = Number.parseInt(process.env.LI_SCORE_CONCURRENCY || "3", 10);
 const tag = "linkedin_engage";
 const log = (m) => console.log(`[${tag}] ${m}`);
 
@@ -56,7 +60,7 @@ function isSatireOrJoke(text) {
 // Was keyword-hit counting against axis vocabulary (scored ~everything low); a
 // small local model judges topical relevance far more robustly. Scoring stays on
 // the local brain (cheap); composition uses Claude.
-function makeScorer() {
+function makeScorer(stats) {
   const { generate: llmGenerate } = require("./llm");
   return async (post) => {
     const text = (post.text || "").trim();
@@ -68,11 +72,19 @@ function makeScorer() {
         `Rate ONLY substantive relevance to those themes. Job updates, congratulations, motivational quotes, personal milestones, generic business advice, and ads = 0 even if well-written. A post must actually engage with power, politics, media, policy, or truth-claims to score 2-3.\n\n` +
         `Answer with a SINGLE digit:\n0 = irrelevant, 1 = tangential, 2 = relevant, 3 = squarely on-topic.\n\n` +
         `POST: "${text.slice(0, 400)}"\n\nDigit:`,
-        { temperature: 0, maxTokens: 5, timeoutMs: 30_000 }
+        // 30s was sized for the old local qwen brain. Inference is now the Claude
+        // CLI (a subprocess, ~7s warm and slower under load), and every scoring
+        // call was timing out — scoring 0, so nothing ever cleared minScore.
+        { temperature: 0, maxTokens: 5, timeoutMs: 90_000 }
       );
       const m = String(raw).match(/[0-3]/);
       return m ? Number(m[0]) : 0;
-    } catch { return 0; }
+    } catch (err) {
+      // A failed scorer used to be indistinguishable from "nothing was relevant":
+      // both produced "0 relevant, un-engaged post(s)". Count it so the run says so.
+      if (stats) { stats.failed++; stats.lastError = err.message; }
+      return 0;
+    }
   };
 }
 
@@ -135,11 +147,12 @@ async function generateComment(post) {
     if (!(await li.sessionOk())) { log("LinkedIn session not present (no li_at) — is HelmStack logged in?"); process.exit(0); }
   } catch (err) { log(`could not reach HelmStack/LinkedIn: ${err.message}`); process.exit(0); }
 
-  log(`relevance scoring: LLM 0-3 (min ${RELEVANCE_MIN})`);
+  log(`relevance scoring: LLM 0-3 (min ${RELEVANCE_MIN}, ${SCORE_CONCURRENCY} at a time)`);
   const seen = loadLedger();
+  const scoreStats = { failed: 0, lastError: null };
 
   const result = await li.engage({
-    score: makeScorer(),
+    score: makeScorer(scoreStats),
     generateComment,
     onLike: async (p) => logLinkedIn({ type: "linkedin_like", target_author: p.author, target_url: p.permalink, cycle: CYCLE }),
     onComment: async (p, text) => logLinkedIn({ type: "linkedin_comment", content: text, target_author: p.author, target_url: p.permalink, cycle: CYCLE }),
@@ -147,9 +160,11 @@ async function generateComment(post) {
     minScore: RELEVANCE_MIN,
     maxLikes: MAX_LIKES,
     maxComments: MAX_COMMENTS,
+    scoreConcurrency: SCORE_CONCURRENCY,
     dryRun: DRY_RUN,
   });
 
+  if (scoreStats.failed) log(`WARNING: ${scoreStats.failed} post(s) could not be scored (${scoreStats.lastError}) — treated as irrelevant`);
   if (!DRY_RUN) saveLedger(seen); // dry-runs must not mark posts as engaged
   log(`done — ${result.likes} like(s), ${result.comments} comment(s)${DRY_RUN ? " (dry run)" : ""}`);
   process.exit(0);

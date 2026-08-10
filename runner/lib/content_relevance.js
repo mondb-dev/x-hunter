@@ -8,8 +8,12 @@
  *   loadAxisKeywords()                               belief-axis vocabulary (tie-break)
  *   makeScorer(keywords)                             async (post) -> number
  *
- * The score is an LLM (local qwen) relevance rating 0-3 (+ a small keyword-hit
- * tie-breaker); guarded content returns -1. Same rubric x_engage has always used.
+ * The score is an LLM relevance rating 0-3 (+ a small keyword-hit tie-breaker);
+ * guarded content returns -1. Same rubric x_engage has always used.
+ *
+ * NOTE: inference is the Claude CLI (a subprocess), not the old local model, so
+ * a scorer is SLOW and callers must not fan it out across a whole timeline —
+ * engage() bounds the concurrency for exactly this reason.
  */
 
 const fs = require('fs');
@@ -68,7 +72,10 @@ function makeScorer(keywords) {
         `Rate ONLY the substantive relevance to those themes. Greetings, blessings, motivational quotes, personal life, jokes, ads, and sports = 0 even if they mention people. A post must actually engage with power, politics, media, or truth-claims to score 2-3.\n\n` +
         `Answer with a SINGLE digit:\n0 = irrelevant, 1 = tangential mention, 2 = relevant, 3 = squarely on-topic.\n\n` +
         `POST: "${text.slice(0, 400)}"\n\nDigit:`,
-        { temperature: 0, maxTokens: 5, timeoutMs: 30_000 }
+        // 30s was sized for the old local qwen brain. Inference is now the Claude
+        // CLI (a subprocess), which cannot answer that fast under any load — the
+        // scorer was falling through to the lexical branch on every call.
+        { temperature: 0, maxTokens: 5, timeoutMs: 90_000 }
       );
       const m = String(raw).match(/[0-3]/);
       rel = m ? Number(m[0]) : 0;

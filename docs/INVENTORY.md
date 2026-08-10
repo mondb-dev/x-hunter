@@ -62,7 +62,7 @@ window — in-cycle retries only burn wall-clock (`compose.js isTransient()`).
 | Role | Model | Where |
 |---|---|---|
 | Agent brain (browse/journal/ontology) | **Claude** via single-pass browse | `runner/single_pass_browse.js` — one `composeJSON` call against `BROWSE_SCHEMA`. The 40-turn agentic loop is **retired**: `runner/lib/gemini_agent.js` is a fast-failing stub so callers drop to their direct-compose fallbacks |
-| Scoring / gating / planning / voice rewrite | **Claude** | `runner/llm.js generate()` → `compose()`. Throws if Claude is unavailable; there is no local path and no `localOnly` option any more |
+| Scoring / gating / planning / voice rewrite | **Claude** | `runner/llm.js generate()` → `compose()`. Throws if Claude is unavailable; there is no local path and no `localOnly` option any more. **Every call is a subprocess** (~7s warm): callers that used to fan a batch out in parallel against the old local brain must bound their concurrency and budget ≥90s per call, or all of them time out at once |
 | Outbound prose (tweets, quotes, replies, LinkedIn, articles) | **Claude CLI** (`claude -p`) | `runner/lib/compose.js` — full system-prompt override, no tools, no MCP |
 | Deep-research reasoning (plan, refine, synth) | **Claude CLI** | `runner/deep_research.js` header |
 | Embeddings (768-dim) | **DISABLED** — Claude has no embedding endpoint | `runner/llm.js embed()` returns `null` unconditionally. Callers degrade to keyword search (`recall.js` → sqlite fts5). Stored vectors are inert (nomic-embed-text space, nothing produces new ones). Re-enabling = pick a provider + `backfill_embeddings.js` to re-embed the corpus |
@@ -135,6 +135,21 @@ Follows (`scraper/follows.js:18,45`): max 3/run, 10/day, 1 min between.
   `runner/lib/post_x_helmstack.js` (keeps draft/result/attempt file contract).
   Legacy CDP scripts (`runner/post_tweet.js` etc.) remain as the non-helmstack
   backend path; live path is HelmStack.
+- **X composer fallback** `tools/helmstack-social/src/x.js` — CreateTweet is refused
+  often enough (`344` spurious "daily limit", `226` "looks automated", bare 200 with
+  no id) that the UI path is load-bearing. Two traps, both fixed 2026-08-10:
+  "Quote" **navigates** to `x.com/compose/post` (a status page's reply box is
+  already `tweetTextarea_0`, so `_quoteViaComposer` gates on a `/compose/` path or
+  dialog ancestor, not the bare selector); and `execCommand` selectAll+delete kills
+  the next `Input.insertText`, so `_clearComposer` no-ops on an already-empty
+  composer and `_insertVerified` un-does its warm-up probe with Backspaces.
+- **Feed-engagement scoring is bounded**: `engage()` in both engines scores
+  `scoreConcurrency` candidates at a time (default 3; `LI_SCORE_CONCURRENCY` in
+  `runner/linkedin_engage.js`), because each score is a Claude CLI subprocess.
+  Fanning all ~25 feed candidates out with `Promise.all` timed every call out and
+  scored everything 0 — LinkedIn liked/commented nothing 2026-07-06 → 2026-08-10.
+  Scorer timeout 90s (`linkedin_engage.js`, `lib/content_relevance.js`); regression
+  test in `runner/tests/run_tests.js` → "LinkedIn engagement wiring".
 - **LinkedIn**: plan-first posting (`runner/lib/linkedin_plan.js` — shape assigned by
   A/B controller `linkedin_performance.pickShape`, planner fits material, overrides
   logged); voyager media pipeline for images; UI-driven reshare.
