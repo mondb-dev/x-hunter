@@ -1,17 +1,17 @@
 {
   "schema_version": "1.0",
-  "generated_at": "2026-08-10T07:31:21.355Z",
+  "generated_at": "2026-08-10T10:31:23.398Z",
   "method": "mechanical_registry_v1",
-  "profiled_at": "2026-08-10T07:31:26.842Z",
+  "profiled_at": "2026-08-10T10:31:27.118Z",
   "sources": [
     {
       "domain": "theguardian.com",
       "entity": "Theguardian",
       "kind": "news",
       "first_seen_at": "2026-03-27T23:17:00Z",
-      "last_seen_at": "2026-08-09T20:02:54.414Z",
+      "last_seen_at": "2026-08-10T08:13:36.675Z",
       "discovery": {
-        "distinct_urls": 781,
+        "distinct_urls": 783,
         "example_urls": [
           "https://www.theguardian.com/us-news/2026/jun/23/trump-immigration-courthouse-arrest-policy",
           "https://www.theguardian.com/us-news/2026/jun/28/ice-minnesota-defending-democracy",
@@ -21,9 +21,9 @@
         ],
         "origin_counts": {
           "ontology_evidence": 44,
-          "reading_queue": 746,
+          "reading_queue": 748,
           "journals": 119,
-          "articles": 4
+          "articles": 5
         },
         "distinct_referring_accounts": 0,
         "sample_referring_accounts": [],
@@ -73,7 +73,7 @@
         "breadth": {
           "score": 0.94,
           "basis": [
-            "distinct_urls:781",
+            "distinct_urls:783",
             "distinct_axes:18",
             "origin_types:4"
           ]
@@ -113,7 +113,7 @@
             "newsroom_domain_pattern",
             "article_path_seen",
             "doi_or_identifier_path_seen",
-            "distinct_urls:781",
+            "distinct_urls:783",
             "distinct_axes:18",
             "origin_types:4",
             "referring_accounts:0",
@@ -699,7 +699,7 @@
       "first_seen_at": "2026-06-22T00:15:00Z",
       "last_seen_at": "2026-08-09T22:31:56.129Z",
       "discovery": {
-        "distinct_urls": 528,
+        "distinct_urls": 529,
         "example_urls": [
           "https://www.nytimes.com/2026/06/19/world/canada/frank-stronach-trial-guilty-sex-charges.html",
           "https://www.nytimes.com/2026/06/27/world/americas/mexican-officials-us-informants.html",
@@ -709,7 +709,7 @@
         ],
         "origin_counts": {
           "ontology_evidence": 19,
-          "reading_queue": 542,
+          "reading_queue": 543,
           "journals": 45
         },
         "distinct_referring_accounts": 0,
@@ -752,7 +752,7 @@
         "breadth": {
           "score": 0.8799999999999999,
           "basis": [
-            "distinct_urls:528",
+            "distinct_urls:529",
             "distinct_axes:11",
             "origin_types:3"
           ]
@@ -791,7 +791,7 @@
           "basis": [
             "newsroom_domain_pattern",
             "article_path_seen",
-            "distinct_urls:528",
+            "distinct_urls:529",
             "distinct_axes:11",
             "origin_types:3",
             "referring_accounts:0",
@@ -1213,7 +1213,7 @@
       "first_seen_at": "2026-06-26T07:05:00Z",
       "last_seen_at": "2026-08-07T21:29:16.276Z",
       "discovery": {
-        "distinct_urls": 474,
+        "distinct_urls": 475,
         "example_urls": [
           "https://www.bbc.co.uk/news/articles/cn8qxz6qypyo",
           "https://www.bbc.co.uk/news/articles/cn075j04pnyo?at_medium=RSS&amp;at_campaign=rss",
@@ -1223,7 +1223,7 @@
         ],
         "origin_counts": {
           "ontology_evidence": 6,
-          "reading_queue": 485,
+          "reading_queue": 486,
           "journals": 17,
           "articles": 1
         },
@@ -1259,7 +1259,7 @@
         "breadth": {
           "score": 0.8233333333333333,
           "basis": [
-            "distinct_urls:474",
+            "distinct_urls:475",
             "distinct_axes:4",
             "origin_types:4"
           ]
@@ -1297,7 +1297,7 @@
           "method": "mechanical_v1",
           "basis": [
             "newsroom_domain_pattern",
-            "distinct_urls:474",
+            "distinct_urls:475",
             "distinct_axes:4",
             "origin_types:4",
             "referring_accounts:0",
@@ -2560,9 +2560,9 @@
       "entity": "Philstar",
       "kind": "unknown",
       "first_seen_at": "2026-05-20T06:57:31.760Z",
-      "last_seen_at": "2026-08-10T07:02:12.959Z",
+      "last_seen_at": "2026-08-10T10:02:07.618Z",
       "discovery": {
-        "distinct_urls": 160,
+        "distinct_urls": 164,
         "example_urls": [
           "https://www.philstar.com/headlines/2026/06/24/2537506/mike-defensor-face-trafficking-complaint-over-pasig-ktv-bar-raid",
           "https://www.philstar.com/headlines/2026/06/24/2537509/ched-tells-ateneo-explain-drowning-baterbonia-adili-or-face-sanctions",
@@ -2572,7 +2572,7 @@
         ],
         "origin_counts": {
           "ontology_evidence": 82,
-          "journals": 204,
+          "journals": 208,
           "articles": 3
         },
         "distinct_referring_accounts": 0,
@@ -2621,7 +2621,7 @@
         "breadth": {
           "score": 0.8799999999999999,
           "basis": [
-            "distinct_urls:160",
+            "distinct_urls:164",
             "distinct_axes:17",
             "origin_types:3"
           ]
@@ -2660,7 +2660,7 @@
           "basis": [
             "unknown_domain_pattern",
             "article_path_seen",
-            "distinct_urls:160",
+            "distinct_urls:164",
             "distinct_axes:17",
             "origin_types:3",
             "referring_accounts:0",
@@ -3241,9 +3241,9 @@
       "entity": "T Co",
       "kind": "unknown",
       "first_seen_at": "2016-05-05T18:57:30.000Z",
-      "last_seen_at": "2026-08-10T06:55:17.000Z",
+      "last_seen_at": "2026-08-10T09:54:31.000Z",
       "discovery": {
-        "distinct_urls": 12821,
+        "distinct_urls": 12836,
         "example_urls": [
           "https://t.co/pJSE124ec4",
           "https://t.co/Soz8BXPWaa",
@@ -3252,7 +3252,7 @@
           "https://t.co/cYaqYDRp08"
         ],
         "origin_counts": {
-          "feed_buffer": 10475,
+          "feed_buffer": 10493,
           "feed_buffer_reply": 4896,
           "articles": 3
         },
@@ -3295,7 +3295,7 @@
         "breadth": {
           "score": 0.53,
           "basis": [
-            "distinct_urls:12821",
+            "distinct_urls:12836",
             "distinct_axes:0",
             "origin_types:3"
           ]
@@ -3334,7 +3334,7 @@
           "basis": [
             "unknown_domain_pattern",
             "doi_or_identifier_path_seen",
-            "distinct_urls:12821",
+            "distinct_urls:12836",
             "distinct_axes:0",
             "origin_types:3",
             "referring_accounts:2732",
@@ -3380,9 +3380,9 @@
       "entity": "Inquirer",
       "kind": "unknown",
       "first_seen_at": "2026-05-09T10:15:15.053Z",
-      "last_seen_at": "2026-08-10T07:02:12.937Z",
+      "last_seen_at": "2026-08-10T08:31:58.762Z",
       "discovery": {
-        "distinct_urls": 320,
+        "distinct_urls": 321,
         "example_urls": [
           "https://newsinfo.inquirer.net/2266316/nbi-on-cayetano-position-that-cant-be-defended-by-facts-is-done-with-insults",
           "https://www.inquirer.net/capiz-broadcaster-shooting-probe-widens-as-cops-form-task-force",
@@ -3391,8 +3391,8 @@
           "https://newsinfo.inquirer.net/2251702/chr-seeks-swift-passage-of-bills-creating-detention-monitoring-body"
         ],
         "origin_counts": {
-          "ontology_evidence": 127,
-          "journals": 401,
+          "ontology_evidence": 128,
+          "journals": 402,
           "articles": 4
         },
         "distinct_referring_accounts": 0,
@@ -3443,7 +3443,7 @@
         "breadth": {
           "score": 0.8799999999999999,
           "basis": [
-            "distinct_urls:320",
+            "distinct_urls:321",
             "distinct_axes:20",
             "origin_types:3"
           ]
@@ -3481,7 +3481,7 @@
           "method": "mechanical_v1",
           "basis": [
             "unknown_domain_pattern",
-            "distinct_urls:320",
+            "distinct_urls:321",
             "distinct_axes:20",
             "origin_types:3",
             "referring_accounts:0",
@@ -3527,9 +3527,9 @@
       "entity": "Rappler",
       "kind": "unknown",
       "first_seen_at": "2026-06-22T04:04:30.428Z",
-      "last_seen_at": "2026-08-10T07:02:12.959Z",
+      "last_seen_at": "2026-08-10T10:02:07.618Z",
       "discovery": {
-        "distinct_urls": 251,
+        "distinct_urls": 253,
         "example_urls": [
           "https://www.rappler.com/fact-check-no-arrest-warrant-issued-vs-marcoleta",
           "https://www.rappler.com/technology/decoded-tacloban-school-shooting-disinformation-kiko-barzaga-discussions-juvenile-justice-law/",
@@ -3538,8 +3538,8 @@
           "https://www.rappler.com/voices/thought-leaders/vantage-point-bir-tax-amlc-records-billions-questions-sara-duterte-ignore/"
         ],
         "origin_counts": {
-          "ontology_evidence": 125,
-          "journals": 281,
+          "ontology_evidence": 126,
+          "journals": 283,
           "articles": 4
         },
         "distinct_referring_accounts": 0,
@@ -3572,7 +3572,8 @@
           "axis_rapid_disinformation_v1",
           "axis_reactionary_futurism_v1",
           "axis_selective_outrage",
-          "axis_state_power_monetization_v1"
+          "axis_state_power_monetization_v1",
+          "axis_technological_innovation_vs_social_equity_v1"
         ]
       },
       "claims": {
@@ -3598,8 +3599,8 @@
         "breadth": {
           "score": 0.8799999999999999,
           "basis": [
-            "distinct_urls:251",
-            "distinct_axes:28",
+            "distinct_urls:253",
+            "distinct_axes:29",
             "origin_types:3"
           ]
         },
@@ -3636,8 +3637,8 @@
           "method": "mechanical_v1",
           "basis": [
             "unknown_domain_pattern",
-            "distinct_urls:251",
-            "distinct_axes:28",
+            "distinct_urls:253",
+            "distinct_axes:29",
             "origin_types:3",
             "referring_accounts:0",
             "origin_types:3",
@@ -3646,7 +3647,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-08-07T09:54:51.741Z",
+        "fetched_at": "2026-08-10T10:01:26.108Z",
         "homepage_url": "https://rappler.com/",
         "example_url": "https://www.rappler.com/fact-check-no-arrest-warrant-issued-vs-marcoleta",
         "homepage_status": 200,
@@ -7715,9 +7716,9 @@
       "entity": "Travala",
       "kind": "unknown",
       "first_seen_at": "2026-07-07T12:18:51.059Z",
-      "last_seen_at": "2026-08-10T06:37:25.376Z",
+      "last_seen_at": "2026-08-10T09:47:29.575Z",
       "discovery": {
-        "distinct_urls": 34,
+        "distinct_urls": 35,
         "example_urls": [
           "https://www.travala.com/?camp_name=&camp_offer=credit&camp_content=Sign-up-or-log-in-to-receive-%2450-off-flights%2C-hotels-and-activities.&camp_code=BTCASIA50&camp_value=50&utm_campaign=BTCASIA50&utm_medium=by-travala-cpc&utm_source=twitter&twclid=26wz3yk3m5mtcltdzivyfesoom",
           "https://www.travala.com/?camp_name=&camp_offer=credit&camp_content=Sign-up-or-log-in-to-receive-%2450-off-flights%2C-hotels-and-activities.&camp_code=BTCASIA50&camp_value=50&utm_campaign=BTCASIA50&utm_medium=by-travala-cpc&utm_source=twitter&twclid=27hwmpgkfaysz941g6s97hdxaj",
@@ -7726,7 +7727,7 @@
           "https://www.travala.com/?camp_name=&camp_offer=credit&camp_content=Sign-up-or-log-in-to-receive-%2450-off-flights%2C-hotels-and-activities.&camp_code=BTCASIA50&camp_value=50&utm_campaign=BTCASIA50&utm_medium=by-travala-cpc&utm_source=twitter&twclid=2bbhq20cxwi8wz4ld34c9p9zyc"
         ],
         "origin_counts": {
-          "feed_buffer": 30,
+          "feed_buffer": 31,
           "feed_buffer_reply": 4
         },
         "distinct_referring_accounts": 1,
@@ -7758,7 +7759,7 @@
         "breadth": {
           "score": 0.47,
           "basis": [
-            "distinct_urls:34",
+            "distinct_urls:35",
             "distinct_axes:0",
             "origin_types:2"
           ]
@@ -7796,7 +7797,7 @@
           "method": "mechanical_v1",
           "basis": [
             "unknown_domain_pattern",
-            "distinct_urls:34",
+            "distinct_urls:35",
             "distinct_axes:0",
             "origin_types:2",
             "referring_accounts:1",
@@ -7933,7 +7934,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-08-07T09:54:52.909Z",
+        "fetched_at": "2026-08-10T10:01:27.479Z",
         "homepage_url": "https://metamask.io/",
         "example_url": "https://link.metamask.io/swap?amount=32600000000000000&from=eip155%3A1%2Fslip44%3A60&sig_params=amount%2Cfrom&sig=lcKWbD9emSvYcSy4wKZAAZK4IusikSldKuh2SLobJnCxX6_H50c7o4lrxGukMkQAlJXl_Ro-z9GOFjHlijuUSQ&utm_source=twitter&utm_medium=paid-display&utm_campaign=cmp-1529292347-afbf08&twclid=29ubdtem27pe2i7fvtv9x4pcao",
         "homepage_status": 200,
@@ -9711,7 +9712,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-08-07T09:54:53.772Z",
+        "fetched_at": "2026-08-10T10:01:27.978Z",
         "homepage_url": "https://smart.link/",
         "example_url": "https://smart.link/sdh2x9q4dptrg?twclid=29tfuqwoatuv70nv93xhcyx2vj",
         "homepage_status": 200,
@@ -10600,7 +10601,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-08-07T08:24:50.389Z",
+        "fetched_at": "2026-08-10T08:31:24.800Z",
         "homepage_url": "https://trenchers.ai/",
         "example_url": "https://trenchers.ai/?twclid=2di75phbt55c7y0zfq5ihrqinv",
         "homepage_status": 200,
@@ -11620,7 +11621,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-08-07T08:24:51.872Z",
+        "fetched_at": "2026-08-10T08:31:26.248Z",
         "homepage_url": "https://ukiyoework.com/",
         "example_url": "https://www.ukiyoework.com/view/item/000000000401?utm_source=twitter&utm_medium=cpc&twclid=23tigf5ad41s1prapekhalf5cq",
         "homepage_status": 200,
@@ -12002,7 +12003,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-08-07T08:24:53.836Z",
+        "fetched_at": "2026-08-10T08:31:26.868Z",
         "homepage_url": "https://spotify.com/",
         "example_url": "https://open.spotify.com/track/1lRDfbkJbPZGLaVpHbGjjK?si=0bafd2d0d3d04734&twclid=25onvjxx2lh8042z4br4k46xqz",
         "homepage_status": 200,
@@ -12766,7 +12767,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-08-07T08:24:56.313Z",
+        "fetched_at": "2026-08-10T08:31:28.003Z",
         "homepage_url": "https://mikmak.ai/",
         "example_url": "https://shop.mikmak.ai/social/69d80508c17cd48204adad0b?utm_source=twitter&utm_medium=paid_social&utm_campaign=une_hl_685&utm_term=P3G43FN-&utm_content=hlm-feel-the-flavor-overall-x_jar-and-squeezes_na_spicy_bsay_na_1x1_twpr_none_shnw_en_stp_mikmak_dark_na_sta-base_004_na_na_0565-demo-broad&utm_placement=amplify_preroll&utm_marketing_tactic=Consideration&utm_format=0565-demo-broad&utm_placementid=P3G43FN&utm_variant=brandsay&twclid=2dqu9rpgpoqo0mblvt9uebl5t7",
         "homepage_status": 200,
@@ -12782,7 +12783,7 @@
           "has_about_link": true,
           "has_contact_link": false,
           "has_corrections_link": false,
-          "outbound_links_count": 50,
+          "outbound_links_count": 51,
           "opinion_marker": false
         },
         "example": {
@@ -13049,6 +13050,133 @@
           "has_contact_link": false,
           "has_corrections_link": false,
           "outbound_links_count": 7,
+          "opinion_marker": false
+        }
+      }
+    },
+    {
+      "domain": "walrus.xyz",
+      "entity": "Walrus Xyz",
+      "kind": "unknown",
+      "first_seen_at": "2026-07-05T17:00:00.000Z",
+      "last_seen_at": "2026-08-10T09:52:32.665Z",
+      "discovery": {
+        "distinct_urls": 9,
+        "example_urls": [
+          "https://memory.walrus.xyz/?utm_source=twitter&utm_medium=paid_social&utm_campaign=walrus_memory&twclid=25m14v5tjdgue38tcgv9nyht3e",
+          "https://memory.walrus.xyz/?utm_source=twitter&utm_medium=paid_social&utm_campaign=walrus_memory&twclid=29k2z7awgszl5dfekp834fxz9",
+          "https://memory.walrus.xyz/?utm_source=twitter&utm_medium=paid_social&utm_campaign=walrus_memory&twclid=2a3jl6sx7mi9oc8of0z9l8mnfh",
+          "https://walrus.xyz/products/walrus-memory/?utm_source=twitter&utm_medium=paid_social&utm_campaign=walrus_memory&twclid=267xgt4llxmwfsz1tqoj4rd90v",
+          "https://memory.walrus.xyz/?utm_source=twitter&utm_medium=paid_social&utm_campaign=walrus_memory&twclid=251ujexh202h4l3z0wtsse2had"
+        ],
+        "origin_counts": {
+          "feed_buffer_reply": 6,
+          "feed_buffer": 3
+        },
+        "distinct_referring_accounts": 1,
+        "sample_referring_accounts": [
+          "walrusprotocol"
+        ],
+        "distinct_axes": []
+      },
+      "claims": {
+        "total": 0,
+        "supported": 0,
+        "refuted": 0,
+        "contested": 0,
+        "unverified": 0,
+        "resolved_count": 0
+      },
+      "structural_features": {
+        "has_search_paths": false,
+        "has_article_paths": false,
+        "has_doi_paths": false
+      },
+      "ratings": {
+        "provenance": {
+          "score": 0.45,
+          "basis": [
+            "unknown_domain_pattern"
+          ]
+        },
+        "breadth": {
+          "score": 0.38249999999999995,
+          "basis": [
+            "distinct_urls:9",
+            "distinct_axes:0",
+            "origin_types:2"
+          ]
+        },
+        "corroboration": {
+          "score": 0.2833333333333333,
+          "basis": [
+            "referring_accounts:1",
+            "origin_types:2"
+          ]
+        },
+        "track_record": {
+          "score": null,
+          "basis": [
+            "no_resolved_claims_observed"
+          ]
+        },
+        "profile": {
+          "score": 0.14,
+          "confidence": 0.65,
+          "basis": [
+            "meta_author:false",
+            "published_time:false",
+            "canonical:false",
+            "about:true",
+            "contact:false",
+            "corrections:false",
+            "outbound_links:0",
+            "opinion_marker:false"
+          ]
+        },
+        "overall": {
+          "score": 0.419609375,
+          "confidence": 0.330825,
+          "method": "mechanical_v1",
+          "basis": [
+            "unknown_domain_pattern",
+            "distinct_urls:9",
+            "distinct_axes:0",
+            "origin_types:2",
+            "referring_accounts:1",
+            "origin_types:2",
+            "track_record_unavailable"
+          ]
+        }
+      },
+      "profile": {
+        "fetched_at": "2026-08-08T15:30:49.057Z",
+        "homepage_url": "https://walrus.xyz/",
+        "example_url": "https://memory.walrus.xyz/?utm_source=twitter&utm_medium=paid_social&utm_campaign=walrus_memory&twclid=25m14v5tjdgue38tcgv9nyht3e",
+        "homepage_status": 200,
+        "example_status": 200,
+        "homepage_final_url": "https://walrus.xyz/",
+        "example_final_url": "https://memory.walrus.xyz/?utm_source=twitter&utm_medium=paid_social&utm_campaign=walrus_memory&twclid=25m14v5tjdgue38tcgv9nyht3e",
+        "homepage_content_type": "text/html",
+        "example_content_type": "text/html; charset=utf-8",
+        "homepage": {
+          "has_meta_author": false,
+          "has_published_time": false,
+          "has_canonical": true,
+          "has_about_link": true,
+          "has_contact_link": false,
+          "has_corrections_link": false,
+          "outbound_links_count": 14,
+          "opinion_marker": false
+        },
+        "example": {
+          "has_meta_author": false,
+          "has_published_time": false,
+          "has_canonical": false,
+          "has_about_link": false,
+          "has_contact_link": false,
+          "has_corrections_link": false,
+          "outbound_links_count": 0,
           "opinion_marker": false
         }
       }
@@ -13691,9 +13819,9 @@
       "entity": "Canadacis",
       "kind": "unknown",
       "first_seen_at": "2026-07-20T10:39:44.178Z",
-      "last_seen_at": "2026-08-06T20:33:58.790Z",
+      "last_seen_at": "2026-08-10T09:02:30.481Z",
       "discovery": {
-        "distinct_urls": 33,
+        "distinct_urls": 35,
         "example_urls": [
           "https://ph2canada.canadacis.org/?utm_source=twitter&utm_medium=conversions&utm_campaign=ph01&twclid=29zxowpwkbmryvjqutr3f9ysur",
           "https://ph2canadaf.canadacis.org/?utm_source=twitter&utm_medium=conversions&utm_campaign=ph02family&twclid=21851pq80jbiwf7qxdcye65i6t",
@@ -13702,7 +13830,7 @@
           "https://ph2canadaf.canadacis.org/?utm_source=twitter&utm_medium=conversions&utm_campaign=ph02family&twclid=2bdpahspqoptfne6592349c8h6"
         ],
         "origin_counts": {
-          "feed_buffer": 33
+          "feed_buffer": 35
         },
         "distinct_referring_accounts": 1,
         "sample_referring_accounts": [
@@ -13733,7 +13861,7 @@
         "breadth": {
           "score": 0.41,
           "basis": [
-            "distinct_urls:33",
+            "distinct_urls:35",
             "distinct_axes:0",
             "origin_types:1"
           ]
@@ -13771,7 +13899,7 @@
           "method": "mechanical_v1",
           "basis": [
             "unknown_domain_pattern",
-            "distinct_urls:33",
+            "distinct_urls:35",
             "distinct_axes:0",
             "origin_types:1",
             "referring_accounts:1",
@@ -14411,7 +14539,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-08-07T08:54:48.815Z",
+        "fetched_at": "2026-08-10T09:01:24.659Z",
         "homepage_url": "https://guardianbikes.com/",
         "example_url": "https://guardianbikes.com/products/balance-bike?variant=41102033158237&utm_source=twitter&twclid=2dhmyi0k26r61jxbnc07720qis&utm_content=dpa_carousel&utm_campaign=X_2026_DPA_Remarketing_Campaign+&utm_medium=cpc",
         "homepage_status": 200,
@@ -14537,7 +14665,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-08-07T08:54:50.771Z",
+        "fetched_at": "2026-08-10T09:01:26.263Z",
         "homepage_url": "https://lovart.ai/",
         "example_url": "https://www.lovart.ai/?sourceId=910062&sourceid=910062&utm_source=twitter&utm_medium=paid_social&utm_campaign=Lovart_910062_Meta_US_AIModel_ag_260416_lead&twclid=2a5k8izlnshoxgoxi52b1tnd45",
         "homepage_status": 200,
@@ -14663,7 +14791,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-08-07T08:54:51.527Z",
+        "fetched_at": "2026-08-10T09:01:26.752Z",
         "homepage_url": "https://heylemon.ai/",
         "example_url": "https://heylemon.ai/?utm_source=paid_X_all1&twclid=2bprvotipsebt2ywwd413k1c6r",
         "homepage_status": 200,
@@ -14789,7 +14917,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-08-07T09:54:55.310Z",
+        "fetched_at": "2026-08-10T10:01:29.426Z",
         "homepage_url": "https://wavedash.com/",
         "example_url": "https://wavedash.com/?twclid=29k171tm7pjzrxbob4j7cmjl3o",
         "homepage_status": 200,
@@ -14915,7 +15043,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-08-07T10:24:50.224Z",
+        "fetched_at": "2026-08-10T10:31:24.494Z",
         "homepage_url": "https://babbily.com/",
         "example_url": "https://platform.babbily.com/?twclid=28ntbg85b8teebnlu9ilz4yxht",
         "homepage_status": 200,
@@ -15167,7 +15295,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-08-07T08:54:53.076Z",
+        "fetched_at": "2026-08-10T09:01:28.516Z",
         "homepage_url": "https://hypeddit.com/",
         "example_url": "https://hypeddit.com/psychicfeverfromexiletribe/ifyouremine?twclid=23rtj49iasvoyuwyxn3g4hwi03",
         "homepage_status": 200,
@@ -15293,7 +15421,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-08-07T10:24:51.129Z",
+        "fetched_at": "2026-08-10T10:31:25.364Z",
         "homepage_url": "https://teslahubs.com/",
         "example_url": "https://teslahubs.com/products/teslahubs-proguard-advanced-noise-reduction-weatherproofing-kit?tw_source=twitter&tw_campaign=May_2_ProGuard_Sales__Men_25_34_Web_02_05_2026&utm_term=Static_PG_img_224_1.1&twclid=22spdhzoczolm0ipnjon5bt2pn",
         "homepage_status": 200,
@@ -15545,7 +15673,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-08-07T10:24:51.916Z",
+        "fetched_at": "2026-08-10T10:31:26.120Z",
         "homepage_url": "https://h-tech.space/",
         "example_url": "https://teamlore.h-tech.space/?twclid=21cpesmzgsrh5ius8yd25zbe9t",
         "homepage_status": null,
@@ -15644,14 +15772,14 @@
           ]
         },
         "profile": {
-          "score": 0.12,
-          "confidence": 0.55,
+          "score": 0.38,
+          "confidence": 0.65,
           "basis": [
             "meta_author:false",
             "published_time:false",
             "canonical:false",
-            "about:false",
-            "contact:false",
+            "about:true",
+            "contact:true",
             "corrections:false",
             "outbound_links:27",
             "opinion_marker:false"
@@ -15673,23 +15801,23 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-08-07T10:24:53.159Z",
+        "fetched_at": "2026-08-10T10:31:27.118Z",
         "homepage_url": "https://foxnews.com/",
         "example_url": "https://www.foxnews.com/politics/breaking-president-trump-vows-eradicate-what-he-calls-horrible-thread-cancer-quietly-moving-through-nation-issuing-stark-w",
-        "homepage_status": null,
+        "homepage_status": 200,
         "example_status": 404,
-        "homepage_final_url": "https://foxnews.com/",
+        "homepage_final_url": "https://www.foxnews.com/",
         "example_final_url": "https://www.foxnews.com/politics/breaking-president-trump-vows-eradicate-what-he-calls-horrible-thread-cancer-quietly-moving-through-nation-issuing-stark-w",
-        "homepage_content_type": "",
+        "homepage_content_type": "text/html; charset=UTF-8",
         "example_content_type": "text/html; charset=utf-8",
         "homepage": {
           "has_meta_author": false,
-          "has_published_time": false,
-          "has_canonical": false,
-          "has_about_link": false,
-          "has_contact_link": false,
+          "has_published_time": true,
+          "has_canonical": true,
+          "has_about_link": true,
+          "has_contact_link": true,
           "has_corrections_link": false,
-          "outbound_links_count": 0,
+          "outbound_links_count": 43,
           "opinion_marker": false
         },
         "example": {
@@ -15954,133 +16082,6 @@
           "has_contact_link": false,
           "has_corrections_link": false,
           "outbound_links_count": 9,
-          "opinion_marker": false
-        }
-      }
-    },
-    {
-      "domain": "walrus.xyz",
-      "entity": "Walrus Xyz",
-      "kind": "unknown",
-      "first_seen_at": "2026-07-05T17:00:00.000Z",
-      "last_seen_at": "2026-08-06T01:18:38.148Z",
-      "discovery": {
-        "distinct_urls": 8,
-        "example_urls": [
-          "https://memory.walrus.xyz/?utm_source=twitter&utm_medium=paid_social&utm_campaign=walrus_memory&twclid=25m14v5tjdgue38tcgv9nyht3e",
-          "https://memory.walrus.xyz/?utm_source=twitter&utm_medium=paid_social&utm_campaign=walrus_memory&twclid=29k2z7awgszl5dfekp834fxz9",
-          "https://memory.walrus.xyz/?utm_source=twitter&utm_medium=paid_social&utm_campaign=walrus_memory&twclid=2a3jl6sx7mi9oc8of0z9l8mnfh",
-          "https://walrus.xyz/products/walrus-memory/?utm_source=twitter&utm_medium=paid_social&utm_campaign=walrus_memory&twclid=267xgt4llxmwfsz1tqoj4rd90v",
-          "https://memory.walrus.xyz/?utm_source=twitter&utm_medium=paid_social&utm_campaign=walrus_memory&twclid=251ujexh202h4l3z0wtsse2had"
-        ],
-        "origin_counts": {
-          "feed_buffer_reply": 6,
-          "feed_buffer": 2
-        },
-        "distinct_referring_accounts": 1,
-        "sample_referring_accounts": [
-          "walrusprotocol"
-        ],
-        "distinct_axes": []
-      },
-      "claims": {
-        "total": 0,
-        "supported": 0,
-        "refuted": 0,
-        "contested": 0,
-        "unverified": 0,
-        "resolved_count": 0
-      },
-      "structural_features": {
-        "has_search_paths": false,
-        "has_article_paths": false,
-        "has_doi_paths": false
-      },
-      "ratings": {
-        "provenance": {
-          "score": 0.45,
-          "basis": [
-            "unknown_domain_pattern"
-          ]
-        },
-        "breadth": {
-          "score": 0.3533333333333333,
-          "basis": [
-            "distinct_urls:8",
-            "distinct_axes:0",
-            "origin_types:2"
-          ]
-        },
-        "corroboration": {
-          "score": 0.2833333333333333,
-          "basis": [
-            "referring_accounts:1",
-            "origin_types:2"
-          ]
-        },
-        "track_record": {
-          "score": null,
-          "basis": [
-            "no_resolved_claims_observed"
-          ]
-        },
-        "profile": {
-          "score": 0.14,
-          "confidence": 0.65,
-          "basis": [
-            "meta_author:false",
-            "published_time:false",
-            "canonical:false",
-            "about:true",
-            "contact:false",
-            "corrections:false",
-            "outbound_links:0",
-            "opinion_marker:false"
-          ]
-        },
-        "overall": {
-          "score": 0.41322916666666665,
-          "confidence": 0.30219999999999997,
-          "method": "mechanical_v1",
-          "basis": [
-            "unknown_domain_pattern",
-            "distinct_urls:8",
-            "distinct_axes:0",
-            "origin_types:2",
-            "referring_accounts:1",
-            "origin_types:2",
-            "track_record_unavailable"
-          ]
-        }
-      },
-      "profile": {
-        "fetched_at": "2026-08-08T15:30:49.057Z",
-        "homepage_url": "https://walrus.xyz/",
-        "example_url": "https://memory.walrus.xyz/?utm_source=twitter&utm_medium=paid_social&utm_campaign=walrus_memory&twclid=25m14v5tjdgue38tcgv9nyht3e",
-        "homepage_status": 200,
-        "example_status": 200,
-        "homepage_final_url": "https://walrus.xyz/",
-        "example_final_url": "https://memory.walrus.xyz/?utm_source=twitter&utm_medium=paid_social&utm_campaign=walrus_memory&twclid=25m14v5tjdgue38tcgv9nyht3e",
-        "homepage_content_type": "text/html",
-        "example_content_type": "text/html; charset=utf-8",
-        "homepage": {
-          "has_meta_author": false,
-          "has_published_time": false,
-          "has_canonical": true,
-          "has_about_link": true,
-          "has_contact_link": false,
-          "has_corrections_link": false,
-          "outbound_links_count": 14,
-          "opinion_marker": false
-        },
-        "example": {
-          "has_meta_author": false,
-          "has_published_time": false,
-          "has_canonical": false,
-          "has_about_link": false,
-          "has_contact_link": false,
-          "has_corrections_link": false,
-          "outbound_links_count": 0,
           "opinion_marker": false
         }
       }
@@ -17482,9 +17483,9 @@
       "entity": "Moltbook",
       "kind": "unknown",
       "first_seen_at": "2026-03-07T00:29:35.326Z",
-      "last_seen_at": "2026-08-09T07:41:31.843Z",
+      "last_seen_at": "2026-08-10T08:13:36.675Z",
       "discovery": {
-        "distinct_urls": 109,
+        "distinct_urls": 110,
         "example_urls": [
           "https://www.moltbook.com/post/29d49c40-bc59-4a1a-b875-3d3d41ec469e",
           "https://www.moltbook.com/post/3694a386-c24e-4744-8c06-2fc74c73c559",
@@ -17493,7 +17494,7 @@
           "https://www.moltbook.com/post/c6a71bf0-72ab-4867-820a-6b306bae0cea"
         ],
         "origin_counts": {
-          "articles": 109
+          "articles": 110
         },
         "distinct_referring_accounts": 0,
         "sample_referring_accounts": [],
@@ -17522,7 +17523,7 @@
         "breadth": {
           "score": 0.41,
           "basis": [
-            "distinct_urls:109",
+            "distinct_urls:110",
             "distinct_axes:0",
             "origin_types:1"
           ]
@@ -17560,7 +17561,7 @@
           "method": "mechanical_v1",
           "basis": [
             "unknown_domain_pattern",
-            "distinct_urls:109",
+            "distinct_urls:110",
             "distinct_axes:0",
             "origin_types:1",
             "referring_accounts:0",
