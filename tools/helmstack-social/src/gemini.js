@@ -506,6 +506,12 @@ class Gemini {
 
   // ── History maintenance ─────────────────────────────────────────────────────
 
+  /** `ms` spread by ±`jitter` so a run isn't a metronome. Never below 500ms. */
+  _jittered(ms, jitter = 0.4) {
+    const spread = ms * jitter;
+    return Math.max(500, Math.round(ms - spread + Math.random() * spread * 2));
+  }
+
   /** Absolute URL of a conversation on the pinned account. */
   _convUrl(id) {
     return this.accountIndex > 0
@@ -589,11 +595,19 @@ class Gemini {
    * @param {boolean}  [opts.dryRun=true]
    * @param {number}   [opts.max=Infinity]      stop after this many deletions
    * @param {number}   [opts.maxScan=Infinity]  stop after opening this many chats
-   * @param {number}   [opts.pauseMs=2500]      delay between chats (anti-abuse)
+   * @param {number}   [opts.pauseMs=9000]      base delay between chats
+   * @param {number}   [opts.jitter=0.4]        ± fraction applied to every delay
+   * @param {number}   [opts.restEvery=8]       take a long rest after this many chats
+   * @param {number}   [opts.restMs=120000]     length of that rest
    * @param {function} [opts.onChat]            ({ title, prompt, match, deleted }) => void
+   * @param {function} [opts.onRest]            (ms, stats) => void
    * @returns {Promise<{scanned:number, matched:number, deleted:number, kept:number}>}
    */
-  async purgeChats({ patterns, dryRun = true, max = Infinity, maxScan = Infinity, pauseMs = 2500, onChat } = {}) {
+  async purgeChats({
+    patterns, dryRun = true, max = Infinity, maxScan = Infinity,
+    pauseMs = 9000, jitter = 0.4, restEvery = 8, restMs = 120_000,
+    onChat, onRest,
+  } = {}) {
     const pats = patterns || Gemini.AGENT_PROMPT_PATTERNS;
     await this.ensureTab();
     // The CLI is interactive: stop hard rather than report an empty history.
@@ -616,7 +630,23 @@ class Gemini {
 
     for (const { id, title } of chats) {
       if (stats.deleted >= max || stats.scanned >= maxScan) break;
-      if (stats.scanned) await sleep(pauseMs); // don't hammer — see the /sorry check below
+
+      // Cadence. One full page load per chat, back to back, is what tripped
+      // Google's interstitial the first time: the load rate, not the identity of
+      // the client, is the signal. So the run throttles ITSELF — a jittered gap
+      // between chats and a long rest every `restEvery` — instead of trying to
+      // look like something it isn't. Everything here is a delay; nothing spoofs
+      // a fingerprint, a user agent, or an input event.
+      if (stats.scanned) {
+        if (restEvery && stats.scanned % restEvery === 0) {
+          const rest = this._jittered(restMs, jitter);
+          if (onRest) onRest(rest, { ...stats });
+          else console.log(`[gemini] resting ${Math.round(rest / 1000)}s after ${stats.scanned} chats`);
+          await sleep(rest);
+        } else {
+          await sleep(this._jittered(pauseMs, jitter));
+        }
+      }
 
       // Full navigation, NOT a sidebar click: in-app routing leaves the previous
       // conversation's <user-query> nodes mounted and appends the new ones, so
