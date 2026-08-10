@@ -153,6 +153,34 @@ await li.engage({
 | `likeByIdx(idx, {dryRun})` | Like a scraped tweet by index. |
 | `engage(hooks)` | Orchestrate scrape → score → like → reply. |
 
+### `Gemini` methods
+
+Drives the signed-in Google account at gemini.google.com — no API key.
+
+| method | description |
+| --- | --- |
+| `ask(prompt, {timeoutMs})` | Text Q&A (claim verification) → answer string or `null`. |
+| `generateImage(prompt, {referenceImagePath})` | → `{buffer, width, height}` or `null`. |
+| `generateVideo(prompt, {referenceImagePath})` | Veo, needs an entitlement → `{buffer, mime}` or `null`. |
+| `deleteCurrentChat()` | Delete the conversation open in this tab → bool. |
+| `listChats()` | Sidebar conversations → `[{id, title}]`. |
+| `purgeChats({dryRun, max, maxScan, pauseMs})` | Delete chats whose FIRST PROMPT matches `Gemini.AGENT_PROMPT_PATTERNS` → `{scanned, matched, deleted, kept}`. |
+
+The account is a person's own, and their chats sit in the same history. Two rules
+keep the engine off them:
+
+1. `ask`/`generate` delete **the conversation they created**, by id, as the last
+   step of the call (`GEMINI_KEEP_CHATS=1` opts out). No search, no matching.
+2. `purgeChats` opens each chat and matches its **first prompt** against the fixed
+   strings this engine sends — never the title, which Gemini writes itself. It is
+   a dry run unless told otherwise, and it stops when Google's anti-abuse
+   interstitial appears rather than pushing through it.
+
+```
+node bin/helmstack-social.js gemini purge                 # list what would go
+node bin/helmstack-social.js gemini purge --apply --max 25
+```
+
 ## HelmStack endpoints used
 
 Standard tabs/navigate/evaluate/cookies/screenshot, plus three CDP input

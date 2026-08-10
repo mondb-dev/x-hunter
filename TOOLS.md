@@ -99,10 +99,27 @@ follows 3 h).
 
 ## Channel engines (`tools/helmstack-social/`)
 
-Standalone package driving X and LinkedIn through HelmStack:
+Standalone package driving X, LinkedIn and Gemini through HelmStack:
 X — CreateTweet/CreateRetweet GraphQL, quotes/replies via API, browser image
 upload, X Articles (Premium editor flow); LinkedIn — voyager posting + media
-pipeline, UI-driven reshare, comments.
+pipeline, UI-driven reshare, comments; Gemini — `ask()` for claim verification
+plus image/video generation on the signed-in Google account.
+
+**Gemini chats clean up after themselves.** That account belongs to a human and
+its history is shared with their own chats, so every `ask`/`generate` deletes the
+conversation it created once the answer or bytes are in hand. `GEMINI_KEEP_CHATS=1`
+keeps them for debugging. To clear chats left by older runs:
+
+```
+node tools/helmstack-social/bin/helmstack-social.js gemini purge            # dry run
+node tools/helmstack-social/bin/helmstack-social.js gemini purge --apply    # delete
+```
+
+A chat is only deleted when its **first prompt** is one this engine writes
+(`Gemini.AGENT_PROMPT_PATTERNS`); titles are never matched, because Gemini writes
+those and a human chat can easily read like a fact-check. `--max N`, `--max-scan N`
+and `--pause-ms MS` bound a run — go slowly, since rapid page loads trip Google's
+anti-abuse interstitial, which the engine detects and stops on.
 
 ---
 
