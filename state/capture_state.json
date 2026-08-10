@@ -1,119 +1,129 @@
 {
-  "checked_at": "2026-08-09T07:36:22.164Z",
-  "evidence_24h": 27,
+  "checked_at": "2026-08-10T08:10:06.602Z",
+  "evidence_24h": 21,
   "unique_sources": 4,
   "status": "captured",
   "alerts": [
     {
       "type": "source_dominance",
       "severity": "high",
-      "detail": "@unknown accounts for 85% of today's evidence (23/27)",
+      "detail": "@unknown accounts for 86% of today's evidence (18/21)",
       "username": "unknown",
-      "share": 0.852
+      "share": 0.857
     }
   ],
-  "summary": "1 capture alert(s) detected:\n[HIGH] @unknown accounts for 85% of today's evidence (23/27)",
+  "summary": "1 capture alert(s) detected:\n[HIGH] @unknown accounts for 86% of today's evidence (18/21)",
   "source_concentration": {
     "unknown": {
       "username": "unknown",
-      "count": 23,
-      "share": 0.852
+      "count": 18,
+      "share": 0.857
     },
-    "news5ph": {
-      "username": "news5ph",
-      "count": 2,
-      "share": 0.074
-    },
-    "imtheatan": {
-      "username": "imtheatan",
+    "bncdotph": {
+      "username": "bncdotph",
       "count": 1,
-      "share": 0.037
+      "share": 0.048
     },
-    "kowalerts": {
-      "username": "kowalerts",
+    "zoomafrika1": {
+      "username": "zoomafrika1",
       "count": 1,
-      "share": 0.037
+      "share": 0.048
+    },
+    "philippinestar": {
+      "username": "philippinestar",
+      "count": 1,
+      "share": 0.048
     }
   },
   "axis_concentration": {
     "axis_power_accountability": {
       "axis_id": "axis_power_accountability",
       "label": "Power, Institutions, and Rule of Law",
-      "count": 4,
-      "share": 0.148
+      "count": 3,
+      "share": 0.143
     },
     "axis_procedural_governance_substantive_action": {
       "axis_id": "axis_procedural_governance_substantive_action",
       "label": "Procedural Governance vs. Substantive Action",
-      "count": 4,
-      "share": 0.148
-    },
-    "axis_infrastructure_commons_v_extraction_v1": {
-      "axis_id": "axis_infrastructure_commons_v_extraction_v1",
-      "label": "Infrastructure as Commons vs. Extraction",
       "count": 3,
-      "share": 0.111
+      "share": 0.143
+    },
+    "axis_infrastructure_displacement_accountability_v1": {
+      "axis_id": "axis_infrastructure_displacement_accountability_v1",
+      "label": "Infrastructure Accountability Timing",
+      "count": 3,
+      "share": 0.143
+    },
+    "axis_crisis_visibility_hierarchy_v1": {
+      "axis_id": "axis_crisis_visibility_hierarchy_v1",
+      "label": "Crisis Visibility Hierarchy",
+      "count": 3,
+      "share": 0.143
     },
     "axis_media_integrity_v1": {
       "axis_id": "axis_media_integrity_v1",
       "label": "Integrity of Information and Social Media Manipulation",
-      "count": 2,
-      "share": 0.074
+      "count": 1,
+      "share": 0.048
+    },
+    "axis_historical_legacy_v1": {
+      "axis_id": "axis_historical_legacy_v1",
+      "label": "Interpretation and Legacy of Historical Events",
+      "count": 1,
+      "share": 0.048
+    },
+    "axis_global_power_realignments_v1": {
+      "axis_id": "axis_global_power_realignments_v1",
+      "label": "Global Power Realignments and Shifting Hegemony",
+      "count": 1,
+      "share": 0.048
     },
     "axis_human_rights_exploitation_v1": {
       "axis_id": "axis_human_rights_exploitation_v1",
       "label": "Human Rights and Exploitation",
-      "count": 2,
-      "share": 0.074
-    },
-    "axis_environmental_policy_v_economic_v1": {
-      "axis_id": "axis_environmental_policy_v_economic_v1",
-      "label": "Environmental Policy vs. Economic Development",
-      "count": 2,
-      "share": 0.074
-    },
-    "axis_epistemic_integrity": {
-      "axis_id": "axis_epistemic_integrity",
-      "label": "Truth and Evidence in Public Discourse",
       "count": 1,
-      "share": 0.037
+      "share": 0.048
     },
-    "axis_public_trust_safety_crisis_v1": {
-      "axis_id": "axis_public_trust_safety_crisis_v1",
-      "label": "Public Trust in Safety and Crisis Communication",
+    "axis_social_welfare_v_military_spending_v1": {
+      "axis_id": "axis_social_welfare_v_military_spending_v1",
+      "label": "Social Welfare vs. Military Spending Priorities",
       "count": 1,
-      "share": 0.037
+      "share": 0.048
     },
-    "axis_political_dynasties_meritocracy_v1": {
-      "axis_id": "axis_political_dynasties_meritocracy_v1",
-      "label": "Political Dynasties and Meritocracy",
+    "axis_humanitarian_crisis_response": {
+      "axis_id": "axis_humanitarian_crisis_response",
+      "label": "Humanitarian Crisis Response",
       "count": 1,
-      "share": 0.037
-    },
-    "axis_digital_supply_chain_security": {
-      "axis_id": "axis_digital_supply_chain_security",
-      "label": "Digital Supply Chain Security and Vulnerabilities",
-      "count": 1,
-      "share": 0.037
+      "share": 0.048
     }
   },
   "cluster_concentration": {
     "unknown": {
       "cluster": "unknown",
-      "count": 24,
-      "share": 0.889
+      "count": 18,
+      "share": 0.857
     },
-    "accountability_journalism": {
-      "cluster": "accountability_journalism",
-      "count": 3,
-      "share": 0.111
+    "asia_pacific": {
+      "cluster": "asia_pacific",
+      "count": 1,
+      "share": 0.048
+    },
+    "human_rights": {
+      "cluster": "human_rights",
+      "count": 1,
+      "share": 0.048
+    },
+    "breaking_news": {
+      "cluster": "breaking_news",
+      "count": 1,
+      "share": 0.048
     }
   },
   "pole_balance": {
-    "left": 13,
-    "right": 14,
+    "left": 11,
+    "right": 10,
     "neutral": 0,
-    "left_share": 0.481,
-    "right_share": 0.519
+    "left_share": 0.524,
+    "right_share": 0.476
   }
 }

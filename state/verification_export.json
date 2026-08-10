@@ -1,11 +1,11 @@
 {
-  "generated_at": "2026-08-10T08:10:01.046Z",
+  "generated_at": "2026-08-10T08:12:59.383Z",
   "stats": {
-    "total": 1146,
-    "supported": 318,
+    "total": 1151,
+    "supported": 321,
     "refuted": 224,
     "contested": 6,
-    "unverified": 114,
+    "unverified": 116,
     "expired": 484
   },
   "claims": [
@@ -4494,6 +4494,49 @@
       "dissenting_sources": [],
       "framing_analysis": "The claim is framed accurately and directly reflects the legal summons issued by the Sandiganbayan Third Division as reported in media outlets.",
       "web_search_summary": "The Sandiganbayan Third Division issued a subpoena summoning former Department of Public Works and Highways chief Manuel Bonoan to testify against former Senator Bong Revilla. The order requires Bonoan to present testimony regarding a malversation case.",
+      "investigation_depth": "quick"
+    },
+    {
+      "claim_id": "live_f90735f2a3",
+      "claim_text": "US State Department closed five consulates in Japan, Indonesia, Canada, Grenada, and Cameroon",
+      "status": "supported",
+      "confidence_score": 0.69,
+      "display_score": 0.424,
+      "scoring_breakdown": {
+        "source_tier": 0.5,
+        "newsguard": 0.5,
+        "corroboration": 0.9,
+        "evidence_quality": 0.9,
+        "cross_source": 0.5,
+        "web_search": 1
+      },
+      "source_handle": null,
+      "source_tier": null,
+      "evidence_urls": [
+        "https://www.reuters.com/world/us/us-state-department-close-consulates-canada-japan-indonesia-sources-say-2026-08-03/",
+        "https://www.reuters.com/world/us/us-state-department-close-consulates-canada-japan-indonesia-sources-say-2026-08-03/",
+        "https://ca.news.yahoo.com/us-state-department-close-consulates-223628324.html",
+        "https://ca.news.yahoo.com/us-state-department-close-consulates-223628324.html",
+        "https://www.usnews.com/news/world/articles/2026-08-03/us-state-department-to-close-consulates-in-canada-japan-and-indonesia-sources-say"
+      ],
+      "tweet_url": null,
+      "category": null,
+      "related_axis_id": "axis_immigration_policy_v_national_control_v1",
+      "verification_count": 1,
+      "verified_at": "2026-08-10T08:12:59.359Z",
+      "created_at": "2026-08-10T08:12:59.358Z",
+      "original_source": "Reuters",
+      "claim_date": "2026-08-03",
+      "supporting_sources": [
+        {
+          "name": "Reuters",
+          "excerpt": "The U.S. State Department notified Congress of plans to close five foreign missions located in Grenada, Japan, Indonesia, Cameroon, and Canada.",
+          "url": null
+        }
+      ],
+      "dissenting_sources": [],
+      "framing_analysis": "The claim accurately identifies all five locations, though it describes the closures as already completed rather than planned following a notification to Congress.",
+      "web_search_summary": "The U.S. State Department notified Congress of plans to close five diplomatic posts in Winnipeg (Canada), Nagoya (Japan), Medan (Indonesia), St. George's (Grenada), and Douala (Cameroon). Reporting confirms all five specified countries, though the notice outlines planned closures rather than completed ones.",
       "investigation_depth": "quick"
     },
     {
@@ -17717,6 +17760,113 @@
       "dissenting_sources": [],
       "framing_analysis": "The claim accurately conveys the mechanism and impact of the policy shift requiring visa holders to depart the U.S., though the specific figure of 780,000+ slightly exaggerates the reported estimate of roughly 700,000.",
       "web_search_summary": "A new federal memo requires temporary visa holders seeking green cards to undergo consular processing in their home countries rather than adjusting status from within the U.S. While sources confirm the policy affects hundreds of thousands of applicants, the provided reporting specifies roughly 700,000 green card applicants rather than over 780,000.",
+      "investigation_depth": "quick"
+    },
+    {
+      "claim_id": "live_48be2ae396",
+      "claim_text": "780,000+ immigrants in the US on temporary visas are affected by new policy requiring them to leave the country to apply for green cards",
+      "status": "supported",
+      "confidence_score": 0.6,
+      "display_score": 0.397,
+      "scoring_breakdown": {
+        "source_tier": 0.5,
+        "newsguard": 0.5,
+        "corroboration": 0.7,
+        "evidence_quality": 0.7,
+        "cross_source": 0.5,
+        "web_search": 0.8
+      },
+      "source_handle": null,
+      "source_tier": null,
+      "evidence_urls": [
+        "https://www.americanimmigrationcouncil.org/blog/green-card-news-uscis-memo/",
+        "https://www.americanimmigrationcouncil.org/blog/green-card-news-uscis-memo/",
+        "https://www.gmlaw.com/news/uscis-has-issued-a-sweeping-new-policy-memorandum-shifting-the-default-pathway-for-green-cards/",
+        "https://www.gmlaw.com/news/uscis-has-issued-a-sweeping-new-policy-memorandum-shifting-the-default-pathway-for-green-cards/",
+        "https://bhlflaw.com/blog/uscis-restricts-adjustment-of-status-green-card-applicants-now-required-to-apply-from-abroad/"
+      ],
+      "tweet_url": null,
+      "category": null,
+      "related_axis_id": "axis_immigration_policy_v_national_control_v1",
+      "verification_count": 1,
+      "verified_at": "2026-08-10T08:11:31.117Z",
+      "created_at": "2026-08-10T08:11:31.116Z",
+      "original_source": "Unknown",
+      "claim_date": "2026-05",
+      "supporting_sources": [
+        {
+          "name": "American Immigration Council",
+          "excerpt": "USCIS issued a memo that may force immigrants to leave the country to apply for green cards, upending and complicating the usual process.",
+          "url": null
+        },
+        {
+          "name": "Greenspoon Marder",
+          "excerpt": "USCIS now requires most visa holders to apply for green cards abroad based on a May 2026 policy memo.",
+          "url": null
+        },
+        {
+          "name": "Banker's Hill Law",
+          "excerpt": "USCIS issued a formal memorandum on May 22, 2026, directing officers to grant adjustment of status only under extraordinary circumstances.",
+          "url": null
+        }
+      ],
+      "dissenting_sources": [],
+      "framing_analysis": "The claim accurately describes the May 2026 USCIS policy shift requiring green card applications to be processed abroad, but it introduces a specific metric (780,000+) that is not substantiated by the provided context.",
+      "web_search_summary": "The provided sources confirm that a May 2026 USCIS policy memorandum directs most temporary visa holders to apply for green cards from abroad rather than adjusting status in the U.S. However, the provided snippets do not state or verify the specific figure of 780,000+ affected immigrants.",
+      "investigation_depth": "quick"
+    },
+    {
+      "claim_id": "live_2790804cd1",
+      "claim_text": "H-1B visa holders and their families are targeted for deportation under new policy",
+      "status": "supported",
+      "confidence_score": 0.6,
+      "display_score": 0.397,
+      "scoring_breakdown": {
+        "source_tier": 0.5,
+        "newsguard": 0.5,
+        "corroboration": 0.7,
+        "evidence_quality": 0.7,
+        "cross_source": 0.5,
+        "web_search": 0.8
+      },
+      "source_handle": null,
+      "source_tier": null,
+      "evidence_urls": [
+        "https://www.visaverge.com/visa/could-enhanced-deportation-funding-affect-h-1b-and-f-1-visa-holders/",
+        "https://www.visaverge.com/visa/could-enhanced-deportation-funding-affect-h-1b-and-f-1-visa-holders/",
+        "https://maplecrestlaw.com/uscis-policy-change-puts-h-1b-visa-holders-children-at-risk/",
+        "https://maplecrestlaw.com/uscis-policy-change-puts-h-1b-visa-holders-children-at-risk/",
+        "https://trak.in/stories/kids-of-h1b-visa-holders-now-face-deportation-separation-under-new-laws/"
+      ],
+      "tweet_url": null,
+      "category": null,
+      "related_axis_id": "axis_immigration_policy_v_national_control_v1",
+      "verification_count": 1,
+      "verified_at": "2026-08-10T08:12:18.844Z",
+      "created_at": "2026-08-10T08:12:18.843Z",
+      "original_source": null,
+      "claim_date": null,
+      "supporting_sources": [
+        {
+          "name": "Maple Crest Law",
+          "excerpt": "USCIS ended a Biden-era rule that allowed dependent children of H-1B visa holders to maintain legal status while waiting for green card processing, placing young adults at risk.",
+          "url": null
+        },
+        {
+          "name": "Trak.in",
+          "excerpt": "Children of H-1B visa holders face potential deportation and family separation following the rollback of protections for green card applicants' children.",
+          "url": null
+        }
+      ],
+      "dissenting_sources": [
+        {
+          "name": "VisaVerge",
+          "excerpt": "H-1B and F-1 visa holders are not primary targets of expanded ICE deportation funding, despite facing heightened enforcement risks.",
+          "url": null
+        }
+      ],
+      "framing_analysis": "The claim misleadingly implies a direct targeting campaign against all H-1B holders and their families. While broader enforcement funding has increased general scrutiny, the direct risk of deportation specifically impacts aging-out dependent children due to the rollback of legal protections rather than a direct deportation program targeting H-1B workers.",
+      "web_search_summary": "While H-1B visa holders are not direct primary targets for deportation, recent USCIS policy changes ending Biden-era protections have placed their aging-out dependent children at risk of losing legal status and facing deportation. Furthermore, increased enforcement funding has raised overall scrutiny and risks for visa holders, even though they remain non-primary targets.",
       "investigation_depth": "quick"
     },
     {
@@ -31306,6 +31456,80 @@
       "dissenting_sources": [],
       "framing_analysis": null,
       "web_search_summary": "Defining the FrameworkGemini said",
+      "investigation_depth": "quick"
+    },
+    {
+      "claim_id": "live_337ccc080d",
+      "claim_text": "US forcibly removed 17 asylum seekers (Turks, Afghans, Iranians) to Central African Republic on June 12, 2026",
+      "status": "unverified",
+      "confidence_score": 0.4,
+      "display_score": 0.337,
+      "scoring_breakdown": {
+        "source_tier": 0.5,
+        "newsguard": 0.5,
+        "corroboration": 0,
+        "evidence_quality": 0.5,
+        "cross_source": 0.5,
+        "web_search": 0.5
+      },
+      "source_handle": null,
+      "source_tier": null,
+      "evidence_urls": [
+        "https://www.amnesty.org/en/latest/news/2026/08/tribune-politique-americaine/",
+        "https://www.amnesty.org/en/latest/news/2026/08/tribune-politique-americaine/",
+        "https://www.afintl.com/en/202606126396",
+        "https://www.afintl.com/en/202606126396",
+        "https://www.hrw.org/news/2026/06/29/central-african-republic-latest-third-country-for-us-deportees"
+      ],
+      "tweet_url": null,
+      "category": null,
+      "related_axis_id": "axis_immigration_policy_v_national_control_v1",
+      "verification_count": 1,
+      "verified_at": "2026-08-10T08:11:56.587Z",
+      "created_at": "2026-08-10T08:11:56.586Z",
+      "original_source": null,
+      "claim_date": null,
+      "supporting_sources": [],
+      "dissenting_sources": [],
+      "framing_analysis": null,
+      "web_search_summary": "Searching the webGemini said",
+      "investigation_depth": "quick"
+    },
+    {
+      "claim_id": "live_8cb112a431",
+      "claim_text": "ICE arrest records reached historic highs under current administration",
+      "status": "unverified",
+      "confidence_score": 0.4,
+      "display_score": 0.337,
+      "scoring_breakdown": {
+        "source_tier": 0.5,
+        "newsguard": 0.5,
+        "corroboration": 0,
+        "evidence_quality": 0.5,
+        "cross_source": 0.5,
+        "web_search": 0.5
+      },
+      "source_handle": null,
+      "source_tier": null,
+      "evidence_urls": [
+        "https://www.colorado.edu/today/2026/02/18/ice-arrests-reach-record-highs-percent-criminal-record-plummets",
+        "https://www.colorado.edu/today/2026/02/18/ice-arrests-reach-record-highs-percent-criminal-record-plummets",
+        "https://www.visaverge.com/legal/ice-arrests-surge-to-record-highs-in-june-2026-new-detention-data-reveals/",
+        "https://www.visaverge.com/legal/ice-arrests-surge-to-record-highs-in-june-2026-new-detention-data-reveals/",
+        "https://www.cbsnews.com/news/ice-detentions-trump-high-july-2026-immigration-crackdown-widens/"
+      ],
+      "tweet_url": null,
+      "category": null,
+      "related_axis_id": "axis_immigration_policy_v_national_control_v1",
+      "verification_count": 1,
+      "verified_at": "2026-08-10T08:12:37.063Z",
+      "created_at": "2026-08-10T08:12:37.062Z",
+      "original_source": null,
+      "claim_date": null,
+      "supporting_sources": [],
+      "dissenting_sources": [],
+      "framing_analysis": null,
+      "web_search_summary": "Searching the webGemini said",
       "investigation_depth": "quick"
     },
     {
