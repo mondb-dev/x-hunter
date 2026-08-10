@@ -12,6 +12,7 @@
  *
  * Mechanics (validated interactively 2026-07-20):
  *   - each generation starts a fresh chat (navigate to /app) so no context bleeds
+ *   - every run DELETES its own chat when it finishes (see cleanup note below)
  *   - prompt goes into the rich-textarea contenteditable via execCommand
  *   - generated images render as blob: <img>; blob refetch is blocked, so bytes
  *     are extracted by drawing the <img> to a canvas -> toDataURL (PNG)
@@ -22,6 +23,15 @@
  * HelmStack profile (Sebastian's own account, free tier as of 2026-07 — image
  * generation works with daily limits; Veo video generally needs an AI Pro
  * entitlement on that account, e.g. via Google One family sharing).
+ *
+ * NOTE on cleanup (added 2026-08-10): that account is a HUMAN's account, and its
+ * chat history is shared with the human's own conversations. Every ask/generate
+ * used to leave a saved chat behind, so a few hundred fact-checks buried the
+ * owner's real chats. Each call now deletes the conversation it created once the
+ * answer/bytes are in hand — set GEMINI_KEEP_CHATS=1 (or `new Gemini(client,
+ * { autoDelete: false })`) to keep them while debugging. Deletion targets the
+ * conversation open in THIS tab by id; it never matches on titles, so a human
+ * chat can't be caught by it. For the existing backlog see purgeChats().
  */
 
 const GEMINI_URL = "https://gemini.google.com/app";
@@ -35,34 +45,72 @@ class Gemini {
    *   (default env GEMINI_ACCOUNT_INDEX or 0). The browser can hold several
    *   Google sessions; /u/N/ addressing keeps media generation on a specific
    *   one (e.g. the AI Pro account) while everything else stays on u/0.
+   * @param {boolean} [opts.autoDelete]  Delete each chat this engine creates once
+   *   the call is done (default true; GEMINI_KEEP_CHATS=1 turns it off).
    */
-  constructor(client, { accountIndex } = {}) {
+  constructor(client, { accountIndex, autoDelete } = {}) {
     this.client = client;
     this.tabId = null;
     const idx = accountIndex !== undefined ? accountIndex : Number(process.env.GEMINI_ACCOUNT_INDEX || 0);
     this.accountIndex = Number.isFinite(idx) && idx > 0 ? idx : 0;
+    this.autoDelete = autoDelete !== undefined ? autoDelete : process.env.GEMINI_KEEP_CHATS !== "1";
   }
 
   get url() {
     return this.accountIndex > 0 ? `https://gemini.google.com/u/${this.accountIndex}/app` : GEMINI_URL;
   }
 
+  /**
+   * Is this tab ON gemini? Anchored to the ORIGIN, not a substring: Google's
+   * anti-abuse interstitial lives at google.com/sorry/index?continue=https://
+   * gemini.google.com/... and a loose test adopts that page as a Gemini tab.
+   */
+  _isGeminiTab(t) {
+    return /^https:\/\/gemini\.google\.com\//.test(t.url || "");
+  }
+
   _tabMatches(t) {
-    const u = t.url || "";
-    if (!/gemini\.google\.com/.test(u)) return false;
-    const m = u.match(/\/u\/(\d+)\//);
+    if (!this._isGeminiTab(t)) return false;
+    const m = (t.url || "").match(/\/u\/(\d+)\//);
     const tabIdx = m ? Number(m[1]) : 0;
     return tabIdx === this.accountIndex;
   }
 
-  /** Fresh chat tab on the pinned account: reuse a matching tab, else open one. */
+  /**
+   * Fresh chat tab on the pinned account: reuse a matching tab, else open one.
+   *
+   * The reuse test falls back to ANY gemini tab when no `/u/<accountIndex>/` one
+   * exists, because Google redirects `/u/N/` to the account that is actually
+   * signed in — with GEMINI_ACCOUNT_INDEX=1 and only one Google session, every
+   * tab lands on `/u/0/`, `_tabMatches` never matched, and each call opened a
+   * tab that was never closed (a dozen stale Gemini tabs after a day of
+   * fact-checking). The navigate below still targets the pinned URL, so pinning
+   * is unchanged — only tab reuse gets more forgiving.
+   */
   async ensureTab() {
-    this.tabId = await this.client.ensureTab((t) => this._tabMatches(t), this.url);
+    const tabs = await this.client.listTabs().catch(() => []);
+    const reuse = tabs.find((t) => this._tabMatches(t)) || tabs.find((t) => this._isGeminiTab(t));
+    // `client.ensureTab` opens a tab when its predicate matches nothing, which is
+    // exactly what we want once both reuse tiers have missed.
+    this.tabId = reuse ? reuse.id : await this.client.ensureTab(() => false, this.url);
     // Always reset to a new conversation so prior prompts don't leak in.
     await this.client.request("POST", `/api/tabs/${this.tabId}/navigate`, { url: this.url });
     await sleep(3500);
+    // Too many loads in a row and Google answers with its anti-abuse
+    // interstitial instead of the app. Record it: signedIn() can't see it (there
+    // is no "Sign in" button on that page), so callers used to report a missing
+    // editor or an empty history and carry on hammering.
+    const landed = await this.client.tabUrl(this.tabId).catch(() => "");
+    this.blocked = /google\.com\/sorry/.test(landed);
+    if (this.blocked) console.warn("[gemini] Google served its anti-abuse interstitial — the app did not load. A human has to clear it in the browser.");
     await this._dismissDialogs();
     return this.tabId;
+  }
+
+  /** Reason string when the app is unreachable, else null. */
+  _unavailable() {
+    if (this.blocked) return "Google anti-abuse interstitial is up";
+    return null;
   }
 
   async _eval(expression, opts) {
@@ -148,6 +196,97 @@ class Gemini {
     return String(t || "").trim();
   }
 
+  /** Poll an in-page boolean expression until true. Returns whether it went true. */
+  async _waitFor(expression, timeoutMs = 8000, interval = 400) {
+    const deadline = Date.now() + timeoutMs;
+    for (;;) {
+      if (await this._eval(expression).catch(() => false)) return true;
+      if (Date.now() >= deadline) return false;
+      await sleep(interval);
+    }
+  }
+
+  /** Close any open menu/dialog so the next call starts from a clean composer. */
+  async _dismissOverlays() {
+    await this._eval(`(() => {
+      document.querySelectorAll('.cdk-overlay-backdrop').forEach(b => b.click());
+      document.dispatchEvent(new KeyboardEvent('keydown', { key: 'Escape', bubbles: true }));
+      return 'ok';
+    })()`).catch(() => {});
+  }
+
+  /**
+   * The conversation id in the tab URL (`/app/<id>`), or null when the chat is
+   * still unsaved (a fresh `/app` before the first turn completes).
+   */
+  async currentConversationId() {
+    const url = await this.client.tabUrl(this.tabId).catch(() => "");
+    const m = String(url || "").match(/\/app\/([0-9a-z]{8,})/i);
+    return m ? m[1] : null;
+  }
+
+  /**
+   * Delete the conversation currently open in this tab: top-bar ⋮ →
+   * "Delete" → confirm "Delete chat?". Returns true when Gemini navigated off
+   * the conversation (i.e. it is gone).
+   *
+   * Targets the OPEN conversation only — there is no title/keyword matching
+   * anywhere in this path, which is what keeps it off the account owner's own
+   * chats. Returns false (never throws) when there is nothing to delete or the
+   * UI moved; callers treat cleanup as best-effort.
+   */
+  async deleteCurrentChat({ timeoutMs = 20_000 } = {}) {
+    const convId = await this.currentConversationId();
+    if (!convId) return false; // unsaved chat — nothing in history to remove
+
+    try {
+      const opened = await this._eval(`(() => {
+        const icon = document.querySelector('conversation-actions-icon');
+        const btn = icon && (icon.querySelector('button, [role="button"]') || icon.firstElementChild);
+        if (!btn) return 'no-trigger';
+        btn.click();
+        return 'ok';
+      })()`);
+      if (opened !== "ok") throw new Error(`conversation menu not found (${opened})`);
+
+      if (!(await this._waitFor(`!!document.querySelector('[data-test-id="delete-button"]')`, 5000))) {
+        throw new Error("delete item did not appear in the menu");
+      }
+      await this._eval(`document.querySelector('[data-test-id="delete-button"]').click()`);
+
+      // Confirm dialog: both buttons share a class, so pick by label and never
+      // by position — a reordered dialog must miss rather than hit Cancel.
+      const CONFIRM = `[...document.querySelectorAll('mat-dialog-container button, [role="dialog"] button')]
+        .find(b => /^\\s*delete\\s*$/i.test(b.textContent || ''))`;
+      if (!(await this._waitFor(`!!(${CONFIRM})`, 5000))) {
+        throw new Error("delete confirmation dialog did not appear");
+      }
+      await this._eval(`(${CONFIRM}).click()`);
+
+      // Gemini routes back to a blank /app once the chat is gone.
+      const deadline = Date.now() + timeoutMs;
+      while (Date.now() < deadline) {
+        await sleep(600);
+        const url = await this.client.tabUrl(this.tabId).catch(() => "");
+        if (!String(url).includes(convId)) {
+          console.log(`[gemini] deleted chat ${convId}`);
+          return true;
+        }
+      }
+      throw new Error("chat still open after confirming delete");
+    } catch (e) {
+      console.warn(`[gemini] could not delete chat ${convId}: ${e.message}`);
+      await this._dismissOverlays();
+      return false;
+    }
+  }
+
+  /** Best-effort cleanup of the chat this run created. Never throws. */
+  async _cleanup() {
+    if (!this.autoDelete) return;
+    await this.deleteCurrentChat().catch(() => {});
+  }
+
   /**
    * ask(prompt) — TEXT question/answer through the Gemini web app.
    *
@@ -168,6 +307,7 @@ class Gemini {
    */
   async ask(prompt, { timeoutMs = 120_000, maxChars = 8000, settleChecks = 3 } = {}) {
     await this.ensureTab();
+    if (this.blocked) { console.warn(`[gemini] skipping ask — ${this._unavailable()}`); return null; }
     if (!(await this.signedIn())) {
       console.warn("[gemini] no Google session in the HelmStack profile — skipping ask");
       return null;
@@ -204,6 +344,7 @@ class Gemini {
       if (now && now === last) {
         if (++stable >= settleChecks) {
           console.log(`[gemini] ask answered (${now.length} chars)`);
+          await this._cleanup();
           return now;
         }
       } else {
@@ -212,6 +353,7 @@ class Gemini {
       }
     }
     console.warn(`[gemini] ask timed out after ${Math.round(timeoutMs / 1000)}s${last ? ` — partial: "${last.slice(0, 140)}"` : ""}`);
+    await this._cleanup();
     return last || null;
   }
 
@@ -224,6 +366,7 @@ class Gemini {
    */
   async generateImage(prompt, { timeoutMs = 180_000, minWidth = 512, referenceImagePath = null } = {}) {
     await this.ensureTab();
+    if (this.blocked) { console.warn(`[gemini] skipping image — ${this._unavailable()}`); return null; }
     if (!(await this.signedIn())) {
       console.warn("[gemini] no Google session in the HelmStack profile — skipping image");
       return null;
@@ -263,6 +406,8 @@ class Gemini {
         if (typeof dataUrl === "string" && dataUrl.startsWith("data:image/png;base64,")) {
           const buffer = Buffer.from(dataUrl.split(",")[1], "base64");
           console.log(`[gemini] image generated: ${found.w}x${found.h}, ${buffer.length} bytes`);
+          // Bytes are in hand — the chat is now disposable.
+          await this._cleanup();
           return { buffer, width: found.w, height: found.h };
         }
       }
@@ -270,6 +415,7 @@ class Gemini {
 
     const why = await this._lastResponseText();
     console.warn(`[gemini] no image within ${Math.round(timeoutMs / 1000)}s${why ? ` — last response: "${why.slice(0, 140)}"` : ""}`);
+    await this._cleanup();
     return null;
   }
 
@@ -283,6 +429,7 @@ class Gemini {
    */
   async generateVideo(prompt, { timeoutMs = 600_000, referenceImagePath = null } = {}) {
     await this.ensureTab();
+    if (this.blocked) { console.warn(`[gemini] skipping video — ${this._unavailable()}`); return null; }
     if (!(await this.signedIn())) {
       console.warn("[gemini] no Google session — skipping video");
       return null;
@@ -314,6 +461,7 @@ class Gemini {
     if (!src) {
       const why = await this._lastResponseText();
       console.warn(`[gemini] no video produced${why ? ` — last response: "${why.slice(0, 140)}"` : ""} ${/upload|attach|image/i.test(why || "") ? " (Gemini is ASKING FOR AN IMAGE — the reference attach failed, this is not an entitlement problem)" : " (possibly no Veo entitlement on this account)"}`);
+      await this._cleanup();
       return null;
     }
 
@@ -323,8 +471,11 @@ class Gemini {
     // browser and fetch the bytes Node-side — verified 2026-07-20.
     if (!/^https?:/.test(src)) {
       console.warn(`[gemini] unexpected video src scheme: ${src.slice(0, 40)} — cannot extract`);
+      await this._cleanup();
       return null;
     }
+    // Cleanup runs only AFTER the bytes are fetched below: the signed
+    // usercontent URL is served off the live conversation.
     try {
       const origin = new URL(src).origin;
       const raw = await this.client.getCookies(this.tabId, origin).catch(() => null);
@@ -339,15 +490,177 @@ class Gemini {
       const mime = res.headers.get("content-type") || "";
       if (!res.ok || !/video|octet/.test(mime)) {
         console.warn(`[gemini] video fetch got HTTP ${res.status} ${mime} — cookie wall?`);
+        await this._cleanup();
         return null;
       }
       const buffer = Buffer.from(await res.arrayBuffer());
       console.log(`[gemini] video generated: ${(buffer.length / 1048576).toFixed(1)} MB (${mime})`);
+      await this._cleanup();
       return { buffer, mime };
     } catch (e) {
       console.warn(`[gemini] video byte extraction failed: ${e.message}`);
+      await this._cleanup();
       return null;
     }
+  }
+
+  // ── History maintenance ─────────────────────────────────────────────────────
+
+  /** Absolute URL of a conversation on the pinned account. */
+  _convUrl(id) {
+    return this.accountIndex > 0
+      ? `https://gemini.google.com/u/${this.accountIndex}/app/${id}`
+      : `https://gemini.google.com/app/${id}`;
+  }
+
+  /**
+   * The sidebar conversations as `[{ id, title }]`, newest first. The list is
+   * virtualised, so scroll it until the count stops growing (bounded).
+   */
+  async listChats({ maxScrolls = 40 } = {}) {
+    const read = () => this._eval(
+      `JSON.stringify([...document.querySelectorAll('[data-test-id="conversation"] a[href*="/app/"]')].map(a => ({
+        id: (a.getAttribute('href') || '').split('/app/')[1] || '',
+        title: a.getAttribute('aria-label') || (a.textContent || '').trim(),
+      })).filter(c => c.id))`
+    ).catch(() => "[]");
+    // The sidebar mounts a beat after navigation. Without this wait the very
+    // first read comes back empty and the "stopped growing" check below reads
+    // that as "no history" — which silently made purgeChats a no-op.
+    await this._waitFor(`document.querySelectorAll('[data-test-id="conversation"]').length > 0`, 15_000);
+    let chats = JSON.parse((await read()) || "[]");
+    for (let i = 0; i < maxScrolls; i++) {
+      await this._eval(`(() => {
+        const s = document.querySelector('conversations-list infinite-scroller, infinite-scroller, conversations-list');
+        if (s) s.scrollTop = s.scrollHeight;
+        return 'ok';
+      })()`).catch(() => {});
+      await sleep(900);
+      const next = JSON.parse((await read()) || "[]");
+      if (next.length <= chats.length) break;
+      chats = next;
+    }
+    return chats;
+  }
+
+  /**
+   * The first thing the human/agent typed in the open conversation. This is the
+   * fingerprint purgeChats() matches on — the prompts this engine sends are
+   * fixed strings from this file, so an exact prefix match identifies Sebastian's
+   * chats with no risk of catching one of the account owner's.
+   */
+  async firstPromptText({ maxChars = 400 } = {}) {
+    const t = await this._eval(
+      `(() => {
+        let t = (document.querySelector('user-query, user-query-content')?.textContent || '').trim();
+        // Same screen-reader label trick as model responses ("Gemini said …"):
+        // the user bubble is prefixed with "You said", which would push every
+        // prompt past an anchored fingerprint.
+        t = t.replace(/^\\s*You\\s+said\\s*:?\\s*/i, '');
+        return t.slice(0, ${maxChars});
+      })()`
+    ).catch(() => "");
+    return String(t || "").trim();
+  }
+
+  /**
+   * Prompt prefixes this engine emits. Anything in Gemini's history opening with
+   * one of these was written by Sebastian, not by the person who owns the
+   * account. Keep in sync with the prompts built above / by callers.
+   */
+  static get AGENT_PROMPT_PATTERNS() {
+    return [
+      /^You are a fact-checker\. Using ONLY the search results below/i, // web_search.js verify
+      /^Generate an image(\.| using the attached image)/i,              // generateImage
+      /^Create a video(:| using the attached image)/i,                  // generateVideo
+    ];
+  }
+
+  /**
+   * Clear the backlog this engine left behind before it learned to clean up.
+   *
+   * Walks the sidebar, opens each conversation, and deletes it ONLY when its
+   * first prompt matches `patterns` (default: AGENT_PROMPT_PATTERNS). Titles are
+   * never used to decide — Gemini titles are model-written and a human chat can
+   * easily read like a fact-check. Defaults to a dry run.
+   *
+   * @param {object} [opts]
+   * @param {RegExp[]} [opts.patterns]
+   * @param {boolean}  [opts.dryRun=true]
+   * @param {number}   [opts.max=Infinity]      stop after this many deletions
+   * @param {number}   [opts.maxScan=Infinity]  stop after opening this many chats
+   * @param {number}   [opts.pauseMs=2500]      delay between chats (anti-abuse)
+   * @param {function} [opts.onChat]            ({ title, prompt, match, deleted }) => void
+   * @returns {Promise<{scanned:number, matched:number, deleted:number, kept:number}>}
+   */
+  async purgeChats({ patterns, dryRun = true, max = Infinity, maxScan = Infinity, pauseMs = 2500, onChat } = {}) {
+    const pats = patterns || Gemini.AGENT_PROMPT_PATTERNS;
+    await this.ensureTab();
+    // The CLI is interactive: stop hard rather than report an empty history.
+    if (this.blocked) throw new Error("Google anti-abuse interstitial is up — clear it by hand in the browser, then re-run (a larger --pause-ms helps).");
+    if (!(await this.signedIn())) {
+      console.warn("[gemini] no Google session in the HelmStack profile — skipping purge");
+      return { scanned: 0, matched: 0, deleted: 0, kept: 0 };
+    }
+
+    const stats = { scanned: 0, matched: 0, deleted: 0, kept: 0 };
+    const chats = await this.listChats();
+    if (!chats.length) {
+      // Distinguish "no history" from "the list rendered but ids didn't" —
+      // returning zeros for both made a broken selector look like a clean run.
+      const items = await this._eval(`document.querySelectorAll('[data-test-id="conversation"]').length`).catch(() => 0);
+      if (Number(items) > 0) throw new Error(`sidebar shows ${items} chats but no /app/<id> links could be read — Gemini's markup changed`);
+      console.warn("[gemini] no conversations in the sidebar — nothing to purge");
+      return stats;
+    }
+
+    for (const { id, title } of chats) {
+      if (stats.deleted >= max || stats.scanned >= maxScan) break;
+      if (stats.scanned) await sleep(pauseMs); // don't hammer — see the /sorry check below
+
+      // Full navigation, NOT a sidebar click: in-app routing leaves the previous
+      // conversation's <user-query> nodes mounted and appends the new ones, so
+      // "first prompt" would read whichever chat was opened first. A real load
+      // remounts the app, making the first bubble unambiguously this chat's.
+      await this.client.navigate(this.tabId, this._convUrl(id)).catch(() => {});
+      // Wait for the URL to commit AND for the bubble to carry TEXT. Either half
+      // alone gives a wrong answer: a poll issued while the outgoing page is
+      // still mounted sees the previous chat's text and returns immediately, and
+      // <user-query> itself mounts before it fills. Both misread as "" — which
+      // silently means "not one of ours" and skips a chat that should go.
+      const HAS_PROMPT = `location.href.indexOf(${JSON.stringify(id)}) >= 0
+        && ((document.querySelector('user-query, user-query-content') || {}).textContent || '')
+             .replace(/^\\s*You\\s+said\\s*:?\\s*/i, '').trim().length > 0`;
+      if (!(await this._waitFor(HAS_PROMPT, 20_000))) {
+        // Rapid page loads can trip Google's anti-abuse interstitial. That is a
+        // stop sign, not an obstacle: bail out and let a human deal with it,
+        // rather than grinding through the rest of the list against a wall.
+        const landed = await this.client.tabUrl(this.tabId).catch(() => "");
+        if (/google\.com\/sorry/.test(landed)) {
+          throw new Error("Google served its anti-abuse interstitial — purge stopped. Clear it by hand in the browser and re-run later (a larger --pause-ms helps).");
+        }
+        console.warn(`[gemini] could not open chat ${id} (${title}) — leaving it alone`);
+        stats.kept++;
+        continue;
+      }
+
+      const prompt = await this.firstPromptText();
+      const match = pats.some((re) => re.test(prompt));
+      stats.scanned++;
+      let deleted = false;
+      if (match) {
+        stats.matched++;
+        if (dryRun) stats.kept++;
+        else {
+          deleted = await this.deleteCurrentChat();
+          if (deleted) stats.deleted++; else stats.kept++;
+        }
+      } else {
+        stats.kept++;
+      }
+      if (onChat) onChat({ id, title, prompt, match, deleted });
+    }
+    return stats;
   }
 }
 

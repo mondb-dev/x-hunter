@@ -8,6 +8,7 @@
  *   helmstack-social linkedin engage [--keywords kw.txt] [--max-likes N] [--max-comments N]
  *                                    [--comment-command "cmd"] [--seen ledger.json] [--dry-run]
  *   helmstack-social bootstrap       --cookies cookies.json
+ *   helmstack-social gemini purge    [--apply] [--max N] [--max-scan N] [--pause-ms MS]
  *
  * Config comes from env: HELMSTACK_URL, HELMSTACK_AUTH_TOKEN.
  * `--comment-command` receives the post JSON on stdin and must print the comment
@@ -16,7 +17,7 @@
 
 const fs = require("fs");
 const { execFileSync } = require("child_process");
-const { HelmStackClient, LinkedIn, X, session } = require("../src");
+const { HelmStackClient, LinkedIn, X, Gemini, session } = require("../src");
 
 function arg(flags, def) {
   const argv = process.argv;
@@ -156,7 +157,30 @@ async function main() {
     throw new Error(`unknown x subcommand: ${sub}`);
   }
 
-  console.error("usage: helmstack-social <health|bootstrap|linkedin post|linkedin engage|x post|x engage> [options]");
+  if (cmd === "gemini") {
+    if (sub === "purge") {
+      // Clears the chats the Gemini ENGINE left in the signed-in account's
+      // history. The account belongs to a human whose own chats live in the same
+      // list, so a chat is only deleted when its FIRST PROMPT is one this engine
+      // writes — titles are never matched. Dry run unless --apply.
+      const g = new Gemini(new HelmStackClient());
+      const dry = !has("--apply");
+      const stats = await g.purgeChats({
+        dryRun: dry,
+        max: Number(arg("--max", Infinity)),
+        maxScan: Number(arg("--max-scan", Infinity)),
+        pauseMs: Number(arg("--pause-ms", 2500)),
+        onChat: ({ title, prompt, match, deleted }) =>
+          console.log(`${match ? (deleted ? "DELETED" : dry ? "WOULD DELETE" : "FAILED ") : "keep    "} | ${title.slice(0, 50).padEnd(50)} | ${prompt.slice(0, 60)}`),
+      });
+      console.log(JSON.stringify(stats));
+      if (dry) console.log("dry run — re-run with --apply to delete");
+      return;
+    }
+    throw new Error(`unknown gemini subcommand: ${sub}`);
+  }
+
+  console.error("usage: helmstack-social <health|bootstrap|linkedin post|linkedin engage|x post|x engage|gemini purge> [options]");
   process.exit(2);
 }
 
