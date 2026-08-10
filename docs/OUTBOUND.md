@@ -73,6 +73,21 @@ Driven through HelmStack (HTTP API :7070, `POST_BACKEND=helmstack`,
   via API; reposts via CreateRetweet; threads + bio + X Articles (Premium
   editor flow) ported from CDP; image posts — copy source og:image + attribute,
   browser upload.
+  - CreateTweet is **intermittently refused** — `344` ("daily limit", spurious:
+    an immediate retry posts), `226` ("looks automated"), or a bare 200 with no
+    tweet id. The UI composer is the fallback on those cycles, so it has to work.
+  - **Quoting navigates.** X answers the retweet menu's "Quote" by loading
+    `x.com/compose/post`, not by opening an in-place modal. A status page's own
+    reply box is already `tweetTextarea_0`, so waiting on that selector alone
+    returns before the navigation and the insert runs against the outgoing page
+    (verifies as 0 characters, draft discarded, quote lost — every non-API quote
+    cycle until 2026-08-10). `_quoteViaComposer` gates on `/compose/` in the path
+    or a dialog ancestor instead.
+  - **Never `execCommand`-clear an empty composer.** `selectAll`+`delete` against
+    X's editor silently kills the next `Input.insertText` (a direct insert into a
+    fresh composer lands; the same insert after a clear lands 0 characters), so
+    `_clearComposer` returns early when the composer is already empty and
+    `_insertVerified` removes its warm-up probe with Backspaces.
 - **LinkedIn**: voyager posting + media pipeline (images); UI-driven reshare +
   deleteReshare (instant repost is SDUI/RSC, not voyager); comments; inbound
   responder (dry-run default).
@@ -130,9 +145,18 @@ Measure → correlate → select, for reposts/quotes/reshares:
 ## Feed engagement (like / comment)
 
 - `runner/x_engage.js` / `runner/linkedin_engage.js` — score feed candidates on
-  belief-axis relevance (local LLM, 0–3, gate `LI_RELEVANCE_MIN`, default 2),
+  belief-axis relevance (Claude, 0–3, gate `LI_RELEVANCE_MIN`, default 2),
   like the top `LI_MAX_LIKES` (3) and comment on `LI_MAX_COMMENTS` (1). Comments
   are claim-verified, composed on-voice, then voice/fact-check gated.
+- **Scoring is bounded, and slow.** Each score is a Claude CLI subprocess (~7s),
+  not the old local model, so `engage()` scores `scoreConcurrency` posts at a
+  time (default 3, `LI_SCORE_CONCURRENCY`) rather than fanning the whole feed out
+  at once. Scoring all ~25 candidates in parallel blew every call's timeout, and
+  each scorer's `catch` returned 0 — LinkedIn engagement did nothing at all from
+  2026-07-06 to 2026-08-10 and the logs only ever said "0 relevant". The scorer
+  timeout is 90s (was 30s, sized for the retired local brain), and
+  `linkedin_engage` now logs a warning naming how many posts failed to score, so
+  a broken scorer no longer looks like a boring feed.
 - LinkedIn candidates come from the **voyager feed API**
   (`LinkedIn.fetchFeedCandidates`), not the rendered DOM: the feed only ever
   renders ~3 cards for this session, while the API returns ~26 with full post

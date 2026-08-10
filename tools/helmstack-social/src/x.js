@@ -14,6 +14,8 @@
  * scanning the author's profile for the new status URL.
  */
 
+const { mapLimit } = require("./util");
+
 const HOME_URL = "https://x.com/home";
 // X's public web bearer (used by the logged-in web client). Auth is completed by
 // the session cookies + ct0 CSRF; this constant is the same for every web user.
@@ -154,20 +156,34 @@ class X {
    * Focus the composer with a real browser-level click. element.focus() alone
    * does not reliably move CDP input focus in a freshly-opened reply modal —
    * the first Input.insertText after it lands nowhere.
+   *
+   * Verified + retried: the /compose/post route does NOT auto-focus its composer,
+   * and one click can land before the page finishes wiring up its handlers, which
+   * costs a whole insert attempt. Confirm activeElement actually moved.
+   * @returns {Promise<boolean>} composer holds input focus
    */
   async _focusComposer() {
-    const raw = await this.c.evalFn(this.tab, (sel) => {
-      const e = document.querySelector(sel);
-      if (!e) return null;
-      e.scrollIntoView({ block: "center" });
-      const r = e.getBoundingClientRect();
-      if (!r.width || !r.height) return null;
-      return JSON.stringify({ x: Math.round(r.x + Math.min(r.width / 2, 200)), y: Math.round(r.y + Math.min(r.height / 2, 20)) });
-    }, COMPOSE_BOX).catch(() => null);
-    let pt = null;
-    try { pt = JSON.parse(raw); } catch {}
-    if (pt) await this.c.clickAt(this.tab, pt.x, pt.y).catch(() => {});
-    await this.c.evalFn(this.tab, (sel) => { const e = document.querySelector(sel); if (e) { e.click(); e.focus(); } }, COMPOSE_BOX);
+    for (let attempt = 1; attempt <= 3; attempt++) {
+      const raw = await this.c.evalFn(this.tab, (sel) => {
+        const e = document.querySelector(sel);
+        if (!e) return null;
+        e.scrollIntoView({ block: "center" });
+        const r = e.getBoundingClientRect();
+        if (!r.width || !r.height) return null;
+        return JSON.stringify({ x: Math.round(r.x + Math.min(r.width / 2, 200)), y: Math.round(r.y + Math.min(r.height / 2, 20)) });
+      }, COMPOSE_BOX).catch(() => null);
+      let pt = null;
+      try { pt = JSON.parse(raw); } catch {}
+      if (pt) await this.c.clickAt(this.tab, pt.x, pt.y).catch(() => {});
+      await this.c.evalFn(this.tab, (sel) => { const e = document.querySelector(sel); if (e) { e.click(); e.focus(); } }, COMPOSE_BOX);
+      await sleep(300);
+      const focused = await this.c.evalFn(this.tab, (sel) => {
+        const e = document.querySelector(sel);
+        return !!e && (document.activeElement === e || e.contains(document.activeElement));
+      }, COMPOSE_BOX).catch(() => false);
+      if (focused) return true;
+    }
+    return false;
   }
 
   /**
@@ -180,6 +196,12 @@ class X {
       const e = document.querySelector(sel);
       return !e || e.innerText.trim().length === 0;
     }, COMPOSE_BOX);
+    // Already empty → do nothing. This is not just an optimization: execCommand
+    // selectAll/delete against X's composer silently kills the NEXT
+    // Input.insertText (empirically — a direct insert into a fresh composer
+    // lands, the same insert after a clear lands 0 characters), so clearing
+    // something that needs no clearing costs a whole insert attempt.
+    if (await isEmpty()) return true;
     for (let t = 0; t < 4; t++) {
       // execCommand path — works when there's no link chip in the composer.
       await this.c.evalFn(this.tab, (sel) => { const e = document.querySelector(sel); if (e) { e.focus(); document.execCommand("selectAll"); document.execCommand("delete"); } }, COMPOSE_BOX);
@@ -290,6 +312,15 @@ class X {
         await sleep(400);
         const seen = await this.c.evalFn(this.tab, (sel) => { const e = document.querySelector(sel); return e ? e.innerText.trim().length > 0 : false; }, COMPOSE_BOX);
         if (seen) break;
+      }
+      // Take the probe back out with real Backspaces rather than leaving it for
+      // _clearComposer: that path uses execCommand, which kills the next
+      // insertText (see _clearComposer), so warming the channel up would
+      // immediately break it again. Backspace keeps the editor in sync.
+      const probed = await this.c.evalFn(this.tab, (sel) => { const e = document.querySelector(sel); return e ? e.innerText.trim().length : 0; }, COMPOSE_BOX).catch(() => 0);
+      for (let b = 0; b < Number(probed) + 1; b++) {
+        await this.c.pressKey(this.tab, { key: "Backspace", code: "Backspace", keyCode: 8 }).catch(() => {});
+        await sleep(120);
       }
     }
     // Never insert into a non-empty composer — leftover text makes insertText
@@ -694,7 +725,10 @@ class X {
   /**
    * Quote-tweet a source post with commentary. Prefers the CreateTweet API with
    * `attachment_url` (no composer → none of its duplication failure modes);
-   * falls back to the retweet-menu composer flow if the API is unavailable.
+   * falls back to the retweet-menu composer flow if the API is unavailable. That
+   * fallback matters: CreateTweet is intermittently refused (344 "daily limit",
+   * 226 "looks automated", or a bare 200 with no tweet id), and the composer is
+   * the only way a quote goes out on those cycles.
    * X_POST_VIA_API=0 forces the composer. Either way the source page is loaded
    * first so the mentions guard sees the real tweet.
    * @param {string} sourceUrl  https://x.com/<user>/status/<id>
@@ -735,11 +769,25 @@ class X {
       return { posted: false, reason: "quote_menu_not_found" };
     }
     await this.c.evalFn(this.tab, () => { const q = Array.from(document.querySelectorAll("[role='menuitem']")).find((i) => (i.innerText || "").trim().toLowerCase() === "quote"); if (q) q.click(); });
+    // Wait for the QUOTE composer specifically, not just for the selector to
+    // match. X now answers "Quote" by NAVIGATING the tab to /compose/post rather
+    // than opening an in-place modal, and a status page's own inline reply box is
+    // already `tweetTextarea_0` — so a bare selector poll returned instantly, and
+    // the clear/focus/insert then ran against the outgoing page while the SPA
+    // navigated out from under it. Every insert verified as 0 characters and the
+    // draft was discarded. Gate on the composer being on a /compose/ route or
+    // inside a dialog, which is what tells the two surfaces apart.
     try {
-      await this.c.pollFn(this.tab, "compose box", () => !!document.querySelector('[data-testid="tweetTextarea_0"]'), { attempts: 10, interval: 1000, tag: "x" });
+      await this.c.pollFn(this.tab, "quote composer", () => {
+        const box = document.querySelector('[data-testid="tweetTextarea_0"]');
+        if (!box) return false;
+        if (/^\/compose\//.test(location.pathname)) return true;   // full-page composer
+        return !!box.closest('[aria-modal="true"], [role="dialog"]'); // legacy modal
+      }, { attempts: 15, interval: 1000, tag: "x" });
     } catch {
       return { posted: false, reason: "compose_box_not_found" };
     }
+    await sleep(1500); // let the quoted-post card finish mounting under the composer
     // A quote carries no uploaded media (the quoted post is an embedded card, not
     // an attachment), so strip anything restored from a prior aborted draft before
     // inserting the commentary — this is how the stale image ended up on a quote.
@@ -751,6 +799,10 @@ class X {
 
     if (dryRun) {
       this.log(`DRY RUN — quote composer verified, not posting`);
+      // Navigating away from a composer holding text is how X saves a draft —
+      // which then restores into the next compose cycle and stacks. A dry run
+      // must leave nothing behind, so discard before leaving (see _discardComposer).
+      await this._discardComposer().catch(() => {});
       await this.c.navigate(this.tab, HOME_URL).catch(() => {});
       return { posted: false, reason: "dry_run", dryRun: true };
     }
@@ -821,6 +873,10 @@ class X {
 
     if (dryRun) {
       this.log(`DRY RUN — reply composer verified, not posting`);
+      // Same reason as the quote dry run: navigating away from a composer that
+      // still holds text is how X saves a draft, and a saved draft restores into
+      // the next compose cycle and stacks onto it.
+      await this._discardComposer().catch(() => {});
       await this.c.navigate(this.tab, HOME_URL).catch(() => {});
       return { ok: false, reason: "dry_run", dryRun: true };
     }
@@ -1551,15 +1607,19 @@ class X {
     const {
       score = () => 0, generateReply = null, onLike = null, onReply = null,
       keyOf = (p) => p.url, seen = new Set(),
-      minScore = 1, maxLikes = 3, maxReplies = 1, scrapeLimit = 15, dryRun = false,
+      minScore = 1, maxLikes = 3, maxReplies = 1, scrapeLimit = 15,
+      scoreConcurrency = 3, dryRun = false,
     } = hooks;
 
     const posts = await this.scrapeTimeline({ limit: scrapeLimit });
     this.log(`scraped ${posts.length} timeline post(s)`);
     // score() may be sync or async (e.g. an LLM relevance scorer) — await either.
-    const scored = await Promise.all(
-      posts.map(async (p) => ({ ...p, key: keyOf(p), score: await score(p) }))
-    );
+    // Bounded rather than Promise.all: an LLM scorer fanned out across the whole
+    // timeline starves itself into timing out and scoring everything 0. Parity
+    // with the LinkedIn engine; see util.mapLimit.
+    const scored = await mapLimit(posts, scoreConcurrency, async (p) => ({
+      ...p, key: keyOf(p), score: await score(p),
+    }));
     const ranked = scored
       .filter((p) => !seen.has(p.key) && p.score >= minScore)
       .sort((a, b) => b.score - a.score);

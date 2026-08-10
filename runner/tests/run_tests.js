@@ -615,6 +615,23 @@ section("LinkedIn engagement wiring");
       else fail("relevance gate", `expected 0/0, got ranked=${r.ranked} likes=${r.likes}`);
     }
 
+    // (5) The SECOND way this job silently no-oped for a month: scoring fanned
+    //     the whole ~25-post feed out with Promise.all. The scorer is a Claude
+    //     CLI subprocess, so all 25 blew their timeout, every catch returned 0,
+    //     and "0 relevant" looked identical to a boring feed. Scoring must stay
+    //     bounded.
+    {
+      const many = Array.from({ length: 25 }, (_, i) => ({ author: `A${i}`, text: "media framing", permalink: `https://x/p${i}` }));
+      const li = stubEngine({ posts: many });
+      let inflight = 0, peak = 0;
+      await li.engage({
+        score: async () => { inflight++; peak = Math.max(peak, inflight); await new Promise((r) => setTimeout(r, 5)); inflight--; return 0; },
+        minScore: 2, maxLikes: 0, maxComments: 0, scoreConcurrency: 3,
+      });
+      if (peak <= 3) pass(`scoring is concurrency-bounded (peak ${peak} of 25 candidates)`);
+      else fail("score concurrency", `expected peak <= 3, got ${peak}`);
+    }
+
   })().catch((e) => fail("LinkedIn engagement wiring", e.message))
       .finally(() => {
         // This section is the only async one, so it owns the summary — the

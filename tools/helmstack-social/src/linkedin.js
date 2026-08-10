@@ -29,6 +29,8 @@
  *                 _scrollBy/_scrollTop, never window.scrollBy (a silent no-op).
  */
 
+const { mapLimit } = require("./util");
+
 const FEED_URL = "https://www.linkedin.com/feed/";
 const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
 const norm = (s) => String(s || "").replace(/\s+/g, " ").trim();
@@ -998,6 +1000,7 @@ class LinkedIn {
       maxComments = 1,
       scrapeLimit = 12,
       useFeedApi = true,
+      scoreConcurrency = 3,
       dryRun = false,
     } = hooks;
 
@@ -1020,9 +1023,14 @@ class LinkedIn {
     // `score` may be async (the LLM relevance scorer is) — await it. Without the
     // await, `p.score` is a Promise, `Promise >= minScore` is always false, and
     // `ranked` is silently always empty. Parity with the X engine.
-    const scored = await Promise.all(
-      posts.map(async (p) => ({ ...p, key: keyOf(p), score: await score(p) }))
-    );
+    //
+    // Bounded, NOT Promise.all: the feed API returns ~25 candidates and the
+    // scorer is an LLM call. Scoring all 25 at once made every call miss its
+    // timeout and score 0, so engage() found nothing relevant on every run for
+    // a month. See util.mapLimit.
+    const scored = await mapLimit(posts, scoreConcurrency, async (p) => ({
+      ...p, key: keyOf(p), score: await score(p),
+    }));
     const ranked = scored
       .filter((p) => !seen.has(p.key) && p.score >= minScore)
       .sort((a, b) => b.score - a.score);
