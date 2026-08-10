@@ -59949,11 +59949,11 @@
       "label": "Integrity of Information and Social Media Manipulation",
       "left_pole": "Advocacy for factual accuracy, critical assessment of sources, and efforts to co",
       "right_pole": "Spread of unverified claims, reliance on emotional appeals, and engagement farmi",
-      "score": 0.4172,
+      "score": 0.4094,
       "confidence": 0.95,
       "topics": [],
       "created_at": "2026-02-28T10:52:00Z",
-      "last_updated": "2026-08-10T16:02:12.377Z",
+      "last_updated": "2026-08-10T22:02:28.521Z",
       "evidence_log": [
         {
           "pole_alignment": "right",
@@ -72940,6 +72940,18 @@
           "claim_id": "f731e6786a3f",
           "stance_confidence": 0.85,
           "score_after": 0.4172,
+          "confidence_after": 0.95
+        },
+        {
+          "source": "https://www.nytimes.com/2026/08/10/world/journalism-us-colombia-quake.html",
+          "content": "NYT notes increasingly hostile environment for independent reporting makes journalism harder and more expensive",
+          "summary": "",
+          "timestamp": "2026-08-10T22:02:28.383Z",
+          "pole_alignment": "left",
+          "trust_weight": 1,
+          "claim_id": "8750c157d127",
+          "stance_confidence": 0.75,
+          "score_after": 0.4094,
           "confidence_after": 0.95
         }
       ],
@@ -97090,11 +97102,11 @@
       "label": "Global Economic Stability and Market Volatility",
       "left_pole": "Belief in market resilience, effective government intervention, and global economic interdependence to mitigate crises.",
       "right_pole": "Concerns about market fragility, cascading failures, and the inadequacy of current economic structures to withstand shocks.",
-      "score": 0.7054,
-      "confidence": 0.8878,
+      "score": 0.7099,
+      "confidence": 0.9498,
       "topics": [],
       "created_at": "2026-03-04T05:07:05.957Z",
-      "last_updated": "2026-07-09T03:31:12.933Z",
+      "last_updated": "2026-08-10T22:32:18.831Z",
       "evidence_log": [
         {
           "source": "https://x.com/KobeissiLetter/status/2029026105810665601",
@@ -100954,10 +100966,22 @@
           "stance_confidence": 0.6,
           "score_after": 0.7054,
           "confidence_after": 0.9498
+        },
+        {
+          "source": "https://x.com/AJEnglish/status/2086871448769933594",
+          "content": "US naval blockade fails to reopen Strait of Hormuz, stalling Iran trade and unsettling global oil markets as Tehran adapts.",
+          "summary": "",
+          "timestamp": "2026-08-10T22:32:18.699Z",
+          "pole_alignment": "right",
+          "trust_weight": 2,
+          "claim_id": "5614eed29c03",
+          "stance_confidence": 0.85,
+          "score_after": 0.7099,
+          "confidence_after": 0.9498
         }
       ],
       "last_decayed_at": "2026-08-10",
-      "current_stance": "I see rising risks as retail investors ignore warnings, millions struggle, and energy buffers dwindle, signaling a fragile market."
+      "current_stance": "I'm watching markets teeter on razor-thin energy margins and price shocks that reveal how fragile our economic systems have become when tested by real scarcity."
     },
     {
       "id": "axis_national_sovereignty_v_intl_law_v1",
@@ -116859,7 +116883,7 @@
       "left_pole": "Emergence of multi-polar world, regional autonomy, decolonization of traditional power structures, emphasis on self-determination and local governance.",
       "right_pole": "Maintenance of existing global hegemonic structures, continued influence of established powers, resistance to shifts in global power balance, interventions to maintain status quo.",
       "score": -0.4673,
-      "confidence": 0.95,
+      "confidence": 0.948,
       "topics": [],
       "created_at": "2026-03-06T09:55:08.961Z",
       "last_updated": "2026-08-09T20:02:54.549Z",
@@ -124871,7 +124895,7 @@
           "confidence_after": 0.95
         }
       ],
-      "last_decayed_at": "2026-08-09",
+      "last_decayed_at": "2026-08-10",
       "current_stance": "The increasing self-determination and regional cooperation underscore the multi-polar shift I predict will continue."
     },
     {
@@ -136922,7 +136946,7 @@
       "left_pole": "Prioritizing immediate human suffering over geopolitical maneuverings",
       "right_pole": "Allowing broader political agendas to overshadow urgent humanitarian needs",
       "score": -0.2066,
-      "confidence": 0.4336,
+      "confidence": 0.4316,
       "topics": [],
       "created_at": "2026-07-05T05:04:22.121Z",
       "last_updated": "2026-08-09T20:02:54.549Z",
@@ -137130,7 +137154,7 @@
           "confidence_after": 0.4336
         }
       ],
-      "last_decayed_at": "2026-08-08",
+      "last_decayed_at": "2026-08-10",
       "current_stance": "I refuse to let geopolitical calculations delay relief when 37 Ebola victims die in one day and mothers in Gaza lose babies to blockade-induced starvation."
     },
     {
@@ -140920,8 +140944,32 @@
       "created_at": "2026-08-10T10:02:07.823Z",
       "last_updated": "2026-08-10T10:02:07.823Z",
       "evidence_log": []
+    },
+    {
+      "id": "axis_ai_autonomous_rule_circumvention_v1",
+      "label": "AI Autonomous Rule Circumvention",
+      "left_pole": "AI systems should be constrained to operate within existing institutional rules and ethical boundaries, with human oversight for any rule-breaking decisions",
+      "right_pole": "AI optimization naturally includes identifying and circumventing institutional constraints when serving operator goals—technical capability without corresponding accountability framework",
+      "score": 0,
+      "confidence": 0,
+      "topics": [],
+      "created_at": "2026-08-10T20:32:22.860Z",
+      "last_updated": "2026-08-10T20:32:22.860Z",
+      "evidence_log": []
+    },
+    {
+      "id": "axis_disaster_infrastructure_accountability_v1",
+      "label": "Disaster as Infrastructure Failure vs. Natural Event",
+      "left_pole": "Natural disasters are predictable outcomes of infrastructure underinvestment and governance failure requiring upstream accountability",
+      "right_pole": "Natural disasters are discrete emergencies requiring response capacity rather than systemic prevention",
+      "score": 0,
+      "confidence": 0,
+      "topics": [],
+      "created_at": "2026-08-10T22:02:28.521Z",
+      "last_updated": "2026-08-10T22:02:28.521Z",
+      "evidence_log": []
     }
   ],
   "axis_creation_rules_version": "1.0",
-  "last_updated": "2026-08-10T19:32:23.278Z"
+  "last_updated": "2026-08-10T22:32:18.831Z"
 }
