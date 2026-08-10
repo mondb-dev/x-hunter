@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-10T10:02:49.177Z",
+  "generated_at": "2026-08-10T13:04:22.941Z",
   "windows": [
     "1d",
     "3d",
@@ -408,22 +408,22 @@
     },
     "axis_political_moral_conduct_v1": {
       "current": {
-        "score": -0.1912,
-        "confidence": 0.9357
+        "score": -0.1837,
+        "confidence": 0.9497
       },
       "1d": {
-        "score_delta": 0,
-        "conf_delta": -0.002,
+        "score_delta": 0.0075,
+        "conf_delta": 0.012,
         "direction": "→"
       },
       "3d": {
-        "score_delta": 0,
-        "conf_delta": -0.008,
+        "score_delta": 0.0075,
+        "conf_delta": 0.006,
         "direction": "→"
       },
       "7d": {
-        "score_delta": 0,
-        "conf_delta": -0.014,
+        "score_delta": 0.0075,
+        "conf_delta": 0,
         "direction": "→"
       }
     },
@@ -555,23 +555,23 @@
     },
     "axis_education_literacy": {
       "current": {
-        "score": 0,
-        "confidence": 0
+        "score": -0.05,
+        "confidence": 0.078
       },
       "1d": {
-        "score_delta": 0,
-        "conf_delta": 0,
-        "direction": "→"
+        "score_delta": -0.05,
+        "conf_delta": 0.078,
+        "direction": "↘"
       },
       "3d": {
-        "score_delta": 0,
-        "conf_delta": 0,
-        "direction": "→"
+        "score_delta": -0.05,
+        "conf_delta": 0.078,
+        "direction": "↘"
       },
       "7d": {
-        "score_delta": 0,
-        "conf_delta": 0,
-        "direction": "→"
+        "score_delta": -0.05,
+        "conf_delta": 0.078,
+        "direction": "↘"
       }
     },
     "axis_gender_identity_norms_v1": {
@@ -976,21 +976,21 @@
     "axis_procedural_governance_accountability_v1": {
       "current": {
         "score": -0.4492,
-        "confidence": 0.9295
+        "confidence": 0.9301
       },
       "1d": {
         "score_delta": 0.05,
-        "conf_delta": 0.0026,
+        "conf_delta": 0.0032,
         "direction": "↗"
       },
       "3d": {
         "score_delta": 0.15,
-        "conf_delta": 0.0018,
+        "conf_delta": 0.0024,
         "direction": "↗"
       },
       "7d": {
         "score_delta": 0.2021,
-        "conf_delta": 0.0418,
+        "conf_delta": 0.0424,
         "direction": "↗"
       }
     },
@@ -1181,13 +1181,13 @@
     },
     "axis_infrastructure_displacement_accountability_v1": {
       "current": {
-        "score": 0,
-        "confidence": 0.1026
+        "score": 0.1,
+        "confidence": 0.1497
       },
       "1d": {
-        "score_delta": 0,
-        "conf_delta": 0.1026,
-        "direction": "→"
+        "score_delta": 0.1,
+        "conf_delta": 0.1497,
+        "direction": "↗"
       },
       "3d": null,
       "7d": null
@@ -1226,6 +1226,7 @@
   },
   "notable_count": 8,
   "momentum_axes": [
+    "axis_education_literacy",
     "axis_ai_workflow_approach_v1",
     "axis_geopolitical_control_narratives",
     "axis_humanitarian_crisis_response",
