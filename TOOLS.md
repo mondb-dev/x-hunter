@@ -117,9 +117,18 @@ node tools/helmstack-social/bin/helmstack-social.js gemini purge --apply    # de
 
 A chat is only deleted when its **first prompt** is one this engine writes
 (`Gemini.AGENT_PROMPT_PATTERNS`); titles are never matched, because Gemini writes
-those and a human chat can easily read like a fact-check. `--max N`, `--max-scan N`
-and `--pause-ms MS` bound a run — go slowly, since rapid page loads trip Google's
-anti-abuse interstitial, which the engine detects and stops on.
+those and a human chat can easily read like a fact-check.
+
+**Cadence.** Identifying a chat costs one page load, and back-to-back loads are
+what trip Google's anti-abuse interstitial — it's the request rate that gets
+noticed. The run throttles itself: `--pause-ms` (default 9000) jittered by
+`--jitter` (0.4) between chats, plus a `--rest-ms` (120s) rest every
+`--rest-every` (8) chats. A full ~40-chat sweep therefore takes 12–15 minutes.
+`--max N` / `--max-scan N` split it into smaller sittings. If the interstitial
+appears anyway the run stops and says so — clearing it is a human's job.
+
+**Run it when no cycle is active.** The purge and a live fact-check share the
+same browser tab, so they will fight over it.
 
 ---
 

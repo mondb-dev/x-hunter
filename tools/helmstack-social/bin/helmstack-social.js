@@ -8,7 +8,8 @@
  *   helmstack-social linkedin engage [--keywords kw.txt] [--max-likes N] [--max-comments N]
  *                                    [--comment-command "cmd"] [--seen ledger.json] [--dry-run]
  *   helmstack-social bootstrap       --cookies cookies.json
- *   helmstack-social gemini purge    [--apply] [--max N] [--max-scan N] [--pause-ms MS]
+ *   helmstack-social gemini purge    [--apply] [--max N] [--max-scan N]
+ *                                    [--pause-ms MS] [--jitter F] [--rest-every N] [--rest-ms MS]
  *
  * Config comes from env: HELMSTACK_URL, HELMSTACK_AUTH_TOKEN.
  * `--comment-command` receives the post JSON on stdin and must print the comment
@@ -169,9 +170,13 @@ async function main() {
         dryRun: dry,
         max: Number(arg("--max", Infinity)),
         maxScan: Number(arg("--max-scan", Infinity)),
-        pauseMs: Number(arg("--pause-ms", 2500)),
+        pauseMs: Number(arg("--pause-ms", 9000)),
+        jitter: Number(arg("--jitter", 0.4)),
+        restEvery: Number(arg("--rest-every", 8)),
+        restMs: Number(arg("--rest-ms", 120000)),
         onChat: ({ title, prompt, match, deleted }) =>
           console.log(`${match ? (deleted ? "DELETED" : dry ? "WOULD DELETE" : "FAILED ") : "keep    "} | ${title.slice(0, 50).padEnd(50)} | ${prompt.slice(0, 60)}`),
+        onRest: (ms, s) => console.log(`--- resting ${Math.round(ms / 1000)}s (${s.scanned} scanned, ${s.deleted} deleted) ---`),
       });
       console.log(JSON.stringify(stats));
       if (dry) console.log("dry run — re-run with --apply to delete");
