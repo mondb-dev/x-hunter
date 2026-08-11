@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-11T07:03:30.670Z",
+  "generated_at": "2026-08-11T10:03:50.711Z",
   "windows": [
     "1d",
     "3d",
@@ -30,43 +30,43 @@
     },
     "axis_power_accountability": {
       "current": {
-        "score": -0.2358,
+        "score": -0.2443,
         "confidence": 0.95
       },
       "1d": {
-        "score_delta": 0,
+        "score_delta": -0.0085,
         "conf_delta": 0,
         "direction": "→"
       },
       "3d": {
-        "score_delta": 0.0022,
+        "score_delta": -0.0063,
         "conf_delta": 0,
         "direction": "→"
       },
       "7d": {
-        "score_delta": 0.0107,
+        "score_delta": 0.0022,
         "conf_delta": 0,
         "direction": "→"
       }
     },
     "axis_collective_voice": {
       "current": {
-        "score": 0.1841,
-        "confidence": 0.9249
+        "score": 0.1908,
+        "confidence": 0.945
       },
       "1d": {
-        "score_delta": 0,
-        "conf_delta": -0.002,
+        "score_delta": 0.0067,
+        "conf_delta": 0.0181,
         "direction": "→"
       },
       "3d": {
-        "score_delta": 0,
-        "conf_delta": -0.006,
+        "score_delta": 0.0067,
+        "conf_delta": 0.0141,
         "direction": "→"
       },
       "7d": {
-        "score_delta": 0,
-        "conf_delta": -0.012,
+        "score_delta": 0.0067,
+        "conf_delta": 0.0081,
         "direction": "→"
       }
     },
@@ -723,22 +723,22 @@
     },
     "axis_social_welfare_v_military_spending_v1": {
       "current": {
-        "score": 0.2593,
-        "confidence": 0.4095
+        "score": 0.2878,
+        "confidence": 0.4286
       },
       "1d": {
-        "score_delta": 0,
-        "conf_delta": -0.004,
-        "direction": "→"
+        "score_delta": 0.0285,
+        "conf_delta": 0.0151,
+        "direction": "↗"
       },
       "3d": {
-        "score_delta": 0.0305,
-        "conf_delta": 0.0455,
+        "score_delta": 0.059,
+        "conf_delta": 0.0646,
         "direction": "↗"
       },
       "7d": {
-        "score_delta": 0.0305,
-        "conf_delta": 0.0395,
+        "score_delta": 0.059,
+        "conf_delta": 0.0586,
         "direction": "↗"
       }
     },
@@ -975,22 +975,22 @@
     },
     "axis_procedural_governance_accountability_v1": {
       "current": {
-        "score": -0.4573,
-        "confidence": 0.9323
+        "score": -0.4626,
+        "confidence": 0.9328
       },
       "1d": {
-        "score_delta": 0.0419,
-        "conf_delta": 0.0074,
+        "score_delta": 0.0366,
+        "conf_delta": 0.0079,
         "direction": "↗"
       },
       "3d": {
-        "score_delta": 0.0419,
-        "conf_delta": 0.0034,
+        "score_delta": 0.0366,
+        "conf_delta": 0.0039,
         "direction": "↗"
       },
       "7d": {
-        "score_delta": 0.174,
-        "conf_delta": 0.0333,
+        "score_delta": 0.1687,
+        "conf_delta": 0.0338,
         "direction": "↗"
       }
     },
@@ -1209,19 +1209,6 @@
       "3d": null,
       "7d": null
     },
-    "axis_archival_power_crisis_memory_v1": {
-      "current": {
-        "score": 0,
-        "confidence": 0
-      },
-      "1d": {
-        "score_delta": 0,
-        "conf_delta": 0,
-        "direction": "→"
-      },
-      "3d": null,
-      "7d": null
-    },
     "axis_institutional_continuity_v_political_volatility": {
       "current": {
         "score": 0,
@@ -1262,6 +1249,7 @@
   "notable_count": 8,
   "momentum_axes": [
     "axis_education_literacy",
+    "axis_social_welfare_v_military_spending_v1",
     "axis_humanitarian_crisis_response",
     "axis_procedural_governance_accountability_v1",
     "axis_ai_automated_dehumanization_v1",
