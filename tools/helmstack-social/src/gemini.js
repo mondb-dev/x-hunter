@@ -506,6 +506,28 @@ class Gemini {
 
   // ── History maintenance ─────────────────────────────────────────────────────
 
+  /**
+   * Make sure the conversation list is actually rendered.
+   *
+   * While the sidenav is collapsed Gemini keeps every `gem-nav-list-item` row
+   * mounted but EMPTY — `<gem-nav-list-item data-test-id="conversation">` with
+   * nothing but Angular comment anchors inside. So the rows count as present
+   * while carrying no link and no title, and a reader that waits on the rows
+   * gets 37 chats it can say nothing about. Expand first, then read.
+   */
+  async _expandSidebar() {
+    const HAS_LINKS = `document.querySelectorAll('[data-test-id="conversation"] a[href*="/app/"]').length > 0`;
+    if (await this._eval(HAS_LINKS).catch(() => false)) return true;
+    await this._eval(`(() => {
+      const b = [...document.querySelectorAll('button')]
+        .find(x => /open sidebar|expand|main menu/i.test(x.getAttribute('aria-label') || ''));
+      if (!b) return 'none';
+      b.click();
+      return 'ok';
+    })()`).catch(() => {});
+    return this._waitFor(HAS_LINKS, 10_000);
+  }
+
   /** `ms` spread by ±`jitter` so a run isn't a metronome. Never below 500ms. */
   _jittered(ms, jitter = 0.4) {
     const spread = ms * jitter;
@@ -530,10 +552,10 @@ class Gemini {
         title: a.getAttribute('aria-label') || (a.textContent || '').trim(),
       })).filter(c => c.id))`
     ).catch(() => "[]");
-    // The sidebar mounts a beat after navigation. Without this wait the very
-    // first read comes back empty and the "stopped growing" check below reads
-    // that as "no history" — which silently made purgeChats a no-op.
-    await this._waitFor(`document.querySelectorAll('[data-test-id="conversation"]').length > 0`, 15_000);
+    // The sidebar mounts a beat after navigation, and stays contentless while
+    // collapsed. Wait for the LINKS (not the rows) and open the nav if needed.
+    await this._waitFor(`document.querySelectorAll('[data-test-id="conversation"]').length > 0`, 20_000);
+    await this._expandSidebar();
     let chats = JSON.parse((await read()) || "[]");
     for (let i = 0; i < maxScrolls; i++) {
       await this._eval(`(() => {
@@ -555,6 +577,29 @@ class Gemini {
    * fixed strings from this file, so an exact prefix match identifies Sebastian's
    * chats with no risk of catching one of the account owner's.
    */
+  /**
+   * `{ turns, first }` for the open conversation — how many user bubbles are
+   * rendered, and the text of the topmost one.
+   *
+   * `turns` matters as much as the text. Gemini renders long conversations
+   * lazily, so the topmost bubble is whichever turn happens to be loaded, not
+   * necessarily the opening one (the same human chat reported two different
+   * "first" prompts across two runs). Every chat this engine creates is a fresh
+   * single-turn one, so requiring exactly one rendered turn alongside the prompt
+   * match keeps a long human chat out of range even if some bubble of theirs
+   * were to read like an agent prompt.
+   */
+  async conversationShape({ maxChars = 400 } = {}) {
+    const raw = await this._eval(
+      `JSON.stringify((() => {
+        const qs = [...document.querySelectorAll('user-query')];
+        let t = (qs[0]?.textContent || '').trim().replace(/^\\s*You\\s+said\\s*:?\\s*/i, '');
+        return { turns: qs.length, first: t.slice(0, ${maxChars}) };
+      })())`
+    ).catch(() => null);
+    try { return JSON.parse(raw); } catch { return { turns: 0, first: "" }; }
+  }
+
   async firstPromptText({ maxChars = 400 } = {}) {
     const t = await this._eval(
       `(() => {
@@ -674,8 +719,9 @@ class Gemini {
         continue;
       }
 
-      const prompt = await this.firstPromptText();
-      const match = pats.some((re) => re.test(prompt));
+      const { turns, first: prompt } = await this.conversationShape();
+      // Both conditions, always: this engine only ever leaves single-turn chats.
+      const match = turns === 1 && pats.some((re) => re.test(prompt));
       stats.scanned++;
       let deleted = false;
       if (match) {

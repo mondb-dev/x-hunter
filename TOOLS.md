@@ -111,13 +111,18 @@ conversation it created once the answer or bytes are in hand. `GEMINI_KEEP_CHATS
 keeps them for debugging. To clear chats left by older runs:
 
 ```
-node tools/helmstack-social/bin/helmstack-social.js gemini purge            # dry run
-node tools/helmstack-social/bin/helmstack-social.js gemini purge --apply    # delete
+# --env-file is required: HELMSTACK_URL/_AUTH_TOKEN come from .env, and the
+# default port (7070) is not the one this box runs (7071).
+node --env-file=.env tools/helmstack-social/bin/helmstack-social.js gemini purge         # dry run
+node --env-file=.env tools/helmstack-social/bin/helmstack-social.js gemini purge --apply # delete
 ```
 
-A chat is only deleted when its **first prompt** is one this engine writes
-(`Gemini.AGENT_PROMPT_PATTERNS`); titles are never matched, because Gemini writes
-those and a human chat can easily read like a fact-check.
+A chat is only deleted when it has **exactly one turn** AND that turn matches
+one of the prompts this engine writes (`Gemini.AGENT_PROMPT_PATTERNS`). Titles are
+never matched — Gemini writes those, and a human chat easily reads like a
+fact-check. The turn count carries real weight: Gemini renders long chats lazily,
+so the topmost bubble is whichever turn is loaded rather than the opening one,
+while every chat this engine creates is a fresh single-turn one.
 
 **Cadence.** Identifying a chat costs one page load, and back-to-back loads are
 what trip Google's anti-abuse interstitial — it's the request rate that gets
