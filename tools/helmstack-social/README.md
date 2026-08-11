@@ -171,14 +171,15 @@ keep the engine off them:
 
 1. `ask`/`generate` delete **the conversation they created**, by id, as the last
    step of the call (`GEMINI_KEEP_CHATS=1` opts out). No search, no matching.
-2. `purgeChats` opens each chat and matches its **first prompt** against the fixed
-   strings this engine sends — never the title, which Gemini writes itself. It is
-   a dry run unless told otherwise, and it stops when Google's anti-abuse
-   interstitial appears rather than pushing through it.
+2. `purgeChats` opens each chat and requires BOTH a single rendered turn and a
+   **first prompt** matching the fixed strings this engine sends — never the
+   title, which Gemini writes itself. It is a dry run unless told otherwise, and
+   it stops when Google's anti-abuse interstitial appears rather than pushing
+   through it.
 
 ```
-node bin/helmstack-social.js gemini purge                 # list what would go
-node bin/helmstack-social.js gemini purge --apply --max 25
+node --env-file=.env bin/helmstack-social.js gemini purge                 # list what would go
+node --env-file=.env bin/helmstack-social.js gemini purge --apply --max 25
 ```
 
 ## HelmStack endpoints used
