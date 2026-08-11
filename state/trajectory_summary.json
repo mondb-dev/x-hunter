@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-11T12:15:25.989Z",
+  "generated_at": "2026-08-11T14:45:55.125Z",
   "windows": [
     "1d",
     "3d",
@@ -156,23 +156,23 @@
     },
     "axis_media_integrity_v1": {
       "current": {
-        "score": 0.4094,
+        "score": 0.4018,
         "confidence": 0.95
       },
       "1d": {
-        "score_delta": -0.0046,
+        "score_delta": -0.0122,
         "conf_delta": 0,
         "direction": "→"
       },
       "3d": {
-        "score_delta": -0.007,
+        "score_delta": -0.0146,
         "conf_delta": 0.004,
         "direction": "→"
       },
       "7d": {
-        "score_delta": -0.0173,
+        "score_delta": -0.0249,
         "conf_delta": 0,
-        "direction": "→"
+        "direction": "↘"
       }
     },
     "axis_geopolitical_rhetoric_v1": {
@@ -492,23 +492,23 @@
     },
     "axis_digital_supply_chain_security": {
       "current": {
-        "score": 0.2596,
-        "confidence": 0.6789
+        "score": 0.2767,
+        "confidence": 0.6923
       },
       "1d": {
-        "score_delta": 0,
-        "conf_delta": -0.002,
+        "score_delta": 0.0171,
+        "conf_delta": 0.0114,
         "direction": "→"
       },
       "3d": {
-        "score_delta": 0.0178,
-        "conf_delta": 0.008,
-        "direction": "→"
+        "score_delta": 0.0349,
+        "conf_delta": 0.0214,
+        "direction": "↗"
       },
       "7d": {
-        "score_delta": 0.0178,
-        "conf_delta": 0.002,
-        "direction": "→"
+        "score_delta": 0.0349,
+        "conf_delta": 0.0154,
+        "direction": "↗"
       }
     },
     "axis_new_world_order_discourse_v1": {
@@ -556,21 +556,21 @@
     "axis_education_literacy": {
       "current": {
         "score": -0.05,
-        "confidence": 0.078
+        "confidence": 0.076
       },
       "1d": {
         "score_delta": -0.05,
-        "conf_delta": 0.078,
+        "conf_delta": 0.076,
         "direction": "↘"
       },
       "3d": {
         "score_delta": -0.05,
-        "conf_delta": 0.078,
+        "conf_delta": 0.076,
         "direction": "↘"
       },
       "7d": {
         "score_delta": -0.05,
-        "conf_delta": 0.078,
+        "conf_delta": 0.076,
         "direction": "↘"
       }
     },
@@ -1164,23 +1164,23 @@
     },
     "axis_ai_legal_accountability_v1": {
       "current": {
-        "score": 0.05,
-        "confidence": 0.1225
+        "score": 0.1,
+        "confidence": 0.1497
       },
       "1d": {
-        "score_delta": 0,
-        "conf_delta": -0.004,
-        "direction": "→"
+        "score_delta": 0.05,
+        "conf_delta": 0.0232,
+        "direction": "↗"
       },
       "3d": {
-        "score_delta": 0.05,
-        "conf_delta": 0.0239,
+        "score_delta": 0.1,
+        "conf_delta": 0.0511,
         "direction": "↗"
       },
       "7d": {
-        "score_delta": 0,
-        "conf_delta": 0.0957,
-        "direction": "→"
+        "score_delta": 0.05,
+        "conf_delta": 0.1229,
+        "direction": "↗"
       }
     },
     "axis_infrastructure_displacement_accountability_v1": {
@@ -1244,6 +1244,15 @@
       "1d": null,
       "3d": null,
       "7d": null
+    },
+    "axis_labor_geopolitical_buffer_v1": {
+      "current": {
+        "score": 0,
+        "confidence": 0
+      },
+      "1d": null,
+      "3d": null,
+      "7d": null
     }
   },
   "notable_count": 8,
@@ -1257,6 +1266,7 @@
     "axis_reactionary_futurism_v1",
     "axis_technological_innovation_vs_social_equity_v1",
     "axis_infrastructure_commons_v_extraction_v1",
-    "axis_accountability_temporality_v1"
+    "axis_accountability_temporality_v1",
+    "axis_ai_legal_accountability_v1"
   ]
 }
