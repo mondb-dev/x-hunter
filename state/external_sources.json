@@ -1,8 +1,8 @@
 {
   "schema_version": "1.0",
-  "generated_at": "2026-08-11T07:31:50.777Z",
+  "generated_at": "2026-08-11T08:31:52.389Z",
   "method": "mechanical_registry_v1",
-  "profiled_at": "2026-08-11T07:32:04.894Z",
+  "profiled_at": "2026-08-11T08:32:03.050Z",
   "sources": [
     {
       "domain": "theguardian.com",
@@ -11,7 +11,7 @@
       "first_seen_at": "2026-03-27T23:17:00Z",
       "last_seen_at": "2026-08-11T07:02:49.744Z",
       "discovery": {
-        "distinct_urls": 797,
+        "distinct_urls": 798,
         "example_urls": [
           "https://www.theguardian.com/us-news/2026/jun/23/trump-immigration-courthouse-arrest-policy",
           "https://www.theguardian.com/us-news/2026/jun/28/ice-minnesota-defending-democracy",
@@ -21,7 +21,7 @@
         ],
         "origin_counts": {
           "ontology_evidence": 45,
-          "reading_queue": 761,
+          "reading_queue": 762,
           "journals": 120,
           "articles": 5
         },
@@ -74,7 +74,7 @@
         "breadth": {
           "score": 0.94,
           "basis": [
-            "distinct_urls:797",
+            "distinct_urls:798",
             "distinct_axes:19",
             "origin_types:4"
           ]
@@ -114,7 +114,7 @@
             "newsroom_domain_pattern",
             "article_path_seen",
             "doi_or_identifier_path_seen",
-            "distinct_urls:797",
+            "distinct_urls:798",
             "distinct_axes:19",
             "origin_types:4",
             "referring_accounts:0",
@@ -701,7 +701,7 @@
       "first_seen_at": "2026-06-22T00:15:00Z",
       "last_seen_at": "2026-08-10T22:02:28.383Z",
       "discovery": {
-        "distinct_urls": 542,
+        "distinct_urls": 543,
         "example_urls": [
           "https://www.nytimes.com/2026/06/19/world/canada/frank-stronach-trial-guilty-sex-charges.html",
           "https://www.nytimes.com/2026/06/27/world/americas/mexican-officials-us-informants.html",
@@ -711,7 +711,7 @@
         ],
         "origin_counts": {
           "ontology_evidence": 20,
-          "reading_queue": 553,
+          "reading_queue": 554,
           "journals": 49
         },
         "distinct_referring_accounts": 0,
@@ -755,7 +755,7 @@
         "breadth": {
           "score": 0.8799999999999999,
           "basis": [
-            "distinct_urls:542",
+            "distinct_urls:543",
             "distinct_axes:12",
             "origin_types:3"
           ]
@@ -794,7 +794,7 @@
           "basis": [
             "newsroom_domain_pattern",
             "article_path_seen",
-            "distinct_urls:542",
+            "distinct_urls:543",
             "distinct_axes:12",
             "origin_types:3",
             "referring_accounts:0",
@@ -2279,9 +2279,9 @@
       "entity": "Com Ph",
       "kind": "unknown",
       "first_seen_at": "2026-04-15T09:58:55.036Z",
-      "last_seen_at": "2026-08-04T05:34:01.148Z",
+      "last_seen_at": "2026-08-11T07:53:02.864Z",
       "discovery": {
-        "distinct_urls": 25,
+        "distinct_urls": 26,
         "example_urls": [
           "https://x.tv5.com.ph/news/national/read/arrest-warrants-issued-vs-discayas-over-malversation-graft-charges-tied-to-flood-control-projects-malolos-court",
           "https://balita.mb.com.ph/2026/06/11/di-pagbalik-ng-ph-sa-icc-di-nagpapakita-n",
@@ -2291,15 +2291,16 @@
         ],
         "origin_counts": {
           "ontology_evidence": 4,
-          "feed_buffer": 11,
+          "feed_buffer": 12,
           "feed_buffer_reply": 5,
           "journals": 13
         },
-        "distinct_referring_accounts": 3,
+        "distinct_referring_accounts": 4,
         "sample_referring_accounts": [
           "benchtm",
           "casinoplusph",
-          "lazadaph"
+          "lazadaph",
+          "ptgamingph"
         ],
         "distinct_axes": [
           "axis_political_trust_corruption_v1",
@@ -2330,15 +2331,15 @@
         "breadth": {
           "score": 0.7066666666666666,
           "basis": [
-            "distinct_urls:25",
+            "distinct_urls:26",
             "distinct_axes:2",
             "origin_types:4"
           ]
         },
         "corroboration": {
-          "score": 0.675,
+          "score": 0.7833333333333333,
           "basis": [
-            "referring_accounts:3",
+            "referring_accounts:4",
             "origin_types:4"
           ]
         },
@@ -2363,16 +2364,16 @@
           ]
         },
         "overall": {
-          "score": 0.5478645833333332,
-          "confidence": 0.6591499999999999,
+          "score": 0.5580208333333333,
+          "confidence": 0.6688999999999999,
           "method": "mechanical_v1",
           "basis": [
             "unknown_domain_pattern",
             "article_path_seen",
-            "distinct_urls:25",
+            "distinct_urls:26",
             "distinct_axes:2",
             "origin_types:4",
-            "referring_accounts:3",
+            "referring_accounts:4",
             "origin_types:4",
             "track_record_unavailable"
           ]
@@ -3245,9 +3246,9 @@
       "entity": "T Co",
       "kind": "unknown",
       "first_seen_at": "2016-05-05T18:57:30.000Z",
-      "last_seen_at": "2026-08-11T05:34:48.000Z",
+      "last_seen_at": "2026-08-11T08:17:44.000Z",
       "discovery": {
-        "distinct_urls": 12891,
+        "distinct_urls": 12895,
         "example_urls": [
           "https://t.co/pJSE124ec4",
           "https://t.co/Soz8BXPWaa",
@@ -3256,8 +3257,8 @@
           "https://t.co/cYaqYDRp08"
         ],
         "origin_counts": {
-          "feed_buffer": 10562,
-          "feed_buffer_reply": 4897,
+          "feed_buffer": 10566,
+          "feed_buffer_reply": 4898,
           "articles": 3
         },
         "distinct_referring_accounts": 2733,
@@ -3299,7 +3300,7 @@
         "breadth": {
           "score": 0.53,
           "basis": [
-            "distinct_urls:12891",
+            "distinct_urls:12895",
             "distinct_axes:0",
             "origin_types:3"
           ]
@@ -3338,7 +3339,7 @@
           "basis": [
             "unknown_domain_pattern",
             "doi_or_identifier_path_seen",
-            "distinct_urls:12891",
+            "distinct_urls:12895",
             "distinct_axes:0",
             "origin_types:3",
             "referring_accounts:2733",
@@ -8195,7 +8196,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-08-08T07:51:55.481Z",
+        "fetched_at": "2026-08-11T08:31:52.916Z",
         "homepage_url": "https://coderabbit.ai/",
         "example_url": "https://www.coderabbit.ai/agent?utm_source=twitter&utm_medium=cpc&utm_campaign=brandawareness_slack&twclid=25ohyy1nnhx1vb6p888i79f380",
         "homepage_status": 200,
@@ -8957,7 +8958,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-08-08T07:51:55.623Z",
+        "fetched_at": "2026-08-11T08:31:53.062Z",
         "homepage_url": "https://bcgame-bet.com/",
         "example_url": "https://bcall-global.bcgame-bet.com/dispatch-v6?i=45zn3497p&utm_medium=twitter&utm_content=%7B%7Bad_name%7D%7D&p=%2Flogin%2Fregist&ch=twitter&pixel_id=or72z&register=tw-or72z-or738&purchase=tw-or72z-or736&twclid=2cjhb3kupxi19emmjqo3fks82g",
         "homepage_status": null,
@@ -9465,7 +9466,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-08-08T07:51:57.379Z",
+        "fetched_at": "2026-08-11T08:32:01.932Z",
         "homepage_url": "https://fx-edge.com/",
         "example_url": "https://fx-edge.com/prop-liquidity/?utm_source=twitter&utm_medium=ppc&utm_campaign=prop_liquidity&twclid=2232cmky8wi7upvvrdlud3bfsm",
         "homepage_status": 200,
@@ -10080,7 +10081,7 @@
             "about:false",
             "contact:false",
             "corrections:false",
-            "outbound_links:55",
+            "outbound_links:60",
             "opinion_marker:false"
           ]
         },
@@ -10100,7 +10101,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-08-08T07:51:58.642Z",
+        "fetched_at": "2026-08-11T08:32:03.050Z",
         "homepage_url": "https://shipaton.com/",
         "example_url": "https://www.shipaton.com/events/?utm_source=x&utm_medium=cpc&utm_campaign=shipaton-traffic&twclid=2d8n4jkad805fesk63uxwuffy9",
         "homepage_status": 200,
@@ -10126,7 +10127,7 @@
           "has_about_link": false,
           "has_contact_link": false,
           "has_corrections_link": false,
-          "outbound_links_count": 55,
+          "outbound_links_count": 60,
           "opinion_marker": false
         }
       }
