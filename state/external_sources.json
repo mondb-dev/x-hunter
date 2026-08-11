@@ -1,17 +1,17 @@
 {
   "schema_version": "1.0",
-  "generated_at": "2026-08-11T04:31:48.561Z",
+  "generated_at": "2026-08-11T07:31:50.777Z",
   "method": "mechanical_registry_v1",
-  "profiled_at": "2026-08-11T04:31:58.352Z",
+  "profiled_at": "2026-08-11T07:32:04.894Z",
   "sources": [
     {
       "domain": "theguardian.com",
       "entity": "Theguardian",
       "kind": "news",
       "first_seen_at": "2026-03-27T23:17:00Z",
-      "last_seen_at": "2026-08-10T08:13:36.675Z",
+      "last_seen_at": "2026-08-11T07:02:49.744Z",
       "discovery": {
-        "distinct_urls": 794,
+        "distinct_urls": 797,
         "example_urls": [
           "https://www.theguardian.com/us-news/2026/jun/23/trump-immigration-courthouse-arrest-policy",
           "https://www.theguardian.com/us-news/2026/jun/28/ice-minnesota-defending-democracy",
@@ -20,9 +20,9 @@
           "https://www.theguardian.com/global-development/2026/jun/26/woman-sadia-moalim-ali-three-year-jail-sentence-somalia-online-comments-governement"
         ],
         "origin_counts": {
-          "ontology_evidence": 44,
-          "reading_queue": 759,
-          "journals": 119,
+          "ontology_evidence": 45,
+          "reading_queue": 761,
+          "journals": 120,
           "articles": 5
         },
         "distinct_referring_accounts": 0,
@@ -44,6 +44,7 @@
           "axis_political_trust_corruption_v1",
           "axis_power_accountability",
           "axis_procedural_governance_accountability_v1",
+          "axis_procedural_governance_substantive_action",
           "axis_procedural_governance_v1",
           "axis_weaponized_demographics_narrative_control_v1"
         ]
@@ -73,8 +74,8 @@
         "breadth": {
           "score": 0.94,
           "basis": [
-            "distinct_urls:794",
-            "distinct_axes:18",
+            "distinct_urls:797",
+            "distinct_axes:19",
             "origin_types:4"
           ]
         },
@@ -113,8 +114,8 @@
             "newsroom_domain_pattern",
             "article_path_seen",
             "doi_or_identifier_path_seen",
-            "distinct_urls:794",
-            "distinct_axes:18",
+            "distinct_urls:797",
+            "distinct_axes:19",
             "origin_types:4",
             "referring_accounts:0",
             "origin_types:4",
@@ -700,7 +701,7 @@
       "first_seen_at": "2026-06-22T00:15:00Z",
       "last_seen_at": "2026-08-10T22:02:28.383Z",
       "discovery": {
-        "distinct_urls": 541,
+        "distinct_urls": 542,
         "example_urls": [
           "https://www.nytimes.com/2026/06/19/world/canada/frank-stronach-trial-guilty-sex-charges.html",
           "https://www.nytimes.com/2026/06/27/world/americas/mexican-officials-us-informants.html",
@@ -710,7 +711,7 @@
         ],
         "origin_counts": {
           "ontology_evidence": 20,
-          "reading_queue": 552,
+          "reading_queue": 553,
           "journals": 49
         },
         "distinct_referring_accounts": 0,
@@ -754,7 +755,7 @@
         "breadth": {
           "score": 0.8799999999999999,
           "basis": [
-            "distinct_urls:541",
+            "distinct_urls:542",
             "distinct_axes:12",
             "origin_types:3"
           ]
@@ -793,7 +794,7 @@
           "basis": [
             "newsroom_domain_pattern",
             "article_path_seen",
-            "distinct_urls:541",
+            "distinct_urls:542",
             "distinct_axes:12",
             "origin_types:3",
             "referring_accounts:0",
@@ -1979,9 +1980,9 @@
       "entity": "Google",
       "kind": "unknown",
       "first_seen_at": "2026-04-01T08:58:28.219Z",
-      "last_seen_at": "2026-07-14T19:51:25.938Z",
+      "last_seen_at": "2026-08-11T06:48:00.772Z",
       "discovery": {
-        "distinct_urls": 216,
+        "distinct_urls": 217,
         "example_urls": [
           "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQG8zTjzNOXrSBZwvSTLobfen2T2Mfxyn8MYVxW4sIU6cWottxkV4pJs_p6fwS7LJGs_vuED8LS-hCfYDaWBVPP6g5GilaCYMrJml-ow5K6SCv_H_b1Dl2x1bJE8PTS68J1lar6YIqGro0gdLxt0MIOMv-l1vVmmO0WJQtLSOEieMA6I7dl7eRgRC0BRXQWnC1DBXjH9CBNLq5ag1EbSnkyImyoNmXyv0qV7VQUvoAHc5OC2odagG5YXdhPj4Im_aZZUwd8=",
           "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHrJNqE08-Q7Tqg05X_ofoDNtZLKVJsHf6UdRREA1OxztC8CDB6FsNjQuBV136gJb2Y9QXrXsx7zbeEa5BUqoJBYqmssKHmfzwTgOysIjMJg6Joojzce5N3TRuitNQcNaKb2hCiLA==",
@@ -1994,11 +1995,12 @@
           "claim_tracker": 15,
           "reading_queue": 15,
           "feed_buffer_reply": 33,
-          "feed_buffer": 7,
+          "feed_buffer": 8,
           "journals": 68
         },
-        "distinct_referring_accounts": 7,
+        "distinct_referring_accounts": 8,
         "sample_referring_accounts": [
+          "benchtm",
           "davidfr33man",
           "fabrice_mayrand",
           "geminiapp",
@@ -2054,7 +2056,7 @@
         "breadth": {
           "score": 1,
           "basis": [
-            "distinct_urls:216",
+            "distinct_urls:217",
             "distinct_axes:20",
             "origin_types:6"
           ]
@@ -2062,7 +2064,7 @@
         "corroboration": {
           "score": 1,
           "basis": [
-            "referring_accounts:7",
+            "referring_accounts:8",
             "origin_types:6"
           ]
         },
@@ -2095,10 +2097,10 @@
           "basis": [
             "unknown_domain_pattern",
             "search_results_seen",
-            "distinct_urls:216",
+            "distinct_urls:217",
             "distinct_axes:20",
             "origin_types:6",
-            "referring_accounts:7",
+            "referring_accounts:8",
             "origin_types:6",
             "supported:8",
             "refuted:7",
@@ -2562,9 +2564,9 @@
       "entity": "Philstar",
       "kind": "unknown",
       "first_seen_at": "2026-05-20T06:57:31.760Z",
-      "last_seen_at": "2026-08-11T04:02:26.302Z",
+      "last_seen_at": "2026-08-11T07:02:49.719Z",
       "discovery": {
-        "distinct_urls": 169,
+        "distinct_urls": 170,
         "example_urls": [
           "https://www.philstar.com/headlines/2026/06/24/2537506/mike-defensor-face-trafficking-complaint-over-pasig-ktv-bar-raid",
           "https://www.philstar.com/headlines/2026/06/24/2537509/ched-tells-ateneo-explain-drowning-baterbonia-adili-or-face-sanctions",
@@ -2574,7 +2576,7 @@
         ],
         "origin_counts": {
           "ontology_evidence": 82,
-          "journals": 213,
+          "journals": 214,
           "articles": 3
         },
         "distinct_referring_accounts": 0,
@@ -2623,7 +2625,7 @@
         "breadth": {
           "score": 0.8799999999999999,
           "basis": [
-            "distinct_urls:169",
+            "distinct_urls:170",
             "distinct_axes:17",
             "origin_types:3"
           ]
@@ -2662,7 +2664,7 @@
           "basis": [
             "unknown_domain_pattern",
             "article_path_seen",
-            "distinct_urls:169",
+            "distinct_urls:170",
             "distinct_axes:17",
             "origin_types:3",
             "referring_accounts:0",
@@ -3243,9 +3245,9 @@
       "entity": "T Co",
       "kind": "unknown",
       "first_seen_at": "2016-05-05T18:57:30.000Z",
-      "last_seen_at": "2026-08-11T04:00:40.000Z",
+      "last_seen_at": "2026-08-11T05:34:48.000Z",
       "discovery": {
-        "distinct_urls": 12885,
+        "distinct_urls": 12891,
         "example_urls": [
           "https://t.co/pJSE124ec4",
           "https://t.co/Soz8BXPWaa",
@@ -3254,7 +3256,7 @@
           "https://t.co/cYaqYDRp08"
         ],
         "origin_counts": {
-          "feed_buffer": 10554,
+          "feed_buffer": 10562,
           "feed_buffer_reply": 4897,
           "articles": 3
         },
@@ -3297,7 +3299,7 @@
         "breadth": {
           "score": 0.53,
           "basis": [
-            "distinct_urls:12885",
+            "distinct_urls:12891",
             "distinct_axes:0",
             "origin_types:3"
           ]
@@ -3336,7 +3338,7 @@
           "basis": [
             "unknown_domain_pattern",
             "doi_or_identifier_path_seen",
-            "distinct_urls:12885",
+            "distinct_urls:12891",
             "distinct_axes:0",
             "origin_types:3",
             "referring_accounts:2733",
@@ -3382,9 +3384,9 @@
       "entity": "Inquirer",
       "kind": "unknown",
       "first_seen_at": "2026-05-09T10:15:15.053Z",
-      "last_seen_at": "2026-08-11T01:02:28.906Z",
+      "last_seen_at": "2026-08-11T07:02:49.719Z",
       "discovery": {
-        "distinct_urls": 336,
+        "distinct_urls": 340,
         "example_urls": [
           "https://newsinfo.inquirer.net/2266316/nbi-on-cayetano-position-that-cant-be-defended-by-facts-is-done-with-insults",
           "https://www.inquirer.net/capiz-broadcaster-shooting-probe-widens-as-cops-form-task-force",
@@ -3393,8 +3395,8 @@
           "https://newsinfo.inquirer.net/2251702/chr-seeks-swift-passage-of-bills-creating-detention-monitoring-body"
         ],
         "origin_counts": {
-          "ontology_evidence": 131,
-          "journals": 416,
+          "ontology_evidence": 132,
+          "journals": 419,
           "articles": 4
         },
         "distinct_referring_accounts": 0,
@@ -3409,6 +3411,7 @@
           "axis_epistemic_integrity",
           "axis_geopolitical_rhetoric_v1",
           "axis_information_control_v1",
+          "axis_infrastructure_commons_v_extraction_v1",
           "axis_infrastructure_displacement_accountability_v1",
           "axis_media_integrity_v1",
           "axis_national_sovereignty_v_intl_law_v1",
@@ -3446,8 +3449,8 @@
         "breadth": {
           "score": 0.8799999999999999,
           "basis": [
-            "distinct_urls:336",
-            "distinct_axes:21",
+            "distinct_urls:340",
+            "distinct_axes:22",
             "origin_types:3"
           ]
         },
@@ -3484,8 +3487,8 @@
           "method": "mechanical_v1",
           "basis": [
             "unknown_domain_pattern",
-            "distinct_urls:336",
-            "distinct_axes:21",
+            "distinct_urls:340",
+            "distinct_axes:22",
             "origin_types:3",
             "referring_accounts:0",
             "origin_types:3",
@@ -3530,9 +3533,9 @@
       "entity": "Rappler",
       "kind": "unknown",
       "first_seen_at": "2026-06-22T04:04:30.428Z",
-      "last_seen_at": "2026-08-11T04:02:26.302Z",
+      "last_seen_at": "2026-08-11T05:32:59.932Z",
       "discovery": {
-        "distinct_urls": 262,
+        "distinct_urls": 264,
         "example_urls": [
           "https://www.rappler.com/fact-check-no-arrest-warrant-issued-vs-marcoleta",
           "https://www.rappler.com/technology/decoded-tacloban-school-shooting-disinformation-kiko-barzaga-discussions-juvenile-justice-law/",
@@ -3542,7 +3545,7 @@
         ],
         "origin_counts": {
           "ontology_evidence": 130,
-          "journals": 292,
+          "journals": 294,
           "articles": 4
         },
         "distinct_referring_accounts": 0,
@@ -3603,7 +3606,7 @@
         "breadth": {
           "score": 0.8799999999999999,
           "basis": [
-            "distinct_urls:262",
+            "distinct_urls:264",
             "distinct_axes:30",
             "origin_types:3"
           ]
@@ -3641,7 +3644,7 @@
           "method": "mechanical_v1",
           "basis": [
             "unknown_domain_pattern",
-            "distinct_urls:262",
+            "distinct_urls:264",
             "distinct_axes:30",
             "origin_types:3",
             "referring_accounts:0",
@@ -27689,6 +27692,132 @@
       }
     },
     {
+      "domain": "apple.com",
+      "entity": "Apple",
+      "kind": "unknown",
+      "first_seen_at": "2026-06-03T05:49:58.616Z",
+      "last_seen_at": "2026-08-11T06:58:01.033Z",
+      "discovery": {
+        "distinct_urls": 3,
+        "example_urls": [
+          "https://apps.apple.com/us/app/oceanhorn-3/id1539411904?twclid=25zyeamc9kepxd6rdpaddxcmui",
+          "https://itunes.apple.com/app/id1631680437?twclid=299qyecdgw00l8f04ql6lkhizb",
+          "https://apps.apple.com/ph/app/bench-lifestyle/id1447478773?twclid=29trmbxrm6a00d052gkfeg7ink"
+        ],
+        "origin_counts": {
+          "feed_buffer": 3
+        },
+        "distinct_referring_accounts": 3,
+        "sample_referring_accounts": [
+          "benchtm",
+          "cornfox",
+          "flamingotrips"
+        ],
+        "distinct_axes": []
+      },
+      "claims": {
+        "total": 0,
+        "supported": 0,
+        "refuted": 0,
+        "contested": 0,
+        "unverified": 0,
+        "resolved_count": 0
+      },
+      "structural_features": {
+        "has_search_paths": false,
+        "has_article_paths": false,
+        "has_doi_paths": false
+      },
+      "ratings": {
+        "provenance": {
+          "score": 0.45,
+          "basis": [
+            "unknown_domain_pattern"
+          ]
+        },
+        "breadth": {
+          "score": 0.1475,
+          "basis": [
+            "distinct_urls:3",
+            "distinct_axes:0",
+            "origin_types:1"
+          ]
+        },
+        "corroboration": {
+          "score": 0.4125,
+          "basis": [
+            "referring_accounts:3",
+            "origin_types:1"
+          ]
+        },
+        "track_record": {
+          "score": null,
+          "basis": [
+            "no_resolved_claims_observed"
+          ]
+        },
+        "profile": {
+          "score": 0.42000000000000004,
+          "confidence": 0.65,
+          "basis": [
+            "meta_author:false",
+            "published_time:true",
+            "canonical:true",
+            "about:false",
+            "contact:true",
+            "corrections:false",
+            "outbound_links:2",
+            "opinion_marker:false"
+          ]
+        },
+        "overall": {
+          "score": 0.3803125,
+          "confidence": 0.2031,
+          "method": "mechanical_v1",
+          "basis": [
+            "unknown_domain_pattern",
+            "distinct_urls:3",
+            "distinct_axes:0",
+            "origin_types:1",
+            "referring_accounts:3",
+            "origin_types:1",
+            "track_record_unavailable"
+          ]
+        }
+      },
+      "profile": {
+        "fetched_at": "2026-08-10T04:01:23.955Z",
+        "homepage_url": "https://apple.com/",
+        "example_url": "https://apps.apple.com/us/app/oceanhorn-3/id1539411904?twclid=25zyeamc9kepxd6rdpaddxcmui",
+        "homepage_status": 200,
+        "example_status": 200,
+        "homepage_final_url": "https://www.apple.com/",
+        "example_final_url": "https://apps.apple.com/us/app/oceanhorn-3/id1539411904",
+        "homepage_content_type": "text/html; charset=utf-8",
+        "example_content_type": "text/html",
+        "homepage": {
+          "has_meta_author": false,
+          "has_published_time": false,
+          "has_canonical": true,
+          "has_about_link": false,
+          "has_contact_link": true,
+          "has_corrections_link": false,
+          "outbound_links_count": 3,
+          "opinion_marker": false
+        },
+        "example": {
+          "has_meta_author": false,
+          "has_published_time": true,
+          "has_canonical": true,
+          "has_about_link": false,
+          "has_contact_link": false,
+          "has_corrections_link": false,
+          "outbound_links_count": 2,
+          "opinion_marker": false
+        }
+      }
+    },
+    {
       "domain": "zite.com",
       "entity": "Zite",
       "kind": "unknown",
@@ -41046,130 +41175,6 @@
       }
     },
     {
-      "domain": "apple.com",
-      "entity": "Apple",
-      "kind": "unknown",
-      "first_seen_at": "2026-06-03T05:49:58.616Z",
-      "last_seen_at": "2026-07-13T17:48:42.549Z",
-      "discovery": {
-        "distinct_urls": 2,
-        "example_urls": [
-          "https://apps.apple.com/us/app/oceanhorn-3/id1539411904?twclid=25zyeamc9kepxd6rdpaddxcmui",
-          "https://itunes.apple.com/app/id1631680437?twclid=299qyecdgw00l8f04ql6lkhizb"
-        ],
-        "origin_counts": {
-          "feed_buffer": 2
-        },
-        "distinct_referring_accounts": 2,
-        "sample_referring_accounts": [
-          "cornfox",
-          "flamingotrips"
-        ],
-        "distinct_axes": []
-      },
-      "claims": {
-        "total": 0,
-        "supported": 0,
-        "refuted": 0,
-        "contested": 0,
-        "unverified": 0,
-        "resolved_count": 0
-      },
-      "structural_features": {
-        "has_search_paths": false,
-        "has_article_paths": false,
-        "has_doi_paths": false
-      },
-      "ratings": {
-        "provenance": {
-          "score": 0.45,
-          "basis": [
-            "unknown_domain_pattern"
-          ]
-        },
-        "breadth": {
-          "score": 0.11833333333333332,
-          "basis": [
-            "distinct_urls:2",
-            "distinct_axes:0",
-            "origin_types:1"
-          ]
-        },
-        "corroboration": {
-          "score": 0.3041666666666667,
-          "basis": [
-            "referring_accounts:2",
-            "origin_types:1"
-          ]
-        },
-        "track_record": {
-          "score": null,
-          "basis": [
-            "no_resolved_claims_observed"
-          ]
-        },
-        "profile": {
-          "score": 0.42000000000000004,
-          "confidence": 0.65,
-          "basis": [
-            "meta_author:false",
-            "published_time:true",
-            "canonical:true",
-            "about:false",
-            "contact:true",
-            "corrections:false",
-            "outbound_links:2",
-            "opinion_marker:false"
-          ]
-        },
-        "overall": {
-          "score": 0.36377604166666666,
-          "confidence": 0.142225,
-          "method": "mechanical_v1",
-          "basis": [
-            "unknown_domain_pattern",
-            "distinct_urls:2",
-            "distinct_axes:0",
-            "origin_types:1",
-            "referring_accounts:2",
-            "origin_types:1",
-            "track_record_unavailable"
-          ]
-        }
-      },
-      "profile": {
-        "fetched_at": "2026-08-10T04:01:23.955Z",
-        "homepage_url": "https://apple.com/",
-        "example_url": "https://apps.apple.com/us/app/oceanhorn-3/id1539411904?twclid=25zyeamc9kepxd6rdpaddxcmui",
-        "homepage_status": 200,
-        "example_status": 200,
-        "homepage_final_url": "https://www.apple.com/",
-        "example_final_url": "https://apps.apple.com/us/app/oceanhorn-3/id1539411904",
-        "homepage_content_type": "text/html; charset=utf-8",
-        "example_content_type": "text/html",
-        "homepage": {
-          "has_meta_author": false,
-          "has_published_time": false,
-          "has_canonical": true,
-          "has_about_link": false,
-          "has_contact_link": true,
-          "has_corrections_link": false,
-          "outbound_links_count": 3,
-          "opinion_marker": false
-        },
-        "example": {
-          "has_meta_author": false,
-          "has_published_time": true,
-          "has_canonical": true,
-          "has_about_link": false,
-          "has_contact_link": false,
-          "has_corrections_link": false,
-          "outbound_links_count": 2,
-          "opinion_marker": false
-        }
-      }
-    },
-    {
       "domain": "kickstarter.com",
       "entity": "Kickstarter",
       "kind": "unknown",
@@ -44733,7 +44738,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-08-07T20:25:22.722Z",
+        "fetched_at": "2026-08-11T05:32:20.695Z",
         "homepage_url": "https://jobescape.me/",
         "example_url": "https://jobescape.me/chat-v3?utm_source=X&utm_campaign=41800699&utm_adset=55644377&utm_ad=2073384613213569345&utm_tag=cld&twclid=2f3xceh90a7lt534cy5nyja6uw",
         "homepage_status": 200,
@@ -44857,7 +44862,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-08-07T21:28:34.727Z",
+        "fetched_at": "2026-08-11T05:32:22.780Z",
         "homepage_url": "https://alpha-sense.com/",
         "example_url": "https://www.alpha-sense.com/?utm_source=twitter&utm_medium=ps&utm_campaign=TOFU-Content_FS_APAC_video&utm_content=harry-stebbings-20VC_video&twclid=2ce46untfg4fn49nwjc9wp8k8o",
         "homepage_status": 200,
@@ -44981,7 +44986,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-08-07T02:54:40.939Z",
+        "fetched_at": "2026-08-11T05:32:23.549Z",
         "homepage_url": "https://convoai.world/",
         "example_url": "https://podcast.convoai.world/episode/reimagining-the-future-of-learning-through-conversational-ai-with-physics-wallahs-supreet-singh/?utm_source=X&utm_medium=Paid-Social&utm_campaign=APAC-July-26&twclid=230k9qgjmrkm0obl0llcbwb6zj",
         "homepage_status": 200,
@@ -45105,7 +45110,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-08-07T02:54:43.914Z",
+        "fetched_at": "2026-08-11T05:32:26.563Z",
         "homepage_url": "https://latyx.io/",
         "example_url": "https://app.latyx.io/?utm_source=x&utm_medium=paid_social&utm_campaign=x_proof_pilot_2026q3&utm_content=a01_paste_understand&community=x_kw_crypto_risk&twclid=2dpf4orm5mjnll44til1alkjte",
         "homepage_status": 200,
@@ -45229,7 +45234,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-08-07T03:54:41.642Z",
+        "fetched_at": "2026-08-11T06:01:51.782Z",
         "homepage_url": "https://superhumanchambers.com/",
         "example_url": "https://superhumanchambers.com/careers/ai-digital-outbound-operator/?utm_source=x&utm_medium=paid_social&utm_campaign=hire_ai_digital_outbound_2026q3&utm_content=proof_portrait_v1&utm_term=operator_fit&twclid=2di85sm7u6un6dynmt8f5fzgu9",
         "homepage_status": 200,
@@ -45353,7 +45358,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-08-07T03:54:42.036Z",
+        "fetched_at": "2026-08-11T06:01:52.135Z",
         "homepage_url": "https://qrindex.org/",
         "example_url": "https://qrindex.org/?twclid=24um41mtui293u0o4uvv0npasx",
         "homepage_status": 200,
@@ -45477,7 +45482,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-08-07T03:54:45.955Z",
+        "fetched_at": "2026-08-11T06:01:57.223Z",
         "homepage_url": "https://geni.us/",
         "example_url": "https://geni.us/BitcoinNation?twclid=24fcosa9inu5c1v4re7y92fmou",
         "homepage_status": 200,
@@ -45601,7 +45606,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-08-07T03:54:47.652Z",
+        "fetched_at": "2026-08-11T06:01:59.007Z",
         "homepage_url": "https://jetbrains.com/",
         "example_url": "https://surveys.jetbrains.com/s3/px-state-of-php-2026?utm_source=twitter&utm_medium=cpc&utm_campaign=apac_west_en_dc_tw_phpstorm_state_of_php_2026_na_video&twclid=23jq4cs5apzjavaziudc0vsy6f",
         "homepage_status": 200,
@@ -45725,7 +45730,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-08-07T04:24:45.547Z",
+        "fetched_at": "2026-08-11T07:01:50.836Z",
         "homepage_url": "https://github.io/",
         "example_url": "https://yinxinghuan.github.io/sky-leap/index.html?twclid=2bkc4pwqkq0x4x8zjkumybliim",
         "homepage_status": 200,
@@ -45849,7 +45854,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-08-07T04:24:46.221Z",
+        "fetched_at": "2026-08-11T07:01:52.313Z",
         "homepage_url": "https://minepi.com/",
         "example_url": "https://minepi.com/vibe-code/?utm_source=X&utm_medium=x_vibe&utm_content=3B-3&twclid=2ceupjbcdlmh4nm420zbcujkx5",
         "homepage_status": 200,
@@ -45971,7 +45976,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-08-07T05:54:46.071Z",
+        "fetched_at": "2026-08-11T07:01:55.857Z",
         "homepage_url": "https://rice.edu/",
         "example_url": "https://news.rice.edu/news/2026/more-dangerous-and-unpredictable-experts-discuss-ongoing-iran-conflict",
         "homepage_status": null,
@@ -46063,16 +46068,16 @@
           ]
         },
         "profile": {
-          "score": 0.58,
-          "confidence": 0.75,
+          "score": 0,
+          "confidence": 0.55,
           "basis": [
-            "meta_author:true",
-            "published_time:true",
-            "canonical:true",
+            "meta_author:false",
+            "published_time:false",
+            "canonical:false",
             "about:false",
             "contact:false",
             "corrections:false",
-            "outbound_links:12",
+            "outbound_links:0",
             "opinion_marker:false"
           ]
         },
@@ -46093,15 +46098,15 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-08-07T05:55:02.491Z",
+        "fetched_at": "2026-08-11T07:02:15.862Z",
         "homepage_url": "https://moderndiplomacy.eu/",
         "example_url": "https://moderndiplomacy.eu/2026/03/06/alone-under-fire-irans-partners-step-back-as-war-intensifies/",
         "homepage_status": null,
-        "example_status": 200,
+        "example_status": null,
         "homepage_final_url": "https://moderndiplomacy.eu/",
         "example_final_url": "https://moderndiplomacy.eu/2026/03/06/alone-under-fire-irans-partners-step-back-as-war-intensifies/",
         "homepage_content_type": "",
-        "example_content_type": "text/html; charset=UTF-8",
+        "example_content_type": "",
         "homepage": {
           "has_meta_author": false,
           "has_published_time": false,
@@ -46113,13 +46118,13 @@
           "opinion_marker": false
         },
         "example": {
-          "has_meta_author": true,
-          "has_published_time": true,
-          "has_canonical": true,
+          "has_meta_author": false,
+          "has_published_time": false,
+          "has_canonical": false,
           "has_about_link": false,
           "has_contact_link": false,
           "has_corrections_link": false,
-          "outbound_links_count": 12,
+          "outbound_links_count": 0,
           "opinion_marker": false
         }
       }
@@ -46215,7 +46220,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-08-07T05:55:03.750Z",
+        "fetched_at": "2026-08-11T07:31:52.536Z",
         "homepage_url": "https://vt.edu/",
         "example_url": "https://news.vt.edu/articles/2026/03/Iran-Israel-Trump-gas-LNG-prices-Strait-Hormuz-economic-impact.html",
         "homepage_status": 200,
@@ -46337,7 +46342,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-08-07T05:55:03.767Z",
+        "fetched_at": "2026-08-11T07:31:52.554Z",
         "homepage_url": "https://x.m/",
         "example_url": "https://x.m/mjfree/status/2067065470641983623",
         "homepage_status": null,
@@ -46459,7 +46464,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-08-07T21:28:45.359Z",
+        "fetched_at": "2026-08-11T07:32:03.393Z",
         "homepage_url": "https://guardian.com/",
         "example_url": "https://www.guardian.com/business/2026/jun/28/ocado-boss-tim-steiner-payouts",
         "homepage_status": null,
@@ -46581,7 +46586,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-08-07T21:28:46.887Z",
+        "fetched_at": "2026-08-11T07:32:04.894Z",
         "homepage_url": "https://joerogan.com/",
         "example_url": "https://joerogan.com/clip/2026/06/30/income-tax-ngo-claims",
         "homepage_status": 200,
