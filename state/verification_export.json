@@ -1,11 +1,11 @@
 {
-  "generated_at": "2026-08-12T09:20:36.750Z",
+  "generated_at": "2026-08-12T09:24:13.799Z",
   "stats": {
-    "total": 1186,
-    "supported": 336,
-    "refuted": 225,
+    "total": 1191,
+    "supported": 339,
+    "refuted": 226,
     "contested": 6,
-    "unverified": 135,
+    "unverified": 136,
     "expired": 484
   },
   "claims": [
@@ -6514,6 +6514,108 @@
       "dissenting_sources": [],
       "framing_analysis": "The claim accurately states the candidate's campaign promise in Kaohsiung as reported, but couples it with an additional demographic assertion that is not supported by the provided sources.",
       "web_search_summary": "The provided search results confirm that an independent political candidate in Kaohsiung, Taiwan vowed to ban Indians from immigrating. However, the search results do not contain information to confirm or refute the claim that most Indians in Taiwan are higher-education students.",
+      "investigation_depth": "quick"
+    },
+    {
+      "claim_id": "live_520890d87b",
+      "claim_text": "China's real estate market crashed to 20-year low with about 25% of market already gone as of 2026-04-28",
+      "status": "supported",
+      "confidence_score": 0.67,
+      "display_score": 0.418,
+      "scoring_breakdown": {
+        "source_tier": 0.5,
+        "newsguard": 0.5,
+        "corroboration": 0.9,
+        "evidence_quality": 0.9,
+        "cross_source": 0.5,
+        "web_search": 0.8
+      },
+      "source_handle": null,
+      "source_tier": null,
+      "evidence_urls": [
+        "https://en.wikipedia.org/wiki/China",
+        "https://www.geocountries.com/china",
+        "https://www.britannica.com/place/China",
+        "https://www.worldatlas.com/maps/china",
+        "https://www.reuters.com/world/china/"
+      ],
+      "tweet_url": null,
+      "category": null,
+      "related_axis_id": "axis_global_economic_stability_v1",
+      "verification_count": 1,
+      "verified_at": "2026-08-12T09:22:52.080Z",
+      "created_at": "2026-08-12T09:22:52.078Z",
+      "original_source": "Financial media outlets aggregating BIS and China National Bureau of Statistics real estate data in April 2026.",
+      "claim_date": "2026-04-28",
+      "supporting_sources": [
+        {
+          "name": "Phemex News",
+          "excerpt": "On April 28, 2026, reports indicated China's real estate market plummeted to price levels at a 20-year low.",
+          "url": null
+        },
+        {
+          "name": "Asia Times",
+          "excerpt": "Inflation-adjusted price metrics placed real housing prices in early 2026 below levels from two decades prior.",
+          "url": null
+        }
+      ],
+      "dissenting_sources": [
+        {
+          "name": "GAM Investment Opinions",
+          "excerpt": "Real estate historically accounted for 20-25% of total fixed-asset investment, explaining macroeconomic impact rather than a literal 25% deletion of the market.",
+          "url": null
+        }
+      ],
+      "framing_analysis": "The claim validly captures the multi-decade low in real property prices, but misleadingly frames historical GDP/investment composition figures (20-25%) as a literal loss of 25% of the housing market.",
+      "web_search_summary": "Reports from late April 2026 indicate that inflation-adjusted real estate price indices in China fell to levels not seen in two decades. However, the assertion that '25% of the market is already gone' conflates historical sector composition (where real estate accounted for 20-25% of total fixed-asset investment) with an overall market destruction statistic.",
+      "investigation_depth": "quick"
+    },
+    {
+      "claim_id": "live_0a6de5e4c5",
+      "claim_text": "Iran conducted missile attacks targeting UAE and regional countries in late April 2026",
+      "status": "supported",
+      "confidence_score": 0.67,
+      "display_score": 0.418,
+      "scoring_breakdown": {
+        "source_tier": 0.5,
+        "newsguard": 0.5,
+        "corroboration": 0.9,
+        "evidence_quality": 0.9,
+        "cross_source": 0.5,
+        "web_search": 0.8
+      },
+      "source_handle": null,
+      "source_tier": null,
+      "evidence_urls": [
+        "https://en.wikipedia.org/wiki/2026_Iranian_Strikes_on_Arab_Countries",
+        "https://en.wikipedia.org/wiki/2026_Iranian_Strikes_on_Arab_Countries",
+        "https://en.wikipedia.org/wiki/United_Arab_Emirates_in_the_2026_Iran_war",
+        "https://en.wikipedia.org/wiki/United_Arab_Emirates_in_the_2026_Iran_war",
+        "https://www.aljazeera.com/news/2026/5/12/why-is-iran-increasingly-targeting-the-uae-in-its-war-messaging"
+      ],
+      "tweet_url": null,
+      "category": null,
+      "related_axis_id": "axis_global_economic_stability_v1",
+      "verification_count": 1,
+      "verified_at": "2026-08-12T09:23:34.199Z",
+      "created_at": "2026-08-12T09:23:34.196Z",
+      "original_source": "Unknown",
+      "claim_date": "2026-04",
+      "supporting_sources": [
+        {
+          "name": "Wikipedia",
+          "excerpt": "Iran launched a multiday series of missile and drone airstrikes on the UAE starting February 28, 2026, with hundreds of missiles intercepted as of April 9, 2026.",
+          "url": null
+        },
+        {
+          "name": "Al Jazeera",
+          "excerpt": "Iran launched missiles and drones mostly against the UAE, followed by Bahrain, Kuwait, Qatar, and Saudi Arabia.",
+          "url": null
+        }
+      ],
+      "dissenting_sources": [],
+      "framing_analysis": "The claim accurately reflects that Iran targeted the UAE and regional countries with missile attacks during the 2026 conflict, but narrows the timeframe to late April when the provided text only explicitly documents dates up to early April.",
+      "web_search_summary": "The provided search results confirm that Iran launched missile and drone attacks targeting the UAE and other regional Arab countries in 2026, starting in late February. However, while sources track attacks through at least April 9, 2026, the provided snippets do not specifically confirm strikes taking place in late April 2026.",
       "investigation_depth": "quick"
     },
     {
@@ -16876,6 +16978,59 @@
       "investigation_depth": "quick"
     },
     {
+      "claim_id": "live_a06c6b548d",
+      "claim_text": "Philippine inflation jumped to 7.2%, highest in three years, as of early May 2026",
+      "status": "supported",
+      "confidence_score": 0.62,
+      "display_score": 0.403,
+      "scoring_breakdown": {
+        "source_tier": 0.5,
+        "newsguard": 0.5,
+        "corroboration": 0.7,
+        "evidence_quality": 0.7,
+        "cross_source": 0.5,
+        "web_search": 1
+      },
+      "source_handle": null,
+      "source_tier": null,
+      "evidence_urls": [
+        "https://businessmirror.com.ph/2026/05/05/inflation-surges-to-7-2-highest-in-over-three-years/",
+        "https://businessmirror.com.ph/2026/05/05/inflation-surges-to-7-2-highest-in-over-three-years/",
+        "https://tribune.net.ph/2026/05/06/philippine-inflation-hits-three-year-high-in-april",
+        "https://tribune.net.ph/2026/05/06/philippine-inflation-hits-three-year-high-in-april",
+        "https://www.rappler.com/business/inflation-rate-philippines-april-2026/"
+      ],
+      "tweet_url": null,
+      "category": null,
+      "related_axis_id": "axis_global_economic_stability_v1",
+      "verification_count": 1,
+      "verified_at": "2026-08-12T09:23:51.988Z",
+      "created_at": "2026-08-12T09:23:51.987Z",
+      "original_source": "Philippine Statistics Authority (PSA)",
+      "claim_date": "2026-05-05",
+      "supporting_sources": [
+        {
+          "name": "BusinessMirror",
+          "excerpt": "The Philippine Statistics Authority reported that inflation jumped to 7.2 percent in April, reaching its highest level in over three years.",
+          "url": null
+        },
+        {
+          "name": "Daily Tribune",
+          "excerpt": "Philippine inflation surged to 7.2% in April 2026, marking its fastest pace in three years due to rising food, transport, and utility costs.",
+          "url": null
+        },
+        {
+          "name": "Rappler",
+          "excerpt": "Inflation skyrocketed to a three-year high of 7.2% in April 2026 as an oil shock drove fuel and food prices higher.",
+          "url": null
+        }
+      ],
+      "dissenting_sources": [],
+      "framing_analysis": "The claim is framed accurately and reflects the statistics reported by official government data in early May 2026 without misleading context.",
+      "web_search_summary": "The claim is fully supported by the provided search results. Reports published in early May 2026 show that the Philippine Statistics Authority recorded April 2026 inflation surging to 7.2%, making it the highest level in three years.",
+      "investigation_depth": "quick"
+    },
+    {
       "claim_id": "claim_85",
       "claim_text": "Israeli military planes are unable to fly due to the largest swarm of bees in recorded history.",
       "status": "supported",
@@ -24769,6 +24924,54 @@
       "investigation_depth": "quick"
     },
     {
+      "claim_id": "live_c2c4f48b86",
+      "claim_text": "Chinese household debt dropped for first time since 1994",
+      "status": "refuted",
+      "confidence_score": 0.45,
+      "display_score": 0.385,
+      "scoring_breakdown": {
+        "source_tier": 0.5,
+        "newsguard": 0.5,
+        "corroboration": 0,
+        "evidence_quality": 0.5,
+        "cross_source": 0.5,
+        "web_search": -1
+      },
+      "source_handle": null,
+      "source_tier": null,
+      "evidence_urls": [
+        "https://www.scmp.com/economy/china-economy/article/3362491/chinas-debt-ratio-dips-households-cut-borrowing-and-firms-slash-investment-report",
+        "https://www.scmp.com/economy/china-economy/article/3362491/chinas-debt-ratio-dips-households-cut-borrowing-and-firms-slash-investment-report",
+        "https://eu.36kr.com/en/p/3899499146823301",
+        "https://eu.36kr.com/en/p/3899499146823301",
+        "https://x.com/Real_JFK_Jr_/status/2049075519128264859"
+      ],
+      "tweet_url": null,
+      "category": null,
+      "related_axis_id": "axis_global_economic_stability_v1",
+      "verification_count": 3,
+      "verified_at": "2026-08-12T09:23:10.128Z",
+      "created_at": "2026-08-02T02:33:42.999Z",
+      "original_source": "@Real_JFK_Jr_ on X (formerly Twitter)",
+      "claim_date": "2024",
+      "supporting_sources": [],
+      "dissenting_sources": [
+        {
+          "name": "36Kr",
+          "excerpt": "Reported that the net drop in Chinese household loans in H1 2024 marked the first cumulative half-year decline since official relevant statistics became available, not specifically 1994.",
+          "url": null
+        },
+        {
+          "name": "South China Morning Post",
+          "excerpt": "Reported that China's overall debt-to-GDP ratio fell in the second quarter for the first time since 2022.",
+          "url": null
+        }
+      ],
+      "framing_analysis": "The claim is framed misleadingly by taking real economic data regarding a drop in household borrowing and adding unsourced, sensationalized historical assertions about 1994 to stoke market fear.",
+      "web_search_summary": "The claim that Chinese household debt dropped for the first time since 1994 is a misrepresentation of recent financial data. While China recorded a drop in household loans in H1 2024, reports indicate this was the first net decline since relevant official statistics became available, whereas the overall debt-to-GDP ratio fell for the first time since only 2022. The post on X appears to make up or confuse the 1994 historical timeframe to exaggerate market panic.",
+      "investigation_depth": "quick"
+    },
+    {
       "claim_id": "live_6d259c228f",
       "claim_text": "BREAKING: Mexican President Claudia Sheinbaum isn't playing games!\n\nMexico’s government says it will file criminal complaints in the United States over the deaths of 17 Mexican nationals in ICE custody or during immigration enforcement operations under the Trump administration.",
       "status": "refuted",
@@ -31844,43 +32047,6 @@
       "investigation_depth": "quick"
     },
     {
-      "claim_id": "live_c2c4f48b86",
-      "claim_text": "Chinese household debt dropped for first time since 1994",
-      "status": "unverified",
-      "confidence_score": 0.4,
-      "display_score": 0.353,
-      "scoring_breakdown": {
-        "source_tier": 0.5,
-        "newsguard": 0.5,
-        "corroboration": 0,
-        "evidence_quality": 0.5,
-        "cross_source": 0.5,
-        "web_search": 0.5
-      },
-      "source_handle": null,
-      "source_tier": null,
-      "evidence_urls": [
-        "https://eu.36kr.com/en/p/3899499146823301",
-        "https://eu.36kr.com/en/p/3899499146823301",
-        "https://x.com/Real_JFK_Jr_/status/2049075519128264859",
-        "https://x.com/Real_JFK_Jr_/status/2049075519128264859",
-        "https://www.zerohedge.com/economics/chinese-household-debt-drops-1st-time-three-decades"
-      ],
-      "tweet_url": null,
-      "category": null,
-      "related_axis_id": "axis_global_economic_stability_v1",
-      "verification_count": 2,
-      "verified_at": "2026-08-08T06:08:31.772Z",
-      "created_at": "2026-08-02T02:33:42.999Z",
-      "original_source": null,
-      "claim_date": "2024",
-      "supporting_sources": [],
-      "dissenting_sources": [],
-      "framing_analysis": "The claim correctly captures a historic decline in Chinese household debt, but framing the benchmark specifically as 'since 1994' is unverified by the provided results, which measure the drop against 2022 or since official record-keeping began.",
-      "web_search_summary": "Evaluating the ClaimGemini said",
-      "investigation_depth": "quick"
-    },
-    {
       "claim_id": "live_e7295a3663",
       "claim_text": "Senate Minority Leader Alan Peter Cayetano invited Senator Panfilo \"Ping\" Lacson to visit Taguig City and see for himself the projects in the city amid the investigation into the alleged anomalous flood control and other infrastructure projects in their bailiwick.\n\nLacson earlier",
       "status": "unverified",
@@ -32581,6 +32747,80 @@
       "dissenting_sources": [],
       "framing_analysis": null,
       "web_search_summary": "Defining the FrameworkGemini said",
+      "investigation_depth": "quick"
+    },
+    {
+      "claim_id": "live_a1187cc030",
+      "claim_text": "Federal Reserve injected exactly $7,585,000,000 into markets on 2026-05-05 at 9 AM ET",
+      "status": "unverified",
+      "confidence_score": 0.4,
+      "display_score": 0.337,
+      "scoring_breakdown": {
+        "source_tier": 0.5,
+        "newsguard": 0.5,
+        "corroboration": 0,
+        "evidence_quality": 0.5,
+        "cross_source": 0.5,
+        "web_search": 0.5
+      },
+      "source_handle": null,
+      "source_tier": null,
+      "evidence_urls": [
+        "https://www.federalreserve.gov/",
+        "https://www.federalreserve.gov/",
+        "https://www.federalreserve.gov/monetarypolicy/files/20260710_mprfullreport.pdf",
+        "https://www.federalreserve.gov/monetarypolicy/files/20260710_mprfullreport.pdf",
+        "https://www.abc.net.au/news/2025-11-05/us-fed-pumps-billions-into-economy-to-avert-credit-crunch/105970180"
+      ],
+      "tweet_url": null,
+      "category": null,
+      "related_axis_id": "axis_global_economic_stability_v1",
+      "verification_count": 1,
+      "verified_at": "2026-08-12T09:22:26.240Z",
+      "created_at": "2026-08-12T09:22:26.239Z",
+      "original_source": null,
+      "claim_date": "2026-05-05",
+      "supporting_sources": [],
+      "dissenting_sources": [],
+      "framing_analysis": "The claim presents a highly specific date, time, and monetary amount regarding Federal Reserve market operations, but without corresponding evidence in the search results, its framing cannot be evaluated as valid or misleading.",
+      "web_search_summary": "The provided search results contain general information about the Federal Reserve's monetary policy and operations from late 2025 and July 2026, but do not contain any specific details or records regarding an injection of $7,585,000,000 on May 5, 2026. As a result, the claim cannot be verified or refuted using ONLY the provided search results.",
+      "investigation_depth": "quick"
+    },
+    {
+      "claim_id": "live_2ef229481b",
+      "claim_text": "US and Iran were close to a 14-point deal including reopening the Strait of Hormuz as of 2026-05-06",
+      "status": "unverified",
+      "confidence_score": 0.4,
+      "display_score": 0.337,
+      "scoring_breakdown": {
+        "source_tier": 0.5,
+        "newsguard": 0.5,
+        "corroboration": 0,
+        "evidence_quality": 0.5,
+        "cross_source": 0.5,
+        "web_search": 0.5
+      },
+      "source_handle": null,
+      "source_tier": null,
+      "evidence_urls": [
+        "https://www.cnn.com/2026/06/17/middleeast/us-iran-war-mou-text-intl",
+        "https://www.cnn.com/2026/06/17/middleeast/us-iran-war-mou-text-intl",
+        "https://www.thenationalnews.com/news/mena/2026/06/18/us-and-iran-sign-digital-deal-to-end-war-reopen-hormuz-and-launch-60-day-talks/",
+        "https://www.thenationalnews.com/news/mena/2026/06/18/us-and-iran-sign-digital-deal-to-end-war-reopen-hormuz-and-launch-60-day-talks/",
+        "https://gulfnews.com/world/mena/near-final-14-point-us-iran-peace-deal-hormuz-reopening-sanctions-relief-nuclear-talks-in-focus-1.500576885"
+      ],
+      "tweet_url": null,
+      "category": null,
+      "related_axis_id": "axis_global_economic_stability_v1",
+      "verification_count": 1,
+      "verified_at": "2026-08-12T09:24:13.731Z",
+      "created_at": "2026-08-12T09:24:13.727Z",
+      "original_source": null,
+      "claim_date": null,
+      "supporting_sources": [],
+      "dissenting_sources": [],
+      "framing_analysis": null,
+      "web_search_summary": "Searching the webGemini said",
       "investigation_depth": "quick"
     },
     {
