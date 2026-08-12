@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-11T20:45:12.505Z",
+  "generated_at": "2026-08-11T23:45:57.553Z",
   "windows": [
     "1d",
     "3d",
@@ -240,22 +240,22 @@
     },
     "axis_political_dynasties_meritocracy_v1": {
       "current": {
-        "score": 0.2218,
-        "confidence": 0.6293
+        "score": 0.2406,
+        "confidence": 0.6353
       },
       "1d": {
-        "score_delta": 0,
-        "conf_delta": -0.002,
+        "score_delta": 0.0188,
+        "conf_delta": 0.004,
         "direction": "→"
       },
       "3d": {
-        "score_delta": 0.0196,
-        "conf_delta": -0.002,
-        "direction": "→"
+        "score_delta": 0.0384,
+        "conf_delta": 0.004,
+        "direction": "↗"
       },
       "7d": {
-        "score_delta": 0.0401,
-        "conf_delta": -0.002,
+        "score_delta": 0.0589,
+        "conf_delta": 0.004,
         "direction": "↗"
       }
     },
@@ -325,21 +325,21 @@
     "axis_global_economic_stability_v1": {
       "current": {
         "score": 0.7099,
-        "confidence": 0.9498
+        "confidence": 0.9478
       },
       "1d": {
         "score_delta": 0.0045,
-        "conf_delta": 0.062,
+        "conf_delta": 0.06,
         "direction": "→"
       },
       "3d": {
         "score_delta": 0.0045,
-        "conf_delta": 0.058,
+        "conf_delta": 0.056,
         "direction": "→"
       },
       "7d": {
         "score_delta": 0.0045,
-        "conf_delta": 0.052,
+        "conf_delta": 0.05,
         "direction": "→"
       }
     },
@@ -471,21 +471,21 @@
     },
     "axis_human_rights_exploitation_v1": {
       "current": {
-        "score": -0.4888,
+        "score": -0.4921,
         "confidence": 0.9499
       },
       "1d": {
-        "score_delta": -0.0034,
+        "score_delta": -0.0067,
         "conf_delta": 0,
         "direction": "→"
       },
       "3d": {
-        "score_delta": -0.0137,
+        "score_delta": -0.017,
         "conf_delta": 0.004,
         "direction": "→"
       },
       "7d": {
-        "score_delta": -0.0242,
+        "score_delta": -0.0275,
         "conf_delta": 0.004,
         "direction": "↘"
       }
@@ -597,22 +597,22 @@
     },
     "axis_environmental_policy_v_economic_v1": {
       "current": {
-        "score": -0.2142,
-        "confidence": 0.6783
+        "score": -0.1885,
+        "confidence": 0.6823
       },
       "1d": {
-        "score_delta": 0,
-        "conf_delta": -0.002,
-        "direction": "→"
+        "score_delta": 0.0257,
+        "conf_delta": 0.002,
+        "direction": "↗"
       },
       "3d": {
-        "score_delta": 0.0094,
-        "conf_delta": 0.0157,
-        "direction": "→"
+        "score_delta": 0.0351,
+        "conf_delta": 0.0197,
+        "direction": "↗"
       },
       "7d": {
-        "score_delta": -0.0081,
-        "conf_delta": 0.0199,
+        "score_delta": 0.0176,
+        "conf_delta": 0.0239,
         "direction": "→"
       }
     },
@@ -744,22 +744,22 @@
     },
     "axis_immigration_policy_v_national_control_v1": {
       "current": {
-        "score": 0.8729,
-        "confidence": 0.9006
+        "score": 0.8756,
+        "confidence": 0.909
       },
       "1d": {
-        "score_delta": 0,
-        "conf_delta": -0.002,
+        "score_delta": 0.0027,
+        "conf_delta": 0.0064,
         "direction": "→"
       },
       "3d": {
-        "score_delta": 0.0014,
-        "conf_delta": -0.002,
+        "score_delta": 0.0041,
+        "conf_delta": 0.0064,
         "direction": "→"
       },
       "7d": {
-        "score_delta": 0.0028,
-        "conf_delta": 0.0293,
+        "score_delta": 0.0055,
+        "conf_delta": 0.0377,
         "direction": "→"
       }
     },
@@ -1257,6 +1257,7 @@
   },
   "notable_count": 8,
   "momentum_axes": [
+    "axis_political_dynasties_meritocracy_v1",
     "axis_education_literacy",
     "axis_social_welfare_v_military_spending_v1",
     "axis_humanitarian_crisis_response",
