@@ -164,7 +164,7 @@ Drives the signed-in Google account at gemini.google.com — no API key.
 | `generateVideo(prompt, {referenceImagePath})` | Veo, needs an entitlement → `{buffer, mime}` or `null`. |
 | `deleteCurrentChat()` | Delete the conversation open in this tab → bool. |
 | `listChats()` | Sidebar conversations → `[{id, title}]`. |
-| `purgeChats({dryRun, max, maxScan, pauseMs, jitter, restEvery, restMs})` | Delete chats whose FIRST PROMPT matches `Gemini.AGENT_PROMPT_PATTERNS` → `{scanned, matched, deleted, kept}`. Self-throttling: jittered pauses plus periodic rests, because one page load per chat at full speed trips Google's interstitial. |
+| `purgeChats({dryRun, max, maxScan, pauseMs, jitter, restEvery, restMs})` | Delete single-turn chats whose prompt matches `Gemini.AGENT_PROMPT_PATTERNS` → `{scanned, matched, deleted, kept, acted, failures}`. `acted` names the chats deleted, `failures` those it could not process; neither records the chats left alone. Self-throttling: jittered pauses plus periodic rests, because one page load per chat at full speed trips Google's interstitial. |
 
 The account is a person's own, and their chats sit in the same history. Two rules
 keep the engine off them:

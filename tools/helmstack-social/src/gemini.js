@@ -589,15 +589,38 @@ class Gemini {
    * match keeps a long human chat out of range even if some bubble of theirs
    * were to read like an agent prompt.
    */
-  async conversationShape({ maxChars = 400 } = {}) {
+  async conversationShape({ maxChars = 400, expectId = null } = {}) {
     const raw = await this._eval(
       `JSON.stringify((() => {
         const qs = [...document.querySelectorAll('user-query')];
         let t = (qs[0]?.textContent || '').trim().replace(/^\\s*You\\s+said\\s*:?\\s*/i, '');
-        return { turns: qs.length, first: t.slice(0, ${maxChars}) };
+        return {
+          here: ${expectId ? `location.href.indexOf(${JSON.stringify(expectId)}) >= 0` : "true"},
+          turns: qs.length,
+          first: t.slice(0, ${maxChars}),
+        };
       })())`
     ).catch(() => null);
-    try { return JSON.parse(raw); } catch { return { turns: 0, first: "" }; }
+    try { return JSON.parse(raw); } catch { return { here: false, turns: 0, first: "" }; }
+  }
+
+  /**
+   * Poll `conversationShape` until the tab is on `id` AND a turn has text.
+   *
+   * One read, not two. Waiting on a "has text" probe and then reading the text
+   * in a second call let the page move between them: the probe passed against
+   * the outgoing chat, the read landed on the incoming one before it filled, and
+   * the prompt came back empty — which reads as "not an agent chat" and quietly
+   * skips it. Returns the shape, or null on timeout.
+   */
+  async _awaitConversation(id, timeoutMs = 20_000, interval = 700) {
+    const deadline = Date.now() + timeoutMs;
+    for (;;) {
+      const shape = await this.conversationShape({ expectId: id });
+      if (shape.here && shape.turns > 0 && shape.first) return shape;
+      if (Date.now() >= deadline) return null;
+      await sleep(interval);
+    }
   }
 
   async firstPromptText({ maxChars = 400 } = {}) {
@@ -646,7 +669,11 @@ class Gemini {
    * @param {number}   [opts.restMs=120000]     length of that rest
    * @param {function} [opts.onChat]            ({ title, prompt, match, deleted }) => void
    * @param {function} [opts.onRest]            (ms, stats) => void
-   * @returns {Promise<{scanned:number, matched:number, deleted:number, kept:number}>}
+   * @returns {Promise<{scanned, matched, deleted, kept, acted, failures}>}
+   *   `acted` lists the agent chats deleted (or, in a dry run, that would be) as
+   *   `{id, title, prompt}`; `failures` lists `{id, title, reason}`. Neither
+   *   records the chats left alone — those are the account owner's, and a report
+   *   of what this tool DID has no business carrying their titles around.
    */
   async purgeChats({
     patterns, dryRun = true, max = Infinity, maxScan = Infinity,
@@ -662,7 +689,7 @@ class Gemini {
       return { scanned: 0, matched: 0, deleted: 0, kept: 0 };
     }
 
-    const stats = { scanned: 0, matched: 0, deleted: 0, kept: 0 };
+    const stats = { scanned: 0, matched: 0, deleted: 0, kept: 0, acted: [], failures: [] };
     const chats = await this.listChats();
     if (!chats.length) {
       // Distinguish "no history" from "the list rendered but ids didn't" —
@@ -698,15 +725,8 @@ class Gemini {
       // "first prompt" would read whichever chat was opened first. A real load
       // remounts the app, making the first bubble unambiguously this chat's.
       await this.client.navigate(this.tabId, this._convUrl(id)).catch(() => {});
-      // Wait for the URL to commit AND for the bubble to carry TEXT. Either half
-      // alone gives a wrong answer: a poll issued while the outgoing page is
-      // still mounted sees the previous chat's text and returns immediately, and
-      // <user-query> itself mounts before it fills. Both misread as "" — which
-      // silently means "not one of ours" and skips a chat that should go.
-      const HAS_PROMPT = `location.href.indexOf(${JSON.stringify(id)}) >= 0
-        && ((document.querySelector('user-query, user-query-content') || {}).textContent || '')
-             .replace(/^\\s*You\\s+said\\s*:?\\s*/i, '').trim().length > 0`;
-      if (!(await this._waitFor(HAS_PROMPT, 20_000))) {
+      const shape = await this._awaitConversation(id);
+      if (!shape) {
         // Rapid page loads can trip Google's anti-abuse interstitial. That is a
         // stop sign, not an obstacle: bail out and let a human deal with it,
         // rather than grinding through the rest of the list against a wall.
@@ -715,22 +735,34 @@ class Gemini {
           throw new Error("Google served its anti-abuse interstitial — purge stopped. Clear it by hand in the browser and re-run later (a larger --pause-ms helps).");
         }
         console.warn(`[gemini] could not open chat ${id} (${title}) — leaving it alone`);
-        stats.kept++;
+        // Not counted as kept: it was never examined, so it belongs in the
+        // failure list only. Folding it into `kept` made "left alone" exceed
+        // "scanned" in the summary.
+        stats.failures.push({ id, title, reason: "chat did not load" });
         continue;
       }
 
-      const { turns, first: prompt } = await this.conversationShape();
+      const { turns, first: prompt } = shape;
       // Both conditions, always: this engine only ever leaves single-turn chats.
       const match = turns === 1 && pats.some((re) => re.test(prompt));
       stats.scanned++;
       let deleted = false;
       if (match) {
         stats.matched++;
-        if (dryRun) stats.kept++;
-        else {
+        if (dryRun) {
+          stats.kept++;
+        } else {
           deleted = await this.deleteCurrentChat();
-          if (deleted) stats.deleted++; else stats.kept++;
+          if (deleted) {
+            stats.deleted++;
+          } else {
+            stats.failures.push({ id, title, reason: "delete did not confirm" });
+            stats.kept++;
+          }
         }
+        // Recorded whether or not it went: in a dry run this IS the plan, and
+        // after a real run it is the only record that the chat ever existed.
+        stats.acted.push({ id, title, prompt: prompt.slice(0, 120), deleted });
       } else {
         stats.kept++;
       }
