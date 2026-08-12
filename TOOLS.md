@@ -135,6 +135,14 @@ appears anyway the run stops and says so — clearing it is a human's job.
 **Run it when no cycle is active.** The purge and a live fact-check share the
 same browser tab, so they will fight over it.
 
+**Report.** Every run ends with a summary — counts, then the deleted chats listed
+by title and id, then anything it could not process — and writes the same as JSON
+to `helmstack/gemini_purge/<timestamp>.json` (`--report FILE` to place it,
+`--no-report` to skip). The report records only the chats it ACTED on: the account
+owner's chats are read to rule them out and then forgotten, so their titles never
+reach a file. `helmstack/` is gitignored, which is what keeps a private chat list
+out of the repo.
+
 ---
 
 ## State files (`state/`)

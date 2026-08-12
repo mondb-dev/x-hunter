@@ -10,6 +10,7 @@
  *   helmstack-social bootstrap       --cookies cookies.json
  *   helmstack-social gemini purge    [--apply] [--max N] [--max-scan N]
  *                                    [--pause-ms MS] [--jitter F] [--rest-every N] [--rest-ms MS]
+ *                                    [--report FILE | --no-report]
  *
  * Config comes from env: HELMSTACK_URL, HELMSTACK_AUTH_TOKEN.
  * `--comment-command` receives the post JSON on stdin and must print the comment
@@ -178,8 +179,56 @@ async function main() {
           console.log(`${match ? (deleted ? "DELETED" : dry ? "WOULD DELETE" : "FAILED ") : "keep    "} | ${title.slice(0, 50).padEnd(50)} | ${prompt.slice(0, 60)}`),
         onRest: (ms, s) => console.log(`--- resting ${Math.round(ms / 1000)}s (${s.scanned} scanned, ${s.deleted} deleted) ---`),
       });
-      console.log(JSON.stringify(stats));
-      if (dry) console.log("dry run — re-run with --apply to delete");
+      // ── Report ──────────────────────────────────────────────────────────
+      // A sweep takes 12-15 minutes and scrolls well past the terminal, and the
+      // deletions are irreversible — so end with a standalone account of what
+      // was removed, not just a tally.
+      const verb = dry ? "would delete" : "deleted";
+      const line = "─".repeat(64);
+      console.log(`\n${line}`);
+      console.log(`gemini purge — ${dry ? "DRY RUN (nothing deleted)" : "APPLIED"}`);
+      console.log([
+        `scanned ${stats.scanned}`,
+        `matched ${stats.matched}`,
+        `${dry ? "would delete" : "deleted"} ${dry ? stats.matched : stats.deleted}`,
+        `left alone ${stats.kept - (dry ? stats.matched : 0)}`,
+        stats.failures.length ? `failed ${stats.failures.length}` : null,
+      ].filter(Boolean).join("   "));
+      console.log(line);
+      if (stats.acted.length) {
+        console.log(`\n${stats.acted.length} agent ${stats.acted.length === 1 ? "chat" : "chats"} ${verb}:`);
+        stats.acted.forEach((c, i) => console.log(`  ${String(i + 1).padStart(3)}. ${c.title}  [${c.id}]`));
+      } else {
+        console.log("\nno agent chats found.");
+      }
+      if (stats.failures.length) {
+        console.log(`\n${stats.failures.length} could not be processed (left untouched):`);
+        stats.failures.forEach((f) => console.log(`  - ${f.title} [${f.id}] — ${f.reason}`));
+      }
+
+      // Report file holds ONLY the chats acted on. The account owner's chats are
+      // read to rule them out and then deliberately forgotten — their titles are
+      // none of this log's business.
+      const noReport = has("--no-report");
+      if (!noReport) {
+        const defaultDir = "helmstack/gemini_purge"; // gitignored
+        let out = arg("--report");
+        if (!out || out === true) out = `${defaultDir}/${new Date().toISOString().replace(/[:.]/g, "-")}${dry ? "-dryrun" : ""}.json`;
+        try {
+          fs.mkdirSync(require("path").dirname(out), { recursive: true });
+          fs.writeFileSync(out, JSON.stringify({
+            ran_at: new Date().toISOString(),
+            mode: dry ? "dry-run" : "applied",
+            scanned: stats.scanned, matched: stats.matched, deleted: stats.deleted,
+            [dry ? "would_delete" : "deleted_chats"]: stats.acted,
+            failures: stats.failures,
+          }, null, 2));
+          console.log(`\nreport: ${out}`);
+        } catch (e) {
+          console.warn(`\ncould not write report (${e.message}) — the list above is the record`);
+        }
+      }
+      if (dry) console.log("\ndry run — re-run with --apply to delete");
       return;
     }
     throw new Error(`unknown gemini subcommand: ${sub}`);
