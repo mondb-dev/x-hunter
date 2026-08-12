@@ -1,17 +1,17 @@
 {
   "schema_version": "1.0",
-  "generated_at": "2026-08-12T04:44:17.748Z",
+  "generated_at": "2026-08-12T07:44:20.513Z",
   "method": "mechanical_registry_v1",
-  "profiled_at": "2026-08-12T04:44:27.171Z",
+  "profiled_at": "2026-08-12T07:44:27.605Z",
   "sources": [
     {
       "domain": "theguardian.com",
       "entity": "Theguardian",
       "kind": "news",
       "first_seen_at": "2026-03-27T23:17:00Z",
-      "last_seen_at": "2026-08-11T07:02:49.744Z",
+      "last_seen_at": "2026-08-12T07:15:01.538Z",
       "discovery": {
-        "distinct_urls": 811,
+        "distinct_urls": 814,
         "example_urls": [
           "https://www.theguardian.com/us-news/2026/jun/23/trump-immigration-courthouse-arrest-policy",
           "https://www.theguardian.com/us-news/2026/jun/28/ice-minnesota-defending-democracy",
@@ -20,9 +20,9 @@
           "https://www.theguardian.com/global-development/2026/jun/26/woman-sadia-moalim-ali-three-year-jail-sentence-somalia-online-comments-governement"
         ],
         "origin_counts": {
-          "ontology_evidence": 45,
-          "reading_queue": 775,
-          "journals": 120,
+          "ontology_evidence": 46,
+          "reading_queue": 777,
+          "journals": 121,
           "articles": 5
         },
         "distinct_referring_accounts": 0,
@@ -31,6 +31,7 @@
           "axis_ai_societal_impact_v1",
           "axis_authoritarian_self_determination_v1",
           "axis_collective_voice",
+          "axis_crisis_visibility_hierarchy_v1",
           "axis_dehumanization_propaganda_v1",
           "axis_economic_indicators_reliability_v1",
           "axis_environmental_policy_v_economic_v1",
@@ -74,8 +75,8 @@
         "breadth": {
           "score": 0.94,
           "basis": [
-            "distinct_urls:811",
-            "distinct_axes:19",
+            "distinct_urls:814",
+            "distinct_axes:20",
             "origin_types:4"
           ]
         },
@@ -114,8 +115,8 @@
             "newsroom_domain_pattern",
             "article_path_seen",
             "doi_or_identifier_path_seen",
-            "distinct_urls:811",
-            "distinct_axes:19",
+            "distinct_urls:814",
+            "distinct_axes:20",
             "origin_types:4",
             "referring_accounts:0",
             "origin_types:4",
@@ -287,9 +288,9 @@
       "entity": "Aljazeera",
       "kind": "news",
       "first_seen_at": "2026-06-22T02:45:00Z",
-      "last_seen_at": "2026-08-12T04:15:05.619Z",
+      "last_seen_at": "2026-08-12T05:45:03.459Z",
       "discovery": {
-        "distinct_urls": 413,
+        "distinct_urls": 414,
         "example_urls": [
           "https://www.aljazeera.com/opinions/2026/6/24/south-africas-crises-will-not-be-solved-by-blaming-migrants",
           "https://www.aljazeera.com/video/newsfeed/2026/6/27/newly-released-video-exposes-henry-nowak-killers-lies?traffic_source=rss",
@@ -300,7 +301,7 @@
         "origin_counts": {
           "ontology_evidence": 187,
           "reading_queue": 17,
-          "journals": 511,
+          "journals": 512,
           "articles": 8
         },
         "distinct_referring_accounts": 0,
@@ -361,7 +362,7 @@
         "breadth": {
           "score": 0.94,
           "basis": [
-            "distinct_urls:413",
+            "distinct_urls:414",
             "distinct_axes:29",
             "origin_types:4"
           ]
@@ -400,7 +401,7 @@
           "basis": [
             "newsroom_domain_pattern",
             "article_path_seen",
-            "distinct_urls:413",
+            "distinct_urls:414",
             "distinct_axes:29",
             "origin_types:4",
             "referring_accounts:0",
@@ -1216,7 +1217,7 @@
       "first_seen_at": "2026-06-26T07:05:00Z",
       "last_seen_at": "2026-08-07T21:29:16.276Z",
       "discovery": {
-        "distinct_urls": 496,
+        "distinct_urls": 497,
         "example_urls": [
           "https://www.bbc.co.uk/news/articles/cn8qxz6qypyo",
           "https://www.bbc.co.uk/news/articles/cn075j04pnyo?at_medium=RSS&amp;at_campaign=rss",
@@ -1226,7 +1227,7 @@
         ],
         "origin_counts": {
           "ontology_evidence": 6,
-          "reading_queue": 508,
+          "reading_queue": 509,
           "journals": 17,
           "articles": 1
         },
@@ -1262,7 +1263,7 @@
         "breadth": {
           "score": 0.8233333333333333,
           "basis": [
-            "distinct_urls:496",
+            "distinct_urls:497",
             "distinct_axes:4",
             "origin_types:4"
           ]
@@ -1300,7 +1301,7 @@
           "method": "mechanical_v1",
           "basis": [
             "newsroom_domain_pattern",
-            "distinct_urls:496",
+            "distinct_urls:497",
             "distinct_axes:4",
             "origin_types:4",
             "referring_accounts:0",
@@ -2565,9 +2566,9 @@
       "entity": "Philstar",
       "kind": "unknown",
       "first_seen_at": "2026-05-20T06:57:31.760Z",
-      "last_seen_at": "2026-08-12T02:44:55.272Z",
+      "last_seen_at": "2026-08-12T07:15:01.515Z",
       "discovery": {
-        "distinct_urls": 177,
+        "distinct_urls": 179,
         "example_urls": [
           "https://www.philstar.com/headlines/2026/06/24/2537506/mike-defensor-face-trafficking-complaint-over-pasig-ktv-bar-raid",
           "https://www.philstar.com/headlines/2026/06/24/2537509/ched-tells-ateneo-explain-drowning-baterbonia-adili-or-face-sanctions",
@@ -2576,8 +2577,8 @@
           "https://www.philstar.com/headlines/2026/06/28/2538295/icc-freezes-money-seized-duterte"
         ],
         "origin_counts": {
-          "ontology_evidence": 84,
-          "journals": 221,
+          "ontology_evidence": 85,
+          "journals": 223,
           "articles": 3
         },
         "distinct_referring_accounts": 0,
@@ -2626,7 +2627,7 @@
         "breadth": {
           "score": 0.8799999999999999,
           "basis": [
-            "distinct_urls:177",
+            "distinct_urls:179",
             "distinct_axes:17",
             "origin_types:3"
           ]
@@ -2665,7 +2666,7 @@
           "basis": [
             "unknown_domain_pattern",
             "article_path_seen",
-            "distinct_urls:177",
+            "distinct_urls:179",
             "distinct_axes:17",
             "origin_types:3",
             "referring_accounts:0",
@@ -3246,9 +3247,9 @@
       "entity": "T Co",
       "kind": "unknown",
       "first_seen_at": "2016-05-05T18:57:30.000Z",
-      "last_seen_at": "2026-08-12T04:35:00.000Z",
+      "last_seen_at": "2026-08-12T07:01:03.000Z",
       "discovery": {
-        "distinct_urls": 12945,
+        "distinct_urls": 12951,
         "example_urls": [
           "https://t.co/pJSE124ec4",
           "https://t.co/Soz8BXPWaa",
@@ -3257,7 +3258,7 @@
           "https://t.co/cYaqYDRp08"
         ],
         "origin_counts": {
-          "feed_buffer": 10628,
+          "feed_buffer": 10636,
           "feed_buffer_reply": 4898,
           "articles": 3
         },
@@ -3300,7 +3301,7 @@
         "breadth": {
           "score": 0.53,
           "basis": [
-            "distinct_urls:12945",
+            "distinct_urls:12951",
             "distinct_axes:0",
             "origin_types:3"
           ]
@@ -3339,7 +3340,7 @@
           "basis": [
             "unknown_domain_pattern",
             "doi_or_identifier_path_seen",
-            "distinct_urls:12945",
+            "distinct_urls:12951",
             "distinct_axes:0",
             "origin_types:3",
             "referring_accounts:2734",
@@ -3385,9 +3386,9 @@
       "entity": "Inquirer",
       "kind": "unknown",
       "first_seen_at": "2026-05-09T10:15:15.053Z",
-      "last_seen_at": "2026-08-12T04:15:05.642Z",
+      "last_seen_at": "2026-08-12T07:15:01.538Z",
       "discovery": {
-        "distinct_urls": 351,
+        "distinct_urls": 355,
         "example_urls": [
           "https://newsinfo.inquirer.net/2266316/nbi-on-cayetano-position-that-cant-be-defended-by-facts-is-done-with-insults",
           "https://www.inquirer.net/capiz-broadcaster-shooting-probe-widens-as-cops-form-task-force",
@@ -3396,8 +3397,8 @@
           "https://newsinfo.inquirer.net/2251702/chr-seeks-swift-passage-of-bills-creating-detention-monitoring-body"
         ],
         "origin_counts": {
-          "ontology_evidence": 135,
-          "journals": 430,
+          "ontology_evidence": 136,
+          "journals": 433,
           "articles": 4
         },
         "distinct_referring_accounts": 0,
@@ -3450,7 +3451,7 @@
         "breadth": {
           "score": 0.8799999999999999,
           "basis": [
-            "distinct_urls:351",
+            "distinct_urls:355",
             "distinct_axes:22",
             "origin_types:3"
           ]
@@ -3488,7 +3489,7 @@
           "method": "mechanical_v1",
           "basis": [
             "unknown_domain_pattern",
-            "distinct_urls:351",
+            "distinct_urls:355",
             "distinct_axes:22",
             "origin_types:3",
             "referring_accounts:0",
@@ -12646,7 +12647,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-08-09T06:31:04.702Z",
+        "fetched_at": "2026-08-12T07:14:20.176Z",
         "homepage_url": "https://bitget.com/",
         "example_url": "https://partner.bitget.com/bg/SMTwittercfd?twclid=2dlbmypv93aoxlr6pzrilrub21",
         "homepage_status": null,
@@ -13285,7 +13286,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-08-09T06:31:05.881Z",
+        "fetched_at": "2026-08-12T07:14:21.466Z",
         "homepage_url": "https://sentinels.gg/",
         "example_url": "https://shop.sentinels.gg/collections/sen-metallics?twclid=2eikc5h5also5tonotr2q4ciq6",
         "homepage_status": 200,
@@ -14169,7 +14170,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-08-09T05:01:03.922Z",
+        "fetched_at": "2026-08-12T05:44:21.869Z",
         "homepage_url": "https://panzer.quest/",
         "example_url": "https://panzer.quest/?r=twipq1wwa&twclid=29prb4l0osv19xvy30sejzir0",
         "homepage_status": 200,
@@ -16571,7 +16572,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-08-09T06:31:06.162Z",
+        "fetched_at": "2026-08-12T07:14:21.824Z",
         "homepage_url": "https://aitradingbotreview.com/",
         "example_url": "https://aitradingbotreview.com/cointech2u-okx-testimonial/?utm_source=x&utm_medium=cpc&utm_campaign=ct2u_cici_testimonial_v1&utm_content=v3_architecture&twclid=29n2yshl33pi6gwhsndaezd9zg",
         "homepage_status": 200,
@@ -18214,7 +18215,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-08-09T06:31:06.537Z",
+        "fetched_at": "2026-08-12T07:14:22.464Z",
         "homepage_url": "https://puter.com/",
         "example_url": "https://developer.puter.com/?utm_source=x&utm_medium=paid_social&utm_campaign=backend_ai&twclid=27ht9opz02h3rp1i1jsomffb4m",
         "homepage_status": 200,
@@ -34918,7 +34919,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-08-09T05:01:07.639Z",
+        "fetched_at": "2026-08-12T05:44:23.857Z",
         "homepage_url": "https://figma.bot/",
         "example_url": "https://figma.bot/4erZ585?twclid=2c31nfwdd6xvlc3otoa9aoi4sv",
         "homepage_status": 200,
@@ -35044,7 +35045,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-08-09T05:01:12.022Z",
+        "fetched_at": "2026-08-12T05:44:27.096Z",
         "homepage_url": "https://telega.io/",
         "example_url": "https://telega.io/package/?r=Vz7qIZLvWm_r&utm_source=dsp_banner&utm_medium=cpc&utm_campaign=X%5BALL%5BS%5BD%5BM%5BAds%5BTGads%7Cs%7Cdsp_banner%7Cm%7Ccpc%7Cc%7C103%7Cct%7C102&twclid=29ffqq0bpqjb2yxu5ppn3bdkms",
         "homepage_status": 200,
@@ -35170,7 +35171,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-08-09T05:01:13.996Z",
+        "fetched_at": "2026-08-12T05:44:28.512Z",
         "homepage_url": "https://org.ph/",
         "example_url": "https://www.worldvision.org.ph/chosen/?utm_medium=paid&utm_source=x-video-ad&utm_campaign=chosen&utm_id=child-sponsorship&utm_content=x-chosen-lee-jun-ho-main-video-awr-paid-social-omt&twclid=2cse6q3251wnx3ic8w9l0fj9d9",
         "homepage_status": null,
@@ -35296,7 +35297,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-08-09T05:31:15.637Z",
+        "fetched_at": "2026-08-12T06:14:23.951Z",
         "homepage_url": "https://alphawire.xyz/",
         "example_url": "https://alphawire.xyz/?twclid=2p71crxbbvb07f2xbxdculv89",
         "homepage_status": 200,
@@ -35422,7 +35423,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-08-09T05:31:16.003Z",
+        "fetched_at": "2026-08-12T06:14:24.867Z",
         "homepage_url": "https://bingoplus.com/",
         "example_url": "https://bingoplus.com/?palcode=2077999381702086656&twclid=28n3e8dzy2r55kg6u29i1aw2go",
         "homepage_status": 200,
@@ -35674,7 +35675,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-08-09T05:31:16.393Z",
+        "fetched_at": "2026-08-12T06:14:25.634Z",
         "homepage_url": "https://clickhouse.com/",
         "example_url": "https://clickhouse.com/blog/cloudflare?utm_campaign=twitter-awareness-apac-tier-2&utm_source=Twitter&utm_medium=paid-social&twclid=2e6nwzr1alswe5w301ver5l71",
         "homepage_status": 200,
@@ -36049,7 +36050,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-08-09T05:31:17.233Z",
+        "fetched_at": "2026-08-12T06:14:26.526Z",
         "homepage_url": "https://straitstimes.com/",
         "example_url": "https://straitstimes.com/",
         "homepage_status": 200,
@@ -36172,7 +36173,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-08-09T07:01:13.184Z",
+        "fetched_at": "2026-08-12T07:44:21.848Z",
         "homepage_url": "https://brennancenter.org/",
         "example_url": "https://www.brennancenter.org/",
         "homepage_status": 200,
@@ -36295,7 +36296,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-08-09T07:01:14.634Z",
+        "fetched_at": "2026-08-12T07:44:25.632Z",
         "homepage_url": "https://thesandersfirmpc.com/",
         "example_url": "https://thesandersfirmpc.com/evidentiary-inversion-when-internal-investigations-manufacture-misconduct/",
         "homepage_status": 200,
@@ -36418,7 +36419,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-08-09T07:01:15.368Z",
+        "fetched_at": "2026-08-12T07:44:26.228Z",
         "homepage_url": "https://hindustantimes.com/",
         "example_url": "https://www.hindustantimes.com/cities/lucknow-news/saffron-cash-for-crores-probe-into-ram-mandir-donation-scam-widens-to-employees-150-sevadars-under-scanner-101718873733575.html",
         "homepage_status": 200,
@@ -36541,7 +36542,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-08-09T07:01:16.585Z",
+        "fetched_at": "2026-08-12T07:44:27.605Z",
         "homepage_url": "https://britannica.com/",
         "example_url": "https://www.britannica.com/event/2026-Iran-War",
         "homepage_status": 403,
@@ -87915,6 +87916,83 @@
         "distinct_referring_accounts": 1,
         "sample_referring_accounts": [
           "pocoglobal"
+        ],
+        "distinct_axes": []
+      },
+      "claims": {
+        "total": 0,
+        "supported": 0,
+        "refuted": 0,
+        "contested": 0,
+        "unverified": 0,
+        "resolved_count": 0
+      },
+      "structural_features": {
+        "has_search_paths": false,
+        "has_article_paths": false,
+        "has_doi_paths": false
+      },
+      "ratings": {
+        "provenance": {
+          "score": 0.45,
+          "basis": [
+            "unknown_domain_pattern"
+          ]
+        },
+        "breadth": {
+          "score": 0.08916666666666666,
+          "basis": [
+            "distinct_urls:1",
+            "distinct_axes:0",
+            "origin_types:1"
+          ]
+        },
+        "corroboration": {
+          "score": 0.19583333333333333,
+          "basis": [
+            "referring_accounts:1",
+            "origin_types:1"
+          ]
+        },
+        "track_record": {
+          "score": null,
+          "basis": [
+            "no_resolved_claims_observed"
+          ]
+        },
+        "overall": {
+          "score": 0.3472395833333333,
+          "confidence": 0.08135,
+          "method": "mechanical_v1",
+          "basis": [
+            "unknown_domain_pattern",
+            "distinct_urls:1",
+            "distinct_axes:0",
+            "origin_types:1",
+            "referring_accounts:1",
+            "origin_types:1",
+            "track_record_unavailable"
+          ]
+        }
+      }
+    },
+    {
+      "domain": "dynamiclivewall.com",
+      "entity": "Dynamiclivewall",
+      "kind": "unknown",
+      "first_seen_at": "2026-08-12T05:55:25.693Z",
+      "last_seen_at": "2026-08-12T05:55:25.693Z",
+      "discovery": {
+        "distinct_urls": 1,
+        "example_urls": [
+          "https://dynamiclivewall.com/?twclid=23ej74j717urz9aiq9ed7kl4gi"
+        ],
+        "origin_counts": {
+          "feed_buffer": 1
+        },
+        "distinct_referring_accounts": 1,
+        "sample_referring_accounts": [
+          "basalt_blaobiw"
         ],
         "distinct_axes": []
       },
