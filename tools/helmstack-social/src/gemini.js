@@ -696,6 +696,13 @@ class Gemini {
     }
 
     const stats = { scanned: 0, matched: 0, deleted: 0, kept: 0, acted: [], failures: [] };
+    // Gemini usually writes a short title, but when it doesn't the title IS the
+    // whole prompt — newlines, search results and all. One of those turned the
+    // run summary into forty lines of pasted article text.
+    const label = (t) => {
+      const flat = String(t || "").replace(/\s+/g, " ").trim();
+      return flat.length > 70 ? `${flat.slice(0, 67)}...` : flat || "(untitled)";
+    };
     try {
     const chats = await this.listChats();
     if (!chats.length) {
@@ -752,7 +759,7 @@ class Gemini {
         // Not counted as kept: it was never examined, so it belongs in the
         // failure list only. Folding it into `kept` made "left alone" exceed
         // "scanned" in the summary.
-        stats.failures.push({ id, title, reason: "chat did not load" });
+        stats.failures.push({ id, title: label(title), reason: "chat did not load" });
         continue;
       }
 
@@ -770,13 +777,13 @@ class Gemini {
           if (deleted) {
             stats.deleted++;
           } else {
-            stats.failures.push({ id, title, reason: "delete did not confirm" });
+            stats.failures.push({ id, title: label(title), reason: "delete did not confirm" });
             stats.kept++;
           }
         }
         // Recorded whether or not it went: in a dry run this IS the plan, and
         // after a real run it is the only record that the chat ever existed.
-        stats.acted.push({ id, title, prompt: prompt.slice(0, 120), deleted });
+        stats.acted.push({ id, title: label(title), prompt: prompt.slice(0, 120), deleted });
       } else {
         stats.kept++;
       }
