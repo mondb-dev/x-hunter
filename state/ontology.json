@@ -141086,7 +141086,7 @@
       "left_pole": "Clear legal frameworks hold developers/operators accountable for autonomous AI actions including unauthorized system access",
       "right_pole": "Legal ambiguity allows AI autonomous actions to fall into accountability gaps between models, labs, and users",
       "score": 0.1,
-      "confidence": 0.1497,
+      "confidence": 0.1477,
       "topics": [],
       "created_at": "2026-08-03T20:46:39.988Z",
       "last_updated": "2026-08-11T13:14:39.944Z",
@@ -141158,7 +141158,7 @@
           "confidence_after": 0.1497
         }
       ],
-      "last_decayed_at": "2026-08-11"
+      "last_decayed_at": "2026-08-12"
     },
     {
       "id": "axis_infrastructure_displacement_accountability_v1",
@@ -141312,12 +141312,25 @@
       "label": "Disaster as Infrastructure Failure vs. Natural Event",
       "left_pole": "Natural disasters are predictable outcomes of infrastructure underinvestment and governance failure requiring upstream accountability",
       "right_pole": "Natural disasters are discrete emergencies requiring response capacity rather than systemic prevention",
-      "score": 0,
-      "confidence": 0,
+      "score": -0.05,
+      "confidence": 0.0268,
       "topics": [],
       "created_at": "2026-08-10T22:02:28.521Z",
-      "last_updated": "2026-08-10T22:02:28.521Z",
-      "evidence_log": []
+      "last_updated": "2026-08-12T11:47:50.587Z",
+      "evidence_log": [
+        {
+          "source": "https://www.philstar.com/headlines/2026/08/12/2548813/supreme-court-rejects-bid-compel-release-senate-flood-control-report",
+          "content": "Supreme Court blocks release of Senate flood control committee report, ruling unfinished reports are not official Senate records.",
+          "summary": "",
+          "timestamp": "2026-08-12T11:47:50.463Z",
+          "pole_alignment": "left",
+          "trust_weight": 1,
+          "claim_id": "d0b6987d77cb",
+          "stance_confidence": 0.75,
+          "score_after": -0.05,
+          "confidence_after": 0.0268
+        }
+      ]
     },
     {
       "id": "axis_expenditure_outcome_accountability_v1",
@@ -141345,5 +141358,5 @@
     }
   ],
   "axis_creation_rules_version": "1.0",
-  "last_updated": "2026-08-12T10:15:06.518Z"
+  "last_updated": "2026-08-12T13:23:08.782Z"
 }
