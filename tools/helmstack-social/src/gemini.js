@@ -678,10 +678,16 @@ class Gemini {
   async purgeChats({
     patterns, dryRun = true, max = Infinity, maxScan = Infinity,
     pauseMs = 9000, jitter = 0.4, restEvery = 8, restMs = 120_000,
-    onChat, onRest,
+    ownTab = true, onChat, onRest,
   } = {}) {
     const pats = patterns || Gemini.AGENT_PROMPT_PATTERNS;
-    await this.ensureTab();
+    // A purge takes 12-15 minutes, and the live agent fact-checks throughout it.
+    // Sharing the engine's usual tab means both sides navigate it: a run where
+    // the agent was busy lost 12 of 37 chats to "did not load", because the tab
+    // kept getting steered to someone else's conversation mid-read. Take a tab of
+    // our own and give it back at the end.
+    const ownedTab = ownTab ? await this._openOwnTab() : null;
+    if (!ownedTab) await this.ensureTab();
     // The CLI is interactive: stop hard rather than report an empty history.
     if (this.blocked) throw new Error("Google anti-abuse interstitial is up — clear it by hand in the browser, then re-run (a larger --pause-ms helps).");
     if (!(await this.signedIn())) {
@@ -690,6 +696,7 @@ class Gemini {
     }
 
     const stats = { scanned: 0, matched: 0, deleted: 0, kept: 0, acted: [], failures: [] };
+    try {
     const chats = await this.listChats();
     if (!chats.length) {
       // Distinguish "no history" from "the list rendered but ids didn't" —
@@ -724,8 +731,15 @@ class Gemini {
       // conversation's <user-query> nodes mounted and appends the new ones, so
       // "first prompt" would read whichever chat was opened first. A real load
       // remounts the app, making the first bubble unambiguously this chat's.
-      await this.client.navigate(this.tabId, this._convUrl(id)).catch(() => {});
-      const shape = await this._awaitConversation(id);
+      // One retry: a chat that didn't render in time is usually a transient
+      // slow load, and failing it outright leaves an agent chat behind.
+      let shape = null;
+      for (let attempt = 1; attempt <= 2 && !shape; attempt++) {
+        const navErr = await this.client.navigate(this.tabId, this._convUrl(id)).then(() => null, (e) => e.message);
+        if (navErr) console.warn(`[gemini] navigate to ${id} failed (${navErr})`);
+        shape = await this._awaitConversation(id);
+        if (!shape && attempt === 1) await sleep(this._jittered(4000, jitter));
+      }
       if (!shape) {
         // Rapid page loads can trip Google's anti-abuse interstitial. That is a
         // stop sign, not an obstacle: bail out and let a human deal with it,
@@ -769,6 +783,34 @@ class Gemini {
       if (onChat) onChat({ id, title, prompt, match, deleted });
     }
     return stats;
+    } finally {
+      if (ownedTab) await this.client.closeTab(ownedTab).catch(() => {});
+    }
+  }
+
+  /**
+   * Open a tab this engine owns for the duration of one long job, so a
+   * concurrent agent run navigating the shared tab can't yank the page out from
+   * under it. Returns the tab id (also set as `this.tabId`), or null if the tab
+   * could not be opened — callers fall back to ensureTab().
+   */
+  async _openOwnTab() {
+    try {
+      const before = new Set((await this.client.listTabs()).map((t) => t.id));
+      const after = await this.client.openTab(this.url);
+      const created = after.find((t) => !before.has(t.id));
+      if (!created) return null;
+      this.tabId = created.id;
+      await sleep(3500);
+      const landed = await this.client.tabUrl(this.tabId).catch(() => "");
+      this.blocked = /google\.com\/sorry/.test(landed);
+      if (this.blocked) console.warn("[gemini] Google served its anti-abuse interstitial — the app did not load. A human has to clear it in the browser.");
+      await this._dismissDialogs();
+      return this.tabId;
+    } catch (e) {
+      console.warn(`[gemini] could not open a dedicated tab (${e.message}) — sharing the usual one`);
+      return null;
+    }
   }
 }
 

@@ -132,8 +132,10 @@ noticed. The run throttles itself: `--pause-ms` (default 9000) jittered by
 `--max N` / `--max-scan N` split it into smaller sittings. If the interstitial
 appears anyway the run stops and says so — clearing it is a human's job.
 
-**Run it when no cycle is active.** The purge and a live fact-check share the
-same browser tab, so they will fight over it.
+**Concurrency.** The purge opens its own browser tab and closes it at the end, so
+a fact-check running in the shared tab mid-sweep no longer steers the page out
+from under it (that cost 12 of 37 chats to "did not load" in one run). Each chat
+also gets one retry before being recorded as a failure.
 
 **Report.** Every run ends with a summary — counts, then the deleted chats listed
 by title and id, then anything it could not process — and writes the same as JSON
