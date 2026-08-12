@@ -129,7 +129,13 @@ what trip Google's anti-abuse interstitial — it's the request rate that gets
 noticed. The run throttles itself: `--pause-ms` (default 9000) jittered by
 `--jitter` (0.4) between chats, plus a `--rest-ms` (120s) rest every
 `--rest-every` (8) chats. A full ~40-chat sweep therefore takes 12–15 minutes.
-`--max N` / `--max-scan N` split it into smaller sittings. If the interstitial
+`--max N` / `--max-scan N` split it into smaller sittings. A ~100-chat history
+takes closer to 40 minutes.
+
+**Run it more than once.** Enumeration of the sidebar is not exhaustive — the
+same account has yielded 37 chats on one call and 97 on another — so a run clears
+what it can see rather than everything. Repeated runs converge, since deleting
+shrinks the list. Read a run's count as a floor. If the interstitial
 appears anyway the run stops and says so — clearing it is a human's job.
 
 **Concurrency.** The purge opens its own browser tab and closes it at the end, so

@@ -557,16 +557,27 @@ class Gemini {
     await this._waitFor(`document.querySelectorAll('[data-test-id="conversation"]').length > 0`, 20_000);
     await this._expandSidebar();
     let chats = JSON.parse((await read()) || "[]");
-    for (let i = 0; i < maxScrolls; i++) {
+    // Stop only after the count has held still for SEVERAL passes, rather than on
+    // the first non-growing one.
+    //
+    // KNOWN LIMITATION: this still does not always enumerate the whole history.
+    // The same account returned 37 chats on three consecutive calls and 97
+    // during a live sweep, and on the 37 runs no scrollable list container and
+    // no "show more" control is present to drive — so the window Gemini hands us
+    // varies for reasons not yet pinned down. The purge is therefore convergent
+    // rather than exhaustive: each run clears what it can see, and repeated runs
+    // whittle the backlog down. Treat a single run's count as a floor, never as
+    // the total.
+    let stable = 0;
+    for (let i = 0; i < maxScrolls && stable < 3; i++) {
       await this._eval(`(() => {
         const s = document.querySelector('conversations-list infinite-scroller, infinite-scroller, conversations-list');
         if (s) s.scrollTop = s.scrollHeight;
         return 'ok';
       })()`).catch(() => {});
-      await sleep(900);
+      await sleep(1400);
       const next = JSON.parse((await read()) || "[]");
-      if (next.length <= chats.length) break;
-      chats = next;
+      if (next.length > chats.length) { chats = next; stable = 0; } else { stable++; }
     }
     return chats;
   }
