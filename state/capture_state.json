@@ -1,139 +1,128 @@
 {
-  "checked_at": "2026-08-12T09:20:42.439Z",
-  "evidence_24h": 22,
-  "unique_sources": 7,
+  "checked_at": "2026-08-13T09:40:27.856Z",
+  "evidence_24h": 11,
+  "unique_sources": 5,
   "status": "captured",
   "alerts": [
     {
       "type": "source_dominance",
       "severity": "high",
-      "detail": "@unknown accounts for 73% of today's evidence (16/22)",
+      "detail": "@unknown accounts for 55% of today's evidence (6/11)",
       "username": "unknown",
-      "share": 0.727
+      "share": 0.545
     }
   ],
-  "summary": "1 capture alert(s) detected:\n[HIGH] @unknown accounts for 73% of today's evidence (16/22)",
+  "summary": "1 capture alert(s) detected:\n[HIGH] @unknown accounts for 55% of today's evidence (6/11)",
   "source_concentration": {
     "unknown": {
       "username": "unknown",
-      "count": 16,
-      "share": 0.727
+      "count": 6,
+      "share": 0.545
     },
-    "philippinestar": {
-      "username": "philippinestar",
+    "inquirerdotnet": {
+      "username": "inquirerdotnet",
+      "count": 2,
+      "share": 0.182
+    },
+    "sprinterpress": {
+      "username": "sprinterpress",
       "count": 1,
-      "share": 0.045
+      "share": 0.091
+    },
+    "rapplerdotcom": {
+      "username": "rapplerdotcom",
+      "count": 1,
+      "share": 0.091
     },
     "ajenglish": {
       "username": "ajenglish",
       "count": 1,
-      "share": 0.045
-    },
-    "newswatchplusph": {
-      "username": "newswatchplusph",
-      "count": 1,
-      "share": 0.045
-    },
-    "tvpatrol": {
-      "username": "tvpatrol",
-      "count": 1,
-      "share": 0.045
-    },
-    "news5ph": {
-      "username": "news5ph",
-      "count": 1,
-      "share": 0.045
-    },
-    "inquirerdotnet": {
-      "username": "inquirerdotnet",
-      "count": 1,
-      "share": 0.045
+      "share": 0.091
     }
   },
   "axis_concentration": {
-    "axis_procedural_governance_substantive_action": {
-      "axis_id": "axis_procedural_governance_substantive_action",
-      "label": "Procedural Governance vs. Substantive Action",
-      "count": 4,
+    "axis_power_accountability": {
+      "axis_id": "axis_power_accountability",
+      "label": "Power, Institutions, and Rule of Law",
+      "count": 2,
       "share": 0.182
     },
     "axis_procedural_governance_accountability_v1": {
       "axis_id": "axis_procedural_governance_accountability_v1",
       "label": "Procedural Governance vs. Genuine Accountability",
-      "count": 3,
-      "share": 0.136
-    },
-    "axis_media_integrity_v1": {
-      "axis_id": "axis_media_integrity_v1",
-      "label": "Integrity of Information and Social Media Manipulation",
       "count": 2,
-      "share": 0.091
+      "share": 0.182
     },
-    "axis_human_rights_exploitation_v1": {
-      "axis_id": "axis_human_rights_exploitation_v1",
-      "label": "Human Rights and Exploitation",
-      "count": 2,
-      "share": 0.091
-    },
-    "axis_accountability_temporality_v1": {
-      "axis_id": "axis_accountability_temporality_v1",
-      "label": "Accountability Temporality: Real-Time Enforcement vs. Archaeological Discovery",
-      "count": 2,
-      "share": 0.091
-    },
-    "axis_crisis_visibility_hierarchy_v1": {
-      "axis_id": "axis_crisis_visibility_hierarchy_v1",
-      "label": "Crisis Visibility Hierarchy",
-      "count": 2,
-      "share": 0.091
-    },
-    "axis_political_dynasties_meritocracy_v1": {
-      "axis_id": "axis_political_dynasties_meritocracy_v1",
-      "label": "Political Dynasties and Meritocracy",
+    "axis_epistemic_integrity": {
+      "axis_id": "axis_epistemic_integrity",
+      "label": "Truth and Evidence in Public Discourse",
       "count": 1,
-      "share": 0.045
-    },
-    "axis_economic_indicators_reliability_v1": {
-      "axis_id": "axis_economic_indicators_reliability_v1",
-      "label": "Reliability of Economic Indicators and Societal Progress",
-      "count": 1,
-      "share": 0.045
+      "share": 0.091
     },
     "axis_digital_supply_chain_security": {
       "axis_id": "axis_digital_supply_chain_security",
       "label": "Digital Supply Chain Security and Vulnerabilities",
       "count": 1,
-      "share": 0.045
+      "share": 0.091
     },
-    "axis_environmental_policy_v_economic_v1": {
-      "axis_id": "axis_environmental_policy_v_economic_v1",
-      "label": "Environmental Policy vs. Economic Development",
+    "axis_rapid_disinformation_v1": {
+      "axis_id": "axis_rapid_disinformation_v1",
+      "label": "Rapid Disinformation",
       "count": 1,
-      "share": 0.045
+      "share": 0.091
+    },
+    "axis_procedural_governance_substantive_action": {
+      "axis_id": "axis_procedural_governance_substantive_action",
+      "label": "Procedural Governance vs. Substantive Action",
+      "count": 1,
+      "share": 0.091
+    },
+    "axis_infrastructure_commons_v_extraction_v1": {
+      "axis_id": "axis_infrastructure_commons_v_extraction_v1",
+      "label": "Infrastructure as Commons vs. Extraction",
+      "count": 1,
+      "share": 0.091
+    },
+    "axis_state_power_monetization_v1": {
+      "axis_id": "axis_state_power_monetization_v1",
+      "label": "Monetization of State Power",
+      "count": 1,
+      "share": 0.091
+    },
+    "axis_disaster_infrastructure_accountability_v1": {
+      "axis_id": "axis_disaster_infrastructure_accountability_v1",
+      "label": "Disaster as Infrastructure Failure vs. Natural Event",
+      "count": 1,
+      "share": 0.091
     }
   },
   "cluster_concentration": {
     "unknown": {
       "cluster": "unknown",
-      "count": 16,
-      "share": 0.727
+      "count": 6,
+      "share": 0.545
     },
     "breaking_news": {
       "cluster": "breaking_news",
-      "count": 4,
-      "share": 0.182
+      "count": 3,
+      "share": 0.273
+    },
+    "disinformation": {
+      "cluster": "disinformation",
+      "count": 1,
+      "share": 0.091
     },
     "accountability_journalism": {
       "cluster": "accountability_journalism",
-      "count": 2,
+      "count": 1,
       "share": 0.091
     }
   },
   "pole_balance": {
-    "left": 12,
-    "right": 10,
+    "left": 7,
+    "right": 4,
     "neutral": 0,
-    "left_share": 0.545,
-    "right_share": 0.455
+    "left_share": 0.636,
+    "right_share": 0.364
   }
 }

@@ -1,8 +1,8 @@
 {
   "schema_version": "1.0",
-  "generated_at": "2026-08-13T05:56:38.097Z",
+  "generated_at": "2026-08-13T09:07:17.652Z",
   "method": "mechanical_registry_v1",
-  "profiled_at": "2026-08-13T05:56:45.133Z",
+  "profiled_at": "2026-08-13T09:07:46.225Z",
   "sources": [
     {
       "domain": "theguardian.com",
@@ -11,7 +11,7 @@
       "first_seen_at": "2026-03-27T23:17:00Z",
       "last_seen_at": "2026-08-12T07:15:01.538Z",
       "discovery": {
-        "distinct_urls": 829,
+        "distinct_urls": 830,
         "example_urls": [
           "https://www.theguardian.com/us-news/2026/jun/23/trump-immigration-courthouse-arrest-policy",
           "https://www.theguardian.com/us-news/2026/jun/28/ice-minnesota-defending-democracy",
@@ -21,7 +21,7 @@
         ],
         "origin_counts": {
           "ontology_evidence": 46,
-          "reading_queue": 793,
+          "reading_queue": 794,
           "journals": 121,
           "articles": 5
         },
@@ -75,7 +75,7 @@
         "breadth": {
           "score": 0.94,
           "basis": [
-            "distinct_urls:829",
+            "distinct_urls:830",
             "distinct_axes:20",
             "origin_types:4"
           ]
@@ -115,7 +115,7 @@
             "newsroom_domain_pattern",
             "article_path_seen",
             "doi_or_identifier_path_seen",
-            "distinct_urls:829",
+            "distinct_urls:830",
             "distinct_axes:20",
             "origin_types:4",
             "referring_accounts:0",
@@ -702,7 +702,7 @@
       "first_seen_at": "2026-06-22T00:15:00Z",
       "last_seen_at": "2026-08-10T22:02:28.383Z",
       "discovery": {
-        "distinct_urls": 565,
+        "distinct_urls": 566,
         "example_urls": [
           "https://www.nytimes.com/2026/06/19/world/canada/frank-stronach-trial-guilty-sex-charges.html",
           "https://www.nytimes.com/2026/06/27/world/americas/mexican-officials-us-informants.html",
@@ -712,7 +712,7 @@
         ],
         "origin_counts": {
           "ontology_evidence": 20,
-          "reading_queue": 577,
+          "reading_queue": 578,
           "journals": 49
         },
         "distinct_referring_accounts": 0,
@@ -756,7 +756,7 @@
         "breadth": {
           "score": 0.8799999999999999,
           "basis": [
-            "distinct_urls:565",
+            "distinct_urls:566",
             "distinct_axes:12",
             "origin_types:3"
           ]
@@ -795,7 +795,7 @@
           "basis": [
             "newsroom_domain_pattern",
             "article_path_seen",
-            "distinct_urls:565",
+            "distinct_urls:566",
             "distinct_axes:12",
             "origin_types:3",
             "referring_accounts:0",
@@ -1217,7 +1217,7 @@
       "first_seen_at": "2026-06-26T07:05:00Z",
       "last_seen_at": "2026-08-07T21:29:16.276Z",
       "discovery": {
-        "distinct_urls": 508,
+        "distinct_urls": 509,
         "example_urls": [
           "https://www.bbc.co.uk/news/articles/cn8qxz6qypyo",
           "https://www.bbc.co.uk/news/articles/cn075j04pnyo?at_medium=RSS&amp;at_campaign=rss",
@@ -1227,7 +1227,7 @@
         ],
         "origin_counts": {
           "ontology_evidence": 6,
-          "reading_queue": 520,
+          "reading_queue": 521,
           "journals": 17,
           "articles": 1
         },
@@ -1263,7 +1263,7 @@
         "breadth": {
           "score": 0.8233333333333333,
           "basis": [
-            "distinct_urls:508",
+            "distinct_urls:509",
             "distinct_axes:4",
             "origin_types:4"
           ]
@@ -1301,7 +1301,7 @@
           "method": "mechanical_v1",
           "basis": [
             "newsroom_domain_pattern",
-            "distinct_urls:508",
+            "distinct_urls:509",
             "distinct_axes:4",
             "origin_types:4",
             "referring_accounts:0",
@@ -3249,9 +3249,9 @@
       "entity": "T Co",
       "kind": "unknown",
       "first_seen_at": "2016-05-05T18:57:30.000Z",
-      "last_seen_at": "2026-08-13T05:23:20.000Z",
+      "last_seen_at": "2026-08-13T06:15:00.000Z",
       "discovery": {
-        "distinct_urls": 13214,
+        "distinct_urls": 13246,
         "example_urls": [
           "https://t.co/pJSE124ec4",
           "https://t.co/Soz8BXPWaa",
@@ -3260,11 +3260,11 @@
           "https://t.co/cYaqYDRp08"
         ],
         "origin_counts": {
-          "feed_buffer": 10925,
-          "feed_buffer_reply": 4913,
+          "feed_buffer": 10953,
+          "feed_buffer_reply": 4920,
           "articles": 3
         },
-        "distinct_referring_accounts": 2741,
+        "distinct_referring_accounts": 2744,
         "sample_referring_accounts": [
           "0808iveta",
           "09abracadabra",
@@ -3303,7 +3303,7 @@
         "breadth": {
           "score": 0.53,
           "basis": [
-            "distinct_urls:13214",
+            "distinct_urls:13246",
             "distinct_axes:0",
             "origin_types:3"
           ]
@@ -3311,7 +3311,7 @@
         "corroboration": {
           "score": 0.9125,
           "basis": [
-            "referring_accounts:2741",
+            "referring_accounts:2744",
             "origin_types:3"
           ]
         },
@@ -3342,10 +3342,10 @@
           "basis": [
             "unknown_domain_pattern",
             "doi_or_identifier_path_seen",
-            "distinct_urls:13214",
+            "distinct_urls:13246",
             "distinct_axes:0",
             "origin_types:3",
-            "referring_accounts:2741",
+            "referring_accounts:2744",
             "origin_types:3",
             "track_record_unavailable"
           ]
@@ -5101,13 +5101,13 @@
           ]
         },
         "profile": {
-          "score": 0.14,
-          "confidence": 0.65,
+          "score": 0,
+          "confidence": 0.55,
           "basis": [
             "meta_author:false",
             "published_time:false",
             "canonical:false",
-            "about:true",
+            "about:false",
             "contact:false",
             "corrections:false",
             "outbound_links:0",
@@ -5130,23 +5130,23 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-08-10T07:01:32.923Z",
+        "fetched_at": "2026-08-13T07:30:31.933Z",
         "homepage_url": "https://doubleclick.net/",
         "example_url": "https://ad.doubleclick.net/ddm/trackclk/N117602.5126432X/B34540950.438517562;dc_trk_aid=631787244;dc_trk_cid=249093288;dc_dbm_token=$%7BDC_DBM_TOKEN%7D;dc_lat=;dc_rdid=;tag_for_child_directed_treatment=;tfua=;gdpr=$%7BGDPR%7D;gdpr_consent=$%7BGDPR_CONSENT_755%7D;gpp=$%7BGPP_STRING_755%7D;gpp_sid=$%7BGPP_SID%7D;ltd=;dc_tdv=1?twclid=292cdwzoayexun1iu6o4fsk10z",
-        "homepage_status": 200,
+        "homepage_status": null,
         "example_status": null,
-        "homepage_final_url": "https://marketingplatform.google.com/about/enterprise/",
+        "homepage_final_url": "https://doubleclick.net/",
         "example_final_url": "https://ad.doubleclick.net/ddm/trackclk/N117602.5126432X/B34540950.438517562;dc_trk_aid=631787244;dc_trk_cid=249093288;dc_dbm_token=$%7BDC_DBM_TOKEN%7D;dc_lat=;dc_rdid=;tag_for_child_directed_treatment=;tfua=;gdpr=$%7BGDPR%7D;gdpr_consent=$%7BGDPR_CONSENT_755%7D;gpp=$%7BGPP_STRING_755%7D;gpp_sid=$%7BGPP_SID%7D;ltd=;dc_tdv=1?twclid=292cdwzoayexun1iu6o4fsk10z",
-        "homepage_content_type": "text/html",
+        "homepage_content_type": "",
         "example_content_type": "",
         "homepage": {
           "has_meta_author": false,
           "has_published_time": false,
-          "has_canonical": true,
-          "has_about_link": true,
+          "has_canonical": false,
+          "has_about_link": false,
           "has_contact_link": false,
           "has_corrections_link": false,
-          "outbound_links_count": 27,
+          "outbound_links_count": 0,
           "opinion_marker": false
         },
         "example": {
@@ -5554,7 +5554,7 @@
       "first_seen_at": "2026-04-07T03:51:50.000Z",
       "last_seen_at": "2026-08-13T00:19:58.000Z",
       "discovery": {
-        "distinct_urls": 104,
+        "distinct_urls": 105,
         "example_urls": [
           "https://www.starlink.com/us/residential?referral=RC-DF-9543787-19448-67&utm_medium=paid&utm_campaign=awr_us_soc_twt_ptg_cau&utm_content=awr_us_soc_twt_ptg_cau_res_gvp_v4s_stc_en-us_sdb-bluesky-uptime&twclid=2cg62b1u0oqrypdim5oir1767e",
           "https://www.starlink.com/us/residential?referral=RC-DF-9543787-19448-67&utm_medium=paid&utm_campaign=awr_us_soc_twt_ptg_cau&utm_content=awr_us_soc_twt_ptg_cau_res_gvp_v4s_stc_en-us_sdb-avail-sat-yourhome&twclid=2216n7j93v9absqn77762mm626",
@@ -5563,7 +5563,7 @@
           "https://www.starlink.com/us/residential?referral=RC-DF-9543787-19448-67&utm_medium=paid&utm_campaign=awr_us_soc_twt_ptg_cau&utm_content=awr_us_soc_twt_ptg_cau_res_gvp_v4s_stc_en-us_sdb-avail-sat-arrived&twclid=21pi7t0qs8tgw0wgnh5mvmdu2g"
         ],
         "origin_counts": {
-          "feed_buffer_reply": 94,
+          "feed_buffer_reply": 95,
           "feed_buffer": 14
         },
         "distinct_referring_accounts": 5,
@@ -5599,7 +5599,7 @@
         "breadth": {
           "score": 0.47,
           "basis": [
-            "distinct_urls:104",
+            "distinct_urls:105",
             "distinct_axes:0",
             "origin_types:2"
           ]
@@ -5637,7 +5637,7 @@
           "method": "mechanical_v1",
           "basis": [
             "unknown_domain_pattern",
-            "distinct_urls:104",
+            "distinct_urls:105",
             "distinct_axes:0",
             "origin_types:2",
             "referring_accounts:5",
@@ -6038,19 +6038,19 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-08-10T07:01:34.073Z",
+        "fetched_at": "2026-08-13T07:30:31.935Z",
         "homepage_url": "https://youtu.be/",
         "example_url": "https://youtu.be/m7jAReMF2c8?si=AtT5ue3VPnmZq5V6",
-        "homepage_status": 200,
-        "example_status": 200,
-        "homepage_final_url": "https://www.youtube.com/?feature=youtu.be",
-        "example_final_url": "https://www.youtube.com/watch?si=AtT5ue3VPnmZq5V6&v=m7jAReMF2c8&feature=youtu.be",
-        "homepage_content_type": "text/html; charset=utf-8",
-        "example_content_type": "text/html; charset=utf-8",
+        "homepage_status": null,
+        "example_status": null,
+        "homepage_final_url": "https://youtu.be/",
+        "example_final_url": "https://youtu.be/m7jAReMF2c8?si=AtT5ue3VPnmZq5V6",
+        "homepage_content_type": "",
+        "example_content_type": "",
         "homepage": {
           "has_meta_author": false,
           "has_published_time": false,
-          "has_canonical": true,
+          "has_canonical": false,
           "has_about_link": false,
           "has_contact_link": false,
           "has_corrections_link": false,
@@ -6931,15 +6931,15 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-08-10T07:01:34.490Z",
+        "fetched_at": "2026-08-13T07:30:31.937Z",
         "homepage_url": "https://ro.co/",
         "example_url": "https://ro.co/lp/weight-loss/quiz/?utm_medium=paid_social&utm_source=Twitter&utm_campaign=41158458&utm_term=54579155&utm_content=Ad2&twclid=2bv3rduaz2ypp78vahy5e6wspd",
-        "homepage_status": 403,
-        "example_status": 403,
+        "homepage_status": null,
+        "example_status": null,
         "homepage_final_url": "https://ro.co/",
         "example_final_url": "https://ro.co/lp/weight-loss/quiz/?utm_medium=paid_social&utm_source=Twitter&utm_campaign=41158458&utm_term=54579155&utm_content=Ad2&twclid=2bv3rduaz2ypp78vahy5e6wspd",
-        "homepage_content_type": "text/html; charset=UTF-8",
-        "example_content_type": "text/html; charset=UTF-8",
+        "homepage_content_type": "",
+        "example_content_type": "",
         "homepage": {
           "has_meta_author": false,
           "has_published_time": false,
@@ -9217,15 +9217,15 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-08-10T07:01:34.816Z",
+        "fetched_at": "2026-08-13T07:30:31.939Z",
         "homepage_url": "https://wsj.com/",
         "example_url": "https://www.wsj.com/video/three-things-to-consider-before-buying-an-electric-vehicle/BF3DA411-C296-4CB8-A22D-BE3A2E943ACB?mod=WSJvidctr_watchnow_pos2%3FUCID%3DWSJ_SMD_TWT_BRA_BND_MBC_NAP_NAP_EVS_NAP&twclid=2227k5fcsvy3eazrqjlp63r0go",
-        "homepage_status": 401,
-        "example_status": 401,
-        "homepage_final_url": "https://www.wsj.com/",
+        "homepage_status": null,
+        "example_status": null,
+        "homepage_final_url": "https://wsj.com/",
         "example_final_url": "https://www.wsj.com/video/three-things-to-consider-before-buying-an-electric-vehicle/BF3DA411-C296-4CB8-A22D-BE3A2E943ACB?mod=WSJvidctr_watchnow_pos2%3FUCID%3DWSJ_SMD_TWT_BRA_BND_MBC_NAP_NAP_EVS_NAP&twclid=2227k5fcsvy3eazrqjlp63r0go",
-        "homepage_content_type": "text/html;charset=utf-8",
-        "example_content_type": "text/html;charset=utf-8",
+        "homepage_content_type": "",
+        "example_content_type": "",
         "homepage": {
           "has_meta_author": false,
           "has_published_time": false,
@@ -9344,19 +9344,19 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-08-10T07:31:23.301Z",
+        "fetched_at": "2026-08-13T09:07:33.154Z",
         "homepage_url": "https://aramco.com/",
         "example_url": "https://www.aramco.com/en/what-we-do/energy-innovation/innovation-ecosystem/aramco-fifa-partnership?utm_source=x&utm_medium=cpm&utm_term=en_vid_cpm_inf-ftbl_na_football-fans&utm_content=en_4x5_vid_6s_global_fifa-whatif_na_m3&twclid=2f1bxdfhmr1if32n1ssvcc3xtc",
-        "homepage_status": 200,
+        "homepage_status": null,
         "example_status": 200,
-        "homepage_final_url": "https://www.aramco.com/",
+        "homepage_final_url": "https://aramco.com/",
         "example_final_url": "https://www.aramco.com/en/what-we-do/energy-innovation/innovation-ecosystem/aramco-fifa-partnership?utm_source=x&utm_medium=cpm&utm_term=en_vid_cpm_inf-ftbl_na_football-fans&utm_content=en_4x5_vid_6s_global_fifa-whatif_na_m3&twclid=2f1bxdfhmr1if32n1ssvcc3xtc",
-        "homepage_content_type": "text/html; charset=utf-8",
+        "homepage_content_type": "",
         "example_content_type": "text/html; charset=utf-8",
         "homepage": {
           "has_meta_author": false,
           "has_published_time": false,
-          "has_canonical": true,
+          "has_canonical": false,
           "has_about_link": false,
           "has_contact_link": false,
           "has_corrections_link": false,
@@ -10614,7 +10614,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-08-10T08:31:24.800Z",
+        "fetched_at": "2026-08-13T09:07:37.036Z",
         "homepage_url": "https://trenchers.ai/",
         "example_url": "https://trenchers.ai/?twclid=2di75phbt55c7y0zfq5ihrqinv",
         "homepage_status": 200,
@@ -11253,7 +11253,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-08-10T07:31:25.278Z",
+        "fetched_at": "2026-08-13T09:07:41.095Z",
         "homepage_url": "https://onelink.me/",
         "example_url": "https://vix.onelink.me/Z4oU/hyuh928w?twclid=24s36ffdjwv85ew8o2yfteqmxu",
         "homepage_status": 200,
@@ -12015,7 +12015,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-08-10T08:31:26.248Z",
+        "fetched_at": "2026-08-13T09:07:46.225Z",
         "homepage_url": "https://ukiyoework.com/",
         "example_url": "https://www.ukiyoework.com/view/item/000000000401?utm_source=twitter&utm_medium=cpc&twclid=23tigf5ad41s1prapekhalf5cq",
         "homepage_status": 200,
