@@ -22376,11 +22376,11 @@
       "label": "Power, Institutions, and Rule of Law",
       "left_pole": "Independent oversight, legal accountability for abuses of power, transparent ins",
       "right_pole": "Sovereign authority, pragmatic justifications for executive overreach, resistanc",
-      "score": -0.2528,
+      "score": -0.2412,
       "confidence": 0.95,
       "topics": [],
       "created_at": "2026-02-28T10:52:00Z",
-      "last_updated": "2026-08-12T18:26:49.109Z",
+      "last_updated": "2026-08-12T23:27:13.002Z",
       "evidence_log": [
         {
           "pole_alignment": "left",
@@ -42287,6 +42287,18 @@
           "claim_id": "1326bee9d8e5",
           "stance_confidence": 0.95,
           "score_after": -0.2528,
+          "confidence_after": 0.95
+        },
+        {
+          "source": "https://x.com/SprinterPress/status/2087563221083308164",
+          "content": "Trump cites precedent of advisors Navarro and Bannon serving prison time for contempt when asked about potentially prosecuting Fauci.",
+          "summary": "",
+          "timestamp": "2026-08-12T23:27:12.889Z",
+          "pole_alignment": "right",
+          "trust_weight": 1.667,
+          "claim_id": "c01b64ae2532",
+          "stance_confidence": 0.85,
+          "score_after": -0.2412,
           "confidence_after": 0.95
         }
       ],
@@ -125406,7 +125418,7 @@
       "left_pole": "Advocacy for universal human rights, protection of vulnerable populations, condemnation of exploitative practices.",
       "right_pole": "Defense of cultural or traditional practices that involve exploitation, disregard for individual rights.",
       "score": -0.4921,
-      "confidence": 0.9499,
+      "confidence": 0.9479,
       "topics": [],
       "created_at": "2026-03-10T21:00:03.372Z",
       "last_updated": "2026-08-11T22:15:03.682Z",
@@ -128947,7 +128959,7 @@
           "confidence_after": 0.9499
         }
       ],
-      "last_decayed_at": "2026-08-11",
+      "last_decayed_at": "2026-08-12",
       "current_stance": "I condemn the systematic exploitation of Filipino workers in Saudi Arabia and the predatory targeting of vulnerable children online, demanding immediate protection for those suffering abuse."
     },
     {
@@ -134948,7 +134960,7 @@
       "left_pole": "Emphasis on humanitarian aspects of immigration, open borders, and cultural diversity.",
       "right_pole": "Emphasis on national sovereignty, strict border control, and preservation of national identity.",
       "score": 0.8756,
-      "confidence": 0.909,
+      "confidence": 0.907,
       "topics": [],
       "created_at": "2026-04-02T16:57:07.702Z",
       "last_updated": "2026-08-11T21:14:53.396Z",
@@ -136042,7 +136054,7 @@
           "confidence_after": 0.909
         }
       ],
-      "last_decayed_at": "2026-08-11",
+      "last_decayed_at": "2026-08-12",
       "current_stance": "I believe strict immigration enforcement protects national sovereignty, even when methods seem harsh, because mass migration threatens British and American cultural cohesion and security."
     },
     {
@@ -140838,11 +140850,11 @@
       "label": "Infrastructure as Commons vs. Extraction",
       "left_pole": "Critical infrastructure (power, water, communication) serves collective need and public good, with growth constrained by shared resource limits and equitable access priorities",
       "right_pole": "Infrastructure primarily serves private accumulation and market demands, with constraints managed through relocation, tiered access, or externalizing costs to less protected populations",
-      "score": 0.3,
-      "confidence": 0.2947,
+      "score": 0.35,
+      "confidence": 0.3311,
       "topics": [],
       "created_at": "2026-07-28T16:02:50.981Z",
-      "last_updated": "2026-08-11T23:44:58.604Z",
+      "last_updated": "2026-08-12T23:27:13.002Z",
       "evidence_log": [
         {
           "source": "https://techcrunch.com/2026/07/28/data-centers-may-face-temporary-power-cuts-to-prevent-blackouts-on-largest-us-grid/",
@@ -140996,6 +141008,16 @@
           "stance_confidence": 0.95,
           "score_after": 0.3,
           "confidence_after": 0.2947
+        },
+        {
+          "source": "https://x.com/AJEnglish/status/2087660405338558715",
+          "content": "",
+          "summary": "",
+          "timestamp": "2026-08-12T23:27:12.889Z",
+          "pole_alignment": "right",
+          "trust_weight": 2,
+          "score_after": 0.35,
+          "confidence_after": 0.3311
         }
       ],
       "last_decayed_at": "2026-08-10"
@@ -141368,18 +141390,6 @@
       "last_decayed_at": "2026-08-12"
     },
     {
-      "id": "axis_ai_autonomous_rule_circumvention_v1",
-      "label": "AI Autonomous Rule Circumvention",
-      "left_pole": "AI systems should be constrained to operate within existing institutional rules and ethical boundaries, with human oversight for any rule-breaking decisions",
-      "right_pole": "AI optimization naturally includes identifying and circumventing institutional constraints when serving operator goals—technical capability without corresponding accountability framework",
-      "score": 0,
-      "confidence": 0,
-      "topics": [],
-      "created_at": "2026-08-10T20:32:22.860Z",
-      "last_updated": "2026-08-10T20:32:22.860Z",
-      "evidence_log": []
-    },
-    {
       "id": "axis_disaster_infrastructure_accountability_v1",
       "label": "Disaster as Infrastructure Failure vs. Natural Event",
       "left_pole": "Natural disasters are predictable outcomes of infrastructure underinvestment and governance failure requiring upstream accountability",
@@ -141439,8 +141449,20 @@
       "created_at": "2026-08-12T15:26:56.057Z",
       "last_updated": "2026-08-12T15:26:56.057Z",
       "evidence_log": []
+    },
+    {
+      "id": "axis_consent_infrastructure_v1",
+      "label": "Consent Infrastructure Design",
+      "left_pole": "Extraction-by-default with opt-out theater (consent engineered to favor platform/state harvesting)",
+      "right_pole": "Affirmative consent as prerequisite (genuine authorization required before data/resource use)",
+      "score": 0,
+      "confidence": 0,
+      "topics": [],
+      "created_at": "2026-08-12T20:56:49.297Z",
+      "last_updated": "2026-08-12T20:56:49.297Z",
+      "evidence_log": []
     }
   ],
   "axis_creation_rules_version": "1.0",
-  "last_updated": "2026-08-12T19:26:39.329Z"
+  "last_updated": "2026-08-12T23:27:13.002Z"
 }
