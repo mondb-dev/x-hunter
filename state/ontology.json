@@ -60008,7 +60008,7 @@
       "left_pole": "Advocacy for factual accuracy, critical assessment of sources, and efforts to co",
       "right_pole": "Spread of unverified claims, reliance on emotional appeals, and engagement farmi",
       "score": 0.4082,
-      "confidence": 0.95,
+      "confidence": 0.948,
       "topics": [],
       "created_at": "2026-02-28T10:52:00Z",
       "last_updated": "2026-08-12T03:14:49.113Z",
@@ -73035,7 +73035,7 @@
           "confidence_after": 0.95
         }
       ],
-      "last_decayed_at": "2026-08-10",
+      "last_decayed_at": "2026-08-13",
       "current_stance": "I'm watching the Philippines drown in paid disinformation while fact-checkers scramble to debunk viral lies that vanish before accountability can stick."
     },
     {
@@ -138292,11 +138292,11 @@
       "label": "Rapid Disinformation",
       "left_pole": "Quickly verified and accurate information",
       "right_pole": "Unverified and rapidly disseminated claims",
-      "score": 0.4,
-      "confidence": 0.3515,
+      "score": 0.45,
+      "confidence": 0.382,
       "topics": [],
       "created_at": "2026-07-13T00:10:59.798Z",
-      "last_updated": "2026-08-05T03:38:40.092Z",
+      "last_updated": "2026-08-13T03:57:14.431Z",
       "evidence_log": [
         {
           "source": "https://x.com/RT_com/status/2077106304095531013",
@@ -138437,6 +138437,18 @@
           "claim_id": "a4454575ecc3",
           "score_after": 0.4,
           "confidence_after": 0.3655
+        },
+        {
+          "source": "https://www.rappler.com/newsbreak/fact-check/icc-not-junk-rodrigo-duterte-case-old-sara-statement/",
+          "content": "Misleading post uses old Sara Duterte audio clip to falsely claim ICC dismissed Duterte's case, misrepresenting jurisdictional challenge as case dismissal.",
+          "summary": "",
+          "timestamp": "2026-08-13T03:57:14.293Z",
+          "pole_alignment": "right",
+          "trust_weight": 1,
+          "claim_id": "d155394cd70d",
+          "stance_confidence": 1,
+          "score_after": 0.45,
+          "confidence_after": 0.382
         }
       ],
       "last_decayed_at": "2026-08-13"
@@ -141427,18 +141439,6 @@
       ]
     },
     {
-      "id": "axis_expenditure_outcome_accountability_v1",
-      "label": "Expenditure vs. Outcome Accountability",
-      "left_pole": "Accountability measured by documented outcomes and problem resolution—systems track efficacy, impact, and whether stated objectives were achieved",
-      "right_pole": "Accountability measured by disbursement documentation and procedural compliance—systems verify money moved and forms completed, outcomes irrelevant",
-      "score": 0,
-      "confidence": 0,
-      "topics": [],
-      "created_at": "2026-08-11T04:02:26.479Z",
-      "last_updated": "2026-08-11T04:02:26.479Z",
-      "evidence_log": []
-    },
-    {
       "id": "axis_labor_geopolitical_buffer_v1",
       "label": "Labor as Geopolitical Buffer",
       "left_pole": "Workers as expendable geopolitical infrastructure—economic necessity forces labor into conflict zones, normalizing risk absorption as employment condition",
@@ -141476,5 +141476,5 @@
     }
   ],
   "axis_creation_rules_version": "1.0",
-  "last_updated": "2026-08-13T00:57:06.866Z"
+  "last_updated": "2026-08-13T04:27:14.556Z"
 }
