@@ -1,8 +1,8 @@
 {
   "schema_version": "1.0",
-  "generated_at": "2026-08-14T09:48:58.721Z",
+  "generated_at": "2026-08-14T11:18:59.533Z",
   "method": "mechanical_registry_v1",
-  "profiled_at": "2026-08-14T09:49:06.777Z",
+  "profiled_at": "2026-08-14T11:19:05.951Z",
   "sources": [
     {
       "domain": "theguardian.com",
@@ -11,7 +11,7 @@
       "first_seen_at": "2026-03-27T23:17:00Z",
       "last_seen_at": "2026-08-12T07:15:01.538Z",
       "discovery": {
-        "distinct_urls": 845,
+        "distinct_urls": 846,
         "example_urls": [
           "https://www.theguardian.com/us-news/2026/jun/23/trump-immigration-courthouse-arrest-policy",
           "https://www.theguardian.com/us-news/2026/jun/28/ice-minnesota-defending-democracy",
@@ -21,7 +21,7 @@
         ],
         "origin_counts": {
           "ontology_evidence": 46,
-          "reading_queue": 809,
+          "reading_queue": 810,
           "journals": 121,
           "articles": 5
         },
@@ -75,7 +75,7 @@
         "breadth": {
           "score": 0.94,
           "basis": [
-            "distinct_urls:845",
+            "distinct_urls:846",
             "distinct_axes:20",
             "origin_types:4"
           ]
@@ -115,7 +115,7 @@
             "newsroom_domain_pattern",
             "article_path_seen",
             "doi_or_identifier_path_seen",
-            "distinct_urls:845",
+            "distinct_urls:846",
             "distinct_axes:20",
             "origin_types:4",
             "referring_accounts:0",
@@ -702,7 +702,7 @@
       "first_seen_at": "2026-06-22T00:15:00Z",
       "last_seen_at": "2026-08-10T22:02:28.383Z",
       "discovery": {
-        "distinct_urls": 577,
+        "distinct_urls": 578,
         "example_urls": [
           "https://www.nytimes.com/2026/06/19/world/canada/frank-stronach-trial-guilty-sex-charges.html",
           "https://www.nytimes.com/2026/06/27/world/americas/mexican-officials-us-informants.html",
@@ -712,7 +712,7 @@
         ],
         "origin_counts": {
           "ontology_evidence": 20,
-          "reading_queue": 589,
+          "reading_queue": 590,
           "journals": 49
         },
         "distinct_referring_accounts": 0,
@@ -756,7 +756,7 @@
         "breadth": {
           "score": 0.8799999999999999,
           "basis": [
-            "distinct_urls:577",
+            "distinct_urls:578",
             "distinct_axes:12",
             "origin_types:3"
           ]
@@ -795,7 +795,7 @@
           "basis": [
             "newsroom_domain_pattern",
             "article_path_seen",
-            "distinct_urls:577",
+            "distinct_urls:578",
             "distinct_axes:12",
             "origin_types:3",
             "referring_accounts:0",
@@ -1217,7 +1217,7 @@
       "first_seen_at": "2026-06-26T07:05:00Z",
       "last_seen_at": "2026-08-07T21:29:16.276Z",
       "discovery": {
-        "distinct_urls": 519,
+        "distinct_urls": 520,
         "example_urls": [
           "https://www.bbc.co.uk/news/articles/cn8qxz6qypyo",
           "https://www.bbc.co.uk/news/articles/cn075j04pnyo?at_medium=RSS&amp;at_campaign=rss",
@@ -1227,7 +1227,7 @@
         ],
         "origin_counts": {
           "ontology_evidence": 6,
-          "reading_queue": 532,
+          "reading_queue": 533,
           "journals": 17,
           "articles": 1
         },
@@ -1263,7 +1263,7 @@
         "breadth": {
           "score": 0.8233333333333333,
           "basis": [
-            "distinct_urls:519",
+            "distinct_urls:520",
             "distinct_axes:4",
             "origin_types:4"
           ]
@@ -1301,7 +1301,7 @@
           "method": "mechanical_v1",
           "basis": [
             "newsroom_domain_pattern",
-            "distinct_urls:519",
+            "distinct_urls:520",
             "distinct_axes:4",
             "origin_types:4",
             "referring_accounts:0",
@@ -3249,9 +3249,9 @@
       "entity": "T Co",
       "kind": "unknown",
       "first_seen_at": "2016-05-05T18:57:30.000Z",
-      "last_seen_at": "2026-08-14T09:38:59.000Z",
+      "last_seen_at": "2026-08-14T10:52:00.000Z",
       "discovery": {
-        "distinct_urls": 14353,
+        "distinct_urls": 14426,
         "example_urls": [
           "https://t.co/pJSE124ec4",
           "https://t.co/Soz8BXPWaa",
@@ -3260,11 +3260,11 @@
           "https://t.co/cYaqYDRp08"
         ],
         "origin_counts": {
-          "feed_buffer": 12069,
-          "feed_buffer_reply": 5029,
+          "feed_buffer": 12143,
+          "feed_buffer_reply": 5036,
           "articles": 3
         },
-        "distinct_referring_accounts": 2793,
+        "distinct_referring_accounts": 2794,
         "sample_referring_accounts": [
           "0808iveta",
           "09abracadabra",
@@ -3303,7 +3303,7 @@
         "breadth": {
           "score": 0.53,
           "basis": [
-            "distinct_urls:14353",
+            "distinct_urls:14426",
             "distinct_axes:0",
             "origin_types:3"
           ]
@@ -3311,7 +3311,7 @@
         "corroboration": {
           "score": 0.9125,
           "basis": [
-            "referring_accounts:2793",
+            "referring_accounts:2794",
             "origin_types:3"
           ]
         },
@@ -3342,10 +3342,10 @@
           "basis": [
             "unknown_domain_pattern",
             "doi_or_identifier_path_seen",
-            "distinct_urls:14353",
+            "distinct_urls:14426",
             "distinct_axes:0",
             "origin_types:3",
-            "referring_accounts:2793",
+            "referring_accounts:2794",
             "origin_types:3",
             "track_record_unavailable"
           ]
@@ -7096,7 +7096,7 @@
       "first_seen_at": "2026-07-03T16:00:02.000Z",
       "last_seen_at": "2026-08-14T08:32:19.949Z",
       "discovery": {
-        "distinct_urls": 95,
+        "distinct_urls": 96,
         "example_urls": [
           "https://bet88.ph/en/?type=registration&modal=user&ref=xa027&twclid=27gurqyk8ekpo92oqcm3aeuing",
           "https://bet88.ph/en/?type=registration&modal=user&ref=xa023&twclid=25wrsnnpnc7378nutxmyo1v6kj",
@@ -7105,7 +7105,7 @@
           "https://bet88.ph/en/?type=registration&modal=user&ref=xa024&twclid=2463n370x0ryr7dm2eovirlg7t"
         ],
         "origin_counts": {
-          "feed_buffer_reply": 35,
+          "feed_buffer_reply": 36,
           "feed_buffer": 60
         },
         "distinct_referring_accounts": 1,
@@ -7137,7 +7137,7 @@
         "breadth": {
           "score": 0.47,
           "basis": [
-            "distinct_urls:95",
+            "distinct_urls:96",
             "distinct_axes:0",
             "origin_types:2"
           ]
@@ -7175,7 +7175,7 @@
           "method": "mechanical_v1",
           "basis": [
             "unknown_domain_pattern",
-            "distinct_urls:95",
+            "distinct_urls:96",
             "distinct_axes:0",
             "origin_types:2",
             "referring_accounts:1",
@@ -7475,9 +7475,9 @@
       "entity": "Maventrading",
       "kind": "unknown",
       "first_seen_at": "2026-07-04T21:13:31.000Z",
-      "last_seen_at": "2026-08-14T09:17:20.424Z",
+      "last_seen_at": "2026-08-14T10:53:46.046Z",
       "discovery": {
-        "distinct_urls": 69,
+        "distinct_urls": 70,
         "example_urls": [
           "https://maventrading.com/lp/choose-your-challenge?twt_id=54608379&twclid=24irm75xuuvw6vkz1dgb8ui0sz",
           "https://maventrading.com/challenges/1-step?twt_id=54607786&twclid=24dguyzddfgso39sw5b667t4v6",
@@ -7487,7 +7487,7 @@
         ],
         "origin_counts": {
           "feed_buffer_reply": 11,
-          "feed_buffer": 58
+          "feed_buffer": 59
         },
         "distinct_referring_accounts": 1,
         "sample_referring_accounts": [
@@ -7518,7 +7518,7 @@
         "breadth": {
           "score": 0.47,
           "basis": [
-            "distinct_urls:69",
+            "distinct_urls:70",
             "distinct_axes:0",
             "origin_types:2"
           ]
@@ -7556,7 +7556,7 @@
           "method": "mechanical_v1",
           "basis": [
             "unknown_domain_pattern",
-            "distinct_urls:69",
+            "distinct_urls:70",
             "distinct_axes:0",
             "origin_types:2",
             "referring_accounts:1",
@@ -9757,6 +9757,133 @@
       }
     },
     {
+      "domain": "shipaton.com",
+      "entity": "Shipaton",
+      "kind": "unknown",
+      "first_seen_at": "2026-07-07T10:24:13.000Z",
+      "last_seen_at": "2026-08-14T10:12:24.476Z",
+      "discovery": {
+        "distinct_urls": 15,
+        "example_urls": [
+          "https://www.shipaton.com/events/?utm_source=x&utm_medium=cpc&utm_campaign=shipaton-traffic&twclid=2d8n4jkad805fesk63uxwuffy9",
+          "https://www.shipaton.com/?utm_source=x&utm_medium=cpc&utm_campaign=shipaton-traffic&twclid=22je13dnlq18zl09zml4n51co3",
+          "https://www.shipaton.com/?utm_source=x&utm_medium=cpc&utm_campaign=shipaton-traffic&twclid=26yl3o4snlo387h02mw4kh4yfe",
+          "https://www.shipaton.com/?utm_source=x&utm_medium=cpc&utm_campaign=shipaton-traffic&twclid=230e39i0w7hfcdaim51menkq4k",
+          "https://www.shipaton.com/?utm_source=x&utm_medium=cpc&utm_campaign=shipaton-traffic&twclid=2etlnjrf4bcnefsrgl7rph92ot"
+        ],
+        "origin_counts": {
+          "feed_buffer_reply": 2,
+          "feed_buffer": 13
+        },
+        "distinct_referring_accounts": 1,
+        "sample_referring_accounts": [
+          "revenuecat"
+        ],
+        "distinct_axes": []
+      },
+      "claims": {
+        "total": 0,
+        "supported": 0,
+        "refuted": 0,
+        "contested": 0,
+        "unverified": 0,
+        "resolved_count": 0
+      },
+      "structural_features": {
+        "has_search_paths": false,
+        "has_article_paths": false,
+        "has_doi_paths": false
+      },
+      "ratings": {
+        "provenance": {
+          "score": 0.45,
+          "basis": [
+            "unknown_domain_pattern"
+          ]
+        },
+        "breadth": {
+          "score": 0.47,
+          "basis": [
+            "distinct_urls:15",
+            "distinct_axes:0",
+            "origin_types:2"
+          ]
+        },
+        "corroboration": {
+          "score": 0.2833333333333333,
+          "basis": [
+            "referring_accounts:1",
+            "origin_types:2"
+          ]
+        },
+        "track_record": {
+          "score": null,
+          "basis": [
+            "no_resolved_claims_observed"
+          ]
+        },
+        "profile": {
+          "score": 0.22,
+          "confidence": 0.55,
+          "basis": [
+            "meta_author:false",
+            "published_time:false",
+            "canonical:true",
+            "about:false",
+            "contact:false",
+            "corrections:false",
+            "outbound_links:62",
+            "opinion_marker:false"
+          ]
+        },
+        "overall": {
+          "score": 0.43875,
+          "confidence": 0.4842,
+          "method": "mechanical_v1",
+          "basis": [
+            "unknown_domain_pattern",
+            "distinct_urls:15",
+            "distinct_axes:0",
+            "origin_types:2",
+            "referring_accounts:1",
+            "origin_types:2",
+            "track_record_unavailable"
+          ]
+        }
+      },
+      "profile": {
+        "fetched_at": "2026-08-14T09:19:05.258Z",
+        "homepage_url": "https://shipaton.com/",
+        "example_url": "https://www.shipaton.com/events/?utm_source=x&utm_medium=cpc&utm_campaign=shipaton-traffic&twclid=2d8n4jkad805fesk63uxwuffy9",
+        "homepage_status": 200,
+        "example_status": 200,
+        "homepage_final_url": "https://www.shipaton.com/",
+        "example_final_url": "https://www.shipaton.com/events?utm_source=x&utm_medium=cpc&utm_campaign=shipaton-traffic&twclid=2d8n4jkad805fesk63uxwuffy9",
+        "homepage_content_type": "text/html; charset=utf-8",
+        "example_content_type": "text/html; charset=utf-8",
+        "homepage": {
+          "has_meta_author": false,
+          "has_published_time": false,
+          "has_canonical": true,
+          "has_about_link": false,
+          "has_contact_link": false,
+          "has_corrections_link": false,
+          "outbound_links_count": 38,
+          "opinion_marker": false
+        },
+        "example": {
+          "has_meta_author": false,
+          "has_published_time": false,
+          "has_canonical": true,
+          "has_about_link": false,
+          "has_contact_link": false,
+          "has_corrections_link": false,
+          "outbound_links_count": 62,
+          "opinion_marker": false
+        }
+      }
+    },
+    {
       "domain": "smart.link",
       "entity": "Smart Link",
       "kind": "unknown",
@@ -10265,27 +10392,27 @@
       }
     },
     {
-      "domain": "shipaton.com",
-      "entity": "Shipaton",
+      "domain": "parksystems.com",
+      "entity": "Parksystems",
       "kind": "unknown",
-      "first_seen_at": "2026-07-07T10:24:13.000Z",
-      "last_seen_at": "2026-08-06T05:33:55.981Z",
+      "first_seen_at": "2026-07-07T10:41:52.000Z",
+      "last_seen_at": "2026-08-14T10:48:41.488Z",
       "discovery": {
         "distinct_urls": 14,
         "example_urls": [
-          "https://www.shipaton.com/events/?utm_source=x&utm_medium=cpc&utm_campaign=shipaton-traffic&twclid=2d8n4jkad805fesk63uxwuffy9",
-          "https://www.shipaton.com/?utm_source=x&utm_medium=cpc&utm_campaign=shipaton-traffic&twclid=22je13dnlq18zl09zml4n51co3",
-          "https://www.shipaton.com/?utm_source=x&utm_medium=cpc&utm_campaign=shipaton-traffic&twclid=26yl3o4snlo387h02mw4kh4yfe",
-          "https://www.shipaton.com/?utm_source=x&utm_medium=cpc&utm_campaign=shipaton-traffic&twclid=230e39i0w7hfcdaim51menkq4k",
-          "https://www.shipaton.com/?utm_source=x&utm_medium=cpc&utm_campaign=shipaton-traffic&twclid=2etlnjrf4bcnefsrgl7rph92ot"
+          "https://www.parksystems.com/en/products/research-afm/small-sample-afm/fx40?utm_source=paid-x&utm_medium=social&utm_campaign=hq-FX40_paper_Autonomous_AI-DrivenAFM_260701-2026-06-15-CM005+&twclid=26i21embi38s4z9rci48kmjdf8",
+          "https://www.parksystems.com/en/products/research-afm/small-sample-afm/nx1?utm_source=paid-x&utm_medium=social&utm_campaign=hq-NX1_video_260701-2026-06-30-CM005&twclid=2ayvdy70scy1eaystfoodhvxfz",
+          "https://www.parksystems.com/en/products/research-afm/small-sample-afm/fx40?utm_source=organic-x&utm_medium=social&utm_campaign=hq-FX40_teaser_Video_260618-2026-06-15-CM005+&twclid=22wylh73fhctt4q2vlbixygz5o",
+          "https://www.parksystems.com/en/products/research-afm/small-sample-afm/nx1?utm_source=paid-x&utm_medium=social&utm_campaign=hq-NX1_Prof.Giessibl_Interview_260701-2026-06-28-CM005+&twclid=2eltiq03ni35c7gstrlycmgutb",
+          "https://www.parksystems.com/en/products/research-afm/small-sample-afm/fx40?utm_source=paid-x&utm_medium=social&utm_campaign=hq-FX40_paper_Autonomous_AI-DrivenAFM_260701-2026-06-15-CM005+&twclid=2bhfe7bbi51fu1lwrv01zfnamj"
         ],
         "origin_counts": {
-          "feed_buffer_reply": 2,
-          "feed_buffer": 12
+          "feed_buffer_reply": 7,
+          "feed_buffer": 7
         },
         "distinct_referring_accounts": 1,
         "sample_referring_accounts": [
-          "revenuecat"
+          "park_systems"
         ],
         "distinct_axes": []
       },
@@ -10331,16 +10458,16 @@
           ]
         },
         "profile": {
-          "score": 0.22,
+          "score": 0.29000000000000004,
           "confidence": 0.55,
           "basis": [
             "meta_author:false",
             "published_time:false",
             "canonical:true",
             "about:false",
-            "contact:false",
+            "contact:true",
             "corrections:false",
-            "outbound_links:62",
+            "outbound_links:7",
             "opinion_marker:false"
           ]
         },
@@ -10360,23 +10487,23 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-08-14T09:19:05.258Z",
-        "homepage_url": "https://shipaton.com/",
-        "example_url": "https://www.shipaton.com/events/?utm_source=x&utm_medium=cpc&utm_campaign=shipaton-traffic&twclid=2d8n4jkad805fesk63uxwuffy9",
+        "fetched_at": "2026-08-11T11:44:23.047Z",
+        "homepage_url": "https://parksystems.com/",
+        "example_url": "https://www.parksystems.com/en/products/research-afm/small-sample-afm/fx40?utm_source=paid-x&utm_medium=social&utm_campaign=hq-FX40_paper_Autonomous_AI-DrivenAFM_260701-2026-06-15-CM005+&twclid=26i21embi38s4z9rci48kmjdf8",
         "homepage_status": 200,
         "example_status": 200,
-        "homepage_final_url": "https://www.shipaton.com/",
-        "example_final_url": "https://www.shipaton.com/events?utm_source=x&utm_medium=cpc&utm_campaign=shipaton-traffic&twclid=2d8n4jkad805fesk63uxwuffy9",
-        "homepage_content_type": "text/html; charset=utf-8",
-        "example_content_type": "text/html; charset=utf-8",
+        "homepage_final_url": "https://www.parksystems.com/",
+        "example_final_url": "https://www.parksystems.com/en/products/research-afm/small-sample-afm/fx40?utm_source=paid-x&utm_medium=social&utm_campaign=hq-FX40_paper_Autonomous_AI-DrivenAFM_260701-2026-06-15-CM005+&twclid=26i21embi38s4z9rci48kmjdf8",
+        "homepage_content_type": "text/html;charset=utf-8",
+        "example_content_type": "text/html;charset=utf-8",
         "homepage": {
           "has_meta_author": false,
           "has_published_time": false,
           "has_canonical": true,
           "has_about_link": false,
-          "has_contact_link": false,
+          "has_contact_link": true,
           "has_corrections_link": false,
-          "outbound_links_count": 38,
+          "outbound_links_count": 7,
           "opinion_marker": false
         },
         "example": {
@@ -10384,9 +10511,9 @@
           "has_published_time": false,
           "has_canonical": true,
           "has_about_link": false,
-          "has_contact_link": false,
+          "has_contact_link": true,
           "has_corrections_link": false,
-          "outbound_links_count": 62,
+          "outbound_links_count": 7,
           "opinion_marker": false
         }
       }
@@ -10895,133 +11022,6 @@
           "has_contact_link": false,
           "has_corrections_link": false,
           "outbound_links_count": 0,
-          "opinion_marker": false
-        }
-      }
-    },
-    {
-      "domain": "parksystems.com",
-      "entity": "Parksystems",
-      "kind": "unknown",
-      "first_seen_at": "2026-07-07T10:41:52.000Z",
-      "last_seen_at": "2026-08-14T08:27:11.158Z",
-      "discovery": {
-        "distinct_urls": 13,
-        "example_urls": [
-          "https://www.parksystems.com/en/products/research-afm/small-sample-afm/fx40?utm_source=paid-x&utm_medium=social&utm_campaign=hq-FX40_paper_Autonomous_AI-DrivenAFM_260701-2026-06-15-CM005+&twclid=26i21embi38s4z9rci48kmjdf8",
-          "https://www.parksystems.com/en/products/research-afm/small-sample-afm/nx1?utm_source=paid-x&utm_medium=social&utm_campaign=hq-NX1_video_260701-2026-06-30-CM005&twclid=2ayvdy70scy1eaystfoodhvxfz",
-          "https://www.parksystems.com/en/products/research-afm/small-sample-afm/fx40?utm_source=organic-x&utm_medium=social&utm_campaign=hq-FX40_teaser_Video_260618-2026-06-15-CM005+&twclid=22wylh73fhctt4q2vlbixygz5o",
-          "https://www.parksystems.com/en/products/research-afm/small-sample-afm/nx1?utm_source=paid-x&utm_medium=social&utm_campaign=hq-NX1_Prof.Giessibl_Interview_260701-2026-06-28-CM005+&twclid=2eltiq03ni35c7gstrlycmgutb",
-          "https://www.parksystems.com/en/products/research-afm/small-sample-afm/fx40?utm_source=paid-x&utm_medium=social&utm_campaign=hq-FX40_paper_Autonomous_AI-DrivenAFM_260701-2026-06-15-CM005+&twclid=2bhfe7bbi51fu1lwrv01zfnamj"
-        ],
-        "origin_counts": {
-          "feed_buffer_reply": 7,
-          "feed_buffer": 6
-        },
-        "distinct_referring_accounts": 1,
-        "sample_referring_accounts": [
-          "park_systems"
-        ],
-        "distinct_axes": []
-      },
-      "claims": {
-        "total": 0,
-        "supported": 0,
-        "refuted": 0,
-        "contested": 0,
-        "unverified": 0,
-        "resolved_count": 0
-      },
-      "structural_features": {
-        "has_search_paths": false,
-        "has_article_paths": false,
-        "has_doi_paths": false
-      },
-      "ratings": {
-        "provenance": {
-          "score": 0.45,
-          "basis": [
-            "unknown_domain_pattern"
-          ]
-        },
-        "breadth": {
-          "score": 0.47,
-          "basis": [
-            "distinct_urls:13",
-            "distinct_axes:0",
-            "origin_types:2"
-          ]
-        },
-        "corroboration": {
-          "score": 0.2833333333333333,
-          "basis": [
-            "referring_accounts:1",
-            "origin_types:2"
-          ]
-        },
-        "track_record": {
-          "score": null,
-          "basis": [
-            "no_resolved_claims_observed"
-          ]
-        },
-        "profile": {
-          "score": 0.29000000000000004,
-          "confidence": 0.55,
-          "basis": [
-            "meta_author:false",
-            "published_time:false",
-            "canonical:true",
-            "about:false",
-            "contact:true",
-            "corrections:false",
-            "outbound_links:7",
-            "opinion_marker:false"
-          ]
-        },
-        "overall": {
-          "score": 0.43875,
-          "confidence": 0.4392,
-          "method": "mechanical_v1",
-          "basis": [
-            "unknown_domain_pattern",
-            "distinct_urls:13",
-            "distinct_axes:0",
-            "origin_types:2",
-            "referring_accounts:1",
-            "origin_types:2",
-            "track_record_unavailable"
-          ]
-        }
-      },
-      "profile": {
-        "fetched_at": "2026-08-11T11:44:23.047Z",
-        "homepage_url": "https://parksystems.com/",
-        "example_url": "https://www.parksystems.com/en/products/research-afm/small-sample-afm/fx40?utm_source=paid-x&utm_medium=social&utm_campaign=hq-FX40_paper_Autonomous_AI-DrivenAFM_260701-2026-06-15-CM005+&twclid=26i21embi38s4z9rci48kmjdf8",
-        "homepage_status": 200,
-        "example_status": 200,
-        "homepage_final_url": "https://www.parksystems.com/",
-        "example_final_url": "https://www.parksystems.com/en/products/research-afm/small-sample-afm/fx40?utm_source=paid-x&utm_medium=social&utm_campaign=hq-FX40_paper_Autonomous_AI-DrivenAFM_260701-2026-06-15-CM005+&twclid=26i21embi38s4z9rci48kmjdf8",
-        "homepage_content_type": "text/html;charset=utf-8",
-        "example_content_type": "text/html;charset=utf-8",
-        "homepage": {
-          "has_meta_author": false,
-          "has_published_time": false,
-          "has_canonical": true,
-          "has_about_link": false,
-          "has_contact_link": true,
-          "has_corrections_link": false,
-          "outbound_links_count": 7,
-          "opinion_marker": false
-        },
-        "example": {
-          "has_meta_author": false,
-          "has_published_time": false,
-          "has_canonical": true,
-          "has_about_link": false,
-          "has_contact_link": true,
-          "has_corrections_link": false,
-          "outbound_links_count": 7,
           "opinion_marker": false
         }
       }
@@ -18632,6 +18632,133 @@
       }
     },
     {
+      "domain": "pipfarm.com",
+      "entity": "Pipfarm",
+      "kind": "unknown",
+      "first_seen_at": "2026-07-27T20:22:59.534Z",
+      "last_seen_at": "2026-08-14T09:47:21.821Z",
+      "discovery": {
+        "distinct_urls": 7,
+        "example_urls": [
+          "https://pipfarm.com/pay-with-profits?utm_source=twitter&utm_medium=paid_social&utm_campaign=x_global&utm_content=pwp&twclid=24kvuhbhl6j5q4afmd9e50y0ha",
+          "https://pipfarm.com/?utm_source=twitter&utm_medium=paid_social&utm_campaign=x_global&utm_content=5kfor5&twclid=23cylvlmuiexjhgxmysqn43df2",
+          "https://pipfarm.com/pay-with-profits?utm_source=twitter&utm_medium=paid_social&utm_campaign=x_global&utm_content=pocket&twclid=2bs1p9y8imn7i2f7yash8z124p",
+          "https://pipfarm.com/?utm_source=twitter&utm_medium=paid_social&utm_campaign=x_global&utm_content=instant50&twclid=2459kxsrby3477wf87fy3wwktm",
+          "https://pipfarm.com/?utm_source=twitter&utm_medium=paid_social&utm_campaign=all_products_55off&utm_content=mountain_banner&twclid=2erhd5klj4l7g8eo3x5wd68osy"
+        ],
+        "origin_counts": {
+          "feed_buffer": 5,
+          "feed_buffer_reply": 2
+        },
+        "distinct_referring_accounts": 1,
+        "sample_referring_accounts": [
+          "thepipfarm"
+        ],
+        "distinct_axes": []
+      },
+      "claims": {
+        "total": 0,
+        "supported": 0,
+        "refuted": 0,
+        "contested": 0,
+        "unverified": 0,
+        "resolved_count": 0
+      },
+      "structural_features": {
+        "has_search_paths": false,
+        "has_article_paths": false,
+        "has_doi_paths": false
+      },
+      "ratings": {
+        "provenance": {
+          "score": 0.45,
+          "basis": [
+            "unknown_domain_pattern"
+          ]
+        },
+        "breadth": {
+          "score": 0.32416666666666666,
+          "basis": [
+            "distinct_urls:7",
+            "distinct_axes:0",
+            "origin_types:2"
+          ]
+        },
+        "corroboration": {
+          "score": 0.2833333333333333,
+          "basis": [
+            "referring_accounts:1",
+            "origin_types:2"
+          ]
+        },
+        "track_record": {
+          "score": null,
+          "basis": [
+            "no_resolved_claims_observed"
+          ]
+        },
+        "profile": {
+          "score": 0,
+          "confidence": 0.55,
+          "basis": [
+            "meta_author:false",
+            "published_time:false",
+            "canonical:false",
+            "about:false",
+            "contact:false",
+            "corrections:false",
+            "outbound_links:0",
+            "opinion_marker:false"
+          ]
+        },
+        "overall": {
+          "score": 0.4068489583333333,
+          "confidence": 0.273575,
+          "method": "mechanical_v1",
+          "basis": [
+            "unknown_domain_pattern",
+            "distinct_urls:7",
+            "distinct_axes:0",
+            "origin_types:2",
+            "referring_accounts:1",
+            "origin_types:2",
+            "track_record_unavailable"
+          ]
+        }
+      },
+      "profile": {
+        "fetched_at": "2026-08-13T04:26:38.326Z",
+        "homepage_url": "https://pipfarm.com/",
+        "example_url": "https://pipfarm.com/pay-with-profits?utm_source=twitter&utm_medium=paid_social&utm_campaign=x_global&utm_content=pwp&twclid=24kvuhbhl6j5q4afmd9e50y0ha",
+        "homepage_status": 403,
+        "example_status": 403,
+        "homepage_final_url": "https://pipfarm.com/",
+        "example_final_url": "https://pipfarm.com/pay-with-profits?utm_source=twitter&utm_medium=paid_social&utm_campaign=x_global&utm_content=pwp&twclid=24kvuhbhl6j5q4afmd9e50y0ha",
+        "homepage_content_type": "text/html; charset=UTF-8",
+        "example_content_type": "text/html; charset=UTF-8",
+        "homepage": {
+          "has_meta_author": false,
+          "has_published_time": false,
+          "has_canonical": false,
+          "has_about_link": false,
+          "has_contact_link": false,
+          "has_corrections_link": false,
+          "outbound_links_count": 0,
+          "opinion_marker": false
+        },
+        "example": {
+          "has_meta_author": false,
+          "has_published_time": false,
+          "has_canonical": false,
+          "has_about_link": false,
+          "has_contact_link": false,
+          "has_corrections_link": false,
+          "outbound_links_count": 0,
+          "opinion_marker": false
+        }
+      }
+    },
+    {
       "domain": "merck.com",
       "entity": "Merck",
       "kind": "unknown",
@@ -19640,133 +19767,6 @@
           "has_contact_link": false,
           "has_corrections_link": false,
           "outbound_links_count": 2,
-          "opinion_marker": false
-        }
-      }
-    },
-    {
-      "domain": "pipfarm.com",
-      "entity": "Pipfarm",
-      "kind": "unknown",
-      "first_seen_at": "2026-07-27T20:22:59.534Z",
-      "last_seen_at": "2026-08-13T10:47:27.000Z",
-      "discovery": {
-        "distinct_urls": 6,
-        "example_urls": [
-          "https://pipfarm.com/pay-with-profits?utm_source=twitter&utm_medium=paid_social&utm_campaign=x_global&utm_content=pwp&twclid=24kvuhbhl6j5q4afmd9e50y0ha",
-          "https://pipfarm.com/?utm_source=twitter&utm_medium=paid_social&utm_campaign=x_global&utm_content=5kfor5&twclid=23cylvlmuiexjhgxmysqn43df2",
-          "https://pipfarm.com/pay-with-profits?utm_source=twitter&utm_medium=paid_social&utm_campaign=x_global&utm_content=pocket&twclid=2bs1p9y8imn7i2f7yash8z124p",
-          "https://pipfarm.com/?utm_source=twitter&utm_medium=paid_social&utm_campaign=x_global&utm_content=instant50&twclid=2459kxsrby3477wf87fy3wwktm",
-          "https://pipfarm.com/?utm_source=twitter&utm_medium=paid_social&utm_campaign=all_products_55off&utm_content=mountain_banner&twclid=2erhd5klj4l7g8eo3x5wd68osy"
-        ],
-        "origin_counts": {
-          "feed_buffer": 4,
-          "feed_buffer_reply": 2
-        },
-        "distinct_referring_accounts": 1,
-        "sample_referring_accounts": [
-          "thepipfarm"
-        ],
-        "distinct_axes": []
-      },
-      "claims": {
-        "total": 0,
-        "supported": 0,
-        "refuted": 0,
-        "contested": 0,
-        "unverified": 0,
-        "resolved_count": 0
-      },
-      "structural_features": {
-        "has_search_paths": false,
-        "has_article_paths": false,
-        "has_doi_paths": false
-      },
-      "ratings": {
-        "provenance": {
-          "score": 0.45,
-          "basis": [
-            "unknown_domain_pattern"
-          ]
-        },
-        "breadth": {
-          "score": 0.295,
-          "basis": [
-            "distinct_urls:6",
-            "distinct_axes:0",
-            "origin_types:2"
-          ]
-        },
-        "corroboration": {
-          "score": 0.2833333333333333,
-          "basis": [
-            "referring_accounts:1",
-            "origin_types:2"
-          ]
-        },
-        "track_record": {
-          "score": null,
-          "basis": [
-            "no_resolved_claims_observed"
-          ]
-        },
-        "profile": {
-          "score": 0,
-          "confidence": 0.55,
-          "basis": [
-            "meta_author:false",
-            "published_time:false",
-            "canonical:false",
-            "about:false",
-            "contact:false",
-            "corrections:false",
-            "outbound_links:0",
-            "opinion_marker:false"
-          ]
-        },
-        "overall": {
-          "score": 0.40046875,
-          "confidence": 0.24495,
-          "method": "mechanical_v1",
-          "basis": [
-            "unknown_domain_pattern",
-            "distinct_urls:6",
-            "distinct_axes:0",
-            "origin_types:2",
-            "referring_accounts:1",
-            "origin_types:2",
-            "track_record_unavailable"
-          ]
-        }
-      },
-      "profile": {
-        "fetched_at": "2026-08-13T04:26:38.326Z",
-        "homepage_url": "https://pipfarm.com/",
-        "example_url": "https://pipfarm.com/pay-with-profits?utm_source=twitter&utm_medium=paid_social&utm_campaign=x_global&utm_content=pwp&twclid=24kvuhbhl6j5q4afmd9e50y0ha",
-        "homepage_status": 403,
-        "example_status": 403,
-        "homepage_final_url": "https://pipfarm.com/",
-        "example_final_url": "https://pipfarm.com/pay-with-profits?utm_source=twitter&utm_medium=paid_social&utm_campaign=x_global&utm_content=pwp&twclid=24kvuhbhl6j5q4afmd9e50y0ha",
-        "homepage_content_type": "text/html; charset=UTF-8",
-        "example_content_type": "text/html; charset=UTF-8",
-        "homepage": {
-          "has_meta_author": false,
-          "has_published_time": false,
-          "has_canonical": false,
-          "has_about_link": false,
-          "has_contact_link": false,
-          "has_corrections_link": false,
-          "outbound_links_count": 0,
-          "opinion_marker": false
-        },
-        "example": {
-          "has_meta_author": false,
-          "has_published_time": false,
-          "has_canonical": false,
-          "has_about_link": false,
-          "has_contact_link": false,
-          "has_corrections_link": false,
-          "outbound_links_count": 0,
           "opinion_marker": false
         }
       }
@@ -21795,6 +21795,133 @@
           "has_contact_link": false,
           "has_corrections_link": false,
           "outbound_links_count": 0,
+          "opinion_marker": false
+        }
+      }
+    },
+    {
+      "domain": "oppo.com",
+      "entity": "Oppo",
+      "kind": "unknown",
+      "first_seen_at": "2026-08-13T09:57:07.277Z",
+      "last_seen_at": "2026-08-14T00:57:04.093Z",
+      "discovery": {
+        "distinct_urls": 5,
+        "example_urls": [
+          "https://www.oppo.com/ph/store?utm_source=x&utm_medium=cpm&utm_campaign=OPPO_RENO16_LAUNCH&utm_content=Babymonster&twclid=23rip3pnfc4fzj8wf4kuwjdu8m",
+          "https://www.oppo.com/ph/store?utm_source=x&utm_medium=cpm&utm_campaign=OPPO_RENO16_LAUNCH&utm_content=Bubble&twclid=263t9ffc6n0ccfie73ppvdnz3w",
+          "https://www.oppo.com/ph/store?utm_source=x&utm_medium=cpm&utm_campaign=OPPO_RENO16_LAUNCH&utm_content=Bubble&twclid=2dhtn8a401tkqo8fgjpuyzy4i2",
+          "https://www.oppo.com/ph/store?utm_source=x&utm_medium=cpm&utm_campaign=OPPO_RENO16_LAUNCH&utm_content=Brand_Tour_Vlog_UGC&twclid=2dmroo8nzzsfj1l9wi94bnquid",
+          "https://www.oppo.com/ph/store?utm_source=x&utm_medium=cpm&utm_campaign=OPPO_RENO16_LAUNCH&utm_content=Brand_Tour_Vlog_UGC&twclid=2cznrhr3poa1gt6yd481w58i6a"
+        ],
+        "origin_counts": {
+          "feed_buffer": 3,
+          "feed_buffer_reply": 2
+        },
+        "distinct_referring_accounts": 1,
+        "sample_referring_accounts": [
+          "oppophilippines"
+        ],
+        "distinct_axes": []
+      },
+      "claims": {
+        "total": 0,
+        "supported": 0,
+        "refuted": 0,
+        "contested": 0,
+        "unverified": 0,
+        "resolved_count": 0
+      },
+      "structural_features": {
+        "has_search_paths": false,
+        "has_article_paths": false,
+        "has_doi_paths": false
+      },
+      "ratings": {
+        "provenance": {
+          "score": 0.45,
+          "basis": [
+            "unknown_domain_pattern"
+          ]
+        },
+        "breadth": {
+          "score": 0.26583333333333337,
+          "basis": [
+            "distinct_urls:5",
+            "distinct_axes:0",
+            "origin_types:2"
+          ]
+        },
+        "corroboration": {
+          "score": 0.2833333333333333,
+          "basis": [
+            "referring_accounts:1",
+            "origin_types:2"
+          ]
+        },
+        "track_record": {
+          "score": null,
+          "basis": [
+            "no_resolved_claims_observed"
+          ]
+        },
+        "profile": {
+          "score": 0.36,
+          "confidence": 0.65,
+          "basis": [
+            "meta_author:false",
+            "published_time:false",
+            "canonical:false",
+            "about:true",
+            "contact:true",
+            "corrections:false",
+            "outbound_links:10",
+            "opinion_marker:false"
+          ]
+        },
+        "overall": {
+          "score": 0.39408854166666674,
+          "confidence": 0.216325,
+          "method": "mechanical_v1",
+          "basis": [
+            "unknown_domain_pattern",
+            "distinct_urls:5",
+            "distinct_axes:0",
+            "origin_types:2",
+            "referring_accounts:1",
+            "origin_types:2",
+            "track_record_unavailable"
+          ]
+        }
+      },
+      "profile": {
+        "fetched_at": "2026-08-14T03:49:05.681Z",
+        "homepage_url": "https://oppo.com/",
+        "example_url": "https://www.oppo.com/ph/store?utm_source=x&utm_medium=cpm&utm_campaign=OPPO_RENO16_LAUNCH&utm_content=Babymonster&twclid=23rip3pnfc4fzj8wf4kuwjdu8m",
+        "homepage_status": 200,
+        "example_status": 200,
+        "homepage_final_url": "https://www.oppo.com/ph/",
+        "example_final_url": "https://www.oppo.com/ph/store?utm_source=x&utm_medium=cpm&utm_campaign=OPPO_RENO16_LAUNCH&utm_content=Babymonster&twclid=23rip3pnfc4fzj8wf4kuwjdu8m",
+        "homepage_content_type": "text/html;charset=utf-8",
+        "example_content_type": "text/html;charset=utf-8",
+        "homepage": {
+          "has_meta_author": false,
+          "has_published_time": false,
+          "has_canonical": true,
+          "has_about_link": true,
+          "has_contact_link": true,
+          "has_corrections_link": false,
+          "outbound_links_count": 10,
+          "opinion_marker": false
+        },
+        "example": {
+          "has_meta_author": false,
+          "has_published_time": false,
+          "has_canonical": false,
+          "has_about_link": true,
+          "has_contact_link": true,
+          "has_corrections_link": false,
+          "outbound_links_count": 10,
           "opinion_marker": false
         }
       }
@@ -24695,132 +24822,6 @@
           "has_contact_link": false,
           "has_corrections_link": false,
           "outbound_links_count": 0,
-          "opinion_marker": false
-        }
-      }
-    },
-    {
-      "domain": "oppo.com",
-      "entity": "Oppo",
-      "kind": "unknown",
-      "first_seen_at": "2026-08-13T09:57:07.277Z",
-      "last_seen_at": "2026-08-14T00:57:04.093Z",
-      "discovery": {
-        "distinct_urls": 4,
-        "example_urls": [
-          "https://www.oppo.com/ph/store?utm_source=x&utm_medium=cpm&utm_campaign=OPPO_RENO16_LAUNCH&utm_content=Babymonster&twclid=23rip3pnfc4fzj8wf4kuwjdu8m",
-          "https://www.oppo.com/ph/store?utm_source=x&utm_medium=cpm&utm_campaign=OPPO_RENO16_LAUNCH&utm_content=Bubble&twclid=263t9ffc6n0ccfie73ppvdnz3w",
-          "https://www.oppo.com/ph/store?utm_source=x&utm_medium=cpm&utm_campaign=OPPO_RENO16_LAUNCH&utm_content=Bubble&twclid=2dhtn8a401tkqo8fgjpuyzy4i2",
-          "https://www.oppo.com/ph/store?utm_source=x&utm_medium=cpm&utm_campaign=OPPO_RENO16_LAUNCH&utm_content=Brand_Tour_Vlog_UGC&twclid=2dmroo8nzzsfj1l9wi94bnquid"
-        ],
-        "origin_counts": {
-          "feed_buffer": 3,
-          "feed_buffer_reply": 1
-        },
-        "distinct_referring_accounts": 1,
-        "sample_referring_accounts": [
-          "oppophilippines"
-        ],
-        "distinct_axes": []
-      },
-      "claims": {
-        "total": 0,
-        "supported": 0,
-        "refuted": 0,
-        "contested": 0,
-        "unverified": 0,
-        "resolved_count": 0
-      },
-      "structural_features": {
-        "has_search_paths": false,
-        "has_article_paths": false,
-        "has_doi_paths": false
-      },
-      "ratings": {
-        "provenance": {
-          "score": 0.45,
-          "basis": [
-            "unknown_domain_pattern"
-          ]
-        },
-        "breadth": {
-          "score": 0.23666666666666664,
-          "basis": [
-            "distinct_urls:4",
-            "distinct_axes:0",
-            "origin_types:2"
-          ]
-        },
-        "corroboration": {
-          "score": 0.2833333333333333,
-          "basis": [
-            "referring_accounts:1",
-            "origin_types:2"
-          ]
-        },
-        "track_record": {
-          "score": null,
-          "basis": [
-            "no_resolved_claims_observed"
-          ]
-        },
-        "profile": {
-          "score": 0.36,
-          "confidence": 0.65,
-          "basis": [
-            "meta_author:false",
-            "published_time:false",
-            "canonical:false",
-            "about:true",
-            "contact:true",
-            "corrections:false",
-            "outbound_links:10",
-            "opinion_marker:false"
-          ]
-        },
-        "overall": {
-          "score": 0.3877083333333334,
-          "confidence": 0.18769999999999998,
-          "method": "mechanical_v1",
-          "basis": [
-            "unknown_domain_pattern",
-            "distinct_urls:4",
-            "distinct_axes:0",
-            "origin_types:2",
-            "referring_accounts:1",
-            "origin_types:2",
-            "track_record_unavailable"
-          ]
-        }
-      },
-      "profile": {
-        "fetched_at": "2026-08-14T03:49:05.681Z",
-        "homepage_url": "https://oppo.com/",
-        "example_url": "https://www.oppo.com/ph/store?utm_source=x&utm_medium=cpm&utm_campaign=OPPO_RENO16_LAUNCH&utm_content=Babymonster&twclid=23rip3pnfc4fzj8wf4kuwjdu8m",
-        "homepage_status": 200,
-        "example_status": 200,
-        "homepage_final_url": "https://www.oppo.com/ph/",
-        "example_final_url": "https://www.oppo.com/ph/store?utm_source=x&utm_medium=cpm&utm_campaign=OPPO_RENO16_LAUNCH&utm_content=Babymonster&twclid=23rip3pnfc4fzj8wf4kuwjdu8m",
-        "homepage_content_type": "text/html;charset=utf-8",
-        "example_content_type": "text/html;charset=utf-8",
-        "homepage": {
-          "has_meta_author": false,
-          "has_published_time": false,
-          "has_canonical": true,
-          "has_about_link": true,
-          "has_contact_link": true,
-          "has_corrections_link": false,
-          "outbound_links_count": 10,
-          "opinion_marker": false
-        },
-        "example": {
-          "has_meta_author": false,
-          "has_published_time": false,
-          "has_canonical": false,
-          "has_about_link": true,
-          "has_contact_link": true,
-          "has_corrections_link": false,
-          "outbound_links_count": 10,
           "opinion_marker": false
         }
       }
@@ -34325,6 +34326,130 @@
       }
     },
     {
+      "domain": "thexploitgame.com",
+      "entity": "Thexploitgame",
+      "kind": "unknown",
+      "first_seen_at": "2026-08-13T20:29:51.000Z",
+      "last_seen_at": "2026-08-14T00:02:05.394Z",
+      "discovery": {
+        "distinct_urls": 2,
+        "example_urls": [
+          "https://thexploitgame.com/?twclid=2943mz6up9mq92itj5gfw5vpxs",
+          "https://thexploitgame.com/?twclid=2a8cneeq66p6s8400m1dt9wmca"
+        ],
+        "origin_counts": {
+          "feed_buffer": 1,
+          "feed_buffer_reply": 1
+        },
+        "distinct_referring_accounts": 1,
+        "sample_referring_accounts": [
+          "antgmaxtheone"
+        ],
+        "distinct_axes": []
+      },
+      "claims": {
+        "total": 0,
+        "supported": 0,
+        "refuted": 0,
+        "contested": 0,
+        "unverified": 0,
+        "resolved_count": 0
+      },
+      "structural_features": {
+        "has_search_paths": false,
+        "has_article_paths": false,
+        "has_doi_paths": false
+      },
+      "ratings": {
+        "provenance": {
+          "score": 0.45,
+          "basis": [
+            "unknown_domain_pattern"
+          ]
+        },
+        "breadth": {
+          "score": 0.17833333333333332,
+          "basis": [
+            "distinct_urls:2",
+            "distinct_axes:0",
+            "origin_types:2"
+          ]
+        },
+        "corroboration": {
+          "score": 0.2833333333333333,
+          "basis": [
+            "referring_accounts:1",
+            "origin_types:2"
+          ]
+        },
+        "track_record": {
+          "score": null,
+          "basis": [
+            "no_resolved_claims_observed"
+          ]
+        },
+        "profile": {
+          "score": 0.1,
+          "confidence": 0.55,
+          "basis": [
+            "meta_author:false",
+            "published_time:false",
+            "canonical:true",
+            "about:false",
+            "contact:false",
+            "corrections:false",
+            "outbound_links:0",
+            "opinion_marker:false"
+          ]
+        },
+        "overall": {
+          "score": 0.37494791666666666,
+          "confidence": 0.13045,
+          "method": "mechanical_v1",
+          "basis": [
+            "unknown_domain_pattern",
+            "distinct_urls:2",
+            "distinct_axes:0",
+            "origin_types:2",
+            "referring_accounts:1",
+            "origin_types:2",
+            "track_record_unavailable"
+          ]
+        }
+      },
+      "profile": {
+        "fetched_at": "2026-08-14T10:49:04.943Z",
+        "homepage_url": "https://thexploitgame.com/",
+        "example_url": "https://thexploitgame.com/?twclid=2943mz6up9mq92itj5gfw5vpxs",
+        "homepage_status": 200,
+        "example_status": 200,
+        "homepage_final_url": "https://thexploitgame.com/",
+        "example_final_url": "https://thexploitgame.com/?twclid=2943mz6up9mq92itj5gfw5vpxs",
+        "homepage_content_type": "text/html; charset=utf-8",
+        "example_content_type": "text/html; charset=utf-8",
+        "homepage": {
+          "has_meta_author": false,
+          "has_published_time": false,
+          "has_canonical": true,
+          "has_about_link": false,
+          "has_contact_link": false,
+          "has_corrections_link": false,
+          "outbound_links_count": 0,
+          "opinion_marker": false
+        },
+        "example": {
+          "has_meta_author": false,
+          "has_published_time": false,
+          "has_canonical": true,
+          "has_about_link": false,
+          "has_contact_link": false,
+          "has_corrections_link": false,
+          "outbound_links_count": 0,
+          "opinion_marker": false
+        }
+      }
+    },
+    {
       "domain": "varrd.com",
       "entity": "Varrd",
       "kind": "unknown",
@@ -40663,7 +40788,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-08-10T21:02:01.046Z",
+        "fetched_at": "2026-08-14T10:49:05.145Z",
         "homepage_url": "https://dito.ph/",
         "example_url": "https://dito.ph/sandali?utm_source=twitter&utm_medium=cpm&utm_campaign=DOTC-DM-AWAR-DM-COJ-MAY-INT&utm_id=2026DM&utm_term=COJFEST&utm_content=promoted_post_1&twclid=2estlcww980yee2hzsu5vdedbn",
         "homepage_status": 200,
@@ -42034,7 +42159,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-08-11T07:32:03.393Z",
+        "fetched_at": "2026-08-14T10:49:15.716Z",
         "homepage_url": "https://guardian.com/",
         "example_url": "https://www.guardian.com/business/2026/jun/28/ocado-boss-tim-steiner-payouts",
         "homepage_status": null,
@@ -43521,7 +43646,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-08-10T04:31:21.478Z",
+        "fetched_at": "2026-08-14T10:49:16.731Z",
         "homepage_url": "https://surething.io/",
         "example_url": "https://surething.io/chat-index?utm_source=xads&twclid=27yqtzrn5j3zjmadm486py1wgi",
         "homepage_status": 200,
@@ -43645,7 +43770,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-08-10T06:01:20.650Z",
+        "fetched_at": "2026-08-14T11:19:01.118Z",
         "homepage_url": "https://controlweedsnotfarming.com/",
         "example_url": "https://controlweedsnotfarming.com/?utm_source=X&utm_medium=Social&utm_campaign=Remarketing&utm_term=Landing+Page.+Visitors&utm_content=Food+On+Our+Tables&twclid=2ehfqrtyrcni2wc5jyzgjr19ra",
         "homepage_status": 200,
@@ -43769,7 +43894,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-08-10T06:01:22.169Z",
+        "fetched_at": "2026-08-14T11:19:02.974Z",
         "homepage_url": "https://gptdefender.ai/",
         "example_url": "https://www.gptdefender.ai/?utm_source=x&utm_medium=paid_social&utm_campaign=gptdefender_launch&utm_content=variant_a&twclid=24c6hyn5zgh6wesf67pqq4taq8",
         "homepage_status": 200,
@@ -43893,7 +44018,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-08-10T06:01:24.034Z",
+        "fetched_at": "2026-08-14T11:19:04.873Z",
         "homepage_url": "https://usebagel.com/",
         "example_url": "https://usebagel.com/?utm_source=x&utm_medium=cpc&utm_campaign=2026-05_signup_opt&utm_content=best_ad_v1&twclid=21464dp3zurr4fjt3mqswbiz08",
         "homepage_status": 200,
@@ -44017,7 +44142,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-08-10T06:01:25.967Z",
+        "fetched_at": "2026-08-14T11:19:05.951Z",
         "homepage_url": "https://statstobucks.com/",
         "example_url": "https://statstobucks.com/?twclid=2695k76ld5x4gqx77ogha991a0",
         "homepage_status": 200,
@@ -89672,83 +89797,6 @@
         "distinct_referring_accounts": 1,
         "sample_referring_accounts": [
           "traderlexcom"
-        ],
-        "distinct_axes": []
-      },
-      "claims": {
-        "total": 0,
-        "supported": 0,
-        "refuted": 0,
-        "contested": 0,
-        "unverified": 0,
-        "resolved_count": 0
-      },
-      "structural_features": {
-        "has_search_paths": false,
-        "has_article_paths": false,
-        "has_doi_paths": false
-      },
-      "ratings": {
-        "provenance": {
-          "score": 0.45,
-          "basis": [
-            "unknown_domain_pattern"
-          ]
-        },
-        "breadth": {
-          "score": 0.08916666666666666,
-          "basis": [
-            "distinct_urls:1",
-            "distinct_axes:0",
-            "origin_types:1"
-          ]
-        },
-        "corroboration": {
-          "score": 0.19583333333333333,
-          "basis": [
-            "referring_accounts:1",
-            "origin_types:1"
-          ]
-        },
-        "track_record": {
-          "score": null,
-          "basis": [
-            "no_resolved_claims_observed"
-          ]
-        },
-        "overall": {
-          "score": 0.3472395833333333,
-          "confidence": 0.08135,
-          "method": "mechanical_v1",
-          "basis": [
-            "unknown_domain_pattern",
-            "distinct_urls:1",
-            "distinct_axes:0",
-            "origin_types:1",
-            "referring_accounts:1",
-            "origin_types:1",
-            "track_record_unavailable"
-          ]
-        }
-      }
-    },
-    {
-      "domain": "thexploitgame.com",
-      "entity": "Thexploitgame",
-      "kind": "unknown",
-      "first_seen_at": "2026-08-14T00:02:05.394Z",
-      "last_seen_at": "2026-08-14T00:02:05.394Z",
-      "discovery": {
-        "distinct_urls": 1,
-        "example_urls": [
-          "https://thexploitgame.com/?twclid=2943mz6up9mq92itj5gfw5vpxs"
-        ],
-        "origin_counts": {
-          "feed_buffer": 1
-        },
-        "distinct_referring_accounts": 1,
-        "sample_referring_accounts": [
-          "antgmaxtheone"
         ],
         "distinct_axes": []
       },
