@@ -1,8 +1,8 @@
 {
   "schema_version": "1.0",
-  "generated_at": "2026-08-14T23:19:21.387Z",
+  "generated_at": "2026-08-15T03:45:39.567Z",
   "method": "mechanical_registry_v1",
-  "profiled_at": "2026-08-14T23:19:48.971Z",
+  "profiled_at": "2026-08-15T03:45:46.875Z",
   "sources": [
     {
       "domain": "theguardian.com",
@@ -11,7 +11,7 @@
       "first_seen_at": "2026-03-27T23:17:00Z",
       "last_seen_at": "2026-08-12T07:15:01.538Z",
       "discovery": {
-        "distinct_urls": 854,
+        "distinct_urls": 856,
         "example_urls": [
           "https://www.theguardian.com/us-news/2026/jun/23/trump-immigration-courthouse-arrest-policy",
           "https://www.theguardian.com/us-news/2026/jun/28/ice-minnesota-defending-democracy",
@@ -21,7 +21,7 @@
         ],
         "origin_counts": {
           "ontology_evidence": 46,
-          "reading_queue": 818,
+          "reading_queue": 820,
           "journals": 121,
           "articles": 5
         },
@@ -75,7 +75,7 @@
         "breadth": {
           "score": 0.94,
           "basis": [
-            "distinct_urls:854",
+            "distinct_urls:856",
             "distinct_axes:20",
             "origin_types:4"
           ]
@@ -115,7 +115,7 @@
             "newsroom_domain_pattern",
             "article_path_seen",
             "doi_or_identifier_path_seen",
-            "distinct_urls:854",
+            "distinct_urls:856",
             "distinct_axes:20",
             "origin_types:4",
             "referring_accounts:0",
@@ -288,9 +288,9 @@
       "entity": "Aljazeera",
       "kind": "news",
       "first_seen_at": "2026-06-22T02:45:00Z",
-      "last_seen_at": "2026-08-14T22:50:02.040Z",
+      "last_seen_at": "2026-08-15T03:16:18.817Z",
       "discovery": {
-        "distinct_urls": 418,
+        "distinct_urls": 421,
         "example_urls": [
           "https://www.aljazeera.com/opinions/2026/6/24/south-africas-crises-will-not-be-solved-by-blaming-migrants",
           "https://www.aljazeera.com/video/newsfeed/2026/6/27/newly-released-video-exposes-henry-nowak-killers-lies?traffic_source=rss",
@@ -299,9 +299,9 @@
           "https://www.aljazeera.com/video/newsfeed/2026/7/1/why-is-maga-in-meltdown-over-the-supreme-court-birthright-ruling-2?traffic_source=rss"
         ],
         "origin_counts": {
-          "ontology_evidence": 188,
+          "ontology_evidence": 189,
           "reading_queue": 18,
-          "journals": 516,
+          "journals": 519,
           "articles": 10
         },
         "distinct_referring_accounts": 0,
@@ -362,7 +362,7 @@
         "breadth": {
           "score": 0.94,
           "basis": [
-            "distinct_urls:418",
+            "distinct_urls:421",
             "distinct_axes:29",
             "origin_types:4"
           ]
@@ -401,7 +401,7 @@
           "basis": [
             "newsroom_domain_pattern",
             "article_path_seen",
-            "distinct_urls:418",
+            "distinct_urls:421",
             "distinct_axes:29",
             "origin_types:4",
             "referring_accounts:0",
@@ -458,7 +458,7 @@
           "https://careers.cbp.gov/s/connect-to-recruiter?campaignid=701SJ00000BV0tR&utm_source=X&utm_medium=paid_social&utm_campaign=MGC_B5SXtXt5J5T&twclid=2f2100ywgvzunnowbnhrpi34g1"
         ],
         "origin_counts": {
-          "reading_queue": 18,
+          "reading_queue": 19,
           "feed_buffer_reply": 7
         },
         "distinct_referring_accounts": 1,
@@ -583,7 +583,7 @@
           "https://www.justice.gov/usao-ri/pr/two-business-executives-plead-guilty-tech-support-fraud-scheme?twclid=2f42440xock41qvr5cwo18o539"
         ],
         "origin_counts": {
-          "reading_queue": 18,
+          "reading_queue": 19,
           "feed_buffer_reply": 2,
           "feed_buffer": 1
         },
@@ -775,7 +775,7 @@
           ]
         },
         "profile": {
-          "score": 0,
+          "score": 0.16,
           "confidence": 0.55,
           "basis": [
             "meta_author:false",
@@ -783,7 +783,7 @@
             "canonical:false",
             "about:false",
             "contact:false",
-            "corrections:false",
+            "corrections:true",
             "outbound_links:0",
             "opinion_marker:false"
           ]
@@ -805,7 +805,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-08-12T01:14:13.803Z",
+        "fetched_at": "2026-08-15T01:45:44.417Z",
         "homepage_url": "https://nytimes.com/",
         "example_url": "https://www.nytimes.com/2026/06/19/world/canada/frank-stronach-trial-guilty-sex-charges.html",
         "homepage_status": 200,
@@ -816,12 +816,12 @@
         "example_content_type": "text/html;charset=utf-8",
         "homepage": {
           "has_meta_author": false,
-          "has_published_time": true,
+          "has_published_time": false,
           "has_canonical": true,
           "has_about_link": false,
           "has_contact_link": false,
-          "has_corrections_link": false,
-          "outbound_links_count": 0,
+          "has_corrections_link": true,
+          "outbound_links_count": 5,
           "opinion_marker": true
         },
         "example": {
@@ -977,7 +977,7 @@
         ],
         "origin_counts": {
           "ontology_evidence": 1,
-          "reading_queue": 15
+          "reading_queue": 16
         },
         "distinct_referring_accounts": 0,
         "sample_referring_accounts": [],
@@ -1217,7 +1217,7 @@
       "first_seen_at": "2026-06-26T07:05:00Z",
       "last_seen_at": "2026-08-07T21:29:16.276Z",
       "discovery": {
-        "distinct_urls": 525,
+        "distinct_urls": 526,
         "example_urls": [
           "https://www.bbc.co.uk/news/articles/cn8qxz6qypyo",
           "https://www.bbc.co.uk/news/articles/cn075j04pnyo?at_medium=RSS&amp;at_campaign=rss",
@@ -1227,7 +1227,7 @@
         ],
         "origin_counts": {
           "ontology_evidence": 6,
-          "reading_queue": 538,
+          "reading_queue": 539,
           "journals": 17,
           "articles": 1
         },
@@ -1263,7 +1263,7 @@
         "breadth": {
           "score": 0.8233333333333333,
           "basis": [
-            "distinct_urls:525",
+            "distinct_urls:526",
             "distinct_axes:4",
             "origin_types:4"
           ]
@@ -1301,7 +1301,7 @@
           "method": "mechanical_v1",
           "basis": [
             "newsroom_domain_pattern",
-            "distinct_urls:525",
+            "distinct_urls:526",
             "distinct_axes:4",
             "origin_types:4",
             "referring_accounts:0",
@@ -1680,7 +1680,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-08-12T01:14:33.810Z",
+        "fetched_at": "2026-08-15T01:46:04.430Z",
         "homepage_url": "https://washingtonpost.com/",
         "example_url": "https://www.washingtonpost.com/world/2026/04/13/us-iran-blockade-strait-hormuz-oil/",
         "homepage_status": null,
@@ -1804,7 +1804,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-08-12T01:14:34.895Z",
+        "fetched_at": "2026-08-15T01:46:04.941Z",
         "homepage_url": "https://bbc.com/",
         "example_url": "https://www.bbc.com/news/articles/cgmdw4vn7y2o?at_medium=RSS&amp;at_campaign=rss",
         "homepage_status": 200,
@@ -1840,7 +1840,7 @@
       "entity": "Pcij",
       "kind": "unknown",
       "first_seen_at": "2026-07-08T04:32:07.894Z",
-      "last_seen_at": "2026-08-14T22:50:02.040Z",
+      "last_seen_at": "2026-08-15T01:46:41.214Z",
       "discovery": {
         "distinct_urls": 13,
         "example_urls": [
@@ -1851,9 +1851,9 @@
           "https://pcij.org/2026/05/25/7-reasons-why-the-party-list-system-serves-dynasties-not-democracy/"
         ],
         "origin_counts": {
-          "ontology_evidence": 34,
-          "reading_queue": 22,
-          "journals": 63,
+          "ontology_evidence": 35,
+          "reading_queue": 23,
+          "journals": 64,
           "articles": 1
         },
         "distinct_referring_accounts": 0,
@@ -2110,7 +2110,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-08-12T01:14:36.832Z",
+        "fetched_at": "2026-08-15T01:46:05.794Z",
         "homepage_url": "https://google.com/",
         "example_url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQG8zTjzNOXrSBZwvSTLobfen2T2Mfxyn8MYVxW4sIU6cWottxkV4pJs_p6fwS7LJGs_vuED8LS-hCfYDaWBVPP6g5GilaCYMrJml-ow5K6SCv_H_b1Dl2x1bJE8PTS68J1lar6YIqGro0gdLxt0MIOMv-l1vVmmO0WJQtLSOEieMA6I7dl7eRgRC0BRXQWnC1DBXjH9CBNLq5ag1EbSnkyImyoNmXyv0qV7VQUvoAHc5OC2odagG5YXdhPj4Im_aZZUwd8=",
         "homepage_status": 200,
@@ -2244,7 +2244,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-08-12T02:44:20.744Z",
+        "fetched_at": "2026-08-15T03:15:41.362Z",
         "homepage_url": "https://cbsnews.com/",
         "example_url": "https://www.cbsnews.com/news/us-naval-blockade-iran-ports-2026/",
         "homepage_status": 200,
@@ -2280,9 +2280,9 @@
       "entity": "Com Ph",
       "kind": "unknown",
       "first_seen_at": "2026-04-15T09:58:55.036Z",
-      "last_seen_at": "2026-08-14T15:08:47.656Z",
+      "last_seen_at": "2026-08-15T03:40:21.286Z",
       "discovery": {
-        "distinct_urls": 31,
+        "distinct_urls": 33,
         "example_urls": [
           "https://x.tv5.com.ph/news/national/read/arrest-warrants-issued-vs-discayas-over-malversation-graft-charges-tied-to-flood-control-projects-malolos-court",
           "https://balita.mb.com.ph/2026/06/11/di-pagbalik-ng-ph-sa-icc-di-nagpapakita-n",
@@ -2292,7 +2292,7 @@
         ],
         "origin_counts": {
           "ontology_evidence": 4,
-          "feed_buffer": 14,
+          "feed_buffer": 16,
           "feed_buffer_reply": 8,
           "journals": 13
         },
@@ -2332,7 +2332,7 @@
         "breadth": {
           "score": 0.7066666666666666,
           "basis": [
-            "distinct_urls:31",
+            "distinct_urls:33",
             "distinct_axes:2",
             "origin_types:4"
           ]
@@ -2371,7 +2371,7 @@
           "basis": [
             "unknown_domain_pattern",
             "article_path_seen",
-            "distinct_urls:31",
+            "distinct_urls:33",
             "distinct_axes:2",
             "origin_types:4",
             "referring_accounts:4",
@@ -2381,7 +2381,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-08-12T02:44:20.817Z",
+        "fetched_at": "2026-08-15T03:15:41.395Z",
         "homepage_url": "https://com.ph/",
         "example_url": "https://x.tv5.com.ph/news/national/read/arrest-warrants-issued-vs-discayas-over-malversation-graft-charges-tied-to-flood-control-projects-malolos-court",
         "homepage_status": null,
@@ -3249,9 +3249,9 @@
       "entity": "T Co",
       "kind": "unknown",
       "first_seen_at": "2016-05-05T18:57:30.000Z",
-      "last_seen_at": "2026-08-14T23:07:48.000Z",
+      "last_seen_at": "2026-08-15T03:22:00.000Z",
       "discovery": {
-        "distinct_urls": 14814,
+        "distinct_urls": 14942,
         "example_urls": [
           "https://t.co/pJSE124ec4",
           "https://t.co/Soz8BXPWaa",
@@ -3260,11 +3260,11 @@
           "https://t.co/cYaqYDRp08"
         ],
         "origin_counts": {
-          "feed_buffer": 12546,
-          "feed_buffer_reply": 5093,
+          "feed_buffer": 12686,
+          "feed_buffer_reply": 5101,
           "articles": 3
         },
-        "distinct_referring_accounts": 2809,
+        "distinct_referring_accounts": 2812,
         "sample_referring_accounts": [
           "0808iveta",
           "09abracadabra",
@@ -3303,7 +3303,7 @@
         "breadth": {
           "score": 0.53,
           "basis": [
-            "distinct_urls:14814",
+            "distinct_urls:14942",
             "distinct_axes:0",
             "origin_types:3"
           ]
@@ -3311,7 +3311,7 @@
         "corroboration": {
           "score": 0.9125,
           "basis": [
-            "referring_accounts:2809",
+            "referring_accounts:2812",
             "origin_types:3"
           ]
         },
@@ -3342,10 +3342,10 @@
           "basis": [
             "unknown_domain_pattern",
             "doi_or_identifier_path_seen",
-            "distinct_urls:14814",
+            "distinct_urls:14942",
             "distinct_axes:0",
             "origin_types:3",
-            "referring_accounts:2809",
+            "referring_accounts:2812",
             "origin_types:3",
             "track_record_unavailable"
           ]
@@ -3538,9 +3538,9 @@
       "entity": "Rappler",
       "kind": "unknown",
       "first_seen_at": "2026-06-22T04:04:30.428Z",
-      "last_seen_at": "2026-08-13T03:57:14.293Z",
+      "last_seen_at": "2026-08-15T03:16:18.795Z",
       "discovery": {
-        "distinct_urls": 278,
+        "distinct_urls": 281,
         "example_urls": [
           "https://www.rappler.com/fact-check-no-arrest-warrant-issued-vs-marcoleta",
           "https://www.rappler.com/technology/decoded-tacloban-school-shooting-disinformation-kiko-barzaga-discussions-juvenile-justice-law/",
@@ -3549,8 +3549,8 @@
           "https://www.rappler.com/voices/thought-leaders/vantage-point-bir-tax-amlc-records-billions-questions-sara-duterte-ignore/"
         ],
         "origin_counts": {
-          "ontology_evidence": 132,
-          "journals": 308,
+          "ontology_evidence": 133,
+          "journals": 311,
           "articles": 4
         },
         "distinct_referring_accounts": 0,
@@ -3612,7 +3612,7 @@
         "breadth": {
           "score": 0.8799999999999999,
           "basis": [
-            "distinct_urls:278",
+            "distinct_urls:281",
             "distinct_axes:31",
             "origin_types:3"
           ]
@@ -3650,7 +3650,7 @@
           "method": "mechanical_v1",
           "basis": [
             "unknown_domain_pattern",
-            "distinct_urls:278",
+            "distinct_urls:281",
             "distinct_axes:31",
             "origin_types:3",
             "referring_accounts:0",
@@ -4894,9 +4894,9 @@
       "entity": "Steampowered",
       "kind": "unknown",
       "first_seen_at": "2026-04-04T23:34:51.000Z",
-      "last_seen_at": "2026-08-14T18:08:45.189Z",
+      "last_seen_at": "2026-08-15T02:35:20.384Z",
       "discovery": {
-        "distinct_urls": 277,
+        "distinct_urls": 278,
         "example_urls": [
           "https://store.steampowered.com/app/1315180?twclid=2cb8mho5n4udnkq1fnm1yi4kkh",
           "https://store.steampowered.com/app/3321460?utm_campaign=launching&utm_source=X&utm_term=20260319_traffic&utm_medium=us&utm_content=Trailer_view&twclid=22351un15xjmtu22gjwnjp292d",
@@ -4906,7 +4906,7 @@
         ],
         "origin_counts": {
           "feed_buffer_reply": 213,
-          "feed_buffer": 64
+          "feed_buffer": 65
         },
         "distinct_referring_accounts": 42,
         "sample_referring_accounts": [
@@ -4946,7 +4946,7 @@
         "breadth": {
           "score": 0.47,
           "basis": [
-            "distinct_urls:277",
+            "distinct_urls:278",
             "distinct_axes:0",
             "origin_types:2"
           ]
@@ -4984,7 +4984,7 @@
           "method": "mechanical_v1",
           "basis": [
             "unknown_domain_pattern",
-            "distinct_urls:277",
+            "distinct_urls:278",
             "distinct_axes:0",
             "origin_types:2",
             "referring_accounts:42",
@@ -5552,9 +5552,9 @@
       "entity": "Starlink",
       "kind": "unknown",
       "first_seen_at": "2026-04-07T03:51:50.000Z",
-      "last_seen_at": "2026-08-14T17:19:47.000Z",
+      "last_seen_at": "2026-08-14T23:01:08.000Z",
       "discovery": {
-        "distinct_urls": 135,
+        "distinct_urls": 136,
         "example_urls": [
           "https://www.starlink.com/us/residential?referral=RC-DF-9543787-19448-67&utm_medium=paid&utm_campaign=awr_us_soc_twt_ptg_cau&utm_content=awr_us_soc_twt_ptg_cau_res_gvp_v4s_stc_en-us_sdb-bluesky-uptime&twclid=2cg62b1u0oqrypdim5oir1767e",
           "https://www.starlink.com/us/residential?referral=RC-DF-9543787-19448-67&utm_medium=paid&utm_campaign=awr_us_soc_twt_ptg_cau&utm_content=awr_us_soc_twt_ptg_cau_res_gvp_v4s_stc_en-us_sdb-avail-sat-yourhome&twclid=2216n7j93v9absqn77762mm626",
@@ -5563,7 +5563,7 @@
           "https://www.starlink.com/us/residential?referral=RC-DF-9543787-19448-67&utm_medium=paid&utm_campaign=awr_us_soc_twt_ptg_cau&utm_content=awr_us_soc_twt_ptg_cau_res_gvp_v4s_stc_en-us_sdb-avail-sat-arrived&twclid=21pi7t0qs8tgw0wgnh5mvmdu2g"
         ],
         "origin_counts": {
-          "feed_buffer_reply": 124,
+          "feed_buffer_reply": 125,
           "feed_buffer": 15
         },
         "distinct_referring_accounts": 5,
@@ -5599,7 +5599,7 @@
         "breadth": {
           "score": 0.47,
           "basis": [
-            "distinct_urls:135",
+            "distinct_urls:136",
             "distinct_axes:0",
             "origin_types:2"
           ]
@@ -5637,7 +5637,7 @@
           "method": "mechanical_v1",
           "basis": [
             "unknown_domain_pattern",
-            "distinct_urls:135",
+            "distinct_urls:136",
             "distinct_axes:0",
             "origin_types:2",
             "referring_accounts:5",
@@ -7223,9 +7223,9 @@
       "entity": "Bet88 Ph",
       "kind": "unknown",
       "first_seen_at": "2026-07-03T16:00:02.000Z",
-      "last_seen_at": "2026-08-14T18:33:44.974Z",
+      "last_seen_at": "2026-08-15T03:25:21.153Z",
       "discovery": {
-        "distinct_urls": 100,
+        "distinct_urls": 102,
         "example_urls": [
           "https://bet88.ph/en/?type=registration&modal=user&ref=xa027&twclid=27gurqyk8ekpo92oqcm3aeuing",
           "https://bet88.ph/en/?type=registration&modal=user&ref=xa023&twclid=25wrsnnpnc7378nutxmyo1v6kj",
@@ -7235,7 +7235,7 @@
         ],
         "origin_counts": {
           "feed_buffer_reply": 37,
-          "feed_buffer": 63
+          "feed_buffer": 65
         },
         "distinct_referring_accounts": 1,
         "sample_referring_accounts": [
@@ -7266,7 +7266,7 @@
         "breadth": {
           "score": 0.47,
           "basis": [
-            "distinct_urls:100",
+            "distinct_urls:102",
             "distinct_axes:0",
             "origin_types:2"
           ]
@@ -7304,7 +7304,7 @@
           "method": "mechanical_v1",
           "basis": [
             "unknown_domain_pattern",
-            "distinct_urls:100",
+            "distinct_urls:102",
             "distinct_axes:0",
             "origin_types:2",
             "referring_accounts:1",
@@ -7604,9 +7604,9 @@
       "entity": "Maventrading",
       "kind": "unknown",
       "first_seen_at": "2026-07-04T21:13:31.000Z",
-      "last_seen_at": "2026-08-14T18:08:52.435Z",
+      "last_seen_at": "2026-08-14T21:06:24.000Z",
       "discovery": {
-        "distinct_urls": 72,
+        "distinct_urls": 73,
         "example_urls": [
           "https://maventrading.com/lp/choose-your-challenge?twt_id=54608379&twclid=24irm75xuuvw6vkz1dgb8ui0sz",
           "https://maventrading.com/challenges/1-step?twt_id=54607786&twclid=24dguyzddfgso39sw5b667t4v6",
@@ -7615,7 +7615,7 @@
           "https://maventrading.com/challenges/3-step?twt_id=54776293&twclid=2aaofkb5fwz3yvcvuoky39r51x"
         ],
         "origin_counts": {
-          "feed_buffer_reply": 11,
+          "feed_buffer_reply": 12,
           "feed_buffer": 61
         },
         "distinct_referring_accounts": 1,
@@ -7647,7 +7647,7 @@
         "breadth": {
           "score": 0.47,
           "basis": [
-            "distinct_urls:72",
+            "distinct_urls:73",
             "distinct_axes:0",
             "origin_types:2"
           ]
@@ -7685,7 +7685,7 @@
           "method": "mechanical_v1",
           "basis": [
             "unknown_domain_pattern",
-            "distinct_urls:72",
+            "distinct_urls:73",
             "distinct_axes:0",
             "origin_types:2",
             "referring_accounts:1",
@@ -7731,9 +7731,9 @@
       "entity": "Travala",
       "kind": "unknown",
       "first_seen_at": "2026-07-07T12:18:51.059Z",
-      "last_seen_at": "2026-08-14T16:58:46.592Z",
+      "last_seen_at": "2026-08-15T01:45:29.333Z",
       "discovery": {
-        "distinct_urls": 45,
+        "distinct_urls": 46,
         "example_urls": [
           "https://www.travala.com/?camp_name=&camp_offer=credit&camp_content=Sign-up-or-log-in-to-receive-%2450-off-flights%2C-hotels-and-activities.&camp_code=BTCASIA50&camp_value=50&utm_campaign=BTCASIA50&utm_medium=by-travala-cpc&utm_source=twitter&twclid=26wz3yk3m5mtcltdzivyfesoom",
           "https://www.travala.com/?camp_name=&camp_offer=credit&camp_content=Sign-up-or-log-in-to-receive-%2450-off-flights%2C-hotels-and-activities.&camp_code=BTCASIA50&camp_value=50&utm_campaign=BTCASIA50&utm_medium=by-travala-cpc&utm_source=twitter&twclid=27hwmpgkfaysz941g6s97hdxaj",
@@ -7742,7 +7742,7 @@
           "https://www.travala.com/?camp_name=&camp_offer=credit&camp_content=Sign-up-or-log-in-to-receive-%2450-off-flights%2C-hotels-and-activities.&camp_code=BTCASIA50&camp_value=50&utm_campaign=BTCASIA50&utm_medium=by-travala-cpc&utm_source=twitter&twclid=2bbhq20cxwi8wz4ld34c9p9zyc"
         ],
         "origin_counts": {
-          "feed_buffer": 40,
+          "feed_buffer": 41,
           "feed_buffer_reply": 5
         },
         "distinct_referring_accounts": 1,
@@ -7774,7 +7774,7 @@
         "breadth": {
           "score": 0.47,
           "basis": [
-            "distinct_urls:45",
+            "distinct_urls:46",
             "distinct_axes:0",
             "origin_types:2"
           ]
@@ -7812,7 +7812,7 @@
           "method": "mechanical_v1",
           "basis": [
             "unknown_domain_pattern",
-            "distinct_urls:45",
+            "distinct_urls:46",
             "distinct_axes:0",
             "origin_types:2",
             "referring_accounts:1",
@@ -7858,9 +7858,9 @@
       "entity": "Coderabbit Ai",
       "kind": "unknown",
       "first_seen_at": "2026-06-09T09:50:16.000Z",
-      "last_seen_at": "2026-08-14T18:18:45.509Z",
+      "last_seen_at": "2026-08-15T02:35:31.255Z",
       "discovery": {
-        "distinct_urls": 38,
+        "distinct_urls": 39,
         "example_urls": [
           "https://www.coderabbit.ai/agent?utm_source=twitter&utm_medium=cpc&utm_campaign=brandawareness_slack&twclid=25ohyy1nnhx1vb6p888i79f380",
           "https://www.coderabbit.ai/agent?utm_source=twitter&utm_medium=cpc&utm_campaign=brandawareness_slack&twclid=289waaptg8g5p8kt9nmjdhtmdm",
@@ -7870,7 +7870,7 @@
         ],
         "origin_counts": {
           "feed_buffer_reply": 9,
-          "feed_buffer": 29
+          "feed_buffer": 30
         },
         "distinct_referring_accounts": 1,
         "sample_referring_accounts": [
@@ -7901,7 +7901,7 @@
         "breadth": {
           "score": 0.47,
           "basis": [
-            "distinct_urls:38",
+            "distinct_urls:39",
             "distinct_axes:0",
             "origin_types:2"
           ]
@@ -7939,7 +7939,7 @@
           "method": "mechanical_v1",
           "basis": [
             "unknown_domain_pattern",
-            "distinct_urls:38",
+            "distinct_urls:39",
             "distinct_axes:0",
             "origin_types:2",
             "referring_accounts:1",
@@ -13705,6 +13705,133 @@
       }
     },
     {
+      "domain": "asco.org",
+      "entity": "Asco",
+      "kind": "unknown",
+      "first_seen_at": "2026-07-14T04:41:05.684Z",
+      "last_seen_at": "2026-08-14T23:33:58.801Z",
+      "discovery": {
+        "distinct_urls": 9,
+        "example_urls": [
+          "https://www.asco.org/career-development/leadership-programs/global-leadership-programs/asia-pacific?cmpid=cc_ascoorg_ldp_abc26-phase2-ldp-asia_sn_x_formerly_twitter_all_retargeting_intl_070126_081726___aware_anime_impact&twclid=2ag9prgoer02llrzl6qhdbcbe6",
+          "https://www.asco.org/career-development/leadership-programs/global-leadership-programs/asia-pacific?cmpid=cc_ascoorg_ldp_abc26-phase2-ldp-asia_sn_x_formerly_twitter_all_retargeting_intl_070126_081726___aware_anime_impact&twclid=2486sv1037g5c9tnd25p6zaxm9",
+          "https://www.asco.org/career-development/leadership-programs/global-leadership-programs/asia-pacific?cmpid=cc_ascoorg_ldp_abc26-phase2-ldp-asia_sn_x_formerly_twitter_all_retargeting_intl_070126_081726___aware_anime_connect&twclid=217ofrzj1fz65u2t2ziymm6d9a",
+          "https://www.asco.org/career-development/leadership-programs/global-leadership-programs/asia-pacific?cmpid=cc_ascoorg_ldp_abc26-phase2-ldp-asia_sn_x_formerly_twitter_all_retargeting_intl_070126_081726___aware_anime_training-guidance&twclid=2590aqyn7f1pxs71ddnelfii3g",
+          "https://www.asco.org/career-development/leadership-programs/global-leadership-programs/asia-pacific?cmpid=cc_ascoorg_ldp_abc26-phase2-ldp-asia_sn_x_formerly_twitter_all_retargeting_intl_070126_081726___aware_anime_impact&twclid=24i4va4gjlwh4zdo2hq9z2nv97"
+        ],
+        "origin_counts": {
+          "feed_buffer": 8,
+          "feed_buffer_reply": 1
+        },
+        "distinct_referring_accounts": 1,
+        "sample_referring_accounts": [
+          "asco"
+        ],
+        "distinct_axes": []
+      },
+      "claims": {
+        "total": 0,
+        "supported": 0,
+        "refuted": 0,
+        "contested": 0,
+        "unverified": 0,
+        "resolved_count": 0
+      },
+      "structural_features": {
+        "has_search_paths": false,
+        "has_article_paths": false,
+        "has_doi_paths": false
+      },
+      "ratings": {
+        "provenance": {
+          "score": 0.45,
+          "basis": [
+            "unknown_domain_pattern"
+          ]
+        },
+        "breadth": {
+          "score": 0.38249999999999995,
+          "basis": [
+            "distinct_urls:9",
+            "distinct_axes:0",
+            "origin_types:2"
+          ]
+        },
+        "corroboration": {
+          "score": 0.2833333333333333,
+          "basis": [
+            "referring_accounts:1",
+            "origin_types:2"
+          ]
+        },
+        "track_record": {
+          "score": null,
+          "basis": [
+            "no_resolved_claims_observed"
+          ]
+        },
+        "profile": {
+          "score": 0,
+          "confidence": 0.55,
+          "basis": [
+            "meta_author:false",
+            "published_time:false",
+            "canonical:false",
+            "about:false",
+            "contact:false",
+            "corrections:false",
+            "outbound_links:0",
+            "opinion_marker:false"
+          ]
+        },
+        "overall": {
+          "score": 0.419609375,
+          "confidence": 0.330825,
+          "method": "mechanical_v1",
+          "basis": [
+            "unknown_domain_pattern",
+            "distinct_urls:9",
+            "distinct_axes:0",
+            "origin_types:2",
+            "referring_accounts:1",
+            "origin_types:2",
+            "track_record_unavailable"
+          ]
+        }
+      },
+      "profile": {
+        "fetched_at": "2026-08-14T18:19:10.890Z",
+        "homepage_url": "https://asco.org/",
+        "example_url": "https://www.asco.org/career-development/leadership-programs/global-leadership-programs/asia-pacific?cmpid=cc_ascoorg_ldp_abc26-phase2-ldp-asia_sn_x_formerly_twitter_all_retargeting_intl_070126_081726___aware_anime_impact&twclid=2ag9prgoer02llrzl6qhdbcbe6",
+        "homepage_status": 403,
+        "example_status": 403,
+        "homepage_final_url": "https://asco.org/",
+        "example_final_url": "https://www.asco.org/career-development/leadership-programs/global-leadership-programs/asia-pacific?cmpid=cc_ascoorg_ldp_abc26-phase2-ldp-asia_sn_x_formerly_twitter_all_retargeting_intl_070126_081726___aware_anime_impact&twclid=2ag9prgoer02llrzl6qhdbcbe6",
+        "homepage_content_type": "text/html",
+        "example_content_type": "text/html",
+        "homepage": {
+          "has_meta_author": false,
+          "has_published_time": false,
+          "has_canonical": false,
+          "has_about_link": false,
+          "has_contact_link": false,
+          "has_corrections_link": false,
+          "outbound_links_count": 0,
+          "opinion_marker": false
+        },
+        "example": {
+          "has_meta_author": false,
+          "has_published_time": false,
+          "has_canonical": false,
+          "has_about_link": false,
+          "has_contact_link": false,
+          "has_corrections_link": false,
+          "outbound_links_count": 0,
+          "opinion_marker": false
+        }
+      }
+    },
+    {
       "domain": "tradeodds.io",
       "entity": "Tradeodds Io",
       "kind": "unknown",
@@ -16832,7 +16959,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-08-12T02:44:23.332Z",
+        "fetched_at": "2026-08-15T03:15:41.756Z",
         "homepage_url": "https://abey.com/",
         "example_url": "https://abey.com/?twclid=245i7ob4cgmg7v7epadtxl7ku4",
         "homepage_status": 200,
@@ -17095,133 +17222,6 @@
         "example_final_url": "https://www.pyrenva.com/products/havern-polo?utm_source=twitter&utm_campaign=HpoloSWC02&twclid=285udvuvfb3zz15rwylu1v9etj",
         "homepage_content_type": "text/html; charset=UTF-8",
         "example_content_type": "text/html; charset=UTF-8",
-        "homepage": {
-          "has_meta_author": false,
-          "has_published_time": false,
-          "has_canonical": false,
-          "has_about_link": false,
-          "has_contact_link": false,
-          "has_corrections_link": false,
-          "outbound_links_count": 0,
-          "opinion_marker": false
-        },
-        "example": {
-          "has_meta_author": false,
-          "has_published_time": false,
-          "has_canonical": false,
-          "has_about_link": false,
-          "has_contact_link": false,
-          "has_corrections_link": false,
-          "outbound_links_count": 0,
-          "opinion_marker": false
-        }
-      }
-    },
-    {
-      "domain": "asco.org",
-      "entity": "Asco",
-      "kind": "unknown",
-      "first_seen_at": "2026-07-14T04:41:05.684Z",
-      "last_seen_at": "2026-08-14T02:12:16.254Z",
-      "discovery": {
-        "distinct_urls": 8,
-        "example_urls": [
-          "https://www.asco.org/career-development/leadership-programs/global-leadership-programs/asia-pacific?cmpid=cc_ascoorg_ldp_abc26-phase2-ldp-asia_sn_x_formerly_twitter_all_retargeting_intl_070126_081726___aware_anime_impact&twclid=2ag9prgoer02llrzl6qhdbcbe6",
-          "https://www.asco.org/career-development/leadership-programs/global-leadership-programs/asia-pacific?cmpid=cc_ascoorg_ldp_abc26-phase2-ldp-asia_sn_x_formerly_twitter_all_retargeting_intl_070126_081726___aware_anime_impact&twclid=2486sv1037g5c9tnd25p6zaxm9",
-          "https://www.asco.org/career-development/leadership-programs/global-leadership-programs/asia-pacific?cmpid=cc_ascoorg_ldp_abc26-phase2-ldp-asia_sn_x_formerly_twitter_all_retargeting_intl_070126_081726___aware_anime_connect&twclid=217ofrzj1fz65u2t2ziymm6d9a",
-          "https://www.asco.org/career-development/leadership-programs/global-leadership-programs/asia-pacific?cmpid=cc_ascoorg_ldp_abc26-phase2-ldp-asia_sn_x_formerly_twitter_all_retargeting_intl_070126_081726___aware_anime_training-guidance&twclid=2590aqyn7f1pxs71ddnelfii3g",
-          "https://www.asco.org/career-development/leadership-programs/global-leadership-programs/asia-pacific?cmpid=cc_ascoorg_ldp_abc26-phase2-ldp-asia_sn_x_formerly_twitter_all_retargeting_intl_070126_081726___aware_anime_impact&twclid=24i4va4gjlwh4zdo2hq9z2nv97"
-        ],
-        "origin_counts": {
-          "feed_buffer": 7,
-          "feed_buffer_reply": 1
-        },
-        "distinct_referring_accounts": 1,
-        "sample_referring_accounts": [
-          "asco"
-        ],
-        "distinct_axes": []
-      },
-      "claims": {
-        "total": 0,
-        "supported": 0,
-        "refuted": 0,
-        "contested": 0,
-        "unverified": 0,
-        "resolved_count": 0
-      },
-      "structural_features": {
-        "has_search_paths": false,
-        "has_article_paths": false,
-        "has_doi_paths": false
-      },
-      "ratings": {
-        "provenance": {
-          "score": 0.45,
-          "basis": [
-            "unknown_domain_pattern"
-          ]
-        },
-        "breadth": {
-          "score": 0.3533333333333333,
-          "basis": [
-            "distinct_urls:8",
-            "distinct_axes:0",
-            "origin_types:2"
-          ]
-        },
-        "corroboration": {
-          "score": 0.2833333333333333,
-          "basis": [
-            "referring_accounts:1",
-            "origin_types:2"
-          ]
-        },
-        "track_record": {
-          "score": null,
-          "basis": [
-            "no_resolved_claims_observed"
-          ]
-        },
-        "profile": {
-          "score": 0,
-          "confidence": 0.55,
-          "basis": [
-            "meta_author:false",
-            "published_time:false",
-            "canonical:false",
-            "about:false",
-            "contact:false",
-            "corrections:false",
-            "outbound_links:0",
-            "opinion_marker:false"
-          ]
-        },
-        "overall": {
-          "score": 0.41322916666666665,
-          "confidence": 0.30219999999999997,
-          "method": "mechanical_v1",
-          "basis": [
-            "unknown_domain_pattern",
-            "distinct_urls:8",
-            "distinct_axes:0",
-            "origin_types:2",
-            "referring_accounts:1",
-            "origin_types:2",
-            "track_record_unavailable"
-          ]
-        }
-      },
-      "profile": {
-        "fetched_at": "2026-08-14T18:19:10.890Z",
-        "homepage_url": "https://asco.org/",
-        "example_url": "https://www.asco.org/career-development/leadership-programs/global-leadership-programs/asia-pacific?cmpid=cc_ascoorg_ldp_abc26-phase2-ldp-asia_sn_x_formerly_twitter_all_retargeting_intl_070126_081726___aware_anime_impact&twclid=2ag9prgoer02llrzl6qhdbcbe6",
-        "homepage_status": 403,
-        "example_status": 403,
-        "homepage_final_url": "https://asco.org/",
-        "example_final_url": "https://www.asco.org/career-development/leadership-programs/global-leadership-programs/asia-pacific?cmpid=cc_ascoorg_ldp_abc26-phase2-ldp-asia_sn_x_formerly_twitter_all_retargeting_intl_070126_081726___aware_anime_impact&twclid=2ag9prgoer02llrzl6qhdbcbe6",
-        "homepage_content_type": "text/html",
-        "example_content_type": "text/html",
         "homepage": {
           "has_meta_author": false,
           "has_published_time": false,
@@ -21803,6 +21803,133 @@
       }
     },
     {
+      "domain": "shopee.ph",
+      "entity": "Shopee Ph",
+      "kind": "unknown",
+      "first_seen_at": "2026-08-01T02:38:23.049Z",
+      "last_seen_at": "2026-08-15T03:05:20.698Z",
+      "discovery": {
+        "distinct_urls": 5,
+        "example_urls": [
+          "https://shopee.ph/universal-link/product/278394653/22353819981/?deep_and_web=1&smtt=9&utm_campaign=s278394653_ss_ph_twtr_twitterad&utm_content=eoint&utm_medium=seller&utm_source=twitter&twclid=21uy0mdqfu18byi7ighc1a87wq",
+          "https://shopee.ph/universal-link/product/278394653/22353819981/?deep_and_web=1&smtt=9&utm_campaign=s278394653_ss_ph_twtr_twitterad&utm_content=eoint&utm_medium=seller&utm_source=twitter&twclid=27zrwtk8jty1udv5n7exlcuvsf",
+          "https://shopee.ph/universal-link/product/278394653/22353819981/?deep_and_web=1&smtt=9&utm_campaign=s278394653_ss_ph_twtr_twitterad&utm_content=eoint&utm_medium=seller&utm_source=twitter&twclid=21g7ic77xyycmkpk8au6yp9yuw",
+          "https://shopee.ph/universal-link/product/278394653/22353819981/?deep_and_web=1&smtt=9&utm_campaign=s278394653_ss_ph_twtr_twitterad&utm_content=eoint&utm_medium=seller&utm_source=twitter&twclid=25pujicvxfu94itxtwc9nbr5ht",
+          "https://shopee.ph/universal-link/product/278394653/22353819981/?deep_and_web=1&smtt=9&utm_campaign=s278394653_ss_ph_twtr_twitterad&utm_content=eoint&utm_medium=seller&utm_source=twitter&twclid=21ocwjrkz9v53mxfs7ot38xzi7"
+        ],
+        "origin_counts": {
+          "feed_buffer": 3,
+          "feed_buffer_reply": 2
+        },
+        "distinct_referring_accounts": 1,
+        "sample_referring_accounts": [
+          "efficascentph"
+        ],
+        "distinct_axes": []
+      },
+      "claims": {
+        "total": 0,
+        "supported": 0,
+        "refuted": 0,
+        "contested": 0,
+        "unverified": 0,
+        "resolved_count": 0
+      },
+      "structural_features": {
+        "has_search_paths": false,
+        "has_article_paths": false,
+        "has_doi_paths": false
+      },
+      "ratings": {
+        "provenance": {
+          "score": 0.45,
+          "basis": [
+            "unknown_domain_pattern"
+          ]
+        },
+        "breadth": {
+          "score": 0.26583333333333337,
+          "basis": [
+            "distinct_urls:5",
+            "distinct_axes:0",
+            "origin_types:2"
+          ]
+        },
+        "corroboration": {
+          "score": 0.2833333333333333,
+          "basis": [
+            "referring_accounts:1",
+            "origin_types:2"
+          ]
+        },
+        "track_record": {
+          "score": null,
+          "basis": [
+            "no_resolved_claims_observed"
+          ]
+        },
+        "profile": {
+          "score": 0.1,
+          "confidence": 0.55,
+          "basis": [
+            "meta_author:false",
+            "published_time:false",
+            "canonical:true",
+            "about:false",
+            "contact:false",
+            "corrections:false",
+            "outbound_links:0",
+            "opinion_marker:false"
+          ]
+        },
+        "overall": {
+          "score": 0.39408854166666674,
+          "confidence": 0.216325,
+          "method": "mechanical_v1",
+          "basis": [
+            "unknown_domain_pattern",
+            "distinct_urls:5",
+            "distinct_axes:0",
+            "origin_types:2",
+            "referring_accounts:1",
+            "origin_types:2",
+            "track_record_unavailable"
+          ]
+        }
+      },
+      "profile": {
+        "fetched_at": "2026-08-14T03:49:03.640Z",
+        "homepage_url": "https://shopee.ph/",
+        "example_url": "https://shopee.ph/universal-link/product/278394653/22353819981/?deep_and_web=1&smtt=9&utm_campaign=s278394653_ss_ph_twtr_twitterad&utm_content=eoint&utm_medium=seller&utm_source=twitter&twclid=21uy0mdqfu18byi7ighc1a87wq",
+        "homepage_status": 200,
+        "example_status": 200,
+        "homepage_final_url": "https://shopee.ph/",
+        "example_final_url": "https://shopee.ph/product/278394653/22353819981/?smtt=9&twclid=21uy0mdqfu18byi7ighc1a87wq&uls_trackid=56cn0kgp00iv&utm_campaign=s278394653_ss_ph_twtr_twitterad&utm_content=eoint&utm_medium=seller&utm_source=twitter",
+        "homepage_content_type": "text/html; charset=utf-8",
+        "example_content_type": "text/html; charset=utf-8",
+        "homepage": {
+          "has_meta_author": false,
+          "has_published_time": false,
+          "has_canonical": false,
+          "has_about_link": false,
+          "has_contact_link": false,
+          "has_corrections_link": false,
+          "outbound_links_count": 0,
+          "opinion_marker": false
+        },
+        "example": {
+          "has_meta_author": false,
+          "has_published_time": false,
+          "has_canonical": true,
+          "has_about_link": false,
+          "has_contact_link": false,
+          "has_corrections_link": false,
+          "outbound_links_count": 0,
+          "opinion_marker": false
+        }
+      }
+    },
+    {
       "domain": "oppo.com",
       "entity": "Oppo",
       "kind": "unknown",
@@ -23036,7 +23163,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-08-12T01:44:16.526Z",
+        "fetched_at": "2026-08-15T02:15:38.581Z",
         "homepage_url": "https://simba.sg/",
         "example_url": "https://simba.sg/home?twclid=246gm13qkkeak3bq6hmc879ar",
         "homepage_status": 200,
@@ -24704,26 +24831,26 @@
       }
     },
     {
-      "domain": "shopee.ph",
-      "entity": "Shopee Ph",
+      "domain": "sketchal.com",
+      "entity": "Sketchal",
       "kind": "unknown",
-      "first_seen_at": "2026-08-01T02:38:23.049Z",
-      "last_seen_at": "2026-08-13T08:55:39.000Z",
+      "first_seen_at": "2026-08-13T13:29:04.000Z",
+      "last_seen_at": "2026-08-14T23:43:50.026Z",
       "discovery": {
         "distinct_urls": 4,
         "example_urls": [
-          "https://shopee.ph/universal-link/product/278394653/22353819981/?deep_and_web=1&smtt=9&utm_campaign=s278394653_ss_ph_twtr_twitterad&utm_content=eoint&utm_medium=seller&utm_source=twitter&twclid=21uy0mdqfu18byi7ighc1a87wq",
-          "https://shopee.ph/universal-link/product/278394653/22353819981/?deep_and_web=1&smtt=9&utm_campaign=s278394653_ss_ph_twtr_twitterad&utm_content=eoint&utm_medium=seller&utm_source=twitter&twclid=27zrwtk8jty1udv5n7exlcuvsf",
-          "https://shopee.ph/universal-link/product/278394653/22353819981/?deep_and_web=1&smtt=9&utm_campaign=s278394653_ss_ph_twtr_twitterad&utm_content=eoint&utm_medium=seller&utm_source=twitter&twclid=21g7ic77xyycmkpk8au6yp9yuw",
-          "https://shopee.ph/universal-link/product/278394653/22353819981/?deep_and_web=1&smtt=9&utm_campaign=s278394653_ss_ph_twtr_twitterad&utm_content=eoint&utm_medium=seller&utm_source=twitter&twclid=25pujicvxfu94itxtwc9nbr5ht"
+          "https://sketchal.com/?twclid=23e5oiuzd370ykqhopow4leh4x",
+          "https://sketchal.com/?twclid=2bbxlvrzf9v53p54d918mjz770",
+          "https://sketchal.com/?twclid=2b4zr1npuenohn568ckioq9mk8",
+          "https://sketchal.com/?twclid=2csocngxfa1e73x5fjkqjoljaz"
         ],
         "origin_counts": {
-          "feed_buffer": 2,
-          "feed_buffer_reply": 2
+          "feed_buffer_reply": 1,
+          "feed_buffer": 3
         },
         "distinct_referring_accounts": 1,
         "sample_referring_accounts": [
-          "efficascentph"
+          "sketchal_hq"
         ],
         "distinct_axes": []
       },
@@ -24769,12 +24896,12 @@
           ]
         },
         "profile": {
-          "score": 0.1,
+          "score": 0,
           "confidence": 0.55,
           "basis": [
             "meta_author:false",
             "published_time:false",
-            "canonical:true",
+            "canonical:false",
             "about:false",
             "contact:false",
             "corrections:false",
@@ -24798,13 +24925,13 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-08-14T03:49:03.640Z",
-        "homepage_url": "https://shopee.ph/",
-        "example_url": "https://shopee.ph/universal-link/product/278394653/22353819981/?deep_and_web=1&smtt=9&utm_campaign=s278394653_ss_ph_twtr_twitterad&utm_content=eoint&utm_medium=seller&utm_source=twitter&twclid=21uy0mdqfu18byi7ighc1a87wq",
+        "fetched_at": "2026-08-14T17:19:09.576Z",
+        "homepage_url": "https://sketchal.com/",
+        "example_url": "https://sketchal.com/?twclid=23e5oiuzd370ykqhopow4leh4x",
         "homepage_status": 200,
         "example_status": 200,
-        "homepage_final_url": "https://shopee.ph/",
-        "example_final_url": "https://shopee.ph/product/278394653/22353819981/?smtt=9&twclid=21uy0mdqfu18byi7ighc1a87wq&uls_trackid=56cn0kgp00iv&utm_campaign=s278394653_ss_ph_twtr_twitterad&utm_content=eoint&utm_medium=seller&utm_source=twitter",
+        "homepage_final_url": "https://www.sketchal.com/",
+        "example_final_url": "https://www.sketchal.com/?twclid=23e5oiuzd370ykqhopow4leh4x",
         "homepage_content_type": "text/html; charset=utf-8",
         "example_content_type": "text/html; charset=utf-8",
         "homepage": {
@@ -24820,7 +24947,7 @@
         "example": {
           "has_meta_author": false,
           "has_published_time": false,
-          "has_canonical": true,
+          "has_canonical": false,
           "has_about_link": false,
           "has_contact_link": false,
           "has_corrections_link": false,
@@ -29217,131 +29344,6 @@
       }
     },
     {
-      "domain": "sketchal.com",
-      "entity": "Sketchal",
-      "kind": "unknown",
-      "first_seen_at": "2026-08-13T13:29:04.000Z",
-      "last_seen_at": "2026-08-14T17:08:47.352Z",
-      "discovery": {
-        "distinct_urls": 3,
-        "example_urls": [
-          "https://sketchal.com/?twclid=23e5oiuzd370ykqhopow4leh4x",
-          "https://sketchal.com/?twclid=2bbxlvrzf9v53p54d918mjz770",
-          "https://sketchal.com/?twclid=2b4zr1npuenohn568ckioq9mk8"
-        ],
-        "origin_counts": {
-          "feed_buffer_reply": 1,
-          "feed_buffer": 2
-        },
-        "distinct_referring_accounts": 1,
-        "sample_referring_accounts": [
-          "sketchal_hq"
-        ],
-        "distinct_axes": []
-      },
-      "claims": {
-        "total": 0,
-        "supported": 0,
-        "refuted": 0,
-        "contested": 0,
-        "unverified": 0,
-        "resolved_count": 0
-      },
-      "structural_features": {
-        "has_search_paths": false,
-        "has_article_paths": false,
-        "has_doi_paths": false
-      },
-      "ratings": {
-        "provenance": {
-          "score": 0.45,
-          "basis": [
-            "unknown_domain_pattern"
-          ]
-        },
-        "breadth": {
-          "score": 0.2075,
-          "basis": [
-            "distinct_urls:3",
-            "distinct_axes:0",
-            "origin_types:2"
-          ]
-        },
-        "corroboration": {
-          "score": 0.2833333333333333,
-          "basis": [
-            "referring_accounts:1",
-            "origin_types:2"
-          ]
-        },
-        "track_record": {
-          "score": null,
-          "basis": [
-            "no_resolved_claims_observed"
-          ]
-        },
-        "profile": {
-          "score": 0,
-          "confidence": 0.55,
-          "basis": [
-            "meta_author:false",
-            "published_time:false",
-            "canonical:false",
-            "about:false",
-            "contact:false",
-            "corrections:false",
-            "outbound_links:0",
-            "opinion_marker:false"
-          ]
-        },
-        "overall": {
-          "score": 0.381328125,
-          "confidence": 0.15907500000000002,
-          "method": "mechanical_v1",
-          "basis": [
-            "unknown_domain_pattern",
-            "distinct_urls:3",
-            "distinct_axes:0",
-            "origin_types:2",
-            "referring_accounts:1",
-            "origin_types:2",
-            "track_record_unavailable"
-          ]
-        }
-      },
-      "profile": {
-        "fetched_at": "2026-08-14T17:19:09.576Z",
-        "homepage_url": "https://sketchal.com/",
-        "example_url": "https://sketchal.com/?twclid=23e5oiuzd370ykqhopow4leh4x",
-        "homepage_status": 200,
-        "example_status": 200,
-        "homepage_final_url": "https://www.sketchal.com/",
-        "example_final_url": "https://www.sketchal.com/?twclid=23e5oiuzd370ykqhopow4leh4x",
-        "homepage_content_type": "text/html; charset=utf-8",
-        "example_content_type": "text/html; charset=utf-8",
-        "homepage": {
-          "has_meta_author": false,
-          "has_published_time": false,
-          "has_canonical": false,
-          "has_about_link": false,
-          "has_contact_link": false,
-          "has_corrections_link": false,
-          "outbound_links_count": 0,
-          "opinion_marker": false
-        },
-        "example": {
-          "has_meta_author": false,
-          "has_published_time": false,
-          "has_canonical": false,
-          "has_about_link": false,
-          "has_contact_link": false,
-          "has_corrections_link": false,
-          "outbound_links_count": 0,
-          "opinion_marker": false
-        }
-      }
-    },
-    {
       "domain": "openinfer.io",
       "entity": "Openinfer Io",
       "kind": "unknown",
@@ -33189,7 +33191,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-08-11T22:44:19.086Z",
+        "fetched_at": "2026-08-15T02:15:40.585Z",
         "homepage_url": "https://tolt.com/",
         "example_url": "https://tolt.com/?twclid=24jeerwwldzt1cwgx3ktzfvzm5",
         "homepage_status": 200,
@@ -33313,7 +33315,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-08-11T22:44:19.589Z",
+        "fetched_at": "2026-08-15T02:15:41.104Z",
         "homepage_url": "https://clubwptgold.com/",
         "example_url": "https://clubwptgold.com/login?promo=TWT&utm_source=x&twclid=2awu25myk6xgwlkhdjuj2acwh4",
         "homepage_status": 403,
@@ -33437,7 +33439,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-08-11T23:44:11.537Z",
+        "fetched_at": "2026-08-15T02:15:41.437Z",
         "homepage_url": "https://tuckercarlson.com/",
         "example_url": "https://tuckercarlson.com/watchthebibifiles?utm_source=twitter&utm_medium=paid&twclid=2csdk0gcbb1wulo0j0y7zfkr8h",
         "homepage_status": 403,
@@ -33561,7 +33563,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-08-11T23:44:12.689Z",
+        "fetched_at": "2026-08-15T03:15:43.655Z",
         "homepage_url": "https://focusfeatures.com/",
         "example_url": "https://www.focusfeatures.com/obsession?twclid=2edvdkjskb18lt46rkzi6fpirn",
         "homepage_status": 200,
@@ -33685,7 +33687,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-08-11T23:44:13.798Z",
+        "fetched_at": "2026-08-15T03:45:40.499Z",
         "homepage_url": "https://energyalert.org/",
         "example_url": "https://energyalert.org/speed-to-power/?twclid=29c3xdnaadwruhur8bny93vxj7",
         "homepage_status": 200,
@@ -33809,7 +33811,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-08-11T23:44:14.166Z",
+        "fetched_at": "2026-08-15T03:45:41.145Z",
         "homepage_url": "https://lenovo.com/",
         "example_url": "https://www.lenovo.com/fifa?twclid=28bun2tvvdii9atmnb69jedydn",
         "homepage_status": 403,
@@ -33933,7 +33935,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-08-12T00:14:15.228Z",
+        "fetched_at": "2026-08-15T03:45:44.537Z",
         "homepage_url": "https://govee.com/",
         "example_url": "https://us.govee.com/pages/govee-houseofthedragon?utm_source=twitter&utm_medium=paid_social&utm_campaign=hotd&utm_term=cpe&twclid=29b1vkgpwftpnrvrqi4d3zdxhg",
         "homepage_status": 200,
@@ -34057,7 +34059,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-08-12T00:14:17.541Z",
+        "fetched_at": "2026-08-15T03:45:46.875Z",
         "homepage_url": "https://bsc.news/",
         "example_url": "https://pinews.bsc.news/?twclid=2bzqv927m4uzohrcyl1nn1870e",
         "homepage_status": 200,
@@ -90520,6 +90522,83 @@
         "distinct_referring_accounts": 1,
         "sample_referring_accounts": [
           "ntbperst"
+        ],
+        "distinct_axes": []
+      },
+      "claims": {
+        "total": 0,
+        "supported": 0,
+        "refuted": 0,
+        "contested": 0,
+        "unverified": 0,
+        "resolved_count": 0
+      },
+      "structural_features": {
+        "has_search_paths": false,
+        "has_article_paths": false,
+        "has_doi_paths": false
+      },
+      "ratings": {
+        "provenance": {
+          "score": 0.45,
+          "basis": [
+            "unknown_domain_pattern"
+          ]
+        },
+        "breadth": {
+          "score": 0.08916666666666666,
+          "basis": [
+            "distinct_urls:1",
+            "distinct_axes:0",
+            "origin_types:1"
+          ]
+        },
+        "corroboration": {
+          "score": 0.19583333333333333,
+          "basis": [
+            "referring_accounts:1",
+            "origin_types:1"
+          ]
+        },
+        "track_record": {
+          "score": null,
+          "basis": [
+            "no_resolved_claims_observed"
+          ]
+        },
+        "overall": {
+          "score": 0.3472395833333333,
+          "confidence": 0.08135,
+          "method": "mechanical_v1",
+          "basis": [
+            "unknown_domain_pattern",
+            "distinct_urls:1",
+            "distinct_axes:0",
+            "origin_types:1",
+            "referring_accounts:1",
+            "origin_types:1",
+            "track_record_unavailable"
+          ]
+        }
+      }
+    },
+    {
+      "domain": "solarheavystudios.com",
+      "entity": "Solarheavystudios",
+      "kind": "unknown",
+      "first_seen_at": "2026-08-14T23:23:57.871Z",
+      "last_seen_at": "2026-08-14T23:23:57.871Z",
+      "discovery": {
+        "distinct_urls": 1,
+        "example_urls": [
+          "https://solarheavystudios.com/spotify/?twclid=22i0a48khx4d49ynzsmho1rcfv"
+        ],
+        "origin_counts": {
+          "feed_buffer": 1
+        },
+        "distinct_referring_accounts": 1,
+        "sample_referring_accounts": [
+          "solarheavy"
         ],
         "distinct_axes": []
       },

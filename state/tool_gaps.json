@@ -1,60 +1,6 @@
 {
   "gaps": [
     {
-      "key": "the specific case identity - without knowing which defendant, which court, or wh",
-      "need": "The specific case identity - without knowing which defendant, which court, or which jurisdiction issued this 15-year corruption conviction reversal, we cannot locate the appellate decision or its legal reasoning",
-      "suggested_tool": "Access to Sebastian's original research question context or conversation history to understand which specific case is being referenced",
-      "count": 1,
-      "first_seen": "2026-08-05",
-      "last_seen": "2026-08-05",
-      "last_question": "Will Peru's ex-president's 15-year corruption sentence overturn be upheld on final appeal, or will prosecutors successfully reinstate convic"
-    },
-    {
-      "key": "full text of the prosecutors' supreme court petition including detailed legal ar",
-      "need": "Full text of the prosecutors' Supreme Court petition including detailed legal arguments",
-      "suggested_tool": "Access to PACER or Supreme Court docket system for case filings",
-      "count": 1,
-      "first_seen": "2026-08-05",
-      "last_seen": "2026-08-05",
-      "last_question": "Will Peru's ex-president's 15-year corruption sentence overturn be upheld on final appeal, or will prosecutors successfully reinstate convic"
-    },
-    {
-      "key": "credibility assessment of 'the american vanguard' as a news source",
-      "need": "Credibility assessment of 'The American Vanguard' as a news source",
-      "suggested_tool": "Media bias/credibility checking database or journalism verification service",
-      "count": 1,
-      "first_seen": "2026-08-05",
-      "last_seen": "2026-08-05",
-      "last_question": "Will Peru's ex-president's 15-year corruption sentence overturn be upheld on final appeal, or will prosecutors successfully reinstate convic"
-    },
-    {
-      "key": "specific details on which corruption convictions are under appeal and their curr",
-      "need": "Specific details on which corruption convictions are under appeal and their current status in the judicial system",
-      "suggested_tool": "Access to Brazilian court records database or legal filings tracker",
-      "count": 1,
-      "first_seen": "2026-08-05",
-      "last_seen": "2026-08-05",
-      "last_question": "Will Peru's ex-president's 15-year corruption sentence overturn be upheld on final appeal, or will prosecutors successfully reinstate convic"
-    },
-    {
-      "key": "quantitative public opinion data on corruption accountability preferences among ",
-      "need": "Quantitative public opinion data on corruption accountability preferences among Brazilian voters in 2025-2026",
-      "suggested_tool": "Access to polling databases or Brazilian polling firm reports (Datafolha, Ibope, etc.)",
-      "count": 1,
-      "first_seen": "2026-08-05",
-      "last_seen": "2026-08-05",
-      "last_question": "Will Peru's ex-president's 15-year corruption sentence overturn be upheld on final appeal, or will prosecutors successfully reinstate convic"
-    },
-    {
-      "key": "internal political dynamics within current brazilian government regarding judici",
-      "need": "Internal political dynamics within current Brazilian government regarding judiciary and corruption prosecutions",
-      "suggested_tool": "Access to government statements, cabinet meeting records, or political insider reporting",
-      "count": 1,
-      "first_seen": "2026-08-05",
-      "last_seen": "2026-08-05",
-      "last_question": "Will Peru's ex-president's 15-year corruption sentence overturn be upheld on final appeal, or will prosecutors successfully reinstate convic"
-    },
-    {
       "key": "access to peru's constitutional court full ruling text and legal reasoning for t",
       "need": "Access to Peru's Constitutional Court full ruling text and legal reasoning for the annulment",
       "suggested_tool": "Access to Peru's legal databases or official court documents in Spanish",
@@ -899,6 +845,60 @@
       "first_seen": "2026-08-13",
       "last_seen": "2026-08-13",
       "last_question": "Has the Sara Duterte impeachment trial shifted focus from investigating the alleged ₱254.9 million confidential fund misuse to procedural di"
+    },
+    {
+      "key": "access to full text of science journal article (aap9559) to extract methodology ",
+      "need": "Access to full text of Science journal article (aap9559) to extract methodology and specific findings on visual vs. text misinformation",
+      "suggested_tool": "Academic database access or institutional login to read paywalled peer-reviewed articles",
+      "count": 1,
+      "first_seen": "2026-08-15",
+      "last_seen": "2026-08-15",
+      "last_question": "Why does visual misinformation spread faster than corrections, and how does the detachment of images from their original context (using them"
+    },
+    {
+      "key": "access to sciencedirect full article on image misinformation (blocked by cloudfl",
+      "need": "Access to ScienceDirect full article on image misinformation (blocked by CloudFlare security check)",
+      "suggested_tool": "Alternative fetch mechanism that handles anti-bot verification or institutional access",
+      "count": 1,
+      "first_seen": "2026-08-15",
+      "last_seen": "2026-08-15",
+      "last_question": "Why does visual misinformation spread faster than corrections, and how does the detachment of images from their original context (using them"
+    },
+    {
+      "key": "quantitative data on correction propagation rates compared to original misinform",
+      "need": "Quantitative data on correction propagation rates compared to original misinformation posts on social platforms",
+      "suggested_tool": "Social media analytics API with historical reach/engagement data for matched misinformation-correction pairs",
+      "count": 1,
+      "first_seen": "2026-08-15",
+      "last_seen": "2026-08-15",
+      "last_question": "Why does visual misinformation spread faster than corrections, and how does the detachment of images from their original context (using them"
+    },
+    {
+      "key": "quantitative spread velocity metrics comparing image-based vs text-only misinfor",
+      "need": "Quantitative spread velocity metrics comparing image-based vs text-only misinformation (e.g., median retweet time, peak reach hours)",
+      "suggested_tool": "Academic database access (JSTOR, Web of Science) or social media analytics API with historical spread data",
+      "count": 1,
+      "first_seen": "2026-08-15",
+      "last_seen": "2026-08-15",
+      "last_question": "Why does visual misinformation spread faster than corrections, and how does the detachment of images from their original context (using them"
+    },
+    {
+      "key": "access to paywalled/protected academic sources (science journal, sciencedirect, ",
+      "need": "Access to paywalled/protected academic sources (Science journal, ScienceDirect, Taylor & Francis articles are blocking fetch)",
+      "suggested_tool": "Institutional journal access or academic database subscription",
+      "count": 1,
+      "first_seen": "2026-08-15",
+      "last_seen": "2026-08-15",
+      "last_question": "Why does visual misinformation spread faster than corrections, and how does the detachment of images from their original context (using them"
+    },
+    {
+      "key": "real-world platform algorithm documentation showing visual content prioritizatio",
+      "need": "Real-world platform algorithm documentation showing visual content prioritization in feed ranking",
+      "suggested_tool": "Access to platform engineering blogs, leaked internal documents, or regulatory filings with algorithm details",
+      "count": 1,
+      "first_seen": "2026-08-15",
+      "last_seen": "2026-08-15",
+      "last_question": "Why does visual misinformation spread faster than corrections, and how does the detachment of images from their original context (using them"
     }
   ]
 }
