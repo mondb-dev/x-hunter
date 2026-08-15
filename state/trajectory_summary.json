@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-15T07:48:52.449Z",
+  "generated_at": "2026-08-15T13:50:34.830Z",
   "windows": [
     "1d",
     "3d",
@@ -72,22 +72,22 @@
     },
     "axis_eje_accountability_v1": {
       "current": {
-        "score": -0.5818,
-        "confidence": 0.887
+        "score": -0.5856,
+        "confidence": 0.9316
       },
       "1d": {
-        "score_delta": 0,
-        "conf_delta": -0.004,
+        "score_delta": -0.0038,
+        "conf_delta": 0.0406,
         "direction": "→"
       },
       "3d": {
-        "score_delta": 0,
-        "conf_delta": -0.006,
+        "score_delta": -0.0038,
+        "conf_delta": 0.0386,
         "direction": "→"
       },
       "7d": {
-        "score_delta": 0,
-        "conf_delta": -0.014,
+        "score_delta": -0.0038,
+        "conf_delta": 0.0306,
         "direction": "→"
       }
     },
@@ -1038,22 +1038,22 @@
     },
     "axis_procedural_governance_substantive_action": {
       "current": {
-        "score": -0.8817,
-        "confidence": 0.8269
+        "score": -0.8837,
+        "confidence": 0.8342
       },
       "1d": {
-        "score_delta": 0,
-        "conf_delta": -0.004,
+        "score_delta": -0.002,
+        "conf_delta": 0.0033,
         "direction": "→"
       },
       "3d": {
-        "score_delta": -0.0033,
-        "conf_delta": 0.0019,
+        "score_delta": -0.0053,
+        "conf_delta": 0.0092,
         "direction": "→"
       },
       "7d": {
-        "score_delta": -0.0817,
-        "conf_delta": 0.0598,
+        "score_delta": -0.0837,
+        "conf_delta": 0.0671,
         "direction": "↘"
       }
     },
@@ -1219,22 +1219,31 @@
     },
     "axis_disaster_infrastructure_accountability_v1": {
       "current": {
-        "score": -0.05,
-        "confidence": 0.0228
+        "score": -0.1,
+        "confidence": 0.078
       },
       "1d": {
-        "score_delta": 0,
-        "conf_delta": -0.004,
-        "direction": "→"
+        "score_delta": -0.05,
+        "conf_delta": 0.0512,
+        "direction": "↘"
       },
       "3d": {
-        "score_delta": -0.05,
-        "conf_delta": 0.0228,
+        "score_delta": -0.1,
+        "conf_delta": 0.078,
         "direction": "↘"
       },
       "7d": null
     },
     "axis_industrial_safety_accountability_timing_v1": {
+      "current": {
+        "score": 0,
+        "confidence": 0
+      },
+      "1d": null,
+      "3d": null,
+      "7d": null
+    },
+    "axis_institutional_vetting_timing_v1": {
       "current": {
         "score": 0,
         "confidence": 0

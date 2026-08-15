@@ -1,0 +1,730 @@
+{
+  "job_id": "2026-08-15T13-56-54-647Z_will-peru-s-ex-president-s-15-year-corru",
+  "question": "Will Peru's ex-president's 15-year corruption sentence overturn be upheld on final appeal, or will prosecutors successfully reinstate conviction?",
+  "tier": "deep",
+  "status": "done",
+  "root": {
+    "title": "Peru Ex-President Corruption Appeal Outcome",
+    "question": "Will Peru's ex-president's 15-year corruption sentence overturn be upheld on final appeal, or will prosecutors successfully reinstate conviction?",
+    "direction": "Identify the specific case and president, establish current legal status, track procedural timeline, assess prosecution strength vs defense arguments, and monitor final appeal outcome",
+    "research_areas": [
+      "Peruvian presidential corruption cases",
+      "Recent sentence overturns in Peru",
+      "Supreme Court corruption appeals",
+      "Prosecutor appeals of acquittals"
+    ],
+    "tools_hint": [
+      "search",
+      "fetch",
+      "recall",
+      "posts"
+    ],
+    "success_criterion": "Clear determination of whether final appeal upheld overturn (president freed) or reinstated conviction (president imprisoned)",
+    "depends_on": [],
+    "children": [
+      {
+        "title": "Case Identification",
+        "question": "Which Peruvian ex-president had a 15-year corruption sentence recently overturned, and what is the specific case name and charges?",
+        "direction": "Search recent Peruvian news for ex-presidents with overturned corruption sentences, identify the defendant, case name, original charges, and sentencing details",
+        "research_areas": [
+          "Recent Peruvian presidential corruption cases 2023-2025",
+          "Alejandro Toledo, Alberto Fujimori, Pedro Pablo Kuczynski cases",
+          "Odebrecht scandal Peru",
+          "Lava Jato Peru cases"
+        ],
+        "tools_hint": [
+          "search",
+          "fetch",
+          "recall"
+        ],
+        "success_criterion": "Name of ex-president, case name, original conviction charges, original 15-year sentence date, and overturn date confirmed",
+        "depends_on": [],
+        "children": [
+          {
+            "parent_id": "1.1",
+            "title": "Timeline Context & Key Dates",
+            "question": "What are the complete timeline of events: original investigation start, conviction date, sentence start date, overturn date, appeal filing date, and any scheduled hearing/decision dates?",
+            "direction": "Establish chronological framework to understand legal process stage and urgency",
+            "research_areas": [
+              "case timeline",
+              "procedural history",
+              "appeal deadlines"
+            ],
+            "tools_hint": [
+              "search",
+              "fetch"
+            ],
+            "success_criterion": "Complete timeline from investigation through current appeal status with all key procedural dates documented",
+            "depends_on": [
+              "1.1"
+            ],
+            "children": [],
+            "id": "1.1.1",
+            "status": "answered",
+            "findings": [
+              {
+                "tool": "search",
+                "input": "original investigation start date conviction date sentence timeline",
+                "result": "1. Criminal Investigation Timeline - Welcome to TrialLine | Legal Timeline ...\n   https://blog.trialline.net/criminal-investigation-timeline/\n   The criminal investigation timeline is a comprehensive document that maps the incident sequence from the crime scene to the trial.\n2. Criminal Investigation Timeline - Welcome to TrialLine | Legal Timeline ...\n   https://blog.trialline.net/criminal-investigation-timeline/\n   The criminal investigation timeline is a comprehensive document that maps the incident sequence from the crime scene to the trial.\n3. PDF A Federal Criminal Case Timeline\n   https://vae.fd.org/sites/vae/files/FedCrimTimeline.pdf\n   A Federal Criminal Case Timeline The following timeline is a very broad overview of the progress of a federal felony case. Many variables can change the speed or course of the case, including settlement negotiations and changes in law. This timeline, however, will hold true in the majority of federal felony cases in the Eastern District of Virginia.\n4. PDF A Federal Criminal Case Timeline\n   https://vae.fd.org/sites/vae/files/FedCrimTimeline.pdf\n   A Federal Criminal Case Timeline The following timeline is a very broad overview of the progress of a federal felony case. Many variables can change the speed or course of the case, including settlement negotiations and changes in law. This timeline, however, will hold true in the majority of federal felony cases in the Eastern District of Virginia.\n5. Criminal Case Timeline for a Felony Crime - TrialLine\n   https://blog.trialline.net/order-events-felony-case-timeline/\n   Felony cases follow a legal process that determines how charges move through the court system. Unlike misdemeanor cases, felony cases involve serious crimes that can lead to long-term consequences, including prison sentences, fines, and a permanent criminal record. The timeline for a felony case depends on several factors, including the severity of the crime, legal motions, and plea ...\n6. Criminal Case Timeline for a Felony Crime - TrialLine\n   https://blog.trialline.net/order-events-felony-case-timeline/\n   Felony cases follow a legal process that determines how charges move through the court system. Unlike misdemeanor cases, felony cases involve serious crimes that can lead to long-term consequences, including prison sentences, fines, and a permanent criminal record. The timeline for a felony case depends on several factors, including the severity of the crime, legal motions, and plea ..."
+              },
+              {
+                "tool": "search",
+                "input": "appeal filing date overturn date scheduled hearing dates",
+                "result": "1. Appellate Deadlines - U.S. Court of Appeals for the Fourth Circuit\n   https://www.ca4.uscourts.gov/AppellateProcedureGuide/General_Provisions/APG-appellatedeadlines.html\n   Bankr R 8002 & 8006: For timely filing of a petition for permission to appeal, a notice of appeal must be filed in the bankruptcy court within 14 days of entry of the order under Bankr R 8002, and a petition for permission to appeal must be filed in the court of appeals within 30 days of the date the order is certified for direct appeal to the court of appeals under Bank R 8006.\n2. Appellate Deadlines - U.S. Court of Appeals for the Fourth Circuit\n   https://www.ca4.uscourts.gov/AppellateProcedureGuide/General_Provisions/APG-appellatedeadlines.html\n   Bankr R 8002 & 8006: For timely filing of a petition for permission to appeal, a notice of appeal must be filed in the bankruptcy court within 14 days of entry of the order under Bankr R 8002, and a petition for permission to appeal must be filed in the court of appeals within 30 days of the date the order is certified for direct appeal to the court of appeals under Bank R 8006.\n3. PDF Appendix1 - appellate.courts.ca.gov\n   https://appellate.courts.ca.gov/system/files/general/2dca-shm-appendix1-timeline.pdf\n   Judgment or Appealable Order, Notice of Appeal, filing fee ($775) and clerk's deposit ($100) due when counting from date the judgment/order was file stamped or the notice of entry served: If notice of entry served 60 calendar days after service or mailing If notice of entry not served 180 calendar days after judgment entered.\n4. PDF Appendix1 - appellate.courts.ca.gov\n   https://appellate.courts.ca.gov/system/files/general/2dca-shm-appendix1-timeline.pdf\n   Judgment or Appealable Order, Notice of Appeal, filing fee ($775) and clerk's deposit ($100) due when counting from date the judgment/order was file stamped or the notice of entry served: If notice of entry served 60 calendar days after service or mailing If notice of entry not served 180 calendar days after judgment entered.\n5. Rule 4. Appeal as of Right — When Taken\n   https://www.ca4.uscourts.gov/Rules/Rule04.html\n   (3) Multiple Appeals. If one party timely files a notice of appeal, any other party may file a notice of appeal within 14 days after the date when the first notice was filed, or within the time otherwise prescribed by this Rule 4 (a), whichever period ends later. (4) Effect of a Motion on a Notice of Appeal.\n6. Rule 4. Appeal as of Right — When Taken\n   https://www.ca4.uscourts.gov/Rules/Rule04.html\n   (3) Multiple Appeals. If one party timely files a notice of appeal, any other party may file a notice of appeal within 14 days after the date when the first notice was filed, or within the time otherwise prescribed by this Rule 4 (a), whichever period ends later. (4) Effect of a Motion on a Notice of Appeal."
+              },
+              {
+                "tool": "fetch",
+                "input": "[URL from search results with most comprehensive timeline]",
+                "result": "(could not fetch [URL from search results with most comprehensive timeline])"
+              },
+              {
+                "tool": "search",
+                "input": "sentence start date incarceration begin date",
+                "result": "1. Sentence Checker - Advanced Sentence Checkers\n   https://duckduckgo.com/y.js?ad_domain=grammarly.com&ad_provider=bingv7aa&ad_type=txad&click_metadata=MX5NeprD9qGJ7vrk0QnTscxeRn%2D1hn5S0vSV7BQc3rvVKDMFtn0DmCKZqMCxnXNTbXlGd3AwpZ2hUh8I3tFDxkO5yVRsxSfNKy8lDU5HSrHKszdHs2CzLSTFn_MZlbGdpm%2DtADjoF9_Zx7ePCy41bd%2DUc8lnuoSXUgfOs1k9Kg8.altKcZVibq4YOcU%2D4j1nUg&rut=5e750950ec5bccc70e348ed61cfccf626855854e7efa776f07bf7c7b70ee78da&u3=https%3A%2F%2Fwww.bing.com%2Faclick%3Fld%3De8bSmasI0h_aYfUl3ZWgVUizVUCUxW_Rtz2BLhP20cPJwhFifU%2DZ317hlNdb%2DJyJEuEEERoLor9dygejd097Sd4hwGC3EPlCK3hBNcxIQ_CknQbWCfptT0BBGTn17gxg84wF7ZFwA1NqIw_MDsPtWOLCAOsCmijUv_aCG_tsuDCGcNcBCGi7EdaXZgR64gjkAA9QXxy74inKVSG2BXhLIpKtR8qTM%26u%3DaHR0cHMlM2ElMmYlMmZ3d3cuZ3JhbW1hcmx5LmNvbSUyZnNlbnRlbmNlLWNoZWNrZXIlM2Z1dG1fc291cmNlJTNkYmluZyUyNnV0bV9tZWRpdW0lM2RjcGMlMjZ1dG1fY2FtcGFpZ24lM2Q2MjY5NzY2MTklMjZ1dG1fY29udGVudCUzZDgxNTcwMTM3MDcwMDYxJTI2dXRtX3Rlcm0lM2RodHRwcyUyNTNBJTI1MkYlMjUyRnd3dy5ncmFtbWFybHkuY29tJTI1MkZzZW50ZW5jZS1jaGVja2VyJTI2dXRtX2J1JTNkY29ycCUyNmtleXdvcmRpZCUzZDIzMzMzNjk4MzI3NzEyNzYlMjZ0YXJnZXRpZCUzZGRhdC0yMzMzMzY5ODMyNzcxMjc2JTNhbG9jLTE0OSUyNmFkZ3JvdXAlM2QxMzA1MTIwNzQ3MDAwMTM3JTI2ZGV2aWNlJTNkYyUyNm1hdGNodHlwZSUzZGIlMjZuZXR3b3JrJTNkcyUyNmV4dGVuc2lvbiUzZCUyNmNsaWNraWQlM2Q2NGJmOWY3MDg2MzUxNTgzZWQ2Y2Y1ZjBmNjUwY2RmYiUyNmdjbGlkJTNkNjRiZjlmNzA4NjM1MTU4M2VkNmNmNWYwZjY1MGNkZmIlMjZtc2Nsa2lkJTNkNjRiZjlmNzA4NjM1MTU4M2VkNmNmNWYwZjY1MGNkZmI%26rlid%3D64bf9f7086351583ed6cf5f0f650cdfb&vqd=4-297539023444203837509016102900889741492&iurl=%7B1%7DIG%3D45242823003A43CC805C806DCEF4DCAE%26CID%3D07A8A2D1D30962353BF0B567D2D963FD%26ID%3DDevEx%2C5037.1\n   Check for run-on sentences, tone, clarity, and more with Grammarly. Our free sentence checker allows you to write your best wherever you love to write.\n2. Jail Calculator - Estimate Release Dates & Sentence Lengths\n   https://everycalculators.com/jail-calculator.html\n   Jail Sentence & Release Date Estimator Sentence Start Date: The official date your sentence began or incarceration started. Initial Sentence Length: The total length of the sentence imposed by the court. Pre-Trial Confinement Credit:\n3. Jail Calculator - Estimate Release Dates & Sentence Lengths\n   https://everycalculators.com/jail-calculator.html\n   Jail Sentence & Release Date Estimator Sentence Start Date: The official date your sentence began or incarceration started. Initial Sentence Length: The total length of the sentence imposed by the court. Pre-Trial Confinement Credit:\n4. Prison Sentence Calculator - Sage Calculator\n   https://sagecalculator.com/prison-sentence-calculator/\n   Estimate prison release dates, parole eligibility, and remaining time easily with this accurate prison sentence calculator tool.\n5. Prison Sentence Calculator - Sage Calculator\n   https://sagecalculator.com/prison-sentence-calculator/\n   Estimate prison release dates, parole eligibility, and remaining time easily with this accurate prison sentence calculator tool.\n6. Prison Sentence Calculator - everycalculators.com\n   https://everycalculators.com/sentence-calculator-prison.html\n   Prison Sentence Calculator Accurately estimate release dates, parole eligibility, and mandatory minimums for prison sentences. This advanced prison sentence calculator considers various factors like base sentence, pre-trial detention, good behavior credits, and parole eligibility percentages to provide a detailed timeline."
+              },
+              {
+                "tool": "fetch",
+                "input": "https://vae.fd.org/sites/vae/files/FedCrimTimeline.pdf",
+                "result": "(could not fetch https://vae.fd.org/sites/vae/files/FedCrimTimeline.pdf)"
+              },
+              {
+                "tool": "fetch",
+                "input": "https://blog.trialline.net/order-events-felony-case-timeline/",
+                "result": "Felony cases follow a legal process that determines how charges move through the court system. Unlike misdemeanor cases, felony cases involve serious crimes that can lead to long-term consequences, including prison sentences, fines, and a permanent criminal record.\nThe timeline for a felony case depends on several factors, including the severity of the crime, legal motions, and plea negotiations. \nUnderstanding each phase helps defendants, victims, and attorneys prepare for what’s ahead. Knowing how long each stage typically takes can also reduce confusion and stress during the legal process.\nIn this article, you will learn how long the process typically takes, what to expect at each step, and how to manage the case.\nMake courtroom presentations clearer with detailed felony case timelines. Try TrialLine now!\nWhat Is a Felony Case?\nA felony is a serious crime that carries harsher penalties than a misdemeanor. Courts classify crimes based on their severity, with felonies leading to longer prison sentences, higher fines, and long-term legal consequences.\nThe main difference between felonies and misdemeanors is the punishment. Misdemeanors typically result in less than a year in jail, smaller fines, and lower court supervision requirements.\nFelonies, on the other hand, can lead to multi-year prison sentences and larger fines. Some felony convictions result in life imprisonment or, in certain jurisdictions, the death penalty.\nFelonies cover a wide range of crimes, but they generally fall into the following categories:\n\nViolent crimes – Murder, manslaughter, aggravated assault, robbery, and kidnapping.\nDrug offenses – Drug trafficking and large-scale possession.\nWhite-collar crimes – Fraud, embezzlement, money laundering, insider trading, and identity theft.\nProperty crimes – Burglary, arson, grand theft, and motor vehicle theft.\nSex crimes – Sexual assault, rape, child exploitation, and sex trafficking.\n\nCriminal Process for Felony Cases\nFelony trials move through several criminal case stages, each designed to ensure that the legal process is fair and follows due process:\n1. The Crime and Investigation\nThe felony criminal case process begins when a crime occurs and law enforcement starts an investigation. Police officers, detectives, or federal agencies gather evidence, interview witnesses, and attempt to identify suspects.\nWhen law enforcement receives a report of a crime, officers assess the scene, document evidence, and take witness statements. If there is immediate probable cause, an arrest may happen quickly.\nIn more complex cases, such as fraud or homicide, investigators spend weeks or months building a case before making an arrest.\nCommon investigative steps include:\n\nCollecting physical evidence – DNA, fingerprints, weapons, surveillance footage, or forensic materials.\nInterviewing witnesses and victims – Statements help establish a timeline and identify potential suspects.\nConducting searches – Law enforcement may obtain warrants to search homes, vehicles, or digital records.\nSurveillance and undercover operations – Used in drug cases, organized crime investigations, and fraud cases.\n\n2. Arrest\n\nWhen law enforcement has sufficient evidence to support probable cause, they proceed with an arrest. This can happen in different ways, depending on the circumstances of the crime and whether officers witnessed it directly.\nIf officers see a felony occurring, they can arrest the suspect immediately without a warrant.\nHowever, if the crime is"
+              },
+              {
+                "tool": "recall",
+                "input": "conviction overturn appeal timeline investigation",
+                "result": "(no memory match)"
+              },
+              {
+                "tool": "recall",
+                "input": "criminal case defendant sentence prison",
+                "result": "(no memory match)"
+              },
+              {
+                "tool": "posts",
+                "input": "conviction overturned appeal",
+                "result": "@inquirerdotnet: Prosec dismisses survey results, says goal is Sara Duterte’s conviction\n@Pomplianoia: Roe v. Wade got overturned by the Supreme Court in 2022 It’s already dead An AG can’t kill what’s already gone Update your facts, Chelsea.\n@Sg3Lu: Can Taxi Drivers Make a Good Living?  \nThe Appeal of Blue-Collar Work: \"27 Years Old, Monthly Income of 600,000 Yen\"\n@rapplerdotcom: #FactCheck: As Vice President Sara Duterte’s trial is ongoing, no verdict of conviction or acquittal has been issued by the Senate impeachment court #FactsFirstPH\n@BeardStaffX:  THIS IS AN APPEAL NOT ONLY TO SHELDON XIA AND OTHER PEOPLE CONNECTED TO BITMART. THIS IS ALSO AN APPEAL TO THE EXCHANGES THROUGH WHICH BITMART-RELATED FUNDS APPEAR TO BE MOVING.\n\nSince late July, Bit\n@0xbags: the trenches don't want you to know this\n\nbut you can just wait patiently for high conviction trade set ups to size into and do better than everyone chasing overnight wealth\n@mjfree: Our November Midterm Elections are NOT safe. We must be diligent to insure election security and safeguard ourselves against this life-time scam-artist who's terrified of impeachment & conviction.\n@AJEnglish: A passenger train derailed near Lewes in East Sussex, England, injuring at least 11 people, and two of them seriously. \n\nThe wreck overturned at least one carriage, trapping several people, as emergen"
+              }
+            ],
+            "answer": "I cannot answer this question from the evidence provided. The search results contain only general information about criminal case timelines, felony procedures, and appellate deadlines from sources like TrialLine blog (https://blog.trialline.net/criminal-investigation-timeline/) and U.S. Court of Appeals procedural guides, but no specific case details. The social media posts mention conviction/appeal topics generically without providing dates for any particular case. **Confidence: High** that the evidence lacks the specific timeline data requested."
+          }
+        ],
+        "id": "1.1",
+        "status": "answered",
+        "findings": [],
+        "answer": "I cannot answer this question from the evidence provided. The sub-findings contain no information about any Peruvian ex-president, corruption sentences, or specific case details. The evidence only discusses generic criminal timeline procedures and U.S. appellate processes, with no relevant data about Peru or any individual case involving an overturned corruption sentence. **Confidence: High** that the evidence does not address this question."
+      },
+      {
+        "title": "Current Legal Status",
+        "question": "What is the current procedural status of the appeal - has the final appeal been filed, heard, or decided?",
+        "direction": "Determine if prosecutors filed cassation/final appeal, whether Supreme Court has accepted it, current hearing status, and any preliminary rulings",
+        "research_areas": [
+          "Peruvian Supreme Court docket",
+          "Prosecutor's office statements on appeal",
+          "Recent court procedural updates",
+          "Timeline from overturn to present"
+        ],
+        "tools_hint": [
+          "search",
+          "fetch",
+          "posts",
+          "xsearch"
+        ],
+        "success_criterion": "Clear status: appeal pending, under review, oral arguments scheduled, or verdict issued",
+        "depends_on": [
+          "Case Identification"
+        ],
+        "children": [],
+        "id": "1.2",
+        "status": "answered",
+        "findings": [
+          {
+            "tool": "recall",
+            "input": "cassation appeal Supreme Court prosecutors filed hearing status verdict",
+            "result": "(no memory match)"
+          },
+          {
+            "tool": "search",
+            "input": "cassation appeal Supreme Court prosecutors filed 2024 2025",
+            "result": "1. Docket Search - Supreme Court of the United States\n   https://www.supremecourt.gov/docket/docket.aspx?Search=supreme+court+docket\n   Docket Search The Supreme Court's docket system contains information about cases, both pending and decided, that have been filed at the Court. The docket provided here contains complete information regarding the status of cases filed since the beginning of the 2001 Term.\n2. Docket Search - Supreme Court of the United States\n   https://www.supremecourt.gov/docket/docket.aspx?Search=supreme+court+docket\n   Docket Search The Supreme Court's docket system contains information about cases, both pending and decided, that have been filed at the Court. The docket provided here contains complete information regarding the status of cases filed since the beginning of the 2001 Term.\n3. The French Court of Cassation Endorses Head of State Absolute Personal ...\n   https://opiniojuris.org/2025/12/23/the-french-court-of-cassation-endorses-head-of-state-absolute-personal-immunity-from-foreign-jurisdiction/\n   The prosecutor-general at the Paris court immediately filed an appeal against this ruling to the French Court of Cassation, the highest judicial authority in France.\n4. The French Court of Cassation Endorses Head of State Absolute Personal ...\n   https://opiniojuris.org/2025/12/23/the-french-court-of-cassation-endorses-head-of-state-absolute-personal-immunity-from-foreign-jurisdiction/\n   The prosecutor-general at the Paris court immediately filed an appeal against this ruling to the French Court of Cassation, the highest judicial authority in France.\n5. Urban planning survey in MilanoThe Supreme Court of Cassation rejects ...\n   https://en.lamilano.it/Milan/In-the-Milan-urban-planning-investigation--the-Supreme-Court-of-Cassation-rejects-the-prosecutor%27s-appeal%3B-the-review%27s-decisions-are-confirmed%3B-the-defendants-remain-free./\n   Urban planning survey in MilanoThe Supreme Court of Cassation rejects the prosecutors' appeal: the preliminary investigations' decisions are upheld. The suspects remain free. Milano, Nov. 13 2025 - New setback for the urban planning investigation by the Public Prosecutor's Office Milano which has been shaking the city and the construction sector for months. Court of Cassation indeed the ...\n6. Urban planning survey in MilanoThe Supreme Court of Cassation rejects ...\n   https://en.lamilano.it/Milan/In-the-Milan-urban-planning-investigation--the-Supreme-Court-of-Cassation-rejects-the-prosecutor%27s-appeal%3B-the-review%27s-decisions-are-confirmed%3B-the-defendants-remain-free./\n   Urban planning survey in MilanoThe Supreme Court of Cassation rejects the prosecutors' appeal: the preliminary investigations' decisions are upheld. The suspects remain free. Milano, Nov. 13 2025 - New setback for the urban planning investigation by the Public Prosecutor's Office Milano which has been shaking the city and the construction sector for months. Court of Cassation indeed the ..."
+          },
+          {
+            "tool": "search",
+            "input": "Supreme Court cassation hearing oral arguments scheduled verdict decision",
+            "result": "1. Oral Arguments - Supreme Court of the United States\n   https://www.supremecourt.gov/oral_arguments/oral_arguments.aspx\n   The Court holds oral argument in about 70-80 cases each year. The arguments are an opportunity for the Justices to ask questions directly of the attorneys representing the parties to the case, and for the attorneys to highlight arguments that they view as particularly important.\n2. Oral Arguments - Supreme Court of the United States\n   https://www.supremecourt.gov/oral_arguments/oral_arguments.aspx\n   The Court holds oral argument in about 70-80 cases each year. The arguments are an opportunity for the Justices to ask questions directly of the attorneys representing the parties to the case, and for the attorneys to highlight arguments that they view as particularly important.\n3. Calendars and Lists - Supreme Court of the United States\n   https://www.supremecourt.gov/oral_arguments/calendarsandlists.aspx\n   Home > Oral Arguments > Calendars and Lists Argument Transcripts Argument Audio Calendars and Lists Courtroom Seating\n4. Calendars and Lists - Supreme Court of the United States\n   https://www.supremecourt.gov/oral_arguments/calendarsandlists.aspx\n   Home > Oral Arguments > Calendars and Lists Argument Transcripts Argument Audio Calendars and Lists Courtroom Seating\n5. Supreme Court Case Tracker — Cases, Decisions & Analysis\n   https://www.supremecourtcasetracker.com/\n   Track current U.S. Supreme Court cases — live docket status, oral arguments, opinions, justice votes, and plain-English, source-backed analysis of every decision.\n6. Supreme Court Case Tracker — Cases, Decisions & Analysis\n   https://www.supremecourtcasetracker.com/\n   Track current U.S. Supreme Court cases — live docket status, oral arguments, opinions, justice votes, and plain-English, source-backed analysis of every decision."
+          },
+          {
+            "tool": "fetch",
+            "input": "https://www.supremecourt.gov/search.aspx?filename=/docket/docketfiles/html/public/CASE_NUMBER.html",
+            "result": "(could not fetch https://www.supremecourt.gov/search.aspx?filename=/docket/docketfiles/html/public/CASE_NUMBER.html)"
+          },
+          {
+            "tool": "fetch",
+            "input": "https://www.supremecourt.gov/docket/docket.aspx?Search=supreme+court+docket",
+            "result": "(could not fetch https://www.supremecourt.gov/docket/docket.aspx?Search=supreme+court+docket)"
+          },
+          {
+            "tool": "fetch",
+            "input": "https://www.supremecourt.gov/oral_arguments/calendarsandlists.aspx",
+            "result": "(could not fetch https://www.supremecourt.gov/oral_arguments/calendarsandlists.aspx)"
+          },
+          {
+            "tool": "recall",
+            "input": "prosecutors appeal case docket number court filing",
+            "result": "(no memory match)"
+          },
+          {
+            "tool": "recall",
+            "input": "legal case investigation Supreme Court cassation",
+            "result": "(no memory match)"
+          },
+          {
+            "tool": "search",
+            "input": "prosecutors cassation appeal filed 2026 Supreme Court",
+            "result": "1. Supreme Court Upholds Prosecutor's Cassation, Forged Inheritance ...\n   https://jawawa.id/newsitem/supreme-court-upholds-prosecutors-cassation-forged-inheritance-document-defendant-sentenced-to-probation-1772510486\n   Indonesia's Supreme Court (MA) has upheld a cassation appeal filed by the Public Prosecutor (JPU) from Bali's High Prosecutor's Office (Kejati) in a case involving the forgery of an inheritance document, with defendant Anak Agung Ngurah Oka from Jero Kepisah.\n2. Supreme Court Upholds Prosecutor's Cassation, Forged Inheritance ...\n   https://jawawa.id/newsitem/supreme-court-upholds-prosecutors-cassation-forged-inheritance-document-defendant-sentenced-to-probation-1772510486\n   Indonesia's Supreme Court (MA) has upheld a cassation appeal filed by the Public Prosecutor (JPU) from Bali's High Prosecutor's Office (Kejati) in a case involving the forgery of an inheritance document, with defendant Anak Agung Ngurah Oka from Jero Kepisah.\n3. Vatican's 'trial of the century' resumes after prosecutors suffer ...\n   https://cruxnow.com/vatican/2026/02/vaticans-trial-of-the-century-resumes-after-prosecutors-suffer-embarrassing-setbacks-on-appeal\n   However, the Vatican's high Court of Cassation recently upheld a lower court's decision to throw out the prosecutors' appeal entirely. That means the defendants can only expect to see their ...\n4. Vatican's 'trial of the century' resumes after prosecutors suffer ...\n   https://cruxnow.com/vatican/2026/02/vaticans-trial-of-the-century-resumes-after-prosecutors-suffer-embarrassing-setbacks-on-appeal\n   However, the Vatican's high Court of Cassation recently upheld a lower court's decision to throw out the prosecutors' appeal entirely. That means the defendants can only expect to see their ...\n5. Delpedro and Associates Challenge the Prosecutor's Cassation Appeal to ...\n   https://jawawa.id/newsitem/delpedro-and-associates-challenge-the-prosecutors-cassation-appeal-to-the-supreme-court-1776081072\n   JAKARTA, KOMPAS.com - The Advocacy Team for Democracy (TAUD) submitted a counter-memoir to the cassation appeal on behalf of four activists, namely Delpedro Marhaen, Khariq Anhar, Muzaffar Salim, and Syahdan Husein, to the Central Jakarta District Court on Monday (13/4/2026). The counter-memoir was filed in response to the cassation appeal against the acquittal verdict for the four activists ...\n6. Delpedro and Associates Challenge the Prosecutor's Cassation Appeal to ...\n   https://jawawa.id/newsitem/delpedro-and-associates-challenge-the-prosecutors-cassation-appeal-to-the-supreme-court-1776081072\n   JAKARTA, KOMPAS.com - The Advocacy Team for Democracy (TAUD) submitted a counter-memoir to the cassation appeal on behalf of four activists, namely Delpedro Marhaen, Khariq Anhar, Muzaffar Salim, and Syahdan Husein, to the Central Jakarta District Court on Monday (13/4/2026). The counter-memoir was filed in response to the cassation appeal against the acquittal verdict for the four activists ..."
+          },
+          {
+            "tool": "fetch",
+            "input": "https://cruxnow.com/vatican/2026/02/vaticans-trial-of-the-century-resumes-after-prosecutors-suffer-embarrassing-setbacks-on-appeal",
+            "result": "Details emerge, questions persist after British bishop’s court appearance on child rape charges"
+          }
+        ],
+        "answer": "Based on the available evidence, I cannot determine the specific procedural status of the cassation appeal in question. The search results reference multiple different cases involving cassation appeals by prosecutors in different jurisdictions (Indonesia's Supreme Court, Vatican Court of Cassation, and French Court of Cassation), but none provide clear status information about a specific case's current hearing or decision status. The evidence lacks the necessary detail to answer whether a particular appeal has been filed, heard, or decided. **Confidence: Low** - insufficient context to identify which specific case is being referenced."
+      },
+      {
+        "title": "Overturn Rationale Analysis",
+        "question": "On what legal grounds did the appellate court overturn the original 15-year conviction?",
+        "direction": "Extract the appellate court's written decision, identify specific legal deficiencies cited (procedural errors, insufficient evidence, rights violations), and assess strength of reasoning",
+        "research_areas": [
+          "Appellate court decision text",
+          "Due process violations cited",
+          "Evidentiary insufficiency arguments",
+          "Judicial reasoning and precedent applied"
+        ],
+        "tools_hint": [
+          "search",
+          "fetch"
+        ],
+        "success_criterion": "Specific legal grounds for overturn identified with court's reasoning documented",
+        "depends_on": [
+          "Case Identification"
+        ],
+        "children": [
+          {
+            "parent_id": "1.3",
+            "title": "Political Context & Pressure",
+            "question": "What is the current political climate in Peru regarding corruption prosecutions, public opinion on this case, and any documented political pressure on the judiciary?",
+            "direction": "Understand non-legal factors that might influence judicial decision-making in high-profile case",
+            "research_areas": [
+              "public opinion",
+              "political pressure",
+              "media coverage",
+              "institutional independence"
+            ],
+            "tools_hint": [
+              "search",
+              "xsearch",
+              "fetch"
+            ],
+            "success_criterion": "Assessment of political environment with polling data, media sentiment, and any documented interference attempts or judicial independence concerns",
+            "depends_on": [
+              "1.1"
+            ],
+            "children": [],
+            "id": "1.3.1",
+            "status": "answered",
+            "findings": [
+              {
+                "tool": "search",
+                "input": "Peru corruption prosecutions political climate 2024 2025",
+                "result": "1. World Report 2025: Peru | Human Rights Watch\n   https://www.hrw.org/world-report/2025/country-chapters/peru\n   In March 2024, the Attorney General's Office opened a criminal investigation against journalist Gustavo Gorriti and two anti-corruption prosecutors for alleged influence peddling.\n2. World Report 2025: Peru | Human Rights Watch\n   https://www.hrw.org/world-report/2025/country-chapters/peru\n   In March 2024, the Attorney General's Office opened a criminal investigation against journalist Gustavo Gorriti and two anti-corruption prosecutors for alleged influence peddling.\n3. Peru at a breaking point: How ten years of political chaos opened the ...\n   https://www.atlanticcouncil.org/blogs/new-atlanticist/peru-at-a-breaking-point-how-ten-years-of-political-chaos-opened-the-door-to-organized-crime/\n   Peru's Congress, now one of the least trusted institutions in the hemisphere, has often acted as a shield for illicit interests. In recent years, lawmakers have quietly advanced legislation that has reduced penalties for certain crimes, weakened controls on political financing, and obstructed efforts to vet local authorities for corruption.\n4. Peru at a breaking point: How ten years of political chaos opened the ...\n   https://www.atlanticcouncil.org/blogs/new-atlanticist/peru-at-a-breaking-point-how-ten-years-of-political-chaos-opened-the-door-to-organized-crime/\n   Peru's Congress, now one of the least trusted institutions in the hemisphere, has often acted as a shield for illicit interests. In recent years, lawmakers have quietly advanced legislation that has reduced penalties for certain crimes, weakened controls on political financing, and obstructed efforts to vet local authorities for corruption.\n5. PDF Peru 2024 Human Rights Report - U.S. Department of State\n   https://www.state.gov/wp-content/uploads/2025/08/624521_PERU-2024-HUMAN-RIGHTS-REPORT.pdf\n   In July, congress passed legislation to prevent prosecution of crimes against humanity committed before 2002, including unlawful killings, potentially leading to impunity. Courts and prosecutors challenged the law, alleging it was unconstitutional and inconsistent with international treaties and agreements.\n6. PDF Peru 2024 Human Rights Report - U.S. Department of State\n   https://www.state.gov/wp-content/uploads/2025/08/624521_PERU-2024-HUMAN-RIGHTS-REPORT.pdf\n   In July, congress passed legislation to prevent prosecution of crimes against humanity committed before 2002, including unlawful killings, potentially leading to impunity. Courts and prosecutors challenged the law, alleging it was unconstitutional and inconsistent with international treaties and agreements."
+              },
+              {
+                "tool": "search",
+                "input": "Peru judiciary independence political pressure corruption cases public opinion polls",
+                "result": "1. World Report 2026: Peru | Human Rights Watch\n   https://www.hrw.org/world-report/2026/country-chapters/peru\n   In 2025, Peru continued to backslide on democracy and human rights as Congress adopted measures that fostered impunity, weakened democratic institutions, and eroded judicial independence.\n2. World Report 2026: Peru | Human Rights Watch\n   https://www.hrw.org/world-report/2026/country-chapters/peru\n   In 2025, Peru continued to backslide on democracy and human rights as Congress adopted measures that fostered impunity, weakened democratic institutions, and eroded judicial independence.\n3. Peru: Congress Runs Roughshod Over Rule of Law\n   https://www.hrw.org/news/2024/03/11/peru-congress-runs-roughshod-over-rule-law\n   The decision by Peru's Congress on March 7, 2024, to arbitrarily remove two members of the National Board of Justice severely undermines judicial independence, the rule of law, and the ...\n4. Peru: Congress Runs Roughshod Over Rule of Law\n   https://www.hrw.org/news/2024/03/11/peru-congress-runs-roughshod-over-rule-law\n   The decision by Peru's Congress on March 7, 2024, to arbitrarily remove two members of the National Board of Justice severely undermines judicial independence, the rule of law, and the ...\n5. Political Opportunism in Peru's Judicial Reform: The National Council ...\n   https://www.tandfonline.com/doi/full/10.1080/10999922.2025.2523712\n   By studying nearly 500 news articles and 53 legal documents, this study shows how public attention, political pressure, and weak institutions influenced reform efforts. The CNM collapsed because it failed to stop corruption, while the JNJ has struggled to survive political interference.\n6. Political Opportunism in Peru's Judicial Reform: The National Council ...\n   https://www.tandfonline.com/doi/full/10.1080/10999922.2025.2523712\n   By studying nearly 500 news articles and 53 legal documents, this study shows how public attention, political pressure, and weak institutions influenced reform efforts. The CNM collapsed because it failed to stop corruption, while the JNJ has struggled to survive political interference."
+              },
+              {
+                "tool": "search",
+                "input": "Peru media sentiment corruption trials political reactions government",
+                "result": "1. Peru at a breaking point: How ten years of political chaos opened the ...\n   https://www.atlanticcouncil.org/blogs/new-atlanticist/peru-at-a-breaking-point-how-ten-years-of-political-chaos-opened-the-door-to-organized-crime/\n   Peru's Congress, now one of the least trusted institutions in the hemisphere, has often acted as a shield for illicit interests. In recent years, lawmakers have quietly advanced legislation that has reduced penalties for certain crimes, weakened controls on political financing, and obstructed efforts to vet local authorities for corruption.\n2. Peru at a breaking point: How ten years of political chaos opened the ...\n   https://www.atlanticcouncil.org/blogs/new-atlanticist/peru-at-a-breaking-point-how-ten-years-of-political-chaos-opened-the-door-to-organized-crime/\n   Peru's Congress, now one of the least trusted institutions in the hemisphere, has often acted as a shield for illicit interests. In recent years, lawmakers have quietly advanced legislation that has reduced penalties for certain crimes, weakened controls on political financing, and obstructed efforts to vet local authorities for corruption.\n3. Government Corruption Sparks Migration from Peru\n   https://thehuman-rights.com/government_corruption_sparks_migration_from_peru/\n   Corruption has long been a defining feature of Peru's political system, eroding public trust and weakening democratic institutions. From embezzlement of public funds to collusion with private interests, corruption deprives citizens of essential services and fuels inequality.\n4. Government Corruption Sparks Migration from Peru\n   https://thehuman-rights.com/government_corruption_sparks_migration_from_peru/\n   Corruption has long been a defining feature of Peru's political system, eroding public trust and weakening democratic institutions. From embezzlement of public funds to collusion with private interests, corruption deprives citizens of essential services and fuels inequality.\n5. Journalists in Peru seek protection from justice system amid rising ...\n   https://www.icij.org/news/2025/09/journalists-in-peru-seek-protection-from-justice-system-amid-rising-threats-harassment-by-officials/\n   Hundreds of journalists in Peru this month organized to denounce increasingly dangerous working conditions amid rising harassment and threats. In a statement, the nearly 300 reporters condemned recent attacks by public officials and demanded additional safeguards. Data gathered by the country's press association, known by its Spanish acronym ANP, shows the number of attacks against ...\n6. Journalists in Peru seek protection from justice system amid rising ...\n   https://www.icij.org/news/2025/09/journalists-in-peru-seek-protection-from-justice-system-amid-rising-threats-harassment-by-officials/\n   Hundreds of journalists in Peru this month organized to denounce increasingly dangerous working conditions amid rising harassment and threats. In a statement, the nearly 300 reporters condemned recent attacks by public officials and demanded additional safeguards. Data gathered by the country's press association, known by its Spanish acronym ANP, shows the number of attacks against ..."
+              },
+              {
+                "tool": "fetch",
+                "input": "[URL from most relevant search result containing polling data or judicial independence analysis]",
+                "result": "(could not fetch [URL from most relevant search result containing polling data or judicial independence analysis])"
+              },
+              {
+                "tool": "fetch",
+                "input": "https://www.hrw.org/world-report/2025/country-chapters/peru",
+                "result": "Would you like to read this page in another language?\n \n\n \n \n Yes\n \n\n \n\n \n\n \n\n \n \n\n \n \n \n \n \n \n\n \n \n \n \n\n \n \n \n\n \n \n \n Peru\n \n \n Events of 2024\n \n \n \n \n Demonstrators hold a protest in front of the Congress as Peruvian transport unions go on strike to demand greater protection from authorities amid a wave of extortion in Lima, Peru, October 23, 2024.\n © 2024 Reuters/Sebastian Castaneda\n \n \n \n \n \n\n \n \n\n \n\n \n \n\n \n \n \n \n Share this via Facebook\n \n\n Share this via Bluesky\n \n\n More sharing options\n \n\n Share this via X\n \n\n Share this via WhatsApp\n \n\n Share this via Email\n \n\n Share this via LinkedIn\n \n\n Share this via Reddit\n \n\n Share this via Telegram\n \n\n Share this via Printer\n \n\n \n \n \n\n \n\n \n \n \n \n \n \n Share this via Facebook\n \n\n Share this via Bluesky\n \n\n More sharing options\n \n\n Share this via X\n \n\n Share this via WhatsApp\n \n\n Share this via Email\n \n\n Share this via LinkedIn\n \n\n Share this via Reddit\n \n\n Share this via Telegram\n \n\n Share this via Printer\n \n\n \n \n\n \n \n \n Keynote\n \n\n \n \n  \n \n \n \n \n \n \n \n\n \n \n \n \n\n \n \n \n \n \n \n \n \n Tirana Hassan\n \n\n Former Executive Director\n \n \n \n \n \n\n \n \n \n \n \n \n \n \n \n\n \n In 2024, the Peruvian Congress passed laws and adopted other decisions that undermined judicial independence, weakened democratic institutions, and hindered investigations into organized crime, corruption, and human rights violations.President Dina Boluarte made little or no effort to stop these congressional attacks against democracy and the rule of law and her administration also pursued policies that contributed to the erosion of democratic norms. These included efforts to suppress protests and a growing disregard for judicial independence.Public Sector CorruptionCorruption is a major factor driving the deterioration of public institutions, deficient public services, and environmental destruction in Peru. Five former presidents have been charged with corruption. President Boluarte remains under investigation for allegedly receiving illicit contributions for her political campaign and expensive watches from a provincial governor. As of May 2024, 67 of the 130 members of Congress were under criminal investigation for corruption and other offenses, media outlets reported on the basis of information provided by the Attorney General’s Office.In December 2023, Congress modified the Efficient Collaboration Law, which had been a key tool to investigate corruption. The changes drastically shortened the period prosecutors have to corroborate a collaborator’s statements, making it harder for prosecutors to use this tool to investigate. The bill was approved in June 2023, but President Boluarte vetoed it in July; Congress overrode the president’s veto.In July 2024, Congress approved a bill to narrow the definition of “organized crime,” making it harder for prosecutors to investigate related offenses, including corruption and extortion, and rendering investigative searches largely ineffective. President Boluarte did not veto the bill; it became law in August. In October, Congress reintroduced extortion and other crimes into the definition of “organized crime,” but kept the exclusion of many corruption offenses and failed to address all changes that undermined investigative searches.Threats to Judicial and Prosecutorial IndependenceThroughout 2024, Congress moved forward with efforts to weaken the National Board of Justice, the body in charge of appointing and removing judges, prosecutors, and electoral authorities, which has played a key role in prote"
+              },
+              {
+                "tool": "fetch",
+                "input": "https://www.state.gov/wp-content/uploads/2025/08/624521_PERU-2024-HUMAN-RIGHTS-REPORT.pdf",
+                "result": "(could not fetch https://www.state.gov/wp-content/uploads/2025/08/624521_PERU-2024-HUMAN-RIGHTS-REPORT.pdf)"
+              },
+              {
+                "tool": "fetch",
+                "input": "https://www.hrw.org/world-report/2026/country-chapters/peru",
+                "result": "Would you like to read this page in another language?\n \n\n \n \n Yes\n \n\n \n\n \n\n \n\n \n \n\n \n \n \n \n \n \n\n \n \n \n \n\n \n \n \n\n \n \n \n Peru\n \n \n Events of 2025\n \n \n \n \n Relatives of those killed during the 2022/2023 anti-government protests, dressed in red, take part in a memorial ceremony at Cerro San Cristobal in Lima on July 27, 2025.\n © 2025 CONNIE FRANCE/AFP via Getty Images\n \n \n \n \n \n\n \n \n\n \n\n \n \n\n \n \n \n \n Share this via Facebook\n \n\n Share this via Bluesky\n \n\n More sharing options\n \n\n Share this via X\n \n\n Share this via WhatsApp\n \n\n Share this via Email\n \n\n Share this via LinkedIn\n \n\n Share this via Reddit\n \n\n Share this via Telegram\n \n\n Share this via Printer\n \n\n \n \n \n\n \n\n \n \n \n \n \n \n Share this via Facebook\n \n\n Share this via Bluesky\n \n\n More sharing options\n \n\n Share this via X\n \n\n Share this via WhatsApp\n \n\n Share this via Email\n \n\n Share this via LinkedIn\n \n\n Share this via Reddit\n \n\n Share this via Telegram\n \n\n Share this via Printer\n \n\n \n \n\n \n \n \n \n \n \n \n \n\n \n In 2025, Peru continued to backslide on democracy and human rights as Congress adopted measures that fostered impunity, weakened democratic institutions, and eroded judicial independence. Congress passed a broad amnesty law that grants impunity for serious crimes committed during the armed conflict.Organized crime continued to expand across the country, leading to an increase in homicides, extortion, and other violent crimes. On October 10, Congress ousted then-President Dina Boluarte, citing an obscure constitutional provision allowing it to declare that the presidency has been “vacated” if the president faces “moral incapacity.” José Jerí, the head of Congress, took office as interim president.Threats to Judicial and Prosecutorial IndependenceMore than half of the lawmakers in Congress are facing investigations for corruption or other crimes. In recent years, Congress has taken steps to undermine the independence and capacity of courts and prosecutors. In January 2025, authorities swore in a new seven-member National Board of Justice that, when it functions properly, plays a key role in safeguarding the separation of powers. An international mission of experts monitoring the selection process concluded that it “fail[ed] to meet international standards of transparency, publicity, technical criteria, and citizen participation.”In September, the National Board of Justice appointed Tomás Gálvez as attorney general. Gálvez, who had been investigated for an influence peddling scheme known as “Cuellos Blancos,” said he would remove leading anti-corruption prosecutors. He had not removed them at time of writing.Impunity for Human Rights ViolationsIn July, Congress passed an amnesty bill that grants impunity for serious crimes committed during the country’s internal armed conflict. President Boluarte enacted the law in August, despite an Inter-American Court of Human Rights ruling ordering Peru to halt implementation of the bill pending an analysis of its compatibility with the court’s prior rulings on amnesty laws.Authorities have failed to adequately investigate the killing of 49 protesters and bystanders during large protests that took place between December 2022 and February 2023. As of September, nobody had been convicted for these killings. In July, prosecutors said that 70 percent of their investigations into the abuses remained in the “preparatory phase.” In September, Congress shelved a constitutional complaint against President Boluarte regarding her role in the repression of the"
+              },
+              {
+                "tool": "search",
+                "input": "Peru public opinion poll corruption judiciary trust 2025 2026",
+                "result": "1. Opinión Pública - Cpi\n   https://cpi.pe/banco-de-datos/opinion-publica/\n   Ultima Encuesta De Opinión Pública Nacional - Campo: 03 Al 07 De Noviembre De 2025\n2. Opinión Pública - Cpi\n   https://cpi.pe/banco-de-datos/opinion-publica/\n   Ultima Encuesta De Opinión Pública Nacional - Campo: 03 Al 07 De Noviembre De 2025\n3. Opinion polling for the 2026 Peruvian general election\n   https://en.wikipedia.org/wiki/Opinion_polling_for_the_2026_Peruvian_general_election\n   Peruvian electoral law prohibits the dissemination of polls in the week prior to the day of the electoral suffrage. In the run-up to the 2026 Peruvian general election, various organizations conduct opinion polls to measure the intention to vote in Peru in the previous period. The results of these surveys are shown in this article.\n4. Opinion polling for the 2026 Peruvian general election\n   https://en.wikipedia.org/wiki/Opinion_polling_for_the_2026_Peruvian_general_election\n   Peruvian electoral law prohibits the dissemination of polls in the week prior to the day of the electoral suffrage. In the run-up to the 2026 Peruvian general election, various organizations conduct opinion polls to measure the intention to vote in Peru in the previous period. The results of these surveys are shown in this article.\n5. Peru - Transparency.org\n   https://www.transparency.org/en/countries/peru\n   Find out more about corruption in Peru: Latest news, Corruption Perceptions Index score & local chapter's contact information.\n6. Peru - Transparency.org\n   https://www.transparency.org/en/countries/peru\n   Find out more about corruption in Peru: Latest news, Corruption Perceptions Index score & local chapter's contact information."
+              },
+              {
+                "tool": "search",
+                "input": "Peru National Board of Justice removal March 2024 aftermath consequences",
+                "result": "1. Peru - March 2024 | The Global State of Democracy\n   https://www.idea.int/democracytracker/report/peru/march-2024\n   Peru - March 2024 National Board of Justice members are suspended, later reinstated Congress suspended two members (Ines Tello and Aldo Vasquez) of the National Board of Justice (Junta Nacional de Justicia, JNJ), in a process criticized by experts and human rights organizations as undermining judicial independence.\n2. Peru - March 2024 | The Global State of Democracy\n   https://www.idea.int/democracytracker/report/peru/march-2024\n   Peru - March 2024 National Board of Justice members are suspended, later reinstated Congress suspended two members (Ines Tello and Aldo Vasquez) of the National Board of Justice (Junta Nacional de Justicia, JNJ), in a process criticized by experts and human rights organizations as undermining judicial independence.\n3. Peru: Congress Runs Roughshod Over Rule of Law\n   https://www.hrw.org/news/2024/03/11/peru-congress-runs-roughshod-over-rule-law\n   The decision by Peru's Congress on March 7, 2024, to arbitrarily remove two members of the National Board of Justice severely undermines judicial independence, the rule of law, and the ...\n4. Peru: Congress Runs Roughshod Over Rule of Law\n   https://www.hrw.org/news/2024/03/11/peru-congress-runs-roughshod-over-rule-law\n   The decision by Peru's Congress on March 7, 2024, to arbitrarily remove two members of the National Board of Justice severely undermines judicial independence, the rule of law, and the ...\n5. Integrity of Peru's Electoral System is at Risk Due to the Imminent ...\n   https://dplf.org/en/2024/03/07/peru-the-integrity-of-the-peruvian-electoral-system-is-at-risk-due-to-the-imminent-removal-of-members-of-the-national-board-of-justice/\n   Faced with the insistence of the Peruvian Congress to remove all or some of the members of the National Justice Board (Junta Nacional de Justicia, JNJ) through a plenary session scheduled for today Thursday, March 7, 2024, the undersigned international human rights organizations alert the international community about the serious consequences of this initiative for the integrity of the ...\n6. Integrity of Peru's Electoral System is at Risk Due to the Imminent ...\n   https://dplf.org/en/2024/03/07/peru-the-integrity-of-the-peruvian-electoral-system-is-at-risk-due-to-the-imminent-removal-of-members-of-the-national-board-of-justice/\n   Faced with the insistence of the Peruvian Congress to remove all or some of the members of the National Justice Board (Junta Nacional de Justicia, JNJ) through a plenary session scheduled for today Thursday, March 7, 2024, the undersigned international human rights organizations alert the international community about the serious consequences of this initiative for the integrity of the ..."
+              },
+              {
+                "tool": "fetch",
+                "input": "https://www.hrw.org/news/2024/03/11/peru-congress-runs-roughshod-over-rule-law",
+                "result": "Would you like to read this page in another language?\n \n\n \n \n Yes\n \n\n \n\n \n\n \n\n \n Would you like to see a version of this page that loads faster by showing text only?\n \n\n \n \n Yes\n \n\n \n\n \n\n \n\n \n \n\n \n \n \n \n \n \n\n \n \n \n \n \n \n \n \n \n Peru: Congress Runs Roughshod Over Rule of Law\n \n \n \n \n \n \n \n \n \n\n Donate Now\n \n \n \n \n \n\n \n \n\n \n \n \n \n \n \n \n\n \n\n \n \n \n \n\n \n \n \n \n\n \n \n \n\n \n\n \n \n \n\n \n \n \n\n \n \n\n \n\n \n \n\n \n \n \n\n \n Click to expand Image\n \n\n \n\n \n \n \n \n Congress of the Republic of Peru, in Lima, March 6, 2024.\n © 2024 Congress of the Republic of Peru\n \n \n\n \n\n(Washington, DC) – The decision by Peru’s Congress on March 7, 2024, to arbitrarily remove two members of the National Board of Justice severely undermines judicial independence, the rule of law, and the protection of human rights, Human Rights Watch said today. The Organization of American States (OAS) should convene a meeting of its Permanent Council to address ongoing attacks on judicial independence in Peru.\n\nThe board appoints and removes judges and prosecutors, as well as the heads of the agencies that organize elections and maintain the electoral registry. The removal of its members opens the door to political influence in the justice and electoral systems, endangering the right to vote.\n\n“Peru’s Congress has severely weakened one of the last standing independent bodies that could serve as a check on its abusive practices,” said Juanita Goebertus, Americas director at Human Rights Watch. “Members of Congress seem to be trying to block investigations that could expose their own misconduct and influence the appointment of prosecutors and judges.”\n\nCongress had been trying to dismiss National Board of Justice members, whose five-year tenures expire in January 2025, through several means for months.\n\nThese efforts seem to have accelerated after a team of anti-corruption prosecutors alleged in November 2023 that then-Attorney General Patricia Benavides had influenced congressional decisions in exchange for closing criminal investigations against lawmakers. As of September 2023, prosecutors were reportedly investigating at least 47 of the 130 members of Congress for various offenses, in many cases connected to corruption. The board suspended Benavides in December 2023 and opened an investigation into the allegations.\n\nOn March 7, Congress removed two of the board's seven members, citing a disagreement between lawmakers and the board over the interpretation of the law regarding the required age to be a member of the board. Lawmakers tried to remove all other board members but have so far failed to muster sufficient votes.\n\nPeru’s constitution requires that anyone appointed to the board be under the age of 75. The board has interpreted that to mean that existing members appointed before turning 75 are not required to retire after they reach that age. The government agency in charge of public service administration supported the board’s interpretation. Under Peru’s constitution, Congress may only remove board members for “serious infractions.”\n\nUnder Peruvian law, members of the Permanent Commission of Congress, which previously discussed the removal of National Board of Justice members, are not allowed to participate in the final vote to dismiss them. But a member of the commission voted on the removal of board member Inés Tello, which was approved by a single vote majority. Congress’s press office issued a statement arguing that, because the member of the commission did not vote at the Permanent Com"
+              }
+            ],
+            "answer": "Peru's political climate shows significant democratic backsliding with documented political pressure on the judiciary. According to Human Rights Watch (hrw.org/world-report/2026), in 2025 Peru \"continued to backslide on democracy and human rights as Congress adopted measures that fostered impunity, weakened democratic institutions, and eroded judicial independence.\" The Atlantic Council reports that Peru's Congress is \"now one of the least trusted institutions in the hemisphere\" and has \"acted as a shield for illicit interests\" (atlanticcouncil.org). Specific interference includes Congress arbitrarily removing two National Board of Justice members in March 2024, which HRW describes as severely undermining judicial independence, and opening criminal investigations against anti-corruption prosecutors (hrw.org/news/2024/03/11). **Confidence: High** - multiple credible sources document systematic political interference in judicial independence and anti-corruption efforts."
+          }
+        ],
+        "id": "1.3",
+        "status": "answered",
+        "findings": [],
+        "answer": "**Answer:** No evidence was gathered regarding the specific legal grounds for the appellate court's decision to overturn the 15-year conviction. The sub-findings document political pressure on Peru's judiciary but contain no information about the legal reasoning, procedural grounds, or judicial rationale cited in the appellate ruling itself.\n\n**Confidence: None** – question cannot be answered from provided evidence."
+      },
+      {
+        "title": "Prosecution Appeal Strength",
+        "question": "What are the prosecutor's main arguments for reinstating the conviction, and how strong is their legal case?",
+        "direction": "Review prosecution's appeal briefs, identify their counter-arguments to overturn rationale, assess quality of evidence they cite, and evaluate legal precedent supporting reinstatement",
+        "research_areas": [
+          "Prosecutor's cassation appeal arguments",
+          "Evidence supporting original conviction",
+          "Supreme Court corruption case precedents",
+          "Expert legal analysis of appeal merits"
+        ],
+        "tools_hint": [
+          "search",
+          "fetch",
+          "posts"
+        ],
+        "success_criterion": "Prosecution's key arguments documented with assessment of their legal merit based on precedent and evidence",
+        "depends_on": [
+          "Case Identification",
+          "Overturn Rationale Analysis"
+        ],
+        "children": [
+          {
+            "parent_id": "1.4",
+            "title": "Evidence Quality Assessment",
+            "question": "What new evidence or legal arguments has the prosecution presented in their appeal, and what is the strength/admissibility of this evidence compared to what was available at original trial?",
+            "direction": "Evaluate whether prosecution has materially stronger case on appeal or is merely re-arguing same points",
+            "research_areas": [
+              "appeal brief content",
+              "new evidence",
+              "evidentiary standards"
+            ],
+            "tools_hint": [
+              "search",
+              "fetch"
+            ],
+            "success_criterion": "Documentation of specific new evidence or arguments with legal analysis of their probative value and likelihood of changing outcome",
+            "depends_on": [
+              "1.1",
+              "1.3"
+            ],
+            "children": [],
+            "id": "1.4.1",
+            "status": "answered",
+            "findings": [
+              {
+                "tool": "search",
+                "input": "prosecution appeal new evidence legal arguments admissibility compared to original trial",
+                "result": "1. Can New Evidence Be Introduced in an Appeal? - The Legal Guide\n   https://thelegalguide.org/can-evidence-be-introduced-appeal/\n   The question of whether new evidence can be introduced in an appeal hinges on jurisdiction, procedural rules, and the standards governing appellate review. Generally, appellate courts review the record from the trial court and do not entertain new evidence except under narrowly defined circumstances.\n2. Can New Evidence Be Introduced in an Appeal? - The Legal Guide\n   https://thelegalguide.org/can-evidence-be-introduced-appeal/\n   The question of whether new evidence can be introduced in an appeal hinges on jurisdiction, procedural rules, and the standards governing appellate review. Generally, appellate courts review the record from the trial court and do not entertain new evidence except under narrowly defined circumstances.\n3. Understanding the Admissibility of Evidence on Appeal in Civil and ...\n   https://obligolaw.com/admissibility-of-evidence-on-appeal/\n   Discover key principles and legal standards governing the admissibility of evidence on appeal, including challenges, procedures, and judicial discretion in evidence law.\n4. Understanding the Admissibility of Evidence on Appeal in Civil and ...\n   https://obligolaw.com/admissibility-of-evidence-on-appeal/\n   Discover key principles and legal standards governing the admissibility of evidence on appeal, including challenges, procedures, and judicial discretion in evidence law.\n5. Newly discovered evidence impacting the appellate judgment\n   https://legalwritingexperts.com/legal-brief-writing-services-for-criminal-motions/motion-to-recall-mandate/newly-discovered-evidence-impacting-the-appellate-judgment/\n   The \"not admissible on appeal\" default rule holds firm in both contexts: courts treat the four-part test as a gateway for remand or new trial motions rather than as authorization to accept new evidence into the appellate record.\n6. Newly discovered evidence impacting the appellate judgment\n   https://legalwritingexperts.com/legal-brief-writing-services-for-criminal-motions/motion-to-recall-mandate/newly-discovered-evidence-impacting-the-appellate-judgment/\n   The \"not admissible on appeal\" default rule holds firm in both contexts: courts treat the four-part test as a gateway for remand or new trial motions rather than as authorization to accept new evidence into the appellate record."
+              },
+              {
+                "tool": "fetch",
+                "input": "https://www.law.cornell.edu/wex/appeal",
+                "result": "appealAn appeal is a challenge to a previous legal determination. An appeal is directed towards a legal power higher than the power making the challenged determination. In most states and the federal system, trial court determinations can be appealed in an appellate court. The rulings of those appellate courts may be reviewed by a \"court of last resort.\" In the federal court system, that is the United States Supreme Court.\nThe person pursuing an appeal is called an appellant, while the person defending the lower court’s ruling is the appellee or respondent.\nAppeals can be either discretionary or of right. An appeal of right is one that the higher court must hear, if the losing party demands it, while a discretionary appeal is one that the higher court may, but does not have to, consider. For example, in the federal system, there is an appeal of right from the District Court to the Court of Appeals but appeals from the Court of Appeals to the Supreme Court are discretionary. \nAppeals do not always originate from court decisions. In administrative law, people are often allowed to appeal, in court, the decisions made by executive agencies.\nSee also: Appellate Jurisdiction and Appellate Procedure\n[Last reviewed in June of 2022 by the Wex Definitions Team]WexTHE LEGAL PROCESS appellate procedure criminal procedure legal practice/ethics civil procedure courts and procedure legal education and practice wex definitions"
+              },
+              {
+                "tool": "search",
+                "input": "prosecution appellate brief new forensic evidence DNA expert testimony not available at trial",
+                "result": "1. National Commission on Forensic Science\n   https://www.justice.gov/ncfs/file/831526/dl?inline\n   The need for pretrial discovery of forensic evidence in criminal cases is critical—for both the prosecution and defense—because \"it is difficult to test expert testimony at trial without advance notice and preparation.\"1 Indeed, in a number of the cases in which convicted defendants were subsequently exonerated by DNA testing, the ...\n2. National Commission on Forensic Science\n   https://www.justice.gov/ncfs/file/831526/dl?inline\n   The need for pretrial discovery of forensic evidence in criminal cases is critical—for both the prosecution and defense—because \"it is difficult to test expert testimony at trial without advance notice and preparation.\"1 Indeed, in a number of the cases in which convicted defendants were subsequently exonerated by DNA testing, the ...\n3. Substitute Analyst Testimony and Smith v. Arizona\n   https://nccriminallaw.sog.unc.edu/2023/10/17/substitute-analyst-testimony-and-smith-v-arizona/\n   The forensic report was not admitted at trial, but the testifying expert referenced the report and refreshed his recollection with it during his testimony. The state appellate court affirmed, pointing in part to Williams and endorsing the \"basis of opinion\" argument. Smith argues that the basis of opinion theory is wrong.\n4. Substitute Analyst Testimony and Smith v. Arizona\n   https://nccriminallaw.sog.unc.edu/2023/10/17/substitute-analyst-testimony-and-smith-v-arizona/\n   The forensic report was not admitted at trial, but the testifying expert referenced the report and refreshed his recollection with it during his testimony. The state appellate court affirmed, pointing in part to Williams and endorsing the \"basis of opinion\" argument. Smith argues that the basis of opinion theory is wrong.\n5. Machines Need Not Testify: Forensic Reports Under the Confrontation ...\n   https://harvardlawreview.org/blog/2024/10/machines-need-not-testify-forensic-reports-under-the-confrontation-clause/\n   With the backlogs in forensic laboratories around the country and thousands of defendants awaiting trial, a future with a fast, impersonal, and automated system for testing samples and introducing results at trial without the need for analysts to testify has its attractive qualities.\n6. Machines Need Not Testify: Forensic Reports Under the Confrontation ...\n   https://harvardlawreview.org/blog/2024/10/machines-need-not-testify-forensic-reports-under-the-confrontation-clause/\n   With the backlogs in forensic laboratories around the country and thousands of defendants awaiting trial, a future with a fast, impersonal, and automated system for testing samples and introducing results at trial without the need for analysts to testify has its attractive qualities."
+              },
+              {
+                "tool": "search",
+                "input": "harmless error standard prosecution appeal newly discovered evidence admissibility criteria",
+                "result": "1. Newly discovered evidence impacting the appellate judgment\n   https://legalwritingexperts.com/legal-brief-writing-services-for-criminal-motions/motion-to-recall-mandate/newly-discovered-evidence-impacting-the-appellate-judgment/\n   Explore how newly discovered evidence impacting the appellate judgment can reshape case outcomes, from admissibility standards to procedural strategies.\n2. Newly discovered evidence impacting the appellate judgment\n   https://legalwritingexperts.com/legal-brief-writing-services-for-criminal-motions/motion-to-recall-mandate/newly-discovered-evidence-impacting-the-appellate-judgment/\n   Explore how newly discovered evidence impacting the appellate judgment can reshape case outcomes, from admissibility standards to procedural strategies.\n3. G.R. No. 145420 - The Lawphil Project\n   https://lawphil.net/judjuris/juri2006/sep2006/gr_145420_2006.html\n   A contrary ruling may open the floodgates to an endless review of decisions, where losing litigants, in delaying the disposition of cases, invoke evidence already presented, whether through a motion for reconsideration or for a new trial, in guise of newly discovered evidence. WHEREFORE, premises considered, the instant Petition is DISMISSED.\n4. G.R. No. 145420 - The Lawphil Project\n   https://lawphil.net/judjuris/juri2006/sep2006/gr_145420_2006.html\n   A contrary ruling may open the floodgates to an endless review of decisions, where losing litigants, in delaying the disposition of cases, invoke evidence already presented, whether through a motion for reconsideration or for a new trial, in guise of newly discovered evidence. WHEREFORE, premises considered, the instant Petition is DISMISSED.\n5. Understanding Harmless Error and Evidence Admissibility in Legal ...\n   https://juribloom.com/harmless-error-and-evidence-admissibility/\n   Explore how harmless error impacts evidence admissibility and the legal standards courts apply, ensuring proper trial procedures and appellate review.\n6. Understanding Harmless Error and Evidence Admissibility in Legal ...\n   https://juribloom.com/harmless-error-and-evidence-admissibility/\n   Explore how harmless error impacts evidence admissibility and the legal standards courts apply, ensuring proper trial procedures and appellate review."
+              },
+              {
+                "tool": "fetch",
+                "input": "https://thelegalguide.org/can-evidence-be-introduced-appeal/",
+                "result": "The question of whether new evidence can be introduced in an appeal hinges on jurisdiction, procedural rules, and the standards governing appellate review. Generally, appellate courts review the record from the trial court and do not entertain new evidence except under narrowly defined circumstances. This article explains when and how new evidence may be allowed, the types of evidence typically permitted, and practical steps for litigants navigating appellate procedures in the United States. It also clarifies common misunderstandings and highlights the most relevant search terms for readers seeking guidance on new evidence on appeal.\nWhat Appellate Courts Review And What They Do Not\nAppellate review focuses on legal errors made by the trial court and whether those errors affected the outcome. The standard of review varies by issue, such as abuse of discretion, de novo review for questions of law, or substantial evidence for sufficiency of the evidence. Importantly, appellate courts generally review the trial record as it existed at the time of judgment. They do not reevaluate facts or hear new testimony unless a statutory exception applies. This framework explains why new evidence is typically excluded on appeal and why timely preservation and accurate trial records are critical.\n\n \n ☎\n\n \n \n Want to talk through your situation?\n \n \n A quick phone call can clarify your options and next steps. The conversation is confidential.\n \n\n \n Call (855) 550-1270\n \n\n \n Or dial: (855) 550-1270\n \n \n \n\nWhen New Evidence May Be Considered On Appeal\nNew evidence is typically allowed on appeal only under limited, narrow circumstances. The most common exceptions include:\n\nFraud or misrepresentation of evidence in the record that substantially affects the outcome, discovered after trial, which may justify a remand or reconsideration.\nHabeas corpus and post-conviction relief contexts where new evidence can support claims of actual innocence or ineffective assistance of counsel, depending on jurisdiction.\nJurisdictional or statutory exceptions allowing an appellate court to accept supplemental materials for specific issues such as sentencing errors or clerical mistakes.\nLimited evidentiary supplements in some states to address procedural defects, like clerical errors in judgments, nurse to correct the record for appeal purposes.\n\nOutside these narrow contexts, presenting new evidence in an appeal is typically rejected. Even where arguments invoke new evidence, the appellate court may treat it as a motion for reconsideration or a petition for post-conviction relief rather than an ordinary appeal. It is essential to understand the exact rules in the relevant jurisdiction because they vary widely across states and between state and federal systems.\nAlternative Avenues For New Information\nWhen new information emerges after trial, several legitimate paths other than an appeal exist to pursue relief:\n\nMotion for a new trial based on newly discovered evidence in some jurisdictions, often requiring a showing of diligence and material impact on the verdict.\nPost-conviction relief petitions to raise claims such as ineffective assistance of counsel, newly discovered evidence, or constitutional rights violations.\nPetition for writ of habeas corpus in appropriate contexts, typically after state remedies are exhausted, to challenge the legality of detention in light of new evidence.\nClerical correction motions to fix obvious errors in judgments or sentencing notices withou"
+              },
+              {
+                "tool": "fetch",
+                "input": "https://obligolaw.com/admissibility-of-evidence-on-appeal/",
+                "result": "Post author:Obligolaw Teams\n \n \n \n \n \n \n \n \n Post published:January 6, 2025\n \n \n \n \n \n \n \n \n \n Post category:Evidence Law\n \n \n \n \n \n \n \n \n \n \n \n\n \n\n \n 💡 AI-Assisted Content: Parts of this article were generated with the help of AI. Please verify important details using reliable or official sources.\n \n\nTable of Contents\n\nToggle\n\nFundamentals of Evidence Law in the Context of Appeals\nIn the context of appeals, the fundamentals of evidence law serve as the foundation for understanding how evidence is evaluated and permitted before the appellate court. Evidence law governs the types of evidence that can be introduced, the standards for its admissibility, and the procedures for presenting such evidence during appellate hearings. \nUnlike trial courts, appellate courts primarily review the record of the lower court and generally do not accept new or additional evidence unless specific exceptions apply. This regime emphasizes the importance of the original evidence and rulings, making the legal principles of admissibility central to the appellate process. \nUnderstanding the core principles of evidence law in appeals helps clarify which evidence can influence the outcome and how courts balance procedural rules, judicial discretion, and legal standards. These fundamentals ensure that appellate review maintains fairness, consistency, and integrity within the broader legal system.\nCriteria for Admissibility of Evidence on Appeal\nThe criteria for admissibility of evidence on appeal primarily focus on ensuring that the evidence is relevant, reliable, and appropriate for the appellate review process. Evidence must demonstrate a clear connection to the issues on appeal and contribute to informed judicial decision-making. Audio, video, and testimonial evidence are subject to scrutiny based on these aspects. \n\nAdditionally, the evidence should comply with procedural rules governing appellate proceedings, including timeliness and proper presentation. Evidence obtained unlawfully or violating constitutional protections may be deemed inadmissible, unless special exceptions apply. The authenticity and integrity of the evidence must also be established before it can be considered.\nThe admissibility criteria aim to prevent new evidence from improperly influencing the appellate court, preserving the record established during trial. Courts carefully evaluate whether evidence meets these standards, balancing the need for a fair review with procedural fairness and legal correctness.\nDistinction Between Fresh Evidence and Evidence Previously Considered\nThe distinction between fresh evidence and evidence previously considered is fundamental in evidence law during appeals. Fresh evidence refers to new material that was not available or presented during the original trial, whereas evidence previously considered has already been examined by the lower court. \nAppeals typically do not allow the introduction of evidence that was part of the original record unless specific exceptions apply. Fresh evidence must often meet strict criteria to be admitted, such as demonstrating that it could not have been obtained earlier with due diligence. Conversely, evidence previously considered is generally only reviewed through the existing record, unless rulings or procedural errors justify its reconsideration. \nSee also  Understanding Scientific Evidence and the Daubert Standard in Legal ProceedingsUnderstanding this distinction helps clarify the limits on evidence admissibility on a"
+              },
+              {
+                "tool": "recall",
+                "input": "prosecution appeal case defendant trial conviction appellate brief",
+                "result": "(no memory match)"
+              },
+              {
+                "tool": "recall",
+                "input": "criminal trial evidence forensic DNA expert testimony new evidence appeal",
+                "result": "(no memory match)"
+              },
+              {
+                "tool": "search",
+                "input": "recent high-profile prosecution appeal 2026 new evidence admissibility criminal case",
+                "result": "1. State Seeks To Use Alex Murdaugh's Prior Testimony At Murder Retrial\n   https://www.fitsnews.com/2026/08/10/state-seeks-to-use-alex-murdaughs-prior-testimony-at-murder-retrial/\n   State Seeks To Use Alex Murdaugh's Prior Testimony At Murder Retrial Prosecutors also renew bids to restrict third-party guilt and polygraph evidence ahead of this week's pretrial hearing…\n2. State Seeks To Use Alex Murdaugh's Prior Testimony At Murder Retrial\n   https://www.fitsnews.com/2026/08/10/state-seeks-to-use-alex-murdaughs-prior-testimony-at-murder-retrial/\n   State Seeks To Use Alex Murdaugh's Prior Testimony At Murder Retrial Prosecutors also renew bids to restrict third-party guilt and polygraph evidence ahead of this week's pretrial hearing…\n3. Appeals court says evidence was 'compelling' in ComEd Four case; leaves ...\n   https://muddyrivernews.com/politics/appeals-court-says-evidence-was-compelling-in-comed-four-case-leaves-door-open-for-mcclain-pramaggiore-retrial/20260616075834/\n   CHICAGO — A federal appeals court in Chicago said Monday that prosecutors presented \"significant and compelling evidence\" against former ComEd CEO Anne Pramaggiore and lobbyist Michael McClain of Quincy, even as it formally vacated their convictions in the high-profile \"ComEd Four\" corruption case. The 16-page opinion from the 7th U.S. Circuit Court of Appeals comes...\n4. Appeals court says evidence was 'compelling' in ComEd Four case; leaves ...\n   https://muddyrivernews.com/politics/appeals-court-says-evidence-was-compelling-in-comed-four-case-leaves-door-open-for-mcclain-pramaggiore-retrial/20260616075834/\n   CHICAGO — A federal appeals court in Chicago said Monday that prosecutors presented \"significant and compelling evidence\" against former ComEd CEO Anne Pramaggiore and lobbyist Michael McClain of Quincy, even as it formally vacated their convictions in the high-profile \"ComEd Four\" corruption case. The 16-page opinion from the 7th U.S. Circuit Court of Appeals comes...\n5. Alex Murdaugh murder decision overturned by SC Supreme Court | The State\n   https://www.thestate.com/news/local/crime/article315737340.html\n   Alex Murdaugh's conviction in the murder of his wife and youngest son has been overturned and will return to circuit court.\n6. Alex Murdaugh murder decision overturned by SC Supreme Court | The State\n   https://www.thestate.com/news/local/crime/article315737340.html\n   Alex Murdaugh's conviction in the murder of his wife and youngest son has been overturned and will return to circuit court."
+              },
+              {
+                "tool": "fetch",
+                "input": "https://www.fitsnews.com/2026/08/10/state-seeks-to-use-alex-murdaughs-prior-testimony-at-murder-retrial/",
+                "result": "(could not fetch https://www.fitsnews.com/2026/08/10/state-seeks-to-use-alex-murdaughs-prior-testimony-at-murder-retrial/)"
+              }
+            ],
+            "answer": "Based on the available evidence, I cannot provide a specific answer to this question. The evidence retrieved consists entirely of **general legal principles** about appellate procedure, which state that appellate courts typically do not accept new evidence except under narrowly defined circumstances and primarily review the trial court record (sources: thelegalguide.org, obligolaw.com, law.cornell.edu/wex/appeal). \n\n**No case-specific information** about what new evidence or legal arguments any particular prosecution has presented in an appeal is contained in the search results. The searches returned only theoretical discussions of admissibility standards and one inaccessible 2026 article about the Murdaugh case.\n\n**Confidence: Low** - The evidence does not address the specific sub-question; only general appellate principles were retrieved."
+          }
+        ],
+        "id": "1.4",
+        "status": "answered",
+        "findings": [],
+        "answer": "**ANSWER:**\n\nBased on the available evidence, **I cannot determine the prosecutor's main arguments for reinstating the conviction or assess the strength of their legal case**. The search results retrieved only general appellate procedure principles (thelegalguide.org, obligolaw.com, law.cornell.edu/wex/appeal) explaining that appeals typically review trial court records rather than introducing new evidence. No case-specific prosecutorial arguments, legal briefs, or strategic positions were found in the evidence.\n\n**Confidence: Very Low** – No relevant case-specific evidence was obtained; question remains unanswered from available sources."
+      },
+      {
+        "title": "Judicial Precedent Review",
+        "question": "How has Peru's Supreme Court historically ruled on similar prosecutor appeals of overturned corruption convictions?",
+        "direction": "Research recent Supreme Court decisions on cassation appeals in high-profile corruption cases, identify patterns in upholding vs reversing lower court acquittals/overturns",
+        "research_areas": [
+          "Peruvian Supreme Court corruption jurisprudence",
+          "Cassation appeal success rates",
+          "Similar Odebrecht/Lava Jato appeals",
+          "Judicial independence vs anti-corruption pressure"
+        ],
+        "tools_hint": [
+          "search",
+          "fetch"
+        ],
+        "success_criterion": "Pattern identified showing Supreme Court tendency to favor prosecution or defense in similar appeals, with specific case examples",
+        "depends_on": [
+          "Case Identification"
+        ],
+        "children": [
+          {
+            "parent_id": "1.5",
+            "title": "Appellate Court Composition",
+            "question": "Which judges/justices are hearing this final appeal, what are their judicial philosophies, and how have they ruled in similar corruption/procedural cases?",
+            "direction": "Assess likely judicial disposition based on panel composition and individual judge tendencies",
+            "research_areas": [
+              "appellate judges",
+              "judicial voting patterns",
+              "corruption case rulings"
+            ],
+            "tools_hint": [
+              "search",
+              "fetch"
+            ],
+            "success_criterion": "Identification of specific judges on panel with documented voting patterns in comparable cases showing prosecution vs. defense lean",
+            "depends_on": [
+              "1.1",
+              "1.2"
+            ],
+            "children": [],
+            "id": "1.5.1",
+            "status": "answered",
+            "findings": [
+              {
+                "tool": "search",
+                "input": "final appeal judges panel corruption case 2024 2025",
+                "result": "1. House Bill 6 Scandal Timeline: Ohio's Largest Corruption Case\n   https://www.commoncause.org/ohio/resources/a-cycle-of-corruption-a-timeline-of-the-householder-hb6-scandal/\n   October 6, 2025: A panel of US Sixth Circuit Court of Appeals judges overturned a decision ordering the release of FirstEnergy two internal investigations into the utility's involvement in the House Bill 6 scandal.\n2. House Bill 6 Scandal Timeline: Ohio's Largest Corruption Case\n   https://www.commoncause.org/ohio/resources/a-cycle-of-corruption-a-timeline-of-the-householder-hb6-scandal/\n   October 6, 2025: A panel of US Sixth Circuit Court of Appeals judges overturned a decision ordering the release of FirstEnergy two internal investigations into the utility's involvement in the House Bill 6 scandal.\n3. Madigan's corruption conviction upheld on appeal - Chicago Tribune\n   https://www.chicagotribune.com/2026/04/27/appeals-corruption-conviction-madigan-upheld/\n   A federal appeals court in Chicago on Monday upheld the sweeping corruption conviction for ex-House Speaker Michael Madigan, brushing aside his arguments that schemes to help utility giant ComEd ...\n4. Madigan's corruption conviction upheld on appeal - Chicago Tribune\n   https://www.chicagotribune.com/2026/04/27/appeals-corruption-conviction-madigan-upheld/\n   A federal appeals court in Chicago on Monday upheld the sweeping corruption conviction for ex-House Speaker Michael Madigan, brushing aside his arguments that schemes to help utility giant ComEd ...\n5. The Battle for Indonesia's Tin Empire: PT Timah Corruption Case Update\n   https://storiesfromindonesia.com/2025/08/07/corruption-pt-timah-case-update/\n   PT Timah Corruption Case Defendants' Sentences Increased on Appeal by Jakarta High Court By Jihan Ristiyanti for Tempo.co, March 1, 2025 Indonesian Court hands down harsher penalties in multibillion-dollar mining corruption case The Jakarta High Court has increased the sentences of four defendants involved in the corruption case concerning the management of tin commodities within PT Timah ...\n6. The Battle for Indonesia's Tin Empire: PT Timah Corruption Case Update\n   https://storiesfromindonesia.com/2025/08/07/corruption-pt-timah-case-update/\n   PT Timah Corruption Case Defendants' Sentences Increased on Appeal by Jakarta High Court By Jihan Ristiyanti for Tempo.co, March 1, 2025 Indonesian Court hands down harsher penalties in multibillion-dollar mining corruption case The Jakarta High Court has increased the sentences of four defendants involved in the corruption case concerning the management of tin commodities within PT Timah ..."
+              },
+              {
+                "tool": "fetch",
+                "input": "https://www.supremecourt.gov/oral_arguments/argument_calendars/MonthlyArgumentCalOct2024.html",
+                "result": "404 - Page Not Found\n \n Sorry, the page you are looking for does not exist or has been moved.\n — Return to Homepage"
+              },
+              {
+                "tool": "search",
+                "input": "[judge names from step 1] judicial philosophy corruption cases voting record prosecution defense",
+                "result": "1. Judicial Corruption Prosecutions - Law Gratis\n   https://www.lawgratis.com/blog-detail/judicial-corruption-prosecutions\n   Conclusion Judicial corruption prosecutions are complex but essential for preserving the rule of law. Cases demonstrate that: Judges can be criminally prosecuted and impeached. Specialized anti-corruption courts increase accountability. Large-scale investigations can lead to systemic reforms. Political and institutional challenges often complicate prosecutions.\n2. Judicial Corruption Prosecutions - Law Gratis\n   https://www.lawgratis.com/blog-detail/judicial-corruption-prosecutions\n   Conclusion Judicial corruption prosecutions are complex but essential for preserving the rule of law. Cases demonstrate that: Judges can be criminally prosecuted and impeached. Specialized anti-corruption courts increase accountability. Large-scale investigations can lead to systemic reforms. Political and institutional challenges often complicate prosecutions.\n3. Manila Regional Trial Court Directory | PDF - Scribd\n   https://www.scribd.com/document/338522648/Court-Directory-pdf\n   This document provides a directory of regional trial courts in Metro Manila, listing the court branches in Kalookan City, Las Piñas, Malabon, Makati City, Marikina City, Mandaluyong City, Manila, Muntinlupa City, Parañaque City, Pasay City, Pasig City, Quezon City, Taguig City and Valenzuela City. It includes the names of presiding judges and key court personnel, as well as contact details ...\n4. Manila Regional Trial Court Directory | PDF - Scribd\n   https://www.scribd.com/document/338522648/Court-Directory-pdf\n   This document provides a directory of regional trial courts in Metro Manila, listing the court branches in Kalookan City, Las Piñas, Malabon, Makati City, Marikina City, Mandaluyong City, Manila, Muntinlupa City, Parañaque City, Pasay City, Pasig City, Quezon City, Taguig City and Valenzuela City. It includes the names of presiding judges and key court personnel, as well as contact details ...\n5. Case Studies in Emergency Election Litigation | Federal Judicial Center\n   https://www.fjc.gov/content/case-studies\n   Assembled here are case studies on emergency election litigation in federal courts. Because of the time constraints in emergency cases, the case records are often not easily available from other sources. These 513 case studies were prepared by Robert Timothy Reagan, Margaret S. Williams, Marie Leary, Catherine R. Borden, Jessica L. Snowden, Patricia D. Breen, and Jason A. Cantone. We are ...\n6. Case Studies in Emergency Election Litigation | Federal Judicial Center\n   https://www.fjc.gov/content/case-studies\n   Assembled here are case studies on emergency election litigation in federal courts. Because of the time constraints in emergency cases, the case records are often not easily available from other sources. These 513 case studies were prepared by Robert Timothy Reagan, Margaret S. Williams, Marie Leary, Catherine R. Borden, Jessica L. Snowden, Patricia D. Breen, and Jason A. Cantone. We are ..."
+              },
+              {
+                "tool": "fetch",
+                "input": "[URL of judicial database or court opinion archive from step 3]",
+                "result": "(could not fetch [URL of judicial database or court opinion archive from step 3])"
+              },
+              {
+                "tool": "fetch",
+                "input": "https://www.chicagotribune.com/2026/04/27/appeals-corruption-conviction-madigan-upheld/",
+                "result": "Former Illinois House Speaker Michael Madigan leaves the Dirksen U.S. Courthouse after being sentenced to 7 1/2 years in prison and fined $2.5 million during his post-trial sentencing hearing on June 13, 2025, in Chicago. (Terrence Antonio James/Chicago Tribune)Former Illinois House Speaker Michael Madigan leaves the Dirksen U.S. Courthouse after being sentenced to 7 1/2 years in prison and fined $2.5 million during his posttrial sentencing hearing June 13, 2025, in downtown Chicago. He's trailed by daughter Nicole. (Audrey Richardson/Chicago Tribune)Former Illinois House Speaker Michael Madigan leaves the Dirksen U.S. Courthouse after being sentenced to 7 1/2 years in prison and fined $2.5 million during a hearing on June 13, 2025, in Chicago. (Audrey Richardson/Chicago Tribune)Former Speaker Michael Madigan, left, arrives at the Dirksen U.S. Courthouse with attorneys Thomas Breen, center, and Robert Stanley for a hearing on sentencing guidelines on June 10, 2025. (Antonio Perez/Chicago Tribune)Former Illinois Speaker of the House Michael Madigan, flanked by daughters Nicole, left, and Tiffany, leaves the Dirksen U.S. Courthouse after jurors found him guilty on 10 counts in his racketeering case on Feb. 12, 2025. (E. Jason Wambsgans/Chicago Tribune)Former lobbyist Michael McClain walks toward reporters after the jury was deadlocked on charges at the Dirksen U.S. Courthouse, Feb. 12, 2025. (Antonio Perez/Chicago Tribune)Former Illinois House Speaker Michael Madigan leaves the Dirksen U.S. Courthouse while holding hands with his daughter Nicole after jurors found him guilty on 10 counts in his racketeering case on Feb. 12, 2025. His daughter Tiffany is at right. (E. Jason Wambsgans/Chicago Tribune)Acting U.S. Attorney Morris Pasqual walks toward reporters following former Illinois House Speaker Michael Madigan’s guilty verdict, at the Dirksen U.S. Courthouse on Feb. 12, 2025. (Antonio Perez/Chicago Tribune)Michael McClain, left, and his attorney Patrick Cotter talk with reporters after the conclusion of his trial at the Dirksen U.S. Courthouse on Feb. 12, 2025. (Antonio Perez/Chicago Tribune)Former Illinois Speaker of the House Michael Madigan leaves the Dirksen U.S. Courthouse after jurors found him guilty on 10 counts in his racketeering case on Feb. 12, 2025. (E. Jason Wambsgans/Chicago Tribune)Lobbyist Michael McClain leaves Dirksen U.S. Courthouse after Michael Madigan was convicted of bribery conspiracy in a landmark trial in Chicago on Feb. 12, 2025. (Audrey Richardson/Chicago Tribune)Former Illinois Speaker of the House Michael Madigan leaves the Dirksen U.S. Courthouse with daughter Nicole after jurors found him guilty on 10 counts in his racketeering case, Feb. 12, 2025. (E. Jason Wambsgans/Chicago Tribune)Former Illinois House Speaker Michael Madigan arrives home after being convicted on several counts in his federal corruption trial on Feb. 12, 2025. (Terrence Antonio James/Chicago Tribune)Former Illinois House Speaker Michael Madigan exits after the jury delivered a partial verdict in his and former lobbyist Michael McClain’s corruption trial at the Dirksen U.S. Courthouse on Feb. 12, 2025. (Audrey Richardson/Chicago Tribune)Former lobbyist Michael McClain exits after the jury delivered a partial verdict in his and former Illinois House Speaker Michael Madigan’s corruption trial at the Dirksen U.S. Courthouse, Feb. 12, 2025, in Chicago. The panel also deadlocked on all six counts against Madigan co-defendant Michael McClain."
+              },
+              {
+                "tool": "fetch",
+                "input": "https://www.fjc.gov/content/case-studies",
+                "result": "(could not fetch https://www.fjc.gov/content/case-studies)"
+              },
+              {
+                "tool": "recall",
+                "input": "final appeal corruption case judges panel 2026",
+                "result": "(no memory match)"
+              },
+              {
+                "tool": "search",
+                "input": "Seventh Circuit Court Appeals judges Madigan corruption case 2026 panel members",
+                "result": "1. Madigan's landmark conviction now in hands of appeals court focused on ...\n   https://chicago.suntimes.com/madigan-trial-news/2026/04/09/madigan-corruption-conviction-appeal-federal-7th-circuit\n   Madigan's landmark conviction now in hands of appeals court focused on 'specific' corruption The 40-minute argument on the 27th floor of the Dirksen Federal Courthouse drew members of Madigan's ...\n2. Madigan's landmark conviction now in hands of appeals court focused on ...\n   https://chicago.suntimes.com/madigan-trial-news/2026/04/09/madigan-corruption-conviction-appeal-federal-7th-circuit\n   Madigan's landmark conviction now in hands of appeals court focused on 'specific' corruption The 40-minute argument on the 27th floor of the Dirksen Federal Courthouse drew members of Madigan's ...\n3. Madigan Appeals 2025 Conviction to 7th Circuit in Chicago\n   https://hoodline.com/2026/04/madigan-fights-back-as-7th-circuit-grills-his-corruption-appeal/\n   Lawyers for imprisoned former Illinois House Speaker Mike Madigan tried to chip away at his corruption case in front of a three-judge panel of the U.S. Court of Appeals for the Seventh Circuit on ...\n4. Madigan Appeals 2025 Conviction to 7th Circuit in Chicago\n   https://hoodline.com/2026/04/madigan-fights-back-as-7th-circuit-grills-his-corruption-appeal/\n   Lawyers for imprisoned former Illinois House Speaker Mike Madigan tried to chip away at his corruption case in front of a three-judge panel of the U.S. Court of Appeals for the Seventh Circuit on ...\n5. Appeals Court Upholds Madigan Corruption Conviction\n   https://www.decaturradio.com/2026/04/27/appeals-court-upholds-madigan-corruption-conviction/\n   The Seventh Circuit U.S. Court of Appeals has affirmed the conviction of former Illinois House Speaker Michael Madigan on ten counts of public corruption. The decision was handed down yesterday by a panel consisting of Judges Frank Easterbrook, Nancy Maldonado, and Michael Scudder, following oral arguments presented on April 9. Madigan, a dominant figure in Illinois politics for decades, faced ...\n6. Appeals Court Upholds Madigan Corruption Conviction\n   https://www.decaturradio.com/2026/04/27/appeals-court-upholds-madigan-corruption-conviction/\n   The Seventh Circuit U.S. Court of Appeals has affirmed the conviction of former Illinois House Speaker Michael Madigan on ten counts of public corruption. The decision was handed down yesterday by a panel consisting of Judges Frank Easterbrook, Nancy Maldonado, and Michael Scudder, following oral arguments presented on April 9. Madigan, a dominant figure in Illinois politics for decades, faced ..."
+              },
+              {
+                "tool": "search",
+                "input": "Sixth Circuit Court Appeals judges FirstEnergy House Bill 6 October 2025 panel",
+                "result": "1. Judges set some ground rules for evidence in HB 6 cases ... - Yahoo\n   https://www.yahoo.com/news/articles/judges-set-ground-rules-evidence-100232792.html\n   Sixth Circuit Court of Appeals has ruled that FirstEnergy does not have to release the results of internal investigations into its role in the House Bill 6 scandal that it hired law firms to conduct.\n2. Judges set some ground rules for evidence in HB 6 cases ... - Yahoo\n   https://www.yahoo.com/news/articles/judges-set-ground-rules-evidence-100232792.html\n   Sixth Circuit Court of Appeals has ruled that FirstEnergy does not have to release the results of internal investigations into its role in the House Bill 6 scandal that it hired law firms to conduct.\n3. FirstEnergy wins appeal to keep secret internal investigations on HB 6 ...\n   https://www.cleveland.com/news/2025/10/firstenergy-wins-appeal-to-keep-secret-internal-investigations-on-hb-6-bribery-scandal.html\n   A panel of federal appellate judges ruled FirstEnergy doesn't have to release the results of two internal investigations into the House Bill 6 bribery scandal.\n4. FirstEnergy wins appeal to keep secret internal investigations on HB 6 ...\n   https://www.cleveland.com/news/2025/10/firstenergy-wins-appeal-to-keep-secret-internal-investigations-on-hb-6-bribery-scandal.html\n   A panel of federal appellate judges ruled FirstEnergy doesn't have to release the results of two internal investigations into the House Bill 6 bribery scandal.\n5. House Bill 6 Scandal Timeline: Ohio's Largest Corruption Case\n   https://www.commoncause.org/ohio/resources/a-cycle-of-corruption-a-timeline-of-the-householder-hb6-scandal/\n   October 6, 2025: A panel of US Sixth Circuit Court of Appeals judges overturned a decision ordering the release of FirstEnergy two internal investigations into the utility's involvement in the House Bill 6 scandal.\n6. House Bill 6 Scandal Timeline: Ohio's Largest Corruption Case\n   https://www.commoncause.org/ohio/resources/a-cycle-of-corruption-a-timeline-of-the-householder-hb6-scandal/\n   October 6, 2025: A panel of US Sixth Circuit Court of Appeals judges overturned a decision ordering the release of FirstEnergy two internal investigations into the utility's involvement in the House Bill 6 scandal."
+              },
+              {
+                "tool": "fetch",
+                "input": "https://hoodline.com/2026/04/madigan-fights-back-as-7th-circuit-grills-his-corruption-appeal/",
+                "result": "Source: Library of CongressLawyers for imprisoned former Illinois House Speaker Mike Madigan tried to chip away at his corruption case in front of a three-judge panel of the U.S. Court of Appeals for the Seventh Circuit on Thursday, urging judges to toss his conviction from last year. They argued prosecutors stretched federal bribery and fraud laws past their limits and leaned on a \"stream of benefits\" theory instead of proving an explicit quid pro quo. Madigan, who is serving a 7½-year sentence, was not in the courtroom. He listened in remotely while his attorneys pushed for either a full reversal or at least a new trial.\n\n \n \n \n \n \n \n \n\nAppellate arguments at the Dirksen courthouse\nAccording to CBS Chicago, each side got 20 minutes to argue, with the hearing set for 2 p.m. The panel took the matter under advisement, with no immediate decision. CBS quoted legal analyst Irv Miller noting that appellate judges review the evidence \"in the light most favorable to the prosecution,\" a posture that makes it tough to overturn jury verdicts for lack of proof. Madigan's attorneys told the court the trial judge was wrong to let jurors consider a \"stream of benefits\" theory instead of requiring proof that Madigan agreed to take specific official action in exchange for something of value.\n\n \n \n \n \n \n \n \n\nConviction, sentence and custody\nA federal jury convicted Madigan in February 2025 on 10 counts after a four-month trial, and U.S. District Judge John Robert Blakey sentenced him in June to 7½ years in prison and a $2.5 million fine, according to AP. The jury acquitted him on seven charges and deadlocked on six others. Madigan reported to a minimum-security federal prison camp in Morgantown, West Virginia, in October 2025.\n\n \n \n \n \n \n \n \n\nAllegations at the center of the case\nProsecutors told jurors that Madigan conspired with utilities and others, including schemes tied to Commonwealth Edison and AT&T, to arrange no-show jobs, steer business to allies and pressure developers to hire his law firm, local reporting has documented. The alleged ComEd scheme involved subcontractor payments that prosecutors say went to Madigan's allies even when the work was nominal. Those themes combined into the government's portrait of a years-long corruption network, as reported by WTTW.\n\n \n \n \n \n \n \n \n\nWhat the appeal asks the court to do\nIn a 71-page brief filed last year, Madigan's lawyers said prosecutors \"shoehorned nearly a decade of conduct\" into overlapping corruption theories and argued that Judge Blakey made several legal errors at trial, according to CBS Chicago. Court records list the appeal as No. 25-2249 before the 7th U.S. Circuit Court of Appeals, per Justia. The defense is asking the panel to reverse the convictions outright or, at a minimum, order a new trial.\nWhy the appeals court matters\nMadigan's team is leaning on a recent run of Supreme Court decisions that narrowed the reach of federal corruption statutes. The Court's 2024 ruling in Snyder v. United States, described by Cornell Law School, limited how gratuities and bribery can be prosecuted under certain federal laws. That precedent gives appellate counsel a fresh set of legal hooks to argue that routine political back-and-forth was improperly labeled criminal at Madigan's trial.\nNext steps\nThe three-judge panel heard argument Thursday but issued no ruling. The judges will now deliberate and release a written opinion, a process that can stretch for weeks or months and is tracked on the public"
+              }
+            ],
+            "answer": "Based on the evidence, the final Madigan appeal was heard by a three-judge panel of the U.S. Court of Appeals for the Seventh Circuit in Chicago in April 2026 (Hoodline). However, the specific names of the judges on this panel are not provided in the available evidence. The evidence also references an October 2025 Sixth Circuit Court of Appeals panel that ruled on a related House Bill 6/FirstEnergy case, but again does not identify the individual judges. Without judge names, their judicial philosophies and voting records in similar corruption cases cannot be determined from this evidence. **Confidence: Low** - panel composition unknown."
+          }
+        ],
+        "id": "1.5",
+        "status": "answered",
+        "findings": [],
+        "answer": "**No evidence available.** The provided sub-findings contain information about U.S. federal appellate courts (Seventh Circuit, Sixth Circuit) hearing cases related to Madigan and FirstEnergy corruption appeals, but include zero evidence about Peru's Supreme Court or its rulings on prosecutor appeals in corruption cases. No research tools were cited that gathered relevant evidence on Peruvian judicial precedents. **Confidence: None** - question cannot be answered from available evidence."
+      },
+      {
+        "title": "Final Decision Status",
+        "question": "Has the Supreme Court issued a final ruling, and if so, did it uphold the overturn or reinstate the conviction?",
+        "direction": "Check most recent court announcements, news reports, and official statements for final verdict; if no decision yet, note expected timeline",
+        "research_areas": [
+          "Supreme Court press releases",
+          "Breaking news on case verdict",
+          "Court calendar and decision timeline",
+          "Official government legal updates"
+        ],
+        "tools_hint": [
+          "search",
+          "fetch",
+          "posts",
+          "xsearch"
+        ],
+        "success_criterion": "Either confirmed final ruling (overturn upheld or conviction reinstated) or confirmed status as pending with expected decision date",
+        "depends_on": [
+          "Current Legal Status"
+        ],
+        "children": [],
+        "id": "1.6",
+        "status": "answered",
+        "findings": [
+          {
+            "tool": "search",
+            "input": "Supreme Court final ruling overturn conviction 2024 2025",
+            "result": "1. Opinions - Supreme Court of the United States\n   https://www.supremecourt.gov/opinions/opinions.aspx\n   All opinions in a single case are published together and are prefaced by a syllabus prepared by the Reporter of Decisions that summarizes the Court's decision. The Justice who authors the majority or principal opinion often will summarize the opinion from the bench during a Court session.\n2. Opinions - Supreme Court of the United States\n   https://www.supremecourt.gov/opinions/opinions.aspx\n   All opinions in a single case are published together and are prefaced by a syllabus prepared by the Reporter of Decisions that summarizes the Court's decision. The Justice who authors the majority or principal opinion often will summarize the opinion from the bench during a Court session.\n3. Supreme Court Overturns Death Row Inmate's Conviction, Cites ...\n   https://www.law.com/nationallawjournal/2025/02/25/supreme-court-overturns-death-row-inmates-conviction-cites-prosecutorial-misconduct/\n   The divided court ruled that Oklahoma prosecutors violated their constitutional obligation to \"correct false testimony\" in the long-running death penalty case of murder defendant Richard Glossip.\n4. Supreme Court Overturns Death Row Inmate's Conviction, Cites ...\n   https://www.law.com/nationallawjournal/2025/02/25/supreme-court-overturns-death-row-inmates-conviction-cites-prosecutorial-misconduct/\n   The divided court ruled that Oklahoma prosecutors violated their constitutional obligation to \"correct false testimony\" in the long-running death penalty case of murder defendant Richard Glossip.\n5. Supreme Court Votes 9-0 to Overturn Convictions of Former Chicago ...\n   https://www.ntd.com/supreme-court-votes-9-0-to-overturn-convictions-of-former-chicago-alderman_1056273.html\n   The Supreme Court on March 21 unanimously overturned former Chicago alderman Patrick Daley Thompson's conviction for making false statements to financial regulators. Thompson is related to two former Chicago mayors. He is the grandson of Richard J. Daley, who was mayor from 1955 to 1976, and nephew of Richard M. Daley, who was mayor from 1989 to 2011.\n6. Supreme Court Votes 9-0 to Overturn Convictions of Former Chicago ...\n   https://www.ntd.com/supreme-court-votes-9-0-to-overturn-convictions-of-former-chicago-alderman_1056273.html\n   The Supreme Court on March 21 unanimously overturned former Chicago alderman Patrick Daley Thompson's conviction for making false statements to financial regulators. Thompson is related to two former Chicago mayors. He is the grandson of Richard J. Daley, who was mayor from 1955 to 1976, and nephew of Richard M. Daley, who was mayor from 1989 to 2011."
+          },
+          {
+            "tool": "fetch",
+            "input": "https://www.supremecourt.gov/opinions/slipopinion/24",
+            "result": "(could not fetch https://www.supremecourt.gov/opinions/slipopinion/24)"
+          },
+          {
+            "tool": "search",
+            "input": "Supreme Court upheld overturn reinstated conviction latest decision",
+            "result": "1. BREAKING: SCOTUS Issues 6-3 Ruling Overturning Key Verdict\n   https://wltreport.com/2026/06/22/scotus-6-3-ruling-overturning-key-verdict/\n   The Supreme Court voted 6-3 to reinstate Pedro Hernandez's murder conviction in the 1979 disappearance and killing of 6-year-old Etan Patz.\n2. BREAKING: SCOTUS Issues 6-3 Ruling Overturning Key Verdict\n   https://wltreport.com/2026/06/22/scotus-6-3-ruling-overturning-key-verdict/\n   The Supreme Court voted 6-3 to reinstate Pedro Hernandez's murder conviction in the 1979 disappearance and killing of 6-year-old Etan Patz.\n3. Supreme Court overturns pair of Patrick Daley Thompson convictions\n   https://www.fox32chicago.com/news/supreme-court-patrick-daley-thompson-convictions\n   The U.S. Supreme Court unanimously ruled in favor of former Ald. Patrick Daley Thompson, overturning two counts of lying to regulators.\n4. Supreme Court overturns pair of Patrick Daley Thompson convictions\n   https://www.fox32chicago.com/news/supreme-court-patrick-daley-thompson-convictions\n   The U.S. Supreme Court unanimously ruled in favor of former Ald. Patrick Daley Thompson, overturning two counts of lying to regulators.\n5. Opinions - Supreme Court of the United States\n   https://www.supremecourt.gov/opinions/opinions.aspx\n   The term \"opinions\" as used on this website refers to several types of writing by the Justices. The most well-known opinions are those released or announced in cases in which the Court has heard oral argument. Each opinion sets out the Court's judgment and its reasoning and may include the majority or principal opinion as well as any concurring or dissenting opinions. All opinions in a ...\n6. Opinions - Supreme Court of the United States\n   https://www.supremecourt.gov/opinions/opinions.aspx\n   The term \"opinions\" as used on this website refers to several types of writing by the Justices. The most well-known opinions are those released or announced in cases in which the Court has heard oral argument. Each opinion sets out the Court's judgment and its reasoning and may include the majority or principal opinion as well as any concurring or dissenting opinions. All opinions in a ..."
+          },
+          {
+            "tool": "xsearch",
+            "input": "Supreme Court ruling conviction overturn reinstated",
+            "result": "@CharleyTakaya: SCOTUS NEW: The Supreme Court has reinstated a New York man’s murder conviction, ruling that federal habeas courts cannot overturn state convictions based on legal principles the Court has not clearly established. Justic\n@JB_Slear: NEW: The Supreme Court has reinstated a New York man’s murder conviction, ruling that federal habeas courts cannot overturn state convictions based on legal principles the Court has not clearly established. Justice Sotom\n@FOXBaltimore: \"Adnan’s innocence is not at issue, but his rights as a defendant and freedom as an exoneree are directly impacted by the Appellate Court of Maryland’s decision.\" https:// foxbaltimore.com/news/local/adn an-syed-asks-mar\n@FOXBaltimore: Syed, whose case gained notoriety from the hit podcast Serial, spent more than 20 years behind bars for the death of Hae Min Lee. In September, his murder conviction was thrown out, and he became a free man. https:// fox\n@KATUNews: Attorneys for Adnan Syed have asked the Maryland Supreme Court to consider its appeal of a lower court ruling that reinstated his murder conviction. https:// katu.com/news/nation-wo rld/adnan-syed-asks-maryland-supreme-c\n@abc3340: Attorneys for Adnan Syed have asked the Maryland Supreme Court to consider its appeal of a lower court ruling that reinstated his murder conviction. https:// abc3340.com/news/nation-wo rld/adnan-syed-asks-maryland-suprem\n@WTOP: Adnan Syed’s lawyer asked Maryland’s highest court on Wednesday to overturn a lower court’s ruling that reinstated his murder conviction from more than two decades ago. https:// wtop.com/maryland/2023/ 05/adnan-syeds-law\n@7NewsDC: Attorneys for Adnan Syed have asked the Maryland Supreme Court to consider its appeal of a lower court ruling that reinstated his murder conviction. https:// wjla.com/news/local/adn an-syed-asks-maryland-supreme-court-to\n@KCTV5: Adnan Syed’s lawyer asked Maryland’s highest court on Wednesday to overturn a lower court’s ruling that reinstated his murder conviction from more than two decades ago. https:// kctv5.com/2023/05/24/adn an-syeds-lawyer-a\n@News4Reno: Attorneys for Adnan Syed have asked the Maryland Supreme Court to consider its appeal of a lower court ruling that reinstated his murder conviction. https:// mynews4.com/news/nation-wo rld/adnan-syed-asks-maryland-suprem\n@News3LV: Attorneys for Adnan Syed have asked the Maryland Supreme Court to consider its appeal of a lower court ruling that reinstated his murder conviction. https:// news3lv.com/news/nation-wo rld/adnan-syed-asks-maryland-suprem\n@FOXBaltimore: Adnan Syed asks Md. Supreme Court to overturn ruling that reinstated murder conviction https:// foxbaltimore.com/news/local/adn an-syed-asks-maryland-supreme-court-to-overturn-ruling-that-reinstated-murde-conviction-eric"
+          },
+          {
+            "tool": "fetch",
+            "input": "https://www.supremecourt.gov/opinions/opinions.aspx",
+            "result": "(could not fetch https://www.supremecourt.gov/opinions/opinions.aspx)"
+          },
+          {
+            "tool": "fetch",
+            "input": "https://www.law.com/nationallawjournal/2025/02/25/supreme-court-overturns-death-row-inmates-conviction-cites-prosecutorial-misconduct/",
+            "result": "KEY CONTENTLegaltech News Reporting, and expert analysis of legal technology with a focus onwhat legal departments, law firms, and tech companies need to know"
+          },
+          {
+            "tool": "recall",
+            "input": "Supreme Court case conviction overturn reinstate what case name parties",
+            "result": "(no memory match)"
+          },
+          {
+            "tool": "recall",
+            "input": "original question context what conviction being tracked",
+            "result": "(no memory match)"
+          },
+          {
+            "tool": "posts",
+            "input": "Supreme Court ruling conviction",
+            "result": "(posts search error: fts5: missing row 307692 from content table 'main'.'posts')"
+          }
+        ],
+        "answer": "Based on the available evidence, I cannot definitively answer this question because the evidence references multiple different Supreme Court cases involving overturned or reinstated convictions, without clearly identifying which case the sub-question refers to. The evidence shows: (1) a February 2025 ruling overturning death row inmate Richard Glossip's conviction due to prosecutorial misconduct (https://www.law.com/nationallawjournal/2025/02/25/); (2) a 6-3 ruling reinstating Pedro Hernandez's murder conviction (wltreport.com); and (3) social media posts about reinstating a New York man's conviction and Adnan Syed's case. Without context identifying the specific case being tracked, I cannot determine which ruling answers the question. **Confidence: Low** - multiple cases identified but unclear which is relevant."
+      }
+    ],
+    "id": "1",
+    "status": "answered",
+    "findings": [],
+    "answer": "**Answer:** I cannot answer this question from the evidence provided. None of the sub-findings contain any information about a Peruvian ex-president's corruption case, cassation appeal proceedings, or Supreme Court rulings on such matters. The evidence only references U.S. appellate procedures and unrelated cases from other jurisdictions (Indonesia, Vatican, France). No research tools successfully retrieved data about Peru's judicial system or any specific former president facing corruption charges.\n\n**Confidence: High** that the available evidence does not address this question."
+  },
+  "ledger": {
+    "marked_terms": [
+      {
+        "term": "TrialLine",
+        "why": "Appears as the source domain for generic legal timeline information - unclear if this is a credible legal resource or a marketing/software site"
+      },
+      {
+        "term": "cassation appeal",
+        "why": "Unclear whether this refers to US Supreme Court review, French Court of Cassation, or another jurisdiction's highest court appeal mechanism"
+      },
+      {
+        "term": "the appeal",
+        "why": "No specific case, parties, or subject matter has been identified - 'the appeal' has no referent in the gathered material"
+      },
+      {
+        "term": "National Board of Justice",
+        "why": "Institutional body whose members were arbitrarily removed - need to understand its role in judicial independence and corruption oversight"
+      },
+      {
+        "term": "Gustavo Gorriti",
+        "why": "Journalist investigated alongside anti-corruption prosecutors - unclear if this is a prominent figure or why this investigation is significant as political pressure"
+      },
+      {
+        "term": "Law Gratis",
+        "why": "Source appears in search results discussing judicial corruption prosecutions but credibility/authority of this site is unknown - could be T4 content farm"
+      },
+      {
+        "term": "US Sixth Circuit Court of Appeals judges panel",
+        "why": "Specific judges not named in the October 2025 FirstEnergy decision - unclear which judges ruled and therefore cannot assess their philosophies"
+      },
+      {
+        "term": "federal appeals court in Chicago",
+        "why": "Madigan article references this court but doesn't specify if it's Seventh Circuit or name the specific panel - vague attribution"
+      },
+      {
+        "term": "wltreport.com",
+        "why": "Source for Pedro Hernandez ruling claim; unknown credibility - appears to be 'WLT Report' but quality tier unclear, could be T4 content farm"
+      },
+      {
+        "term": "The Legal Guide (thelegalguide.org)",
+        "why": "Primary source for appeal evidence admissibility rules but unclear if this is authoritative legal source or content farm - domain not recognized as T2 institution"
+      },
+      {
+        "term": "Obligolaw (obligolaw.com)",
+        "why": "Second source on evidence admissibility on appeal - appears to be legal services site but credibility/authority tier unclear, contains AI-disclosure warning"
+      }
+    ],
+    "verify_points": [
+      {
+        "claim": "In March 2024, the Attorney General's Office opened a criminal investigation against journalist Gustavo Gorriti and two anti-corruption prosecutors for alleged influence peddling",
+        "source": "https://www.hrw.org/world-report/2025/country-chapters/peru",
+        "importance": 3
+      },
+      {
+        "claim": "Peru's Congress on March 7, 2024, arbitrarily removed two members of the National Board of Justice",
+        "source": "https://www.hrw.org/news/2024/03/11/peru-congress-runs-roughshod-over-rule-law",
+        "importance": 3
+      },
+      {
+        "claim": "In 2025, Peru continued to backslide on democracy and human rights as Congress adopted measures that fostered impunity, weakened democratic institutions, and eroded judicial independence",
+        "source": "https://www.hrw.org/world-report/2026/country-chapters/peru",
+        "importance": 3
+      },
+      {
+        "claim": "A federal appeals court in Chicago on Monday upheld the sweeping corruption conviction for ex-House Speaker Michael Madigan on April 27, 2026",
+        "source": "https://www.chicagotribune.com/2026/04/27/appeals-corruption-conviction-madigan-upheld/",
+        "importance": 3
+      },
+      {
+        "claim": "The Supreme Court voted 6-3 to reinstate Pedro Hernandez's murder conviction in the 1979 disappearance and killing of 6-year-old Etan Patz in June 2026",
+        "source": "https://wltreport.com/2026/06/22/scotus-6-3-ruling-overturning-key-verdict/",
+        "importance": 3
+      },
+      {
+        "claim": "The Supreme Court overturned Richard Glossip's death row conviction in February 2025 citing prosecutorial misconduct",
+        "source": "https://www.law.com/nationallawjournal/2025/02/25/supreme-court-overturns-death-row-inmates-conviction-cites-prosecutorial-misconduct/",
+        "importance": 3
+      },
+      {
+        "claim": "Peru's Congress is now one of the least trusted institutions in the hemisphere",
+        "source": "https://www.atlanticcouncil.org/blogs/new-atlanticist/peru-at-a-breaking-point-how-ten-years-of-political-chaos-opened-the-door-to-organized-crime/",
+        "importance": 2
+      },
+      {
+        "claim": "On October 6, 2025, a panel of US Sixth Circuit Court of Appeals judges overturned a decision ordering the release of FirstEnergy's two internal investigations into the utility's involvement in the House Bill 6 scandal",
+        "source": "https://www.commoncause.org/ohio/resources/a-cycle-of-corruption-a-timeline-of-the-householder-hb6-scandal/",
+        "importance": 2
+      },
+      {
+        "claim": "Appellate courts generally review the record from the trial court and do not entertain new evidence except under narrowly defined circumstances",
+        "source": "https://thelegalguide.org/can-evidence-be-introduced-appeal/",
+        "importance": 2
+      },
+      {
+        "claim": "Unlike trial courts, appellate courts primarily review the record of the lower court and generally do not accept new or additional evidence unless specific exceptions apply",
+        "source": "https://obligolaw.com/admissibility-of-evidence-on-appeal/",
+        "importance": 2
+      }
+    ],
+    "tool_gaps": [
+      {
+        "need": "Identification of which specific criminal case, defendant, or legal proceeding the question refers to",
+        "suggested_tool": "Context from the original request or previous conversation history that would specify the case name/defendant"
+      },
+      {
+        "need": "Access to court records, dockets, or legal databases to retrieve specific dates for investigation start, conviction, sentencing, appeal filing, and hearing schedules for a particular case",
+        "suggested_tool": "PACER access, court docket search, or legal records database that can retrieve case-specific timeline information"
+      },
+      {
+        "need": "Identification of which specific legal case, parties, and jurisdiction the question refers to",
+        "suggested_tool": "Access to Sebastian's research notes, project brief, or task context that would specify what case is being investigated"
+      },
+      {
+        "need": "Direct access to court docket databases with working search/fetch capabilities",
+        "suggested_tool": "Working fetch capability for Supreme Court docket pages, or API access to court records systems"
+      },
+      {
+        "need": "Real-time Peruvian public opinion polling data on corruption and judiciary",
+        "suggested_tool": "Access to polling databases or Peruvian polling firms (IEP, Ipsos Peru, etc.)"
+      },
+      {
+        "need": "Spanish-language Peruvian media coverage and public discourse on corruption cases",
+        "suggested_tool": "Spanish-language news search or Peruvian media monitoring service"
+      },
+      {
+        "need": "Historical voting records and detailed judicial philosophy analysis of specific federal appellate judges in corruption cases",
+        "suggested_tool": "Access to legal databases like Westlaw or LexisNexis with judge analytics, or Federal Judicial Center biographical database with full case histories"
+      },
+      {
+        "need": "The specific context/case Sebastian is researching - which corruption appeal is the subject of this research request",
+        "suggested_tool": "Context from Sebastian's current research project or task description that explains which case is being investigated"
+      },
+      {
+        "need": "Identification of which specific case the original question refers to - the research appears to lack initial context/assignment scope",
+        "suggested_tool": "Access to Sebastian's original research brief, assignment, or client question that initiated this investigation"
+      },
+      {
+        "need": "Direct access to Supreme Court slip opinions and docket to verify case status and ruling details",
+        "suggested_tool": "SCOTUS API or reliable legal database (fetch failed on supremecourt.gov URLs)"
+      },
+      {
+        "need": "Access to actual prosecution appellate briefs, court filings, or legal dockets for a specific case to examine what new evidence or arguments were actually presented",
+        "suggested_tool": "PACER/court records database access or legal research database (Westlaw/LexisNexis) to retrieve actual appellate documents"
+      },
+      {
+        "need": "Identity of the specific criminal case being audited - no case name, jurisdiction, defendant, or court provided in the question",
+        "suggested_tool": "Clarification from the user or access to Sebastian's task/project context that would specify which appeal is under review"
+      }
+    ]
+  }
+}
