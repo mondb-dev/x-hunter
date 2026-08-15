@@ -1,14 +1,150 @@
 {
-  "checked_at": "2026-08-14T09:54:33.466Z",
-  "evidence_24h": 0,
-  "alerts": [],
-  "source_concentration": {},
-  "axis_concentration": {},
-  "pole_balance": {
-    "left": 0,
-    "right": 0,
-    "neutral": 0
+  "checked_at": "2026-08-15T10:26:24.172Z",
+  "evidence_24h": 11,
+  "unique_sources": 7,
+  "status": "captured",
+  "alerts": [
+    {
+      "type": "source_dominance",
+      "severity": "high",
+      "detail": "@unknown accounts for 46% of today's evidence (5/11)",
+      "username": "unknown",
+      "share": 0.455
+    },
+    {
+      "type": "pole_skew",
+      "severity": "moderate",
+      "detail": "73% of evidence pushes \"left\" — risk of one-sided belief drift",
+      "dominant_pole": "left",
+      "share": 0.727
+    }
+  ],
+  "summary": "2 capture alert(s) detected:\n[HIGH] @unknown accounts for 46% of today's evidence (5/11)\n[MODERATE] 73% of evidence pushes \"left\" — risk of one-sided belief drift",
+  "source_concentration": {
+    "unknown": {
+      "username": "unknown",
+      "count": 5,
+      "share": 0.455
+    },
+    "acyn": {
+      "username": "acyn",
+      "count": 1,
+      "share": 0.091
+    },
+    "clashreport": {
+      "username": "clashreport",
+      "count": 1,
+      "share": 0.091
+    },
+    "narendramodi": {
+      "username": "narendramodi",
+      "count": 1,
+      "share": 0.091
+    },
+    "ericldaugh": {
+      "username": "ericldaugh",
+      "count": 1,
+      "share": 0.091
+    },
+    "gmanews": {
+      "username": "gmanews",
+      "count": 1,
+      "share": 0.091
+    },
+    "philstarnews": {
+      "username": "philstarnews",
+      "count": 1,
+      "share": 0.091
+    }
   },
-  "status": "clean",
-  "summary": "No evidence collected in the last 24h — nothing to assess."
+  "axis_concentration": {
+    "axis_power_accountability": {
+      "axis_id": "axis_power_accountability",
+      "label": "Power, Institutions, and Rule of Law",
+      "count": 2,
+      "share": 0.182
+    },
+    "axis_crisis_visibility_hierarchy_v1": {
+      "axis_id": "axis_crisis_visibility_hierarchy_v1",
+      "label": "Crisis Visibility Hierarchy",
+      "count": 2,
+      "share": 0.182
+    },
+    "axis_eje_accountability_v1": {
+      "axis_id": "axis_eje_accountability_v1",
+      "label": "Accountability for Extrajudicial Killings",
+      "count": 1,
+      "share": 0.091
+    },
+    "axis_public_trust_safety_crisis_v1": {
+      "axis_id": "axis_public_trust_safety_crisis_v1",
+      "label": "Public Trust in Safety and Crisis Communication",
+      "count": 1,
+      "share": 0.091
+    },
+    "axis_geopolitical_control_narratives": {
+      "axis_id": "axis_geopolitical_control_narratives",
+      "label": "Geopolitical Control Narratives: Asserting Sovereignty vs. International Norms",
+      "count": 1,
+      "share": 0.091
+    },
+    "axis_engineered_nationalism_v_global_solidarity": {
+      "axis_id": "axis_engineered_nationalism_v_global_solidarity",
+      "label": "Engineered Nationalism vs. Global Solidarity",
+      "count": 1,
+      "share": 0.091
+    },
+    "axis_reactionary_futurism_v1": {
+      "axis_id": "axis_reactionary_futurism_v1",
+      "label": "Reactionary Futurism: Innovation Aesthetics vs. Democratic Accountability",
+      "count": 1,
+      "share": 0.091
+    },
+    "axis_infrastructure_commons_v_extraction_v1": {
+      "axis_id": "axis_infrastructure_commons_v_extraction_v1",
+      "label": "Infrastructure as Commons vs. Extraction",
+      "count": 1,
+      "share": 0.091
+    },
+    "axis_disaster_infrastructure_accountability_v1": {
+      "axis_id": "axis_disaster_infrastructure_accountability_v1",
+      "label": "Disaster as Infrastructure Failure vs. Natural Event",
+      "count": 1,
+      "share": 0.091
+    }
+  },
+  "cluster_concentration": {
+    "unknown": {
+      "cluster": "unknown",
+      "count": 5,
+      "share": 0.455
+    },
+    "us_politics": {
+      "cluster": "us_politics",
+      "count": 2,
+      "share": 0.182
+    },
+    "geopolitics": {
+      "cluster": "geopolitics",
+      "count": 2,
+      "share": 0.182
+    },
+    "government_official": {
+      "cluster": "government_official",
+      "count": 1,
+      "share": 0.091
+    },
+    "breaking_news": {
+      "cluster": "breaking_news",
+      "count": 1,
+      "share": 0.091
+    }
+  },
+  "pole_balance": {
+    "left": 8,
+    "right": 3,
+    "neutral": 0,
+    "left_share": 0.727,
+    "right_share": 0.273
+  }
 }

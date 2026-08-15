@@ -1,123 +1,75 @@
 {
-  "generated_at": "2026-08-14T09:54:37.248Z",
+  "generated_at": "2026-08-15T10:29:02.805Z",
   "monthly_usd": {
-    "llm": 120.33,
+    "llm": 139.25,
     "fixed": 101.25,
-    "total": 221.58
+    "total": 240.5
   },
   "llm_recent": {
     "window_days": 7,
-    "usd": 28.0768,
-    "calls": 10480,
-    "daily_avg_usd": 4.011,
+    "usd": 32.4909,
+    "calls": 11940,
+    "daily_avg_usd": 4.6416,
     "by_tag": {
       "llm": {
-        "calls": 9598,
-        "usd": 12.300929000000064
+        "calls": 11030,
+        "usd": 16.18303700000007
       },
       "browse": {
-        "calls": 118,
-        "usd": 4.961633999999997
+        "calls": 121,
+        "usd": 5.089023999999998
       },
       "adversarial_eval": {
-        "calls": 44,
-        "usd": 0.26407500000000006
-      },
-      "tweet": {
-        "calls": 40,
-        "usd": 1.437204
-      },
-      "tweet-retry": {
-        "calls": 13,
-        "usd": 0.462068
-      },
-      "tweet:factcheck": {
-        "calls": 40,
-        "usd": 0.04867800000000001
-      },
-      "quote": {
-        "calls": 39,
-        "usd": 2.512983000000001
-      },
-      "linkedin_connect": {
-        "calls": 10,
-        "usd": 0.021618000000000002
-      },
-      "brain": {
-        "calls": 46,
-        "usd": 0.8217120000000001
-      },
-      "article": {
-        "calls": 5,
-        "usd": 0.29278099999999996
-      },
-      "process_reflection": {
-        "calls": 5,
-        "usd": 0.185632
-      },
-      "evaluate_vocation": {
-        "calls": 5,
-        "usd": 0.038489999999999996
-      },
-      "sprint_tracker": {
-        "calls": 5,
-        "usd": 0.09894800000000001
+        "calls": 45,
+        "usd": 0.268374
       },
       "x_reply": {
-        "calls": 34,
-        "usd": 0.27088499999999993
+        "calls": 36,
+        "usd": 0.28684499999999996
       },
       "x_reply:factcheck": {
-        "calls": 30,
-        "usd": 0.035787
+        "calls": 32,
+        "usd": 0.038210999999999995
       },
       "x_reply:coherence": {
-        "calls": 30,
-        "usd": 0.06766799999999999
+        "calls": 32,
+        "usd": 0.07260599999999998
       },
-      "x_amplify_quote": {
-        "calls": 3,
-        "usd": 0.021517
-      },
-      "x_amplify_quote:factcheck": {
-        "calls": 3,
-        "usd": 0.003624
-      },
-      "x_amplify_quote:coherence": {
-        "calls": 3,
-        "usd": 0.006975
-      },
-      "linkedin_plan": {
-        "calls": 10,
-        "usd": 0.138461
-      },
-      "dr-triage": {
-        "calls": 15,
-        "usd": 0.082689
-      },
-      "linkedin_draft": {
-        "calls": 10,
-        "usd": 0.25149399999999994
-      },
-      "linkedin_draft:factcheck": {
+      "linkedin_connect": {
         "calls": 9,
-        "usd": 0.015888
+        "usd": 0.019746
       },
-      "chart:plan": {
-        "calls": 10,
-        "usd": 0.053940999999999996
+      "tweet": {
+        "calls": 41,
+        "usd": 1.480221
+      },
+      "tweet:factcheck": {
+        "calls": 41,
+        "usd": 0.050091
+      },
+      "quote": {
+        "calls": 40,
+        "usd": 2.6617910000000014
       },
       "quote:factcheck": {
-        "calls": 34,
-        "usd": 0.042504000000000014
+        "calls": 37,
+        "usd": 0.04615200000000002
       },
       "quote:coherence": {
-        "calls": 34,
-        "usd": 0.080667
+        "calls": 36,
+        "usd": 0.08532300000000002
+      },
+      "tweet-retry": {
+        "calls": 12,
+        "usd": 0.43121500000000007
       },
       "probe": {
         "calls": 10,
         "usd": 0.00333
+      },
+      "brain": {
+        "calls": 53,
+        "usd": 0.884086
       },
       "helmstack_feedback": {
         "calls": 5,
@@ -135,21 +87,53 @@
         "calls": 5,
         "usd": 0.005703000000000001
       },
+      "linkedin_plan": {
+        "calls": 10,
+        "usd": 0.13910199999999998
+      },
+      "dr-triage": {
+        "calls": 14,
+        "usd": 0.07793699999999999
+      },
       "dr-plan": {
-        "calls": 9,
-        "usd": 0.151198
+        "calls": 10,
+        "usd": 0.168967
       },
       "dr-pick": {
-        "calls": 65,
-        "usd": 0.17143499999999998
+        "calls": 68,
+        "usd": 0.18046199999999996
       },
       "dr-gap": {
-        "calls": 41,
-        "usd": 1.096865
+        "calls": 43,
+        "usd": 1.161683
       },
       "dr-synth": {
-        "calls": 9,
-        "usd": 0.895048
+        "calls": 10,
+        "usd": 0.982672
+      },
+      "linkedin_draft": {
+        "calls": 10,
+        "usd": 0.25377
+      },
+      "chart:plan": {
+        "calls": 10,
+        "usd": 0.053773
+      },
+      "article": {
+        "calls": 5,
+        "usd": 0.292418
+      },
+      "process_reflection": {
+        "calls": 4,
+        "usd": 0.148584
+      },
+      "evaluate_vocation": {
+        "calls": 4,
+        "usd": 0.030662000000000002
+      },
+      "sprint_tracker": {
+        "calls": 4,
+        "usd": 0.09127000000000002
       },
       "sprint_retro": {
         "calls": 1,
@@ -175,13 +159,17 @@
         "calls": 36,
         "usd": 0.336591
       },
+      "linkedin_draft:factcheck": {
+        "calls": 9,
+        "usd": 0.015906
+      },
       "x_mention_reply": {
-        "calls": 11,
-        "usd": 0.22636300000000004
+        "calls": 12,
+        "usd": 0.24624300000000005
       },
       "x_mention_reply:factcheck": {
-        "calls": 6,
-        "usd": 0.007251
+        "calls": 7,
+        "usd": 0.008373
       },
       "score": {
         "calls": 25,
@@ -191,17 +179,29 @@
         "calls": 3,
         "usd": 0.095807
       },
+      "x_amplify_quote": {
+        "calls": 2,
+        "usd": 0.014222
+      },
+      "x_amplify_quote:factcheck": {
+        "calls": 2,
+        "usd": 0.002406
+      },
+      "x_amplify_quote:coherence": {
+        "calls": 2,
+        "usd": 0.004562999999999999
+      },
       "linkedin_comment": {
-        "calls": 3,
-        "usd": 0.024889
+        "calls": 4,
+        "usd": 0.032762
       },
       "linkedin_comment:factcheck": {
-        "calls": 3,
-        "usd": 0.0037079999999999995
+        "calls": 4,
+        "usd": 0.004928999999999999
       },
       "linkedin_comment:coherence": {
-        "calls": 3,
-        "usd": 0.007548000000000001
+        "calls": 4,
+        "usd": 0.009846
       },
       "thread_draft": {
         "calls": 1,
@@ -210,8 +210,8 @@
     },
     "by_model": {
       "claude": {
-        "calls": 10480,
-        "usd": 28.07679300000002
+        "calls": 11940,
+        "usd": 32.490908000000125
       }
     }
   },
@@ -224,7 +224,7 @@
   },
   "storage_wallet": {
     "sol_balance": 0.000020209,
-    "checked_at": "2026-08-14T08:49:03.492Z"
+    "checked_at": "2026-08-15T10:19:13.221Z"
   },
   "funding_goal": {
     "mode": "mac",
