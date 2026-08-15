@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-15T04:47:02.462Z",
+  "generated_at": "2026-08-15T07:48:52.449Z",
   "windows": [
     "1d",
     "3d",
@@ -786,23 +786,23 @@
     },
     "axis_geopolitical_control_narratives": {
       "current": {
-        "score": -0.16,
-        "confidence": 0.4146
+        "score": -0.21,
+        "confidence": 0.4576
       },
       "1d": {
-        "score_delta": 0,
-        "conf_delta": -0.004,
-        "direction": "→"
+        "score_delta": -0.05,
+        "conf_delta": 0.039,
+        "direction": "↘"
       },
       "3d": {
-        "score_delta": 0,
-        "conf_delta": -0.006,
-        "direction": "→"
+        "score_delta": -0.05,
+        "conf_delta": 0.037,
+        "direction": "↘"
       },
       "7d": {
-        "score_delta": 0,
-        "conf_delta": -0.014,
-        "direction": "→"
+        "score_delta": -0.05,
+        "conf_delta": 0.029,
+        "direction": "↘"
       }
     },
     "axis_weaponized_demographics_narrative_control_v1": {
@@ -828,23 +828,23 @@
     },
     "axis_engineered_nationalism_v_global_solidarity": {
       "current": {
-        "score": 0.05,
-        "confidence": 0
+        "score": 0,
+        "confidence": 0.1026
       },
       "1d": {
-        "score_delta": 0,
-        "conf_delta": 0,
-        "direction": "→"
+        "score_delta": -0.05,
+        "conf_delta": 0.1026,
+        "direction": "↘"
       },
       "3d": {
-        "score_delta": 0,
-        "conf_delta": 0,
-        "direction": "→"
+        "score_delta": -0.05,
+        "conf_delta": 0.1026,
+        "direction": "↘"
       },
       "7d": {
-        "score_delta": 0,
-        "conf_delta": 0,
-        "direction": "→"
+        "score_delta": -0.05,
+        "conf_delta": 0.1026,
+        "direction": "↘"
       }
     },
     "axis_humanitarian_crisis_response": {
@@ -1059,22 +1059,22 @@
     },
     "axis_reactionary_futurism_v1": {
       "current": {
-        "score": 0.2,
-        "confidence": 0.2442
+        "score": 0.15,
+        "confidence": 0.2947
       },
       "1d": {
-        "score_delta": 0,
-        "conf_delta": -0.004,
-        "direction": "→"
+        "score_delta": -0.05,
+        "conf_delta": 0.0465,
+        "direction": "↘"
       },
       "3d": {
-        "score_delta": 0,
-        "conf_delta": -0.006,
-        "direction": "→"
+        "score_delta": -0.05,
+        "conf_delta": 0.0445,
+        "direction": "↘"
       },
       "7d": {
-        "score_delta": -0.1,
-        "conf_delta": 0.0328,
+        "score_delta": -0.15,
+        "conf_delta": 0.0833,
         "direction": "↘"
       }
     },
@@ -1202,18 +1202,18 @@
     },
     "axis_crisis_visibility_hierarchy_v1": {
       "current": {
-        "score": 0.1,
-        "confidence": 0.1225
+        "score": 0.15,
+        "confidence": 0.1941
       },
       "1d": {
-        "score_delta": 0,
-        "conf_delta": -0.004,
-        "direction": "→"
+        "score_delta": 0.05,
+        "conf_delta": 0.0676,
+        "direction": "↗"
       },
       "3d": {
-        "score_delta": 0,
-        "conf_delta": -0.004,
-        "direction": "→"
+        "score_delta": 0.05,
+        "conf_delta": 0.0676,
+        "direction": "↗"
       },
       "7d": null
     },
@@ -1233,12 +1233,24 @@
         "direction": "↘"
       },
       "7d": null
+    },
+    "axis_industrial_safety_accountability_timing_v1": {
+      "current": {
+        "score": 0,
+        "confidence": 0
+      },
+      "1d": null,
+      "3d": null,
+      "7d": null
     }
   },
   "notable_count": 8,
   "momentum_axes": [
+    "axis_geopolitical_control_narratives",
+    "axis_engineered_nationalism_v_global_solidarity",
     "axis_rapid_disinformation_v1",
     "axis_procedural_governance_substantive_action",
+    "axis_reactionary_futurism_v1",
     "axis_infrastructure_commons_v_extraction_v1",
     "axis_state_power_monetization_v1"
   ]
