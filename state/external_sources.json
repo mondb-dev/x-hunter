@@ -1,17 +1,17 @@
 {
   "schema_version": "1.0",
-  "generated_at": "2026-08-16T04:42:25.564Z",
+  "generated_at": "2026-08-16T07:42:27.312Z",
   "method": "mechanical_registry_v1",
-  "profiled_at": "2026-08-16T04:42:33.745Z",
+  "profiled_at": "2026-08-16T07:42:40.116Z",
   "sources": [
     {
       "domain": "theguardian.com",
       "entity": "Theguardian",
       "kind": "news",
       "first_seen_at": "2026-03-27T23:17:00Z",
-      "last_seen_at": "2026-08-15T13:50:02.170Z",
+      "last_seen_at": "2026-08-16T05:43:07.616Z",
       "discovery": {
-        "distinct_urls": 870,
+        "distinct_urls": 872,
         "example_urls": [
           "https://www.theguardian.com/us-news/2026/jun/23/trump-immigration-courthouse-arrest-policy",
           "https://www.theguardian.com/us-news/2026/jun/28/ice-minnesota-defending-democracy",
@@ -20,9 +20,9 @@
           "https://www.theguardian.com/global-development/2026/jun/26/woman-sadia-moalim-ali-three-year-jail-sentence-somalia-online-comments-governement"
         ],
         "origin_counts": {
-          "ontology_evidence": 46,
-          "reading_queue": 832,
-          "journals": 124,
+          "ontology_evidence": 47,
+          "reading_queue": 834,
+          "journals": 125,
           "articles": 5
         },
         "distinct_referring_accounts": 0,
@@ -75,7 +75,7 @@
         "breadth": {
           "score": 0.94,
           "basis": [
-            "distinct_urls:870",
+            "distinct_urls:872",
             "distinct_axes:20",
             "origin_types:4"
           ]
@@ -115,7 +115,7 @@
             "newsroom_domain_pattern",
             "article_path_seen",
             "doi_or_identifier_path_seen",
-            "distinct_urls:870",
+            "distinct_urls:872",
             "distinct_axes:20",
             "origin_types:4",
             "referring_accounts:0",
@@ -288,9 +288,9 @@
       "entity": "Aljazeera",
       "kind": "news",
       "first_seen_at": "2026-06-22T02:45:00Z",
-      "last_seen_at": "2026-08-15T16:49:56.139Z",
+      "last_seen_at": "2026-08-16T05:43:07.596Z",
       "discovery": {
-        "distinct_urls": 423,
+        "distinct_urls": 425,
         "example_urls": [
           "https://www.aljazeera.com/opinions/2026/6/24/south-africas-crises-will-not-be-solved-by-blaming-migrants",
           "https://www.aljazeera.com/video/newsfeed/2026/6/27/newly-released-video-exposes-henry-nowak-killers-lies?traffic_source=rss",
@@ -301,7 +301,7 @@
         "origin_counts": {
           "ontology_evidence": 190,
           "reading_queue": 19,
-          "journals": 521,
+          "journals": 523,
           "articles": 10
         },
         "distinct_referring_accounts": 0,
@@ -362,7 +362,7 @@
         "breadth": {
           "score": 0.94,
           "basis": [
-            "distinct_urls:423",
+            "distinct_urls:425",
             "distinct_axes:29",
             "origin_types:4"
           ]
@@ -401,7 +401,7 @@
           "basis": [
             "newsroom_domain_pattern",
             "article_path_seen",
-            "distinct_urls:423",
+            "distinct_urls:425",
             "distinct_axes:29",
             "origin_types:4",
             "referring_accounts:0",
@@ -1217,7 +1217,7 @@
       "first_seen_at": "2026-06-26T07:05:00Z",
       "last_seen_at": "2026-08-07T21:29:16.276Z",
       "discovery": {
-        "distinct_urls": 535,
+        "distinct_urls": 536,
         "example_urls": [
           "https://www.bbc.co.uk/news/articles/cn8qxz6qypyo",
           "https://www.bbc.co.uk/news/articles/cn075j04pnyo?at_medium=RSS&amp;at_campaign=rss",
@@ -1227,7 +1227,7 @@
         ],
         "origin_counts": {
           "ontology_evidence": 6,
-          "reading_queue": 548,
+          "reading_queue": 549,
           "journals": 17,
           "articles": 1
         },
@@ -1263,7 +1263,7 @@
         "breadth": {
           "score": 0.8233333333333333,
           "basis": [
-            "distinct_urls:535",
+            "distinct_urls:536",
             "distinct_axes:4",
             "origin_types:4"
           ]
@@ -1301,7 +1301,7 @@
           "method": "mechanical_v1",
           "basis": [
             "newsroom_domain_pattern",
-            "distinct_urls:535",
+            "distinct_urls:536",
             "distinct_axes:4",
             "origin_types:4",
             "referring_accounts:0",
@@ -2657,7 +2657,7 @@
             "about:false",
             "contact:false",
             "corrections:false",
-            "outbound_links:33",
+            "outbound_links:34",
             "opinion_marker:false"
           ]
         },
@@ -2678,7 +2678,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-08-13T05:56:42.442Z",
+        "fetched_at": "2026-08-16T06:12:29.626Z",
         "homepage_url": "https://philstar.com/",
         "example_url": "https://www.philstar.com/headlines/2026/06/24/2537506/mike-defensor-face-trafficking-complaint-over-pasig-ktv-bar-raid",
         "homepage_status": 200,
@@ -2704,7 +2704,7 @@
           "has_about_link": false,
           "has_contact_link": false,
           "has_corrections_link": false,
-          "outbound_links_count": 33,
+          "outbound_links_count": 34,
           "opinion_marker": false
         }
       }
@@ -3249,9 +3249,9 @@
       "entity": "T Co",
       "kind": "unknown",
       "first_seen_at": "2016-05-05T18:57:30.000Z",
-      "last_seen_at": "2026-08-16T04:37:00.000Z",
+      "last_seen_at": "2026-08-16T07:24:46.000Z",
       "discovery": {
-        "distinct_urls": 15518,
+        "distinct_urls": 15611,
         "example_urls": [
           "https://t.co/pJSE124ec4",
           "https://t.co/Soz8BXPWaa",
@@ -3260,11 +3260,11 @@
           "https://t.co/cYaqYDRp08"
         ],
         "origin_counts": {
-          "feed_buffer": 13335,
-          "feed_buffer_reply": 5125,
+          "feed_buffer": 13434,
+          "feed_buffer_reply": 5130,
           "articles": 3
         },
-        "distinct_referring_accounts": 2827,
+        "distinct_referring_accounts": 2832,
         "sample_referring_accounts": [
           "0808iveta",
           "09abracadabra",
@@ -3303,7 +3303,7 @@
         "breadth": {
           "score": 0.53,
           "basis": [
-            "distinct_urls:15518",
+            "distinct_urls:15611",
             "distinct_axes:0",
             "origin_types:3"
           ]
@@ -3311,7 +3311,7 @@
         "corroboration": {
           "score": 0.9125,
           "basis": [
-            "referring_accounts:2827",
+            "referring_accounts:2832",
             "origin_types:3"
           ]
         },
@@ -3342,10 +3342,10 @@
           "basis": [
             "unknown_domain_pattern",
             "doi_or_identifier_path_seen",
-            "distinct_urls:15518",
+            "distinct_urls:15611",
             "distinct_axes:0",
             "origin_types:3",
-            "referring_accounts:2827",
+            "referring_accounts:2832",
             "origin_types:3",
             "track_record_unavailable"
           ]
@@ -3388,9 +3388,9 @@
       "entity": "Inquirer",
       "kind": "unknown",
       "first_seen_at": "2026-05-09T10:15:15.053Z",
-      "last_seen_at": "2026-08-16T01:12:52.665Z",
+      "last_seen_at": "2026-08-16T05:43:07.596Z",
       "discovery": {
-        "distinct_urls": 382,
+        "distinct_urls": 383,
         "example_urls": [
           "https://newsinfo.inquirer.net/2266316/nbi-on-cayetano-position-that-cant-be-defended-by-facts-is-done-with-insults",
           "https://www.inquirer.net/capiz-broadcaster-shooting-probe-widens-as-cops-form-task-force",
@@ -3400,7 +3400,7 @@
         ],
         "origin_counts": {
           "ontology_evidence": 142,
-          "journals": 459,
+          "journals": 460,
           "articles": 5
         },
         "distinct_referring_accounts": 0,
@@ -3454,7 +3454,7 @@
         "breadth": {
           "score": 0.8799999999999999,
           "basis": [
-            "distinct_urls:382",
+            "distinct_urls:383",
             "distinct_axes:23",
             "origin_types:3"
           ]
@@ -3492,7 +3492,7 @@
           "method": "mechanical_v1",
           "basis": [
             "unknown_domain_pattern",
-            "distinct_urls:382",
+            "distinct_urls:383",
             "distinct_axes:23",
             "origin_types:3",
             "referring_accounts:0",
@@ -3805,7 +3805,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-08-13T05:56:42.779Z",
+        "fetched_at": "2026-08-16T06:12:30.041Z",
         "homepage_url": "https://techcrunch.com/",
         "example_url": "https://techcrunch.com/2026/07/30/judge-says-trump-admin-still-lacks-evidence-for-anthropic-supply-chain-risk-label/",
         "homepage_status": 200,
@@ -4467,7 +4467,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-08-13T05:56:44.162Z",
+        "fetched_at": "2026-08-16T06:12:31.522Z",
         "homepage_url": "https://brobible.com/",
         "example_url": "https://brobible.com/culture/paige-ostroushko-savanah-hernandez-anti-ice-protest-arrest/",
         "homepage_status": 200,
@@ -4758,9 +4758,9 @@
       "entity": "Grok",
       "kind": "unknown",
       "first_seen_at": "2026-04-03T01:20:27.000Z",
-      "last_seen_at": "2026-08-16T03:37:41.023Z",
+      "last_seen_at": "2026-08-16T06:47:41.233Z",
       "discovery": {
-        "distinct_urls": 657,
+        "distinct_urls": 659,
         "example_urls": [
           "https://grok.com/imagine/post/9b92ff60-ec59-45db-8a35-8e1b743e5339",
           "https://grok.com/imagine/post/42c16172-4296-42be-b3d0-aa45ad7b6b97",
@@ -4770,9 +4770,9 @@
         ],
         "origin_counts": {
           "feed_buffer_reply": 551,
-          "feed_buffer": 151
+          "feed_buffer": 153
         },
-        "distinct_referring_accounts": 394,
+        "distinct_referring_accounts": 396,
         "sample_referring_accounts": [
           "100ohiostate",
           "106laxeldorado",
@@ -4810,7 +4810,7 @@
         "breadth": {
           "score": 0.47,
           "basis": [
-            "distinct_urls:657",
+            "distinct_urls:659",
             "distinct_axes:0",
             "origin_types:2"
           ]
@@ -4818,7 +4818,7 @@
         "corroboration": {
           "score": 0.825,
           "basis": [
-            "referring_accounts:394",
+            "referring_accounts:396",
             "origin_types:2"
           ]
         },
@@ -4848,10 +4848,10 @@
           "method": "mechanical_v1",
           "basis": [
             "unknown_domain_pattern",
-            "distinct_urls:657",
+            "distinct_urls:659",
             "distinct_axes:0",
             "origin_types:2",
-            "referring_accounts:394",
+            "referring_accounts:396",
             "origin_types:2",
             "track_record_unavailable"
           ]
@@ -4994,7 +4994,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-08-13T05:56:45.133Z",
+        "fetched_at": "2026-08-16T06:12:32.673Z",
         "homepage_url": "https://steampowered.com/",
         "example_url": "https://store.steampowered.com/app/1315180?twclid=2cb8mho5n4udnkq1fnm1yi4kkh",
         "homepage_status": 200,
@@ -5101,13 +5101,13 @@
           ]
         },
         "profile": {
-          "score": 0,
-          "confidence": 0.55,
+          "score": 0.14,
+          "confidence": 0.65,
           "basis": [
             "meta_author:false",
             "published_time:false",
             "canonical:false",
-            "about:false",
+            "about:true",
             "contact:false",
             "corrections:false",
             "outbound_links:0",
@@ -5130,23 +5130,23 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-08-13T07:30:31.933Z",
+        "fetched_at": "2026-08-16T07:42:37.677Z",
         "homepage_url": "https://doubleclick.net/",
         "example_url": "https://ad.doubleclick.net/ddm/trackclk/N117602.5126432X/B34540950.438517562;dc_trk_aid=631787244;dc_trk_cid=249093288;dc_dbm_token=$%7BDC_DBM_TOKEN%7D;dc_lat=;dc_rdid=;tag_for_child_directed_treatment=;tfua=;gdpr=$%7BGDPR%7D;gdpr_consent=$%7BGDPR_CONSENT_755%7D;gpp=$%7BGPP_STRING_755%7D;gpp_sid=$%7BGPP_SID%7D;ltd=;dc_tdv=1?twclid=292cdwzoayexun1iu6o4fsk10z",
-        "homepage_status": null,
+        "homepage_status": 200,
         "example_status": null,
-        "homepage_final_url": "https://doubleclick.net/",
+        "homepage_final_url": "https://marketingplatform.google.com/about/enterprise/",
         "example_final_url": "https://ad.doubleclick.net/ddm/trackclk/N117602.5126432X/B34540950.438517562;dc_trk_aid=631787244;dc_trk_cid=249093288;dc_dbm_token=$%7BDC_DBM_TOKEN%7D;dc_lat=;dc_rdid=;tag_for_child_directed_treatment=;tfua=;gdpr=$%7BGDPR%7D;gdpr_consent=$%7BGDPR_CONSENT_755%7D;gpp=$%7BGPP_STRING_755%7D;gpp_sid=$%7BGPP_SID%7D;ltd=;dc_tdv=1?twclid=292cdwzoayexun1iu6o4fsk10z",
-        "homepage_content_type": "",
+        "homepage_content_type": "text/html",
         "example_content_type": "",
         "homepage": {
           "has_meta_author": false,
           "has_published_time": false,
-          "has_canonical": false,
-          "has_about_link": false,
+          "has_canonical": true,
+          "has_about_link": true,
           "has_contact_link": false,
           "has_corrections_link": false,
-          "outbound_links_count": 0,
+          "outbound_links_count": 27,
           "opinion_marker": false
         },
         "example": {
@@ -6038,19 +6038,19 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-08-13T07:30:31.935Z",
+        "fetched_at": "2026-08-16T07:42:38.901Z",
         "homepage_url": "https://youtu.be/",
         "example_url": "https://youtu.be/m7jAReMF2c8?si=AtT5ue3VPnmZq5V6",
-        "homepage_status": null,
-        "example_status": null,
-        "homepage_final_url": "https://youtu.be/",
-        "example_final_url": "https://youtu.be/m7jAReMF2c8?si=AtT5ue3VPnmZq5V6",
-        "homepage_content_type": "",
-        "example_content_type": "",
+        "homepage_status": 200,
+        "example_status": 200,
+        "homepage_final_url": "https://www.youtube.com/?feature=youtu.be",
+        "example_final_url": "https://www.youtube.com/watch?si=AtT5ue3VPnmZq5V6&v=m7jAReMF2c8&feature=youtu.be",
+        "homepage_content_type": "text/html; charset=utf-8",
+        "example_content_type": "text/html; charset=utf-8",
         "homepage": {
           "has_meta_author": false,
           "has_published_time": false,
-          "has_canonical": false,
+          "has_canonical": true,
           "has_about_link": false,
           "has_contact_link": false,
           "has_corrections_link": false,
@@ -7060,15 +7060,15 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-08-13T07:30:31.937Z",
+        "fetched_at": "2026-08-16T07:42:39.776Z",
         "homepage_url": "https://ro.co/",
         "example_url": "https://ro.co/lp/weight-loss/quiz/?utm_medium=paid_social&utm_source=Twitter&utm_campaign=41158458&utm_term=54579155&utm_content=Ad2&twclid=2bv3rduaz2ypp78vahy5e6wspd",
-        "homepage_status": null,
-        "example_status": null,
+        "homepage_status": 403,
+        "example_status": 403,
         "homepage_final_url": "https://ro.co/",
         "example_final_url": "https://ro.co/lp/weight-loss/quiz/?utm_medium=paid_social&utm_source=Twitter&utm_campaign=41158458&utm_term=54579155&utm_content=Ad2&twclid=2bv3rduaz2ypp78vahy5e6wspd",
-        "homepage_content_type": "",
-        "example_content_type": "",
+        "homepage_content_type": "text/html; charset=UTF-8",
+        "example_content_type": "text/html; charset=UTF-8",
         "homepage": {
           "has_meta_author": false,
           "has_published_time": false,
@@ -7731,9 +7731,9 @@
       "entity": "Travala",
       "kind": "unknown",
       "first_seen_at": "2026-07-07T12:18:51.059Z",
-      "last_seen_at": "2026-08-15T16:12:14.651Z",
+      "last_seen_at": "2026-08-16T07:27:35.163Z",
       "discovery": {
-        "distinct_urls": 48,
+        "distinct_urls": 49,
         "example_urls": [
           "https://www.travala.com/?camp_name=&camp_offer=credit&camp_content=Sign-up-or-log-in-to-receive-%2450-off-flights%2C-hotels-and-activities.&camp_code=BTCASIA50&camp_value=50&utm_campaign=BTCASIA50&utm_medium=by-travala-cpc&utm_source=twitter&twclid=26wz3yk3m5mtcltdzivyfesoom",
           "https://www.travala.com/?camp_name=&camp_offer=credit&camp_content=Sign-up-or-log-in-to-receive-%2450-off-flights%2C-hotels-and-activities.&camp_code=BTCASIA50&camp_value=50&utm_campaign=BTCASIA50&utm_medium=by-travala-cpc&utm_source=twitter&twclid=27hwmpgkfaysz941g6s97hdxaj",
@@ -7742,7 +7742,7 @@
           "https://www.travala.com/?camp_name=&camp_offer=credit&camp_content=Sign-up-or-log-in-to-receive-%2450-off-flights%2C-hotels-and-activities.&camp_code=BTCASIA50&camp_value=50&utm_campaign=BTCASIA50&utm_medium=by-travala-cpc&utm_source=twitter&twclid=2bbhq20cxwi8wz4ld34c9p9zyc"
         ],
         "origin_counts": {
-          "feed_buffer": 42,
+          "feed_buffer": 43,
           "feed_buffer_reply": 6
         },
         "distinct_referring_accounts": 1,
@@ -7774,7 +7774,7 @@
         "breadth": {
           "score": 0.47,
           "basis": [
-            "distinct_urls:48",
+            "distinct_urls:49",
             "distinct_axes:0",
             "origin_types:2"
           ]
@@ -7812,7 +7812,7 @@
           "method": "mechanical_v1",
           "basis": [
             "unknown_domain_pattern",
-            "distinct_urls:48",
+            "distinct_urls:49",
             "distinct_axes:0",
             "origin_types:2",
             "referring_accounts:1",
@@ -9600,15 +9600,15 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-08-13T07:30:31.939Z",
+        "fetched_at": "2026-08-16T07:42:40.116Z",
         "homepage_url": "https://wsj.com/",
         "example_url": "https://www.wsj.com/video/three-things-to-consider-before-buying-an-electric-vehicle/BF3DA411-C296-4CB8-A22D-BE3A2E943ACB?mod=WSJvidctr_watchnow_pos2%3FUCID%3DWSJ_SMD_TWT_BRA_BND_MBC_NAP_NAP_EVS_NAP&twclid=2227k5fcsvy3eazrqjlp63r0go",
-        "homepage_status": null,
-        "example_status": null,
-        "homepage_final_url": "https://wsj.com/",
+        "homepage_status": 401,
+        "example_status": 401,
+        "homepage_final_url": "https://www.wsj.com/",
         "example_final_url": "https://www.wsj.com/video/three-things-to-consider-before-buying-an-electric-vehicle/BF3DA411-C296-4CB8-A22D-BE3A2E943ACB?mod=WSJvidctr_watchnow_pos2%3FUCID%3DWSJ_SMD_TWT_BRA_BND_MBC_NAP_NAP_EVS_NAP&twclid=2227k5fcsvy3eazrqjlp63r0go",
-        "homepage_content_type": "",
-        "example_content_type": "",
+        "homepage_content_type": "text/html;charset=utf-8",
+        "example_content_type": "text/html;charset=utf-8",
         "homepage": {
           "has_meta_author": false,
           "has_published_time": false,
@@ -31079,7 +31079,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-08-13T05:26:39.417Z",
+        "fetched_at": "2026-08-16T05:42:25.798Z",
         "homepage_url": "https://muscle-booster.io/",
         "example_url": "https://plan.muscle-booster.io/?utm_source=Twitter&utm_medium=cpc&utm_campaign=0024_MBw-UA_WW-BL_LC_ABO_all_1d_ma25%2B_Broad__twitter-military-go15ttm_all_06.08.26_Purchase&campaign_id=42110369&adgroup_id=56065459&ad_id=2084569938015224291&branch-name=military_workout&link-id=go15ttm&gender=male&twclid=21459fca9jpb8k48iswpvgmy09",
         "homepage_status": 200,
@@ -40302,7 +40302,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-08-12T12:17:55.405Z",
+        "fetched_at": "2026-08-16T05:42:27.746Z",
         "homepage_url": "https://nigerianobservernews.com/",
         "example_url": "https://nigerianobservernews.com/2026/06/igbinedion-university-stuns-world-clinches-huawei-ict-global-crown-women-in-tech-award/",
         "homepage_status": 200,
@@ -40426,7 +40426,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-08-12T12:17:56.340Z",
+        "fetched_at": "2026-08-16T05:42:29.774Z",
         "homepage_url": "https://thoughtcrimeradio.net/",
         "example_url": "https://thoughtcrimeradio.net/2019/07/study-finds-transgender-autism-link/",
         "homepage_status": 200,
@@ -40550,7 +40550,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-08-13T03:56:40.623Z",
+        "fetched_at": "2026-08-16T05:42:30.474Z",
         "homepage_url": "https://go.jp/",
         "example_url": "https://performingarts.jpf.go.jp/en/article/118034/?twclid=28p7wtgfxffyb07vuin32dk0yi",
         "homepage_status": null,
@@ -40674,7 +40674,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-08-12T13:22:29.156Z",
+        "fetched_at": "2026-08-16T07:12:26.817Z",
         "homepage_url": "https://imf.org/",
         "example_url": "https://www.imf.org/en/news/seminars/campaigns/2026/10/thailand-2026?twclid=2ccxo7fau6hdebz8g13sxlllee",
         "homepage_status": 403,
@@ -41047,7 +41047,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-08-12T13:22:31.990Z",
+        "fetched_at": "2026-08-16T07:12:28.263Z",
         "homepage_url": "https://manduka.com/",
         "example_url": "https://www.manduka.com/products/manduka-pro-yoga-mat?utm_source=twitter&utm_medium=cpc&utm_campaign=xconvert&utm_content=PRO+Mat+-+Rooibos+1x1&twclid=2c1i50hvb8z81u6asprj4f4oqt",
         "homepage_status": 200,
@@ -41172,7 +41172,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-08-12T13:22:35.639Z",
+        "fetched_at": "2026-08-16T07:12:30.022Z",
         "homepage_url": "https://tickerscores.ai/",
         "example_url": "https://tickerscores.ai/?twclid=29mi9nru582fdb9vf7t1d5r9yf",
         "homepage_status": 200,
@@ -41297,7 +41297,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-08-12T13:54:33.599Z",
+        "fetched_at": "2026-08-16T07:12:32.319Z",
         "homepage_url": "https://eclincher.com/",
         "example_url": "https://www.eclincher.com/ai-social-media-agent?twclid=22gdnmarextv0i2rs5d53x1dzn",
         "homepage_status": 200,
