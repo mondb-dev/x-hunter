@@ -1,60 +1,6 @@
 {
   "gaps": [
     {
-      "key": "historical case studies showing when disaster documentation did lead to structur",
-      "need": "Historical case studies showing when disaster documentation DID lead to structural accountability vs when it didn't",
-      "suggested_tool": "Case study database or comparative policy analysis tool",
-      "count": 1,
-      "first_seen": "2026-08-09",
-      "last_seen": "2026-08-09",
-      "last_question": "Evidence-based documentation of recurring climate disasters generates weather bulletins, not structural accountability"
-    },
-    {
-      "key": "access to paywalled academic articles (nature geoscience, sage journals) that di",
-      "need": "Access to paywalled academic articles (Nature Geoscience, SAGE journals) that directly address the research question",
-      "suggested_tool": "Academic database access or institutional login capability",
-      "count": 1,
-      "first_seen": "2026-08-09",
-      "last_seen": "2026-08-09",
-      "last_question": "Evidence-based documentation of recurring climate disasters generates weather bulletins, not structural accountability"
-    },
-    {
-      "key": "examples of climate policy frameworks that have actually implemented attribution",
-      "need": "Examples of climate policy frameworks that have actually implemented attribution-based accountability (not proposals/recommendations)",
-      "suggested_tool": "Policy implementation database or case law database with filtering for climate litigation outcomes",
-      "count": 1,
-      "first_seen": "2026-08-09",
-      "last_seen": "2026-08-09",
-      "last_question": "Evidence-based documentation of recurring climate disasters generates weather bulletins, not structural accountability"
-    },
-    {
-      "key": "identify which specific appeal/case the user is asking about from context or seb",
-      "need": "Identify which specific appeal/case the user is asking about from context or Sebastian's current research focus",
-      "suggested_tool": "Access to Sebastian's current task/project context or conversation history to understand what appeal is being audited",
-      "count": 1,
-      "first_seen": "2026-08-10",
-      "last_seen": "2026-08-10",
-      "last_question": "Will Peru's ex-president's 15-year corruption sentence overturn be upheld on final appeal, or will prosecutors successfully reinstate convic"
-    },
-    {
-      "key": "access to the full text of the california court of appeal opinion with detailed ",
-      "need": "Access to the full text of the California Court of Appeal opinion with detailed legal analysis of the prosecutorial misconduct and applicable case law",
-      "suggested_tool": "Legal database access (Westlaw, LexisNexis, or court filing system) or direct court opinion repository",
-      "count": 1,
-      "first_seen": "2026-08-10",
-      "last_seen": "2026-08-10",
-      "last_question": "Will Peru's ex-president's 15-year corruption sentence overturn be upheld on final appeal, or will prosecutors successfully reinstate convic"
-    },
-    {
-      "key": "the actual full text of supreme court procedural rules and timelines - the offic",
-      "need": "The actual full text of Supreme Court procedural rules and timelines - the official .gov pages failed to fetch (404 or connection errors)",
-      "suggested_tool": "A more robust fetch capability that can handle Supreme Court website architecture, or access to Supreme Court Rules PDF documents",
-      "count": 1,
-      "first_seen": "2026-08-10",
-      "last_seen": "2026-08-10",
-      "last_question": "Will Peru's ex-president's 15-year corruption sentence overturn be upheld on final appeal, or will prosecutors successfully reinstate convic"
-    },
-    {
       "key": "if this question refers to a specific ongoing case, we need case name/docket num",
       "need": "If this question refers to a specific ongoing case, we need case name/docket number to provide tailored timeline information",
       "suggested_tool": "Context from the original research request or ability to query Sebastian's memory about what case he is investigating",
@@ -899,6 +845,60 @@
       "first_seen": "2026-08-15",
       "last_seen": "2026-08-15",
       "last_question": "Will Peru's ex-president's 15-year corruption sentence overturn be upheld on final appeal, or will prosecutors successfully reinstate convic"
+    },
+    {
+      "key": "quantitative media analysis comparing volume, prominence, and framing of space e",
+      "need": "Quantitative media analysis comparing volume, prominence, and framing of space exploration vs satellite warfare coverage across major outlets",
+      "suggested_tool": "Media database with content analysis/volume metrics (e.g., Factiva, LexisNexis with analytics)",
+      "count": 1,
+      "first_seen": "2026-08-16",
+      "last_seen": "2026-08-16",
+      "last_question": "How does media attention to aspirational space monuments (e.g., private launches, Mars missions) compare to coverage of military strikes on "
+    },
+    {
+      "key": "systematic catalog of dual-use satellite targeting incidents 2024-2026 with asso",
+      "need": "Systematic catalog of dual-use satellite targeting incidents 2024-2026 with associated media coverage metrics",
+      "suggested_tool": "Military incident database or space security tracker with media monitoring component",
+      "count": 1,
+      "first_seen": "2026-08-16",
+      "last_seen": "2026-08-16",
+      "last_question": "How does media attention to aspirational space monuments (e.g., private launches, Mars missions) compare to coverage of military strikes on "
+    },
+    {
+      "key": "academic literature specifically on 'space spectacle' framing and accountability",
+      "need": "Academic literature specifically on 'space spectacle' framing and accountability gaps in space warfare reporting",
+      "suggested_tool": "Academic database (JSTOR, Google Scholar) - current search tool may not surface specialized academic work effectively",
+      "count": 1,
+      "first_seen": "2026-08-16",
+      "last_seen": "2026-08-16",
+      "last_question": "How does media attention to aspirational space monuments (e.g., private launches, Mars missions) compare to coverage of military strikes on "
+    },
+    {
+      "key": "quantitative media coverage analysis comparing article count, prominence, airtim",
+      "need": "Quantitative media coverage analysis comparing article count, prominence, airtime between space exploration events and satellite warfare incidents (2024-2026)",
+      "suggested_tool": "Media monitoring database with filtering by topic and measurement of coverage volume/prominence metrics",
+      "count": 1,
+      "first_seen": "2026-08-16",
+      "last_seen": "2026-08-16",
+      "last_question": "How does media attention to aspirational space monuments (e.g., private launches, Mars missions) compare to coverage of military strikes on "
+    },
+    {
+      "key": "content analysis of media framing comparing 'spectacle' narratives in space expl",
+      "need": "Content analysis of media framing comparing 'spectacle' narratives in space exploration coverage vs. 'accountability' framing in satellite warfare coverage",
+      "suggested_tool": "Academic database access for media studies journals or custom content analysis of news archives",
+      "count": 1,
+      "first_seen": "2026-08-16",
+      "last_seen": "2026-08-16",
+      "last_question": "How does media attention to aspirational space monuments (e.g., private launches, Mars missions) compare to coverage of military strikes on "
+    },
+    {
+      "key": "public awareness surveys comparing knowledge/concern about space exploration mil",
+      "need": "Public awareness surveys comparing knowledge/concern about space exploration milestones vs. satellite warfare incidents",
+      "suggested_tool": "Polling data aggregator or academic survey databases",
+      "count": 1,
+      "first_seen": "2026-08-16",
+      "last_seen": "2026-08-16",
+      "last_question": "How does media attention to aspirational space monuments (e.g., private launches, Mars missions) compare to coverage of military strikes on "
     }
   ]
 }
