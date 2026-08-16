@@ -1,17 +1,17 @@
 {
   "schema_version": "1.0",
-  "generated_at": "2026-08-16T10:42:31.909Z",
+  "generated_at": "2026-08-16T15:04:15.388Z",
   "method": "mechanical_registry_v1",
-  "profiled_at": "2026-08-16T10:42:40.402Z",
+  "profiled_at": "2026-08-16T15:04:20.127Z",
   "sources": [
     {
       "domain": "theguardian.com",
       "entity": "Theguardian",
       "kind": "news",
       "first_seen_at": "2026-03-27T23:17:00Z",
-      "last_seen_at": "2026-08-16T05:43:07.616Z",
+      "last_seen_at": "2026-08-16T13:54:04.358Z",
       "discovery": {
-        "distinct_urls": 873,
+        "distinct_urls": 877,
         "example_urls": [
           "https://www.theguardian.com/us-news/2026/jun/23/trump-immigration-courthouse-arrest-policy",
           "https://www.theguardian.com/us-news/2026/jun/28/ice-minnesota-defending-democracy",
@@ -21,8 +21,8 @@
         ],
         "origin_counts": {
           "ontology_evidence": 47,
-          "reading_queue": 835,
-          "journals": 125,
+          "reading_queue": 838,
+          "journals": 126,
           "articles": 5
         },
         "distinct_referring_accounts": 0,
@@ -75,7 +75,7 @@
         "breadth": {
           "score": 0.94,
           "basis": [
-            "distinct_urls:873",
+            "distinct_urls:877",
             "distinct_axes:20",
             "origin_types:4"
           ]
@@ -115,7 +115,7 @@
             "newsroom_domain_pattern",
             "article_path_seen",
             "doi_or_identifier_path_seen",
-            "distinct_urls:873",
+            "distinct_urls:877",
             "distinct_axes:20",
             "origin_types:4",
             "referring_accounts:0",
@@ -125,7 +125,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-08-13T14:58:33.058Z",
+        "fetched_at": "2026-08-16T15:04:16.225Z",
         "homepage_url": "https://theguardian.com/",
         "example_url": "https://www.theguardian.com/us-news/2026/jun/23/trump-immigration-courthouse-arrest-policy",
         "homepage_status": 200,
@@ -702,7 +702,7 @@
       "first_seen_at": "2026-06-22T00:15:00Z",
       "last_seen_at": "2026-08-15T16:49:56.115Z",
       "discovery": {
-        "distinct_urls": 596,
+        "distinct_urls": 597,
         "example_urls": [
           "https://www.nytimes.com/2026/06/19/world/canada/frank-stronach-trial-guilty-sex-charges.html",
           "https://www.nytimes.com/2026/06/27/world/americas/mexican-officials-us-informants.html",
@@ -712,7 +712,7 @@
         ],
         "origin_counts": {
           "ontology_evidence": 21,
-          "reading_queue": 609,
+          "reading_queue": 610,
           "journals": 54
         },
         "distinct_referring_accounts": 0,
@@ -756,7 +756,7 @@
         "breadth": {
           "score": 0.8799999999999999,
           "basis": [
-            "distinct_urls:596",
+            "distinct_urls:597",
             "distinct_axes:12",
             "origin_types:3"
           ]
@@ -795,7 +795,7 @@
           "basis": [
             "newsroom_domain_pattern",
             "article_path_seen",
-            "distinct_urls:596",
+            "distinct_urls:597",
             "distinct_axes:12",
             "origin_types:3",
             "referring_accounts:0",
@@ -1217,7 +1217,7 @@
       "first_seen_at": "2026-06-26T07:05:00Z",
       "last_seen_at": "2026-08-16T08:43:09.638Z",
       "discovery": {
-        "distinct_urls": 537,
+        "distinct_urls": 539,
         "example_urls": [
           "https://www.bbc.co.uk/news/articles/cn8qxz6qypyo",
           "https://www.bbc.co.uk/news/articles/cn075j04pnyo?at_medium=RSS&amp;at_campaign=rss",
@@ -1227,7 +1227,7 @@
         ],
         "origin_counts": {
           "ontology_evidence": 6,
-          "reading_queue": 550,
+          "reading_queue": 552,
           "journals": 18,
           "articles": 1
         },
@@ -1263,7 +1263,7 @@
         "breadth": {
           "score": 0.8233333333333333,
           "basis": [
-            "distinct_urls:537",
+            "distinct_urls:539",
             "distinct_axes:4",
             "origin_types:4"
           ]
@@ -1301,7 +1301,7 @@
           "method": "mechanical_v1",
           "basis": [
             "newsroom_domain_pattern",
-            "distinct_urls:537",
+            "distinct_urls:539",
             "distinct_axes:4",
             "origin_types:4",
             "referring_accounts:0",
@@ -1432,7 +1432,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-08-13T14:58:34.077Z",
+        "fetched_at": "2026-08-16T15:04:17.357Z",
         "homepage_url": "https://house.gov/",
         "example_url": "https://www.house.gov/",
         "homepage_status": 200,
@@ -1836,6 +1836,147 @@
       }
     },
     {
+      "domain": "amnesty.org",
+      "entity": "Amnesty",
+      "kind": "unknown",
+      "first_seen_at": "2026-03-31T12:16:18.459Z",
+      "last_seen_at": "2026-08-16T10:49:49.623Z",
+      "discovery": {
+        "distinct_urls": 87,
+        "example_urls": [
+          "https://www.amnesty.org/en/latest/news/2026/06/burkina-serge-oulon/",
+          "https://www.amnesty.org/en/latest/news/2026/06/car-bozize/",
+          "https://www.amnesty.org/en/latest/news/2026/06/turkiye-authorities-must-lift-blanket-protest-ban-ahead-of-nato-summit-and-release-scores-of-arbitrarily-detained-people/",
+          "https://www.amnesty.org/en/latest/news/2026/06/usa-four-months-after-horrific-minab-school-airstrike-accountability-delayed/",
+          "https://www.amnesty.org/en/latest/news/2026/06/usa-four-months-after-horrific-minab-school-airstrike"
+        ],
+        "origin_counts": {
+          "ontology_evidence": 63,
+          "reading_queue": 65,
+          "journals": 113,
+          "articles": 1
+        },
+        "distinct_referring_accounts": 0,
+        "sample_referring_accounts": [],
+        "distinct_axes": [
+          "axis_authoritarian_self_determination_v1",
+          "axis_collective_voice",
+          "axis_crisis_visibility_hierarchy_v1",
+          "axis_environmental_policy_v_economic_v1",
+          "axis_human_rights_exploitation_v1",
+          "axis_humanitarian_crisis_response",
+          "axis_immigration_policy_v_national_control_v1",
+          "axis_information_control_v1",
+          "axis_national_sovereignty_v_intl_law_v1",
+          "axis_power_accountability",
+          "axis_procedural_governance_accountability_v1"
+        ]
+      },
+      "claims": {
+        "total": 0,
+        "supported": 0,
+        "refuted": 0,
+        "contested": 0,
+        "unverified": 0,
+        "resolved_count": 0
+      },
+      "structural_features": {
+        "has_search_paths": false,
+        "has_article_paths": true,
+        "has_doi_paths": false
+      },
+      "ratings": {
+        "provenance": {
+          "score": 0.48,
+          "basis": [
+            "unknown_domain_pattern",
+            "article_path_seen"
+          ]
+        },
+        "breadth": {
+          "score": 0.94,
+          "basis": [
+            "distinct_urls:87",
+            "distinct_axes:11",
+            "origin_types:4"
+          ]
+        },
+        "corroboration": {
+          "score": 0.35,
+          "basis": [
+            "referring_accounts:0",
+            "origin_types:4"
+          ]
+        },
+        "track_record": {
+          "score": null,
+          "basis": [
+            "no_resolved_claims_observed"
+          ]
+        },
+        "profile": {
+          "score": 0.52,
+          "confidence": 0.65,
+          "basis": [
+            "meta_author:false",
+            "published_time:true",
+            "canonical:true",
+            "about:false",
+            "contact:true",
+            "corrections:false",
+            "outbound_links:30",
+            "opinion_marker:false"
+          ]
+        },
+        "overall": {
+          "score": 0.5684374999999999,
+          "confidence": 0.6789,
+          "method": "mechanical_v1",
+          "basis": [
+            "unknown_domain_pattern",
+            "article_path_seen",
+            "distinct_urls:87",
+            "distinct_axes:11",
+            "origin_types:4",
+            "referring_accounts:0",
+            "origin_types:4",
+            "track_record_unavailable"
+          ]
+        }
+      },
+      "profile": {
+        "fetched_at": "2026-08-15T09:17:52.514Z",
+        "homepage_url": "https://amnesty.org/",
+        "example_url": "https://www.amnesty.org/en/latest/news/2026/06/burkina-serge-oulon/",
+        "homepage_status": 200,
+        "example_status": 200,
+        "homepage_final_url": "https://www.amnesty.org/en/",
+        "example_final_url": "https://www.amnesty.org/en/latest/news/2026/06/burkina-serge-oulon/",
+        "homepage_content_type": "text/html; charset=UTF-8",
+        "example_content_type": "text/html; charset=UTF-8",
+        "homepage": {
+          "has_meta_author": false,
+          "has_published_time": true,
+          "has_canonical": true,
+          "has_about_link": false,
+          "has_contact_link": true,
+          "has_corrections_link": false,
+          "outbound_links_count": 7,
+          "opinion_marker": false
+        },
+        "example": {
+          "has_meta_author": false,
+          "has_published_time": true,
+          "has_canonical": true,
+          "has_about_link": false,
+          "has_contact_link": true,
+          "has_corrections_link": false,
+          "outbound_links_count": 30,
+          "opinion_marker": false
+        }
+      }
+    },
+    {
       "domain": "pcij.org",
       "entity": "Pcij",
       "kind": "unknown",
@@ -1852,7 +1993,7 @@
         ],
         "origin_counts": {
           "ontology_evidence": 35,
-          "reading_queue": 23,
+          "reading_queue": 24,
           "journals": 64,
           "articles": 1
         },
@@ -2710,146 +2851,6 @@
       }
     },
     {
-      "domain": "amnesty.org",
-      "entity": "Amnesty",
-      "kind": "unknown",
-      "first_seen_at": "2026-03-31T12:16:18.459Z",
-      "last_seen_at": "2026-08-14T21:19:52.381Z",
-      "discovery": {
-        "distinct_urls": 86,
-        "example_urls": [
-          "https://www.amnesty.org/en/latest/news/2026/06/burkina-serge-oulon/",
-          "https://www.amnesty.org/en/latest/news/2026/06/car-bozize/",
-          "https://www.amnesty.org/en/latest/news/2026/06/turkiye-authorities-must-lift-blanket-protest-ban-ahead-of-nato-summit-and-release-scores-of-arbitrarily-detained-people/",
-          "https://www.amnesty.org/en/latest/news/2026/06/usa-four-months-after-horrific-minab-school-airstrike-accountability-delayed/",
-          "https://www.amnesty.org/en/latest/news/2026/06/usa-four-months-after-horrific-minab-school-airstrike"
-        ],
-        "origin_counts": {
-          "ontology_evidence": 63,
-          "reading_queue": 65,
-          "journals": 113
-        },
-        "distinct_referring_accounts": 0,
-        "sample_referring_accounts": [],
-        "distinct_axes": [
-          "axis_authoritarian_self_determination_v1",
-          "axis_collective_voice",
-          "axis_crisis_visibility_hierarchy_v1",
-          "axis_environmental_policy_v_economic_v1",
-          "axis_human_rights_exploitation_v1",
-          "axis_humanitarian_crisis_response",
-          "axis_immigration_policy_v_national_control_v1",
-          "axis_information_control_v1",
-          "axis_national_sovereignty_v_intl_law_v1",
-          "axis_power_accountability",
-          "axis_procedural_governance_accountability_v1"
-        ]
-      },
-      "claims": {
-        "total": 0,
-        "supported": 0,
-        "refuted": 0,
-        "contested": 0,
-        "unverified": 0,
-        "resolved_count": 0
-      },
-      "structural_features": {
-        "has_search_paths": false,
-        "has_article_paths": true,
-        "has_doi_paths": false
-      },
-      "ratings": {
-        "provenance": {
-          "score": 0.48,
-          "basis": [
-            "unknown_domain_pattern",
-            "article_path_seen"
-          ]
-        },
-        "breadth": {
-          "score": 0.8799999999999999,
-          "basis": [
-            "distinct_urls:86",
-            "distinct_axes:11",
-            "origin_types:3"
-          ]
-        },
-        "corroboration": {
-          "score": 0.26249999999999996,
-          "basis": [
-            "referring_accounts:0",
-            "origin_types:3"
-          ]
-        },
-        "track_record": {
-          "score": null,
-          "basis": [
-            "no_resolved_claims_observed"
-          ]
-        },
-        "profile": {
-          "score": 0.52,
-          "confidence": 0.65,
-          "basis": [
-            "meta_author:false",
-            "published_time:true",
-            "canonical:true",
-            "about:false",
-            "contact:true",
-            "corrections:false",
-            "outbound_links:30",
-            "opinion_marker:false"
-          ]
-        },
-        "overall": {
-          "score": 0.547109375,
-          "confidence": 0.6584249999999999,
-          "method": "mechanical_v1",
-          "basis": [
-            "unknown_domain_pattern",
-            "article_path_seen",
-            "distinct_urls:86",
-            "distinct_axes:11",
-            "origin_types:3",
-            "referring_accounts:0",
-            "origin_types:3",
-            "track_record_unavailable"
-          ]
-        }
-      },
-      "profile": {
-        "fetched_at": "2026-08-15T09:17:52.514Z",
-        "homepage_url": "https://amnesty.org/",
-        "example_url": "https://www.amnesty.org/en/latest/news/2026/06/burkina-serge-oulon/",
-        "homepage_status": 200,
-        "example_status": 200,
-        "homepage_final_url": "https://www.amnesty.org/en/",
-        "example_final_url": "https://www.amnesty.org/en/latest/news/2026/06/burkina-serge-oulon/",
-        "homepage_content_type": "text/html; charset=UTF-8",
-        "example_content_type": "text/html; charset=UTF-8",
-        "homepage": {
-          "has_meta_author": false,
-          "has_published_time": true,
-          "has_canonical": true,
-          "has_about_link": false,
-          "has_contact_link": true,
-          "has_corrections_link": false,
-          "outbound_links_count": 7,
-          "opinion_marker": false
-        },
-        "example": {
-          "has_meta_author": false,
-          "has_published_time": true,
-          "has_canonical": true,
-          "has_about_link": false,
-          "has_contact_link": true,
-          "has_corrections_link": false,
-          "outbound_links_count": 30,
-          "opinion_marker": false
-        }
-      }
-    },
-    {
       "domain": "youtube.com",
       "entity": "Youtube",
       "kind": "unknown",
@@ -3079,7 +3080,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-08-13T14:58:34.439Z",
+        "fetched_at": "2026-08-16T15:04:18.961Z",
         "homepage_url": "https://apnews.com/",
         "example_url": "https://apnews.com/hub/iran",
         "homepage_status": 200,
@@ -3249,9 +3250,9 @@
       "entity": "T Co",
       "kind": "unknown",
       "first_seen_at": "2016-05-05T18:57:30.000Z",
-      "last_seen_at": "2026-08-16T10:20:49.000Z",
+      "last_seen_at": "2026-08-16T11:16:36.000Z",
       "discovery": {
-        "distinct_urls": 15679,
+        "distinct_urls": 15691,
         "example_urls": [
           "https://t.co/pJSE124ec4",
           "https://t.co/Soz8BXPWaa",
@@ -3260,8 +3261,8 @@
           "https://t.co/cYaqYDRp08"
         ],
         "origin_counts": {
-          "feed_buffer": 13514,
-          "feed_buffer_reply": 5135,
+          "feed_buffer": 13529,
+          "feed_buffer_reply": 5136,
           "articles": 3
         },
         "distinct_referring_accounts": 2834,
@@ -3303,7 +3304,7 @@
         "breadth": {
           "score": 0.53,
           "basis": [
-            "distinct_urls:15679",
+            "distinct_urls:15691",
             "distinct_axes:0",
             "origin_types:3"
           ]
@@ -3342,7 +3343,7 @@
           "basis": [
             "unknown_domain_pattern",
             "doi_or_identifier_path_seen",
-            "distinct_urls:15679",
+            "distinct_urls:15691",
             "distinct_axes:0",
             "origin_types:3",
             "referring_accounts:2834",
@@ -3352,7 +3353,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-08-13T14:58:35.483Z",
+        "fetched_at": "2026-08-16T15:04:20.127Z",
         "homepage_url": "https://t.co/",
         "example_url": "https://t.co/pJSE124ec4",
         "homepage_status": 200,
@@ -3388,9 +3389,9 @@
       "entity": "Inquirer",
       "kind": "unknown",
       "first_seen_at": "2026-05-09T10:15:15.053Z",
-      "last_seen_at": "2026-08-16T08:43:09.638Z",
+      "last_seen_at": "2026-08-16T13:54:04.358Z",
       "discovery": {
-        "distinct_urls": 384,
+        "distinct_urls": 388,
         "example_urls": [
           "https://newsinfo.inquirer.net/2266316/nbi-on-cayetano-position-that-cant-be-defended-by-facts-is-done-with-insults",
           "https://www.inquirer.net/capiz-broadcaster-shooting-probe-widens-as-cops-form-task-force",
@@ -3400,7 +3401,7 @@
         ],
         "origin_counts": {
           "ontology_evidence": 142,
-          "journals": 461,
+          "journals": 465,
           "articles": 5
         },
         "distinct_referring_accounts": 0,
@@ -3454,7 +3455,7 @@
         "breadth": {
           "score": 0.8799999999999999,
           "basis": [
-            "distinct_urls:384",
+            "distinct_urls:388",
             "distinct_axes:23",
             "origin_types:3"
           ]
@@ -3492,7 +3493,7 @@
           "method": "mechanical_v1",
           "basis": [
             "unknown_domain_pattern",
-            "distinct_urls:384",
+            "distinct_urls:388",
             "distinct_axes:23",
             "origin_types:3",
             "referring_accounts:0",
@@ -5552,9 +5553,9 @@
       "entity": "Starlink",
       "kind": "unknown",
       "first_seen_at": "2026-04-07T03:51:50.000Z",
-      "last_seen_at": "2026-08-16T00:51:22.723Z",
+      "last_seen_at": "2026-08-16T10:58:25.000Z",
       "discovery": {
-        "distinct_urls": 151,
+        "distinct_urls": 153,
         "example_urls": [
           "https://www.starlink.com/us/residential?referral=RC-DF-9543787-19448-67&utm_medium=paid&utm_campaign=awr_us_soc_twt_ptg_cau&utm_content=awr_us_soc_twt_ptg_cau_res_gvp_v4s_stc_en-us_sdb-bluesky-uptime&twclid=2cg62b1u0oqrypdim5oir1767e",
           "https://www.starlink.com/us/residential?referral=RC-DF-9543787-19448-67&utm_medium=paid&utm_campaign=awr_us_soc_twt_ptg_cau&utm_content=awr_us_soc_twt_ptg_cau_res_gvp_v4s_stc_en-us_sdb-avail-sat-yourhome&twclid=2216n7j93v9absqn77762mm626",
@@ -5563,8 +5564,8 @@
           "https://www.starlink.com/us/residential?referral=RC-DF-9543787-19448-67&utm_medium=paid&utm_campaign=awr_us_soc_twt_ptg_cau&utm_content=awr_us_soc_twt_ptg_cau_res_gvp_v4s_stc_en-us_sdb-avail-sat-arrived&twclid=21pi7t0qs8tgw0wgnh5mvmdu2g"
         ],
         "origin_counts": {
-          "feed_buffer_reply": 139,
-          "feed_buffer": 16
+          "feed_buffer_reply": 140,
+          "feed_buffer": 17
         },
         "distinct_referring_accounts": 5,
         "sample_referring_accounts": [
@@ -5599,7 +5600,7 @@
         "breadth": {
           "score": 0.47,
           "basis": [
-            "distinct_urls:151",
+            "distinct_urls:153",
             "distinct_axes:0",
             "origin_types:2"
           ]
@@ -5637,7 +5638,7 @@
           "method": "mechanical_v1",
           "basis": [
             "unknown_domain_pattern",
-            "distinct_urls:151",
+            "distinct_urls:153",
             "distinct_axes:0",
             "origin_types:2",
             "referring_accounts:5",
@@ -6425,7 +6426,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-08-13T11:58:36.215Z",
+        "fetched_at": "2026-08-16T12:17:31.832Z",
         "homepage_url": "https://spotify.com/",
         "example_url": "https://open.spotify.com/track/1lRDfbkJbPZGLaVpHbGjjK?si=0bafd2d0d3d04734&twclid=25onvjxx2lh8042z4br4k46xqz",
         "homepage_status": 200,
@@ -11231,7 +11232,7 @@
             "about:false",
             "contact:false",
             "corrections:false",
-            "outbound_links:15",
+            "outbound_links:16",
             "opinion_marker:false"
           ]
         },
@@ -11251,7 +11252,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-08-13T11:58:34.672Z",
+        "fetched_at": "2026-08-16T12:17:34.679Z",
         "homepage_url": "https://gastechevent.com/",
         "example_url": "https://www.gastechevent.com/visit/visitor-registration/?utm_source=X&utm_medium=cpc&utm_campaign=Gastech%2BVisprom%2BElectrification%2BTraffic%2BP1%2BX%2B2026&twclid=25c7n2tffmzu4y35y7ba8rbphq",
         "homepage_status": 200,
@@ -11267,7 +11268,7 @@
           "has_about_link": false,
           "has_contact_link": false,
           "has_corrections_link": false,
-          "outbound_links_count": 68,
+          "outbound_links_count": 69,
           "opinion_marker": false
         },
         "example": {
@@ -11277,7 +11278,7 @@
           "has_about_link": false,
           "has_contact_link": false,
           "has_corrections_link": false,
-          "outbound_links_count": 15,
+          "outbound_links_count": 16,
           "opinion_marker": false
         }
       }
@@ -13288,7 +13289,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-08-13T11:58:36.838Z",
+        "fetched_at": "2026-08-16T12:17:35.369Z",
         "homepage_url": "https://sofi.com/",
         "example_url": "https://sofi.com/crypto?twclid=2ykrysimqbgqvsp6rfph8v1n3",
         "homepage_status": 403,
@@ -13417,7 +13418,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-08-13T11:58:38.181Z",
+        "fetched_at": "2026-08-16T12:17:36.133Z",
         "homepage_url": "https://mikmak.ai/",
         "example_url": "https://shop.mikmak.ai/social/69d80508c17cd48204adad0b?utm_source=twitter&utm_medium=paid_social&utm_campaign=une_hl_685&utm_term=P3G43FN-&utm_content=hlm-feel-the-flavor-overall-x_jar-and-squeezes_na_spicy_bsay_na_1x1_twpr_none_shnw_en_stp_mikmak_dark_na_sta-base_004_na_na_0565-demo-broad&utm_placement=amplify_preroll&utm_marketing_tactic=Consideration&utm_format=0565-demo-broad&utm_placementid=P3G43FN&utm_variant=brandsay&twclid=2dqu9rpgpoqo0mblvt9uebl5t7",
         "homepage_status": 200,
@@ -15062,7 +15063,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-08-13T12:58:31.159Z",
+        "fetched_at": "2026-08-16T13:51:19.545Z",
         "homepage_url": "https://guardianbikes.com/",
         "example_url": "https://guardianbikes.com/products/balance-bike?variant=41102033158237&utm_source=twitter&twclid=2dhmyi0k26r61jxbnc07720qis&utm_content=dpa_carousel&utm_campaign=X_2026_DPA_Remarketing_Campaign+&utm_medium=cpc",
         "homepage_status": 200,
@@ -15188,7 +15189,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-08-13T12:58:33.172Z",
+        "fetched_at": "2026-08-16T13:51:21.630Z",
         "homepage_url": "https://lovart.ai/",
         "example_url": "https://www.lovart.ai/?sourceId=910062&sourceid=910062&utm_source=twitter&utm_medium=paid_social&utm_campaign=Lovart_910062_Meta_US_AIModel_ag_260416_lead&twclid=2a5k8izlnshoxgoxi52b1tnd45",
         "homepage_status": 200,
@@ -15314,7 +15315,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-08-13T12:58:35.510Z",
+        "fetched_at": "2026-08-16T13:51:23.085Z",
         "homepage_url": "https://heylemon.ai/",
         "example_url": "https://heylemon.ai/?utm_source=paid_X_all1&twclid=2bprvotipsebt2ywwd413k1c6r",
         "homepage_status": 200,
@@ -15440,7 +15441,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-08-13T12:58:38.050Z",
+        "fetched_at": "2026-08-16T13:51:24.017Z",
         "homepage_url": "https://wavedash.com/",
         "example_url": "https://wavedash.com/?twclid=29k171tm7pjzrxbob4j7cmjl3o",
         "homepage_status": 200,
@@ -18007,9 +18008,9 @@
       "entity": "Moltbook",
       "kind": "unknown",
       "first_seen_at": "2026-03-07T00:29:35.326Z",
-      "last_seen_at": "2026-08-15T10:29:02.673Z",
+      "last_seen_at": "2026-08-16T10:49:49.623Z",
       "discovery": {
-        "distinct_urls": 113,
+        "distinct_urls": 114,
         "example_urls": [
           "https://www.moltbook.com/post/29d49c40-bc59-4a1a-b875-3d3d41ec469e",
           "https://www.moltbook.com/post/3694a386-c24e-4744-8c06-2fc74c73c559",
@@ -18018,7 +18019,7 @@
           "https://www.moltbook.com/post/c6a71bf0-72ab-4867-820a-6b306bae0cea"
         ],
         "origin_counts": {
-          "articles": 113
+          "articles": 114
         },
         "distinct_referring_accounts": 0,
         "sample_referring_accounts": [],
@@ -18047,7 +18048,7 @@
         "breadth": {
           "score": 0.41,
           "basis": [
-            "distinct_urls:113",
+            "distinct_urls:114",
             "distinct_axes:0",
             "origin_types:1"
           ]
@@ -18085,7 +18086,7 @@
           "method": "mechanical_v1",
           "basis": [
             "unknown_domain_pattern",
-            "distinct_urls:113",
+            "distinct_urls:114",
             "distinct_axes:0",
             "origin_types:1",
             "referring_accounts:0",
@@ -25464,6 +25465,132 @@
       }
     },
     {
+      "domain": "vryzmir.com",
+      "entity": "Vryzmir",
+      "kind": "unknown",
+      "first_seen_at": "2026-08-14T17:08:43.719Z",
+      "last_seen_at": "2026-08-16T10:44:09.250Z",
+      "discovery": {
+        "distinct_urls": 4,
+        "example_urls": [
+          "https://www.vryzmir.com/products/portable-silicone-ice-ball-maker-kettle?utm_source=twitter&utm_campaign=42166381&twclid=2h87hfhbmpwrcy696fcioag1c",
+          "https://www.vryzmir.com/products/portable-silicone-ice-ball-maker-kettle?utm_source=twitter&utm_campaign=42166381&twclid=2dx253yeavpmg5g33pbo8pc6da",
+          "https://www.vryzmir.com/products/menx27s-xback-suspenders-with-hook-clips?utm_source=twitter&utm_campaign=42183138&twclid=21lut6lkszct95kb2b7qunrnl7",
+          "https://www.vryzmir.com/products/vipelectric-nail-clipper?utm_source=twitter&utm_campaign=42166379&twclid=2793zfw3z1pqkhk1m8w3kpurm"
+        ],
+        "origin_counts": {
+          "feed_buffer": 3,
+          "feed_buffer_reply": 1
+        },
+        "distinct_referring_accounts": 1,
+        "sample_referring_accounts": [
+          "vryzmir"
+        ],
+        "distinct_axes": []
+      },
+      "claims": {
+        "total": 0,
+        "supported": 0,
+        "refuted": 0,
+        "contested": 0,
+        "unverified": 0,
+        "resolved_count": 0
+      },
+      "structural_features": {
+        "has_search_paths": false,
+        "has_article_paths": false,
+        "has_doi_paths": false
+      },
+      "ratings": {
+        "provenance": {
+          "score": 0.45,
+          "basis": [
+            "unknown_domain_pattern"
+          ]
+        },
+        "breadth": {
+          "score": 0.23666666666666664,
+          "basis": [
+            "distinct_urls:4",
+            "distinct_axes:0",
+            "origin_types:2"
+          ]
+        },
+        "corroboration": {
+          "score": 0.2833333333333333,
+          "basis": [
+            "referring_accounts:1",
+            "origin_types:2"
+          ]
+        },
+        "track_record": {
+          "score": null,
+          "basis": [
+            "no_resolved_claims_observed"
+          ]
+        },
+        "profile": {
+          "score": 0,
+          "confidence": 0.55,
+          "basis": [
+            "meta_author:false",
+            "published_time:false",
+            "canonical:false",
+            "about:false",
+            "contact:false",
+            "corrections:false",
+            "outbound_links:0",
+            "opinion_marker:false"
+          ]
+        },
+        "overall": {
+          "score": 0.3877083333333334,
+          "confidence": 0.18769999999999998,
+          "method": "mechanical_v1",
+          "basis": [
+            "unknown_domain_pattern",
+            "distinct_urls:4",
+            "distinct_axes:0",
+            "origin_types:2",
+            "referring_accounts:1",
+            "origin_types:2",
+            "track_record_unavailable"
+          ]
+        }
+      },
+      "profile": {
+        "fetched_at": "2026-08-15T09:47:48.533Z",
+        "homepage_url": "https://vryzmir.com/",
+        "example_url": "https://www.vryzmir.com/products/portable-silicone-ice-ball-maker-kettle?utm_source=twitter&utm_campaign=42166381&twclid=2h87hfhbmpwrcy696fcioag1c",
+        "homepage_status": 403,
+        "example_status": 403,
+        "homepage_final_url": "https://www.vryzmir.com/",
+        "example_final_url": "https://www.vryzmir.com/products/portable-silicone-ice-ball-maker-kettle?utm_source=twitter&utm_campaign=42166381&twclid=2h87hfhbmpwrcy696fcioag1c",
+        "homepage_content_type": "text/html; charset=UTF-8",
+        "example_content_type": "text/html; charset=UTF-8",
+        "homepage": {
+          "has_meta_author": false,
+          "has_published_time": false,
+          "has_canonical": false,
+          "has_about_link": false,
+          "has_contact_link": false,
+          "has_corrections_link": false,
+          "outbound_links_count": 0,
+          "opinion_marker": false
+        },
+        "example": {
+          "has_meta_author": false,
+          "has_published_time": false,
+          "has_canonical": false,
+          "has_about_link": false,
+          "has_contact_link": false,
+          "has_corrections_link": false,
+          "outbound_links_count": 0,
+          "opinion_marker": false
+        }
+      }
+    },
+    {
       "domain": "apple.com",
       "entity": "Apple",
       "kind": "unknown",
@@ -29470,131 +29597,6 @@
           "has_contact_link": false,
           "has_corrections_link": false,
           "outbound_links_count": 4,
-          "opinion_marker": false
-        }
-      }
-    },
-    {
-      "domain": "vryzmir.com",
-      "entity": "Vryzmir",
-      "kind": "unknown",
-      "first_seen_at": "2026-08-14T17:08:43.719Z",
-      "last_seen_at": "2026-08-15T17:22:22.387Z",
-      "discovery": {
-        "distinct_urls": 3,
-        "example_urls": [
-          "https://www.vryzmir.com/products/portable-silicone-ice-ball-maker-kettle?utm_source=twitter&utm_campaign=42166381&twclid=2h87hfhbmpwrcy696fcioag1c",
-          "https://www.vryzmir.com/products/portable-silicone-ice-ball-maker-kettle?utm_source=twitter&utm_campaign=42166381&twclid=2dx253yeavpmg5g33pbo8pc6da",
-          "https://www.vryzmir.com/products/menx27s-xback-suspenders-with-hook-clips?utm_source=twitter&utm_campaign=42183138&twclid=21lut6lkszct95kb2b7qunrnl7"
-        ],
-        "origin_counts": {
-          "feed_buffer": 2,
-          "feed_buffer_reply": 1
-        },
-        "distinct_referring_accounts": 1,
-        "sample_referring_accounts": [
-          "vryzmir"
-        ],
-        "distinct_axes": []
-      },
-      "claims": {
-        "total": 0,
-        "supported": 0,
-        "refuted": 0,
-        "contested": 0,
-        "unverified": 0,
-        "resolved_count": 0
-      },
-      "structural_features": {
-        "has_search_paths": false,
-        "has_article_paths": false,
-        "has_doi_paths": false
-      },
-      "ratings": {
-        "provenance": {
-          "score": 0.45,
-          "basis": [
-            "unknown_domain_pattern"
-          ]
-        },
-        "breadth": {
-          "score": 0.2075,
-          "basis": [
-            "distinct_urls:3",
-            "distinct_axes:0",
-            "origin_types:2"
-          ]
-        },
-        "corroboration": {
-          "score": 0.2833333333333333,
-          "basis": [
-            "referring_accounts:1",
-            "origin_types:2"
-          ]
-        },
-        "track_record": {
-          "score": null,
-          "basis": [
-            "no_resolved_claims_observed"
-          ]
-        },
-        "profile": {
-          "score": 0,
-          "confidence": 0.55,
-          "basis": [
-            "meta_author:false",
-            "published_time:false",
-            "canonical:false",
-            "about:false",
-            "contact:false",
-            "corrections:false",
-            "outbound_links:0",
-            "opinion_marker:false"
-          ]
-        },
-        "overall": {
-          "score": 0.381328125,
-          "confidence": 0.15907500000000002,
-          "method": "mechanical_v1",
-          "basis": [
-            "unknown_domain_pattern",
-            "distinct_urls:3",
-            "distinct_axes:0",
-            "origin_types:2",
-            "referring_accounts:1",
-            "origin_types:2",
-            "track_record_unavailable"
-          ]
-        }
-      },
-      "profile": {
-        "fetched_at": "2026-08-15T09:47:48.533Z",
-        "homepage_url": "https://vryzmir.com/",
-        "example_url": "https://www.vryzmir.com/products/portable-silicone-ice-ball-maker-kettle?utm_source=twitter&utm_campaign=42166381&twclid=2h87hfhbmpwrcy696fcioag1c",
-        "homepage_status": 403,
-        "example_status": 403,
-        "homepage_final_url": "https://www.vryzmir.com/",
-        "example_final_url": "https://www.vryzmir.com/products/portable-silicone-ice-ball-maker-kettle?utm_source=twitter&utm_campaign=42166381&twclid=2h87hfhbmpwrcy696fcioag1c",
-        "homepage_content_type": "text/html; charset=UTF-8",
-        "example_content_type": "text/html; charset=UTF-8",
-        "homepage": {
-          "has_meta_author": false,
-          "has_published_time": false,
-          "has_canonical": false,
-          "has_about_link": false,
-          "has_contact_link": false,
-          "has_corrections_link": false,
-          "outbound_links_count": 0,
-          "opinion_marker": false
-        },
-        "example": {
-          "has_meta_author": false,
-          "has_published_time": false,
-          "has_canonical": false,
-          "has_about_link": false,
-          "has_contact_link": false,
-          "has_corrections_link": false,
-          "outbound_links_count": 0,
           "opinion_marker": false
         }
       }
@@ -42548,7 +42550,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-08-13T03:56:41.721Z",
+        "fetched_at": "2026-08-16T11:40:33.563Z",
         "homepage_url": "https://noomeva.com/",
         "example_url": "https://www.noomeva.com/products/premium-leather-adjustable-underarm-shoulder-bag?utm_source=twitter&utm_campaign=UnderarmBagSWC304&twclid=2d96rsmlwzbdndc5bq7cimiom3",
         "homepage_status": 403,
@@ -42673,7 +42675,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-08-12T15:26:11.193Z",
+        "fetched_at": "2026-08-16T11:40:38.221Z",
         "homepage_url": "https://czapp.com/",
         "example_url": "https://www.czapp.com/analyst-insights/grains-rally-on-black-sea-disruptions-weather-concerns/?utm_source=twitter&utm_medium=social&utm_term=opinion&utm_content=organic&twclid=26m34d56qe4fs7irm1mj3xf0rk",
         "homepage_status": 200,
@@ -42798,7 +42800,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-08-13T05:26:41.221Z",
+        "fetched_at": "2026-08-16T11:40:40.884Z",
         "homepage_url": "https://sustainabilityeconomics.com/",
         "example_url": "https://webinar.sustainabilityeconomics.com/?twclid=2av9ysefynmg8hdk3bmd2bpw7h",
         "homepage_status": 200,
@@ -42893,6 +42895,20 @@
             "no_resolved_claims_observed"
           ]
         },
+        "profile": {
+          "score": 0,
+          "confidence": 0.55,
+          "basis": [
+            "meta_author:false",
+            "published_time:false",
+            "canonical:false",
+            "about:false",
+            "contact:false",
+            "corrections:false",
+            "outbound_links:0",
+            "opinion_marker:false"
+          ]
+        },
         "overall": {
           "score": 0.3663802083333333,
           "confidence": 0.16722499999999998,
@@ -42906,6 +42922,37 @@
             "origin_types:1",
             "track_record_unavailable"
           ]
+        }
+      },
+      "profile": {
+        "fetched_at": "2026-08-16T11:40:41.807Z",
+        "homepage_url": "https://cavorina.com/",
+        "example_url": "https://www.cavorina.com/products/sun-protection-hat?utm_source=twitter&utm_campaign=42165657&twclid=2exl5hkoe1xm0a2kxes2axtq22",
+        "homepage_status": 403,
+        "example_status": 403,
+        "homepage_final_url": "https://www.cavorina.com/",
+        "example_final_url": "https://www.cavorina.com/products/sun-protection-hat?utm_source=twitter&utm_campaign=42165657&twclid=2exl5hkoe1xm0a2kxes2axtq22",
+        "homepage_content_type": "text/html; charset=UTF-8",
+        "example_content_type": "text/html; charset=UTF-8",
+        "homepage": {
+          "has_meta_author": false,
+          "has_published_time": false,
+          "has_canonical": false,
+          "has_about_link": false,
+          "has_contact_link": false,
+          "has_corrections_link": false,
+          "outbound_links_count": 0,
+          "opinion_marker": false
+        },
+        "example": {
+          "has_meta_author": false,
+          "has_published_time": false,
+          "has_canonical": false,
+          "has_about_link": false,
+          "has_contact_link": false,
+          "has_corrections_link": false,
+          "outbound_links_count": 0,
+          "opinion_marker": false
         }
       }
     },
@@ -43001,7 +43048,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-08-12T15:26:21.304Z",
+        "fetched_at": "2026-08-16T12:45:25.056Z",
         "homepage_url": "https://georgetown.edu/",
         "example_url": "https://gjia.georgetown.edu/2026/03/26/the-war-against-iran-and-global-risks-tell-me-how-this-ends/",
         "homepage_status": 200,
@@ -43228,7 +43275,7 @@
             "about:false",
             "contact:false",
             "corrections:false",
-            "outbound_links:18",
+            "outbound_links:21",
             "opinion_marker:false"
           ]
         },
@@ -43248,7 +43295,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-08-12T16:56:03.082Z",
+        "fetched_at": "2026-08-16T12:45:26.118Z",
         "homepage_url": "https://fandango.com/",
         "example_url": "https://www.fandango.com/lee-cronins-the-mummy-2026-244052/movie-overview?twclid=2buocyfoltepc4nr5ab0l6j90t",
         "homepage_status": 200,
@@ -43264,7 +43311,7 @@
           "has_about_link": false,
           "has_contact_link": false,
           "has_corrections_link": false,
-          "outbound_links_count": 24,
+          "outbound_links_count": 23,
           "opinion_marker": false
         },
         "example": {
@@ -43274,7 +43321,7 @@
           "has_about_link": false,
           "has_contact_link": false,
           "has_corrections_link": false,
-          "outbound_links_count": 18,
+          "outbound_links_count": 21,
           "opinion_marker": false
         }
       }
@@ -43372,7 +43419,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-08-12T16:56:05.210Z",
+        "fetched_at": "2026-08-16T12:45:27.790Z",
         "homepage_url": "https://typeform.com/",
         "example_url": "https://form.typeform.com/to/rQ99Fjtn?utm_source=mediabuyer&twclid=294n0eht0qoq4ibz93o6uvw95v",
         "homepage_status": 200,
@@ -43496,23 +43543,23 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-08-12T16:56:06.736Z",
+        "fetched_at": "2026-08-16T12:45:29.419Z",
         "homepage_url": "https://cuervo.com/",
         "example_url": "https://cuervo.com/?twclid=2cw6oebezormtkrlgtaweck05m",
-        "homepage_status": 200,
+        "homepage_status": null,
         "example_status": 200,
         "homepage_final_url": "https://cuervo.com/",
         "example_final_url": "https://cuervo.com/?twclid=2cw6oebezormtkrlgtaweck05m",
-        "homepage_content_type": "text/html; charset=UTF-8",
+        "homepage_content_type": "",
         "example_content_type": "text/html; charset=UTF-8",
         "homepage": {
           "has_meta_author": false,
-          "has_published_time": true,
-          "has_canonical": true,
+          "has_published_time": false,
+          "has_canonical": false,
           "has_about_link": false,
           "has_contact_link": false,
           "has_corrections_link": false,
-          "outbound_links_count": 15,
+          "outbound_links_count": 0,
           "opinion_marker": false
         },
         "example": {
