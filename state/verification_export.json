@@ -1,11 +1,11 @@
 {
-  "generated_at": "2026-08-16T10:47:43.359Z",
+  "generated_at": "2026-08-16T10:49:09.359Z",
   "stats": {
-    "total": 1217,
-    "supported": 352,
+    "total": 1219,
+    "supported": 353,
     "refuted": 226,
     "contested": 6,
-    "unverified": 149,
+    "unverified": 150,
     "expired": 484
   },
   "claims": [
@@ -17594,6 +17594,59 @@
       "investigation_depth": "quick"
     },
     {
+      "claim_id": "live_6f06673731",
+      "claim_text": "The policy applies to students, H-1B workers, tourists and other temporary visa categories",
+      "status": "supported",
+      "confidence_score": 0.62,
+      "display_score": 0.403,
+      "scoring_breakdown": {
+        "source_tier": 0.5,
+        "newsguard": 0.5,
+        "corroboration": 0.7,
+        "evidence_quality": 0.7,
+        "cross_source": 0.5,
+        "web_search": 1
+      },
+      "source_handle": null,
+      "source_tier": null,
+      "evidence_urls": [
+        "https://www.ellis.com/resources/uscis-adjustment-of-status-policy-2026",
+        "https://www.ellis.com/resources/uscis-adjustment-of-status-policy-2026",
+        "https://siss.ucdavis.edu/news/federal-government-updates-international-students-and-scholars",
+        "https://siss.ucdavis.edu/news/federal-government-updates-international-students-and-scholars",
+        "https://www.travelandtourworld.com/news/article/complete-guide-to-the-new-u-s-visa-implementation-rules-for-2026-everything-you-need-to-know-about-the-latest-security-and-processing-changes/"
+      ],
+      "tweet_url": null,
+      "category": null,
+      "related_axis_id": "axis_immigration_policy_v_national_control_v1",
+      "verification_count": 1,
+      "verified_at": "2026-08-16T10:49:09.319Z",
+      "created_at": "2026-08-16T10:49:09.319Z",
+      "original_source": "Ellis Immigration appears to be reporting on USCIS policy changes",
+      "claim_date": "2026-05",
+      "supporting_sources": [
+        {
+          "name": "Ellis Immigration",
+          "excerpt": "The policy applies to F-1, H-1B, O-1, L-1, B-1/B-2, and other nonimmigrant visa holders, with USCIS noting it covers students, temporary workers, and tourist visas.",
+          "url": null
+        },
+        {
+          "name": "UC Davis SISS",
+          "excerpt": "The pause includes nonimmigrant visas for tourists, business travelers, students, exchange visitors, and all other nonimmigrant categories.",
+          "url": null
+        },
+        {
+          "name": "Travel and Tour World",
+          "excerpt": "The 2026 U.S. visa policy changes affect B-1/B-2 tourist visas, F/M student visas, H-1B work visas, L-1 visas, J-1 exchange visitor visas, and K-1 fiancé visas.",
+          "url": null
+        }
+      ],
+      "dissenting_sources": [],
+      "framing_analysis": "The claim is framed validly and accurately represents the scope of the policy as described in the sources, correctly identifying the three main categories mentioned (students, H-1B workers, tourists) plus acknowledging other temporary visa categories are also covered.",
+      "web_search_summary": "The claim is supported by multiple search results. Sources confirm that the policy applies to students (F-1 visas), H-1B workers, tourists (B-1/B-2 visas), and other temporary/nonimmigrant visa categories including O-1, L-1, J-1 exchange visitors, and all other nonimmigrant categories.",
+      "investigation_depth": "quick"
+    },
+    {
       "claim_id": "claim_85",
       "claim_text": "Israeli military planes are unable to fly due to the largest swarm of bees in recorded history.",
       "status": "supported",
@@ -33720,6 +33773,54 @@
       "dissenting_sources": [],
       "framing_analysis": "The claim cannot be verified as the search results only contain the claim itself being shared on LinkedIn, without independent sources confirming the EU AI Act provisions described or their August 2 implementation date. Additional authoritative sources would be needed to verify these specific regulatory claims.",
       "web_search_summary": "The search results contain LinkedIn posts that appear to reproduce the exact claim verbatim, but do not provide independent verification of the factual assertions about EU AI Act rules taking effect on August 2 or details about the MJRC research project. The search results only show social media posts stating the claim, not authoritative sources confirming the underlying facts.",
+      "investigation_depth": "quick"
+    },
+    {
+      "claim_id": "live_5249a34276",
+      "claim_text": "780,000+ immigrants in the US are affected by the new green card application requirement",
+      "status": "unverified",
+      "confidence_score": 0.4,
+      "display_score": 0.337,
+      "scoring_breakdown": {
+        "source_tier": 0.5,
+        "newsguard": 0.5,
+        "corroboration": 0,
+        "evidence_quality": 0.5,
+        "cross_source": 0.5,
+        "web_search": 0.5
+      },
+      "source_handle": null,
+      "source_tier": null,
+      "evidence_urls": [
+        "https://www.pewresearch.org/short-reads/2026/06/02/majority-of-new-green-cards-have-gone-to-immigrants-already-living-in-us/",
+        "https://www.pewresearch.org/short-reads/2026/06/02/majority-of-new-green-cards-have-gone-to-immigrants-already-living-in-us/",
+        "https://www.cnn.com/2026/07/20/politics/trump-rule-green-card-applicants",
+        "https://www.cnn.com/2026/07/20/politics/trump-rule-green-card-applicants",
+        "https://borderlessmag.org/2026/06/04/green-card-immigration-policy-uscis-law-donald-trump-department-of-state/"
+      ],
+      "tweet_url": null,
+      "category": null,
+      "related_axis_id": "axis_immigration_policy_v_national_control_v1",
+      "verification_count": 1,
+      "verified_at": "2026-08-16T10:48:53.058Z",
+      "created_at": "2026-08-16T10:48:53.058Z",
+      "original_source": null,
+      "claim_date": null,
+      "supporting_sources": [
+        {
+          "name": "Pew Research Center",
+          "excerpt": "A new Trump administration memo could require green card seekers already in the U.S. to apply from abroad, potentially affecting hundreds of thousands annually.",
+          "url": null
+        },
+        {
+          "name": "Borderless Magazine",
+          "excerpt": "A new USCIS memo may require thousands of immigrants to leave the U.S. before petitioning to apply for a Green Card.",
+          "url": null
+        }
+      ],
+      "dissenting_sources": [],
+      "framing_analysis": "The claim provides a specific numerical figure (780,000+) that is not verified in the search results. The sources use vaguer terms like 'hundreds of thousands annually' or 'thousands,' making it impossible to confirm the precision of the claimed number without additional data.",
+      "web_search_summary": "The search results confirm that a new Trump administration memo could require green card seekers already in the U.S. to apply from abroad, potentially affecting 'hundreds of thousands annually' or 'thousands' of immigrants. However, none of the sources specifically confirm or refute the exact figure of '780,000+' immigrants being affected.",
       "investigation_depth": "quick"
     },
     {

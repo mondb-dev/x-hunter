@@ -1,150 +1,164 @@
 {
-  "checked_at": "2026-08-15T10:26:24.172Z",
-  "evidence_24h": 11,
-  "unique_sources": 7,
-  "status": "captured",
+  "checked_at": "2026-08-16T10:47:48.589Z",
+  "evidence_24h": 19,
+  "unique_sources": 15,
+  "status": "warning",
   "alerts": [
     {
       "type": "source_dominance",
-      "severity": "high",
-      "detail": "@unknown accounts for 46% of today's evidence (5/11)",
-      "username": "unknown",
-      "share": 0.455
-    },
-    {
-      "type": "pole_skew",
       "severity": "moderate",
-      "detail": "73% of evidence pushes \"left\" — risk of one-sided belief drift",
-      "dominant_pole": "left",
-      "share": 0.727
+      "detail": "@unknown accounts for 26% of today's evidence (5/19)",
+      "username": "unknown",
+      "share": 0.263
     }
   ],
-  "summary": "2 capture alert(s) detected:\n[HIGH] @unknown accounts for 46% of today's evidence (5/11)\n[MODERATE] 73% of evidence pushes \"left\" — risk of one-sided belief drift",
+  "summary": "1 capture alert(s) detected:\n[MODERATE] @unknown accounts for 26% of today's evidence (5/19)",
   "source_concentration": {
     "unknown": {
       "username": "unknown",
       "count": 5,
-      "share": 0.455
+      "share": 0.263
     },
-    "acyn": {
-      "username": "acyn",
+    "krassenstein": {
+      "username": "krassenstein",
       "count": 1,
-      "share": 0.091
+      "share": 0.053
     },
-    "clashreport": {
-      "username": "clashreport",
+    "tvpatrol": {
+      "username": "tvpatrol",
       "count": 1,
-      "share": 0.091
+      "share": 0.053
     },
-    "narendramodi": {
-      "username": "narendramodi",
+    "tadventurousoul": {
+      "username": "tadventurousoul",
       "count": 1,
-      "share": 0.091
+      "share": 0.053
     },
-    "ericldaugh": {
-      "username": "ericldaugh",
+    "migrel4": {
+      "username": "migrel4",
       "count": 1,
-      "share": 0.091
+      "share": 0.053
     },
-    "gmanews": {
-      "username": "gmanews",
+    "maddenifico": {
+      "username": "maddenifico",
       "count": 1,
-      "share": 0.091
+      "share": 0.053
     },
-    "philstarnews": {
-      "username": "philstarnews",
+    "inquirerdotnet": {
+      "username": "inquirerdotnet",
       "count": 1,
-      "share": 0.091
+      "share": 0.053
+    },
+    "pamphletsy": {
+      "username": "pamphletsy",
+      "count": 1,
+      "share": 0.053
+    },
+    "presstv": {
+      "username": "presstv",
+      "count": 1,
+      "share": 0.053
+    },
+    "balitangayonfb": {
+      "username": "balitangayonfb",
+      "count": 1,
+      "share": 0.053
     }
   },
   "axis_concentration": {
+    "axis_procedural_governance_accountability_v1": {
+      "axis_id": "axis_procedural_governance_accountability_v1",
+      "label": "Procedural Governance vs. Genuine Accountability",
+      "count": 3,
+      "share": 0.158
+    },
+    "axis_rapid_disinformation_v1": {
+      "axis_id": "axis_rapid_disinformation_v1",
+      "label": "Rapid Disinformation",
+      "count": 2,
+      "share": 0.105
+    },
+    "axis_reactionary_futurism_v1": {
+      "axis_id": "axis_reactionary_futurism_v1",
+      "label": "Reactionary Futurism: Innovation Aesthetics vs. Democratic Accountability",
+      "count": 2,
+      "share": 0.105
+    },
+    "axis_disaster_infrastructure_accountability_v1": {
+      "axis_id": "axis_disaster_infrastructure_accountability_v1",
+      "label": "Disaster as Infrastructure Failure vs. Natural Event",
+      "count": 2,
+      "share": 0.105
+    },
     "axis_power_accountability": {
       "axis_id": "axis_power_accountability",
       "label": "Power, Institutions, and Rule of Law",
-      "count": 2,
-      "share": 0.182
-    },
-    "axis_crisis_visibility_hierarchy_v1": {
-      "axis_id": "axis_crisis_visibility_hierarchy_v1",
-      "label": "Crisis Visibility Hierarchy",
-      "count": 2,
-      "share": 0.182
+      "count": 1,
+      "share": 0.053
     },
     "axis_eje_accountability_v1": {
       "axis_id": "axis_eje_accountability_v1",
       "label": "Accountability for Extrajudicial Killings",
       "count": 1,
-      "share": 0.091
+      "share": 0.053
     },
-    "axis_public_trust_safety_crisis_v1": {
-      "axis_id": "axis_public_trust_safety_crisis_v1",
-      "label": "Public Trust in Safety and Crisis Communication",
+    "axis_media_integrity_v1": {
+      "axis_id": "axis_media_integrity_v1",
+      "label": "Integrity of Information and Social Media Manipulation",
       "count": 1,
-      "share": 0.091
+      "share": 0.053
     },
-    "axis_geopolitical_control_narratives": {
-      "axis_id": "axis_geopolitical_control_narratives",
-      "label": "Geopolitical Control Narratives: Asserting Sovereignty vs. International Norms",
+    "axis_national_sovereignty_v_intl_law_v1": {
+      "axis_id": "axis_national_sovereignty_v_intl_law_v1",
+      "label": "National Sovereignty vs. International Law",
       "count": 1,
-      "share": 0.091
+      "share": 0.053
     },
-    "axis_engineered_nationalism_v_global_solidarity": {
-      "axis_id": "axis_engineered_nationalism_v_global_solidarity",
-      "label": "Engineered Nationalism vs. Global Solidarity",
+    "axis_political_moral_conduct_v1": {
+      "axis_id": "axis_political_moral_conduct_v1",
+      "label": "Political Integrity and Moral Conduct in Public Service",
       "count": 1,
-      "share": 0.091
+      "share": 0.053
     },
-    "axis_reactionary_futurism_v1": {
-      "axis_id": "axis_reactionary_futurism_v1",
-      "label": "Reactionary Futurism: Innovation Aesthetics vs. Democratic Accountability",
+    "axis_human_rights_exploitation_v1": {
+      "axis_id": "axis_human_rights_exploitation_v1",
+      "label": "Human Rights and Exploitation",
       "count": 1,
-      "share": 0.091
-    },
-    "axis_infrastructure_commons_v_extraction_v1": {
-      "axis_id": "axis_infrastructure_commons_v_extraction_v1",
-      "label": "Infrastructure as Commons vs. Extraction",
-      "count": 1,
-      "share": 0.091
-    },
-    "axis_disaster_infrastructure_accountability_v1": {
-      "axis_id": "axis_disaster_infrastructure_accountability_v1",
-      "label": "Disaster as Infrastructure Failure vs. Natural Event",
-      "count": 1,
-      "share": 0.091
+      "share": 0.053
     }
   },
   "cluster_concentration": {
     "unknown": {
       "cluster": "unknown",
-      "count": 5,
-      "share": 0.455
-    },
-    "us_politics": {
-      "cluster": "us_politics",
-      "count": 2,
-      "share": 0.182
-    },
-    "geopolitics": {
-      "cluster": "geopolitics",
-      "count": 2,
-      "share": 0.182
-    },
-    "government_official": {
-      "cluster": "government_official",
-      "count": 1,
-      "share": 0.091
+      "count": 9,
+      "share": 0.474
     },
     "breaking_news": {
       "cluster": "breaking_news",
+      "count": 4,
+      "share": 0.211
+    },
+    "geopolitics": {
+      "cluster": "geopolitics",
+      "count": 3,
+      "share": 0.158
+    },
+    "us_politics": {
+      "cluster": "us_politics",
       "count": 1,
-      "share": 0.091
+      "share": 0.053
+    },
+    "humor_memes": {
+      "cluster": "humor_memes",
+      "count": 1,
+      "share": 0.053
     }
   },
   "pole_balance": {
-    "left": 8,
-    "right": 3,
+    "left": 7,
+    "right": 12,
     "neutral": 0,
-    "left_share": 0.727,
-    "right_share": 0.273
+    "left_share": 0.368,
+    "right_share": 0.632
   }
 }
