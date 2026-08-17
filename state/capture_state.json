@@ -1,164 +1,95 @@
 {
-  "checked_at": "2026-08-16T10:47:48.589Z",
-  "evidence_24h": 19,
-  "unique_sources": 15,
-  "status": "warning",
+  "checked_at": "2026-08-17T11:27:53.993Z",
+  "evidence_24h": 9,
+  "unique_sources": 4,
+  "status": "captured",
   "alerts": [
     {
       "type": "source_dominance",
-      "severity": "moderate",
-      "detail": "@unknown accounts for 26% of today's evidence (5/19)",
+      "severity": "high",
+      "detail": "@unknown accounts for 67% of today's evidence (6/9)",
       "username": "unknown",
-      "share": 0.263
+      "share": 0.667
     }
   ],
-  "summary": "1 capture alert(s) detected:\n[MODERATE] @unknown accounts for 26% of today's evidence (5/19)",
+  "summary": "1 capture alert(s) detected:\n[HIGH] @unknown accounts for 67% of today's evidence (6/9)",
   "source_concentration": {
     "unknown": {
       "username": "unknown",
-      "count": 5,
-      "share": 0.263
+      "count": 6,
+      "share": 0.667
     },
-    "krassenstein": {
-      "username": "krassenstein",
+    "rpsagainsttrump": {
+      "username": "rpsagainsttrump",
       "count": 1,
-      "share": 0.053
+      "share": 0.111
     },
-    "tvpatrol": {
-      "username": "tvpatrol",
+    "atrupar": {
+      "username": "atrupar",
       "count": 1,
-      "share": 0.053
+      "share": 0.111
     },
-    "tadventurousoul": {
-      "username": "tadventurousoul",
+    "facethenation": {
+      "username": "facethenation",
       "count": 1,
-      "share": 0.053
-    },
-    "migrel4": {
-      "username": "migrel4",
-      "count": 1,
-      "share": 0.053
-    },
-    "maddenifico": {
-      "username": "maddenifico",
-      "count": 1,
-      "share": 0.053
-    },
-    "inquirerdotnet": {
-      "username": "inquirerdotnet",
-      "count": 1,
-      "share": 0.053
-    },
-    "pamphletsy": {
-      "username": "pamphletsy",
-      "count": 1,
-      "share": 0.053
-    },
-    "presstv": {
-      "username": "presstv",
-      "count": 1,
-      "share": 0.053
-    },
-    "balitangayonfb": {
-      "username": "balitangayonfb",
-      "count": 1,
-      "share": 0.053
+      "share": 0.111
     }
   },
   "axis_concentration": {
-    "axis_procedural_governance_accountability_v1": {
-      "axis_id": "axis_procedural_governance_accountability_v1",
-      "label": "Procedural Governance vs. Genuine Accountability",
-      "count": 3,
-      "share": 0.158
-    },
-    "axis_rapid_disinformation_v1": {
-      "axis_id": "axis_rapid_disinformation_v1",
-      "label": "Rapid Disinformation",
-      "count": 2,
-      "share": 0.105
-    },
-    "axis_reactionary_futurism_v1": {
-      "axis_id": "axis_reactionary_futurism_v1",
-      "label": "Reactionary Futurism: Innovation Aesthetics vs. Democratic Accountability",
-      "count": 2,
-      "share": 0.105
-    },
-    "axis_disaster_infrastructure_accountability_v1": {
-      "axis_id": "axis_disaster_infrastructure_accountability_v1",
-      "label": "Disaster as Infrastructure Failure vs. Natural Event",
-      "count": 2,
-      "share": 0.105
-    },
     "axis_power_accountability": {
       "axis_id": "axis_power_accountability",
       "label": "Power, Institutions, and Rule of Law",
-      "count": 1,
-      "share": 0.053
+      "count": 3,
+      "share": 0.333
     },
-    "axis_eje_accountability_v1": {
-      "axis_id": "axis_eje_accountability_v1",
-      "label": "Accountability for Extrajudicial Killings",
-      "count": 1,
-      "share": 0.053
+    "axis_procedural_governance_accountability_v1": {
+      "axis_id": "axis_procedural_governance_accountability_v1",
+      "label": "Procedural Governance vs. Genuine Accountability",
+      "count": 2,
+      "share": 0.222
     },
-    "axis_media_integrity_v1": {
-      "axis_id": "axis_media_integrity_v1",
-      "label": "Integrity of Information and Social Media Manipulation",
+    "axis_ai_societal_impact_v1": {
+      "axis_id": "axis_ai_societal_impact_v1",
+      "label": "Societal Impact and Ethical Concerns of AI/Robots",
       "count": 1,
-      "share": 0.053
+      "share": 0.111
     },
-    "axis_national_sovereignty_v_intl_law_v1": {
-      "axis_id": "axis_national_sovereignty_v_intl_law_v1",
-      "label": "National Sovereignty vs. International Law",
+    "axis_public_trust_safety_crisis_v1": {
+      "axis_id": "axis_public_trust_safety_crisis_v1",
+      "label": "Public Trust in Safety and Crisis Communication",
       "count": 1,
-      "share": 0.053
+      "share": 0.111
     },
     "axis_political_moral_conduct_v1": {
       "axis_id": "axis_political_moral_conduct_v1",
       "label": "Political Integrity and Moral Conduct in Public Service",
       "count": 1,
-      "share": 0.053
+      "share": 0.111
     },
     "axis_human_rights_exploitation_v1": {
       "axis_id": "axis_human_rights_exploitation_v1",
       "label": "Human Rights and Exploitation",
       "count": 1,
-      "share": 0.053
+      "share": 0.111
     }
   },
   "cluster_concentration": {
     "unknown": {
       "cluster": "unknown",
-      "count": 9,
-      "share": 0.474
+      "count": 8,
+      "share": 0.889
     },
-    "breaking_news": {
-      "cluster": "breaking_news",
-      "count": 4,
-      "share": 0.211
-    },
-    "geopolitics": {
-      "cluster": "geopolitics",
-      "count": 3,
-      "share": 0.158
-    },
-    "us_politics": {
-      "cluster": "us_politics",
+    "accountability_journalism": {
+      "cluster": "accountability_journalism",
       "count": 1,
-      "share": 0.053
-    },
-    "humor_memes": {
-      "cluster": "humor_memes",
-      "count": 1,
-      "share": 0.053
+      "share": 0.111
     }
   },
   "pole_balance": {
-    "left": 7,
-    "right": 12,
+    "left": 5,
+    "right": 4,
     "neutral": 0,
-    "left_share": 0.368,
-    "right_share": 0.632
+    "left_share": 0.556,
+    "right_share": 0.444
   }
 }
