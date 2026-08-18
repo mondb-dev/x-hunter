@@ -1,8 +1,8 @@
 {
   "schema_version": "1.0",
-  "generated_at": "2026-08-18T06:54:40.431Z",
+  "generated_at": "2026-08-18T09:54:37.193Z",
   "method": "mechanical_registry_v1",
-  "profiled_at": "2026-08-18T06:54:48.240Z",
+  "profiled_at": "2026-08-18T09:54:41.953Z",
   "sources": [
     {
       "domain": "theguardian.com",
@@ -11,7 +11,7 @@
       "first_seen_at": "2026-03-27T23:17:00Z",
       "last_seen_at": "2026-08-16T20:34:57.150Z",
       "discovery": {
-        "distinct_urls": 900,
+        "distinct_urls": 902,
         "example_urls": [
           "https://www.theguardian.com/us-news/2026/jun/23/trump-immigration-courthouse-arrest-policy",
           "https://www.theguardian.com/us-news/2026/jun/28/ice-minnesota-defending-democracy",
@@ -21,7 +21,7 @@
         ],
         "origin_counts": {
           "ontology_evidence": 47,
-          "reading_queue": 861,
+          "reading_queue": 864,
           "journals": 127,
           "articles": 5
         },
@@ -75,7 +75,7 @@
         "breadth": {
           "score": 0.94,
           "basis": [
-            "distinct_urls:900",
+            "distinct_urls:902",
             "distinct_axes:20",
             "origin_types:4"
           ]
@@ -115,7 +115,7 @@
             "newsroom_domain_pattern",
             "article_path_seen",
             "doi_or_identifier_path_seen",
-            "distinct_urls:900",
+            "distinct_urls:902",
             "distinct_axes:20",
             "origin_types:4",
             "referring_accounts:0",
@@ -221,16 +221,16 @@
           ]
         },
         "profile": {
-          "score": 0.009999999999999998,
-          "confidence": 0.55,
+          "score": 0.64,
+          "confidence": 0.65,
           "basis": [
             "meta_author:false",
             "published_time:false",
-            "canonical:false",
-            "about:false",
-            "contact:false",
-            "corrections:false",
-            "outbound_links:1",
+            "canonical:true",
+            "about:true",
+            "contact:true",
+            "corrections:true",
+            "outbound_links:18",
             "opinion_marker:false"
           ]
         },
@@ -252,11 +252,11 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-08-15T09:17:51.204Z",
+        "fetched_at": "2026-08-18T09:24:44.787Z",
         "homepage_url": "https://ojp.gov/",
         "example_url": "https://bjs.ojp.gov/library/publications/violent-victimization-race-or-hispanic-origin-2008-2012",
-        "homepage_status": 520,
-        "example_status": 520,
+        "homepage_status": 200,
+        "example_status": 404,
         "homepage_final_url": "https://www.ojp.gov/",
         "example_final_url": "https://bjs.ojp.gov/library/publications/violent-victimization-race-or-hispanic-origin-2008-2012",
         "homepage_content_type": "text/html; charset=UTF-8",
@@ -264,21 +264,21 @@
         "homepage": {
           "has_meta_author": false,
           "has_published_time": false,
-          "has_canonical": false,
-          "has_about_link": false,
-          "has_contact_link": false,
-          "has_corrections_link": false,
-          "outbound_links_count": 1,
+          "has_canonical": true,
+          "has_about_link": true,
+          "has_contact_link": true,
+          "has_corrections_link": true,
+          "outbound_links_count": 22,
           "opinion_marker": false
         },
         "example": {
           "has_meta_author": false,
           "has_published_time": false,
-          "has_canonical": false,
-          "has_about_link": false,
+          "has_canonical": true,
+          "has_about_link": true,
           "has_contact_link": false,
-          "has_corrections_link": false,
-          "outbound_links_count": 1,
+          "has_corrections_link": true,
+          "outbound_links_count": 18,
           "opinion_marker": false
         }
       }
@@ -702,7 +702,7 @@
       "first_seen_at": "2026-06-22T00:15:00Z",
       "last_seen_at": "2026-08-15T16:49:56.115Z",
       "discovery": {
-        "distinct_urls": 613,
+        "distinct_urls": 614,
         "example_urls": [
           "https://www.nytimes.com/2026/06/19/world/canada/frank-stronach-trial-guilty-sex-charges.html",
           "https://www.nytimes.com/2026/06/27/world/americas/mexican-officials-us-informants.html",
@@ -712,7 +712,7 @@
         ],
         "origin_counts": {
           "ontology_evidence": 21,
-          "reading_queue": 628,
+          "reading_queue": 631,
           "journals": 54
         },
         "distinct_referring_accounts": 0,
@@ -756,7 +756,7 @@
         "breadth": {
           "score": 0.8799999999999999,
           "basis": [
-            "distinct_urls:613",
+            "distinct_urls:614",
             "distinct_axes:12",
             "origin_types:3"
           ]
@@ -795,7 +795,7 @@
           "basis": [
             "newsroom_domain_pattern",
             "article_path_seen",
-            "distinct_urls:613",
+            "distinct_urls:614",
             "distinct_axes:12",
             "origin_types:3",
             "referring_accounts:0",
@@ -1217,7 +1217,7 @@
       "first_seen_at": "2026-06-26T07:05:00Z",
       "last_seen_at": "2026-08-16T20:34:57.150Z",
       "discovery": {
-        "distinct_urls": 555,
+        "distinct_urls": 557,
         "example_urls": [
           "https://www.bbc.co.uk/news/articles/cn8qxz6qypyo",
           "https://www.bbc.co.uk/news/articles/cn075j04pnyo?at_medium=RSS&amp;at_campaign=rss",
@@ -1227,7 +1227,7 @@
         ],
         "origin_counts": {
           "ontology_evidence": 6,
-          "reading_queue": 569,
+          "reading_queue": 571,
           "journals": 19,
           "articles": 1
         },
@@ -1263,7 +1263,7 @@
         "breadth": {
           "score": 0.8233333333333333,
           "basis": [
-            "distinct_urls:555",
+            "distinct_urls:557",
             "distinct_axes:4",
             "origin_types:4"
           ]
@@ -1301,7 +1301,7 @@
           "method": "mechanical_v1",
           "basis": [
             "newsroom_domain_pattern",
-            "distinct_urls:555",
+            "distinct_urls:557",
             "distinct_axes:4",
             "origin_types:4",
             "referring_accounts:0",
@@ -1727,7 +1727,7 @@
           "https://www.bbc.com/news/articles/cp3xqkxp3x5o?at_medium=RSS&amp;at_campaign=rss"
         ],
         "origin_counts": {
-          "reading_queue": 37
+          "reading_queue": 38
         },
         "distinct_referring_accounts": 0,
         "sample_referring_accounts": [],
@@ -1915,16 +1915,16 @@
           ]
         },
         "profile": {
-          "score": 0.52,
-          "confidence": 0.65,
+          "score": 0,
+          "confidence": 0.55,
           "basis": [
             "meta_author:false",
-            "published_time:true",
-            "canonical:true",
+            "published_time:false",
+            "canonical:false",
             "about:false",
-            "contact:true",
+            "contact:false",
             "corrections:false",
-            "outbound_links:30",
+            "outbound_links:0",
             "opinion_marker:false"
           ]
         },
@@ -1945,33 +1945,33 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-08-15T09:17:52.514Z",
+        "fetched_at": "2026-08-18T09:24:45.130Z",
         "homepage_url": "https://amnesty.org/",
         "example_url": "https://www.amnesty.org/en/latest/news/2026/06/burkina-serge-oulon/",
-        "homepage_status": 200,
-        "example_status": 200,
-        "homepage_final_url": "https://www.amnesty.org/en/",
+        "homepage_status": 403,
+        "example_status": 403,
+        "homepage_final_url": "https://amnesty.org/",
         "example_final_url": "https://www.amnesty.org/en/latest/news/2026/06/burkina-serge-oulon/",
         "homepage_content_type": "text/html; charset=UTF-8",
         "example_content_type": "text/html; charset=UTF-8",
         "homepage": {
           "has_meta_author": false,
-          "has_published_time": true,
-          "has_canonical": true,
+          "has_published_time": false,
+          "has_canonical": false,
           "has_about_link": false,
-          "has_contact_link": true,
+          "has_contact_link": false,
           "has_corrections_link": false,
-          "outbound_links_count": 7,
+          "outbound_links_count": 0,
           "opinion_marker": false
         },
         "example": {
           "has_meta_author": false,
-          "has_published_time": true,
-          "has_canonical": true,
+          "has_published_time": false,
+          "has_canonical": false,
           "has_about_link": false,
-          "has_contact_link": true,
+          "has_contact_link": false,
           "has_corrections_link": false,
-          "outbound_links_count": 30,
+          "outbound_links_count": 0,
           "opinion_marker": false
         }
       }
@@ -3214,7 +3214,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-08-15T09:17:53.274Z",
+        "fetched_at": "2026-08-18T09:24:45.479Z",
         "homepage_url": "https://hrw.org/",
         "example_url": "https://www.hrw.org/news/2026/06/18/support-builds-to-protect-children-from-crimes-against-humanity",
         "homepage_status": 200,
@@ -3503,7 +3503,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-08-15T09:17:54.200Z",
+        "fetched_at": "2026-08-18T09:24:47.146Z",
         "homepage_url": "https://inquirer.net/",
         "example_url": "https://newsinfo.inquirer.net/2266316/nbi-on-cayetano-position-that-cant-be-defended-by-facts-is-done-with-insults",
         "homepage_status": 200,
@@ -11887,7 +11887,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-08-15T07:47:46.494Z",
+        "fetched_at": "2026-08-18T07:54:34.956Z",
         "homepage_url": "https://bitget.com/",
         "example_url": "https://partner.bitget.com/bg/SMTwittercfd?twclid=2dlbmypv93aoxlr6pzrilrub21",
         "homepage_status": null,
@@ -13801,7 +13801,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-08-15T07:47:47.811Z",
+        "fetched_at": "2026-08-18T07:54:36.269Z",
         "homepage_url": "https://sentinels.gg/",
         "example_url": "https://shop.sentinels.gg/collections/sen-metallics?twclid=2eikc5h5also5tonotr2q4ciq6",
         "homepage_status": 200,
@@ -17087,7 +17087,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-08-15T07:47:48.114Z",
+        "fetched_at": "2026-08-18T07:54:36.512Z",
         "homepage_url": "https://aitradingbotreview.com/",
         "example_url": "https://aitradingbotreview.com/cointech2u-okx-testimonial/?utm_source=x&utm_medium=cpc&utm_campaign=ct2u_cici_testimonial_v1&utm_content=v3_architecture&twclid=29n2yshl33pi6gwhsndaezd9zg",
         "homepage_status": 200,
@@ -18731,7 +18731,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-08-15T07:47:48.336Z",
+        "fetched_at": "2026-08-18T07:54:36.909Z",
         "homepage_url": "https://puter.com/",
         "example_url": "https://developer.puter.com/?utm_source=x&utm_medium=paid_social&utm_campaign=backend_ai&twclid=27ht9opz02h3rp1i1jsomffb4m",
         "homepage_status": 200,
@@ -18747,7 +18747,7 @@
           "has_about_link": false,
           "has_contact_link": false,
           "has_corrections_link": false,
-          "outbound_links_count": 10,
+          "outbound_links_count": 11,
           "opinion_marker": false
         },
         "example": {
@@ -20506,7 +20506,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-08-15T09:47:48.533Z",
+        "fetched_at": "2026-08-18T09:54:38.367Z",
         "homepage_url": "https://vryzmir.com/",
         "example_url": "https://www.vryzmir.com/products/portable-silicone-ice-ball-maker-kettle?utm_source=twitter&utm_campaign=42166381&twclid=2h87hfhbmpwrcy696fcioag1c",
         "homepage_status": 403,
@@ -35561,7 +35561,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-08-14T10:49:04.943Z",
+        "fetched_at": "2026-08-18T08:24:41.463Z",
         "homepage_url": "https://thexploitgame.com/",
         "example_url": "https://thexploitgame.com/?twclid=2943mz6up9mq92itj5gfw5vpxs",
         "homepage_status": 200,
@@ -35935,7 +35935,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-08-15T05:15:48.626Z",
+        "fetched_at": "2026-08-18T08:24:43.088Z",
         "homepage_url": "https://varrd.com/",
         "example_url": "https://varrd.com/?twclid=222hhmjo1hjeaafibt54abkalz",
         "homepage_status": 200,
@@ -36032,7 +36032,7 @@
           ]
         },
         "profile": {
-          "score": 0.16999999999999998,
+          "score": 0.15999999999999998,
           "confidence": 0.55,
           "basis": [
             "meta_author:false",
@@ -36041,7 +36041,7 @@
             "about:false",
             "contact:true",
             "corrections:false",
-            "outbound_links:5",
+            "outbound_links:4",
             "opinion_marker:false"
           ]
         },
@@ -36061,7 +36061,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-08-15T05:15:49.727Z",
+        "fetched_at": "2026-08-18T08:24:45.040Z",
         "homepage_url": "https://moxt.ai/",
         "example_url": "https://moxt.ai/?utm_source=x&utm_medium=paid_social&utm_campaign=x-brand-build-your-ai-team&utm_content=video-49s&utm_term=en-desktop&twclid=24fse5wprkux1ktw6we6w27x5c",
         "homepage_status": 200,
@@ -36077,7 +36077,7 @@
           "has_about_link": false,
           "has_contact_link": true,
           "has_corrections_link": false,
-          "outbound_links_count": 5,
+          "outbound_links_count": 4,
           "opinion_marker": false
         },
         "example": {
@@ -36087,7 +36087,7 @@
           "has_about_link": false,
           "has_contact_link": true,
           "has_corrections_link": false,
-          "outbound_links_count": 5,
+          "outbound_links_count": 4,
           "opinion_marker": false
         }
       }
@@ -36187,7 +36187,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-08-15T06:15:44.429Z",
+        "fetched_at": "2026-08-18T08:24:46.771Z",
         "homepage_url": "https://usekeel.io/",
         "example_url": "https://usekeel.io/run?twclid=2bgfmx5me1bzmqklq02dv94p1e",
         "homepage_status": 200,
@@ -36313,7 +36313,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-08-15T06:15:47.149Z",
+        "fetched_at": "2026-08-18T09:54:40.721Z",
         "homepage_url": "https://codenewsletter.ai/",
         "example_url": "https://codenewsletter.ai/subscribe?utm_source=twitter_ads_flal_1_claude_code_v2&twclid=2efow5tezir2vqfxf73rgau0vh",
         "homepage_status": 200,
@@ -36410,16 +36410,16 @@
           ]
         },
         "profile": {
-          "score": 0.03,
+          "score": 0.22,
           "confidence": 0.55,
           "basis": [
             "meta_author:false",
             "published_time:false",
-            "canonical:false",
+            "canonical:true",
             "about:false",
-            "contact:false",
+            "contact:true",
             "corrections:false",
-            "outbound_links:3",
+            "outbound_links:0",
             "opinion_marker:false"
           ]
         },
@@ -36439,33 +36439,33 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-08-15T06:15:47.602Z",
+        "fetched_at": "2026-08-18T09:54:41.281Z",
         "homepage_url": "https://buildordie.ai/",
         "example_url": "https://buildordie.ai/?twclid=2dk5bzhoclutd1xq1e7jd5z6rq",
-        "homepage_status": 530,
-        "example_status": 530,
+        "homepage_status": 200,
+        "example_status": 200,
         "homepage_final_url": "https://buildordie.ai/",
         "example_final_url": "https://buildordie.ai/?twclid=2dk5bzhoclutd1xq1e7jd5z6rq",
-        "homepage_content_type": "text/html; charset=UTF-8",
-        "example_content_type": "text/html; charset=UTF-8",
+        "homepage_content_type": "text/html; charset=utf-8",
+        "example_content_type": "text/html; charset=utf-8",
         "homepage": {
           "has_meta_author": false,
           "has_published_time": false,
-          "has_canonical": false,
+          "has_canonical": true,
           "has_about_link": false,
-          "has_contact_link": false,
+          "has_contact_link": true,
           "has_corrections_link": false,
-          "outbound_links_count": 3,
+          "outbound_links_count": 0,
           "opinion_marker": false
         },
         "example": {
           "has_meta_author": false,
           "has_published_time": false,
-          "has_canonical": false,
+          "has_canonical": true,
           "has_about_link": false,
-          "has_contact_link": false,
+          "has_contact_link": true,
           "has_corrections_link": false,
-          "outbound_links_count": 3,
+          "outbound_links_count": 0,
           "opinion_marker": false
         }
       }
@@ -36536,7 +36536,7 @@
           ]
         },
         "profile": {
-          "score": 0.17,
+          "score": 0.14,
           "confidence": 0.55,
           "basis": [
             "meta_author:false",
@@ -36545,7 +36545,7 @@
             "about:false",
             "contact:false",
             "corrections:false",
-            "outbound_links:7",
+            "outbound_links:4",
             "opinion_marker:false"
           ]
         },
@@ -36565,7 +36565,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-08-15T06:45:44.312Z",
+        "fetched_at": "2026-08-18T09:54:41.953Z",
         "homepage_url": "https://constella.app/",
         "example_url": "https://constella.app/?twclid=27y7gzef47njy1aqk6w8xg9x6q",
         "homepage_status": 200,
@@ -36581,7 +36581,7 @@
           "has_about_link": false,
           "has_contact_link": false,
           "has_corrections_link": false,
-          "outbound_links_count": 7,
+          "outbound_links_count": 4,
           "opinion_marker": false
         },
         "example": {
@@ -36591,7 +36591,7 @@
           "has_about_link": false,
           "has_contact_link": false,
           "has_corrections_link": false,
-          "outbound_links_count": 7,
+          "outbound_links_count": 4,
           "opinion_marker": false
         }
       }
