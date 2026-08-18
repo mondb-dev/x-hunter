@@ -1,8 +1,8 @@
 {
   "schema_version": "1.0",
-  "generated_at": "2026-08-18T09:54:37.193Z",
+  "generated_at": "2026-08-18T11:24:48.596Z",
   "method": "mechanical_registry_v1",
-  "profiled_at": "2026-08-18T09:54:41.953Z",
+  "profiled_at": "2026-08-18T11:24:57.649Z",
   "sources": [
     {
       "domain": "theguardian.com",
@@ -11,7 +11,7 @@
       "first_seen_at": "2026-03-27T23:17:00Z",
       "last_seen_at": "2026-08-16T20:34:57.150Z",
       "discovery": {
-        "distinct_urls": 902,
+        "distinct_urls": 903,
         "example_urls": [
           "https://www.theguardian.com/us-news/2026/jun/23/trump-immigration-courthouse-arrest-policy",
           "https://www.theguardian.com/us-news/2026/jun/28/ice-minnesota-defending-democracy",
@@ -21,7 +21,7 @@
         ],
         "origin_counts": {
           "ontology_evidence": 47,
-          "reading_queue": 864,
+          "reading_queue": 865,
           "journals": 127,
           "articles": 5
         },
@@ -75,7 +75,7 @@
         "breadth": {
           "score": 0.94,
           "basis": [
-            "distinct_urls:902",
+            "distinct_urls:903",
             "distinct_axes:20",
             "origin_types:4"
           ]
@@ -115,7 +115,7 @@
             "newsroom_domain_pattern",
             "article_path_seen",
             "doi_or_identifier_path_seen",
-            "distinct_urls:902",
+            "distinct_urls:903",
             "distinct_axes:20",
             "origin_types:4",
             "referring_accounts:0",
@@ -702,7 +702,7 @@
       "first_seen_at": "2026-06-22T00:15:00Z",
       "last_seen_at": "2026-08-15T16:49:56.115Z",
       "discovery": {
-        "distinct_urls": 614,
+        "distinct_urls": 615,
         "example_urls": [
           "https://www.nytimes.com/2026/06/19/world/canada/frank-stronach-trial-guilty-sex-charges.html",
           "https://www.nytimes.com/2026/06/27/world/americas/mexican-officials-us-informants.html",
@@ -712,7 +712,7 @@
         ],
         "origin_counts": {
           "ontology_evidence": 21,
-          "reading_queue": 631,
+          "reading_queue": 632,
           "journals": 54
         },
         "distinct_referring_accounts": 0,
@@ -756,7 +756,7 @@
         "breadth": {
           "score": 0.8799999999999999,
           "basis": [
-            "distinct_urls:614",
+            "distinct_urls:615",
             "distinct_axes:12",
             "origin_types:3"
           ]
@@ -795,7 +795,7 @@
           "basis": [
             "newsroom_domain_pattern",
             "article_path_seen",
-            "distinct_urls:614",
+            "distinct_urls:615",
             "distinct_axes:12",
             "origin_types:3",
             "referring_accounts:0",
@@ -1217,7 +1217,7 @@
       "first_seen_at": "2026-06-26T07:05:00Z",
       "last_seen_at": "2026-08-16T20:34:57.150Z",
       "discovery": {
-        "distinct_urls": 557,
+        "distinct_urls": 558,
         "example_urls": [
           "https://www.bbc.co.uk/news/articles/cn8qxz6qypyo",
           "https://www.bbc.co.uk/news/articles/cn075j04pnyo?at_medium=RSS&amp;at_campaign=rss",
@@ -1227,7 +1227,7 @@
         ],
         "origin_counts": {
           "ontology_evidence": 6,
-          "reading_queue": 571,
+          "reading_queue": 572,
           "journals": 19,
           "articles": 1
         },
@@ -1263,7 +1263,7 @@
         "breadth": {
           "score": 0.8233333333333333,
           "basis": [
-            "distinct_urls:557",
+            "distinct_urls:558",
             "distinct_axes:4",
             "origin_types:4"
           ]
@@ -1301,7 +1301,7 @@
           "method": "mechanical_v1",
           "basis": [
             "newsroom_domain_pattern",
-            "distinct_urls:557",
+            "distinct_urls:558",
             "distinct_axes:4",
             "origin_types:4",
             "referring_accounts:0",
@@ -6806,7 +6806,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-08-15T10:47:54.845Z",
+        "fetched_at": "2026-08-18T10:54:53.503Z",
         "homepage_url": "https://tr.ee/",
         "example_url": "https://tr.ee/wndhL7?twclid=22lr9koznm9ghbdy0s9178q7j0",
         "homepage_status": 200,
@@ -18858,7 +18858,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-08-15T10:47:55.581Z",
+        "fetched_at": "2026-08-18T10:54:54.689Z",
         "homepage_url": "https://agentstakes.gg/",
         "example_url": "https://agentstakes.gg/?twclid=2cp3uw3rrtvzfe93ubg50npzc5",
         "homepage_status": 200,
@@ -36691,7 +36691,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-08-15T06:45:44.809Z",
+        "fetched_at": "2026-08-18T10:54:54.985Z",
         "homepage_url": "https://karma.domains/",
         "example_url": "https://karma.domains/app/?utm_source=x.com&utm_medium=cpc&utm_campaign=targeting&utm_content=interests_seo",
         "homepage_status": 403,
@@ -36788,16 +36788,16 @@
           ]
         },
         "profile": {
-          "score": 0.39,
-          "confidence": 0.65,
+          "score": 0,
+          "confidence": 0.55,
           "basis": [
             "meta_author:false",
             "published_time:false",
-            "canonical:true",
-            "about:true",
-            "contact:true",
+            "canonical:false",
+            "about:false",
+            "contact:false",
             "corrections:false",
-            "outbound_links:3",
+            "outbound_links:0",
             "opinion_marker:false"
           ]
         },
@@ -36817,33 +36817,33 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-08-15T06:45:46.517Z",
+        "fetched_at": "2026-08-18T10:54:57.113Z",
         "homepage_url": "https://propercloth.com/",
         "example_url": "https://propercloth.com/dress-shirts/jackson-blue-red-and-yellow-country-plaid-580653.html?utm_source=X&twclid=2auvzg6t8okkwlcwbl0m6jjjpm&utm_content=TWITTER_TIMELINE&utm_campaign=41332274&utm_medium=paidsocial&utm_term=twitter",
-        "homepage_status": 200,
-        "example_status": 200,
+        "homepage_status": 405,
+        "example_status": 405,
         "homepage_final_url": "https://propercloth.com/",
         "example_final_url": "https://propercloth.com/dress-shirts/jackson-blue-red-and-yellow-country-plaid-580653.html?utm_source=X&twclid=2auvzg6t8okkwlcwbl0m6jjjpm&utm_content=TWITTER_TIMELINE&utm_campaign=41332274&utm_medium=paidsocial&utm_term=twitter",
-        "homepage_content_type": "text/html; charset=utf-8",
-        "example_content_type": "text/html; charset=utf-8",
+        "homepage_content_type": "text/html; charset=UTF-8",
+        "example_content_type": "text/html; charset=UTF-8",
         "homepage": {
           "has_meta_author": false,
           "has_published_time": false,
           "has_canonical": false,
-          "has_about_link": true,
-          "has_contact_link": true,
+          "has_about_link": false,
+          "has_contact_link": false,
           "has_corrections_link": false,
-          "outbound_links_count": 3,
+          "outbound_links_count": 0,
           "opinion_marker": false
         },
         "example": {
           "has_meta_author": false,
           "has_published_time": false,
-          "has_canonical": true,
-          "has_about_link": true,
-          "has_contact_link": true,
+          "has_canonical": false,
+          "has_about_link": false,
+          "has_contact_link": false,
           "has_corrections_link": false,
-          "outbound_links_count": 3,
+          "outbound_links_count": 0,
           "opinion_marker": false
         }
       }
@@ -36914,13 +36914,13 @@
           ]
         },
         "profile": {
-          "score": 0.32,
-          "confidence": 0.65,
+          "score": 0.18,
+          "confidence": 0.55,
           "basis": [
             "meta_author:false",
             "published_time:false",
             "canonical:true",
-            "about:true",
+            "about:false",
             "contact:false",
             "corrections:false",
             "outbound_links:8",
@@ -36943,12 +36943,12 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-08-15T06:45:49.783Z",
+        "fetched_at": "2026-08-18T11:24:51.959Z",
         "homepage_url": "https://robinhood.com/",
         "example_url": "https://robinhood.com/us/en/about/crypto/?twclid=29pd7fgrhb1gsdhy8smyxe6kbg",
         "homepage_status": 200,
         "example_status": 200,
-        "homepage_final_url": "https://robinhood.com/us/en/",
+        "homepage_final_url": "https://robinhood.com/sg/en/",
         "example_final_url": "https://robinhood.com/us/en/crypto/?twclid=29pd7fgrhb1gsdhy8smyxe6kbg",
         "homepage_content_type": "text/html; charset=utf-8",
         "example_content_type": "text/html; charset=utf-8",
@@ -36956,10 +36956,10 @@
           "has_meta_author": false,
           "has_published_time": false,
           "has_canonical": true,
-          "has_about_link": true,
+          "has_about_link": false,
           "has_contact_link": false,
           "has_corrections_link": false,
-          "outbound_links_count": 9,
+          "outbound_links_count": 7,
           "opinion_marker": false
         },
         "example": {
@@ -37069,7 +37069,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-08-15T08:17:49.868Z",
+        "fetched_at": "2026-08-18T11:24:55.287Z",
         "homepage_url": "https://novelmint.ai/",
         "example_url": "https://novelmint.ai/?twclid=24swsjnpk4f6tjvwc81a9jb0ee",
         "homepage_status": 200,
@@ -37166,14 +37166,14 @@
           ]
         },
         "profile": {
-          "score": 0.22,
+          "score": 0,
           "confidence": 0.55,
           "basis": [
             "meta_author:false",
             "published_time:false",
-            "canonical:true",
+            "canonical:false",
             "about:false",
-            "contact:true",
+            "contact:false",
             "corrections:false",
             "outbound_links:0",
             "opinion_marker:false"
@@ -37195,29 +37195,29 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-08-15T08:17:54.080Z",
+        "fetched_at": "2026-08-18T11:24:55.731Z",
         "homepage_url": "https://instacart.com/",
         "example_url": "https://www.instacart.com/store/brands/budweiser?ic_source=social&ic_campaignid=2026&twclid=2dlv3d1a0x9ht77bw7gqwrn3ou",
-        "homepage_status": 200,
-        "example_status": 200,
-        "homepage_final_url": "https://www.instacart.com/",
+        "homepage_status": 403,
+        "example_status": 403,
+        "homepage_final_url": "https://instacart.com/",
         "example_final_url": "https://www.instacart.com/store/brands/budweiser?ic_source=social&ic_campaignid=2026&twclid=2dlv3d1a0x9ht77bw7gqwrn3ou",
-        "homepage_content_type": "text/html; charset=utf-8",
-        "example_content_type": "text/html; charset=utf-8",
+        "homepage_content_type": "text/html",
+        "example_content_type": "text/html",
         "homepage": {
           "has_meta_author": false,
           "has_published_time": false,
-          "has_canonical": true,
+          "has_canonical": false,
           "has_about_link": false,
-          "has_contact_link": true,
+          "has_contact_link": false,
           "has_corrections_link": false,
-          "outbound_links_count": 11,
+          "outbound_links_count": 0,
           "opinion_marker": false
         },
         "example": {
           "has_meta_author": false,
           "has_published_time": false,
-          "has_canonical": true,
+          "has_canonical": false,
           "has_about_link": false,
           "has_contact_link": false,
           "has_corrections_link": false,
@@ -37321,7 +37321,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-08-15T08:17:59.844Z",
+        "fetched_at": "2026-08-18T11:24:57.649Z",
         "homepage_url": "https://tow.dev/",
         "example_url": "https://tow.dev/?utm_source=twitter&utm_medium=cpc&utm_campaign=launch&utm_id=twitter_launch&twclid=26xxdbf1ybv4rz2smsfk823weq",
         "homepage_status": 200,

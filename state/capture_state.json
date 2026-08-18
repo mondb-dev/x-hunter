@@ -1,95 +1,14 @@
 {
-  "checked_at": "2026-08-17T11:27:53.993Z",
-  "evidence_24h": 9,
-  "unique_sources": 4,
-  "status": "captured",
-  "alerts": [
-    {
-      "type": "source_dominance",
-      "severity": "high",
-      "detail": "@unknown accounts for 67% of today's evidence (6/9)",
-      "username": "unknown",
-      "share": 0.667
-    }
-  ],
-  "summary": "1 capture alert(s) detected:\n[HIGH] @unknown accounts for 67% of today's evidence (6/9)",
-  "source_concentration": {
-    "unknown": {
-      "username": "unknown",
-      "count": 6,
-      "share": 0.667
-    },
-    "rpsagainsttrump": {
-      "username": "rpsagainsttrump",
-      "count": 1,
-      "share": 0.111
-    },
-    "atrupar": {
-      "username": "atrupar",
-      "count": 1,
-      "share": 0.111
-    },
-    "facethenation": {
-      "username": "facethenation",
-      "count": 1,
-      "share": 0.111
-    }
-  },
-  "axis_concentration": {
-    "axis_power_accountability": {
-      "axis_id": "axis_power_accountability",
-      "label": "Power, Institutions, and Rule of Law",
-      "count": 3,
-      "share": 0.333
-    },
-    "axis_procedural_governance_accountability_v1": {
-      "axis_id": "axis_procedural_governance_accountability_v1",
-      "label": "Procedural Governance vs. Genuine Accountability",
-      "count": 2,
-      "share": 0.222
-    },
-    "axis_ai_societal_impact_v1": {
-      "axis_id": "axis_ai_societal_impact_v1",
-      "label": "Societal Impact and Ethical Concerns of AI/Robots",
-      "count": 1,
-      "share": 0.111
-    },
-    "axis_public_trust_safety_crisis_v1": {
-      "axis_id": "axis_public_trust_safety_crisis_v1",
-      "label": "Public Trust in Safety and Crisis Communication",
-      "count": 1,
-      "share": 0.111
-    },
-    "axis_political_moral_conduct_v1": {
-      "axis_id": "axis_political_moral_conduct_v1",
-      "label": "Political Integrity and Moral Conduct in Public Service",
-      "count": 1,
-      "share": 0.111
-    },
-    "axis_human_rights_exploitation_v1": {
-      "axis_id": "axis_human_rights_exploitation_v1",
-      "label": "Human Rights and Exploitation",
-      "count": 1,
-      "share": 0.111
-    }
-  },
-  "cluster_concentration": {
-    "unknown": {
-      "cluster": "unknown",
-      "count": 8,
-      "share": 0.889
-    },
-    "accountability_journalism": {
-      "cluster": "accountability_journalism",
-      "count": 1,
-      "share": 0.111
-    }
-  },
+  "checked_at": "2026-08-18T11:58:39.938Z",
+  "evidence_24h": 0,
+  "alerts": [],
+  "source_concentration": {},
+  "axis_concentration": {},
   "pole_balance": {
-    "left": 5,
-    "right": 4,
-    "neutral": 0,
-    "left_share": 0.556,
-    "right_share": 0.444
-  }
+    "left": 0,
+    "right": 0,
+    "neutral": 0
+  },
+  "status": "clean",
+  "summary": "No evidence collected in the last 24h — nothing to assess."
 }
