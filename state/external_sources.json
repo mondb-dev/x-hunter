@@ -1,8 +1,8 @@
 {
   "schema_version": "1.0",
-  "generated_at": "2026-08-18T00:54:27.527Z",
+  "generated_at": "2026-08-18T03:54:33.705Z",
   "method": "mechanical_registry_v1",
-  "profiled_at": "2026-08-18T00:54:32.974Z",
+  "profiled_at": "2026-08-18T03:54:58.284Z",
   "sources": [
     {
       "domain": "theguardian.com",
@@ -11,7 +11,7 @@
       "first_seen_at": "2026-03-27T23:17:00Z",
       "last_seen_at": "2026-08-16T20:34:57.150Z",
       "discovery": {
-        "distinct_urls": 896,
+        "distinct_urls": 898,
         "example_urls": [
           "https://www.theguardian.com/us-news/2026/jun/23/trump-immigration-courthouse-arrest-policy",
           "https://www.theguardian.com/us-news/2026/jun/28/ice-minnesota-defending-democracy",
@@ -21,7 +21,7 @@
         ],
         "origin_counts": {
           "ontology_evidence": 47,
-          "reading_queue": 857,
+          "reading_queue": 859,
           "journals": 127,
           "articles": 5
         },
@@ -75,7 +75,7 @@
         "breadth": {
           "score": 0.94,
           "basis": [
-            "distinct_urls:896",
+            "distinct_urls:898",
             "distinct_axes:20",
             "origin_types:4"
           ]
@@ -115,7 +115,7 @@
             "newsroom_domain_pattern",
             "article_path_seen",
             "doi_or_identifier_path_seen",
-            "distinct_urls:896",
+            "distinct_urls:898",
             "distinct_axes:20",
             "origin_types:4",
             "referring_accounts:0",
@@ -458,7 +458,7 @@
           "https://careers.cbp.gov/s/connect-to-recruiter?campaignid=701SJ00000BV0tR&utm_source=X&utm_medium=paid_social&utm_campaign=MGC_B5SXtXt5J5T&twclid=2f2100ywgvzunnowbnhrpi34g1"
         ],
         "origin_counts": {
-          "reading_queue": 19,
+          "reading_queue": 20,
           "feed_buffer_reply": 7
         },
         "distinct_referring_accounts": 1,
@@ -583,7 +583,7 @@
           "https://www.justice.gov/usao-ri/pr/two-business-executives-plead-guilty-tech-support-fraud-scheme?twclid=2f42440xock41qvr5cwo18o539"
         ],
         "origin_counts": {
-          "reading_queue": 19,
+          "reading_queue": 20,
           "feed_buffer_reply": 2,
           "feed_buffer": 1
         },
@@ -702,7 +702,7 @@
       "first_seen_at": "2026-06-22T00:15:00Z",
       "last_seen_at": "2026-08-15T16:49:56.115Z",
       "discovery": {
-        "distinct_urls": 610,
+        "distinct_urls": 611,
         "example_urls": [
           "https://www.nytimes.com/2026/06/19/world/canada/frank-stronach-trial-guilty-sex-charges.html",
           "https://www.nytimes.com/2026/06/27/world/americas/mexican-officials-us-informants.html",
@@ -712,7 +712,7 @@
         ],
         "origin_counts": {
           "ontology_evidence": 21,
-          "reading_queue": 625,
+          "reading_queue": 626,
           "journals": 54
         },
         "distinct_referring_accounts": 0,
@@ -756,7 +756,7 @@
         "breadth": {
           "score": 0.8799999999999999,
           "basis": [
-            "distinct_urls:610",
+            "distinct_urls:611",
             "distinct_axes:12",
             "origin_types:3"
           ]
@@ -795,7 +795,7 @@
           "basis": [
             "newsroom_domain_pattern",
             "article_path_seen",
-            "distinct_urls:610",
+            "distinct_urls:611",
             "distinct_axes:12",
             "origin_types:3",
             "referring_accounts:0",
@@ -805,7 +805,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-08-15T01:45:44.417Z",
+        "fetched_at": "2026-08-18T01:54:27.481Z",
         "homepage_url": "https://nytimes.com/",
         "example_url": "https://www.nytimes.com/2026/06/19/world/canada/frank-stronach-trial-guilty-sex-charges.html",
         "homepage_status": 200,
@@ -816,7 +816,7 @@
         "example_content_type": "text/html;charset=utf-8",
         "homepage": {
           "has_meta_author": false,
-          "has_published_time": false,
+          "has_published_time": true,
           "has_canonical": true,
           "has_about_link": false,
           "has_contact_link": false,
@@ -977,7 +977,7 @@
         ],
         "origin_counts": {
           "ontology_evidence": 1,
-          "reading_queue": 16
+          "reading_queue": 17
         },
         "distinct_referring_accounts": 0,
         "sample_referring_accounts": [],
@@ -1217,7 +1217,7 @@
       "first_seen_at": "2026-06-26T07:05:00Z",
       "last_seen_at": "2026-08-16T20:34:57.150Z",
       "discovery": {
-        "distinct_urls": 552,
+        "distinct_urls": 554,
         "example_urls": [
           "https://www.bbc.co.uk/news/articles/cn8qxz6qypyo",
           "https://www.bbc.co.uk/news/articles/cn075j04pnyo?at_medium=RSS&amp;at_campaign=rss",
@@ -1227,7 +1227,7 @@
         ],
         "origin_counts": {
           "ontology_evidence": 6,
-          "reading_queue": 566,
+          "reading_queue": 568,
           "journals": 19,
           "articles": 1
         },
@@ -1263,7 +1263,7 @@
         "breadth": {
           "score": 0.8233333333333333,
           "basis": [
-            "distinct_urls:552",
+            "distinct_urls:554",
             "distinct_axes:4",
             "origin_types:4"
           ]
@@ -1301,7 +1301,7 @@
           "method": "mechanical_v1",
           "basis": [
             "newsroom_domain_pattern",
-            "distinct_urls:552",
+            "distinct_urls:554",
             "distinct_axes:4",
             "origin_types:4",
             "referring_accounts:0",
@@ -1680,7 +1680,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-08-15T01:46:04.430Z",
+        "fetched_at": "2026-08-18T01:54:47.491Z",
         "homepage_url": "https://washingtonpost.com/",
         "example_url": "https://www.washingtonpost.com/world/2026/04/13/us-iran-blockade-strait-hormuz-oil/",
         "homepage_status": null,
@@ -1804,7 +1804,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-08-15T01:46:04.941Z",
+        "fetched_at": "2026-08-18T01:54:47.990Z",
         "homepage_url": "https://bbc.com/",
         "example_url": "https://www.bbc.com/news/articles/cgmdw4vn7y2o?at_medium=RSS&amp;at_campaign=rss",
         "homepage_status": 200,
@@ -1993,7 +1993,7 @@
         ],
         "origin_counts": {
           "ontology_evidence": 35,
-          "reading_queue": 26,
+          "reading_queue": 27,
           "journals": 64,
           "articles": 1
         },
@@ -2251,7 +2251,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-08-15T01:46:05.794Z",
+        "fetched_at": "2026-08-18T01:54:48.721Z",
         "homepage_url": "https://google.com/",
         "example_url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQG8zTjzNOXrSBZwvSTLobfen2T2Mfxyn8MYVxW4sIU6cWottxkV4pJs_p6fwS7LJGs_vuED8LS-hCfYDaWBVPP6g5GilaCYMrJml-ow5K6SCv_H_b1Dl2x1bJE8PTS68J1lar6YIqGro0gdLxt0MIOMv-l1vVmmO0WJQtLSOEieMA6I7dl7eRgRC0BRXQWnC1DBXjH9CBNLq5ag1EbSnkyImyoNmXyv0qV7VQUvoAHc5OC2odagG5YXdhPj4Im_aZZUwd8=",
         "homepage_status": 200,
@@ -2385,7 +2385,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-08-15T03:15:41.362Z",
+        "fetched_at": "2026-08-18T03:24:45.780Z",
         "homepage_url": "https://cbsnews.com/",
         "example_url": "https://www.cbsnews.com/news/us-naval-blockade-iran-ports-2026/",
         "homepage_status": 200,
@@ -2522,7 +2522,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-08-15T03:15:41.395Z",
+        "fetched_at": "2026-08-18T03:24:45.819Z",
         "homepage_url": "https://com.ph/",
         "example_url": "https://x.tv5.com.ph/news/national/read/arrest-warrants-issued-vs-discayas-over-malversation-graft-charges-tied-to-flood-control-projects-malolos-court",
         "homepage_status": null,
@@ -13928,7 +13928,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-08-15T03:15:41.756Z",
+        "fetched_at": "2026-08-18T03:24:46.605Z",
         "homepage_url": "https://abey.com/",
         "example_url": "https://abey.com/?twclid=245i7ob4cgmg7v7epadtxl7ku4",
         "homepage_status": 200,
@@ -23672,7 +23672,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-08-15T02:15:38.581Z",
+        "fetched_at": "2026-08-18T02:24:27.907Z",
         "homepage_url": "https://simba.sg/",
         "example_url": "https://simba.sg/home?twclid=246gm13qkkeak3bq6hmc879ar",
         "homepage_status": 200,
@@ -32430,16 +32430,16 @@
           ]
         },
         "profile": {
-          "score": 0.3,
-          "confidence": 0.65,
+          "score": 0,
+          "confidence": 0.55,
           "basis": [
             "meta_author:false",
             "published_time:false",
             "canonical:false",
-            "about:true",
-            "contact:true",
+            "about:false",
+            "contact:false",
             "corrections:false",
-            "outbound_links:4",
+            "outbound_links:0",
             "opinion_marker:false"
           ]
         },
@@ -32459,33 +32459,33 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-08-14T22:49:22.710Z",
+        "fetched_at": "2026-08-18T02:24:29.352Z",
         "homepage_url": "https://dynamicocean.net/",
         "example_url": "https://dynamicocean.net/?twclid=2576n00y5l1125y8xeb3lcwmz1",
-        "homepage_status": 200,
-        "example_status": 200,
+        "homepage_status": null,
+        "example_status": null,
         "homepage_final_url": "https://dynamicocean.net/",
         "example_final_url": "https://dynamicocean.net/?twclid=2576n00y5l1125y8xeb3lcwmz1",
-        "homepage_content_type": "text/html;charset=UTF-8",
-        "example_content_type": "text/html;charset=UTF-8",
+        "homepage_content_type": "",
+        "example_content_type": "",
         "homepage": {
           "has_meta_author": false,
           "has_published_time": false,
           "has_canonical": false,
-          "has_about_link": true,
-          "has_contact_link": true,
+          "has_about_link": false,
+          "has_contact_link": false,
           "has_corrections_link": false,
-          "outbound_links_count": 4,
+          "outbound_links_count": 0,
           "opinion_marker": false
         },
         "example": {
           "has_meta_author": false,
           "has_published_time": false,
           "has_canonical": false,
-          "has_about_link": true,
-          "has_contact_link": true,
+          "has_about_link": false,
+          "has_contact_link": false,
           "has_corrections_link": false,
-          "outbound_links_count": 4,
+          "outbound_links_count": 0,
           "opinion_marker": false
         }
       }
@@ -32709,23 +32709,23 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-08-14T21:49:27.916Z",
+        "fetched_at": "2026-08-18T02:24:30.238Z",
         "homepage_url": "https://coingecko.com/",
         "example_url": "https://www.coingecko.com/en/api/acquisition/entry-plans?utm_source=twitter&utm_medium=ad&utm_campaign=bau&utm_content=mar26-gt-brand-ad-free-v1&audience_segment=prospecting&twclid=26xrmua0k4othy65876mc0aamh",
-        "homepage_status": 200,
+        "homepage_status": 403,
         "example_status": 403,
         "homepage_final_url": "https://www.coingecko.com/",
         "example_final_url": "https://www.coingecko.com/en/api/acquisition/entry-plans?utm_source=twitter&utm_medium=ad&utm_campaign=bau&utm_content=mar26-gt-brand-ad-free-v1&audience_segment=prospecting&twclid=26xrmua0k4othy65876mc0aamh",
-        "homepage_content_type": "text/html; charset=utf-8",
+        "homepage_content_type": "text/html; charset=UTF-8",
         "example_content_type": "text/html; charset=UTF-8",
         "homepage": {
           "has_meta_author": false,
           "has_published_time": false,
-          "has_canonical": true,
+          "has_canonical": false,
           "has_about_link": false,
           "has_contact_link": false,
           "has_corrections_link": false,
-          "outbound_links_count": 4,
+          "outbound_links_count": 0,
           "opinion_marker": false
         },
         "example": {
@@ -32833,7 +32833,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-08-14T22:49:23.215Z",
+        "fetched_at": "2026-08-18T02:24:32.073Z",
         "homepage_url": "https://onkodex.com/",
         "example_url": "https://onkodex.com/join/?twclid=21aq9xwo1p6ea49gu5skcha56k",
         "homepage_status": 200,
@@ -32957,7 +32957,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-08-14T22:49:26.923Z",
+        "fetched_at": "2026-08-18T03:24:50.647Z",
         "homepage_url": "https://artprice.com/",
         "example_url": "https://www.artprice.com/artprice-news/14183/world-record-a-painting-by-raja-ravi-varma-sold-for-nearly-18-million-dollars-in-mumbai?utm_medium=artprice-news&utm_source=X&utm_campaign=news&utm_content=14183&twclid=23wn7ayvhifg7vr11g3elt7wk3",
         "homepage_status": 200,
@@ -33081,7 +33081,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-08-14T23:19:27.130Z",
+        "fetched_at": "2026-08-18T03:54:38.695Z",
         "homepage_url": "https://pupgum.com/",
         "example_url": "https://pupgum.com/?discount=X20&utm_source=twitter&utm_medium=cpc&utm_campaign=x04&twclid=2dx55fuulwvv0t6pgl8v4t8syr",
         "homepage_status": 200,
@@ -33093,7 +33093,7 @@
         "homepage": {
           "has_meta_author": false,
           "has_published_time": false,
-          "has_canonical": false,
+          "has_canonical": true,
           "has_about_link": false,
           "has_contact_link": true,
           "has_corrections_link": false,
@@ -33205,7 +33205,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-08-14T23:19:38.862Z",
+        "fetched_at": "2026-08-18T03:54:50.286Z",
         "homepage_url": "https://spr.ly/",
         "example_url": "http://spr.ly/6017B6mDnt?twclid=2ajcph2gf0va7okmqyb2o5fv6v",
         "homepage_status": 200,
@@ -33329,7 +33329,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-08-14T23:19:42.423Z",
+        "fetched_at": "2026-08-18T03:54:53.277Z",
         "homepage_url": "https://interactivebrokers.com/",
         "example_url": "https://www.interactivebrokers.com/mkt/?src=twitter1516e&url=%2Fen%2Ftrading%2Fmargin.php&twclid=26s33m7076ex8oai4uldw5cov5",
         "homepage_status": 200,
@@ -33453,7 +33453,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-08-14T23:19:48.971Z",
+        "fetched_at": "2026-08-18T03:54:58.284Z",
         "homepage_url": "https://deere.com/",
         "example_url": "https://www.deere.com/en/technology-products/precision-ag-technology/remote-management/operations-center-pro-golf/?twclid=24oqwc0zuejy7hkjph647og8x6",
         "homepage_status": 200,
