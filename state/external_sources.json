@@ -1,8 +1,8 @@
 {
   "schema_version": "1.0",
-  "generated_at": "2026-08-18T18:56:07.339Z",
+  "generated_at": "2026-08-18T21:57:42.272Z",
   "method": "mechanical_registry_v1",
-  "profiled_at": "2026-08-18T18:57:33.159Z",
+  "profiled_at": "2026-08-18T21:59:02.393Z",
   "sources": [
     {
       "domain": "theguardian.com",
@@ -11,7 +11,7 @@
       "first_seen_at": "2026-03-27T23:17:00Z",
       "last_seen_at": "2026-08-16T20:34:57.150Z",
       "discovery": {
-        "distinct_urls": 908,
+        "distinct_urls": 909,
         "example_urls": [
           "https://www.theguardian.com/us-news/2026/jun/23/trump-immigration-courthouse-arrest-policy",
           "https://www.theguardian.com/us-news/2026/jun/28/ice-minnesota-defending-democracy",
@@ -21,7 +21,7 @@
         ],
         "origin_counts": {
           "ontology_evidence": 47,
-          "reading_queue": 870,
+          "reading_queue": 871,
           "journals": 127,
           "articles": 5
         },
@@ -75,7 +75,7 @@
         "breadth": {
           "score": 0.94,
           "basis": [
-            "distinct_urls:908",
+            "distinct_urls:909",
             "distinct_axes:20",
             "origin_types:4"
           ]
@@ -115,7 +115,7 @@
             "newsroom_domain_pattern",
             "article_path_seen",
             "doi_or_identifier_path_seen",
-            "distinct_urls:908",
+            "distinct_urls:909",
             "distinct_axes:20",
             "origin_types:4",
             "referring_accounts:0",
@@ -702,7 +702,7 @@
       "first_seen_at": "2026-06-22T00:15:00Z",
       "last_seen_at": "2026-08-15T16:49:56.115Z",
       "discovery": {
-        "distinct_urls": 616,
+        "distinct_urls": 617,
         "example_urls": [
           "https://www.nytimes.com/2026/06/19/world/canada/frank-stronach-trial-guilty-sex-charges.html",
           "https://www.nytimes.com/2026/06/27/world/americas/mexican-officials-us-informants.html",
@@ -712,7 +712,7 @@
         ],
         "origin_counts": {
           "ontology_evidence": 21,
-          "reading_queue": 636,
+          "reading_queue": 637,
           "journals": 54
         },
         "distinct_referring_accounts": 0,
@@ -756,7 +756,7 @@
         "breadth": {
           "score": 0.8799999999999999,
           "basis": [
-            "distinct_urls:616",
+            "distinct_urls:617",
             "distinct_axes:12",
             "origin_types:3"
           ]
@@ -795,7 +795,7 @@
           "basis": [
             "newsroom_domain_pattern",
             "article_path_seen",
-            "distinct_urls:616",
+            "distinct_urls:617",
             "distinct_axes:12",
             "origin_types:3",
             "referring_accounts:0",
@@ -1217,7 +1217,7 @@
       "first_seen_at": "2026-06-26T07:05:00Z",
       "last_seen_at": "2026-08-16T20:34:57.150Z",
       "discovery": {
-        "distinct_urls": 562,
+        "distinct_urls": 564,
         "example_urls": [
           "https://www.bbc.co.uk/news/articles/cn8qxz6qypyo",
           "https://www.bbc.co.uk/news/articles/cn075j04pnyo?at_medium=RSS&amp;at_campaign=rss",
@@ -1227,7 +1227,7 @@
         ],
         "origin_counts": {
           "ontology_evidence": 6,
-          "reading_queue": 576,
+          "reading_queue": 578,
           "journals": 19,
           "articles": 1
         },
@@ -1263,7 +1263,7 @@
         "breadth": {
           "score": 0.8233333333333333,
           "basis": [
-            "distinct_urls:562",
+            "distinct_urls:564",
             "distinct_axes:4",
             "origin_types:4"
           ]
@@ -1301,7 +1301,7 @@
           "method": "mechanical_v1",
           "basis": [
             "newsroom_domain_pattern",
-            "distinct_urls:562",
+            "distinct_urls:564",
             "distinct_axes:4",
             "origin_types:4",
             "referring_accounts:0",
@@ -38944,14 +38944,14 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-08-15T14:19:15.220Z",
+        "fetched_at": "2026-08-18T19:59:08.816Z",
         "homepage_url": "https://britannica.com/",
         "example_url": "https://www.britannica.com/event/2026-Iran-War",
-        "homepage_status": 403,
+        "homepage_status": null,
         "example_status": 403,
-        "homepage_final_url": "https://www.britannica.com/",
+        "homepage_final_url": "https://britannica.com/",
         "example_final_url": "https://www.britannica.com/event/2026-Iran-War",
-        "homepage_content_type": "text/html; charset=UTF-8",
+        "homepage_content_type": "",
         "example_content_type": "text/html; charset=UTF-8",
         "homepage": {
           "has_meta_author": false,
@@ -39067,7 +39067,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-08-15T15:19:12.060Z",
+        "fetched_at": "2026-08-18T19:59:11.624Z",
         "homepage_url": "https://icc-cpi.int/",
         "example_url": "https://icc-cpi.int/news/icc-concludes-confirmation-charges-hearing-el-hishri-case",
         "homepage_status": 403,
@@ -39191,15 +39191,15 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-08-15T15:19:12.294Z",
+        "fetched_at": "2026-08-18T19:59:22.454Z",
         "homepage_url": "https://abs-cbn.com/",
         "example_url": "https://news.abs-cbn.com/news/2026/06/09/nbi-dismisses-kickback-claims-as-hearsay",
         "homepage_status": 403,
-        "example_status": 403,
+        "example_status": null,
         "homepage_final_url": "https://abs-cbn.com/",
         "example_final_url": "https://news.abs-cbn.com/news/2026/06/09/nbi-dismisses-kickback-claims-as-hearsay",
         "homepage_content_type": "text/html",
-        "example_content_type": "text/html",
+        "example_content_type": "",
         "homepage": {
           "has_meta_author": false,
           "has_published_time": false,
@@ -39287,16 +39287,16 @@
           ]
         },
         "profile": {
-          "score": 0.84,
-          "confidence": 0.85,
+          "score": 0,
+          "confidence": 0.55,
           "basis": [
-            "meta_author:true",
-            "published_time:true",
-            "canonical:true",
-            "about:true",
-            "contact:true",
+            "meta_author:false",
+            "published_time:false",
+            "canonical:false",
+            "about:false",
+            "contact:false",
             "corrections:false",
-            "outbound_links:21",
+            "outbound_links:0",
             "opinion_marker:false"
           ]
         },
@@ -39316,33 +39316,33 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-08-15T15:19:15.295Z",
+        "fetched_at": "2026-08-18T19:59:42.461Z",
         "homepage_url": "https://thefastmode.com/",
         "example_url": "https://www.thefastmode.com/technology-solutions/49624-ai-powered-connectivity-apac-charts-a-unified-path-to-a-smarter-digital-future?twclid=281yms0e71cmmk7m5khtvm4j4n",
-        "homepage_status": 200,
-        "example_status": 200,
-        "homepage_final_url": "https://www.thefastmode.com/",
+        "homepage_status": null,
+        "example_status": null,
+        "homepage_final_url": "https://thefastmode.com/",
         "example_final_url": "https://www.thefastmode.com/technology-solutions/49624-ai-powered-connectivity-apac-charts-a-unified-path-to-a-smarter-digital-future?twclid=281yms0e71cmmk7m5khtvm4j4n",
-        "homepage_content_type": "text/html; charset=utf-8",
-        "example_content_type": "text/html; charset=UTF-8",
+        "homepage_content_type": "",
+        "example_content_type": "",
         "homepage": {
-          "has_meta_author": true,
+          "has_meta_author": false,
           "has_published_time": false,
-          "has_canonical": true,
-          "has_about_link": true,
-          "has_contact_link": true,
+          "has_canonical": false,
+          "has_about_link": false,
+          "has_contact_link": false,
           "has_corrections_link": false,
-          "outbound_links_count": 20,
+          "outbound_links_count": 0,
           "opinion_marker": false
         },
         "example": {
-          "has_meta_author": true,
-          "has_published_time": true,
-          "has_canonical": true,
-          "has_about_link": true,
-          "has_contact_link": true,
+          "has_meta_author": false,
+          "has_published_time": false,
+          "has_canonical": false,
+          "has_about_link": false,
+          "has_contact_link": false,
           "has_corrections_link": false,
-          "outbound_links_count": 21,
+          "outbound_links_count": 0,
           "opinion_marker": false
         }
       }
@@ -39412,14 +39412,14 @@
           ]
         },
         "profile": {
-          "score": 0.12,
+          "score": 0,
           "confidence": 0.55,
           "basis": [
             "meta_author:false",
             "published_time:false",
             "canonical:false",
             "about:false",
-            "contact:true",
+            "contact:false",
             "corrections:false",
             "outbound_links:0",
             "opinion_marker:false"
@@ -39441,21 +39441,21 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-08-15T15:49:16.164Z",
+        "fetched_at": "2026-08-18T20:27:22.557Z",
         "homepage_url": "https://kuvi.ai/",
         "example_url": "https://altura.kuvi.ai/leaderboard?twclid=22146c8rer0fhb7658qzfblh0s",
-        "homepage_status": 200,
-        "example_status": 200,
+        "homepage_status": null,
+        "example_status": null,
         "homepage_final_url": "https://kuvi.ai/",
         "example_final_url": "https://altura.kuvi.ai/leaderboard?twclid=22146c8rer0fhb7658qzfblh0s",
-        "homepage_content_type": "text/html",
-        "example_content_type": "text/html; charset=utf-8",
+        "homepage_content_type": "",
+        "example_content_type": "",
         "homepage": {
           "has_meta_author": false,
           "has_published_time": false,
-          "has_canonical": true,
+          "has_canonical": false,
           "has_about_link": false,
-          "has_contact_link": true,
+          "has_contact_link": false,
           "has_corrections_link": false,
           "outbound_links_count": 0,
           "opinion_marker": false
@@ -39565,7 +39565,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-08-15T15:49:17.027Z",
+        "fetched_at": "2026-08-18T20:27:34.529Z",
         "homepage_url": "https://abscbn.news/",
         "example_url": "https://abscbn.news/4cXfLnd",
         "homepage_status": 403,
@@ -39689,7 +39689,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-08-14T08:19:00.725Z",
+        "fetched_at": "2026-08-18T20:27:50.859Z",
         "homepage_url": "https://linkedin.com/",
         "example_url": "https://www.linkedin.com/company/the-center-for-humane-technology/posts/",
         "homepage_status": 200,
@@ -39783,16 +39783,16 @@
           ]
         },
         "profile": {
-          "score": 0.57,
-          "confidence": 0.75,
+          "score": 0,
+          "confidence": 0.55,
           "basis": [
-            "meta_author:true",
-            "published_time:true",
-            "canonical:true",
+            "meta_author:false",
+            "published_time:false",
+            "canonical:false",
             "about:false",
             "contact:false",
             "corrections:false",
-            "outbound_links:11",
+            "outbound_links:0",
             "opinion_marker:false"
           ]
         },
@@ -39813,19 +39813,19 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-08-15T17:19:16.595Z",
+        "fetched_at": "2026-08-18T20:28:10.868Z",
         "homepage_url": "https://thedispatch.com/",
         "example_url": "https://thedispatch.com/article/slavery-christianity-judaism/?twclid=224n5l3gu5l6wy53cctpntxjmr",
-        "homepage_status": 200,
-        "example_status": 200,
+        "homepage_status": null,
+        "example_status": null,
         "homepage_final_url": "https://thedispatch.com/",
         "example_final_url": "https://thedispatch.com/article/slavery-christianity-judaism/?twclid=224n5l3gu5l6wy53cctpntxjmr",
-        "homepage_content_type": "text/html; charset=UTF-8",
-        "example_content_type": "text/html; charset=UTF-8",
+        "homepage_content_type": "",
+        "example_content_type": "",
         "homepage": {
           "has_meta_author": false,
-          "has_published_time": true,
-          "has_canonical": true,
+          "has_published_time": false,
+          "has_canonical": false,
           "has_about_link": false,
           "has_contact_link": false,
           "has_corrections_link": false,
@@ -39833,13 +39833,13 @@
           "opinion_marker": false
         },
         "example": {
-          "has_meta_author": true,
-          "has_published_time": true,
-          "has_canonical": true,
-          "has_about_link": true,
-          "has_contact_link": true,
+          "has_meta_author": false,
+          "has_published_time": false,
+          "has_canonical": false,
+          "has_about_link": false,
+          "has_contact_link": false,
           "has_corrections_link": false,
-          "outbound_links_count": 11,
+          "outbound_links_count": 0,
           "opinion_marker": false
         }
       }
@@ -39907,14 +39907,14 @@
           ]
         },
         "profile": {
-          "score": 0.8200000000000001,
-          "confidence": 0.75,
+          "score": 0.56,
+          "confidence": 0.65,
           "basis": [
             "meta_author:false",
             "published_time:true",
             "canonical:true",
-            "about:true",
-            "contact:true",
+            "about:false",
+            "contact:false",
             "corrections:true",
             "outbound_links:23",
             "opinion_marker:false"
@@ -39937,23 +39937,23 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-08-15T17:19:17.603Z",
+        "fetched_at": "2026-08-18T21:26:01.084Z",
         "homepage_url": "https://scienceandculture.com/",
         "example_url": "https://scienceandculture.com/2026/04/cosmic-orphans-no-more-stephen-meyer-on-the-meaning-of-the-artemis-ii-mission/?twclid=2rnhdm9vyiuko1egq7pyr6uby",
-        "homepage_status": 200,
+        "homepage_status": null,
         "example_status": 200,
         "homepage_final_url": "https://scienceandculture.com/",
         "example_final_url": "https://scienceandculture.com/2026/04/cosmic-orphans-no-more-stephen-meyer-on-the-meaning-of-the-artemis-ii-mission/?twclid=2rnhdm9vyiuko1egq7pyr6uby",
-        "homepage_content_type": "text/html; charset=UTF-8",
+        "homepage_content_type": "",
         "example_content_type": "text/html; charset=UTF-8",
         "homepage": {
           "has_meta_author": false,
           "has_published_time": false,
-          "has_canonical": true,
-          "has_about_link": true,
-          "has_contact_link": true,
-          "has_corrections_link": true,
-          "outbound_links_count": 23,
+          "has_canonical": false,
+          "has_about_link": false,
+          "has_contact_link": false,
+          "has_corrections_link": false,
+          "outbound_links_count": 0,
           "opinion_marker": false
         },
         "example": {
@@ -40031,16 +40031,16 @@
           ]
         },
         "profile": {
-          "score": 0.58,
-          "confidence": 0.75,
+          "score": 0,
+          "confidence": 0.55,
           "basis": [
-            "meta_author:true",
-            "published_time:true",
-            "canonical:true",
+            "meta_author:false",
+            "published_time:false",
+            "canonical:false",
             "about:false",
             "contact:false",
             "corrections:false",
-            "outbound_links:29",
+            "outbound_links:0",
             "opinion_marker:false"
           ]
         },
@@ -40061,33 +40061,33 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-08-15T17:19:20.844Z",
+        "fetched_at": "2026-08-18T21:26:21.096Z",
         "homepage_url": "https://19fortyfive.com/",
         "example_url": "https://www.19fortyfive.com/2026/04/we-touched-the-super-guppy-nasas-whale-shaped-cargo-plane-has-a-25-foot-wide-internal-diameter-swallowed-apollo-rocket-stages-whole-and-only-one-still-flies/?twclid=23xrrcgqxanqbvkiqbsyzs1ox8",
-        "homepage_status": 200,
-        "example_status": 200,
-        "homepage_final_url": "https://www.19fortyfive.com/",
+        "homepage_status": null,
+        "example_status": null,
+        "homepage_final_url": "https://19fortyfive.com/",
         "example_final_url": "https://www.19fortyfive.com/2026/04/we-touched-the-super-guppy-nasas-whale-shaped-cargo-plane-has-a-25-foot-wide-internal-diameter-swallowed-apollo-rocket-stages-whole-and-only-one-still-flies/?twclid=23xrrcgqxanqbvkiqbsyzs1ox8",
-        "homepage_content_type": "text/html; charset=UTF-8",
-        "example_content_type": "text/html; charset=UTF-8",
+        "homepage_content_type": "",
+        "example_content_type": "",
         "homepage": {
-          "has_meta_author": true,
-          "has_published_time": true,
-          "has_canonical": true,
+          "has_meta_author": false,
+          "has_published_time": false,
+          "has_canonical": false,
           "has_about_link": false,
           "has_contact_link": false,
           "has_corrections_link": false,
-          "outbound_links_count": 6,
+          "outbound_links_count": 0,
           "opinion_marker": false
         },
         "example": {
-          "has_meta_author": true,
-          "has_published_time": true,
-          "has_canonical": true,
+          "has_meta_author": false,
+          "has_published_time": false,
+          "has_canonical": false,
           "has_about_link": false,
           "has_contact_link": false,
           "has_corrections_link": false,
-          "outbound_links_count": 29,
+          "outbound_links_count": 0,
           "opinion_marker": false
         }
       }
@@ -40155,17 +40155,17 @@
           ]
         },
         "profile": {
-          "score": 0.20999999999999996,
-          "confidence": 0.65,
+          "score": 0,
+          "confidence": 0.55,
           "basis": [
             "meta_author:false",
-            "published_time:true",
+            "published_time:false",
             "canonical:false",
             "about:false",
             "contact:false",
             "corrections:false",
-            "outbound_links:11",
-            "opinion_marker:true"
+            "outbound_links:0",
+            "opinion_marker:false"
           ]
         },
         "overall": {
@@ -40185,15 +40185,15 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-08-15T17:19:21.936Z",
+        "fetched_at": "2026-08-18T21:26:41.102Z",
         "homepage_url": "https://usatoday.com/",
         "example_url": "https://www.usatoday.com/story/sponsor-story/collegium-pharmaceutical/2026/05/05/paris-hilton-on-adhd-advocacy-and-support-in-the-workplace/89244166007/?twclid=28p40ybg70zs0nzujyc1b1b5mt",
-        "homepage_status": 200,
-        "example_status": 200,
-        "homepage_final_url": "https://www.usatoday.com/",
+        "homepage_status": null,
+        "example_status": null,
+        "homepage_final_url": "https://usatoday.com/",
         "example_final_url": "https://www.usatoday.com/story/sponsor-story/collegium-pharmaceutical/2026/05/05/paris-hilton-on-adhd-advocacy-and-support-in-the-workplace/89244166007/?twclid=28p40ybg70zs0nzujyc1b1b5mt",
-        "homepage_content_type": "text/html; charset=utf-8",
-        "example_content_type": "text/html; charset=utf-8",
+        "homepage_content_type": "",
+        "example_content_type": "",
         "homepage": {
           "has_meta_author": false,
           "has_published_time": false,
@@ -40201,18 +40201,18 @@
           "has_about_link": false,
           "has_contact_link": false,
           "has_corrections_link": false,
-          "outbound_links_count": 4,
+          "outbound_links_count": 0,
           "opinion_marker": false
         },
         "example": {
           "has_meta_author": false,
-          "has_published_time": true,
+          "has_published_time": false,
           "has_canonical": false,
           "has_about_link": false,
           "has_contact_link": false,
           "has_corrections_link": false,
-          "outbound_links_count": 11,
-          "opinion_marker": true
+          "outbound_links_count": 0,
+          "opinion_marker": false
         }
       }
     },
@@ -41023,16 +41023,16 @@
           ]
         },
         "profile": {
-          "score": 0.58,
-          "confidence": 0.75,
+          "score": 0,
+          "confidence": 0.55,
           "basis": [
-            "meta_author:true",
-            "published_time:true",
-            "canonical:true",
+            "meta_author:false",
+            "published_time:false",
+            "canonical:false",
             "about:false",
             "contact:false",
             "corrections:false",
-            "outbound_links:14",
+            "outbound_links:0",
             "opinion_marker:false"
           ]
         },
@@ -41053,15 +41053,15 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-08-14T08:19:04.485Z",
+        "fetched_at": "2026-08-18T21:26:51.671Z",
         "homepage_url": "https://co.za/",
         "example_url": "https://stuff.co.za/2026/08/07/huawei-south-africa-opens-applications-2026-women-in-tech/",
         "homepage_status": null,
-        "example_status": 200,
+        "example_status": null,
         "homepage_final_url": "https://co.za/",
         "example_final_url": "https://stuff.co.za/2026/08/07/huawei-south-africa-opens-applications-2026-women-in-tech/",
         "homepage_content_type": "",
-        "example_content_type": "text/html; charset=UTF-8",
+        "example_content_type": "",
         "homepage": {
           "has_meta_author": false,
           "has_published_time": false,
@@ -41073,13 +41073,13 @@
           "opinion_marker": false
         },
         "example": {
-          "has_meta_author": true,
-          "has_published_time": true,
-          "has_canonical": true,
+          "has_meta_author": false,
+          "has_published_time": false,
+          "has_canonical": false,
           "has_about_link": false,
-          "has_contact_link": true,
+          "has_contact_link": false,
           "has_corrections_link": false,
-          "outbound_links_count": 14,
+          "outbound_links_count": 0,
           "opinion_marker": false
         }
       }
@@ -41147,16 +41147,16 @@
           ]
         },
         "profile": {
-          "score": 0.4,
-          "confidence": 0.65,
+          "score": 0,
+          "confidence": 0.55,
           "basis": [
             "meta_author:false",
-            "published_time:true",
-            "canonical:true",
+            "published_time:false",
+            "canonical:false",
             "about:false",
             "contact:false",
             "corrections:false",
-            "outbound_links:114",
+            "outbound_links:0",
             "opinion_marker:false"
           ]
         },
@@ -41177,15 +41177,15 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-08-14T08:19:06.587Z",
+        "fetched_at": "2026-08-18T21:58:02.379Z",
         "homepage_url": "https://springer.com/",
         "example_url": "https://link.springer.com/article/10.1007/s11596-025-00074-8?twclid=2c6ygqvm2kbo3mg7om8ugx9up2",
-        "homepage_status": 200,
-        "example_status": 200,
-        "homepage_final_url": "https://idp.springer.com/transit?redirect_uri=https%3A%2F%2Flink.springer.com%2Fbrands%2Fspringer&code=dab76597-10ea-4c96-9f4d-ab46ba4de4d9",
+        "homepage_status": null,
+        "example_status": null,
+        "homepage_final_url": "https://springer.com/",
         "example_final_url": "https://link.springer.com/article/10.1007/s11596-025-00074-8?twclid=2c6ygqvm2kbo3mg7om8ugx9up2",
-        "homepage_content_type": "text/html; charset=utf-8",
-        "example_content_type": "text/html; charset=utf-8",
+        "homepage_content_type": "",
+        "example_content_type": "",
         "homepage": {
           "has_meta_author": false,
           "has_published_time": false,
@@ -41198,12 +41198,12 @@
         },
         "example": {
           "has_meta_author": false,
-          "has_published_time": true,
-          "has_canonical": true,
-          "has_about_link": true,
+          "has_published_time": false,
+          "has_canonical": false,
+          "has_about_link": false,
           "has_contact_link": false,
           "has_corrections_link": false,
-          "outbound_links_count": 114,
+          "outbound_links_count": 0,
           "opinion_marker": false
         }
       }
@@ -41898,16 +41898,16 @@
           ]
         },
         "profile": {
-          "score": 0.16,
+          "score": 0,
           "confidence": 0.55,
           "basis": [
             "meta_author:false",
             "published_time:false",
-            "canonical:true",
+            "canonical:false",
             "about:false",
             "contact:false",
             "corrections:false",
-            "outbound_links:6",
+            "outbound_links:0",
             "opinion_marker:false"
           ]
         },
@@ -41927,33 +41927,33 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-08-14T10:49:05.145Z",
+        "fetched_at": "2026-08-18T21:58:22.385Z",
         "homepage_url": "https://dito.ph/",
         "example_url": "https://dito.ph/sandali?utm_source=twitter&utm_medium=cpm&utm_campaign=DOTC-DM-AWAR-DM-COJ-MAY-INT&utm_id=2026DM&utm_term=COJFEST&utm_content=promoted_post_1&twclid=2estlcww980yee2hzsu5vdedbn",
-        "homepage_status": 200,
-        "example_status": 200,
+        "homepage_status": null,
+        "example_status": null,
         "homepage_final_url": "https://dito.ph/",
         "example_final_url": "https://dito.ph/sandali?utm_source=twitter&utm_medium=cpm&utm_campaign=DOTC-DM-AWAR-DM-COJ-MAY-INT&utm_id=2026DM&utm_term=COJFEST&utm_content=promoted_post_1&twclid=2estlcww980yee2hzsu5vdedbn",
-        "homepage_content_type": "text/html; charset=UTF-8",
-        "example_content_type": "text/html; charset=UTF-8",
+        "homepage_content_type": "",
+        "example_content_type": "",
         "homepage": {
           "has_meta_author": false,
           "has_published_time": false,
-          "has_canonical": true,
+          "has_canonical": false,
           "has_about_link": false,
           "has_contact_link": false,
           "has_corrections_link": false,
-          "outbound_links_count": 12,
+          "outbound_links_count": 0,
           "opinion_marker": false
         },
         "example": {
           "has_meta_author": false,
           "has_published_time": false,
-          "has_canonical": true,
+          "has_canonical": false,
           "has_about_link": false,
           "has_contact_link": false,
           "has_corrections_link": false,
-          "outbound_links_count": 6,
+          "outbound_links_count": 0,
           "opinion_marker": false
         }
       }
@@ -43268,16 +43268,16 @@
           ]
         },
         "profile": {
-          "score": 0.2,
+          "score": 0,
           "confidence": 0.55,
           "basis": [
             "meta_author:false",
             "published_time:false",
-            "canonical:true",
+            "canonical:false",
             "about:false",
             "contact:false",
             "corrections:false",
-            "outbound_links:10",
+            "outbound_links:0",
             "opinion_marker:false"
           ]
         },
@@ -43298,15 +43298,15 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-08-14T10:49:15.716Z",
+        "fetched_at": "2026-08-18T21:58:42.389Z",
         "homepage_url": "https://guardian.com/",
         "example_url": "https://www.guardian.com/business/2026/jun/28/ocado-boss-tim-steiner-payouts",
         "homepage_status": null,
-        "example_status": 404,
+        "example_status": null,
         "homepage_final_url": "https://guardian.com/",
         "example_final_url": "https://www.guardian.com/business/2026/jun/28/ocado-boss-tim-steiner-payouts",
         "homepage_content_type": "",
-        "example_content_type": "text/html;charset=utf-8",
+        "example_content_type": "",
         "homepage": {
           "has_meta_author": false,
           "has_published_time": false,
@@ -43320,11 +43320,11 @@
         "example": {
           "has_meta_author": false,
           "has_published_time": false,
-          "has_canonical": true,
+          "has_canonical": false,
           "has_about_link": false,
-          "has_contact_link": true,
+          "has_contact_link": false,
           "has_corrections_link": false,
-          "outbound_links_count": 10,
+          "outbound_links_count": 0,
           "opinion_marker": false
         }
       }
@@ -44149,6 +44149,51 @@
             "origin_types:1",
             "track_record_unavailable"
           ]
+        },
+        "profile": {
+          "score": 0,
+          "confidence": 0.55,
+          "basis": [
+            "meta_author:false",
+            "published_time:false",
+            "canonical:false",
+            "about:false",
+            "contact:false",
+            "corrections:false",
+            "outbound_links:0",
+            "opinion_marker:false"
+          ]
+        }
+      },
+      "profile": {
+        "fetched_at": "2026-08-18T21:59:02.393Z",
+        "homepage_url": "https://livewebtennis.com/",
+        "example_url": "https://livewebtennis.com/?twclid=29nonl4nbu53fv7ejohbads75n",
+        "homepage_status": null,
+        "example_status": null,
+        "homepage_final_url": "https://livewebtennis.com/",
+        "example_final_url": "https://livewebtennis.com/?twclid=29nonl4nbu53fv7ejohbads75n",
+        "homepage_content_type": "",
+        "example_content_type": "",
+        "homepage": {
+          "has_meta_author": false,
+          "has_published_time": false,
+          "has_canonical": false,
+          "has_about_link": false,
+          "has_contact_link": false,
+          "has_corrections_link": false,
+          "outbound_links_count": 0,
+          "opinion_marker": false
+        },
+        "example": {
+          "has_meta_author": false,
+          "has_published_time": false,
+          "has_canonical": false,
+          "has_about_link": false,
+          "has_contact_link": false,
+          "has_corrections_link": false,
+          "outbound_links_count": 0,
+          "opinion_marker": false
         }
       }
     },
