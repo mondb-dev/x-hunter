@@ -81,20 +81,27 @@ function makeScorer(keywords, { log } = {}) {
   const local = require('./local_llm');
 
   // Resolved lazily on first use, then cached: one availability probe per run.
-  let route = null;
-  async function resolveRoute() {
-    if (route) return route;
-    if (!local.isEnabled()) { route = { local: false, why: 'local disabled' }; }
-    else {
-      const av = await local.isAvailable(); // warms the model (~110s cold)
-      // A missing model is REPORTED, never silent — the 2026-07-28 wipe went
-      // unnoticed for 2.3 days precisely because absence looked like normal output.
-      route = av.ok
-        ? { local: true, mode: local.mode(), why: `${local.MODEL} ready in ${av.warmedMs}ms, mode=${local.mode()}` }
-        : { local: false, why: `local unavailable (${av.reason})` };
-    }
-    if (log) log(`relevance backend: ${route.local ? 'local' : 'claude'} — ${route.why}`);
-    return route;
+  // Cache the in-flight PROMISE, not the resolved value: scoring is bounded-
+  // concurrent, so caching only the result lets N scorers all miss the cache and
+  // each run their own warm-up (observed: 3 concurrent probes, ~6s each).
+  let routePromise = null;
+  function resolveRoute() {
+    if (routePromise) return routePromise;
+    routePromise = (async () => {
+      let route;
+      if (!local.isEnabled()) { route = { local: false, why: 'local disabled' }; }
+      else {
+        const av = await local.isAvailable(); // warms the model (~110s cold)
+        // A missing model is REPORTED, never silent — the 2026-07-28 wipe went
+        // unnoticed for 2.3 days precisely because absence looked like normal output.
+        route = av.ok
+          ? { local: true, mode: local.mode(), why: `${local.MODEL} ready in ${av.warmedMs}ms, mode=${local.mode()}` }
+          : { local: false, why: `local unavailable (${av.reason})` };
+      }
+      if (log) log(`relevance backend: ${route.local ? 'local' : 'claude'} — ${route.why}`);
+      return route;
+    })();
+    return routePromise;
   }
 
   const digit = (raw) => { const m = String(raw).match(/[0-3]/); return m ? Number(m[0]) : 0; };

@@ -79,18 +79,26 @@ function makeScorer(stats) {
   const { generate: llmGenerate } = require("./llm");
   const local = require("./lib/local_llm");
 
-  let route = null;
-  async function resolveRoute() {
-    if (route) return route;
-    if (!local.isEnabled()) route = { local: false, why: "local disabled" };
-    else {
-      const av = await local.isAvailable(); // warms the model (~110s cold)
-      route = av.ok
-        ? { local: true, mode: local.mode(), why: `${local.MODEL} ready in ${av.warmedMs}ms, mode=${local.mode()}` }
-        : { local: false, why: `local unavailable (${av.reason})` };
-    }
-    log(`relevance backend: ${route.local ? "local" : "claude"} — ${route.why}`);
-    return route;
+  // Cache the in-flight PROMISE, not the resolved value: scoring is bounded-
+  // concurrent, so caching only the result lets N scorers all miss the cache and
+  // each run their own warm-up (observed: 3 concurrent probes, ~6s each, and the
+  // backend line logged 3x).
+  let routePromise = null;
+  function resolveRoute() {
+    if (routePromise) return routePromise;
+    routePromise = (async () => {
+      let route;
+      if (!local.isEnabled()) route = { local: false, why: "local disabled" };
+      else {
+        const av = await local.isAvailable(); // warms the model (~110s cold)
+        route = av.ok
+          ? { local: true, mode: local.mode(), why: `${local.MODEL} ready in ${av.warmedMs}ms, mode=${local.mode()}` }
+          : { local: false, why: `local unavailable (${av.reason})` };
+      }
+      log(`relevance backend: ${route.local ? "local" : "claude"} — ${route.why}`);
+      return route;
+    })();
+    return routePromise;
   }
 
   const askClaude = (text) => llmGenerate(SCORER_PROMPT(text),
