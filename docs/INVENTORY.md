@@ -37,12 +37,47 @@ Scraper loops (`scraper/start.sh:23-26`): mentions 120s · collect 300s · reply
     reclaimable run-lock (`state/reply.run.lock`, 20-min stale TTL) so the
     scheduled run and a poller-triggered run never double-post.
 
-## 2. Inference: Claude only
+## 2. Inference: Claude for everything Sebastian says; local for bounded scoring
 
-**POLICY: Claude is the only LLM.** Gemini/Vertex was retired first, the local
-Ollama brain second (2026-07-30, after the model store was wiped and every local
-path 404'd for ~2.3 days). There is no fallback backend by design — a silent
-substitution to a weaker model is what this policy exists to prevent.
+**POLICY: Claude is the only LLM for generated prose and judgement.**
+Gemini/Vertex was retired first, the local Ollama brain second (2026-07-30,
+after the model store was wiped and every local path 404'd for ~2.3 days). There
+is no fallback backend by design — a silent substitution to a weaker model is
+what this policy exists to prevent.
+
+**Narrow exception (2026-08-19): relevance scoring may run locally.**
+`runner/lib/local_llm.js` routes 0-3 relevance classification to Ollama
+(`phi4-mini`) when `LOCAL_LLM_ENABLED=1`. Scoring is bounded classification —
+one digit — which is the one shape a 3.8B model handles as well as a frontier
+one, and it is the highest-frequency LLM call in the system (~25 candidates per
+engagement run, on both X and LinkedIn, at a 90s Claude timeout each).
+
+This is an exception, not a reopening of the policy. It holds because:
+
+- **Routing is explicit and per-call-site.** Nothing reroutes silently, and the
+  local path never escalates to Claude. Chaining backends per call is exactly
+  what produced `Claude 429s → local 404s → retry → 18 failures in one cycle`.
+- **Absence is loud.** `isAvailable()` resolves the model *by name* and returns a
+  reason. The 2026-07-28 wipe was invisible because `ollama serve` kept returning
+  `200 {"models":[]}` while every model 404'd.
+- **Default mode is `prefilter`, not `only`.** Measured on 18 real feed items,
+  phi4-mini is a good *noise filter* (correctly zeroes ads, product news, job
+  posts, birthdays) but a bad *ranker*: it emitted only 0 and 2 — never 1 or 3 —
+  and rated a ferry disaster and licensure-exam results a 2. So local drops the
+  confident 0s and **Claude ranks the survivors**. `LOCAL_LLM_MODE=only` skips
+  Claude entirely; ranking collapses to 0/2, and it exists for quota outages
+  where degraded engagement beats none.
+- **Prompt shape carries the quality.** An abbreviated prompt returned a constant
+  `2` for everything; the production prompt's explicit anti-examples ("job
+  updates, congratulations, ads = 0") are what produce the separation. Those
+  anti-examples are load-bearing — do not tidy them out.
+
+Composition, gating, and fact-checking stay on Claude. In particular the
+fact-check gate (`lib/outbound_gates.js`) must not run locally: it fails *open*,
+so a weak checker does not block bad output, it waves it through.
+
+Cold start is ~110s (2.5GB, M4/16GB), then ~0.2-1.4s warm; `isAvailable()` warms
+the model so that cost lands on the probe, not the first scored post.
 
 Everything funnels through `runner/lib/compose.js`:
 

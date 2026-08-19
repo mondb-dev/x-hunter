@@ -91,7 +91,7 @@ async function composeCommentary(post) {
   try {
     const seen = loadLedger();
     const keywords = loadAxisKeywords();
-    const score = makeScorer(keywords);
+    const score = makeScorer(keywords, { log });
 
     const posts = await x.scrapeTimeline({ limit: SCRAPE, scrolls: 3 });
     log(`scraped ${posts.length} timeline post(s)`);

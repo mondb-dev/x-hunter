@@ -50,12 +50,55 @@ function loadAxisKeywords() {
   } catch { return []; }
 }
 
+const SCORER_PROMPT = (text) =>
+  `You rate posts for Sebastian Hunter, who analyzes how narratives are constructed in public discourse: political messaging, media framing, propaganda, spin, institutional accountability, manipulation of public opinion.\n\n` +
+  `Rate ONLY the substantive relevance to those themes. Greetings, blessings, motivational quotes, personal life, jokes, ads, and sports = 0 even if they mention people. A post must actually engage with power, politics, media, or truth-claims to score 2-3.\n\n` +
+  `Answer with a SINGLE digit:\n0 = irrelevant, 1 = tangential mention, 2 = relevant, 3 = squarely on-topic.\n\n` +
+  `POST: "${String(text).slice(0, 400)}"\n\nDigit:`;
+
 /**
  * Build an async scorer: (post) -> relevance number. Guarded content -> -1.
- * LLM-driven (local qwen); keyword hits only tie-break equal-relevance posts.
+ * LLM-driven; keyword hits only tie-break equal-relevance posts.
+ *
+ * BACKEND: this is bounded classification (one digit), the one shape a small
+ * local model handles as well as a frontier one — so when LOCAL_LLM_ENABLED=1
+ * and the model is actually pulled, scoring routes to Ollama (lib/local_llm.js):
+ * ~free, and fast enough to matter (the Claude CLI path needed a 90s timeout
+ * because a subprocess "cannot answer that fast under any load", and that is
+ * paid per candidate post, every cycle, on both X and LinkedIn).
+ *
+ * The routing is decided ONCE per scorer, not per post, and a local failure
+ * degrades to the lexical signal — it never escalates to Claude. Chaining
+ * backends per call is exactly what produced "Claude 429s -> local 404s ->
+ * retry -> 18 failures in one cycle" on 2026-07-30 (b158bd33a).
+ *
+ * @param {string[]} keywords
+ * @param {object} [opts]
+ * @param {(m:string)=>void} [opts.log] one-line backend report (which backend, and why)
  */
-function makeScorer(keywords) {
+function makeScorer(keywords, { log } = {}) {
   const { generate: llmGenerate } = require('../llm');
+  const local = require('./local_llm');
+
+  // Resolved lazily on first use, then cached: one availability probe per run.
+  let route = null;
+  async function resolveRoute() {
+    if (route) return route;
+    if (!local.isEnabled()) { route = { local: false, why: 'local disabled' }; }
+    else {
+      const av = await local.isAvailable(); // warms the model (~110s cold)
+      // A missing model is REPORTED, never silent — the 2026-07-28 wipe went
+      // unnoticed for 2.3 days precisely because absence looked like normal output.
+      route = av.ok
+        ? { local: true, mode: local.mode(), why: `${local.MODEL} ready in ${av.warmedMs}ms, mode=${local.mode()}` }
+        : { local: false, why: `local unavailable (${av.reason})` };
+    }
+    if (log) log(`relevance backend: ${route.local ? 'local' : 'claude'} — ${route.why}`);
+    return route;
+  }
+
+  const digit = (raw) => { const m = String(raw).match(/[0-3]/); return m ? Number(m[0]) : 0; };
+
   return async (post) => {
     const text = (post.text || '').trim();
     if (!text) return -1;
@@ -65,13 +108,32 @@ function makeScorer(keywords) {
     let hits = 0;
     for (const kw of keywords) if (lower.includes(kw)) hits++;
 
+    const r = await resolveRoute();
+
+    if (r.local) {
+      let localScore = null;
+      try {
+        localScore = digit(await local.generateLocal(SCORER_PROMPT(text), {
+          temperature: 0, maxTokens: 4, timeoutMs: 20_000, tag: 'relevance', stop: ['\n'],
+        }));
+      } catch {
+        // 'only' has no second backend by design (never escalate to Claude —
+        // that chaining caused the 2026-07-30 cascade); degrade to lexical.
+        if (r.mode === 'only') return (hits > 0 ? 1 : 0) + Math.min(hits, 2) * 0.1;
+      }
+      if (localScore !== null) {
+        if (r.mode === 'only') return localScore + Math.min(hits, 2) * 0.1;
+        // prefilter: a local 0 is the one call this model makes reliably.
+        if (localScore === 0) return 0 + Math.min(hits, 2) * 0.1;
+      }
+    }
+
     let rel = 0;
     try {
       const raw = await llmGenerate(
-        `You rate posts for Sebastian Hunter, who analyzes how narratives are constructed in public discourse: political messaging, media framing, propaganda, spin, institutional accountability, manipulation of public opinion.\n\n` +
-        `Rate ONLY the substantive relevance to those themes. Greetings, blessings, motivational quotes, personal life, jokes, ads, and sports = 0 even if they mention people. A post must actually engage with power, politics, media, or truth-claims to score 2-3.\n\n` +
-        `Answer with a SINGLE digit:\n0 = irrelevant, 1 = tangential mention, 2 = relevant, 3 = squarely on-topic.\n\n` +
-        `POST: "${text.slice(0, 400)}"\n\nDigit:`,
+        // Same SCORER_PROMPT both backends use — keeping one copy is what makes
+        // a local-vs-Claude agreement measurement meaningful.
+        SCORER_PROMPT(text),
         // 30s was sized for the old local qwen brain. Inference is now the Claude
         // CLI (a subprocess), which cannot answer that fast under any load — the
         // scorer was falling through to the lexical branch on every call.

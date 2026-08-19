@@ -130,7 +130,7 @@ async function generateReply(post) {
   const seen = loadLedger();
 
   const result = await x.engage({
-    score: makeScorer(keywords),
+    score: makeScorer(keywords, { log }),
     generateReply,
     onLike: async (p) => logInteraction({ type: "x_like", tweet_url: p.url, handle: p.handle, cycle: CYCLE }),
     onReply: async (p, text) => logInteraction({ type: "x_reply", tweet_url: p.url, handle: p.handle, our_reply: text, cycle: CYCLE }),

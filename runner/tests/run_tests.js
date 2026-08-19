@@ -501,6 +501,75 @@ section("LinkedIn A/B scoring");
   }
 }
 
+// ── Local LLM routing (phi4-mini scorer) ──────────────────────────────────────
+// The local backend exists for bounded classification only, and its containment
+// rules are the whole point: local routing is OPT-IN, a missing model is REPORTED
+// rather than silent (the 2026-07-28 store wipe degraded every local path for
+// ~2.3 days unnoticed), and local inference must never be billed as paid.
+// These are pure-config assertions — no daemon required, so CI stays hermetic.
+section("Local LLM routing");
+{
+  const localPath = path.join(RUNNER, "lib", "local_llm.js");
+  if (!fileExists(localPath)) {
+    skip("local_llm.js", "file missing");
+  } else {
+    const saved = { en: process.env.LOCAL_LLM_ENABLED, mode: process.env.LOCAL_LLM_MODE };
+    try {
+      const local = require(localPath);
+
+      // (1) Opt-in: absent/!=1 env must NOT route locally.
+      delete process.env.LOCAL_LLM_ENABLED;
+      const offWhenUnset = local.isEnabled() === false;
+      process.env.LOCAL_LLM_ENABLED = "0";
+      const offWhenZero = local.isEnabled() === false;
+      process.env.LOCAL_LLM_ENABLED = "1";
+      const onWhenOne = local.isEnabled() === true;
+      if (offWhenUnset && offWhenZero && onWhenOne) pass("local routing is opt-in (off unless LOCAL_LLM_ENABLED=1)");
+      else fail("local opt-in", `unset=${offWhenUnset} zero=${offWhenZero} one=${onWhenOne}`);
+
+      // (2) Default mode is the SAFE one. phi4-mini measured as a good noise
+      //     filter but a bad ranker (only ever 0 or 2, never 1 or 3), so
+      //     'prefilter' — local drops 0s, Claude ranks — must be the default;
+      //     'only' collapses ranking and is for quota outages.
+      delete process.env.LOCAL_LLM_MODE;
+      const defMode = local.mode();
+      process.env.LOCAL_LLM_MODE = "only";
+      const onlyMode = local.mode();
+      process.env.LOCAL_LLM_MODE = "garbage";
+      const fallbackMode = local.mode();
+      if (defMode === "prefilter" && onlyMode === "only" && fallbackMode === "prefilter") {
+        pass("mode defaults to 'prefilter'; only an explicit 'only' collapses ranking");
+      } else {
+        fail("local mode default", `default=${defMode} only=${onlyMode} garbage=${fallbackMode}`);
+      }
+
+      // (3) Disabled must report a REASON, never a bare false — silent absence
+      //     is the failure this module was written to prevent.
+      delete process.env.LOCAL_LLM_ENABLED;
+      local.isAvailable().then((av) => {
+        if (av.ok === false && typeof av.reason === "string" && av.reason.length) {
+          pass(`unavailability carries a reason ("${av.reason}")`);
+        } else {
+          fail("local availability reason", `got ${JSON.stringify(av)}`);
+        }
+      }).catch((e) => fail("local availability reason", e.message));
+
+      // (4) Local inference must price as FREE. Without a 'phi' rule the tag
+      //     falls through to '_default' and a free call is billed at a paid rate.
+      const { normalizeModel } = require(path.join(RUNNER, "lib", "cost_meter.js"));
+      const localish = ["phi4-mini", "phi4-mini:latest", "qwen2.5-agent", "ollama/whatever", "local"];
+      const mis = localish.filter((m) => normalizeModel(m) !== "local");
+      if (!mis.length) pass("local model tags price as free (phi/qwen/ollama → 'local')");
+      else fail("local cost accounting", `these did not map to 'local': ${mis.join(", ")}`);
+    } catch (e) {
+      fail("local_llm.js", e.message.slice(0, 140));
+    } finally {
+      if (saved.en === undefined) delete process.env.LOCAL_LLM_ENABLED; else process.env.LOCAL_LLM_ENABLED = saved.en;
+      if (saved.mode === undefined) delete process.env.LOCAL_LLM_MODE; else process.env.LOCAL_LLM_MODE = saved.mode;
+    }
+  }
+}
+
 // ── Daily stance video: locked voice ──────────────────────────────────────────
 // Regression guard for operator decision 2026-08-05: Veo has no voice-lock (no
 // API/seed/reference-audio, just a text prompt), so the brief-writing LLM used

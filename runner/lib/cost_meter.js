@@ -38,7 +38,9 @@ function rateFor(model) {
 
 function normalizeModel(model) {
   const m = String(model || '').toLowerCase();
-  if (!m || m === 'local' || m.includes('qwen') || m.includes('ollama')) return 'local';
+  // 'phi' covers the phi4-mini local scorer; without it a locally-served model
+  // falls through to '_default' and gets billed at a paid rate in the ledger.
+  if (!m || m === 'local' || m.includes('qwen') || m.includes('ollama') || m.includes('phi')) return 'local';
   if (m.includes('claude') || m === 'sonnet' || m === 'opus' || m === 'haiku') return 'claude';
   if (m.includes('pro')) return 'gemini-2.5-pro';
   if (m.includes('flash') || m.includes('gemini')) return 'gemini-2.5-flash';
