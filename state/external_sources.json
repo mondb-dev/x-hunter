@@ -1,8 +1,8 @@
 {
   "schema_version": "1.0",
-  "generated_at": "2026-08-19T18:47:10.837Z",
+  "generated_at": "2026-08-19T22:41:40.325Z",
   "method": "mechanical_registry_v1",
-  "profiled_at": "2026-08-19T18:47:15.934Z",
+  "profiled_at": "2026-08-19T22:41:47.121Z",
   "sources": [
     {
       "domain": "theguardian.com",
@@ -11,7 +11,7 @@
       "first_seen_at": "2026-03-27T23:17:00Z",
       "last_seen_at": "2026-08-16T20:34:57.150Z",
       "discovery": {
-        "distinct_urls": 923,
+        "distinct_urls": 925,
         "example_urls": [
           "https://www.theguardian.com/us-news/2026/jun/23/trump-immigration-courthouse-arrest-policy",
           "https://www.theguardian.com/us-news/2026/jun/28/ice-minnesota-defending-democracy",
@@ -21,7 +21,7 @@
         ],
         "origin_counts": {
           "ontology_evidence": 47,
-          "reading_queue": 885,
+          "reading_queue": 887,
           "journals": 127,
           "articles": 5
         },
@@ -75,7 +75,7 @@
         "breadth": {
           "score": 0.94,
           "basis": [
-            "distinct_urls:923",
+            "distinct_urls:925",
             "distinct_axes:20",
             "origin_types:4"
           ]
@@ -115,7 +115,7 @@
             "newsroom_domain_pattern",
             "article_path_seen",
             "doi_or_identifier_path_seen",
-            "distinct_urls:923",
+            "distinct_urls:925",
             "distinct_axes:20",
             "origin_types:4",
             "referring_accounts:0",
@@ -702,7 +702,7 @@
       "first_seen_at": "2026-06-22T00:15:00Z",
       "last_seen_at": "2026-08-15T16:49:56.115Z",
       "discovery": {
-        "distinct_urls": 626,
+        "distinct_urls": 627,
         "example_urls": [
           "https://www.nytimes.com/2026/06/19/world/canada/frank-stronach-trial-guilty-sex-charges.html",
           "https://www.nytimes.com/2026/06/27/world/americas/mexican-officials-us-informants.html",
@@ -712,7 +712,7 @@
         ],
         "origin_counts": {
           "ontology_evidence": 21,
-          "reading_queue": 646,
+          "reading_queue": 647,
           "journals": 54
         },
         "distinct_referring_accounts": 0,
@@ -756,7 +756,7 @@
         "breadth": {
           "score": 0.8799999999999999,
           "basis": [
-            "distinct_urls:626",
+            "distinct_urls:627",
             "distinct_axes:12",
             "origin_types:3"
           ]
@@ -795,7 +795,7 @@
           "basis": [
             "newsroom_domain_pattern",
             "article_path_seen",
-            "distinct_urls:626",
+            "distinct_urls:627",
             "distinct_axes:12",
             "origin_types:3",
             "referring_accounts:0",
@@ -1217,7 +1217,7 @@
       "first_seen_at": "2026-06-26T07:05:00Z",
       "last_seen_at": "2026-08-16T20:34:57.150Z",
       "discovery": {
-        "distinct_urls": 576,
+        "distinct_urls": 577,
         "example_urls": [
           "https://www.bbc.co.uk/news/articles/cn8qxz6qypyo",
           "https://www.bbc.co.uk/news/articles/cn075j04pnyo?at_medium=RSS&amp;at_campaign=rss",
@@ -1227,7 +1227,7 @@
         ],
         "origin_counts": {
           "ontology_evidence": 6,
-          "reading_queue": 591,
+          "reading_queue": 592,
           "journals": 19,
           "articles": 1
         },
@@ -1263,7 +1263,7 @@
         "breadth": {
           "score": 0.8233333333333333,
           "basis": [
-            "distinct_urls:576",
+            "distinct_urls:577",
             "distinct_axes:4",
             "origin_types:4"
           ]
@@ -1301,7 +1301,7 @@
           "method": "mechanical_v1",
           "basis": [
             "newsroom_domain_pattern",
-            "distinct_urls:576",
+            "distinct_urls:577",
             "distinct_axes:4",
             "origin_types:4",
             "referring_accounts:0",
@@ -3250,9 +3250,9 @@
       "entity": "T Co",
       "kind": "unknown",
       "first_seen_at": "2016-05-05T18:57:30.000Z",
-      "last_seen_at": "2026-08-19T17:25:00.000Z",
+      "last_seen_at": "2026-08-19T21:12:24.000Z",
       "discovery": {
-        "distinct_urls": 15832,
+        "distinct_urls": 15907,
         "example_urls": [
           "https://t.co/pJSE124ec4",
           "https://t.co/Soz8BXPWaa",
@@ -3261,11 +3261,11 @@
           "https://t.co/cYaqYDRp08"
         ],
         "origin_counts": {
-          "feed_buffer": 13693,
-          "feed_buffer_reply": 5140,
+          "feed_buffer": 13771,
+          "feed_buffer_reply": 5144,
           "articles": 3
         },
-        "distinct_referring_accounts": 2836,
+        "distinct_referring_accounts": 2839,
         "sample_referring_accounts": [
           "0808iveta",
           "09abracadabra",
@@ -3304,7 +3304,7 @@
         "breadth": {
           "score": 0.53,
           "basis": [
-            "distinct_urls:15832",
+            "distinct_urls:15907",
             "distinct_axes:0",
             "origin_types:3"
           ]
@@ -3312,7 +3312,7 @@
         "corroboration": {
           "score": 0.9125,
           "basis": [
-            "referring_accounts:2836",
+            "referring_accounts:2839",
             "origin_types:3"
           ]
         },
@@ -3343,10 +3343,10 @@
           "basis": [
             "unknown_domain_pattern",
             "doi_or_identifier_path_seen",
-            "distinct_urls:15832",
+            "distinct_urls:15907",
             "distinct_axes:0",
             "origin_types:3",
-            "referring_accounts:2836",
+            "referring_accounts:2839",
             "origin_types:3",
             "track_record_unavailable"
           ]
@@ -3842,9 +3842,9 @@
       "entity": "Bit Ly",
       "kind": "unknown",
       "first_seen_at": "2026-04-06T16:33:36.000Z",
-      "last_seen_at": "2026-08-15T10:46:10.638Z",
+      "last_seen_at": "2026-08-19T21:05:30.724Z",
       "discovery": {
-        "distinct_urls": 34,
+        "distinct_urls": 36,
         "example_urls": [
           "https://bit.ly/4rFUGm4?twclid=2cxu7o43bx4p37y7v84zudvy2q",
           "https://bit.ly/4rFUGm4?twclid=2bcgwzcedehb1ong389c8zjnsb",
@@ -3854,13 +3854,14 @@
         ],
         "origin_counts": {
           "feed_buffer_reply": 20,
-          "feed_buffer": 13,
+          "feed_buffer": 15,
           "journals": 10
         },
-        "distinct_referring_accounts": 9,
+        "distinct_referring_accounts": 10,
         "sample_referring_accounts": [
           "1stforall",
           "3commas_io",
+          "abscbn",
           "aramco",
           "arenasocialph",
           "chelseafc",
@@ -3894,7 +3895,7 @@
         "breadth": {
           "score": 0.53,
           "basis": [
-            "distinct_urls:34",
+            "distinct_urls:36",
             "distinct_axes:0",
             "origin_types:3"
           ]
@@ -3902,7 +3903,7 @@
         "corroboration": {
           "score": 0.9125,
           "basis": [
-            "referring_accounts:9",
+            "referring_accounts:10",
             "origin_types:3"
           ]
         },
@@ -3932,10 +3933,10 @@
           "method": "mechanical_v1",
           "basis": [
             "unknown_domain_pattern",
-            "distinct_urls:34",
+            "distinct_urls:36",
             "distinct_axes:0",
             "origin_types:3",
-            "referring_accounts:9",
+            "referring_accounts:10",
             "origin_types:3",
             "track_record_unavailable"
           ]
@@ -4759,9 +4760,9 @@
       "entity": "Grok",
       "kind": "unknown",
       "first_seen_at": "2026-04-03T01:20:27.000Z",
-      "last_seen_at": "2026-08-16T21:50:32.000Z",
+      "last_seen_at": "2026-08-19T18:03:20.000Z",
       "discovery": {
-        "distinct_urls": 661,
+        "distinct_urls": 664,
         "example_urls": [
           "https://grok.com/imagine/post/9b92ff60-ec59-45db-8a35-8e1b743e5339",
           "https://grok.com/imagine/post/42c16172-4296-42be-b3d0-aa45ad7b6b97",
@@ -4770,10 +4771,10 @@
           "https://grok.com/imagine/post/3289422f-50b2-4655-8527-e2b1c950ce5e"
         ],
         "origin_counts": {
-          "feed_buffer_reply": 551,
-          "feed_buffer": 155
+          "feed_buffer_reply": 553,
+          "feed_buffer": 156
         },
-        "distinct_referring_accounts": 397,
+        "distinct_referring_accounts": 399,
         "sample_referring_accounts": [
           "100ohiostate",
           "106laxeldorado",
@@ -4811,7 +4812,7 @@
         "breadth": {
           "score": 0.47,
           "basis": [
-            "distinct_urls:661",
+            "distinct_urls:664",
             "distinct_axes:0",
             "origin_types:2"
           ]
@@ -4819,7 +4820,7 @@
         "corroboration": {
           "score": 0.825,
           "basis": [
-            "referring_accounts:397",
+            "referring_accounts:399",
             "origin_types:2"
           ]
         },
@@ -4849,10 +4850,10 @@
           "method": "mechanical_v1",
           "basis": [
             "unknown_domain_pattern",
-            "distinct_urls:661",
+            "distinct_urls:664",
             "distinct_axes:0",
             "origin_types:2",
-            "referring_accounts:397",
+            "referring_accounts:399",
             "origin_types:2",
             "track_record_unavailable"
           ]
@@ -5555,7 +5556,7 @@
       "first_seen_at": "2026-04-07T03:51:50.000Z",
       "last_seen_at": "2026-08-19T18:45:13.825Z",
       "discovery": {
-        "distinct_urls": 158,
+        "distinct_urls": 159,
         "example_urls": [
           "https://www.starlink.com/us/residential?referral=RC-DF-9543787-19448-67&utm_medium=paid&utm_campaign=awr_us_soc_twt_ptg_cau&utm_content=awr_us_soc_twt_ptg_cau_res_gvp_v4s_stc_en-us_sdb-bluesky-uptime&twclid=2cg62b1u0oqrypdim5oir1767e",
           "https://www.starlink.com/us/residential?referral=RC-DF-9543787-19448-67&utm_medium=paid&utm_campaign=awr_us_soc_twt_ptg_cau&utm_content=awr_us_soc_twt_ptg_cau_res_gvp_v4s_stc_en-us_sdb-avail-sat-yourhome&twclid=2216n7j93v9absqn77762mm626",
@@ -5564,7 +5565,7 @@
           "https://www.starlink.com/us/residential?referral=RC-DF-9543787-19448-67&utm_medium=paid&utm_campaign=awr_us_soc_twt_ptg_cau&utm_content=awr_us_soc_twt_ptg_cau_res_gvp_v4s_stc_en-us_sdb-avail-sat-arrived&twclid=21pi7t0qs8tgw0wgnh5mvmdu2g"
         ],
         "origin_counts": {
-          "feed_buffer_reply": 143,
+          "feed_buffer_reply": 144,
           "feed_buffer": 19
         },
         "distinct_referring_accounts": 5,
@@ -5600,7 +5601,7 @@
         "breadth": {
           "score": 0.47,
           "basis": [
-            "distinct_urls:158",
+            "distinct_urls:159",
             "distinct_axes:0",
             "origin_types:2"
           ]
@@ -5638,7 +5639,7 @@
           "method": "mechanical_v1",
           "basis": [
             "unknown_domain_pattern",
-            "distinct_urls:158",
+            "distinct_urls:159",
             "distinct_axes:0",
             "origin_types:2",
             "referring_accounts:5",
@@ -7224,9 +7225,9 @@
       "entity": "Bet88 Ph",
       "kind": "unknown",
       "first_seen_at": "2026-07-03T16:00:02.000Z",
-      "last_seen_at": "2026-08-16T19:43:45.171Z",
+      "last_seen_at": "2026-08-19T21:35:03.469Z",
       "discovery": {
-        "distinct_urls": 105,
+        "distinct_urls": 106,
         "example_urls": [
           "https://bet88.ph/en/?type=registration&modal=user&ref=xa027&twclid=27gurqyk8ekpo92oqcm3aeuing",
           "https://bet88.ph/en/?type=registration&modal=user&ref=xa023&twclid=25wrsnnpnc7378nutxmyo1v6kj",
@@ -7236,7 +7237,7 @@
         ],
         "origin_counts": {
           "feed_buffer_reply": 38,
-          "feed_buffer": 67
+          "feed_buffer": 68
         },
         "distinct_referring_accounts": 1,
         "sample_referring_accounts": [
@@ -7267,7 +7268,7 @@
         "breadth": {
           "score": 0.47,
           "basis": [
-            "distinct_urls:105",
+            "distinct_urls:106",
             "distinct_axes:0",
             "origin_types:2"
           ]
@@ -7305,7 +7306,7 @@
           "method": "mechanical_v1",
           "basis": [
             "unknown_domain_pattern",
-            "distinct_urls:105",
+            "distinct_urls:106",
             "distinct_axes:0",
             "origin_types:2",
             "referring_accounts:1",
@@ -7696,7 +7697,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-08-16T19:33:58.419Z",
+        "fetched_at": "2026-08-19T19:48:03.444Z",
         "homepage_url": "https://maventrading.com/",
         "example_url": "https://maventrading.com/lp/choose-your-challenge?twt_id=54608379&twclid=24irm75xuuvw6vkz1dgb8ui0sz",
         "homepage_status": 200,
@@ -17846,7 +17847,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-08-16T19:04:18.191Z",
+        "fetched_at": "2026-08-19T19:48:23.472Z",
         "homepage_url": "https://makofy.com/",
         "example_url": "https://makofy.com/openclaw?twclid=217okoej56crajhkd22b6nsfzf",
         "homepage_status": null,
@@ -18096,7 +18097,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-08-16T19:04:19.858Z",
+        "fetched_at": "2026-08-19T19:48:25.438Z",
         "homepage_url": "https://moltbook.com/",
         "example_url": "https://www.moltbook.com/post/29d49c40-bc59-4a1a-b875-3d3d41ec469e",
         "homepage_status": 200,
@@ -18194,16 +18195,16 @@
           ]
         },
         "profile": {
-          "score": 0.6000000000000001,
-          "confidence": 0.75,
+          "score": 0,
+          "confidence": 0.55,
           "basis": [
-            "meta_author:true",
+            "meta_author:false",
             "published_time:false",
-            "canonical:true",
-            "about:true",
-            "contact:true",
+            "canonical:false",
+            "about:false",
+            "contact:false",
             "corrections:false",
-            "outbound_links:6",
+            "outbound_links:0",
             "opinion_marker:false"
           ]
         },
@@ -18223,33 +18224,33 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-08-16T19:04:22.187Z",
+        "fetched_at": "2026-08-19T19:48:26.143Z",
         "homepage_url": "https://framia.pro/",
         "example_url": "https://framia.pro/?utm_source=x&utm_campaign=twitter_adsmarch_framia_14_20260331&utm_medium=paid_social&twclid=2e6c8vey7aaz8sdwedu4gd0jgx",
-        "homepage_status": 200,
-        "example_status": 200,
+        "homepage_status": 403,
+        "example_status": 403,
         "homepage_final_url": "https://framia.converge.ai/",
         "example_final_url": "https://framia.converge.ai/?utm_source=x&utm_campaign=twitter_adsmarch_framia_14_20260331&utm_medium=paid_social&twclid=2e6c8vey7aaz8sdwedu4gd0jgx",
-        "homepage_content_type": "text/html; charset=utf-8",
-        "example_content_type": "text/html; charset=utf-8",
+        "homepage_content_type": "text/html; charset=UTF-8",
+        "example_content_type": "text/html; charset=UTF-8",
         "homepage": {
-          "has_meta_author": true,
+          "has_meta_author": false,
           "has_published_time": false,
-          "has_canonical": true,
-          "has_about_link": true,
-          "has_contact_link": true,
+          "has_canonical": false,
+          "has_about_link": false,
+          "has_contact_link": false,
           "has_corrections_link": false,
-          "outbound_links_count": 6,
+          "outbound_links_count": 0,
           "opinion_marker": false
         },
         "example": {
-          "has_meta_author": true,
+          "has_meta_author": false,
           "has_published_time": false,
-          "has_canonical": true,
-          "has_about_link": true,
-          "has_contact_link": true,
+          "has_canonical": false,
+          "has_about_link": false,
+          "has_contact_link": false,
           "has_corrections_link": false,
-          "outbound_links_count": 6,
+          "outbound_links_count": 0,
           "opinion_marker": false
         }
       }
@@ -18350,7 +18351,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-08-16T19:04:25.593Z",
+        "fetched_at": "2026-08-19T20:18:16.757Z",
         "homepage_url": "https://wptgold.com/",
         "example_url": "https://wptgold.com/subscription-3?twclid=26ckzizem3j5r9q8uf2y0hd1k6",
         "homepage_status": 200,
@@ -18448,7 +18449,7 @@
           ]
         },
         "profile": {
-          "score": 0.11,
+          "score": 0.15000000000000002,
           "confidence": 0.55,
           "basis": [
             "meta_author:false",
@@ -18457,7 +18458,7 @@
             "about:false",
             "contact:false",
             "corrections:false",
-            "outbound_links:1",
+            "outbound_links:5",
             "opinion_marker:false"
           ]
         },
@@ -18477,7 +18478,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-08-16T19:34:00.394Z",
+        "fetched_at": "2026-08-19T20:18:18.809Z",
         "homepage_url": "https://cocainecoffee.com/",
         "example_url": "https://cocainecoffee.com/?twclid=27twwbqquoqevtoxgztpejovrb",
         "homepage_status": 200,
@@ -18493,7 +18494,7 @@
           "has_about_link": false,
           "has_contact_link": false,
           "has_corrections_link": false,
-          "outbound_links_count": 1,
+          "outbound_links_count": 5,
           "opinion_marker": false
         },
         "example": {
@@ -18503,7 +18504,7 @@
           "has_about_link": false,
           "has_contact_link": false,
           "has_corrections_link": false,
-          "outbound_links_count": 1,
+          "outbound_links_count": 5,
           "opinion_marker": false
         }
       }
@@ -19238,7 +19239,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-08-16T19:34:03.212Z",
+        "fetched_at": "2026-08-19T20:18:20.672Z",
         "homepage_url": "https://merck.com/",
         "example_url": "https://www.merck.com/stories/were-pursuing-innovative-science-with-antibody-drug-conjugate-adc-research/?utm_source=twitter&utm_medium=paid-social&utm_campaign=US_NON_oncoalwayson_OT_AW_202604&utm_content=na_NA_VID_18s&twclid=2ashs3kuiq7isb412ax3cbgusn",
         "homepage_status": 200,
@@ -19364,7 +19365,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-08-16T19:34:03.810Z",
+        "fetched_at": "2026-08-19T20:18:21.103Z",
         "homepage_url": "https://fabletics.com/",
         "example_url": "https://www.fabletics.com/dmg/926C08?utm_medium=paid_social_media&utm_source=twitter&utm_campaign=twitter_campaign_id_FLM56&utm_content=twitter_adgroup_id_FLM56-1&utm_term=twitter_ad_id_FLM56-1-11&twclid=21tkc8gfxmeyk2zkude4aqtxx0",
         "homepage_status": 403,
@@ -19617,7 +19618,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-08-16T20:34:00.940Z",
+        "fetched_at": "2026-08-19T21:17:07.811Z",
         "homepage_url": "https://inqnews.net/",
         "example_url": "https://inqnews.net/major",
         "homepage_status": 200,
@@ -19744,7 +19745,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-08-16T20:34:20.951Z",
+        "fetched_at": "2026-08-19T21:17:27.823Z",
         "homepage_url": "https://newsmax.com/",
         "example_url": "https://www.newsmax.com/ruddy/chris-ruddy-scott-bessent-donald-trump/2026/01/19/id/1242743/?twclid=26mj7qjkmqd4eerrni08qzffox",
         "homepage_status": null,
@@ -19871,7 +19872,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-08-16T20:34:21.857Z",
+        "fetched_at": "2026-08-19T21:17:28.677Z",
         "homepage_url": "https://declarenews.org/",
         "example_url": "https://declarenews.org/?twclid=2500ov9qtyoaopft1mo5mjis4t",
         "homepage_status": 200,
@@ -20632,7 +20633,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-08-16T20:34:23.509Z",
+        "fetched_at": "2026-08-19T21:17:29.161Z",
         "homepage_url": "https://scitools.com/",
         "example_url": "https://scitools.com/codecheck?xad=codecheck&twclid=23owlb2i7ei44kgcykku0zs4en",
         "homepage_status": 200,
@@ -20758,7 +20759,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-08-16T21:03:59.657Z",
+        "fetched_at": "2026-08-19T22:41:41.557Z",
         "homepage_url": "https://ironclaw.com/",
         "example_url": "https://www.ironclaw.com/?utm_source=x&utm_medium=paid_social&utm_campaign=ironclaw_marapr26&twclid=2axdpb938w7qafe76dwca4od5q",
         "homepage_status": 200,
@@ -20884,7 +20885,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-08-16T21:04:01.869Z",
+        "fetched_at": "2026-08-19T22:41:43.760Z",
         "homepage_url": "https://darkhours-thegame.com/",
         "example_url": "https://www.darkhours-thegame.com/xbox?utm_source=twitter&utm_campaign=XboxLaunch&utm_medium=pc&utm_content=Diftborn&utm_term=us&twclid=271vf2o4bu11vai5qyjclxea1r",
         "homepage_status": 200,
@@ -21010,7 +21011,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-08-16T21:04:04.749Z",
+        "fetched_at": "2026-08-19T22:41:45.983Z",
         "homepage_url": "https://zavu.dev/",
         "example_url": "https://www.zavu.dev/?twclid=28xrbkfqjxo8t4gl13yvgj5wa8",
         "homepage_status": 200,
@@ -21137,7 +21138,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-08-16T21:04:05.549Z",
+        "fetched_at": "2026-08-19T22:41:47.121Z",
         "homepage_url": "https://oracle.com/",
         "example_url": "https://www.oracle.com/database/?source=%3Aad%3Aso%3Atw%3Adg%3Aa_nas%3A%3ARC_TWTR260205P00003C00005%3AEnd_Data_Risk&SC=%3Aad%3Aso%3Atw%3Adg%3Aa_nas%3A%3ARC_TWTR260205P00003C00005%3AEnd_Data_Risk&twclid=2b7h3vpee1s0pq1u9507vf4n1e",
         "homepage_status": 403,
@@ -31242,6 +31243,132 @@
       }
     },
     {
+      "domain": "cavorina.com",
+      "entity": "Cavorina",
+      "kind": "unknown",
+      "first_seen_at": "2026-08-13T15:44:00.149Z",
+      "last_seen_at": "2026-08-19T20:20:00.861Z",
+      "discovery": {
+        "distinct_urls": 6,
+        "example_urls": [
+          "https://www.cavorina.com/products/sun-protection-hat?utm_source=twitter&utm_campaign=42165657&twclid=2exl5hkoe1xm0a2kxes2axtq22",
+          "https://www.cavorina.com/products/denim-vintage-cap?utm_source=twitter&utm_campaign=42165658&twclid=25mrkv2cdcpmvszhqi593bieb8",
+          "https://www.cavorina.com/products/sun-protection-hat?utm_source=twitter&utm_campaign=42165657&twclid=2dykgsp3s0itjg1aejwo68cg0p",
+          "https://www.cavorina.com/products/denim-vintage-cap?utm_source=twitter&utm_campaign=42165658&twclid=2c8ctr6z3h4t304qqe622a1053",
+          "https://www.cavorina.com/products/denim-vintage-cap?utm_source=twitter&utm_campaign=42165658&twclid=24bswn2flkqi5lp0lall7eyo2l"
+        ],
+        "origin_counts": {
+          "feed_buffer": 6
+        },
+        "distinct_referring_accounts": 1,
+        "sample_referring_accounts": [
+          "cavorina_shop"
+        ],
+        "distinct_axes": []
+      },
+      "claims": {
+        "total": 0,
+        "supported": 0,
+        "refuted": 0,
+        "contested": 0,
+        "unverified": 0,
+        "resolved_count": 0
+      },
+      "structural_features": {
+        "has_search_paths": false,
+        "has_article_paths": false,
+        "has_doi_paths": false
+      },
+      "ratings": {
+        "provenance": {
+          "score": 0.45,
+          "basis": [
+            "unknown_domain_pattern"
+          ]
+        },
+        "breadth": {
+          "score": 0.235,
+          "basis": [
+            "distinct_urls:6",
+            "distinct_axes:0",
+            "origin_types:1"
+          ]
+        },
+        "corroboration": {
+          "score": 0.19583333333333333,
+          "basis": [
+            "referring_accounts:1",
+            "origin_types:1"
+          ]
+        },
+        "track_record": {
+          "score": null,
+          "basis": [
+            "no_resolved_claims_observed"
+          ]
+        },
+        "profile": {
+          "score": 0,
+          "confidence": 0.55,
+          "basis": [
+            "meta_author:false",
+            "published_time:false",
+            "canonical:false",
+            "about:false",
+            "contact:false",
+            "corrections:false",
+            "outbound_links:0",
+            "opinion_marker:false"
+          ]
+        },
+        "overall": {
+          "score": 0.379140625,
+          "confidence": 0.22447499999999998,
+          "method": "mechanical_v1",
+          "basis": [
+            "unknown_domain_pattern",
+            "distinct_urls:6",
+            "distinct_axes:0",
+            "origin_types:1",
+            "referring_accounts:1",
+            "origin_types:1",
+            "track_record_unavailable"
+          ]
+        }
+      },
+      "profile": {
+        "fetched_at": "2026-08-19T14:25:19.772Z",
+        "homepage_url": "https://cavorina.com/",
+        "example_url": "https://www.cavorina.com/products/sun-protection-hat?utm_source=twitter&utm_campaign=42165657&twclid=2exl5hkoe1xm0a2kxes2axtq22",
+        "homepage_status": 403,
+        "example_status": 403,
+        "homepage_final_url": "https://www.cavorina.com/",
+        "example_final_url": "https://www.cavorina.com/products/sun-protection-hat?utm_source=twitter&utm_campaign=42165657&twclid=2exl5hkoe1xm0a2kxes2axtq22",
+        "homepage_content_type": "text/html; charset=UTF-8",
+        "example_content_type": "text/html; charset=UTF-8",
+        "homepage": {
+          "has_meta_author": false,
+          "has_published_time": false,
+          "has_canonical": false,
+          "has_about_link": false,
+          "has_contact_link": false,
+          "has_corrections_link": false,
+          "outbound_links_count": 0,
+          "opinion_marker": false
+        },
+        "example": {
+          "has_meta_author": false,
+          "has_published_time": false,
+          "has_canonical": false,
+          "has_about_link": false,
+          "has_contact_link": false,
+          "has_corrections_link": false,
+          "outbound_links_count": 0,
+          "opinion_marker": false
+        }
+      }
+    },
+    {
       "domain": "understandingwar.org",
       "entity": "Understandingwar",
       "kind": "unknown",
@@ -38230,132 +38357,6 @@
           "has_contact_link": false,
           "has_corrections_link": false,
           "outbound_links_count": 17,
-          "opinion_marker": false
-        }
-      }
-    },
-    {
-      "domain": "cavorina.com",
-      "entity": "Cavorina",
-      "kind": "unknown",
-      "first_seen_at": "2026-08-13T15:44:00.149Z",
-      "last_seen_at": "2026-08-16T17:08:54.424Z",
-      "discovery": {
-        "distinct_urls": 5,
-        "example_urls": [
-          "https://www.cavorina.com/products/sun-protection-hat?utm_source=twitter&utm_campaign=42165657&twclid=2exl5hkoe1xm0a2kxes2axtq22",
-          "https://www.cavorina.com/products/denim-vintage-cap?utm_source=twitter&utm_campaign=42165658&twclid=25mrkv2cdcpmvszhqi593bieb8",
-          "https://www.cavorina.com/products/sun-protection-hat?utm_source=twitter&utm_campaign=42165657&twclid=2dykgsp3s0itjg1aejwo68cg0p",
-          "https://www.cavorina.com/products/denim-vintage-cap?utm_source=twitter&utm_campaign=42165658&twclid=2c8ctr6z3h4t304qqe622a1053",
-          "https://www.cavorina.com/products/denim-vintage-cap?utm_source=twitter&utm_campaign=42165658&twclid=24bswn2flkqi5lp0lall7eyo2l"
-        ],
-        "origin_counts": {
-          "feed_buffer": 5
-        },
-        "distinct_referring_accounts": 1,
-        "sample_referring_accounts": [
-          "cavorina_shop"
-        ],
-        "distinct_axes": []
-      },
-      "claims": {
-        "total": 0,
-        "supported": 0,
-        "refuted": 0,
-        "contested": 0,
-        "unverified": 0,
-        "resolved_count": 0
-      },
-      "structural_features": {
-        "has_search_paths": false,
-        "has_article_paths": false,
-        "has_doi_paths": false
-      },
-      "ratings": {
-        "provenance": {
-          "score": 0.45,
-          "basis": [
-            "unknown_domain_pattern"
-          ]
-        },
-        "breadth": {
-          "score": 0.20583333333333334,
-          "basis": [
-            "distinct_urls:5",
-            "distinct_axes:0",
-            "origin_types:1"
-          ]
-        },
-        "corroboration": {
-          "score": 0.19583333333333333,
-          "basis": [
-            "referring_accounts:1",
-            "origin_types:1"
-          ]
-        },
-        "track_record": {
-          "score": null,
-          "basis": [
-            "no_resolved_claims_observed"
-          ]
-        },
-        "profile": {
-          "score": 0,
-          "confidence": 0.55,
-          "basis": [
-            "meta_author:false",
-            "published_time:false",
-            "canonical:false",
-            "about:false",
-            "contact:false",
-            "corrections:false",
-            "outbound_links:0",
-            "opinion_marker:false"
-          ]
-        },
-        "overall": {
-          "score": 0.37276041666666665,
-          "confidence": 0.19585000000000002,
-          "method": "mechanical_v1",
-          "basis": [
-            "unknown_domain_pattern",
-            "distinct_urls:5",
-            "distinct_axes:0",
-            "origin_types:1",
-            "referring_accounts:1",
-            "origin_types:1",
-            "track_record_unavailable"
-          ]
-        }
-      },
-      "profile": {
-        "fetched_at": "2026-08-19T14:25:19.772Z",
-        "homepage_url": "https://cavorina.com/",
-        "example_url": "https://www.cavorina.com/products/sun-protection-hat?utm_source=twitter&utm_campaign=42165657&twclid=2exl5hkoe1xm0a2kxes2axtq22",
-        "homepage_status": 403,
-        "example_status": 403,
-        "homepage_final_url": "https://www.cavorina.com/",
-        "example_final_url": "https://www.cavorina.com/products/sun-protection-hat?utm_source=twitter&utm_campaign=42165657&twclid=2exl5hkoe1xm0a2kxes2axtq22",
-        "homepage_content_type": "text/html; charset=UTF-8",
-        "example_content_type": "text/html; charset=UTF-8",
-        "homepage": {
-          "has_meta_author": false,
-          "has_published_time": false,
-          "has_canonical": false,
-          "has_about_link": false,
-          "has_contact_link": false,
-          "has_corrections_link": false,
-          "outbound_links_count": 0,
-          "opinion_marker": false
-        },
-        "example": {
-          "has_meta_author": false,
-          "has_published_time": false,
-          "has_canonical": false,
-          "has_about_link": false,
-          "has_contact_link": false,
-          "has_corrections_link": false,
-          "outbound_links_count": 0,
           "opinion_marker": false
         }
       }
@@ -48589,6 +48590,85 @@
         "distinct_referring_accounts": 1,
         "sample_referring_accounts": [
           "basalt_blaobiw"
+        ],
+        "distinct_axes": []
+      },
+      "claims": {
+        "total": 0,
+        "supported": 0,
+        "refuted": 0,
+        "contested": 0,
+        "unverified": 0,
+        "resolved_count": 0
+      },
+      "structural_features": {
+        "has_search_paths": false,
+        "has_article_paths": false,
+        "has_doi_paths": false
+      },
+      "ratings": {
+        "provenance": {
+          "score": 0.45,
+          "basis": [
+            "unknown_domain_pattern"
+          ]
+        },
+        "breadth": {
+          "score": 0.1475,
+          "basis": [
+            "distinct_urls:3",
+            "distinct_axes:0",
+            "origin_types:1"
+          ]
+        },
+        "corroboration": {
+          "score": 0.19583333333333333,
+          "basis": [
+            "referring_accounts:1",
+            "origin_types:1"
+          ]
+        },
+        "track_record": {
+          "score": null,
+          "basis": [
+            "no_resolved_claims_observed"
+          ]
+        },
+        "overall": {
+          "score": 0.36000000000000004,
+          "confidence": 0.1386,
+          "method": "mechanical_v1",
+          "basis": [
+            "unknown_domain_pattern",
+            "distinct_urls:3",
+            "distinct_axes:0",
+            "origin_types:1",
+            "referring_accounts:1",
+            "origin_types:1",
+            "track_record_unavailable"
+          ]
+        }
+      }
+    },
+    {
+      "domain": "casvibe.com",
+      "entity": "Casvibe",
+      "kind": "unknown",
+      "first_seen_at": "2026-08-16T15:58:48.225Z",
+      "last_seen_at": "2026-08-19T20:00:09.046Z",
+      "discovery": {
+        "distinct_urls": 3,
+        "example_urls": [
+          "https://www.casvibe.com/products/shorts?utm_source=twitter&utm_campaign=5PCargoShortsSWC403&twclid=27vfkk1pvqh74enbucyz84lbao",
+          "https://www.casvibe.com/products/sereinex-clogs-4?utm_source=twitter&utm_campaign=WalkCloudClogSWC403&twclid=2c5yknon08ttjz7jjz2ov7n71l",
+          "https://www.casvibe.com/products/gjenbru-llish?utm_source=twitter&utm_campaign=KeepingBagsSWC403&twclid=287pili4zi224fi2iu57wexww7"
+        ],
+        "origin_counts": {
+          "feed_buffer": 3
+        },
+        "distinct_referring_accounts": 1,
+        "sample_referring_accounts": [
+          "casvibe_us"
         ],
         "distinct_axes": []
       },
@@ -59132,84 +59212,6 @@
         "distinct_referring_accounts": 1,
         "sample_referring_accounts": [
           "cleanlune"
-        ],
-        "distinct_axes": []
-      },
-      "claims": {
-        "total": 0,
-        "supported": 0,
-        "refuted": 0,
-        "contested": 0,
-        "unverified": 0,
-        "resolved_count": 0
-      },
-      "structural_features": {
-        "has_search_paths": false,
-        "has_article_paths": false,
-        "has_doi_paths": false
-      },
-      "ratings": {
-        "provenance": {
-          "score": 0.45,
-          "basis": [
-            "unknown_domain_pattern"
-          ]
-        },
-        "breadth": {
-          "score": 0.11833333333333332,
-          "basis": [
-            "distinct_urls:2",
-            "distinct_axes:0",
-            "origin_types:1"
-          ]
-        },
-        "corroboration": {
-          "score": 0.19583333333333333,
-          "basis": [
-            "referring_accounts:1",
-            "origin_types:1"
-          ]
-        },
-        "track_record": {
-          "score": null,
-          "basis": [
-            "no_resolved_claims_observed"
-          ]
-        },
-        "overall": {
-          "score": 0.3536197916666667,
-          "confidence": 0.10997499999999999,
-          "method": "mechanical_v1",
-          "basis": [
-            "unknown_domain_pattern",
-            "distinct_urls:2",
-            "distinct_axes:0",
-            "origin_types:1",
-            "referring_accounts:1",
-            "origin_types:1",
-            "track_record_unavailable"
-          ]
-        }
-      }
-    },
-    {
-      "domain": "casvibe.com",
-      "entity": "Casvibe",
-      "kind": "unknown",
-      "first_seen_at": "2026-08-16T15:58:48.225Z",
-      "last_seen_at": "2026-08-19T18:15:10.849Z",
-      "discovery": {
-        "distinct_urls": 2,
-        "example_urls": [
-          "https://www.casvibe.com/products/shorts?utm_source=twitter&utm_campaign=5PCargoShortsSWC403&twclid=27vfkk1pvqh74enbucyz84lbao",
-          "https://www.casvibe.com/products/sereinex-clogs-4?utm_source=twitter&utm_campaign=WalkCloudClogSWC403&twclid=2c5yknon08ttjz7jjz2ov7n71l"
-        ],
-        "origin_counts": {
-          "feed_buffer": 2
-        },
-        "distinct_referring_accounts": 1,
-        "sample_referring_accounts": [
-          "casvibe_us"
         ],
         "distinct_axes": []
       },
@@ -91713,6 +91715,83 @@
         "distinct_referring_accounts": 1,
         "sample_referring_accounts": [
           "legendawakes"
+        ],
+        "distinct_axes": []
+      },
+      "claims": {
+        "total": 0,
+        "supported": 0,
+        "refuted": 0,
+        "contested": 0,
+        "unverified": 0,
+        "resolved_count": 0
+      },
+      "structural_features": {
+        "has_search_paths": false,
+        "has_article_paths": false,
+        "has_doi_paths": false
+      },
+      "ratings": {
+        "provenance": {
+          "score": 0.45,
+          "basis": [
+            "unknown_domain_pattern"
+          ]
+        },
+        "breadth": {
+          "score": 0.08916666666666666,
+          "basis": [
+            "distinct_urls:1",
+            "distinct_axes:0",
+            "origin_types:1"
+          ]
+        },
+        "corroboration": {
+          "score": 0.19583333333333333,
+          "basis": [
+            "referring_accounts:1",
+            "origin_types:1"
+          ]
+        },
+        "track_record": {
+          "score": null,
+          "basis": [
+            "no_resolved_claims_observed"
+          ]
+        },
+        "overall": {
+          "score": 0.3472395833333333,
+          "confidence": 0.08135,
+          "method": "mechanical_v1",
+          "basis": [
+            "unknown_domain_pattern",
+            "distinct_urls:1",
+            "distinct_axes:0",
+            "origin_types:1",
+            "referring_accounts:1",
+            "origin_types:1",
+            "track_record_unavailable"
+          ]
+        }
+      }
+    },
+    {
+      "domain": "calnorae.com",
+      "entity": "Calnorae",
+      "kind": "unknown",
+      "first_seen_at": "2026-08-19T20:15:32.624Z",
+      "last_seen_at": "2026-08-19T20:15:32.624Z",
+      "discovery": {
+        "distinct_urls": 1,
+        "example_urls": [
+          "https://www.calnorae.com/products/men-s-non-slip-breathable-leather-sandals-8pqk?utm_source=twitter&utm_campaign=42195129&twclid=28rn1vewt30niaqv0nqt2ycg6z"
+        ],
+        "origin_counts": {
+          "feed_buffer": 1
+        },
+        "distinct_referring_accounts": 1,
+        "sample_referring_accounts": [
+          "calnorae"
         ],
         "distinct_axes": []
       },
