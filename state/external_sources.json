@@ -1,8 +1,8 @@
 {
   "schema_version": "1.0",
-  "generated_at": "2026-08-19T00:58:52.493Z",
+  "generated_at": "2026-08-19T03:57:48.952Z",
   "method": "mechanical_registry_v1",
-  "profiled_at": "2026-08-19T00:59:21.333Z",
+  "profiled_at": "2026-08-19T03:58:00.643Z",
   "sources": [
     {
       "domain": "theguardian.com",
@@ -11,7 +11,7 @@
       "first_seen_at": "2026-03-27T23:17:00Z",
       "last_seen_at": "2026-08-16T20:34:57.150Z",
       "discovery": {
-        "distinct_urls": 911,
+        "distinct_urls": 913,
         "example_urls": [
           "https://www.theguardian.com/us-news/2026/jun/23/trump-immigration-courthouse-arrest-policy",
           "https://www.theguardian.com/us-news/2026/jun/28/ice-minnesota-defending-democracy",
@@ -21,7 +21,7 @@
         ],
         "origin_counts": {
           "ontology_evidence": 47,
-          "reading_queue": 873,
+          "reading_queue": 875,
           "journals": 127,
           "articles": 5
         },
@@ -75,7 +75,7 @@
         "breadth": {
           "score": 0.94,
           "basis": [
-            "distinct_urls:911",
+            "distinct_urls:913",
             "distinct_axes:20",
             "origin_types:4"
           ]
@@ -115,7 +115,7 @@
             "newsroom_domain_pattern",
             "article_path_seen",
             "doi_or_identifier_path_seen",
-            "distinct_urls:911",
+            "distinct_urls:913",
             "distinct_axes:20",
             "origin_types:4",
             "referring_accounts:0",
@@ -702,7 +702,7 @@
       "first_seen_at": "2026-06-22T00:15:00Z",
       "last_seen_at": "2026-08-15T16:49:56.115Z",
       "discovery": {
-        "distinct_urls": 618,
+        "distinct_urls": 619,
         "example_urls": [
           "https://www.nytimes.com/2026/06/19/world/canada/frank-stronach-trial-guilty-sex-charges.html",
           "https://www.nytimes.com/2026/06/27/world/americas/mexican-officials-us-informants.html",
@@ -712,7 +712,7 @@
         ],
         "origin_counts": {
           "ontology_evidence": 21,
-          "reading_queue": 638,
+          "reading_queue": 639,
           "journals": 54
         },
         "distinct_referring_accounts": 0,
@@ -756,7 +756,7 @@
         "breadth": {
           "score": 0.8799999999999999,
           "basis": [
-            "distinct_urls:618",
+            "distinct_urls:619",
             "distinct_axes:12",
             "origin_types:3"
           ]
@@ -795,7 +795,7 @@
           "basis": [
             "newsroom_domain_pattern",
             "article_path_seen",
-            "distinct_urls:618",
+            "distinct_urls:619",
             "distinct_axes:12",
             "origin_types:3",
             "referring_accounts:0",
@@ -1217,7 +1217,7 @@
       "first_seen_at": "2026-06-26T07:05:00Z",
       "last_seen_at": "2026-08-16T20:34:57.150Z",
       "discovery": {
-        "distinct_urls": 565,
+        "distinct_urls": 567,
         "example_urls": [
           "https://www.bbc.co.uk/news/articles/cn8qxz6qypyo",
           "https://www.bbc.co.uk/news/articles/cn075j04pnyo?at_medium=RSS&amp;at_campaign=rss",
@@ -1227,7 +1227,7 @@
         ],
         "origin_counts": {
           "ontology_evidence": 6,
-          "reading_queue": 579,
+          "reading_queue": 581,
           "journals": 19,
           "articles": 1
         },
@@ -1263,7 +1263,7 @@
         "breadth": {
           "score": 0.8233333333333333,
           "basis": [
-            "distinct_urls:565",
+            "distinct_urls:567",
             "distinct_axes:4",
             "origin_types:4"
           ]
@@ -1301,7 +1301,7 @@
           "method": "mechanical_v1",
           "basis": [
             "newsroom_domain_pattern",
-            "distinct_urls:565",
+            "distinct_urls:567",
             "distinct_axes:4",
             "origin_types:4",
             "referring_accounts:0",
@@ -10236,7 +10236,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-08-16T01:42:23.758Z",
+        "fetched_at": "2026-08-19T01:57:46.698Z",
         "homepage_url": "https://imbue.com/",
         "example_url": "https://imbue.com/product/bouncer/redirect.html?utm_source=x&utm_medium=paid_social&utm_campaign=omni&authuser=0&hl=en&twclid=28wps3duhy1q7hzrcdj2h5pxpl",
         "homepage_status": 200,
@@ -12399,15 +12399,15 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-08-16T01:12:22.503Z",
+        "fetched_at": "2026-08-19T01:57:59.370Z",
         "homepage_url": "https://falconx.io/",
         "example_url": "https://focal.falconx.io/workflows/discovery/crypto?utm_source=x&utm_medium=ads&utm_campaign=discover&utm_id=discover&twclid=24ydefk7qg32l97smp6icteh83",
         "homepage_status": 200,
-        "example_status": 200,
+        "example_status": null,
         "homepage_final_url": "https://www.falconx.io/",
-        "example_final_url": "https://askfocal.com/workflows/discovery/crypto?utm_source=x&utm_medium=ads&utm_campaign=discover&utm_id=discover&twclid=24ydefk7qg32l97smp6icteh83",
+        "example_final_url": "https://focal.falconx.io/workflows/discovery/crypto?utm_source=x&utm_medium=ads&utm_campaign=discover&utm_id=discover&twclid=24ydefk7qg32l97smp6icteh83",
         "homepage_content_type": "text/html; charset=utf-8",
-        "example_content_type": "text/html",
+        "example_content_type": "",
         "homepage": {
           "has_meta_author": false,
           "has_published_time": false,
@@ -12526,7 +12526,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-08-16T01:12:23.830Z",
+        "fetched_at": "2026-08-19T01:58:05.619Z",
         "homepage_url": "https://fundrise.com/",
         "example_url": "https://fundrise.com/vcx?utm_source=twitter&utm_campaign=vcxsky&twclid=286j5mjx6wqmg12vs5jto11lrf",
         "homepage_status": 405,
@@ -13035,7 +13035,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-08-16T01:12:24.565Z",
+        "fetched_at": "2026-08-19T01:58:06.358Z",
         "homepage_url": "https://avenorigin.com/",
         "example_url": "https://avenorigin.com/?x=twg11&tw=rcafs&tw_click=tw-rcafs-rcafv&twclid=27a9svqvmxrds3k2j1qq8l2dy6",
         "homepage_status": null,
@@ -13162,7 +13162,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-08-16T01:12:26.065Z",
+        "fetched_at": "2026-08-19T02:27:02.505Z",
         "homepage_url": "https://xhawk.ai/",
         "example_url": "https://xhawk.ai/?twclid=218eppqu7okpx25fant8nuhrp1",
         "homepage_status": 200,
@@ -14055,7 +14055,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-08-16T01:42:25.368Z",
+        "fetched_at": "2026-08-19T02:27:05.184Z",
         "homepage_url": "https://ic.com/",
         "example_url": "https://www.ic.com/en/trade-indices/?utm_source=twitter&utm_medium=twitter&utm_campaign=tw_en_ph_cv_pr&utm_term=TWITTER_TIMELINE&utm_content=indices&camp=94092&twclid=22h8qlm19mtb6b4fjbtto4x3rp",
         "homepage_status": 200,
@@ -14181,7 +14181,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-08-16T01:42:26.278Z",
+        "fetched_at": "2026-08-19T02:27:05.826Z",
         "homepage_url": "https://tradeodds.io/",
         "example_url": "https://www.tradeodds.io/dashboard?tab=factor-match&utm_source=twitter&utm_medium=cpc&utm_campaign=Factor+Match+Purchase+Campaign+Desk&utm_id=factor+match+purchase+campaign+desk&utm_term=factor+match+purchase+purchase+desk+us&utm_content=ad2&twclid=21dpzozj7vqb86fdz6auuzunmy",
         "homepage_status": 200,
@@ -14278,16 +14278,16 @@
           ]
         },
         "profile": {
-          "score": 0,
+          "score": 0.21,
           "confidence": 0.55,
           "basis": [
             "meta_author:false",
             "published_time:false",
-            "canonical:false",
+            "canonical:true",
             "about:false",
             "contact:false",
             "corrections:false",
-            "outbound_links:0",
+            "outbound_links:11",
             "opinion_marker:false"
           ]
         },
@@ -14307,19 +14307,19 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-08-16T01:42:46.283Z",
+        "fetched_at": "2026-08-19T02:27:08.073Z",
         "homepage_url": "https://poly.market/",
         "example_url": "https://poly.market/X0q565H?twclid=24x365380zub6d85j7s6xd212w",
-        "homepage_status": null,
-        "example_status": null,
-        "homepage_final_url": "https://poly.market/",
-        "example_final_url": "https://poly.market/X0q565H?twclid=24x365380zub6d85j7s6xd212w",
-        "homepage_content_type": "",
-        "example_content_type": "",
+        "homepage_status": 200,
+        "example_status": 200,
+        "homepage_final_url": "https://polymarket.com/",
+        "example_final_url": "https://polymarket.com/event/bnb-updown-5m-1787101800",
+        "homepage_content_type": "text/html; charset=utf-8",
+        "example_content_type": "text/html; charset=utf-8",
         "homepage": {
           "has_meta_author": false,
           "has_published_time": false,
-          "has_canonical": false,
+          "has_canonical": true,
           "has_about_link": false,
           "has_contact_link": false,
           "has_corrections_link": false,
@@ -14329,11 +14329,11 @@
         "example": {
           "has_meta_author": false,
           "has_published_time": false,
-          "has_canonical": false,
+          "has_canonical": true,
           "has_about_link": false,
           "has_contact_link": false,
           "has_corrections_link": false,
-          "outbound_links_count": 0,
+          "outbound_links_count": 11,
           "opinion_marker": false
         }
       }
@@ -14811,7 +14811,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-08-16T02:42:24.228Z",
+        "fetched_at": "2026-08-19T03:57:54.848Z",
         "homepage_url": "https://omgskills.com/",
         "example_url": "https://omgskills.com/?twclid=2ewu2vd054idb44rsf4bgvksa8",
         "homepage_status": 200,
@@ -14937,7 +14937,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-08-16T02:42:25.546Z",
+        "fetched_at": "2026-08-19T03:57:58.129Z",
         "homepage_url": "https://era.app/",
         "example_url": "https://era.app/?twclid=23bm7jtrc66pin9ydx0wvupecw",
         "homepage_status": 200,
@@ -15693,7 +15693,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-08-16T02:42:26.016Z",
+        "fetched_at": "2026-08-19T03:57:59.729Z",
         "homepage_url": "https://spacex.com/",
         "example_url": "https://shop.spacex.com/products/spacex-mission-ready-sunglasses?variant=44537843744847&utm_source=twitter&utm_medium=product_sync&utm_campaign=twitter_44537843744847&twclid=298d45vmtw4pu78lan6k2cs4ha",
         "homepage_status": 200,
@@ -16071,7 +16071,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-08-16T02:42:27.890Z",
+        "fetched_at": "2026-08-19T03:58:00.643Z",
         "homepage_url": "https://hypemarkets.xyz/",
         "example_url": "https://hypemarkets.xyz/?twclid=27lmvj7zap2yyfs7n0ndgenluy",
         "homepage_status": 200,
