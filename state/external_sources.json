@@ -1,8 +1,8 @@
 {
   "schema_version": "1.0",
-  "generated_at": "2026-08-19T15:55:20.694Z",
+  "generated_at": "2026-08-19T18:47:10.837Z",
   "method": "mechanical_registry_v1",
-  "profiled_at": "2026-08-19T15:55:29.573Z",
+  "profiled_at": "2026-08-19T18:47:15.934Z",
   "sources": [
     {
       "domain": "theguardian.com",
@@ -11,7 +11,7 @@
       "first_seen_at": "2026-03-27T23:17:00Z",
       "last_seen_at": "2026-08-16T20:34:57.150Z",
       "discovery": {
-        "distinct_urls": 921,
+        "distinct_urls": 923,
         "example_urls": [
           "https://www.theguardian.com/us-news/2026/jun/23/trump-immigration-courthouse-arrest-policy",
           "https://www.theguardian.com/us-news/2026/jun/28/ice-minnesota-defending-democracy",
@@ -21,7 +21,7 @@
         ],
         "origin_counts": {
           "ontology_evidence": 47,
-          "reading_queue": 883,
+          "reading_queue": 885,
           "journals": 127,
           "articles": 5
         },
@@ -75,7 +75,7 @@
         "breadth": {
           "score": 0.94,
           "basis": [
-            "distinct_urls:921",
+            "distinct_urls:923",
             "distinct_axes:20",
             "origin_types:4"
           ]
@@ -115,7 +115,7 @@
             "newsroom_domain_pattern",
             "article_path_seen",
             "doi_or_identifier_path_seen",
-            "distinct_urls:921",
+            "distinct_urls:923",
             "distinct_axes:20",
             "origin_types:4",
             "referring_accounts:0",
@@ -702,7 +702,7 @@
       "first_seen_at": "2026-06-22T00:15:00Z",
       "last_seen_at": "2026-08-15T16:49:56.115Z",
       "discovery": {
-        "distinct_urls": 625,
+        "distinct_urls": 626,
         "example_urls": [
           "https://www.nytimes.com/2026/06/19/world/canada/frank-stronach-trial-guilty-sex-charges.html",
           "https://www.nytimes.com/2026/06/27/world/americas/mexican-officials-us-informants.html",
@@ -712,7 +712,7 @@
         ],
         "origin_counts": {
           "ontology_evidence": 21,
-          "reading_queue": 645,
+          "reading_queue": 646,
           "journals": 54
         },
         "distinct_referring_accounts": 0,
@@ -756,7 +756,7 @@
         "breadth": {
           "score": 0.8799999999999999,
           "basis": [
-            "distinct_urls:625",
+            "distinct_urls:626",
             "distinct_axes:12",
             "origin_types:3"
           ]
@@ -795,7 +795,7 @@
           "basis": [
             "newsroom_domain_pattern",
             "article_path_seen",
-            "distinct_urls:625",
+            "distinct_urls:626",
             "distinct_axes:12",
             "origin_types:3",
             "referring_accounts:0",
@@ -1099,7 +1099,7 @@
           "https://singaporeglobalnetwork.gov.sg/stories/tech/why-i-quit-college-at-22-to-launch-a-biotech-startup-in-singapore/?utm_source=x&utm_medium=social&utm_campaign=sg-paid-ao-traffic&utm_content=armaan-dhanda&twclid=2epj25tilhtb65igot07prztga"
         ],
         "origin_counts": {
-          "reading_queue": 11,
+          "reading_queue": 12,
           "feed_buffer": 1
         },
         "distinct_referring_accounts": 1,
@@ -1150,16 +1150,16 @@
           ]
         },
         "profile": {
-          "score": 0.12,
-          "confidence": 0.55,
+          "score": 0.6699999999999999,
+          "confidence": 0.75,
           "basis": [
-            "meta_author:false",
-            "published_time:false",
-            "canonical:false",
+            "meta_author:true",
+            "published_time:true",
+            "canonical:true",
             "about:false",
             "contact:true",
             "corrections:false",
-            "outbound_links:0",
+            "outbound_links:9",
             "opinion_marker:false"
           ]
         },
@@ -1179,15 +1179,15 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-08-16T18:03:58.381Z",
+        "fetched_at": "2026-08-19T18:17:12.088Z",
         "homepage_url": "https://gov.sg/",
         "example_url": "https://singaporeglobalnetwork.gov.sg/stories/tech/why-i-quit-college-at-22-to-launch-a-biotech-startup-in-singapore/?utm_source=x&utm_medium=social&utm_campaign=sg-paid-ao-traffic&utm_content=armaan-dhanda&twclid=2epj25tilhtb65igot07prztga",
         "homepage_status": 200,
-        "example_status": null,
+        "example_status": 200,
         "homepage_final_url": "https://www.gov.sg/",
         "example_final_url": "https://singaporeglobalnetwork.gov.sg/stories/tech/why-i-quit-college-at-22-to-launch-a-biotech-startup-in-singapore/?utm_source=x&utm_medium=social&utm_campaign=sg-paid-ao-traffic&utm_content=armaan-dhanda&twclid=2epj25tilhtb65igot07prztga",
         "homepage_content_type": "text/html",
-        "example_content_type": "",
+        "example_content_type": "text/html; charset=UTF-8",
         "homepage": {
           "has_meta_author": false,
           "has_published_time": false,
@@ -1199,13 +1199,13 @@
           "opinion_marker": false
         },
         "example": {
-          "has_meta_author": false,
-          "has_published_time": false,
-          "has_canonical": false,
+          "has_meta_author": true,
+          "has_published_time": true,
+          "has_canonical": true,
           "has_about_link": false,
           "has_contact_link": false,
           "has_corrections_link": false,
-          "outbound_links_count": 0,
+          "outbound_links_count": 9,
           "opinion_marker": false
         }
       }
@@ -1217,7 +1217,7 @@
       "first_seen_at": "2026-06-26T07:05:00Z",
       "last_seen_at": "2026-08-16T20:34:57.150Z",
       "discovery": {
-        "distinct_urls": 574,
+        "distinct_urls": 576,
         "example_urls": [
           "https://www.bbc.co.uk/news/articles/cn8qxz6qypyo",
           "https://www.bbc.co.uk/news/articles/cn075j04pnyo?at_medium=RSS&amp;at_campaign=rss",
@@ -1227,7 +1227,7 @@
         ],
         "origin_counts": {
           "ontology_evidence": 6,
-          "reading_queue": 588,
+          "reading_queue": 591,
           "journals": 19,
           "articles": 1
         },
@@ -1263,7 +1263,7 @@
         "breadth": {
           "score": 0.8233333333333333,
           "basis": [
-            "distinct_urls:574",
+            "distinct_urls:576",
             "distinct_axes:4",
             "origin_types:4"
           ]
@@ -1301,7 +1301,7 @@
           "method": "mechanical_v1",
           "basis": [
             "newsroom_domain_pattern",
-            "distinct_urls:574",
+            "distinct_urls:576",
             "distinct_axes:4",
             "origin_types:4",
             "referring_accounts:0",
@@ -1311,7 +1311,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-08-16T16:33:57.043Z",
+        "fetched_at": "2026-08-19T16:56:08.007Z",
         "homepage_url": "https://bbc.co.uk/",
         "example_url": "https://www.bbc.co.uk/news/articles/cn8qxz6qypyo",
         "homepage_status": 200,
@@ -1993,7 +1993,7 @@
         ],
         "origin_counts": {
           "ontology_evidence": 35,
-          "reading_queue": 27,
+          "reading_queue": 28,
           "journals": 64,
           "articles": 1
         },
@@ -3250,9 +3250,9 @@
       "entity": "T Co",
       "kind": "unknown",
       "first_seen_at": "2016-05-05T18:57:30.000Z",
-      "last_seen_at": "2026-08-17T00:50:55.000Z",
+      "last_seen_at": "2026-08-19T17:25:00.000Z",
       "discovery": {
-        "distinct_urls": 15823,
+        "distinct_urls": 15832,
         "example_urls": [
           "https://t.co/pJSE124ec4",
           "https://t.co/Soz8BXPWaa",
@@ -3261,8 +3261,8 @@
           "https://t.co/cYaqYDRp08"
         ],
         "origin_counts": {
-          "feed_buffer": 13686,
-          "feed_buffer_reply": 5138,
+          "feed_buffer": 13693,
+          "feed_buffer_reply": 5140,
           "articles": 3
         },
         "distinct_referring_accounts": 2836,
@@ -3304,7 +3304,7 @@
         "breadth": {
           "score": 0.53,
           "basis": [
-            "distinct_urls:15823",
+            "distinct_urls:15832",
             "distinct_axes:0",
             "origin_types:3"
           ]
@@ -3343,7 +3343,7 @@
           "basis": [
             "unknown_domain_pattern",
             "doi_or_identifier_path_seen",
-            "distinct_urls:15823",
+            "distinct_urls:15832",
             "distinct_axes:0",
             "origin_types:3",
             "referring_accounts:2836",
@@ -4859,7 +4859,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-08-16T16:34:00.112Z",
+        "fetched_at": "2026-08-19T16:56:11.341Z",
         "homepage_url": "https://grok.com/",
         "example_url": "https://grok.com/imagine/post/9b92ff60-ec59-45db-8a35-8e1b743e5339",
         "homepage_status": 200,
@@ -5553,9 +5553,9 @@
       "entity": "Starlink",
       "kind": "unknown",
       "first_seen_at": "2026-04-07T03:51:50.000Z",
-      "last_seen_at": "2026-08-16T14:20:06.000Z",
+      "last_seen_at": "2026-08-19T18:45:13.825Z",
       "discovery": {
-        "distinct_urls": 154,
+        "distinct_urls": 158,
         "example_urls": [
           "https://www.starlink.com/us/residential?referral=RC-DF-9543787-19448-67&utm_medium=paid&utm_campaign=awr_us_soc_twt_ptg_cau&utm_content=awr_us_soc_twt_ptg_cau_res_gvp_v4s_stc_en-us_sdb-bluesky-uptime&twclid=2cg62b1u0oqrypdim5oir1767e",
           "https://www.starlink.com/us/residential?referral=RC-DF-9543787-19448-67&utm_medium=paid&utm_campaign=awr_us_soc_twt_ptg_cau&utm_content=awr_us_soc_twt_ptg_cau_res_gvp_v4s_stc_en-us_sdb-avail-sat-yourhome&twclid=2216n7j93v9absqn77762mm626",
@@ -5564,8 +5564,8 @@
           "https://www.starlink.com/us/residential?referral=RC-DF-9543787-19448-67&utm_medium=paid&utm_campaign=awr_us_soc_twt_ptg_cau&utm_content=awr_us_soc_twt_ptg_cau_res_gvp_v4s_stc_en-us_sdb-avail-sat-arrived&twclid=21pi7t0qs8tgw0wgnh5mvmdu2g"
         ],
         "origin_counts": {
-          "feed_buffer_reply": 141,
-          "feed_buffer": 17
+          "feed_buffer_reply": 143,
+          "feed_buffer": 19
         },
         "distinct_referring_accounts": 5,
         "sample_referring_accounts": [
@@ -5600,7 +5600,7 @@
         "breadth": {
           "score": 0.47,
           "basis": [
-            "distinct_urls:154",
+            "distinct_urls:158",
             "distinct_axes:0",
             "origin_types:2"
           ]
@@ -5638,7 +5638,7 @@
           "method": "mechanical_v1",
           "basis": [
             "unknown_domain_pattern",
-            "distinct_urls:154",
+            "distinct_urls:158",
             "distinct_axes:0",
             "origin_types:2",
             "referring_accounts:5",
@@ -6297,7 +6297,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-08-16T16:34:01.201Z",
+        "fetched_at": "2026-08-19T16:56:12.463Z",
         "homepage_url": "https://rockstargames.com/",
         "example_url": "https://www.rockstargames.com/gta-online?utm_source=Twitter&utm_medium=p_social&utm_campaign=506-kch-pre-release-gift-20260702&utm_content=uk-eng&twclid=21k9dspaz1uqc236nsfftz24wo",
         "homepage_status": 200,
@@ -6555,7 +6555,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-08-16T16:34:03.394Z",
+        "fetched_at": "2026-08-19T16:56:13.961Z",
         "homepage_url": "https://theepochtimes.com/",
         "example_url": "https://www.theepochtimes.com/china/former-chinese-military-doctor-leaks-ccp-plan-to-use-taiwanese-troops-as-organ-bank-5871639?utm_medium=DigitalMkt&utm_source=twitter&utm_campaign=content_FormerChineseMilitary-karen-20250827&utm_content=img-2_FormerChineseMilitary&utm_term=new-pagevisitor&gl=reg&twclid=2387x75uji9nq8gmjpy9cer691",
         "homepage_status": 200,
@@ -6646,16 +6646,16 @@
           ]
         },
         "profile": {
-          "score": 0.14,
+          "score": 0,
           "confidence": 0.55,
           "basis": [
             "meta_author:false",
             "published_time:false",
-            "canonical:true",
+            "canonical:false",
             "about:false",
             "contact:false",
             "corrections:false",
-            "outbound_links:4",
+            "outbound_links:0",
             "opinion_marker:false"
           ]
         },
@@ -6675,15 +6675,15 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-08-16T17:33:57.583Z",
+        "fetched_at": "2026-08-19T18:17:22.824Z",
         "homepage_url": "https://wikipedia.org/",
         "example_url": "https://en.wikipedia.org/wiki/2026_Iran_war",
         "homepage_status": 200,
-        "example_status": 200,
+        "example_status": null,
         "homepage_final_url": "https://www.wikipedia.org/",
         "example_final_url": "https://en.wikipedia.org/wiki/2026_Iran_war",
         "homepage_content_type": "text/html",
-        "example_content_type": "text/html; charset=UTF-8",
+        "example_content_type": "",
         "homepage": {
           "has_meta_author": false,
           "has_published_time": false,
@@ -6697,11 +6697,11 @@
         "example": {
           "has_meta_author": false,
           "has_published_time": false,
-          "has_canonical": true,
+          "has_canonical": false,
           "has_about_link": false,
           "has_contact_link": false,
           "has_corrections_link": false,
-          "outbound_links_count": 4,
+          "outbound_links_count": 0,
           "opinion_marker": false
         }
       }
@@ -14559,7 +14559,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-08-16T18:03:59.241Z",
+        "fetched_at": "2026-08-19T18:17:25.444Z",
         "homepage_url": "https://anymark.co/",
         "example_url": "https://anymark.co/?utm_source=x&utm_campaign=x771&twclid=293t0nesyim9m91au5fqoaj5s8",
         "homepage_status": 200,
@@ -15567,7 +15567,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-08-16T16:04:06.460Z",
+        "fetched_at": "2026-08-19T17:29:22.697Z",
         "homepage_url": "https://babbily.com/",
         "example_url": "https://platform.babbily.com/?twclid=28ntbg85b8teebnlu9ilz4yxht",
         "homepage_status": 200,
@@ -15819,7 +15819,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-08-16T16:04:07.899Z",
+        "fetched_at": "2026-08-19T17:29:24.381Z",
         "homepage_url": "https://hypeddit.com/",
         "example_url": "https://hypeddit.com/psychicfeverfromexiletribe/ifyouremine?twclid=23rtj49iasvoyuwyxn3g4hwi03",
         "homepage_status": 200,
@@ -15945,7 +15945,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-08-16T16:04:09.023Z",
+        "fetched_at": "2026-08-19T17:29:25.615Z",
         "homepage_url": "https://teslahubs.com/",
         "example_url": "https://teslahubs.com/products/teslahubs-proguard-advanced-noise-reduction-weatherproofing-kit?tw_source=twitter&tw_campaign=May_2_ProGuard_Sales__Men_25_34_Web_02_05_2026&utm_term=Static_PG_img_224_1.1&twclid=22spdhzoczolm0ipnjon5bt2pn",
         "homepage_status": 200,
@@ -16197,7 +16197,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-08-16T16:04:09.595Z",
+        "fetched_at": "2026-08-19T17:29:26.124Z",
         "homepage_url": "https://h-tech.space/",
         "example_url": "https://teamlore.h-tech.space/?twclid=21cpesmzgsrh5ius8yd25zbe9t",
         "homepage_status": null,
@@ -16325,7 +16325,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-08-16T17:33:59.040Z",
+        "fetched_at": "2026-08-19T18:17:29.125Z",
         "homepage_url": "https://foxnews.com/",
         "example_url": "https://www.foxnews.com/politics/breaking-president-trump-vows-eradicate-what-he-calls-horrible-thread-cancer-quietly-moving-through-nation-issuing-stark-w",
         "homepage_status": 200,
@@ -16341,7 +16341,7 @@
           "has_about_link": true,
           "has_contact_link": true,
           "has_corrections_link": false,
-          "outbound_links_count": 43,
+          "outbound_links_count": 41,
           "opinion_marker": false
         },
         "example": {
@@ -16706,7 +16706,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-08-16T17:34:00.964Z",
+        "fetched_at": "2026-08-19T18:47:13.427Z",
         "homepage_url": "https://flow.com/",
         "example_url": "https://flow.com/post/stablecoin-market-cap-on-flow-hits-all-time-high-of-74-6m?twclid=2czuzc6x3hqaue58fju5it9nms",
         "homepage_status": 200,
@@ -16833,7 +16833,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-08-16T17:34:02.484Z",
+        "fetched_at": "2026-08-19T18:47:14.871Z",
         "homepage_url": "https://par.bz/",
         "example_url": "https://par.bz/nep?twclid=2cqyfqbi1emcrdcv6yo3eddsrk",
         "homepage_status": 403,
@@ -17594,7 +17594,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-08-16T18:04:00.331Z",
+        "fetched_at": "2026-08-19T18:47:15.711Z",
         "homepage_url": "https://kubit.ai/",
         "example_url": "https://kubit.ai/agent-analytics-landing/?utm_source=x_ads&utm_medium=paid_social&utm_campaign=claude_group&twclid=2eb9hv62es2e93pzc1qorbclgf",
         "homepage_status": 200,
@@ -17720,7 +17720,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-08-16T18:04:00.522Z",
+        "fetched_at": "2026-08-19T18:47:15.934Z",
         "homepage_url": "https://ridge.com/",
         "example_url": "https://ridge.com/collections/fday-rings-3rlp?utm_source=social&utm_medium=twitter&utm_campaign=TW+%7C+ACQ+%7C+RINGS+%7C+PCH+%7C+FDAY26+%28IO%29&utm_term=5.17+-+PCH+-+FDAY+-+IMGs+-+FDAY-RINGS-3RLP&utm_content=05250b_GIFT_FDAY_JEWELRY_WEDDING-RINGS_MIX-COLOR_OFFER-%25OFF_The-gift-your-man-actually-wants-%28we-asked%29_RINGS-FDAY-Branded__META_NN_IH_DR__FDAY-RINGS-3RLP_5-12-26%3Fnb_platform%3Dtwitter&twclid=2cpbcoko2qkg7u5nrw2y5g1wdo",
         "homepage_status": 403,
@@ -23704,6 +23704,132 @@
       }
     },
     {
+      "domain": "80.lv",
+      "entity": "80 Lv",
+      "kind": "unknown",
+      "first_seen_at": "2026-07-25T16:41:15.717Z",
+      "last_seen_at": "2026-08-19T18:14:59.960Z",
+      "discovery": {
+        "distinct_urls": 8,
+        "example_urls": [
+          "https://80.lv/articles/this-cyberpunk-cozy-game-allows-you-to-build-your-own-rain-soaked-world?utm_source=pa-x&utm_medium=cpc&twclid=24138z1ynt8psd4xn6ca3421h5",
+          "https://80.lv/articles/full-body-hand-facial-motion-capture-from-any-video-in-blender?utm_source=pa-x&utm_medium=cpc&twclid=24pjq04wg39h2xjcb31xo7m6c3",
+          "https://80.lv/articles/realistic-torso-deformation-with-rbf-muscle-rig?utm_source=pa-x&utm_medium=cpc&twclid=29tpso9x1r5kp8la08uohw2gsu",
+          "https://80.lv/articles/jesse-miettinen-s-the-last-of-us-like-generator-finally-launches?utm_source=pa-x&utm_medium=cpc&twclid=26cqfuhyc4w3w7wtzwg060bdyx",
+          "https://80.lv/articles/the-forgotten-metal-technique-behind-2008-s-iron-man?utm_source=pa-x&utm_medium=cpc&twclid=2dzgarhis82p5j356vdwjzmrg0"
+        ],
+        "origin_counts": {
+          "feed_buffer": 8
+        },
+        "distinct_referring_accounts": 1,
+        "sample_referring_accounts": [
+          "80level"
+        ],
+        "distinct_axes": []
+      },
+      "claims": {
+        "total": 0,
+        "supported": 0,
+        "refuted": 0,
+        "contested": 0,
+        "unverified": 0,
+        "resolved_count": 0
+      },
+      "structural_features": {
+        "has_search_paths": false,
+        "has_article_paths": false,
+        "has_doi_paths": false
+      },
+      "ratings": {
+        "provenance": {
+          "score": 0.45,
+          "basis": [
+            "unknown_domain_pattern"
+          ]
+        },
+        "breadth": {
+          "score": 0.29333333333333333,
+          "basis": [
+            "distinct_urls:8",
+            "distinct_axes:0",
+            "origin_types:1"
+          ]
+        },
+        "corroboration": {
+          "score": 0.19583333333333333,
+          "basis": [
+            "referring_accounts:1",
+            "origin_types:1"
+          ]
+        },
+        "track_record": {
+          "score": null,
+          "basis": [
+            "no_resolved_claims_observed"
+          ]
+        },
+        "profile": {
+          "score": 0,
+          "confidence": 0.55,
+          "basis": [
+            "meta_author:false",
+            "published_time:false",
+            "canonical:false",
+            "about:false",
+            "contact:false",
+            "corrections:false",
+            "outbound_links:0",
+            "opinion_marker:false"
+          ]
+        },
+        "overall": {
+          "score": 0.39190104166666667,
+          "confidence": 0.281725,
+          "method": "mechanical_v1",
+          "basis": [
+            "unknown_domain_pattern",
+            "distinct_urls:8",
+            "distinct_axes:0",
+            "origin_types:1",
+            "referring_accounts:1",
+            "origin_types:1",
+            "track_record_unavailable"
+          ]
+        }
+      },
+      "profile": {
+        "fetched_at": "2026-08-18T14:28:06.584Z",
+        "homepage_url": "https://80.lv/",
+        "example_url": "https://80.lv/articles/this-cyberpunk-cozy-game-allows-you-to-build-your-own-rain-soaked-world?utm_source=pa-x&utm_medium=cpc&twclid=24138z1ynt8psd4xn6ca3421h5",
+        "homepage_status": null,
+        "example_status": null,
+        "homepage_final_url": "https://80.lv/",
+        "example_final_url": "https://80.lv/articles/this-cyberpunk-cozy-game-allows-you-to-build-your-own-rain-soaked-world?utm_source=pa-x&utm_medium=cpc&twclid=24138z1ynt8psd4xn6ca3421h5",
+        "homepage_content_type": "",
+        "example_content_type": "",
+        "homepage": {
+          "has_meta_author": false,
+          "has_published_time": false,
+          "has_canonical": false,
+          "has_about_link": false,
+          "has_contact_link": false,
+          "has_corrections_link": false,
+          "outbound_links_count": 0,
+          "opinion_marker": false
+        },
+        "example": {
+          "has_meta_author": false,
+          "has_published_time": false,
+          "has_canonical": false,
+          "has_about_link": false,
+          "has_contact_link": false,
+          "has_corrections_link": false,
+          "outbound_links_count": 0,
+          "opinion_marker": false
+        }
+      }
+    },
+    {
       "domain": "geopoliticalfutures.com",
       "entity": "Geopoliticalfutures",
       "kind": "unknown",
@@ -26956,132 +27082,6 @@
         "example_final_url": "https://www.huggies.com/en-us/diapers/little-movers?twclid=21yw19hs9bynwsphlmw5vod8rj",
         "homepage_content_type": "text/html; charset=UTF-8",
         "example_content_type": "text/html; charset=UTF-8",
-        "homepage": {
-          "has_meta_author": false,
-          "has_published_time": false,
-          "has_canonical": false,
-          "has_about_link": false,
-          "has_contact_link": false,
-          "has_corrections_link": false,
-          "outbound_links_count": 0,
-          "opinion_marker": false
-        },
-        "example": {
-          "has_meta_author": false,
-          "has_published_time": false,
-          "has_canonical": false,
-          "has_about_link": false,
-          "has_contact_link": false,
-          "has_corrections_link": false,
-          "outbound_links_count": 0,
-          "opinion_marker": false
-        }
-      }
-    },
-    {
-      "domain": "80.lv",
-      "entity": "80 Lv",
-      "kind": "unknown",
-      "first_seen_at": "2026-07-25T16:41:15.717Z",
-      "last_seen_at": "2026-08-14T18:18:50.346Z",
-      "discovery": {
-        "distinct_urls": 7,
-        "example_urls": [
-          "https://80.lv/articles/this-cyberpunk-cozy-game-allows-you-to-build-your-own-rain-soaked-world?utm_source=pa-x&utm_medium=cpc&twclid=24138z1ynt8psd4xn6ca3421h5",
-          "https://80.lv/articles/full-body-hand-facial-motion-capture-from-any-video-in-blender?utm_source=pa-x&utm_medium=cpc&twclid=24pjq04wg39h2xjcb31xo7m6c3",
-          "https://80.lv/articles/realistic-torso-deformation-with-rbf-muscle-rig?utm_source=pa-x&utm_medium=cpc&twclid=29tpso9x1r5kp8la08uohw2gsu",
-          "https://80.lv/articles/jesse-miettinen-s-the-last-of-us-like-generator-finally-launches?utm_source=pa-x&utm_medium=cpc&twclid=26cqfuhyc4w3w7wtzwg060bdyx",
-          "https://80.lv/articles/the-forgotten-metal-technique-behind-2008-s-iron-man?utm_source=pa-x&utm_medium=cpc&twclid=2dzgarhis82p5j356vdwjzmrg0"
-        ],
-        "origin_counts": {
-          "feed_buffer": 7
-        },
-        "distinct_referring_accounts": 1,
-        "sample_referring_accounts": [
-          "80level"
-        ],
-        "distinct_axes": []
-      },
-      "claims": {
-        "total": 0,
-        "supported": 0,
-        "refuted": 0,
-        "contested": 0,
-        "unverified": 0,
-        "resolved_count": 0
-      },
-      "structural_features": {
-        "has_search_paths": false,
-        "has_article_paths": false,
-        "has_doi_paths": false
-      },
-      "ratings": {
-        "provenance": {
-          "score": 0.45,
-          "basis": [
-            "unknown_domain_pattern"
-          ]
-        },
-        "breadth": {
-          "score": 0.26416666666666666,
-          "basis": [
-            "distinct_urls:7",
-            "distinct_axes:0",
-            "origin_types:1"
-          ]
-        },
-        "corroboration": {
-          "score": 0.19583333333333333,
-          "basis": [
-            "referring_accounts:1",
-            "origin_types:1"
-          ]
-        },
-        "track_record": {
-          "score": null,
-          "basis": [
-            "no_resolved_claims_observed"
-          ]
-        },
-        "profile": {
-          "score": 0,
-          "confidence": 0.55,
-          "basis": [
-            "meta_author:false",
-            "published_time:false",
-            "canonical:false",
-            "about:false",
-            "contact:false",
-            "corrections:false",
-            "outbound_links:0",
-            "opinion_marker:false"
-          ]
-        },
-        "overall": {
-          "score": 0.3855208333333333,
-          "confidence": 0.2531,
-          "method": "mechanical_v1",
-          "basis": [
-            "unknown_domain_pattern",
-            "distinct_urls:7",
-            "distinct_axes:0",
-            "origin_types:1",
-            "referring_accounts:1",
-            "origin_types:1",
-            "track_record_unavailable"
-          ]
-        }
-      },
-      "profile": {
-        "fetched_at": "2026-08-18T14:28:06.584Z",
-        "homepage_url": "https://80.lv/",
-        "example_url": "https://80.lv/articles/this-cyberpunk-cozy-game-allows-you-to-build-your-own-rain-soaked-world?utm_source=pa-x&utm_medium=cpc&twclid=24138z1ynt8psd4xn6ca3421h5",
-        "homepage_status": null,
-        "example_status": null,
-        "homepage_final_url": "https://80.lv/",
-        "example_final_url": "https://80.lv/articles/this-cyberpunk-cozy-game-allows-you-to-build-your-own-rain-soaked-world?utm_source=pa-x&utm_medium=cpc&twclid=24138z1ynt8psd4xn6ca3421h5",
-        "homepage_content_type": "",
-        "example_content_type": "",
         "homepage": {
           "has_meta_author": false,
           "has_published_time": false,
@@ -58725,6 +58725,84 @@
       }
     },
     {
+      "domain": "forms.gle",
+      "entity": "Forms Gle",
+      "kind": "unknown",
+      "first_seen_at": "2026-08-04T22:45:40.050Z",
+      "last_seen_at": "2026-08-19T18:00:24.756Z",
+      "discovery": {
+        "distinct_urls": 2,
+        "example_urls": [
+          "https://forms.gle/ieGgsegGSPHSZ7eZ8?twclid=272s1ofxioxozi8t72ri4rx31h",
+          "https://forms.gle/ieGgsegGSPHSZ7eZ8?twclid=25h1frtlpnv8pbo24flafv5ntx"
+        ],
+        "origin_counts": {
+          "feed_buffer": 2
+        },
+        "distinct_referring_accounts": 1,
+        "sample_referring_accounts": [
+          "bitget_tradfi"
+        ],
+        "distinct_axes": []
+      },
+      "claims": {
+        "total": 0,
+        "supported": 0,
+        "refuted": 0,
+        "contested": 0,
+        "unverified": 0,
+        "resolved_count": 0
+      },
+      "structural_features": {
+        "has_search_paths": false,
+        "has_article_paths": false,
+        "has_doi_paths": false
+      },
+      "ratings": {
+        "provenance": {
+          "score": 0.45,
+          "basis": [
+            "unknown_domain_pattern"
+          ]
+        },
+        "breadth": {
+          "score": 0.11833333333333332,
+          "basis": [
+            "distinct_urls:2",
+            "distinct_axes:0",
+            "origin_types:1"
+          ]
+        },
+        "corroboration": {
+          "score": 0.19583333333333333,
+          "basis": [
+            "referring_accounts:1",
+            "origin_types:1"
+          ]
+        },
+        "track_record": {
+          "score": null,
+          "basis": [
+            "no_resolved_claims_observed"
+          ]
+        },
+        "overall": {
+          "score": 0.3536197916666667,
+          "confidence": 0.10997499999999999,
+          "method": "mechanical_v1",
+          "basis": [
+            "unknown_domain_pattern",
+            "distinct_urls:2",
+            "distinct_axes:0",
+            "origin_types:1",
+            "referring_accounts:1",
+            "origin_types:1",
+            "track_record_unavailable"
+          ]
+        }
+      }
+    },
+    {
       "domain": "bitfunded.com",
       "entity": "Bitfunded",
       "kind": "unknown",
@@ -59054,6 +59132,84 @@
         "distinct_referring_accounts": 1,
         "sample_referring_accounts": [
           "cleanlune"
+        ],
+        "distinct_axes": []
+      },
+      "claims": {
+        "total": 0,
+        "supported": 0,
+        "refuted": 0,
+        "contested": 0,
+        "unverified": 0,
+        "resolved_count": 0
+      },
+      "structural_features": {
+        "has_search_paths": false,
+        "has_article_paths": false,
+        "has_doi_paths": false
+      },
+      "ratings": {
+        "provenance": {
+          "score": 0.45,
+          "basis": [
+            "unknown_domain_pattern"
+          ]
+        },
+        "breadth": {
+          "score": 0.11833333333333332,
+          "basis": [
+            "distinct_urls:2",
+            "distinct_axes:0",
+            "origin_types:1"
+          ]
+        },
+        "corroboration": {
+          "score": 0.19583333333333333,
+          "basis": [
+            "referring_accounts:1",
+            "origin_types:1"
+          ]
+        },
+        "track_record": {
+          "score": null,
+          "basis": [
+            "no_resolved_claims_observed"
+          ]
+        },
+        "overall": {
+          "score": 0.3536197916666667,
+          "confidence": 0.10997499999999999,
+          "method": "mechanical_v1",
+          "basis": [
+            "unknown_domain_pattern",
+            "distinct_urls:2",
+            "distinct_axes:0",
+            "origin_types:1",
+            "referring_accounts:1",
+            "origin_types:1",
+            "track_record_unavailable"
+          ]
+        }
+      }
+    },
+    {
+      "domain": "casvibe.com",
+      "entity": "Casvibe",
+      "kind": "unknown",
+      "first_seen_at": "2026-08-16T15:58:48.225Z",
+      "last_seen_at": "2026-08-19T18:15:10.849Z",
+      "discovery": {
+        "distinct_urls": 2,
+        "example_urls": [
+          "https://www.casvibe.com/products/shorts?utm_source=twitter&utm_campaign=5PCargoShortsSWC403&twclid=27vfkk1pvqh74enbucyz84lbao",
+          "https://www.casvibe.com/products/sereinex-clogs-4?utm_source=twitter&utm_campaign=WalkCloudClogSWC403&twclid=2c5yknon08ttjz7jjz2ov7n71l"
+        ],
+        "origin_counts": {
+          "feed_buffer": 2
+        },
+        "distinct_referring_accounts": 1,
+        "sample_referring_accounts": [
+          "casvibe_us"
         ],
         "distinct_axes": []
       },
@@ -89539,83 +89695,6 @@
       }
     },
     {
-      "domain": "forms.gle",
-      "entity": "Forms Gle",
-      "kind": "unknown",
-      "first_seen_at": "2026-08-04T22:45:40.050Z",
-      "last_seen_at": "2026-08-04T22:45:40.050Z",
-      "discovery": {
-        "distinct_urls": 1,
-        "example_urls": [
-          "https://forms.gle/ieGgsegGSPHSZ7eZ8?twclid=272s1ofxioxozi8t72ri4rx31h"
-        ],
-        "origin_counts": {
-          "feed_buffer": 1
-        },
-        "distinct_referring_accounts": 1,
-        "sample_referring_accounts": [
-          "bitget_tradfi"
-        ],
-        "distinct_axes": []
-      },
-      "claims": {
-        "total": 0,
-        "supported": 0,
-        "refuted": 0,
-        "contested": 0,
-        "unverified": 0,
-        "resolved_count": 0
-      },
-      "structural_features": {
-        "has_search_paths": false,
-        "has_article_paths": false,
-        "has_doi_paths": false
-      },
-      "ratings": {
-        "provenance": {
-          "score": 0.45,
-          "basis": [
-            "unknown_domain_pattern"
-          ]
-        },
-        "breadth": {
-          "score": 0.08916666666666666,
-          "basis": [
-            "distinct_urls:1",
-            "distinct_axes:0",
-            "origin_types:1"
-          ]
-        },
-        "corroboration": {
-          "score": 0.19583333333333333,
-          "basis": [
-            "referring_accounts:1",
-            "origin_types:1"
-          ]
-        },
-        "track_record": {
-          "score": null,
-          "basis": [
-            "no_resolved_claims_observed"
-          ]
-        },
-        "overall": {
-          "score": 0.3472395833333333,
-          "confidence": 0.08135,
-          "method": "mechanical_v1",
-          "basis": [
-            "unknown_domain_pattern",
-            "distinct_urls:1",
-            "distinct_axes:0",
-            "origin_types:1",
-            "referring_accounts:1",
-            "origin_types:1",
-            "track_record_unavailable"
-          ]
-        }
-      }
-    },
-    {
       "domain": "hackenproof.com",
       "entity": "Hackenproof",
       "kind": "unknown",
@@ -91326,83 +91405,6 @@
         "distinct_referring_accounts": 1,
         "sample_referring_accounts": [
           "rob_vrc"
-        ],
-        "distinct_axes": []
-      },
-      "claims": {
-        "total": 0,
-        "supported": 0,
-        "refuted": 0,
-        "contested": 0,
-        "unverified": 0,
-        "resolved_count": 0
-      },
-      "structural_features": {
-        "has_search_paths": false,
-        "has_article_paths": false,
-        "has_doi_paths": false
-      },
-      "ratings": {
-        "provenance": {
-          "score": 0.45,
-          "basis": [
-            "unknown_domain_pattern"
-          ]
-        },
-        "breadth": {
-          "score": 0.08916666666666666,
-          "basis": [
-            "distinct_urls:1",
-            "distinct_axes:0",
-            "origin_types:1"
-          ]
-        },
-        "corroboration": {
-          "score": 0.19583333333333333,
-          "basis": [
-            "referring_accounts:1",
-            "origin_types:1"
-          ]
-        },
-        "track_record": {
-          "score": null,
-          "basis": [
-            "no_resolved_claims_observed"
-          ]
-        },
-        "overall": {
-          "score": 0.3472395833333333,
-          "confidence": 0.08135,
-          "method": "mechanical_v1",
-          "basis": [
-            "unknown_domain_pattern",
-            "distinct_urls:1",
-            "distinct_axes:0",
-            "origin_types:1",
-            "referring_accounts:1",
-            "origin_types:1",
-            "track_record_unavailable"
-          ]
-        }
-      }
-    },
-    {
-      "domain": "casvibe.com",
-      "entity": "Casvibe",
-      "kind": "unknown",
-      "first_seen_at": "2026-08-16T15:58:48.225Z",
-      "last_seen_at": "2026-08-16T15:58:48.225Z",
-      "discovery": {
-        "distinct_urls": 1,
-        "example_urls": [
-          "https://www.casvibe.com/products/shorts?utm_source=twitter&utm_campaign=5PCargoShortsSWC403&twclid=27vfkk1pvqh74enbucyz84lbao"
-        ],
-        "origin_counts": {
-          "feed_buffer": 1
-        },
-        "distinct_referring_accounts": 1,
-        "sample_referring_accounts": [
-          "casvibe_us"
         ],
         "distinct_axes": []
       },
