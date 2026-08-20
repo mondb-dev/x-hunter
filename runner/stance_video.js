@@ -93,9 +93,40 @@ function pickSubject() {
     .filter((a) => (a.confidence || 0) >= 0.65)
     .sort((x, y) => Math.abs(y.score || 0) - Math.abs(x.score || 0))[0];
   if (strong && Math.abs(strong.score || 0) >= 0.15) {
+    // State the position IN WORDS, not as a signed score.
+    //
+    // This shipped inverted to production once already: on 2026-07-25 the video
+    // said "I believe in open borders" while the immigration axis sat at +0.876
+    // toward "national sovereignty, strict border control" — the exact opposite
+    // of the committed position, spoken on camera and cross-posted to X and
+    // Facebook. Claude composed that one, so this is NOT a weak-model problem:
+    // `SCORE: 0.87 (−1..+1)` next to a "PoleA vs. PoleB" label is ambiguous
+    // enough to flip a frontier model. Naming the side, and quoting his own
+    // current_stance, produced a correct line on the first attempt in testing.
+    // `current_stance` is the load-bearing field: it is his position in his own
+    // first-person words, so it cannot be mis-read the way a signed score can.
+    // The poles are given as ORIENTATION, never as "he rejects X" — on many axes
+    // they are descriptive observations rather than advocacy positions ("...
+    // prioritizes formal processes over substantive outcomes" is a diagnosis of
+    // how institutions behave, not a thing to be for or against), so instructing
+    // the model to argue against the far pole would manufacture a new inversion.
+    const side = (strong.score || 0) >= 0 ? strong.right_pole : strong.left_pole;
     return {
       kind: "conviction",
-      text: `BELIEF AXIS: ${strong.label || strong.id}\nSCORE: ${strong.score} (−1..+1 between the poles)\nCONFIDENCE: ${strong.confidence}\nEvidence entries: ${(strong.evidence_log || []).length}`,
+      axis: {
+        poleA: strong.left_pole || "one side",
+        poleB: strong.right_pole || "the other side",
+        score: strong.score || 0,
+      },
+      text:
+        `BELIEF AXIS: ${strong.label || strong.id}\n` +
+        (strong.current_stance
+          ? `HIS POSITION, IN HIS OWN WORDS: ${String(strong.current_stance).slice(0, 400)}\n`
+          : "") +
+        `HE LEANS TOWARD: ${side}\n` +
+        `CONFIDENCE: ${strong.confidence}\n` +
+        `Evidence entries: ${(strong.evidence_log || []).length}\n` +
+        `Speak from the position above, in his voice. Do not argue the opposite of it.`,
     };
   }
 
@@ -173,7 +204,42 @@ async function composeBrief(subject) {
 }
 
 // The spoken line is public-facing speech — same bar as any other outbound.
-async function gateSpokenLine(line) {
+/**
+ * Does the line argue the side he actually committed to?
+ *
+ * Runs on EVERY backend, not just the local one. The 2026-07-25 inversion ("I
+ * believe in open borders" on an axis committed to strict border control) was
+ * composed by Claude and passed voice + factcheck untouched — those gates check
+ * tics and officeholder facts, neither of which can see a reversed position.
+ * Uses the local model for the check because it is a single-letter
+ * classification, the one thing a small model does reliably.
+ *
+ * Fails OPEN when it cannot verify: an unavailable checker must not silence the
+ * daily series. It only blocks on a POSITIVE finding of inversion.
+ */
+async function verifyStance(line, axis) {
+  if (!axis || typeof axis.score !== "number") return null; // stance-tier subjects carry no axis
+  try {
+    const local = require("./lib/local_llm");
+    if (!local.isEnabled()) return null;
+    const av = await local.isAvailable();
+    if (!av.ok) { log(`stance check skipped — local model unavailable (${av.reason})`); return null; }
+    const { checkStance } = require("./lib/local_harness");
+    return await checkStance(line, axis);
+  } catch (e) {
+    log(`stance check unavailable (${e.message}) — not blocking`);
+    return null;
+  }
+}
+
+async function gateSpokenLine(line, axis) {
+  // Position check FIRST: a reversed stance is not fixable by a fact-correction,
+  // so there is no point spending the factcheck call on it.
+  const inverted = await verifyStance(line, axis);
+  if (inverted) {
+    log(`spoken line REJECTED — ${inverted}`);
+    return null;
+  }
   try {
     const { passOutbound } = require("./lib/outbound_gates");
     const r = await passOutbound(line, { gates: ["voice", "factcheck"], tag: "stance_video" });
@@ -229,7 +295,9 @@ async function main() {
   log(`subject (${subject.kind}): ${subject.text.split("\n")[0]}`);
 
   const brief = await composeBrief(subject);
-  const gated = await gateSpokenLine(brief.spoken_line);
+  // subject.axis is present only for conviction-tier subjects; stance-tier ones
+  // carry no axis and the position check no-ops for them.
+  const gated = await gateSpokenLine(brief.spoken_line, subject.axis);
   if (!gated) return;
   if (gated !== brief.spoken_line) {
     brief.spoken_line = gated;
