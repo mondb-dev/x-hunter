@@ -363,15 +363,28 @@ section("Prediction eval coverage");
     const preds = lines.map(l => { try { return JSON.parse(l); } catch { return null; } }).filter(Boolean);
     // resolution_status is added by prediction_resolution.js — may not exist on raw predictions
     const resolved  = preds.filter(p => ["correct","wrong","partial","expired"].includes(p.resolution_status));
-    const unresolved = preds.filter(p => !p.resolution_status || p.resolution_status === "pending");
     const correct   = resolved.filter(p => p.resolution_status === "correct");
     const accuracy  = resolved.length ? (correct.length / resolved.length * 100).toFixed(0) : "n/a";
 
+    // Entries written before the current schema (Apr 11 - May 8 2026) have no
+    // `deadline_at`. prediction_resolution.js correctly skips those — with no
+    // deadline there is nothing to be past — so they are permanently pending by
+    // construction, not evidence of a backlog. Counting them made this test fail
+    // on EVERY run regardless of system health (28 legacy + 5 genuinely-waiting
+    // = 33, over the threshold of 20), and a permanently-red test is worse than
+    // no test: it teaches everyone to ignore the suite that caught the LinkedIn
+    // `await` regression.
+    const legacy     = preds.filter(p => !p.deadline_at);
+    const unresolved = preds.filter(p => p.deadline_at && (!p.resolution_status || p.resolution_status === "pending"));
+    const overdue    = unresolved.filter(p => new Date(p.deadline_at).getTime() < Date.now());
+
     if (preds.length === 0) fail("predictions", "no predictions logged");
     else {
-      pass(`predictions: ${preds.length} total, ${resolved.length} resolved (accuracy: ${accuracy}%), ${unresolved.length} pending`);
-      if (unresolved.length > 20) {
-        fail("prediction backlog", `${unresolved.length} unresolved — prediction_resolution.js may not be running`);
+      pass(`predictions: ${preds.length} total, ${resolved.length} resolved (accuracy: ${accuracy}%), ${unresolved.length} pending${legacy.length ? `, ${legacy.length} legacy (pre-schema, unresolvable)` : ""}`);
+      // Only OVERDUE predictions indicate the resolver is stuck. Pending-but-
+      // not-yet-due is the system working as designed.
+      if (overdue.length > 20) {
+        fail("prediction backlog", `${overdue.length} past their deadline and still pending — prediction_resolution.js may not be running`);
       }
     }
   }
