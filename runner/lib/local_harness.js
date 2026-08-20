@@ -86,6 +86,38 @@ function checkSpecificity(text, source) {
 }
 
 /**
+ * Reject output that is substantially a COPY of the source.
+ *
+ * checkSpecificity demands an anchor from the source — which a verbatim copy
+ * satisfies perfectly. qwen2.5:3b found that hole immediately: asked to write a
+ * tweet about an event, it returned the event brief word-for-word (151/151 chars
+ * identical) and passed every other check. Echoing the source is not analysis,
+ * and Sebastian's whole value is the take, not the restatement.
+ *
+ * Measured by word-level 5-gram overlap, which is robust to trivial edits
+ * (reordering a clause, swapping a connective) in a way string equality is not.
+ */
+function checkNotCopied(text, source, { maxOverlap = 0.5 } = {}) {
+  if (!source) return null;
+  const grams = (s, n = 5) => {
+    const w = String(s).toLowerCase().replace(/[^\w\s]/g, ' ').split(/\s+/).filter(Boolean);
+    const out = new Set();
+    for (let i = 0; i + n <= w.length; i++) out.add(w.slice(i, i + n).join(' '));
+    return out;
+  };
+  const g = grams(text);
+  if (!g.size) return null;               // too short to judge
+  const src = grams(source);
+  if (!src.size) return null;
+  let shared = 0;
+  for (const x of g) if (src.has(x)) shared++;
+  const ratio = shared / g.size;
+  return ratio > maxOverlap
+    ? `${Math.round(ratio * 100)}% of the output is copied from the source — restate it as your own point, do not echo it`
+    : null;
+}
+
+/**
  * Cebuano/Bisaya markers that are NOT Tagalog. phi4-mini emitted 'unya' and
  * 'sa-diri' while asked for Taglish. Cheap, high-precision signal that the
  * model has drifted out of the requested language.
@@ -200,6 +232,7 @@ async function guardedCompose(prompt, opts = {}) {
       checkConstraints(text, { maxLen, noHashtags, noEmoji }) ||
       checkCurrency(text, source) ||
       checkInventedNumbers(text, source) ||
+      checkNotCopied(text, source) ||
       checkSpecificity(text, source) ||
       // Language: enforce whichever policy is actually in force. If Taglish is
       // disabled on this backend the override wins regardless of what the caller
@@ -228,5 +261,5 @@ async function guardedCompose(prompt, opts = {}) {
 module.exports = {
   guardedCompose,
   checkCurrency, checkInventedNumbers, checkConstraints,
-  checkSpecificity, checkTaglish, checkEnglishOnly, checkStance,
+  checkSpecificity, checkNotCopied, checkTaglish, checkEnglishOnly, checkStance,
 };
