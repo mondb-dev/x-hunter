@@ -1,14 +1,86 @@
 {
-  "checked_at": "2026-08-19T12:39:34.236Z",
-  "evidence_24h": 0,
-  "alerts": [],
-  "source_concentration": {},
-  "axis_concentration": {},
-  "pole_balance": {
-    "left": 0,
-    "right": 0,
-    "neutral": 0
+  "checked_at": "2026-08-20T13:10:06.406Z",
+  "evidence_24h": 7,
+  "unique_sources": 2,
+  "status": "captured",
+  "alerts": [
+    {
+      "type": "source_dominance",
+      "severity": "high",
+      "detail": "@unknown accounts for 86% of today's evidence (6/7)",
+      "username": "unknown",
+      "share": 0.857
+    },
+    {
+      "type": "pole_skew",
+      "severity": "moderate",
+      "detail": "71% of evidence pushes \"right\" — risk of one-sided belief drift",
+      "dominant_pole": "right",
+      "share": 0.714
+    }
+  ],
+  "summary": "2 capture alert(s) detected:\n[HIGH] @unknown accounts for 86% of today's evidence (6/7)\n[MODERATE] 71% of evidence pushes \"right\" — risk of one-sided belief drift",
+  "source_concentration": {
+    "unknown": {
+      "username": "unknown",
+      "count": 6,
+      "share": 0.857
+    },
+    "edkrassen": {
+      "username": "edkrassen",
+      "count": 1,
+      "share": 0.143
+    }
   },
-  "status": "clean",
-  "summary": "No evidence collected in the last 24h — nothing to assess."
+  "axis_concentration": {
+    "axis_media_integrity_v1": {
+      "axis_id": "axis_media_integrity_v1",
+      "label": "Integrity of Information and Social Media Manipulation",
+      "count": 2,
+      "share": 0.286
+    },
+    "axis_procedural_governance_accountability_v1": {
+      "axis_id": "axis_procedural_governance_accountability_v1",
+      "label": "Procedural Governance vs. Genuine Accountability",
+      "count": 2,
+      "share": 0.286
+    },
+    "axis_geopolitical_control_narratives": {
+      "axis_id": "axis_geopolitical_control_narratives",
+      "label": "Geopolitical Control Narratives: Asserting Sovereignty vs. International Norms",
+      "count": 1,
+      "share": 0.143
+    },
+    "axis_rapid_disinformation_v1": {
+      "axis_id": "axis_rapid_disinformation_v1",
+      "label": "Rapid Disinformation",
+      "count": 1,
+      "share": 0.143
+    },
+    "axis_ai_legal_accountability_v1": {
+      "axis_id": "axis_ai_legal_accountability_v1",
+      "label": "AI Legal Accountability",
+      "count": 1,
+      "share": 0.143
+    }
+  },
+  "cluster_concentration": {
+    "unknown": {
+      "cluster": "unknown",
+      "count": 6,
+      "share": 0.857
+    },
+    "breaking_news": {
+      "cluster": "breaking_news",
+      "count": 1,
+      "share": 0.143
+    }
+  },
+  "pole_balance": {
+    "left": 2,
+    "right": 5,
+    "neutral": 0,
+    "left_share": 0.286,
+    "right_share": 0.714
+  }
 }

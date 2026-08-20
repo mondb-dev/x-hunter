@@ -1,8 +1,8 @@
 {
   "schema_version": "1.0",
-  "generated_at": "2026-08-20T10:17:06.788Z",
+  "generated_at": "2026-08-20T12:55:45.728Z",
   "method": "mechanical_registry_v1",
-  "profiled_at": "2026-08-20T10:17:23.368Z",
+  "profiled_at": "2026-08-20T11:46:51.316Z",
   "sources": [
     {
       "domain": "theguardian.com",
@@ -11,7 +11,7 @@
       "first_seen_at": "2026-03-27T23:17:00Z",
       "last_seen_at": "2026-08-16T20:34:57.150Z",
       "discovery": {
-        "distinct_urls": 933,
+        "distinct_urls": 935,
         "example_urls": [
           "https://www.theguardian.com/us-news/2026/jun/23/trump-immigration-courthouse-arrest-policy",
           "https://www.theguardian.com/us-news/2026/jun/28/ice-minnesota-defending-democracy",
@@ -21,7 +21,7 @@
         ],
         "origin_counts": {
           "ontology_evidence": 47,
-          "reading_queue": 895,
+          "reading_queue": 897,
           "journals": 127,
           "articles": 5
         },
@@ -75,7 +75,7 @@
         "breadth": {
           "score": 0.94,
           "basis": [
-            "distinct_urls:933",
+            "distinct_urls:935",
             "distinct_axes:20",
             "origin_types:4"
           ]
@@ -115,7 +115,7 @@
             "newsroom_domain_pattern",
             "article_path_seen",
             "doi_or_identifier_path_seen",
-            "distinct_urls:933",
+            "distinct_urls:935",
             "distinct_axes:20",
             "origin_types:4",
             "referring_accounts:0",
@@ -702,7 +702,7 @@
       "first_seen_at": "2026-06-22T00:15:00Z",
       "last_seen_at": "2026-08-15T16:49:56.115Z",
       "discovery": {
-        "distinct_urls": 632,
+        "distinct_urls": 634,
         "example_urls": [
           "https://www.nytimes.com/2026/06/19/world/canada/frank-stronach-trial-guilty-sex-charges.html",
           "https://www.nytimes.com/2026/06/27/world/americas/mexican-officials-us-informants.html",
@@ -712,7 +712,7 @@
         ],
         "origin_counts": {
           "ontology_evidence": 21,
-          "reading_queue": 653,
+          "reading_queue": 655,
           "journals": 54
         },
         "distinct_referring_accounts": 0,
@@ -756,7 +756,7 @@
         "breadth": {
           "score": 0.8799999999999999,
           "basis": [
-            "distinct_urls:632",
+            "distinct_urls:634",
             "distinct_axes:12",
             "origin_types:3"
           ]
@@ -795,7 +795,7 @@
           "basis": [
             "newsroom_domain_pattern",
             "article_path_seen",
-            "distinct_urls:632",
+            "distinct_urls:634",
             "distinct_axes:12",
             "origin_types:3",
             "referring_accounts:0",
@@ -1217,7 +1217,7 @@
       "first_seen_at": "2026-06-26T07:05:00Z",
       "last_seen_at": "2026-08-16T20:34:57.150Z",
       "discovery": {
-        "distinct_urls": 583,
+        "distinct_urls": 585,
         "example_urls": [
           "https://www.bbc.co.uk/news/articles/cn8qxz6qypyo",
           "https://www.bbc.co.uk/news/articles/cn075j04pnyo?at_medium=RSS&amp;at_campaign=rss",
@@ -1227,7 +1227,7 @@
         ],
         "origin_counts": {
           "ontology_evidence": 6,
-          "reading_queue": 598,
+          "reading_queue": 600,
           "journals": 19,
           "articles": 1
         },
@@ -1263,7 +1263,7 @@
         "breadth": {
           "score": 0.8233333333333333,
           "basis": [
-            "distinct_urls:583",
+            "distinct_urls:585",
             "distinct_axes:4",
             "origin_types:4"
           ]
@@ -1301,7 +1301,7 @@
           "method": "mechanical_v1",
           "basis": [
             "newsroom_domain_pattern",
-            "distinct_urls:583",
+            "distinct_urls:585",
             "distinct_axes:4",
             "origin_types:4",
             "referring_accounts:0",
@@ -2707,9 +2707,9 @@
       "entity": "Philstar",
       "kind": "unknown",
       "first_seen_at": "2026-05-20T06:57:31.760Z",
-      "last_seen_at": "2026-08-20T08:21:42.767Z",
+      "last_seen_at": "2026-08-20T11:21:29.275Z",
       "discovery": {
-        "distinct_urls": 195,
+        "distinct_urls": 197,
         "example_urls": [
           "https://www.philstar.com/headlines/2026/06/24/2537506/mike-defensor-face-trafficking-complaint-over-pasig-ktv-bar-raid",
           "https://www.philstar.com/headlines/2026/06/24/2537509/ched-tells-ateneo-explain-drowning-baterbonia-adili-or-face-sanctions",
@@ -2718,8 +2718,8 @@
           "https://www.philstar.com/headlines/2026/06/28/2538295/icc-freezes-money-seized-duterte"
         ],
         "origin_counts": {
-          "ontology_evidence": 88,
-          "journals": 238,
+          "ontology_evidence": 90,
+          "journals": 240,
           "articles": 4
         },
         "distinct_referring_accounts": 0,
@@ -2729,6 +2729,7 @@
           "axis_dehumanization_propaganda_v1",
           "axis_digital_surveillance_autonomy_v1",
           "axis_disaster_infrastructure_accountability_v1",
+          "axis_geopolitical_control_narratives",
           "axis_human_rights_exploitation_v1",
           "axis_information_control_v1",
           "axis_infrastructure_commons_v_extraction_v1",
@@ -2770,8 +2771,8 @@
         "breadth": {
           "score": 0.8799999999999999,
           "basis": [
-            "distinct_urls:195",
-            "distinct_axes:19",
+            "distinct_urls:197",
+            "distinct_axes:20",
             "origin_types:3"
           ]
         },
@@ -2809,8 +2810,8 @@
           "basis": [
             "unknown_domain_pattern",
             "article_path_seen",
-            "distinct_urls:195",
-            "distinct_axes:19",
+            "distinct_urls:197",
+            "distinct_axes:20",
             "origin_types:3",
             "referring_accounts:0",
             "origin_types:3",
@@ -3250,9 +3251,9 @@
       "entity": "T Co",
       "kind": "unknown",
       "first_seen_at": "2016-05-05T18:57:30.000Z",
-      "last_seen_at": "2026-08-20T09:31:52.000Z",
+      "last_seen_at": "2026-08-20T11:01:30.000Z",
       "discovery": {
-        "distinct_urls": 16079,
+        "distinct_urls": 16085,
         "example_urls": [
           "https://t.co/pJSE124ec4",
           "https://t.co/Soz8BXPWaa",
@@ -3261,7 +3262,7 @@
           "https://t.co/cYaqYDRp08"
         ],
         "origin_counts": {
-          "feed_buffer": 13943,
+          "feed_buffer": 13949,
           "feed_buffer_reply": 5162,
           "articles": 3
         },
@@ -3304,7 +3305,7 @@
         "breadth": {
           "score": 0.53,
           "basis": [
-            "distinct_urls:16079",
+            "distinct_urls:16085",
             "distinct_axes:0",
             "origin_types:3"
           ]
@@ -3343,7 +3344,7 @@
           "basis": [
             "unknown_domain_pattern",
             "doi_or_identifier_path_seen",
-            "distinct_urls:16079",
+            "distinct_urls:16085",
             "distinct_axes:0",
             "origin_types:3",
             "referring_accounts:2847",
@@ -3539,9 +3540,9 @@
       "entity": "Rappler",
       "kind": "unknown",
       "first_seen_at": "2026-06-22T04:04:30.428Z",
-      "last_seen_at": "2026-08-17T07:23:57.793Z",
+      "last_seen_at": "2026-08-20T11:21:29.275Z",
       "discovery": {
-        "distinct_urls": 289,
+        "distinct_urls": 290,
         "example_urls": [
           "https://www.rappler.com/fact-check-no-arrest-warrant-issued-vs-marcoleta",
           "https://www.rappler.com/technology/decoded-tacloban-school-shooting-disinformation-kiko-barzaga-discussions-juvenile-justice-law/",
@@ -3550,8 +3551,8 @@
           "https://www.rappler.com/voices/thought-leaders/vantage-point-bir-tax-amlc-records-billions-questions-sara-duterte-ignore/"
         ],
         "origin_counts": {
-          "ontology_evidence": 136,
-          "journals": 320,
+          "ontology_evidence": 137,
+          "journals": 321,
           "articles": 4
         },
         "distinct_referring_accounts": 0,
@@ -3613,7 +3614,7 @@
         "breadth": {
           "score": 0.8799999999999999,
           "basis": [
-            "distinct_urls:289",
+            "distinct_urls:290",
             "distinct_axes:31",
             "origin_types:3"
           ]
@@ -3651,7 +3652,7 @@
           "method": "mechanical_v1",
           "basis": [
             "unknown_domain_pattern",
-            "distinct_urls:289",
+            "distinct_urls:290",
             "distinct_axes:31",
             "origin_types:3",
             "referring_accounts:0",
@@ -7225,9 +7226,9 @@
       "entity": "Bet88 Ph",
       "kind": "unknown",
       "first_seen_at": "2026-07-03T16:00:02.000Z",
-      "last_seen_at": "2026-08-20T01:36:37.730Z",
+      "last_seen_at": "2026-08-20T11:24:46.398Z",
       "discovery": {
-        "distinct_urls": 107,
+        "distinct_urls": 108,
         "example_urls": [
           "https://bet88.ph/en/?type=registration&modal=user&ref=xa027&twclid=27gurqyk8ekpo92oqcm3aeuing",
           "https://bet88.ph/en/?type=registration&modal=user&ref=xa023&twclid=25wrsnnpnc7378nutxmyo1v6kj",
@@ -7237,7 +7238,7 @@
         ],
         "origin_counts": {
           "feed_buffer_reply": 38,
-          "feed_buffer": 69
+          "feed_buffer": 70
         },
         "distinct_referring_accounts": 1,
         "sample_referring_accounts": [
@@ -7268,7 +7269,7 @@
         "breadth": {
           "score": 0.47,
           "basis": [
-            "distinct_urls:107",
+            "distinct_urls:108",
             "distinct_axes:0",
             "origin_types:2"
           ]
@@ -7306,7 +7307,7 @@
           "method": "mechanical_v1",
           "basis": [
             "unknown_domain_pattern",
-            "distinct_urls:107",
+            "distinct_urls:108",
             "distinct_axes:0",
             "origin_types:2",
             "referring_accounts:1",
@@ -20126,7 +20127,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-08-17T10:52:39.165Z",
+        "fetched_at": "2026-08-20T11:20:09.128Z",
         "homepage_url": "https://jetcraft.com/",
         "example_url": "https://www.jetcraft.com/?utm_campaign=X-Branding-Ad&utm_medium=paid-social&utm_source=x&twclid=2ay2ajx0dm14xp5m3pne3v6y19",
         "homepage_status": 200,
@@ -22153,7 +22154,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-08-17T10:52:40.965Z",
+        "fetched_at": "2026-08-20T11:20:11.194Z",
         "homepage_url": "https://navax.io/",
         "example_url": "https://navax.io/?twclid=24etxfpdzoav2cgkg5folp34ad",
         "homepage_status": 200,
@@ -25561,7 +25562,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-08-17T08:54:18.230Z",
+        "fetched_at": "2026-08-20T11:20:11.718Z",
         "homepage_url": "https://uaprad.org/",
         "example_url": "https://uaprad.org/gregmode?twclid=2cuj8c32csu6satdshdjujp39c",
         "homepage_status": 200,
@@ -25658,7 +25659,7 @@
           ]
         },
         "profile": {
-          "score": 0.14,
+          "score": 0.13,
           "confidence": 0.55,
           "basis": [
             "meta_author:false",
@@ -25667,7 +25668,7 @@
             "about:false",
             "contact:false",
             "corrections:false",
-            "outbound_links:4",
+            "outbound_links:3",
             "opinion_marker:false"
           ]
         },
@@ -25687,7 +25688,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-08-17T08:54:20.534Z",
+        "fetched_at": "2026-08-20T11:20:13.199Z",
         "homepage_url": "https://testsigma.com/",
         "example_url": "https://testsigma.com/webinars/ai-test-management-coverage-gaps?utm_source=twitter&utm_medium=paid_social&utm_campaign=tms-is-dead&utm_content=%5Bad-name%5D&utm_term=act1-burn&twclid=2ckh8kjs1jwqycpvn734e9ehgb",
         "homepage_status": 200,
@@ -25713,7 +25714,7 @@
           "has_about_link": false,
           "has_contact_link": false,
           "has_corrections_link": false,
-          "outbound_links_count": 4,
+          "outbound_links_count": 3,
           "opinion_marker": false
         }
       }
@@ -25813,7 +25814,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-08-17T08:54:22.841Z",
+        "fetched_at": "2026-08-20T11:46:46.367Z",
         "homepage_url": "https://2si.com/",
         "example_url": "https://2si.com/buy-now?twclid=27uev9nd9i9cgpoubm28hr0ash",
         "homepage_status": 200,
@@ -26066,7 +26067,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-08-17T08:54:23.625Z",
+        "fetched_at": "2026-08-20T11:46:46.799Z",
         "homepage_url": "https://enter.pro/",
         "example_url": "https://enter.pro/?utm_source=x&utm_medium=paid_social&utm_campaign=twitter_adsmarch_enter_13_0260403&twclid=21y4m3veyg3qz1wzl60cdelnk1",
         "homepage_status": 403,
@@ -26192,7 +26193,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-08-17T10:52:43.441Z",
+        "fetched_at": "2026-08-20T11:46:49.564Z",
         "homepage_url": "https://intro.co/",
         "example_url": "https://intro.co/marketplace?topic=Career+%26+Business&tag%5B%5D=Marketing+%26+Growth&utm_source=twitter_ads&utm_campaign=Prospecting_Traffic_20260402&utm_medium=Broad_AllOS_25-54_CPC_ExpertPageView_Growth-03-26-26_20260402&utm_term=230_Static_03-26-26-Growth-Concept-20d-AI-Clueless-To-AI-Confident_PLP-Marketplace-Business-Marketing_April-2026&source=intropaid&twclid=268r32sn6j3tec3xu57anl3fij",
         "homepage_status": 200,
@@ -26318,7 +26319,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-08-17T10:52:45.207Z",
+        "fetched_at": "2026-08-20T11:46:51.316Z",
         "homepage_url": "https://patsnap.com/",
         "example_url": "https://eureka.patsnap.com/mse-landing?from=mktcampaign_mse_ads_x_formuvideo-asia2en2&twclid=29qq6c80v43jc7y7o992xnzaaf",
         "homepage_status": 200,
@@ -26334,7 +26335,7 @@
           "has_about_link": true,
           "has_contact_link": false,
           "has_corrections_link": false,
-          "outbound_links_count": 2,
+          "outbound_links_count": 3,
           "opinion_marker": false
         },
         "example": {
