@@ -616,6 +616,16 @@ section("Local harness");
       pass("language drift caught (Cebuano tokens, and English-when-Taglish-asked)");
     } else fail("taglish check", "language drift detection wrong");
 
+    // Taglish is DISABLED on the local backend (operator decision 2026-08-19):
+    // phi4-mini wrote Cebuano and non-words when asked for it, and the harness
+    // can detect that but not fix it. So local output must be English — while
+    // Filipino PROPER NOUNS stay legal, since they are correct in English copy.
+    if (h.checkEnglishOnly("Yung receipt walang liquidation") &&
+        h.checkEnglishOnly("Nandito, unya wala pa") &&
+        !h.checkEnglishOnly("Sara Duterte and Malacanang responded from Bulacan.")) {
+      pass("English-only enforced on local; Filipino proper nouns still allowed");
+    } else fail("english-only check", "blocked proper nouns, or let Tagalog/Cebuano through");
+
     // The wrapper must FAIL CLOSED — returning nothing is correct when the
     // output cannot be verified. Silence beats an inverted stance under his name.
     const shape = typeof h.guardedCompose === "function";

@@ -32,6 +32,12 @@
 
 const { generateLocal } = require('./local_llm');
 
+/** Whether Taglish output is permitted on the local backend (see compose.js). */
+function taglishEnabled() {
+  try { return require('./compose').localTaglishAllowed(); }
+  catch { return false; }
+}
+
 // ── Deterministic checks ─────────────────────────────────────────────────────
 
 /** Currency/number drift vs the source text — catches ₱50,000 → $50,000. */
@@ -86,12 +92,30 @@ function checkSpecificity(text, source) {
  */
 const NON_TAGALOG = /\b(unya|karon|dili|kaayo|nimo|nimu|siya\s+nga|sa-diri|ug|pag-abot|gyud|jud)\b/i;
 
+const TAGALOG_WORDS = /\b(yung|ang|mga|hindi|walang|kasi|pero|naman|dapat|talaga|lang|nag|may|para|habang|ito|sila|natin|ako|niya|kung|nila|ngayon|wala)\b/i;
+
 function checkTaglish(text) {
   const bad = text.match(NON_TAGALOG);
   if (bad) return `non-Tagalog (Cebuano) token: "${bad[0]}"`;
   // Must actually contain some Tagalog if Taglish was requested.
-  const tagalog = /\b(yung|ang|mga|hindi|walang|kasi|pero|naman|dapat|talaga|lang|nag|may|para|habang|ito|sila|natin)\b/i;
-  return tagalog.test(text) ? null : 'Taglish requested but output has no Tagalog function words';
+  return TAGALOG_WORDS.test(text) ? null : 'Taglish requested but output has no Tagalog function words';
+}
+
+/**
+ * The inverse, for when Taglish is DISABLED on this backend
+ * (compose.localTaglishAllowed() === false): the model was told English only,
+ * so any Tagalog is a violation of the override rather than a style choice.
+ *
+ * Deliberately keyed on Tagalog *function words*, not on Filipino proper nouns —
+ * "Sara Duterte", "Malacañang" and "Bulacan" are correct in English copy and
+ * must not trip this.
+ */
+function checkEnglishOnly(text) {
+  const t = text.match(TAGALOG_WORDS);
+  if (t) return `English-only required on this backend, but output contains Tagalog: "${t[0]}"`;
+  const c = text.match(NON_TAGALOG);
+  if (c) return `English-only required, but output contains Cebuano: "${c[0]}"`;
+  return null;
 }
 
 // ── Model-based checks (BOUNDED output only) ─────────────────────────────────
@@ -177,7 +201,11 @@ async function guardedCompose(prompt, opts = {}) {
       checkCurrency(text, source) ||
       checkInventedNumbers(text, source) ||
       checkSpecificity(text, source) ||
-      (taglish ? checkTaglish(text) : null);
+      // Language: enforce whichever policy is actually in force. If Taglish is
+      // disabled on this backend the override wins regardless of what the caller
+      // asked for — a caller requesting Taglish from a model that cannot write
+      // it is exactly the case this exists to stop.
+      (taglishEnabled() ? (taglish ? checkTaglish(text) : null) : checkEnglishOnly(text));
     if (det) { lastReason = det; checksRun.push({ attempt: i, failed: det }); continue; }
 
     // Then the voice regex the rest of the system already trusts.
@@ -200,5 +228,5 @@ async function guardedCompose(prompt, opts = {}) {
 module.exports = {
   guardedCompose,
   checkCurrency, checkInventedNumbers, checkConstraints,
-  checkSpecificity, checkTaglish, checkStance,
+  checkSpecificity, checkTaglish, checkEnglishOnly, checkStance,
 };

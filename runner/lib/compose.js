@@ -212,12 +212,43 @@ function localRoutingActive() {
  * Kept deliberately thin: same in/out contract as claudeCompose (string in,
  * trimmed string out) so callers cannot tell which backend answered.
  */
+/**
+ * Is Taglish output allowed on the local backend?
+ *
+ * OFF by default (operator decision 2026-08-19). ~51% of Sebastian's real X
+ * output is Tagalog/Taglish, and the prompts demand *natural* code-switching
+ * while explicitly rejecting "formal/academic/textbook Tagalog". Asked for
+ * exactly that, phi4-mini produced Cebuano and non-words:
+ *   "Sa-diri'y natanggap nga mga receipt na nakaseptyo pa sa Mary Grace Piattos"
+ * ('nakaseptyo' is not a word; 'unya' is Cebuano). The harness can DETECT this
+ * (local_harness.checkTaglish) but cannot fix it — the model simply does not
+ * have the language. So on the local backend we write English rather than
+ * publish broken Tagalog under his name.
+ *
+ * Set LOCAL_TAGLISH=1 to re-enable once a model that actually handles Tagalog
+ * is in place (qwen2.5 is the candidate — Alibaba's SEA-language coverage is
+ * far better than phi's). Claude is unaffected either way.
+ */
+function localTaglishAllowed() {
+  return process.env.LOCAL_TAGLISH === '1';
+}
+
+const ENGLISH_ONLY_OVERRIDE =
+  '\n\nLANGUAGE OVERRIDE (highest priority — overrides any Tagalog/Taglish rule above): ' +
+  'Write in ENGLISH ONLY. Do not write in Tagalog, Taglish, Cebuano, or any ' +
+  'Tagalog-English code-switch, even if an earlier instruction asks for it. ' +
+  'English proper nouns and Filipino names stay as they are; everything else is English.';
+
 async function localCompose(prompt, opts = {}) {
   const { generateLocal } = require('./local_llm');
   const { system, maxTokens = 1024, timeoutMs, tag = 'local' } = opts;
   // claudeCompose takes the system prompt as a separate CLI flag; Ollama's
   // /api/generate has no system slot here, so prepend it.
-  const full = system ? `${system}\n\n${prompt}` : prompt;
+  let full = system ? `${system}\n\n${prompt}` : prompt;
+  // Appended LAST so it wins over the TAGALOG RULE embedded in the prompt
+  // modules (tweet.js, quote.js, thread.js, claims.js, stance_video.js, …) —
+  // one override at the boundary instead of editing eight prompt files.
+  if (!localTaglishAllowed()) full += ENGLISH_ONLY_OVERRIDE;
   return generateLocal(full, {
     maxTokens,
     temperature: opts.temperature != null ? opts.temperature : 0.7,
@@ -324,7 +355,7 @@ async function reason(prompt, opts = {}) {
 module.exports = {
   compose, reason, composeJSON, claudeCompose, withRetry,
   useClaudeCompose, useClaudeThink, DEFAULT_SYSTEM, REASON_SYSTEM,
-  localScope, localRoutingActive, localCompose,
+  localScope, localRoutingActive, localCompose, localTaglishAllowed,
 };
 
 // ── CLI: quick manual test — `node runner/lib/compose.js "your prompt"` ─────────
