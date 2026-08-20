@@ -1,8 +1,8 @@
 {
   "schema_version": "1.0",
-  "generated_at": "2026-08-20T04:17:54.807Z",
+  "generated_at": "2026-08-20T07:21:10.980Z",
   "method": "mechanical_registry_v1",
-  "profiled_at": "2026-08-20T04:17:59.794Z",
+  "profiled_at": "2026-08-20T07:21:16.709Z",
   "sources": [
     {
       "domain": "theguardian.com",
@@ -11,7 +11,7 @@
       "first_seen_at": "2026-03-27T23:17:00Z",
       "last_seen_at": "2026-08-16T20:34:57.150Z",
       "discovery": {
-        "distinct_urls": 929,
+        "distinct_urls": 931,
         "example_urls": [
           "https://www.theguardian.com/us-news/2026/jun/23/trump-immigration-courthouse-arrest-policy",
           "https://www.theguardian.com/us-news/2026/jun/28/ice-minnesota-defending-democracy",
@@ -21,7 +21,7 @@
         ],
         "origin_counts": {
           "ontology_evidence": 47,
-          "reading_queue": 891,
+          "reading_queue": 893,
           "journals": 127,
           "articles": 5
         },
@@ -75,7 +75,7 @@
         "breadth": {
           "score": 0.94,
           "basis": [
-            "distinct_urls:929",
+            "distinct_urls:931",
             "distinct_axes:20",
             "origin_types:4"
           ]
@@ -115,7 +115,7 @@
             "newsroom_domain_pattern",
             "article_path_seen",
             "doi_or_identifier_path_seen",
-            "distinct_urls:929",
+            "distinct_urls:931",
             "distinct_axes:20",
             "origin_types:4",
             "referring_accounts:0",
@@ -702,7 +702,7 @@
       "first_seen_at": "2026-06-22T00:15:00Z",
       "last_seen_at": "2026-08-15T16:49:56.115Z",
       "discovery": {
-        "distinct_urls": 629,
+        "distinct_urls": 630,
         "example_urls": [
           "https://www.nytimes.com/2026/06/19/world/canada/frank-stronach-trial-guilty-sex-charges.html",
           "https://www.nytimes.com/2026/06/27/world/americas/mexican-officials-us-informants.html",
@@ -712,7 +712,7 @@
         ],
         "origin_counts": {
           "ontology_evidence": 21,
-          "reading_queue": 650,
+          "reading_queue": 651,
           "journals": 54
         },
         "distinct_referring_accounts": 0,
@@ -756,7 +756,7 @@
         "breadth": {
           "score": 0.8799999999999999,
           "basis": [
-            "distinct_urls:629",
+            "distinct_urls:630",
             "distinct_axes:12",
             "origin_types:3"
           ]
@@ -795,7 +795,7 @@
           "basis": [
             "newsroom_domain_pattern",
             "article_path_seen",
-            "distinct_urls:629",
+            "distinct_urls:630",
             "distinct_axes:12",
             "origin_types:3",
             "referring_accounts:0",
@@ -1217,7 +1217,7 @@
       "first_seen_at": "2026-06-26T07:05:00Z",
       "last_seen_at": "2026-08-16T20:34:57.150Z",
       "discovery": {
-        "distinct_urls": 580,
+        "distinct_urls": 581,
         "example_urls": [
           "https://www.bbc.co.uk/news/articles/cn8qxz6qypyo",
           "https://www.bbc.co.uk/news/articles/cn075j04pnyo?at_medium=RSS&amp;at_campaign=rss",
@@ -1227,7 +1227,7 @@
         ],
         "origin_counts": {
           "ontology_evidence": 6,
-          "reading_queue": 595,
+          "reading_queue": 596,
           "journals": 19,
           "articles": 1
         },
@@ -1263,7 +1263,7 @@
         "breadth": {
           "score": 0.8233333333333333,
           "basis": [
-            "distinct_urls:580",
+            "distinct_urls:581",
             "distinct_axes:4",
             "origin_types:4"
           ]
@@ -1301,7 +1301,7 @@
           "method": "mechanical_v1",
           "basis": [
             "newsroom_domain_pattern",
-            "distinct_urls:580",
+            "distinct_urls:581",
             "distinct_axes:4",
             "origin_types:4",
             "referring_accounts:0",
@@ -3250,9 +3250,9 @@
       "entity": "T Co",
       "kind": "unknown",
       "first_seen_at": "2016-05-05T18:57:30.000Z",
-      "last_seen_at": "2026-08-20T04:12:15.919Z",
+      "last_seen_at": "2026-08-20T06:00:01.000Z",
       "discovery": {
-        "distinct_urls": 16008,
+        "distinct_urls": 16061,
         "example_urls": [
           "https://t.co/pJSE124ec4",
           "https://t.co/Soz8BXPWaa",
@@ -3261,11 +3261,11 @@
           "https://t.co/cYaqYDRp08"
         ],
         "origin_counts": {
-          "feed_buffer": 13870,
-          "feed_buffer_reply": 5155,
+          "feed_buffer": 13920,
+          "feed_buffer_reply": 5162,
           "articles": 3
         },
-        "distinct_referring_accounts": 2843,
+        "distinct_referring_accounts": 2847,
         "sample_referring_accounts": [
           "0808iveta",
           "09abracadabra",
@@ -3304,7 +3304,7 @@
         "breadth": {
           "score": 0.53,
           "basis": [
-            "distinct_urls:16008",
+            "distinct_urls:16061",
             "distinct_axes:0",
             "origin_types:3"
           ]
@@ -3312,7 +3312,7 @@
         "corroboration": {
           "score": 0.9125,
           "basis": [
-            "referring_accounts:2843",
+            "referring_accounts:2847",
             "origin_types:3"
           ]
         },
@@ -3343,10 +3343,10 @@
           "basis": [
             "unknown_domain_pattern",
             "doi_or_identifier_path_seen",
-            "distinct_urls:16008",
+            "distinct_urls:16061",
             "distinct_axes:0",
             "origin_types:3",
-            "referring_accounts:2843",
+            "referring_accounts:2847",
             "origin_types:3",
             "track_record_unavailable"
           ]
@@ -3842,9 +3842,9 @@
       "entity": "Bit Ly",
       "kind": "unknown",
       "first_seen_at": "2026-04-06T16:33:36.000Z",
-      "last_seen_at": "2026-08-19T21:05:30.724Z",
+      "last_seen_at": "2026-08-20T05:37:11.166Z",
       "discovery": {
-        "distinct_urls": 36,
+        "distinct_urls": 37,
         "example_urls": [
           "https://bit.ly/4rFUGm4?twclid=2cxu7o43bx4p37y7v84zudvy2q",
           "https://bit.ly/4rFUGm4?twclid=2bcgwzcedehb1ong389c8zjnsb",
@@ -3854,7 +3854,7 @@
         ],
         "origin_counts": {
           "feed_buffer_reply": 20,
-          "feed_buffer": 15,
+          "feed_buffer": 16,
           "journals": 10
         },
         "distinct_referring_accounts": 10,
@@ -3895,7 +3895,7 @@
         "breadth": {
           "score": 0.53,
           "basis": [
-            "distinct_urls:36",
+            "distinct_urls:37",
             "distinct_axes:0",
             "origin_types:3"
           ]
@@ -3933,7 +3933,7 @@
           "method": "mechanical_v1",
           "basis": [
             "unknown_domain_pattern",
-            "distinct_urls:36",
+            "distinct_urls:37",
             "distinct_axes:0",
             "origin_types:3",
             "referring_accounts:10",
@@ -5554,9 +5554,9 @@
       "entity": "Starlink",
       "kind": "unknown",
       "first_seen_at": "2026-04-07T03:51:50.000Z",
-      "last_seen_at": "2026-08-19T18:45:13.825Z",
+      "last_seen_at": "2026-08-20T01:11:56.000Z",
       "discovery": {
-        "distinct_urls": 159,
+        "distinct_urls": 161,
         "example_urls": [
           "https://www.starlink.com/us/residential?referral=RC-DF-9543787-19448-67&utm_medium=paid&utm_campaign=awr_us_soc_twt_ptg_cau&utm_content=awr_us_soc_twt_ptg_cau_res_gvp_v4s_stc_en-us_sdb-bluesky-uptime&twclid=2cg62b1u0oqrypdim5oir1767e",
           "https://www.starlink.com/us/residential?referral=RC-DF-9543787-19448-67&utm_medium=paid&utm_campaign=awr_us_soc_twt_ptg_cau&utm_content=awr_us_soc_twt_ptg_cau_res_gvp_v4s_stc_en-us_sdb-avail-sat-yourhome&twclid=2216n7j93v9absqn77762mm626",
@@ -5565,7 +5565,7 @@
           "https://www.starlink.com/us/residential?referral=RC-DF-9543787-19448-67&utm_medium=paid&utm_campaign=awr_us_soc_twt_ptg_cau&utm_content=awr_us_soc_twt_ptg_cau_res_gvp_v4s_stc_en-us_sdb-avail-sat-arrived&twclid=21pi7t0qs8tgw0wgnh5mvmdu2g"
         ],
         "origin_counts": {
-          "feed_buffer_reply": 144,
+          "feed_buffer_reply": 146,
           "feed_buffer": 19
         },
         "distinct_referring_accounts": 5,
@@ -5601,7 +5601,7 @@
         "breadth": {
           "score": 0.47,
           "basis": [
-            "distinct_urls:159",
+            "distinct_urls:161",
             "distinct_axes:0",
             "origin_types:2"
           ]
@@ -5639,7 +5639,7 @@
           "method": "mechanical_v1",
           "basis": [
             "unknown_domain_pattern",
-            "distinct_urls:159",
+            "distinct_urls:161",
             "distinct_axes:0",
             "origin_types:2",
             "referring_accounts:5",
@@ -11539,6 +11539,133 @@
       }
     },
     {
+      "domain": "bitget.com",
+      "entity": "Bitget",
+      "kind": "unknown",
+      "first_seen_at": "2026-07-06T16:20:33.820Z",
+      "last_seen_at": "2026-08-20T05:52:20.014Z",
+      "discovery": {
+        "distinct_urls": 13,
+        "example_urls": [
+          "https://partner.bitget.com/bg/SMTwittercfd?twclid=2dlbmypv93aoxlr6pzrilrub21",
+          "https://www.bitget.com/events/activities/new/ed02b9702a6c52e5a684217195d65e32?channelCode=regd&vipCode=s45x&twclid=282w7z5ggr3a2dcyd1h8s4aa16",
+          "https://www.bitget.com/promotion/stock?channelCode=regd&vipCode=6q53&twclid=2adirie4qy37i3yepn5mbehim",
+          "https://www.bitget.com/promotion/stock?channelCode=regd&vipCode=6q53&twclid=298wy4zjofw27yud2ri5tibtgn",
+          "https://www.bitget.com/promotion/stock?channelCode=regd&vipCode=6q53&twclid=2e7gufznsslo5usvtfb3fuwach"
+        ],
+        "origin_counts": {
+          "feed_buffer": 10,
+          "feed_buffer_reply": 3
+        },
+        "distinct_referring_accounts": 1,
+        "sample_referring_accounts": [
+          "bitget_tradfi"
+        ],
+        "distinct_axes": []
+      },
+      "claims": {
+        "total": 0,
+        "supported": 0,
+        "refuted": 0,
+        "contested": 0,
+        "unverified": 0,
+        "resolved_count": 0
+      },
+      "structural_features": {
+        "has_search_paths": false,
+        "has_article_paths": false,
+        "has_doi_paths": false
+      },
+      "ratings": {
+        "provenance": {
+          "score": 0.45,
+          "basis": [
+            "unknown_domain_pattern"
+          ]
+        },
+        "breadth": {
+          "score": 0.47,
+          "basis": [
+            "distinct_urls:13",
+            "distinct_axes:0",
+            "origin_types:2"
+          ]
+        },
+        "corroboration": {
+          "score": 0.2833333333333333,
+          "basis": [
+            "referring_accounts:1",
+            "origin_types:2"
+          ]
+        },
+        "track_record": {
+          "score": null,
+          "basis": [
+            "no_resolved_claims_observed"
+          ]
+        },
+        "profile": {
+          "score": 0,
+          "confidence": 0.55,
+          "basis": [
+            "meta_author:false",
+            "published_time:false",
+            "canonical:false",
+            "about:false",
+            "contact:false",
+            "corrections:false",
+            "outbound_links:0",
+            "opinion_marker:false"
+          ]
+        },
+        "overall": {
+          "score": 0.43875,
+          "confidence": 0.4392,
+          "method": "mechanical_v1",
+          "basis": [
+            "unknown_domain_pattern",
+            "distinct_urls:13",
+            "distinct_axes:0",
+            "origin_types:2",
+            "referring_accounts:1",
+            "origin_types:2",
+            "track_record_unavailable"
+          ]
+        }
+      },
+      "profile": {
+        "fetched_at": "2026-08-18T07:54:34.956Z",
+        "homepage_url": "https://bitget.com/",
+        "example_url": "https://partner.bitget.com/bg/SMTwittercfd?twclid=2dlbmypv93aoxlr6pzrilrub21",
+        "homepage_status": null,
+        "example_status": null,
+        "homepage_final_url": "https://bitget.com/",
+        "example_final_url": "https://partner.bitget.com/bg/SMTwittercfd?twclid=2dlbmypv93aoxlr6pzrilrub21",
+        "homepage_content_type": "",
+        "example_content_type": "",
+        "homepage": {
+          "has_meta_author": false,
+          "has_published_time": false,
+          "has_canonical": false,
+          "has_about_link": false,
+          "has_contact_link": false,
+          "has_corrections_link": false,
+          "outbound_links_count": 0,
+          "opinion_marker": false
+        },
+        "example": {
+          "has_meta_author": false,
+          "has_published_time": false,
+          "has_canonical": false,
+          "has_about_link": false,
+          "has_contact_link": false,
+          "has_corrections_link": false,
+          "outbound_links_count": 0,
+          "opinion_marker": false
+        }
+      }
+    },
+    {
       "domain": "proxy-cheap.com",
       "entity": "Proxy-Cheap",
       "kind": "unknown",
@@ -11788,133 +11915,6 @@
           "has_contact_link": false,
           "has_corrections_link": false,
           "outbound_links_count": 4,
-          "opinion_marker": false
-        }
-      }
-    },
-    {
-      "domain": "bitget.com",
-      "entity": "Bitget",
-      "kind": "unknown",
-      "first_seen_at": "2026-07-06T16:20:33.820Z",
-      "last_seen_at": "2026-08-14T14:53:42.835Z",
-      "discovery": {
-        "distinct_urls": 12,
-        "example_urls": [
-          "https://partner.bitget.com/bg/SMTwittercfd?twclid=2dlbmypv93aoxlr6pzrilrub21",
-          "https://www.bitget.com/events/activities/new/ed02b9702a6c52e5a684217195d65e32?channelCode=regd&vipCode=s45x&twclid=282w7z5ggr3a2dcyd1h8s4aa16",
-          "https://www.bitget.com/promotion/stock?channelCode=regd&vipCode=6q53&twclid=2adirie4qy37i3yepn5mbehim",
-          "https://www.bitget.com/promotion/stock?channelCode=regd&vipCode=6q53&twclid=298wy4zjofw27yud2ri5tibtgn",
-          "https://www.bitget.com/promotion/stock?channelCode=regd&vipCode=6q53&twclid=2e7gufznsslo5usvtfb3fuwach"
-        ],
-        "origin_counts": {
-          "feed_buffer": 9,
-          "feed_buffer_reply": 3
-        },
-        "distinct_referring_accounts": 1,
-        "sample_referring_accounts": [
-          "bitget_tradfi"
-        ],
-        "distinct_axes": []
-      },
-      "claims": {
-        "total": 0,
-        "supported": 0,
-        "refuted": 0,
-        "contested": 0,
-        "unverified": 0,
-        "resolved_count": 0
-      },
-      "structural_features": {
-        "has_search_paths": false,
-        "has_article_paths": false,
-        "has_doi_paths": false
-      },
-      "ratings": {
-        "provenance": {
-          "score": 0.45,
-          "basis": [
-            "unknown_domain_pattern"
-          ]
-        },
-        "breadth": {
-          "score": 0.47,
-          "basis": [
-            "distinct_urls:12",
-            "distinct_axes:0",
-            "origin_types:2"
-          ]
-        },
-        "corroboration": {
-          "score": 0.2833333333333333,
-          "basis": [
-            "referring_accounts:1",
-            "origin_types:2"
-          ]
-        },
-        "track_record": {
-          "score": null,
-          "basis": [
-            "no_resolved_claims_observed"
-          ]
-        },
-        "profile": {
-          "score": 0,
-          "confidence": 0.55,
-          "basis": [
-            "meta_author:false",
-            "published_time:false",
-            "canonical:false",
-            "about:false",
-            "contact:false",
-            "corrections:false",
-            "outbound_links:0",
-            "opinion_marker:false"
-          ]
-        },
-        "overall": {
-          "score": 0.43875,
-          "confidence": 0.4167,
-          "method": "mechanical_v1",
-          "basis": [
-            "unknown_domain_pattern",
-            "distinct_urls:12",
-            "distinct_axes:0",
-            "origin_types:2",
-            "referring_accounts:1",
-            "origin_types:2",
-            "track_record_unavailable"
-          ]
-        }
-      },
-      "profile": {
-        "fetched_at": "2026-08-18T07:54:34.956Z",
-        "homepage_url": "https://bitget.com/",
-        "example_url": "https://partner.bitget.com/bg/SMTwittercfd?twclid=2dlbmypv93aoxlr6pzrilrub21",
-        "homepage_status": null,
-        "example_status": null,
-        "homepage_final_url": "https://bitget.com/",
-        "example_final_url": "https://partner.bitget.com/bg/SMTwittercfd?twclid=2dlbmypv93aoxlr6pzrilrub21",
-        "homepage_content_type": "",
-        "example_content_type": "",
-        "homepage": {
-          "has_meta_author": false,
-          "has_published_time": false,
-          "has_canonical": false,
-          "has_about_link": false,
-          "has_contact_link": false,
-          "has_corrections_link": false,
-          "outbound_links_count": 0,
-          "opinion_marker": false
-        },
-        "example": {
-          "has_meta_author": false,
-          "has_published_time": false,
-          "has_canonical": false,
-          "has_about_link": false,
-          "has_contact_link": false,
-          "has_corrections_link": false,
-          "outbound_links_count": 0,
           "opinion_marker": false
         }
       }
@@ -18605,7 +18605,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-08-17T04:52:59.869Z",
+        "fetched_at": "2026-08-20T05:17:39.104Z",
         "homepage_url": "https://agora.io/",
         "example_url": "https://www.agora.io/en/solutions/education/?utm_source=Twitter&utm_medium=Paid-Social&utm_campaign=PoweredByAgora&utm_content=Education-Jul-26&twclid=26e5ryj39r8vw6no3x0qprxip8",
         "homepage_status": 200,
@@ -18986,13 +18986,13 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-08-17T04:53:01.696Z",
+        "fetched_at": "2026-08-20T05:17:40.026Z",
         "homepage_url": "https://shopee.ph/",
         "example_url": "https://shopee.ph/universal-link/product/278394653/22353819981/?deep_and_web=1&smtt=9&utm_campaign=s278394653_ss_ph_twtr_twitterad&utm_content=eoint&utm_medium=seller&utm_source=twitter&twclid=21uy0mdqfu18byi7ighc1a87wq",
         "homepage_status": 200,
         "example_status": 200,
         "homepage_final_url": "https://shopee.ph/",
-        "example_final_url": "https://shopee.ph/product/278394653/22353819981/?smtt=9&twclid=21uy0mdqfu18byi7ighc1a87wq&uls_trackid=56dg3br100h6&utm_campaign=s278394653_ss_ph_twtr_twitterad&utm_content=eoint&utm_medium=seller&utm_source=twitter",
+        "example_final_url": "https://shopee.ph/product/278394653/22353819981/?smtt=9&twclid=21uy0mdqfu18byi7ighc1a87wq&uls_trackid=56e8usor00in&utm_campaign=s278394653_ss_ph_twtr_twitterad&utm_content=eoint&utm_medium=seller&utm_source=twitter",
         "homepage_content_type": "text/html; charset=utf-8",
         "example_content_type": "text/html; charset=utf-8",
         "homepage": {
@@ -19113,7 +19113,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-08-17T04:53:03.599Z",
+        "fetched_at": "2026-08-20T05:17:41.615Z",
         "homepage_url": "https://oppo.com/",
         "example_url": "https://www.oppo.com/ph/store?utm_source=x&utm_medium=cpm&utm_campaign=OPPO_RENO16_LAUNCH&utm_content=Babymonster&twclid=23rip3pnfc4fzj8wf4kuwjdu8m",
         "homepage_status": 200,
@@ -19491,7 +19491,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-08-17T04:53:04.494Z",
+        "fetched_at": "2026-08-20T05:17:41.861Z",
         "homepage_url": "https://miku.ph/",
         "example_url": "https://miku.ph/?utm_source=x&utm_medium=paid_social&utm_campaign=mikufes_announcement&utm_content=detailed&twclid=21azz5ellpiwotx3k2g9myjumu",
         "homepage_status": 200,
@@ -20253,7 +20253,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-08-17T05:53:01.180Z",
+        "fetched_at": "2026-08-20T07:21:11.911Z",
         "homepage_url": "https://fantheone.com/",
         "example_url": "https://fantheone.com/download?twclid=2ffn21z0ebyxzqvqa4nwehpql",
         "homepage_status": 200,
@@ -22026,7 +22026,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-08-17T05:53:04.652Z",
+        "fetched_at": "2026-08-20T07:21:14.518Z",
         "homepage_url": "https://edrforhome.com/",
         "example_url": "https://edrforhome.com/membership/?twclid=26i4bdgzrzez7ck8e18f8jebf7",
         "homepage_status": 200,
@@ -22407,7 +22407,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-08-17T05:53:06.182Z",
+        "fetched_at": "2026-08-20T07:21:15.402Z",
         "homepage_url": "https://sprovatrix.com/",
         "example_url": "https://www.sprovatrix.com/products/non-slip-thick-sole-cloud-slides?utm_source=twitter&utm_campaign=41895006&twclid=2ecuo8ajrfpyyg4tu8lri1ewtq",
         "homepage_status": 403,
@@ -22534,7 +22534,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-08-17T05:53:08.486Z",
+        "fetched_at": "2026-08-20T07:21:16.709Z",
         "homepage_url": "https://zonex.pro/",
         "example_url": "https://zonex.pro/?twclid=25n090v8tlomv20ff48zh48wo0",
         "homepage_status": 200,
@@ -44787,7 +44787,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-08-13T05:26:43.762Z",
+        "fetched_at": "2026-08-20T05:47:42.784Z",
         "homepage_url": "https://finviz.com/",
         "example_url": "https://finviz.com/register?affilId=659201043&twclid=237p0oqyf8bhakod3naytz02qh",
         "homepage_status": 200,
@@ -44911,7 +44911,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-08-14T10:49:16.731Z",
+        "fetched_at": "2026-08-20T05:47:43.656Z",
         "homepage_url": "https://surething.io/",
         "example_url": "https://surething.io/chat-index?utm_source=xads&twclid=27yqtzrn5j3zjmadm486py1wgi",
         "homepage_status": 200,
@@ -45035,7 +45035,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-08-14T11:19:01.118Z",
+        "fetched_at": "2026-08-20T05:47:45.039Z",
         "homepage_url": "https://controlweedsnotfarming.com/",
         "example_url": "https://controlweedsnotfarming.com/?utm_source=X&utm_medium=Social&utm_campaign=Remarketing&utm_term=Landing+Page.+Visitors&utm_content=Food+On+Our+Tables&twclid=2ehfqrtyrcni2wc5jyzgjr19ra",
         "homepage_status": 200,
@@ -45159,7 +45159,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-08-14T11:19:02.974Z",
+        "fetched_at": "2026-08-20T05:47:47.847Z",
         "homepage_url": "https://gptdefender.ai/",
         "example_url": "https://www.gptdefender.ai/?utm_source=x&utm_medium=paid_social&utm_campaign=gptdefender_launch&utm_content=variant_a&twclid=24c6hyn5zgh6wesf67pqq4taq8",
         "homepage_status": 200,
