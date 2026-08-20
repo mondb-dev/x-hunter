@@ -42,6 +42,16 @@
  * explicit "job updates, congratulations, ads = 0" anti-examples produced the
  * separation. Those anti-examples are load-bearing — do not tidy them out.
  *
+ * BIGGER IS NOT BETTER HERE (qwen3:8b evaluated 2026-08-20, then removed).
+ * On the same 10 items, with reasoning OFF it scored everything 2 or 3 — NO
+ * zeros at all, as unfiltered as phi4-mini. With reasoning ON it filtered
+ * correctly but took 15-34s per item: ~11 minutes of scoring for a 22-candidate
+ * run, against <1s/item for qwen2.5:3b at equal accuracy on every discriminator.
+ * It DID fix the one thing 3B gets wrong — factual comprehension. Asked to write
+ * about the OVP receipts, qwen2.5:3b says "without any receipts" (inverted: the
+ * receipts existed, the LIQUIDATION did not) while qwen3:8b gets it right. So if
+ * local composition is ever pursued, size is the lever; for scoring it is not.
+ *
  * ONE MODEL AT A TIME on this box. Swapping between two ~2GB models thrashed
  * badly (16GB, two Electron browser instances, ~10GB swap already in use):
  * phi4-mini errored on all 10 items until forced through a 108s warm-up. Keep
@@ -142,6 +152,7 @@ async function generateLocal(prompt, opts = {}) {
     maxTokens = 8,
     temperature = 0,
     stop = null,
+    think = false,
     tag = 'local',
   } = opts;
 
@@ -159,6 +170,13 @@ async function generateLocal(prompt, opts = {}) {
         model: MODEL,
         prompt,
         stream: false,
+        // Reasoning models (qwen3, deepseek-r1, …) emit chain-of-thought into a
+        // separate `thinking` field and spend the token budget there: with
+        // num_predict=4 a qwen3 call returns {"response":"", "thinking":"Okay,
+        // the user wants me"} — an empty string every time, which the scorer
+        // reads as a failure. We want the answer, not the reasoning, so thinking
+        // is off by default. Ollama ignores this field on non-reasoning models.
+        think: think === true,
         options: { temperature, num_predict: maxTokens, ...(stop ? { stop } : {}) },
       }),
     });
