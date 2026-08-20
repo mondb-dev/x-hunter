@@ -52,11 +52,36 @@ const {
 } = require("../runner/x_api");
 
 // ── Gemini enrichment helper (loaded lazily) ─────────────────────────────────
-let _llmGenerate = null;
+// Metadata enrichment (Phase 5c) runs on the LOCAL model, not Claude.
+//
+// WHY: measured over August 2026 it was 9,262 Claude calls and $24.62 — 69% of
+// the whole untagged `llm` bucket and the single largest inference cost in the
+// system. What it produces is entities/claim/stance JSON that lands ONLY in
+// state/posts_archive/*.jsonl, an append-only cold store with no reader anywhere
+// in the codebase (it preserves the old BigQuery row shape for a future
+// warehouse load). Paying frontier prices to pre-fill optional columns nobody
+// queries is the wrong trade; bounded JSON extraction with a fixed stance enum
+// is exactly what a small local model is good at.
+//
+// NO CLAUDE FALLBACK, deliberately. If the local model is unavailable the phase
+// is SKIPPED and rows archive with empty stance/claim/entities — which the
+// writer already handles (`|| ""`). Falling back would silently reinstate the
+// cost this change exists to remove, and escalation-on-failure is what caused
+// the 2026-07-30 cascade. Set COLLECT_ENRICH_CLAUDE=1 to force the old
+// behaviour; COLLECT_ENRICH=0 disables the phase entirely.
+let _localGen = null;
 try {
-  _llmGenerate = require("../runner/llm").generate;
+  _localGen = require("../runner/lib/local_llm");
 } catch (e) {
-  console.warn("[collect] llm.js not available for Gemini enrichment:", e.message);
+  console.warn("[collect] local_llm not available for enrichment:", e.message);
+}
+let _llmGenerate = null;
+if (process.env.COLLECT_ENRICH_CLAUDE === "1") {
+  try {
+    _llmGenerate = require("../runner/llm").generate;
+  } catch (e) {
+    console.warn("[collect] llm.js not available for enrichment:", e.message);
+  }
 }
 
 let _llmEmbed = null;
@@ -652,8 +677,33 @@ async function scrapeMentionsViaSearch(x) {
     console.log(`[scraper] captured ${capturedMedia.length}/${mediaPosts.slice(0, 10).length} media screenshots`);
   }
 
-  // ── Phase 5c: Gemini metadata enrichment for top posts ────────────────────
-  if (_llmGenerate) {
+  // ── Phase 5c: metadata enrichment for top posts (LOCAL model) ─────────────
+  // Note on dedup: `selected` derives from candidates already filtered against
+  // seenSet (Phase 3), so enrichment only ever sees posts it has not processed
+  // before. Verified against the archive: 16,499 unique ids in 16,614 rows —
+  // 0.7% repeats. No extra ledger is needed here.
+  const enrichEnabled = process.env.COLLECT_ENRICH !== "0";
+  let _enrich = null;
+  if (enrichEnabled) {
+    if (_localGen && _localGen.isEnabled()) {
+      const av = await _localGen.isAvailable();
+      if (av.ok) {
+        _enrich = (p, o) => _localGen.generateLocal(p, { ...o, tag: "collect_enrich" });
+        console.log(`[collect] enrichment backend: local ${_localGen.MODEL} (warmed ${av.warmedMs}ms)`);
+      } else {
+        // Loud, not silent: the 2026-07-28 store wipe degraded every local path
+        // for 2.3 days precisely because absence looked like normal output.
+        console.log(`[collect] enrichment SKIPPED — local model unavailable (${av.reason})`);
+      }
+    } else if (_llmGenerate) {
+      _enrich = (p, o) => _llmGenerate(p, { ...o, tag: "collect_enrich" });
+      console.log("[collect] enrichment backend: claude (COLLECT_ENRICH_CLAUDE=1)");
+    } else {
+      console.log("[collect] enrichment SKIPPED — no local model and Claude not opted in");
+    }
+  }
+
+  if (_enrich) {
     try {
       let enriched = 0;
       const enrichTargets = selected.slice(0, 20);
@@ -674,10 +724,27 @@ async function scrapeMentionsViaSearch(x) {
             '  "axis_relevance": ["0-2 axis labels from Sebastian\'s belief framework most relevant"]',
             '}',
           ].join('\n');
-          const raw = await _llmGenerate(metaPrompt, { temperature: 0.1, maxTokens: 200 });
+          // 300 tokens, not 200: a 3B model is less compact than Claude and a
+          // JSON object truncated mid-string fails the parse below, wasting the
+          // call entirely. Timeout is generous because the local path is free —
+          // the thing worth avoiding is a half-written object, not a slow one.
+          const raw = await _enrich(metaPrompt, { temperature: 0.1, maxTokens: 300, timeoutMs: 60_000 });
           const jsonMatch = raw.match(/\{[\s\S]*\}/);
           if (jsonMatch) {
-            post.gemini_meta = JSON.parse(jsonMatch[0]);
+            const meta = JSON.parse(jsonMatch[0]);
+            // Normalise `entities` to a flat string[]. The prompt asks for a
+            // list of names and Claude returned exactly that, but qwen2.5:3b
+            // sometimes emits [{type,value}] objects instead — measured 2 of 3
+            // sample runs. Both survive JSON.stringify into the archive, so the
+            // inconsistency would only surface years later at warehouse-load
+            // time, in a column no one can re-derive. Flatten it at write time.
+            if (Array.isArray(meta.entities)) {
+              meta.entities = meta.entities
+                .map((e) => (e && typeof e === "object" ? (e.value || e.name || e.entity || "") : e))
+                .filter((e) => typeof e === "string" && e.trim())
+                .map((e) => e.trim());
+            }
+            post.gemini_meta = meta;
             enriched++;
           } else {
             post.gemini_meta = null;
