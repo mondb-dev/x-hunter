@@ -29,6 +29,16 @@
 const voiceFilter = require('./voice_filter');
 const { compose } = require('./compose');
 
+/**
+ * True when prose composition — and therefore this gate itself — is running on
+ * the local model. The gate's fail-open default is only safe when the checker
+ * is STRONGER than the writer; under local routing they are the same model.
+ */
+function localGuardActive() {
+  try { return require('./compose').localRoutingActive(); }
+  catch { return false; }
+}
+
 /** voiceGate(text) → { pass, issues } — never throws. */
 function voiceGate(text) {
   try {
@@ -65,7 +75,19 @@ async function factCheck(text, { tag = 'gate', maxLen = null } = {}) {
     );
     const cleaned = String(raw).replace(/^```[a-z]*\n?/i, '').replace(/\n?```$/i, '');
     const m = cleaned.match(/\{[\s\S]*\}/);
-    const res = m ? JSON.parse(m[0]) : { pass: true };
+    if (!m) {
+      // Unparseable checker output. On Claude this is rare and failing open is
+      // the right availability tradeoff. On a local model it is the NORMAL
+      // failure: asked to fact-check "President Biden vows retaliation" (false
+      // in 2026), phi4-mini returned rambling prose ending "However, based on
+      // today's date alone: OK" — no JSON at all. Defaulting that to {pass:true}
+      // publishes the false claim, so the local path fails CLOSED.
+      if (localGuardActive()) {
+        return { pass: false, text, reason: 'factcheck unparseable (local backend — failing closed)' };
+      }
+      return { pass: true, text, reason: 'factcheck-unparseable' };
+    }
+    const res = JSON.parse(m[0]);
     if (res.pass === false) {
       const corrected = (res.corrected || '').trim();
       if (corrected && corrected.toLowerCase() !== 'null' && (!maxLen || corrected.length <= maxLen)) {
@@ -75,6 +97,14 @@ async function factCheck(text, { tag = 'gate', maxLen = null } = {}) {
     }
     return { pass: true, text, reason: 'ok' };
   } catch (e) {
+    // Claude: fail OPEN — an outage must not block posting.
+    // Local: fail CLOSED — the checker and the writer are the same weak model,
+    // so a checker failure is not an outage, it is the checker being unable to
+    // do the job. Waving output through in that state is how something wrong
+    // gets published under his name.
+    if (localGuardActive()) {
+      return { pass: false, text, reason: `factcheck failed on local backend — failing closed (${e.message})` };
+    }
     return { pass: true, text, reason: `factcheck-skipped (${e.message})` }; // fail open
   }
 }

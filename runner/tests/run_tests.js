@@ -570,6 +570,60 @@ section("Local LLM routing");
   }
 }
 
+// ── Local harness (making a weak model safe to publish from) ──────────────────
+// Each assertion below is pinned to a REAL phi4-mini failure measured on
+// Sebastian's production prompts (2026-08-19). Every one of those outputs passed
+// voice_filter.check(), which is why these checks exist. Deterministic only —
+// the model-based stance check needs a daemon and is exercised separately.
+section("Local harness");
+{
+  const hp = path.join(RUNNER, "lib", "local_harness.js");
+  if (!fileExists(hp)) { skip("local_harness.js", "file missing"); }
+  else {
+    const h = require(hp);
+    const SRC = "COA auditor testified the OVP had receipts naming Mary Grace Piattos for P50,000-P70,000 each.";
+
+    // Real failure: phi4-mini wrote "$50000-$70000" for peso amounts.
+    if (h.checkCurrency("Auditor found $50,000 in payments", SRC) &&
+        !h.checkCurrency("Auditor found P50,000 in payments", SRC)) {
+      pass("currency drift caught (₱ source → $ output), clean output passes");
+    } else fail("currency check", "did not catch $-for-₱ drift, or false-positived on a clean line");
+
+    // Real failure: invented a "$130,000" total that appears nowhere in the source.
+    if (h.checkInventedNumbers("totaling 130,000 pesos", SRC) &&
+        !h.checkInventedNumbers("receipts of 50,000 each", SRC)) {
+      pass("invented figures caught, source-grounded figures pass");
+    } else fail("invented numbers", "did not catch a fabricated figure, or rejected a grounded one");
+
+    // Real failure: emitted "#GAOTestimony" immediately after "No hashtags".
+    if (h.checkConstraints("Real story #COAAudit", { noHashtags: true }) &&
+        h.checkConstraints("x".repeat(300), { maxLen: 260 }) &&
+        !h.checkConstraints("A clean specific line.", { noHashtags: true, maxLen: 260 })) {
+      pass("explicit constraints enforced (hashtags, length)");
+    } else fail("constraint check", "hashtag/length enforcement wrong");
+
+    // Real failure: "collaboration between tech companies and regulatory bodies…"
+    // — fluent, on-topic, and carrying nothing concrete from the source.
+    if (h.checkSpecificity("Collaboration between stakeholders is needed.", SRC) &&
+        !h.checkSpecificity("Mary Grace Piattos is not a real person.", SRC)) {
+      pass("generic filler caught; output anchored to the source passes");
+    } else fail("specificity check", "did not catch filler, or rejected an anchored line");
+
+    // Real failure: asked for Taglish, produced Cebuano ('unya') and non-words.
+    if (h.checkTaglish("Nandito ang receipt, unya wala pa ring liquidation") &&
+        h.checkTaglish("This is entirely in English with no Tagalog at all") &&
+        !h.checkTaglish("Yung receipt walang liquidation, pero may pangalan")) {
+      pass("language drift caught (Cebuano tokens, and English-when-Taglish-asked)");
+    } else fail("taglish check", "language drift detection wrong");
+
+    // The wrapper must FAIL CLOSED — returning nothing is correct when the
+    // output cannot be verified. Silence beats an inverted stance under his name.
+    const shape = typeof h.guardedCompose === "function";
+    if (shape) pass("guardedCompose exported (generate → verify → corrective retry → fail closed)");
+    else fail("guardedCompose", "not exported");
+  }
+}
+
 // ── Daily stance video: locked voice ──────────────────────────────────────────
 // Regression guard for operator decision 2026-08-05: Veo has no voice-lock (no
 // API/seed/reference-audio, just a text prompt), so the brief-writing LLM used
