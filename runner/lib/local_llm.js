@@ -24,24 +24,33 @@
  *      by name so a missing/renamed model is a reported condition, not a silent
  *      zero. Callers are expected to log the reason once per run.
  *
- * MEASURED BEHAVIOUR (phi4-mini, 18 real feed items, 2026-08-19) — this is why
- * the default mode is 'prefilter' and not 'only':
- *   - It is a good NOISE FILTER. Commercial/product chatter is correctly zeroed
- *     (a Reddit feature launch, a TechCrunch ticket ad, a Peacock price rise).
- *     Handwritten LinkedIn noise — birthdays, job announcements, "5 habits of
- *     effective leaders" — is likewise zeroed.
- *   - It is a BAD RANKER. Across those items it emitted only 0 and 2 — never 1,
- *     never 3 — and rated a ferry disaster and licensure-exam results a 2. With
- *     minScore=2 it would wave both through as things worth commenting on.
- *   - Prompt shape carries it. An abbreviated prompt returned a constant "2" for
- *     everything; the production prompt (with explicit "job updates,
- *     congratulations, ads = 0" anti-examples) is what produces the separation.
- *     Do not "tidy" those anti-examples out of the scorer prompt.
+ * MODEL CHOICE (measured 2026-08-19 — phi4-mini was tried first and replaced):
+ * scored head-to-head on the SAME 10 real feed items,
+ *   phi4-mini  → returned "2" for ALL TEN, including a Tupac murder trial and a
+ *                baseball staffer's ICE detention. On political copy it stops
+ *                discriminating entirely: it is a "is this newsy" detector, not
+ *                a relevance scorer, and with minScore=2 it waves everything
+ *                through. (On a noisier LinkedIn feed it does zero ads and
+ *                birthdays — hence the earlier, kinder read of it.)
+ *   qwen2.5:3b → used the full range (0×3, 2×3, 3×1); correctly gave a 3 to the
+ *                White House attacking a CNN reporter, 0 to the Tupac trial.
+ * Live confirmation: same LinkedIn feed, phi4-mini passed 10-11 of 23 candidates,
+ * qwen2.5:3b passed 3 of 22 and awarded a genuine 3.
  *
- * COLD START is ~110s on this M4/16GB (2.5GB model, first load), then ~0.2-1.4s
- * warm. Ollama unloads after keep_alive (default 5m), and engagement runs every
- * few hours — so a run typically pays the cold start once. isAvailable() warms
- * the model so that cost lands on the probe, not on the first scored post.
+ * Prompt shape still carries much of the quality: an abbreviated prompt returned
+ * a constant "2" from phi4-mini for everything, while the production prompt's
+ * explicit "job updates, congratulations, ads = 0" anti-examples produced the
+ * separation. Those anti-examples are load-bearing — do not tidy them out.
+ *
+ * ONE MODEL AT A TIME on this box. Swapping between two ~2GB models thrashed
+ * badly (16GB, two Electron browser instances, ~10GB swap already in use):
+ * phi4-mini errored on all 10 items until forced through a 108s warm-up. Keep
+ * exactly one model pulled.
+ *
+ * COLD START is ~75-110s on this M4/16GB, then ~0.2-1.4s warm. Ollama unloads
+ * after keep_alive (default 5m) and engagement runs every few hours, so a run
+ * typically pays the cold start once. isAvailable() warms the model so that cost
+ * lands on the probe, not on the first scored post.
  *
  * Env:
  *   LOCAL_LLM_ENABLED  '1' to allow local routing at all (default off).
@@ -49,12 +58,12 @@
  *                      ranks the survivors. 'only' — local does all scoring
  *                      (ranking collapses to 0/2; use when Claude quota is
  *                      exhausted and degraded engagement beats none).
- *   LOCAL_LLM_MODEL    ollama model tag (default 'phi4-mini').
+ *   LOCAL_LLM_MODEL    ollama model tag (default 'qwen2.5:3b').
  *   LOCAL_LLM_URL      ollama base URL (default http://127.0.0.1:11434).
  */
 
 const DEFAULT_URL = process.env.LOCAL_LLM_URL || 'http://127.0.0.1:11434';
-const MODEL = process.env.LOCAL_LLM_MODEL || 'phi4-mini';
+const MODEL = process.env.LOCAL_LLM_MODEL || 'qwen2.5:3b';
 
 /** Opt-in gate. Local routing is OFF unless explicitly enabled. */
 function isEnabled() {
@@ -90,7 +99,7 @@ async function isAvailable({ timeoutMs = 15_000, warm = true, warmTimeoutMs = 18
     if (!res.ok) return { ok: false, reason: `ollama http_${res.status}` };
     const j = await res.json();
     const names = (j.models || []).map((m) => String(m.name || m.model || ''));
-    // Ollama reports "phi4-mini:latest" for a bare "phi4-mini" pull.
+    // Ollama reports "qwen2.5:3b" or "phi4-mini:latest" — compare the bare name.
     const found = names.some((n) => n === MODEL || n.split(':')[0] === MODEL.split(':')[0]);
     if (!found) {
       return { ok: false, reason: `model '${MODEL}' not pulled (have: ${names.join(', ') || 'none'})`, models: names };

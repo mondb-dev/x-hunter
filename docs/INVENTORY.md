@@ -47,9 +47,8 @@ what this policy exists to prevent.
 
 **Narrow exception (2026-08-19): relevance scoring may run locally.**
 `runner/lib/local_llm.js` routes 0-3 relevance classification to Ollama
-(`phi4-mini`) when `LOCAL_LLM_ENABLED=1`. Scoring is bounded classification —
-one digit — which is the one shape a 3.8B model handles as well as a frontier
-one, and it is the highest-frequency LLM call in the system (~25 candidates per
+(`qwen2.5:3b`) when `LOCAL_LLM_ENABLED=1`. Scoring is bounded classification —
+one digit — which is the one shape a ~3B model handles adequately, and it is the highest-frequency LLM call in the system (~25 candidates per
 engagement run, on both X and LinkedIn, at a 90s Claude timeout each).
 
 This is an exception, not a reopening of the policy. It holds because:
@@ -60,13 +59,16 @@ This is an exception, not a reopening of the policy. It holds because:
 - **Absence is loud.** `isAvailable()` resolves the model *by name* and returns a
   reason. The 2026-07-28 wipe was invisible because `ollama serve` kept returning
   `200 {"models":[]}` while every model 404'd.
-- **Default mode is `prefilter`, not `only`.** Measured on 18 real feed items,
-  phi4-mini is a good *noise filter* (correctly zeroes ads, product news, job
-  posts, birthdays) but a bad *ranker*: it emitted only 0 and 2 — never 1 or 3 —
-  and rated a ferry disaster and licensure-exam results a 2. So local drops the
-  confident 0s and **Claude ranks the survivors**. `LOCAL_LLM_MODE=only` skips
-  Claude entirely; ranking collapses to 0/2, and it exists for quota outages
-  where degraded engagement beats none.
+- **Model is `qwen2.5:3b`; phi4-mini was tried first and replaced.** Scored
+  head-to-head on the same 10 real feed items, phi4-mini returned "2" for ALL
+  TEN (including a Tupac murder trial and an ICE detention) — on political copy
+  it stops discriminating and, at minScore=2, waves everything through.
+  qwen2.5:3b used the full range and gave a correct 3 to media-framing copy.
+  Live: phi4-mini passed 10-11 of 23 LinkedIn candidates, qwen2.5:3b 3 of 22.
+  Keep exactly ONE model pulled — swapping two ~2GB models thrashes this 16GB box.
+- **Default mode is `prefilter`, not `only`.** Local drops the confident 0s and
+  **Claude ranks the survivors**. `LOCAL_LLM_MODE=only` skips Claude entirely and
+  exists for quota outages where degraded engagement beats none.
 - **Prompt shape carries the quality.** An abbreviated prompt returned a constant
   `2` for everything; the production prompt's explicit anti-examples ("job
   updates, congratulations, ads = 0") are what produce the separation. Those
@@ -76,7 +78,7 @@ Composition, gating, and fact-checking stay on Claude. In particular the
 fact-check gate (`lib/outbound_gates.js`) must not run locally: it fails *open*,
 so a weak checker does not block bad output, it waves it through.
 
-Cold start is ~110s (2.5GB, M4/16GB), then ~0.2-1.4s warm; `isAvailable()` warms
+Cold start is ~75-110s on this M4/16GB, then ~0.2-1.4s warm; `isAvailable()` warms
 the model so that cost lands on the probe, not the first scored post.
 
 Everything funnels through `runner/lib/compose.js`:
