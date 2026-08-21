@@ -1,0 +1,308 @@
+{
+  "job_id": "2026-08-21T16-44-49-919Z_will-peru-s-ex-president-s-15-year-corru",
+  "question": "Will Peru's ex-president's 15-year corruption sentence overturn be upheld on final appeal, or will prosecutors successfully reinstate conviction?",
+  "tier": "deep",
+  "status": "running",
+  "root": {
+    "title": "Peru Ex-President Corruption Sentence Appeal Outcome",
+    "question": "Will Peru's ex-president's 15-year corruption sentence overturn be upheld on final appeal, or will prosecutors successfully reinstate conviction?",
+    "direction": "Identify the specific ex-president and case, then analyze the current legal status, appeal arguments from both sides, and judicial precedents to forecast the likely outcome",
+    "research_areas": [
+      "Identity of ex-president and specific corruption case",
+      "Timeline of conviction, overturn, and appeals",
+      "Legal arguments by prosecution vs defense",
+      "Peru's Supreme Court corruption case precedents",
+      "Current political context affecting judiciary"
+    ],
+    "tools_hint": [
+      "recall",
+      "posts",
+      "search",
+      "fetch"
+    ],
+    "success_criterion": "Clear understanding of which ex-president, the case details, current appeal status, and sufficient precedent/legal analysis to forecast outcome",
+    "depends_on": [],
+    "children": [
+      {
+        "title": "Case Identification and Background",
+        "question": "Which Peruvian ex-president had a 15-year corruption sentence recently overturned, and what are the core facts of the case?",
+        "direction": "Search recent news about Peru ex-presidents, corruption convictions, and sentence overturns to identify the specific individual and case details",
+        "research_areas": [
+          "Recent Peru corruption cases (2023-2024)",
+          "Ex-presidents with 15-year sentences",
+          "Sentence overturns and appeals",
+          "Core allegations and evidence"
+        ],
+        "tools_hint": [
+          "recall",
+          "posts",
+          "search",
+          "fetch"
+        ],
+        "success_criterion": "Confirmed identity of ex-president, the specific corruption charges, original conviction date, overturn date, and key facts",
+        "depends_on": [],
+        "id": "1.1",
+        "status": "answered",
+        "findings": [],
+        "answer": "I cannot answer this sub-question from the provided evidence. The sub-findings indicate that all search attempts returned no web results, fetch operations failed, and no relevant information was retrieved. The available evidence appears to relate to Sheikh Hasina rather than a Peruvian ex-president, suggesting a mismatch in the research process. Without any evidence about a Peruvian president's corruption case or sentence overturn, I cannot provide the requested core facts.\n\n**Confidence: 0%** (no relevant evidence available)",
+        "children": [
+          {
+            "parent_id": "1.1",
+            "title": "Sentence Details and Charges Breakdown",
+            "question": "What specific corruption charges led to the 15-year sentence, what evidence was presented, and what were the key findings in the original conviction?",
+            "direction": "Get granular details on the corruption case substance - specific charges (embezzlement, bribery, illicit enrichment), amounts involved, co-defendants, and evidentiary basis",
+            "research_areas": [
+              "Original trial verdict details",
+              "Specific criminal charges",
+              "Evidence presented",
+              "Co-conspirators"
+            ],
+            "tools_hint": [
+              "search",
+              "fetch"
+            ],
+            "success_criterion": "Complete list of charges with details on alleged corruption acts, amounts, timeframes, and key evidence that secured original conviction",
+            "depends_on": [],
+            "children": [],
+            "id": "1.1.1",
+            "status": "answered",
+            "findings": [
+              {
+                "tool": "search",
+                "input": "Sheikh Hasina corruption charges 15-year sentence specific charges evidence",
+                "result": "(no web results for \"Sheikh Hasina corruption charges 15-year sentence specific charges evidence\")"
+              },
+              {
+                "tool": "fetch",
+                "input": "URL from step 1 with most detailed case information",
+                "result": "(could not fetch URL from step 1 with most detailed case information)"
+              },
+              {
+                "tool": "search",
+                "input": "Sheikh Hasina original conviction evidence amounts co-defendants corruption case details",
+                "result": "(no web results for \"Sheikh Hasina original conviction evidence amounts co-defendants corruption case details\")"
+              },
+              {
+                "tool": "fetch",
+                "input": "URL from step 3 with complementary case details",
+                "result": "(could not fetch URL from step 3 with complementary case details)"
+              },
+              {
+                "tool": "search",
+                "input": "Sheikh Hasina Bangladesh 15 years sentence conviction",
+                "result": "(no web results for \"Sheikh Hasina Bangladesh 15 years sentence conviction\")"
+              },
+              {
+                "tool": "search",
+                "input": "Sheikh Hasina court case 2024 2025 2026 charges",
+                "result": "(no web results for \"Sheikh Hasina court case 2024 2025 2026 charges\")"
+              },
+              {
+                "tool": "recall",
+                "input": "Sheikh Hasina 15 year sentence corruption",
+                "result": "(no memory match)"
+              }
+            ],
+            "answer": "I cannot answer this sub-question from the provided evidence. All search attempts returned no web results, fetch operations failed, and there are no relevant memories. Without any evidence about Sheikh Hasina's corruption charges, sentence details, or case specifics, I cannot provide the requested information about the specific charges, evidence presented, or key findings.\n\n**Confidence: 0%** (no evidence available)"
+          }
+        ]
+      },
+      {
+        "title": "Current Legal Status and Appeal Timeline",
+        "question": "What is the current status of the appeal process, which court is handling it, and what are the key procedural deadlines?",
+        "direction": "Find the most recent court filings, rulings, and procedural status to map where the case stands in Peru's judicial system",
+        "research_areas": [
+          "Peru Supreme Court appeal procedures",
+          "Recent filings by prosecutors",
+          "Defense response to appeal",
+          "Expected hearing or ruling dates"
+        ],
+        "tools_hint": [
+          "search",
+          "fetch",
+          "posts"
+        ],
+        "success_criterion": "Clear timeline showing current stage, which chamber/court has jurisdiction, filing dates, and expected decision timeframe",
+        "depends_on": [
+          "Case Identification and Background"
+        ],
+        "id": "1.2",
+        "status": "running",
+        "findings": [],
+        "answer": null,
+        "children": [
+          {
+            "parent_id": "1.2",
+            "title": "Appeals Court Composition and Tendencies",
+            "question": "Which judges/panel will decide the final appeal, and what are their historical patterns in similar corruption cases?",
+            "direction": "Identify the specific court chamber, judges assigned, and their track record on corruption appeals and prosecutorial appeals",
+            "research_areas": [
+              "Supreme Court chamber assignment",
+              "Judge backgrounds",
+              "Historical ruling patterns"
+            ],
+            "tools_hint": [
+              "search",
+              "fetch"
+            ],
+            "success_criterion": "Names of deciding judges and analysis of their previous rulings in corruption/appeal cases",
+            "depends_on": [
+              "1.2"
+            ],
+            "children": [],
+            "id": "1.2.1",
+            "status": "running",
+            "findings": [],
+            "answer": null
+          }
+        ]
+      },
+      {
+        "title": "Prosecution Appeal Arguments",
+        "question": "What specific legal grounds and evidence are prosecutors citing to reinstate the conviction?",
+        "direction": "Examine prosecution briefs, public statements, and legal filings to understand their case for overturning the acquittal",
+        "research_areas": [
+          "Procedural errors claimed by prosecutors",
+          "Evidence allegedly ignored or misinterpreted",
+          "Legal standards for overturning acquittals",
+          "Prosecutor statements to media"
+        ],
+        "tools_hint": [
+          "search",
+          "fetch",
+          "posts"
+        ],
+        "success_criterion": "Detailed list of prosecution's main arguments, legal precedents cited, and strength of their evidentiary claims",
+        "depends_on": [
+          "Case Identification and Background"
+        ],
+        "id": "1.3",
+        "status": "running",
+        "findings": [],
+        "answer": null,
+        "children": []
+      },
+      {
+        "title": "Defense Counter-Arguments",
+        "question": "What are the defense's arguments for upholding the overturn and maintaining the acquittal?",
+        "direction": "Review defense filings, lawyer statements, and legal reasoning behind the original overturn decision",
+        "research_areas": [
+          "Grounds for original sentence overturn",
+          "Defense response to prosecution appeal",
+          "Due process or evidentiary issues raised",
+          "Legal precedents supporting acquittal"
+        ],
+        "tools_hint": [
+          "search",
+          "fetch",
+          "posts"
+        ],
+        "success_criterion": "Clear understanding of why sentence was overturned initially and defense's legal strategy against reinstatement",
+        "depends_on": [
+          "Case Identification and Background"
+        ],
+        "id": "1.4",
+        "status": "running",
+        "findings": [],
+        "answer": null,
+        "children": []
+      },
+      {
+        "title": "Judicial Precedents and Legal Analysis",
+        "question": "What do Peru's Supreme Court precedents and legal experts suggest about the likelihood of each outcome?",
+        "direction": "Research similar corruption appeal cases in Peru, Supreme Court tendencies, and expert legal commentary",
+        "research_areas": [
+          "Peru Supreme Court corruption case rulings",
+          "Double jeopardy principles in Peruvian law",
+          "Recent trends in overturning acquittals",
+          "Expert legal analyst predictions"
+        ],
+        "tools_hint": [
+          "search",
+          "fetch",
+          "recall"
+        ],
+        "success_criterion": "Pattern analysis of similar cases and credible expert opinions on probable outcome",
+        "depends_on": [
+          "Prosecution Appeal Arguments",
+          "Defense Counter-Arguments"
+        ],
+        "id": "1.5",
+        "status": "pending",
+        "findings": [],
+        "answer": null,
+        "children": [
+          {
+            "parent_id": "1.5",
+            "title": "Procedural Grounds for Overturn Analysis",
+            "question": "Was the sentence overturned on procedural/technical grounds or substantive evidentiary grounds, and how does this affect appeal prospects?",
+            "direction": "Distinguish whether overturn was due to process violations, evidentiary issues, or substantive innocence claims - critical for predicting appeal success",
+            "research_areas": [
+              "Grounds for overturn ruling",
+              "Procedural vs substantive basis",
+              "Appellate review standards"
+            ],
+            "tools_hint": [
+              "search",
+              "fetch"
+            ],
+            "success_criterion": "Clear categorization of overturn reasoning and how appellate courts typically review each type",
+            "depends_on": [
+              "1.4"
+            ],
+            "children": [],
+            "id": "1.5.1",
+            "status": "pending",
+            "findings": [],
+            "answer": null
+          }
+        ]
+      },
+      {
+        "title": "Political and Contextual Factors",
+        "question": "What political pressures, public sentiment, or institutional factors might influence the Supreme Court's decision?",
+        "direction": "Analyze Peru's current political climate, anti-corruption efforts, and any external pressures on the judiciary",
+        "research_areas": [
+          "Peru's anti-corruption movement strength",
+          "Public opinion on the ex-president",
+          "Political party positions",
+          "Judicial independence concerns",
+          "International pressure or oversight"
+        ],
+        "tools_hint": [
+          "search",
+          "posts",
+          "fetch"
+        ],
+        "success_criterion": "Assessment of non-legal factors that might sway judicial decision-making",
+        "depends_on": [
+          "Case Identification and Background",
+          "Current Legal Status and Appeal Timeline"
+        ],
+        "id": "1.6",
+        "status": "pending",
+        "findings": [],
+        "answer": null,
+        "children": []
+      }
+    ],
+    "id": "1",
+    "status": "running",
+    "findings": [],
+    "answer": null
+  },
+  "ledger": {
+    "marked_terms": [],
+    "verify_points": [],
+    "tool_gaps": [
+      {
+        "need": "Access to legal court documents, official verdicts, or case filings that detail the specific charges, evidence, and findings",
+        "suggested_tool": "Legal database access (PACER equivalent for Bangladesh courts) or official government court records API"
+      },
+      {
+        "need": "The initial searches returned no results, suggesting either the query terms are incorrect, the case doesn't exist as described, or it's not indexed in accessible web sources",
+        "suggested_tool": "Clarification from the user about which specific case/conviction is being referenced, or access to specialized legal/news archives for Bangladesh"
+      }
+    ]
+  }
+}

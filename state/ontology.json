@@ -137509,11 +137509,11 @@
       "label": "Humanitarian Crisis Response",
       "left_pole": "Prioritizing immediate human suffering over geopolitical maneuverings",
       "right_pole": "Allowing broader political agendas to overshadow urgent humanitarian needs",
-      "score": -0.2566,
-      "confidence": 0.4529,
+      "score": -0.3061,
+      "confidence": 0.4669,
       "topics": [],
       "created_at": "2026-07-05T05:04:22.121Z",
-      "last_updated": "2026-08-20T21:04:28.913Z",
+      "last_updated": "2026-08-21T17:08:01.385Z",
       "evidence_log": [
         {
           "source": "https://www.aljazeera.com/news/2026/7/6/over-5500-children-displaced-by-fighting-in-sudans-el-obeid-charity-says?traffic_source=rss",
@@ -137727,6 +137727,17 @@
           "claim_id": "fec5944bb400",
           "score_after": -0.2566,
           "confidence_after": 0.4529
+        },
+        {
+          "source": "https://www.bbc.co.uk/news/articles/c24me64n31qo?at_medium=RSS&amp;at_campaign=rss",
+          "content": "Ethiopia cancels Virgin Mary festival in Tigray citing fears of aerial drone strikes against civilian gathering.",
+          "summary": "",
+          "timestamp": "2026-08-21T17:08:01.206Z",
+          "pole_alignment": "left",
+          "trust_weight": 1,
+          "claim_id": "485d343bee2b",
+          "score_after": -0.3061,
+          "confidence_after": 0.4669
         }
       ],
       "last_decayed_at": "2026-08-20",
@@ -138354,11 +138365,11 @@
       "label": "Information Control",
       "left_pole": "Transparent and Independent Verification",
       "right_pole": "Manipulated Narratives for Political Gain",
-      "score": 0.5076,
-      "confidence": 0.5652,
+      "score": 0.5325,
+      "confidence": 0.6022,
       "topics": [],
       "created_at": "2026-07-12T20:10:53.901Z",
-      "last_updated": "2026-08-09T05:01:50.717Z",
+      "last_updated": "2026-08-21T17:08:01.385Z",
       "evidence_log": [
         {
           "source": "https://x.com/EricLDaugh/status/2077098574152949763",
@@ -138670,6 +138681,17 @@
           "stance_confidence": 0.85,
           "score_after": 0.5076,
           "confidence_after": 0.5852
+        },
+        {
+          "source": "https://x.com/rapplerdotcom/status/2090817737455284687",
+          "content": "Hong Kong court convicts organizers of Tiananmen vigil for inciting subversion, criminalizing commemoration of 1989 crackdown.",
+          "summary": "",
+          "timestamp": "2026-08-21T17:08:01.206Z",
+          "pole_alignment": "right",
+          "trust_weight": 1.667,
+          "claim_id": "d7f99d6c4bd1",
+          "score_after": 0.5325,
+          "confidence_after": 0.6022
         }
       ],
       "last_decayed_at": "2026-08-21",
@@ -141929,11 +141951,11 @@
       "label": "AI Legal Accountability",
       "left_pole": "Clear legal frameworks hold developers/operators accountable for autonomous AI actions including unauthorized system access",
       "right_pole": "Legal ambiguity allows AI autonomous actions to fall into accountability gaps between models, labs, and users",
-      "score": 0.15,
-      "confidence": 0.1702,
+      "score": 0.2,
+      "confidence": 0.1941,
       "topics": [],
       "created_at": "2026-08-03T20:46:39.988Z",
-      "last_updated": "2026-08-20T09:48:30.419Z",
+      "last_updated": "2026-08-21T18:40:00.766Z",
       "evidence_log": [
         {
           "source": "https://arstechnica.com/security/2026/07/likely-illegally-claude-gained-access-to-3-networks-will-anthropic-be-held-to-account/",
@@ -142012,6 +142034,18 @@
           "stance_confidence": 0.75,
           "score_after": 0.15,
           "confidence_after": 0.1722
+        },
+        {
+          "source": "https://techcrunch.com/2026/08/21/waymo-hands-over-documents-in-nhtsas-child-collision-probe/",
+          "content": "Waymo's NHTSA responses in child collision probe are redacted entirely, citing confidential business information.",
+          "summary": "",
+          "timestamp": "2026-08-21T18:40:00.614Z",
+          "pole_alignment": "right",
+          "trust_weight": 1,
+          "claim_id": "756b20587fd5",
+          "stance_confidence": 0.65,
+          "score_after": 0.2,
+          "confidence_after": 0.1941
         }
       ],
       "last_decayed_at": "2026-08-21"
@@ -142293,5 +142327,5 @@
     }
   ],
   "axis_creation_rules_version": "1.0",
-  "last_updated": "2026-08-21T15:35:57.843Z"
+  "last_updated": "2026-08-21T18:40:00.766Z"
 }
