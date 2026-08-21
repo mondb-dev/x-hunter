@@ -1,6 +1,6 @@
 {
   "schema_version": "1.0",
-  "generated_at": "2026-08-21T13:16:01.446Z",
+  "generated_at": "2026-08-21T15:36:36.751Z",
   "method": "mechanical_registry_v1",
   "profiled_at": "2026-08-21T12:11:24.371Z",
   "sources": [
@@ -9,9 +9,9 @@
       "entity": "Theguardian",
       "kind": "news",
       "first_seen_at": "2026-03-27T23:17:00Z",
-      "last_seen_at": "2026-08-16T20:34:57.150Z",
+      "last_seen_at": "2026-08-21T13:16:45.088Z",
       "discovery": {
-        "distinct_urls": 949,
+        "distinct_urls": 951,
         "example_urls": [
           "https://www.theguardian.com/us-news/2026/jun/23/trump-immigration-courthouse-arrest-policy",
           "https://www.theguardian.com/us-news/2026/jun/28/ice-minnesota-defending-democracy",
@@ -20,14 +20,15 @@
           "https://www.theguardian.com/global-development/2026/jun/26/woman-sadia-moalim-ali-three-year-jail-sentence-somalia-online-comments-governement"
         ],
         "origin_counts": {
-          "ontology_evidence": 47,
-          "reading_queue": 912,
-          "journals": 127,
+          "ontology_evidence": 48,
+          "reading_queue": 913,
+          "journals": 128,
           "articles": 5
         },
         "distinct_referring_accounts": 0,
         "sample_referring_accounts": [],
         "distinct_axes": [
+          "axis_accountability_temporality_v1",
           "axis_ai_societal_impact_v1",
           "axis_authoritarian_self_determination_v1",
           "axis_collective_voice",
@@ -75,8 +76,8 @@
         "breadth": {
           "score": 0.94,
           "basis": [
-            "distinct_urls:949",
-            "distinct_axes:20",
+            "distinct_urls:951",
+            "distinct_axes:21",
             "origin_types:4"
           ]
         },
@@ -115,8 +116,8 @@
             "newsroom_domain_pattern",
             "article_path_seen",
             "doi_or_identifier_path_seen",
-            "distinct_urls:949",
-            "distinct_axes:20",
+            "distinct_urls:951",
+            "distinct_axes:21",
             "origin_types:4",
             "referring_accounts:0",
             "origin_types:4",
@@ -169,7 +170,7 @@
         ],
         "origin_counts": {
           "claim_tracker": 1,
-          "reading_queue": 20
+          "reading_queue": 21
         },
         "distinct_referring_accounts": 0,
         "sample_referring_accounts": [],
@@ -288,9 +289,9 @@
       "entity": "Aljazeera",
       "kind": "news",
       "first_seen_at": "2026-06-22T02:45:00Z",
-      "last_seen_at": "2026-08-21T11:46:54.726Z",
+      "last_seen_at": "2026-08-21T13:16:45.025Z",
       "discovery": {
-        "distinct_urls": 438,
+        "distinct_urls": 439,
         "example_urls": [
           "https://www.aljazeera.com/opinions/2026/6/24/south-africas-crises-will-not-be-solved-by-blaming-migrants",
           "https://www.aljazeera.com/video/newsfeed/2026/6/27/newly-released-video-exposes-henry-nowak-killers-lies?traffic_source=rss",
@@ -300,8 +301,8 @@
         ],
         "origin_counts": {
           "ontology_evidence": 192,
-          "reading_queue": 20,
-          "journals": 538,
+          "reading_queue": 21,
+          "journals": 539,
           "articles": 10
         },
         "distinct_referring_accounts": 0,
@@ -362,7 +363,7 @@
         "breadth": {
           "score": 0.94,
           "basis": [
-            "distinct_urls:438",
+            "distinct_urls:439",
             "distinct_axes:29",
             "origin_types:4"
           ]
@@ -401,7 +402,7 @@
           "basis": [
             "newsroom_domain_pattern",
             "article_path_seen",
-            "distinct_urls:438",
+            "distinct_urls:439",
             "distinct_axes:29",
             "origin_types:4",
             "referring_accounts:0",
@@ -702,7 +703,7 @@
       "first_seen_at": "2026-06-22T00:15:00Z",
       "last_seen_at": "2026-08-21T11:46:54.726Z",
       "discovery": {
-        "distinct_urls": 644,
+        "distinct_urls": 645,
         "example_urls": [
           "https://www.nytimes.com/2026/06/19/world/canada/frank-stronach-trial-guilty-sex-charges.html",
           "https://www.nytimes.com/2026/06/27/world/americas/mexican-officials-us-informants.html",
@@ -712,7 +713,7 @@
         ],
         "origin_counts": {
           "ontology_evidence": 21,
-          "reading_queue": 666,
+          "reading_queue": 667,
           "journals": 55
         },
         "distinct_referring_accounts": 0,
@@ -756,7 +757,7 @@
         "breadth": {
           "score": 0.8799999999999999,
           "basis": [
-            "distinct_urls:644",
+            "distinct_urls:645",
             "distinct_axes:12",
             "origin_types:3"
           ]
@@ -795,7 +796,7 @@
           "basis": [
             "newsroom_domain_pattern",
             "article_path_seen",
-            "distinct_urls:644",
+            "distinct_urls:645",
             "distinct_axes:12",
             "origin_types:3",
             "referring_accounts:0",
@@ -1215,9 +1216,9 @@
       "entity": "Bbc",
       "kind": "news",
       "first_seen_at": "2026-06-26T07:05:00Z",
-      "last_seen_at": "2026-08-16T20:34:57.150Z",
+      "last_seen_at": "2026-08-21T13:37:00.084Z",
       "discovery": {
-        "distinct_urls": 597,
+        "distinct_urls": 599,
         "example_urls": [
           "https://www.bbc.co.uk/news/articles/cn8qxz6qypyo",
           "https://www.bbc.co.uk/news/articles/cn075j04pnyo?at_medium=RSS&amp;at_campaign=rss",
@@ -1227,9 +1228,9 @@
         ],
         "origin_counts": {
           "ontology_evidence": 6,
-          "reading_queue": 612,
+          "reading_queue": 613,
           "journals": 19,
-          "articles": 1
+          "articles": 2
         },
         "distinct_referring_accounts": 0,
         "sample_referring_accounts": [],
@@ -1263,7 +1264,7 @@
         "breadth": {
           "score": 0.8233333333333333,
           "basis": [
-            "distinct_urls:597",
+            "distinct_urls:599",
             "distinct_axes:4",
             "origin_types:4"
           ]
@@ -1301,7 +1302,7 @@
           "method": "mechanical_v1",
           "basis": [
             "newsroom_domain_pattern",
-            "distinct_urls:597",
+            "distinct_urls:599",
             "distinct_axes:4",
             "origin_types:4",
             "referring_accounts:0",
@@ -1354,7 +1355,7 @@
           "https://www.house.gov/"
         ],
         "origin_counts": {
-          "reading_queue": 20,
+          "reading_queue": 21,
           "journals": 1
         },
         "distinct_referring_accounts": 0,
@@ -3251,9 +3252,9 @@
       "entity": "T Co",
       "kind": "unknown",
       "first_seen_at": "2016-05-05T18:57:30.000Z",
-      "last_seen_at": "2026-08-21T10:49:36.000Z",
+      "last_seen_at": "2026-08-21T14:20:21.000Z",
       "discovery": {
-        "distinct_urls": 16226,
+        "distinct_urls": 16265,
         "example_urls": [
           "https://t.co/pJSE124ec4",
           "https://t.co/Soz8BXPWaa",
@@ -3262,7 +3263,7 @@
           "https://t.co/cYaqYDRp08"
         ],
         "origin_counts": {
-          "feed_buffer": 14117,
+          "feed_buffer": 14163,
           "feed_buffer_reply": 5162,
           "articles": 3
         },
@@ -3305,7 +3306,7 @@
         "breadth": {
           "score": 0.53,
           "basis": [
-            "distinct_urls:16226",
+            "distinct_urls:16265",
             "distinct_axes:0",
             "origin_types:3"
           ]
@@ -3344,7 +3345,7 @@
           "basis": [
             "unknown_domain_pattern",
             "doi_or_identifier_path_seen",
-            "distinct_urls:16226",
+            "distinct_urls:16265",
             "distinct_axes:0",
             "origin_types:3",
             "referring_accounts:2851",
@@ -3390,9 +3391,9 @@
       "entity": "Inquirer",
       "kind": "unknown",
       "first_seen_at": "2026-05-09T10:15:15.053Z",
-      "last_seen_at": "2026-08-21T10:18:12.165Z",
+      "last_seen_at": "2026-08-21T13:16:45.025Z",
       "discovery": {
-        "distinct_urls": 410,
+        "distinct_urls": 411,
         "example_urls": [
           "https://newsinfo.inquirer.net/2266316/nbi-on-cayetano-position-that-cant-be-defended-by-facts-is-done-with-insults",
           "https://www.inquirer.net/capiz-broadcaster-shooting-probe-widens-as-cops-form-task-force",
@@ -3402,7 +3403,7 @@
         ],
         "origin_counts": {
           "ontology_evidence": 148,
-          "journals": 490,
+          "journals": 491,
           "articles": 5
         },
         "distinct_referring_accounts": 0,
@@ -3457,7 +3458,7 @@
         "breadth": {
           "score": 0.8799999999999999,
           "basis": [
-            "distinct_urls:410",
+            "distinct_urls:411",
             "distinct_axes:24",
             "origin_types:3"
           ]
@@ -3495,7 +3496,7 @@
           "method": "mechanical_v1",
           "basis": [
             "unknown_domain_pattern",
-            "distinct_urls:410",
+            "distinct_urls:411",
             "distinct_axes:24",
             "origin_types:3",
             "referring_accounts:0",
@@ -3699,9 +3700,9 @@
       "entity": "Techcrunch",
       "kind": "unknown",
       "first_seen_at": "2026-06-22T23:31:00Z",
-      "last_seen_at": "2026-08-21T01:50:52.321Z",
+      "last_seen_at": "2026-08-21T13:16:45.088Z",
       "discovery": {
-        "distinct_urls": 135,
+        "distinct_urls": 136,
         "example_urls": [
           "https://techcrunch.com/2026/07/30/judge-says-trump-admin-still-lacks-evidence-for-anthropic-supply-chain-risk-label/",
           "https://techcrunch.com/2026/06/22/shareholders-sue-ubers-board-over-sexual-assaults-other-incidents/",
@@ -3710,8 +3711,8 @@
           "https://techcrunch.com/2026/07/09/block-reaches-45m-settlement-with-46-states-over-cash-app-fraud-probe/"
         ],
         "origin_counts": {
-          "ontology_evidence": 56,
-          "journals": 151
+          "ontology_evidence": 57,
+          "journals": 152
         },
         "distinct_referring_accounts": 0,
         "sample_referring_accounts": [],
@@ -3759,7 +3760,7 @@
         "breadth": {
           "score": 0.82,
           "basis": [
-            "distinct_urls:135",
+            "distinct_urls:136",
             "distinct_axes:17",
             "origin_types:2"
           ]
@@ -3798,7 +3799,7 @@
           "basis": [
             "unknown_domain_pattern",
             "article_path_seen",
-            "distinct_urls:135",
+            "distinct_urls:136",
             "distinct_axes:17",
             "origin_types:2",
             "referring_accounts:0",
@@ -18011,9 +18012,9 @@
       "entity": "Moltbook",
       "kind": "unknown",
       "first_seen_at": "2026-03-07T00:29:35.326Z",
-      "last_seen_at": "2026-08-16T10:49:49.623Z",
+      "last_seen_at": "2026-08-21T13:37:00.084Z",
       "discovery": {
-        "distinct_urls": 114,
+        "distinct_urls": 115,
         "example_urls": [
           "https://www.moltbook.com/post/29d49c40-bc59-4a1a-b875-3d3d41ec469e",
           "https://www.moltbook.com/post/3694a386-c24e-4744-8c06-2fc74c73c559",
@@ -18022,7 +18023,7 @@
           "https://www.moltbook.com/post/c6a71bf0-72ab-4867-820a-6b306bae0cea"
         ],
         "origin_counts": {
-          "articles": 114
+          "articles": 115
         },
         "distinct_referring_accounts": 0,
         "sample_referring_accounts": [],
@@ -18051,7 +18052,7 @@
         "breadth": {
           "score": 0.41,
           "basis": [
-            "distinct_urls:114",
+            "distinct_urls:115",
             "distinct_axes:0",
             "origin_types:1"
           ]
@@ -18089,7 +18090,7 @@
           "method": "mechanical_v1",
           "basis": [
             "unknown_domain_pattern",
-            "distinct_urls:114",
+            "distinct_urls:115",
             "distinct_axes:0",
             "origin_types:1",
             "referring_accounts:0",
