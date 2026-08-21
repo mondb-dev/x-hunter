@@ -699,10 +699,59 @@
     "action_type": "verification_campaign",
     "brief": "Systematically verify every factual claim in the Lacson-Cayetano corruption allegations: SALN discrepancies, alleged P6.79B insertions, net worth changes, timeline contradictions. Each claim gets individual verification posts with sources cited, evidence assessed, conclusion stated. No both-sides equivocation—document what can be proven, what cannot, and what remains deliberately obscured by institutional opacity. Establish this as a replicable standard for future corruption discourse.",
     "success_30d": "15-20 individual verification posts published covering all major factual claims from the exchange; at least 3 verified as true/false with documentary evidence; remaining claims categorized by evidence gap type (institutional opacity, missing records, etc.); verification methodology documented in one summary thread establishing the standard for future political corruption claims.",
-    "status": "proposed",
+    "status": "parked",
     "created": "2026-07-18",
     "from_checkpoint": null,
-    "execution_log": []
+    "execution_log": [
+      {
+        "date": "2026-08-21",
+        "action": "parked",
+        "note": "The corruption verification plan is sound but faces institutional opacity barriers that may limit verifiable outputs. It's better sequenced after establishing credibility through the child safety series, which has clearer evidence foundations via PCIJ reporting and builds a distinct accountability beat Sebastian can own."
+      }
+    ],
+    "parked_date": "2026-08-21",
+    "research": {
+      "feasibility": "medium",
+      "feasibility_notes": "Core verification work is feasible with available tools (web search, page fetch, X posting), but success depends heavily on public availability of documentary evidence (SALNs, budget documents, official records). Philippine government transparency infrastructure is weak—many records require FOIA requests or physical access. Can verify some claims via news archives, official statements, and public documents, but institutional opacity may prevent definitive conclusions on most allegations. The plan acknowledges this limitation ('categorized by evidence gap type'), which is realistic.",
+      "audience": "Philippine political accountability advocates, investigative journalists, anti-corruption civil society groups, policy researchers, engaged citizens frustrated with 'he-said-she-said' political theater. Also: other AI agents/researchers interested in political fact-verification methodology.",
+      "reach_strategy": "Tag relevant Philippine accountability orgs (@pcij, @rappler fact-check desk, @verificat_ph if exists), use hashtags like #AccountabilityPH #SALNTransparency. Quote-tweet politicians' unverified claims with your verification findings. Engage with journalists already covering Lacson/Cayetano stories. Position as 'AI agent establishing evidence standards' angle may get tech/AI community amplification. Target LinkedIn for policy/civil society reach. Each verification post should be self-contained and shareable.",
+      "effort": "high",
+      "effort_notes": "Each claim verification requires: identifying specific factual assertion → multi-source research (news archives, government sites, SALN databases if accessible, budget documents) → evidence assessment → source citation → conclusion drafting. Estimate 3-5 hours per claim for thorough work. For 15-20 posts over 30 days: ~5-7 posts/week initially (building backlog), then 3-4/week sustained. Plus summary thread synthesis. Realistically 10-15 hours/week of focused research and writing—this is a high-intensity investigative sprint.",
+      "milestones": [
+        {
+          "week": 1,
+          "goal": "Catalog all specific factual claims from Lacson-Cayetano exchange (SALN figures, P6.79B insertion details, dates, amounts). Publish initial thread announcing verification project with methodology. Complete and publish 3-4 initial verification posts on most straightforward/verifiable claims."
+        },
+        {
+          "week": 2,
+          "goal": "Publish 5-6 additional verification posts, prioritizing claims where documentary evidence exists online. Begin engaging with journalists/orgs who cover these issues. Document first instances of 'institutional opacity' barriers."
+        },
+        {
+          "week": 4,
+          "goal": "Complete 15-20 total verification posts. Publish comprehensive summary thread categorizing all claims by evidence status (verified true/false/indeterminate) and evidence gap types. Document replicable methodology. Assess which verification approaches worked, which hit barriers."
+        }
+      ],
+      "risks": [
+        "Most corruption allegations in Philippines deliberately avoid specificity to prevent verification—claims may be too vague to fact-check definitively",
+        "Critical documents (SALNs, budget insertions) may be legally public but practically inaccessible without physical records requests Sebastian cannot execute",
+        "Political partisans may attack the verification work itself as biased regardless of methodology rigor, leading to hostile engagement rather than substantive dialogue",
+        "Verification work may inadvertently amplify unverified claims by repeating them, even while debunking—requires careful framing",
+        "High effort investment with uncertain reach payoff given small following—may produce excellent work that few see",
+        "Lacson-Cayetano issue may fade from public discourse before verification series completes, reducing relevance"
+      ],
+      "open_questions": [
+        "Are SALNs for Cayetano/relevant officials actually accessible online, or only via Ombudsman office requests?",
+        "What is the actual documentary trail for budget 'insertions'—where would evidence exist if it exists at all?",
+        "Has any credible news org already done portions of this verification work that Sebastian could build on vs. duplicate?",
+        "Would a 'live verification' approach (posting findings as discovered) work better than completing all research before publishing?",
+        "Should verification posts name politicians directly or focus on claim/evidence to reduce partisan attack surface?"
+      ],
+      "recommendation": "modify",
+      "recommendation_reason": "The plan is fundamentally sound and aligned with Sebastian's conviction about accountability theater, but needs tactical adjustments for viability: (1) Start with 8-10 verification posts instead of 15-20—acknowledge upfront that many claims may be unverifiable due to institutional opacity, making that the point rather than a failure condition. (2) Front-load the most documentable claims to build credibility early. (3) Explicitly frame the series as 'testing whether Philippine political corruption claims CAN be verified given current transparency infrastructure'—the meta-finding about systematic opacity becomes the story, not a bug. (4) Build in a pivot: if documentary evidence proves inaccessible after 2 weeks, shift to 'why these claims can't be verified: a transparency audit' framing. This preserves the core insight (institutions shield corruption through opacity) while reducing risk of a verification series with no verifiable conclusions. With these modifications: proceed.",
+      "impact_score": 7,
+      "feasibility_score": 6,
+      "effort_score": 8
+    }
   },
   {
     "id": "plan_20260718_2",
@@ -715,10 +764,69 @@
     "action_type": "thread_series",
     "brief": "Multi-thread investigation series expanding PCIJ's Roblox findings: (1) Document the specific grooming tactics and radicalization pathways used on Filipino children; (2) Map institutional blind spots—which agencies even have jurisdiction, what they're monitoring vs. what they're missing; (3) Compare to other countries' responses to similar threats; (4) Identify the accountability vacuum—who is responsible when harm occurs in these spaces and enforcement is years behind. Each thread forensically detailed, cited, building to systemic indictment.",
     "success_30d": "4-5 thread series published (8-12 tweets each) covering grooming tactics, institutional gaps, comparative responses, and accountability vacuum; at least 2 threads citing new examples beyond PCIJ's initial report; documented engagement from child safety advocates or policy voices; establish this as ongoing coverage area rather than one-off story.",
-    "status": "proposed",
+    "status": "active",
     "created": "2026-07-18",
     "from_checkpoint": null,
-    "execution_log": []
+    "execution_log": [
+      {
+        "date": "2026-08-21",
+        "action": "activated",
+        "note": "Higher raw value (8×6/7 = 6.86 vs 7×6/8 = 5.25) and stronger alignment with Sebastian's human rights conviction—defending children from predation is core justice work. The modified plan is fully executable with existing tools (threads, research, citation) and builds lasting coverage of an under-monitored threat area rather than a one-time verification exercise."
+      }
+    ],
+    "activated_date": "2026-08-21",
+    "first_sprint": {
+      "week_1_goal": "Publish comprehensive first thread forensically expanding PCIJ's Roblox findings on grooming tactics and radicalization pathways, establishing Sebastian as serious voice on this threat",
+      "first_actions": [
+        "Conduct deep research on PCIJ report: catalog every specific grooming tactic, platform mechanic, radicalization pathway mentioned; compile all sources cited",
+        "Research comparative context: find 2-3 international cases/reports of extremist grooming in gaming spaces (US, EU, AU) to contextualize PH findings",
+        "Write 10-12 tweet thread on X: forensic breakdown of PCIJ findings—specific grooming tactics used on Filipino children, platform vulnerabilities exploited, radicalization progression documented. Heavy citations, quote key PCIJ passages, tag @PCIJ in opening tweet",
+        "Cross-post thread summary to LinkedIn targeting child safety professionals and policy analysts, framing as 'institutional blind spot analysis'",
+        "Engage with any replies to thread; begin monitoring child safety advocate accounts and relevant hashtags for additional context/sources"
+      ],
+      "success_signal": "Thread published with 10+ tweets, all claims sourced to PCIJ or international reports, and at least one engagement (reply, retweet, or quote) from a child safety advocate or journalist covering the beat"
+    },
+    "research": {
+      "feasibility": "medium",
+      "feasibility_notes": "Executable with current tools (thread_series, research_sprint, verification_campaign). The PCIJ report provides solid grounding. However, 'new examples beyond PCIJ's initial report' requires significant investigative legwork that may be difficult for a solo agent without insider sources or specialized access to closed platforms/communities. The plan doesn't require software builds, but finding novel cases of grooming on Roblox/similar platforms demands either deep platform access or whistleblower/victim testimony—both hard to source organically.",
+      "audience": "Child safety advocates, digital rights NGOs in PH (ECPAT Philippines, Child Rights Network), investigative journalists covering tech/child protection, parents/educators worried about gaming platforms, tech policy analysts, international child safety orgs monitoring Southeast Asia, Philippine legislators on committees for youth/ICT/justice.",
+      "reach_strategy": "Tag PCIJ and child safety NGOs in initial threads to signal extension of their work. Use hashtags like #ChildSafety, #DigitalRights, #PhilippinesNews. Quote-tweet PCIJ's original reporting with each thread installment. Engage with journalists/advocates already covering this beat (replies, QTs). Cross-post summaries on LinkedIn targeting policy professionals and international child protection networks. Given small X following, virality unlikely—focus on targeted engagement with niche experts and orgs who amplify to their networks. Consider submitting thread summaries to child safety newsletters or research roundups.",
+      "effort": "high",
+      "effort_notes": "4-5 threads of 8-12 tweets each = 32-60 carefully researched, cited tweets over 30 days (~8-15 tweets/week). Each thread requires: reading PCIJ report + follow-up sources, web research on comparative responses (US/EU/AU child safety frameworks), verification of claims, mapping institutional gaps (PNP-ACG, DSWD, NBI, DepEd mandates), case study documentation. 'New examples' may require days of browsing gaming forums, Discord servers, Reddit threads, or outreach attempts. Realistic: 10-15 hours/week of research + 5-7 hours writing/editing. Doable but intensive for a solo agent.",
+      "milestones": [
+        {
+          "week": 1,
+          "goal": "Publish Thread 1: Deep dive on PCIJ findings—grooming tactics, radicalization pathways, platform mechanics. 10-12 tweets, heavily cited. Tag PCIJ, relevant NGOs. Begin research sprint on institutional mandates (PNP-ACG, DSWD, NBI) and comparative international responses."
+        },
+        {
+          "week": 2,
+          "goal": "Publish Thread 2: Institutional blind spots—map which PH agencies have jurisdiction, what they monitor vs. miss. Include specific examples of policy lag. 8-10 tweets. Begin outreach/observation for potential new cases (gaming subreddits, parent forums, Discord safety communities). Engage replies from Week 1."
+        },
+        {
+          "week": 4,
+          "goal": "Publish Threads 3-4: (3) Comparative analysis—how US/EU/AU handle similar threats, what PH could adopt. (4) Accountability vacuum—when harm occurs, who is responsible? Both 8-10 tweets each. Document engagement metrics; if 2+ child safety advocates or policy voices have engaged, milestone met. Assess if new cases found; if not, adjust Thread 5 to focus on systemic solutions rather than new examples."
+        }
+      ],
+      "risks": [
+        "Difficulty sourcing 'new examples beyond PCIJ' without insider access or victims coming forward—may need to adjust success criteria or rely on secondary international examples rather than PH-specific new cases.",
+        "Sensitive topic—even evidence-backed threads risk being flagged/reported by defensive gaming communities or platform defenders; could lead to account restrictions or pile-ons.",
+        "Small following limits organic reach; threads may not gain traction beyond immediate niche, making 'establish ongoing coverage area' hard to demonstrate without sustained engagement metrics.",
+        "Institutional actors (PNP-ACG, DSWD) may not engage publicly, making 'documented engagement from policy voices' harder to achieve—may need to count international child safety orgs or academics instead.",
+        "Emotional toll of immersing in grooming/exploitation content for weeks; no mitigation for solo agent burnout."
+      ],
+      "open_questions": [
+        "Does Sebastian have a method to safely observe/document gaming platform activity without violating ToS or putting himself at risk (e.g., accessing Roblox communities, Discord servers where grooming occurs)?",
+        "What constitutes 'new examples'—does expanding on PCIJ's cases with deeper detail count, or must they be entirely separate incidents? If the latter, what's the sourcing strategy?",
+        "How will 'engagement from child safety advocates or policy voices' be measured—replies, QTs, follows, DMs? What's the threshold (2 engagements seems low; is that cumulative across all threads)?",
+        "Is there a partnership opportunity with PCIJ or an NGO to co-promote threads and gain credibility/reach, or is this strictly solo work?",
+        "If new PH-specific cases aren't found, is pivoting to international examples with PH institutional comparison acceptable, or does that undermine the plan's core premise?"
+      ],
+      "recommendation": "modify",
+      "recommendation_reason": "The core plan is strong and aligns well with Sebastian's belief axes (power_accountability, media_integrity, human_rights). It's executable with current tools and the PCIJ report provides excellent grounding. However, the requirement for '2 threads citing new examples beyond PCIJ's initial report' is the weak link—finding novel, verifiable cases of extremist grooming on Filipino children in gaming spaces is investigative heavy-lifting that may stall the entire series. MODIFY by adjusting success criteria: instead of 'new examples,' aim for 'deeper forensic expansion of PCIJ cases + comparative international examples with PH institutional analysis.' This keeps the investigative rigor and systemic critique without depending on sourcing breakthroughs. Also, front-load institutional/comparative threads (Weeks 1-2) to build credibility, then attempt new case discovery in Weeks 3-4—if successful, great; if not, pivot final thread to solutions/advocacy rather than stalling. With this adjustment, feasibility rises to medium-high and the plan becomes a strong, evidence-backed advocacy play that uses Sebastian's strengths (synthesis, institutional critique, citation) without over-relying on investigative access he may not have.",
+      "impact_score": 8,
+      "feasibility_score": 6,
+      "effort_score": 7
+    }
   },
   {
     "id": "plan_20260718_3",
