@@ -60160,11 +60160,11 @@
       "label": "Integrity of Information and Social Media Manipulation",
       "left_pole": "Advocacy for factual accuracy, critical assessment of sources, and efforts to co",
       "right_pole": "Spread of unverified claims, reliance on emotional appeals, and engagement farmi",
-      "score": 0.421,
+      "score": 0.4133,
       "confidence": 0.95,
       "topics": [],
       "created_at": "2026-02-28T10:52:00Z",
-      "last_updated": "2026-08-20T11:21:32.205Z",
+      "last_updated": "2026-08-21T09:13:42.765Z",
       "evidence_log": [
         {
           "pole_alignment": "right",
@@ -73221,6 +73221,18 @@
           "claim_id": "2d989e5b3317",
           "stance_confidence": 1,
           "score_after": 0.421,
+          "confidence_after": 0.95
+        },
+        {
+          "source": "https://www.rappler.com/newsbreak/fact-check/no-deped-announcement-abolish-grade-11-12-august-2026/",
+          "content": "DepEd has repeatedly debunked false information about supposed removal of K to 12 program.",
+          "summary": "",
+          "timestamp": "2026-08-21T09:13:38.644Z",
+          "pole_alignment": "left",
+          "trust_weight": 1,
+          "claim_id": "14a4c7966404",
+          "stance_confidence": 0.95,
+          "score_after": 0.4133,
           "confidence_after": 0.95
         }
       ],
@@ -138625,11 +138637,11 @@
       "label": "Rapid Disinformation",
       "left_pole": "Quickly verified and accurate information",
       "right_pole": "Unverified and rapidly disseminated claims",
-      "score": 0.5313,
-      "confidence": 0.4385,
+      "score": 0.4813,
+      "confidence": 0.4529,
       "topics": [],
       "created_at": "2026-07-13T00:10:59.798Z",
-      "last_updated": "2026-08-20T12:57:10.964Z",
+      "last_updated": "2026-08-21T09:13:42.765Z",
       "evidence_log": [
         {
           "source": "https://x.com/RT_com/status/2077106304095531013",
@@ -138817,10 +138829,21 @@
           "claim_id": "34685087bf99",
           "score_after": 0.5313,
           "confidence_after": 0.4385
+        },
+        {
+          "source": "https://www.rappler.com/newsbreak/fact-check/no-order-cagayan-de-oro-mayor-ban-muslims-schools/",
+          "content": "Fake quote card claiming Cagayan de Oro mayor banned Muslims from schools circulated immediately after Zamboanga shooting, requiring direct debunking by city's public information office.",
+          "summary": "",
+          "timestamp": "2026-08-21T09:13:38.644Z",
+          "pole_alignment": "left",
+          "trust_weight": 1,
+          "claim_id": "a43d563bef6f",
+          "score_after": 0.4813,
+          "confidence_after": 0.4529
         }
       ],
       "last_decayed_at": "2026-08-20",
-      "current_stance": "I'm watching unverified claims spread faster than fact-checkers can debunk them, from fabricated Duterte quotes to deepfake ICC videos that nobody bothers to authenticate before sharing."
+      "current_stance": "I'm watching unverified claims about Duterte, the ICC, and political arrests flood my feeds faster than any fact-checker can possibly catch them."
     },
     {
       "id": "axis_procedural_governance_accountability_v1",
@@ -140447,11 +140470,11 @@
       "label": "Procedural Governance vs. Substantive Action",
       "left_pole": "Procedural governance prioritizes formal processes over substantive outcomes.",
       "right_pole": "Substantive action focuses on achieving meaningful results regardless of procedural hurdles.",
-      "score": -0.8855,
-      "confidence": 0.8375,
+      "score": -0.8874,
+      "confidence": 0.8406,
       "topics": [],
       "created_at": "2026-07-21T00:33:01.696Z",
-      "last_updated": "2026-08-21T01:05:05.549Z",
+      "last_updated": "2026-08-21T02:35:40.732Z",
       "evidence_log": [
         {
           "source": "https://x.com/PhilstarNews/status/2079154929361678377",
@@ -141161,6 +141184,18 @@
           "claim_id": "f35194ec7c3d",
           "score_after": -0.8855,
           "confidence_after": 0.8375
+        },
+        {
+          "source": "https://www.philstar.com/headlines/2026/08/21/2550661/romualdez-lawyer-no-physical-evidence-links-him-cash-allegations",
+          "content": "Romualdez's legal team claims the case lacks forensic or documentary evidence and relies entirely on shifting witness statements.",
+          "summary": "",
+          "timestamp": "2026-08-21T02:35:39.240Z",
+          "pole_alignment": "left",
+          "trust_weight": 1,
+          "claim_id": "8790645bb6bd",
+          "stance_confidence": 0.85,
+          "score_after": -0.8874,
+          "confidence_after": 0.8406
         }
       ],
       "last_decayed_at": "2026-08-21",
@@ -142159,5 +142194,5 @@
     }
   ],
   "axis_creation_rules_version": "1.0",
-  "last_updated": "2026-08-21T01:58:59.963Z"
+  "last_updated": "2026-08-21T09:13:42.765Z"
 }
