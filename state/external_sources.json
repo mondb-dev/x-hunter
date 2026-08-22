@@ -1,6 +1,6 @@
 {
   "schema_version": "1.0",
-  "generated_at": "2026-08-22T14:14:20.969Z",
+  "generated_at": "2026-08-22T14:54:18.546Z",
   "method": "mechanical_registry_v1",
   "profiled_at": "2026-08-22T14:14:33.845Z",
   "sources": [
@@ -9,7 +9,7 @@
       "entity": "Theguardian",
       "kind": "news",
       "first_seen_at": "2026-03-27T23:17:00Z",
-      "last_seen_at": "2026-08-22T13:18:50.511Z",
+      "last_seen_at": "2026-08-22T14:18:21.216Z",
       "discovery": {
         "distinct_urls": 967,
         "example_urls": [
@@ -22,7 +22,7 @@
         "origin_counts": {
           "ontology_evidence": 50,
           "reading_queue": 927,
-          "journals": 134,
+          "journals": 135,
           "articles": 5
         },
         "distinct_referring_accounts": 0,
@@ -973,9 +973,9 @@
       "entity": "Bbc",
       "kind": "news",
       "first_seen_at": "2026-06-26T07:05:00Z",
-      "last_seen_at": "2026-08-21T17:08:01.206Z",
+      "last_seen_at": "2026-08-22T14:18:21.216Z",
       "discovery": {
-        "distinct_urls": 610,
+        "distinct_urls": 611,
         "example_urls": [
           "https://www.bbc.co.uk/news/articles/cn8qxz6qypyo",
           "https://www.bbc.co.uk/news/articles/cn075j04pnyo?at_medium=RSS&amp;at_campaign=rss",
@@ -986,7 +986,7 @@
         "origin_counts": {
           "ontology_evidence": 7,
           "reading_queue": 623,
-          "journals": 20,
+          "journals": 21,
           "articles": 2
         },
         "distinct_referring_accounts": 0,
@@ -1022,7 +1022,7 @@
         "breadth": {
           "score": 0.8816666666666666,
           "basis": [
-            "distinct_urls:610",
+            "distinct_urls:611",
             "distinct_axes:5",
             "origin_types:4"
           ]
@@ -1060,7 +1060,7 @@
           "method": "mechanical_v1",
           "basis": [
             "newsroom_domain_pattern",
-            "distinct_urls:610",
+            "distinct_urls:611",
             "distinct_axes:5",
             "origin_types:4",
             "referring_accounts:0",
@@ -3257,9 +3257,9 @@
       "entity": "T Co",
       "kind": "unknown",
       "first_seen_at": "2016-05-05T18:57:30.000Z",
-      "last_seen_at": "2026-08-22T12:12:25.000Z",
+      "last_seen_at": "2026-08-22T12:28:57.000Z",
       "discovery": {
-        "distinct_urls": 16326,
+        "distinct_urls": 16327,
         "example_urls": [
           "https://t.co/pJSE124ec4",
           "https://t.co/Soz8BXPWaa",
@@ -3268,7 +3268,7 @@
           "https://t.co/cYaqYDRp08"
         ],
         "origin_counts": {
-          "feed_buffer": 14229,
+          "feed_buffer": 14230,
           "feed_buffer_reply": 5162,
           "articles": 3
         },
@@ -3311,7 +3311,7 @@
         "breadth": {
           "score": 0.53,
           "basis": [
-            "distinct_urls:16326",
+            "distinct_urls:16327",
             "distinct_axes:0",
             "origin_types:3"
           ]
@@ -3350,7 +3350,7 @@
           "basis": [
             "unknown_domain_pattern",
             "doi_or_identifier_path_seen",
-            "distinct_urls:16326",
+            "distinct_urls:16327",
             "distinct_axes:0",
             "origin_types:3",
             "referring_accounts:2852",
@@ -3396,9 +3396,9 @@
       "entity": "Inquirer",
       "kind": "unknown",
       "first_seen_at": "2026-05-09T10:15:15.053Z",
-      "last_seen_at": "2026-08-22T11:48:39.019Z",
+      "last_seen_at": "2026-08-22T14:18:21.216Z",
       "discovery": {
-        "distinct_urls": 430,
+        "distinct_urls": 431,
         "example_urls": [
           "https://newsinfo.inquirer.net/2266316/nbi-on-cayetano-position-that-cant-be-defended-by-facts-is-done-with-insults",
           "https://www.inquirer.net/capiz-broadcaster-shooting-probe-widens-as-cops-form-task-force",
@@ -3408,7 +3408,7 @@
         ],
         "origin_counts": {
           "ontology_evidence": 156,
-          "journals": 518,
+          "journals": 519,
           "articles": 5
         },
         "distinct_referring_accounts": 0,
@@ -3464,7 +3464,7 @@
         "breadth": {
           "score": 0.8799999999999999,
           "basis": [
-            "distinct_urls:430",
+            "distinct_urls:431",
             "distinct_axes:25",
             "origin_types:3"
           ]
@@ -3502,7 +3502,7 @@
           "method": "mechanical_v1",
           "basis": [
             "unknown_domain_pattern",
-            "distinct_urls:430",
+            "distinct_urls:431",
             "distinct_axes:25",
             "origin_types:3",
             "referring_accounts:0",
