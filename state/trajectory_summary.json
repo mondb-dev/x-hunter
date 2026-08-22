@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-22T05:21:24.857Z",
+  "generated_at": "2026-08-22T08:09:38.610Z",
   "windows": [
     "1d",
     "3d",
@@ -30,21 +30,21 @@
     },
     "axis_power_accountability": {
       "current": {
-        "score": -0.1756,
+        "score": -0.169,
         "confidence": 0.95
       },
       "1d": {
-        "score_delta": 0.0131,
+        "score_delta": 0.0197,
         "conf_delta": 0,
         "direction": "→"
       },
       "3d": {
-        "score_delta": 0.0397,
+        "score_delta": 0.0463,
         "conf_delta": 0,
         "direction": "↗"
       },
       "7d": {
-        "score_delta": 0.0628,
+        "score_delta": 0.0694,
         "conf_delta": 0,
         "direction": "↗"
       }
@@ -1038,22 +1038,22 @@
     },
     "axis_procedural_governance_substantive_action": {
       "current": {
-        "score": -0.8595,
-        "confidence": 0.8467
+        "score": -0.8305,
+        "confidence": 0.8496
       },
       "1d": {
-        "score_delta": 0.0279,
-        "conf_delta": 0.0061,
+        "score_delta": 0.0569,
+        "conf_delta": 0.009,
         "direction": "↗"
       },
       "3d": {
-        "score_delta": 0.0242,
-        "conf_delta": 0.0165,
+        "score_delta": 0.0532,
+        "conf_delta": 0.0194,
         "direction": "↗"
       },
       "7d": {
-        "score_delta": 0.0222,
-        "conf_delta": 0.0198,
+        "score_delta": 0.0512,
+        "conf_delta": 0.0227,
         "direction": "↗"
       }
     },
@@ -1227,22 +1227,22 @@
     },
     "axis_disaster_infrastructure_accountability_v1": {
       "current": {
-        "score": -0.05,
-        "confidence": 0.1662
+        "score": 0,
+        "confidence": 0.1941
       },
       "1d": {
-        "score_delta": 0,
-        "conf_delta": -0.002,
-        "direction": "→"
+        "score_delta": 0.05,
+        "conf_delta": 0.0259,
+        "direction": "↗"
       },
       "3d": {
-        "score_delta": 0,
-        "conf_delta": -0.006,
-        "direction": "→"
+        "score_delta": 0.05,
+        "conf_delta": 0.0219,
+        "direction": "↗"
       },
       "7d": {
-        "score_delta": 0.05,
-        "conf_delta": 0.0882,
+        "score_delta": 0.1,
+        "conf_delta": 0.1161,
         "direction": "↗"
       }
     },
@@ -1312,9 +1312,11 @@
   "momentum_axes": [
     "axis_power_accountability",
     "axis_humanitarian_crisis_response",
+    "axis_procedural_governance_substantive_action",
     "axis_infrastructure_commons_v_extraction_v1",
     "axis_state_power_monetization_v1",
     "axis_accountability_temporality_v1",
-    "axis_ai_legal_accountability_v1"
+    "axis_ai_legal_accountability_v1",
+    "axis_disaster_infrastructure_accountability_v1"
   ]
 }
