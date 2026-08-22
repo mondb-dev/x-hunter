@@ -1,17 +1,17 @@
 {
   "schema_version": "1.0",
-  "generated_at": "2026-08-22T11:46:16.779Z",
+  "generated_at": "2026-08-22T14:14:20.969Z",
   "method": "mechanical_registry_v1",
-  "profiled_at": "2026-08-22T07:06:44.578Z",
+  "profiled_at": "2026-08-22T14:14:33.845Z",
   "sources": [
     {
       "domain": "theguardian.com",
       "entity": "Theguardian",
       "kind": "news",
       "first_seen_at": "2026-03-27T23:17:00Z",
-      "last_seen_at": "2026-08-22T05:19:53.134Z",
+      "last_seen_at": "2026-08-22T13:18:50.511Z",
       "discovery": {
-        "distinct_urls": 964,
+        "distinct_urls": 967,
         "example_urls": [
           "https://www.theguardian.com/us-news/2026/jun/23/trump-immigration-courthouse-arrest-policy",
           "https://www.theguardian.com/us-news/2026/jun/28/ice-minnesota-defending-democracy",
@@ -20,9 +20,9 @@
           "https://www.theguardian.com/global-development/2026/jun/26/woman-sadia-moalim-ali-three-year-jail-sentence-somalia-online-comments-governement"
         ],
         "origin_counts": {
-          "ontology_evidence": 49,
-          "reading_queue": 925,
-          "journals": 130,
+          "ontology_evidence": 50,
+          "reading_queue": 927,
+          "journals": 134,
           "articles": 5
         },
         "distinct_referring_accounts": 0,
@@ -76,7 +76,7 @@
         "breadth": {
           "score": 0.94,
           "basis": [
-            "distinct_urls:964",
+            "distinct_urls:967",
             "distinct_axes:21",
             "origin_types:4"
           ]
@@ -116,7 +116,7 @@
             "newsroom_domain_pattern",
             "article_path_seen",
             "doi_or_identifier_path_seen",
-            "distinct_urls:964",
+            "distinct_urls:967",
             "distinct_axes:21",
             "origin_types:4",
             "referring_accounts:0",
@@ -289,9 +289,9 @@
       "entity": "Aljazeera",
       "kind": "news",
       "first_seen_at": "2026-06-22T02:45:00Z",
-      "last_seen_at": "2026-08-22T06:35:14.919Z",
+      "last_seen_at": "2026-08-22T13:18:50.511Z",
       "discovery": {
-        "distinct_urls": 444,
+        "distinct_urls": 445,
         "example_urls": [
           "https://www.aljazeera.com/opinions/2026/6/24/south-africas-crises-will-not-be-solved-by-blaming-migrants",
           "https://www.aljazeera.com/video/newsfeed/2026/6/27/newly-released-video-exposes-henry-nowak-killers-lies?traffic_source=rss",
@@ -300,9 +300,9 @@
           "https://www.aljazeera.com/video/newsfeed/2026/7/1/why-is-maga-in-meltdown-over-the-supreme-court-birthright-ruling-2?traffic_source=rss"
         ],
         "origin_counts": {
-          "ontology_evidence": 194,
+          "ontology_evidence": 195,
           "reading_queue": 21,
-          "journals": 545,
+          "journals": 547,
           "articles": 10
         },
         "distinct_referring_accounts": 0,
@@ -311,6 +311,7 @@
           "axis_ai_automated_dehumanization_v1",
           "axis_ai_societal_impact_v1",
           "axis_authoritarian_self_determination_v1",
+          "axis_crisis_visibility_hierarchy_v1",
           "axis_data_privacy_decentralization_v1",
           "axis_dehumanization_propaganda_v1",
           "axis_disaster_infrastructure_accountability_v1",
@@ -364,8 +365,8 @@
         "breadth": {
           "score": 0.94,
           "basis": [
-            "distinct_urls:444",
-            "distinct_axes:30",
+            "distinct_urls:445",
+            "distinct_axes:31",
             "origin_types:4"
           ]
         },
@@ -403,8 +404,8 @@
           "basis": [
             "newsroom_domain_pattern",
             "article_path_seen",
-            "distinct_urls:444",
-            "distinct_axes:30",
+            "distinct_urls:445",
+            "distinct_axes:31",
             "origin_types:4",
             "referring_accounts:0",
             "origin_types:4",
@@ -974,7 +975,7 @@
       "first_seen_at": "2026-06-26T07:05:00Z",
       "last_seen_at": "2026-08-21T17:08:01.206Z",
       "discovery": {
-        "distinct_urls": 608,
+        "distinct_urls": 610,
         "example_urls": [
           "https://www.bbc.co.uk/news/articles/cn8qxz6qypyo",
           "https://www.bbc.co.uk/news/articles/cn075j04pnyo?at_medium=RSS&amp;at_campaign=rss",
@@ -984,7 +985,7 @@
         ],
         "origin_counts": {
           "ontology_evidence": 7,
-          "reading_queue": 621,
+          "reading_queue": 623,
           "journals": 20,
           "articles": 2
         },
@@ -1021,7 +1022,7 @@
         "breadth": {
           "score": 0.8816666666666666,
           "basis": [
-            "distinct_urls:608",
+            "distinct_urls:610",
             "distinct_axes:5",
             "origin_types:4"
           ]
@@ -1059,7 +1060,7 @@
           "method": "mechanical_v1",
           "basis": [
             "newsroom_domain_pattern",
-            "distinct_urls:608",
+            "distinct_urls:610",
             "distinct_axes:5",
             "origin_types:4",
             "referring_accounts:0",
@@ -1997,7 +1998,7 @@
         ],
         "origin_counts": {
           "ontology_evidence": 37,
-          "reading_queue": 30,
+          "reading_queue": 31,
           "journals": 69,
           "articles": 1
         },
@@ -3256,9 +3257,9 @@
       "entity": "T Co",
       "kind": "unknown",
       "first_seen_at": "2016-05-05T18:57:30.000Z",
-      "last_seen_at": "2026-08-22T07:00:06.000Z",
+      "last_seen_at": "2026-08-22T12:12:25.000Z",
       "discovery": {
-        "distinct_urls": 16324,
+        "distinct_urls": 16326,
         "example_urls": [
           "https://t.co/pJSE124ec4",
           "https://t.co/Soz8BXPWaa",
@@ -3267,7 +3268,7 @@
           "https://t.co/cYaqYDRp08"
         ],
         "origin_counts": {
-          "feed_buffer": 14227,
+          "feed_buffer": 14229,
           "feed_buffer_reply": 5162,
           "articles": 3
         },
@@ -3310,7 +3311,7 @@
         "breadth": {
           "score": 0.53,
           "basis": [
-            "distinct_urls:16324",
+            "distinct_urls:16326",
             "distinct_axes:0",
             "origin_types:3"
           ]
@@ -3349,7 +3350,7 @@
           "basis": [
             "unknown_domain_pattern",
             "doi_or_identifier_path_seen",
-            "distinct_urls:16324",
+            "distinct_urls:16326",
             "distinct_axes:0",
             "origin_types:3",
             "referring_accounts:2852",
@@ -3395,7 +3396,7 @@
       "entity": "Inquirer",
       "kind": "unknown",
       "first_seen_at": "2026-05-09T10:15:15.053Z",
-      "last_seen_at": "2026-08-22T11:10:56.828Z",
+      "last_seen_at": "2026-08-22T11:48:39.019Z",
       "discovery": {
         "distinct_urls": 430,
         "example_urls": [
@@ -3406,8 +3407,8 @@
           "https://newsinfo.inquirer.net/2251702/chr-seeks-swift-passage-of-bills-creating-detention-monitoring-body"
         ],
         "origin_counts": {
-          "ontology_evidence": 155,
-          "journals": 515,
+          "ontology_evidence": 156,
+          "journals": 518,
           "articles": 5
         },
         "distinct_referring_accounts": 0,
@@ -3547,7 +3548,7 @@
       "entity": "Rappler",
       "kind": "unknown",
       "first_seen_at": "2026-06-22T04:04:30.428Z",
-      "last_seen_at": "2026-08-22T11:10:56.828Z",
+      "last_seen_at": "2026-08-22T11:48:39.355Z",
       "discovery": {
         "distinct_urls": 298,
         "example_urls": [
@@ -3558,8 +3559,8 @@
           "https://www.rappler.com/voices/thought-leaders/vantage-point-bir-tax-amlc-records-billions-questions-sara-duterte-ignore/"
         ],
         "origin_counts": {
-          "ontology_evidence": 142,
-          "journals": 331,
+          "ontology_evidence": 143,
+          "journals": 332,
           "articles": 4
         },
         "distinct_referring_accounts": 0,
@@ -3669,7 +3670,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-08-19T11:25:16.482Z",
+        "fetched_at": "2026-08-22T12:39:28.297Z",
         "homepage_url": "https://rappler.com/",
         "example_url": "https://www.rappler.com/fact-check-no-arrest-warrant-issued-vs-marcoleta",
         "homepage_status": 200,
@@ -5140,7 +5141,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-08-19T08:02:37.836Z",
+        "fetched_at": "2026-08-22T12:39:39.255Z",
         "homepage_url": "https://doubleclick.net/",
         "example_url": "https://ad.doubleclick.net/ddm/trackclk/N117602.5126432X/B34540950.438517562;dc_trk_aid=631787244;dc_trk_cid=249093288;dc_dbm_token=$%7BDC_DBM_TOKEN%7D;dc_lat=;dc_rdid=;tag_for_child_directed_treatment=;tfua=;gdpr=$%7BGDPR%7D;gdpr_consent=$%7BGDPR_CONSENT_755%7D;gpp=$%7BGPP_STRING_755%7D;gpp_sid=$%7BGPP_SID%7D;ltd=;dc_tdv=1?twclid=292cdwzoayexun1iu6o4fsk10z",
         "homepage_status": 200,
@@ -6048,7 +6049,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-08-19T08:02:40.690Z",
+        "fetched_at": "2026-08-22T12:39:41.419Z",
         "homepage_url": "https://youtu.be/",
         "example_url": "https://youtu.be/m7jAReMF2c8?si=AtT5ue3VPnmZq5V6",
         "homepage_status": 200,
@@ -6435,7 +6436,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-08-19T12:57:41.018Z",
+        "fetched_at": "2026-08-22T14:14:26.376Z",
         "homepage_url": "https://spotify.com/",
         "example_url": "https://open.spotify.com/track/1lRDfbkJbPZGLaVpHbGjjK?si=0bafd2d0d3d04734&twclid=25onvjxx2lh8042z4br4k46xqz",
         "homepage_status": 200,
@@ -7070,7 +7071,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-08-19T08:02:41.455Z",
+        "fetched_at": "2026-08-22T12:39:42.173Z",
         "homepage_url": "https://ro.co/",
         "example_url": "https://ro.co/lp/weight-loss/quiz/?utm_medium=paid_social&utm_source=Twitter&utm_campaign=41158458&utm_term=54579155&utm_content=Ad2&twclid=2bv3rduaz2ypp78vahy5e6wspd",
         "homepage_status": 403,
@@ -7451,7 +7452,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-08-18T22:57:45.641Z",
+        "fetched_at": "2026-08-22T14:14:29.040Z",
         "homepage_url": "https://athena.com/",
         "example_url": "https://www.athena.com/cl/x?utm_source=twitter&utm_medium=paid_social&utm_campaign=%7B%7Bcampaign_name%7D%7D&utm_term=%7B%7Badgroup_name%7D%7D&utm_content=%7B%7Bad_name%7D%7D&twclid=27k7ut43wxglvx2o2e2nj7pszs",
         "homepage_status": 200,
@@ -7578,7 +7579,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-08-18T23:26:31.499Z",
+        "fetched_at": "2026-08-22T14:14:31.876Z",
         "homepage_url": "https://jamf.com/",
         "example_url": "https://www.jamf.com/blog/mac-management-security-trends-enterprise-it-2025/?utm_source=twitter&utm_medium=sponsored-social&utm_campaign=am_icf_smas_mms_banner_icp&utm_content=20260213_com_ent-midmkt_p_jmac_blog_6679_SIT&twclid=26vc3aicbe9m10pi19ume82b0z",
         "homepage_status": 200,
@@ -8086,7 +8087,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-08-18T23:26:33.666Z",
+        "fetched_at": "2026-08-22T14:14:33.845Z",
         "homepage_url": "https://nizima-action.com/",
         "example_url": "https://site.nizima-action.com/en/?twclid=2diqibk9zmfi9zdpw7jnuyzo3e",
         "homepage_status": 200,
