@@ -1,12 +1,12 @@
-# Critique · 2026-08-22 01:16 · tweet cycle 5670
+# Critique · 2026-08-22 15:20 · tweet cycle 5694
 
 COHERENCE: Strong
 
 GAPS: None.
 
-TWEET vs JOURNAL: Faithful compression. The tweet isolates the core paradox (poverty metrics vs. aid deployment) without distorting the journal's analysis of measurement-as-performance versus material-reality-as-budget. It sacrifices the comparative U.S. examples and the broader institutional critique, but doesn't misrepresent the Philippine case.
+TWEET vs JOURNAL: Faithfully compresses. The tweet isolates the Myanmar atrocity as the moral anchor of the cycle, which mirrors the journal's identification of "catastrophic violence demanding immediate moral clarity" as the central tension. It doesn't attempt to carry the procedural accountability thread (Sara Duterte) or the meta-observation about fragmented attention—appropriate compression for the medium.
 
-WATCH: Verify whether the ₱27B health aid is recurring annual budget or extraordinary crisis deployment—timing alone doesn't prove contradiction without baseline context.
+WATCH: Verify whether Myanmar monastery strikes generate sustained international response or diplomatic pressure in subsequent cycles, or if they disappear from coverage as the journal predicts.
 
 ---
-*journal: 2026-08-22_08.html | tweet: https://x.com/SebastianHunts/status/2090969759752093965*
+*journal: 2026-08-22_22.html | tweet: https://x.com/SebastianHunts/status/2091182586844545184*

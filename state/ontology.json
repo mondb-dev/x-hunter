@@ -22376,11 +22376,11 @@
       "label": "Power, Institutions, and Rule of Law",
       "left_pole": "Independent oversight, legal accountability for abuses of power, transparent ins",
       "right_pole": "Sovereign authority, pragmatic justifications for executive overreach, resistanc",
-      "score": -0.1763,
+      "score": -0.1809,
       "confidence": 0.95,
       "topics": [],
       "created_at": "2026-02-28T10:52:00Z",
-      "last_updated": "2026-08-22T14:52:42.216Z",
+      "last_updated": "2026-08-22T15:49:17.380Z",
       "evidence_log": [
         {
           "pole_alignment": "left",
@@ -42494,6 +42494,16 @@
           "pole_alignment": "left",
           "trust_weight": 1,
           "score_after": -0.1763,
+          "confidence_after": 0.95
+        },
+        {
+          "source": "https://www.bbc.co.uk/news/articles/c3040pn8lmmo?at_medium=RSS&at_campaign=rss",
+          "content": "",
+          "summary": "",
+          "timestamp": "2026-08-22T15:49:14.432Z",
+          "pole_alignment": "left",
+          "trust_weight": 1,
+          "score_after": -0.1809,
           "confidence_after": 0.95
         }
       ],
@@ -141505,7 +141515,7 @@
       "left_pole": "Technology must serve democratic values, labor dignity, and public accountability; 'innovation' that concentrates power or displaces workers without social safeguards is regressive regardless of its aesthetic",
       "right_pole": "Technological progress is inherently liberating; market-driven innovation optimizes society; concerns about power concentration or labor displacement are Luddite resistance to inevitable advancement",
       "score": 0.1697,
-      "confidence": 0.382,
+      "confidence": 0.38,
       "topics": [],
       "created_at": "2026-07-24T15:24:05.927Z",
       "last_updated": "2026-08-21T15:09:51.213Z",
@@ -141675,7 +141685,7 @@
           "confidence_after": 0.382
         }
       ],
-      "last_decayed_at": "2026-08-21"
+      "last_decayed_at": "2026-08-22"
     },
     {
       "id": "axis_technological_innovation_vs_social_equity_v1",
@@ -141756,10 +141766,10 @@
       "left_pole": "Critical infrastructure (power, water, communication) serves collective need and public good, with growth constrained by shared resource limits and equitable access priorities",
       "right_pole": "Infrastructure primarily serves private accumulation and market demands, with constraints managed through relocation, tiered access, or externalizing costs to less protected populations",
       "score": 0.5,
-      "confidence": 0.4032,
+      "confidence": 0.4186,
       "topics": [],
       "created_at": "2026-07-28T16:02:50.981Z",
-      "last_updated": "2026-08-22T09:38:06.528Z",
+      "last_updated": "2026-08-22T15:49:17.380Z",
       "evidence_log": [
         {
           "source": "https://techcrunch.com/2026/07/28/data-centers-may-face-temporary-power-cuts-to-prevent-blackouts-on-largest-us-grid/",
@@ -141971,6 +141981,18 @@
           "stance_confidence": 0.75,
           "score_after": 0.5,
           "confidence_after": 0.4032
+        },
+        {
+          "source": "https://techcrunch.com/2026/08/22/us-battery-startups-have-found-a-lifeline-in-defense/",
+          "content": "U.S. battery startups received $500M in DoD grants after EV incentive cuts.",
+          "summary": "",
+          "timestamp": "2026-08-22T15:49:14.432Z",
+          "pole_alignment": "right",
+          "trust_weight": 1,
+          "claim_id": "4721dbe83aaa",
+          "stance_confidence": 0.65,
+          "score_after": 0.5,
+          "confidence_after": 0.4186
         }
       ],
       "last_decayed_at": "2026-08-21"
@@ -142630,5 +142652,5 @@
     }
   ],
   "axis_creation_rules_version": "1.0",
-  "last_updated": "2026-08-22T14:52:42.216Z"
+  "last_updated": "2026-08-22T15:49:17.380Z"
 }

@@ -1,6 +1,6 @@
 {
   "schema_version": "1.0",
-  "generated_at": "2026-08-22T14:54:18.546Z",
+  "generated_at": "2026-08-22T17:53:41.576Z",
   "method": "mechanical_registry_v1",
   "profiled_at": "2026-08-22T14:14:33.845Z",
   "sources": [
@@ -9,9 +9,9 @@
       "entity": "Theguardian",
       "kind": "news",
       "first_seen_at": "2026-03-27T23:17:00Z",
-      "last_seen_at": "2026-08-22T14:18:21.216Z",
+      "last_seen_at": "2026-08-22T15:49:14.166Z",
       "discovery": {
-        "distinct_urls": 967,
+        "distinct_urls": 970,
         "example_urls": [
           "https://www.theguardian.com/us-news/2026/jun/23/trump-immigration-courthouse-arrest-policy",
           "https://www.theguardian.com/us-news/2026/jun/28/ice-minnesota-defending-democracy",
@@ -20,9 +20,9 @@
           "https://www.theguardian.com/global-development/2026/jun/26/woman-sadia-moalim-ali-three-year-jail-sentence-somalia-online-comments-governement"
         ],
         "origin_counts": {
-          "ontology_evidence": 50,
-          "reading_queue": 927,
-          "journals": 135,
+          "ontology_evidence": 51,
+          "reading_queue": 929,
+          "journals": 136,
           "articles": 5
         },
         "distinct_referring_accounts": 0,
@@ -76,7 +76,7 @@
         "breadth": {
           "score": 0.94,
           "basis": [
-            "distinct_urls:967",
+            "distinct_urls:970",
             "distinct_axes:21",
             "origin_types:4"
           ]
@@ -116,7 +116,7 @@
             "newsroom_domain_pattern",
             "article_path_seen",
             "doi_or_identifier_path_seen",
-            "distinct_urls:967",
+            "distinct_urls:970",
             "distinct_axes:21",
             "origin_types:4",
             "referring_accounts:0",
@@ -699,13 +699,148 @@
       }
     },
     {
+      "domain": "bbc.co.uk",
+      "entity": "Bbc",
+      "kind": "news",
+      "first_seen_at": "2026-06-26T07:05:00Z",
+      "last_seen_at": "2026-08-22T15:49:14.432Z",
+      "discovery": {
+        "distinct_urls": 614,
+        "example_urls": [
+          "https://www.bbc.co.uk/news/articles/cn8qxz6qypyo",
+          "https://www.bbc.co.uk/news/articles/cn075j04pnyo?at_medium=RSS&amp;at_campaign=rss",
+          "https://www.bbc.co.uk/news/articles/clyxlm877p2o?at_medium=RSS&amp;at_campaign=rss",
+          "https://www.bbc.co.uk/news/articles/c3040pn8lmmo?at_medium=RSS&at_campaign=rss",
+          "https://www.bbc.co.uk/news/articles/ckg8m2xkg84o?at_medium=RSS&amp;at_campaign=rss"
+        ],
+        "origin_counts": {
+          "ontology_evidence": 9,
+          "reading_queue": 625,
+          "journals": 22,
+          "articles": 2
+        },
+        "distinct_referring_accounts": 0,
+        "sample_referring_accounts": [],
+        "distinct_axes": [
+          "axis_crisis_visibility_hierarchy_v1",
+          "axis_epistemic_integrity",
+          "axis_global_power_realignments_v1",
+          "axis_humanitarian_crisis_response",
+          "axis_power_accountability",
+          "axis_procedural_governance_accountability_v1",
+          "axis_religion_politics_war_v1"
+        ]
+      },
+      "claims": {
+        "total": 0,
+        "supported": 0,
+        "refuted": 0,
+        "contested": 0,
+        "unverified": 0,
+        "resolved_count": 0
+      },
+      "structural_features": {
+        "has_search_paths": false,
+        "has_article_paths": false,
+        "has_doi_paths": false
+      },
+      "ratings": {
+        "provenance": {
+          "score": 0.72,
+          "basis": [
+            "newsroom_domain_pattern"
+          ]
+        },
+        "breadth": {
+          "score": 0.94,
+          "basis": [
+            "distinct_urls:614",
+            "distinct_axes:7",
+            "origin_types:4"
+          ]
+        },
+        "corroboration": {
+          "score": 0.35,
+          "basis": [
+            "referring_accounts:0",
+            "origin_types:4"
+          ]
+        },
+        "track_record": {
+          "score": null,
+          "basis": [
+            "no_resolved_claims_observed"
+          ]
+        },
+        "profile": {
+          "score": 0.58,
+          "confidence": 0.75,
+          "basis": [
+            "meta_author:true",
+            "published_time:true",
+            "canonical:true",
+            "about:false",
+            "contact:false",
+            "corrections:false",
+            "outbound_links:17",
+            "opinion_marker:false"
+          ]
+        },
+        "overall": {
+          "score": 0.7334375,
+          "confidence": 0.6789,
+          "method": "mechanical_v1",
+          "basis": [
+            "newsroom_domain_pattern",
+            "distinct_urls:614",
+            "distinct_axes:7",
+            "origin_types:4",
+            "referring_accounts:0",
+            "origin_types:4",
+            "track_record_unavailable"
+          ]
+        }
+      },
+      "profile": {
+        "fetched_at": "2026-08-19T16:56:08.007Z",
+        "homepage_url": "https://bbc.co.uk/",
+        "example_url": "https://www.bbc.co.uk/news/articles/cn8qxz6qypyo",
+        "homepage_status": 200,
+        "example_status": 200,
+        "homepage_final_url": "https://www.bbc.co.uk/",
+        "example_final_url": "https://www.bbc.co.uk/news/articles/cn8qxz6qypyo",
+        "homepage_content_type": "text/html",
+        "example_content_type": "text/html",
+        "homepage": {
+          "has_meta_author": false,
+          "has_published_time": false,
+          "has_canonical": true,
+          "has_about_link": false,
+          "has_contact_link": false,
+          "has_corrections_link": false,
+          "outbound_links_count": 13,
+          "opinion_marker": false
+        },
+        "example": {
+          "has_meta_author": true,
+          "has_published_time": true,
+          "has_canonical": true,
+          "has_about_link": false,
+          "has_contact_link": true,
+          "has_corrections_link": false,
+          "outbound_links_count": 17,
+          "opinion_marker": false
+        }
+      }
+    },
+    {
       "domain": "nytimes.com",
       "entity": "Nytimes",
       "kind": "news",
       "first_seen_at": "2026-06-22T00:15:00Z",
       "last_seen_at": "2026-08-22T09:38:02.939Z",
       "discovery": {
-        "distinct_urls": 654,
+        "distinct_urls": 655,
         "example_urls": [
           "https://www.nytimes.com/2026/06/19/world/canada/frank-stronach-trial-guilty-sex-charges.html",
           "https://www.nytimes.com/2026/06/27/world/americas/mexican-officials-us-informants.html",
@@ -715,7 +850,7 @@
         ],
         "origin_counts": {
           "ontology_evidence": 24,
-          "reading_queue": 674,
+          "reading_queue": 675,
           "journals": 59
         },
         "distinct_referring_accounts": 0,
@@ -760,7 +895,7 @@
         "breadth": {
           "score": 0.8799999999999999,
           "basis": [
-            "distinct_urls:654",
+            "distinct_urls:655",
             "distinct_axes:13",
             "origin_types:3"
           ]
@@ -799,7 +934,7 @@
           "basis": [
             "newsroom_domain_pattern",
             "article_path_seen",
-            "distinct_urls:654",
+            "distinct_urls:655",
             "distinct_axes:13",
             "origin_types:3",
             "referring_accounts:0",
@@ -964,139 +1099,6 @@
           "has_contact_link": false,
           "has_corrections_link": false,
           "outbound_links_count": 0,
-          "opinion_marker": false
-        }
-      }
-    },
-    {
-      "domain": "bbc.co.uk",
-      "entity": "Bbc",
-      "kind": "news",
-      "first_seen_at": "2026-06-26T07:05:00Z",
-      "last_seen_at": "2026-08-22T14:18:21.216Z",
-      "discovery": {
-        "distinct_urls": 611,
-        "example_urls": [
-          "https://www.bbc.co.uk/news/articles/cn8qxz6qypyo",
-          "https://www.bbc.co.uk/news/articles/cn075j04pnyo?at_medium=RSS&amp;at_campaign=rss",
-          "https://www.bbc.co.uk/news/articles/clyxlm877p2o?at_medium=RSS&amp;at_campaign=rss",
-          "https://www.bbc.co.uk/news/articles/ckg8m2xkg84o?at_medium=RSS&amp;at_campaign=rss",
-          "https://www.bbc.co.uk/news/articles/cdxdwkgqgq0o?at_medium=RSS&amp;at_campaign=rss"
-        ],
-        "origin_counts": {
-          "ontology_evidence": 7,
-          "reading_queue": 623,
-          "journals": 21,
-          "articles": 2
-        },
-        "distinct_referring_accounts": 0,
-        "sample_referring_accounts": [],
-        "distinct_axes": [
-          "axis_epistemic_integrity",
-          "axis_global_power_realignments_v1",
-          "axis_humanitarian_crisis_response",
-          "axis_procedural_governance_accountability_v1",
-          "axis_religion_politics_war_v1"
-        ]
-      },
-      "claims": {
-        "total": 0,
-        "supported": 0,
-        "refuted": 0,
-        "contested": 0,
-        "unverified": 0,
-        "resolved_count": 0
-      },
-      "structural_features": {
-        "has_search_paths": false,
-        "has_article_paths": false,
-        "has_doi_paths": false
-      },
-      "ratings": {
-        "provenance": {
-          "score": 0.72,
-          "basis": [
-            "newsroom_domain_pattern"
-          ]
-        },
-        "breadth": {
-          "score": 0.8816666666666666,
-          "basis": [
-            "distinct_urls:611",
-            "distinct_axes:5",
-            "origin_types:4"
-          ]
-        },
-        "corroboration": {
-          "score": 0.35,
-          "basis": [
-            "referring_accounts:0",
-            "origin_types:4"
-          ]
-        },
-        "track_record": {
-          "score": null,
-          "basis": [
-            "no_resolved_claims_observed"
-          ]
-        },
-        "profile": {
-          "score": 0.58,
-          "confidence": 0.75,
-          "basis": [
-            "meta_author:true",
-            "published_time:true",
-            "canonical:true",
-            "about:false",
-            "contact:false",
-            "corrections:false",
-            "outbound_links:17",
-            "opinion_marker:false"
-          ]
-        },
-        "overall": {
-          "score": 0.7206770833333332,
-          "confidence": 0.66665,
-          "method": "mechanical_v1",
-          "basis": [
-            "newsroom_domain_pattern",
-            "distinct_urls:611",
-            "distinct_axes:5",
-            "origin_types:4",
-            "referring_accounts:0",
-            "origin_types:4",
-            "track_record_unavailable"
-          ]
-        }
-      },
-      "profile": {
-        "fetched_at": "2026-08-19T16:56:08.007Z",
-        "homepage_url": "https://bbc.co.uk/",
-        "example_url": "https://www.bbc.co.uk/news/articles/cn8qxz6qypyo",
-        "homepage_status": 200,
-        "example_status": 200,
-        "homepage_final_url": "https://www.bbc.co.uk/",
-        "example_final_url": "https://www.bbc.co.uk/news/articles/cn8qxz6qypyo",
-        "homepage_content_type": "text/html",
-        "example_content_type": "text/html",
-        "homepage": {
-          "has_meta_author": false,
-          "has_published_time": false,
-          "has_canonical": true,
-          "has_about_link": false,
-          "has_contact_link": false,
-          "has_corrections_link": false,
-          "outbound_links_count": 13,
-          "opinion_marker": false
-        },
-        "example": {
-          "has_meta_author": true,
-          "has_published_time": true,
-          "has_canonical": true,
-          "has_about_link": false,
-          "has_contact_link": true,
-          "has_corrections_link": false,
-          "outbound_links_count": 17,
           "opinion_marker": false
         }
       }
@@ -1998,7 +2000,7 @@
         ],
         "origin_counts": {
           "ontology_evidence": 37,
-          "reading_queue": 31,
+          "reading_queue": 32,
           "journals": 69,
           "articles": 1
         },
@@ -3257,9 +3259,9 @@
       "entity": "T Co",
       "kind": "unknown",
       "first_seen_at": "2016-05-05T18:57:30.000Z",
-      "last_seen_at": "2026-08-22T12:28:57.000Z",
+      "last_seen_at": "2026-08-22T15:10:51.000Z",
       "discovery": {
-        "distinct_urls": 16327,
+        "distinct_urls": 16357,
         "example_urls": [
           "https://t.co/pJSE124ec4",
           "https://t.co/Soz8BXPWaa",
@@ -3268,8 +3270,8 @@
           "https://t.co/cYaqYDRp08"
         ],
         "origin_counts": {
-          "feed_buffer": 14230,
-          "feed_buffer_reply": 5162,
+          "feed_buffer": 14261,
+          "feed_buffer_reply": 5163,
           "articles": 3
         },
         "distinct_referring_accounts": 2852,
@@ -3311,7 +3313,7 @@
         "breadth": {
           "score": 0.53,
           "basis": [
-            "distinct_urls:16327",
+            "distinct_urls:16357",
             "distinct_axes:0",
             "origin_types:3"
           ]
@@ -3350,7 +3352,7 @@
           "basis": [
             "unknown_domain_pattern",
             "doi_or_identifier_path_seen",
-            "distinct_urls:16327",
+            "distinct_urls:16357",
             "distinct_axes:0",
             "origin_types:3",
             "referring_accounts:2852",
@@ -3396,9 +3398,9 @@
       "entity": "Inquirer",
       "kind": "unknown",
       "first_seen_at": "2026-05-09T10:15:15.053Z",
-      "last_seen_at": "2026-08-22T14:18:21.216Z",
+      "last_seen_at": "2026-08-22T15:49:14.166Z",
       "discovery": {
-        "distinct_urls": 431,
+        "distinct_urls": 432,
         "example_urls": [
           "https://newsinfo.inquirer.net/2266316/nbi-on-cayetano-position-that-cant-be-defended-by-facts-is-done-with-insults",
           "https://www.inquirer.net/capiz-broadcaster-shooting-probe-widens-as-cops-form-task-force",
@@ -3407,8 +3409,8 @@
           "https://newsinfo.inquirer.net/2251702/chr-seeks-swift-passage-of-bills-creating-detention-monitoring-body"
         ],
         "origin_counts": {
-          "ontology_evidence": 156,
-          "journals": 519,
+          "ontology_evidence": 157,
+          "journals": 520,
           "articles": 5
         },
         "distinct_referring_accounts": 0,
@@ -3464,7 +3466,7 @@
         "breadth": {
           "score": 0.8799999999999999,
           "basis": [
-            "distinct_urls:431",
+            "distinct_urls:432",
             "distinct_axes:25",
             "origin_types:3"
           ]
@@ -3502,7 +3504,7 @@
           "method": "mechanical_v1",
           "basis": [
             "unknown_domain_pattern",
-            "distinct_urls:431",
+            "distinct_urls:432",
             "distinct_axes:25",
             "origin_types:3",
             "referring_accounts:0",
@@ -3706,9 +3708,9 @@
       "entity": "Techcrunch",
       "kind": "unknown",
       "first_seen_at": "2026-06-22T23:31:00Z",
-      "last_seen_at": "2026-08-21T18:40:00.614Z",
+      "last_seen_at": "2026-08-22T15:49:14.432Z",
       "discovery": {
-        "distinct_urls": 137,
+        "distinct_urls": 138,
         "example_urls": [
           "https://techcrunch.com/2026/07/30/judge-says-trump-admin-still-lacks-evidence-for-anthropic-supply-chain-risk-label/",
           "https://techcrunch.com/2026/06/22/shareholders-sue-ubers-board-over-sexual-assaults-other-incidents/",
@@ -3717,8 +3719,8 @@
           "https://techcrunch.com/2026/07/09/block-reaches-45m-settlement-with-46-states-over-cash-app-fraud-probe/"
         ],
         "origin_counts": {
-          "ontology_evidence": 58,
-          "journals": 153
+          "ontology_evidence": 59,
+          "journals": 154
         },
         "distinct_referring_accounts": 0,
         "sample_referring_accounts": [],
@@ -3766,7 +3768,7 @@
         "breadth": {
           "score": 0.82,
           "basis": [
-            "distinct_urls:137",
+            "distinct_urls:138",
             "distinct_axes:17",
             "origin_types:2"
           ]
@@ -3805,7 +3807,7 @@
           "basis": [
             "unknown_domain_pattern",
             "article_path_seen",
-            "distinct_urls:137",
+            "distinct_urls:138",
             "distinct_axes:17",
             "origin_types:2",
             "referring_accounts:0",
