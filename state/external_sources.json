@@ -1,6 +1,6 @@
 {
   "schema_version": "1.0",
-  "generated_at": "2026-08-22T08:36:37.623Z",
+  "generated_at": "2026-08-22T11:46:16.779Z",
   "method": "mechanical_registry_v1",
   "profiled_at": "2026-08-22T07:06:44.578Z",
   "sources": [
@@ -11,7 +11,7 @@
       "first_seen_at": "2026-03-27T23:17:00Z",
       "last_seen_at": "2026-08-22T05:19:53.134Z",
       "discovery": {
-        "distinct_urls": 962,
+        "distinct_urls": 964,
         "example_urls": [
           "https://www.theguardian.com/us-news/2026/jun/23/trump-immigration-courthouse-arrest-policy",
           "https://www.theguardian.com/us-news/2026/jun/28/ice-minnesota-defending-democracy",
@@ -21,7 +21,7 @@
         ],
         "origin_counts": {
           "ontology_evidence": 49,
-          "reading_queue": 923,
+          "reading_queue": 925,
           "journals": 130,
           "articles": 5
         },
@@ -76,7 +76,7 @@
         "breadth": {
           "score": 0.94,
           "basis": [
-            "distinct_urls:962",
+            "distinct_urls:964",
             "distinct_axes:21",
             "origin_types:4"
           ]
@@ -116,7 +116,7 @@
             "newsroom_domain_pattern",
             "article_path_seen",
             "doi_or_identifier_path_seen",
-            "distinct_urls:962",
+            "distinct_urls:964",
             "distinct_axes:21",
             "origin_types:4",
             "referring_accounts:0",
@@ -702,9 +702,9 @@
       "entity": "Nytimes",
       "kind": "news",
       "first_seen_at": "2026-06-22T00:15:00Z",
-      "last_seen_at": "2026-08-21T23:15:26.931Z",
+      "last_seen_at": "2026-08-22T09:38:02.939Z",
       "discovery": {
-        "distinct_urls": 650,
+        "distinct_urls": 654,
         "example_urls": [
           "https://www.nytimes.com/2026/06/19/world/canada/frank-stronach-trial-guilty-sex-charges.html",
           "https://www.nytimes.com/2026/06/27/world/americas/mexican-officials-us-informants.html",
@@ -713,9 +713,9 @@
           "https://www.nytimes.com/2026/08/05/us/politics/cia-cuba-task-force.html"
         ],
         "origin_counts": {
-          "ontology_evidence": 22,
-          "reading_queue": 672,
-          "journals": 57
+          "ontology_evidence": 24,
+          "reading_queue": 674,
+          "journals": 59
         },
         "distinct_referring_accounts": 0,
         "sample_referring_accounts": [],
@@ -728,6 +728,7 @@
           "axis_human_rights_exploitation_v1",
           "axis_humanitarian_crisis_response",
           "axis_information_control_v1",
+          "axis_infrastructure_commons_v_extraction_v1",
           "axis_media_integrity_v1",
           "axis_national_sovereignty_v_intl_law_v1",
           "axis_power_accountability",
@@ -758,8 +759,8 @@
         "breadth": {
           "score": 0.8799999999999999,
           "basis": [
-            "distinct_urls:650",
-            "distinct_axes:12",
+            "distinct_urls:654",
+            "distinct_axes:13",
             "origin_types:3"
           ]
         },
@@ -797,8 +798,8 @@
           "basis": [
             "newsroom_domain_pattern",
             "article_path_seen",
-            "distinct_urls:650",
-            "distinct_axes:12",
+            "distinct_urls:654",
+            "distinct_axes:13",
             "origin_types:3",
             "referring_accounts:0",
             "origin_types:3",
@@ -973,7 +974,7 @@
       "first_seen_at": "2026-06-26T07:05:00Z",
       "last_seen_at": "2026-08-21T17:08:01.206Z",
       "discovery": {
-        "distinct_urls": 607,
+        "distinct_urls": 608,
         "example_urls": [
           "https://www.bbc.co.uk/news/articles/cn8qxz6qypyo",
           "https://www.bbc.co.uk/news/articles/cn075j04pnyo?at_medium=RSS&amp;at_campaign=rss",
@@ -983,7 +984,7 @@
         ],
         "origin_counts": {
           "ontology_evidence": 7,
-          "reading_queue": 620,
+          "reading_queue": 621,
           "journals": 20,
           "articles": 2
         },
@@ -1020,7 +1021,7 @@
         "breadth": {
           "score": 0.8816666666666666,
           "basis": [
-            "distinct_urls:607",
+            "distinct_urls:608",
             "distinct_axes:5",
             "origin_types:4"
           ]
@@ -1058,7 +1059,7 @@
           "method": "mechanical_v1",
           "basis": [
             "newsroom_domain_pattern",
-            "distinct_urls:607",
+            "distinct_urls:608",
             "distinct_axes:5",
             "origin_types:4",
             "referring_accounts:0",
@@ -3255,9 +3256,9 @@
       "entity": "T Co",
       "kind": "unknown",
       "first_seen_at": "2016-05-05T18:57:30.000Z",
-      "last_seen_at": "2026-08-22T06:46:30.000Z",
+      "last_seen_at": "2026-08-22T07:00:06.000Z",
       "discovery": {
-        "distinct_urls": 16321,
+        "distinct_urls": 16324,
         "example_urls": [
           "https://t.co/pJSE124ec4",
           "https://t.co/Soz8BXPWaa",
@@ -3266,7 +3267,7 @@
           "https://t.co/cYaqYDRp08"
         ],
         "origin_counts": {
-          "feed_buffer": 14223,
+          "feed_buffer": 14227,
           "feed_buffer_reply": 5162,
           "articles": 3
         },
@@ -3309,7 +3310,7 @@
         "breadth": {
           "score": 0.53,
           "basis": [
-            "distinct_urls:16321",
+            "distinct_urls:16324",
             "distinct_axes:0",
             "origin_types:3"
           ]
@@ -3348,7 +3349,7 @@
           "basis": [
             "unknown_domain_pattern",
             "doi_or_identifier_path_seen",
-            "distinct_urls:16321",
+            "distinct_urls:16324",
             "distinct_axes:0",
             "origin_types:3",
             "referring_accounts:2852",
@@ -3394,9 +3395,9 @@
       "entity": "Inquirer",
       "kind": "unknown",
       "first_seen_at": "2026-05-09T10:15:15.053Z",
-      "last_seen_at": "2026-08-22T06:35:14.919Z",
+      "last_seen_at": "2026-08-22T11:10:56.828Z",
       "discovery": {
-        "distinct_urls": 423,
+        "distinct_urls": 430,
         "example_urls": [
           "https://newsinfo.inquirer.net/2266316/nbi-on-cayetano-position-that-cant-be-defended-by-facts-is-done-with-insults",
           "https://www.inquirer.net/capiz-broadcaster-shooting-probe-widens-as-cops-form-task-force",
@@ -3405,8 +3406,8 @@
           "https://newsinfo.inquirer.net/2251702/chr-seeks-swift-passage-of-bills-creating-detention-monitoring-body"
         ],
         "origin_counts": {
-          "ontology_evidence": 152,
-          "journals": 508,
+          "ontology_evidence": 155,
+          "journals": 515,
           "articles": 5
         },
         "distinct_referring_accounts": 0,
@@ -3435,6 +3436,7 @@
           "axis_procedural_governance_substantive_action",
           "axis_procedural_governance_v1",
           "axis_public_trust_safety_crisis_v1",
+          "axis_rapid_disinformation_v1",
           "axis_reactionary_futurism_v1"
         ]
       },
@@ -3461,8 +3463,8 @@
         "breadth": {
           "score": 0.8799999999999999,
           "basis": [
-            "distinct_urls:423",
-            "distinct_axes:24",
+            "distinct_urls:430",
+            "distinct_axes:25",
             "origin_types:3"
           ]
         },
@@ -3499,8 +3501,8 @@
           "method": "mechanical_v1",
           "basis": [
             "unknown_domain_pattern",
-            "distinct_urls:423",
-            "distinct_axes:24",
+            "distinct_urls:430",
+            "distinct_axes:25",
             "origin_types:3",
             "referring_accounts:0",
             "origin_types:3",
@@ -3545,9 +3547,9 @@
       "entity": "Rappler",
       "kind": "unknown",
       "first_seen_at": "2026-06-22T04:04:30.428Z",
-      "last_seen_at": "2026-08-22T06:35:14.919Z",
+      "last_seen_at": "2026-08-22T11:10:56.828Z",
       "discovery": {
-        "distinct_urls": 297,
+        "distinct_urls": 298,
         "example_urls": [
           "https://www.rappler.com/fact-check-no-arrest-warrant-issued-vs-marcoleta",
           "https://www.rappler.com/technology/decoded-tacloban-school-shooting-disinformation-kiko-barzaga-discussions-juvenile-justice-law/",
@@ -3557,7 +3559,7 @@
         ],
         "origin_counts": {
           "ontology_evidence": 142,
-          "journals": 330,
+          "journals": 331,
           "articles": 4
         },
         "distinct_referring_accounts": 0,
@@ -3619,7 +3621,7 @@
         "breadth": {
           "score": 0.8799999999999999,
           "basis": [
-            "distinct_urls:297",
+            "distinct_urls:298",
             "distinct_axes:31",
             "origin_types:3"
           ]
@@ -3657,7 +3659,7 @@
           "method": "mechanical_v1",
           "basis": [
             "unknown_domain_pattern",
-            "distinct_urls:297",
+            "distinct_urls:298",
             "distinct_axes:31",
             "origin_types:3",
             "referring_accounts:0",
