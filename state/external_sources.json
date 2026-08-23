@@ -1,8 +1,8 @@
 {
   "schema_version": "1.0",
-  "generated_at": "2026-08-22T23:51:22.693Z",
+  "generated_at": "2026-08-23T02:23:01.092Z",
   "method": "mechanical_registry_v1",
-  "profiled_at": "2026-08-22T20:49:19.576Z",
+  "profiled_at": "2026-08-23T02:56:00.901Z",
   "sources": [
     {
       "domain": "theguardian.com",
@@ -11,7 +11,7 @@
       "first_seen_at": "2026-03-27T23:17:00Z",
       "last_seen_at": "2026-08-22T15:49:14.166Z",
       "discovery": {
-        "distinct_urls": 974,
+        "distinct_urls": 976,
         "example_urls": [
           "https://www.theguardian.com/us-news/2026/jun/23/trump-immigration-courthouse-arrest-policy",
           "https://www.theguardian.com/us-news/2026/jun/28/ice-minnesota-defending-democracy",
@@ -21,7 +21,7 @@
         ],
         "origin_counts": {
           "ontology_evidence": 51,
-          "reading_queue": 933,
+          "reading_queue": 935,
           "journals": 136,
           "articles": 5
         },
@@ -76,7 +76,7 @@
         "breadth": {
           "score": 0.94,
           "basis": [
-            "distinct_urls:974",
+            "distinct_urls:976",
             "distinct_axes:21",
             "origin_types:4"
           ]
@@ -116,7 +116,7 @@
             "newsroom_domain_pattern",
             "article_path_seen",
             "doi_or_identifier_path_seen",
-            "distinct_urls:974",
+            "distinct_urls:976",
             "distinct_axes:21",
             "origin_types:4",
             "referring_accounts:0",
@@ -705,7 +705,7 @@
       "first_seen_at": "2026-06-26T07:05:00Z",
       "last_seen_at": "2026-08-22T15:49:14.432Z",
       "discovery": {
-        "distinct_urls": 614,
+        "distinct_urls": 616,
         "example_urls": [
           "https://www.bbc.co.uk/news/articles/cn8qxz6qypyo",
           "https://www.bbc.co.uk/news/articles/cn075j04pnyo?at_medium=RSS&amp;at_campaign=rss",
@@ -715,7 +715,7 @@
         ],
         "origin_counts": {
           "ontology_evidence": 9,
-          "reading_queue": 626,
+          "reading_queue": 628,
           "journals": 22,
           "articles": 2
         },
@@ -754,7 +754,7 @@
         "breadth": {
           "score": 0.94,
           "basis": [
-            "distinct_urls:614",
+            "distinct_urls:616",
             "distinct_axes:7",
             "origin_types:4"
           ]
@@ -792,7 +792,7 @@
           "method": "mechanical_v1",
           "basis": [
             "newsroom_domain_pattern",
-            "distinct_urls:614",
+            "distinct_urls:616",
             "distinct_axes:7",
             "origin_types:4",
             "referring_accounts:0",
@@ -1859,7 +1859,7 @@
         ],
         "origin_counts": {
           "ontology_evidence": 64,
-          "reading_queue": 71,
+          "reading_queue": 72,
           "journals": 116,
           "articles": 1
         },
@@ -2648,16 +2648,16 @@
           ]
         },
         "profile": {
-          "score": 0,
-          "confidence": 0.55,
+          "score": 0.58,
+          "confidence": 0.75,
           "basis": [
-            "meta_author:false",
-            "published_time:false",
-            "canonical:false",
+            "meta_author:true",
+            "published_time:true",
+            "canonical:true",
             "about:false",
             "contact:false",
             "corrections:false",
-            "outbound_links:0",
+            "outbound_links:13",
             "opinion_marker:false"
           ]
         },
@@ -2678,19 +2678,19 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-08-20T00:44:14.003Z",
+        "fetched_at": "2026-08-23T00:53:29.957Z",
         "homepage_url": "https://gmanetwork.com/",
         "example_url": "https://www.gmanetwork.com/news/topstories/nation/994225/explainer-objections-in-a-trial-and-their-role-in-due-process/story/",
-        "homepage_status": null,
-        "example_status": null,
-        "homepage_final_url": "https://gmanetwork.com/",
+        "homepage_status": 200,
+        "example_status": 200,
+        "homepage_final_url": "https://www.gmanetwork.com/",
         "example_final_url": "https://www.gmanetwork.com/news/topstories/nation/994225/explainer-objections-in-a-trial-and-their-role-in-due-process/story/",
-        "homepage_content_type": "",
-        "example_content_type": "",
+        "homepage_content_type": "text/html; charset=UTF-8",
+        "example_content_type": "text/html; charset=UTF-8",
         "homepage": {
-          "has_meta_author": false,
+          "has_meta_author": true,
           "has_published_time": false,
-          "has_canonical": false,
+          "has_canonical": true,
           "has_about_link": false,
           "has_contact_link": false,
           "has_corrections_link": false,
@@ -2698,13 +2698,13 @@
           "opinion_marker": false
         },
         "example": {
-          "has_meta_author": false,
-          "has_published_time": false,
-          "has_canonical": false,
+          "has_meta_author": true,
+          "has_published_time": true,
+          "has_canonical": true,
           "has_about_link": false,
           "has_contact_link": false,
           "has_corrections_link": false,
-          "outbound_links_count": 0,
+          "outbound_links_count": 13,
           "opinion_marker": false
         }
       }
@@ -3259,9 +3259,9 @@
       "entity": "T Co",
       "kind": "unknown",
       "first_seen_at": "2016-05-05T18:57:30.000Z",
-      "last_seen_at": "2026-08-22T21:00:23.000Z",
+      "last_seen_at": "2026-08-22T23:51:42.000Z",
       "discovery": {
-        "distinct_urls": 16366,
+        "distinct_urls": 16368,
         "example_urls": [
           "https://t.co/pJSE124ec4",
           "https://t.co/Soz8BXPWaa",
@@ -3270,7 +3270,7 @@
           "https://t.co/cYaqYDRp08"
         ],
         "origin_counts": {
-          "feed_buffer": 14270,
+          "feed_buffer": 14274,
           "feed_buffer_reply": 5163,
           "articles": 3
         },
@@ -3313,7 +3313,7 @@
         "breadth": {
           "score": 0.53,
           "basis": [
-            "distinct_urls:16366",
+            "distinct_urls:16368",
             "distinct_axes:0",
             "origin_types:3"
           ]
@@ -3352,7 +3352,7 @@
           "basis": [
             "unknown_domain_pattern",
             "doi_or_identifier_path_seen",
-            "distinct_urls:16366",
+            "distinct_urls:16368",
             "distinct_axes:0",
             "origin_types:3",
             "referring_accounts:2853",
@@ -5565,9 +5565,9 @@
       "entity": "Starlink",
       "kind": "unknown",
       "first_seen_at": "2026-04-07T03:51:50.000Z",
-      "last_seen_at": "2026-08-22T23:17:56.678Z",
+      "last_seen_at": "2026-08-23T00:26:03.763Z",
       "discovery": {
-        "distinct_urls": 162,
+        "distinct_urls": 163,
         "example_urls": [
           "https://www.starlink.com/us/residential?referral=RC-DF-9543787-19448-67&utm_medium=paid&utm_campaign=awr_us_soc_twt_ptg_cau&utm_content=awr_us_soc_twt_ptg_cau_res_gvp_v4s_stc_en-us_sdb-bluesky-uptime&twclid=2cg62b1u0oqrypdim5oir1767e",
           "https://www.starlink.com/us/residential?referral=RC-DF-9543787-19448-67&utm_medium=paid&utm_campaign=awr_us_soc_twt_ptg_cau&utm_content=awr_us_soc_twt_ptg_cau_res_gvp_v4s_stc_en-us_sdb-avail-sat-yourhome&twclid=2216n7j93v9absqn77762mm626",
@@ -5577,7 +5577,7 @@
         ],
         "origin_counts": {
           "feed_buffer_reply": 146,
-          "feed_buffer": 20
+          "feed_buffer": 21
         },
         "distinct_referring_accounts": 5,
         "sample_referring_accounts": [
@@ -5612,7 +5612,7 @@
         "breadth": {
           "score": 0.47,
           "basis": [
-            "distinct_urls:162",
+            "distinct_urls:163",
             "distinct_axes:0",
             "origin_types:2"
           ]
@@ -5650,7 +5650,7 @@
           "method": "mechanical_v1",
           "basis": [
             "unknown_domain_pattern",
-            "distinct_urls:162",
+            "distinct_urls:163",
             "distinct_axes:0",
             "origin_types:2",
             "referring_accounts:5",
@@ -6567,7 +6567,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-08-19T16:56:13.961Z",
+        "fetched_at": "2026-08-23T00:53:31.316Z",
         "homepage_url": "https://theepochtimes.com/",
         "example_url": "https://www.theepochtimes.com/china/former-chinese-military-doctor-leaks-ccp-plan-to-use-taiwanese-troops-as-organ-bank-5871639?utm_medium=DigitalMkt&utm_source=twitter&utm_campaign=content_FormerChineseMilitary-karen-20250827&utm_content=img-2_FormerChineseMilitary&utm_term=new-pagevisitor&gl=reg&twclid=2387x75uji9nq8gmjpy9cer691",
         "homepage_status": 200,
@@ -6658,16 +6658,16 @@
           ]
         },
         "profile": {
-          "score": 0,
+          "score": 0.14,
           "confidence": 0.55,
           "basis": [
             "meta_author:false",
             "published_time:false",
-            "canonical:false",
+            "canonical:true",
             "about:false",
             "contact:false",
             "corrections:false",
-            "outbound_links:0",
+            "outbound_links:4",
             "opinion_marker:false"
           ]
         },
@@ -6687,15 +6687,15 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-08-19T18:17:22.824Z",
+        "fetched_at": "2026-08-23T00:53:32.099Z",
         "homepage_url": "https://wikipedia.org/",
         "example_url": "https://en.wikipedia.org/wiki/2026_Iran_war",
         "homepage_status": 200,
-        "example_status": null,
+        "example_status": 200,
         "homepage_final_url": "https://www.wikipedia.org/",
         "example_final_url": "https://en.wikipedia.org/wiki/2026_Iran_war",
         "homepage_content_type": "text/html",
-        "example_content_type": "",
+        "example_content_type": "text/html; charset=UTF-8",
         "homepage": {
           "has_meta_author": false,
           "has_published_time": false,
@@ -6709,11 +6709,11 @@
         "example": {
           "has_meta_author": false,
           "has_published_time": false,
-          "has_canonical": false,
+          "has_canonical": true,
           "has_about_link": false,
           "has_contact_link": false,
           "has_corrections_link": false,
-          "outbound_links_count": 0,
+          "outbound_links_count": 4,
           "opinion_marker": false
         }
       }
@@ -7708,7 +7708,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-08-19T19:48:03.444Z",
+        "fetched_at": "2026-08-23T00:53:32.512Z",
         "homepage_url": "https://maventrading.com/",
         "example_url": "https://maventrading.com/lp/choose-your-challenge?twt_id=54608379&twclid=24irm75xuuvw6vkz1dgb8ui0sz",
         "homepage_status": 200,
@@ -8216,7 +8216,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-08-19T11:25:18.044Z",
+        "fetched_at": "2026-08-23T02:55:54.497Z",
         "homepage_url": "https://metamask.io/",
         "example_url": "https://link.metamask.io/swap?amount=32600000000000000&from=eip155%3A1%2Fslip44%3A60&sig_params=amount%2Cfrom&sig=lcKWbD9emSvYcSy4wKZAAZK4IusikSldKuh2SLobJnCxX6_H50c7o4lrxGukMkQAlJXl_Ro-z9GOFjHlijuUSQ&utm_source=twitter&utm_medium=paid-display&utm_campaign=cmp-1529292347-afbf08&twclid=29ubdtem27pe2i7fvtv9x4pcao",
         "homepage_status": 200,
@@ -8695,16 +8695,16 @@
           ]
         },
         "profile": {
-          "score": 0,
-          "confidence": 0.55,
+          "score": 0.28,
+          "confidence": 0.65,
           "basis": [
             "meta_author:false",
             "published_time:false",
             "canonical:false",
-            "about:false",
-            "contact:false",
+            "about:true",
+            "contact:true",
             "corrections:false",
-            "outbound_links:0",
+            "outbound_links:2",
             "opinion_marker:false"
           ]
         },
@@ -8724,33 +8724,33 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-08-18T23:26:53.673Z",
+        "fetched_at": "2026-08-23T02:55:58.275Z",
         "homepage_url": "https://leronx.org/",
         "example_url": "https://leronx.org/?ref=005&tw=r84nh&tw_click=tw-r84nh-r84ni&twclid=29ffsgobmrsvjmkjlmgcllypv0",
-        "homepage_status": null,
-        "example_status": null,
+        "homepage_status": 200,
+        "example_status": 200,
         "homepage_final_url": "https://leronx.org/",
         "example_final_url": "https://leronx.org/?ref=005&tw=r84nh&tw_click=tw-r84nh-r84ni&twclid=29ffsgobmrsvjmkjlmgcllypv0",
-        "homepage_content_type": "",
-        "example_content_type": "",
+        "homepage_content_type": "text/html; charset=UTF-8",
+        "example_content_type": "text/html; charset=UTF-8",
         "homepage": {
           "has_meta_author": false,
           "has_published_time": false,
           "has_canonical": false,
-          "has_about_link": false,
-          "has_contact_link": false,
+          "has_about_link": true,
+          "has_contact_link": true,
           "has_corrections_link": false,
-          "outbound_links_count": 0,
+          "outbound_links_count": 2,
           "opinion_marker": false
         },
         "example": {
           "has_meta_author": false,
           "has_published_time": false,
           "has_canonical": false,
-          "has_about_link": false,
-          "has_contact_link": false,
+          "has_about_link": true,
+          "has_contact_link": true,
           "has_corrections_link": false,
-          "outbound_links_count": 0,
+          "outbound_links_count": 2,
           "opinion_marker": false
         }
       }
@@ -8851,7 +8851,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-08-18T23:26:54.340Z",
+        "fetched_at": "2026-08-23T02:55:59.016Z",
         "homepage_url": "https://app.link/",
         "example_url": "https://chipotle.app.link/rTJVnvMgW1b?%243p=a_twitter&twclid=26fm1l3fbt5tx0wzqe3pjv9fkn",
         "homepage_status": 404,
@@ -8978,7 +8978,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-08-19T00:27:18.063Z",
+        "fetched_at": "2026-08-23T02:56:00.901Z",
         "homepage_url": "https://bk.com/",
         "example_url": "https://www.bk.com/menu/section/fb06fabe-a285-4fb4-994a-c617a1547ddb?utm_source=X&utm_medium=Social-Social&utm_campaign=Peppercorn-Awareness&utm_content=Peppercorn-IMG-Warning&twclid=24j7ivpacvxqbg2t5it24skrl9",
         "homepage_status": 200,
