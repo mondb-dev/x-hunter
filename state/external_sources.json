@@ -1,8 +1,8 @@
 {
   "schema_version": "1.0",
-  "generated_at": "2026-08-23T08:59:09.713Z",
+  "generated_at": "2026-08-23T11:58:10.392Z",
   "method": "mechanical_registry_v1",
-  "profiled_at": "2026-08-23T08:28:09.957Z",
+  "profiled_at": "2026-08-23T11:58:31.606Z",
   "sources": [
     {
       "domain": "theguardian.com",
@@ -11,7 +11,7 @@
       "first_seen_at": "2026-03-27T23:17:00Z",
       "last_seen_at": "2026-08-22T15:49:14.166Z",
       "discovery": {
-        "distinct_urls": 980,
+        "distinct_urls": 982,
         "example_urls": [
           "https://www.theguardian.com/us-news/2026/jun/23/trump-immigration-courthouse-arrest-policy",
           "https://www.theguardian.com/us-news/2026/jun/28/ice-minnesota-defending-democracy",
@@ -21,7 +21,7 @@
         ],
         "origin_counts": {
           "ontology_evidence": 51,
-          "reading_queue": 939,
+          "reading_queue": 941,
           "journals": 136,
           "articles": 5
         },
@@ -76,7 +76,7 @@
         "breadth": {
           "score": 0.94,
           "basis": [
-            "distinct_urls:980",
+            "distinct_urls:982",
             "distinct_axes:21",
             "origin_types:4"
           ]
@@ -116,7 +116,7 @@
             "newsroom_domain_pattern",
             "article_path_seen",
             "doi_or_identifier_path_seen",
-            "distinct_urls:980",
+            "distinct_urls:982",
             "distinct_axes:21",
             "origin_types:4",
             "referring_accounts:0",
@@ -705,7 +705,7 @@
       "first_seen_at": "2026-06-26T07:05:00Z",
       "last_seen_at": "2026-08-22T15:49:14.432Z",
       "discovery": {
-        "distinct_urls": 618,
+        "distinct_urls": 620,
         "example_urls": [
           "https://www.bbc.co.uk/news/articles/cn8qxz6qypyo",
           "https://www.bbc.co.uk/news/articles/cn075j04pnyo?at_medium=RSS&amp;at_campaign=rss",
@@ -715,7 +715,7 @@
         ],
         "origin_counts": {
           "ontology_evidence": 9,
-          "reading_queue": 630,
+          "reading_queue": 632,
           "journals": 22,
           "articles": 2
         },
@@ -754,7 +754,7 @@
         "breadth": {
           "score": 0.94,
           "basis": [
-            "distinct_urls:618",
+            "distinct_urls:620",
             "distinct_axes:7",
             "origin_types:4"
           ]
@@ -792,7 +792,7 @@
           "method": "mechanical_v1",
           "basis": [
             "newsroom_domain_pattern",
-            "distinct_urls:618",
+            "distinct_urls:620",
             "distinct_axes:7",
             "origin_types:4",
             "referring_accounts:0",
@@ -840,7 +840,7 @@
       "first_seen_at": "2026-06-22T00:15:00Z",
       "last_seen_at": "2026-08-22T09:38:02.939Z",
       "discovery": {
-        "distinct_urls": 658,
+        "distinct_urls": 660,
         "example_urls": [
           "https://www.nytimes.com/2026/06/19/world/canada/frank-stronach-trial-guilty-sex-charges.html",
           "https://www.nytimes.com/2026/06/27/world/americas/mexican-officials-us-informants.html",
@@ -850,7 +850,7 @@
         ],
         "origin_counts": {
           "ontology_evidence": 24,
-          "reading_queue": 678,
+          "reading_queue": 680,
           "journals": 59
         },
         "distinct_referring_accounts": 0,
@@ -895,7 +895,7 @@
         "breadth": {
           "score": 0.8799999999999999,
           "basis": [
-            "distinct_urls:658",
+            "distinct_urls:660",
             "distinct_axes:13",
             "origin_types:3"
           ]
@@ -934,7 +934,7 @@
           "basis": [
             "newsroom_domain_pattern",
             "article_path_seen",
-            "distinct_urls:658",
+            "distinct_urls:660",
             "distinct_axes:13",
             "origin_types:3",
             "referring_accounts:0",
@@ -3259,9 +3259,9 @@
       "entity": "T Co",
       "kind": "unknown",
       "first_seen_at": "2016-05-05T18:57:30.000Z",
-      "last_seen_at": "2026-08-23T06:20:09.000Z",
+      "last_seen_at": "2026-08-23T09:48:35.000Z",
       "discovery": {
-        "distinct_urls": 16391,
+        "distinct_urls": 16395,
         "example_urls": [
           "https://t.co/pJSE124ec4",
           "https://t.co/Soz8BXPWaa",
@@ -3270,7 +3270,7 @@
           "https://t.co/cYaqYDRp08"
         ],
         "origin_counts": {
-          "feed_buffer": 14297,
+          "feed_buffer": 14302,
           "feed_buffer_reply": 5163,
           "articles": 3
         },
@@ -3313,7 +3313,7 @@
         "breadth": {
           "score": 0.53,
           "basis": [
-            "distinct_urls:16391",
+            "distinct_urls:16395",
             "distinct_axes:0",
             "origin_types:3"
           ]
@@ -3352,7 +3352,7 @@
           "basis": [
             "unknown_domain_pattern",
             "doi_or_identifier_path_seen",
-            "distinct_urls:16391",
+            "distinct_urls:16395",
             "distinct_axes:0",
             "origin_types:3",
             "referring_accounts:2853",
@@ -7962,7 +7962,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-08-20T09:47:14.477Z",
+        "fetched_at": "2026-08-23T09:57:38.873Z",
         "homepage_url": "https://coderabbit.ai/",
         "example_url": "https://www.coderabbit.ai/agent?utm_source=twitter&utm_medium=cpc&utm_campaign=brandawareness_slack&twclid=25ohyy1nnhx1vb6p888i79f380",
         "homepage_status": 200,
@@ -8597,7 +8597,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-08-20T09:47:14.892Z",
+        "fetched_at": "2026-08-23T09:57:39.096Z",
         "homepage_url": "https://bcgame-bet.com/",
         "example_url": "https://bcall-global.bcgame-bet.com/dispatch-v6?i=45zn3497p&utm_medium=twitter&utm_content=%7B%7Bad_name%7D%7D&p=%2Flogin%2Fregist&ch=twitter&pixel_id=or72z&register=tw-or72z-or738&purchase=tw-or72z-or736&twclid=2cjhb3kupxi19emmjqo3fks82g",
         "homepage_status": null,
@@ -9486,7 +9486,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-08-20T09:47:15.771Z",
+        "fetched_at": "2026-08-23T09:57:40.797Z",
         "homepage_url": "https://shipaton.com/",
         "example_url": "https://www.shipaton.com/events/?utm_source=x&utm_medium=cpc&utm_campaign=shipaton-traffic&twclid=2d8n4jkad805fesk63uxwuffy9",
         "homepage_status": 200,
@@ -9502,7 +9502,7 @@
           "has_about_link": false,
           "has_contact_link": false,
           "has_corrections_link": false,
-          "outbound_links_count": 39,
+          "outbound_links_count": 68,
           "opinion_marker": false
         },
         "example": {
@@ -10121,7 +10121,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-08-20T09:47:18.334Z",
+        "fetched_at": "2026-08-23T09:57:47.850Z",
         "homepage_url": "https://fx-edge.com/",
         "example_url": "https://fx-edge.com/prop-liquidity/?utm_source=twitter&utm_medium=ppc&utm_campaign=prop_liquidity&twclid=2232cmky8wi7upvvrdlud3bfsm",
         "homepage_status": 200,
@@ -10502,7 +10502,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-08-19T00:27:27.543Z",
+        "fetched_at": "2026-08-23T11:58:16.312Z",
         "homepage_url": "https://mottandbow.com/",
         "example_url": "https://www.mottandbow.com/collections/mens-denim2-onlyjeansworthbuying?utm_source=twitter&utm_medium=twitter&utm_campaign=%28M%29+Denim+-+USA+-+Prospecting+-+ABO+8+-+2026+VAIO+%5Bcashback%5D&utm_term=%28M%29+Denim+-+USA+-+Broad+1+-+Auto+%5BAll%5D&utm_content=img-md-neeta-buttshot-highquality-D943-V1-B-h27-p2-LP_MDOJ-c%2FNone-irl&twclid=2cc4cnrb0o1hpyal9rg55w07zo",
         "homepage_status": 200,
@@ -10883,7 +10883,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-08-19T11:25:28.269Z",
+        "fetched_at": "2026-08-23T11:58:26.769Z",
         "homepage_url": "https://smart.link/",
         "example_url": "https://smart.link/sdh2x9q4dptrg?twclid=29tfuqwoatuv70nv93xhcyx2vj",
         "homepage_status": 200,
@@ -11010,7 +11010,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-08-19T12:57:45.930Z",
+        "fetched_at": "2026-08-23T11:58:28.204Z",
         "homepage_url": "https://gastechevent.com/",
         "example_url": "https://www.gastechevent.com/visit/visitor-registration/?utm_source=X&utm_medium=cpc&utm_campaign=Gastech%2BVisprom%2BElectrification%2BTraffic%2BP1%2BX%2B2026&twclid=25c7n2tffmzu4y35y7ba8rbphq",
         "homepage_status": 200,
@@ -11026,7 +11026,7 @@
           "has_about_link": false,
           "has_contact_link": false,
           "has_corrections_link": false,
-          "outbound_links_count": 69,
+          "outbound_links_count": 70,
           "opinion_marker": false
         },
         "example": {
@@ -11137,7 +11137,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-08-20T02:14:52.842Z",
+        "fetched_at": "2026-08-23T11:58:31.606Z",
         "homepage_url": "https://doorzo.com/",
         "example_url": "https://www.doorzo.com/en/landing/newall?utm_source=x_en_testanime_V&utm_medium=banner&utm_campaign=online_download&fbclid=fbclid&twclid=2bzgffsg16g7kpszr2gx684udk",
         "homepage_status": 200,
