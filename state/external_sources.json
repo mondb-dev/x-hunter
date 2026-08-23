@@ -1,8 +1,8 @@
 {
   "schema_version": "1.0",
-  "generated_at": "2026-08-23T06:01:20.693Z",
+  "generated_at": "2026-08-23T08:59:09.713Z",
   "method": "mechanical_registry_v1",
-  "profiled_at": "2026-08-23T02:56:00.901Z",
+  "profiled_at": "2026-08-23T08:28:09.957Z",
   "sources": [
     {
       "domain": "theguardian.com",
@@ -11,7 +11,7 @@
       "first_seen_at": "2026-03-27T23:17:00Z",
       "last_seen_at": "2026-08-22T15:49:14.166Z",
       "discovery": {
-        "distinct_urls": 978,
+        "distinct_urls": 980,
         "example_urls": [
           "https://www.theguardian.com/us-news/2026/jun/23/trump-immigration-courthouse-arrest-policy",
           "https://www.theguardian.com/us-news/2026/jun/28/ice-minnesota-defending-democracy",
@@ -21,7 +21,7 @@
         ],
         "origin_counts": {
           "ontology_evidence": 51,
-          "reading_queue": 937,
+          "reading_queue": 939,
           "journals": 136,
           "articles": 5
         },
@@ -76,7 +76,7 @@
         "breadth": {
           "score": 0.94,
           "basis": [
-            "distinct_urls:978",
+            "distinct_urls:980",
             "distinct_axes:21",
             "origin_types:4"
           ]
@@ -116,7 +116,7 @@
             "newsroom_domain_pattern",
             "article_path_seen",
             "doi_or_identifier_path_seen",
-            "distinct_urls:978",
+            "distinct_urls:980",
             "distinct_axes:21",
             "origin_types:4",
             "referring_accounts:0",
@@ -705,7 +705,7 @@
       "first_seen_at": "2026-06-26T07:05:00Z",
       "last_seen_at": "2026-08-22T15:49:14.432Z",
       "discovery": {
-        "distinct_urls": 617,
+        "distinct_urls": 618,
         "example_urls": [
           "https://www.bbc.co.uk/news/articles/cn8qxz6qypyo",
           "https://www.bbc.co.uk/news/articles/cn075j04pnyo?at_medium=RSS&amp;at_campaign=rss",
@@ -715,7 +715,7 @@
         ],
         "origin_counts": {
           "ontology_evidence": 9,
-          "reading_queue": 629,
+          "reading_queue": 630,
           "journals": 22,
           "articles": 2
         },
@@ -754,7 +754,7 @@
         "breadth": {
           "score": 0.94,
           "basis": [
-            "distinct_urls:617",
+            "distinct_urls:618",
             "distinct_axes:7",
             "origin_types:4"
           ]
@@ -792,7 +792,7 @@
           "method": "mechanical_v1",
           "basis": [
             "newsroom_domain_pattern",
-            "distinct_urls:617",
+            "distinct_urls:618",
             "distinct_axes:7",
             "origin_types:4",
             "referring_accounts:0",
@@ -840,7 +840,7 @@
       "first_seen_at": "2026-06-22T00:15:00Z",
       "last_seen_at": "2026-08-22T09:38:02.939Z",
       "discovery": {
-        "distinct_urls": 657,
+        "distinct_urls": 658,
         "example_urls": [
           "https://www.nytimes.com/2026/06/19/world/canada/frank-stronach-trial-guilty-sex-charges.html",
           "https://www.nytimes.com/2026/06/27/world/americas/mexican-officials-us-informants.html",
@@ -850,7 +850,7 @@
         ],
         "origin_counts": {
           "ontology_evidence": 24,
-          "reading_queue": 677,
+          "reading_queue": 678,
           "journals": 59
         },
         "distinct_referring_accounts": 0,
@@ -895,7 +895,7 @@
         "breadth": {
           "score": 0.8799999999999999,
           "basis": [
-            "distinct_urls:657",
+            "distinct_urls:658",
             "distinct_axes:13",
             "origin_types:3"
           ]
@@ -934,7 +934,7 @@
           "basis": [
             "newsroom_domain_pattern",
             "article_path_seen",
-            "distinct_urls:657",
+            "distinct_urls:658",
             "distinct_axes:13",
             "origin_types:3",
             "referring_accounts:0",
@@ -3259,9 +3259,9 @@
       "entity": "T Co",
       "kind": "unknown",
       "first_seen_at": "2016-05-05T18:57:30.000Z",
-      "last_seen_at": "2026-08-23T05:01:55.000Z",
+      "last_seen_at": "2026-08-23T06:20:09.000Z",
       "discovery": {
-        "distinct_urls": 16387,
+        "distinct_urls": 16391,
         "example_urls": [
           "https://t.co/pJSE124ec4",
           "https://t.co/Soz8BXPWaa",
@@ -3270,7 +3270,7 @@
           "https://t.co/cYaqYDRp08"
         ],
         "origin_counts": {
-          "feed_buffer": 14293,
+          "feed_buffer": 14297,
           "feed_buffer_reply": 5163,
           "articles": 3
         },
@@ -3313,7 +3313,7 @@
         "breadth": {
           "score": 0.53,
           "basis": [
-            "distinct_urls:16387",
+            "distinct_urls:16391",
             "distinct_axes:0",
             "origin_types:3"
           ]
@@ -3352,7 +3352,7 @@
           "basis": [
             "unknown_domain_pattern",
             "doi_or_identifier_path_seen",
-            "distinct_urls:16387",
+            "distinct_urls:16391",
             "distinct_axes:0",
             "origin_types:3",
             "referring_accounts:2853",
@@ -9105,7 +9105,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-08-19T00:27:20.476Z",
+        "fetched_at": "2026-08-23T08:28:07.293Z",
         "homepage_url": "https://hyperagent.com/",
         "example_url": "https://www.hyperagent.com/?promo=FIRST1000&utm_source=twitter&utm_medium=paidsocial&utm_campaign=hyperagent_conversions&utm_content=ag3_fleet&utm_term=ag3_ai_dev_followers&utm_id=recNjFFq2Yg5747V4&twclid=2dzs7nc78iuf64njs9fxab27tl",
         "homepage_status": 200,
@@ -9613,7 +9613,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-08-19T08:02:42.204Z",
+        "fetched_at": "2026-08-23T08:28:07.684Z",
         "homepage_url": "https://wsj.com/",
         "example_url": "https://www.wsj.com/video/three-things-to-consider-before-buying-an-electric-vehicle/BF3DA411-C296-4CB8-A22D-BE3A2E943ACB?mod=WSJvidctr_watchnow_pos2%3FUCID%3DWSJ_SMD_TWT_BRA_BND_MBC_NAP_NAP_EVS_NAP&twclid=2227k5fcsvy3eazrqjlp63r0go",
         "homepage_status": 401,
@@ -9740,7 +9740,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-08-19T10:04:24.805Z",
+        "fetched_at": "2026-08-23T08:28:09.183Z",
         "homepage_url": "https://aramco.com/",
         "example_url": "https://www.aramco.com/en/what-we-do/energy-innovation/innovation-ecosystem/aramco-fifa-partnership?utm_source=x&utm_medium=cpm&utm_term=en_vid_cpm_inf-ftbl_na_football-fans&utm_content=en_4x5_vid_6s_global_fifa-whatif_na_m3&twclid=2f1bxdfhmr1if32n1ssvcc3xtc",
         "homepage_status": 200,
@@ -10248,7 +10248,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-08-19T01:57:46.698Z",
+        "fetched_at": "2026-08-23T08:28:09.957Z",
         "homepage_url": "https://imbue.com/",
         "example_url": "https://imbue.com/product/bouncer/redirect.html?utm_source=x&utm_medium=paid_social&utm_campaign=omni&authuser=0&hl=en&twclid=28wps3duhy1q7hzrcdj2h5pxpl",
         "homepage_status": 200,
