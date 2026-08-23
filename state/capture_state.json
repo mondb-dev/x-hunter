@@ -1,141 +1,51 @@
 {
-  "checked_at": "2026-08-22T14:26:53.548Z",
-  "evidence_24h": 27,
-  "unique_sources": 5,
+  "checked_at": "2026-08-23T14:46:21.316Z",
+  "evidence_24h": 2,
+  "unique_sources": 1,
   "status": "captured",
   "alerts": [
     {
       "type": "source_dominance",
       "severity": "high",
-      "detail": "@unknown accounts for 85% of today's evidence (23/27)",
+      "detail": "@unknown accounts for 100% of today's evidence (2/2)",
       "username": "unknown",
-      "share": 0.852
-    },
-    {
-      "type": "pole_skew",
-      "severity": "moderate",
-      "detail": "70% of evidence pushes \"right\" — risk of one-sided belief drift",
-      "dominant_pole": "right",
-      "share": 0.704
+      "share": 1
     }
   ],
-  "summary": "2 capture alert(s) detected:\n[HIGH] @unknown accounts for 85% of today's evidence (23/27)\n[MODERATE] 70% of evidence pushes \"right\" — risk of one-sided belief drift",
+  "summary": "1 capture alert(s) detected:\n[HIGH] @unknown accounts for 100% of today's evidence (2/2)",
   "source_concentration": {
     "unknown": {
       "username": "unknown",
-      "count": 23,
-      "share": 0.852
-    },
-    "reuters": {
-      "username": "reuters",
-      "count": 1,
-      "share": 0.037
-    },
-    "rapplerdotcom": {
-      "username": "rapplerdotcom",
-      "count": 1,
-      "share": 0.037
-    },
-    "marionawfal": {
-      "username": "marionawfal",
-      "count": 1,
-      "share": 0.037
-    },
-    "rainmaker1973": {
-      "username": "rainmaker1973",
-      "count": 1,
-      "share": 0.037
+      "count": 2,
+      "share": 1
     }
   },
   "axis_concentration": {
     "axis_power_accountability": {
       "axis_id": "axis_power_accountability",
       "label": "Power, Institutions, and Rule of Law",
-      "count": 5,
-      "share": 0.185
-    },
-    "axis_procedural_governance_accountability_v1": {
-      "axis_id": "axis_procedural_governance_accountability_v1",
-      "label": "Procedural Governance vs. Genuine Accountability",
-      "count": 5,
-      "share": 0.185
-    },
-    "axis_procedural_governance_substantive_action": {
-      "axis_id": "axis_procedural_governance_substantive_action",
-      "label": "Procedural Governance vs. Substantive Action",
-      "count": 3,
-      "share": 0.111
-    },
-    "axis_accountability_temporality_v1": {
-      "axis_id": "axis_accountability_temporality_v1",
-      "label": "Accountability Temporality: Real-Time Enforcement vs. Archaeological Discovery",
-      "count": 2,
-      "share": 0.074
-    },
-    "axis_historical_legacy_v1": {
-      "axis_id": "axis_historical_legacy_v1",
-      "label": "Interpretation and Legacy of Historical Events",
       "count": 1,
-      "share": 0.037
+      "share": 0.5
     },
-    "axis_economic_indicators_reliability_v1": {
-      "axis_id": "axis_economic_indicators_reliability_v1",
-      "label": "Reliability of Economic Indicators and Societal Progress",
+    "axis_infrastructure_commons_v_extraction_v1": {
+      "axis_id": "axis_infrastructure_commons_v_extraction_v1",
+      "label": "Infrastructure as Commons vs. Extraction",
       "count": 1,
-      "share": 0.037
-    },
-    "axis_human_rights_exploitation_v1": {
-      "axis_id": "axis_human_rights_exploitation_v1",
-      "label": "Human Rights and Exploitation",
-      "count": 1,
-      "share": 0.037
-    },
-    "axis_humanitarian_crisis_response": {
-      "axis_id": "axis_humanitarian_crisis_response",
-      "label": "Humanitarian Crisis Response",
-      "count": 1,
-      "share": 0.037
-    },
-    "axis_procedural_governance_accountability": {
-      "axis_id": "axis_procedural_governance_accountability",
-      "label": "Procedural Governance vs. Genuine Accountability",
-      "count": 1,
-      "share": 0.037
-    },
-    "axis_information_control_v1": {
-      "axis_id": "axis_information_control_v1",
-      "label": "Information Control",
-      "count": 1,
-      "share": 0.037
+      "share": 0.5
     }
   },
   "cluster_concentration": {
     "unknown": {
       "cluster": "unknown",
-      "count": 23,
-      "share": 0.852
-    },
-    "breaking_news": {
-      "cluster": "breaking_news",
       "count": 2,
-      "share": 0.074
-    },
-    "accountability_journalism": {
-      "cluster": "accountability_journalism",
-      "count": 1,
-      "share": 0.037
-    },
-    "science": {
-      "cluster": "science",
-      "count": 1,
-      "share": 0.037
+      "share": 1
     }
   },
   "pole_balance": {
-    "left": 8,
-    "right": 19,
+    "left": 1,
+    "right": 1,
     "neutral": 0,
-    "left_share": 0.296,
-    "right_share": 0.704
+    "left_share": 0.5,
+    "right_share": 0.5
   }
 }

@@ -1,8 +1,8 @@
 {
   "schema_version": "1.0",
-  "generated_at": "2026-08-23T11:58:10.392Z",
+  "generated_at": "2026-08-23T14:29:09.189Z",
   "method": "mechanical_registry_v1",
-  "profiled_at": "2026-08-23T11:58:31.606Z",
+  "profiled_at": "2026-08-23T13:31:05.605Z",
   "sources": [
     {
       "domain": "theguardian.com",
@@ -11,7 +11,7 @@
       "first_seen_at": "2026-03-27T23:17:00Z",
       "last_seen_at": "2026-08-22T15:49:14.166Z",
       "discovery": {
-        "distinct_urls": 982,
+        "distinct_urls": 984,
         "example_urls": [
           "https://www.theguardian.com/us-news/2026/jun/23/trump-immigration-courthouse-arrest-policy",
           "https://www.theguardian.com/us-news/2026/jun/28/ice-minnesota-defending-democracy",
@@ -21,7 +21,7 @@
         ],
         "origin_counts": {
           "ontology_evidence": 51,
-          "reading_queue": 941,
+          "reading_queue": 943,
           "journals": 136,
           "articles": 5
         },
@@ -76,7 +76,7 @@
         "breadth": {
           "score": 0.94,
           "basis": [
-            "distinct_urls:982",
+            "distinct_urls:984",
             "distinct_axes:21",
             "origin_types:4"
           ]
@@ -116,7 +116,7 @@
             "newsroom_domain_pattern",
             "article_path_seen",
             "doi_or_identifier_path_seen",
-            "distinct_urls:982",
+            "distinct_urls:984",
             "distinct_axes:21",
             "origin_types:4",
             "referring_accounts:0",
@@ -705,7 +705,7 @@
       "first_seen_at": "2026-06-26T07:05:00Z",
       "last_seen_at": "2026-08-22T15:49:14.432Z",
       "discovery": {
-        "distinct_urls": 620,
+        "distinct_urls": 621,
         "example_urls": [
           "https://www.bbc.co.uk/news/articles/cn8qxz6qypyo",
           "https://www.bbc.co.uk/news/articles/cn075j04pnyo?at_medium=RSS&amp;at_campaign=rss",
@@ -715,7 +715,7 @@
         ],
         "origin_counts": {
           "ontology_evidence": 9,
-          "reading_queue": 632,
+          "reading_queue": 633,
           "journals": 22,
           "articles": 2
         },
@@ -754,7 +754,7 @@
         "breadth": {
           "score": 0.94,
           "basis": [
-            "distinct_urls:620",
+            "distinct_urls:621",
             "distinct_axes:7",
             "origin_types:4"
           ]
@@ -792,7 +792,7 @@
           "method": "mechanical_v1",
           "basis": [
             "newsroom_domain_pattern",
-            "distinct_urls:620",
+            "distinct_urls:621",
             "distinct_axes:7",
             "origin_types:4",
             "referring_accounts:0",
@@ -840,7 +840,7 @@
       "first_seen_at": "2026-06-22T00:15:00Z",
       "last_seen_at": "2026-08-22T09:38:02.939Z",
       "discovery": {
-        "distinct_urls": 660,
+        "distinct_urls": 662,
         "example_urls": [
           "https://www.nytimes.com/2026/06/19/world/canada/frank-stronach-trial-guilty-sex-charges.html",
           "https://www.nytimes.com/2026/06/27/world/americas/mexican-officials-us-informants.html",
@@ -850,7 +850,7 @@
         ],
         "origin_counts": {
           "ontology_evidence": 24,
-          "reading_queue": 680,
+          "reading_queue": 682,
           "journals": 59
         },
         "distinct_referring_accounts": 0,
@@ -895,7 +895,7 @@
         "breadth": {
           "score": 0.8799999999999999,
           "basis": [
-            "distinct_urls:660",
+            "distinct_urls:662",
             "distinct_axes:13",
             "origin_types:3"
           ]
@@ -934,7 +934,7 @@
           "basis": [
             "newsroom_domain_pattern",
             "article_path_seen",
-            "distinct_urls:660",
+            "distinct_urls:662",
             "distinct_axes:13",
             "origin_types:3",
             "referring_accounts:0",
@@ -3259,9 +3259,9 @@
       "entity": "T Co",
       "kind": "unknown",
       "first_seen_at": "2016-05-05T18:57:30.000Z",
-      "last_seen_at": "2026-08-23T09:48:35.000Z",
+      "last_seen_at": "2026-08-23T12:07:49.000Z",
       "discovery": {
-        "distinct_urls": 16395,
+        "distinct_urls": 16400,
         "example_urls": [
           "https://t.co/pJSE124ec4",
           "https://t.co/Soz8BXPWaa",
@@ -3270,7 +3270,7 @@
           "https://t.co/cYaqYDRp08"
         ],
         "origin_counts": {
-          "feed_buffer": 14302,
+          "feed_buffer": 14307,
           "feed_buffer_reply": 5163,
           "articles": 3
         },
@@ -3313,7 +3313,7 @@
         "breadth": {
           "score": 0.53,
           "basis": [
-            "distinct_urls:16395",
+            "distinct_urls:16400",
             "distinct_axes:0",
             "origin_types:3"
           ]
@@ -3352,7 +3352,7 @@
           "basis": [
             "unknown_domain_pattern",
             "doi_or_identifier_path_seen",
-            "distinct_urls:16395",
+            "distinct_urls:16400",
             "distinct_axes:0",
             "origin_types:3",
             "referring_accounts:2853",
@@ -11264,7 +11264,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-08-19T00:58:57.732Z",
+        "fetched_at": "2026-08-23T13:30:59.897Z",
         "homepage_url": "https://combos.fun/",
         "example_url": "https://combos.fun/?utm_source=X&utm_campaign=promote%3Dcar2&twclid=2aswwo64b7owkoq09axl1gyba6",
         "homepage_status": 403,
@@ -11391,7 +11391,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-08-19T00:59:03.102Z",
+        "fetched_at": "2026-08-23T13:31:03.077Z",
         "homepage_url": "https://valvolineglobal.com/",
         "example_url": "https://www.valvolineglobal.com/en/fifa-national-sweeps/?utm_source=X&utm_medium=paidsocial&utm_campaign=WC26_GM_US_AWE&utm_content=wcsimplified&twclid=299i90helnojknptru820mqim9",
         "homepage_status": 200,
@@ -11518,7 +11518,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-08-19T10:04:26.220Z",
+        "fetched_at": "2026-08-23T13:31:04.315Z",
         "homepage_url": "https://trenchers.ai/",
         "example_url": "https://trenchers.ai/?twclid=2di75phbt55c7y0zfq5ihrqinv",
         "homepage_status": 200,
@@ -11772,7 +11772,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-08-20T02:14:54.817Z",
+        "fetched_at": "2026-08-23T13:31:05.605Z",
         "homepage_url": "https://proxy-cheap.com/",
         "example_url": "https://www.proxy-cheap.com/?twclid=241rx3okk7tuov8hduxv4r27su",
         "homepage_status": 200,
