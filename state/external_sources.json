@@ -1,8 +1,8 @@
 {
   "schema_version": "1.0",
-  "generated_at": "2026-08-25T16:22:09.233Z",
+  "generated_at": "2026-08-25T19:34:30.797Z",
   "method": "mechanical_registry_v1",
-  "profiled_at": "2026-08-25T16:22:32.952Z",
+  "profiled_at": "2026-08-25T19:34:36.958Z",
   "sources": [
     {
       "domain": "theguardian.com",
@@ -11,7 +11,7 @@
       "first_seen_at": "2026-03-27T23:17:00Z",
       "last_seen_at": "2026-08-22T15:49:14.166Z",
       "discovery": {
-        "distinct_urls": 1013,
+        "distinct_urls": 1015,
         "example_urls": [
           "https://www.theguardian.com/us-news/2026/jun/23/trump-immigration-courthouse-arrest-policy",
           "https://www.theguardian.com/us-news/2026/jun/28/ice-minnesota-defending-democracy",
@@ -21,7 +21,7 @@
         ],
         "origin_counts": {
           "ontology_evidence": 51,
-          "reading_queue": 973,
+          "reading_queue": 975,
           "journals": 136,
           "articles": 5
         },
@@ -76,7 +76,7 @@
         "breadth": {
           "score": 0.94,
           "basis": [
-            "distinct_urls:1013",
+            "distinct_urls:1015",
             "distinct_axes:21",
             "origin_types:4"
           ]
@@ -116,7 +116,7 @@
             "newsroom_domain_pattern",
             "article_path_seen",
             "doi_or_identifier_path_seen",
-            "distinct_urls:1013",
+            "distinct_urls:1015",
             "distinct_axes:21",
             "origin_types:4",
             "referring_accounts:0",
@@ -705,7 +705,7 @@
       "first_seen_at": "2026-06-26T07:05:00Z",
       "last_seen_at": "2026-08-22T15:49:14.432Z",
       "discovery": {
-        "distinct_urls": 641,
+        "distinct_urls": 643,
         "example_urls": [
           "https://www.bbc.co.uk/news/articles/cn8qxz6qypyo",
           "https://www.bbc.co.uk/news/articles/cn075j04pnyo?at_medium=RSS&amp;at_campaign=rss",
@@ -715,7 +715,7 @@
         ],
         "origin_counts": {
           "ontology_evidence": 9,
-          "reading_queue": 653,
+          "reading_queue": 656,
           "journals": 22,
           "articles": 2
         },
@@ -754,7 +754,7 @@
         "breadth": {
           "score": 0.94,
           "basis": [
-            "distinct_urls:641",
+            "distinct_urls:643",
             "distinct_axes:7",
             "origin_types:4"
           ]
@@ -792,7 +792,7 @@
           "method": "mechanical_v1",
           "basis": [
             "newsroom_domain_pattern",
-            "distinct_urls:641",
+            "distinct_urls:643",
             "distinct_axes:7",
             "origin_types:4",
             "referring_accounts:0",
@@ -840,7 +840,7 @@
       "first_seen_at": "2026-06-22T00:15:00Z",
       "last_seen_at": "2026-08-22T09:38:02.939Z",
       "discovery": {
-        "distinct_urls": 683,
+        "distinct_urls": 685,
         "example_urls": [
           "https://www.nytimes.com/2026/06/19/world/canada/frank-stronach-trial-guilty-sex-charges.html",
           "https://www.nytimes.com/2026/06/27/world/americas/mexican-officials-us-informants.html",
@@ -850,7 +850,7 @@
         ],
         "origin_counts": {
           "ontology_evidence": 24,
-          "reading_queue": 707,
+          "reading_queue": 709,
           "journals": 59
         },
         "distinct_referring_accounts": 0,
@@ -895,7 +895,7 @@
         "breadth": {
           "score": 0.8799999999999999,
           "basis": [
-            "distinct_urls:683",
+            "distinct_urls:685",
             "distinct_axes:13",
             "origin_types:3"
           ]
@@ -934,7 +934,7 @@
           "basis": [
             "newsroom_domain_pattern",
             "article_path_seen",
-            "distinct_urls:683",
+            "distinct_urls:685",
             "distinct_axes:13",
             "origin_types:3",
             "referring_accounts:0",
@@ -1238,7 +1238,7 @@
           "https://singaporeglobalnetwork.gov.sg/stories/tech/why-i-quit-college-at-22-to-launch-a-biotech-startup-in-singapore/?utm_source=x&utm_medium=social&utm_campaign=sg-paid-ao-traffic&utm_content=armaan-dhanda&twclid=2epj25tilhtb65igot07prztga"
         ],
         "origin_counts": {
-          "reading_queue": 13,
+          "reading_queue": 14,
           "feed_buffer": 1
         },
         "distinct_referring_accounts": 1,
@@ -20263,7 +20263,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-08-20T11:20:09.128Z",
+        "fetched_at": "2026-08-25T17:34:31.455Z",
         "homepage_url": "https://jetcraft.com/",
         "example_url": "https://www.jetcraft.com/?utm_campaign=X-Branding-Ad&utm_medium=paid-social&utm_source=x&twclid=2ay2ajx0dm14xp5m3pne3v6y19",
         "homepage_status": 200,
@@ -20390,7 +20390,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-08-20T07:21:11.911Z",
+        "fetched_at": "2026-08-25T17:34:31.908Z",
         "homepage_url": "https://fantheone.com/",
         "example_url": "https://fantheone.com/download?twclid=2ffn21z0ebyxzqvqa4nwehpql",
         "homepage_status": 200,
@@ -20488,7 +20488,7 @@
           ]
         },
         "profile": {
-          "score": 0.33,
+          "score": 0.31000000000000005,
           "confidence": 0.65,
           "basis": [
             "meta_author:true",
@@ -20497,7 +20497,7 @@
             "about:false",
             "contact:false",
             "corrections:false",
-            "outbound_links:5",
+            "outbound_links:3",
             "opinion_marker:false"
           ]
         },
@@ -20517,7 +20517,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-08-19T05:32:11.829Z",
+        "fetched_at": "2026-08-25T17:34:34.564Z",
         "homepage_url": "https://getkrona.app/",
         "example_url": "https://www.getkrona.app/?twclid=275wq8t5uj0kgjzmzfnm46jcuv",
         "homepage_status": 200,
@@ -20533,7 +20533,7 @@
           "has_about_link": false,
           "has_contact_link": false,
           "has_corrections_link": false,
-          "outbound_links_count": 5,
+          "outbound_links_count": 3,
           "opinion_marker": false
         },
         "example": {
@@ -20543,7 +20543,7 @@
           "has_about_link": false,
           "has_contact_link": false,
           "has_corrections_link": false,
-          "outbound_links_count": 5,
+          "outbound_links_count": 3,
           "opinion_marker": false
         }
       }
@@ -20644,7 +20644,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-08-21T12:11:23.970Z",
+        "fetched_at": "2026-08-25T17:34:35.566Z",
         "homepage_url": "https://vryzmir.com/",
         "example_url": "https://www.vryzmir.com/products/portable-silicone-ice-ball-maker-kettle?utm_source=twitter&utm_campaign=42166381&twclid=2h87hfhbmpwrcy696fcioag1c",
         "homepage_status": 403,
@@ -20770,7 +20770,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-08-19T21:17:29.161Z",
+        "fetched_at": "2026-08-25T18:04:31.963Z",
         "homepage_url": "https://scitools.com/",
         "example_url": "https://scitools.com/codecheck?xad=codecheck&twclid=23owlb2i7ei44kgcykku0zs4en",
         "homepage_status": 200,
@@ -20896,7 +20896,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-08-19T22:41:41.557Z",
+        "fetched_at": "2026-08-25T18:04:32.417Z",
         "homepage_url": "https://ironclaw.com/",
         "example_url": "https://www.ironclaw.com/?utm_source=x&utm_medium=paid_social&utm_campaign=ironclaw_marapr26&twclid=2axdpb938w7qafe76dwca4od5q",
         "homepage_status": 200,
@@ -21022,7 +21022,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-08-19T22:41:43.760Z",
+        "fetched_at": "2026-08-25T18:04:38.603Z",
         "homepage_url": "https://darkhours-thegame.com/",
         "example_url": "https://www.darkhours-thegame.com/xbox?utm_source=twitter&utm_campaign=XboxLaunch&utm_medium=pc&utm_content=Diftborn&utm_term=us&twclid=271vf2o4bu11vai5qyjclxea1r",
         "homepage_status": 200,
@@ -21148,7 +21148,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-08-19T22:41:45.983Z",
+        "fetched_at": "2026-08-25T18:04:41.513Z",
         "homepage_url": "https://zavu.dev/",
         "example_url": "https://www.zavu.dev/?twclid=28xrbkfqjxo8t4gl13yvgj5wa8",
         "homepage_status": 200,
@@ -21275,7 +21275,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-08-19T22:41:47.121Z",
+        "fetched_at": "2026-08-25T19:04:32.100Z",
         "homepage_url": "https://oracle.com/",
         "example_url": "https://www.oracle.com/database/?source=%3Aad%3Aso%3Atw%3Adg%3Aa_nas%3A%3ARC_TWTR260205P00003C00005%3AEnd_Data_Risk&SC=%3Aad%3Aso%3Atw%3Adg%3Aa_nas%3A%3ARC_TWTR260205P00003C00005%3AEnd_Data_Risk&twclid=2b7h3vpee1s0pq1u9507vf4n1e",
         "homepage_status": 403,
@@ -21402,7 +21402,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-08-19T23:15:53.115Z",
+        "fetched_at": "2026-08-25T19:04:32.829Z",
         "homepage_url": "https://temu.com/",
         "example_url": "https://www.temu.com/kuiper/un1.html?subj=feed-un&_bg_fs=1&_p_mat1_type=1&_p_jump_id=725&_x_vst_scene=adg&gids=538325&_p_rfs=1&_x_ads_channel=twitter&twclid=29gpd1jhyu86nybj5gna95l3tw",
         "homepage_status": 200,
@@ -21529,7 +21529,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-08-19T23:16:00.799Z",
+        "fetched_at": "2026-08-25T19:04:38.815Z",
         "homepage_url": "https://la28.org/",
         "example_url": "https://hospitality.la28.org/en?utm_source=x&utm_medium=paid_social&utm_campaign=emg_onlocation_la-olympics-b2c_aw_ecomm_paid-social_x_x_nu_us&twclid=2dvfag01sx2wxc4fmpjts9gb7p",
         "homepage_status": 200,
@@ -21656,7 +21656,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-08-19T23:16:02.991Z",
+        "fetched_at": "2026-08-25T19:04:40.518Z",
         "homepage_url": "https://atlassian.com/",
         "example_url": "https://www.atlassian.com/software/rovo?utm_source=twitter&utm_medium=paid-social&utm_campaign=P%3Arovo%7CO%3Appm%7CV%3Atwitter%7CG%3Aus%7CL%3Aen%7CF%3Aaware%7CT%3Aprospecting%7CZ%3Astandard-image%7CI%3Aimc-rovo-iyryk%7CA%3Aimage%7CD%3Aalld&utm_content=P%3Arovo%7CO%3Appm%7CV%3Atwitter%7CG%3Aus%7CL%3Aen%7CF%3Aaware%7CT%3Aprospecting%7CZ%3Astandard-image%7CI%3Aimc-rovo-iyryk%7CA%3Aimage%7CD%3Aalld%7CU%3Ahandles_image-core-brand-default-onepromptaway-1200x628-na-na-aipowered&twclid=256sbqrmpm1kmygbwj39syq8d2",
         "homepage_status": 200,
@@ -21783,7 +21783,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-08-19T23:16:03.872Z",
+        "fetched_at": "2026-08-25T19:34:31.658Z",
         "homepage_url": "https://myblockchainweek.com/",
         "example_url": "https://myblockchainweek.com/buy-ticket?twclid=21nicpg0ek4tfxn16u0mxc14r1",
         "homepage_status": 200,
@@ -21910,7 +21910,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-08-20T20:32:49.402Z",
+        "fetched_at": "2026-08-25T19:34:32.624Z",
         "homepage_url": "https://slynora.com/",
         "example_url": "https://www.slynora.com/products/non-slip-thick-sole-cloud-slides-for-men?utm_source=twitter&utm_campaign=41804910&twclid=2dusafrlugnqx0tw8g5vfsrw0n",
         "homepage_status": 403,
@@ -22037,7 +22037,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-08-20T07:21:14.518Z",
+        "fetched_at": "2026-08-25T19:34:34.960Z",
         "homepage_url": "https://edrforhome.com/",
         "example_url": "https://edrforhome.com/membership/?twclid=26i4bdgzrzez7ck8e18f8jebf7",
         "homepage_status": 200,
@@ -22164,7 +22164,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-08-20T11:20:11.194Z",
+        "fetched_at": "2026-08-25T19:34:36.958Z",
         "homepage_url": "https://navax.io/",
         "example_url": "https://navax.io/?twclid=24etxfpdzoav2cgkg5folp34ad",
         "homepage_status": 200,
