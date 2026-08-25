@@ -1,8 +1,8 @@
 {
   "schema_version": "1.0",
-  "generated_at": "2026-08-25T07:15:47.326Z",
+  "generated_at": "2026-08-25T10:22:01.903Z",
   "method": "mechanical_registry_v1",
-  "profiled_at": "2026-08-25T07:15:56.089Z",
+  "profiled_at": "2026-08-25T10:22:07.795Z",
   "sources": [
     {
       "domain": "theguardian.com",
@@ -11,7 +11,7 @@
       "first_seen_at": "2026-03-27T23:17:00Z",
       "last_seen_at": "2026-08-22T15:49:14.166Z",
       "discovery": {
-        "distinct_urls": 1007,
+        "distinct_urls": 1009,
         "example_urls": [
           "https://www.theguardian.com/us-news/2026/jun/23/trump-immigration-courthouse-arrest-policy",
           "https://www.theguardian.com/us-news/2026/jun/28/ice-minnesota-defending-democracy",
@@ -21,7 +21,7 @@
         ],
         "origin_counts": {
           "ontology_evidence": 51,
-          "reading_queue": 967,
+          "reading_queue": 969,
           "journals": 136,
           "articles": 5
         },
@@ -76,7 +76,7 @@
         "breadth": {
           "score": 0.94,
           "basis": [
-            "distinct_urls:1007",
+            "distinct_urls:1009",
             "distinct_axes:21",
             "origin_types:4"
           ]
@@ -116,7 +116,7 @@
             "newsroom_domain_pattern",
             "article_path_seen",
             "doi_or_identifier_path_seen",
-            "distinct_urls:1007",
+            "distinct_urls:1009",
             "distinct_axes:21",
             "origin_types:4",
             "referring_accounts:0",
@@ -840,7 +840,7 @@
       "first_seen_at": "2026-06-22T00:15:00Z",
       "last_seen_at": "2026-08-22T09:38:02.939Z",
       "discovery": {
-        "distinct_urls": 677,
+        "distinct_urls": 679,
         "example_urls": [
           "https://www.nytimes.com/2026/06/19/world/canada/frank-stronach-trial-guilty-sex-charges.html",
           "https://www.nytimes.com/2026/06/27/world/americas/mexican-officials-us-informants.html",
@@ -850,7 +850,7 @@
         ],
         "origin_counts": {
           "ontology_evidence": 24,
-          "reading_queue": 701,
+          "reading_queue": 703,
           "journals": 59
         },
         "distinct_referring_accounts": 0,
@@ -895,7 +895,7 @@
         "breadth": {
           "score": 0.8799999999999999,
           "basis": [
-            "distinct_urls:677",
+            "distinct_urls:679",
             "distinct_axes:13",
             "origin_types:3"
           ]
@@ -934,7 +934,7 @@
           "basis": [
             "newsroom_domain_pattern",
             "article_path_seen",
-            "distinct_urls:677",
+            "distinct_urls:679",
             "distinct_axes:13",
             "origin_types:3",
             "referring_accounts:0",
@@ -1849,7 +1849,7 @@
       "first_seen_at": "2026-03-31T12:16:18.459Z",
       "last_seen_at": "2026-08-21T18:40:00.592Z",
       "discovery": {
-        "distinct_urls": 95,
+        "distinct_urls": 96,
         "example_urls": [
           "https://www.amnesty.org/en/latest/news/2026/06/burkina-serge-oulon/",
           "https://www.amnesty.org/en/latest/news/2026/06/car-bozize/",
@@ -1859,7 +1859,7 @@
         ],
         "origin_counts": {
           "ontology_evidence": 64,
-          "reading_queue": 75,
+          "reading_queue": 76,
           "journals": 116,
           "articles": 1
         },
@@ -1903,7 +1903,7 @@
         "breadth": {
           "score": 0.94,
           "basis": [
-            "distinct_urls:95",
+            "distinct_urls:96",
             "distinct_axes:11",
             "origin_types:4"
           ]
@@ -1942,7 +1942,7 @@
           "basis": [
             "unknown_domain_pattern",
             "article_path_seen",
-            "distinct_urls:95",
+            "distinct_urls:96",
             "distinct_axes:11",
             "origin_types:4",
             "referring_accounts:0",
@@ -15201,7 +15201,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-08-19T13:56:12.372Z",
+        "fetched_at": "2026-08-25T08:15:51.088Z",
         "homepage_url": "https://lovart.ai/",
         "example_url": "https://www.lovart.ai/?sourceId=910062&sourceid=910062&utm_source=twitter&utm_medium=paid_social&utm_campaign=Lovart_910062_Meta_US_AIModel_ag_260416_lead&twclid=2a5k8izlnshoxgoxi52b1tnd45",
         "homepage_status": 200,
@@ -15327,7 +15327,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-08-19T13:56:14.490Z",
+        "fetched_at": "2026-08-25T08:15:52.710Z",
         "homepage_url": "https://heylemon.ai/",
         "example_url": "https://heylemon.ai/?utm_source=paid_X_all1&twclid=2bprvotipsebt2ywwd413k1c6r",
         "homepage_status": 200,
@@ -15424,16 +15424,16 @@
           ]
         },
         "profile": {
-          "score": 0.26,
+          "score": 0.1,
           "confidence": 0.55,
           "basis": [
             "meta_author:false",
             "published_time:false",
             "canonical:true",
             "about:false",
-            "contact:true",
+            "contact:false",
             "corrections:false",
-            "outbound_links:4",
+            "outbound_links:0",
             "opinion_marker:false"
           ]
         },
@@ -15453,7 +15453,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-08-19T13:56:16.323Z",
+        "fetched_at": "2026-08-25T08:15:54.648Z",
         "homepage_url": "https://wavedash.com/",
         "example_url": "https://wavedash.com/?twclid=29k171tm7pjzrxbob4j7cmjl3o",
         "homepage_status": 200,
@@ -15467,9 +15467,9 @@
           "has_published_time": false,
           "has_canonical": true,
           "has_about_link": false,
-          "has_contact_link": true,
+          "has_contact_link": false,
           "has_corrections_link": false,
-          "outbound_links_count": 4,
+          "outbound_links_count": 0,
           "opinion_marker": false
         },
         "example": {
@@ -15477,9 +15477,9 @@
           "has_published_time": false,
           "has_canonical": true,
           "has_about_link": false,
-          "has_contact_link": true,
+          "has_contact_link": false,
           "has_corrections_link": false,
-          "outbound_links_count": 4,
+          "outbound_links_count": 0,
           "opinion_marker": false
         }
       }
@@ -15579,7 +15579,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-08-19T17:29:22.697Z",
+        "fetched_at": "2026-08-25T08:15:55.805Z",
         "homepage_url": "https://babbily.com/",
         "example_url": "https://platform.babbily.com/?twclid=28ntbg85b8teebnlu9ilz4yxht",
         "homepage_status": 200,
@@ -15705,7 +15705,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-08-19T03:57:59.729Z",
+        "fetched_at": "2026-08-25T08:45:49.090Z",
         "homepage_url": "https://spacex.com/",
         "example_url": "https://shop.spacex.com/products/spacex-mission-ready-sunglasses?variant=44537843744847&utm_source=twitter&utm_medium=product_sync&utm_campaign=twitter_44537843744847&twclid=298d45vmtw4pu78lan6k2cs4ha",
         "homepage_status": 200,
@@ -15831,7 +15831,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-08-19T17:29:24.381Z",
+        "fetched_at": "2026-08-25T08:45:50.715Z",
         "homepage_url": "https://hypeddit.com/",
         "example_url": "https://hypeddit.com/psychicfeverfromexiletribe/ifyouremine?twclid=23rtj49iasvoyuwyxn3g4hwi03",
         "homepage_status": 200,
@@ -15957,7 +15957,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-08-19T17:29:25.615Z",
+        "fetched_at": "2026-08-25T08:45:51.759Z",
         "homepage_url": "https://teslahubs.com/",
         "example_url": "https://teslahubs.com/products/teslahubs-proguard-advanced-noise-reduction-weatherproofing-kit?tw_source=twitter&tw_campaign=May_2_ProGuard_Sales__Men_25_34_Web_02_05_2026&utm_term=Static_PG_img_224_1.1&twclid=22spdhzoczolm0ipnjon5bt2pn",
         "homepage_status": 200,
@@ -16083,7 +16083,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-08-19T03:58:00.643Z",
+        "fetched_at": "2026-08-25T08:45:52.894Z",
         "homepage_url": "https://hypemarkets.xyz/",
         "example_url": "https://hypemarkets.xyz/?twclid=27lmvj7zap2yyfs7n0ndgenluy",
         "homepage_status": 200,
@@ -16209,7 +16209,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-08-19T17:29:26.124Z",
+        "fetched_at": "2026-08-25T09:52:03.056Z",
         "homepage_url": "https://h-tech.space/",
         "example_url": "https://teamlore.h-tech.space/?twclid=21cpesmzgsrh5ius8yd25zbe9t",
         "homepage_status": null,
@@ -16317,7 +16317,7 @@
             "about:true",
             "contact:true",
             "corrections:false",
-            "outbound_links:32",
+            "outbound_links:29",
             "opinion_marker:false"
           ]
         },
@@ -16337,7 +16337,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-08-19T18:17:29.125Z",
+        "fetched_at": "2026-08-25T09:52:04.130Z",
         "homepage_url": "https://foxnews.com/",
         "example_url": "https://www.foxnews.com/politics/breaking-president-trump-vows-eradicate-what-he-calls-horrible-thread-cancer-quietly-moving-through-nation-issuing-stark-w",
         "homepage_status": 200,
@@ -16353,7 +16353,7 @@
           "has_about_link": true,
           "has_contact_link": true,
           "has_corrections_link": false,
-          "outbound_links_count": 41,
+          "outbound_links_count": 40,
           "opinion_marker": false
         },
         "example": {
@@ -16363,7 +16363,7 @@
           "has_about_link": true,
           "has_contact_link": true,
           "has_corrections_link": false,
-          "outbound_links_count": 32,
+          "outbound_links_count": 29,
           "opinion_marker": false
         }
       }
@@ -16464,7 +16464,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-08-19T05:02:56.712Z",
+        "fetched_at": "2026-08-25T09:52:05.441Z",
         "homepage_url": "https://davidprotein.com/",
         "example_url": "https://davidprotein.com/pages/meet-david-gold?utm_source=X&utm_medium=paid&utm_campaign=CPC_2026&utm_term=GOLD_CPC_2026&twclid=2beqsd3kifgmiz3bgaf4s8hcjs",
         "homepage_status": 200,
@@ -16480,7 +16480,7 @@
           "has_about_link": true,
           "has_contact_link": false,
           "has_corrections_link": false,
-          "outbound_links_count": 9,
+          "outbound_links_count": 3,
           "opinion_marker": false
         },
         "example": {
@@ -16591,7 +16591,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-08-19T05:03:00.411Z",
+        "fetched_at": "2026-08-25T09:52:09.351Z",
         "homepage_url": "https://ethos.com/",
         "example_url": "https://www.ethos.com/life/life-insurance-now/?utm_source=twitter&utm_medium=cpc&utm_campaign=Broad01162026&utm_campaign_id=40806420&utm_adgroup=Broad01162026&utm_adgroup_id=54091382&utm_ad_id=2024963714831835547&ad_name=hiking+%28convert%29&twclid=2eck112qrn4y0a9og1cs3anquo",
         "homepage_status": 200,
@@ -16718,7 +16718,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-08-19T18:47:13.427Z",
+        "fetched_at": "2026-08-25T10:22:03.351Z",
         "homepage_url": "https://flow.com/",
         "example_url": "https://flow.com/post/stablecoin-market-cap-on-flow-hits-all-time-high-of-74-6m?twclid=2czuzc6x3hqaue58fju5it9nms",
         "homepage_status": 200,
@@ -16816,7 +16816,7 @@
           ]
         },
         "profile": {
-          "score": 0,
+          "score": 0.009999999999999998,
           "confidence": 0.55,
           "basis": [
             "meta_author:false",
@@ -16825,7 +16825,7 @@
             "about:false",
             "contact:false",
             "corrections:false",
-            "outbound_links:0",
+            "outbound_links:1",
             "opinion_marker:false"
           ]
         },
@@ -16845,7 +16845,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-08-19T18:47:14.871Z",
+        "fetched_at": "2026-08-25T10:22:04.541Z",
         "homepage_url": "https://par.bz/",
         "example_url": "https://par.bz/nep?twclid=2cqyfqbi1emcrdcv6yo3eddsrk",
         "homepage_status": 403,
@@ -16861,7 +16861,7 @@
           "has_about_link": false,
           "has_contact_link": false,
           "has_corrections_link": false,
-          "outbound_links_count": 0,
+          "outbound_links_count": 1,
           "opinion_marker": false
         },
         "example": {
@@ -16871,7 +16871,7 @@
           "has_about_link": false,
           "has_contact_link": false,
           "has_corrections_link": false,
-          "outbound_links_count": 0,
+          "outbound_links_count": 1,
           "opinion_marker": false
         }
       }
@@ -16943,16 +16943,16 @@
           ]
         },
         "profile": {
-          "score": 0,
-          "confidence": 0.55,
+          "score": 0.66,
+          "confidence": 0.75,
           "basis": [
             "meta_author:false",
-            "published_time:false",
-            "canonical:false",
-            "about:false",
-            "contact:false",
+            "published_time:true",
+            "canonical:true",
+            "about:true",
+            "contact:true",
             "corrections:false",
-            "outbound_links:0",
+            "outbound_links:20",
             "opinion_marker:false"
           ]
         },
@@ -16972,33 +16972,33 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-08-20T00:44:14.008Z",
+        "fetched_at": "2026-08-25T10:22:07.305Z",
         "homepage_url": "https://pickleball.mov/",
         "example_url": "https://pickleball.mov/?twclid=2dap2o6t8b0iplizc69goovrfk",
-        "homepage_status": null,
-        "example_status": null,
-        "homepage_final_url": "https://pickleball.mov/",
-        "example_final_url": "https://pickleball.mov/?twclid=2dap2o6t8b0iplizc69goovrfk",
-        "homepage_content_type": "",
-        "example_content_type": "",
+        "homepage_status": 200,
+        "example_status": 200,
+        "homepage_final_url": "https://filmhub.com/t/7rq4-rqzp/pickleball",
+        "example_final_url": "https://filmhub.com/t/7rq4-rqzp/pickleball",
+        "homepage_content_type": "text/html; charset=utf-8",
+        "example_content_type": "text/html; charset=utf-8",
         "homepage": {
           "has_meta_author": false,
-          "has_published_time": false,
-          "has_canonical": false,
-          "has_about_link": false,
-          "has_contact_link": false,
+          "has_published_time": true,
+          "has_canonical": true,
+          "has_about_link": true,
+          "has_contact_link": true,
           "has_corrections_link": false,
-          "outbound_links_count": 0,
+          "outbound_links_count": 20,
           "opinion_marker": false
         },
         "example": {
           "has_meta_author": false,
-          "has_published_time": false,
-          "has_canonical": false,
-          "has_about_link": false,
-          "has_contact_link": false,
+          "has_published_time": true,
+          "has_canonical": true,
+          "has_about_link": true,
+          "has_contact_link": true,
           "has_corrections_link": false,
-          "outbound_links_count": 0,
+          "outbound_links_count": 20,
           "opinion_marker": false
         }
       }
@@ -17099,7 +17099,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-08-21T11:43:09.430Z",
+        "fetched_at": "2026-08-25T10:22:07.795Z",
         "homepage_url": "https://aitradingbotreview.com/",
         "example_url": "https://aitradingbotreview.com/cointech2u-okx-testimonial/?utm_source=x&utm_medium=cpc&utm_campaign=ct2u_cici_testimonial_v1&utm_content=v3_architecture&twclid=29n2yshl33pi6gwhsndaezd9zg",
         "homepage_status": 200,
