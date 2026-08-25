@@ -1,51 +1,14 @@
 {
-  "checked_at": "2026-08-23T14:46:21.316Z",
-  "evidence_24h": 2,
-  "unique_sources": 1,
-  "status": "captured",
-  "alerts": [
-    {
-      "type": "source_dominance",
-      "severity": "high",
-      "detail": "@unknown accounts for 100% of today's evidence (2/2)",
-      "username": "unknown",
-      "share": 1
-    }
-  ],
-  "summary": "1 capture alert(s) detected:\n[HIGH] @unknown accounts for 100% of today's evidence (2/2)",
-  "source_concentration": {
-    "unknown": {
-      "username": "unknown",
-      "count": 2,
-      "share": 1
-    }
-  },
-  "axis_concentration": {
-    "axis_power_accountability": {
-      "axis_id": "axis_power_accountability",
-      "label": "Power, Institutions, and Rule of Law",
-      "count": 1,
-      "share": 0.5
-    },
-    "axis_infrastructure_commons_v_extraction_v1": {
-      "axis_id": "axis_infrastructure_commons_v_extraction_v1",
-      "label": "Infrastructure as Commons vs. Extraction",
-      "count": 1,
-      "share": 0.5
-    }
-  },
-  "cluster_concentration": {
-    "unknown": {
-      "cluster": "unknown",
-      "count": 2,
-      "share": 1
-    }
-  },
+  "checked_at": "2026-08-24T15:47:17.727Z",
+  "evidence_24h": 0,
+  "alerts": [],
+  "source_concentration": {},
+  "axis_concentration": {},
   "pole_balance": {
-    "left": 1,
-    "right": 1,
-    "neutral": 0,
-    "left_share": 0.5,
-    "right_share": 0.5
-  }
+    "left": 0,
+    "right": 0,
+    "neutral": 0
+  },
+  "status": "clean",
+  "summary": "No evidence collected in the last 24h — nothing to assess."
 }
