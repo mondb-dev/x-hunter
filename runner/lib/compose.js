@@ -171,95 +171,8 @@ function claudeCompose(prompt, opts = {}) {
  *   timeoutMs       kill timeout per attempt
  *   tag             log label                      (default 'compose')
  */
-/**
- * localScope() → 'scoring' | 'all'
- *
- * 'scoring' (default): only lib/content_relevance + linkedin_engage route to the
- * local model, and they call lib/local_llm directly — compose()/reason() here
- * stay on Claude no matter what.
- *
- * 'all': compose()/reason() route to the local model too, so EVERY prose stage
- * — tweets, LinkedIn posts and comments, the stance-video line, and the
- * fact-check gate itself — runs on phi4-mini.
- *
- * Read the header note on `localCompose` before using 'all' in production.
- */
-function localScope() {
-  return process.env.LOCAL_LLM_SCOPE === 'all' ? 'all' : 'scoring';
-}
-
-function localRoutingActive() {
-  try { return require('./local_llm').isEnabled() && localScope() === 'all'; }
-  catch { return false; }
-}
-
-/**
- * Run a compose()/reason()-shaped call on the local model.
- *
- * WHAT CHANGES WHEN YOU DO THIS (measured, not theoretical):
- *  - The fact-check gate (lib/outbound_gates.factCheck) composes through here,
- *    so under scope=all the checker and the writer become the SAME 3.8B model.
- *    That gate fails OPEN on error, so a model that mangles the correction
- *    format does not block bad output — it waves it through. Under scope=all
- *    the only model-independent gate left is voice_filter's regex list.
- *  - ~51% of recent X output is Tagalog/Taglish (measured over the last 120
- *    posts). The prompts demand *natural* code-switching and explicitly reject
- *    "formal/academic/textbook Tagalog"; a small English-tuned model is weakest
- *    exactly there, and no gate checks for it.
- *  - Local calls get NO withRetry: retry exists for Claude's 529s, and a local
- *    daemon failure is not transient in the same way.
- *
- * Kept deliberately thin: same in/out contract as claudeCompose (string in,
- * trimmed string out) so callers cannot tell which backend answered.
- */
-/**
- * Is Taglish output allowed on the local backend?
- *
- * OFF by default (operator decision 2026-08-19). ~51% of Sebastian's real X
- * output is Tagalog/Taglish, and the prompts demand *natural* code-switching
- * while explicitly rejecting "formal/academic/textbook Tagalog". Asked for
- * exactly that, phi4-mini produced Cebuano and non-words:
- *   "Sa-diri'y natanggap nga mga receipt na nakaseptyo pa sa Mary Grace Piattos"
- * ('nakaseptyo' is not a word; 'unya' is Cebuano). The harness can DETECT this
- * (local_harness.checkTaglish) but cannot fix it — the model simply does not
- * have the language. So on the local backend we write English rather than
- * publish broken Tagalog under his name.
- *
- * Set LOCAL_TAGLISH=1 to re-enable once a model that actually handles Tagalog
- * is in place (qwen2.5 is the candidate — Alibaba's SEA-language coverage is
- * far better than phi's). Claude is unaffected either way.
- */
-function localTaglishAllowed() {
-  return process.env.LOCAL_TAGLISH === '1';
-}
-
-const ENGLISH_ONLY_OVERRIDE =
-  '\n\nLANGUAGE OVERRIDE (highest priority — overrides any Tagalog/Taglish rule above): ' +
-  'Write in ENGLISH ONLY. Do not write in Tagalog, Taglish, Cebuano, or any ' +
-  'Tagalog-English code-switch, even if an earlier instruction asks for it. ' +
-  'English proper nouns and Filipino names stay as they are; everything else is English.';
-
-async function localCompose(prompt, opts = {}) {
-  const { generateLocal } = require('./local_llm');
-  const { system, maxTokens = 1024, timeoutMs, tag = 'local' } = opts;
-  // claudeCompose takes the system prompt as a separate CLI flag; Ollama's
-  // /api/generate has no system slot here, so prepend it.
-  let full = system ? `${system}\n\n${prompt}` : prompt;
-  // Appended LAST so it wins over the TAGALOG RULE embedded in the prompt
-  // modules (tweet.js, quote.js, thread.js, claims.js, stance_video.js, …) —
-  // one override at the boundary instead of editing eight prompt files.
-  if (!localTaglishAllowed()) full += ENGLISH_ONLY_OVERRIDE;
-  return generateLocal(full, {
-    maxTokens,
-    temperature: opts.temperature != null ? opts.temperature : 0.7,
-    timeoutMs: timeoutMs || Number(process.env.LOCAL_LLM_COMPOSE_TIMEOUT_MS) || 120_000,
-    tag,
-  });
-}
-
 async function compose(prompt, opts = {}) {
   const { tag = 'compose' } = opts;
-  if (localRoutingActive()) return localCompose(prompt, { ...opts, system: opts.system || DEFAULT_SYSTEM, tag });
   return withRetry(() => claudeCompose(prompt, opts), tag);
 }
 
@@ -305,10 +218,9 @@ async function composeJSON(prompt, schema, opts = {}) {
 // ── reason(): Claude as the REASONING backend for the cognition stack ─────────
 // Same mechanism as compose(), but for the "thinking" stages (ponder, deep_dive,
 // decision, planner, tracker, process_reflection, evaluate_vocation, reflect)
-// that otherwise run on the weak local qwen and defeat their own prompt-level
-// guardrails / emit malformed JSON. Gated SEPARATELY (THINK_BACKEND=claude) so
-// thinking and composing toggle independently. Cognition is a daily batch (a
-// handful of calls/day), so Claude cost/latency is negligible here.
+// that used to run on a weak local model and defeat their own prompt-level
+// guardrails / emit malformed JSON. Cognition is a daily batch (a handful of
+// calls/day), so Claude cost/latency is negligible here.
 const REASON_SYSTEM =
   'You are a careful reasoning engine for an autonomous agent. Follow the ' +
   'instructions in the user message EXACTLY, including any required output ' +
@@ -334,19 +246,12 @@ function useClaudeThink() { return true; }
  */
 async function reason(prompt, opts = {}) {
   const { tag = 'reason' } = opts;
-  const out = localRoutingActive()
-    ? await localCompose(prompt, {
-        ...opts,
-        system: opts.system || REASON_SYSTEM,
-        // Reasoning stages emit JSON objects, not one-liners — give them room.
-        maxTokens: opts.maxTokens || 2048,
-      })
-    : await withRetry(() => claudeCompose(prompt, {
-        ...opts,
-        system: opts.system || REASON_SYSTEM,
-        claudeModel: opts.claudeModel || process.env.CLAUDE_THINK_MODEL || 'sonnet',
-        timeoutMs: opts.timeoutMs || Number(process.env.CLAUDE_THINK_TIMEOUT_MS) || 180_000,
-      }), tag);
+  const out = await withRetry(() => claudeCompose(prompt, {
+    ...opts,
+    system: opts.system || REASON_SYSTEM,
+    claudeModel: opts.claudeModel || process.env.CLAUDE_THINK_MODEL || 'sonnet',
+    timeoutMs: opts.timeoutMs || Number(process.env.CLAUDE_THINK_TIMEOUT_MS) || 180_000,
+  }), tag);
   // Claude sometimes wraps JSON in ```json fences despite instructions; strip
   // leading/trailing code fences so callers' JSON.parse/regex works cleanly.
   return String(out).replace(/^\s*```[a-z]*\s*\n?/i, '').replace(/\n?\s*```\s*$/i, '').trim();
@@ -355,7 +260,6 @@ async function reason(prompt, opts = {}) {
 module.exports = {
   compose, reason, composeJSON, claudeCompose, withRetry,
   useClaudeCompose, useClaudeThink, DEFAULT_SYSTEM, REASON_SYSTEM,
-  localScope, localRoutingActive, localCompose, localTaglishAllowed,
 };
 
 // ── CLI: quick manual test — `node runner/lib/compose.js "your prompt"` ─────────

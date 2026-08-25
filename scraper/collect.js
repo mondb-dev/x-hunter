@@ -51,8 +51,8 @@ const {
   searchRecent,
 } = require("../runner/x_api");
 
-// ── Gemini enrichment helper (loaded lazily) ─────────────────────────────────
-// Metadata enrichment (Phase 5c) runs on the LOCAL model, not Claude.
+// ── Enrichment helper (loaded lazily) ────────────────────────────────────────
+// Metadata enrichment (Phase 5c) is OFF unless explicitly opted into.
 //
 // WHY: measured over August 2026 it was 9,262 Claude calls and $24.62 — 69% of
 // the whole untagged `llm` bucket and the single largest inference cost in the
@@ -60,21 +60,13 @@ const {
 // state/posts_archive/*.jsonl, an append-only cold store with no reader anywhere
 // in the codebase (it preserves the old BigQuery row shape for a future
 // warehouse load). Paying frontier prices to pre-fill optional columns nobody
-// queries is the wrong trade; bounded JSON extraction with a fixed stance enum
-// is exactly what a small local model is good at.
+// queries is the wrong trade.
 //
-// NO CLAUDE FALLBACK, deliberately. If the local model is unavailable the phase
-// is SKIPPED and rows archive with empty stance/claim/entities — which the
-// writer already handles (`|| ""`). Falling back would silently reinstate the
-// cost this change exists to remove, and escalation-on-failure is what caused
-// the 2026-07-30 cascade. Set COLLECT_ENRICH_CLAUDE=1 to force the old
-// behaviour; COLLECT_ENRICH=0 disables the phase entirely.
-let _localGen = null;
-try {
-  _localGen = require("../runner/lib/local_llm");
-} catch (e) {
-  console.warn("[collect] local_llm not available for enrichment:", e.message);
-}
+// This ran on a small local model until the local backend was removed. With
+// Claude the only backend left (runner/llm.js INFERENCE POLICY), the phase now
+// SKIPS by default and rows archive with empty stance/claim/entities — which the
+// writer already handles (`|| ""`). Set COLLECT_ENRICH_CLAUDE=1 to pay for it
+// with Claude; COLLECT_ENRICH=0 disables the phase entirely.
 let _llmGenerate = null;
 if (process.env.COLLECT_ENRICH_CLAUDE === "1") {
   try {
@@ -677,7 +669,7 @@ async function scrapeMentionsViaSearch(x) {
     console.log(`[scraper] captured ${capturedMedia.length}/${mediaPosts.slice(0, 10).length} media screenshots`);
   }
 
-  // ── Phase 5c: metadata enrichment for top posts (LOCAL model) ─────────────
+  // ── Phase 5c: metadata enrichment for top posts (opt-in, see header) ──────
   // Note on dedup: `selected` derives from candidates already filtered against
   // seenSet (Phase 3), so enrichment only ever sees posts it has not processed
   // before. Verified against the archive: 16,499 unique ids in 16,614 rows —
@@ -685,21 +677,13 @@ async function scrapeMentionsViaSearch(x) {
   const enrichEnabled = process.env.COLLECT_ENRICH !== "0";
   let _enrich = null;
   if (enrichEnabled) {
-    if (_localGen && _localGen.isEnabled()) {
-      const av = await _localGen.isAvailable();
-      if (av.ok) {
-        _enrich = (p, o) => _localGen.generateLocal(p, { ...o, tag: "collect_enrich" });
-        console.log(`[collect] enrichment backend: local ${_localGen.MODEL} (warmed ${av.warmedMs}ms)`);
-      } else {
-        // Loud, not silent: the 2026-07-28 store wipe degraded every local path
-        // for 2.3 days precisely because absence looked like normal output.
-        console.log(`[collect] enrichment SKIPPED — local model unavailable (${av.reason})`);
-      }
-    } else if (_llmGenerate) {
+    if (_llmGenerate) {
       _enrich = (p, o) => _llmGenerate(p, { ...o, tag: "collect_enrich" });
       console.log("[collect] enrichment backend: claude (COLLECT_ENRICH_CLAUDE=1)");
     } else {
-      console.log("[collect] enrichment SKIPPED — no local model and Claude not opted in");
+      // Loud, not silent: a skipped phase must be visible in the log, or empty
+      // archive columns look like normal output (the 2026-07-28 lesson).
+      console.log("[collect] enrichment SKIPPED — set COLLECT_ENRICH_CLAUDE=1 to opt in");
     }
   }
 

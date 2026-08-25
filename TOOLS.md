@@ -43,6 +43,7 @@ research, amplify triggers, maintenance), git, and sleep.
 | Module | Purpose |
 |---|---|
 | `gemini_agent.js` | RETIRED stub — agent loop removed with the Ollama transport |
+| `lib/stance_check.js` | Does an outbound line argue the committed side? Single-letter check on Claude; lifted from the removed `local_harness.js` (2026-08-25) |
 | `compose.js` | Claude CLI composition (`COMPOSE_BACKEND=claude`) + `reason()` think backend |
 | `config.js` | Env + paths + cycle constants |
 | `pre_browse.js` | 17-step pre-cycle context pipeline |

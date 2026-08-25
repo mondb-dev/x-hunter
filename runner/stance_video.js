@@ -207,12 +207,10 @@ async function composeBrief(subject) {
 /**
  * Does the line argue the side he actually committed to?
  *
- * Runs on EVERY backend, not just the local one. The 2026-07-25 inversion ("I
- * believe in open borders" on an axis committed to strict border control) was
- * composed by Claude and passed voice + factcheck untouched — those gates check
- * tics and officeholder facts, neither of which can see a reversed position.
- * Uses the local model for the check because it is a single-letter
- * classification, the one thing a small model does reliably.
+ * The 2026-07-25 inversion ("I believe in open borders" on an axis committed to
+ * strict border control) was composed by Claude and passed voice + factcheck
+ * untouched — those gates check tics and officeholder facts, neither of which
+ * can see a reversed position. A single-letter classification catches it.
  *
  * Fails OPEN when it cannot verify: an unavailable checker must not silence the
  * daily series. It only blocks on a POSITIVE finding of inversion.
@@ -220,11 +218,7 @@ async function composeBrief(subject) {
 async function verifyStance(line, axis) {
   if (!axis || typeof axis.score !== "number") return null; // stance-tier subjects carry no axis
   try {
-    const local = require("./lib/local_llm");
-    if (!local.isEnabled()) return null;
-    const av = await local.isAvailable();
-    if (!av.ok) { log(`stance check skipped — local model unavailable (${av.reason})`); return null; }
-    const { checkStance } = require("./lib/local_harness");
+    const { checkStance } = require("./lib/stance_check");
     return await checkStance(line, axis);
   } catch (e) {
     log(`stance check unavailable (${e.message}) — not blocking`);

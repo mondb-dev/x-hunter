@@ -37,42 +37,50 @@ Scraper loops (`scraper/start.sh:23-26`): mentions 120s · collect 300s · reply
     reclaimable run-lock (`state/reply.run.lock`, 20-min stale TTL) so the
     scheduled run and a poller-triggered run never double-post.
 
-## 2. Inference: Claude for everything Sebastian says; local for bounded scoring
+## 2. Inference: Claude, and only Claude
 
-**POLICY: Claude is the only LLM for generated prose and judgement.**
-Gemini/Vertex was retired first, the local Ollama brain second (2026-07-30,
-after the model store was wiped and every local path 404'd for ~2.3 days). There
-is no fallback backend by design — a silent substitution to a weaker model is
-what this policy exists to prevent.
+**POLICY: Claude is the only LLM.** Gemini/Vertex was retired first, the local
+Ollama brain second (2026-07-30, after the model store was wiped and every local
+path 404'd for ~2.3 days). There is no fallback backend by design — a silent
+substitution to a weaker model is what this policy exists to prevent.
 
-**Narrow exception (2026-08-19): relevance scoring may run locally.**
-`runner/lib/local_llm.js` routes 0-3 relevance classification to Ollama
-(`qwen2.5:3b`) when `LOCAL_LLM_ENABLED=1`. Scoring is bounded classification —
-one digit — which is the one shape a ~3B model handles adequately, and it is the highest-frequency LLM call in the system (~25 candidates per
-engagement run, on both X and LinkedIn, at a 90s Claude timeout each).
+**The relevance-scoring exception is closed (2026-08-25, operator decision).**
+Between 2026-08-19 and 2026-08-25, 0-3 relevance classification could run on a
+local `qwen2.5:3b` via Ollama under `LOCAL_LLM_ENABLED=1`. That path is gone:
+`runner/lib/local_llm.js` and `runner/lib/local_harness.js` are deleted, the
+Ollama service is stopped and the model removed. Scoring now runs on Claude
+everywhere, with no second backend anywhere in the system.
 
-This is an exception, not a reopening of the policy. It holds because:
+What that costs, so it is not rediscovered as a bug: relevance scoring is the
+highest-frequency LLM call in the system (~25 candidates per engagement run, on
+both X and LinkedIn) and **every call is a `claude -p` subprocess needing a 90s
+timeout**. Callers MUST bound concurrency — `engage()` does — and a scoring
+failure degrades to the lexical keyword signal within its own path. It never
+chains to a second backend; chaining per call is what produced
+`Claude 429s → local 404s → retry → 18 failures in one cycle` (b158bd33a).
 
-- **Routing is explicit and per-call-site.** Nothing reroutes silently, and the
-  local path never escalates to Claude. Chaining backends per call is exactly
-  what produced `Claude 429s → local 404s → retry → 18 failures in one cycle`.
-- **Absence is loud.** `isAvailable()` resolves the model *by name* and returns a
-  reason. The 2026-07-28 wipe was invisible because `ollama serve` kept returning
-  `200 {"models":[]}` while every model 404'd.
-- **Model is `qwen2.5:3b`; phi4-mini was tried first and replaced.** Scored
-  head-to-head on the same 10 real feed items, phi4-mini returned "2" for ALL
-  TEN (including a Tupac murder trial and an ICE detention) — on political copy
-  it stops discriminating and, at minScore=2, waves everything through.
-  qwen2.5:3b used the full range and gave a correct 3 to media-framing copy.
-  Live: phi4-mini passed 10-11 of 23 LinkedIn candidates, qwen2.5:3b 3 of 22.
-  Keep exactly ONE model pulled — swapping two ~2GB models thrashes this 16GB box.
-- **Default mode is `prefilter`, not `only`.** Local drops the confident 0s and
-  **Claude ranks the survivors**. `LOCAL_LLM_MODE=only` skips Claude entirely and
-  exists for quota outages where degraded engagement beats none.
-- **Prompt shape carries the quality.** An abbreviated prompt returned a constant
-  `2` for everything; the production prompt's explicit anti-examples ("job
-  updates, congratulations, ads = 0") are what produce the separation. Those
-  anti-examples are load-bearing — do not tidy them out.
+Two behaviours changed with the removal:
+
+- **`scraper/collect.js` Phase 5c enrichment now SKIPS by default.** It ran
+  locally because it was 9,262 Claude calls and $24.62 over August 2026 — 69% of
+  the untagged `llm` bucket — to fill entities/claim/stance columns that land
+  only in `state/posts_archive/*.jsonl`, which nothing reads. Rows archive with
+  empty values (the writer already handles `|| ""`). `COLLECT_ENRICH_CLAUDE=1`
+  opts back in and pays for it; `COLLECT_ENRICH=0` disables the phase entirely.
+- **`lib/outbound_gates.js factCheck()` is now uniformly fail-OPEN.** The
+  fail-CLOSED branch existed because under local routing the checker and the
+  writer were the same weak model. With Claude the checker is stronger than the
+  writer, so a checker failure is an outage, not an inability to judge.
+
+**The stance check survived the removal** — see `runner/lib/stance_check.js`.
+It was lifted out of `local_harness.js` because the failure it catches was never
+local: on 2026-07-25 *Claude* composed "I believe in open borders" on an axis
+scored 0.87 toward NATIONAL CONTROL, and it passed voice_filter + factcheck
+untouched. Those gates see tics and officeholder facts, not a reversed position.
+`local_harness.js`'s other checks (currency drift, invented figures, Taglish
+drift, `guardedCompose`) went with the local path — they were only ever wired
+into local generation, and nothing on the Claude path called them.
+
 
 Composition, gating, and fact-checking stay on Claude. In particular the
 fact-check gate (`lib/outbound_gates.js`) must not run locally: it fails *open*,
@@ -308,7 +316,8 @@ HELMSTACK_AUTH_TOKEN, OUTBOX_X, X_AUTO_RESEARCH, X_DEEP_TREE, TWEET_START/END.
   both are Claude-era shims now (compat shim / retired stub).
 - `post.gemini_meta` field in scraper — legacy name for LLM enrichment.
 - `scraper/embed.js` header still says text-embedding-004; embeddings are OFF.
-- `BROWSE_MODEL`/`META_MODEL`/`POST_MODEL`/`OLLAMA_*`/`LOCAL_*` may linger in
-  `.env` — inert, nothing reads them since the Claude-only cutover.
+- `BROWSE_MODEL`/`META_MODEL`/`POST_MODEL`/`OLLAMA_*`/`LOCAL_*` were removed
+  from `.env` on 2026-08-25 with the local backend; nothing had read them since
+  the Claude-only cutover. `LOCAL_LLM_*` was live until that date and is gone too.
 - Old ×0.025/0.98 confidence formula — superseded by belief_calibration.js
   (recalibrate_beliefs.js was the one-time migration).

@@ -148,13 +148,13 @@ Measure → correlate → select, for reposts/quotes/reshares:
   belief-axis relevance (Claude, 0–3, gate `LI_RELEVANCE_MIN`, default 2),
   like the top `LI_MAX_LIKES` (3) and comment on `LI_MAX_COMMENTS` (1). Comments
   are claim-verified, composed on-voice, then voice/fact-check gated.
-- **Scoring is bounded, and slow.** Each score is a Claude CLI subprocess (~7s),
-  not the old local model, so `engage()` scores `scoreConcurrency` posts at a
+- **Scoring is bounded, and slow.** Each score is a Claude CLI subprocess (~7s
+  warm, slower under load), so `engage()` scores `scoreConcurrency` posts at a
   time (default 3, `LI_SCORE_CONCURRENCY`) rather than fanning the whole feed out
   at once. Scoring all ~25 candidates in parallel blew every call's timeout, and
   each scorer's `catch` returned 0 — LinkedIn engagement did nothing at all from
   2026-07-06 to 2026-08-10 and the logs only ever said "0 relevant". The scorer
-  timeout is 90s (was 30s, sized for the retired local brain), and
+  timeout is 90s (was 30s, sized for the local brain removed 2026-08-25), and
   `linkedin_engage` now logs a warning naming how many posts failed to score, so
   a broken scorer no longer looks like a boring feed.
 - LinkedIn candidates come from the **voyager feed API**

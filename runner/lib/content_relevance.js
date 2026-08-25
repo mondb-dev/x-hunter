@@ -11,9 +11,9 @@
  * The score is an LLM relevance rating 0-3 (+ a small keyword-hit tie-breaker);
  * guarded content returns -1. Same rubric x_engage has always used.
  *
- * NOTE: inference is the Claude CLI (a subprocess), not the old local model, so
- * a scorer is SLOW and callers must not fan it out across a whole timeline —
- * engage() bounds the concurrency for exactly this reason.
+ * NOTE: inference is the Claude CLI (a subprocess), so a scorer is SLOW and
+ * callers must not fan it out across a whole timeline — engage() bounds the
+ * concurrency for exactly this reason.
  */
 
 const fs = require('fs');
@@ -60,51 +60,24 @@ const SCORER_PROMPT = (text) =>
  * Build an async scorer: (post) -> relevance number. Guarded content -> -1.
  * LLM-driven; keyword hits only tie-break equal-relevance posts.
  *
- * BACKEND: this is bounded classification (one digit), the one shape a small
- * local model handles as well as a frontier one — so when LOCAL_LLM_ENABLED=1
- * and the model is actually pulled, scoring routes to Ollama (lib/local_llm.js):
- * ~free, and fast enough to matter (the Claude CLI path needed a 90s timeout
- * because a subprocess "cannot answer that fast under any load", and that is
- * paid per candidate post, every cycle, on both X and LinkedIn).
+ * BACKEND: the Claude CLI and nothing else (runner/llm.js INFERENCE POLICY).
+ * Inference is a subprocess, so the call needs a 90s timeout — it "cannot answer
+ * that fast under any load" — and that cost is paid per candidate post, every
+ * cycle, on both X and LinkedIn. Callers must bound concurrency rather than fan
+ * the scorer out across a whole timeline.
  *
- * The routing is decided ONCE per scorer, not per post, and a local failure
- * degrades to the lexical signal — it never escalates to Claude. Chaining
- * backends per call is exactly what produced "Claude 429s -> local 404s ->
- * retry -> 18 failures in one cycle" on 2026-07-30 (b158bd33a).
+ * On failure the scorer degrades to the LEXICAL signal within its own path and
+ * never chains to a second backend. Chaining per call is exactly what produced
+ * "Claude 429s -> local 404s -> retry -> 18 failures in one cycle" on
+ * 2026-07-30 (b158bd33a); the rule outlived the local backend it was written for.
  *
  * @param {string[]} keywords
  * @param {object} [opts]
- * @param {(m:string)=>void} [opts.log] one-line backend report (which backend, and why)
+ * @param {(m:string)=>void} [opts.log] one-line backend report
  */
 function makeScorer(keywords, { log } = {}) {
   const { generate: llmGenerate } = require('../llm');
-  const local = require('./local_llm');
-
-  // Resolved lazily on first use, then cached: one availability probe per run.
-  // Cache the in-flight PROMISE, not the resolved value: scoring is bounded-
-  // concurrent, so caching only the result lets N scorers all miss the cache and
-  // each run their own warm-up (observed: 3 concurrent probes, ~6s each).
-  let routePromise = null;
-  function resolveRoute() {
-    if (routePromise) return routePromise;
-    routePromise = (async () => {
-      let route;
-      if (!local.isEnabled()) { route = { local: false, why: 'local disabled' }; }
-      else {
-        const av = await local.isAvailable(); // warms the model (~110s cold)
-        // A missing model is REPORTED, never silent — the 2026-07-28 wipe went
-        // unnoticed for 2.3 days precisely because absence looked like normal output.
-        route = av.ok
-          ? { local: true, mode: local.mode(), why: `${local.MODEL} ready in ${av.warmedMs}ms, mode=${local.mode()}` }
-          : { local: false, why: `local unavailable (${av.reason})` };
-      }
-      if (log) log(`relevance backend: ${route.local ? 'local' : 'claude'} — ${route.why}`);
-      return route;
-    })();
-    return routePromise;
-  }
-
-  const digit = (raw) => { const m = String(raw).match(/[0-3]/); return m ? Number(m[0]) : 0; };
+  let reported = false;
 
   return async (post) => {
     const text = (post.text || '').trim();
@@ -115,41 +88,21 @@ function makeScorer(keywords, { log } = {}) {
     let hits = 0;
     for (const kw of keywords) if (lower.includes(kw)) hits++;
 
-    const r = await resolveRoute();
-
-    if (r.local) {
-      let localScore = null;
-      try {
-        localScore = digit(await local.generateLocal(SCORER_PROMPT(text), {
-          temperature: 0, maxTokens: 4, timeoutMs: 20_000, tag: 'relevance', stop: ['\n'],
-        }));
-      } catch {
-        // 'only' has no second backend by design (never escalate to Claude —
-        // that chaining caused the 2026-07-30 cascade); degrade to lexical.
-        if (r.mode === 'only') return (hits > 0 ? 1 : 0) + Math.min(hits, 2) * 0.1;
-      }
-      if (localScore !== null) {
-        if (r.mode === 'only') return localScore + Math.min(hits, 2) * 0.1;
-        // prefilter: a local 0 is the one call this model makes reliably.
-        if (localScore === 0) return 0 + Math.min(hits, 2) * 0.1;
-      }
-    }
+    if (log && !reported) { reported = true; log('relevance backend: claude'); }
 
     let rel = 0;
     try {
       const raw = await llmGenerate(
-        // Same SCORER_PROMPT both backends use — keeping one copy is what makes
-        // a local-vs-Claude agreement measurement meaningful.
         SCORER_PROMPT(text),
-        // 30s was sized for the old local qwen brain. Inference is now the Claude
-        // CLI (a subprocess), which cannot answer that fast under any load — the
-        // scorer was falling through to the lexical branch on every call.
+        // 90s because inference is the Claude CLI (a subprocess). A 30s budget —
+        // sized for the retired local brain — made the scorer fall through to
+        // the lexical branch on every call.
         { temperature: 0, maxTokens: 5, timeoutMs: 90_000 }
       );
       const m = String(raw).match(/[0-3]/);
       rel = m ? Number(m[0]) : 0;
     } catch {
-      rel = hits > 0 ? 1 : 0; // LLM down → fall back to lexical signal
+      rel = hits > 0 ? 1 : 0; // LLM down -> fall back to lexical signal
     }
     return rel + Math.min(hits, 2) * 0.1;
   };

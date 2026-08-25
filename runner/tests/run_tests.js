@@ -514,137 +514,51 @@ section("LinkedIn A/B scoring");
   }
 }
 
-// ── Local LLM routing (phi4-mini scorer) ──────────────────────────────────────
-// The local backend exists for bounded classification only, and its containment
-// rules are the whole point: local routing is OPT-IN, a missing model is REPORTED
-// rather than silent (the 2026-07-28 store wipe degraded every local path for
-// ~2.3 days unnoticed), and local inference must never be billed as paid.
-// These are pure-config assertions — no daemon required, so CI stays hermetic.
-section("Local LLM routing");
+// ── Stance check (the guardrail that outlived the local backend) ─────────────
+// The local backend and lib/local_harness.js were removed on 2026-08-25; the
+// stance check moved to lib/stance_check.js because the failure it catches was
+// never local. On 2026-07-25 CLAUDE composed "I believe in open borders" on an
+// axis scored 0.87 toward NATIONAL CONTROL, and it passed voice_filter +
+// factcheck untouched — those gates see tics and officeholder facts, not a
+// reversed position. Pure-shape assertions here: no model call, so CI stays
+// hermetic.
+section("Stance check");
 {
-  const localPath = path.join(RUNNER, "lib", "local_llm.js");
-  if (!fileExists(localPath)) {
-    skip("local_llm.js", "file missing");
-  } else {
-    const saved = { en: process.env.LOCAL_LLM_ENABLED, mode: process.env.LOCAL_LLM_MODE };
-    try {
-      const local = require(localPath);
+  const sp = path.join(RUNNER, "lib", "stance_check.js");
+  if (!fileExists(sp)) { fail("stance_check.js", "file missing — stance inversion is unguarded"); }
+  else {
+    const { checkStance } = require(sp);
+    if (typeof checkStance === "function") pass("checkStance exported");
+    else fail("checkStance", "not exported");
 
-      // (1) Opt-in: absent/!=1 env must NOT route locally.
-      delete process.env.LOCAL_LLM_ENABLED;
-      const offWhenUnset = local.isEnabled() === false;
-      process.env.LOCAL_LLM_ENABLED = "0";
-      const offWhenZero = local.isEnabled() === false;
-      process.env.LOCAL_LLM_ENABLED = "1";
-      const onWhenOne = local.isEnabled() === true;
-      if (offWhenUnset && offWhenZero && onWhenOne) pass("local routing is opt-in (off unless LOCAL_LLM_ENABLED=1)");
-      else fail("local opt-in", `unset=${offWhenUnset} zero=${offWhenZero} one=${onWhenOne}`);
-
-      // (2) Default mode is the SAFE one. phi4-mini measured as a good noise
-      //     filter but a bad ranker (only ever 0 or 2, never 1 or 3), so
-      //     'prefilter' — local drops 0s, Claude ranks — must be the default;
-      //     'only' collapses ranking and is for quota outages.
-      delete process.env.LOCAL_LLM_MODE;
-      const defMode = local.mode();
-      process.env.LOCAL_LLM_MODE = "only";
-      const onlyMode = local.mode();
-      process.env.LOCAL_LLM_MODE = "garbage";
-      const fallbackMode = local.mode();
-      if (defMode === "prefilter" && onlyMode === "only" && fallbackMode === "prefilter") {
-        pass("mode defaults to 'prefilter'; only an explicit 'only' collapses ranking");
-      } else {
-        fail("local mode default", `default=${defMode} only=${onlyMode} garbage=${fallbackMode}`);
-      }
-
-      // (3) Disabled must report a REASON, never a bare false — silent absence
-      //     is the failure this module was written to prevent.
-      delete process.env.LOCAL_LLM_ENABLED;
-      local.isAvailable().then((av) => {
-        if (av.ok === false && typeof av.reason === "string" && av.reason.length) {
-          pass(`unavailability carries a reason ("${av.reason}")`);
-        } else {
-          fail("local availability reason", `got ${JSON.stringify(av)}`);
-        }
-      }).catch((e) => fail("local availability reason", e.message));
-
-      // (4) Local inference must price as FREE. Without a 'phi' rule the tag
-      //     falls through to '_default' and a free call is billed at a paid rate.
-      const { normalizeModel } = require(path.join(RUNNER, "lib", "cost_meter.js"));
-      const localish = ["phi4-mini", "phi4-mini:latest", "qwen2.5-agent", "ollama/whatever", "local"];
-      const mis = localish.filter((m) => normalizeModel(m) !== "local");
-      if (!mis.length) pass("local model tags price as free (phi/qwen/ollama → 'local')");
-      else fail("local cost accounting", `these did not map to 'local': ${mis.join(", ")}`);
-    } catch (e) {
-      fail("local_llm.js", e.message.slice(0, 140));
-    } finally {
-      if (saved.en === undefined) delete process.env.LOCAL_LLM_ENABLED; else process.env.LOCAL_LLM_ENABLED = saved.en;
-      if (saved.mode === undefined) delete process.env.LOCAL_LLM_MODE; else process.env.LOCAL_LLM_MODE = saved.mode;
-    }
+    // No axis => nothing to verify against, and stance-tier subjects legitimately
+    // carry none. Must return null rather than inventing a verdict.
+    Promise.all([
+      checkStance("anything", null),
+      checkStance("anything", { poleA: "a", poleB: "b" }),   // no numeric score
+    ]).then(([noAxis, noScore]) => {
+      if (noAxis === null && noScore === null) pass("no axis / no score → no verdict (returns null)");
+      else fail("stance check axis guard", `got ${JSON.stringify([noAxis, noScore])}`);
+    }).catch((e) => fail("stance check axis guard", e.message.slice(0, 140)));
   }
 }
 
-// ── Local harness (making a weak model safe to publish from) ──────────────────
-// Each assertion below is pinned to a REAL phi4-mini failure measured on
-// Sebastian's production prompts (2026-08-19). Every one of those outputs passed
-// voice_filter.check(), which is why these checks exist. Deterministic only —
-// the model-based stance check needs a daemon and is exercised separately.
-section("Local harness");
+// ── Local backend is GONE ────────────────────────────────────────────────────
+// Removed 2026-08-25 (operator decision). Claude is the only inference backend
+// (runner/llm.js INFERENCE POLICY). This guards against a partial re-introduction
+// leaving half-wired routing behind, which is how the 2026-07-30 cascade started.
+section("Local backend removed");
 {
-  const hp = path.join(RUNNER, "lib", "local_harness.js");
-  if (!fileExists(hp)) { skip("local_harness.js", "file missing"); }
-  else {
-    const h = require(hp);
-    const SRC = "COA auditor testified the OVP had receipts naming Mary Grace Piattos for P50,000-P70,000 each.";
+  const gone = ["lib/local_llm.js", "lib/local_harness.js"]
+    .filter((f) => fileExists(path.join(RUNNER, f)));
+  if (!gone.length) pass("local_llm.js and local_harness.js are gone");
+  else fail("local backend removal", `still present: ${gone.join(", ")}`);
 
-    // Real failure: phi4-mini wrote "$50000-$70000" for peso amounts.
-    if (h.checkCurrency("Auditor found $50,000 in payments", SRC) &&
-        !h.checkCurrency("Auditor found P50,000 in payments", SRC)) {
-      pass("currency drift caught (₱ source → $ output), clean output passes");
-    } else fail("currency check", "did not catch $-for-₱ drift, or false-positived on a clean line");
-
-    // Real failure: invented a "$130,000" total that appears nowhere in the source.
-    if (h.checkInventedNumbers("totaling 130,000 pesos", SRC) &&
-        !h.checkInventedNumbers("receipts of 50,000 each", SRC)) {
-      pass("invented figures caught, source-grounded figures pass");
-    } else fail("invented numbers", "did not catch a fabricated figure, or rejected a grounded one");
-
-    // Real failure: emitted "#GAOTestimony" immediately after "No hashtags".
-    if (h.checkConstraints("Real story #COAAudit", { noHashtags: true }) &&
-        h.checkConstraints("x".repeat(300), { maxLen: 260 }) &&
-        !h.checkConstraints("A clean specific line.", { noHashtags: true, maxLen: 260 })) {
-      pass("explicit constraints enforced (hashtags, length)");
-    } else fail("constraint check", "hashtag/length enforcement wrong");
-
-    // Real failure: "collaboration between tech companies and regulatory bodies…"
-    // — fluent, on-topic, and carrying nothing concrete from the source.
-    if (h.checkSpecificity("Collaboration between stakeholders is needed.", SRC) &&
-        !h.checkSpecificity("Mary Grace Piattos is not a real person.", SRC)) {
-      pass("generic filler caught; output anchored to the source passes");
-    } else fail("specificity check", "did not catch filler, or rejected an anchored line");
-
-    // Real failure: asked for Taglish, produced Cebuano ('unya') and non-words.
-    if (h.checkTaglish("Nandito ang receipt, unya wala pa ring liquidation") &&
-        h.checkTaglish("This is entirely in English with no Tagalog at all") &&
-        !h.checkTaglish("Yung receipt walang liquidation, pero may pangalan")) {
-      pass("language drift caught (Cebuano tokens, and English-when-Taglish-asked)");
-    } else fail("taglish check", "language drift detection wrong");
-
-    // Taglish is DISABLED on the local backend (operator decision 2026-08-19):
-    // phi4-mini wrote Cebuano and non-words when asked for it, and the harness
-    // can detect that but not fix it. So local output must be English — while
-    // Filipino PROPER NOUNS stay legal, since they are correct in English copy.
-    if (h.checkEnglishOnly("Yung receipt walang liquidation") &&
-        h.checkEnglishOnly("Nandito, unya wala pa") &&
-        !h.checkEnglishOnly("Sara Duterte and Malacanang responded from Bulacan.")) {
-      pass("English-only enforced on local; Filipino proper nouns still allowed");
-    } else fail("english-only check", "blocked proper nouns, or let Tagalog/Cebuano through");
-
-    // The wrapper must FAIL CLOSED — returning nothing is correct when the
-    // output cannot be verified. Silence beats an inverted stance under his name.
-    const shape = typeof h.guardedCompose === "function";
-    if (shape) pass("guardedCompose exported (generate → verify → corrective retry → fail closed)");
-    else fail("guardedCompose", "not exported");
-  }
+  const compose = require(path.join(RUNNER, "lib", "compose.js"));
+  const leaked = ["localScope", "localRoutingActive", "localCompose", "localTaglishAllowed"]
+    .filter((k) => k in compose);
+  if (!leaked.length) pass("compose.js exports no local routing");
+  else fail("compose local routing", `still exported: ${leaked.join(", ")}`);
 }
 
 // ── Daily stance video: locked voice ──────────────────────────────────────────
