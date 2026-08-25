@@ -1,8 +1,8 @@
 {
   "schema_version": "1.0",
-  "generated_at": "2026-08-25T10:22:01.903Z",
+  "generated_at": "2026-08-25T13:22:05.361Z",
   "method": "mechanical_registry_v1",
-  "profiled_at": "2026-08-25T10:22:07.795Z",
+  "profiled_at": "2026-08-25T13:22:19.810Z",
   "sources": [
     {
       "domain": "theguardian.com",
@@ -11,7 +11,7 @@
       "first_seen_at": "2026-03-27T23:17:00Z",
       "last_seen_at": "2026-08-22T15:49:14.166Z",
       "discovery": {
-        "distinct_urls": 1009,
+        "distinct_urls": 1011,
         "example_urls": [
           "https://www.theguardian.com/us-news/2026/jun/23/trump-immigration-courthouse-arrest-policy",
           "https://www.theguardian.com/us-news/2026/jun/28/ice-minnesota-defending-democracy",
@@ -21,7 +21,7 @@
         ],
         "origin_counts": {
           "ontology_evidence": 51,
-          "reading_queue": 969,
+          "reading_queue": 971,
           "journals": 136,
           "articles": 5
         },
@@ -76,7 +76,7 @@
         "breadth": {
           "score": 0.94,
           "basis": [
-            "distinct_urls:1009",
+            "distinct_urls:1011",
             "distinct_axes:21",
             "origin_types:4"
           ]
@@ -116,7 +116,7 @@
             "newsroom_domain_pattern",
             "article_path_seen",
             "doi_or_identifier_path_seen",
-            "distinct_urls:1009",
+            "distinct_urls:1011",
             "distinct_axes:21",
             "origin_types:4",
             "referring_accounts:0",
@@ -705,7 +705,7 @@
       "first_seen_at": "2026-06-26T07:05:00Z",
       "last_seen_at": "2026-08-22T15:49:14.432Z",
       "discovery": {
-        "distinct_urls": 638,
+        "distinct_urls": 639,
         "example_urls": [
           "https://www.bbc.co.uk/news/articles/cn8qxz6qypyo",
           "https://www.bbc.co.uk/news/articles/cn075j04pnyo?at_medium=RSS&amp;at_campaign=rss",
@@ -715,7 +715,7 @@
         ],
         "origin_counts": {
           "ontology_evidence": 9,
-          "reading_queue": 650,
+          "reading_queue": 651,
           "journals": 22,
           "articles": 2
         },
@@ -754,7 +754,7 @@
         "breadth": {
           "score": 0.94,
           "basis": [
-            "distinct_urls:638",
+            "distinct_urls:639",
             "distinct_axes:7",
             "origin_types:4"
           ]
@@ -792,7 +792,7 @@
           "method": "mechanical_v1",
           "basis": [
             "newsroom_domain_pattern",
-            "distinct_urls:638",
+            "distinct_urls:639",
             "distinct_axes:7",
             "origin_types:4",
             "referring_accounts:0",
@@ -840,7 +840,7 @@
       "first_seen_at": "2026-06-22T00:15:00Z",
       "last_seen_at": "2026-08-22T09:38:02.939Z",
       "discovery": {
-        "distinct_urls": 679,
+        "distinct_urls": 681,
         "example_urls": [
           "https://www.nytimes.com/2026/06/19/world/canada/frank-stronach-trial-guilty-sex-charges.html",
           "https://www.nytimes.com/2026/06/27/world/americas/mexican-officials-us-informants.html",
@@ -850,7 +850,7 @@
         ],
         "origin_counts": {
           "ontology_evidence": 24,
-          "reading_queue": 703,
+          "reading_queue": 705,
           "journals": 59
         },
         "distinct_referring_accounts": 0,
@@ -895,7 +895,7 @@
         "breadth": {
           "score": 0.8799999999999999,
           "basis": [
-            "distinct_urls:679",
+            "distinct_urls:681",
             "distinct_axes:13",
             "origin_types:3"
           ]
@@ -934,7 +934,7 @@
           "basis": [
             "newsroom_domain_pattern",
             "article_path_seen",
-            "distinct_urls:679",
+            "distinct_urls:681",
             "distinct_axes:13",
             "origin_types:3",
             "referring_accounts:0",
@@ -1990,7 +1990,7 @@
       "first_seen_at": "2026-07-08T04:32:07.894Z",
       "last_seen_at": "2026-08-21T02:35:38.942Z",
       "discovery": {
-        "distinct_urls": 13,
+        "distinct_urls": 14,
         "example_urls": [
           "https://pcij.org/2026/06/23/tycoons-swoop-in-clean-energy-boom/",
           "https://pcij.org/2026/05/24/duterte-impeach-votes-2026/",
@@ -2000,7 +2000,7 @@
         ],
         "origin_counts": {
           "ontology_evidence": 37,
-          "reading_queue": 34,
+          "reading_queue": 35,
           "journals": 69,
           "articles": 1
         },
@@ -2044,7 +2044,7 @@
         "breadth": {
           "score": 0.94,
           "basis": [
-            "distinct_urls:13",
+            "distinct_urls:14",
             "distinct_axes:11",
             "origin_types:4"
           ]
@@ -2078,12 +2078,12 @@
         },
         "overall": {
           "score": 0.5684374999999999,
-          "confidence": 0.5214,
+          "confidence": 0.5438999999999999,
           "method": "mechanical_v1",
           "basis": [
             "unknown_domain_pattern",
             "article_path_seen",
-            "distinct_urls:13",
+            "distinct_urls:14",
             "distinct_axes:11",
             "origin_types:4",
             "referring_accounts:0",
@@ -3672,7 +3672,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-08-22T12:39:28.297Z",
+        "fetched_at": "2026-08-25T12:52:07.009Z",
         "homepage_url": "https://rappler.com/",
         "example_url": "https://www.rappler.com/fact-check-no-arrest-warrant-issued-vs-marcoleta",
         "homepage_status": 200,
@@ -5143,7 +5143,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-08-22T12:39:39.255Z",
+        "fetched_at": "2026-08-25T12:52:17.482Z",
         "homepage_url": "https://doubleclick.net/",
         "example_url": "https://ad.doubleclick.net/ddm/trackclk/N117602.5126432X/B34540950.438517562;dc_trk_aid=631787244;dc_trk_cid=249093288;dc_dbm_token=$%7BDC_DBM_TOKEN%7D;dc_lat=;dc_rdid=;tag_for_child_directed_treatment=;tfua=;gdpr=$%7BGDPR%7D;gdpr_consent=$%7BGDPR_CONSENT_755%7D;gpp=$%7BGPP_STRING_755%7D;gpp_sid=$%7BGPP_SID%7D;ltd=;dc_tdv=1?twclid=292cdwzoayexun1iu6o4fsk10z",
         "homepage_status": 200,
@@ -6051,7 +6051,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-08-22T12:39:41.419Z",
+        "fetched_at": "2026-08-25T12:52:19.394Z",
         "homepage_url": "https://youtu.be/",
         "example_url": "https://youtu.be/m7jAReMF2c8?si=AtT5ue3VPnmZq5V6",
         "homepage_status": 200,
@@ -7073,7 +7073,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-08-22T12:39:42.173Z",
+        "fetched_at": "2026-08-25T12:52:19.982Z",
         "homepage_url": "https://ro.co/",
         "example_url": "https://ro.co/lp/weight-loss/quiz/?utm_medium=paid_social&utm_source=Twitter&utm_campaign=41158458&utm_term=54579155&utm_content=Ad2&twclid=2bv3rduaz2ypp78vahy5e6wspd",
         "homepage_status": 403,
@@ -17226,15 +17226,15 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-08-20T00:44:14.009Z",
+        "fetched_at": "2026-08-25T11:22:03.756Z",
         "homepage_url": "https://floxnar.com/",
         "example_url": "https://www.floxnar.com/products/raineren?utm_source=twitter&utm_campaign=41855548&twclid=2irtlfucdq7bk7pzbe9l7xo7v",
-        "homepage_status": null,
-        "example_status": null,
-        "homepage_final_url": "https://floxnar.com/",
+        "homepage_status": 403,
+        "example_status": 403,
+        "homepage_final_url": "https://www.floxnar.com/",
         "example_final_url": "https://www.floxnar.com/products/raineren?utm_source=twitter&utm_campaign=41855548&twclid=2irtlfucdq7bk7pzbe9l7xo7v",
-        "homepage_content_type": "",
-        "example_content_type": "",
+        "homepage_content_type": "text/html; charset=UTF-8",
+        "example_content_type": "text/html; charset=UTF-8",
         "homepage": {
           "has_meta_author": false,
           "has_published_time": false,
@@ -17353,7 +17353,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-08-20T17:32:53.522Z",
+        "fetched_at": "2026-08-25T11:22:04.737Z",
         "homepage_url": "https://pyrenva.com/",
         "example_url": "https://www.pyrenva.com/products/havern-polo?utm_source=twitter&utm_campaign=HpoloSWC02&twclid=285udvuvfb3zz15rwylu1v9etj",
         "homepage_status": 403,
@@ -17480,15 +17480,15 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-08-19T05:03:00.495Z",
+        "fetched_at": "2026-08-25T11:22:05.177Z",
         "homepage_url": "https://pipfarm.com/",
         "example_url": "https://pipfarm.com/pay-with-profits?utm_source=twitter&utm_medium=paid_social&utm_campaign=x_global&utm_content=pwp&twclid=24kvuhbhl6j5q4afmd9e50y0ha",
-        "homepage_status": null,
-        "example_status": null,
+        "homepage_status": 403,
+        "example_status": 403,
         "homepage_final_url": "https://pipfarm.com/",
         "example_final_url": "https://pipfarm.com/pay-with-profits?utm_source=twitter&utm_medium=paid_social&utm_campaign=x_global&utm_content=pwp&twclid=24kvuhbhl6j5q4afmd9e50y0ha",
-        "homepage_content_type": "",
-        "example_content_type": "",
+        "homepage_content_type": "text/html; charset=UTF-8",
+        "example_content_type": "text/html; charset=UTF-8",
         "homepage": {
           "has_meta_author": false,
           "has_published_time": false,
@@ -17606,7 +17606,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-08-19T18:47:15.711Z",
+        "fetched_at": "2026-08-25T11:22:06.193Z",
         "homepage_url": "https://kubit.ai/",
         "example_url": "https://kubit.ai/agent-analytics-landing/?utm_source=x_ads&utm_medium=paid_social&utm_campaign=claude_group&twclid=2eb9hv62es2e93pzc1qorbclgf",
         "homepage_status": 200,
@@ -17732,7 +17732,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-08-19T18:47:15.934Z",
+        "fetched_at": "2026-08-25T11:52:03.840Z",
         "homepage_url": "https://ridge.com/",
         "example_url": "https://ridge.com/collections/fday-rings-3rlp?utm_source=social&utm_medium=twitter&utm_campaign=TW+%7C+ACQ+%7C+RINGS+%7C+PCH+%7C+FDAY26+%28IO%29&utm_term=5.17+-+PCH+-+FDAY+-+IMGs+-+FDAY-RINGS-3RLP&utm_content=05250b_GIFT_FDAY_JEWELRY_WEDDING-RINGS_MIX-COLOR_OFFER-%25OFF_The-gift-your-man-actually-wants-%28we-asked%29_RINGS-FDAY-Branded__META_NN_IH_DR__FDAY-RINGS-3RLP_5-12-26%3Fnb_platform%3Dtwitter&twclid=2cpbcoko2qkg7u5nrw2y5g1wdo",
         "homepage_status": 403,
@@ -17858,7 +17858,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-08-19T19:48:23.472Z",
+        "fetched_at": "2026-08-25T11:52:23.845Z",
         "homepage_url": "https://makofy.com/",
         "example_url": "https://makofy.com/openclaw?twclid=217okoej56crajhkd22b6nsfzf",
         "homepage_status": null,
@@ -17984,7 +17984,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-08-19T05:03:05.404Z",
+        "fetched_at": "2026-08-25T11:52:28.428Z",
         "homepage_url": "https://gobob.xyz/",
         "example_url": "https://app.gobob.xyz/?utm_campaign=stables&utm_medium=paidads&utm_source=x&twclid=21mgv5jwnbc2895vpeqnlit4hv",
         "homepage_status": 200,
@@ -18108,7 +18108,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-08-19T19:48:25.438Z",
+        "fetched_at": "2026-08-25T11:52:30.006Z",
         "homepage_url": "https://moltbook.com/",
         "example_url": "https://www.moltbook.com/post/29d49c40-bc59-4a1a-b875-3d3d41ec469e",
         "homepage_status": 200,
@@ -18235,7 +18235,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-08-19T19:48:26.143Z",
+        "fetched_at": "2026-08-25T13:22:06.705Z",
         "homepage_url": "https://framia.pro/",
         "example_url": "https://framia.pro/?utm_source=x&utm_campaign=twitter_adsmarch_framia_14_20260331&utm_medium=paid_social&twclid=2e6c8vey7aaz8sdwedu4gd0jgx",
         "homepage_status": 403,
@@ -18362,7 +18362,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-08-19T20:18:16.757Z",
+        "fetched_at": "2026-08-25T13:22:11.646Z",
         "homepage_url": "https://wptgold.com/",
         "example_url": "https://wptgold.com/subscription-3?twclid=26ckzizem3j5r9q8uf2y0hd1k6",
         "homepage_status": 200,
@@ -18489,7 +18489,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-08-19T20:18:18.809Z",
+        "fetched_at": "2026-08-25T13:22:13.695Z",
         "homepage_url": "https://cocainecoffee.com/",
         "example_url": "https://cocainecoffee.com/?twclid=27twwbqquoqevtoxgztpejovrb",
         "homepage_status": 200,
@@ -18596,7 +18596,7 @@
             "about:false",
             "contact:true",
             "corrections:false",
-            "outbound_links:21",
+            "outbound_links:20",
             "opinion_marker:false"
           ]
         },
@@ -18616,7 +18616,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-08-20T05:17:39.104Z",
+        "fetched_at": "2026-08-25T13:22:19.810Z",
         "homepage_url": "https://agora.io/",
         "example_url": "https://www.agora.io/en/solutions/education/?utm_source=Twitter&utm_medium=Paid-Social&utm_campaign=PoweredByAgora&utm_content=Education-Jul-26&twclid=26e5ryj39r8vw6no3x0qprxip8",
         "homepage_status": 200,
@@ -18642,7 +18642,7 @@
           "has_about_link": false,
           "has_contact_link": true,
           "has_corrections_link": false,
-          "outbound_links_count": 21,
+          "outbound_links_count": 20,
           "opinion_marker": false
         }
       }
