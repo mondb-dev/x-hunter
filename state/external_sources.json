@@ -1,8 +1,8 @@
 {
   "schema_version": "1.0",
-  "generated_at": "2026-08-26T04:34:39.192Z",
+  "generated_at": "2026-08-26T07:34:42.917Z",
   "method": "mechanical_registry_v1",
-  "profiled_at": "2026-08-26T04:34:44.076Z",
+  "profiled_at": "2026-08-26T07:34:51.512Z",
   "sources": [
     {
       "domain": "theguardian.com",
@@ -11,7 +11,7 @@
       "first_seen_at": "2026-03-27T23:17:00Z",
       "last_seen_at": "2026-08-22T15:49:14.166Z",
       "discovery": {
-        "distinct_urls": 1021,
+        "distinct_urls": 1023,
         "example_urls": [
           "https://www.theguardian.com/us-news/2026/jun/23/trump-immigration-courthouse-arrest-policy",
           "https://www.theguardian.com/us-news/2026/jun/28/ice-minnesota-defending-democracy",
@@ -21,7 +21,7 @@
         ],
         "origin_counts": {
           "ontology_evidence": 51,
-          "reading_queue": 981,
+          "reading_queue": 983,
           "journals": 136,
           "articles": 5
         },
@@ -76,7 +76,7 @@
         "breadth": {
           "score": 0.94,
           "basis": [
-            "distinct_urls:1021",
+            "distinct_urls:1023",
             "distinct_axes:21",
             "origin_types:4"
           ]
@@ -116,7 +116,7 @@
             "newsroom_domain_pattern",
             "article_path_seen",
             "doi_or_identifier_path_seen",
-            "distinct_urls:1021",
+            "distinct_urls:1023",
             "distinct_axes:21",
             "origin_types:4",
             "referring_accounts:0",
@@ -840,7 +840,7 @@
       "first_seen_at": "2026-06-22T00:15:00Z",
       "last_seen_at": "2026-08-22T09:38:02.939Z",
       "discovery": {
-        "distinct_urls": 687,
+        "distinct_urls": 689,
         "example_urls": [
           "https://www.nytimes.com/2026/06/19/world/canada/frank-stronach-trial-guilty-sex-charges.html",
           "https://www.nytimes.com/2026/06/27/world/americas/mexican-officials-us-informants.html",
@@ -850,7 +850,7 @@
         ],
         "origin_counts": {
           "ontology_evidence": 24,
-          "reading_queue": 711,
+          "reading_queue": 713,
           "journals": 59
         },
         "distinct_referring_accounts": 0,
@@ -895,7 +895,7 @@
         "breadth": {
           "score": 0.8799999999999999,
           "basis": [
-            "distinct_urls:687",
+            "distinct_urls:689",
             "distinct_axes:13",
             "origin_types:3"
           ]
@@ -934,7 +934,7 @@
           "basis": [
             "newsroom_domain_pattern",
             "article_path_seen",
-            "distinct_urls:687",
+            "distinct_urls:689",
             "distinct_axes:13",
             "origin_types:3",
             "referring_accounts:0",
@@ -1990,7 +1990,7 @@
       "first_seen_at": "2026-07-08T04:32:07.894Z",
       "last_seen_at": "2026-08-21T02:35:38.942Z",
       "discovery": {
-        "distinct_urls": 14,
+        "distinct_urls": 15,
         "example_urls": [
           "https://pcij.org/2026/06/23/tycoons-swoop-in-clean-energy-boom/",
           "https://pcij.org/2026/05/24/duterte-impeach-votes-2026/",
@@ -2000,7 +2000,7 @@
         ],
         "origin_counts": {
           "ontology_evidence": 37,
-          "reading_queue": 35,
+          "reading_queue": 36,
           "journals": 69,
           "articles": 1
         },
@@ -2044,7 +2044,7 @@
         "breadth": {
           "score": 0.94,
           "basis": [
-            "distinct_urls:14",
+            "distinct_urls:15",
             "distinct_axes:11",
             "origin_types:4"
           ]
@@ -2078,12 +2078,12 @@
         },
         "overall": {
           "score": 0.5684374999999999,
-          "confidence": 0.5438999999999999,
+          "confidence": 0.5664,
           "method": "mechanical_v1",
           "basis": [
             "unknown_domain_pattern",
             "article_path_seen",
-            "distinct_urls:14",
+            "distinct_urls:15",
             "distinct_axes:11",
             "origin_types:4",
             "referring_accounts:0",
@@ -3259,9 +3259,9 @@
       "entity": "T Co",
       "kind": "unknown",
       "first_seen_at": "2016-05-05T18:57:30.000Z",
-      "last_seen_at": "2026-08-26T03:42:41.000Z",
+      "last_seen_at": "2026-08-26T06:52:43.016Z",
       "discovery": {
-        "distinct_urls": 16551,
+        "distinct_urls": 16655,
         "example_urls": [
           "https://t.co/pJSE124ec4",
           "https://t.co/Soz8BXPWaa",
@@ -3270,11 +3270,11 @@
           "https://t.co/cYaqYDRp08"
         ],
         "origin_counts": {
-          "feed_buffer": 14465,
-          "feed_buffer_reply": 5179,
+          "feed_buffer": 14565,
+          "feed_buffer_reply": 5198,
           "articles": 3
         },
-        "distinct_referring_accounts": 2860,
+        "distinct_referring_accounts": 2865,
         "sample_referring_accounts": [
           "0808iveta",
           "09abracadabra",
@@ -3313,7 +3313,7 @@
         "breadth": {
           "score": 0.53,
           "basis": [
-            "distinct_urls:16551",
+            "distinct_urls:16655",
             "distinct_axes:0",
             "origin_types:3"
           ]
@@ -3321,7 +3321,7 @@
         "corroboration": {
           "score": 0.9125,
           "basis": [
-            "referring_accounts:2860",
+            "referring_accounts:2865",
             "origin_types:3"
           ]
         },
@@ -3352,10 +3352,10 @@
           "basis": [
             "unknown_domain_pattern",
             "doi_or_identifier_path_seen",
-            "distinct_urls:16551",
+            "distinct_urls:16655",
             "distinct_axes:0",
             "origin_types:3",
-            "referring_accounts:2860",
+            "referring_accounts:2865",
             "origin_types:3",
             "track_record_unavailable"
           ]
@@ -5565,9 +5565,9 @@
       "entity": "Starlink",
       "kind": "unknown",
       "first_seen_at": "2026-04-07T03:51:50.000Z",
-      "last_seen_at": "2026-08-26T03:16:12.711Z",
+      "last_seen_at": "2026-08-26T06:08:59.000Z",
       "discovery": {
-        "distinct_urls": 178,
+        "distinct_urls": 196,
         "example_urls": [
           "https://www.starlink.com/us/residential?referral=RC-DF-9543787-19448-67&utm_medium=paid&utm_campaign=awr_us_soc_twt_ptg_cau&utm_content=awr_us_soc_twt_ptg_cau_res_gvp_v4s_stc_en-us_sdb-bluesky-uptime&twclid=2cg62b1u0oqrypdim5oir1767e",
           "https://www.starlink.com/us/residential?referral=RC-DF-9543787-19448-67&utm_medium=paid&utm_campaign=awr_us_soc_twt_ptg_cau&utm_content=awr_us_soc_twt_ptg_cau_res_gvp_v4s_stc_en-us_sdb-avail-sat-yourhome&twclid=2216n7j93v9absqn77762mm626",
@@ -5576,7 +5576,7 @@
           "https://www.starlink.com/us/residential?referral=RC-DF-9543787-19448-67&utm_medium=paid&utm_campaign=awr_us_soc_twt_ptg_cau&utm_content=awr_us_soc_twt_ptg_cau_res_gvp_v4s_stc_en-us_sdb-avail-sat-arrived&twclid=21pi7t0qs8tgw0wgnh5mvmdu2g"
         ],
         "origin_counts": {
-          "feed_buffer_reply": 159,
+          "feed_buffer_reply": 177,
           "feed_buffer": 23
         },
         "distinct_referring_accounts": 5,
@@ -5612,7 +5612,7 @@
         "breadth": {
           "score": 0.47,
           "basis": [
-            "distinct_urls:178",
+            "distinct_urls:196",
             "distinct_axes:0",
             "origin_types:2"
           ]
@@ -5650,7 +5650,7 @@
           "method": "mechanical_v1",
           "basis": [
             "unknown_domain_pattern",
-            "distinct_urls:178",
+            "distinct_urls:196",
             "distinct_axes:0",
             "origin_types:2",
             "referring_accounts:5",
@@ -6087,9 +6087,9 @@
       "entity": "Huawei",
       "kind": "unknown",
       "first_seen_at": "2026-04-28T08:12:51.000Z",
-      "last_seen_at": "2026-08-26T04:22:33.527Z",
+      "last_seen_at": "2026-08-26T05:06:27.000Z",
       "discovery": {
-        "distinct_urls": 34,
+        "distinct_urls": 35,
         "example_urls": [
           "https://www.huawei.com/en/media-center/transform/24/06-jason-lee?utm_medium=psm&utm_source=twitter&utm_campaign=Transform",
           "https://e.huawei.com/ae/events/branding/gitex-ca?utm_medium=psm&utm_source=twitter&source=corp_sc_en&utm_campaign=GITEX2026",
@@ -6098,7 +6098,7 @@
           "https://www.huawei.com/en/news/2026/5/ieee-iscas-tau-scaling?utm_medium=psm&utm_source=twitter&utm_campaign=media-center&twclid=2cf3rne1zap57lkrq9cen4j0o4"
         ],
         "origin_counts": {
-          "feed_buffer_reply": 16,
+          "feed_buffer_reply": 17,
           "feed_buffer": 18
         },
         "distinct_referring_accounts": 1,
@@ -6131,7 +6131,7 @@
         "breadth": {
           "score": 0.47,
           "basis": [
-            "distinct_urls:34",
+            "distinct_urls:35",
             "distinct_axes:0",
             "origin_types:2"
           ]
@@ -6170,7 +6170,7 @@
           "basis": [
             "unknown_domain_pattern",
             "article_path_seen",
-            "distinct_urls:34",
+            "distinct_urls:35",
             "distinct_axes:0",
             "origin_types:2",
             "referring_accounts:1",
@@ -7236,9 +7236,9 @@
       "entity": "Bet88 Ph",
       "kind": "unknown",
       "first_seen_at": "2026-07-03T16:00:02.000Z",
-      "last_seen_at": "2026-08-22T06:31:20.223Z",
+      "last_seen_at": "2026-08-25T13:10:00.000Z",
       "discovery": {
-        "distinct_urls": 109,
+        "distinct_urls": 110,
         "example_urls": [
           "https://bet88.ph/en/?type=registration&modal=user&ref=xa027&twclid=27gurqyk8ekpo92oqcm3aeuing",
           "https://bet88.ph/en/?type=registration&modal=user&ref=xa023&twclid=25wrsnnpnc7378nutxmyo1v6kj",
@@ -7247,7 +7247,7 @@
           "https://bet88.ph/en/?type=registration&modal=user&ref=xa024&twclid=2463n370x0ryr7dm2eovirlg7t"
         ],
         "origin_counts": {
-          "feed_buffer_reply": 38,
+          "feed_buffer_reply": 39,
           "feed_buffer": 71
         },
         "distinct_referring_accounts": 1,
@@ -7279,7 +7279,7 @@
         "breadth": {
           "score": 0.47,
           "basis": [
-            "distinct_urls:109",
+            "distinct_urls:110",
             "distinct_axes:0",
             "origin_types:2"
           ]
@@ -7317,7 +7317,7 @@
           "method": "mechanical_v1",
           "basis": [
             "unknown_domain_pattern",
-            "distinct_urls:109",
+            "distinct_urls:110",
             "distinct_axes:0",
             "origin_types:2",
             "referring_accounts:1",
@@ -17512,6 +17512,133 @@
       }
     },
     {
+      "domain": "shopee.ph",
+      "entity": "Shopee Ph",
+      "kind": "unknown",
+      "first_seen_at": "2026-08-01T02:38:23.049Z",
+      "last_seen_at": "2026-08-26T06:26:27.804Z",
+      "discovery": {
+        "distinct_urls": 8,
+        "example_urls": [
+          "https://shopee.ph/universal-link/product/278394653/22353819981/?deep_and_web=1&smtt=9&utm_campaign=s278394653_ss_ph_twtr_twitterad&utm_content=eoint&utm_medium=seller&utm_source=twitter&twclid=21uy0mdqfu18byi7ighc1a87wq",
+          "https://shopee.ph/universal-link/product/278394653/22353819981/?deep_and_web=1&smtt=9&utm_campaign=s278394653_ss_ph_twtr_twitterad&utm_content=eoint&utm_medium=seller&utm_source=twitter&twclid=27zrwtk8jty1udv5n7exlcuvsf",
+          "https://shopee.ph/universal-link/product/278394653/22353819981/?deep_and_web=1&smtt=9&utm_campaign=s278394653_ss_ph_twtr_twitterad&utm_content=eoint&utm_medium=seller&utm_source=twitter&twclid=21g7ic77xyycmkpk8au6yp9yuw",
+          "https://shopee.ph/universal-link/product/278394653/22353819981/?deep_and_web=1&smtt=9&utm_campaign=s278394653_ss_ph_twtr_twitterad&utm_content=eoint&utm_medium=seller&utm_source=twitter&twclid=25pujicvxfu94itxtwc9nbr5ht",
+          "https://shopee.ph/universal-link/product/278394653/22353819981/?deep_and_web=1&smtt=9&utm_campaign=s278394653_ss_ph_twtr_twitterad&utm_content=eoint&utm_medium=seller&utm_source=twitter&twclid=21ocwjrkz9v53mxfs7ot38xzi7"
+        ],
+        "origin_counts": {
+          "feed_buffer": 5,
+          "feed_buffer_reply": 3
+        },
+        "distinct_referring_accounts": 1,
+        "sample_referring_accounts": [
+          "efficascentph"
+        ],
+        "distinct_axes": []
+      },
+      "claims": {
+        "total": 0,
+        "supported": 0,
+        "refuted": 0,
+        "contested": 0,
+        "unverified": 0,
+        "resolved_count": 0
+      },
+      "structural_features": {
+        "has_search_paths": false,
+        "has_article_paths": false,
+        "has_doi_paths": false
+      },
+      "ratings": {
+        "provenance": {
+          "score": 0.45,
+          "basis": [
+            "unknown_domain_pattern"
+          ]
+        },
+        "breadth": {
+          "score": 0.3533333333333333,
+          "basis": [
+            "distinct_urls:8",
+            "distinct_axes:0",
+            "origin_types:2"
+          ]
+        },
+        "corroboration": {
+          "score": 0.2833333333333333,
+          "basis": [
+            "referring_accounts:1",
+            "origin_types:2"
+          ]
+        },
+        "track_record": {
+          "score": null,
+          "basis": [
+            "no_resolved_claims_observed"
+          ]
+        },
+        "profile": {
+          "score": 0.1,
+          "confidence": 0.55,
+          "basis": [
+            "meta_author:false",
+            "published_time:false",
+            "canonical:true",
+            "about:false",
+            "contact:false",
+            "corrections:false",
+            "outbound_links:0",
+            "opinion_marker:false"
+          ]
+        },
+        "overall": {
+          "score": 0.41322916666666665,
+          "confidence": 0.30219999999999997,
+          "method": "mechanical_v1",
+          "basis": [
+            "unknown_domain_pattern",
+            "distinct_urls:8",
+            "distinct_axes:0",
+            "origin_types:2",
+            "referring_accounts:1",
+            "origin_types:2",
+            "track_record_unavailable"
+          ]
+        }
+      },
+      "profile": {
+        "fetched_at": "2026-08-25T14:52:10.178Z",
+        "homepage_url": "https://shopee.ph/",
+        "example_url": "https://shopee.ph/universal-link/product/278394653/22353819981/?deep_and_web=1&smtt=9&utm_campaign=s278394653_ss_ph_twtr_twitterad&utm_content=eoint&utm_medium=seller&utm_source=twitter&twclid=21uy0mdqfu18byi7ighc1a87wq",
+        "homepage_status": 200,
+        "example_status": 200,
+        "homepage_final_url": "https://shopee.ph/",
+        "example_final_url": "https://shopee.ph/product/278394653/22353819981/?smtt=9&twclid=21uy0mdqfu18byi7ighc1a87wq&uls_trackid=56fleefr000r&utm_campaign=s278394653_ss_ph_twtr_twitterad&utm_content=eoint&utm_medium=seller&utm_source=twitter",
+        "homepage_content_type": "text/html; charset=utf-8",
+        "example_content_type": "text/html; charset=utf-8",
+        "homepage": {
+          "has_meta_author": false,
+          "has_published_time": false,
+          "has_canonical": false,
+          "has_about_link": false,
+          "has_contact_link": false,
+          "has_corrections_link": false,
+          "outbound_links_count": 0,
+          "opinion_marker": false
+        },
+        "example": {
+          "has_meta_author": false,
+          "has_published_time": false,
+          "has_canonical": true,
+          "has_about_link": false,
+          "has_contact_link": false,
+          "has_corrections_link": false,
+          "outbound_links_count": 0,
+          "opinion_marker": false
+        }
+      }
+    },
+    {
       "domain": "kubit.ai",
       "entity": "Kubit Ai",
       "kind": "unknown",
@@ -19029,133 +19156,6 @@
       }
     },
     {
-      "domain": "shopee.ph",
-      "entity": "Shopee Ph",
-      "kind": "unknown",
-      "first_seen_at": "2026-08-01T02:38:23.049Z",
-      "last_seen_at": "2026-08-15T05:25:49.545Z",
-      "discovery": {
-        "distinct_urls": 7,
-        "example_urls": [
-          "https://shopee.ph/universal-link/product/278394653/22353819981/?deep_and_web=1&smtt=9&utm_campaign=s278394653_ss_ph_twtr_twitterad&utm_content=eoint&utm_medium=seller&utm_source=twitter&twclid=21uy0mdqfu18byi7ighc1a87wq",
-          "https://shopee.ph/universal-link/product/278394653/22353819981/?deep_and_web=1&smtt=9&utm_campaign=s278394653_ss_ph_twtr_twitterad&utm_content=eoint&utm_medium=seller&utm_source=twitter&twclid=27zrwtk8jty1udv5n7exlcuvsf",
-          "https://shopee.ph/universal-link/product/278394653/22353819981/?deep_and_web=1&smtt=9&utm_campaign=s278394653_ss_ph_twtr_twitterad&utm_content=eoint&utm_medium=seller&utm_source=twitter&twclid=21g7ic77xyycmkpk8au6yp9yuw",
-          "https://shopee.ph/universal-link/product/278394653/22353819981/?deep_and_web=1&smtt=9&utm_campaign=s278394653_ss_ph_twtr_twitterad&utm_content=eoint&utm_medium=seller&utm_source=twitter&twclid=25pujicvxfu94itxtwc9nbr5ht",
-          "https://shopee.ph/universal-link/product/278394653/22353819981/?deep_and_web=1&smtt=9&utm_campaign=s278394653_ss_ph_twtr_twitterad&utm_content=eoint&utm_medium=seller&utm_source=twitter&twclid=21ocwjrkz9v53mxfs7ot38xzi7"
-        ],
-        "origin_counts": {
-          "feed_buffer": 4,
-          "feed_buffer_reply": 3
-        },
-        "distinct_referring_accounts": 1,
-        "sample_referring_accounts": [
-          "efficascentph"
-        ],
-        "distinct_axes": []
-      },
-      "claims": {
-        "total": 0,
-        "supported": 0,
-        "refuted": 0,
-        "contested": 0,
-        "unverified": 0,
-        "resolved_count": 0
-      },
-      "structural_features": {
-        "has_search_paths": false,
-        "has_article_paths": false,
-        "has_doi_paths": false
-      },
-      "ratings": {
-        "provenance": {
-          "score": 0.45,
-          "basis": [
-            "unknown_domain_pattern"
-          ]
-        },
-        "breadth": {
-          "score": 0.32416666666666666,
-          "basis": [
-            "distinct_urls:7",
-            "distinct_axes:0",
-            "origin_types:2"
-          ]
-        },
-        "corroboration": {
-          "score": 0.2833333333333333,
-          "basis": [
-            "referring_accounts:1",
-            "origin_types:2"
-          ]
-        },
-        "track_record": {
-          "score": null,
-          "basis": [
-            "no_resolved_claims_observed"
-          ]
-        },
-        "profile": {
-          "score": 0.1,
-          "confidence": 0.55,
-          "basis": [
-            "meta_author:false",
-            "published_time:false",
-            "canonical:true",
-            "about:false",
-            "contact:false",
-            "corrections:false",
-            "outbound_links:0",
-            "opinion_marker:false"
-          ]
-        },
-        "overall": {
-          "score": 0.4068489583333333,
-          "confidence": 0.273575,
-          "method": "mechanical_v1",
-          "basis": [
-            "unknown_domain_pattern",
-            "distinct_urls:7",
-            "distinct_axes:0",
-            "origin_types:2",
-            "referring_accounts:1",
-            "origin_types:2",
-            "track_record_unavailable"
-          ]
-        }
-      },
-      "profile": {
-        "fetched_at": "2026-08-25T14:52:10.178Z",
-        "homepage_url": "https://shopee.ph/",
-        "example_url": "https://shopee.ph/universal-link/product/278394653/22353819981/?deep_and_web=1&smtt=9&utm_campaign=s278394653_ss_ph_twtr_twitterad&utm_content=eoint&utm_medium=seller&utm_source=twitter&twclid=21uy0mdqfu18byi7ighc1a87wq",
-        "homepage_status": 200,
-        "example_status": 200,
-        "homepage_final_url": "https://shopee.ph/",
-        "example_final_url": "https://shopee.ph/product/278394653/22353819981/?smtt=9&twclid=21uy0mdqfu18byi7ighc1a87wq&uls_trackid=56fleefr000r&utm_campaign=s278394653_ss_ph_twtr_twitterad&utm_content=eoint&utm_medium=seller&utm_source=twitter",
-        "homepage_content_type": "text/html; charset=utf-8",
-        "example_content_type": "text/html; charset=utf-8",
-        "homepage": {
-          "has_meta_author": false,
-          "has_published_time": false,
-          "has_canonical": false,
-          "has_about_link": false,
-          "has_contact_link": false,
-          "has_corrections_link": false,
-          "outbound_links_count": 0,
-          "opinion_marker": false
-        },
-        "example": {
-          "has_meta_author": false,
-          "has_published_time": false,
-          "has_canonical": true,
-          "has_about_link": false,
-          "has_contact_link": false,
-          "has_corrections_link": false,
-          "outbound_links_count": 0,
-          "opinion_marker": false
-        }
-      }
-    },
-    {
       "domain": "oppo.com",
       "entity": "Oppo",
       "kind": "unknown",
@@ -20163,6 +20163,133 @@
           "has_contact_link": false,
           "has_corrections_link": false,
           "outbound_links_count": 4,
+          "opinion_marker": false
+        }
+      }
+    },
+    {
+      "domain": "dito.ph",
+      "entity": "Dito Ph",
+      "kind": "unknown",
+      "first_seen_at": "2026-05-21T11:15:34.704Z",
+      "last_seen_at": "2026-08-25T10:01:00.000Z",
+      "discovery": {
+        "distinct_urls": 6,
+        "example_urls": [
+          "https://dito.ph/sandali?utm_source=twitter&utm_medium=cpm&utm_campaign=DOTC-DM-AWAR-DM-COJ-MAY-INT&utm_id=2026DM&utm_term=COJFEST&utm_content=promoted_post_1&twclid=2estlcww980yee2hzsu5vdedbn",
+          "https://dito.ph/sandali?utm_source=twitter&utm_medium=cpm&utm_campaign=DOTC-DM-AWAR-DM-COJ-MAY-INT&utm_id=2026DM&utm_term=COJFEST&utm_content=promoted_post_1&twclid=230avkqvmubgda2nlkovmrb0nb",
+          "https://dito.ph/usap-tayo-dito-podcast?utm_source=twitter&utm_medium=cpm&utm_campaign=DOTC-DM-AWAR-PODTR-INTRO-JULOCT-X&utm_id=2026DM&utm_term=usap_tayo_dito_mainKV&utm_content=VID01&twclid=2d5nfecoqvtfvyl7jyesaz9eym",
+          "https://dito.ph/usap-tayo-dito-podcast?utm_source=twitter&utm_medium=cpm&utm_campaign=DOTC-DM-AWAR-PODTR-INTRO-JULOCT-X&utm_id=2026DM&utm_term=usap_tayo_dito_mainKV&utm_content=VID01&twclid=24qmbjtm3a95qq4ounykptsp3w",
+          "https://dito.ph/usap-tayo-dito-podcast?utm_source=twitter&utm_medium=cpm&utm_campaign=DOTC-DM-AWAR-PODTR-INTRO-JULOCT-X&utm_id=2026DM&utm_term=usap_tayo_dito_mainKV&utm_content=VID01&twclid=225vfanohsx898t2giv4wm57cl"
+        ],
+        "origin_counts": {
+          "feed_buffer": 5,
+          "feed_buffer_reply": 1
+        },
+        "distinct_referring_accounts": 1,
+        "sample_referring_accounts": [
+          "ditophofficial"
+        ],
+        "distinct_axes": []
+      },
+      "claims": {
+        "total": 0,
+        "supported": 0,
+        "refuted": 0,
+        "contested": 0,
+        "unverified": 0,
+        "resolved_count": 0
+      },
+      "structural_features": {
+        "has_search_paths": false,
+        "has_article_paths": false,
+        "has_doi_paths": false
+      },
+      "ratings": {
+        "provenance": {
+          "score": 0.45,
+          "basis": [
+            "unknown_domain_pattern"
+          ]
+        },
+        "breadth": {
+          "score": 0.295,
+          "basis": [
+            "distinct_urls:6",
+            "distinct_axes:0",
+            "origin_types:2"
+          ]
+        },
+        "corroboration": {
+          "score": 0.2833333333333333,
+          "basis": [
+            "referring_accounts:1",
+            "origin_types:2"
+          ]
+        },
+        "track_record": {
+          "score": null,
+          "basis": [
+            "no_resolved_claims_observed"
+          ]
+        },
+        "profile": {
+          "score": 0.16,
+          "confidence": 0.55,
+          "basis": [
+            "meta_author:false",
+            "published_time:false",
+            "canonical:true",
+            "about:false",
+            "contact:false",
+            "corrections:false",
+            "outbound_links:6",
+            "opinion_marker:false"
+          ]
+        },
+        "overall": {
+          "score": 0.40046875,
+          "confidence": 0.24495,
+          "method": "mechanical_v1",
+          "basis": [
+            "unknown_domain_pattern",
+            "distinct_urls:6",
+            "distinct_axes:0",
+            "origin_types:2",
+            "referring_accounts:1",
+            "origin_types:2",
+            "track_record_unavailable"
+          ]
+        }
+      },
+      "profile": {
+        "fetched_at": "2026-08-26T07:04:43.434Z",
+        "homepage_url": "https://dito.ph/",
+        "example_url": "https://dito.ph/sandali?utm_source=twitter&utm_medium=cpm&utm_campaign=DOTC-DM-AWAR-DM-COJ-MAY-INT&utm_id=2026DM&utm_term=COJFEST&utm_content=promoted_post_1&twclid=2estlcww980yee2hzsu5vdedbn",
+        "homepage_status": 200,
+        "example_status": 200,
+        "homepage_final_url": "https://dito.ph/",
+        "example_final_url": "https://dito.ph/sandali?utm_source=twitter&utm_medium=cpm&utm_campaign=DOTC-DM-AWAR-DM-COJ-MAY-INT&utm_id=2026DM&utm_term=COJFEST&utm_content=promoted_post_1&twclid=2estlcww980yee2hzsu5vdedbn",
+        "homepage_content_type": "text/html; charset=UTF-8",
+        "example_content_type": "text/html; charset=UTF-8",
+        "homepage": {
+          "has_meta_author": false,
+          "has_published_time": false,
+          "has_canonical": true,
+          "has_about_link": false,
+          "has_contact_link": false,
+          "has_corrections_link": false,
+          "outbound_links_count": 12,
+          "opinion_marker": false
+        },
+        "example": {
+          "has_meta_author": false,
+          "has_published_time": false,
+          "has_canonical": true,
+          "has_about_link": false,
+          "has_contact_link": false,
+          "has_corrections_link": false,
+          "outbound_links_count": 6,
           "opinion_marker": false
         }
       }
@@ -26331,7 +26458,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-08-20T11:46:46.367Z",
+        "fetched_at": "2026-08-26T05:34:45.458Z",
         "homepage_url": "https://2si.com/",
         "example_url": "https://2si.com/buy-now?twclid=27uev9nd9i9cgpoubm28hr0ash",
         "homepage_status": 200,
@@ -26458,7 +26585,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-08-19T05:32:17.969Z",
+        "fetched_at": "2026-08-26T05:34:46.651Z",
         "homepage_url": "https://apple.com/",
         "example_url": "https://apps.apple.com/us/app/oceanhorn-3/id1539411904?twclid=25zyeamc9kepxd6rdpaddxcmui",
         "homepage_status": 200,
@@ -26584,7 +26711,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-08-20T11:46:46.799Z",
+        "fetched_at": "2026-08-26T05:34:47.213Z",
         "homepage_url": "https://enter.pro/",
         "example_url": "https://enter.pro/?utm_source=x&utm_medium=paid_social&utm_campaign=twitter_adsmarch_enter_13_0260403&twclid=21y4m3veyg3qz1wzl60cdelnk1",
         "homepage_status": 403,
@@ -26710,7 +26837,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-08-20T11:46:49.564Z",
+        "fetched_at": "2026-08-26T05:34:51.536Z",
         "homepage_url": "https://intro.co/",
         "example_url": "https://intro.co/marketplace?topic=Career+%26+Business&tag%5B%5D=Marketing+%26+Growth&utm_source=twitter_ads&utm_campaign=Prospecting_Traffic_20260402&utm_medium=Broad_AllOS_25-54_CPC_ExpertPageView_Growth-03-26-26_20260402&utm_term=230_Static_03-26-26-Growth-Concept-20d-AI-Clueless-To-AI-Confident_PLP-Marketplace-Business-Marketing_April-2026&source=intropaid&twclid=268r32sn6j3tec3xu57anl3fij",
         "homepage_status": 200,
@@ -26836,7 +26963,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-08-20T11:46:51.316Z",
+        "fetched_at": "2026-08-26T06:04:47.820Z",
         "homepage_url": "https://patsnap.com/",
         "example_url": "https://eureka.patsnap.com/mse-landing?from=mktcampaign_mse_ads_x_formuvideo-asia2en2&twclid=29qq6c80v43jc7y7o992xnzaaf",
         "homepage_status": 200,
@@ -26962,7 +27089,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-08-20T21:04:19.161Z",
+        "fetched_at": "2026-08-26T06:04:48.726Z",
         "homepage_url": "https://raybrowser.com/",
         "example_url": "https://raybrowser.com/?twclid=2f1xntsosgc648xbloi17s8fyh",
         "homepage_status": 200,
@@ -27088,7 +27215,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-08-20T21:04:20.311Z",
+        "fetched_at": "2026-08-26T06:04:49.426Z",
         "homepage_url": "https://propfirm.compare/",
         "example_url": "https://propfirm.compare/loyalty-program?twclid=2d4zyj9jmkiff93u6ux1kjpg32",
         "homepage_status": 200,
@@ -27214,7 +27341,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-08-20T21:04:21.585Z",
+        "fetched_at": "2026-08-26T06:04:50.266Z",
         "homepage_url": "https://x.ai/",
         "example_url": "https://x.ai/news/grok-voice-think-fast-1?utm_source=x&utm_medium=paid&utm_campaign=us_web_x_ua_grok_20260509_voice-api_purchase&utm_content=us_web_x_ron_ron_x_1865_ads-test&utm_term=en_voice-agent-thinkfast_img_ac_x_x_x_learnmore&twclid=2dnuv3islky6synxbuj0of9m5k",
         "homepage_status": 403,
@@ -27340,7 +27467,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-08-20T22:01:00.827Z",
+        "fetched_at": "2026-08-26T07:04:43.868Z",
         "homepage_url": "https://savagex.com/",
         "example_url": "https://www.savagex.com/dmg/839F22?utm_medium=paid_social_media&utm_source=twitter&utm_campaign=twitter_campaign_id_55&utm_content=twitter_adgroup_id_55A&utm_term=twitter_ad_id_55AD&twclid=2d2ns712d2nwvwxmok1hbdjanj",
         "homepage_status": 403,
@@ -27466,7 +27593,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-08-20T22:01:01.605Z",
+        "fetched_at": "2026-08-26T07:04:44.386Z",
         "homepage_url": "https://myreply.app/",
         "example_url": "https://myreply.app/?utm_source=x&utm_medium=cpc&utm_campaign=raycast_lookalike&utm_content=gmail-reply&twclid=29xpa88z92949xba2t1n28a3y0",
         "homepage_status": 200,
@@ -27592,7 +27719,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-08-20T22:34:13.748Z",
+        "fetched_at": "2026-08-26T07:04:44.610Z",
         "homepage_url": "https://huggies.com/",
         "example_url": "https://www.huggies.com/en-us/diapers/little-movers?twclid=21yw19hs9bynwsphlmw5vod8rj",
         "homepage_status": 403,
@@ -27717,7 +27844,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-08-20T22:34:14.498Z",
+        "fetched_at": "2026-08-26T07:34:44.502Z",
         "homepage_url": "https://jpost.com/",
         "example_url": "https://jpost.com/",
         "homepage_status": 200,
@@ -27821,7 +27948,7 @@
             "about:true",
             "contact:false",
             "corrections:false",
-            "outbound_links:67",
+            "outbound_links:68",
             "opinion_marker:false"
           ]
         },
@@ -27841,7 +27968,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-08-20T22:34:16.037Z",
+        "fetched_at": "2026-08-26T07:34:46.395Z",
         "homepage_url": "https://sedaily.com/",
         "example_url": "https://sedaily.com/",
         "homepage_status": 200,
@@ -27857,7 +27984,7 @@
           "has_about_link": true,
           "has_contact_link": false,
           "has_corrections_link": false,
-          "outbound_links_count": 67,
+          "outbound_links_count": 68,
           "opinion_marker": false
         },
         "example": {
@@ -27867,7 +27994,7 @@
           "has_about_link": true,
           "has_contact_link": false,
           "has_corrections_link": false,
-          "outbound_links_count": 67,
+          "outbound_links_count": 68,
           "opinion_marker": false
         }
       }
@@ -27966,7 +28093,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-08-20T22:34:18.646Z",
+        "fetched_at": "2026-08-26T07:34:49.019Z",
         "homepage_url": "https://mprnews.org/",
         "example_url": "https://www.mprnews.org/story/2023/12/19/minnesota-medicaid-fraud-prevention",
         "homepage_status": 200,
@@ -28091,7 +28218,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-08-20T23:30:13.152Z",
+        "fetched_at": "2026-08-26T07:34:51.512Z",
         "homepage_url": "https://nobullproject.com/",
         "example_url": "https://nobullproject.com/collections/drive-2-shoes?utm_source=x&utm_medium=paidsocial&utm_campaign=cpatest&utm_term=drive&utm_content=white&twclid=24gy5fp678esqwxit13xmono4x",
         "homepage_status": 200,
@@ -37603,132 +37730,6 @@
           "has_contact_link": false,
           "has_corrections_link": false,
           "outbound_links_count": 5,
-          "opinion_marker": false
-        }
-      }
-    },
-    {
-      "domain": "dito.ph",
-      "entity": "Dito Ph",
-      "kind": "unknown",
-      "first_seen_at": "2026-05-21T11:15:34.704Z",
-      "last_seen_at": "2026-08-20T01:20:46.748Z",
-      "discovery": {
-        "distinct_urls": 5,
-        "example_urls": [
-          "https://dito.ph/sandali?utm_source=twitter&utm_medium=cpm&utm_campaign=DOTC-DM-AWAR-DM-COJ-MAY-INT&utm_id=2026DM&utm_term=COJFEST&utm_content=promoted_post_1&twclid=2estlcww980yee2hzsu5vdedbn",
-          "https://dito.ph/sandali?utm_source=twitter&utm_medium=cpm&utm_campaign=DOTC-DM-AWAR-DM-COJ-MAY-INT&utm_id=2026DM&utm_term=COJFEST&utm_content=promoted_post_1&twclid=230avkqvmubgda2nlkovmrb0nb",
-          "https://dito.ph/usap-tayo-dito-podcast?utm_source=twitter&utm_medium=cpm&utm_campaign=DOTC-DM-AWAR-PODTR-INTRO-JULOCT-X&utm_id=2026DM&utm_term=usap_tayo_dito_mainKV&utm_content=VID01&twclid=2d5nfecoqvtfvyl7jyesaz9eym",
-          "https://dito.ph/usap-tayo-dito-podcast?utm_source=twitter&utm_medium=cpm&utm_campaign=DOTC-DM-AWAR-PODTR-INTRO-JULOCT-X&utm_id=2026DM&utm_term=usap_tayo_dito_mainKV&utm_content=VID01&twclid=24qmbjtm3a95qq4ounykptsp3w",
-          "https://dito.ph/usap-tayo-dito-podcast?utm_source=twitter&utm_medium=cpm&utm_campaign=DOTC-DM-AWAR-PODTR-INTRO-JULOCT-X&utm_id=2026DM&utm_term=usap_tayo_dito_mainKV&utm_content=VID01&twclid=225vfanohsx898t2giv4wm57cl"
-        ],
-        "origin_counts": {
-          "feed_buffer": 5
-        },
-        "distinct_referring_accounts": 1,
-        "sample_referring_accounts": [
-          "ditophofficial"
-        ],
-        "distinct_axes": []
-      },
-      "claims": {
-        "total": 0,
-        "supported": 0,
-        "refuted": 0,
-        "contested": 0,
-        "unverified": 0,
-        "resolved_count": 0
-      },
-      "structural_features": {
-        "has_search_paths": false,
-        "has_article_paths": false,
-        "has_doi_paths": false
-      },
-      "ratings": {
-        "provenance": {
-          "score": 0.45,
-          "basis": [
-            "unknown_domain_pattern"
-          ]
-        },
-        "breadth": {
-          "score": 0.20583333333333334,
-          "basis": [
-            "distinct_urls:5",
-            "distinct_axes:0",
-            "origin_types:1"
-          ]
-        },
-        "corroboration": {
-          "score": 0.19583333333333333,
-          "basis": [
-            "referring_accounts:1",
-            "origin_types:1"
-          ]
-        },
-        "track_record": {
-          "score": null,
-          "basis": [
-            "no_resolved_claims_observed"
-          ]
-        },
-        "profile": {
-          "score": 0,
-          "confidence": 0.55,
-          "basis": [
-            "meta_author:false",
-            "published_time:false",
-            "canonical:false",
-            "about:false",
-            "contact:false",
-            "corrections:false",
-            "outbound_links:0",
-            "opinion_marker:false"
-          ]
-        },
-        "overall": {
-          "score": 0.37276041666666665,
-          "confidence": 0.19585000000000002,
-          "method": "mechanical_v1",
-          "basis": [
-            "unknown_domain_pattern",
-            "distinct_urls:5",
-            "distinct_axes:0",
-            "origin_types:1",
-            "referring_accounts:1",
-            "origin_types:1",
-            "track_record_unavailable"
-          ]
-        }
-      },
-      "profile": {
-        "fetched_at": "2026-08-18T21:58:22.385Z",
-        "homepage_url": "https://dito.ph/",
-        "example_url": "https://dito.ph/sandali?utm_source=twitter&utm_medium=cpm&utm_campaign=DOTC-DM-AWAR-DM-COJ-MAY-INT&utm_id=2026DM&utm_term=COJFEST&utm_content=promoted_post_1&twclid=2estlcww980yee2hzsu5vdedbn",
-        "homepage_status": null,
-        "example_status": null,
-        "homepage_final_url": "https://dito.ph/",
-        "example_final_url": "https://dito.ph/sandali?utm_source=twitter&utm_medium=cpm&utm_campaign=DOTC-DM-AWAR-DM-COJ-MAY-INT&utm_id=2026DM&utm_term=COJFEST&utm_content=promoted_post_1&twclid=2estlcww980yee2hzsu5vdedbn",
-        "homepage_content_type": "",
-        "example_content_type": "",
-        "homepage": {
-          "has_meta_author": false,
-          "has_published_time": false,
-          "has_canonical": false,
-          "has_about_link": false,
-          "has_contact_link": false,
-          "has_corrections_link": false,
-          "outbound_links_count": 0,
-          "opinion_marker": false
-        },
-        "example": {
-          "has_meta_author": false,
-          "has_published_time": false,
-          "has_canonical": false,
-          "has_about_link": false,
-          "has_contact_link": false,
-          "has_corrections_link": false,
-          "outbound_links_count": 0,
           "opinion_marker": false
         }
       }
