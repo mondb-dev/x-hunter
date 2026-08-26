@@ -1,8 +1,8 @@
 {
   "schema_version": "1.0",
-  "generated_at": "2026-08-26T07:34:42.917Z",
+  "generated_at": "2026-08-26T10:47:45.244Z",
   "method": "mechanical_registry_v1",
-  "profiled_at": "2026-08-26T07:34:51.512Z",
+  "profiled_at": "2026-08-26T10:47:52.312Z",
   "sources": [
     {
       "domain": "theguardian.com",
@@ -11,7 +11,7 @@
       "first_seen_at": "2026-03-27T23:17:00Z",
       "last_seen_at": "2026-08-22T15:49:14.166Z",
       "discovery": {
-        "distinct_urls": 1023,
+        "distinct_urls": 1025,
         "example_urls": [
           "https://www.theguardian.com/us-news/2026/jun/23/trump-immigration-courthouse-arrest-policy",
           "https://www.theguardian.com/us-news/2026/jun/28/ice-minnesota-defending-democracy",
@@ -21,7 +21,7 @@
         ],
         "origin_counts": {
           "ontology_evidence": 51,
-          "reading_queue": 983,
+          "reading_queue": 985,
           "journals": 136,
           "articles": 5
         },
@@ -76,7 +76,7 @@
         "breadth": {
           "score": 0.94,
           "basis": [
-            "distinct_urls:1023",
+            "distinct_urls:1025",
             "distinct_axes:21",
             "origin_types:4"
           ]
@@ -116,7 +116,7 @@
             "newsroom_domain_pattern",
             "article_path_seen",
             "doi_or_identifier_path_seen",
-            "distinct_urls:1023",
+            "distinct_urls:1025",
             "distinct_axes:21",
             "origin_types:4",
             "referring_accounts:0",
@@ -840,7 +840,7 @@
       "first_seen_at": "2026-06-22T00:15:00Z",
       "last_seen_at": "2026-08-22T09:38:02.939Z",
       "discovery": {
-        "distinct_urls": 689,
+        "distinct_urls": 690,
         "example_urls": [
           "https://www.nytimes.com/2026/06/19/world/canada/frank-stronach-trial-guilty-sex-charges.html",
           "https://www.nytimes.com/2026/06/27/world/americas/mexican-officials-us-informants.html",
@@ -850,7 +850,7 @@
         ],
         "origin_counts": {
           "ontology_evidence": 24,
-          "reading_queue": 713,
+          "reading_queue": 714,
           "journals": 59
         },
         "distinct_referring_accounts": 0,
@@ -895,7 +895,7 @@
         "breadth": {
           "score": 0.8799999999999999,
           "basis": [
-            "distinct_urls:689",
+            "distinct_urls:690",
             "distinct_axes:13",
             "origin_types:3"
           ]
@@ -934,7 +934,7 @@
           "basis": [
             "newsroom_domain_pattern",
             "article_path_seen",
-            "distinct_urls:689",
+            "distinct_urls:690",
             "distinct_axes:13",
             "origin_types:3",
             "referring_accounts:0",
@@ -1990,7 +1990,7 @@
       "first_seen_at": "2026-07-08T04:32:07.894Z",
       "last_seen_at": "2026-08-21T02:35:38.942Z",
       "discovery": {
-        "distinct_urls": 15,
+        "distinct_urls": 16,
         "example_urls": [
           "https://pcij.org/2026/06/23/tycoons-swoop-in-clean-energy-boom/",
           "https://pcij.org/2026/05/24/duterte-impeach-votes-2026/",
@@ -2000,7 +2000,7 @@
         ],
         "origin_counts": {
           "ontology_evidence": 37,
-          "reading_queue": 36,
+          "reading_queue": 37,
           "journals": 69,
           "articles": 1
         },
@@ -2044,7 +2044,7 @@
         "breadth": {
           "score": 0.94,
           "basis": [
-            "distinct_urls:15",
+            "distinct_urls:16",
             "distinct_axes:11",
             "origin_types:4"
           ]
@@ -2078,12 +2078,12 @@
         },
         "overall": {
           "score": 0.5684374999999999,
-          "confidence": 0.5664,
+          "confidence": 0.5889,
           "method": "mechanical_v1",
           "basis": [
             "unknown_domain_pattern",
             "article_path_seen",
-            "distinct_urls:15",
+            "distinct_urls:16",
             "distinct_axes:11",
             "origin_types:4",
             "referring_accounts:0",
@@ -3259,9 +3259,9 @@
       "entity": "T Co",
       "kind": "unknown",
       "first_seen_at": "2016-05-05T18:57:30.000Z",
-      "last_seen_at": "2026-08-26T06:52:43.016Z",
+      "last_seen_at": "2026-08-26T07:54:23.327Z",
       "discovery": {
-        "distinct_urls": 16655,
+        "distinct_urls": 16680,
         "example_urls": [
           "https://t.co/pJSE124ec4",
           "https://t.co/Soz8BXPWaa",
@@ -3270,11 +3270,11 @@
           "https://t.co/cYaqYDRp08"
         ],
         "origin_counts": {
-          "feed_buffer": 14565,
-          "feed_buffer_reply": 5198,
+          "feed_buffer": 14588,
+          "feed_buffer_reply": 5207,
           "articles": 3
         },
-        "distinct_referring_accounts": 2865,
+        "distinct_referring_accounts": 2866,
         "sample_referring_accounts": [
           "0808iveta",
           "09abracadabra",
@@ -3313,7 +3313,7 @@
         "breadth": {
           "score": 0.53,
           "basis": [
-            "distinct_urls:16655",
+            "distinct_urls:16680",
             "distinct_axes:0",
             "origin_types:3"
           ]
@@ -3321,7 +3321,7 @@
         "corroboration": {
           "score": 0.9125,
           "basis": [
-            "referring_accounts:2865",
+            "referring_accounts:2866",
             "origin_types:3"
           ]
         },
@@ -3352,10 +3352,10 @@
           "basis": [
             "unknown_domain_pattern",
             "doi_or_identifier_path_seen",
-            "distinct_urls:16655",
+            "distinct_urls:16680",
             "distinct_axes:0",
             "origin_types:3",
-            "referring_accounts:2865",
+            "referring_accounts:2866",
             "origin_types:3",
             "track_record_unavailable"
           ]
@@ -5565,9 +5565,9 @@
       "entity": "Starlink",
       "kind": "unknown",
       "first_seen_at": "2026-04-07T03:51:50.000Z",
-      "last_seen_at": "2026-08-26T06:08:59.000Z",
+      "last_seen_at": "2026-08-26T07:35:05.000Z",
       "discovery": {
-        "distinct_urls": 196,
+        "distinct_urls": 205,
         "example_urls": [
           "https://www.starlink.com/us/residential?referral=RC-DF-9543787-19448-67&utm_medium=paid&utm_campaign=awr_us_soc_twt_ptg_cau&utm_content=awr_us_soc_twt_ptg_cau_res_gvp_v4s_stc_en-us_sdb-bluesky-uptime&twclid=2cg62b1u0oqrypdim5oir1767e",
           "https://www.starlink.com/us/residential?referral=RC-DF-9543787-19448-67&utm_medium=paid&utm_campaign=awr_us_soc_twt_ptg_cau&utm_content=awr_us_soc_twt_ptg_cau_res_gvp_v4s_stc_en-us_sdb-avail-sat-yourhome&twclid=2216n7j93v9absqn77762mm626",
@@ -5576,7 +5576,7 @@
           "https://www.starlink.com/us/residential?referral=RC-DF-9543787-19448-67&utm_medium=paid&utm_campaign=awr_us_soc_twt_ptg_cau&utm_content=awr_us_soc_twt_ptg_cau_res_gvp_v4s_stc_en-us_sdb-avail-sat-arrived&twclid=21pi7t0qs8tgw0wgnh5mvmdu2g"
         ],
         "origin_counts": {
-          "feed_buffer_reply": 177,
+          "feed_buffer_reply": 186,
           "feed_buffer": 23
         },
         "distinct_referring_accounts": 5,
@@ -5612,7 +5612,7 @@
         "breadth": {
           "score": 0.47,
           "basis": [
-            "distinct_urls:196",
+            "distinct_urls:205",
             "distinct_axes:0",
             "origin_types:2"
           ]
@@ -5650,7 +5650,7 @@
           "method": "mechanical_v1",
           "basis": [
             "unknown_domain_pattern",
-            "distinct_urls:196",
+            "distinct_urls:205",
             "distinct_axes:0",
             "origin_types:2",
             "referring_accounts:5",
@@ -7962,7 +7962,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-08-23T09:57:38.873Z",
+        "fetched_at": "2026-08-26T10:17:40.209Z",
         "homepage_url": "https://coderabbit.ai/",
         "example_url": "https://www.coderabbit.ai/agent?utm_source=twitter&utm_medium=cpc&utm_campaign=brandawareness_slack&twclid=25ohyy1nnhx1vb6p888i79f380",
         "homepage_status": 200,
@@ -8597,7 +8597,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-08-23T09:57:39.096Z",
+        "fetched_at": "2026-08-26T10:17:40.560Z",
         "homepage_url": "https://bcgame-bet.com/",
         "example_url": "https://bcall-global.bcgame-bet.com/dispatch-v6?i=45zn3497p&utm_medium=twitter&utm_content=%7B%7Bad_name%7D%7D&p=%2Flogin%2Fregist&ch=twitter&pixel_id=or72z&register=tw-or72z-or738&purchase=tw-or72z-or736&twclid=2cjhb3kupxi19emmjqo3fks82g",
         "homepage_status": null,
@@ -9105,7 +9105,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-08-23T08:28:07.293Z",
+        "fetched_at": "2026-08-26T08:34:47.384Z",
         "homepage_url": "https://hyperagent.com/",
         "example_url": "https://www.hyperagent.com/?promo=FIRST1000&utm_source=twitter&utm_medium=paidsocial&utm_campaign=hyperagent_conversions&utm_content=ag3_fleet&utm_term=ag3_ai_dev_followers&utm_id=recNjFFq2Yg5747V4&twclid=2dzs7nc78iuf64njs9fxab27tl",
         "homepage_status": 200,
@@ -9339,7 +9339,7 @@
             "about:false",
             "contact:false",
             "corrections:false",
-            "outbound_links:61",
+            "outbound_links:60",
             "opinion_marker:false"
           ]
         },
@@ -9359,7 +9359,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-08-23T09:57:40.797Z",
+        "fetched_at": "2026-08-26T10:17:42.974Z",
         "homepage_url": "https://shipaton.com/",
         "example_url": "https://www.shipaton.com/events/?utm_source=x&utm_medium=cpc&utm_campaign=shipaton-traffic&twclid=2d8n4jkad805fesk63uxwuffy9",
         "homepage_status": 200,
@@ -9385,7 +9385,7 @@
           "has_about_link": false,
           "has_contact_link": false,
           "has_corrections_link": false,
-          "outbound_links_count": 61,
+          "outbound_links_count": 60,
           "opinion_marker": false
         }
       }
@@ -9613,7 +9613,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-08-23T08:28:07.684Z",
+        "fetched_at": "2026-08-26T08:34:47.688Z",
         "homepage_url": "https://wsj.com/",
         "example_url": "https://www.wsj.com/video/three-things-to-consider-before-buying-an-electric-vehicle/BF3DA411-C296-4CB8-A22D-BE3A2E943ACB?mod=WSJvidctr_watchnow_pos2%3FUCID%3DWSJ_SMD_TWT_BRA_BND_MBC_NAP_NAP_EVS_NAP&twclid=2227k5fcsvy3eazrqjlp63r0go",
         "homepage_status": 401,
@@ -9740,7 +9740,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-08-23T08:28:09.183Z",
+        "fetched_at": "2026-08-26T08:34:50.163Z",
         "homepage_url": "https://aramco.com/",
         "example_url": "https://www.aramco.com/en/what-we-do/energy-innovation/innovation-ecosystem/aramco-fifa-partnership?utm_source=x&utm_medium=cpm&utm_term=en_vid_cpm_inf-ftbl_na_football-fans&utm_content=en_4x5_vid_6s_global_fifa-whatif_na_m3&twclid=2f1bxdfhmr1if32n1ssvcc3xtc",
         "homepage_status": 200,
@@ -10092,14 +10092,14 @@
           ]
         },
         "profile": {
-          "score": 0.42000000000000004,
+          "score": 0.30000000000000004,
           "confidence": 0.65,
           "basis": [
             "meta_author:false",
             "published_time:true",
             "canonical:true",
             "about:false",
-            "contact:true",
+            "contact:false",
             "corrections:false",
             "outbound_links:2",
             "opinion_marker:false"
@@ -10121,23 +10121,23 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-08-23T09:57:47.850Z",
+        "fetched_at": "2026-08-26T10:17:46.770Z",
         "homepage_url": "https://fx-edge.com/",
         "example_url": "https://fx-edge.com/prop-liquidity/?utm_source=twitter&utm_medium=ppc&utm_campaign=prop_liquidity&twclid=2232cmky8wi7upvvrdlud3bfsm",
-        "homepage_status": 200,
+        "homepage_status": null,
         "example_status": 200,
         "homepage_final_url": "https://fx-edge.com/",
         "example_final_url": "https://fx-edge.com/prop-liquidity/?utm_source=twitter&utm_medium=ppc&utm_campaign=prop_liquidity&twclid=2232cmky8wi7upvvrdlud3bfsm",
-        "homepage_content_type": "text/html; charset=UTF-8",
+        "homepage_content_type": "",
         "example_content_type": "text/html; charset=UTF-8",
         "homepage": {
           "has_meta_author": false,
-          "has_published_time": true,
-          "has_canonical": true,
+          "has_published_time": false,
+          "has_canonical": false,
           "has_about_link": false,
-          "has_contact_link": true,
+          "has_contact_link": false,
           "has_corrections_link": false,
-          "outbound_links_count": 2,
+          "outbound_links_count": 0,
           "opinion_marker": false
         },
         "example": {
@@ -10248,7 +10248,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-08-23T08:28:09.957Z",
+        "fetched_at": "2026-08-26T08:34:50.695Z",
         "homepage_url": "https://imbue.com/",
         "example_url": "https://imbue.com/product/bouncer/redirect.html?utm_source=x&utm_medium=paid_social&utm_campaign=omni&authuser=0&hl=en&twclid=28wps3duhy1q7hzrcdj2h5pxpl",
         "homepage_status": 200,
@@ -28343,7 +28343,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-08-20T23:30:16.436Z",
+        "fetched_at": "2026-08-26T09:04:45.653Z",
         "homepage_url": "https://pixelsuite.ai/",
         "example_url": "https://www.pixelsuite.ai/?twclid=21t2mc2zkr7fbld6fej146r5rz",
         "homepage_status": 404,
@@ -28468,7 +28468,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-08-21T00:02:30.301Z",
+        "fetched_at": "2026-08-26T09:04:48.133Z",
         "homepage_url": "https://theograce.com/",
         "example_url": "https://www.theograce.com/products/terry-diamond-heart-necklace-with-engraved-names-in-gold-plating?utm_term=Guitar&utm_id=41178982&utm_medium=cpc&utm_campaign=US_ALL_twitter_cpc_Display_MD26_M4W_Still&utm_source=twitter&utm_content=MD26&twclid=2dnpihgths0rs7qj2dk5rkgxbo",
         "homepage_status": 200,
@@ -28593,7 +28593,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-08-21T00:02:32.173Z",
+        "fetched_at": "2026-08-26T09:04:50.101Z",
         "homepage_url": "https://suno.com/",
         "example_url": "https://suno.com/?wpsrc=Twitter&utm_source=Twitter&utm_medium=cpc&twclid=262jn9t05wzgtlibjiyo9sypsn",
         "homepage_status": 200,
@@ -28718,7 +28718,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-08-21T00:02:33.265Z",
+        "fetched_at": "2026-08-26T09:04:54.677Z",
         "homepage_url": "https://thefabulous.co/",
         "example_url": "https://start.thefabulous.co/onboarding/fab-initial-tw?utm_source=twitter&utm_medium=paid&utm_campaign=41232969&utm_content=54677002&twclid=2sflbfppx41vhym58cf0xiqtt",
         "homepage_status": 200,
@@ -28843,7 +28843,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-08-21T00:02:34.733Z",
+        "fetched_at": "2026-08-26T10:47:47.856Z",
         "homepage_url": "https://kurate.org/",
         "example_url": "https://kurate.org/?twclid=297nodwqt8tc962gjnxn3ym0jb",
         "homepage_status": 200,
@@ -28968,7 +28968,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-08-21T01:04:07.061Z",
+        "fetched_at": "2026-08-26T10:47:48.002Z",
         "homepage_url": "https://mexc.com/",
         "example_url": "https://www.mexc.com/register?utm_source=brandad&utm_medium=twitter&utm_campaign=pizza_register&twclid=22vw5h310hr1lnaz6krw03u5v2",
         "homepage_status": null,
@@ -29093,7 +29093,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-08-21T01:04:07.198Z",
+        "fetched_at": "2026-08-26T10:47:48.252Z",
         "homepage_url": "https://afterprime.com/",
         "example_url": "https://afterprime.com/trade/eurusd?utm_source=twitter&utm_campaign=tofu&utm_medium=video&twclid=2623ygrxed4wh1418d13xdzmrn",
         "homepage_status": 403,
@@ -29218,7 +29218,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-08-21T01:04:09.227Z",
+        "fetched_at": "2026-08-26T10:47:52.312Z",
         "homepage_url": "https://snxs.ae/",
         "example_url": "https://app.snxs.ae/careers?utm_source=X&utm_medium=paid_social&utm_campaign=Xhiring&utm_term=MENABCW_Sales&utm_content=IN%2FPK%2FPH&twclid=29gz41ww7eg05p2f841yjjlsws",
         "homepage_status": 200,
