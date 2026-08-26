@@ -1,8 +1,8 @@
 {
   "schema_version": "1.0",
-  "generated_at": "2026-08-26T01:34:37.833Z",
+  "generated_at": "2026-08-26T04:34:39.192Z",
   "method": "mechanical_registry_v1",
-  "profiled_at": "2026-08-26T01:34:56.170Z",
+  "profiled_at": "2026-08-26T04:34:44.076Z",
   "sources": [
     {
       "domain": "theguardian.com",
@@ -11,7 +11,7 @@
       "first_seen_at": "2026-03-27T23:17:00Z",
       "last_seen_at": "2026-08-22T15:49:14.166Z",
       "discovery": {
-        "distinct_urls": 1019,
+        "distinct_urls": 1021,
         "example_urls": [
           "https://www.theguardian.com/us-news/2026/jun/23/trump-immigration-courthouse-arrest-policy",
           "https://www.theguardian.com/us-news/2026/jun/28/ice-minnesota-defending-democracy",
@@ -21,7 +21,7 @@
         ],
         "origin_counts": {
           "ontology_evidence": 51,
-          "reading_queue": 979,
+          "reading_queue": 981,
           "journals": 136,
           "articles": 5
         },
@@ -76,7 +76,7 @@
         "breadth": {
           "score": 0.94,
           "basis": [
-            "distinct_urls:1019",
+            "distinct_urls:1021",
             "distinct_axes:21",
             "origin_types:4"
           ]
@@ -116,7 +116,7 @@
             "newsroom_domain_pattern",
             "article_path_seen",
             "doi_or_identifier_path_seen",
-            "distinct_urls:1019",
+            "distinct_urls:1021",
             "distinct_axes:21",
             "origin_types:4",
             "referring_accounts:0",
@@ -1859,7 +1859,7 @@
         ],
         "origin_counts": {
           "ontology_evidence": 64,
-          "reading_queue": 76,
+          "reading_queue": 77,
           "journals": 116,
           "articles": 1
         },
@@ -2864,9 +2864,9 @@
       "entity": "Youtube",
       "kind": "unknown",
       "first_seen_at": "2026-05-18T03:29:41.732Z",
-      "last_seen_at": "2026-08-26T00:47:03.924Z",
+      "last_seen_at": "2026-08-26T02:09:05.282Z",
       "discovery": {
-        "distinct_urls": 39,
+        "distinct_urls": 40,
         "example_urls": [
           "https://www.youtube.com/watch?v=s31Wd_dF5hI",
           "https://www.youtube.com/watch?v=jK0pvigonSQ&twclid=2p81plhcgyzwohsr9rfa62lnp",
@@ -2877,7 +2877,7 @@
         "origin_counts": {
           "ontology_evidence": 1,
           "feed_buffer_reply": 23,
-          "feed_buffer": 14,
+          "feed_buffer": 15,
           "journals": 9
         },
         "distinct_referring_accounts": 12,
@@ -2920,7 +2920,7 @@
         "breadth": {
           "score": 0.6483333333333333,
           "basis": [
-            "distinct_urls:39",
+            "distinct_urls:40",
             "distinct_axes:1",
             "origin_types:4"
           ]
@@ -2958,7 +2958,7 @@
           "method": "mechanical_v1",
           "basis": [
             "unknown_domain_pattern",
-            "distinct_urls:39",
+            "distinct_urls:40",
             "distinct_axes:1",
             "origin_types:4",
             "referring_accounts:12",
@@ -3259,9 +3259,9 @@
       "entity": "T Co",
       "kind": "unknown",
       "first_seen_at": "2016-05-05T18:57:30.000Z",
-      "last_seen_at": "2026-08-26T01:23:00.999Z",
+      "last_seen_at": "2026-08-26T03:42:41.000Z",
       "discovery": {
-        "distinct_urls": 16483,
+        "distinct_urls": 16551,
         "example_urls": [
           "https://t.co/pJSE124ec4",
           "https://t.co/Soz8BXPWaa",
@@ -3270,11 +3270,11 @@
           "https://t.co/cYaqYDRp08"
         ],
         "origin_counts": {
-          "feed_buffer": 14399,
-          "feed_buffer_reply": 5168,
+          "feed_buffer": 14465,
+          "feed_buffer_reply": 5179,
           "articles": 3
         },
-        "distinct_referring_accounts": 2856,
+        "distinct_referring_accounts": 2860,
         "sample_referring_accounts": [
           "0808iveta",
           "09abracadabra",
@@ -3313,7 +3313,7 @@
         "breadth": {
           "score": 0.53,
           "basis": [
-            "distinct_urls:16483",
+            "distinct_urls:16551",
             "distinct_axes:0",
             "origin_types:3"
           ]
@@ -3321,7 +3321,7 @@
         "corroboration": {
           "score": 0.9125,
           "basis": [
-            "referring_accounts:2856",
+            "referring_accounts:2860",
             "origin_types:3"
           ]
         },
@@ -3352,10 +3352,10 @@
           "basis": [
             "unknown_domain_pattern",
             "doi_or_identifier_path_seen",
-            "distinct_urls:16483",
+            "distinct_urls:16551",
             "distinct_axes:0",
             "origin_types:3",
-            "referring_accounts:2856",
+            "referring_accounts:2860",
             "origin_types:3",
             "track_record_unavailable"
           ]
@@ -5565,9 +5565,9 @@
       "entity": "Starlink",
       "kind": "unknown",
       "first_seen_at": "2026-04-07T03:51:50.000Z",
-      "last_seen_at": "2026-08-23T23:24:27.541Z",
+      "last_seen_at": "2026-08-26T03:16:12.711Z",
       "discovery": {
-        "distinct_urls": 164,
+        "distinct_urls": 178,
         "example_urls": [
           "https://www.starlink.com/us/residential?referral=RC-DF-9543787-19448-67&utm_medium=paid&utm_campaign=awr_us_soc_twt_ptg_cau&utm_content=awr_us_soc_twt_ptg_cau_res_gvp_v4s_stc_en-us_sdb-bluesky-uptime&twclid=2cg62b1u0oqrypdim5oir1767e",
           "https://www.starlink.com/us/residential?referral=RC-DF-9543787-19448-67&utm_medium=paid&utm_campaign=awr_us_soc_twt_ptg_cau&utm_content=awr_us_soc_twt_ptg_cau_res_gvp_v4s_stc_en-us_sdb-avail-sat-yourhome&twclid=2216n7j93v9absqn77762mm626",
@@ -5576,8 +5576,8 @@
           "https://www.starlink.com/us/residential?referral=RC-DF-9543787-19448-67&utm_medium=paid&utm_campaign=awr_us_soc_twt_ptg_cau&utm_content=awr_us_soc_twt_ptg_cau_res_gvp_v4s_stc_en-us_sdb-avail-sat-arrived&twclid=21pi7t0qs8tgw0wgnh5mvmdu2g"
         ],
         "origin_counts": {
-          "feed_buffer_reply": 146,
-          "feed_buffer": 22
+          "feed_buffer_reply": 159,
+          "feed_buffer": 23
         },
         "distinct_referring_accounts": 5,
         "sample_referring_accounts": [
@@ -5612,7 +5612,7 @@
         "breadth": {
           "score": 0.47,
           "basis": [
-            "distinct_urls:164",
+            "distinct_urls:178",
             "distinct_axes:0",
             "origin_types:2"
           ]
@@ -5650,7 +5650,7 @@
           "method": "mechanical_v1",
           "basis": [
             "unknown_domain_pattern",
-            "distinct_urls:164",
+            "distinct_urls:178",
             "distinct_axes:0",
             "origin_types:2",
             "referring_accounts:5",
@@ -6087,9 +6087,9 @@
       "entity": "Huawei",
       "kind": "unknown",
       "first_seen_at": "2026-04-28T08:12:51.000Z",
-      "last_seen_at": "2026-08-14T06:38:03.000Z",
+      "last_seen_at": "2026-08-26T04:22:33.527Z",
       "discovery": {
-        "distinct_urls": 33,
+        "distinct_urls": 34,
         "example_urls": [
           "https://www.huawei.com/en/media-center/transform/24/06-jason-lee?utm_medium=psm&utm_source=twitter&utm_campaign=Transform",
           "https://e.huawei.com/ae/events/branding/gitex-ca?utm_medium=psm&utm_source=twitter&source=corp_sc_en&utm_campaign=GITEX2026",
@@ -6099,7 +6099,7 @@
         ],
         "origin_counts": {
           "feed_buffer_reply": 16,
-          "feed_buffer": 17
+          "feed_buffer": 18
         },
         "distinct_referring_accounts": 1,
         "sample_referring_accounts": [
@@ -6131,7 +6131,7 @@
         "breadth": {
           "score": 0.47,
           "basis": [
-            "distinct_urls:33",
+            "distinct_urls:34",
             "distinct_axes:0",
             "origin_types:2"
           ]
@@ -6170,7 +6170,7 @@
           "basis": [
             "unknown_domain_pattern",
             "article_path_seen",
-            "distinct_urls:33",
+            "distinct_urls:34",
             "distinct_axes:0",
             "origin_types:2",
             "referring_accounts:1",
@@ -8216,7 +8216,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-08-23T02:55:54.497Z",
+        "fetched_at": "2026-08-26T03:04:40.473Z",
         "homepage_url": "https://metamask.io/",
         "example_url": "https://link.metamask.io/swap?amount=32600000000000000&from=eip155%3A1%2Fslip44%3A60&sig_params=amount%2Cfrom&sig=lcKWbD9emSvYcSy4wKZAAZK4IusikSldKuh2SLobJnCxX6_H50c7o4lrxGukMkQAlJXl_Ro-z9GOFjHlijuUSQ&utm_source=twitter&utm_medium=paid-display&utm_campaign=cmp-1529292347-afbf08&twclid=29ubdtem27pe2i7fvtv9x4pcao",
         "homepage_status": 200,
@@ -8695,16 +8695,16 @@
           ]
         },
         "profile": {
-          "score": 0.28,
-          "confidence": 0.65,
+          "score": 0.64,
+          "confidence": 0.75,
           "basis": [
-            "meta_author:false",
+            "meta_author:true",
             "published_time:false",
-            "canonical:false",
+            "canonical:true",
             "about:true",
             "contact:true",
             "corrections:false",
-            "outbound_links:2",
+            "outbound_links:10",
             "opinion_marker:false"
           ]
         },
@@ -8724,7 +8724,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-08-23T02:55:58.275Z",
+        "fetched_at": "2026-08-26T03:04:43.664Z",
         "homepage_url": "https://leronx.org/",
         "example_url": "https://leronx.org/?ref=005&tw=r84nh&tw_click=tw-r84nh-r84ni&twclid=29ffsgobmrsvjmkjlmgcllypv0",
         "homepage_status": 200,
@@ -8734,23 +8734,23 @@
         "homepage_content_type": "text/html; charset=UTF-8",
         "example_content_type": "text/html; charset=UTF-8",
         "homepage": {
-          "has_meta_author": false,
+          "has_meta_author": true,
           "has_published_time": false,
-          "has_canonical": false,
+          "has_canonical": true,
           "has_about_link": true,
           "has_contact_link": true,
           "has_corrections_link": false,
-          "outbound_links_count": 2,
+          "outbound_links_count": 10,
           "opinion_marker": false
         },
         "example": {
-          "has_meta_author": false,
+          "has_meta_author": true,
           "has_published_time": false,
-          "has_canonical": false,
+          "has_canonical": true,
           "has_about_link": true,
           "has_contact_link": true,
           "has_corrections_link": false,
-          "outbound_links_count": 2,
+          "outbound_links_count": 10,
           "opinion_marker": false
         }
       }
@@ -8851,7 +8851,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-08-23T02:55:59.016Z",
+        "fetched_at": "2026-08-26T03:04:44.212Z",
         "homepage_url": "https://app.link/",
         "example_url": "https://chipotle.app.link/rTJVnvMgW1b?%243p=a_twitter&twclid=26fm1l3fbt5tx0wzqe3pjv9fkn",
         "homepage_status": 404,
@@ -8978,7 +8978,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-08-23T02:56:00.901Z",
+        "fetched_at": "2026-08-26T03:04:45.897Z",
         "homepage_url": "https://bk.com/",
         "example_url": "https://www.bk.com/menu/section/fb06fabe-a285-4fb4-994a-c617a1547ddb?utm_source=X&utm_medium=Social-Social&utm_campaign=Peppercorn-Awareness&utm_content=Peppercorn-IMG-Warning&twclid=24j7ivpacvxqbg2t5it24skrl9",
         "homepage_status": 200,
@@ -9264,6 +9264,133 @@
       }
     },
     {
+      "domain": "shipaton.com",
+      "entity": "Shipaton",
+      "kind": "unknown",
+      "first_seen_at": "2026-07-07T10:24:13.000Z",
+      "last_seen_at": "2026-08-26T03:02:52.020Z",
+      "discovery": {
+        "distinct_urls": 21,
+        "example_urls": [
+          "https://www.shipaton.com/events/?utm_source=x&utm_medium=cpc&utm_campaign=shipaton-traffic&twclid=2d8n4jkad805fesk63uxwuffy9",
+          "https://www.shipaton.com/?utm_source=x&utm_medium=cpc&utm_campaign=shipaton-traffic&twclid=22je13dnlq18zl09zml4n51co3",
+          "https://www.shipaton.com/?utm_source=x&utm_medium=cpc&utm_campaign=shipaton-traffic&twclid=26yl3o4snlo387h02mw4kh4yfe",
+          "https://www.shipaton.com/?utm_source=x&utm_medium=cpc&utm_campaign=shipaton-traffic&twclid=230e39i0w7hfcdaim51menkq4k",
+          "https://www.shipaton.com/?utm_source=x&utm_medium=cpc&utm_campaign=shipaton-traffic&twclid=2etlnjrf4bcnefsrgl7rph92ot"
+        ],
+        "origin_counts": {
+          "feed_buffer_reply": 3,
+          "feed_buffer": 18
+        },
+        "distinct_referring_accounts": 1,
+        "sample_referring_accounts": [
+          "revenuecat"
+        ],
+        "distinct_axes": []
+      },
+      "claims": {
+        "total": 0,
+        "supported": 0,
+        "refuted": 0,
+        "contested": 0,
+        "unverified": 0,
+        "resolved_count": 0
+      },
+      "structural_features": {
+        "has_search_paths": false,
+        "has_article_paths": false,
+        "has_doi_paths": false
+      },
+      "ratings": {
+        "provenance": {
+          "score": 0.45,
+          "basis": [
+            "unknown_domain_pattern"
+          ]
+        },
+        "breadth": {
+          "score": 0.47,
+          "basis": [
+            "distinct_urls:21",
+            "distinct_axes:0",
+            "origin_types:2"
+          ]
+        },
+        "corroboration": {
+          "score": 0.2833333333333333,
+          "basis": [
+            "referring_accounts:1",
+            "origin_types:2"
+          ]
+        },
+        "track_record": {
+          "score": null,
+          "basis": [
+            "no_resolved_claims_observed"
+          ]
+        },
+        "profile": {
+          "score": 0.22,
+          "confidence": 0.55,
+          "basis": [
+            "meta_author:false",
+            "published_time:false",
+            "canonical:true",
+            "about:false",
+            "contact:false",
+            "corrections:false",
+            "outbound_links:61",
+            "opinion_marker:false"
+          ]
+        },
+        "overall": {
+          "score": 0.43875,
+          "confidence": 0.5742,
+          "method": "mechanical_v1",
+          "basis": [
+            "unknown_domain_pattern",
+            "distinct_urls:21",
+            "distinct_axes:0",
+            "origin_types:2",
+            "referring_accounts:1",
+            "origin_types:2",
+            "track_record_unavailable"
+          ]
+        }
+      },
+      "profile": {
+        "fetched_at": "2026-08-23T09:57:40.797Z",
+        "homepage_url": "https://shipaton.com/",
+        "example_url": "https://www.shipaton.com/events/?utm_source=x&utm_medium=cpc&utm_campaign=shipaton-traffic&twclid=2d8n4jkad805fesk63uxwuffy9",
+        "homepage_status": 200,
+        "example_status": 200,
+        "homepage_final_url": "https://www.shipaton.com/",
+        "example_final_url": "https://www.shipaton.com/events?utm_source=x&utm_medium=cpc&utm_campaign=shipaton-traffic&twclid=2d8n4jkad805fesk63uxwuffy9",
+        "homepage_content_type": "text/html; charset=utf-8",
+        "example_content_type": "text/html; charset=utf-8",
+        "homepage": {
+          "has_meta_author": false,
+          "has_published_time": false,
+          "has_canonical": true,
+          "has_about_link": false,
+          "has_contact_link": false,
+          "has_corrections_link": false,
+          "outbound_links_count": 68,
+          "opinion_marker": false
+        },
+        "example": {
+          "has_meta_author": false,
+          "has_published_time": false,
+          "has_canonical": true,
+          "has_about_link": false,
+          "has_contact_link": false,
+          "has_corrections_link": false,
+          "outbound_links_count": 61,
+          "opinion_marker": false
+        }
+      }
+    },
+    {
       "domain": "amro-asia.org",
       "entity": "Amro-Asia",
       "kind": "unknown",
@@ -9386,133 +9513,6 @@
           "has_contact_link": false,
           "has_corrections_link": false,
           "outbound_links_count": 0,
-          "opinion_marker": false
-        }
-      }
-    },
-    {
-      "domain": "shipaton.com",
-      "entity": "Shipaton",
-      "kind": "unknown",
-      "first_seen_at": "2026-07-07T10:24:13.000Z",
-      "last_seen_at": "2026-08-16T00:05:27.955Z",
-      "discovery": {
-        "distinct_urls": 20,
-        "example_urls": [
-          "https://www.shipaton.com/events/?utm_source=x&utm_medium=cpc&utm_campaign=shipaton-traffic&twclid=2d8n4jkad805fesk63uxwuffy9",
-          "https://www.shipaton.com/?utm_source=x&utm_medium=cpc&utm_campaign=shipaton-traffic&twclid=22je13dnlq18zl09zml4n51co3",
-          "https://www.shipaton.com/?utm_source=x&utm_medium=cpc&utm_campaign=shipaton-traffic&twclid=26yl3o4snlo387h02mw4kh4yfe",
-          "https://www.shipaton.com/?utm_source=x&utm_medium=cpc&utm_campaign=shipaton-traffic&twclid=230e39i0w7hfcdaim51menkq4k",
-          "https://www.shipaton.com/?utm_source=x&utm_medium=cpc&utm_campaign=shipaton-traffic&twclid=2etlnjrf4bcnefsrgl7rph92ot"
-        ],
-        "origin_counts": {
-          "feed_buffer_reply": 3,
-          "feed_buffer": 17
-        },
-        "distinct_referring_accounts": 1,
-        "sample_referring_accounts": [
-          "revenuecat"
-        ],
-        "distinct_axes": []
-      },
-      "claims": {
-        "total": 0,
-        "supported": 0,
-        "refuted": 0,
-        "contested": 0,
-        "unverified": 0,
-        "resolved_count": 0
-      },
-      "structural_features": {
-        "has_search_paths": false,
-        "has_article_paths": false,
-        "has_doi_paths": false
-      },
-      "ratings": {
-        "provenance": {
-          "score": 0.45,
-          "basis": [
-            "unknown_domain_pattern"
-          ]
-        },
-        "breadth": {
-          "score": 0.47,
-          "basis": [
-            "distinct_urls:20",
-            "distinct_axes:0",
-            "origin_types:2"
-          ]
-        },
-        "corroboration": {
-          "score": 0.2833333333333333,
-          "basis": [
-            "referring_accounts:1",
-            "origin_types:2"
-          ]
-        },
-        "track_record": {
-          "score": null,
-          "basis": [
-            "no_resolved_claims_observed"
-          ]
-        },
-        "profile": {
-          "score": 0.22,
-          "confidence": 0.55,
-          "basis": [
-            "meta_author:false",
-            "published_time:false",
-            "canonical:true",
-            "about:false",
-            "contact:false",
-            "corrections:false",
-            "outbound_links:61",
-            "opinion_marker:false"
-          ]
-        },
-        "overall": {
-          "score": 0.43875,
-          "confidence": 0.5742,
-          "method": "mechanical_v1",
-          "basis": [
-            "unknown_domain_pattern",
-            "distinct_urls:20",
-            "distinct_axes:0",
-            "origin_types:2",
-            "referring_accounts:1",
-            "origin_types:2",
-            "track_record_unavailable"
-          ]
-        }
-      },
-      "profile": {
-        "fetched_at": "2026-08-23T09:57:40.797Z",
-        "homepage_url": "https://shipaton.com/",
-        "example_url": "https://www.shipaton.com/events/?utm_source=x&utm_medium=cpc&utm_campaign=shipaton-traffic&twclid=2d8n4jkad805fesk63uxwuffy9",
-        "homepage_status": 200,
-        "example_status": 200,
-        "homepage_final_url": "https://www.shipaton.com/",
-        "example_final_url": "https://www.shipaton.com/events?utm_source=x&utm_medium=cpc&utm_campaign=shipaton-traffic&twclid=2d8n4jkad805fesk63uxwuffy9",
-        "homepage_content_type": "text/html; charset=utf-8",
-        "example_content_type": "text/html; charset=utf-8",
-        "homepage": {
-          "has_meta_author": false,
-          "has_published_time": false,
-          "has_canonical": true,
-          "has_about_link": false,
-          "has_contact_link": false,
-          "has_corrections_link": false,
-          "outbound_links_count": 68,
-          "opinion_marker": false
-        },
-        "example": {
-          "has_meta_author": false,
-          "has_published_time": false,
-          "has_canonical": true,
-          "has_about_link": false,
-          "has_contact_link": false,
-          "has_corrections_link": false,
-          "outbound_links_count": 61,
           "opinion_marker": false
         }
       }
@@ -18902,6 +18902,133 @@
       }
     },
     {
+      "domain": "longbridge.com",
+      "entity": "Longbridge",
+      "kind": "unknown",
+      "first_seen_at": "2026-07-17T21:15:14.276Z",
+      "last_seen_at": "2026-08-26T00:25:42.000Z",
+      "discovery": {
+        "distinct_urls": 7,
+        "example_urls": [
+          "https://longbridge.com/sg/longbridge-ai?channel=SGAI0001&twclid=27m5o8o2o9vynl50diwyukaj1x",
+          "https://longbridge.com/sg/longbridge-ai?channel=SGAI0005&twclid=29uhofbpmy5vk8k5r4wwqvz2aj",
+          "https://longbridge.com/sg/longbridge-ai?channel=SGAI0005&twclid=2txtfvyx7zstsuf5n925fzczj",
+          "https://longbridge.com/sg/longbridge-ai?channel=SGAI0005&twclid=29h31271dhzkait0u9bkljb2qi",
+          "https://longbridge.com/sg/longbridge-ai?channel=SGAI0005&twclid=240ei75trgmd0c65empgpb3cgd"
+        ],
+        "origin_counts": {
+          "feed_buffer": 6,
+          "feed_buffer_reply": 1
+        },
+        "distinct_referring_accounts": 1,
+        "sample_referring_accounts": [
+          "longbridgeai"
+        ],
+        "distinct_axes": []
+      },
+      "claims": {
+        "total": 0,
+        "supported": 0,
+        "refuted": 0,
+        "contested": 0,
+        "unverified": 0,
+        "resolved_count": 0
+      },
+      "structural_features": {
+        "has_search_paths": false,
+        "has_article_paths": false,
+        "has_doi_paths": false
+      },
+      "ratings": {
+        "provenance": {
+          "score": 0.45,
+          "basis": [
+            "unknown_domain_pattern"
+          ]
+        },
+        "breadth": {
+          "score": 0.32416666666666666,
+          "basis": [
+            "distinct_urls:7",
+            "distinct_axes:0",
+            "origin_types:2"
+          ]
+        },
+        "corroboration": {
+          "score": 0.2833333333333333,
+          "basis": [
+            "referring_accounts:1",
+            "origin_types:2"
+          ]
+        },
+        "track_record": {
+          "score": null,
+          "basis": [
+            "no_resolved_claims_observed"
+          ]
+        },
+        "profile": {
+          "score": 0.34,
+          "confidence": 0.65,
+          "basis": [
+            "meta_author:false",
+            "published_time:false",
+            "canonical:true",
+            "about:true",
+            "contact:false",
+            "corrections:false",
+            "outbound_links:10",
+            "opinion_marker:false"
+          ]
+        },
+        "overall": {
+          "score": 0.4068489583333333,
+          "confidence": 0.273575,
+          "method": "mechanical_v1",
+          "basis": [
+            "unknown_domain_pattern",
+            "distinct_urls:7",
+            "distinct_axes:0",
+            "origin_types:2",
+            "referring_accounts:1",
+            "origin_types:2",
+            "track_record_unavailable"
+          ]
+        }
+      },
+      "profile": {
+        "fetched_at": "2026-08-26T02:34:43.185Z",
+        "homepage_url": "https://longbridge.com/",
+        "example_url": "https://longbridge.com/sg/longbridge-ai?channel=SGAI0001&twclid=27m5o8o2o9vynl50diwyukaj1x",
+        "homepage_status": 200,
+        "example_status": 200,
+        "homepage_final_url": "https://longbridge.com/sg",
+        "example_final_url": "https://longbridge.com/sg/longbridge-ai?channel=SGAI0001&twclid=27m5o8o2o9vynl50diwyukaj1x",
+        "homepage_content_type": "text/html;charset=utf-8",
+        "example_content_type": "text/html;charset=utf-8",
+        "homepage": {
+          "has_meta_author": false,
+          "has_published_time": false,
+          "has_canonical": true,
+          "has_about_link": true,
+          "has_contact_link": false,
+          "has_corrections_link": false,
+          "outbound_links_count": 11,
+          "opinion_marker": false
+        },
+        "example": {
+          "has_meta_author": false,
+          "has_published_time": false,
+          "has_canonical": true,
+          "has_about_link": true,
+          "has_contact_link": false,
+          "has_corrections_link": false,
+          "outbound_links_count": 10,
+          "opinion_marker": false
+        }
+      }
+    },
+    {
       "domain": "shopee.ph",
       "entity": "Shopee Ph",
       "kind": "unknown",
@@ -20168,6 +20295,133 @@
       }
     },
     {
+      "domain": "ptgaming.ph",
+      "entity": "Ptgaming Ph",
+      "kind": "unknown",
+      "first_seen_at": "2026-07-05T04:59:47.736Z",
+      "last_seen_at": "2026-08-26T02:41:00.812Z",
+      "discovery": {
+        "distinct_urls": 6,
+        "example_urls": [
+          "https://www.ptgaming.ph/?twclid=21n3lg1hcl64ox73kjyr4lggz9",
+          "https://www.ptgaming.ph/?twclid=25vb0w4jbmtupw5yokwy2fjbcq",
+          "https://www.ptgaming.ph/?twclid=24xua76p6ig4wj1on4u6eqhjkz",
+          "https://www.ptgaming.ph/?twclid=23opaojcnervezlk24t4109xw9",
+          "https://www.ptgaming.ph/?twclid=26sb1wpgds50ggj6udc2c7m358"
+        ],
+        "origin_counts": {
+          "feed_buffer": 5,
+          "feed_buffer_reply": 1
+        },
+        "distinct_referring_accounts": 1,
+        "sample_referring_accounts": [
+          "ptgamingph"
+        ],
+        "distinct_axes": []
+      },
+      "claims": {
+        "total": 0,
+        "supported": 0,
+        "refuted": 0,
+        "contested": 0,
+        "unverified": 0,
+        "resolved_count": 0
+      },
+      "structural_features": {
+        "has_search_paths": false,
+        "has_article_paths": false,
+        "has_doi_paths": false
+      },
+      "ratings": {
+        "provenance": {
+          "score": 0.45,
+          "basis": [
+            "unknown_domain_pattern"
+          ]
+        },
+        "breadth": {
+          "score": 0.295,
+          "basis": [
+            "distinct_urls:6",
+            "distinct_axes:0",
+            "origin_types:2"
+          ]
+        },
+        "corroboration": {
+          "score": 0.2833333333333333,
+          "basis": [
+            "referring_accounts:1",
+            "origin_types:2"
+          ]
+        },
+        "track_record": {
+          "score": null,
+          "basis": [
+            "no_resolved_claims_observed"
+          ]
+        },
+        "profile": {
+          "score": 0.1,
+          "confidence": 0.55,
+          "basis": [
+            "meta_author:false",
+            "published_time:false",
+            "canonical:true",
+            "about:false",
+            "contact:false",
+            "corrections:false",
+            "outbound_links:0",
+            "opinion_marker:false"
+          ]
+        },
+        "overall": {
+          "score": 0.40046875,
+          "confidence": 0.24495,
+          "method": "mechanical_v1",
+          "basis": [
+            "unknown_domain_pattern",
+            "distinct_urls:6",
+            "distinct_axes:0",
+            "origin_types:2",
+            "referring_accounts:1",
+            "origin_types:2",
+            "track_record_unavailable"
+          ]
+        }
+      },
+      "profile": {
+        "fetched_at": "2026-08-26T04:04:40.568Z",
+        "homepage_url": "https://ptgaming.ph/",
+        "example_url": "https://www.ptgaming.ph/?twclid=21n3lg1hcl64ox73kjyr4lggz9",
+        "homepage_status": 200,
+        "example_status": 200,
+        "homepage_final_url": "https://www.ptgaming.ph/",
+        "example_final_url": "https://www.ptgaming.ph/?twclid=21n3lg1hcl64ox73kjyr4lggz9",
+        "homepage_content_type": "text/html",
+        "example_content_type": "text/html",
+        "homepage": {
+          "has_meta_author": false,
+          "has_published_time": false,
+          "has_canonical": true,
+          "has_about_link": false,
+          "has_contact_link": false,
+          "has_corrections_link": false,
+          "outbound_links_count": 0,
+          "opinion_marker": false
+        },
+        "example": {
+          "has_meta_author": false,
+          "has_published_time": false,
+          "has_canonical": true,
+          "has_about_link": false,
+          "has_contact_link": false,
+          "has_corrections_link": false,
+          "outbound_links_count": 0,
+          "opinion_marker": false
+        }
+      }
+    },
+    {
       "domain": "jetcraft.com",
       "entity": "Jetcraft",
       "kind": "unknown",
@@ -21180,6 +21434,132 @@
       }
     },
     {
+      "domain": "simba.sg",
+      "entity": "Simba Sg",
+      "kind": "unknown",
+      "first_seen_at": "2026-07-13T16:58:40.909Z",
+      "last_seen_at": "2026-08-26T02:32:44.863Z",
+      "discovery": {
+        "distinct_urls": 9,
+        "example_urls": [
+          "https://simba.sg/home?twclid=246gm13qkkeak3bq6hmc879ar",
+          "https://simba.sg/broadband?twclid=263lercxhlqpt3f5k37y6e8h8x",
+          "https://simba.sg/home?utm_source=x&utm_medium=paid_social&twclid=2ai1rami0qu8qwrfit3wc7bhv6",
+          "https://simba.sg/home?utm_source=x&utm_medium=paid_social&utm_campaign=spiderman&utm_content=video&twclid=2e5yuqueakn3f72okp3hd2s5yx",
+          "https://simba.sg/home?utm_source=x&utm_medium=paid_social&utm_campaign=spiderman&utm_content=video-interest&twclid=22uvvenbddlus40aq4kckl9u7t"
+        ],
+        "origin_counts": {
+          "feed_buffer": 9
+        },
+        "distinct_referring_accounts": 1,
+        "sample_referring_accounts": [
+          "simbatelecomsg"
+        ],
+        "distinct_axes": []
+      },
+      "claims": {
+        "total": 0,
+        "supported": 0,
+        "refuted": 0,
+        "contested": 0,
+        "unverified": 0,
+        "resolved_count": 0
+      },
+      "structural_features": {
+        "has_search_paths": false,
+        "has_article_paths": false,
+        "has_doi_paths": false
+      },
+      "ratings": {
+        "provenance": {
+          "score": 0.45,
+          "basis": [
+            "unknown_domain_pattern"
+          ]
+        },
+        "breadth": {
+          "score": 0.32249999999999995,
+          "basis": [
+            "distinct_urls:9",
+            "distinct_axes:0",
+            "origin_types:1"
+          ]
+        },
+        "corroboration": {
+          "score": 0.19583333333333333,
+          "basis": [
+            "referring_accounts:1",
+            "origin_types:1"
+          ]
+        },
+        "track_record": {
+          "score": null,
+          "basis": [
+            "no_resolved_claims_observed"
+          ]
+        },
+        "profile": {
+          "score": 0,
+          "confidence": 0.55,
+          "basis": [
+            "meta_author:false",
+            "published_time:false",
+            "canonical:false",
+            "about:false",
+            "contact:false",
+            "corrections:false",
+            "outbound_links:0",
+            "opinion_marker:false"
+          ]
+        },
+        "overall": {
+          "score": 0.39828125000000003,
+          "confidence": 0.31035,
+          "method": "mechanical_v1",
+          "basis": [
+            "unknown_domain_pattern",
+            "distinct_urls:9",
+            "distinct_axes:0",
+            "origin_types:1",
+            "referring_accounts:1",
+            "origin_types:1",
+            "track_record_unavailable"
+          ]
+        }
+      },
+      "profile": {
+        "fetched_at": "2026-08-26T00:04:41.098Z",
+        "homepage_url": "https://simba.sg/",
+        "example_url": "https://simba.sg/home?twclid=246gm13qkkeak3bq6hmc879ar",
+        "homepage_status": 200,
+        "example_status": 200,
+        "homepage_final_url": "https://simba.sg/",
+        "example_final_url": "https://simba.sg/home?twclid=246gm13qkkeak3bq6hmc879ar",
+        "homepage_content_type": "text/html; charset=UTF-8",
+        "example_content_type": "text/html; charset=UTF-8",
+        "homepage": {
+          "has_meta_author": false,
+          "has_published_time": false,
+          "has_canonical": false,
+          "has_about_link": false,
+          "has_contact_link": false,
+          "has_corrections_link": false,
+          "outbound_links_count": 0,
+          "opinion_marker": false
+        },
+        "example": {
+          "has_meta_author": false,
+          "has_published_time": false,
+          "has_canonical": false,
+          "has_about_link": false,
+          "has_contact_link": false,
+          "has_corrections_link": false,
+          "outbound_links_count": 0,
+          "opinion_marker": false
+        }
+      }
+    },
+    {
       "domain": "oracle.com",
       "entity": "Oracle",
       "kind": "unknown",
@@ -21429,6 +21809,133 @@
           "has_contact_link": false,
           "has_corrections_link": false,
           "outbound_links_count": 0,
+          "opinion_marker": false
+        }
+      }
+    },
+    {
+      "domain": "hubs.la",
+      "entity": "Hubs La",
+      "kind": "unknown",
+      "first_seen_at": "2026-04-14T13:18:54.124Z",
+      "last_seen_at": "2026-08-26T02:24:18.279Z",
+      "discovery": {
+        "distinct_urls": 5,
+        "example_urls": [
+          "https://hubs.la/Q044Rgs40?twclid=2dj6mgj4wttl7kn2ssc6dwffaw",
+          "https://hubs.la/Q044Rcx50?twclid=2d5u5ruuges6ka5k30bjy3w8df",
+          "https://hubs.la/Q04h1Wgf0?twclid=27row2w6dabw3oan4tcidte1te",
+          "https://hubs.la/Q044Rgs40?twclid=281ebw4pi9mqc9zlg741tdkjl",
+          "https://hubs.la/Q04h1Wgf0?twclid=253dgbc18636k8uha6pzhhl5pr"
+        ],
+        "origin_counts": {
+          "feed_buffer": 4,
+          "feed_buffer_reply": 1
+        },
+        "distinct_referring_accounts": 1,
+        "sample_referring_accounts": [
+          "guardsquare"
+        ],
+        "distinct_axes": []
+      },
+      "claims": {
+        "total": 0,
+        "supported": 0,
+        "refuted": 0,
+        "contested": 0,
+        "unverified": 0,
+        "resolved_count": 0
+      },
+      "structural_features": {
+        "has_search_paths": false,
+        "has_article_paths": false,
+        "has_doi_paths": false
+      },
+      "ratings": {
+        "provenance": {
+          "score": 0.45,
+          "basis": [
+            "unknown_domain_pattern"
+          ]
+        },
+        "breadth": {
+          "score": 0.26583333333333337,
+          "basis": [
+            "distinct_urls:5",
+            "distinct_axes:0",
+            "origin_types:2"
+          ]
+        },
+        "corroboration": {
+          "score": 0.2833333333333333,
+          "basis": [
+            "referring_accounts:1",
+            "origin_types:2"
+          ]
+        },
+        "track_record": {
+          "score": null,
+          "basis": [
+            "no_resolved_claims_observed"
+          ]
+        },
+        "profile": {
+          "score": 0.48,
+          "confidence": 0.65,
+          "basis": [
+            "meta_author:false",
+            "published_time:false",
+            "canonical:true",
+            "about:true",
+            "contact:true",
+            "corrections:false",
+            "outbound_links:47",
+            "opinion_marker:false"
+          ]
+        },
+        "overall": {
+          "score": 0.39408854166666674,
+          "confidence": 0.216325,
+          "method": "mechanical_v1",
+          "basis": [
+            "unknown_domain_pattern",
+            "distinct_urls:5",
+            "distinct_axes:0",
+            "origin_types:2",
+            "referring_accounts:1",
+            "origin_types:2",
+            "track_record_unavailable"
+          ]
+        }
+      },
+      "profile": {
+        "fetched_at": "2026-08-26T01:34:54.239Z",
+        "homepage_url": "https://hubs.la/",
+        "example_url": "https://hubs.la/Q044Rgs40?twclid=2dj6mgj4wttl7kn2ssc6dwffaw",
+        "homepage_status": 200,
+        "example_status": 200,
+        "homepage_final_url": "https://policy.hubspot.com/abuse-prevention",
+        "example_final_url": "https://www.guardsquare.com/quote-ppc?utm_campaign=4215991-Paid%20Digital&utm_source=twitter&utm_medium=paidsocial&utm_content=R2-26-X-KEYWORD-Infeed-Video-3",
+        "homepage_content_type": "text/html; charset=UTF-8",
+        "example_content_type": "text/html; charset=UTF-8",
+        "homepage": {
+          "has_meta_author": false,
+          "has_published_time": false,
+          "has_canonical": true,
+          "has_about_link": true,
+          "has_contact_link": true,
+          "has_corrections_link": false,
+          "outbound_links_count": 7,
+          "opinion_marker": false
+        },
+        "example": {
+          "has_meta_author": false,
+          "has_published_time": false,
+          "has_canonical": true,
+          "has_about_link": true,
+          "has_contact_link": false,
+          "has_corrections_link": false,
+          "outbound_links_count": 47,
           "opinion_marker": false
         }
       }
@@ -23716,132 +24223,6 @@
       }
     },
     {
-      "domain": "simba.sg",
-      "entity": "Simba Sg",
-      "kind": "unknown",
-      "first_seen_at": "2026-07-13T16:58:40.909Z",
-      "last_seen_at": "2026-08-07T10:39:11.514Z",
-      "discovery": {
-        "distinct_urls": 8,
-        "example_urls": [
-          "https://simba.sg/home?twclid=246gm13qkkeak3bq6hmc879ar",
-          "https://simba.sg/broadband?twclid=263lercxhlqpt3f5k37y6e8h8x",
-          "https://simba.sg/home?utm_source=x&utm_medium=paid_social&twclid=2ai1rami0qu8qwrfit3wc7bhv6",
-          "https://simba.sg/home?utm_source=x&utm_medium=paid_social&utm_campaign=spiderman&utm_content=video&twclid=2e5yuqueakn3f72okp3hd2s5yx",
-          "https://simba.sg/home?utm_source=x&utm_medium=paid_social&utm_campaign=spiderman&utm_content=video-interest&twclid=22uvvenbddlus40aq4kckl9u7t"
-        ],
-        "origin_counts": {
-          "feed_buffer": 8
-        },
-        "distinct_referring_accounts": 1,
-        "sample_referring_accounts": [
-          "simbatelecomsg"
-        ],
-        "distinct_axes": []
-      },
-      "claims": {
-        "total": 0,
-        "supported": 0,
-        "refuted": 0,
-        "contested": 0,
-        "unverified": 0,
-        "resolved_count": 0
-      },
-      "structural_features": {
-        "has_search_paths": false,
-        "has_article_paths": false,
-        "has_doi_paths": false
-      },
-      "ratings": {
-        "provenance": {
-          "score": 0.45,
-          "basis": [
-            "unknown_domain_pattern"
-          ]
-        },
-        "breadth": {
-          "score": 0.29333333333333333,
-          "basis": [
-            "distinct_urls:8",
-            "distinct_axes:0",
-            "origin_types:1"
-          ]
-        },
-        "corroboration": {
-          "score": 0.19583333333333333,
-          "basis": [
-            "referring_accounts:1",
-            "origin_types:1"
-          ]
-        },
-        "track_record": {
-          "score": null,
-          "basis": [
-            "no_resolved_claims_observed"
-          ]
-        },
-        "profile": {
-          "score": 0,
-          "confidence": 0.55,
-          "basis": [
-            "meta_author:false",
-            "published_time:false",
-            "canonical:false",
-            "about:false",
-            "contact:false",
-            "corrections:false",
-            "outbound_links:0",
-            "opinion_marker:false"
-          ]
-        },
-        "overall": {
-          "score": 0.39190104166666667,
-          "confidence": 0.281725,
-          "method": "mechanical_v1",
-          "basis": [
-            "unknown_domain_pattern",
-            "distinct_urls:8",
-            "distinct_axes:0",
-            "origin_types:1",
-            "referring_accounts:1",
-            "origin_types:1",
-            "track_record_unavailable"
-          ]
-        }
-      },
-      "profile": {
-        "fetched_at": "2026-08-26T00:04:41.098Z",
-        "homepage_url": "https://simba.sg/",
-        "example_url": "https://simba.sg/home?twclid=246gm13qkkeak3bq6hmc879ar",
-        "homepage_status": 200,
-        "example_status": 200,
-        "homepage_final_url": "https://simba.sg/",
-        "example_final_url": "https://simba.sg/home?twclid=246gm13qkkeak3bq6hmc879ar",
-        "homepage_content_type": "text/html; charset=UTF-8",
-        "example_content_type": "text/html; charset=UTF-8",
-        "homepage": {
-          "has_meta_author": false,
-          "has_published_time": false,
-          "has_canonical": false,
-          "has_about_link": false,
-          "has_contact_link": false,
-          "has_corrections_link": false,
-          "outbound_links_count": 0,
-          "opinion_marker": false
-        },
-        "example": {
-          "has_meta_author": false,
-          "has_published_time": false,
-          "has_canonical": false,
-          "has_about_link": false,
-          "has_contact_link": false,
-          "has_corrections_link": false,
-          "outbound_links_count": 0,
-          "opinion_marker": false
-        }
-      }
-    },
-    {
       "domain": "geopoliticalfutures.com",
       "entity": "Geopoliticalfutures",
       "kind": "unknown",
@@ -24218,6 +24599,132 @@
       }
     },
     {
+      "domain": "aikido.dev",
+      "entity": "Aikido Dev",
+      "kind": "unknown",
+      "first_seen_at": "2026-04-06T05:21:30.007Z",
+      "last_seen_at": "2026-08-26T01:35:02.194Z",
+      "discovery": {
+        "distinct_urls": 4,
+        "example_urls": [
+          "https://www.aikido.dev/attack/infinite?utm_source=twitter&utm_medium=paidsocial&utm_campaign=US_tofu&utm_content=2026-02-26-Mack-Infinte-2-A&twclid=28a2h7kzzful35m0kfwtl23x0c",
+          "https://www.aikido.dev/protect/device-protection?utm_source=twitter&utm_medium=paidsocial&utm_campaign=TOFU&utm_content=2026-05-06-Endpoint-Image2&twclid=2etx8j2o3jcrysp8phyvb5kfsb",
+          "https://www.aikido.dev/?utm_source=twitter&utm_medium=paidsocial&utm_campaign=US_tofu&utm_content=2026-04-30-Free-Forever-Ad1-USD&twclid=29e59idwg3b77yh0egu0y1fx3e",
+          "https://www.aikido.dev/?utm_source=twitter&utm_medium=paidsocial&utm_campaign=US_tofu&utm_content=2026-07-27-Mack-Getting-Rid&twclid=279259h71vs6flfdmkfsdfbd00"
+        ],
+        "origin_counts": {
+          "feed_buffer": 2,
+          "feed_buffer_reply": 2
+        },
+        "distinct_referring_accounts": 1,
+        "sample_referring_accounts": [
+          "aikidosecurity"
+        ],
+        "distinct_axes": []
+      },
+      "claims": {
+        "total": 0,
+        "supported": 0,
+        "refuted": 0,
+        "contested": 0,
+        "unverified": 0,
+        "resolved_count": 0
+      },
+      "structural_features": {
+        "has_search_paths": false,
+        "has_article_paths": false,
+        "has_doi_paths": false
+      },
+      "ratings": {
+        "provenance": {
+          "score": 0.45,
+          "basis": [
+            "unknown_domain_pattern"
+          ]
+        },
+        "breadth": {
+          "score": 0.23666666666666664,
+          "basis": [
+            "distinct_urls:4",
+            "distinct_axes:0",
+            "origin_types:2"
+          ]
+        },
+        "corroboration": {
+          "score": 0.2833333333333333,
+          "basis": [
+            "referring_accounts:1",
+            "origin_types:2"
+          ]
+        },
+        "track_record": {
+          "score": null,
+          "basis": [
+            "no_resolved_claims_observed"
+          ]
+        },
+        "profile": {
+          "score": 0.44999999999999996,
+          "confidence": 0.65,
+          "basis": [
+            "meta_author:false",
+            "published_time:false",
+            "canonical:true",
+            "about:true",
+            "contact:true",
+            "corrections:false",
+            "outbound_links:9",
+            "opinion_marker:false"
+          ]
+        },
+        "overall": {
+          "score": 0.3877083333333334,
+          "confidence": 0.18769999999999998,
+          "method": "mechanical_v1",
+          "basis": [
+            "unknown_domain_pattern",
+            "distinct_urls:4",
+            "distinct_axes:0",
+            "origin_types:2",
+            "referring_accounts:1",
+            "origin_types:2",
+            "track_record_unavailable"
+          ]
+        }
+      },
+      "profile": {
+        "fetched_at": "2026-08-26T02:34:47.124Z",
+        "homepage_url": "https://aikido.dev/",
+        "example_url": "https://www.aikido.dev/attack/infinite?utm_source=twitter&utm_medium=paidsocial&utm_campaign=US_tofu&utm_content=2026-02-26-Mack-Infinte-2-A&twclid=28a2h7kzzful35m0kfwtl23x0c",
+        "homepage_status": 200,
+        "example_status": 200,
+        "homepage_final_url": "https://www.aikido.dev/",
+        "example_final_url": "https://www.aikido.dev/attack/infinite?utm_source=twitter&utm_medium=paidsocial&utm_campaign=US_tofu&utm_content=2026-02-26-Mack-Infinte-2-A&twclid=28a2h7kzzful35m0kfwtl23x0c",
+        "homepage_content_type": "text/html; charset=utf-8",
+        "example_content_type": "text/html; charset=utf-8",
+        "homepage": {
+          "has_meta_author": false,
+          "has_published_time": false,
+          "has_canonical": true,
+          "has_about_link": true,
+          "has_contact_link": true,
+          "has_corrections_link": false,
+          "outbound_links_count": 8,
+          "opinion_marker": false
+        },
+        "example": {
+          "has_meta_author": false,
+          "has_published_time": false,
+          "has_canonical": true,
+          "has_about_link": true,
+          "has_contact_link": true,
+          "has_corrections_link": false,
+          "outbound_links_count": 9,
+          "opinion_marker": false
+        }
+      }
+    },
+    {
       "domain": "absinthe.network",
       "entity": "Absinthe Network",
       "kind": "unknown",
@@ -24470,132 +24977,6 @@
       }
     },
     {
-      "domain": "hubs.la",
-      "entity": "Hubs La",
-      "kind": "unknown",
-      "first_seen_at": "2026-04-14T13:18:54.124Z",
-      "last_seen_at": "2026-08-26T00:03:21.646Z",
-      "discovery": {
-        "distinct_urls": 4,
-        "example_urls": [
-          "https://hubs.la/Q044Rgs40?twclid=2dj6mgj4wttl7kn2ssc6dwffaw",
-          "https://hubs.la/Q044Rcx50?twclid=2d5u5ruuges6ka5k30bjy3w8df",
-          "https://hubs.la/Q04h1Wgf0?twclid=27row2w6dabw3oan4tcidte1te",
-          "https://hubs.la/Q044Rgs40?twclid=281ebw4pi9mqc9zlg741tdkjl"
-        ],
-        "origin_counts": {
-          "feed_buffer": 3,
-          "feed_buffer_reply": 1
-        },
-        "distinct_referring_accounts": 1,
-        "sample_referring_accounts": [
-          "guardsquare"
-        ],
-        "distinct_axes": []
-      },
-      "claims": {
-        "total": 0,
-        "supported": 0,
-        "refuted": 0,
-        "contested": 0,
-        "unverified": 0,
-        "resolved_count": 0
-      },
-      "structural_features": {
-        "has_search_paths": false,
-        "has_article_paths": false,
-        "has_doi_paths": false
-      },
-      "ratings": {
-        "provenance": {
-          "score": 0.45,
-          "basis": [
-            "unknown_domain_pattern"
-          ]
-        },
-        "breadth": {
-          "score": 0.23666666666666664,
-          "basis": [
-            "distinct_urls:4",
-            "distinct_axes:0",
-            "origin_types:2"
-          ]
-        },
-        "corroboration": {
-          "score": 0.2833333333333333,
-          "basis": [
-            "referring_accounts:1",
-            "origin_types:2"
-          ]
-        },
-        "track_record": {
-          "score": null,
-          "basis": [
-            "no_resolved_claims_observed"
-          ]
-        },
-        "profile": {
-          "score": 0.48,
-          "confidence": 0.65,
-          "basis": [
-            "meta_author:false",
-            "published_time:false",
-            "canonical:true",
-            "about:true",
-            "contact:true",
-            "corrections:false",
-            "outbound_links:47",
-            "opinion_marker:false"
-          ]
-        },
-        "overall": {
-          "score": 0.3877083333333334,
-          "confidence": 0.18769999999999998,
-          "method": "mechanical_v1",
-          "basis": [
-            "unknown_domain_pattern",
-            "distinct_urls:4",
-            "distinct_axes:0",
-            "origin_types:2",
-            "referring_accounts:1",
-            "origin_types:2",
-            "track_record_unavailable"
-          ]
-        }
-      },
-      "profile": {
-        "fetched_at": "2026-08-26T01:34:54.239Z",
-        "homepage_url": "https://hubs.la/",
-        "example_url": "https://hubs.la/Q044Rgs40?twclid=2dj6mgj4wttl7kn2ssc6dwffaw",
-        "homepage_status": 200,
-        "example_status": 200,
-        "homepage_final_url": "https://policy.hubspot.com/abuse-prevention",
-        "example_final_url": "https://www.guardsquare.com/quote-ppc?utm_campaign=4215991-Paid%20Digital&utm_source=twitter&utm_medium=paidsocial&utm_content=R2-26-X-KEYWORD-Infeed-Video-3",
-        "homepage_content_type": "text/html; charset=UTF-8",
-        "example_content_type": "text/html; charset=UTF-8",
-        "homepage": {
-          "has_meta_author": false,
-          "has_published_time": false,
-          "has_canonical": true,
-          "has_about_link": true,
-          "has_contact_link": true,
-          "has_corrections_link": false,
-          "outbound_links_count": 7,
-          "opinion_marker": false
-        },
-        "example": {
-          "has_meta_author": false,
-          "has_published_time": false,
-          "has_canonical": true,
-          "has_about_link": true,
-          "has_contact_link": false,
-          "has_corrections_link": false,
-          "outbound_links_count": 47,
-          "opinion_marker": false
-        }
-      }
-    },
-    {
       "domain": "attio.com",
       "entity": "Attio",
       "kind": "unknown",
@@ -24816,7 +25197,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-08-20T10:17:22.409Z",
+        "fetched_at": "2026-08-26T02:34:47.381Z",
         "homepage_url": "https://vast.ai/",
         "example_url": "https://vast.ai/developers/sdk?utm_source=x&utm_medium=paid&utm_campaign=cloud_agents&twclid=293vnkv04bn84l1eoqab2a2ekc",
         "homepage_status": 200,
@@ -24942,7 +25323,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-08-20T19:31:16.571Z",
+        "fetched_at": "2026-08-26T02:34:49.260Z",
         "homepage_url": "https://scalahosting.com/",
         "example_url": "https://www.scalahosting.com/cloud-servers.html?twclid=2cnyz64aududoywwu2d0iw7jhx",
         "homepage_status": 200,
@@ -25068,7 +25449,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-08-20T19:31:18.213Z",
+        "fetched_at": "2026-08-26T04:04:42.567Z",
         "homepage_url": "https://havelsan.com/",
         "example_url": "https://www.havelsan.com/en/products/eyeminer-video-analytic-system-iot?utm_source=x&utm_medium=PaidSocial&utm_campaign=eyeminer_traffic&twclid=26xxdxm61rvq0o921lrv322jio",
         "homepage_status": null,
@@ -25194,7 +25575,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-08-19T05:32:12.087Z",
+        "fetched_at": "2026-08-26T04:04:43.087Z",
         "homepage_url": "https://houseofkaisers.com/",
         "example_url": "https://houseofkaisers.com/kai-portal/beta?twclid=26t8hp42r8pe5p1i02xmt53ngc",
         "homepage_status": 200,
@@ -25291,7 +25672,7 @@
           ]
         },
         "profile": {
-          "score": 0.14,
+          "score": 0.15000000000000002,
           "confidence": 0.55,
           "basis": [
             "meta_author:false",
@@ -25300,7 +25681,7 @@
             "about:false",
             "contact:false",
             "corrections:false",
-            "outbound_links:4",
+            "outbound_links:5",
             "opinion_marker:false"
           ]
         },
@@ -25320,7 +25701,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-08-20T21:04:17.753Z",
+        "fetched_at": "2026-08-26T04:04:46.702Z",
         "homepage_url": "https://spanel.io/",
         "example_url": "https://www.spanel.io/pricing.html?twclid=2arqqjpqxtpmtbpl4vdri6fkg9",
         "homepage_status": 200,
@@ -25336,7 +25717,7 @@
           "has_about_link": false,
           "has_contact_link": false,
           "has_corrections_link": false,
-          "outbound_links_count": 4,
+          "outbound_links_count": 5,
           "opinion_marker": false
         },
         "example": {
@@ -25346,7 +25727,7 @@
           "has_about_link": false,
           "has_contact_link": false,
           "has_corrections_link": false,
-          "outbound_links_count": 4,
+          "outbound_links_count": 5,
           "opinion_marker": false
         }
       }
@@ -25446,7 +25827,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-08-18T16:00:58.029Z",
+        "fetched_at": "2026-08-26T04:34:40.154Z",
         "homepage_url": "https://convoai.world/",
         "example_url": "https://podcast.convoai.world/episode/reimagining-the-future-of-learning-through-conversational-ai-with-physics-wallahs-supreet-singh/?utm_source=X&utm_medium=Paid-Social&utm_campaign=APAC-July-26&twclid=230k9qgjmrkm0obl0llcbwb6zj",
         "homepage_status": 200,
@@ -25462,7 +25843,7 @@
           "has_about_link": false,
           "has_contact_link": false,
           "has_corrections_link": false,
-          "outbound_links_count": 11,
+          "outbound_links_count": 9,
           "opinion_marker": false
         },
         "example": {
@@ -25572,7 +25953,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-08-20T10:17:23.368Z",
+        "fetched_at": "2026-08-26T04:34:40.933Z",
         "homepage_url": "https://disneyplus.com/",
         "example_url": "https://apps.disneyplus.com/1271507587?utm_source=twitter&utm_medium=video&utm_campaign=MK-PH_YR-26_AN-WALDIZ_BS-KD_CN-FY26Q4AShopforKillersS2_PB-Twitter_DT-CROSS_OB-Consid_CP-DIS_ZODDPH26-187_FF-Views22July&twclid=29smr8krrzqfg1u432yrn4a65l",
         "homepage_status": 200,
@@ -25669,7 +26050,7 @@
           ]
         },
         "profile": {
-          "score": 0.25,
+          "score": 0.26,
           "confidence": 0.65,
           "basis": [
             "meta_author:false",
@@ -25678,7 +26059,7 @@
             "about:true",
             "contact:false",
             "corrections:false",
-            "outbound_links:1",
+            "outbound_links:2",
             "opinion_marker:false"
           ]
         },
@@ -25698,7 +26079,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-08-20T11:20:11.718Z",
+        "fetched_at": "2026-08-26T04:34:42.306Z",
         "homepage_url": "https://uaprad.org/",
         "example_url": "https://uaprad.org/gregmode?twclid=2cuj8c32csu6satdshdjujp39c",
         "homepage_status": 200,
@@ -25724,7 +26105,7 @@
           "has_about_link": true,
           "has_contact_link": false,
           "has_corrections_link": false,
-          "outbound_links_count": 1,
+          "outbound_links_count": 2,
           "opinion_marker": false
         }
       }
@@ -25824,7 +26205,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-08-20T11:20:13.199Z",
+        "fetched_at": "2026-08-26T04:34:44.076Z",
         "homepage_url": "https://testsigma.com/",
         "example_url": "https://testsigma.com/webinars/ai-test-management-coverage-gaps?utm_source=twitter&utm_medium=paid_social&utm_campaign=tms-is-dead&utm_content=%5Bad-name%5D&utm_term=act1-burn&twclid=2ckh8kjs1jwqycpvn734e9ehgb",
         "homepage_status": 200,
@@ -27612,131 +27993,6 @@
           "has_contact_link": false,
           "has_corrections_link": false,
           "outbound_links_count": 1,
-          "opinion_marker": false
-        }
-      }
-    },
-    {
-      "domain": "aikido.dev",
-      "entity": "Aikido Dev",
-      "kind": "unknown",
-      "first_seen_at": "2026-04-06T05:21:30.007Z",
-      "last_seen_at": "2026-06-08T20:00:01.000Z",
-      "discovery": {
-        "distinct_urls": 3,
-        "example_urls": [
-          "https://www.aikido.dev/attack/infinite?utm_source=twitter&utm_medium=paidsocial&utm_campaign=US_tofu&utm_content=2026-02-26-Mack-Infinte-2-A&twclid=28a2h7kzzful35m0kfwtl23x0c",
-          "https://www.aikido.dev/protect/device-protection?utm_source=twitter&utm_medium=paidsocial&utm_campaign=TOFU&utm_content=2026-05-06-Endpoint-Image2&twclid=2etx8j2o3jcrysp8phyvb5kfsb",
-          "https://www.aikido.dev/?utm_source=twitter&utm_medium=paidsocial&utm_campaign=US_tofu&utm_content=2026-04-30-Free-Forever-Ad1-USD&twclid=29e59idwg3b77yh0egu0y1fx3e"
-        ],
-        "origin_counts": {
-          "feed_buffer": 1,
-          "feed_buffer_reply": 2
-        },
-        "distinct_referring_accounts": 1,
-        "sample_referring_accounts": [
-          "aikidosecurity"
-        ],
-        "distinct_axes": []
-      },
-      "claims": {
-        "total": 0,
-        "supported": 0,
-        "refuted": 0,
-        "contested": 0,
-        "unverified": 0,
-        "resolved_count": 0
-      },
-      "structural_features": {
-        "has_search_paths": false,
-        "has_article_paths": false,
-        "has_doi_paths": false
-      },
-      "ratings": {
-        "provenance": {
-          "score": 0.45,
-          "basis": [
-            "unknown_domain_pattern"
-          ]
-        },
-        "breadth": {
-          "score": 0.2075,
-          "basis": [
-            "distinct_urls:3",
-            "distinct_axes:0",
-            "origin_types:2"
-          ]
-        },
-        "corroboration": {
-          "score": 0.2833333333333333,
-          "basis": [
-            "referring_accounts:1",
-            "origin_types:2"
-          ]
-        },
-        "track_record": {
-          "score": null,
-          "basis": [
-            "no_resolved_claims_observed"
-          ]
-        },
-        "profile": {
-          "score": 0.44999999999999996,
-          "confidence": 0.65,
-          "basis": [
-            "meta_author:false",
-            "published_time:false",
-            "canonical:true",
-            "about:true",
-            "contact:true",
-            "corrections:false",
-            "outbound_links:9",
-            "opinion_marker:false"
-          ]
-        },
-        "overall": {
-          "score": 0.381328125,
-          "confidence": 0.15907500000000002,
-          "method": "mechanical_v1",
-          "basis": [
-            "unknown_domain_pattern",
-            "distinct_urls:3",
-            "distinct_axes:0",
-            "origin_types:2",
-            "referring_accounts:1",
-            "origin_types:2",
-            "track_record_unavailable"
-          ]
-        }
-      },
-      "profile": {
-        "fetched_at": "2026-08-20T23:30:10.530Z",
-        "homepage_url": "https://aikido.dev/",
-        "example_url": "https://www.aikido.dev/attack/infinite?utm_source=twitter&utm_medium=paidsocial&utm_campaign=US_tofu&utm_content=2026-02-26-Mack-Infinte-2-A&twclid=28a2h7kzzful35m0kfwtl23x0c",
-        "homepage_status": 200,
-        "example_status": 200,
-        "homepage_final_url": "https://www.aikido.dev/",
-        "example_final_url": "https://www.aikido.dev/attack/infinite?utm_source=twitter&utm_medium=paidsocial&utm_campaign=US_tofu&utm_content=2026-02-26-Mack-Infinte-2-A&twclid=28a2h7kzzful35m0kfwtl23x0c",
-        "homepage_content_type": "text/html; charset=utf-8",
-        "example_content_type": "text/html; charset=utf-8",
-        "homepage": {
-          "has_meta_author": false,
-          "has_published_time": false,
-          "has_canonical": true,
-          "has_about_link": true,
-          "has_contact_link": true,
-          "has_corrections_link": false,
-          "outbound_links_count": 8,
-          "opinion_marker": false
-        },
-        "example": {
-          "has_meta_author": false,
-          "has_published_time": false,
-          "has_canonical": true,
-          "has_about_link": true,
-          "has_contact_link": true,
-          "has_corrections_link": false,
-          "outbound_links_count": 9,
           "opinion_marker": false
         }
       }
@@ -30826,132 +31082,6 @@
           "has_contact_link": false,
           "has_corrections_link": false,
           "outbound_links_count": 7,
-          "opinion_marker": false
-        }
-      }
-    },
-    {
-      "domain": "longbridge.com",
-      "entity": "Longbridge",
-      "kind": "unknown",
-      "first_seen_at": "2026-07-17T21:15:14.276Z",
-      "last_seen_at": "2026-08-07T18:34:41.058Z",
-      "discovery": {
-        "distinct_urls": 6,
-        "example_urls": [
-          "https://longbridge.com/sg/longbridge-ai?channel=SGAI0001&twclid=27m5o8o2o9vynl50diwyukaj1x",
-          "https://longbridge.com/sg/longbridge-ai?channel=SGAI0005&twclid=29uhofbpmy5vk8k5r4wwqvz2aj",
-          "https://longbridge.com/sg/longbridge-ai?channel=SGAI0005&twclid=2txtfvyx7zstsuf5n925fzczj",
-          "https://longbridge.com/sg/longbridge-ai?channel=SGAI0005&twclid=29h31271dhzkait0u9bkljb2qi",
-          "https://longbridge.com/sg/longbridge-ai?channel=SGAI0005&twclid=240ei75trgmd0c65empgpb3cgd"
-        ],
-        "origin_counts": {
-          "feed_buffer": 6
-        },
-        "distinct_referring_accounts": 1,
-        "sample_referring_accounts": [
-          "longbridgeai"
-        ],
-        "distinct_axes": []
-      },
-      "claims": {
-        "total": 0,
-        "supported": 0,
-        "refuted": 0,
-        "contested": 0,
-        "unverified": 0,
-        "resolved_count": 0
-      },
-      "structural_features": {
-        "has_search_paths": false,
-        "has_article_paths": false,
-        "has_doi_paths": false
-      },
-      "ratings": {
-        "provenance": {
-          "score": 0.45,
-          "basis": [
-            "unknown_domain_pattern"
-          ]
-        },
-        "breadth": {
-          "score": 0.235,
-          "basis": [
-            "distinct_urls:6",
-            "distinct_axes:0",
-            "origin_types:1"
-          ]
-        },
-        "corroboration": {
-          "score": 0.19583333333333333,
-          "basis": [
-            "referring_accounts:1",
-            "origin_types:1"
-          ]
-        },
-        "track_record": {
-          "score": null,
-          "basis": [
-            "no_resolved_claims_observed"
-          ]
-        },
-        "profile": {
-          "score": 0.34,
-          "confidence": 0.65,
-          "basis": [
-            "meta_author:false",
-            "published_time:false",
-            "canonical:true",
-            "about:true",
-            "contact:false",
-            "corrections:false",
-            "outbound_links:10",
-            "opinion_marker:false"
-          ]
-        },
-        "overall": {
-          "score": 0.379140625,
-          "confidence": 0.22447499999999998,
-          "method": "mechanical_v1",
-          "basis": [
-            "unknown_domain_pattern",
-            "distinct_urls:6",
-            "distinct_axes:0",
-            "origin_types:1",
-            "referring_accounts:1",
-            "origin_types:1",
-            "track_record_unavailable"
-          ]
-        }
-      },
-      "profile": {
-        "fetched_at": "2026-08-17T23:24:27.900Z",
-        "homepage_url": "https://longbridge.com/",
-        "example_url": "https://longbridge.com/sg/longbridge-ai?channel=SGAI0001&twclid=27m5o8o2o9vynl50diwyukaj1x",
-        "homepage_status": 200,
-        "example_status": 200,
-        "homepage_final_url": "https://longbridge.com/sg",
-        "example_final_url": "https://longbridge.com/sg/longbridge-ai?channel=SGAI0001&twclid=27m5o8o2o9vynl50diwyukaj1x",
-        "homepage_content_type": "text/html;charset=utf-8",
-        "example_content_type": "text/html;charset=utf-8",
-        "homepage": {
-          "has_meta_author": false,
-          "has_published_time": false,
-          "has_canonical": true,
-          "has_about_link": true,
-          "has_contact_link": false,
-          "has_corrections_link": false,
-          "outbound_links_count": 11,
-          "opinion_marker": false
-        },
-        "example": {
-          "has_meta_author": false,
-          "has_published_time": false,
-          "has_canonical": true,
-          "has_about_link": true,
-          "has_contact_link": false,
-          "has_corrections_link": false,
-          "outbound_links_count": 10,
           "opinion_marker": false
         }
       }
@@ -42586,131 +42716,6 @@
       }
     },
     {
-      "domain": "ptgaming.ph",
-      "entity": "Ptgaming Ph",
-      "kind": "unknown",
-      "first_seen_at": "2026-07-05T04:59:47.736Z",
-      "last_seen_at": "2026-07-23T09:30:34.436Z",
-      "discovery": {
-        "distinct_urls": 4,
-        "example_urls": [
-          "https://www.ptgaming.ph/?twclid=21n3lg1hcl64ox73kjyr4lggz9",
-          "https://www.ptgaming.ph/?twclid=25vb0w4jbmtupw5yokwy2fjbcq",
-          "https://www.ptgaming.ph/?twclid=24xua76p6ig4wj1on4u6eqhjkz",
-          "https://www.ptgaming.ph/?twclid=23opaojcnervezlk24t4109xw9"
-        ],
-        "origin_counts": {
-          "feed_buffer": 4
-        },
-        "distinct_referring_accounts": 1,
-        "sample_referring_accounts": [
-          "ptgamingph"
-        ],
-        "distinct_axes": []
-      },
-      "claims": {
-        "total": 0,
-        "supported": 0,
-        "refuted": 0,
-        "contested": 0,
-        "unverified": 0,
-        "resolved_count": 0
-      },
-      "structural_features": {
-        "has_search_paths": false,
-        "has_article_paths": false,
-        "has_doi_paths": false
-      },
-      "ratings": {
-        "provenance": {
-          "score": 0.45,
-          "basis": [
-            "unknown_domain_pattern"
-          ]
-        },
-        "breadth": {
-          "score": 0.17666666666666664,
-          "basis": [
-            "distinct_urls:4",
-            "distinct_axes:0",
-            "origin_types:1"
-          ]
-        },
-        "corroboration": {
-          "score": 0.19583333333333333,
-          "basis": [
-            "referring_accounts:1",
-            "origin_types:1"
-          ]
-        },
-        "track_record": {
-          "score": null,
-          "basis": [
-            "no_resolved_claims_observed"
-          ]
-        },
-        "profile": {
-          "score": 0.1,
-          "confidence": 0.55,
-          "basis": [
-            "meta_author:false",
-            "published_time:false",
-            "canonical:true",
-            "about:false",
-            "contact:false",
-            "corrections:false",
-            "outbound_links:0",
-            "opinion_marker:false"
-          ]
-        },
-        "overall": {
-          "score": 0.3663802083333333,
-          "confidence": 0.16722499999999998,
-          "method": "mechanical_v1",
-          "basis": [
-            "unknown_domain_pattern",
-            "distinct_urls:4",
-            "distinct_axes:0",
-            "origin_types:1",
-            "referring_accounts:1",
-            "origin_types:1",
-            "track_record_unavailable"
-          ]
-        }
-      },
-      "profile": {
-        "fetched_at": "2026-08-20T01:16:18.147Z",
-        "homepage_url": "https://ptgaming.ph/",
-        "example_url": "https://www.ptgaming.ph/?twclid=21n3lg1hcl64ox73kjyr4lggz9",
-        "homepage_status": 200,
-        "example_status": 200,
-        "homepage_final_url": "https://www.ptgaming.ph/",
-        "example_final_url": "https://www.ptgaming.ph/?twclid=21n3lg1hcl64ox73kjyr4lggz9",
-        "homepage_content_type": "text/html",
-        "example_content_type": "text/html",
-        "homepage": {
-          "has_meta_author": false,
-          "has_published_time": false,
-          "has_canonical": true,
-          "has_about_link": false,
-          "has_contact_link": false,
-          "has_corrections_link": false,
-          "outbound_links_count": 0,
-          "opinion_marker": false
-        },
-        "example": {
-          "has_meta_author": false,
-          "has_published_time": false,
-          "has_canonical": true,
-          "has_about_link": false,
-          "has_contact_link": false,
-          "has_corrections_link": false,
-          "outbound_links_count": 0,
-          "opinion_marker": false
-        }
-      }
-    },
-    {
       "domain": "ovationproductions.asia",
       "entity": "Ovationproductions Asia",
       "kind": "unknown",
@@ -42950,6 +42955,131 @@
         },
         "example": {
           "has_meta_author": true,
+          "has_published_time": false,
+          "has_canonical": false,
+          "has_about_link": false,
+          "has_contact_link": false,
+          "has_corrections_link": false,
+          "outbound_links_count": 0,
+          "opinion_marker": false
+        }
+      }
+    },
+    {
+      "domain": "jobescape.me",
+      "entity": "Jobescape Me",
+      "kind": "unknown",
+      "first_seen_at": "2026-07-17T14:35:13.138Z",
+      "last_seen_at": "2026-08-26T02:32:37.517Z",
+      "discovery": {
+        "distinct_urls": 4,
+        "example_urls": [
+          "https://jobescape.me/chat-v3?utm_source=X&utm_campaign=41800699&utm_adset=55644377&utm_ad=2073384613213569345&utm_tag=cld&twclid=2f3xceh90a7lt534cy5nyja6uw",
+          "https://jobescape.me/chat-v3?utm_source=X&utm_campaign=42036667&utm_adset=55984484&utm_ad=2082357892272062526&utm_tag=cld&twclid=25jlkh40oud35mqv3zg7w9ar2u",
+          "https://jobescape.me/chat-v3?utm_source=X&utm_campaign=41800699&utm_adset=55792034&utm_ad=2076616228563816944&utm_tag=cld&twclid=2bv6ag5uourd8ypn9ezay271zk",
+          "https://jobescape.me/chat-v3?utm_source=X&utm_campaign=42036667&utm_adset=55984484&utm_ad=2082357892272062526&utm_tag=cld&twclid=2d2f6hcv295muzj1wmb647o60e"
+        ],
+        "origin_counts": {
+          "feed_buffer": 4
+        },
+        "distinct_referring_accounts": 1,
+        "sample_referring_accounts": [
+          "jobescape_ai"
+        ],
+        "distinct_axes": []
+      },
+      "claims": {
+        "total": 0,
+        "supported": 0,
+        "refuted": 0,
+        "contested": 0,
+        "unverified": 0,
+        "resolved_count": 0
+      },
+      "structural_features": {
+        "has_search_paths": false,
+        "has_article_paths": false,
+        "has_doi_paths": false
+      },
+      "ratings": {
+        "provenance": {
+          "score": 0.45,
+          "basis": [
+            "unknown_domain_pattern"
+          ]
+        },
+        "breadth": {
+          "score": 0.17666666666666664,
+          "basis": [
+            "distinct_urls:4",
+            "distinct_axes:0",
+            "origin_types:1"
+          ]
+        },
+        "corroboration": {
+          "score": 0.19583333333333333,
+          "basis": [
+            "referring_accounts:1",
+            "origin_types:1"
+          ]
+        },
+        "track_record": {
+          "score": null,
+          "basis": [
+            "no_resolved_claims_observed"
+          ]
+        },
+        "profile": {
+          "score": 0.26,
+          "confidence": 0.65,
+          "basis": [
+            "meta_author:false",
+            "published_time:false",
+            "canonical:false",
+            "about:true",
+            "contact:true",
+            "corrections:false",
+            "outbound_links:0",
+            "opinion_marker:false"
+          ]
+        },
+        "overall": {
+          "score": 0.3663802083333333,
+          "confidence": 0.16722499999999998,
+          "method": "mechanical_v1",
+          "basis": [
+            "unknown_domain_pattern",
+            "distinct_urls:4",
+            "distinct_axes:0",
+            "origin_types:1",
+            "referring_accounts:1",
+            "origin_types:1",
+            "track_record_unavailable"
+          ]
+        }
+      },
+      "profile": {
+        "fetched_at": "2026-08-11T05:32:20.695Z",
+        "homepage_url": "https://jobescape.me/",
+        "example_url": "https://jobescape.me/chat-v3?utm_source=X&utm_campaign=41800699&utm_adset=55644377&utm_ad=2073384613213569345&utm_tag=cld&twclid=2f3xceh90a7lt534cy5nyja6uw",
+        "homepage_status": 200,
+        "example_status": 200,
+        "homepage_final_url": "https://jobescape.me/",
+        "example_final_url": "https://jobescape.me/chat-v3?utm_source=X&utm_campaign=41800699&utm_adset=55644377&utm_ad=2073384613213569345&utm_tag=cld&twclid=2f3xceh90a7lt534cy5nyja6uw",
+        "homepage_content_type": "text/html; charset=utf-8",
+        "example_content_type": "text/html; charset=utf-8",
+        "homepage": {
+          "has_meta_author": false,
+          "has_published_time": false,
+          "has_canonical": true,
+          "has_about_link": true,
+          "has_contact_link": true,
+          "has_corrections_link": false,
+          "outbound_links_count": 1,
+          "opinion_marker": false
+        },
+        "example": {
+          "has_meta_author": false,
           "has_published_time": false,
           "has_canonical": false,
           "has_about_link": false,
@@ -47623,130 +47753,6 @@
           "has_contact_link": false,
           "has_corrections_link": false,
           "outbound_links_count": 16,
-          "opinion_marker": false
-        }
-      }
-    },
-    {
-      "domain": "jobescape.me",
-      "entity": "Jobescape Me",
-      "kind": "unknown",
-      "first_seen_at": "2026-07-17T14:35:13.138Z",
-      "last_seen_at": "2026-08-07T18:34:38.603Z",
-      "discovery": {
-        "distinct_urls": 3,
-        "example_urls": [
-          "https://jobescape.me/chat-v3?utm_source=X&utm_campaign=41800699&utm_adset=55644377&utm_ad=2073384613213569345&utm_tag=cld&twclid=2f3xceh90a7lt534cy5nyja6uw",
-          "https://jobescape.me/chat-v3?utm_source=X&utm_campaign=42036667&utm_adset=55984484&utm_ad=2082357892272062526&utm_tag=cld&twclid=25jlkh40oud35mqv3zg7w9ar2u",
-          "https://jobescape.me/chat-v3?utm_source=X&utm_campaign=41800699&utm_adset=55792034&utm_ad=2076616228563816944&utm_tag=cld&twclid=2bv6ag5uourd8ypn9ezay271zk"
-        ],
-        "origin_counts": {
-          "feed_buffer": 3
-        },
-        "distinct_referring_accounts": 1,
-        "sample_referring_accounts": [
-          "jobescape_ai"
-        ],
-        "distinct_axes": []
-      },
-      "claims": {
-        "total": 0,
-        "supported": 0,
-        "refuted": 0,
-        "contested": 0,
-        "unverified": 0,
-        "resolved_count": 0
-      },
-      "structural_features": {
-        "has_search_paths": false,
-        "has_article_paths": false,
-        "has_doi_paths": false
-      },
-      "ratings": {
-        "provenance": {
-          "score": 0.45,
-          "basis": [
-            "unknown_domain_pattern"
-          ]
-        },
-        "breadth": {
-          "score": 0.1475,
-          "basis": [
-            "distinct_urls:3",
-            "distinct_axes:0",
-            "origin_types:1"
-          ]
-        },
-        "corroboration": {
-          "score": 0.19583333333333333,
-          "basis": [
-            "referring_accounts:1",
-            "origin_types:1"
-          ]
-        },
-        "track_record": {
-          "score": null,
-          "basis": [
-            "no_resolved_claims_observed"
-          ]
-        },
-        "profile": {
-          "score": 0.26,
-          "confidence": 0.65,
-          "basis": [
-            "meta_author:false",
-            "published_time:false",
-            "canonical:false",
-            "about:true",
-            "contact:true",
-            "corrections:false",
-            "outbound_links:0",
-            "opinion_marker:false"
-          ]
-        },
-        "overall": {
-          "score": 0.36000000000000004,
-          "confidence": 0.1386,
-          "method": "mechanical_v1",
-          "basis": [
-            "unknown_domain_pattern",
-            "distinct_urls:3",
-            "distinct_axes:0",
-            "origin_types:1",
-            "referring_accounts:1",
-            "origin_types:1",
-            "track_record_unavailable"
-          ]
-        }
-      },
-      "profile": {
-        "fetched_at": "2026-08-11T05:32:20.695Z",
-        "homepage_url": "https://jobescape.me/",
-        "example_url": "https://jobescape.me/chat-v3?utm_source=X&utm_campaign=41800699&utm_adset=55644377&utm_ad=2073384613213569345&utm_tag=cld&twclid=2f3xceh90a7lt534cy5nyja6uw",
-        "homepage_status": 200,
-        "example_status": 200,
-        "homepage_final_url": "https://jobescape.me/",
-        "example_final_url": "https://jobescape.me/chat-v3?utm_source=X&utm_campaign=41800699&utm_adset=55644377&utm_ad=2073384613213569345&utm_tag=cld&twclid=2f3xceh90a7lt534cy5nyja6uw",
-        "homepage_content_type": "text/html; charset=utf-8",
-        "example_content_type": "text/html; charset=utf-8",
-        "homepage": {
-          "has_meta_author": false,
-          "has_published_time": false,
-          "has_canonical": true,
-          "has_about_link": true,
-          "has_contact_link": true,
-          "has_corrections_link": false,
-          "outbound_links_count": 1,
-          "opinion_marker": false
-        },
-        "example": {
-          "has_meta_author": false,
-          "has_published_time": false,
-          "has_canonical": false,
-          "has_about_link": false,
-          "has_contact_link": false,
-          "has_corrections_link": false,
-          "outbound_links_count": 0,
           "opinion_marker": false
         }
       }
@@ -59151,6 +59157,84 @@
         "distinct_referring_accounts": 1,
         "sample_referring_accounts": [
           "bitget_tradfi"
+        ],
+        "distinct_axes": []
+      },
+      "claims": {
+        "total": 0,
+        "supported": 0,
+        "refuted": 0,
+        "contested": 0,
+        "unverified": 0,
+        "resolved_count": 0
+      },
+      "structural_features": {
+        "has_search_paths": false,
+        "has_article_paths": false,
+        "has_doi_paths": false
+      },
+      "ratings": {
+        "provenance": {
+          "score": 0.45,
+          "basis": [
+            "unknown_domain_pattern"
+          ]
+        },
+        "breadth": {
+          "score": 0.11833333333333332,
+          "basis": [
+            "distinct_urls:2",
+            "distinct_axes:0",
+            "origin_types:1"
+          ]
+        },
+        "corroboration": {
+          "score": 0.19583333333333333,
+          "basis": [
+            "referring_accounts:1",
+            "origin_types:1"
+          ]
+        },
+        "track_record": {
+          "score": null,
+          "basis": [
+            "no_resolved_claims_observed"
+          ]
+        },
+        "overall": {
+          "score": 0.3536197916666667,
+          "confidence": 0.10997499999999999,
+          "method": "mechanical_v1",
+          "basis": [
+            "unknown_domain_pattern",
+            "distinct_urls:2",
+            "distinct_axes:0",
+            "origin_types:1",
+            "referring_accounts:1",
+            "origin_types:1",
+            "track_record_unavailable"
+          ]
+        }
+      }
+    },
+    {
+      "domain": "portals-experience.sg",
+      "entity": "Portals-Experience Sg",
+      "kind": "unknown",
+      "first_seen_at": "2026-08-07T13:49:16.759Z",
+      "last_seen_at": "2026-08-26T02:32:33.255Z",
+      "discovery": {
+        "distinct_urls": 2,
+        "example_urls": [
+          "https://portals-experience.sg/?utm_source=twitter&utm_medium=ad&utm_campaign=611656_sin&twclid=249ovn5jovr9jcnaj3k7mr9p23",
+          "https://portals-experience.sg/?utm_source=twitter&utm_medium=ad&utm_campaign=611656_sin&twclid=22uz03s0no3udebc9lkja7otu7"
+        ],
+        "origin_counts": {
+          "feed_buffer": 2
+        },
+        "distinct_referring_accounts": 1,
+        "sample_referring_accounts": [
+          "fever_gl"
         ],
         "distinct_axes": []
       },
@@ -90103,83 +90187,6 @@
       }
     },
     {
-      "domain": "portals-experience.sg",
-      "entity": "Portals-Experience Sg",
-      "kind": "unknown",
-      "first_seen_at": "2026-08-07T13:49:16.759Z",
-      "last_seen_at": "2026-08-07T13:49:16.759Z",
-      "discovery": {
-        "distinct_urls": 1,
-        "example_urls": [
-          "https://portals-experience.sg/?utm_source=twitter&utm_medium=ad&utm_campaign=611656_sin&twclid=249ovn5jovr9jcnaj3k7mr9p23"
-        ],
-        "origin_counts": {
-          "feed_buffer": 1
-        },
-        "distinct_referring_accounts": 1,
-        "sample_referring_accounts": [
-          "fever_gl"
-        ],
-        "distinct_axes": []
-      },
-      "claims": {
-        "total": 0,
-        "supported": 0,
-        "refuted": 0,
-        "contested": 0,
-        "unverified": 0,
-        "resolved_count": 0
-      },
-      "structural_features": {
-        "has_search_paths": false,
-        "has_article_paths": false,
-        "has_doi_paths": false
-      },
-      "ratings": {
-        "provenance": {
-          "score": 0.45,
-          "basis": [
-            "unknown_domain_pattern"
-          ]
-        },
-        "breadth": {
-          "score": 0.08916666666666666,
-          "basis": [
-            "distinct_urls:1",
-            "distinct_axes:0",
-            "origin_types:1"
-          ]
-        },
-        "corroboration": {
-          "score": 0.19583333333333333,
-          "basis": [
-            "referring_accounts:1",
-            "origin_types:1"
-          ]
-        },
-        "track_record": {
-          "score": null,
-          "basis": [
-            "no_resolved_claims_observed"
-          ]
-        },
-        "overall": {
-          "score": 0.3472395833333333,
-          "confidence": 0.08135,
-          "method": "mechanical_v1",
-          "basis": [
-            "unknown_domain_pattern",
-            "distinct_urls:1",
-            "distinct_axes:0",
-            "origin_types:1",
-            "referring_accounts:1",
-            "origin_types:1",
-            "track_record_unavailable"
-          ]
-        }
-      }
-    },
-    {
       "domain": "ebiblefellowship.org",
       "entity": "Ebiblefellowship",
       "kind": "unknown",
@@ -92121,6 +92128,160 @@
         "distinct_referring_accounts": 1,
         "sample_referring_accounts": [
           "arsenal"
+        ],
+        "distinct_axes": []
+      },
+      "claims": {
+        "total": 0,
+        "supported": 0,
+        "refuted": 0,
+        "contested": 0,
+        "unverified": 0,
+        "resolved_count": 0
+      },
+      "structural_features": {
+        "has_search_paths": false,
+        "has_article_paths": false,
+        "has_doi_paths": false
+      },
+      "ratings": {
+        "provenance": {
+          "score": 0.45,
+          "basis": [
+            "unknown_domain_pattern"
+          ]
+        },
+        "breadth": {
+          "score": 0.08916666666666666,
+          "basis": [
+            "distinct_urls:1",
+            "distinct_axes:0",
+            "origin_types:1"
+          ]
+        },
+        "corroboration": {
+          "score": 0.19583333333333333,
+          "basis": [
+            "referring_accounts:1",
+            "origin_types:1"
+          ]
+        },
+        "track_record": {
+          "score": null,
+          "basis": [
+            "no_resolved_claims_observed"
+          ]
+        },
+        "overall": {
+          "score": 0.3472395833333333,
+          "confidence": 0.08135,
+          "method": "mechanical_v1",
+          "basis": [
+            "unknown_domain_pattern",
+            "distinct_urls:1",
+            "distinct_axes:0",
+            "origin_types:1",
+            "referring_accounts:1",
+            "origin_types:1",
+            "track_record_unavailable"
+          ]
+        }
+      }
+    },
+    {
+      "domain": "huggingface.co",
+      "entity": "Huggingface Co",
+      "kind": "unknown",
+      "first_seen_at": "2026-08-26T01:55:45.166Z",
+      "last_seen_at": "2026-08-26T01:55:45.166Z",
+      "discovery": {
+        "distinct_urls": 1,
+        "example_urls": [
+          "https://huggingface.co/superwhisper/s1-mini?twclid=28hujw9q4zxf3mlccru8wtlv6g"
+        ],
+        "origin_counts": {
+          "feed_buffer": 1
+        },
+        "distinct_referring_accounts": 1,
+        "sample_referring_accounts": [
+          "superwhisper"
+        ],
+        "distinct_axes": []
+      },
+      "claims": {
+        "total": 0,
+        "supported": 0,
+        "refuted": 0,
+        "contested": 0,
+        "unverified": 0,
+        "resolved_count": 0
+      },
+      "structural_features": {
+        "has_search_paths": false,
+        "has_article_paths": false,
+        "has_doi_paths": false
+      },
+      "ratings": {
+        "provenance": {
+          "score": 0.45,
+          "basis": [
+            "unknown_domain_pattern"
+          ]
+        },
+        "breadth": {
+          "score": 0.08916666666666666,
+          "basis": [
+            "distinct_urls:1",
+            "distinct_axes:0",
+            "origin_types:1"
+          ]
+        },
+        "corroboration": {
+          "score": 0.19583333333333333,
+          "basis": [
+            "referring_accounts:1",
+            "origin_types:1"
+          ]
+        },
+        "track_record": {
+          "score": null,
+          "basis": [
+            "no_resolved_claims_observed"
+          ]
+        },
+        "overall": {
+          "score": 0.3472395833333333,
+          "confidence": 0.08135,
+          "method": "mechanical_v1",
+          "basis": [
+            "unknown_domain_pattern",
+            "distinct_urls:1",
+            "distinct_axes:0",
+            "origin_types:1",
+            "referring_accounts:1",
+            "origin_types:1",
+            "track_record_unavailable"
+          ]
+        }
+      }
+    },
+    {
+      "domain": "playtime.ph",
+      "entity": "Playtime Ph",
+      "kind": "unknown",
+      "first_seen_at": "2026-08-26T04:08:56.467Z",
+      "last_seen_at": "2026-08-26T04:08:56.467Z",
+      "discovery": {
+        "distinct_urls": 1,
+        "example_urls": [
+          "https://www.playtime.ph/?twclid=2ehhsiuw72qcjnqiqckbnej4r9"
+        ],
+        "origin_counts": {
+          "feed_buffer": 1
+        },
+        "distinct_referring_accounts": 1,
+        "sample_referring_accounts": [
+          "playtime_ent"
         ],
         "distinct_axes": []
       },
