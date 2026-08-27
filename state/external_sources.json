@@ -1,8 +1,8 @@
 {
   "schema_version": "1.0",
-  "generated_at": "2026-08-27T01:04:56.551Z",
+  "generated_at": "2026-08-27T04:05:01.096Z",
   "method": "mechanical_registry_v1",
-  "profiled_at": "2026-08-27T01:05:01.309Z",
+  "profiled_at": "2026-08-27T04:05:03.269Z",
   "sources": [
     {
       "domain": "theguardian.com",
@@ -11,7 +11,7 @@
       "first_seen_at": "2026-03-27T23:17:00Z",
       "last_seen_at": "2026-08-22T15:49:14.166Z",
       "discovery": {
-        "distinct_urls": 1031,
+        "distinct_urls": 1033,
         "example_urls": [
           "https://www.theguardian.com/us-news/2026/jun/23/trump-immigration-courthouse-arrest-policy",
           "https://www.theguardian.com/us-news/2026/jun/28/ice-minnesota-defending-democracy",
@@ -21,7 +21,7 @@
         ],
         "origin_counts": {
           "ontology_evidence": 51,
-          "reading_queue": 991,
+          "reading_queue": 993,
           "journals": 136,
           "articles": 5
         },
@@ -76,7 +76,7 @@
         "breadth": {
           "score": 0.94,
           "basis": [
-            "distinct_urls:1031",
+            "distinct_urls:1033",
             "distinct_axes:21",
             "origin_types:4"
           ]
@@ -116,7 +116,7 @@
             "newsroom_domain_pattern",
             "article_path_seen",
             "doi_or_identifier_path_seen",
-            "distinct_urls:1031",
+            "distinct_urls:1033",
             "distinct_axes:21",
             "origin_types:4",
             "referring_accounts:0",
@@ -461,7 +461,7 @@
           "https://careers.cbp.gov/s/connect-to-recruiter?campaignid=701SJ00000BV0tR&utm_source=X&utm_medium=paid_social&utm_campaign=MGC_B5SXtXt5J5T&twclid=2f2100ywgvzunnowbnhrpi34g1"
         ],
         "origin_counts": {
-          "reading_queue": 22,
+          "reading_queue": 23,
           "feed_buffer_reply": 7
         },
         "distinct_referring_accounts": 1,
@@ -586,7 +586,7 @@
           "https://www.justice.gov/usao-ri/pr/two-business-executives-plead-guilty-tech-support-fraud-scheme?twclid=2f42440xock41qvr5cwo18o539"
         ],
         "origin_counts": {
-          "reading_queue": 22,
+          "reading_queue": 23,
           "feed_buffer_reply": 2,
           "feed_buffer": 1
         },
@@ -705,7 +705,7 @@
       "first_seen_at": "2026-06-26T07:05:00Z",
       "last_seen_at": "2026-08-22T15:49:14.432Z",
       "discovery": {
-        "distinct_urls": 649,
+        "distinct_urls": 650,
         "example_urls": [
           "https://www.bbc.co.uk/news/articles/cn8qxz6qypyo",
           "https://www.bbc.co.uk/news/articles/cn075j04pnyo?at_medium=RSS&amp;at_campaign=rss",
@@ -715,7 +715,7 @@
         ],
         "origin_counts": {
           "ontology_evidence": 9,
-          "reading_queue": 662,
+          "reading_queue": 663,
           "journals": 22,
           "articles": 2
         },
@@ -754,7 +754,7 @@
         "breadth": {
           "score": 0.94,
           "basis": [
-            "distinct_urls:649",
+            "distinct_urls:650",
             "distinct_axes:7",
             "origin_types:4"
           ]
@@ -792,7 +792,7 @@
           "method": "mechanical_v1",
           "basis": [
             "newsroom_domain_pattern",
-            "distinct_urls:649",
+            "distinct_urls:650",
             "distinct_axes:7",
             "origin_types:4",
             "referring_accounts:0",
@@ -840,7 +840,7 @@
       "first_seen_at": "2026-06-22T00:15:00Z",
       "last_seen_at": "2026-08-22T09:38:02.939Z",
       "discovery": {
-        "distinct_urls": 696,
+        "distinct_urls": 698,
         "example_urls": [
           "https://www.nytimes.com/2026/06/19/world/canada/frank-stronach-trial-guilty-sex-charges.html",
           "https://www.nytimes.com/2026/06/27/world/americas/mexican-officials-us-informants.html",
@@ -850,7 +850,7 @@
         ],
         "origin_counts": {
           "ontology_evidence": 24,
-          "reading_queue": 720,
+          "reading_queue": 722,
           "journals": 59
         },
         "distinct_referring_accounts": 0,
@@ -895,7 +895,7 @@
         "breadth": {
           "score": 0.8799999999999999,
           "basis": [
-            "distinct_urls:696",
+            "distinct_urls:698",
             "distinct_axes:13",
             "origin_types:3"
           ]
@@ -934,7 +934,7 @@
           "basis": [
             "newsroom_domain_pattern",
             "article_path_seen",
-            "distinct_urls:696",
+            "distinct_urls:698",
             "distinct_axes:13",
             "origin_types:3",
             "referring_accounts:0",
@@ -1116,7 +1116,7 @@
         ],
         "origin_counts": {
           "ontology_evidence": 1,
-          "reading_queue": 19
+          "reading_queue": 20
         },
         "distinct_referring_accounts": 0,
         "sample_referring_accounts": [],
@@ -12126,12 +12126,12 @@
           ]
         },
         "profile": {
-          "score": 0,
+          "score": 0.1,
           "confidence": 0.55,
           "basis": [
             "meta_author:false",
             "published_time:false",
-            "canonical:false",
+            "canonical:true",
             "about:false",
             "contact:false",
             "corrections:false",
@@ -12155,19 +12155,19 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-08-23T19:57:54.274Z",
+        "fetched_at": "2026-08-27T02:05:02.160Z",
         "homepage_url": "https://amazon.com/",
         "example_url": "https://www.amazon.com/The-Boys-Season-5/dp/B0FX3G8F44/ref_=dvm_us_c_soc_THBY_tw_rb?twclid=2e4zyrzur7iapo7e8zxfmiz1fu",
-        "homepage_status": null,
-        "example_status": null,
-        "homepage_final_url": "https://amazon.com/",
-        "example_final_url": "https://www.amazon.com/The-Boys-Season-5/dp/B0FX3G8F44/ref_=dvm_us_c_soc_THBY_tw_rb?twclid=2e4zyrzur7iapo7e8zxfmiz1fu",
-        "homepage_content_type": "",
-        "example_content_type": "",
+        "homepage_status": 200,
+        "example_status": 200,
+        "homepage_final_url": "https://www.amazon.com/",
+        "example_final_url": "https://www.amazon.com/The-Boys-Season-5/dp/B0FX3G8F44",
+        "homepage_content_type": "text/html;charset=UTF-8",
+        "example_content_type": "text/html;charset=UTF-8",
         "homepage": {
           "has_meta_author": false,
           "has_published_time": false,
-          "has_canonical": false,
+          "has_canonical": true,
           "has_about_link": false,
           "has_contact_link": false,
           "has_corrections_link": false,
@@ -12177,7 +12177,7 @@
         "example": {
           "has_meta_author": false,
           "has_published_time": false,
-          "has_canonical": false,
+          "has_canonical": true,
           "has_about_link": false,
           "has_contact_link": false,
           "has_corrections_link": false,
@@ -12255,14 +12255,14 @@
           ]
         },
         "profile": {
-          "score": 0,
-          "confidence": 0.55,
+          "score": 0.26,
+          "confidence": 0.65,
           "basis": [
             "meta_author:false",
             "published_time:false",
             "canonical:false",
-            "about:false",
-            "contact:false",
+            "about:true",
+            "contact:true",
             "corrections:false",
             "outbound_links:0",
             "opinion_marker:false"
@@ -12284,23 +12284,23 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-08-23T19:58:14.279Z",
+        "fetched_at": "2026-08-27T02:05:04.811Z",
         "homepage_url": "https://onelink.me/",
         "example_url": "https://vix.onelink.me/Z4oU/hyuh928w?twclid=24s36ffdjwv85ew8o2yfteqmxu",
-        "homepage_status": null,
-        "example_status": null,
-        "homepage_final_url": "https://onelink.me/",
-        "example_final_url": "https://vix.onelink.me/Z4oU/hyuh928w?twclid=24s36ffdjwv85ew8o2yfteqmxu",
-        "homepage_content_type": "",
-        "example_content_type": "",
+        "homepage_status": 200,
+        "example_status": 200,
+        "homepage_final_url": "https://www.appsflyer.com/products/deep-linking/",
+        "example_final_url": "https://assets.vix.com/geo.html",
+        "homepage_content_type": "text/html; charset=UTF-8",
+        "example_content_type": "text/html",
         "homepage": {
-          "has_meta_author": false,
-          "has_published_time": false,
-          "has_canonical": false,
-          "has_about_link": false,
-          "has_contact_link": false,
+          "has_meta_author": true,
+          "has_published_time": true,
+          "has_canonical": true,
+          "has_about_link": true,
+          "has_contact_link": true,
           "has_corrections_link": false,
-          "outbound_links_count": 0,
+          "outbound_links_count": 116,
           "opinion_marker": false
         },
         "example": {
@@ -12382,14 +12382,14 @@
           ]
         },
         "profile": {
-          "score": 0,
-          "confidence": 0.55,
+          "score": 0.26,
+          "confidence": 0.65,
           "basis": [
             "meta_author:false",
             "published_time:false",
             "canonical:false",
-            "about:false",
-            "contact:false",
+            "about:true",
+            "contact:true",
             "corrections:false",
             "outbound_links:0",
             "opinion_marker:false"
@@ -12411,23 +12411,23 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-08-23T19:58:34.284Z",
+        "fetched_at": "2026-08-27T02:05:06.034Z",
         "homepage_url": "https://falconx.io/",
         "example_url": "https://focal.falconx.io/workflows/discovery/crypto?utm_source=x&utm_medium=ads&utm_campaign=discover&utm_id=discover&twclid=24ydefk7qg32l97smp6icteh83",
-        "homepage_status": null,
-        "example_status": null,
-        "homepage_final_url": "https://falconx.io/",
-        "example_final_url": "https://focal.falconx.io/workflows/discovery/crypto?utm_source=x&utm_medium=ads&utm_campaign=discover&utm_id=discover&twclid=24ydefk7qg32l97smp6icteh83",
-        "homepage_content_type": "",
-        "example_content_type": "",
+        "homepage_status": 200,
+        "example_status": 200,
+        "homepage_final_url": "https://www.falconx.io/",
+        "example_final_url": "https://askfocal.com/workflows/discovery/crypto?utm_source=x&utm_medium=ads&utm_campaign=discover&utm_id=discover&twclid=24ydefk7qg32l97smp6icteh83",
+        "homepage_content_type": "text/html; charset=utf-8",
+        "example_content_type": "text/html",
         "homepage": {
           "has_meta_author": false,
           "has_published_time": false,
-          "has_canonical": false,
-          "has_about_link": false,
-          "has_contact_link": false,
+          "has_canonical": true,
+          "has_about_link": true,
+          "has_contact_link": true,
           "has_corrections_link": false,
-          "outbound_links_count": 0,
+          "outbound_links_count": 3,
           "opinion_marker": false
         },
         "example": {
@@ -12538,15 +12538,15 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-08-23T19:58:54.290Z",
+        "fetched_at": "2026-08-27T02:05:07.245Z",
         "homepage_url": "https://fundrise.com/",
         "example_url": "https://fundrise.com/vcx?utm_source=twitter&utm_campaign=vcxsky&twclid=286j5mjx6wqmg12vs5jto11lrf",
-        "homepage_status": null,
-        "example_status": null,
+        "homepage_status": 405,
+        "example_status": 405,
         "homepage_final_url": "https://fundrise.com/",
         "example_final_url": "https://fundrise.com/vcx?utm_source=twitter&utm_campaign=vcxsky&twclid=286j5mjx6wqmg12vs5jto11lrf",
-        "homepage_content_type": "",
-        "example_content_type": "",
+        "homepage_content_type": "text/html; charset=UTF-8",
+        "example_content_type": "text/html; charset=UTF-8",
         "homepage": {
           "has_meta_author": false,
           "has_published_time": false,
@@ -12665,7 +12665,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-08-24T02:02:46.027Z",
+        "fetched_at": "2026-08-27T02:34:59.157Z",
         "homepage_url": "https://asco.org/",
         "example_url": "https://www.asco.org/career-development/leadership-programs/global-leadership-programs/asia-pacific?cmpid=cc_ascoorg_ldp_abc26-phase2-ldp-asia_sn_x_formerly_twitter_all_retargeting_intl_070126_081726___aware_anime_impact&twclid=2ag9prgoer02llrzl6qhdbcbe6",
         "homepage_status": 403,
@@ -12792,7 +12792,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-08-24T02:02:47.651Z",
+        "fetched_at": "2026-08-27T02:35:01.381Z",
         "homepage_url": "https://ukiyoework.com/",
         "example_url": "https://www.ukiyoework.com/view/item/000000000401?utm_source=twitter&utm_medium=cpc&twclid=23tigf5ad41s1prapekhalf5cq",
         "homepage_status": 200,
@@ -12920,7 +12920,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-08-24T02:02:49.027Z",
+        "fetched_at": "2026-08-27T02:35:02.645Z",
         "homepage_url": "https://tinyurl.com/",
         "example_url": "https://tinyurl.com/yc8xxez5?twclid=2dnd76jy9k71tnu9ve267e0uz7",
         "homepage_status": 200,
@@ -13047,7 +13047,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-08-24T02:02:49.655Z",
+        "fetched_at": "2026-08-27T02:35:03.268Z",
         "homepage_url": "https://avenorigin.com/",
         "example_url": "https://avenorigin.com/?x=twg11&tw=rcafs&tw_click=tw-rcafs-rcafv&twclid=27a9svqvmxrds3k2j1qq8l2dy6",
         "homepage_status": null,
@@ -13174,7 +13174,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-08-24T03:02:22.720Z",
+        "fetched_at": "2026-08-27T03:35:05.604Z",
         "homepage_url": "https://xhawk.ai/",
         "example_url": "https://xhawk.ai/?twclid=218eppqu7okpx25fant8nuhrp1",
         "homepage_status": 200,
@@ -13301,7 +13301,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-08-24T03:02:24.687Z",
+        "fetched_at": "2026-08-27T03:35:13.329Z",
         "homepage_url": "https://sofi.com/",
         "example_url": "https://sofi.com/crypto?twclid=2ykrysimqbgqvsp6rfph8v1n3",
         "homepage_status": 403,
@@ -13430,7 +13430,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-08-24T03:02:25.833Z",
+        "fetched_at": "2026-08-27T03:35:15.268Z",
         "homepage_url": "https://mikmak.ai/",
         "example_url": "https://shop.mikmak.ai/social/69d80508c17cd48204adad0b?utm_source=twitter&utm_medium=paid_social&utm_campaign=une_hl_685&utm_term=P3G43FN-&utm_content=hlm-feel-the-flavor-overall-x_jar-and-squeezes_na_spicy_bsay_na_1x1_twpr_none_shnw_en_stp_mikmak_dark_na_sta-base_004_na_na_0565-demo-broad&utm_placement=amplify_preroll&utm_marketing_tactic=Consideration&utm_format=0565-demo-broad&utm_placementid=P3G43FN&utm_variant=brandsay&twclid=2dqu9rpgpoqo0mblvt9uebl5t7",
         "homepage_status": 200,
@@ -13559,7 +13559,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-08-24T03:02:28.091Z",
+        "fetched_at": "2026-08-27T03:35:19.350Z",
         "homepage_url": "https://huaweicloud.com/",
         "example_url": "https://www.huaweicloud.com/intl/en-us/?twclid=2ea99603xayrfvitnfttr9a4vn",
         "homepage_status": 200,
@@ -32322,16 +32322,16 @@
           ]
         },
         "profile": {
-          "score": 0.48,
-          "confidence": 0.65,
+          "score": 0,
+          "confidence": 0.55,
           "basis": [
             "meta_author:false",
             "published_time:false",
-            "canonical:true",
-            "about:true",
-            "contact:true",
+            "canonical:false",
+            "about:false",
+            "contact:false",
             "corrections:false",
-            "outbound_links:16",
+            "outbound_links:0",
             "opinion_marker:false"
           ]
         },
@@ -32351,33 +32351,33 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-08-18T00:24:28.536Z",
+        "fetched_at": "2026-08-27T04:05:01.628Z",
         "homepage_url": "https://timesofisrael.com/",
         "example_url": "https://timesofisrael.com/",
-        "homepage_status": 200,
-        "example_status": 200,
+        "homepage_status": 403,
+        "example_status": 403,
         "homepage_final_url": "https://www.timesofisrael.com/",
         "example_final_url": "https://www.timesofisrael.com/",
-        "homepage_content_type": "text/html",
-        "example_content_type": "text/html",
+        "homepage_content_type": "text/html; charset=UTF-8",
+        "example_content_type": "text/html; charset=UTF-8",
         "homepage": {
           "has_meta_author": false,
           "has_published_time": false,
-          "has_canonical": true,
-          "has_about_link": true,
-          "has_contact_link": true,
+          "has_canonical": false,
+          "has_about_link": false,
+          "has_contact_link": false,
           "has_corrections_link": false,
-          "outbound_links_count": 16,
+          "outbound_links_count": 0,
           "opinion_marker": false
         },
         "example": {
           "has_meta_author": false,
           "has_published_time": false,
-          "has_canonical": true,
-          "has_about_link": true,
-          "has_contact_link": true,
+          "has_canonical": false,
+          "has_about_link": false,
+          "has_contact_link": false,
           "has_corrections_link": false,
-          "outbound_links_count": 16,
+          "outbound_links_count": 0,
           "opinion_marker": false
         }
       }
@@ -32476,7 +32476,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-08-18T00:54:27.680Z",
+        "fetched_at": "2026-08-27T04:05:01.646Z",
         "homepage_url": "https://x.xom/",
         "example_url": "https://x.xom/EricLDaugh/status/2049914155461652916",
         "homepage_status": null,
@@ -32602,7 +32602,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-08-18T00:54:29.327Z",
+        "fetched_at": "2026-08-27T04:05:02.825Z",
         "homepage_url": "https://sourcebot.dev/",
         "example_url": "https://docs.sourcebot.dev/docs/features/mcp-server?twclid=24rnkjjr58b4nqm87glv1o5dr0",
         "homepage_status": 200,
@@ -32728,7 +32728,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-08-18T00:54:29.955Z",
+        "fetched_at": "2026-08-27T04:05:03.269Z",
         "homepage_url": "https://co.jp/",
         "example_url": "https://audition-en.anycolor.co.jp/?twclid=2bmm2ufti869142c85xr0ucr6a",
         "homepage_status": null,
