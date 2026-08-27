@@ -1,8 +1,8 @@
 {
   "schema_version": "1.0",
-  "generated_at": "2026-08-27T17:40:55.966Z",
+  "generated_at": "2026-08-27T18:21:50.666Z",
   "method": "mechanical_registry_v1",
-  "profiled_at": "2026-08-27T17:41:01.487Z",
+  "profiled_at": "2026-08-27T18:22:06.466Z",
   "sources": [
     {
       "domain": "theguardian.com",
@@ -3261,7 +3261,7 @@
       "first_seen_at": "2016-05-05T18:57:30.000Z",
       "last_seen_at": "2026-08-27T14:51:16.833Z",
       "discovery": {
-        "distinct_urls": 16694,
+        "distinct_urls": 16700,
         "example_urls": [
           "https://t.co/pJSE124ec4",
           "https://t.co/Soz8BXPWaa",
@@ -3270,7 +3270,7 @@
           "https://t.co/cYaqYDRp08"
         ],
         "origin_counts": {
-          "feed_buffer": 14603,
+          "feed_buffer": 14609,
           "feed_buffer_reply": 5207,
           "articles": 3
         },
@@ -3313,7 +3313,7 @@
         "breadth": {
           "score": 0.53,
           "basis": [
-            "distinct_urls:16694",
+            "distinct_urls:16700",
             "distinct_axes:0",
             "origin_types:3"
           ]
@@ -3352,7 +3352,7 @@
           "basis": [
             "unknown_domain_pattern",
             "doi_or_identifier_path_seen",
-            "distinct_urls:16694",
+            "distinct_urls:16700",
             "distinct_axes:0",
             "origin_types:3",
             "referring_accounts:2866",
@@ -37809,13 +37809,13 @@
           ]
         },
         "profile": {
-          "score": 0.18,
-          "confidence": 0.55,
+          "score": 0.32,
+          "confidence": 0.65,
           "basis": [
             "meta_author:false",
             "published_time:false",
             "canonical:true",
-            "about:false",
+            "about:true",
             "contact:false",
             "corrections:false",
             "outbound_links:8",
@@ -37838,12 +37838,12 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-08-18T11:24:51.959Z",
+        "fetched_at": "2026-08-27T18:21:53.598Z",
         "homepage_url": "https://robinhood.com/",
         "example_url": "https://robinhood.com/us/en/about/crypto/?twclid=29pd7fgrhb1gsdhy8smyxe6kbg",
         "homepage_status": 200,
         "example_status": 200,
-        "homepage_final_url": "https://robinhood.com/sg/en/",
+        "homepage_final_url": "https://robinhood.com/us/en/",
         "example_final_url": "https://robinhood.com/us/en/crypto/?twclid=29pd7fgrhb1gsdhy8smyxe6kbg",
         "homepage_content_type": "text/html; charset=utf-8",
         "example_content_type": "text/html; charset=utf-8",
@@ -37851,10 +37851,10 @@
           "has_meta_author": false,
           "has_published_time": false,
           "has_canonical": true,
-          "has_about_link": false,
+          "has_about_link": true,
           "has_contact_link": false,
           "has_corrections_link": false,
-          "outbound_links_count": 7,
+          "outbound_links_count": 9,
           "opinion_marker": false
         },
         "example": {
@@ -37964,7 +37964,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-08-18T11:24:55.287Z",
+        "fetched_at": "2026-08-27T18:21:57.879Z",
         "homepage_url": "https://novelmint.ai/",
         "example_url": "https://novelmint.ai/?twclid=24swsjnpk4f6tjvwc81a9jb0ee",
         "homepage_status": 200,
@@ -38061,14 +38061,14 @@
           ]
         },
         "profile": {
-          "score": 0,
+          "score": 0.22,
           "confidence": 0.55,
           "basis": [
             "meta_author:false",
             "published_time:false",
-            "canonical:false",
+            "canonical:true",
             "about:false",
-            "contact:false",
+            "contact:true",
             "corrections:false",
             "outbound_links:0",
             "opinion_marker:false"
@@ -38090,29 +38090,29 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-08-18T11:24:55.731Z",
+        "fetched_at": "2026-08-27T18:22:02.212Z",
         "homepage_url": "https://instacart.com/",
         "example_url": "https://www.instacart.com/store/brands/budweiser?ic_source=social&ic_campaignid=2026&twclid=2dlv3d1a0x9ht77bw7gqwrn3ou",
-        "homepage_status": 403,
-        "example_status": 403,
-        "homepage_final_url": "https://instacart.com/",
+        "homepage_status": 200,
+        "example_status": 200,
+        "homepage_final_url": "https://www.instacart.com/",
         "example_final_url": "https://www.instacart.com/store/brands/budweiser?ic_source=social&ic_campaignid=2026&twclid=2dlv3d1a0x9ht77bw7gqwrn3ou",
-        "homepage_content_type": "text/html",
-        "example_content_type": "text/html",
+        "homepage_content_type": "text/html; charset=utf-8",
+        "example_content_type": "text/html; charset=utf-8",
         "homepage": {
           "has_meta_author": false,
           "has_published_time": false,
-          "has_canonical": false,
+          "has_canonical": true,
           "has_about_link": false,
-          "has_contact_link": false,
+          "has_contact_link": true,
           "has_corrections_link": false,
-          "outbound_links_count": 0,
+          "outbound_links_count": 11,
           "opinion_marker": false
         },
         "example": {
           "has_meta_author": false,
           "has_published_time": false,
-          "has_canonical": false,
+          "has_canonical": true,
           "has_about_link": false,
           "has_contact_link": false,
           "has_corrections_link": false,
@@ -38216,7 +38216,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-08-18T11:24:57.649Z",
+        "fetched_at": "2026-08-27T18:22:06.466Z",
         "homepage_url": "https://tow.dev/",
         "example_url": "https://tow.dev/?utm_source=twitter&utm_medium=cpc&utm_campaign=launch&utm_id=twitter_launch&twclid=26xxdbf1ybv4rz2smsfk823weq",
         "homepage_status": 200,
