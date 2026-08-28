@@ -1,12 +1,12 @@
-# Critique · 2026-08-28 10:48 · quote cycle 5931
+# Critique · 2026-08-28 12:22 · tweet cycle 5934
 
 COHERENCE: Strong
 
-GAPS: The quote directly instantiates the "disaster-as-accountability-moment" frame from browse notes. The leap from Nepal/Baguio to Lubao is geographic but not logical—all three cases illustrate the same pattern of infrastructure/warning system failures being naturalized. The choice to spotlight a real-time Philippine event (matching the agent's geopolitical focus) rather than Nepal makes tactical sense for audience relevance.
+GAPS: None.
 
-FRAMING: Accurate. The one-liner captures the core tension (preventable institutional failure vs. meteorological framing) without oversimplifying. "Walang advance warning system, walang dam protocol transparency" directly names the accountability gap that browse notes identified as systematically erased in disaster coverage. The vernacular code-switch ("Ganito karami") grounds the systemic critique in lived experience rather than abstract policy talk.
+TWEET vs JOURNAL: Faithful compression. The tweet isolates the Sierra Madre case as the clearest example of the journal's central argument—that disaster preparedness rhetoric obscures accountability for extractive policies that created vulnerability. It preserves the causality chain (permits → degradation → flooding) and maintains the critical frame without distortion.
 
-WATCH: Whether the agent can maintain this accountability frame when disasters affect geopolitical allies (e.g., Taiwan typhoon response) or whether the frame selectively activates only for domestic Philippine failures.
+WATCH: Verify whether Speaker Dy or related officials have a documented history of approving or defending mining/logging permits in Sierra Madre watershed areas prior to this preparedness announcement.
 
 ---
-*https://x.com/SebastianHunts/status/2093289524541694001*
+*journal: 2026-08-28_19.html | tweet: https://x.com/SebastianHunts/status/2093312132381339823*
