@@ -133269,7 +133269,7 @@
       "left_pole": "Emphasis on individual control over personal data, privacy-preserving technologies, decentralized systems.",
       "right_pole": "Acceptance of data collection for convenience/monetization, reliance on centralized platforms, trade-offs between privacy and utility.",
       "score": -0.4835,
-      "confidence": 0.3311,
+      "confidence": 0.3291,
       "topics": [],
       "created_at": "2026-03-18T04:42:04.707Z",
       "last_updated": "2026-08-28T11:20:26.131Z",
@@ -133455,7 +133455,7 @@
           "confidence_after": 0.3311
         }
       ],
-      "last_decayed_at": "2026-08-28"
+      "last_decayed_at": "2026-08-29"
     },
     {
       "id": "axis_political_vulnerability_foreign_influence_v1",
@@ -139141,11 +139141,11 @@
       "label": "Procedural Governance vs. Genuine Accountability",
       "left_pole": "Procedural governance prioritizes formal mechanisms over substantive outcomes.",
       "right_pole": "Genuine accountability ensures that formal mechanisms lead to meaningful change and public trust.",
-      "score": -0.4625,
-      "confidence": 0.9428,
+      "score": -0.4719,
+      "confidence": 0.9432,
       "topics": [],
       "created_at": "2026-07-16T19:45:55.744Z",
-      "last_updated": "2026-08-29T08:06:49.231Z",
+      "last_updated": "2026-08-29T12:07:33.573Z",
       "evidence_log": [
         {
           "source": "https://newsinfo.inquirer.net/2265311/another-ayuda-p12000-each-for-7-5m-families-says-marcos",
@@ -140756,9 +140756,31 @@
           "stance_confidence": 0.85,
           "score_after": -0.4625,
           "confidence_after": 0.9428
+        },
+        {
+          "source": "https://newsinfo.inquirer.net/2294789/barbers-there-should-be-no-double-standard-in-enforcing-sub-judice-rule",
+          "content": "House impeachment team demands equal enforcement of sub judice rules, performing procedural fairness while substantive evidence questions remain unresolved.",
+          "summary": "",
+          "timestamp": "2026-08-29T10:37:00.031Z",
+          "pole_alignment": "left",
+          "trust_weight": 1,
+          "claim_id": "27252fe83d04",
+          "stance_confidence": 0.85,
+          "score_after": -0.4672,
+          "confidence_after": 0.943
+        },
+        {
+          "source": "https://newsinfo.inquirer.net/2294699/ilocos-region-fishermen-receive-aid-from-bfar",
+          "content": "",
+          "summary": "",
+          "timestamp": "2026-08-29T12:07:33.445Z",
+          "pole_alignment": "left",
+          "trust_weight": 1,
+          "score_after": -0.4719,
+          "confidence_after": 0.9432
         }
       ],
-      "current_stance": "The impeachment machinery churns through testimony and documentation while the Bersamin evidence vanishes into silence, proving procedures exist to contain spectacle, not deliver justice.",
+      "current_stance": "The impeachment trial grinds through disbursing officer testimony while the Ombudsman perpetually \"gathers evidence\" on Bersamin as procedural theater drowns actual accountability in documentation.",
       "last_decayed_at": "2026-08-28"
     },
     {
@@ -142729,10 +142751,10 @@
       "left_pole": "Natural disasters are predictable outcomes of infrastructure underinvestment and governance failure requiring upstream accountability",
       "right_pole": "Natural disasters are discrete emergencies requiring response capacity rather than systemic prevention",
       "score": 0.1,
-      "confidence": 0.3399,
+      "confidence": 0.3655,
       "topics": [],
       "created_at": "2026-08-10T22:02:28.521Z",
-      "last_updated": "2026-08-29T09:06:59.105Z",
+      "last_updated": "2026-08-29T11:06:54.349Z",
       "evidence_log": [
         {
           "source": "https://www.philstar.com/headlines/2026/08/12/2548813/supreme-court-rejects-bid-compel-release-senate-flood-control-report",
@@ -142871,6 +142893,30 @@
           "stance_confidence": 0.85,
           "score_after": 0.1,
           "confidence_after": 0.3399
+        },
+        {
+          "source": "https://www.philstar.com/headlines/2026/08/29/2552647/32-dead-8-million-affected-luis-maymay-neneng-habagat-ocd",
+          "content": "32 deaths and 8 million affected by typhoons and habagat framed as weather event toll, not as infrastructure or preparedness failure.",
+          "summary": "",
+          "timestamp": "2026-08-29T10:37:00.031Z",
+          "pole_alignment": "right",
+          "trust_weight": 0.5,
+          "claim_id": "a5a3d817a876",
+          "stance_confidence": 0.85,
+          "score_after": 0.1,
+          "confidence_after": 0.3486
+        },
+        {
+          "source": "https://x.com/MarioNawfal/status/2093471263607902353",
+          "content": "Nepal hydropower tunnel collapse traps ~100 workers; rescue presented as heroic military operation rather than infrastructure failure investigation.",
+          "summary": "",
+          "timestamp": "2026-08-29T11:06:54.218Z",
+          "pole_alignment": "right",
+          "trust_weight": 1,
+          "claim_id": "7df9a0b891fd",
+          "stance_confidence": 0.85,
+          "score_after": 0.1,
+          "confidence_after": 0.3655
         }
       ],
       "last_decayed_at": "2026-08-22"
@@ -142913,5 +142959,5 @@
     }
   ],
   "axis_creation_rules_version": "1.0",
-  "last_updated": "2026-08-29T09:06:59.105Z"
+  "last_updated": "2026-08-29T12:07:33.573Z"
 }

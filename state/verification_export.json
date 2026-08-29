@@ -1,11 +1,11 @@
 {
-  "generated_at": "2026-08-29T09:37:14.694Z",
+  "generated_at": "2026-08-29T12:39:49.739Z",
   "stats": {
-    "total": 1257,
-    "supported": 374,
+    "total": 1260,
+    "supported": 375,
     "refuted": 226,
     "contested": 6,
-    "unverified": 167,
+    "unverified": 169,
     "expired": 484
   },
   "claims": [
@@ -7541,6 +7541,60 @@
       "dissenting_sources": [],
       "framing_analysis": "The claim is misleadingly framed by suggesting Carney 'triggers' US tariffs, when the sources show Trump imposed 50% tariffs first and Carney responded by matching them. Carney suspended talks and announced retaliatory tariffs, but did not cause the original US tariffs.",
       "web_search_summary": "The claim is partially accurate but misleadingly framed. Mark Carney did suspend trade talks and announced retaliatory tariffs after calling US changes 'unfair', but he did not 'trigger' the 50% US tariffs - Trump imposed them first, and Carney responded by matching them. The claim reverses the causation.",
+      "investigation_depth": "quick"
+    },
+    {
+      "claim_id": "live_a6598c5ead",
+      "claim_text": "Why can’t China and there junk defense systems protect Irans airspace",
+      "status": "supported",
+      "confidence_score": 0.67,
+      "display_score": 0.218,
+      "scoring_breakdown": {
+        "source_tier": 0.5,
+        "newsguard": 0.5,
+        "corroboration": 0.9,
+        "evidence_quality": 0.9,
+        "cross_source": 0.5,
+        "web_search": 0.8
+      },
+      "source_handle": "jremy44",
+      "source_tier": null,
+      "evidence_urls": [
+        "https://organiser.org/2026/03/04/342729/world/chinese-hq-9b-air-defence-systems-fail-for-the-third-time-as-us-israel-strikes-expose-weaknesses-in-irans-defences/",
+        "https://organiser.org/2026/03/04/342729/world/chinese-hq-9b-air-defence-systems-fail-for-the-third-time-as-us-israel-strikes-expose-weaknesses-in-irans-defences/",
+        "https://www.thedefensenews.com/Chinese-HQ-9-Air-Defence-System-Fails-to-Protect-Iran-Adding-to-Prior-Setbacks-in-Pakistan-and-Venezuela/",
+        "https://www.thedefensenews.com/Chinese-HQ-9-Air-Defence-System-Fails-to-Protect-Iran-Adding-to-Prior-Setbacks-in-Pakistan-and-Venezuela/",
+        "https://www.army-technology.com/features/why-has-irans-air-defence-network-failed-so-badly/"
+      ],
+      "tweet_url": null,
+      "category": null,
+      "related_axis_id": null,
+      "verification_count": 1,
+      "verified_at": "2026-08-29T12:34:36.941Z",
+      "created_at": "2026-08-29T12:34:36.941Z",
+      "original_source": null,
+      "claim_date": null,
+      "supporting_sources": [
+        {
+          "name": "Organiser.org",
+          "excerpt": "Reports that Iran's Chinese-made HQ-9B air defence systems failed to prevent attacks by US and Israeli forces for the third time.",
+          "url": null
+        },
+        {
+          "name": "The Defense News",
+          "excerpt": "States that integration delays between the HQ-9B and Iran's broader air defense command network contributed to slow response times, with air defense sites struck before completing targeting procedures.",
+          "url": null
+        }
+      ],
+      "dissenting_sources": [
+        {
+          "name": "The Defense News",
+          "excerpt": "Notes that China denied supplying the system to Iran, though Iranian officials referenced its acquisition, raising questions about the claim's premise.",
+          "url": null
+        }
+      ],
+      "framing_analysis": "The claim uses inflammatory language ('junk') to characterize Chinese defense systems broadly, when the evidence only documents specific operational failures of one system (HQ-9B) in Iran's context. The framing conflates system performance issues with categorical quality assessments and contains a grammatical error ('there' instead of 'their').",
+      "web_search_summary": "The search results confirm that Chinese-made air defense systems in Iran, specifically the HQ-9B, have failed to prevent recent US and Israeli strikes. However, the claim's characterization of Chinese defense systems as universally 'junk' is not substantiated by the evidence, which points to specific failures of the HQ-9B system in Iran due to integration delays and operational issues rather than categorical deficiencies of all Chinese defense technology.",
       "investigation_depth": "quick"
     },
     {
@@ -32089,6 +32143,43 @@
       "investigation_depth": "quick"
     },
     {
+      "claim_id": "live_9e564aa750",
+      "claim_text": "Trump claims US firms have secured majority control of 65bn barrels of Venezuelan oil reserves at no cost to taxpayers, a deal he says could double US reserves and cut fuel prices.\n\nEconomist Ed Hirs doubts the claimed \"biggest oil deal in history\" will materialise.",
+      "status": "unverified",
+      "confidence_score": 0.56,
+      "display_score": 0.185,
+      "scoring_breakdown": {
+        "source_tier": 1,
+        "newsguard": 0.7,
+        "corroboration": 0,
+        "evidence_quality": 0.5,
+        "cross_source": 0.5,
+        "web_search": 0.3
+      },
+      "source_handle": "AJEnglish",
+      "source_tier": null,
+      "evidence_urls": [
+        "https://en.wikipedia.org/wiki/Donald_Trump",
+        "https://apnews.com/hub/donald-trump",
+        "https://www.reuters.com/world/us/donald-trump/",
+        "https://www.whitehouse.gov/administration/donald-j-trump/",
+        "https://www.washingtonpost.com/donald-trump/"
+      ],
+      "tweet_url": null,
+      "category": null,
+      "related_axis_id": null,
+      "verification_count": 1,
+      "verified_at": "2026-08-29T12:39:49.710Z",
+      "created_at": "2026-08-29T12:39:49.710Z",
+      "original_source": null,
+      "claim_date": null,
+      "supporting_sources": [],
+      "dissenting_sources": [],
+      "framing_analysis": "Cannot assess framing validity without relevant search results. The claim combines specific numerical assertions (65bn barrels, doubling reserves) with expert skepticism, but no evidence was provided to evaluate either component.",
+      "web_search_summary": "The search results provided contain only general biographical and news hub pages about Donald Trump, with no specific information about Venezuelan oil reserves, deals with US firms, or statements from economist Ed Hirs. None of the sources address the specific claim about a 65 billion barrel oil deal or its potential impact on US reserves and fuel prices.",
+      "investigation_depth": "quick"
+    },
+    {
       "claim_id": "live_b8de204087",
       "claim_text": "President Trump says Walmart is stepping up for America's 250th anniversary.\n\nAccording to Trump, the retailer will lower prices on a range of products—including nearly a 15% reduction on a pound of ground beef—at his administration's request.\n\nIn a Truth Social post, Trump",
       "status": "unverified",
@@ -36168,6 +36259,43 @@
       "dissenting_sources": [],
       "framing_analysis": "Cannot assess framing validity without relevant search results. The claim references a future date (August 2026) which has not yet occurred, making it temporally impossible to verify at present.",
       "web_search_summary": "The search results provided contain only YouTube help documentation and Chinese-language questions about Google account registration. None of the search results contain any information about Japan's AI governance policies, the Principles-Code for Protection of Intellectual Property, or any developments related to generative AI regulation from August 2026.",
+      "investigation_depth": "quick"
+    },
+    {
+      "claim_id": "live_3d5ec7f8a5",
+      "claim_text": "I sincerely can't believe judges are being encouraged to use generative AI summaries as \"ethical AI use.\"\n\nNO, the summaries are not neutral.\nNO, safeguards will be ineffective because of automation bias.\n\nLadies and gentlemen, that's how AI takes over the legal system.\n\nIt's happening.",
+      "status": "unverified",
+      "confidence_score": 0.38,
+      "display_score": 0.131,
+      "scoring_breakdown": {
+        "source_tier": 0.5,
+        "newsguard": 0.5,
+        "corroboration": 0,
+        "evidence_quality": 0.5,
+        "cross_source": 0.5,
+        "web_search": 0.3
+      },
+      "source_handle": "Luiza Jarovsky, PhD",
+      "source_tier": null,
+      "evidence_urls": [
+        "https://dictionary.cambridge.org/dictionary/english/sincerely",
+        "https://www.merriam-webster.com/dictionary/sincerely",
+        "https://www.wikihow.com/End-a-Letter-Sincerely",
+        "https://englishgrammerpro.com/yours-sincerely-or-your-sincerely/",
+        "https://www.rontar.com/blog/sincerely/"
+      ],
+      "tweet_url": null,
+      "category": null,
+      "related_axis_id": null,
+      "verification_count": 1,
+      "verified_at": "2026-08-29T12:09:30.585Z",
+      "created_at": "2026-08-29T12:09:30.585Z",
+      "original_source": null,
+      "claim_date": null,
+      "supporting_sources": [],
+      "dissenting_sources": [],
+      "framing_analysis": "Cannot evaluate framing validity as no relevant information about the claim's substantive content (judicial use of AI summaries) appears in the search results provided.",
+      "web_search_summary": "The search results contain only dictionary definitions and usage guides for the word 'sincerely' as a letter closing. None of the results address the claim's subject matter regarding judges, generative AI, legal system automation, AI summaries, or automation bias.",
       "investigation_depth": "quick"
     },
     {
