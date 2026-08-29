@@ -1,8 +1,8 @@
 {
   "schema_version": "1.0",
-  "generated_at": "2026-08-29T15:36:47.974Z",
+  "generated_at": "2026-08-29T19:31:45.183Z",
   "method": "mechanical_registry_v1",
-  "profiled_at": "2026-08-29T15:36:56.350Z",
+  "profiled_at": "2026-08-29T19:32:30.608Z",
   "sources": [
     {
       "domain": "theguardian.com",
@@ -11,7 +11,7 @@
       "first_seen_at": "2026-03-27T23:17:00Z",
       "last_seen_at": "2026-08-29T12:07:33.425Z",
       "discovery": {
-        "distinct_urls": 1068,
+        "distinct_urls": 1069,
         "example_urls": [
           "https://www.theguardian.com/us-news/2026/jun/23/trump-immigration-courthouse-arrest-policy",
           "https://www.theguardian.com/us-news/2026/jun/28/ice-minnesota-defending-democracy",
@@ -21,7 +21,7 @@
         ],
         "origin_counts": {
           "ontology_evidence": 52,
-          "reading_queue": 1026,
+          "reading_queue": 1027,
           "journals": 140,
           "articles": 5
         },
@@ -77,7 +77,7 @@
         "breadth": {
           "score": 0.94,
           "basis": [
-            "distinct_urls:1068",
+            "distinct_urls:1069",
             "distinct_axes:22",
             "origin_types:4"
           ]
@@ -117,7 +117,7 @@
             "newsroom_domain_pattern",
             "article_path_seen",
             "doi_or_identifier_path_seen",
-            "distinct_urls:1068",
+            "distinct_urls:1069",
             "distinct_axes:22",
             "origin_types:4",
             "referring_accounts:0",
@@ -706,7 +706,7 @@
       "first_seen_at": "2026-06-26T07:05:00Z",
       "last_seen_at": "2026-08-28T17:35:46.989Z",
       "discovery": {
-        "distinct_urls": 678,
+        "distinct_urls": 679,
         "example_urls": [
           "https://www.bbc.co.uk/news/articles/cn8qxz6qypyo",
           "https://www.bbc.co.uk/news/articles/cn075j04pnyo?at_medium=RSS&amp;at_campaign=rss",
@@ -716,7 +716,7 @@
         ],
         "origin_counts": {
           "ontology_evidence": 10,
-          "reading_queue": 690,
+          "reading_queue": 691,
           "journals": 23,
           "articles": 2
         },
@@ -755,7 +755,7 @@
         "breadth": {
           "score": 0.94,
           "basis": [
-            "distinct_urls:678",
+            "distinct_urls:679",
             "distinct_axes:7",
             "origin_types:4"
           ]
@@ -793,7 +793,7 @@
           "method": "mechanical_v1",
           "basis": [
             "newsroom_domain_pattern",
-            "distinct_urls:678",
+            "distinct_urls:679",
             "distinct_axes:7",
             "origin_types:4",
             "referring_accounts:0",
@@ -1860,7 +1860,7 @@
         ],
         "origin_counts": {
           "ontology_evidence": 64,
-          "reading_queue": 81,
+          "reading_queue": 82,
           "journals": 117,
           "articles": 1
         },
@@ -3261,9 +3261,9 @@
       "entity": "T Co",
       "kind": "unknown",
       "first_seen_at": "2016-05-05T18:57:30.000Z",
-      "last_seen_at": "2026-08-29T13:36:34.000Z",
+      "last_seen_at": "2026-08-29T15:00:33.000Z",
       "discovery": {
-        "distinct_urls": 16913,
+        "distinct_urls": 16914,
         "example_urls": [
           "https://t.co/pJSE124ec4",
           "https://t.co/Soz8BXPWaa",
@@ -3272,7 +3272,7 @@
           "https://t.co/cYaqYDRp08"
         ],
         "origin_counts": {
-          "feed_buffer": 14842,
+          "feed_buffer": 14843,
           "feed_buffer_reply": 5217,
           "articles": 3
         },
@@ -3315,7 +3315,7 @@
         "breadth": {
           "score": 0.53,
           "basis": [
-            "distinct_urls:16913",
+            "distinct_urls:16914",
             "distinct_axes:0",
             "origin_types:3"
           ]
@@ -3354,7 +3354,7 @@
           "basis": [
             "unknown_domain_pattern",
             "doi_or_identifier_path_seen",
-            "distinct_urls:16913",
+            "distinct_urls:16914",
             "distinct_axes:0",
             "origin_types:3",
             "referring_accounts:2876",
@@ -6923,16 +6923,16 @@
           ]
         },
         "profile": {
-          "score": 0.27,
+          "score": 0,
           "confidence": 0.55,
           "basis": [
             "meta_author:false",
             "published_time:false",
-            "canonical:true",
+            "canonical:false",
             "about:false",
-            "contact:true",
+            "contact:false",
             "corrections:false",
-            "outbound_links:5",
+            "outbound_links:0",
             "opinion_marker:false"
           ]
         },
@@ -6952,33 +6952,33 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-08-26T18:05:57.175Z",
+        "fetched_at": "2026-08-29T19:32:05.252Z",
         "homepage_url": "https://springermedicine.com/",
         "example_url": "https://www.springermedicine.com/webinar-breakthroughs-in-bladder-cancer-care/52496396?utm_source=x&utm_medium=cpc&utm_campaign=bladder-cancer-care-webinar&utm_content=ad-4&twclid=27am5hqwt8x5t4o745p030f1a4",
-        "homepage_status": 200,
-        "example_status": 200,
-        "homepage_final_url": "https://www.springermedicine.com/",
+        "homepage_status": null,
+        "example_status": null,
+        "homepage_final_url": "https://springermedicine.com/",
         "example_final_url": "https://www.springermedicine.com/webinar-breakthroughs-in-bladder-cancer-care/52496396?utm_source=x&utm_medium=cpc&utm_campaign=bladder-cancer-care-webinar&utm_content=ad-4&twclid=27am5hqwt8x5t4o745p030f1a4",
-        "homepage_content_type": "text/html; charset=UTF-8",
-        "example_content_type": "text/html; charset=UTF-8",
+        "homepage_content_type": "",
+        "example_content_type": "",
         "homepage": {
           "has_meta_author": false,
           "has_published_time": false,
-          "has_canonical": true,
+          "has_canonical": false,
           "has_about_link": false,
-          "has_contact_link": true,
+          "has_contact_link": false,
           "has_corrections_link": false,
-          "outbound_links_count": 6,
+          "outbound_links_count": 0,
           "opinion_marker": false
         },
         "example": {
           "has_meta_author": false,
           "has_published_time": false,
-          "has_canonical": true,
+          "has_canonical": false,
           "has_about_link": false,
-          "has_contact_link": true,
+          "has_contact_link": false,
           "has_corrections_link": false,
-          "outbound_links_count": 5,
+          "outbound_links_count": 0,
           "opinion_marker": false
         }
       }
@@ -7841,7 +7841,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-08-26T18:06:00.507Z",
+        "fetched_at": "2026-08-29T19:32:14.495Z",
         "homepage_url": "https://travala.com/",
         "example_url": "https://www.travala.com/?camp_name=&camp_offer=credit&camp_content=Sign-up-or-log-in-to-receive-%2450-off-flights%2C-hotels-and-activities.&camp_code=BTCASIA50&camp_value=50&utm_campaign=BTCASIA50&utm_medium=by-travala-cpc&utm_source=twitter&twclid=26wz3yk3m5mtcltdzivyfesoom",
         "homepage_status": 200,
@@ -8349,7 +8349,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-08-26T18:06:03.002Z",
+        "fetched_at": "2026-08-29T19:32:27.347Z",
         "homepage_url": "https://fundingpips.com/",
         "example_url": "https://fundingpips.com/?utm_source=x&utm_medium=paid_social&utm_campaign=2026_q3_global_acquisition_all_in_sale&utm_content=2073786412856660020&twclid=24njria5jvt4ka7ejelux4oc97",
         "homepage_status": 429,
@@ -8603,7 +8603,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-08-26T18:06:03.277Z",
+        "fetched_at": "2026-08-29T19:32:30.608Z",
         "homepage_url": "https://bybet.com/",
         "example_url": "https://bybet.com/promotion/detail/10/70?utm_source=x&utm_medium=cpc&utm_campaign=Awarenes-DTS-Football&twclid=2aetcv0gphixdtyqc7k0t0any5",
         "homepage_status": 200,

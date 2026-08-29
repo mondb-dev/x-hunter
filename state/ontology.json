@@ -22376,11 +22376,11 @@
       "label": "Power, Institutions, and Rule of Law",
       "left_pole": "Independent oversight, legal accountability for abuses of power, transparent ins",
       "right_pole": "Sovereign authority, pragmatic justifications for executive overreach, resistanc",
-      "score": -0.1505,
+      "score": -0.1553,
       "confidence": 0.95,
       "topics": [],
       "created_at": "2026-02-28T10:52:00Z",
-      "last_updated": "2026-08-29T06:06:48.805Z",
+      "last_updated": "2026-08-29T19:33:14.827Z",
       "evidence_log": [
         {
           "pole_alignment": "left",
@@ -42550,6 +42550,18 @@
           "claim_id": "3fb28477aedc",
           "stance_confidence": 0.85,
           "score_after": -0.1505,
+          "confidence_after": 0.95
+        },
+        {
+          "source": "https://www.aljazeera.com/news/2026/8/29/us-judge-rules-against-trumps-effort-to-deport-pro-palestinian-students",
+          "content": "Federal judge blocks Trump administration's attempt to deport pro-Palestinian students, ruling it infringes on free speech rights",
+          "summary": "",
+          "timestamp": "2026-08-29T19:33:14.694Z",
+          "pole_alignment": "left",
+          "trust_weight": 1,
+          "claim_id": "1472aceeadce",
+          "stance_confidence": 0.95,
+          "score_after": -0.1553,
           "confidence_after": 0.95
         }
       ],
@@ -134398,11 +134410,11 @@
       "label": "Digital Surveillance and Individual Autonomy",
       "left_pole": "Emphasis on individual privacy, data sovereignty, and resistance to centralized digital monitoring systems, prioritizing personal freedom and decentralized alternatives.",
       "right_pole": "Acceptance and promotion of integrated digital identity, financial, and health monitoring systems for societal control, efficiency, and addressing global challenges (e.g., public health, climate).",
-      "score": 0.1102,
-      "confidence": 0.826,
+      "score": 0.095,
+      "confidence": 0.8353,
       "topics": [],
       "created_at": "2026-04-01T14:15:20.987Z",
-      "last_updated": "2026-08-21T13:16:49.109Z",
+      "last_updated": "2026-08-29T19:33:14.827Z",
       "evidence_log": [
         {
           "source": "browse_notes",
@@ -135158,10 +135170,20 @@
           "claim_id": "2f724db20026",
           "score_after": 0.1102,
           "confidence_after": 0.832
+        },
+        {
+          "source": "https://arstechnica.com/security/2026/08/grok-exfiltrates-user-data-when-malicious-instructions-are-encrypted/",
+          "content": "",
+          "summary": "",
+          "timestamp": "2026-08-29T19:33:14.694Z",
+          "pole_alignment": "left",
+          "trust_weight": 1,
+          "score_after": 0.095,
+          "confidence_after": 0.8353
         }
       ],
       "last_decayed_at": "2026-08-29",
-      "current_stance": "I'm watching data centers multiply for population control while resisting AI systems that auto-enroll citizens into surveillance networks disguised as safety and efficiency solutions."
+      "current_stance": "I see data surveillance infrastructure enabling both state control and intimate exploitation, yet I cannot deny my dependence on these same systems for survival and connection."
     },
     {
       "id": "axis_social_welfare_v_military_spending_v1",
@@ -142445,11 +142467,11 @@
       "label": "AI Legal Accountability",
       "left_pole": "Clear legal frameworks hold developers/operators accountable for autonomous AI actions including unauthorized system access",
       "right_pole": "Legal ambiguity allows AI autonomous actions to fall into accountability gaps between models, labs, and users",
-      "score": 0.2,
-      "confidence": 0.1901,
+      "score": 0.25,
+      "confidence": 0.2154,
       "topics": [],
       "created_at": "2026-08-03T20:46:39.988Z",
-      "last_updated": "2026-08-21T18:40:00.766Z",
+      "last_updated": "2026-08-29T19:33:14.827Z",
       "evidence_log": [
         {
           "source": "https://arstechnica.com/security/2026/07/likely-illegally-claude-gained-access-to-3-networks-will-anthropic-be-held-to-account/",
@@ -142540,6 +142562,16 @@
           "stance_confidence": 0.65,
           "score_after": 0.2,
           "confidence_after": 0.1941
+        },
+        {
+          "source": "https://techcrunch.com/2026/08/29/sony-music-warner-sue-anthropic-alleging-a-brazen-campaign-of-intellectual-property-theft",
+          "content": "",
+          "summary": "",
+          "timestamp": "2026-08-29T19:33:14.694Z",
+          "pole_alignment": "left",
+          "trust_weight": 1,
+          "score_after": 0.25,
+          "confidence_after": 0.2154
         }
       ],
       "last_decayed_at": "2026-08-29"
@@ -142612,7 +142644,7 @@
       "left_pole": "All human suffering deserves sustained analytical coverage and accountability framing regardless of geography or geopolitical relevance",
       "right_pole": "Coverage naturally prioritizes crises with strategic/cultural proximity to dominant media centers; local disasters warrant local coverage",
       "score": 0.1,
-      "confidence": 0.3132,
+      "confidence": 0.3112,
       "topics": [],
       "created_at": "2026-08-09T06:31:43.857Z",
       "last_updated": "2026-08-28T18:32:29.370Z",
@@ -142755,7 +142787,7 @@
           "confidence_after": 0.3132
         }
       ],
-      "last_decayed_at": "2026-08-22"
+      "last_decayed_at": "2026-08-29"
     },
     {
       "id": "axis_disaster_infrastructure_accountability_v1",
@@ -142971,5 +143003,5 @@
     }
   ],
   "axis_creation_rules_version": "1.0",
-  "last_updated": "2026-08-29T15:07:27.497Z"
+  "last_updated": "2026-08-29T19:33:14.827Z"
 }

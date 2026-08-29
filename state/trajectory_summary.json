@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-29T13:38:15.836Z",
+  "generated_at": "2026-08-29T19:34:12.668Z",
   "windows": [
     "1d",
     "3d",
@@ -30,23 +30,23 @@
     },
     "axis_power_accountability": {
       "current": {
-        "score": -0.1505,
+        "score": -0.1553,
         "confidence": 0.95
       },
       "1d": {
-        "score_delta": 0.0129,
+        "score_delta": 0.0081,
         "conf_delta": 0,
         "direction": "→"
       },
       "3d": {
-        "score_delta": 0.0304,
+        "score_delta": 0.0256,
         "conf_delta": 0,
         "direction": "↗"
       },
       "7d": {
-        "score_delta": 0.0212,
+        "score_delta": 0.0164,
         "conf_delta": 0,
-        "direction": "↗"
+        "direction": "→"
       }
     },
     "axis_collective_voice": {
@@ -702,22 +702,22 @@
     },
     "axis_digital_surveillance_autonomy_v1": {
       "current": {
-        "score": 0.1102,
-        "confidence": 0.826
+        "score": 0.095,
+        "confidence": 0.8353
       },
       "1d": {
-        "score_delta": 0,
-        "conf_delta": -0.002,
+        "score_delta": -0.0152,
+        "conf_delta": 0.0073,
         "direction": "→"
       },
       "3d": {
-        "score_delta": 0,
-        "conf_delta": -0.004,
+        "score_delta": -0.0152,
+        "conf_delta": 0.0053,
         "direction": "→"
       },
       "7d": {
-        "score_delta": 0,
-        "conf_delta": -0.004,
+        "score_delta": -0.0152,
+        "conf_delta": 0.0053,
         "direction": "→"
       }
     },
@@ -1164,23 +1164,23 @@
     },
     "axis_ai_legal_accountability_v1": {
       "current": {
-        "score": 0.2,
-        "confidence": 0.1901
+        "score": 0.25,
+        "confidence": 0.2154
       },
       "1d": {
-        "score_delta": 0,
-        "conf_delta": -0.002,
-        "direction": "→"
+        "score_delta": 0.05,
+        "conf_delta": 0.0233,
+        "direction": "↗"
       },
       "3d": {
-        "score_delta": 0,
-        "conf_delta": -0.004,
-        "direction": "→"
+        "score_delta": 0.05,
+        "conf_delta": 0.0213,
+        "direction": "↗"
       },
       "7d": {
-        "score_delta": 0,
-        "conf_delta": -0.004,
-        "direction": "→"
+        "score_delta": 0.05,
+        "conf_delta": 0.0213,
+        "direction": "↗"
       }
     },
     "axis_infrastructure_displacement_accountability_v1": {
@@ -1207,21 +1207,21 @@
     "axis_crisis_visibility_hierarchy_v1": {
       "current": {
         "score": 0.1,
-        "confidence": 0.3132
+        "confidence": 0.3112
       },
       "1d": {
         "score_delta": 0,
-        "conf_delta": 0,
+        "conf_delta": -0.002,
         "direction": "→"
       },
       "3d": {
         "score_delta": -0.05,
-        "conf_delta": 0.057,
+        "conf_delta": 0.055,
         "direction": "↘"
       },
       "7d": {
         "score_delta": -0.0895,
-        "conf_delta": 0.0771,
+        "conf_delta": 0.0751,
         "direction": "↘"
       }
     },
@@ -1284,6 +1284,7 @@
     "axis_dehumanization_propaganda_v1",
     "axis_state_power_monetization_v1",
     "axis_accountability_temporality_v1",
+    "axis_ai_legal_accountability_v1",
     "axis_crisis_visibility_hierarchy_v1",
     "axis_disaster_infrastructure_accountability_v1"
   ]

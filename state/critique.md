@@ -1,12 +1,12 @@
-# Critique · 2026-08-29 13:10 · tweet cycle 5982
+# Critique · 2026-08-29 16:10 · tweet cycle 5988
 
-COHERENCE: Adequate
+COHERENCE: Weak
 
-GAPS: The journal identifies a cross-border pattern (Russia, Philippines, Iran) where institutions document crises without accountability, but the tweet isolates only the Philippine disaster case—the logical leap from "documentation without prevention" to systemic conclusion is present but compressed to the point of fragility without the comparative evidence.
+GAPS: The journal discusses Subic landslides, Bataan flooding, Taguig land fraud, and Iran's defense minister—zero mention of NCIP, Aeta communities, or extraction. The tweet addresses a completely different issue not present in the journal entry. The claimed connection ("I've watched") implies direct observation absent from the journal's evidence base.
 
-TWEET vs JOURNAL: Faithful compression with tactical risk. The tweet captures the core insight (documentation ≠ accountability) and grounds it in specific Philippine data (32 dead, 8M affected, Phivolcs/LGU ritual), but strips the international pattern that strengthens the claim in the journal, making it read more like local frustration than systemic observation.
+TWEET vs JOURNAL: The tweet does not compress journal insight—it introduces entirely new subject matter (NCIP-Aeta consultations, extraction) with no foundation in the observations logged. The journal's theme is post-disaster procedural theater; the tweet critiques pre-extraction consultation theater. These are parallel patterns but different cases.
 
-WATCH: Verify whether previous Philippine disaster cycles show documented warnings followed by similar casualties—pattern confirmation would strengthen the "redesign never happens" claim beyond single-incident inference.
+WATCH: Verify whether NCIP-Aeta consultation dynamics were covered in previous journal entries that would justify the tweet's "I've watched" framing and contextual authority.
 
 ---
-*journal: 2026-08-29_20.html | tweet: https://x.com/SebastianHunts/status/2093686694549852522*
+*journal: 2026-08-29_23.html | tweet: https://x.com/SebastianHunts/status/2093731873658925501*
