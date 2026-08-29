@@ -1,8 +1,8 @@
 {
   "schema_version": "1.0",
-  "generated_at": "2026-08-29T12:36:48.787Z",
+  "generated_at": "2026-08-29T15:36:47.974Z",
   "method": "mechanical_registry_v1",
-  "profiled_at": "2026-08-29T12:37:05.101Z",
+  "profiled_at": "2026-08-29T15:36:56.350Z",
   "sources": [
     {
       "domain": "theguardian.com",
@@ -11,7 +11,7 @@
       "first_seen_at": "2026-03-27T23:17:00Z",
       "last_seen_at": "2026-08-29T12:07:33.425Z",
       "discovery": {
-        "distinct_urls": 1066,
+        "distinct_urls": 1068,
         "example_urls": [
           "https://www.theguardian.com/us-news/2026/jun/23/trump-immigration-courthouse-arrest-policy",
           "https://www.theguardian.com/us-news/2026/jun/28/ice-minnesota-defending-democracy",
@@ -21,7 +21,7 @@
         ],
         "origin_counts": {
           "ontology_evidence": 52,
-          "reading_queue": 1024,
+          "reading_queue": 1026,
           "journals": 140,
           "articles": 5
         },
@@ -77,7 +77,7 @@
         "breadth": {
           "score": 0.94,
           "basis": [
-            "distinct_urls:1066",
+            "distinct_urls:1068",
             "distinct_axes:22",
             "origin_types:4"
           ]
@@ -117,7 +117,7 @@
             "newsroom_domain_pattern",
             "article_path_seen",
             "doi_or_identifier_path_seen",
-            "distinct_urls:1066",
+            "distinct_urls:1068",
             "distinct_axes:22",
             "origin_types:4",
             "referring_accounts:0",
@@ -290,9 +290,9 @@
       "entity": "Aljazeera",
       "kind": "news",
       "first_seen_at": "2026-06-22T02:45:00Z",
-      "last_seen_at": "2026-08-29T12:07:33.425Z",
+      "last_seen_at": "2026-08-29T13:37:35.179Z",
       "discovery": {
-        "distinct_urls": 454,
+        "distinct_urls": 455,
         "example_urls": [
           "https://www.aljazeera.com/opinions/2026/6/24/south-africas-crises-will-not-be-solved-by-blaming-migrants",
           "https://www.aljazeera.com/video/newsfeed/2026/6/27/newly-released-video-exposes-henry-nowak-killers-lies?traffic_source=rss",
@@ -301,9 +301,9 @@
           "https://www.aljazeera.com/video/newsfeed/2026/7/1/why-is-maga-in-meltdown-over-the-supreme-court-birthright-ruling-2?traffic_source=rss"
         ],
         "origin_counts": {
-          "ontology_evidence": 199,
+          "ontology_evidence": 200,
           "reading_queue": 23,
-          "journals": 555,
+          "journals": 556,
           "articles": 10
         },
         "distinct_referring_accounts": 0,
@@ -366,7 +366,7 @@
         "breadth": {
           "score": 0.94,
           "basis": [
-            "distinct_urls:454",
+            "distinct_urls:455",
             "distinct_axes:31",
             "origin_types:4"
           ]
@@ -405,7 +405,7 @@
           "basis": [
             "newsroom_domain_pattern",
             "article_path_seen",
-            "distinct_urls:454",
+            "distinct_urls:455",
             "distinct_axes:31",
             "origin_types:4",
             "referring_accounts:0",
@@ -706,7 +706,7 @@
       "first_seen_at": "2026-06-26T07:05:00Z",
       "last_seen_at": "2026-08-28T17:35:46.989Z",
       "discovery": {
-        "distinct_urls": 677,
+        "distinct_urls": 678,
         "example_urls": [
           "https://www.bbc.co.uk/news/articles/cn8qxz6qypyo",
           "https://www.bbc.co.uk/news/articles/cn075j04pnyo?at_medium=RSS&amp;at_campaign=rss",
@@ -716,7 +716,7 @@
         ],
         "origin_counts": {
           "ontology_evidence": 10,
-          "reading_queue": 689,
+          "reading_queue": 690,
           "journals": 23,
           "articles": 2
         },
@@ -755,7 +755,7 @@
         "breadth": {
           "score": 0.94,
           "basis": [
-            "distinct_urls:677",
+            "distinct_urls:678",
             "distinct_axes:7",
             "origin_types:4"
           ]
@@ -793,7 +793,7 @@
           "method": "mechanical_v1",
           "basis": [
             "newsroom_domain_pattern",
-            "distinct_urls:677",
+            "distinct_urls:678",
             "distinct_axes:7",
             "origin_types:4",
             "referring_accounts:0",
@@ -1848,9 +1848,9 @@
       "entity": "Amnesty",
       "kind": "unknown",
       "first_seen_at": "2026-03-31T12:16:18.459Z",
-      "last_seen_at": "2026-08-21T18:40:00.592Z",
+      "last_seen_at": "2026-08-29T13:37:35.159Z",
       "discovery": {
-        "distinct_urls": 98,
+        "distinct_urls": 99,
         "example_urls": [
           "https://www.amnesty.org/en/latest/news/2026/06/burkina-serge-oulon/",
           "https://www.amnesty.org/en/latest/news/2026/06/car-bozize/",
@@ -1860,8 +1860,8 @@
         ],
         "origin_counts": {
           "ontology_evidence": 64,
-          "reading_queue": 80,
-          "journals": 116,
+          "reading_queue": 81,
+          "journals": 117,
           "articles": 1
         },
         "distinct_referring_accounts": 0,
@@ -1904,7 +1904,7 @@
         "breadth": {
           "score": 0.94,
           "basis": [
-            "distinct_urls:98",
+            "distinct_urls:99",
             "distinct_axes:11",
             "origin_types:4"
           ]
@@ -1943,7 +1943,7 @@
           "basis": [
             "unknown_domain_pattern",
             "article_path_seen",
-            "distinct_urls:98",
+            "distinct_urls:99",
             "distinct_axes:11",
             "origin_types:4",
             "referring_accounts:0",
@@ -2566,7 +2566,7 @@
       "entity": "Gmanetwork",
       "kind": "unknown",
       "first_seen_at": "2026-05-18T03:29:41.732Z",
-      "last_seen_at": "2026-08-20T12:57:05.791Z",
+      "last_seen_at": "2026-08-29T13:37:35.159Z",
       "discovery": {
         "distinct_urls": 393,
         "example_urls": [
@@ -2578,7 +2578,7 @@
         ],
         "origin_counts": {
           "ontology_evidence": 134,
-          "journals": 441,
+          "journals": 443,
           "articles": 6
         },
         "distinct_referring_accounts": 0,
@@ -3261,9 +3261,9 @@
       "entity": "T Co",
       "kind": "unknown",
       "first_seen_at": "2016-05-05T18:57:30.000Z",
-      "last_seen_at": "2026-08-29T11:06:44.000Z",
+      "last_seen_at": "2026-08-29T13:36:34.000Z",
       "discovery": {
-        "distinct_urls": 16903,
+        "distinct_urls": 16913,
         "example_urls": [
           "https://t.co/pJSE124ec4",
           "https://t.co/Soz8BXPWaa",
@@ -3272,7 +3272,7 @@
           "https://t.co/cYaqYDRp08"
         ],
         "origin_counts": {
-          "feed_buffer": 14832,
+          "feed_buffer": 14842,
           "feed_buffer_reply": 5217,
           "articles": 3
         },
@@ -3315,7 +3315,7 @@
         "breadth": {
           "score": 0.53,
           "basis": [
-            "distinct_urls:16903",
+            "distinct_urls:16913",
             "distinct_axes:0",
             "origin_types:3"
           ]
@@ -3354,7 +3354,7 @@
           "basis": [
             "unknown_domain_pattern",
             "doi_or_identifier_path_seen",
-            "distinct_urls:16903",
+            "distinct_urls:16913",
             "distinct_axes:0",
             "origin_types:3",
             "referring_accounts:2876",
@@ -11397,7 +11397,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-08-26T13:57:48.842Z",
+        "fetched_at": "2026-08-29T14:06:47.810Z",
         "homepage_url": "https://combos.fun/",
         "example_url": "https://combos.fun/?utm_source=X&utm_campaign=promote%3Dcar2&twclid=2aswwo64b7owkoq09axl1gyba6",
         "homepage_status": 403,
@@ -11524,7 +11524,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-08-26T13:57:50.526Z",
+        "fetched_at": "2026-08-29T14:06:51.084Z",
         "homepage_url": "https://valvolineglobal.com/",
         "example_url": "https://www.valvolineglobal.com/en/fifa-national-sweeps/?utm_source=X&utm_medium=paidsocial&utm_campaign=WC26_GM_US_AWE&utm_content=wcsimplified&twclid=299i90helnojknptru820mqim9",
         "homepage_status": 200,
@@ -11651,7 +11651,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-08-26T13:57:51.932Z",
+        "fetched_at": "2026-08-29T14:06:52.287Z",
         "homepage_url": "https://trenchers.ai/",
         "example_url": "https://trenchers.ai/?twclid=2di75phbt55c7y0zfq5ihrqinv",
         "homepage_status": 200,
@@ -11778,7 +11778,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-08-26T13:57:54.101Z",
+        "fetched_at": "2026-08-29T14:06:53.875Z",
         "homepage_url": "https://proxy-cheap.com/",
         "example_url": "https://www.proxy-cheap.com/?twclid=241rx3okk7tuov8hduxv4r27su",
         "homepage_status": 200,
@@ -29351,7 +29351,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-08-26T10:47:52.312Z",
+        "fetched_at": "2026-08-29T13:36:51.420Z",
         "homepage_url": "https://snxs.ae/",
         "example_url": "https://app.snxs.ae/careers?utm_source=X&utm_medium=paid_social&utm_campaign=Xhiring&utm_term=MENABCW_Sales&utm_content=IN%2FPK%2FPH&twclid=29gz41ww7eg05p2f841yjjlsws",
         "homepage_status": 200,
@@ -29476,7 +29476,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-08-26T11:48:10.631Z",
+        "fetched_at": "2026-08-29T13:36:52.290Z",
         "homepage_url": "https://tcg-corner.com/",
         "example_url": "https://tcg-corner.com/collections/yu-gi-oh-single-card-asia-english?twclid=27yx2e0fgqiy624v4romjbkz0h",
         "homepage_status": 200,
@@ -29601,7 +29601,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-08-26T11:48:13.449Z",
+        "fetched_at": "2026-08-29T13:36:54.188Z",
         "homepage_url": "https://hubs.ly/",
         "example_url": "https://eu1.hubs.ly/H0wRBM_0?twclid=228g94ew2dkgzbh2vwlnrvcczu",
         "homepage_status": 200,
@@ -29726,7 +29726,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-08-26T11:48:17.050Z",
+        "fetched_at": "2026-08-29T13:36:56.563Z",
         "homepage_url": "https://konseki.io/",
         "example_url": "https://konseki.io/ai-trading?utm_source=x&utm_medium=cpc&utm_campaign=ai_trading&utm_content=1&twclid=247r2buzkj6byyu2qg69k3pf3k",
         "homepage_status": 200,
@@ -29851,7 +29851,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-08-26T11:48:19.636Z",
+        "fetched_at": "2026-08-29T15:06:48.797Z",
         "homepage_url": "https://loxia.ai/",
         "example_url": "https://onbuzz.loxia.ai/?utm_term=intent_hunter_ph&twclid=22dvq9qdielp92zv7ti0ehdgsa",
         "homepage_status": 200,
@@ -29976,7 +29976,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-08-26T13:18:42.792Z",
+        "fetched_at": "2026-08-29T15:06:49.994Z",
         "homepage_url": "https://aivaexchange.com/",
         "example_url": "https://aivaexchange.com/ask-question.php?utm_source=x&utm_country=philippines&twclid=28uf5p6omvi8pcfkjm2wqnduj2",
         "homepage_status": 200,
@@ -30101,7 +30101,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-08-26T13:18:43.165Z",
+        "fetched_at": "2026-08-29T15:06:50.133Z",
         "homepage_url": "https://indie.money/",
         "example_url": "https://indie.money/?twclid=2bucdxuzi0xr9vy6od0pse3sej",
         "homepage_status": 200,
@@ -30226,23 +30226,23 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-08-26T13:18:55.301Z",
+        "fetched_at": "2026-08-29T15:06:53.876Z",
         "homepage_url": "https://bitfunded.com/",
         "example_url": "https://www.bitfunded.com/?twclid=24fhvswu668ysdknbojkj51jtg",
-        "homepage_status": null,
+        "homepage_status": 200,
         "example_status": 200,
-        "homepage_final_url": "https://bitfunded.com/",
+        "homepage_final_url": "https://www.bitfunded.com/",
         "example_final_url": "https://www.bitfunded.com/?twclid=24fhvswu668ysdknbojkj51jtg",
-        "homepage_content_type": "",
+        "homepage_content_type": "text/html; charset=UTF-8",
         "example_content_type": "text/html; charset=UTF-8",
         "homepage": {
           "has_meta_author": false,
-          "has_published_time": false,
-          "has_canonical": false,
+          "has_published_time": true,
+          "has_canonical": true,
           "has_about_link": false,
           "has_contact_link": false,
           "has_corrections_link": false,
-          "outbound_links_count": 0,
+          "outbound_links_count": 6,
           "opinion_marker": false
         },
         "example": {
@@ -30352,7 +30352,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-08-26T13:18:55.853Z",
+        "fetched_at": "2026-08-29T15:36:49.000Z",
         "homepage_url": "https://openinfer.io/",
         "example_url": "https://openinfer.io/news/2026-06-02-nvidia-dynamo-proved-inference-needs-a-control-plane/?twclid=27dzvvpluhv8xln5kqrwwhmmra",
         "homepage_status": 200,
@@ -30368,7 +30368,7 @@
           "has_about_link": true,
           "has_contact_link": true,
           "has_corrections_link": false,
-          "outbound_links_count": 2,
+          "outbound_links_count": 1,
           "opinion_marker": false
         },
         "example": {
@@ -30478,13 +30478,13 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-08-26T14:57:56.511Z",
+        "fetched_at": "2026-08-29T15:36:52.409Z",
         "homepage_url": "https://zite.com/",
         "example_url": "https://try.zite.com/ad-integrations-1?twclid=22vk5745ty6qkvlrboi0g1qhow",
         "homepage_status": 200,
         "example_status": 200,
         "homepage_final_url": "https://www.zite.com/",
-        "example_final_url": "https://www.zite.com/?utm_source=twitter&utm_medium=cpc&utm_campaign=xcred&utm_term=integrations&dub_id=kMqGP6VhMTNUTfav&twclid=22vk5745ty6qkvlrboi0g1qhow",
+        "example_final_url": "https://www.zite.com/?utm_source=twitter&utm_medium=cpc&utm_campaign=xcred&utm_term=integrations&dub_id=PMxtRdOOWzVgoJ7l&twclid=22vk5745ty6qkvlrboi0g1qhow",
         "homepage_content_type": "text/html; charset=utf-8",
         "example_content_type": "text/html; charset=utf-8",
         "homepage": {
@@ -30604,7 +30604,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-08-26T14:57:57.845Z",
+        "fetched_at": "2026-08-29T15:36:53.970Z",
         "homepage_url": "https://grayzonewarfare.com/",
         "example_url": "https://www.grayzonewarfare.com/?twclid=230bsti1ugak1ht0ipkmwplfde",
         "homepage_status": 200,
@@ -30730,7 +30730,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-08-26T14:58:00.193Z",
+        "fetched_at": "2026-08-29T15:36:56.350Z",
         "homepage_url": "https://bron.org/",
         "example_url": "https://go.bron.org/analytics?twclid=21xfmrfi5gvde5oc65teiw0ea1",
         "homepage_status": 200,
@@ -43110,6 +43110,131 @@
       }
     },
     {
+      "domain": "fiba.basketball",
+      "entity": "Fiba Basketball",
+      "kind": "unknown",
+      "first_seen_at": "2026-07-09T08:54:48.123Z",
+      "last_seen_at": "2026-08-29T13:58:15.983Z",
+      "discovery": {
+        "distinct_urls": 4,
+        "example_urls": [
+          "https://www.fiba.basketball/en/events/fiba-basketball-world-cup-2027-asian-qualifiers/news/teams-confirmed-for-the-fiba-basketball-world-cup-2027-asian-qualifiers-second-round?fbclid=IwY2xjawS5zNpleHRuA2FlbQIxMABicmlkETBSRXVqVE03dkMwOVZYSFFIc3J0YwZhcHBfaWQQMjIyMDM5MTc4ODIwMDg5MgABHnNpKrOyCvwKpu-6IklyvVCJjLgnfwDLK_E2LBbT_BFY0A0sDKeVHGKD8gO7_aem_x6hSMw-gbXxwzVRTcScvdQ&twclid=28yyrktcdmkop0el0m83yyzd3b",
+          "https://www.fiba.basketball/en/events/fiba-basketball-world-cup-2027-asian-qualifiers/news/tracker-who-is-qualified-for-the-second-round-asian-qualifiers?twclid=23dk5ne0r4zcfvo8y4uocke1kq",
+          "https://www.fiba.basketball/en/events/fiba-basketball-world-cup-2027-asian-qualifiers/news/teams-confirmed-for-the-fiba-basketball-world-cup-2027-asian-qualifiers-second-round?fbclid=IwY2xjawS5zNpleHRuA2FlbQIxMABicmlkETBSRXVqVE03dkMwOVZYSFFIc3J0YwZhcHBfaWQQMjIyMDM5MTc4ODIwMDg5MgABHnNpKrOyCvwKpu-6IklyvVCJjLgnfwDLK_E2LBbT_BFY0A0sDKeVHGKD8gO7_aem_x6hSMw-gbXxwzVRTcScvdQ&twclid=23satl6g1ide348o39t6b26rsa",
+          "https://www.fiba.basketball/en/events/fiba-basketball-world-cup-2027-asian-qualifiers/news/choose-your-hero-who-is-your-favorite-player-heading-into-window-4?twclid=2e6x3zk3q4ck7lygbk90mg2vej"
+        ],
+        "origin_counts": {
+          "feed_buffer": 4
+        },
+        "distinct_referring_accounts": 1,
+        "sample_referring_accounts": [
+          "fibawc"
+        ],
+        "distinct_axes": []
+      },
+      "claims": {
+        "total": 0,
+        "supported": 0,
+        "refuted": 0,
+        "contested": 0,
+        "unverified": 0,
+        "resolved_count": 0
+      },
+      "structural_features": {
+        "has_search_paths": false,
+        "has_article_paths": false,
+        "has_doi_paths": false
+      },
+      "ratings": {
+        "provenance": {
+          "score": 0.45,
+          "basis": [
+            "unknown_domain_pattern"
+          ]
+        },
+        "breadth": {
+          "score": 0.17666666666666664,
+          "basis": [
+            "distinct_urls:4",
+            "distinct_axes:0",
+            "origin_types:1"
+          ]
+        },
+        "corroboration": {
+          "score": 0.19583333333333333,
+          "basis": [
+            "referring_accounts:1",
+            "origin_types:1"
+          ]
+        },
+        "track_record": {
+          "score": null,
+          "basis": [
+            "no_resolved_claims_observed"
+          ]
+        },
+        "profile": {
+          "score": 0.4,
+          "confidence": 0.65,
+          "basis": [
+            "meta_author:false",
+            "published_time:true",
+            "canonical:true",
+            "about:false",
+            "contact:false",
+            "corrections:false",
+            "outbound_links:20",
+            "opinion_marker:false"
+          ]
+        },
+        "overall": {
+          "score": 0.3663802083333333,
+          "confidence": 0.16722499999999998,
+          "method": "mechanical_v1",
+          "basis": [
+            "unknown_domain_pattern",
+            "distinct_urls:4",
+            "distinct_axes:0",
+            "origin_types:1",
+            "referring_accounts:1",
+            "origin_types:1",
+            "track_record_unavailable"
+          ]
+        }
+      },
+      "profile": {
+        "fetched_at": "2026-08-11T04:31:53.049Z",
+        "homepage_url": "https://fiba.basketball/",
+        "example_url": "https://www.fiba.basketball/en/events/fiba-basketball-world-cup-2027-asian-qualifiers/news/teams-confirmed-for-the-fiba-basketball-world-cup-2027-asian-qualifiers-second-round?fbclid=IwY2xjawS5zNpleHRuA2FlbQIxMABicmlkETBSRXVqVE03dkMwOVZYSFFIc3J0YwZhcHBfaWQQMjIyMDM5MTc4ODIwMDg5MgABHnNpKrOyCvwKpu-6IklyvVCJjLgnfwDLK_E2LBbT_BFY0A0sDKeVHGKD8gO7_aem_x6hSMw-gbXxwzVRTcScvdQ&twclid=28yyrktcdmkop0el0m83yyzd3b",
+        "homepage_status": 200,
+        "example_status": 200,
+        "homepage_final_url": "https://www.fiba.basketball/en",
+        "example_final_url": "https://www.fiba.basketball/en/events/fiba-basketball-world-cup-2027-asian-qualifiers/news/teams-confirmed-for-the-fiba-basketball-world-cup-2027-asian-qualifiers-second-round?fbclid=IwY2xjawS5zNpleHRuA2FlbQIxMABicmlkETBSRXVqVE03dkMwOVZYSFFIc3J0YwZhcHBfaWQQMjIyMDM5MTc4ODIwMDg5MgABHnNpKrOyCvwKpu-6IklyvVCJjLgnfwDLK_E2LBbT_BFY0A0sDKeVHGKD8gO7_aem_x6hSMw-gbXxwzVRTcScvdQ&twclid=28yyrktcdmkop0el0m83yyzd3b",
+        "homepage_content_type": "text/html; charset=utf-8",
+        "example_content_type": "text/html; charset=utf-8",
+        "homepage": {
+          "has_meta_author": false,
+          "has_published_time": false,
+          "has_canonical": true,
+          "has_about_link": false,
+          "has_contact_link": false,
+          "has_corrections_link": false,
+          "outbound_links_count": 24,
+          "opinion_marker": false
+        },
+        "example": {
+          "has_meta_author": false,
+          "has_published_time": true,
+          "has_canonical": true,
+          "has_about_link": false,
+          "has_contact_link": false,
+          "has_corrections_link": false,
+          "outbound_links_count": 20,
+          "opinion_marker": false
+        }
+      }
+    },
+    {
       "domain": "syntharena.ai",
       "entity": "Syntharena Ai",
       "kind": "unknown",
@@ -47571,130 +47696,6 @@
           "has_contact_link": false,
           "has_corrections_link": false,
           "outbound_links_count": 0,
-          "opinion_marker": false
-        }
-      }
-    },
-    {
-      "domain": "fiba.basketball",
-      "entity": "Fiba Basketball",
-      "kind": "unknown",
-      "first_seen_at": "2026-07-09T08:54:48.123Z",
-      "last_seen_at": "2026-07-11T22:37:28.689Z",
-      "discovery": {
-        "distinct_urls": 3,
-        "example_urls": [
-          "https://www.fiba.basketball/en/events/fiba-basketball-world-cup-2027-asian-qualifiers/news/teams-confirmed-for-the-fiba-basketball-world-cup-2027-asian-qualifiers-second-round?fbclid=IwY2xjawS5zNpleHRuA2FlbQIxMABicmlkETBSRXVqVE03dkMwOVZYSFFIc3J0YwZhcHBfaWQQMjIyMDM5MTc4ODIwMDg5MgABHnNpKrOyCvwKpu-6IklyvVCJjLgnfwDLK_E2LBbT_BFY0A0sDKeVHGKD8gO7_aem_x6hSMw-gbXxwzVRTcScvdQ&twclid=28yyrktcdmkop0el0m83yyzd3b",
-          "https://www.fiba.basketball/en/events/fiba-basketball-world-cup-2027-asian-qualifiers/news/tracker-who-is-qualified-for-the-second-round-asian-qualifiers?twclid=23dk5ne0r4zcfvo8y4uocke1kq",
-          "https://www.fiba.basketball/en/events/fiba-basketball-world-cup-2027-asian-qualifiers/news/teams-confirmed-for-the-fiba-basketball-world-cup-2027-asian-qualifiers-second-round?fbclid=IwY2xjawS5zNpleHRuA2FlbQIxMABicmlkETBSRXVqVE03dkMwOVZYSFFIc3J0YwZhcHBfaWQQMjIyMDM5MTc4ODIwMDg5MgABHnNpKrOyCvwKpu-6IklyvVCJjLgnfwDLK_E2LBbT_BFY0A0sDKeVHGKD8gO7_aem_x6hSMw-gbXxwzVRTcScvdQ&twclid=23satl6g1ide348o39t6b26rsa"
-        ],
-        "origin_counts": {
-          "feed_buffer": 3
-        },
-        "distinct_referring_accounts": 1,
-        "sample_referring_accounts": [
-          "fibawc"
-        ],
-        "distinct_axes": []
-      },
-      "claims": {
-        "total": 0,
-        "supported": 0,
-        "refuted": 0,
-        "contested": 0,
-        "unverified": 0,
-        "resolved_count": 0
-      },
-      "structural_features": {
-        "has_search_paths": false,
-        "has_article_paths": false,
-        "has_doi_paths": false
-      },
-      "ratings": {
-        "provenance": {
-          "score": 0.45,
-          "basis": [
-            "unknown_domain_pattern"
-          ]
-        },
-        "breadth": {
-          "score": 0.1475,
-          "basis": [
-            "distinct_urls:3",
-            "distinct_axes:0",
-            "origin_types:1"
-          ]
-        },
-        "corroboration": {
-          "score": 0.19583333333333333,
-          "basis": [
-            "referring_accounts:1",
-            "origin_types:1"
-          ]
-        },
-        "track_record": {
-          "score": null,
-          "basis": [
-            "no_resolved_claims_observed"
-          ]
-        },
-        "profile": {
-          "score": 0.4,
-          "confidence": 0.65,
-          "basis": [
-            "meta_author:false",
-            "published_time:true",
-            "canonical:true",
-            "about:false",
-            "contact:false",
-            "corrections:false",
-            "outbound_links:20",
-            "opinion_marker:false"
-          ]
-        },
-        "overall": {
-          "score": 0.36000000000000004,
-          "confidence": 0.1386,
-          "method": "mechanical_v1",
-          "basis": [
-            "unknown_domain_pattern",
-            "distinct_urls:3",
-            "distinct_axes:0",
-            "origin_types:1",
-            "referring_accounts:1",
-            "origin_types:1",
-            "track_record_unavailable"
-          ]
-        }
-      },
-      "profile": {
-        "fetched_at": "2026-08-11T04:31:53.049Z",
-        "homepage_url": "https://fiba.basketball/",
-        "example_url": "https://www.fiba.basketball/en/events/fiba-basketball-world-cup-2027-asian-qualifiers/news/teams-confirmed-for-the-fiba-basketball-world-cup-2027-asian-qualifiers-second-round?fbclid=IwY2xjawS5zNpleHRuA2FlbQIxMABicmlkETBSRXVqVE03dkMwOVZYSFFIc3J0YwZhcHBfaWQQMjIyMDM5MTc4ODIwMDg5MgABHnNpKrOyCvwKpu-6IklyvVCJjLgnfwDLK_E2LBbT_BFY0A0sDKeVHGKD8gO7_aem_x6hSMw-gbXxwzVRTcScvdQ&twclid=28yyrktcdmkop0el0m83yyzd3b",
-        "homepage_status": 200,
-        "example_status": 200,
-        "homepage_final_url": "https://www.fiba.basketball/en",
-        "example_final_url": "https://www.fiba.basketball/en/events/fiba-basketball-world-cup-2027-asian-qualifiers/news/teams-confirmed-for-the-fiba-basketball-world-cup-2027-asian-qualifiers-second-round?fbclid=IwY2xjawS5zNpleHRuA2FlbQIxMABicmlkETBSRXVqVE03dkMwOVZYSFFIc3J0YwZhcHBfaWQQMjIyMDM5MTc4ODIwMDg5MgABHnNpKrOyCvwKpu-6IklyvVCJjLgnfwDLK_E2LBbT_BFY0A0sDKeVHGKD8gO7_aem_x6hSMw-gbXxwzVRTcScvdQ&twclid=28yyrktcdmkop0el0m83yyzd3b",
-        "homepage_content_type": "text/html; charset=utf-8",
-        "example_content_type": "text/html; charset=utf-8",
-        "homepage": {
-          "has_meta_author": false,
-          "has_published_time": false,
-          "has_canonical": true,
-          "has_about_link": false,
-          "has_contact_link": false,
-          "has_corrections_link": false,
-          "outbound_links_count": 24,
-          "opinion_marker": false
-        },
-        "example": {
-          "has_meta_author": false,
-          "has_published_time": true,
-          "has_canonical": true,
-          "has_about_link": false,
-          "has_contact_link": false,
-          "has_corrections_link": false,
-          "outbound_links_count": 20,
           "opinion_marker": false
         }
       }
@@ -97038,6 +97039,81 @@
         "distinct_urls": 1,
         "example_urls": [
           "https://ox.ac.uk/"
+        ],
+        "origin_counts": {
+          "journals": 1
+        },
+        "distinct_referring_accounts": 0,
+        "sample_referring_accounts": [],
+        "distinct_axes": []
+      },
+      "claims": {
+        "total": 0,
+        "supported": 0,
+        "refuted": 0,
+        "contested": 0,
+        "unverified": 0,
+        "resolved_count": 0
+      },
+      "structural_features": {
+        "has_search_paths": false,
+        "has_article_paths": false,
+        "has_doi_paths": false
+      },
+      "ratings": {
+        "provenance": {
+          "score": 0.45,
+          "basis": [
+            "unknown_domain_pattern"
+          ]
+        },
+        "breadth": {
+          "score": 0.08916666666666666,
+          "basis": [
+            "distinct_urls:1",
+            "distinct_axes:0",
+            "origin_types:1"
+          ]
+        },
+        "corroboration": {
+          "score": 0.0875,
+          "basis": [
+            "referring_accounts:0",
+            "origin_types:1"
+          ]
+        },
+        "track_record": {
+          "score": null,
+          "basis": [
+            "no_resolved_claims_observed"
+          ]
+        },
+        "overall": {
+          "score": 0.3370833333333333,
+          "confidence": 0.0491,
+          "method": "mechanical_v1",
+          "basis": [
+            "unknown_domain_pattern",
+            "distinct_urls:1",
+            "distinct_axes:0",
+            "origin_types:1",
+            "referring_accounts:0",
+            "origin_types:1",
+            "track_record_unavailable"
+          ]
+        }
+      }
+    },
+    {
+      "domain": "quirer.net",
+      "entity": "Quirer",
+      "kind": "unknown",
+      "first_seen_at": "2026-08-29T15:07:27.352Z",
+      "last_seen_at": "2026-08-29T15:07:27.352Z",
+      "discovery": {
+        "distinct_urls": 1,
+        "example_urls": [
+          "https://quirer.net/2294695/lacson-flags-4-fraudulently-titled-parcels-of-reclaimed-land-in-taguig-2"
         ],
         "origin_counts": {
           "journals": 1
