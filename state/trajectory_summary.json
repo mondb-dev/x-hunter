@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-29T19:34:12.668Z",
+  "generated_at": "2026-08-29T21:43:57.980Z",
   "windows": [
     "1d",
     "3d",
@@ -240,22 +240,22 @@
     },
     "axis_political_dynasties_meritocracy_v1": {
       "current": {
-        "score": 0.2758,
-        "confidence": 0.6527
+        "score": 0.2906,
+        "confidence": 0.6611
       },
       "1d": {
-        "score_delta": 0.0352,
-        "conf_delta": 0.0354,
+        "score_delta": 0.05,
+        "conf_delta": 0.0438,
         "direction": "↗"
       },
       "3d": {
-        "score_delta": 0.0352,
-        "conf_delta": 0.0334,
+        "score_delta": 0.05,
+        "conf_delta": 0.0418,
         "direction": "↗"
       },
       "7d": {
-        "score_delta": 0.0352,
-        "conf_delta": 0.0334,
+        "score_delta": 0.05,
+        "conf_delta": 0.0418,
         "direction": "↗"
       }
     },
@@ -660,22 +660,22 @@
     },
     "axis_political_vulnerability_foreign_influence_v1": {
       "current": {
-        "score": 0.1031,
-        "confidence": 0.7442
+        "score": 0.0855,
+        "confidence": 0.7967
       },
       "1d": {
-        "score_delta": 0,
-        "conf_delta": -0.002,
+        "score_delta": -0.0176,
+        "conf_delta": 0.0505,
         "direction": "→"
       },
       "3d": {
-        "score_delta": 0,
-        "conf_delta": -0.004,
+        "score_delta": -0.0176,
+        "conf_delta": 0.0485,
         "direction": "→"
       },
       "7d": {
-        "score_delta": 0,
-        "conf_delta": -0.004,
+        "score_delta": -0.0176,
+        "conf_delta": 0.0485,
         "direction": "→"
       }
     },
@@ -1038,22 +1038,22 @@
     },
     "axis_procedural_governance_substantive_action": {
       "current": {
-        "score": -0.8357,
-        "confidence": 0.8552
+        "score": -0.8406,
+        "confidence": 0.8579
       },
       "1d": {
-        "score_delta": -0.0026,
-        "conf_delta": 0.0027,
+        "score_delta": -0.0075,
+        "conf_delta": 0.0054,
         "direction": "→"
       },
       "3d": {
-        "score_delta": -0.0052,
-        "conf_delta": 0.0056,
+        "score_delta": -0.0101,
+        "conf_delta": 0.0083,
         "direction": "→"
       },
       "7d": {
-        "score_delta": -0.0052,
-        "conf_delta": 0.0056,
+        "score_delta": -0.0101,
+        "conf_delta": 0.0083,
         "direction": "→"
       }
     },
@@ -1280,6 +1280,7 @@
   },
   "notable_count": 8,
   "momentum_axes": [
+    "axis_political_dynasties_meritocracy_v1",
     "axis_humanitarian_crisis_response",
     "axis_dehumanization_propaganda_v1",
     "axis_state_power_monetization_v1",
