@@ -1,11 +1,11 @@
 {
-  "generated_at": "2026-08-29T06:36:51.013Z",
+  "generated_at": "2026-08-29T09:37:14.694Z",
   "stats": {
-    "total": 1255,
-    "supported": 373,
+    "total": 1257,
+    "supported": 374,
     "refuted": 226,
     "contested": 6,
-    "unverified": 166,
+    "unverified": 167,
     "expired": 484
   },
   "claims": [
@@ -18565,6 +18565,59 @@
       "investigation_depth": "quick"
     },
     {
+      "claim_id": "live_bd4769612f",
+      "claim_text": "Atty. Paolo Panelo points to what he says is a major hole in Ramil Madriaga's story: an alleged delivery location where Madriaga claimed he could clearly see an S&R. Panelo says their evidence shows the nearest branch was kilometers away. #PolitikoTalks",
+      "status": "supported",
+      "confidence_score": 0.62,
+      "display_score": 0.203,
+      "scoring_breakdown": {
+        "source_tier": 0.5,
+        "newsguard": 0.5,
+        "corroboration": 0.7,
+        "evidence_quality": 0.7,
+        "cross_source": 0.5,
+        "web_search": 1
+      },
+      "source_handle": "bncdotph",
+      "source_tier": null,
+      "evidence_urls": [
+        "https://www.facebook.com/bncphl/videos/atty-paolo-panelo-points-to-what-he-says-is-a-major-hole-in-ramil-madriagas-stor/1484785220179329/",
+        "https://www.facebook.com/bncphl/videos/atty-paolo-panelo-points-to-what-he-says-is-a-major-hole-in-ramil-madriagas-stor/1484785220179329/",
+        "https://mb.com.ph/2026/04/13/ridon-gives-panelo-a-reality-check-after-weakest-link-tirade-on-impeachment-witness-madriaga",
+        "https://mb.com.ph/2026/04/13/ridon-gives-panelo-a-reality-check-after-weakest-link-tirade-on-impeachment-witness-madriaga",
+        "https://tnt.abante.com.ph/2026/04/14/salvador-panelo-jr-ramil-madriaga-weakest-link-impeachment-fraud/news/"
+      ],
+      "tweet_url": null,
+      "category": null,
+      "related_axis_id": null,
+      "verification_count": 1,
+      "verified_at": "2026-08-29T09:37:14.645Z",
+      "created_at": "2026-08-29T09:37:14.645Z",
+      "original_source": "BNC PHL (Facebook video post)",
+      "claim_date": null,
+      "supporting_sources": [
+        {
+          "name": "BNC PHL (Facebook)",
+          "excerpt": "Atty. Paolo Panelo points to what he says is a major hole in Ramil Madriaga's story: an alleged delivery location where Madriaga claimed he could clearly see an S&R, with Panelo saying their evidence shows the nearest branch was kilometers away.",
+          "url": null
+        },
+        {
+          "name": "Manila Bulletin",
+          "excerpt": "Reported on lawyer Paolo Panelo describing witness Ramil Madriaga as the supposed 'weakest link' in the impeachment case against Vice President Sara Duterte.",
+          "url": null
+        },
+        {
+          "name": "Abante TNT",
+          "excerpt": "Reported Panelo's official statement claiming Madriaga failed to address clear and strong evidence presented by the Vice President in the perjury case.",
+          "url": null
+        }
+      ],
+      "dissenting_sources": [],
+      "framing_analysis": "The claim is framed validly as it accurately attributes the statement to Panelo and uses appropriate hedging language ('what he says,' 'alleged,' 'Panelo says') to indicate this is Panelo's assertion rather than verified fact. The hashtag #PolitikoTalks suggests this is from a specific program or discussion.",
+      "web_search_summary": "The claim is directly confirmed by multiple search results. Search results [1] and [2] contain the exact wording of the claim, showing that Atty. Paolo Panelo did make this statement about Ramil Madriaga's story regarding the S&R delivery location. Additional sources [3-6] confirm Panelo's criticism of Madriaga as a witness, though they don't specifically mention the S&R detail.",
+      "investigation_depth": "quick"
+    },
+    {
       "claim_id": "claim_85",
       "claim_text": "Israeli military planes are unable to fly due to the largest swarm of bees in recorded history.",
       "status": "supported",
@@ -35010,6 +35063,43 @@
       "dissenting_sources": [],
       "framing_analysis": "The claim references specific entities (BNC, ICI) and specific findings ('abnormal insertions' from 2019) that are not mentioned in any of the search results provided. Without verification of these specific details, the framing cannot be assessed for validity.",
       "web_search_summary": "The search results confirm the existence of a flood control scandal in the Philippines and ongoing legal actions against those involved. However, none of the provided search results mention the Bilyonaryo News Channel (BNC), the Independent Commission for Infrastructure (ICI), or any findings about 'abnormal insertions' from 2019. The specific claims about BNC's reporting and the ICI's findings cannot be verified from these sources.",
+      "investigation_depth": "quick"
+    },
+    {
+      "claim_id": "live_cdf6064f87",
+      "claim_text": "LLMs do not merely reproduce human biases. They also display biases of their own.\n\nWhen choosing among similarly high-quality alternatives, models tend to favor whichever option appears first.\n\nWhen the alternatives are of lower quality, the bias shifts: models tend to favor later options.\n\nSome models also display an unexpected name bias. Claude 3 Haiku, for example, favored certain candidates purely because of their names, even when résumé content and position were held constant.\n\nThe authors also show that these are not harmless tie-breakers. Presentation order can reverse a model’s underlying preference, leading it to select an option it would otherwise regard as inferior.\n\nHumans also show biases, but these particular biases have not been documented in human decision-making.\n\nLLMs may not simply mirror of our biases.\nThey may also come with biases of their own.\n\n*\n\nFull paper in the first comment",
+      "status": "unverified",
+      "confidence_score": 0.4,
+      "display_score": 0.137,
+      "scoring_breakdown": {
+        "source_tier": 0.5,
+        "newsguard": 0.5,
+        "corroboration": 0,
+        "evidence_quality": 0.5,
+        "cross_source": 0.5,
+        "web_search": 0.5
+      },
+      "source_handle": "Valerio Capraro",
+      "source_tier": null,
+      "evidence_urls": [
+        "https://www.geeksforgeeks.org/artificial-intelligence/large-language-model-llm/",
+        "https://www.ibm.com/think/topics/large-language-models",
+        "https://en.wikipedia.org/wiki/Large_language_model",
+        "https://cloud.google.com/ai/llms",
+        "https://online.hbs.edu/blog/post/what-are-llms"
+      ],
+      "tweet_url": null,
+      "category": null,
+      "related_axis_id": null,
+      "verification_count": 1,
+      "verified_at": "2026-08-29T07:38:54.417Z",
+      "created_at": "2026-08-29T07:38:54.417Z",
+      "original_source": null,
+      "claim_date": null,
+      "supporting_sources": [],
+      "dissenting_sources": [],
+      "framing_analysis": "The claim references specific empirical findings from a research paper (mentioned as being in 'the first comment'), including particular model behaviors and experimental results. Without access to this paper or related research coverage, the claim cannot be evaluated using the provided search results.",
+      "web_search_summary": "The search results contain only general introductory information about what LLMs are and their capabilities. None of the sources address the specific research claims about positional bias, quality-dependent bias reversal, name bias in Claude 3 Haiku, or comparisons between LLM biases and human decision-making biases.",
       "investigation_depth": "quick"
     },
     {
