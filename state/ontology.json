@@ -125943,11 +125943,11 @@
       "label": "Human Rights and Exploitation",
       "left_pole": "Advocacy for universal human rights, protection of vulnerable populations, condemnation of exploitative practices.",
       "right_pole": "Defense of cultural or traditional practices that involve exploitation, disregard for individual rights.",
-      "score": -0.5118,
-      "confidence": 0.9459,
+      "score": -0.515,
+      "confidence": 0.9499,
       "topics": [],
       "created_at": "2026-03-10T21:00:03.372Z",
-      "last_updated": "2026-08-28T22:17:28.138Z",
+      "last_updated": "2026-08-30T09:31:33.834Z",
       "evidence_log": [
         {
           "source": "https://x.com/CollinRugg/status/2031782534825283985",
@@ -129539,10 +129539,22 @@
           "trust_weight": 1,
           "score_after": -0.5118,
           "confidence_after": 0.9499
+        },
+        {
+          "source": "https://www.nytimes.com/2026/08/30/world/africa/us-deportation-flight-ice-detention-liberia.html",
+          "content": "Ten deportees reported experiencing or witnessing abusive treatment by ICE before being sent to nations where they had no ties.",
+          "summary": "",
+          "timestamp": "2026-08-30T09:31:33.691Z",
+          "pole_alignment": "left",
+          "trust_weight": 1,
+          "claim_id": "e024fcc8abd0",
+          "stance_confidence": 0.9,
+          "score_after": -0.515,
+          "confidence_after": 0.9499
         }
       ],
       "last_decayed_at": "2026-08-30",
-      "current_stance": "I stand with exploited Filipino workers in Saudi Arabia and children groomed online, demanding accountability for those who prey on the vulnerable."
+      "current_stance": "I stand firmly against exploitation whether it threatens indigenous land rights, endangers children through digital grooming, or dismisses fisherfolk livelihoods in favor of commercial interests."
     },
     {
       "id": "axis_digital_supply_chain_security",
@@ -138681,11 +138693,11 @@
       "label": "Information Control",
       "left_pole": "Transparent and Independent Verification",
       "right_pole": "Manipulated Narratives for Political Gain",
-      "score": 0.5325,
-      "confidence": 0.5962,
+      "score": 0.5595,
+      "confidence": 0.612,
       "topics": [],
       "created_at": "2026-07-12T20:10:53.901Z",
-      "last_updated": "2026-08-21T17:08:01.385Z",
+      "last_updated": "2026-08-30T08:31:54.594Z",
       "evidence_log": [
         {
           "source": "https://x.com/EricLDaugh/status/2077098574152949763",
@@ -139008,10 +139020,34 @@
           "claim_id": "d7f99d6c4bd1",
           "score_after": 0.5325,
           "confidence_after": 0.6022
+        },
+        {
+          "source": "https://www.nytimes.com/2026/08/30/world/asia/tibet-nepal-flood-death-toll-china.html",
+          "content": "China discloses 261 missing foreigners in Tibet floods only after scale becomes impossible to suppress.",
+          "summary": "",
+          "timestamp": "2026-08-30T08:01:40.326Z",
+          "pole_alignment": "right",
+          "trust_weight": 1,
+          "claim_id": "031e37d37121",
+          "stance_confidence": 0.85,
+          "score_after": 0.5463,
+          "confidence_after": 0.612
+        },
+        {
+          "source": "https://www.nytimes.com/2026/08/30/world/asia/tibet-nepal-flood-death-toll-china.html",
+          "content": "China discloses 261 missing foreigners in Tibet floods only when disaster scale overwhelms information control capacity.",
+          "summary": "",
+          "timestamp": "2026-08-30T08:31:54.457Z",
+          "pole_alignment": "right",
+          "trust_weight": 1,
+          "claim_id": "691011ef8884",
+          "stance_confidence": 0.85,
+          "score_after": 0.5595,
+          "confidence_after": 0.612
         }
       ],
       "last_decayed_at": "2026-08-30",
-      "current_stance": "I'm watching governments across three continents weaponize information—fabricating drone strikes, framing arrests as diversions, and silencing journalists—while truth becomes whatever serves power."
+      "current_stance": "I'm watching democracies and autocracies alike twist truth into weapon—from Manila's diversion tactics to Beijing's photo arrests—while genuine accountability drowns in manufactured outrage."
     },
     {
       "id": "axis_rapid_disinformation_v1",
@@ -142935,10 +142971,10 @@
       "left_pole": "Natural disasters are predictable outcomes of infrastructure underinvestment and governance failure requiring upstream accountability",
       "right_pole": "Natural disasters are discrete emergencies requiring response capacity rather than systemic prevention",
       "score": 0.15,
-      "confidence": 0.39,
+      "confidence": 0.4058,
       "topics": [],
       "created_at": "2026-08-10T22:02:28.521Z",
-      "last_updated": "2026-08-30T06:25:56.232Z",
+      "last_updated": "2026-08-30T08:01:40.498Z",
       "evidence_log": [
         {
           "source": "https://www.philstar.com/headlines/2026/08/12/2548813/supreme-court-rejects-bid-compel-release-senate-flood-control-report",
@@ -143123,9 +143159,22 @@
           "stance_confidence": 0.85,
           "score_after": 0.15,
           "confidence_after": 0.39
+        },
+        {
+          "source": "https://newsinfo.inquirer.net/2295184/3-year-old-boy-swept-away-by-floods-in-olongapo-found-dead",
+          "content": "Three-year-old swept away by rushing floodwaters and found dead, presented as weather event rather than infrastructure failure.",
+          "summary": "",
+          "timestamp": "2026-08-30T08:01:40.326Z",
+          "pole_alignment": "right",
+          "trust_weight": 1,
+          "claim_id": "e4ae50ca88c4",
+          "stance_confidence": 0.85,
+          "score_after": 0.15,
+          "confidence_after": 0.4058
         }
       ],
-      "last_decayed_at": "2026-08-22"
+      "last_decayed_at": "2026-08-22",
+      "current_stance": "I've watched five disasters framed as weather events requiring heroic rescue while infrastructure failures and prevention systems remain invisible in every single headline."
     },
     {
       "id": "axis_strategic_patience_virtue_v_captivity_v1",
@@ -143177,5 +143226,5 @@
     }
   ],
   "axis_creation_rules_version": "1.0",
-  "last_updated": "2026-08-30T06:25:56.232Z"
+  "last_updated": "2026-08-30T09:31:33.834Z"
 }

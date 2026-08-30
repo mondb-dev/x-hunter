@@ -1,8 +1,8 @@
 {
   "schema_version": "1.0",
-  "generated_at": "2026-08-30T07:00:51.070Z",
+  "generated_at": "2026-08-30T10:00:52.785Z",
   "method": "mechanical_registry_v1",
-  "profiled_at": "2026-08-30T07:00:56.003Z",
+  "profiled_at": "2026-08-30T10:01:17.108Z",
   "sources": [
     {
       "domain": "theguardian.com",
@@ -11,7 +11,7 @@
       "first_seen_at": "2026-03-27T23:17:00Z",
       "last_seen_at": "2026-08-29T12:07:33.425Z",
       "discovery": {
-        "distinct_urls": 1074,
+        "distinct_urls": 1076,
         "example_urls": [
           "https://www.theguardian.com/us-news/2026/jun/23/trump-immigration-courthouse-arrest-policy",
           "https://www.theguardian.com/us-news/2026/jun/28/ice-minnesota-defending-democracy",
@@ -21,7 +21,7 @@
         ],
         "origin_counts": {
           "ontology_evidence": 52,
-          "reading_queue": 1032,
+          "reading_queue": 1034,
           "journals": 140,
           "articles": 5
         },
@@ -77,7 +77,7 @@
         "breadth": {
           "score": 0.94,
           "basis": [
-            "distinct_urls:1074",
+            "distinct_urls:1076",
             "distinct_axes:22",
             "origin_types:4"
           ]
@@ -117,7 +117,7 @@
             "newsroom_domain_pattern",
             "article_path_seen",
             "doi_or_identifier_path_seen",
-            "distinct_urls:1074",
+            "distinct_urls:1076",
             "distinct_axes:22",
             "origin_types:4",
             "referring_accounts:0",
@@ -706,7 +706,7 @@
       "first_seen_at": "2026-06-26T07:05:00Z",
       "last_seen_at": "2026-08-28T17:35:46.989Z",
       "discovery": {
-        "distinct_urls": 683,
+        "distinct_urls": 685,
         "example_urls": [
           "https://www.bbc.co.uk/news/articles/cn8qxz6qypyo",
           "https://www.bbc.co.uk/news/articles/cn075j04pnyo?at_medium=RSS&amp;at_campaign=rss",
@@ -716,7 +716,7 @@
         ],
         "origin_counts": {
           "ontology_evidence": 10,
-          "reading_queue": 695,
+          "reading_queue": 697,
           "journals": 23,
           "articles": 2
         },
@@ -755,7 +755,7 @@
         "breadth": {
           "score": 0.94,
           "basis": [
-            "distinct_urls:683",
+            "distinct_urls:685",
             "distinct_axes:7",
             "origin_types:4"
           ]
@@ -793,7 +793,7 @@
           "method": "mechanical_v1",
           "basis": [
             "newsroom_domain_pattern",
-            "distinct_urls:683",
+            "distinct_urls:685",
             "distinct_axes:7",
             "origin_types:4",
             "referring_accounts:0",
@@ -839,9 +839,9 @@
       "entity": "Nytimes",
       "kind": "news",
       "first_seen_at": "2026-06-22T00:15:00Z",
-      "last_seen_at": "2026-08-29T23:35:49.274Z",
+      "last_seen_at": "2026-08-30T09:31:33.691Z",
       "discovery": {
-        "distinct_urls": 731,
+        "distinct_urls": 734,
         "example_urls": [
           "https://www.nytimes.com/2026/06/19/world/canada/frank-stronach-trial-guilty-sex-charges.html",
           "https://www.nytimes.com/2026/06/27/world/americas/mexican-officials-us-informants.html",
@@ -850,9 +850,9 @@
           "https://www.nytimes.com/2026/08/05/us/politics/cia-cuba-task-force.html"
         ],
         "origin_counts": {
-          "ontology_evidence": 25,
-          "reading_queue": 754,
-          "journals": 64
+          "ontology_evidence": 28,
+          "reading_queue": 756,
+          "journals": 67
         },
         "distinct_referring_accounts": 0,
         "sample_referring_accounts": [],
@@ -896,7 +896,7 @@
         "breadth": {
           "score": 0.8799999999999999,
           "basis": [
-            "distinct_urls:731",
+            "distinct_urls:734",
             "distinct_axes:13",
             "origin_types:3"
           ]
@@ -935,7 +935,7 @@
           "basis": [
             "newsroom_domain_pattern",
             "article_path_seen",
-            "distinct_urls:731",
+            "distinct_urls:734",
             "distinct_axes:13",
             "origin_types:3",
             "referring_accounts:0",
@@ -4472,9 +4472,9 @@
       "entity": "Philstar",
       "kind": "unknown",
       "first_seen_at": "2026-05-20T06:57:31.760Z",
-      "last_seen_at": "2026-08-30T06:25:56.074Z",
+      "last_seen_at": "2026-08-30T08:31:54.435Z",
       "discovery": {
-        "distinct_urls": 221,
+        "distinct_urls": 222,
         "example_urls": [
           "https://www.philstar.com/headlines/2026/06/24/2537506/mike-defensor-face-trafficking-complaint-over-pasig-ktv-bar-raid",
           "https://www.philstar.com/headlines/2026/06/24/2537509/ched-tells-ateneo-explain-drowning-baterbonia-adili-or-face-sanctions",
@@ -4484,7 +4484,7 @@
         ],
         "origin_counts": {
           "ontology_evidence": 103,
-          "journals": 269,
+          "journals": 271,
           "articles": 4
         },
         "distinct_referring_accounts": 0,
@@ -4540,7 +4540,7 @@
         "breadth": {
           "score": 0.8799999999999999,
           "basis": [
-            "distinct_urls:221",
+            "distinct_urls:222",
             "distinct_axes:23",
             "origin_types:3"
           ]
@@ -4580,7 +4580,7 @@
             "unknown_domain_pattern",
             "article_path_seen",
             "search_results_seen",
-            "distinct_urls:221",
+            "distinct_urls:222",
             "distinct_axes:23",
             "origin_types:3",
             "referring_accounts:0",
@@ -5675,9 +5675,9 @@
       "entity": "Inquirer",
       "kind": "unknown",
       "first_seen_at": "2026-05-09T10:15:15.053Z",
-      "last_seen_at": "2026-08-30T06:25:56.074Z",
+      "last_seen_at": "2026-08-30T09:31:33.671Z",
       "discovery": {
-        "distinct_urls": 468,
+        "distinct_urls": 472,
         "example_urls": [
           "https://newsinfo.inquirer.net/2266316/nbi-on-cayetano-position-that-cant-be-defended-by-facts-is-done-with-insults",
           "https://www.inquirer.net/capiz-broadcaster-shooting-probe-widens-as-cops-form-task-force",
@@ -5686,8 +5686,8 @@
           "https://newsinfo.inquirer.net/2251702/chr-seeks-swift-passage-of-bills-creating-detention-monitoring-body"
         ],
         "origin_counts": {
-          "ontology_evidence": 173,
-          "journals": 556,
+          "ontology_evidence": 174,
+          "journals": 562,
           "articles": 5
         },
         "distinct_referring_accounts": 0,
@@ -5747,7 +5747,7 @@
         "breadth": {
           "score": 0.8799999999999999,
           "basis": [
-            "distinct_urls:468",
+            "distinct_urls:472",
             "distinct_axes:28",
             "origin_types:3"
           ]
@@ -5786,7 +5786,7 @@
           "basis": [
             "unknown_domain_pattern",
             "search_results_seen",
-            "distinct_urls:468",
+            "distinct_urls:472",
             "distinct_axes:28",
             "origin_types:3",
             "referring_accounts:0",
@@ -13698,7 +13698,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-08-27T08:05:07.526Z",
+        "fetched_at": "2026-08-30T08:30:52.436Z",
         "homepage_url": "https://betterstack.com/",
         "example_url": "https://betterstack.com/incident-management?twclid=23e9xf4wt9fpugvwab34523yyy",
         "homepage_status": 200,
@@ -14079,7 +14079,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-08-27T08:05:09.657Z",
+        "fetched_at": "2026-08-30T08:30:54.823Z",
         "homepage_url": "https://ic.com/",
         "example_url": "https://www.ic.com/en/trade-indices/?utm_source=twitter&utm_medium=twitter&utm_campaign=tw_en_ph_cv_pr&utm_term=TWITTER_TIMELINE&utm_content=indices&camp=94092&twclid=22h8qlm19mtb6b4fjbtto4x3rp",
         "homepage_status": 200,
@@ -14205,7 +14205,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-08-27T08:05:10.280Z",
+        "fetched_at": "2026-08-30T08:30:55.461Z",
         "homepage_url": "https://tradeodds.io/",
         "example_url": "https://www.tradeodds.io/dashboard?tab=factor-match&utm_source=twitter&utm_medium=cpc&utm_campaign=Factor+Match+Purchase+Campaign+Desk&utm_id=factor+match+purchase+campaign+desk&utm_term=factor+match+purchase+purchase+desk+us&utm_content=ad2&twclid=21dpzozj7vqb86fdz6auuzunmy",
         "homepage_status": 200,
@@ -14331,7 +14331,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-08-27T08:05:20.984Z",
+        "fetched_at": "2026-08-30T08:31:15.467Z",
         "homepage_url": "https://poly.market/",
         "example_url": "https://poly.market/X0q565H?twclid=24x365380zub6d85j7s6xd212w",
         "homepage_status": null,
@@ -14457,7 +14457,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-08-27T08:35:08.980Z",
+        "fetched_at": "2026-08-30T09:30:56.642Z",
         "homepage_url": "https://canadacis.org/",
         "example_url": "https://ph2canada.canadacis.org/?utm_source=twitter&utm_medium=conversions&utm_campaign=ph01&twclid=29zxowpwkbmryvjqutr3f9ysur",
         "homepage_status": 200,
@@ -14583,7 +14583,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-08-27T08:35:09.894Z",
+        "fetched_at": "2026-08-30T09:30:57.858Z",
         "homepage_url": "https://anymark.co/",
         "example_url": "https://anymark.co/?utm_source=x&utm_campaign=x771&twclid=293t0nesyim9m91au5fqoaj5s8",
         "homepage_status": 200,
@@ -14835,7 +14835,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-08-27T08:35:10.508Z",
+        "fetched_at": "2026-08-30T09:30:58.376Z",
         "homepage_url": "https://omgskills.com/",
         "example_url": "https://omgskills.com/?twclid=2ewu2vd054idb44rsf4bgvksa8",
         "homepage_status": 200,
@@ -14961,7 +14961,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-08-27T08:35:12.063Z",
+        "fetched_at": "2026-08-30T09:30:58.806Z",
         "homepage_url": "https://era.app/",
         "example_url": "https://era.app/?twclid=23bm7jtrc66pin9ydx0wvupecw",
         "homepage_status": 200,
@@ -32616,7 +32616,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-08-27T04:05:01.628Z",
+        "fetched_at": "2026-08-30T08:00:55.648Z",
         "homepage_url": "https://timesofisrael.com/",
         "example_url": "https://timesofisrael.com/",
         "homepage_status": 403,
@@ -32741,7 +32741,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-08-27T04:05:01.646Z",
+        "fetched_at": "2026-08-30T08:00:55.905Z",
         "homepage_url": "https://x.xom/",
         "example_url": "https://x.xom/EricLDaugh/status/2049914155461652916",
         "homepage_status": null,
@@ -32867,7 +32867,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-08-27T04:05:02.825Z",
+        "fetched_at": "2026-08-30T08:00:58.654Z",
         "homepage_url": "https://sourcebot.dev/",
         "example_url": "https://docs.sourcebot.dev/docs/features/mcp-server?twclid=24rnkjjr58b4nqm87glv1o5dr0",
         "homepage_status": 200,
@@ -32993,7 +32993,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-08-27T04:05:03.269Z",
+        "fetched_at": "2026-08-30T08:00:59.623Z",
         "homepage_url": "https://co.jp/",
         "example_url": "https://audition-en.anycolor.co.jp/?twclid=2bmm2ufti869142c85xr0ucr6a",
         "homepage_status": null,
@@ -33119,7 +33119,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-08-27T05:35:05.096Z",
+        "fetched_at": "2026-08-30T10:00:55.830Z",
         "homepage_url": "https://e.lilly/",
         "example_url": "https://e.lilly/4alH5c4?twclid=2ctpaufet268794kpf0u2aweev",
         "homepage_status": 200,
@@ -33245,7 +33245,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-08-27T05:35:25.103Z",
+        "fetched_at": "2026-08-30T10:01:15.837Z",
         "homepage_url": "https://dynamicocean.net/",
         "example_url": "https://dynamicocean.net/?twclid=2576n00y5l1125y8xeb3lcwmz1",
         "homepage_status": null,
@@ -33371,7 +33371,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-08-27T05:35:25.405Z",
+        "fetched_at": "2026-08-30T10:01:16.277Z",
         "homepage_url": "https://chatchat.com/",
         "example_url": "https://chatchat.com/?twclid=22ylkish68xq0yeya22ij7x2j8",
         "homepage_status": 200,
@@ -33495,7 +33495,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-08-27T05:35:26.290Z",
+        "fetched_at": "2026-08-30T10:01:17.108Z",
         "homepage_url": "https://coingecko.com/",
         "example_url": "https://www.coingecko.com/en/api/acquisition/entry-plans?utm_source=twitter&utm_medium=ad&utm_campaign=bau&utm_content=mar26-gt-brand-ad-free-v1&audience_segment=prospecting&twclid=26xrmua0k4othy65876mc0aamh",
         "homepage_status": 403,
