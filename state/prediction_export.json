@@ -1,15 +1,60 @@
 {
-  "generated_at": "2026-08-28T10:22:08.960Z",
+  "generated_at": "2026-08-30T17:15:18.997Z",
   "stats": {
-    "total": 86,
+    "total": 87,
     "correct": 5,
     "wrong": 18,
     "partial": 8,
-    "pending": 31,
+    "pending": 32,
     "expired": 24,
     "accuracy": 16
   },
+  "calibration": {
+    "resolved": 31,
+    "base_rate_pct": 29,
+    "mean_stated_pct": 79,
+    "overconfidence_gap_pts": 50,
+    "brier_raw": 0.396083870967742,
+    "brier_calibrated": 0.14143225806451612,
+    "buckets": [
+      {
+        "lo": 70,
+        "hi": 80,
+        "n": 16,
+        "statedMean": 0.7575,
+        "hitRate": 0.28125,
+        "shrunk": 0.28427419354838707
+      },
+      {
+        "lo": 80,
+        "hi": 90,
+        "n": 15,
+        "statedMean": 0.8333333333333333,
+        "hitRate": 0.3,
+        "shrunk": 0.2966339410939691
+      }
+    ]
+  },
   "predictions": [
+    {
+      "id": "pred_ba060359",
+      "ts": "2026-08-30T17:15:18.996Z",
+      "axes_count": 3,
+      "top_axes": [
+        "Accountability for Extrajudicial Killings",
+        "Disaster as Infrastructure Failure vs. Natural Event",
+        "Procedural Governance vs. Substantive Action"
+      ],
+      "top_axis_edge": "insufficient",
+      "prediction": "DPWH will announce additional personnel relief or project suspensions following Barasoain Church flooding, continuing the pattern of post-crisis accountability theater without addressing why heritage sites lack preventive flood protocols. Within 72 hours.",
+      "confidence_pct": 45,
+      "calibrated_pct": 28,
+      "resolution_status": "pending",
+      "deadline_at": "2026-09-29T17:15:18.996Z",
+      "resolved_at": null,
+      "resolution_note": null,
+      "tweet_url": null
+    },
     {
       "id": "pred_f3bec0bf",
       "ts": "2026-08-04T04:58:29.507Z",
