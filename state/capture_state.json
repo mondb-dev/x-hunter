@@ -1,139 +1,99 @@
 {
-  "checked_at": "2026-08-29T19:39:24.528Z",
-  "evidence_24h": 25,
-  "unique_sources": 6,
+  "checked_at": "2026-08-30T19:51:39.934Z",
+  "evidence_24h": 27,
+  "unique_sources": 1,
   "status": "captured",
   "alerts": [
     {
       "type": "source_dominance",
       "severity": "high",
-      "detail": "@unknown accounts for 76% of today's evidence (19/25)",
+      "detail": "@unknown accounts for 100% of today's evidence (27/27)",
       "username": "unknown",
-      "share": 0.76
+      "share": 1
     }
   ],
-  "summary": "1 capture alert(s) detected:\n[HIGH] @unknown accounts for 76% of today's evidence (19/25)",
+  "summary": "1 capture alert(s) detected:\n[HIGH] @unknown accounts for 100% of today's evidence (27/27)",
   "source_concentration": {
     "unknown": {
       "username": "unknown",
-      "count": 19,
-      "share": 0.76
-    },
-    "inquirerdotnet": {
-      "username": "inquirerdotnet",
-      "count": 2,
-      "share": 0.08
-    },
-    "ajenglish": {
-      "username": "ajenglish",
-      "count": 1,
-      "share": 0.04
-    },
-    "bncdotph": {
-      "username": "bncdotph",
-      "count": 1,
-      "share": 0.04
-    },
-    "sprinterpress": {
-      "username": "sprinterpress",
-      "count": 1,
-      "share": 0.04
-    },
-    "marionawfal": {
-      "username": "marionawfal",
-      "count": 1,
-      "share": 0.04
+      "count": 27,
+      "share": 1
     }
   },
   "axis_concentration": {
+    "axis_procedural_governance_substantive_action": {
+      "axis_id": "axis_procedural_governance_substantive_action",
+      "label": "Procedural Governance vs. Substantive Action",
+      "count": 6,
+      "share": 0.222
+    },
     "axis_disaster_infrastructure_accountability_v1": {
       "axis_id": "axis_disaster_infrastructure_accountability_v1",
       "label": "Disaster as Infrastructure Failure vs. Natural Event",
-      "count": 7,
-      "share": 0.28
+      "count": 4,
+      "share": 0.148
     },
-    "axis_procedural_governance_accountability_v1": {
-      "axis_id": "axis_procedural_governance_accountability_v1",
-      "label": "Procedural Governance vs. Genuine Accountability",
-      "count": 5,
-      "share": 0.2
-    },
-    "axis_power_accountability": {
-      "axis_id": "axis_power_accountability",
-      "label": "Power, Institutions, and Rule of Law",
+    "axis_information_control_v1": {
+      "axis_id": "axis_information_control_v1",
+      "label": "Information Control",
       "count": 3,
-      "share": 0.12
+      "share": 0.111
     },
     "axis_political_dynasties_meritocracy_v1": {
       "axis_id": "axis_political_dynasties_meritocracy_v1",
       "label": "Political Dynasties and Meritocracy",
-      "count": 1,
-      "share": 0.04
+      "count": 2,
+      "share": 0.074
     },
-    "axis_global_power_realignments_v1": {
-      "axis_id": "axis_global_power_realignments_v1",
-      "label": "Global Power Realignments and Shifting Hegemony",
-      "count": 1,
-      "share": 0.04
+    "axis_political_moral_conduct_v1": {
+      "axis_id": "axis_political_moral_conduct_v1",
+      "label": "Political Integrity and Moral Conduct in Public Service",
+      "count": 2,
+      "share": 0.074
     },
-    "axis_human_rights_exploitation_v1": {
-      "axis_id": "axis_human_rights_exploitation_v1",
-      "label": "Human Rights and Exploitation",
-      "count": 1,
-      "share": 0.04
+    "axis_accountability_temporality_v1": {
+      "axis_id": "axis_accountability_temporality_v1",
+      "label": "Accountability Temporality: Real-Time Enforcement vs. Archaeological Discovery",
+      "count": 2,
+      "share": 0.074
     },
-    "axis_digital_surveillance_autonomy_v1": {
-      "axis_id": "axis_digital_surveillance_autonomy_v1",
-      "label": "Digital Surveillance and Individual Autonomy",
+    "axis_power_accountability": {
+      "axis_id": "axis_power_accountability",
+      "label": "Power, Institutions, and Rule of Law",
       "count": 1,
-      "share": 0.04
+      "share": 0.037
     },
-    "axis_humanitarian_crisis_response": {
-      "axis_id": "axis_humanitarian_crisis_response",
-      "label": "Humanitarian Crisis Response",
+    "axis_eje_accountability_v1": {
+      "axis_id": "axis_eje_accountability_v1",
+      "label": "Accountability for Extrajudicial Killings",
       "count": 1,
-      "share": 0.04
+      "share": 0.037
     },
-    "axis_dehumanization_propaganda_v1": {
-      "axis_id": "axis_dehumanization_propaganda_v1",
-      "label": "Dehumanization as State Propaganda Strategy",
+    "axis_media_integrity_v1": {
+      "axis_id": "axis_media_integrity_v1",
+      "label": "Integrity of Information and Social Media Manipulation",
       "count": 1,
-      "share": 0.04
+      "share": 0.037
     },
-    "axis_procedural_governance_substantive_action": {
-      "axis_id": "axis_procedural_governance_substantive_action",
-      "label": "Procedural Governance vs. Substantive Action",
+    "axis_national_sovereignty_v_intl_law_v1": {
+      "axis_id": "axis_national_sovereignty_v_intl_law_v1",
+      "label": "National Sovereignty vs. International Law",
       "count": 1,
-      "share": 0.04
+      "share": 0.037
     }
   },
   "cluster_concentration": {
     "unknown": {
       "cluster": "unknown",
-      "count": 19,
-      "share": 0.76
-    },
-    "breaking_news": {
-      "cluster": "breaking_news",
-      "count": 4,
-      "share": 0.16
-    },
-    "asia_pacific": {
-      "cluster": "asia_pacific",
-      "count": 1,
-      "share": 0.04
-    },
-    "disinformation": {
-      "cluster": "disinformation",
-      "count": 1,
-      "share": 0.04
+      "count": 27,
+      "share": 1
     }
   },
   "pole_balance": {
-    "left": 11,
+    "left": 13,
     "right": 14,
     "neutral": 0,
-    "left_share": 0.44,
-    "right_share": 0.56
+    "left_share": 0.481,
+    "right_share": 0.519
   }
 }
