@@ -1,17 +1,17 @@
 {
   "schema_version": "1.0",
-  "generated_at": "2026-08-31T05:01:42.195Z",
+  "generated_at": "2026-08-31T08:01:45.108Z",
   "method": "mechanical_registry_v1",
-  "profiled_at": "2026-08-31T05:01:54.737Z",
+  "profiled_at": "2026-08-31T08:01:51.706Z",
   "sources": [
     {
       "domain": "theguardian.com",
       "entity": "Theguardian",
       "kind": "news",
       "first_seen_at": "2026-03-27T23:17:00Z",
-      "last_seen_at": "2026-08-31T01:27:56.375Z",
+      "last_seen_at": "2026-08-31T07:32:38.367Z",
       "discovery": {
-        "distinct_urls": 1093,
+        "distinct_urls": 1096,
         "example_urls": [
           "https://www.theguardian.com/us-news/2026/jun/23/trump-immigration-courthouse-arrest-policy",
           "https://www.theguardian.com/us-news/2026/jun/28/ice-minnesota-defending-democracy",
@@ -21,8 +21,8 @@
         ],
         "origin_counts": {
           "ontology_evidence": 54,
-          "reading_queue": 1047,
-          "journals": 150,
+          "reading_queue": 1049,
+          "journals": 151,
           "articles": 5
         },
         "distinct_referring_accounts": 0,
@@ -78,7 +78,7 @@
         "breadth": {
           "score": 0.94,
           "basis": [
-            "distinct_urls:1093",
+            "distinct_urls:1096",
             "distinct_axes:23",
             "origin_types:4"
           ]
@@ -118,7 +118,7 @@
             "newsroom_domain_pattern",
             "article_path_seen",
             "doi_or_identifier_path_seen",
-            "distinct_urls:1093",
+            "distinct_urls:1096",
             "distinct_axes:23",
             "origin_types:4",
             "referring_accounts:0",
@@ -852,7 +852,7 @@
         ],
         "origin_counts": {
           "ontology_evidence": 28,
-          "reading_queue": 764,
+          "reading_queue": 765,
           "journals": 71
         },
         "distinct_referring_accounts": 0,
@@ -1074,7 +1074,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-08-28T05:49:34.009Z",
+        "fetched_at": "2026-08-31T06:01:46.298Z",
         "homepage_url": "https://doi.org/",
         "example_url": "https://doi.org/10.1002/ped4.70061?twclid=2p92o0thcwkaxz6o70plj8t4q",
         "homepage_status": 200,
@@ -3252,9 +3252,9 @@
       "entity": "Rappler",
       "kind": "unknown",
       "first_seen_at": "2026-06-22T04:04:30.428Z",
-      "last_seen_at": "2026-08-31T04:32:36.025Z",
+      "last_seen_at": "2026-08-31T07:32:38.367Z",
       "discovery": {
-        "distinct_urls": 306,
+        "distinct_urls": 308,
         "example_urls": [
           "https://www.rappler.com/fact-check-no-arrest-warrant-issued-vs-marcoleta",
           "https://www.rappler.com/technology/decoded-tacloban-school-shooting-disinformation-kiko-barzaga-discussions-juvenile-justice-law/",
@@ -3264,7 +3264,7 @@
         ],
         "origin_counts": {
           "ontology_evidence": 143,
-          "journals": 342,
+          "journals": 345,
           "articles": 5
         },
         "distinct_referring_accounts": 0,
@@ -3326,7 +3326,7 @@
         "breadth": {
           "score": 0.8799999999999999,
           "basis": [
-            "distinct_urls:306",
+            "distinct_urls:308",
             "distinct_axes:31",
             "origin_types:3"
           ]
@@ -3364,7 +3364,7 @@
           "method": "mechanical_v1",
           "basis": [
             "unknown_domain_pattern",
-            "distinct_urls:306",
+            "distinct_urls:308",
             "distinct_axes:31",
             "origin_types:3",
             "referring_accounts:0",
@@ -3519,7 +3519,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-08-28T07:19:40.088Z",
+        "fetched_at": "2026-08-31T07:31:44.564Z",
         "homepage_url": "https://techcrunch.com/",
         "example_url": "https://techcrunch.com/2026/07/30/judge-says-trump-admin-still-lacks-evidence-for-anthropic-supply-chain-risk-label/",
         "homepage_status": 200,
@@ -3555,7 +3555,7 @@
       "entity": "Arstechnica",
       "kind": "unknown",
       "first_seen_at": "2026-06-24T20:02:00Z",
-      "last_seen_at": "2026-08-31T04:32:36.025Z",
+      "last_seen_at": "2026-08-31T07:32:38.367Z",
       "discovery": {
         "distinct_urls": 18,
         "example_urls": [
@@ -3567,7 +3567,7 @@
         ],
         "origin_counts": {
           "ontology_evidence": 9,
-          "journals": 24
+          "journals": 25
         },
         "distinct_referring_accounts": 0,
         "sample_referring_accounts": [],
@@ -4183,7 +4183,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-08-28T07:19:41.865Z",
+        "fetched_at": "2026-08-31T07:31:46.421Z",
         "homepage_url": "https://brobible.com/",
         "example_url": "https://brobible.com/culture/paige-ostroushko-savanah-hernandez-anti-ice-protest-arrest/",
         "homepage_status": 200,
@@ -4310,7 +4310,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-08-28T05:49:34.380Z",
+        "fetched_at": "2026-08-31T06:01:46.660Z",
         "homepage_url": "https://epochtimes.com/",
         "example_url": "https://www.epochtimes.com/",
         "homepage_status": 200,
@@ -4438,7 +4438,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-08-28T05:49:34.908Z",
+        "fetched_at": "2026-08-31T06:01:47.472Z",
         "homepage_url": "https://idf.il/",
         "example_url": "https://www.idf.il/en/articles/2026/04/16/idf-finds-weapons-in-school-in-bint-jbeil-lebanon/",
         "homepage_status": null,
@@ -4474,9 +4474,9 @@
       "entity": "Philstar",
       "kind": "unknown",
       "first_seen_at": "2026-05-20T06:57:31.760Z",
-      "last_seen_at": "2026-08-31T03:28:00.775Z",
+      "last_seen_at": "2026-08-31T06:32:38.200Z",
       "discovery": {
-        "distinct_urls": 230,
+        "distinct_urls": 231,
         "example_urls": [
           "https://www.philstar.com/headlines/2026/06/24/2537506/mike-defensor-face-trafficking-complaint-over-pasig-ktv-bar-raid",
           "https://www.philstar.com/headlines/2026/06/24/2537509/ched-tells-ateneo-explain-drowning-baterbonia-adili-or-face-sanctions",
@@ -4486,7 +4486,7 @@
         ],
         "origin_counts": {
           "ontology_evidence": 110,
-          "journals": 284,
+          "journals": 286,
           "articles": 4
         },
         "distinct_referring_accounts": 0,
@@ -4544,7 +4544,7 @@
         "breadth": {
           "score": 0.8799999999999999,
           "basis": [
-            "distinct_urls:230",
+            "distinct_urls:231",
             "distinct_axes:25",
             "origin_types:3"
           ]
@@ -4572,7 +4572,7 @@
             "about:false",
             "contact:false",
             "corrections:false",
-            "outbound_links:44",
+            "outbound_links:31",
             "opinion_marker:false"
           ]
         },
@@ -4584,7 +4584,7 @@
             "unknown_domain_pattern",
             "article_path_seen",
             "search_results_seen",
-            "distinct_urls:230",
+            "distinct_urls:231",
             "distinct_axes:25",
             "origin_types:3",
             "referring_accounts:0",
@@ -4594,7 +4594,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-08-28T07:19:38.793Z",
+        "fetched_at": "2026-08-31T07:31:50.838Z",
         "homepage_url": "https://philstar.com/",
         "example_url": "https://www.philstar.com/headlines/2026/06/24/2537506/mike-defensor-face-trafficking-complaint-over-pasig-ktv-bar-raid",
         "homepage_status": 200,
@@ -4620,7 +4620,7 @@
           "has_about_link": false,
           "has_contact_link": false,
           "has_corrections_link": false,
-          "outbound_links_count": 44,
+          "outbound_links_count": 31,
           "opinion_marker": false
         }
       }
@@ -4866,7 +4866,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-08-28T07:19:42.815Z",
+        "fetched_at": "2026-08-31T07:31:54.451Z",
         "homepage_url": "https://steampowered.com/",
         "example_url": "https://store.steampowered.com/app/1315180?twclid=2cb8mho5n4udnkq1fnm1yi4kkh",
         "homepage_status": 200,
@@ -5136,7 +5136,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-08-28T05:49:35.861Z",
+        "fetched_at": "2026-08-31T06:01:48.418Z",
         "homepage_url": "https://github.com/",
         "example_url": "https://github.com/BlockRunAI/ClawRouter/?twclid=2bnr8zsvp3b72fbw0yuil7yilw",
         "homepage_status": 200,
@@ -5262,7 +5262,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-08-28T06:49:37.193Z",
+        "fetched_at": "2026-08-31T08:01:48.816Z",
         "homepage_url": "https://newsguardtech.com/",
         "example_url": "https://www.newsguardtech.com/",
         "homepage_status": 200,
@@ -5388,7 +5388,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-08-28T06:49:38.270Z",
+        "fetched_at": "2026-08-31T08:01:49.927Z",
         "homepage_url": "https://snopes.com/",
         "example_url": "https://snopes.com/fact-check/strait-of-hormuz-oil-shorts-trump/",
         "homepage_status": 200,
@@ -5519,15 +5519,15 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-08-28T06:49:39.152Z",
+        "fetched_at": "2026-08-31T08:01:50.071Z",
         "homepage_url": "https://starlink.com/",
         "example_url": "https://www.starlink.com/us/residential?referral=RC-DF-9543787-19448-67&utm_medium=paid&utm_campaign=awr_us_soc_twt_ptg_cau&utm_content=awr_us_soc_twt_ptg_cau_res_gvp_v4s_stc_en-us_sdb-bluesky-uptime&twclid=2cg62b1u0oqrypdim5oir1767e",
-        "homepage_status": 200,
-        "example_status": 200,
+        "homepage_status": null,
+        "example_status": null,
         "homepage_final_url": "https://starlink.com/",
-        "example_final_url": "https://starlink.com/us/residential?referral=RC-DF-9543787-19448-67&utm_medium=paid&utm_campaign=awr_us_soc_twt_ptg_cau&utm_content=awr_us_soc_twt_ptg_cau_res_gvp_v4s_stc_en-us_sdb-bluesky-uptime&twclid=2cg62b1u0oqrypdim5oir1767e",
-        "homepage_content_type": "text/html; charset=utf-8",
-        "example_content_type": "text/html; charset=utf-8",
+        "example_final_url": "https://www.starlink.com/us/residential?referral=RC-DF-9543787-19448-67&utm_medium=paid&utm_campaign=awr_us_soc_twt_ptg_cau&utm_content=awr_us_soc_twt_ptg_cau_res_gvp_v4s_stc_en-us_sdb-bluesky-uptime&twclid=2cg62b1u0oqrypdim5oir1767e",
+        "homepage_content_type": "",
+        "example_content_type": "",
         "homepage": {
           "has_meta_author": false,
           "has_published_time": false,
@@ -5643,7 +5643,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-08-28T06:49:40.225Z",
+        "fetched_at": "2026-08-31T08:01:51.706Z",
         "homepage_url": "https://reuters.com/",
         "example_url": "https://www.reuters.com/site-search/?query=Evidence-based%20claims%2C%20transparent%20sourcing%2C%20honest%20uncertainty%2C%20good-faith%20argu%20Truth%20and%20Evidence%20in%20Public%20Discourse",
         "homepage_status": 401,
@@ -5679,9 +5679,9 @@
       "entity": "Inquirer",
       "kind": "unknown",
       "first_seen_at": "2026-05-09T10:15:15.053Z",
-      "last_seen_at": "2026-08-31T04:32:36.025Z",
+      "last_seen_at": "2026-08-31T07:32:38.422Z",
       "discovery": {
-        "distinct_urls": 488,
+        "distinct_urls": 491,
         "example_urls": [
           "https://newsinfo.inquirer.net/2266316/nbi-on-cayetano-position-that-cant-be-defended-by-facts-is-done-with-insults",
           "https://www.inquirer.net/capiz-broadcaster-shooting-probe-widens-as-cops-form-task-force",
@@ -5690,8 +5690,8 @@
           "https://newsinfo.inquirer.net/2251702/chr-seeks-swift-passage-of-bills-creating-detention-monitoring-body"
         ],
         "origin_counts": {
-          "ontology_evidence": 180,
-          "journals": 586,
+          "ontology_evidence": 184,
+          "journals": 591,
           "articles": 5
         },
         "distinct_referring_accounts": 0,
@@ -5751,7 +5751,7 @@
         "breadth": {
           "score": 0.8799999999999999,
           "basis": [
-            "distinct_urls:488",
+            "distinct_urls:491",
             "distinct_axes:28",
             "origin_types:3"
           ]
@@ -5790,7 +5790,7 @@
           "basis": [
             "unknown_domain_pattern",
             "search_results_seen",
-            "distinct_urls:488",
+            "distinct_urls:491",
             "distinct_axes:28",
             "origin_types:3",
             "referring_accounts:0",
@@ -39977,7 +39977,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-08-28T05:19:32.768Z",
+        "fetched_at": "2026-08-31T06:31:47.487Z",
         "homepage_url": "https://abs-cbn.com/",
         "example_url": "https://news.abs-cbn.com/news/2026/06/09/nbi-dismisses-kickback-claims-as-hearsay",
         "homepage_status": 403,
@@ -40102,7 +40102,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-08-28T05:19:35.804Z",
+        "fetched_at": "2026-08-31T06:31:50.913Z",
         "homepage_url": "https://thefastmode.com/",
         "example_url": "https://www.thefastmode.com/technology-solutions/49624-ai-powered-connectivity-apac-charts-a-unified-path-to-a-smarter-digital-future?twclid=281yms0e71cmmk7m5khtvm4j4n",
         "homepage_status": 200,
@@ -40227,15 +40227,15 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-08-28T05:19:36.798Z",
+        "fetched_at": "2026-08-31T06:31:52.000Z",
         "homepage_url": "https://kuvi.ai/",
         "example_url": "https://altura.kuvi.ai/leaderboard?twclid=22146c8rer0fhb7658qzfblh0s",
         "homepage_status": 200,
-        "example_status": 200,
+        "example_status": null,
         "homepage_final_url": "https://kuvi.ai/",
         "example_final_url": "https://altura.kuvi.ai/leaderboard?twclid=22146c8rer0fhb7658qzfblh0s",
         "homepage_content_type": "text/html",
-        "example_content_type": "text/html; charset=utf-8",
+        "example_content_type": "",
         "homepage": {
           "has_meta_author": false,
           "has_published_time": false,
@@ -40351,7 +40351,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-08-28T05:19:37.512Z",
+        "fetched_at": "2026-08-31T06:31:52.790Z",
         "homepage_url": "https://abscbn.news/",
         "example_url": "https://abscbn.news/4cXfLnd",
         "homepage_status": 403,
