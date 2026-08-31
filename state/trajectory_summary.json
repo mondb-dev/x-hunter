@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-31T10:34:57.779Z",
+  "generated_at": "2026-08-31T18:52:33.336Z",
   "windows": [
     "1d",
     "3d",
@@ -30,21 +30,21 @@
     },
     "axis_power_accountability": {
       "current": {
-        "score": -0.147,
+        "score": -0.1518,
         "confidence": 0.95
       },
       "1d": {
-        "score_delta": 0.013,
+        "score_delta": 0.0082,
         "conf_delta": 0,
         "direction": "→"
       },
       "3d": {
-        "score_delta": 0.0164,
+        "score_delta": 0.0116,
         "conf_delta": 0,
         "direction": "→"
       },
       "7d": {
-        "score_delta": 0.0339,
+        "score_delta": 0.0291,
         "conf_delta": 0,
         "direction": "↗"
       }
@@ -156,21 +156,21 @@
     },
     "axis_media_integrity_v1": {
       "current": {
-        "score": 0.4197,
+        "score": 0.4042,
         "confidence": 0.95
       },
       "1d": {
-        "score_delta": 0.0032,
+        "score_delta": -0.0123,
         "conf_delta": 0,
         "direction": "→"
       },
       "3d": {
-        "score_delta": 0.0064,
+        "score_delta": -0.0091,
         "conf_delta": 0.004,
         "direction": "→"
       },
       "7d": {
-        "score_delta": 0.0064,
+        "score_delta": -0.0091,
         "conf_delta": 0.002,
         "direction": "→"
       }
@@ -891,23 +891,23 @@
     },
     "axis_procedural_governance_accountability": {
       "current": {
-        "score": -0.45,
-        "confidence": 0.563
+        "score": -0.5,
+        "confidence": 0.5817
       },
       "1d": {
-        "score_delta": 0,
-        "conf_delta": -0.002,
-        "direction": "→"
+        "score_delta": -0.05,
+        "conf_delta": 0.0167,
+        "direction": "↘"
       },
       "3d": {
-        "score_delta": 0,
-        "conf_delta": -0.006,
-        "direction": "→"
+        "score_delta": -0.05,
+        "conf_delta": 0.0127,
+        "direction": "↘"
       },
       "7d": {
-        "score_delta": 0,
-        "conf_delta": -0.008,
-        "direction": "→"
+        "score_delta": -0.05,
+        "conf_delta": 0.0107,
+        "direction": "↘"
       }
     },
     "axis_procedural_governance_v1": {
@@ -1038,22 +1038,22 @@
     },
     "axis_procedural_governance_substantive_action": {
       "current": {
-        "score": -0.8541,
-        "confidence": 0.8701
+        "score": -0.8562,
+        "confidence": 0.8724
       },
       "1d": {
-        "score_delta": -0.0043,
-        "conf_delta": 0.0047,
+        "score_delta": -0.0064,
+        "conf_delta": 0.007,
         "direction": "→"
       },
       "3d": {
-        "score_delta": -0.021,
-        "conf_delta": 0.0176,
+        "score_delta": -0.0231,
+        "conf_delta": 0.0199,
         "direction": "↘"
       },
       "7d": {
-        "score_delta": -0.0236,
-        "conf_delta": 0.0205,
+        "score_delta": -0.0257,
+        "conf_delta": 0.0228,
         "direction": "↘"
       }
     },
@@ -1143,22 +1143,22 @@
     },
     "axis_accountability_temporality_v1": {
       "current": {
-        "score": 0.4122,
-        "confidence": 0.4336
+        "score": 0.4622,
+        "confidence": 0.4481
       },
       "1d": {
-        "score_delta": 0,
-        "conf_delta": 0,
-        "direction": "→"
+        "score_delta": 0.05,
+        "conf_delta": 0.0145,
+        "direction": "↗"
       },
       "3d": {
-        "score_delta": 0.1,
-        "conf_delta": 0.0483,
+        "score_delta": 0.15,
+        "conf_delta": 0.0628,
         "direction": "↗"
       },
       "7d": {
-        "score_delta": 0.1,
-        "conf_delta": 0.0463,
+        "score_delta": 0.15,
+        "conf_delta": 0.0608,
         "direction": "↗"
       }
     },
@@ -1228,21 +1228,21 @@
     "axis_disaster_infrastructure_accountability_v1": {
       "current": {
         "score": 0.2,
-        "confidence": 0.4915
+        "confidence": 0.498
       },
       "1d": {
         "score_delta": 0.05,
-        "conf_delta": 0.0704,
+        "conf_delta": 0.0769,
         "direction": "↗"
       },
       "3d": {
         "score_delta": 0.15,
-        "conf_delta": 0.2353,
+        "conf_delta": 0.2418,
         "direction": "↗"
       },
       "7d": {
         "score_delta": 0.2,
-        "conf_delta": 0.2974,
+        "conf_delta": 0.3039,
         "direction": "↗"
       }
     },
@@ -1264,6 +1264,7 @@
   "momentum_axes": [
     "axis_political_dynasties_meritocracy_v1",
     "axis_humanitarian_crisis_response",
+    "axis_procedural_governance_accountability",
     "axis_dehumanization_propaganda_v1",
     "axis_state_power_monetization_v1",
     "axis_accountability_temporality_v1",
