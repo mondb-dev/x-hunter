@@ -1,60 +1,6 @@
 {
   "gaps": [
     {
-      "key": "direct access to supreme court slip opinions and docket to verify case status an",
-      "need": "Direct access to Supreme Court slip opinions and docket to verify case status and ruling details",
-      "suggested_tool": "SCOTUS API or reliable legal database (fetch failed on supremecourt.gov URLs)",
-      "count": 1,
-      "first_seen": "2026-08-15",
-      "last_seen": "2026-08-15",
-      "last_question": "Will Peru's ex-president's 15-year corruption sentence overturn be upheld on final appeal, or will prosecutors successfully reinstate convic"
-    },
-    {
-      "key": "access to actual prosecution appellate briefs, court filings, or legal dockets f",
-      "need": "Access to actual prosecution appellate briefs, court filings, or legal dockets for a specific case to examine what new evidence or arguments were actually presented",
-      "suggested_tool": "PACER/court records database access or legal research database (Westlaw/LexisNexis) to retrieve actual appellate documents",
-      "count": 1,
-      "first_seen": "2026-08-15",
-      "last_seen": "2026-08-15",
-      "last_question": "Will Peru's ex-president's 15-year corruption sentence overturn be upheld on final appeal, or will prosecutors successfully reinstate convic"
-    },
-    {
-      "key": "identity of the specific criminal case being audited - no case name, jurisdictio",
-      "need": "Identity of the specific criminal case being audited - no case name, jurisdiction, defendant, or court provided in the question",
-      "suggested_tool": "Clarification from the user or access to Sebastian's task/project context that would specify which appeal is under review",
-      "count": 1,
-      "first_seen": "2026-08-15",
-      "last_seen": "2026-08-15",
-      "last_question": "Will Peru's ex-president's 15-year corruption sentence overturn be upheld on final appeal, or will prosecutors successfully reinstate convic"
-    },
-    {
-      "key": "quantitative media analysis comparing volume, prominence, and framing of space e",
-      "need": "Quantitative media analysis comparing volume, prominence, and framing of space exploration vs satellite warfare coverage across major outlets",
-      "suggested_tool": "Media database with content analysis/volume metrics (e.g., Factiva, LexisNexis with analytics)",
-      "count": 1,
-      "first_seen": "2026-08-16",
-      "last_seen": "2026-08-16",
-      "last_question": "How does media attention to aspirational space monuments (e.g., private launches, Mars missions) compare to coverage of military strikes on "
-    },
-    {
-      "key": "systematic catalog of dual-use satellite targeting incidents 2024-2026 with asso",
-      "need": "Systematic catalog of dual-use satellite targeting incidents 2024-2026 with associated media coverage metrics",
-      "suggested_tool": "Military incident database or space security tracker with media monitoring component",
-      "count": 1,
-      "first_seen": "2026-08-16",
-      "last_seen": "2026-08-16",
-      "last_question": "How does media attention to aspirational space monuments (e.g., private launches, Mars missions) compare to coverage of military strikes on "
-    },
-    {
-      "key": "academic literature specifically on 'space spectacle' framing and accountability",
-      "need": "Academic literature specifically on 'space spectacle' framing and accountability gaps in space warfare reporting",
-      "suggested_tool": "Academic database (JSTOR, Google Scholar) - current search tool may not surface specialized academic work effectively",
-      "count": 1,
-      "first_seen": "2026-08-16",
-      "last_seen": "2026-08-16",
-      "last_question": "How does media attention to aspirational space monuments (e.g., private launches, Mars missions) compare to coverage of military strikes on "
-    },
-    {
       "key": "quantitative media coverage analysis comparing article count, prominence, airtim",
       "need": "Quantitative media coverage analysis comparing article count, prominence, airtime between space exploration events and satellite warfare incidents (2024-2026)",
       "suggested_tool": "Media monitoring database with filtering by topic and measurement of coverage volume/prominence metrics",
@@ -899,6 +845,60 @@
       "first_seen": "2026-08-30",
       "last_seen": "2026-08-30",
       "last_question": "Infrastructure failures kill during disasters, but accountability systems only document deaths after the fact instead of interrogating the d"
+    },
+    {
+      "key": "academic research databases or systematic literature reviews on institutional ac",
+      "need": "Academic research databases or systematic literature reviews on institutional accountability theory and empirical enforcement patterns",
+      "suggested_tool": "Academic database access (JSTOR, Google Scholar API, institutional library access)",
+      "count": 1,
+      "first_seen": "2026-08-31",
+      "last_seen": "2026-08-31",
+      "last_question": "What evidence exists that accountability systems in institutional contexts (government, corporate, or international organizations) prioritiz"
+    },
+    {
+      "key": "structured government enforcement databases with longitudinal data on violations",
+      "need": "Structured government enforcement databases with longitudinal data on violations, documentation, and outcomes",
+      "suggested_tool": "Direct API access to OSHA, EPA, SEC, FDA enforcement databases",
+      "count": 1,
+      "first_seen": "2026-08-31",
+      "last_seen": "2026-08-31",
+      "last_question": "What evidence exists that accountability systems in institutional contexts (government, corporate, or international organizations) prioritiz"
+    },
+    {
+      "key": "comparative institutional analysis across government/corporate/international con",
+      "need": "Comparative institutional analysis across government/corporate/international contexts with standardized metrics",
+      "suggested_tool": "Access to institutional research datasets or policy analysis repositories",
+      "count": 1,
+      "first_seen": "2026-08-31",
+      "last_seen": "2026-08-31",
+      "last_question": "What evidence exists that accountability systems in institutional contexts (government, corporate, or international organizations) prioritiz"
+    },
+    {
+      "key": "systematic data on ratio of regulatory findings/citations to enforcement actions",
+      "need": "Systematic data on ratio of regulatory findings/citations to enforcement actions with penalties across agencies over time",
+      "suggested_tool": "Structured database query or API access to regulatory enforcement databases (OSHA, SEC, FDA, EPA)",
+      "count": 1,
+      "first_seen": "2026-08-31",
+      "last_seen": "2026-08-31",
+      "last_question": "What evidence exists that accountability systems in institutional contexts (government, corporate, or international organizations) prioritiz"
+    },
+    {
+      "key": "quantitative analysis of un/international body resolution passage versus impleme",
+      "need": "Quantitative analysis of UN/international body resolution passage versus implementation/compliance rates",
+      "suggested_tool": "International organization compliance database or academic dataset access",
+      "count": 1,
+      "first_seen": "2026-08-31",
+      "last_seen": "2026-08-31",
+      "last_question": "What evidence exists that accountability systems in institutional contexts (government, corporate, or international organizations) prioritiz"
+    },
+    {
+      "key": "why all web searches returned zero results - diagnostic of search tool functiona",
+      "need": "Why all web searches returned zero results - diagnostic of search tool functionality",
+      "suggested_tool": "Search tool health check or alternative search backend",
+      "count": 1,
+      "first_seen": "2026-08-31",
+      "last_seen": "2026-08-31",
+      "last_question": "What evidence exists that accountability systems in institutional contexts (government, corporate, or international organizations) prioritiz"
     }
   ]
 }
