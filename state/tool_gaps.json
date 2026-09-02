@@ -1,60 +1,6 @@
 {
   "gaps": [
     {
-      "key": "full text of the constitutional court's july 31, 2026 ruling explaining legal re",
-      "need": "Full text of the Constitutional Court's July 31, 2026 ruling explaining legal reasoning",
-      "suggested_tool": "Access to Peru's Constitutional Court official database (Tribunal Constitucional del Perú)",
-      "count": 1,
-      "first_seen": "2026-08-16",
-      "last_seen": "2026-08-16",
-      "last_question": "Will Peru's ex-president's 15-year corruption sentence overturn be upheld on final appeal, or will prosecutors successfully reinstate convic"
-    },
-    {
-      "key": "official text of the constitutional court ruling (sentencia no. 169/2026) with f",
-      "need": "Official text of the Constitutional Court ruling (Sentencia No. 169/2026) with full legal reasoning",
-      "suggested_tool": "Access to Peru government/judicial database or ability to fetch PDFs from official TC website",
-      "count": 1,
-      "first_seen": "2026-08-16",
-      "last_seen": "2026-08-16",
-      "last_question": "Will Peru's ex-president's 15-year corruption sentence overturn be upheld on final appeal, or will prosecutors successfully reinstate convic"
-    },
-    {
-      "key": "official statements or legal filings from peru's fiscalía (prosecutor's office) ",
-      "need": "Official statements or legal filings from Peru's Fiscalía (prosecutor's office) regarding response to the TC ruling",
-      "suggested_tool": "Access to Peru's prosecutor office press releases or legal filing database",
-      "count": 1,
-      "first_seen": "2026-08-16",
-      "last_seen": "2026-08-16",
-      "last_question": "Will Peru's ex-president's 15-year corruption sentence overturn be upheld on final appeal, or will prosecutors successfully reinstate convic"
-    },
-    {
-      "key": "expert legal analysis on whether constitutional court decisions in peru can be a",
-      "need": "Expert legal analysis on whether Constitutional Court decisions in Peru can be appealed or are constitutionally final",
-      "suggested_tool": "Access to Peruvian constitutional law experts, academic databases, or official judicial hierarchy documentation",
-      "count": 1,
-      "first_seen": "2026-08-16",
-      "last_seen": "2026-08-16",
-      "last_question": "Will Peru's ex-president's 15-year corruption sentence overturn be upheld on final appeal, or will prosecutors successfully reinstate convic"
-    },
-    {
-      "key": "identity of the case being researched - no tools can infer what 'this case' refe",
-      "need": "Identity of the case being researched - no tools can infer what 'this case' refers to without prior context",
-      "suggested_tool": "Access to Sebastian's research brief, assignment document, or project scope that would specify which case to audit",
-      "count": 1,
-      "first_seen": "2026-08-20",
-      "last_seen": "2026-08-20",
-      "last_question": "Will Peru's ex-president's 15-year corruption sentence overturn be upheld on final appeal, or will prosecutors successfully reinstate convic"
-    },
-    {
-      "key": "current status of a specific legal appeal - requires court docket access or pace",
-      "need": "Current status of a specific legal appeal - requires court docket access or PACER-like system",
-      "suggested_tool": "Court records API or legal docket monitoring service (e.g., PACER for US federal courts, or equivalent jurisdictional system)",
-      "count": 1,
-      "first_seen": "2026-08-20",
-      "last_seen": "2026-08-20",
-      "last_question": "Will Peru's ex-president's 15-year corruption sentence overturn be upheld on final appeal, or will prosecutors successfully reinstate convic"
-    },
-    {
       "key": "the actual constitutional court ruling document or official court statement expl",
       "need": "The actual constitutional court ruling document or official court statement explaining the legal grounds",
       "suggested_tool": "Access to Peru's Constitutional Tribunal official website/database or legal document repository",
@@ -899,6 +845,60 @@
       "first_seen": "2026-09-01",
       "last_seen": "2026-09-01",
       "last_question": "What is the comparative timeline between AI-generated evidence introduction in courtroom proceedings versus the completion of high-value ass"
+    },
+    {
+      "key": "access to sebastian's own past observations about accountability theater, regula",
+      "need": "Access to Sebastian's own past observations about accountability theater, regulatory capture, or enforcement failures (recall tool returned no results)",
+      "suggested_tool": "Working recall/memory system with Sebastian's research history",
+      "count": 1,
+      "first_seen": "2026-09-02",
+      "last_seen": "2026-09-02",
+      "last_question": "What evidence exists that accountability mechanisms in technology companies, legal systems, and international governance have become perform"
+    },
+    {
+      "key": "access to sebastian's x feed observations about tech accountability discussions ",
+      "need": "Access to Sebastian's X feed observations about tech accountability discussions (posts tool errored)",
+      "suggested_tool": "Functional posts database without FTS corruption",
+      "count": 1,
+      "first_seen": "2026-09-02",
+      "last_seen": "2026-09-02",
+      "last_question": "What evidence exists that accountability mechanisms in technology companies, legal systems, and international governance have become perform"
+    },
+    {
+      "key": "all web searches returned zero results despite searching for major documented to",
+      "need": "All web searches returned zero results despite searching for major documented topics (Google antitrust, GDPR enforcement, Russia sanctions) - appears to be a connectivity or search API failure",
+      "suggested_tool": "Working web search capability or alternative news/research database",
+      "count": 1,
+      "first_seen": "2026-09-02",
+      "last_seen": "2026-09-02",
+      "last_question": "What evidence exists that accountability mechanisms in technology companies, legal systems, and international governance have become perform"
+    },
+    {
+      "key": "actual enforcement outcome data - whether fines were paid, structural remedies i",
+      "need": "Actual enforcement outcome data - whether fines were paid, structural remedies implemented, or cases settled with no admission of wrongdoing",
+      "suggested_tool": "Access to court dockets, settlement databases, or enforcement tracking systems that show disposition vs. announcement",
+      "count": 1,
+      "first_seen": "2026-09-02",
+      "last_seen": "2026-09-02",
+      "last_question": "What evidence exists that accountability mechanisms in technology companies, legal systems, and international governance have become perform"
+    },
+    {
+      "key": "comparison metrics between announced enforcement actions and measurable behavior",
+      "need": "Comparison metrics between announced enforcement actions and measurable behavior change in target companies",
+      "suggested_tool": "Regulatory effectiveness database tracking pre/post enforcement metrics (market share, privacy practices, compliance audits)",
+      "count": 1,
+      "first_seen": "2026-09-02",
+      "last_seen": "2026-09-02",
+      "last_question": "What evidence exists that accountability mechanisms in technology companies, legal systems, and international governance have become perform"
+    },
+    {
+      "key": "insider perspectives on why enforcement mechanisms fail - prosecutorial resource",
+      "need": "Insider perspectives on why enforcement mechanisms fail - prosecutorial resource constraints, political interference, regulatory capture",
+      "suggested_tool": "Access to whistleblower reports, internal government documents, or investigative journalism with confidential sources",
+      "count": 1,
+      "first_seen": "2026-09-02",
+      "last_seen": "2026-09-02",
+      "last_question": "What evidence exists that accountability mechanisms in technology companies, legal systems, and international governance have become perform"
     }
   ]
 }
