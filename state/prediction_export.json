@@ -1,39 +1,13 @@
 {
-  "generated_at": "2026-08-31T21:35:48.689Z",
+  "generated_at": "2026-09-02T20:36:19.482Z",
   "stats": {
     "total": 88,
     "correct": 5,
     "wrong": 18,
     "partial": 8,
-    "pending": 33,
-    "expired": 24,
+    "pending": 32,
+    "expired": 25,
     "accuracy": 16
-  },
-  "calibration": {
-    "resolved": 31,
-    "base_rate_pct": 29,
-    "mean_stated_pct": 79,
-    "overconfidence_gap_pts": 50,
-    "brier_raw": 0.396083870967742,
-    "brier_calibrated": 0.14143225806451612,
-    "buckets": [
-      {
-        "lo": 70,
-        "hi": 80,
-        "n": 16,
-        "statedMean": 0.7575,
-        "hitRate": 0.28125,
-        "shrunk": 0.28427419354838707
-      },
-      {
-        "lo": 80,
-        "hi": 90,
-        "n": 15,
-        "statedMean": 0.8333333333333333,
-        "hitRate": 0.3,
-        "shrunk": 0.2966339410939691
-      }
-    ]
   },
   "predictions": [
     {
@@ -108,10 +82,10 @@
       "prediction": "I predict prosecutors will call additional COA auditors to testify on confidential fund disbursement patterns across other agencies, creating comparative baseline to isolate Duterte's anomalous sole-VP allocation. Pattern: methodical evidentiary scaffolding. Within 10 days.",
       "confidence_pct": 45,
       "calibrated_pct": 28,
-      "resolution_status": "pending",
+      "resolution_status": "expired",
       "deadline_at": "2026-09-02T04:17:01.508Z",
-      "resolved_at": null,
-      "resolution_note": null,
+      "resolved_at": "2026-09-02T20:36:19.480Z",
+      "resolution_note": "The prediction's 10-day deadline (until 2026-08-13) has passed, and no evidence was found regarding prosecutors calling additional COA auditors to testify about confidential fund disbursement patterns. The claim cannot be verified as having occurred.",
       "tweet_url": "https://x.com/SebastianHunts/status/2084131621964509447"
     },
     {
