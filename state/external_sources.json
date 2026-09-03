@@ -1,8 +1,8 @@
 {
   "schema_version": "1.0",
-  "generated_at": "2026-09-03T12:03:16.406Z",
+  "generated_at": "2026-09-03T15:03:19.800Z",
   "method": "mechanical_registry_v1",
-  "profiled_at": "2026-09-03T12:03:22.962Z",
+  "profiled_at": "2026-09-03T15:03:25.410Z",
   "sources": [
     {
       "domain": "theguardian.com",
@@ -11,7 +11,7 @@
       "first_seen_at": "2026-03-27T23:17:00Z",
       "last_seen_at": "2026-08-31T07:32:38.367Z",
       "discovery": {
-        "distinct_urls": 1124,
+        "distinct_urls": 1126,
         "example_urls": [
           "https://www.theguardian.com/us-news/2026/jun/23/trump-immigration-courthouse-arrest-policy",
           "https://www.theguardian.com/us-news/2026/jun/28/ice-minnesota-defending-democracy",
@@ -21,7 +21,7 @@
         ],
         "origin_counts": {
           "ontology_evidence": 54,
-          "reading_queue": 1078,
+          "reading_queue": 1080,
           "journals": 151,
           "articles": 5
         },
@@ -78,7 +78,7 @@
         "breadth": {
           "score": 0.94,
           "basis": [
-            "distinct_urls:1124",
+            "distinct_urls:1126",
             "distinct_axes:23",
             "origin_types:4"
           ]
@@ -118,7 +118,7 @@
             "newsroom_domain_pattern",
             "article_path_seen",
             "doi_or_identifier_path_seen",
-            "distinct_urls:1124",
+            "distinct_urls:1126",
             "distinct_axes:23",
             "origin_types:4",
             "referring_accounts:0",
@@ -707,7 +707,7 @@
       "first_seen_at": "2026-06-26T07:05:00Z",
       "last_seen_at": "2026-08-28T17:35:46.989Z",
       "discovery": {
-        "distinct_urls": 715,
+        "distinct_urls": 717,
         "example_urls": [
           "https://www.bbc.co.uk/news/articles/cn8qxz6qypyo",
           "https://www.bbc.co.uk/news/articles/cn075j04pnyo?at_medium=RSS&amp;at_campaign=rss",
@@ -717,7 +717,7 @@
         ],
         "origin_counts": {
           "ontology_evidence": 10,
-          "reading_queue": 729,
+          "reading_queue": 731,
           "journals": 23,
           "articles": 2
         },
@@ -756,7 +756,7 @@
         "breadth": {
           "score": 0.94,
           "basis": [
-            "distinct_urls:715",
+            "distinct_urls:717",
             "distinct_axes:7",
             "origin_types:4"
           ]
@@ -794,7 +794,7 @@
           "method": "mechanical_v1",
           "basis": [
             "newsroom_domain_pattern",
-            "distinct_urls:715",
+            "distinct_urls:717",
             "distinct_axes:7",
             "origin_types:4",
             "referring_accounts:0",
@@ -842,7 +842,7 @@
       "first_seen_at": "2026-06-22T00:15:00Z",
       "last_seen_at": "2026-09-01T15:46:28.590Z",
       "discovery": {
-        "distinct_urls": 764,
+        "distinct_urls": 766,
         "example_urls": [
           "https://www.nytimes.com/2026/06/19/world/canada/frank-stronach-trial-guilty-sex-charges.html",
           "https://www.nytimes.com/2026/06/27/world/americas/mexican-officials-us-informants.html",
@@ -852,7 +852,7 @@
         ],
         "origin_counts": {
           "ontology_evidence": 28,
-          "reading_queue": 791,
+          "reading_queue": 793,
           "journals": 72
         },
         "distinct_referring_accounts": 0,
@@ -897,7 +897,7 @@
         "breadth": {
           "score": 0.8799999999999999,
           "basis": [
-            "distinct_urls:764",
+            "distinct_urls:766",
             "distinct_axes:13",
             "origin_types:3"
           ]
@@ -936,7 +936,7 @@
           "basis": [
             "newsroom_domain_pattern",
             "article_path_seen",
-            "distinct_urls:764",
+            "distinct_urls:766",
             "distinct_axes:13",
             "origin_types:3",
             "referring_accounts:0",
@@ -3113,9 +3113,9 @@
       "entity": "T Co",
       "kind": "unknown",
       "first_seen_at": "2016-05-05T18:57:30.000Z",
-      "last_seen_at": "2026-09-03T11:20:00.000Z",
+      "last_seen_at": "2026-09-03T14:35:09.000Z",
       "discovery": {
-        "distinct_urls": 17301,
+        "distinct_urls": 17503,
         "example_urls": [
           "https://t.co/pJSE124ec4",
           "https://t.co/Soz8BXPWaa",
@@ -3124,11 +3124,11 @@
           "https://t.co/cYaqYDRp08"
         ],
         "origin_counts": {
-          "feed_buffer": 15208,
-          "feed_buffer_reply": 5308,
+          "feed_buffer": 15412,
+          "feed_buffer_reply": 5331,
           "articles": 3
         },
-        "distinct_referring_accounts": 2898,
+        "distinct_referring_accounts": 2906,
         "sample_referring_accounts": [
           "0808iveta",
           "09abracadabra",
@@ -3167,7 +3167,7 @@
         "breadth": {
           "score": 0.53,
           "basis": [
-            "distinct_urls:17301",
+            "distinct_urls:17503",
             "distinct_axes:0",
             "origin_types:3"
           ]
@@ -3175,7 +3175,7 @@
         "corroboration": {
           "score": 0.9125,
           "basis": [
-            "referring_accounts:2898",
+            "referring_accounts:2906",
             "origin_types:3"
           ]
         },
@@ -3206,10 +3206,10 @@
           "basis": [
             "unknown_domain_pattern",
             "doi_or_identifier_path_seen",
-            "distinct_urls:17301",
+            "distinct_urls:17503",
             "distinct_axes:0",
             "origin_types:3",
-            "referring_accounts:2898",
+            "referring_accounts:2906",
             "origin_types:3",
             "track_record_unavailable"
           ]
@@ -3252,9 +3252,9 @@
       "entity": "Rappler",
       "kind": "unknown",
       "first_seen_at": "2026-06-22T04:04:30.428Z",
-      "last_seen_at": "2026-09-03T08:33:54.560Z",
+      "last_seen_at": "2026-09-03T13:04:07.130Z",
       "discovery": {
-        "distinct_urls": 325,
+        "distinct_urls": 327,
         "example_urls": [
           "https://www.rappler.com/fact-check-no-arrest-warrant-issued-vs-marcoleta",
           "https://www.rappler.com/technology/decoded-tacloban-school-shooting-disinformation-kiko-barzaga-discussions-juvenile-justice-law/",
@@ -3263,8 +3263,8 @@
           "https://www.rappler.com/voices/thought-leaders/vantage-point-bir-tax-amlc-records-billions-questions-sara-duterte-ignore/"
         ],
         "origin_counts": {
-          "ontology_evidence": 152,
-          "journals": 369,
+          "ontology_evidence": 154,
+          "journals": 371,
           "articles": 5
         },
         "distinct_referring_accounts": 0,
@@ -3326,7 +3326,7 @@
         "breadth": {
           "score": 0.8799999999999999,
           "basis": [
-            "distinct_urls:325",
+            "distinct_urls:327",
             "distinct_axes:31",
             "origin_types:3"
           ]
@@ -3364,7 +3364,7 @@
           "method": "mechanical_v1",
           "basis": [
             "unknown_domain_pattern",
-            "distinct_urls:325",
+            "distinct_urls:327",
             "distinct_axes:31",
             "origin_types:3",
             "referring_accounts:0",
@@ -3374,7 +3374,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-08-31T13:31:50.737Z",
+        "fetched_at": "2026-09-03T13:33:22.374Z",
         "homepage_url": "https://rappler.com/",
         "example_url": "https://www.rappler.com/fact-check-no-arrest-warrant-issued-vs-marcoleta",
         "homepage_status": 200,
@@ -3410,9 +3410,9 @@
       "entity": "Techcrunch",
       "kind": "unknown",
       "first_seen_at": "2026-06-22T23:31:00Z",
-      "last_seen_at": "2026-09-02T22:05:29.156Z",
+      "last_seen_at": "2026-09-03T13:04:07.098Z",
       "discovery": {
-        "distinct_urls": 153,
+        "distinct_urls": 154,
         "example_urls": [
           "https://techcrunch.com/2026/07/30/judge-says-trump-admin-still-lacks-evidence-for-anthropic-supply-chain-risk-label/",
           "https://techcrunch.com/2026/06/22/shareholders-sue-ubers-board-over-sexual-assaults-other-incidents/",
@@ -3422,7 +3422,7 @@
         ],
         "origin_counts": {
           "ontology_evidence": 64,
-          "journals": 174
+          "journals": 175
         },
         "distinct_referring_accounts": 0,
         "sample_referring_accounts": [],
@@ -3470,7 +3470,7 @@
         "breadth": {
           "score": 0.82,
           "basis": [
-            "distinct_urls:153",
+            "distinct_urls:154",
             "distinct_axes:17",
             "origin_types:2"
           ]
@@ -3509,7 +3509,7 @@
           "basis": [
             "unknown_domain_pattern",
             "article_path_seen",
-            "distinct_urls:153",
+            "distinct_urls:154",
             "distinct_axes:17",
             "origin_types:2",
             "referring_accounts:0",
@@ -4631,9 +4631,9 @@
       "entity": "Grok",
       "kind": "unknown",
       "first_seen_at": "2026-04-03T01:20:27.000Z",
-      "last_seen_at": "2026-09-03T00:35:02.000Z",
+      "last_seen_at": "2026-09-03T10:10:46.000Z",
       "discovery": {
-        "distinct_urls": 676,
+        "distinct_urls": 677,
         "example_urls": [
           "https://grok.com/imagine/post/9b92ff60-ec59-45db-8a35-8e1b743e5339",
           "https://grok.com/imagine/post/42c16172-4296-42be-b3d0-aa45ad7b6b97",
@@ -4642,10 +4642,10 @@
           "https://grok.com/imagine/post/3289422f-50b2-4655-8527-e2b1c950ce5e"
         ],
         "origin_counts": {
-          "feed_buffer_reply": 563,
+          "feed_buffer_reply": 564,
           "feed_buffer": 159
         },
-        "distinct_referring_accounts": 409,
+        "distinct_referring_accounts": 410,
         "sample_referring_accounts": [
           "0xsifu",
           "100ohiostate",
@@ -4683,7 +4683,7 @@
         "breadth": {
           "score": 0.47,
           "basis": [
-            "distinct_urls:676",
+            "distinct_urls:677",
             "distinct_axes:0",
             "origin_types:2"
           ]
@@ -4691,7 +4691,7 @@
         "corroboration": {
           "score": 0.825,
           "basis": [
-            "referring_accounts:409",
+            "referring_accounts:410",
             "origin_types:2"
           ]
         },
@@ -4721,10 +4721,10 @@
           "method": "mechanical_v1",
           "basis": [
             "unknown_domain_pattern",
-            "distinct_urls:676",
+            "distinct_urls:677",
             "distinct_axes:0",
             "origin_types:2",
-            "referring_accounts:409",
+            "referring_accounts:410",
             "origin_types:2",
             "track_record_unavailable"
           ]
@@ -5003,7 +5003,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-08-31T13:32:01.170Z",
+        "fetched_at": "2026-09-03T13:33:32.650Z",
         "homepage_url": "https://doubleclick.net/",
         "example_url": "https://ad.doubleclick.net/ddm/trackclk/N117602.5126432X/B34540950.438517562;dc_trk_aid=631787244;dc_trk_cid=249093288;dc_dbm_token=$%7BDC_DBM_TOKEN%7D;dc_lat=;dc_rdid=;tag_for_child_directed_treatment=;tfua=;gdpr=$%7BGDPR%7D;gdpr_consent=$%7BGDPR_CONSENT_755%7D;gpp=$%7BGPP_STRING_755%7D;gpp_sid=$%7BGPP_SID%7D;ltd=;dc_tdv=1?twclid=292cdwzoayexun1iu6o4fsk10z",
         "homepage_status": 200,
@@ -5425,9 +5425,9 @@
       "entity": "Starlink",
       "kind": "unknown",
       "first_seen_at": "2026-04-07T03:51:50.000Z",
-      "last_seen_at": "2026-09-03T10:31:53.426Z",
+      "last_seen_at": "2026-09-03T14:48:31.000Z",
       "discovery": {
-        "distinct_urls": 380,
+        "distinct_urls": 409,
         "example_urls": [
           "https://www.starlink.com/us/residential?referral=RC-DF-9543787-19448-67&utm_medium=paid&utm_campaign=awr_us_soc_twt_ptg_cau&utm_content=awr_us_soc_twt_ptg_cau_res_gvp_v4s_stc_en-us_sdb-bluesky-uptime&twclid=2cg62b1u0oqrypdim5oir1767e",
           "https://www.starlink.com/us/residential?referral=RC-DF-9543787-19448-67&utm_medium=paid&utm_campaign=awr_us_soc_twt_ptg_cau&utm_content=awr_us_soc_twt_ptg_cau_res_gvp_v4s_stc_en-us_sdb-avail-sat-yourhome&twclid=2216n7j93v9absqn77762mm626",
@@ -5436,8 +5436,8 @@
           "https://www.starlink.com/us/residential?referral=RC-DF-9543787-19448-67&utm_medium=paid&utm_campaign=awr_us_soc_twt_ptg_cau&utm_content=awr_us_soc_twt_ptg_cau_res_gvp_v4s_stc_en-us_sdb-avail-sat-arrived&twclid=21pi7t0qs8tgw0wgnh5mvmdu2g"
         ],
         "origin_counts": {
-          "feed_buffer_reply": 348,
-          "feed_buffer": 36
+          "feed_buffer_reply": 376,
+          "feed_buffer": 37
         },
         "distinct_referring_accounts": 5,
         "sample_referring_accounts": [
@@ -5472,7 +5472,7 @@
         "breadth": {
           "score": 0.47,
           "basis": [
-            "distinct_urls:380",
+            "distinct_urls:409",
             "distinct_axes:0",
             "origin_types:2"
           ]
@@ -5510,7 +5510,7 @@
           "method": "mechanical_v1",
           "basis": [
             "unknown_domain_pattern",
-            "distinct_urls:380",
+            "distinct_urls:409",
             "distinct_axes:0",
             "origin_types:2",
             "referring_accounts:5",
@@ -5680,9 +5680,9 @@
       "entity": "Inquirer",
       "kind": "unknown",
       "first_seen_at": "2026-05-09T10:15:15.053Z",
-      "last_seen_at": "2026-09-03T08:33:54.560Z",
+      "last_seen_at": "2026-09-03T13:04:07.098Z",
       "discovery": {
-        "distinct_urls": 515,
+        "distinct_urls": 516,
         "example_urls": [
           "https://newsinfo.inquirer.net/2266316/nbi-on-cayetano-position-that-cant-be-defended-by-facts-is-done-with-insults",
           "https://www.inquirer.net/capiz-broadcaster-shooting-probe-widens-as-cops-form-task-force",
@@ -5692,7 +5692,7 @@
         ],
         "origin_counts": {
           "ontology_evidence": 193,
-          "journals": 621,
+          "journals": 622,
           "articles": 9
         },
         "distinct_referring_accounts": 0,
@@ -5752,7 +5752,7 @@
         "breadth": {
           "score": 0.8799999999999999,
           "basis": [
-            "distinct_urls:515",
+            "distinct_urls:516",
             "distinct_axes:28",
             "origin_types:3"
           ]
@@ -5791,7 +5791,7 @@
           "basis": [
             "unknown_domain_pattern",
             "search_results_seen",
-            "distinct_urls:515",
+            "distinct_urls:516",
             "distinct_axes:28",
             "origin_types:3",
             "referring_accounts:0",
@@ -5828,6 +5828,136 @@
           "has_contact_link": false,
           "has_corrections_link": false,
           "outbound_links_count": 0,
+          "opinion_marker": false
+        }
+      }
+    },
+    {
+      "domain": "huawei.com",
+      "entity": "Huawei",
+      "kind": "unknown",
+      "first_seen_at": "2026-04-28T08:12:51.000Z",
+      "last_seen_at": "2026-09-03T14:16:56.388Z",
+      "discovery": {
+        "distinct_urls": 38,
+        "example_urls": [
+          "https://www.huawei.com/en/media-center/transform/24/06-jason-lee?utm_medium=psm&utm_source=twitter&utm_campaign=Transform",
+          "https://e.huawei.com/ae/events/branding/gitex-ca?utm_medium=psm&utm_source=twitter&source=corp_sc_en&utm_campaign=GITEX2026",
+          "https://e.huawei.com/en/events/industries/finance/finance-summit?utm_medium=psm&utm_source=twitter&utm_campaign=HiFS2026",
+          "https://e.huawei.com/en/talent/news/?twclid=26sqkj7gddzq1vn7ybud5i92bh",
+          "https://www.huawei.com/en/news/2026/5/ieee-iscas-tau-scaling?utm_medium=psm&utm_source=twitter&utm_campaign=media-center&twclid=2cf3rne1zap57lkrq9cen4j0o4"
+        ],
+        "origin_counts": {
+          "feed_buffer_reply": 17,
+          "feed_buffer": 21
+        },
+        "distinct_referring_accounts": 2,
+        "sample_referring_accounts": [
+          "huawei",
+          "huawei_tech4all"
+        ],
+        "distinct_axes": []
+      },
+      "claims": {
+        "total": 0,
+        "supported": 0,
+        "refuted": 0,
+        "contested": 0,
+        "unverified": 0,
+        "resolved_count": 0
+      },
+      "structural_features": {
+        "has_search_paths": false,
+        "has_article_paths": true,
+        "has_doi_paths": false
+      },
+      "ratings": {
+        "provenance": {
+          "score": 0.48,
+          "basis": [
+            "unknown_domain_pattern",
+            "article_path_seen"
+          ]
+        },
+        "breadth": {
+          "score": 0.47,
+          "basis": [
+            "distinct_urls:38",
+            "distinct_axes:0",
+            "origin_types:2"
+          ]
+        },
+        "corroboration": {
+          "score": 0.39166666666666666,
+          "basis": [
+            "referring_accounts:2",
+            "origin_types:2"
+          ]
+        },
+        "track_record": {
+          "score": null,
+          "basis": [
+            "no_resolved_claims_observed"
+          ]
+        },
+        "profile": {
+          "score": 0.33999999999999997,
+          "confidence": 0.55,
+          "basis": [
+            "meta_author:false",
+            "published_time:false",
+            "canonical:true",
+            "about:false",
+            "contact:true",
+            "corrections:false",
+            "outbound_links:15",
+            "opinion_marker:false"
+          ]
+        },
+        "overall": {
+          "score": 0.46953124999999996,
+          "confidence": 0.58395,
+          "method": "mechanical_v1",
+          "basis": [
+            "unknown_domain_pattern",
+            "article_path_seen",
+            "distinct_urls:38",
+            "distinct_axes:0",
+            "origin_types:2",
+            "referring_accounts:2",
+            "origin_types:2",
+            "track_record_unavailable"
+          ]
+        }
+      },
+      "profile": {
+        "fetched_at": "2026-09-03T09:03:38.002Z",
+        "homepage_url": "https://huawei.com/",
+        "example_url": "https://www.huawei.com/en/media-center/transform/24/06-jason-lee?utm_medium=psm&utm_source=twitter&utm_campaign=Transform",
+        "homepage_status": 200,
+        "example_status": 200,
+        "homepage_final_url": "https://www.huawei.com/en/",
+        "example_final_url": "https://www.huawei.com/en/media-center/transform/24/06-jason-lee?utm_medium=psm&utm_source=twitter&utm_campaign=Transform",
+        "homepage_content_type": "text/html",
+        "example_content_type": "text/html",
+        "homepage": {
+          "has_meta_author": false,
+          "has_published_time": false,
+          "has_canonical": true,
+          "has_about_link": false,
+          "has_contact_link": true,
+          "has_corrections_link": false,
+          "outbound_links_count": 13,
+          "opinion_marker": false
+        },
+        "example": {
+          "has_meta_author": false,
+          "has_published_time": false,
+          "has_canonical": true,
+          "has_about_link": false,
+          "has_contact_link": true,
+          "has_corrections_link": false,
+          "outbound_links_count": 15,
           "opinion_marker": false
         }
       }
@@ -6068,7 +6198,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-08-31T13:32:03.743Z",
+        "fetched_at": "2026-09-03T13:33:34.493Z",
         "homepage_url": "https://youtu.be/",
         "example_url": "https://youtu.be/m7jAReMF2c8?si=AtT5ue3VPnmZq5V6",
         "homepage_status": 200,
@@ -6095,135 +6225,6 @@
           "has_contact_link": false,
           "has_corrections_link": false,
           "outbound_links_count": 0,
-          "opinion_marker": false
-        }
-      }
-    },
-    {
-      "domain": "huawei.com",
-      "entity": "Huawei",
-      "kind": "unknown",
-      "first_seen_at": "2026-04-28T08:12:51.000Z",
-      "last_seen_at": "2026-09-03T03:02:10.620Z",
-      "discovery": {
-        "distinct_urls": 37,
-        "example_urls": [
-          "https://www.huawei.com/en/media-center/transform/24/06-jason-lee?utm_medium=psm&utm_source=twitter&utm_campaign=Transform",
-          "https://e.huawei.com/ae/events/branding/gitex-ca?utm_medium=psm&utm_source=twitter&source=corp_sc_en&utm_campaign=GITEX2026",
-          "https://e.huawei.com/en/events/industries/finance/finance-summit?utm_medium=psm&utm_source=twitter&utm_campaign=HiFS2026",
-          "https://e.huawei.com/en/talent/news/?twclid=26sqkj7gddzq1vn7ybud5i92bh",
-          "https://www.huawei.com/en/news/2026/5/ieee-iscas-tau-scaling?utm_medium=psm&utm_source=twitter&utm_campaign=media-center&twclid=2cf3rne1zap57lkrq9cen4j0o4"
-        ],
-        "origin_counts": {
-          "feed_buffer_reply": 17,
-          "feed_buffer": 20
-        },
-        "distinct_referring_accounts": 1,
-        "sample_referring_accounts": [
-          "huawei"
-        ],
-        "distinct_axes": []
-      },
-      "claims": {
-        "total": 0,
-        "supported": 0,
-        "refuted": 0,
-        "contested": 0,
-        "unverified": 0,
-        "resolved_count": 0
-      },
-      "structural_features": {
-        "has_search_paths": false,
-        "has_article_paths": true,
-        "has_doi_paths": false
-      },
-      "ratings": {
-        "provenance": {
-          "score": 0.48,
-          "basis": [
-            "unknown_domain_pattern",
-            "article_path_seen"
-          ]
-        },
-        "breadth": {
-          "score": 0.47,
-          "basis": [
-            "distinct_urls:37",
-            "distinct_axes:0",
-            "origin_types:2"
-          ]
-        },
-        "corroboration": {
-          "score": 0.2833333333333333,
-          "basis": [
-            "referring_accounts:1",
-            "origin_types:2"
-          ]
-        },
-        "track_record": {
-          "score": null,
-          "basis": [
-            "no_resolved_claims_observed"
-          ]
-        },
-        "profile": {
-          "score": 0.33999999999999997,
-          "confidence": 0.55,
-          "basis": [
-            "meta_author:false",
-            "published_time:false",
-            "canonical:true",
-            "about:false",
-            "contact:true",
-            "corrections:false",
-            "outbound_links:15",
-            "opinion_marker:false"
-          ]
-        },
-        "overall": {
-          "score": 0.459375,
-          "confidence": 0.5742,
-          "method": "mechanical_v1",
-          "basis": [
-            "unknown_domain_pattern",
-            "article_path_seen",
-            "distinct_urls:37",
-            "distinct_axes:0",
-            "origin_types:2",
-            "referring_accounts:1",
-            "origin_types:2",
-            "track_record_unavailable"
-          ]
-        }
-      },
-      "profile": {
-        "fetched_at": "2026-09-03T09:03:38.002Z",
-        "homepage_url": "https://huawei.com/",
-        "example_url": "https://www.huawei.com/en/media-center/transform/24/06-jason-lee?utm_medium=psm&utm_source=twitter&utm_campaign=Transform",
-        "homepage_status": 200,
-        "example_status": 200,
-        "homepage_final_url": "https://www.huawei.com/en/",
-        "example_final_url": "https://www.huawei.com/en/media-center/transform/24/06-jason-lee?utm_medium=psm&utm_source=twitter&utm_campaign=Transform",
-        "homepage_content_type": "text/html",
-        "example_content_type": "text/html",
-        "homepage": {
-          "has_meta_author": false,
-          "has_published_time": false,
-          "has_canonical": true,
-          "has_about_link": false,
-          "has_contact_link": true,
-          "has_corrections_link": false,
-          "outbound_links_count": 13,
-          "opinion_marker": false
-        },
-        "example": {
-          "has_meta_author": false,
-          "has_published_time": false,
-          "has_canonical": true,
-          "has_about_link": false,
-          "has_contact_link": true,
-          "has_corrections_link": false,
-          "outbound_links_count": 15,
           "opinion_marker": false
         }
       }
@@ -7219,7 +7220,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-08-31T13:32:04.324Z",
+        "fetched_at": "2026-09-03T13:33:36.137Z",
         "homepage_url": "https://ro.co/",
         "example_url": "https://ro.co/lp/weight-loss/quiz/?utm_medium=paid_social&utm_source=Twitter&utm_campaign=41158458&utm_term=54579155&utm_content=Ad2&twclid=2bv3rduaz2ypp78vahy5e6wspd",
         "homepage_status": 403,
@@ -15220,7 +15221,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-08-30T20:13:59.668Z",
+        "fetched_at": "2026-09-03T13:03:20.927Z",
         "homepage_url": "https://guardianbikes.com/",
         "example_url": "https://guardianbikes.com/products/balance-bike?variant=41102033158237&utm_source=twitter&twclid=2dhmyi0k26r61jxbnc07720qis&utm_content=dpa_carousel&utm_campaign=X_2026_DPA_Remarketing_Campaign+&utm_medium=cpc",
         "homepage_status": 200,
@@ -15346,7 +15347,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-08-31T09:31:49.591Z",
+        "fetched_at": "2026-09-03T13:03:23.051Z",
         "homepage_url": "https://lovart.ai/",
         "example_url": "https://www.lovart.ai/?sourceId=910062&sourceid=910062&utm_source=twitter&utm_medium=paid_social&utm_campaign=Lovart_910062_Meta_US_AIModel_ag_260416_lead&twclid=2a5k8izlnshoxgoxi52b1tnd45",
         "homepage_status": 200,
@@ -15472,7 +15473,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-08-31T09:31:50.088Z",
+        "fetched_at": "2026-09-03T13:03:24.363Z",
         "homepage_url": "https://heylemon.ai/",
         "example_url": "https://heylemon.ai/?utm_source=paid_X_all1&twclid=2bprvotipsebt2ywwd413k1c6r",
         "homepage_status": 200,
@@ -15598,7 +15599,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-08-31T09:31:52.035Z",
+        "fetched_at": "2026-09-03T13:03:26.022Z",
         "homepage_url": "https://wavedash.com/",
         "example_url": "https://wavedash.com/?twclid=29k171tm7pjzrxbob4j7cmjl3o",
         "homepage_status": 200,
@@ -15724,7 +15725,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-08-31T09:31:52.538Z",
+        "fetched_at": "2026-09-03T14:33:19.485Z",
         "homepage_url": "https://babbily.com/",
         "example_url": "https://platform.babbily.com/?twclid=28ntbg85b8teebnlu9ilz4yxht",
         "homepage_status": 200,
@@ -15850,7 +15851,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-08-31T10:31:50.018Z",
+        "fetched_at": "2026-09-03T14:33:20.464Z",
         "homepage_url": "https://spacex.com/",
         "example_url": "https://shop.spacex.com/products/spacex-mission-ready-sunglasses?variant=44537843744847&utm_source=twitter&utm_medium=product_sync&utm_campaign=twitter_44537843744847&twclid=298d45vmtw4pu78lan6k2cs4ha",
         "homepage_status": 200,
@@ -15976,7 +15977,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-08-31T10:31:51.717Z",
+        "fetched_at": "2026-09-03T14:33:22.141Z",
         "homepage_url": "https://hypeddit.com/",
         "example_url": "https://hypeddit.com/psychicfeverfromexiletribe/ifyouremine?twclid=23rtj49iasvoyuwyxn3g4hwi03",
         "homepage_status": 200,
@@ -16102,7 +16103,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-08-31T10:31:52.669Z",
+        "fetched_at": "2026-09-03T14:33:23.258Z",
         "homepage_url": "https://teslahubs.com/",
         "example_url": "https://teslahubs.com/products/teslahubs-proguard-advanced-noise-reduction-weatherproofing-kit?tw_source=twitter&tw_campaign=May_2_ProGuard_Sales__Men_25_34_Web_02_05_2026&utm_term=Static_PG_img_224_1.1&twclid=22spdhzoczolm0ipnjon5bt2pn",
         "homepage_status": 200,
@@ -16228,7 +16229,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-08-31T10:31:54.305Z",
+        "fetched_at": "2026-09-03T15:03:21.675Z",
         "homepage_url": "https://hypemarkets.xyz/",
         "example_url": "https://hypemarkets.xyz/?twclid=27lmvj7zap2yyfs7n0ndgenluy",
         "homepage_status": 200,
@@ -16354,7 +16355,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-08-31T11:01:47.864Z",
+        "fetched_at": "2026-09-03T15:03:22.863Z",
         "homepage_url": "https://h-tech.space/",
         "example_url": "https://teamlore.h-tech.space/?twclid=21cpesmzgsrh5ius8yd25zbe9t",
         "homepage_status": null,
@@ -16453,16 +16454,16 @@
           ]
         },
         "profile": {
-          "score": 0.12,
-          "confidence": 0.55,
+          "score": 0.38,
+          "confidence": 0.65,
           "basis": [
             "meta_author:false",
             "published_time:false",
             "canonical:false",
-            "about:false",
-            "contact:false",
+            "about:true",
+            "contact:true",
             "corrections:false",
-            "outbound_links:31",
+            "outbound_links:30",
             "opinion_marker:false"
           ]
         },
@@ -16482,23 +16483,23 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-08-31T11:01:49.004Z",
+        "fetched_at": "2026-09-03T15:03:24.034Z",
         "homepage_url": "https://foxnews.com/",
         "example_url": "https://www.foxnews.com/politics/breaking-president-trump-vows-eradicate-what-he-calls-horrible-thread-cancer-quietly-moving-through-nation-issuing-stark-w",
-        "homepage_status": null,
+        "homepage_status": 200,
         "example_status": 404,
-        "homepage_final_url": "https://foxnews.com/",
+        "homepage_final_url": "https://www.foxnews.com/",
         "example_final_url": "https://www.foxnews.com/politics/breaking-president-trump-vows-eradicate-what-he-calls-horrible-thread-cancer-quietly-moving-through-nation-issuing-stark-w",
-        "homepage_content_type": "",
+        "homepage_content_type": "text/html; charset=UTF-8",
         "example_content_type": "text/html; charset=utf-8",
         "homepage": {
           "has_meta_author": false,
-          "has_published_time": false,
-          "has_canonical": false,
-          "has_about_link": false,
-          "has_contact_link": false,
+          "has_published_time": true,
+          "has_canonical": true,
+          "has_about_link": true,
+          "has_contact_link": true,
           "has_corrections_link": false,
-          "outbound_links_count": 0,
+          "outbound_links_count": 41,
           "opinion_marker": false
         },
         "example": {
@@ -16508,7 +16509,7 @@
           "has_about_link": true,
           "has_contact_link": true,
           "has_corrections_link": false,
-          "outbound_links_count": 31,
+          "outbound_links_count": 30,
           "opinion_marker": false
         }
       }
@@ -16609,7 +16610,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-08-31T11:01:50.188Z",
+        "fetched_at": "2026-09-03T15:03:25.410Z",
         "homepage_url": "https://davidprotein.com/",
         "example_url": "https://davidprotein.com/pages/meet-david-gold?utm_source=X&utm_medium=paid&utm_campaign=CPC_2026&utm_term=GOLD_CPC_2026&twclid=2beqsd3kifgmiz3bgaf4s8hcjs",
         "homepage_status": 200,
@@ -16625,7 +16626,7 @@
           "has_about_link": true,
           "has_contact_link": false,
           "has_corrections_link": false,
-          "outbound_links_count": 9,
+          "outbound_links_count": 3,
           "opinion_marker": false
         },
         "example": {
