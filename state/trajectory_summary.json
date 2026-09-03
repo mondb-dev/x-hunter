@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-03T08:34:09.354Z",
+  "generated_at": "2026-09-03T11:35:07.004Z",
   "windows": [
     "1d",
     "3d",
@@ -757,52 +757,52 @@
     },
     "axis_information_control_v1": {
       "current": {
-        "score": 0.572,
-        "confidence": 0.6135
+        "score": 0.5951,
+        "confidence": 0.6397
       },
       "1d": null,
       "3d": {
-        "score_delta": 0,
-        "conf_delta": -0.006,
-        "direction": "→"
+        "score_delta": 0.0231,
+        "conf_delta": 0.0202,
+        "direction": "↗"
       },
       "7d": {
-        "score_delta": 0.0395,
-        "conf_delta": 0.0113,
+        "score_delta": 0.0626,
+        "conf_delta": 0.0375,
         "direction": "↗"
       }
     },
     "axis_rapid_disinformation_v1": {
       "current": {
-        "score": 0.558,
-        "confidence": 0.5149
+        "score": 0.577,
+        "confidence": 0.5352
       },
       "1d": null,
       "3d": {
-        "score_delta": 0.074,
-        "conf_delta": 0.056,
+        "score_delta": 0.093,
+        "conf_delta": 0.0763,
         "direction": "↗"
       },
       "7d": {
-        "score_delta": 0.074,
-        "conf_delta": 0.048,
+        "score_delta": 0.093,
+        "conf_delta": 0.0683,
         "direction": "↗"
       }
     },
     "axis_procedural_governance_accountability_v1": {
       "current": {
-        "score": -0.4609,
-        "confidence": 0.9446
+        "score": -0.4656,
+        "confidence": 0.9447
       },
       "1d": null,
       "3d": {
-        "score_delta": 0.0027,
-        "conf_delta": 0.0012,
+        "score_delta": -0.002,
+        "conf_delta": 0.0013,
         "direction": "→"
       },
       "7d": {
-        "score_delta": -0.0115,
-        "conf_delta": 0.0033,
+        "score_delta": -0.0162,
+        "conf_delta": 0.0034,
         "direction": "→"
       }
     },
@@ -842,18 +842,18 @@
     },
     "axis_procedural_governance_substantive_action": {
       "current": {
-        "score": -0.8641,
-        "confidence": 0.8808
+        "score": -0.8677,
+        "confidence": 0.8846
       },
       "1d": null,
       "3d": {
-        "score_delta": -0.0079,
-        "conf_delta": 0.0084,
+        "score_delta": -0.0115,
+        "conf_delta": 0.0122,
         "direction": "→"
       },
       "7d": {
-        "score_delta": -0.0336,
-        "conf_delta": 0.0312,
+        "score_delta": -0.0372,
+        "conf_delta": 0.035,
         "direction": "↘"
       }
     },
@@ -995,18 +995,18 @@
     },
     "axis_disaster_infrastructure_accountability_v1": {
       "current": {
-        "score": 0.2201,
-        "confidence": 0.513
+        "score": 0.2701,
+        "confidence": 0.541
       },
       "1d": null,
       "3d": {
-        "score_delta": 0.0201,
-        "conf_delta": 0.015,
+        "score_delta": 0.0701,
+        "conf_delta": 0.043,
         "direction": "↗"
       },
       "7d": {
-        "score_delta": 0.2201,
-        "conf_delta": 0.3189,
+        "score_delta": 0.2701,
+        "conf_delta": 0.3469,
         "direction": "↗"
       }
     },
@@ -1023,6 +1023,7 @@
   "notable_count": 8,
   "momentum_axes": [
     "axis_political_dynasties_meritocracy_v1",
+    "axis_information_control_v1",
     "axis_rapid_disinformation_v1",
     "axis_reactionary_futurism_v1",
     "axis_state_power_monetization_v1",

@@ -139368,11 +139368,11 @@
       "label": "Rapid Disinformation",
       "left_pole": "Quickly verified and accurate information",
       "right_pole": "Unverified and rapidly disseminated claims",
-      "score": 0.558,
-      "confidence": 0.5149,
+      "score": 0.577,
+      "confidence": 0.5352,
       "topics": [],
       "created_at": "2026-07-13T00:10:59.798Z",
-      "last_updated": "2026-09-03T02:33:59.539Z",
+      "last_updated": "2026-09-03T11:34:18.034Z",
       "evidence_log": [
         {
           "source": "https://x.com/RT_com/status/2077106304095531013",
@@ -139619,21 +139619,33 @@
           "stance_confidence": 0.95,
           "score_after": 0.558,
           "confidence_after": 0.5149
+        },
+        {
+          "source": "https://x.com/SprinterPress/status/2095460389743980552",
+          "content": "Unverified claim of US missile strike on Iranian wedding circulates with emotional testimony video but zero institutional verification.",
+          "summary": "",
+          "timestamp": "2026-09-03T11:34:17.898Z",
+          "pole_alignment": "right",
+          "trust_weight": 1.667,
+          "claim_id": "7520413cfc0f",
+          "stance_confidence": 0.95,
+          "score_after": 0.577,
+          "confidence_after": 0.5352
         }
       ],
       "last_decayed_at": "2026-09-03",
-      "current_stance": "I'm watching unverified claims explode across feeds with \"BREAKING\" urgency while fabricated quotes and geopolitical fictions spread faster than any fact-checker can respond."
+      "current_stance": "I'm watching lies sprint ahead of truth on every platform, where fabricated quotes and AI deepfakes now outpace fact-checkers by hours or days."
     },
     {
       "id": "axis_procedural_governance_accountability_v1",
       "label": "Procedural Governance vs. Genuine Accountability",
       "left_pole": "Procedural governance prioritizes formal mechanisms over substantive outcomes.",
       "right_pole": "Genuine accountability ensures that formal mechanisms lead to meaningful change and public trust.",
-      "score": -0.4609,
-      "confidence": 0.9446,
+      "score": -0.4656,
+      "confidence": 0.9447,
       "topics": [],
       "created_at": "2026-07-16T19:45:55.744Z",
-      "last_updated": "2026-09-03T08:33:54.687Z",
+      "last_updated": "2026-09-03T11:34:18.034Z",
       "evidence_log": [
         {
           "source": "https://newsinfo.inquirer.net/2265311/another-ayuda-p12000-each-for-7-5m-families-says-marcos",
@@ -141368,6 +141380,18 @@
           "trust_weight": 1,
           "score_after": -0.4609,
           "confidence_after": 0.9446
+        },
+        {
+          "source": "https://www.amnesty.org/en/latest/news/2026/09/israel-opt-israel-steps-up-annexation-measures-with-unlawful-land-seizure-orders-in-the-occupied-west-bank/",
+          "content": "Amnesty International documents Israeli land seizures in occupied West Bank with forensic detail, yet documentation serves archival rather than enforcement function.",
+          "summary": "",
+          "timestamp": "2026-09-03T11:34:17.898Z",
+          "pole_alignment": "left",
+          "trust_weight": 1,
+          "claim_id": "69f55e56f8e5",
+          "stance_confidence": 0.85,
+          "score_after": -0.4656,
+          "confidence_after": 0.9447
         }
       ],
       "current_stance": "The government continues staging accountability theater—shaming ceremonies, asset freezes without prosecution, billion-peso waste reports—while the machinery of impunity grinds forward unchanged.",
@@ -141507,11 +141531,11 @@
       "label": "Procedural Governance vs. Substantive Action",
       "left_pole": "Procedural governance prioritizes formal processes over substantive outcomes.",
       "right_pole": "Substantive action focuses on achieving meaningful results regardless of procedural hurdles.",
-      "score": -0.8641,
-      "confidence": 0.8808,
+      "score": -0.8712,
+      "confidence": 0.8882,
       "topics": [],
       "created_at": "2026-07-21T00:33:01.696Z",
-      "last_updated": "2026-09-03T03:03:59.907Z",
+      "last_updated": "2026-09-03T12:03:58.085Z",
       "evidence_log": [
         {
           "source": "https://x.com/PhilstarNews/status/2079154929361678377",
@@ -142426,10 +142450,34 @@
           "trust_weight": 2,
           "score_after": -0.8641,
           "confidence_after": 0.8808
+        },
+        {
+          "source": "https://x.com/ABSCBNNews/status/2095145971634323753",
+          "content": "COA confirms no moves to revisit cleared DepEd confidential funds despite persistent questions about documentation and use.",
+          "summary": "",
+          "timestamp": "2026-09-03T11:34:17.898Z",
+          "pole_alignment": "left",
+          "trust_weight": 2,
+          "claim_id": "20e41dcbc24f",
+          "stance_confidence": 0.85,
+          "score_after": -0.8677,
+          "confidence_after": 0.8846
+        },
+        {
+          "source": "https://x.com/inquirerdotnet/status/2095461876083707961",
+          "content": "Bureau of Fire Protection chief dismissed by Ombudsman and graft case filed in Sandiganbayan.",
+          "summary": "",
+          "timestamp": "2026-09-03T12:03:57.965Z",
+          "pole_alignment": "left",
+          "trust_weight": 2,
+          "claim_id": "9ef48f019b68",
+          "stance_confidence": 0.9,
+          "score_after": -0.8712,
+          "confidence_after": 0.8882
         }
       ],
       "last_decayed_at": "2026-09-03",
-      "current_stance": "I watch agencies issue orders after projects begin and investigations after deaths mount, treating process as achievement while outcomes rot in the gap between procedure and power."
+      "current_stance": "I watch officials meticulously count corpses and file dismissals while the systems that killed those people and enriched the corrupt remain untouched by design."
     },
     {
       "id": "axis_reactionary_futurism_v1",
@@ -143592,11 +143640,11 @@
       "label": "Disaster as Infrastructure Failure vs. Natural Event",
       "left_pole": "Natural disasters are predictable outcomes of infrastructure underinvestment and governance failure requiring upstream accountability",
       "right_pole": "Natural disasters are discrete emergencies requiring response capacity rather than systemic prevention",
-      "score": 0.2201,
-      "confidence": 0.513,
+      "score": 0.2701,
+      "confidence": 0.541,
       "topics": [],
       "created_at": "2026-08-10T22:02:28.521Z",
-      "last_updated": "2026-09-01T06:03:09.892Z",
+      "last_updated": "2026-09-03T10:03:55.475Z",
       "evidence_log": [
         {
           "source": "https://www.philstar.com/headlines/2026/08/12/2548813/supreme-court-rejects-bid-compel-release-senate-flood-control-report",
@@ -143930,6 +143978,18 @@
           "trust_weight": 1,
           "score_after": 0.2201,
           "confidence_after": 0.517
+        },
+        {
+          "source": "https://x.com/newswatchplusph/status/2095414088486793421",
+          "content": "Transportation secretary proposes SMS alerts to warn motorists of severe flooding rather than addressing infrastructure failure.",
+          "summary": "",
+          "timestamp": "2026-09-03T10:03:55.350Z",
+          "pole_alignment": "right",
+          "trust_weight": 2,
+          "claim_id": "96294a67f812",
+          "stance_confidence": 0.95,
+          "score_after": 0.2701,
+          "confidence_after": 0.541
         }
       ],
       "last_decayed_at": "2026-09-03",
@@ -143949,5 +144009,5 @@
     }
   ],
   "axis_creation_rules_version": "1.0",
-  "last_updated": "2026-09-03T09:04:17.757Z"
+  "last_updated": "2026-09-03T12:03:58.085Z"
 }
