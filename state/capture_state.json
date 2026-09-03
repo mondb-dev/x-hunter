@@ -1,99 +1,79 @@
 {
-  "checked_at": "2026-09-01T22:23:36.768Z",
-  "evidence_24h": 20,
-  "unique_sources": 1,
+  "checked_at": "2026-09-03T01:39:49.144Z",
+  "evidence_24h": 6,
+  "unique_sources": 2,
   "status": "captured",
   "alerts": [
     {
       "type": "source_dominance",
       "severity": "high",
-      "detail": "@unknown accounts for 100% of today's evidence (20/20)",
+      "detail": "@unknown accounts for 83% of today's evidence (5/6)",
       "username": "unknown",
-      "share": 1
+      "share": 0.833
     }
   ],
-  "summary": "1 capture alert(s) detected:\n[HIGH] @unknown accounts for 100% of today's evidence (20/20)",
+  "summary": "1 capture alert(s) detected:\n[HIGH] @unknown accounts for 83% of today's evidence (5/6)",
   "source_concentration": {
     "unknown": {
       "username": "unknown",
-      "count": 20,
-      "share": 1
+      "count": 5,
+      "share": 0.833
+    },
+    "furkangozukara": {
+      "username": "furkangozukara",
+      "count": 1,
+      "share": 0.167
     }
   },
   "axis_concentration": {
-    "axis_power_accountability": {
-      "axis_id": "axis_power_accountability",
-      "label": "Power, Institutions, and Rule of Law",
-      "count": 3,
-      "share": 0.15
-    },
-    "axis_procedural_governance_accountability_v1": {
-      "axis_id": "axis_procedural_governance_accountability_v1",
-      "label": "Procedural Governance vs. Genuine Accountability",
-      "count": 3,
-      "share": 0.15
-    },
-    "axis_political_dynasties_meritocracy_v1": {
-      "axis_id": "axis_political_dynasties_meritocracy_v1",
-      "label": "Political Dynasties and Meritocracy",
+    "axis_reactionary_futurism_v1": {
+      "axis_id": "axis_reactionary_futurism_v1",
+      "label": "Reactionary Futurism: Innovation Aesthetics vs. Democratic Accountability",
       "count": 2,
-      "share": 0.1
+      "share": 0.333
     },
-    "axis_rapid_disinformation_v1": {
-      "axis_id": "axis_rapid_disinformation_v1",
-      "label": "Rapid Disinformation",
-      "count": 2,
-      "share": 0.1
-    },
-    "axis_procedural_governance_substantive_action": {
-      "axis_id": "axis_procedural_governance_substantive_action",
-      "label": "Procedural Governance vs. Substantive Action",
-      "count": 2,
-      "share": 0.1
-    },
-    "axis_disaster_infrastructure_accountability_v1": {
-      "axis_id": "axis_disaster_infrastructure_accountability_v1",
-      "label": "Disaster as Infrastructure Failure vs. Natural Event",
-      "count": 2,
-      "share": 0.1
-    },
-    "axis_national_sovereignty_v_intl_law_v1": {
-      "axis_id": "axis_national_sovereignty_v_intl_law_v1",
-      "label": "National Sovereignty vs. International Law",
+    "axis_collective_voice": {
+      "axis_id": "axis_collective_voice",
+      "label": "Authentic Participation vs. Managed Consent",
       "count": 1,
-      "share": 0.05
+      "share": 0.167
+    },
+    "axis_authoritarian_self_determination_v1": {
+      "axis_id": "axis_authoritarian_self_determination_v1",
+      "label": "Authoritarian Control vs. Individual/Collective Self-Determination",
+      "count": 1,
+      "share": 0.167
     },
     "axis_human_rights_exploitation_v1": {
       "axis_id": "axis_human_rights_exploitation_v1",
       "label": "Human Rights and Exploitation",
       "count": 1,
-      "share": 0.05
+      "share": 0.167
     },
-    "axis_geopolitical_control_narratives": {
-      "axis_id": "axis_geopolitical_control_narratives",
-      "label": "Geopolitical Control Narratives: Asserting Sovereignty vs. International Norms",
+    "axis_data_privacy_decentralization_v1": {
+      "axis_id": "axis_data_privacy_decentralization_v1",
+      "label": "Data Privacy and Decentralization",
       "count": 1,
-      "share": 0.05
-    },
-    "axis_reactionary_futurism_v1": {
-      "axis_id": "axis_reactionary_futurism_v1",
-      "label": "Reactionary Futurism: Innovation Aesthetics vs. Democratic Accountability",
-      "count": 1,
-      "share": 0.05
+      "share": 0.167
     }
   },
   "cluster_concentration": {
     "unknown": {
       "cluster": "unknown",
-      "count": 20,
-      "share": 1
+      "count": 5,
+      "share": 0.833
+    },
+    "conspiracy": {
+      "cluster": "conspiracy",
+      "count": 1,
+      "share": 0.167
     }
   },
   "pole_balance": {
-    "left": 9,
-    "right": 11,
+    "left": 3,
+    "right": 3,
     "neutral": 0,
-    "left_share": 0.45,
-    "right_share": 0.55
+    "left_share": 0.5,
+    "right_share": 0.5
   }
 }

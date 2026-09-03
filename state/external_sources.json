@@ -1,8 +1,8 @@
 {
   "schema_version": "1.0",
-  "generated_at": "2026-09-02T21:04:11.305Z",
+  "generated_at": "2026-09-03T01:33:07.270Z",
   "method": "mechanical_registry_v1",
-  "profiled_at": "2026-09-02T21:05:23.748Z",
+  "profiled_at": "2026-09-03T01:33:12.335Z",
   "sources": [
     {
       "domain": "theguardian.com",
@@ -11,7 +11,7 @@
       "first_seen_at": "2026-03-27T23:17:00Z",
       "last_seen_at": "2026-08-31T07:32:38.367Z",
       "discovery": {
-        "distinct_urls": 1115,
+        "distinct_urls": 1117,
         "example_urls": [
           "https://www.theguardian.com/us-news/2026/jun/23/trump-immigration-courthouse-arrest-policy",
           "https://www.theguardian.com/us-news/2026/jun/28/ice-minnesota-defending-democracy",
@@ -21,7 +21,7 @@
         ],
         "origin_counts": {
           "ontology_evidence": 54,
-          "reading_queue": 1069,
+          "reading_queue": 1071,
           "journals": 151,
           "articles": 5
         },
@@ -78,7 +78,7 @@
         "breadth": {
           "score": 0.94,
           "basis": [
-            "distinct_urls:1115",
+            "distinct_urls:1117",
             "distinct_axes:23",
             "origin_types:4"
           ]
@@ -118,7 +118,7 @@
             "newsroom_domain_pattern",
             "article_path_seen",
             "doi_or_identifier_path_seen",
-            "distinct_urls:1115",
+            "distinct_urls:1117",
             "distinct_axes:23",
             "origin_types:4",
             "referring_accounts:0",
@@ -172,7 +172,7 @@
         ],
         "origin_counts": {
           "claim_tracker": 1,
-          "reading_queue": 24
+          "reading_queue": 25
         },
         "distinct_referring_accounts": 0,
         "sample_referring_accounts": [],
@@ -291,9 +291,9 @@
       "entity": "Aljazeera",
       "kind": "news",
       "first_seen_at": "2026-06-22T02:45:00Z",
-      "last_seen_at": "2026-09-02T00:32:41.840Z",
+      "last_seen_at": "2026-09-02T22:05:29.130Z",
       "discovery": {
-        "distinct_urls": 468,
+        "distinct_urls": 469,
         "example_urls": [
           "https://www.aljazeera.com/opinions/2026/6/24/south-africas-crises-will-not-be-solved-by-blaming-migrants",
           "https://www.aljazeera.com/video/newsfeed/2026/6/27/newly-released-video-exposes-henry-nowak-killers-lies?traffic_source=rss",
@@ -304,7 +304,7 @@
         "origin_counts": {
           "ontology_evidence": 203,
           "reading_queue": 25,
-          "journals": 572,
+          "journals": 573,
           "articles": 10
         },
         "distinct_referring_accounts": 0,
@@ -367,7 +367,7 @@
         "breadth": {
           "score": 0.94,
           "basis": [
-            "distinct_urls:468",
+            "distinct_urls:469",
             "distinct_axes:31",
             "origin_types:4"
           ]
@@ -406,7 +406,7 @@
           "basis": [
             "newsroom_domain_pattern",
             "article_path_seen",
-            "distinct_urls:468",
+            "distinct_urls:469",
             "distinct_axes:31",
             "origin_types:4",
             "referring_accounts:0",
@@ -416,7 +416,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-08-30T22:27:13.695Z",
+        "fetched_at": "2026-09-03T01:33:09.809Z",
         "homepage_url": "https://aljazeera.com/",
         "example_url": "https://www.aljazeera.com/opinions/2026/6/24/south-africas-crises-will-not-be-solved-by-blaming-migrants",
         "homepage_status": 200,
@@ -463,7 +463,7 @@
           "https://careers.cbp.gov/s/connect-to-recruiter?campaignid=701SJ00000BV0tR&utm_source=X&utm_medium=paid_social&utm_campaign=MGC_B5SXtXt5J5T&twclid=2f2100ywgvzunnowbnhrpi34g1"
         ],
         "origin_counts": {
-          "reading_queue": 24,
+          "reading_queue": 25,
           "feed_buffer_reply": 7
         },
         "distinct_referring_accounts": 1,
@@ -588,7 +588,7 @@
           "https://www.justice.gov/usao-ri/pr/two-business-executives-plead-guilty-tech-support-fraud-scheme?twclid=2f42440xock41qvr5cwo18o539"
         ],
         "origin_counts": {
-          "reading_queue": 24,
+          "reading_queue": 25,
           "feed_buffer_reply": 2,
           "feed_buffer": 1
         },
@@ -669,7 +669,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-08-30T22:27:14.817Z",
+        "fetched_at": "2026-09-03T01:33:11.198Z",
         "homepage_url": "https://justice.gov/",
         "example_url": "https://www.justice.gov/usao-ri/pr/two-business-executives-plead-guilty-tech-support-fraud-scheme?twclid=29h44gflnugo1w0tbpbxpo8m7s",
         "homepage_status": 200,
@@ -707,7 +707,7 @@
       "first_seen_at": "2026-06-26T07:05:00Z",
       "last_seen_at": "2026-08-28T17:35:46.989Z",
       "discovery": {
-        "distinct_urls": 707,
+        "distinct_urls": 709,
         "example_urls": [
           "https://www.bbc.co.uk/news/articles/cn8qxz6qypyo",
           "https://www.bbc.co.uk/news/articles/cn075j04pnyo?at_medium=RSS&amp;at_campaign=rss",
@@ -717,7 +717,7 @@
         ],
         "origin_counts": {
           "ontology_evidence": 10,
-          "reading_queue": 721,
+          "reading_queue": 723,
           "journals": 23,
           "articles": 2
         },
@@ -756,7 +756,7 @@
         "breadth": {
           "score": 0.94,
           "basis": [
-            "distinct_urls:707",
+            "distinct_urls:709",
             "distinct_axes:7",
             "origin_types:4"
           ]
@@ -794,7 +794,7 @@
           "method": "mechanical_v1",
           "basis": [
             "newsroom_domain_pattern",
-            "distinct_urls:707",
+            "distinct_urls:709",
             "distinct_axes:7",
             "origin_types:4",
             "referring_accounts:0",
@@ -842,7 +842,7 @@
       "first_seen_at": "2026-06-22T00:15:00Z",
       "last_seen_at": "2026-09-01T15:46:28.590Z",
       "discovery": {
-        "distinct_urls": 758,
+        "distinct_urls": 760,
         "example_urls": [
           "https://www.nytimes.com/2026/06/19/world/canada/frank-stronach-trial-guilty-sex-charges.html",
           "https://www.nytimes.com/2026/06/27/world/americas/mexican-officials-us-informants.html",
@@ -852,7 +852,7 @@
         ],
         "origin_counts": {
           "ontology_evidence": 28,
-          "reading_queue": 785,
+          "reading_queue": 787,
           "journals": 72
         },
         "distinct_referring_accounts": 0,
@@ -897,7 +897,7 @@
         "breadth": {
           "score": 0.8799999999999999,
           "basis": [
-            "distinct_urls:758",
+            "distinct_urls:760",
             "distinct_axes:13",
             "origin_types:3"
           ]
@@ -936,7 +936,7 @@
           "basis": [
             "newsroom_domain_pattern",
             "article_path_seen",
-            "distinct_urls:758",
+            "distinct_urls:760",
             "distinct_axes:13",
             "origin_types:3",
             "referring_accounts:0",
@@ -1118,7 +1118,7 @@
         ],
         "origin_counts": {
           "ontology_evidence": 1,
-          "reading_queue": 21
+          "reading_queue": 22
         },
         "distinct_referring_accounts": 0,
         "sample_referring_accounts": [],
@@ -1363,7 +1363,7 @@
           "https://www.house.gov/"
         ],
         "origin_counts": {
-          "reading_queue": 24,
+          "reading_queue": 25,
           "journals": 1
         },
         "distinct_referring_accounts": 0,
@@ -1562,7 +1562,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-08-30T22:27:16.058Z",
+        "fetched_at": "2026-09-03T01:33:11.749Z",
         "homepage_url": "https://trumprx.gov/",
         "example_url": "http://trumprx.gov/",
         "homepage_status": 200,
@@ -1736,7 +1736,7 @@
           "https://www.bbc.com/news/articles/cp3xqkxp3x5o?at_medium=RSS&amp;at_campaign=rss"
         ],
         "origin_counts": {
-          "reading_queue": 42
+          "reading_queue": 43
         },
         "distinct_referring_accounts": 0,
         "sample_referring_accounts": [],
@@ -1849,7 +1849,7 @@
       "entity": "Amnesty",
       "kind": "unknown",
       "first_seen_at": "2026-03-31T12:16:18.459Z",
-      "last_seen_at": "2026-09-02T20:35:22.177Z",
+      "last_seen_at": "2026-09-02T21:06:29.776Z",
       "discovery": {
         "distinct_urls": 106,
         "example_urls": [
@@ -1862,7 +1862,7 @@
         "origin_counts": {
           "ontology_evidence": 70,
           "reading_queue": 86,
-          "journals": 125,
+          "journals": 127,
           "articles": 3
         },
         "distinct_referring_accounts": 0,
@@ -2262,7 +2262,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-08-30T05:21:46.834Z",
+        "fetched_at": "2026-09-02T22:04:14.337Z",
         "homepage_url": "https://google.com/",
         "example_url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQG8zTjzNOXrSBZwvSTLobfen2T2Mfxyn8MYVxW4sIU6cWottxkV4pJs_p6fwS7LJGs_vuED8LS-hCfYDaWBVPP6g5GilaCYMrJml-ow5K6SCv_H_b1Dl2x1bJE8PTS68J1lar6YIqGro0gdLxt0MIOMv-l1vVmmO0WJQtLSOEieMA6I7dl7eRgRC0BRXQWnC1DBXjH9CBNLq5ag1EbSnkyImyoNmXyv0qV7VQUvoAHc5OC2odagG5YXdhPj4Im_aZZUwd8=",
         "homepage_status": 200,
@@ -2365,16 +2365,16 @@
           ]
         },
         "profile": {
-          "score": 0.36,
-          "confidence": 0.65,
+          "score": 0,
+          "confidence": 0.55,
           "basis": [
             "meta_author:false",
             "published_time:false",
-            "canonical:true",
-            "about:true",
+            "canonical:false",
+            "about:false",
             "contact:false",
             "corrections:false",
-            "outbound_links:18",
+            "outbound_links:0",
             "opinion_marker:false"
           ]
         },
@@ -2396,33 +2396,33 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-08-30T15:31:07.738Z",
+        "fetched_at": "2026-09-02T22:04:34.347Z",
         "homepage_url": "https://cbsnews.com/",
         "example_url": "https://www.cbsnews.com/news/us-naval-blockade-iran-ports-2026/",
-        "homepage_status": 200,
-        "example_status": 404,
-        "homepage_final_url": "https://www.cbsnews.com/",
+        "homepage_status": null,
+        "example_status": null,
+        "homepage_final_url": "https://cbsnews.com/",
         "example_final_url": "https://www.cbsnews.com/news/us-naval-blockade-iran-ports-2026/",
-        "homepage_content_type": "text/html; charset=UTF-8",
-        "example_content_type": "text/html; charset=UTF-8",
+        "homepage_content_type": "",
+        "example_content_type": "",
         "homepage": {
           "has_meta_author": false,
           "has_published_time": false,
-          "has_canonical": true,
-          "has_about_link": true,
+          "has_canonical": false,
+          "has_about_link": false,
           "has_contact_link": false,
           "has_corrections_link": false,
-          "outbound_links_count": 21,
+          "outbound_links_count": 0,
           "opinion_marker": false
         },
         "example": {
           "has_meta_author": false,
           "has_published_time": false,
-          "has_canonical": true,
-          "has_about_link": true,
+          "has_canonical": false,
+          "has_about_link": false,
           "has_contact_link": false,
           "has_corrections_link": false,
-          "outbound_links_count": 18,
+          "outbound_links_count": 0,
           "opinion_marker": false
         }
       }
@@ -2533,7 +2533,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-08-30T15:31:07.815Z",
+        "fetched_at": "2026-09-02T22:04:34.438Z",
         "homepage_url": "https://com.ph/",
         "example_url": "https://x.tv5.com.ph/news/national/read/arrest-warrants-issued-vs-discayas-over-malversation-graft-charges-tied-to-flood-control-projects-malolos-court",
         "homepage_status": null,
@@ -2822,7 +2822,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-08-30T22:27:16.553Z",
+        "fetched_at": "2026-09-03T01:33:12.335Z",
         "homepage_url": "https://youtube.com/",
         "example_url": "https://www.youtube.com/watch?v=s31Wd_dF5hI",
         "homepage_status": 200,
@@ -3077,7 +3077,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-08-30T16:13:45.890Z",
+        "fetched_at": "2026-09-02T22:04:44.048Z",
         "homepage_url": "https://hrw.org/",
         "example_url": "https://www.hrw.org/news/2026/06/18/support-builds-to-protect-children-from-crimes-against-humanity",
         "homepage_status": 200,
@@ -3093,7 +3093,7 @@
           "has_about_link": true,
           "has_contact_link": true,
           "has_corrections_link": true,
-          "outbound_links_count": 11,
+          "outbound_links_count": 12,
           "opinion_marker": false
         },
         "example": {
@@ -3113,9 +3113,9 @@
       "entity": "T Co",
       "kind": "unknown",
       "first_seen_at": "2016-05-05T18:57:30.000Z",
-      "last_seen_at": "2026-08-29T15:00:33.000Z",
+      "last_seen_at": "2026-09-03T01:31:51.631Z",
       "discovery": {
-        "distinct_urls": 16914,
+        "distinct_urls": 16930,
         "example_urls": [
           "https://t.co/pJSE124ec4",
           "https://t.co/Soz8BXPWaa",
@@ -3124,11 +3124,11 @@
           "https://t.co/cYaqYDRp08"
         ],
         "origin_counts": {
-          "feed_buffer": 14843,
-          "feed_buffer_reply": 5217,
+          "feed_buffer": 14857,
+          "feed_buffer_reply": 5220,
           "articles": 3
         },
-        "distinct_referring_accounts": 2876,
+        "distinct_referring_accounts": 2877,
         "sample_referring_accounts": [
           "0808iveta",
           "09abracadabra",
@@ -3167,7 +3167,7 @@
         "breadth": {
           "score": 0.53,
           "basis": [
-            "distinct_urls:16914",
+            "distinct_urls:16930",
             "distinct_axes:0",
             "origin_types:3"
           ]
@@ -3175,7 +3175,7 @@
         "corroboration": {
           "score": 0.9125,
           "basis": [
-            "referring_accounts:2876",
+            "referring_accounts:2877",
             "origin_types:3"
           ]
         },
@@ -3206,10 +3206,10 @@
           "basis": [
             "unknown_domain_pattern",
             "doi_or_identifier_path_seen",
-            "distinct_urls:16914",
+            "distinct_urls:16930",
             "distinct_axes:0",
             "origin_types:3",
-            "referring_accounts:2876",
+            "referring_accounts:2877",
             "origin_types:3",
             "track_record_unavailable"
           ]
@@ -3410,9 +3410,9 @@
       "entity": "Techcrunch",
       "kind": "unknown",
       "first_seen_at": "2026-06-22T23:31:00Z",
-      "last_seen_at": "2026-09-02T20:35:22.177Z",
+      "last_seen_at": "2026-09-02T22:05:29.156Z",
       "discovery": {
-        "distinct_urls": 149,
+        "distinct_urls": 153,
         "example_urls": [
           "https://techcrunch.com/2026/07/30/judge-says-trump-admin-still-lacks-evidence-for-anthropic-supply-chain-risk-label/",
           "https://techcrunch.com/2026/06/22/shareholders-sue-ubers-board-over-sexual-assaults-other-incidents/",
@@ -3421,8 +3421,8 @@
           "https://techcrunch.com/2026/07/09/block-reaches-45m-settlement-with-46-states-over-cash-app-fraud-probe/"
         ],
         "origin_counts": {
-          "ontology_evidence": 62,
-          "journals": 170
+          "ontology_evidence": 64,
+          "journals": 174
         },
         "distinct_referring_accounts": 0,
         "sample_referring_accounts": [],
@@ -3470,7 +3470,7 @@
         "breadth": {
           "score": 0.82,
           "basis": [
-            "distinct_urls:149",
+            "distinct_urls:153",
             "distinct_axes:17",
             "origin_types:2"
           ]
@@ -3509,7 +3509,7 @@
           "basis": [
             "unknown_domain_pattern",
             "article_path_seen",
-            "distinct_urls:149",
+            "distinct_urls:153",
             "distinct_axes:17",
             "origin_types:2",
             "referring_accounts:0",
@@ -3555,9 +3555,9 @@
       "entity": "Arstechnica",
       "kind": "unknown",
       "first_seen_at": "2026-06-24T20:02:00Z",
-      "last_seen_at": "2026-09-02T20:35:22.138Z",
+      "last_seen_at": "2026-09-02T22:05:29.130Z",
       "discovery": {
-        "distinct_urls": 19,
+        "distinct_urls": 20,
         "example_urls": [
           "https://arstechnica.com/security/2026/06/users-cry-foul-after-amd-stripped-memory-crypto-from-its-consumer-cpus/",
           "https://arstechnica.com/security/2026/06/24/dashlane-explains-how-attackers-managed-to-download-encrypted-password-vaults/",
@@ -3567,7 +3567,7 @@
         ],
         "origin_counts": {
           "ontology_evidence": 9,
-          "journals": 27
+          "journals": 28
         },
         "distinct_referring_accounts": 0,
         "sample_referring_accounts": [],
@@ -3603,7 +3603,7 @@
         "breadth": {
           "score": 0.7616666666666666,
           "basis": [
-            "distinct_urls:19",
+            "distinct_urls:20",
             "distinct_axes:5",
             "origin_types:2"
           ]
@@ -3637,12 +3637,12 @@
         },
         "overall": {
           "score": 0.5130208333333333,
-          "confidence": 0.6032,
+          "confidence": 0.6256999999999999,
           "method": "mechanical_v1",
           "basis": [
             "unknown_domain_pattern",
             "article_path_seen",
-            "distinct_urls:19",
+            "distinct_urls:20",
             "distinct_axes:5",
             "origin_types:2",
             "referring_accounts:0",
@@ -5425,9 +5425,9 @@
       "entity": "Starlink",
       "kind": "unknown",
       "first_seen_at": "2026-04-07T03:51:50.000Z",
-      "last_seen_at": "2026-08-29T12:33:17.633Z",
+      "last_seen_at": "2026-09-03T00:20:13.000Z",
       "discovery": {
-        "distinct_urls": 228,
+        "distinct_urls": 234,
         "example_urls": [
           "https://www.starlink.com/us/residential?referral=RC-DF-9543787-19448-67&utm_medium=paid&utm_campaign=awr_us_soc_twt_ptg_cau&utm_content=awr_us_soc_twt_ptg_cau_res_gvp_v4s_stc_en-us_sdb-bluesky-uptime&twclid=2cg62b1u0oqrypdim5oir1767e",
           "https://www.starlink.com/us/residential?referral=RC-DF-9543787-19448-67&utm_medium=paid&utm_campaign=awr_us_soc_twt_ptg_cau&utm_content=awr_us_soc_twt_ptg_cau_res_gvp_v4s_stc_en-us_sdb-avail-sat-yourhome&twclid=2216n7j93v9absqn77762mm626",
@@ -5436,8 +5436,8 @@
           "https://www.starlink.com/us/residential?referral=RC-DF-9543787-19448-67&utm_medium=paid&utm_campaign=awr_us_soc_twt_ptg_cau&utm_content=awr_us_soc_twt_ptg_cau_res_gvp_v4s_stc_en-us_sdb-avail-sat-arrived&twclid=21pi7t0qs8tgw0wgnh5mvmdu2g"
         ],
         "origin_counts": {
-          "feed_buffer_reply": 203,
-          "feed_buffer": 29
+          "feed_buffer_reply": 207,
+          "feed_buffer": 31
         },
         "distinct_referring_accounts": 5,
         "sample_referring_accounts": [
@@ -5472,7 +5472,7 @@
         "breadth": {
           "score": 0.47,
           "basis": [
-            "distinct_urls:228",
+            "distinct_urls:234",
             "distinct_axes:0",
             "origin_types:2"
           ]
@@ -5510,7 +5510,7 @@
           "method": "mechanical_v1",
           "basis": [
             "unknown_domain_pattern",
-            "distinct_urls:228",
+            "distinct_urls:234",
             "distinct_axes:0",
             "origin_types:2",
             "referring_accounts:5",
@@ -30265,6 +30265,86 @@
           "has_corrections_link": false,
           "outbound_links_count": 6,
           "opinion_marker": false
+        }
+      }
+    },
+    {
+      "domain": "playtime.ph",
+      "entity": "Playtime Ph",
+      "kind": "unknown",
+      "first_seen_at": "2026-08-26T04:08:56.467Z",
+      "last_seen_at": "2026-09-02T10:07:58.000Z",
+      "discovery": {
+        "distinct_urls": 3,
+        "example_urls": [
+          "https://www.playtime.ph/?twclid=2ehhsiuw72qcjnqiqckbnej4r9",
+          "https://www.playtime.ph/?twclid=22gk162di36wv9rhjspsrbvpox",
+          "https://www.playtime.ph/?twclid=2ac6trqw2m7rrb6ja8ocybxznz"
+        ],
+        "origin_counts": {
+          "feed_buffer": 2,
+          "feed_buffer_reply": 1
+        },
+        "distinct_referring_accounts": 1,
+        "sample_referring_accounts": [
+          "playtime_ent"
+        ],
+        "distinct_axes": []
+      },
+      "claims": {
+        "total": 0,
+        "supported": 0,
+        "refuted": 0,
+        "contested": 0,
+        "unverified": 0,
+        "resolved_count": 0
+      },
+      "structural_features": {
+        "has_search_paths": false,
+        "has_article_paths": false,
+        "has_doi_paths": false
+      },
+      "ratings": {
+        "provenance": {
+          "score": 0.45,
+          "basis": [
+            "unknown_domain_pattern"
+          ]
+        },
+        "breadth": {
+          "score": 0.2075,
+          "basis": [
+            "distinct_urls:3",
+            "distinct_axes:0",
+            "origin_types:2"
+          ]
+        },
+        "corroboration": {
+          "score": 0.2833333333333333,
+          "basis": [
+            "referring_accounts:1",
+            "origin_types:2"
+          ]
+        },
+        "track_record": {
+          "score": null,
+          "basis": [
+            "no_resolved_claims_observed"
+          ]
+        },
+        "overall": {
+          "score": 0.381328125,
+          "confidence": 0.15907500000000002,
+          "method": "mechanical_v1",
+          "basis": [
+            "unknown_domain_pattern",
+            "distinct_urls:3",
+            "distinct_axes:0",
+            "origin_types:2",
+            "referring_accounts:1",
+            "origin_types:2",
+            "track_record_unavailable"
+          ]
         }
       }
     },
@@ -59906,84 +59986,6 @@
         "distinct_referring_accounts": 1,
         "sample_referring_accounts": [
           "sierraplatform"
-        ],
-        "distinct_axes": []
-      },
-      "claims": {
-        "total": 0,
-        "supported": 0,
-        "refuted": 0,
-        "contested": 0,
-        "unverified": 0,
-        "resolved_count": 0
-      },
-      "structural_features": {
-        "has_search_paths": false,
-        "has_article_paths": false,
-        "has_doi_paths": false
-      },
-      "ratings": {
-        "provenance": {
-          "score": 0.45,
-          "basis": [
-            "unknown_domain_pattern"
-          ]
-        },
-        "breadth": {
-          "score": 0.11833333333333332,
-          "basis": [
-            "distinct_urls:2",
-            "distinct_axes:0",
-            "origin_types:1"
-          ]
-        },
-        "corroboration": {
-          "score": 0.19583333333333333,
-          "basis": [
-            "referring_accounts:1",
-            "origin_types:1"
-          ]
-        },
-        "track_record": {
-          "score": null,
-          "basis": [
-            "no_resolved_claims_observed"
-          ]
-        },
-        "overall": {
-          "score": 0.3536197916666667,
-          "confidence": 0.10997499999999999,
-          "method": "mechanical_v1",
-          "basis": [
-            "unknown_domain_pattern",
-            "distinct_urls:2",
-            "distinct_axes:0",
-            "origin_types:1",
-            "referring_accounts:1",
-            "origin_types:1",
-            "track_record_unavailable"
-          ]
-        }
-      }
-    },
-    {
-      "domain": "playtime.ph",
-      "entity": "Playtime Ph",
-      "kind": "unknown",
-      "first_seen_at": "2026-08-26T04:08:56.467Z",
-      "last_seen_at": "2026-08-27T14:16:15.482Z",
-      "discovery": {
-        "distinct_urls": 2,
-        "example_urls": [
-          "https://www.playtime.ph/?twclid=2ehhsiuw72qcjnqiqckbnej4r9",
-          "https://www.playtime.ph/?twclid=22gk162di36wv9rhjspsrbvpox"
-        ],
-        "origin_counts": {
-          "feed_buffer": 2
-        },
-        "distinct_referring_accounts": 1,
-        "sample_referring_accounts": [
-          "playtime_ent"
         ],
         "distinct_axes": []
       },
