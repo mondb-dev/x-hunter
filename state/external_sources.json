@@ -1,8 +1,8 @@
 {
   "schema_version": "1.0",
-  "generated_at": "2026-09-03T15:03:19.800Z",
+  "generated_at": "2026-09-03T18:03:24.786Z",
   "method": "mechanical_registry_v1",
-  "profiled_at": "2026-09-03T15:03:25.410Z",
+  "profiled_at": "2026-09-03T18:03:28.782Z",
   "sources": [
     {
       "domain": "theguardian.com",
@@ -11,7 +11,7 @@
       "first_seen_at": "2026-03-27T23:17:00Z",
       "last_seen_at": "2026-08-31T07:32:38.367Z",
       "discovery": {
-        "distinct_urls": 1126,
+        "distinct_urls": 1128,
         "example_urls": [
           "https://www.theguardian.com/us-news/2026/jun/23/trump-immigration-courthouse-arrest-policy",
           "https://www.theguardian.com/us-news/2026/jun/28/ice-minnesota-defending-democracy",
@@ -21,7 +21,7 @@
         ],
         "origin_counts": {
           "ontology_evidence": 54,
-          "reading_queue": 1080,
+          "reading_queue": 1082,
           "journals": 151,
           "articles": 5
         },
@@ -78,7 +78,7 @@
         "breadth": {
           "score": 0.94,
           "basis": [
-            "distinct_urls:1126",
+            "distinct_urls:1128",
             "distinct_axes:23",
             "origin_types:4"
           ]
@@ -118,7 +118,7 @@
             "newsroom_domain_pattern",
             "article_path_seen",
             "doi_or_identifier_path_seen",
-            "distinct_urls:1126",
+            "distinct_urls:1128",
             "distinct_axes:23",
             "origin_types:4",
             "referring_accounts:0",
@@ -842,7 +842,7 @@
       "first_seen_at": "2026-06-22T00:15:00Z",
       "last_seen_at": "2026-09-01T15:46:28.590Z",
       "discovery": {
-        "distinct_urls": 766,
+        "distinct_urls": 768,
         "example_urls": [
           "https://www.nytimes.com/2026/06/19/world/canada/frank-stronach-trial-guilty-sex-charges.html",
           "https://www.nytimes.com/2026/06/27/world/americas/mexican-officials-us-informants.html",
@@ -852,7 +852,7 @@
         ],
         "origin_counts": {
           "ontology_evidence": 28,
-          "reading_queue": 793,
+          "reading_queue": 795,
           "journals": 72
         },
         "distinct_referring_accounts": 0,
@@ -897,7 +897,7 @@
         "breadth": {
           "score": 0.8799999999999999,
           "basis": [
-            "distinct_urls:766",
+            "distinct_urls:768",
             "distinct_axes:13",
             "origin_types:3"
           ]
@@ -936,7 +936,7 @@
           "basis": [
             "newsroom_domain_pattern",
             "article_path_seen",
-            "distinct_urls:766",
+            "distinct_urls:768",
             "distinct_axes:13",
             "origin_types:3",
             "referring_accounts:0",
@@ -1851,7 +1851,7 @@
       "first_seen_at": "2026-03-31T12:16:18.459Z",
       "last_seen_at": "2026-09-03T11:34:17.898Z",
       "discovery": {
-        "distinct_urls": 107,
+        "distinct_urls": 108,
         "example_urls": [
           "https://www.amnesty.org/en/latest/news/2026/06/burkina-serge-oulon/",
           "https://www.amnesty.org/en/latest/news/2026/06/car-bozize/",
@@ -1861,7 +1861,7 @@
         ],
         "origin_counts": {
           "ontology_evidence": 71,
-          "reading_queue": 87,
+          "reading_queue": 88,
           "journals": 128,
           "articles": 3
         },
@@ -1907,7 +1907,7 @@
         "breadth": {
           "score": 0.94,
           "basis": [
-            "distinct_urls:107",
+            "distinct_urls:108",
             "distinct_axes:13",
             "origin_types:4"
           ]
@@ -1946,7 +1946,7 @@
           "basis": [
             "unknown_domain_pattern",
             "article_path_seen",
-            "distinct_urls:107",
+            "distinct_urls:108",
             "distinct_axes:13",
             "origin_types:4",
             "referring_accounts:0",
@@ -3113,9 +3113,9 @@
       "entity": "T Co",
       "kind": "unknown",
       "first_seen_at": "2016-05-05T18:57:30.000Z",
-      "last_seen_at": "2026-09-03T14:35:09.000Z",
+      "last_seen_at": "2026-09-03T17:39:57.000Z",
       "discovery": {
-        "distinct_urls": 17503,
+        "distinct_urls": 17646,
         "example_urls": [
           "https://t.co/pJSE124ec4",
           "https://t.co/Soz8BXPWaa",
@@ -3124,11 +3124,11 @@
           "https://t.co/cYaqYDRp08"
         ],
         "origin_counts": {
-          "feed_buffer": 15412,
-          "feed_buffer_reply": 5331,
+          "feed_buffer": 15552,
+          "feed_buffer_reply": 5354,
           "articles": 3
         },
-        "distinct_referring_accounts": 2906,
+        "distinct_referring_accounts": 2916,
         "sample_referring_accounts": [
           "0808iveta",
           "09abracadabra",
@@ -3167,7 +3167,7 @@
         "breadth": {
           "score": 0.53,
           "basis": [
-            "distinct_urls:17503",
+            "distinct_urls:17646",
             "distinct_axes:0",
             "origin_types:3"
           ]
@@ -3175,7 +3175,7 @@
         "corroboration": {
           "score": 0.9125,
           "basis": [
-            "referring_accounts:2906",
+            "referring_accounts:2916",
             "origin_types:3"
           ]
         },
@@ -3206,10 +3206,10 @@
           "basis": [
             "unknown_domain_pattern",
             "doi_or_identifier_path_seen",
-            "distinct_urls:17503",
+            "distinct_urls:17646",
             "distinct_axes:0",
             "origin_types:3",
-            "referring_accounts:2906",
+            "referring_accounts:2916",
             "origin_types:3",
             "track_record_unavailable"
           ]
@@ -4631,9 +4631,9 @@
       "entity": "Grok",
       "kind": "unknown",
       "first_seen_at": "2026-04-03T01:20:27.000Z",
-      "last_seen_at": "2026-09-03T10:10:46.000Z",
+      "last_seen_at": "2026-09-03T17:17:56.000Z",
       "discovery": {
-        "distinct_urls": 677,
+        "distinct_urls": 680,
         "example_urls": [
           "https://grok.com/imagine/post/9b92ff60-ec59-45db-8a35-8e1b743e5339",
           "https://grok.com/imagine/post/42c16172-4296-42be-b3d0-aa45ad7b6b97",
@@ -4642,10 +4642,10 @@
           "https://grok.com/imagine/post/3289422f-50b2-4655-8527-e2b1c950ce5e"
         ],
         "origin_counts": {
-          "feed_buffer_reply": 564,
+          "feed_buffer_reply": 568,
           "feed_buffer": 159
         },
-        "distinct_referring_accounts": 410,
+        "distinct_referring_accounts": 412,
         "sample_referring_accounts": [
           "0xsifu",
           "100ohiostate",
@@ -4683,7 +4683,7 @@
         "breadth": {
           "score": 0.47,
           "basis": [
-            "distinct_urls:677",
+            "distinct_urls:680",
             "distinct_axes:0",
             "origin_types:2"
           ]
@@ -4691,7 +4691,7 @@
         "corroboration": {
           "score": 0.825,
           "basis": [
-            "referring_accounts:410",
+            "referring_accounts:412",
             "origin_types:2"
           ]
         },
@@ -4721,10 +4721,10 @@
           "method": "mechanical_v1",
           "basis": [
             "unknown_domain_pattern",
-            "distinct_urls:677",
+            "distinct_urls:680",
             "distinct_axes:0",
             "origin_types:2",
-            "referring_accounts:410",
+            "referring_accounts:412",
             "origin_types:2",
             "track_record_unavailable"
           ]
@@ -5425,9 +5425,9 @@
       "entity": "Starlink",
       "kind": "unknown",
       "first_seen_at": "2026-04-07T03:51:50.000Z",
-      "last_seen_at": "2026-09-03T14:48:31.000Z",
+      "last_seen_at": "2026-09-03T17:18:53.000Z",
       "discovery": {
-        "distinct_urls": 409,
+        "distinct_urls": 458,
         "example_urls": [
           "https://www.starlink.com/us/residential?referral=RC-DF-9543787-19448-67&utm_medium=paid&utm_campaign=awr_us_soc_twt_ptg_cau&utm_content=awr_us_soc_twt_ptg_cau_res_gvp_v4s_stc_en-us_sdb-bluesky-uptime&twclid=2cg62b1u0oqrypdim5oir1767e",
           "https://www.starlink.com/us/residential?referral=RC-DF-9543787-19448-67&utm_medium=paid&utm_campaign=awr_us_soc_twt_ptg_cau&utm_content=awr_us_soc_twt_ptg_cau_res_gvp_v4s_stc_en-us_sdb-avail-sat-yourhome&twclid=2216n7j93v9absqn77762mm626",
@@ -5436,8 +5436,8 @@
           "https://www.starlink.com/us/residential?referral=RC-DF-9543787-19448-67&utm_medium=paid&utm_campaign=awr_us_soc_twt_ptg_cau&utm_content=awr_us_soc_twt_ptg_cau_res_gvp_v4s_stc_en-us_sdb-avail-sat-arrived&twclid=21pi7t0qs8tgw0wgnh5mvmdu2g"
         ],
         "origin_counts": {
-          "feed_buffer_reply": 376,
-          "feed_buffer": 37
+          "feed_buffer_reply": 423,
+          "feed_buffer": 39
         },
         "distinct_referring_accounts": 5,
         "sample_referring_accounts": [
@@ -5472,7 +5472,7 @@
         "breadth": {
           "score": 0.47,
           "basis": [
-            "distinct_urls:409",
+            "distinct_urls:458",
             "distinct_axes:0",
             "origin_types:2"
           ]
@@ -5510,7 +5510,7 @@
           "method": "mechanical_v1",
           "basis": [
             "unknown_domain_pattern",
-            "distinct_urls:409",
+            "distinct_urls:458",
             "distinct_axes:0",
             "origin_types:2",
             "referring_accounts:5",
@@ -16737,7 +16737,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-08-31T11:01:53.960Z",
+        "fetched_at": "2026-09-03T16:03:25.002Z",
         "homepage_url": "https://ethos.com/",
         "example_url": "https://www.ethos.com/life/life-insurance-now/?utm_source=twitter&utm_medium=cpc&utm_campaign=Broad01162026&utm_campaign_id=40806420&utm_adgroup=Broad01162026&utm_adgroup_id=54091382&utm_ad_id=2024963714831835547&ad_name=hiking+%28convert%29&twclid=2eck112qrn4y0a9og1cs3anquo",
         "homepage_status": 200,
@@ -16864,7 +16864,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-08-31T12:01:52.190Z",
+        "fetched_at": "2026-09-03T16:03:26.527Z",
         "homepage_url": "https://flow.com/",
         "example_url": "https://flow.com/post/stablecoin-market-cap-on-flow-hits-all-time-high-of-74-6m?twclid=2czuzc6x3hqaue58fju5it9nms",
         "homepage_status": 200,
@@ -16991,7 +16991,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-08-31T12:01:53.971Z",
+        "fetched_at": "2026-09-03T16:03:28.145Z",
         "homepage_url": "https://par.bz/",
         "example_url": "https://par.bz/nep?twclid=2cqyfqbi1emcrdcv6yo3eddsrk",
         "homepage_status": 403,
@@ -17118,7 +17118,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-08-31T12:01:56.538Z",
+        "fetched_at": "2026-09-03T16:03:30.572Z",
         "homepage_url": "https://pickleball.mov/",
         "example_url": "https://pickleball.mov/?twclid=2dap2o6t8b0iplizc69goovrfk",
         "homepage_status": 200,
@@ -17245,7 +17245,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-08-31T12:01:56.781Z",
+        "fetched_at": "2026-09-03T16:33:23.409Z",
         "homepage_url": "https://aitradingbotreview.com/",
         "example_url": "https://aitradingbotreview.com/cointech2u-okx-testimonial/?utm_source=x&utm_medium=cpc&utm_campaign=ct2u_cici_testimonial_v1&utm_content=v3_architecture&twclid=29n2yshl33pi6gwhsndaezd9zg",
         "homepage_status": 200,
@@ -17372,7 +17372,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-08-31T12:31:50.894Z",
+        "fetched_at": "2026-09-03T16:33:24.283Z",
         "homepage_url": "https://floxnar.com/",
         "example_url": "https://www.floxnar.com/products/raineren?utm_source=twitter&utm_campaign=41855548&twclid=2irtlfucdq7bk7pzbe9l7xo7v",
         "homepage_status": 403,
@@ -17499,7 +17499,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-08-31T12:31:51.895Z",
+        "fetched_at": "2026-09-03T16:33:24.877Z",
         "homepage_url": "https://pyrenva.com/",
         "example_url": "https://www.pyrenva.com/products/havern-polo?utm_source=twitter&utm_campaign=HpoloSWC02&twclid=285udvuvfb3zz15rwylu1v9etj",
         "homepage_status": 403,
@@ -17626,7 +17626,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-08-31T12:31:52.321Z",
+        "fetched_at": "2026-09-03T16:33:24.965Z",
         "homepage_url": "https://pipfarm.com/",
         "example_url": "https://pipfarm.com/pay-with-profits?utm_source=twitter&utm_medium=paid_social&utm_campaign=x_global&utm_content=pwp&twclid=24kvuhbhl6j5q4afmd9e50y0ha",
         "homepage_status": 403,
@@ -17879,7 +17879,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-08-31T12:31:54.481Z",
+        "fetched_at": "2026-09-03T17:33:25.717Z",
         "homepage_url": "https://kubit.ai/",
         "example_url": "https://kubit.ai/agent-analytics-landing/?utm_source=x_ads&utm_medium=paid_social&utm_campaign=claude_group&twclid=2eb9hv62es2e93pzc1qorbclgf",
         "homepage_status": 200,
@@ -26984,7 +26984,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-08-29T06:36:12.857Z",
+        "fetched_at": "2026-09-03T17:33:26.206Z",
         "homepage_url": "https://enter.pro/",
         "example_url": "https://enter.pro/?utm_source=x&utm_medium=paid_social&utm_campaign=twitter_adsmarch_enter_13_0260403&twclid=21y4m3veyg3qz1wzl60cdelnk1",
         "homepage_status": 403,
@@ -27110,7 +27110,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-08-29T07:36:10.338Z",
+        "fetched_at": "2026-09-03T17:33:28.732Z",
         "homepage_url": "https://intro.co/",
         "example_url": "https://intro.co/marketplace?topic=Career+%26+Business&tag%5B%5D=Marketing+%26+Growth&utm_source=twitter_ads&utm_campaign=Prospecting_Traffic_20260402&utm_medium=Broad_AllOS_25-54_CPC_ExpertPageView_Growth-03-26-26_20260402&utm_term=230_Static_03-26-26-Growth-Concept-20d-AI-Clueless-To-AI-Confident_PLP-Marketplace-Business-Marketing_April-2026&source=intropaid&twclid=268r32sn6j3tec3xu57anl3fij",
         "homepage_status": 200,
@@ -27236,7 +27236,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-08-29T07:36:12.188Z",
+        "fetched_at": "2026-09-03T17:33:30.509Z",
         "homepage_url": "https://patsnap.com/",
         "example_url": "https://eureka.patsnap.com/mse-landing?from=mktcampaign_mse_ads_x_formuvideo-asia2en2&twclid=29qq6c80v43jc7y7o992xnzaaf",
         "homepage_status": 200,
@@ -27362,7 +27362,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-08-29T07:36:13.066Z",
+        "fetched_at": "2026-09-03T18:03:26.005Z",
         "homepage_url": "https://raybrowser.com/",
         "example_url": "https://raybrowser.com/?twclid=2f1xntsosgc648xbloi17s8fyh",
         "homepage_status": 200,
@@ -27488,7 +27488,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-08-29T08:06:09.024Z",
+        "fetched_at": "2026-09-03T18:03:27.172Z",
         "homepage_url": "https://propfirm.compare/",
         "example_url": "https://propfirm.compare/loyalty-program?twclid=2d4zyj9jmkiff93u6ux1kjpg32",
         "homepage_status": 200,
@@ -27614,7 +27614,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-08-29T08:06:09.516Z",
+        "fetched_at": "2026-09-03T18:03:28.097Z",
         "homepage_url": "https://x.ai/",
         "example_url": "https://x.ai/news/grok-voice-think-fast-1?utm_source=x&utm_medium=paid&utm_campaign=us_web_x_ua_grok_20260509_voice-api_purchase&utm_content=us_web_x_ron_ron_x_1865_ads-test&utm_term=en_voice-agent-thinkfast_img_ac_x_x_x_learnmore&twclid=2dnuv3islky6synxbuj0of9m5k",
         "homepage_status": 403,
@@ -27740,7 +27740,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-08-29T08:06:09.877Z",
+        "fetched_at": "2026-09-03T18:03:28.782Z",
         "homepage_url": "https://savagex.com/",
         "example_url": "https://www.savagex.com/dmg/839F22?utm_medium=paid_social_media&utm_source=twitter&utm_campaign=twitter_campaign_id_55&utm_content=twitter_adgroup_id_55A&utm_term=twitter_ad_id_55AD&twclid=2d2ns712d2nwvwxmok1hbdjanj",
         "homepage_status": 403,
@@ -28393,6 +28393,133 @@
           "has_contact_link": false,
           "has_corrections_link": false,
           "outbound_links_count": 1,
+          "opinion_marker": false
+        }
+      }
+    },
+    {
+      "domain": "fiba.basketball",
+      "entity": "Fiba Basketball",
+      "kind": "unknown",
+      "first_seen_at": "2026-07-09T08:54:48.123Z",
+      "last_seen_at": "2026-09-03T15:56:59.401Z",
+      "discovery": {
+        "distinct_urls": 5,
+        "example_urls": [
+          "https://www.fiba.basketball/en/events/fiba-basketball-world-cup-2027-asian-qualifiers/news/teams-confirmed-for-the-fiba-basketball-world-cup-2027-asian-qualifiers-second-round?fbclid=IwY2xjawS5zNpleHRuA2FlbQIxMABicmlkETBSRXVqVE03dkMwOVZYSFFIc3J0YwZhcHBfaWQQMjIyMDM5MTc4ODIwMDg5MgABHnNpKrOyCvwKpu-6IklyvVCJjLgnfwDLK_E2LBbT_BFY0A0sDKeVHGKD8gO7_aem_x6hSMw-gbXxwzVRTcScvdQ&twclid=28yyrktcdmkop0el0m83yyzd3b",
+          "https://www.fiba.basketball/en/events/fiba-basketball-world-cup-2027-asian-qualifiers/news/tracker-who-is-qualified-for-the-second-round-asian-qualifiers?twclid=23dk5ne0r4zcfvo8y4uocke1kq",
+          "https://www.fiba.basketball/en/events/fiba-basketball-world-cup-2027-asian-qualifiers/news/teams-confirmed-for-the-fiba-basketball-world-cup-2027-asian-qualifiers-second-round?fbclid=IwY2xjawS5zNpleHRuA2FlbQIxMABicmlkETBSRXVqVE03dkMwOVZYSFFIc3J0YwZhcHBfaWQQMjIyMDM5MTc4ODIwMDg5MgABHnNpKrOyCvwKpu-6IklyvVCJjLgnfwDLK_E2LBbT_BFY0A0sDKeVHGKD8gO7_aem_x6hSMw-gbXxwzVRTcScvdQ&twclid=23satl6g1ide348o39t6b26rsa",
+          "https://www.fiba.basketball/en/events/fiba-basketball-world-cup-2027-asian-qualifiers/news/choose-your-hero-who-is-your-favorite-player-heading-into-window-4?twclid=2e6x3zk3q4ck7lygbk90mg2vej",
+          "https://www.fiba.basketball/en/events/fiba-womens-basketball-world-cup-2026/news/rosters-confirmed-ahead-of-tip-off-at-fiba-womens-basketball-world-cup-2026?twclid=224xlxaaert98im8pk07vyy5pn"
+        ],
+        "origin_counts": {
+          "feed_buffer": 5
+        },
+        "distinct_referring_accounts": 2,
+        "sample_referring_accounts": [
+          "fibawc",
+          "fibawwc"
+        ],
+        "distinct_axes": []
+      },
+      "claims": {
+        "total": 0,
+        "supported": 0,
+        "refuted": 0,
+        "contested": 0,
+        "unverified": 0,
+        "resolved_count": 0
+      },
+      "structural_features": {
+        "has_search_paths": false,
+        "has_article_paths": false,
+        "has_doi_paths": false
+      },
+      "ratings": {
+        "provenance": {
+          "score": 0.45,
+          "basis": [
+            "unknown_domain_pattern"
+          ]
+        },
+        "breadth": {
+          "score": 0.20583333333333334,
+          "basis": [
+            "distinct_urls:5",
+            "distinct_axes:0",
+            "origin_types:1"
+          ]
+        },
+        "corroboration": {
+          "score": 0.3041666666666667,
+          "basis": [
+            "referring_accounts:2",
+            "origin_types:1"
+          ]
+        },
+        "track_record": {
+          "score": null,
+          "basis": [
+            "no_resolved_claims_observed"
+          ]
+        },
+        "profile": {
+          "score": 0.4,
+          "confidence": 0.65,
+          "basis": [
+            "meta_author:false",
+            "published_time:true",
+            "canonical:true",
+            "about:false",
+            "contact:false",
+            "corrections:false",
+            "outbound_links:21",
+            "opinion_marker:false"
+          ]
+        },
+        "overall": {
+          "score": 0.3829166666666667,
+          "confidence": 0.2281,
+          "method": "mechanical_v1",
+          "basis": [
+            "unknown_domain_pattern",
+            "distinct_urls:5",
+            "distinct_axes:0",
+            "origin_types:1",
+            "referring_accounts:2",
+            "origin_types:1",
+            "track_record_unavailable"
+          ]
+        }
+      },
+      "profile": {
+        "fetched_at": "2026-08-31T03:27:21.912Z",
+        "homepage_url": "https://fiba.basketball/",
+        "example_url": "https://www.fiba.basketball/en/events/fiba-basketball-world-cup-2027-asian-qualifiers/news/teams-confirmed-for-the-fiba-basketball-world-cup-2027-asian-qualifiers-second-round?fbclid=IwY2xjawS5zNpleHRuA2FlbQIxMABicmlkETBSRXVqVE03dkMwOVZYSFFIc3J0YwZhcHBfaWQQMjIyMDM5MTc4ODIwMDg5MgABHnNpKrOyCvwKpu-6IklyvVCJjLgnfwDLK_E2LBbT_BFY0A0sDKeVHGKD8gO7_aem_x6hSMw-gbXxwzVRTcScvdQ&twclid=28yyrktcdmkop0el0m83yyzd3b",
+        "homepage_status": 200,
+        "example_status": 200,
+        "homepage_final_url": "https://www.fiba.basketball/en",
+        "example_final_url": "https://www.fiba.basketball/en/events/fiba-basketball-world-cup-2027-asian-qualifiers/news/teams-confirmed-for-the-fiba-basketball-world-cup-2027-asian-qualifiers-second-round?fbclid=IwY2xjawS5zNpleHRuA2FlbQIxMABicmlkETBSRXVqVE03dkMwOVZYSFFIc3J0YwZhcHBfaWQQMjIyMDM5MTc4ODIwMDg5MgABHnNpKrOyCvwKpu-6IklyvVCJjLgnfwDLK_E2LBbT_BFY0A0sDKeVHGKD8gO7_aem_x6hSMw-gbXxwzVRTcScvdQ&twclid=28yyrktcdmkop0el0m83yyzd3b",
+        "homepage_content_type": "text/html; charset=utf-8",
+        "example_content_type": "text/html; charset=utf-8",
+        "homepage": {
+          "has_meta_author": false,
+          "has_published_time": false,
+          "has_canonical": true,
+          "has_about_link": false,
+          "has_contact_link": false,
+          "has_corrections_link": false,
+          "outbound_links_count": 25,
+          "opinion_marker": false
+        },
+        "example": {
+          "has_meta_author": false,
+          "has_published_time": true,
+          "has_canonical": true,
+          "has_about_link": false,
+          "has_contact_link": false,
+          "has_corrections_link": false,
+          "outbound_links_count": 21,
           "opinion_marker": false
         }
       }
@@ -43245,131 +43372,6 @@
           "has_contact_link": true,
           "has_corrections_link": false,
           "outbound_links_count": 7,
-          "opinion_marker": false
-        }
-      }
-    },
-    {
-      "domain": "fiba.basketball",
-      "entity": "Fiba Basketball",
-      "kind": "unknown",
-      "first_seen_at": "2026-07-09T08:54:48.123Z",
-      "last_seen_at": "2026-08-29T13:58:15.983Z",
-      "discovery": {
-        "distinct_urls": 4,
-        "example_urls": [
-          "https://www.fiba.basketball/en/events/fiba-basketball-world-cup-2027-asian-qualifiers/news/teams-confirmed-for-the-fiba-basketball-world-cup-2027-asian-qualifiers-second-round?fbclid=IwY2xjawS5zNpleHRuA2FlbQIxMABicmlkETBSRXVqVE03dkMwOVZYSFFIc3J0YwZhcHBfaWQQMjIyMDM5MTc4ODIwMDg5MgABHnNpKrOyCvwKpu-6IklyvVCJjLgnfwDLK_E2LBbT_BFY0A0sDKeVHGKD8gO7_aem_x6hSMw-gbXxwzVRTcScvdQ&twclid=28yyrktcdmkop0el0m83yyzd3b",
-          "https://www.fiba.basketball/en/events/fiba-basketball-world-cup-2027-asian-qualifiers/news/tracker-who-is-qualified-for-the-second-round-asian-qualifiers?twclid=23dk5ne0r4zcfvo8y4uocke1kq",
-          "https://www.fiba.basketball/en/events/fiba-basketball-world-cup-2027-asian-qualifiers/news/teams-confirmed-for-the-fiba-basketball-world-cup-2027-asian-qualifiers-second-round?fbclid=IwY2xjawS5zNpleHRuA2FlbQIxMABicmlkETBSRXVqVE03dkMwOVZYSFFIc3J0YwZhcHBfaWQQMjIyMDM5MTc4ODIwMDg5MgABHnNpKrOyCvwKpu-6IklyvVCJjLgnfwDLK_E2LBbT_BFY0A0sDKeVHGKD8gO7_aem_x6hSMw-gbXxwzVRTcScvdQ&twclid=23satl6g1ide348o39t6b26rsa",
-          "https://www.fiba.basketball/en/events/fiba-basketball-world-cup-2027-asian-qualifiers/news/choose-your-hero-who-is-your-favorite-player-heading-into-window-4?twclid=2e6x3zk3q4ck7lygbk90mg2vej"
-        ],
-        "origin_counts": {
-          "feed_buffer": 4
-        },
-        "distinct_referring_accounts": 1,
-        "sample_referring_accounts": [
-          "fibawc"
-        ],
-        "distinct_axes": []
-      },
-      "claims": {
-        "total": 0,
-        "supported": 0,
-        "refuted": 0,
-        "contested": 0,
-        "unverified": 0,
-        "resolved_count": 0
-      },
-      "structural_features": {
-        "has_search_paths": false,
-        "has_article_paths": false,
-        "has_doi_paths": false
-      },
-      "ratings": {
-        "provenance": {
-          "score": 0.45,
-          "basis": [
-            "unknown_domain_pattern"
-          ]
-        },
-        "breadth": {
-          "score": 0.17666666666666664,
-          "basis": [
-            "distinct_urls:4",
-            "distinct_axes:0",
-            "origin_types:1"
-          ]
-        },
-        "corroboration": {
-          "score": 0.19583333333333333,
-          "basis": [
-            "referring_accounts:1",
-            "origin_types:1"
-          ]
-        },
-        "track_record": {
-          "score": null,
-          "basis": [
-            "no_resolved_claims_observed"
-          ]
-        },
-        "profile": {
-          "score": 0.4,
-          "confidence": 0.65,
-          "basis": [
-            "meta_author:false",
-            "published_time:true",
-            "canonical:true",
-            "about:false",
-            "contact:false",
-            "corrections:false",
-            "outbound_links:21",
-            "opinion_marker:false"
-          ]
-        },
-        "overall": {
-          "score": 0.3663802083333333,
-          "confidence": 0.16722499999999998,
-          "method": "mechanical_v1",
-          "basis": [
-            "unknown_domain_pattern",
-            "distinct_urls:4",
-            "distinct_axes:0",
-            "origin_types:1",
-            "referring_accounts:1",
-            "origin_types:1",
-            "track_record_unavailable"
-          ]
-        }
-      },
-      "profile": {
-        "fetched_at": "2026-08-31T03:27:21.912Z",
-        "homepage_url": "https://fiba.basketball/",
-        "example_url": "https://www.fiba.basketball/en/events/fiba-basketball-world-cup-2027-asian-qualifiers/news/teams-confirmed-for-the-fiba-basketball-world-cup-2027-asian-qualifiers-second-round?fbclid=IwY2xjawS5zNpleHRuA2FlbQIxMABicmlkETBSRXVqVE03dkMwOVZYSFFIc3J0YwZhcHBfaWQQMjIyMDM5MTc4ODIwMDg5MgABHnNpKrOyCvwKpu-6IklyvVCJjLgnfwDLK_E2LBbT_BFY0A0sDKeVHGKD8gO7_aem_x6hSMw-gbXxwzVRTcScvdQ&twclid=28yyrktcdmkop0el0m83yyzd3b",
-        "homepage_status": 200,
-        "example_status": 200,
-        "homepage_final_url": "https://www.fiba.basketball/en",
-        "example_final_url": "https://www.fiba.basketball/en/events/fiba-basketball-world-cup-2027-asian-qualifiers/news/teams-confirmed-for-the-fiba-basketball-world-cup-2027-asian-qualifiers-second-round?fbclid=IwY2xjawS5zNpleHRuA2FlbQIxMABicmlkETBSRXVqVE03dkMwOVZYSFFIc3J0YwZhcHBfaWQQMjIyMDM5MTc4ODIwMDg5MgABHnNpKrOyCvwKpu-6IklyvVCJjLgnfwDLK_E2LBbT_BFY0A0sDKeVHGKD8gO7_aem_x6hSMw-gbXxwzVRTcScvdQ&twclid=28yyrktcdmkop0el0m83yyzd3b",
-        "homepage_content_type": "text/html; charset=utf-8",
-        "example_content_type": "text/html; charset=utf-8",
-        "homepage": {
-          "has_meta_author": false,
-          "has_published_time": false,
-          "has_canonical": true,
-          "has_about_link": false,
-          "has_contact_link": false,
-          "has_corrections_link": false,
-          "outbound_links_count": 25,
-          "opinion_marker": false
-        },
-        "example": {
-          "has_meta_author": false,
-          "has_published_time": true,
-          "has_canonical": true,
-          "has_about_link": false,
-          "has_contact_link": false,
-          "has_corrections_link": false,
-          "outbound_links_count": 21,
           "opinion_marker": false
         }
       }
