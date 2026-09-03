@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-03T01:34:37.982Z",
+  "generated_at": "2026-09-03T06:03:34.208Z",
   "windows": [
     "1d",
     "3d",
@@ -9,36 +9,36 @@
   "axes": {
     "axis_epistemic_integrity": {
       "current": {
-        "score": 0.5349,
-        "confidence": 0.922
+        "score": 0.541,
+        "confidence": 0.95
       },
       "1d": null,
       "3d": {
-        "score_delta": 0,
-        "conf_delta": -0.006,
+        "score_delta": 0.0061,
+        "conf_delta": 0.022,
         "direction": "→"
       },
       "7d": {
-        "score_delta": 0,
-        "conf_delta": -0.014,
+        "score_delta": 0.0061,
+        "conf_delta": 0.014,
         "direction": "→"
       }
     },
     "axis_power_accountability": {
       "current": {
-        "score": -0.1548,
-        "confidence": 0.946
+        "score": -0.1643,
+        "confidence": 0.95
       },
       "1d": null,
       "3d": {
-        "score_delta": -0.003,
-        "conf_delta": -0.004,
+        "score_delta": -0.0125,
+        "conf_delta": 0,
         "direction": "→"
       },
       "7d": {
-        "score_delta": 0.0261,
-        "conf_delta": -0.004,
-        "direction": "↗"
+        "score_delta": 0.0166,
+        "conf_delta": 0,
+        "direction": "→"
       }
     },
     "axis_collective_voice": {
@@ -774,18 +774,18 @@
     },
     "axis_rapid_disinformation_v1": {
       "current": {
-        "score": 0.527,
-        "confidence": 0.4897
+        "score": 0.558,
+        "confidence": 0.5149
       },
       "1d": null,
       "3d": {
-        "score_delta": 0.043,
-        "conf_delta": 0.0308,
+        "score_delta": 0.074,
+        "conf_delta": 0.056,
         "direction": "↗"
       },
       "7d": {
-        "score_delta": 0.043,
-        "conf_delta": 0.0228,
+        "score_delta": 0.074,
+        "conf_delta": 0.048,
         "direction": "↗"
       }
     },
@@ -842,18 +842,18 @@
     },
     "axis_procedural_governance_substantive_action": {
       "current": {
-        "score": -0.8602,
-        "confidence": 0.8727
+        "score": -0.8641,
+        "confidence": 0.8808
       },
       "1d": null,
       "3d": {
-        "score_delta": -0.004,
-        "conf_delta": 0.0003,
+        "score_delta": -0.0079,
+        "conf_delta": 0.0084,
         "direction": "→"
       },
       "7d": {
-        "score_delta": -0.0297,
-        "conf_delta": 0.0231,
+        "score_delta": -0.0336,
+        "conf_delta": 0.0312,
         "direction": "↘"
       }
     },
@@ -1009,11 +1009,21 @@
         "conf_delta": 0.3189,
         "direction": "↗"
       }
+    },
+    "axis_temporal_accountability_manipulation_v1": {
+      "current": {
+        "score": 0,
+        "confidence": 0
+      },
+      "1d": null,
+      "3d": null,
+      "7d": null
     }
   },
   "notable_count": 8,
   "momentum_axes": [
     "axis_political_dynasties_meritocracy_v1",
+    "axis_rapid_disinformation_v1",
     "axis_reactionary_futurism_v1",
     "axis_state_power_monetization_v1",
     "axis_accountability_temporality_v1",
