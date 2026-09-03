@@ -1,11 +1,11 @@
 {
-  "generated_at": "2026-09-03T18:06:07.916Z",
+  "generated_at": "2026-09-03T21:14:52.286Z",
   "stats": {
-    "total": 1285,
-    "supported": 386,
+    "total": 1287,
+    "supported": 387,
     "refuted": 227,
     "contested": 6,
-    "unverified": 182,
+    "unverified": 183,
     "expired": 484
   },
   "claims": [
@@ -5663,6 +5663,59 @@
       "dissenting_sources": [],
       "framing_analysis": "The claim is framed validly as it accurately represents the content shown in the search results. The use of the Tagalog quote, video reference, and specific statements about powerful interests and avoiding weak cases all align with the reported content from multiple news sources.",
       "web_search_summary": "The claim is directly confirmed by multiple search results. Both Facebook posts from BNC Philippines and news articles from Inquirer and Manila Bulletin confirm that Ombudsman Jesus Crispin Remulla made statements about investigating ex-Speaker Martin Romualdez, with the exact quote 'SOBRANG DAMING PERA NYAN' appearing in the Facebook posts. The reporting consistently mentions Remulla discussing powerful interests and the need to avoid filing weak cases prematurely.",
+      "investigation_depth": "quick"
+    },
+    {
+      "claim_id": "live_ad89501b90",
+      "claim_text": "Jinggoy Estrada declines to enter plea in flood control related plunder, graft raps\n\nRead more:",
+      "status": "supported",
+      "confidence_score": 0.69,
+      "display_score": 0.224,
+      "scoring_breakdown": {
+        "source_tier": 0.5,
+        "newsguard": 0.5,
+        "corroboration": 0.9,
+        "evidence_quality": 0.9,
+        "cross_source": 0.5,
+        "web_search": 1
+      },
+      "source_handle": "gmanews",
+      "source_tier": null,
+      "evidence_urls": [
+        "https://www.gmanetwork.com/news/topstories/nation/1000959/jinggoy-estrada-declines-to-enter-plea-in-flood-control-related-plunder-graft-raps/story/",
+        "https://www.gmanetwork.com/news/topstories/nation/1000959/jinggoy-estrada-declines-to-enter-plea-in-flood-control-related-plunder-graft-raps/story/",
+        "https://newsinfo.inquirer.net/2298105/estrada-declines-to-enter-plea-to-graft-plunder-raps",
+        "https://newsinfo.inquirer.net/2298105/estrada-declines-to-enter-plea-to-graft-plunder-raps",
+        "https://philnews.ph/2026/09/03/jinggoy-estrada-enters-not-guilty-plea-over-alleged-p573-million-kickbacks/"
+      ],
+      "tweet_url": null,
+      "category": null,
+      "related_axis_id": null,
+      "verification_count": 1,
+      "verified_at": "2026-09-03T21:14:52.243Z",
+      "created_at": "2026-09-03T21:14:52.243Z",
+      "original_source": "GMA Network appears to be among the first based on the search results",
+      "claim_date": null,
+      "supporting_sources": [
+        {
+          "name": "GMA Network",
+          "excerpt": "Senator Jinggoy Estrada on Thursday refused to enter a plea in the P573 million plunder and graft cases filed against him in connection with his alleged involvement in the flood control mess.",
+          "url": null
+        },
+        {
+          "name": "Inquirer.net",
+          "excerpt": "Sen. Jose 'Jinggoy' Estrada on Thursday declined to enter a plea to the graft and plunder charges against him before the Sandiganbayan Fifth Division.",
+          "url": null
+        },
+        {
+          "name": "PhilNews",
+          "excerpt": "Senator Jinggoy Estrada appeared before the Sandiganbayan Fifth Division on Thursday for his arraignment, however, the senator refused to personally enter a plea for the charges filed against him.",
+          "url": null
+        }
+      ],
+      "dissenting_sources": [],
+      "framing_analysis": "The claim is framed accurately and matches the reported facts. All sources consistently report that Estrada declined/refused to enter a plea in flood control related plunder and graft charges.",
+      "web_search_summary": "Multiple credible sources confirm that Senator Jinggoy Estrada declined to enter a plea in flood control related plunder and graft cases. The incident occurred on Thursday before the Sandiganbayan Fifth Division, involving P573 million in charges related to alleged kickbacks from flood control projects.",
       "investigation_depth": "quick"
     },
     {
@@ -35763,6 +35816,45 @@
       "dissenting_sources": [],
       "framing_analysis": "The claim references specific empirical findings from a research paper (mentioned as being in 'the first comment'), including particular model behaviors and experimental results. Without access to this paper or related research coverage, the claim cannot be evaluated using the provided search results.",
       "web_search_summary": "The search results contain only general introductory information about what LLMs are and their capabilities. None of the sources address the specific research claims about positional bias, quality-dependent bias reversal, name bias in Claude 3 Haiku, or comparisons between LLM biases and human decision-making biases.",
+      "investigation_depth": "quick"
+    },
+    {
+      "claim_id": "live_673a1ba6f2",
+      "claim_text": "We'll be presenting a few papers at EMNLP 2026🥳 \n\nMain:  \nProbing Factual Knowledge Transfer with Training Data Interventions.\nBy Romina Oji, Marc Braun, Marcel Bollmann, Marco Kuhlmann, and me. \nPreprint: https://lnkd.in/d7tBirJa \n\nIndustry Track: \nReading the News: Adapting Large Language Models to Swedish Journalism Through Continued Pre-Training\nBy Lukas Borggren, me, and Marco Kuhlmann.\nPreprint: https://lnkd.in/dD4WH6Vm \n\nFindings: \nDialects of Translationese Shape Language Model Learning\nPreprint: https://lnkd.in/dkustXyF \n\nTACL: \nPreferences for idiomatic language are acquired slowly — and forgotten quickly: A case study on Swedish. \nPaper: https://lnkd.in/d-eSEBby",
+      "status": "unverified",
+      "confidence_score": 0.4,
+      "display_score": 0.137,
+      "scoring_breakdown": {
+        "source_tier": 0.5,
+        "newsguard": 0.5,
+        "corroboration": 0,
+        "evidence_quality": 0.5,
+        "cross_source": 0.5,
+        "web_search": 0.5
+      },
+      "source_handle": "Jenny Kunz",
+      "source_tier": null,
+      "evidence_urls": [
+        "https://www.linkedin.com/posts/jenny-kunz_well-be-presenting-a-few-papers-at-emnlp-activity-7500883423289376770-jrKH"
+      ],
+      "tweet_url": null,
+      "category": null,
+      "related_axis_id": null,
+      "verification_count": 1,
+      "verified_at": "2026-09-03T19:06:37.803Z",
+      "created_at": "2026-09-03T19:06:37.803Z",
+      "original_source": "Jenny Kunz (LinkedIn post)",
+      "claim_date": null,
+      "supporting_sources": [
+        {
+          "name": "LinkedIn",
+          "excerpt": "A LinkedIn post mentions presenting papers at EMNLP 2026 and references the Industry Track paper on Swedish journalism with a matching preprint link.",
+          "url": null
+        }
+      ],
+      "dissenting_sources": [],
+      "framing_analysis": "The claim appears to be a straightforward announcement of academic paper acceptances. Without access to complete search results showing all four papers and their details, it cannot be fully verified, though partial matches suggest legitimate academic work rather than misrepresentation.",
+      "web_search_summary": "The search results confirm that a LinkedIn post exists announcing papers at EMNLP 2026, and one paper title from the Industry Track matches the claim. However, the search results do not provide complete information to verify all four papers listed, their authors, or the specific track assignments (Main, Industry Track, Findings, TACL) claimed in the statement.",
       "investigation_depth": "quick"
     },
     {
