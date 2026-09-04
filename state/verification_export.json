@@ -1,11 +1,11 @@
 {
-  "generated_at": "2026-09-04T13:07:51.122Z",
+  "generated_at": "2026-09-04T22:17:30.614Z",
   "stats": {
-    "total": 1295,
-    "supported": 393,
+    "total": 1297,
+    "supported": 394,
     "refuted": 228,
     "contested": 6,
-    "unverified": 184,
+    "unverified": 185,
     "expired": 484
   },
   "claims": [
@@ -21489,6 +21489,59 @@
       "investigation_depth": "quick"
     },
     {
+      "claim_id": "live_a8eae907b9",
+      "claim_text": "Most AI governance is aimed at the wrong thing.\n\nWe keep debating alignment, explainability, bias, hallucinations, monitoring and whether the model behaved properly.\n\nFine.\n\nBut none of that answers the question that actually creates institutional liability:\n\nWhy was the system allowed to act?\n\nIf an AI system can send the message, move the money, change the record, approve the transaction, alter the workflow or control something consequential, then the governance boundary is not the model.\n\nIt is execution authority.\n\nAnd if your “AI governance” cannot prevent an inadmissible action before it becomes real, I would argue you do not have runtime governance at all.\n\nYou have observation.\n\nThat is the argument in this paper.\n\nI wrote it before much of the current industry conversation moved toward execution control. Curious to hear who disagrees — and more importantly, what mechanism you believe actually prevents the action.",
+      "status": "supported",
+      "confidence_score": 0.6,
+      "display_score": 0.197,
+      "scoring_breakdown": {
+        "source_tier": 0.5,
+        "newsguard": 0.5,
+        "corroboration": 0.7,
+        "evidence_quality": 0.7,
+        "cross_source": 0.5,
+        "web_search": 0.8
+      },
+      "source_handle": "Chris C.",
+      "source_tier": null,
+      "evidence_urls": [
+        "https://unu.edu/article/we-keep-debating-ai-law-and-ai-governance-separately-thats-mistake",
+        "https://www.eccouncil.org/cybersecurity-exchange/responsible-ai-governance/bias-model-drift-hallucination-mapping-ai-risks-to-governance-controls/",
+        "https://www.researchgate.net/publication/383477929_AI_Governance_and_Ethics_Frameworks_Challenges_and_Case_Studies",
+        "https://pmc.ncbi.nlm.nih.gov/articles/PMC12405166/",
+        "https://aign.global/ai-governance-insights/aign-global/ai-governance-is-infrastructure-and-most-got-it-wrong/"
+      ],
+      "tweet_url": null,
+      "category": null,
+      "related_axis_id": null,
+      "verification_count": 1,
+      "verified_at": "2026-09-04T22:17:30.565Z",
+      "created_at": "2026-09-04T22:17:30.565Z",
+      "original_source": null,
+      "claim_date": null,
+      "supporting_sources": [
+        {
+          "name": "EC-Council",
+          "excerpt": "Discusses AI governance controls focused on hallucination, bias, and model drift - the traditional topics the claim says are emphasized.",
+          "url": null
+        },
+        {
+          "name": "Monash Lens",
+          "excerpt": "States that responsible AI is now a governance risk, not an ethics debate, and AI failures stem from poor governance.",
+          "url": null
+        },
+        {
+          "name": "ResearchGate",
+          "excerpt": "Presents examination of AI governance and ethics frameworks, indicating focus on traditional governance approaches.",
+          "url": null
+        }
+      ],
+      "dissenting_sources": [],
+      "framing_analysis": "The claim is framed as a critique of current AI governance approaches, positioning execution authority as the overlooked critical element. While search results confirm governance discussions focus on the traditional topics mentioned, none validate the specific execution control framework or paper referenced, making verification of the central thesis incomplete.",
+      "web_search_summary": "The claim that AI governance focuses on alignment, bias, and monitoring rather than execution authority is partially supported. Search results confirm governance discussions center on bias, hallucination, and model behavior, and that AI failures stem from poor governance rather than just ethics. However, no search results directly discuss or validate the specific paper mentioned or the execution authority framework proposed.",
+      "investigation_depth": "quick"
+    },
+    {
       "claim_id": "claim_7",
       "claim_text": ">1,500 civilians killed, up to 3.2 million displaced due to the conflict",
       "status": "supported",
@@ -33527,6 +33580,59 @@
       "dissenting_sources": [],
       "framing_analysis": "The claim is framed factually and accurately reflects Australia's affiliation with the AFC and the current status of Asian teams in the World Cup.",
       "web_search_summary": "Australia is indeed the only team representing the Asian Football Confederation (AFC) remaining in the World Cup. While geographically not in Asia, Australia joined the AFC in 2006 to enhance their football competition and World Cup qualification pathway. All other Asian teams that qualified for the World Cup have been eliminated.",
+      "investigation_depth": "quick"
+    },
+    {
+      "claim_id": "live_448d6b6a39",
+      "claim_text": "🇷🇺 RUSSIA’S “HYBRID WAR” IS STARTING TO LOOK A LOT LIKE WAR\n\nEurope keeps calling Russia’s campaign a “hybrid war.” The problem is that the hybrid part is becoming increasingly difficult to spot.\n\nGermany now formally blames Russia for the explosive-laden drone found at",
+      "status": "unverified",
+      "confidence_score": 0.435,
+      "display_score": 0.147,
+      "scoring_breakdown": {
+        "source_tier": 0.6,
+        "newsguard": 0.5329999999999999,
+        "corroboration": 0,
+        "evidence_quality": 0.5,
+        "cross_source": 0.5,
+        "web_search": 0.5
+      },
+      "source_handle": "MarioNawfal",
+      "source_tier": null,
+      "evidence_urls": [
+        "https://www.theguardian.com/world/2026/sep/04/europe-weighs-solutions-to-curtail-russias-growing-hybrid-warfare",
+        "https://www.bloomberg.com/news/articles/2026-09-04/russia-s-hybrid-war-is-europe-s-top-threat-eu-commander-warns",
+        "https://carnegieendowment.org/europe/strategic-europe/2026/07/why-russia-could-escalate-hybrid-warfare-against-europe",
+        "https://www.theguardian.com/world/2025/oct/08/this-is-europe-russia-hybrid-war-destabilise-europe",
+        "https://www.washingtonpost.com/opinions/2026/09/03/putins-hybrid-war-europe-needs-firm-us-response/"
+      ],
+      "tweet_url": null,
+      "category": null,
+      "related_axis_id": null,
+      "verification_count": 1,
+      "verified_at": "2026-09-04T22:14:33.158Z",
+      "created_at": "2026-09-04T22:14:33.157Z",
+      "original_source": null,
+      "claim_date": null,
+      "supporting_sources": [
+        {
+          "name": "The Guardian",
+          "excerpt": "Europe is calling out Russia's 'hybrid war' in public and Russia's suspected sabotage campaign across Europe appears to be gathering pace.",
+          "url": null
+        },
+        {
+          "name": "Bloomberg",
+          "excerpt": "Russia's escalating hybrid attacks represent the European Union's 'most significant strategic threat' according to the EU's top commander.",
+          "url": null
+        },
+        {
+          "name": "The Guardian",
+          "excerpt": "Moscow's suspected drone incursions are threatening chaos in Europe as part of Russia's hybrid war strategy.",
+          "url": null
+        }
+      ],
+      "dissenting_sources": [],
+      "framing_analysis": "The claim's characterization of Europe calling it a 'hybrid war' is accurate based on the search results. However, the specific claim about Germany and an explosive-laden drone cannot be verified from these sources, making the overall claim incomplete and unverifiable.",
+      "web_search_summary": "The search results confirm that Europe is indeed calling Russia's campaign a 'hybrid war' and that these activities are escalating. However, none of the search results contain any information about Germany blaming Russia for an 'explosive-laden drone' at any specific location, which is the core factual claim being made.",
       "investigation_depth": "quick"
     },
     {
