@@ -1,8 +1,8 @@
 {
   "schema_version": "1.0",
-  "generated_at": "2026-09-04T16:05:46.723Z",
+  "generated_at": "2026-09-04T19:42:12.925Z",
   "method": "mechanical_registry_v1",
-  "profiled_at": "2026-09-04T16:05:52.465Z",
+  "profiled_at": "2026-09-04T19:42:28.723Z",
   "sources": [
     {
       "domain": "theguardian.com",
@@ -11,7 +11,7 @@
       "first_seen_at": "2026-03-27T23:17:00Z",
       "last_seen_at": "2026-08-31T07:32:38.367Z",
       "discovery": {
-        "distinct_urls": 1137,
+        "distinct_urls": 1139,
         "example_urls": [
           "https://www.theguardian.com/us-news/2026/jun/23/trump-immigration-courthouse-arrest-policy",
           "https://www.theguardian.com/us-news/2026/jun/28/ice-minnesota-defending-democracy",
@@ -21,7 +21,7 @@
         ],
         "origin_counts": {
           "ontology_evidence": 54,
-          "reading_queue": 1091,
+          "reading_queue": 1093,
           "journals": 151,
           "articles": 5
         },
@@ -78,7 +78,7 @@
         "breadth": {
           "score": 0.94,
           "basis": [
-            "distinct_urls:1137",
+            "distinct_urls:1139",
             "distinct_axes:23",
             "origin_types:4"
           ]
@@ -118,7 +118,7 @@
             "newsroom_domain_pattern",
             "article_path_seen",
             "doi_or_identifier_path_seen",
-            "distinct_urls:1137",
+            "distinct_urls:1139",
             "distinct_axes:23",
             "origin_types:4",
             "referring_accounts:0",
@@ -835,7 +835,7 @@
       "first_seen_at": "2026-06-26T07:05:00Z",
       "last_seen_at": "2026-08-28T17:35:46.989Z",
       "discovery": {
-        "distinct_urls": 724,
+        "distinct_urls": 726,
         "example_urls": [
           "https://www.bbc.co.uk/news/articles/cn8qxz6qypyo",
           "https://www.bbc.co.uk/news/articles/cn075j04pnyo?at_medium=RSS&amp;at_campaign=rss",
@@ -845,7 +845,7 @@
         ],
         "origin_counts": {
           "ontology_evidence": 10,
-          "reading_queue": 739,
+          "reading_queue": 741,
           "journals": 23,
           "articles": 2
         },
@@ -884,7 +884,7 @@
         "breadth": {
           "score": 0.94,
           "basis": [
-            "distinct_urls:724",
+            "distinct_urls:726",
             "distinct_axes:7",
             "origin_types:4"
           ]
@@ -922,7 +922,7 @@
           "method": "mechanical_v1",
           "basis": [
             "newsroom_domain_pattern",
-            "distinct_urls:724",
+            "distinct_urls:726",
             "distinct_axes:7",
             "origin_types:4",
             "referring_accounts:0",
@@ -970,7 +970,7 @@
       "first_seen_at": "2026-06-22T00:15:00Z",
       "last_seen_at": "2026-09-01T15:46:28.590Z",
       "discovery": {
-        "distinct_urls": 775,
+        "distinct_urls": 776,
         "example_urls": [
           "https://www.nytimes.com/2026/06/19/world/canada/frank-stronach-trial-guilty-sex-charges.html",
           "https://www.nytimes.com/2026/06/27/world/americas/mexican-officials-us-informants.html",
@@ -980,7 +980,7 @@
         ],
         "origin_counts": {
           "ontology_evidence": 28,
-          "reading_queue": 802,
+          "reading_queue": 803,
           "journals": 72
         },
         "distinct_referring_accounts": 0,
@@ -1025,7 +1025,7 @@
         "breadth": {
           "score": 0.8799999999999999,
           "basis": [
-            "distinct_urls:775",
+            "distinct_urls:776",
             "distinct_axes:13",
             "origin_types:3"
           ]
@@ -1064,7 +1064,7 @@
           "basis": [
             "newsroom_domain_pattern",
             "article_path_seen",
-            "distinct_urls:775",
+            "distinct_urls:776",
             "distinct_axes:13",
             "origin_types:3",
             "referring_accounts:0",
@@ -1861,7 +1861,7 @@
         ],
         "origin_counts": {
           "ontology_evidence": 71,
-          "reading_queue": 88,
+          "reading_queue": 89,
           "journals": 128,
           "articles": 3
         },
@@ -3113,9 +3113,9 @@
       "entity": "T Co",
       "kind": "unknown",
       "first_seen_at": "2016-05-05T18:57:30.000Z",
-      "last_seen_at": "2026-09-04T15:40:40.000Z",
+      "last_seen_at": "2026-09-04T19:00:34.000Z",
       "discovery": {
-        "distinct_urls": 18262,
+        "distinct_urls": 18387,
         "example_urls": [
           "https://t.co/pJSE124ec4",
           "https://t.co/Soz8BXPWaa",
@@ -3124,11 +3124,11 @@
           "https://t.co/cYaqYDRp08"
         ],
         "origin_counts": {
-          "feed_buffer": 16151,
-          "feed_buffer_reply": 5459,
+          "feed_buffer": 16282,
+          "feed_buffer_reply": 5491,
           "articles": 3
         },
-        "distinct_referring_accounts": 2964,
+        "distinct_referring_accounts": 2973,
         "sample_referring_accounts": [
           "0808iveta",
           "09abracadabra",
@@ -3167,7 +3167,7 @@
         "breadth": {
           "score": 0.53,
           "basis": [
-            "distinct_urls:18262",
+            "distinct_urls:18387",
             "distinct_axes:0",
             "origin_types:3"
           ]
@@ -3175,7 +3175,7 @@
         "corroboration": {
           "score": 0.9125,
           "basis": [
-            "referring_accounts:2964",
+            "referring_accounts:2973",
             "origin_types:3"
           ]
         },
@@ -3206,10 +3206,10 @@
           "basis": [
             "unknown_domain_pattern",
             "doi_or_identifier_path_seen",
-            "distinct_urls:18262",
+            "distinct_urls:18387",
             "distinct_axes:0",
             "origin_types:3",
-            "referring_accounts:2964",
+            "referring_accounts:2973",
             "origin_types:3",
             "track_record_unavailable"
           ]
@@ -4631,7 +4631,7 @@
       "entity": "Grok",
       "kind": "unknown",
       "first_seen_at": "2026-04-03T01:20:27.000Z",
-      "last_seen_at": "2026-09-04T13:33:07.000Z",
+      "last_seen_at": "2026-09-04T14:30:39.000Z",
       "discovery": {
         "distinct_urls": 691,
         "example_urls": [
@@ -4642,7 +4642,7 @@
           "https://grok.com/imagine/post/3289422f-50b2-4655-8527-e2b1c950ce5e"
         ],
         "origin_counts": {
-          "feed_buffer_reply": 577,
+          "feed_buffer_reply": 578,
           "feed_buffer": 161
         },
         "distinct_referring_accounts": 420,
@@ -5425,9 +5425,9 @@
       "entity": "Starlink",
       "kind": "unknown",
       "first_seen_at": "2026-04-07T03:51:50.000Z",
-      "last_seen_at": "2026-09-04T16:02:24.071Z",
+      "last_seen_at": "2026-09-04T19:31:38.110Z",
       "discovery": {
-        "distinct_urls": 557,
+        "distinct_urls": 597,
         "example_urls": [
           "https://www.starlink.com/us/residential?referral=RC-DF-9543787-19448-67&utm_medium=paid&utm_campaign=awr_us_soc_twt_ptg_cau&utm_content=awr_us_soc_twt_ptg_cau_res_gvp_v4s_stc_en-us_sdb-bluesky-uptime&twclid=2cg62b1u0oqrypdim5oir1767e",
           "https://www.starlink.com/us/residential?referral=RC-DF-9543787-19448-67&utm_medium=paid&utm_campaign=awr_us_soc_twt_ptg_cau&utm_content=awr_us_soc_twt_ptg_cau_res_gvp_v4s_stc_en-us_sdb-avail-sat-yourhome&twclid=2216n7j93v9absqn77762mm626",
@@ -5436,8 +5436,8 @@
           "https://www.starlink.com/us/residential?referral=RC-DF-9543787-19448-67&utm_medium=paid&utm_campaign=awr_us_soc_twt_ptg_cau&utm_content=awr_us_soc_twt_ptg_cau_res_gvp_v4s_stc_en-us_sdb-avail-sat-arrived&twclid=21pi7t0qs8tgw0wgnh5mvmdu2g"
         ],
         "origin_counts": {
-          "feed_buffer_reply": 515,
-          "feed_buffer": 46
+          "feed_buffer_reply": 549,
+          "feed_buffer": 52
         },
         "distinct_referring_accounts": 5,
         "sample_referring_accounts": [
@@ -5472,7 +5472,7 @@
         "breadth": {
           "score": 0.47,
           "basis": [
-            "distinct_urls:557",
+            "distinct_urls:597",
             "distinct_axes:0",
             "origin_types:2"
           ]
@@ -5510,7 +5510,7 @@
           "method": "mechanical_v1",
           "basis": [
             "unknown_domain_pattern",
-            "distinct_urls:557",
+            "distinct_urls:597",
             "distinct_axes:0",
             "origin_types:2",
             "referring_accounts:5",
@@ -7383,9 +7383,9 @@
       "entity": "Bet88 Ph",
       "kind": "unknown",
       "first_seen_at": "2026-07-03T16:00:02.000Z",
-      "last_seen_at": "2026-09-03T01:56:51.958Z",
+      "last_seen_at": "2026-09-04T04:15:00.000Z",
       "discovery": {
-        "distinct_urls": 112,
+        "distinct_urls": 113,
         "example_urls": [
           "https://bet88.ph/en/?type=registration&modal=user&ref=xa027&twclid=27gurqyk8ekpo92oqcm3aeuing",
           "https://bet88.ph/en/?type=registration&modal=user&ref=xa023&twclid=25wrsnnpnc7378nutxmyo1v6kj",
@@ -7394,7 +7394,7 @@
           "https://bet88.ph/en/?type=registration&modal=user&ref=xa024&twclid=2463n370x0ryr7dm2eovirlg7t"
         ],
         "origin_counts": {
-          "feed_buffer_reply": 39,
+          "feed_buffer_reply": 40,
           "feed_buffer": 73
         },
         "distinct_referring_accounts": 1,
@@ -7426,7 +7426,7 @@
         "breadth": {
           "score": 0.47,
           "basis": [
-            "distinct_urls:112",
+            "distinct_urls:113",
             "distinct_axes:0",
             "origin_types:2"
           ]
@@ -7464,7 +7464,7 @@
           "method": "mechanical_v1",
           "basis": [
             "unknown_domain_pattern",
-            "distinct_urls:112",
+            "distinct_urls:113",
             "distinct_axes:0",
             "origin_types:2",
             "referring_accounts:1",
@@ -14086,7 +14086,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-09-01T16:49:24.044Z",
+        "fetched_at": "2026-09-04T17:05:50.167Z",
         "homepage_url": "https://attio.com/",
         "example_url": "https://attio.com/p/crm-031515110905/?utm_source=twitter_ads&utm_medium=paidsocial&utm_campaign=Prospecting&utm_content=0226_singleimage_2602_AskAttioUI-and-device-AskMore_v2_Light_n_a_n_a_1080x1080&twclid=271iqk60c3hmf5z7qzfjlyoijm",
         "homepage_status": 200,
@@ -14113,6 +14113,133 @@
           "has_contact_link": false,
           "has_corrections_link": false,
           "outbound_links_count": 7,
+          "opinion_marker": false
+        }
+      }
+    },
+    {
+      "domain": "ptgaming.ph",
+      "entity": "Ptgaming Ph",
+      "kind": "unknown",
+      "first_seen_at": "2026-07-05T04:59:47.736Z",
+      "last_seen_at": "2026-09-04T14:30:39.000Z",
+      "discovery": {
+        "distinct_urls": 9,
+        "example_urls": [
+          "https://www.ptgaming.ph/?twclid=21n3lg1hcl64ox73kjyr4lggz9",
+          "https://www.ptgaming.ph/?twclid=25vb0w4jbmtupw5yokwy2fjbcq",
+          "https://www.ptgaming.ph/?twclid=24xua76p6ig4wj1on4u6eqhjkz",
+          "https://www.ptgaming.ph/?twclid=23opaojcnervezlk24t4109xw9",
+          "https://www.ptgaming.ph/?twclid=26sb1wpgds50ggj6udc2c7m358"
+        ],
+        "origin_counts": {
+          "feed_buffer": 7,
+          "feed_buffer_reply": 2
+        },
+        "distinct_referring_accounts": 1,
+        "sample_referring_accounts": [
+          "ptgamingph"
+        ],
+        "distinct_axes": []
+      },
+      "claims": {
+        "total": 0,
+        "supported": 0,
+        "refuted": 0,
+        "contested": 0,
+        "unverified": 0,
+        "resolved_count": 0
+      },
+      "structural_features": {
+        "has_search_paths": false,
+        "has_article_paths": false,
+        "has_doi_paths": false
+      },
+      "ratings": {
+        "provenance": {
+          "score": 0.45,
+          "basis": [
+            "unknown_domain_pattern"
+          ]
+        },
+        "breadth": {
+          "score": 0.38249999999999995,
+          "basis": [
+            "distinct_urls:9",
+            "distinct_axes:0",
+            "origin_types:2"
+          ]
+        },
+        "corroboration": {
+          "score": 0.2833333333333333,
+          "basis": [
+            "referring_accounts:1",
+            "origin_types:2"
+          ]
+        },
+        "track_record": {
+          "score": null,
+          "basis": [
+            "no_resolved_claims_observed"
+          ]
+        },
+        "profile": {
+          "score": 0.1,
+          "confidence": 0.55,
+          "basis": [
+            "meta_author:false",
+            "published_time:false",
+            "canonical:true",
+            "about:false",
+            "contact:false",
+            "corrections:false",
+            "outbound_links:0",
+            "opinion_marker:false"
+          ]
+        },
+        "overall": {
+          "score": 0.419609375,
+          "confidence": 0.330825,
+          "method": "mechanical_v1",
+          "basis": [
+            "unknown_domain_pattern",
+            "distinct_urls:9",
+            "distinct_axes:0",
+            "origin_types:2",
+            "referring_accounts:1",
+            "origin_types:2",
+            "track_record_unavailable"
+          ]
+        }
+      },
+      "profile": {
+        "fetched_at": "2026-09-04T10:15:33.104Z",
+        "homepage_url": "https://ptgaming.ph/",
+        "example_url": "https://www.ptgaming.ph/?twclid=21n3lg1hcl64ox73kjyr4lggz9",
+        "homepage_status": 200,
+        "example_status": 200,
+        "homepage_final_url": "https://www.ptgaming.ph/",
+        "example_final_url": "https://www.ptgaming.ph/?twclid=21n3lg1hcl64ox73kjyr4lggz9",
+        "homepage_content_type": "text/html",
+        "example_content_type": "text/html",
+        "homepage": {
+          "has_meta_author": false,
+          "has_published_time": false,
+          "has_canonical": true,
+          "has_about_link": false,
+          "has_contact_link": false,
+          "has_corrections_link": false,
+          "outbound_links_count": 0,
+          "opinion_marker": false
+        },
+        "example": {
+          "has_meta_author": false,
+          "has_published_time": false,
+          "has_canonical": true,
+          "has_about_link": false,
+          "has_contact_link": false,
+          "has_corrections_link": false,
+          "outbound_links_count": 0,
           "opinion_marker": false
         }
       }
@@ -17145,133 +17272,6 @@
           "has_contact_link": false,
           "has_corrections_link": false,
           "outbound_links_count": 9,
-          "opinion_marker": false
-        }
-      }
-    },
-    {
-      "domain": "ptgaming.ph",
-      "entity": "Ptgaming Ph",
-      "kind": "unknown",
-      "first_seen_at": "2026-07-05T04:59:47.736Z",
-      "last_seen_at": "2026-09-04T12:23:02.730Z",
-      "discovery": {
-        "distinct_urls": 8,
-        "example_urls": [
-          "https://www.ptgaming.ph/?twclid=21n3lg1hcl64ox73kjyr4lggz9",
-          "https://www.ptgaming.ph/?twclid=25vb0w4jbmtupw5yokwy2fjbcq",
-          "https://www.ptgaming.ph/?twclid=24xua76p6ig4wj1on4u6eqhjkz",
-          "https://www.ptgaming.ph/?twclid=23opaojcnervezlk24t4109xw9",
-          "https://www.ptgaming.ph/?twclid=26sb1wpgds50ggj6udc2c7m358"
-        ],
-        "origin_counts": {
-          "feed_buffer": 7,
-          "feed_buffer_reply": 1
-        },
-        "distinct_referring_accounts": 1,
-        "sample_referring_accounts": [
-          "ptgamingph"
-        ],
-        "distinct_axes": []
-      },
-      "claims": {
-        "total": 0,
-        "supported": 0,
-        "refuted": 0,
-        "contested": 0,
-        "unverified": 0,
-        "resolved_count": 0
-      },
-      "structural_features": {
-        "has_search_paths": false,
-        "has_article_paths": false,
-        "has_doi_paths": false
-      },
-      "ratings": {
-        "provenance": {
-          "score": 0.45,
-          "basis": [
-            "unknown_domain_pattern"
-          ]
-        },
-        "breadth": {
-          "score": 0.3533333333333333,
-          "basis": [
-            "distinct_urls:8",
-            "distinct_axes:0",
-            "origin_types:2"
-          ]
-        },
-        "corroboration": {
-          "score": 0.2833333333333333,
-          "basis": [
-            "referring_accounts:1",
-            "origin_types:2"
-          ]
-        },
-        "track_record": {
-          "score": null,
-          "basis": [
-            "no_resolved_claims_observed"
-          ]
-        },
-        "profile": {
-          "score": 0.1,
-          "confidence": 0.55,
-          "basis": [
-            "meta_author:false",
-            "published_time:false",
-            "canonical:true",
-            "about:false",
-            "contact:false",
-            "corrections:false",
-            "outbound_links:0",
-            "opinion_marker:false"
-          ]
-        },
-        "overall": {
-          "score": 0.41322916666666665,
-          "confidence": 0.30219999999999997,
-          "method": "mechanical_v1",
-          "basis": [
-            "unknown_domain_pattern",
-            "distinct_urls:8",
-            "distinct_axes:0",
-            "origin_types:2",
-            "referring_accounts:1",
-            "origin_types:2",
-            "track_record_unavailable"
-          ]
-        }
-      },
-      "profile": {
-        "fetched_at": "2026-09-04T10:15:33.104Z",
-        "homepage_url": "https://ptgaming.ph/",
-        "example_url": "https://www.ptgaming.ph/?twclid=21n3lg1hcl64ox73kjyr4lggz9",
-        "homepage_status": 200,
-        "example_status": 200,
-        "homepage_final_url": "https://www.ptgaming.ph/",
-        "example_final_url": "https://www.ptgaming.ph/?twclid=21n3lg1hcl64ox73kjyr4lggz9",
-        "homepage_content_type": "text/html",
-        "example_content_type": "text/html",
-        "homepage": {
-          "has_meta_author": false,
-          "has_published_time": false,
-          "has_canonical": true,
-          "has_about_link": false,
-          "has_contact_link": false,
-          "has_corrections_link": false,
-          "outbound_links_count": 0,
-          "opinion_marker": false
-        },
-        "example": {
-          "has_meta_author": false,
-          "has_published_time": false,
-          "has_canonical": true,
-          "has_about_link": false,
-          "has_contact_link": false,
-          "has_corrections_link": false,
-          "outbound_links_count": 0,
           "opinion_marker": false
         }
       }
@@ -21044,7 +21044,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-09-01T05:02:26.259Z",
+        "fetched_at": "2026-09-04T17:05:51.499Z",
         "homepage_url": "https://jetcraft.com/",
         "example_url": "https://www.jetcraft.com/?utm_campaign=X-Branding-Ad&utm_medium=paid-social&utm_source=x&twclid=2ay2ajx0dm14xp5m3pne3v6y19",
         "homepage_status": 200,
@@ -21171,7 +21171,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-09-01T05:02:26.783Z",
+        "fetched_at": "2026-09-04T17:05:52.113Z",
         "homepage_url": "https://fantheone.com/",
         "example_url": "https://fantheone.com/download?twclid=2ffn21z0ebyxzqvqa4nwehpql",
         "homepage_status": 200,
@@ -21298,7 +21298,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-09-01T06:02:27.925Z",
+        "fetched_at": "2026-09-04T17:05:54.958Z",
         "homepage_url": "https://getkrona.app/",
         "example_url": "https://www.getkrona.app/?twclid=275wq8t5uj0kgjzmzfnm46jcuv",
         "homepage_status": 200,
@@ -21425,7 +21425,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-09-01T06:02:28.710Z",
+        "fetched_at": "2026-09-04T17:35:50.575Z",
         "homepage_url": "https://vryzmir.com/",
         "example_url": "https://www.vryzmir.com/products/portable-silicone-ice-ball-maker-kettle?utm_source=twitter&utm_campaign=42166381&twclid=2h87hfhbmpwrcy696fcioag1c",
         "homepage_status": 403,
@@ -21551,7 +21551,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-09-01T06:02:29.141Z",
+        "fetched_at": "2026-09-04T17:35:52.134Z",
         "homepage_url": "https://scitools.com/",
         "example_url": "https://scitools.com/codecheck?xad=codecheck&twclid=23owlb2i7ei44kgcykku0zs4en",
         "homepage_status": 200,
@@ -21677,7 +21677,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-09-01T06:02:29.647Z",
+        "fetched_at": "2026-09-04T17:35:53.036Z",
         "homepage_url": "https://ironclaw.com/",
         "example_url": "https://www.ironclaw.com/?utm_source=x&utm_medium=paid_social&utm_campaign=ironclaw_marapr26&twclid=2axdpb938w7qafe76dwca4od5q",
         "homepage_status": 200,
@@ -21803,7 +21803,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-09-01T06:32:35.072Z",
+        "fetched_at": "2026-09-04T17:35:55.321Z",
         "homepage_url": "https://darkhours-thegame.com/",
         "example_url": "https://www.darkhours-thegame.com/xbox?utm_source=twitter&utm_campaign=XboxLaunch&utm_medium=pc&utm_content=Diftborn&utm_term=us&twclid=271vf2o4bu11vai5qyjclxea1r",
         "homepage_status": 200,
@@ -21929,7 +21929,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-09-01T06:32:37.237Z",
+        "fetched_at": "2026-09-04T19:12:15.037Z",
         "homepage_url": "https://zavu.dev/",
         "example_url": "https://www.zavu.dev/?twclid=28xrbkfqjxo8t4gl13yvgj5wa8",
         "homepage_status": 200,
@@ -22055,7 +22055,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-09-01T06:32:37.527Z",
+        "fetched_at": "2026-09-04T19:12:15.315Z",
         "homepage_url": "https://simba.sg/",
         "example_url": "https://simba.sg/home?twclid=246gm13qkkeak3bq6hmc879ar",
         "homepage_status": 200,
@@ -22309,7 +22309,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-09-01T06:32:38.340Z",
+        "fetched_at": "2026-09-04T19:12:16.141Z",
         "homepage_url": "https://oracle.com/",
         "example_url": "https://www.oracle.com/database/?source=%3Aad%3Aso%3Atw%3Adg%3Aa_nas%3A%3ARC_TWTR260205P00003C00005%3AEnd_Data_Risk&SC=%3Aad%3Aso%3Atw%3Adg%3Aa_nas%3A%3ARC_TWTR260205P00003C00005%3AEnd_Data_Risk&twclid=2b7h3vpee1s0pq1u9507vf4n1e",
         "homepage_status": 403,
@@ -22436,7 +22436,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-09-01T07:32:30.732Z",
+        "fetched_at": "2026-09-04T19:12:17.004Z",
         "homepage_url": "https://temu.com/",
         "example_url": "https://www.temu.com/kuiper/un1.html?subj=feed-un&_bg_fs=1&_p_mat1_type=1&_p_jump_id=725&_x_vst_scene=adg&gids=538325&_p_rfs=1&_x_ads_channel=twitter&twclid=29gpd1jhyu86nybj5gna95l3tw",
         "homepage_status": 200,
@@ -22563,7 +22563,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-09-01T07:32:32.360Z",
+        "fetched_at": "2026-09-04T19:42:15.800Z",
         "homepage_url": "https://hubs.la/",
         "example_url": "https://hubs.la/Q044Rgs40?twclid=2dj6mgj4wttl7kn2ssc6dwffaw",
         "homepage_status": 200,
@@ -22690,7 +22690,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-09-01T07:32:36.717Z",
+        "fetched_at": "2026-09-04T19:42:21.445Z",
         "homepage_url": "https://la28.org/",
         "example_url": "https://hospitality.la28.org/en?utm_source=x&utm_medium=paid_social&utm_campaign=emg_onlocation_la-olympics-b2c_aw_ecomm_paid-social_x_x_nu_us&twclid=2dvfag01sx2wxc4fmpjts9gb7p",
         "homepage_status": 200,
@@ -22817,7 +22817,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-09-01T07:32:38.428Z",
+        "fetched_at": "2026-09-04T19:42:23.256Z",
         "homepage_url": "https://atlassian.com/",
         "example_url": "https://www.atlassian.com/software/rovo?utm_source=twitter&utm_medium=paid-social&utm_campaign=P%3Arovo%7CO%3Appm%7CV%3Atwitter%7CG%3Aus%7CL%3Aen%7CF%3Aaware%7CT%3Aprospecting%7CZ%3Astandard-image%7CI%3Aimc-rovo-iyryk%7CA%3Aimage%7CD%3Aalld&utm_content=P%3Arovo%7CO%3Appm%7CV%3Atwitter%7CG%3Aus%7CL%3Aen%7CF%3Aaware%7CT%3Aprospecting%7CZ%3Astandard-image%7CI%3Aimc-rovo-iyryk%7CA%3Aimage%7CD%3Aalld%7CU%3Ahandles_image-core-brand-default-onepromptaway-1200x628-na-na-aipowered&twclid=256sbqrmpm1kmygbwj39syq8d2",
         "homepage_status": 200,
@@ -22944,7 +22944,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-08-30T12:31:05.024Z",
+        "fetched_at": "2026-09-04T19:42:28.723Z",
         "homepage_url": "https://ib.barclays/",
         "example_url": "https://www.ib.barclays/our-insights/the-flip-side-podcast/is-US-equities-exceptionalism-finally-cracking.html?cid=social-single-carousel_twitter_bcib-2023-twitter--emea-en_1x1_standard_r__2602fs80r__carousel_content_1x1_soc-carousel_na_vid_na_na_social-single-carousel_32978842&twclid=276vz5nrdrhpo1aff0ac343mzs",
         "homepage_status": 200,
@@ -25376,6 +25376,132 @@
           "has_contact_link": false,
           "has_corrections_link": false,
           "outbound_links_count": 25,
+          "opinion_marker": false
+        }
+      }
+    },
+    {
+      "domain": "adjust.com",
+      "entity": "Adjust",
+      "kind": "unknown",
+      "first_seen_at": "2026-05-02T01:23:51.000Z",
+      "last_seen_at": "2026-09-04T16:47:20.774Z",
+      "discovery": {
+        "distinct_urls": 3,
+        "example_urls": [
+          "https://app.adjust.com/1zbd03n1?campaign=X_D90NA_1_all_US_sales_260429-0513_dt_CPC_leihuoua_branding&adgroup=US-pic+vid&creative=%E6%8D%8F%E8%84%B8Vid+%E6%8D%8F%E8%84%B8Pic&cross_device_tracking=1&twclid=25wqttszpha1giwsadazr7s78y",
+          "https://app.adjust.com/24ycckz2?campaign=First_Deposit_ios&adgroup=PH&creative=KV_1&twclid=2a0wm2engn59yfmidtb0drvw8j",
+          "https://app.adjust.com/24ycckz2?campaign=First_Deposit_ios&adgroup=PH&creative=KV_1&twclid=2bwch312ve3nsc54kpjpwf1jvm"
+        ],
+        "origin_counts": {
+          "feed_buffer_reply": 1,
+          "feed_buffer": 2
+        },
+        "distinct_referring_accounts": 2,
+        "sample_referring_accounts": [
+          "narakathegame",
+          "ptgamingph"
+        ],
+        "distinct_axes": []
+      },
+      "claims": {
+        "total": 0,
+        "supported": 0,
+        "refuted": 0,
+        "contested": 0,
+        "unverified": 0,
+        "resolved_count": 0
+      },
+      "structural_features": {
+        "has_search_paths": false,
+        "has_article_paths": false,
+        "has_doi_paths": false
+      },
+      "ratings": {
+        "provenance": {
+          "score": 0.45,
+          "basis": [
+            "unknown_domain_pattern"
+          ]
+        },
+        "breadth": {
+          "score": 0.2075,
+          "basis": [
+            "distinct_urls:3",
+            "distinct_axes:0",
+            "origin_types:2"
+          ]
+        },
+        "corroboration": {
+          "score": 0.39166666666666666,
+          "basis": [
+            "referring_accounts:2",
+            "origin_types:2"
+          ]
+        },
+        "track_record": {
+          "score": null,
+          "basis": [
+            "no_resolved_claims_observed"
+          ]
+        },
+        "profile": {
+          "score": 0.28,
+          "confidence": 0.65,
+          "basis": [
+            "meta_author:true",
+            "published_time:false",
+            "canonical:false",
+            "about:false",
+            "contact:false",
+            "corrections:false",
+            "outbound_links:10",
+            "opinion_marker:false"
+          ]
+        },
+        "overall": {
+          "score": 0.391484375,
+          "confidence": 0.191325,
+          "method": "mechanical_v1",
+          "basis": [
+            "unknown_domain_pattern",
+            "distinct_urls:3",
+            "distinct_axes:0",
+            "origin_types:2",
+            "referring_accounts:2",
+            "origin_types:2",
+            "track_record_unavailable"
+          ]
+        }
+      },
+      "profile": {
+        "fetched_at": "2026-07-01T06:07:38.868Z",
+        "homepage_url": "https://adjust.com/",
+        "example_url": "https://app.adjust.com/1zbd03n1?campaign=X_D90NA_1_all_US_sales_260429-0513_dt_CPC_leihuoua_branding&adgroup=US-pic+vid&creative=%E6%8D%8F%E8%84%B8Vid+%E6%8D%8F%E8%84%B8Pic&cross_device_tracking=1&twclid=25wqttszpha1giwsadazr7s78y",
+        "homepage_status": 429,
+        "example_status": 200,
+        "homepage_final_url": "https://www.adjust.com/",
+        "example_final_url": "https://www.narakathegame.com/buy/fab-1/",
+        "homepage_content_type": "text/html; charset=utf-8",
+        "example_content_type": "text/html",
+        "homepage": {
+          "has_meta_author": false,
+          "has_published_time": false,
+          "has_canonical": false,
+          "has_about_link": false,
+          "has_contact_link": false,
+          "has_corrections_link": false,
+          "outbound_links_count": 1,
+          "opinion_marker": false
+        },
+        "example": {
+          "has_meta_author": true,
+          "has_published_time": false,
+          "has_canonical": false,
+          "has_about_link": false,
+          "has_contact_link": false,
+          "has_corrections_link": false,
+          "outbound_links_count": 10,
           "opinion_marker": false
         }
       }
@@ -28527,131 +28653,6 @@
           "has_contact_link": false,
           "has_corrections_link": false,
           "outbound_links_count": 0,
-          "opinion_marker": false
-        }
-      }
-    },
-    {
-      "domain": "adjust.com",
-      "entity": "Adjust",
-      "kind": "unknown",
-      "first_seen_at": "2026-05-02T01:23:51.000Z",
-      "last_seen_at": "2026-09-04T14:08:06.439Z",
-      "discovery": {
-        "distinct_urls": 2,
-        "example_urls": [
-          "https://app.adjust.com/1zbd03n1?campaign=X_D90NA_1_all_US_sales_260429-0513_dt_CPC_leihuoua_branding&adgroup=US-pic+vid&creative=%E6%8D%8F%E8%84%B8Vid+%E6%8D%8F%E8%84%B8Pic&cross_device_tracking=1&twclid=25wqttszpha1giwsadazr7s78y",
-          "https://app.adjust.com/24ycckz2?campaign=First_Deposit_ios&adgroup=PH&creative=KV_1&twclid=2a0wm2engn59yfmidtb0drvw8j"
-        ],
-        "origin_counts": {
-          "feed_buffer_reply": 1,
-          "feed_buffer": 1
-        },
-        "distinct_referring_accounts": 2,
-        "sample_referring_accounts": [
-          "narakathegame",
-          "ptgamingph"
-        ],
-        "distinct_axes": []
-      },
-      "claims": {
-        "total": 0,
-        "supported": 0,
-        "refuted": 0,
-        "contested": 0,
-        "unverified": 0,
-        "resolved_count": 0
-      },
-      "structural_features": {
-        "has_search_paths": false,
-        "has_article_paths": false,
-        "has_doi_paths": false
-      },
-      "ratings": {
-        "provenance": {
-          "score": 0.45,
-          "basis": [
-            "unknown_domain_pattern"
-          ]
-        },
-        "breadth": {
-          "score": 0.17833333333333332,
-          "basis": [
-            "distinct_urls:2",
-            "distinct_axes:0",
-            "origin_types:2"
-          ]
-        },
-        "corroboration": {
-          "score": 0.39166666666666666,
-          "basis": [
-            "referring_accounts:2",
-            "origin_types:2"
-          ]
-        },
-        "track_record": {
-          "score": null,
-          "basis": [
-            "no_resolved_claims_observed"
-          ]
-        },
-        "profile": {
-          "score": 0.28,
-          "confidence": 0.65,
-          "basis": [
-            "meta_author:true",
-            "published_time:false",
-            "canonical:false",
-            "about:false",
-            "contact:false",
-            "corrections:false",
-            "outbound_links:10",
-            "opinion_marker:false"
-          ]
-        },
-        "overall": {
-          "score": 0.3851041666666667,
-          "confidence": 0.1627,
-          "method": "mechanical_v1",
-          "basis": [
-            "unknown_domain_pattern",
-            "distinct_urls:2",
-            "distinct_axes:0",
-            "origin_types:2",
-            "referring_accounts:2",
-            "origin_types:2",
-            "track_record_unavailable"
-          ]
-        }
-      },
-      "profile": {
-        "fetched_at": "2026-07-01T06:07:38.868Z",
-        "homepage_url": "https://adjust.com/",
-        "example_url": "https://app.adjust.com/1zbd03n1?campaign=X_D90NA_1_all_US_sales_260429-0513_dt_CPC_leihuoua_branding&adgroup=US-pic+vid&creative=%E6%8D%8F%E8%84%B8Vid+%E6%8D%8F%E8%84%B8Pic&cross_device_tracking=1&twclid=25wqttszpha1giwsadazr7s78y",
-        "homepage_status": 429,
-        "example_status": 200,
-        "homepage_final_url": "https://www.adjust.com/",
-        "example_final_url": "https://www.narakathegame.com/buy/fab-1/",
-        "homepage_content_type": "text/html; charset=utf-8",
-        "example_content_type": "text/html",
-        "homepage": {
-          "has_meta_author": false,
-          "has_published_time": false,
-          "has_canonical": false,
-          "has_about_link": false,
-          "has_contact_link": false,
-          "has_corrections_link": false,
-          "outbound_links_count": 1,
-          "opinion_marker": false
-        },
-        "example": {
-          "has_meta_author": true,
-          "has_published_time": false,
-          "has_canonical": false,
-          "has_about_link": false,
-          "has_contact_link": false,
-          "has_corrections_link": false,
-          "outbound_links_count": 10,
           "opinion_marker": false
         }
       }
