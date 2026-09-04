@@ -1,79 +1,159 @@
 {
-  "checked_at": "2026-09-03T01:39:49.144Z",
-  "evidence_24h": 6,
-  "unique_sources": 2,
+  "checked_at": "2026-09-04T08:26:00.484Z",
+  "evidence_24h": 17,
+  "unique_sources": 9,
   "status": "captured",
   "alerts": [
     {
       "type": "source_dominance",
       "severity": "high",
-      "detail": "@unknown accounts for 83% of today's evidence (5/6)",
+      "detail": "@unknown accounts for 47% of today's evidence (8/17)",
       "username": "unknown",
-      "share": 0.833
+      "share": 0.471
     }
   ],
-  "summary": "1 capture alert(s) detected:\n[HIGH] @unknown accounts for 83% of today's evidence (5/6)",
+  "summary": "1 capture alert(s) detected:\n[HIGH] @unknown accounts for 47% of today's evidence (8/17)",
   "source_concentration": {
     "unknown": {
       "username": "unknown",
-      "count": 5,
-      "share": 0.833
+      "count": 8,
+      "share": 0.471
     },
-    "furkangozukara": {
-      "username": "furkangozukara",
+    "sprinterpress": {
+      "username": "sprinterpress",
+      "count": 2,
+      "share": 0.118
+    },
+    "ajenglish": {
+      "username": "ajenglish",
       "count": 1,
-      "share": 0.167
+      "share": 0.059
+    },
+    "philippinestar": {
+      "username": "philippinestar",
+      "count": 1,
+      "share": 0.059
+    },
+    "reuters": {
+      "username": "reuters",
+      "count": 1,
+      "share": 0.059
+    },
+    "abscbnnews": {
+      "username": "abscbnnews",
+      "count": 1,
+      "share": 0.059
+    },
+    "inquirerdotnet": {
+      "username": "inquirerdotnet",
+      "count": 1,
+      "share": 0.059
+    },
+    "bncdotph": {
+      "username": "bncdotph",
+      "count": 1,
+      "share": 0.059
+    },
+    "newswatchplusph": {
+      "username": "newswatchplusph",
+      "count": 1,
+      "share": 0.059
     }
   },
   "axis_concentration": {
-    "axis_reactionary_futurism_v1": {
-      "axis_id": "axis_reactionary_futurism_v1",
-      "label": "Reactionary Futurism: Innovation Aesthetics vs. Democratic Accountability",
-      "count": 2,
-      "share": 0.333
+    "axis_procedural_governance_accountability_v1": {
+      "axis_id": "axis_procedural_governance_accountability_v1",
+      "label": "Procedural Governance vs. Genuine Accountability",
+      "count": 6,
+      "share": 0.353
     },
-    "axis_collective_voice": {
-      "axis_id": "axis_collective_voice",
-      "label": "Authentic Participation vs. Managed Consent",
-      "count": 1,
-      "share": 0.167
+    "axis_procedural_governance_substantive_action": {
+      "axis_id": "axis_procedural_governance_substantive_action",
+      "label": "Procedural Governance vs. Substantive Action",
+      "count": 3,
+      "share": 0.176
     },
-    "axis_authoritarian_self_determination_v1": {
-      "axis_id": "axis_authoritarian_self_determination_v1",
-      "label": "Authoritarian Control vs. Individual/Collective Self-Determination",
+    "axis_media_integrity_v1": {
+      "axis_id": "axis_media_integrity_v1",
+      "label": "Integrity of Information and Social Media Manipulation",
       "count": 1,
-      "share": 0.167
+      "share": 0.059
     },
-    "axis_human_rights_exploitation_v1": {
-      "axis_id": "axis_human_rights_exploitation_v1",
-      "label": "Human Rights and Exploitation",
+    "axis_political_dynasties_meritocracy_v1": {
+      "axis_id": "axis_political_dynasties_meritocracy_v1",
+      "label": "Political Dynasties and Meritocracy",
       "count": 1,
-      "share": 0.167
+      "share": 0.059
     },
     "axis_data_privacy_decentralization_v1": {
       "axis_id": "axis_data_privacy_decentralization_v1",
       "label": "Data Privacy and Decentralization",
       "count": 1,
-      "share": 0.167
+      "share": 0.059
+    },
+    "axis_geopolitical_control_narratives": {
+      "axis_id": "axis_geopolitical_control_narratives",
+      "label": "Geopolitical Control Narratives: Asserting Sovereignty vs. International Norms",
+      "count": 1,
+      "share": 0.059
+    },
+    "axis_information_control_v1": {
+      "axis_id": "axis_information_control_v1",
+      "label": "Information Control",
+      "count": 1,
+      "share": 0.059
+    },
+    "axis_rapid_disinformation_v1": {
+      "axis_id": "axis_rapid_disinformation_v1",
+      "label": "Rapid Disinformation",
+      "count": 1,
+      "share": 0.059
+    },
+    "axis_infrastructure_commons_v_extraction_v1": {
+      "axis_id": "axis_infrastructure_commons_v_extraction_v1",
+      "label": "Infrastructure as Commons vs. Extraction",
+      "count": 1,
+      "share": 0.059
+    },
+    "axis_disaster_infrastructure_accountability_v1": {
+      "axis_id": "axis_disaster_infrastructure_accountability_v1",
+      "label": "Disaster as Infrastructure Failure vs. Natural Event",
+      "count": 1,
+      "share": 0.059
     }
   },
   "cluster_concentration": {
     "unknown": {
       "cluster": "unknown",
-      "count": 5,
-      "share": 0.833
+      "count": 8,
+      "share": 0.471
     },
-    "conspiracy": {
-      "cluster": "conspiracy",
+    "breaking_news": {
+      "cluster": "breaking_news",
+      "count": 5,
+      "share": 0.294
+    },
+    "disinformation": {
+      "cluster": "disinformation",
+      "count": 2,
+      "share": 0.118
+    },
+    "asia_pacific": {
+      "cluster": "asia_pacific",
       "count": 1,
-      "share": 0.167
+      "share": 0.059
+    },
+    "accountability_journalism": {
+      "cluster": "accountability_journalism",
+      "count": 1,
+      "share": 0.059
     }
   },
   "pole_balance": {
-    "left": 3,
-    "right": 3,
+    "left": 7,
+    "right": 10,
     "neutral": 0,
-    "left_share": 0.5,
-    "right_share": 0.5
+    "left_share": 0.412,
+    "right_share": 0.588
   }
 }
