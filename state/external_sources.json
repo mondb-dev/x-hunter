@@ -1,8 +1,8 @@
 {
   "schema_version": "1.0",
-  "generated_at": "2026-09-04T07:32:13.000Z",
+  "generated_at": "2026-09-04T08:45:34.879Z",
   "method": "mechanical_registry_v1",
-  "profiled_at": "2026-09-04T07:32:19.821Z",
+  "profiled_at": "2026-09-04T08:45:40.105Z",
   "sources": [
     {
       "domain": "theguardian.com",
@@ -11,7 +11,7 @@
       "first_seen_at": "2026-03-27T23:17:00Z",
       "last_seen_at": "2026-08-31T07:32:38.367Z",
       "discovery": {
-        "distinct_urls": 1132,
+        "distinct_urls": 1133,
         "example_urls": [
           "https://www.theguardian.com/us-news/2026/jun/23/trump-immigration-courthouse-arrest-policy",
           "https://www.theguardian.com/us-news/2026/jun/28/ice-minnesota-defending-democracy",
@@ -21,7 +21,7 @@
         ],
         "origin_counts": {
           "ontology_evidence": 54,
-          "reading_queue": 1086,
+          "reading_queue": 1087,
           "journals": 151,
           "articles": 5
         },
@@ -78,7 +78,7 @@
         "breadth": {
           "score": 0.94,
           "basis": [
-            "distinct_urls:1132",
+            "distinct_urls:1133",
             "distinct_axes:23",
             "origin_types:4"
           ]
@@ -118,7 +118,7 @@
             "newsroom_domain_pattern",
             "article_path_seen",
             "doi_or_identifier_path_seen",
-            "distinct_urls:1132",
+            "distinct_urls:1133",
             "distinct_axes:23",
             "origin_types:4",
             "referring_accounts:0",
@@ -835,7 +835,7 @@
       "first_seen_at": "2026-06-26T07:05:00Z",
       "last_seen_at": "2026-08-28T17:35:46.989Z",
       "discovery": {
-        "distinct_urls": 719,
+        "distinct_urls": 720,
         "example_urls": [
           "https://www.bbc.co.uk/news/articles/cn8qxz6qypyo",
           "https://www.bbc.co.uk/news/articles/cn075j04pnyo?at_medium=RSS&amp;at_campaign=rss",
@@ -845,7 +845,7 @@
         ],
         "origin_counts": {
           "ontology_evidence": 10,
-          "reading_queue": 734,
+          "reading_queue": 735,
           "journals": 23,
           "articles": 2
         },
@@ -884,7 +884,7 @@
         "breadth": {
           "score": 0.94,
           "basis": [
-            "distinct_urls:719",
+            "distinct_urls:720",
             "distinct_axes:7",
             "origin_types:4"
           ]
@@ -922,7 +922,7 @@
           "method": "mechanical_v1",
           "basis": [
             "newsroom_domain_pattern",
-            "distinct_urls:719",
+            "distinct_urls:720",
             "distinct_axes:7",
             "origin_types:4",
             "referring_accounts:0",
@@ -970,7 +970,7 @@
       "first_seen_at": "2026-06-22T00:15:00Z",
       "last_seen_at": "2026-09-01T15:46:28.590Z",
       "discovery": {
-        "distinct_urls": 770,
+        "distinct_urls": 771,
         "example_urls": [
           "https://www.nytimes.com/2026/06/19/world/canada/frank-stronach-trial-guilty-sex-charges.html",
           "https://www.nytimes.com/2026/06/27/world/americas/mexican-officials-us-informants.html",
@@ -980,7 +980,7 @@
         ],
         "origin_counts": {
           "ontology_evidence": 28,
-          "reading_queue": 797,
+          "reading_queue": 798,
           "journals": 72
         },
         "distinct_referring_accounts": 0,
@@ -1025,7 +1025,7 @@
         "breadth": {
           "score": 0.8799999999999999,
           "basis": [
-            "distinct_urls:770",
+            "distinct_urls:771",
             "distinct_axes:13",
             "origin_types:3"
           ]
@@ -1064,7 +1064,7 @@
           "basis": [
             "newsroom_domain_pattern",
             "article_path_seen",
-            "distinct_urls:770",
+            "distinct_urls:771",
             "distinct_axes:13",
             "origin_types:3",
             "referring_accounts:0",
@@ -3113,9 +3113,9 @@
       "entity": "T Co",
       "kind": "unknown",
       "first_seen_at": "2016-05-05T18:57:30.000Z",
-      "last_seen_at": "2026-09-03T23:33:41.000Z",
+      "last_seen_at": "2026-09-04T08:30:06.838Z",
       "discovery": {
-        "distinct_urls": 17907,
+        "distinct_urls": 17927,
         "example_urls": [
           "https://t.co/pJSE124ec4",
           "https://t.co/Soz8BXPWaa",
@@ -3124,11 +3124,11 @@
           "https://t.co/cYaqYDRp08"
         ],
         "origin_counts": {
-          "feed_buffer": 15818,
-          "feed_buffer_reply": 5387,
+          "feed_buffer": 15837,
+          "feed_buffer_reply": 5392,
           "articles": 3
         },
-        "distinct_referring_accounts": 2946,
+        "distinct_referring_accounts": 2949,
         "sample_referring_accounts": [
           "0808iveta",
           "09abracadabra",
@@ -3167,7 +3167,7 @@
         "breadth": {
           "score": 0.53,
           "basis": [
-            "distinct_urls:17907",
+            "distinct_urls:17927",
             "distinct_axes:0",
             "origin_types:3"
           ]
@@ -3175,7 +3175,7 @@
         "corroboration": {
           "score": 0.9125,
           "basis": [
-            "referring_accounts:2946",
+            "referring_accounts:2949",
             "origin_types:3"
           ]
         },
@@ -3206,10 +3206,10 @@
           "basis": [
             "unknown_domain_pattern",
             "doi_or_identifier_path_seen",
-            "distinct_urls:17907",
+            "distinct_urls:17927",
             "distinct_axes:0",
             "origin_types:3",
-            "referring_accounts:2946",
+            "referring_accounts:2949",
             "origin_types:3",
             "track_record_unavailable"
           ]
@@ -3252,9 +3252,9 @@
       "entity": "Rappler",
       "kind": "unknown",
       "first_seen_at": "2026-06-22T04:04:30.428Z",
-      "last_seen_at": "2026-09-03T13:04:07.130Z",
+      "last_seen_at": "2026-09-04T07:33:04.513Z",
       "discovery": {
-        "distinct_urls": 327,
+        "distinct_urls": 331,
         "example_urls": [
           "https://www.rappler.com/fact-check-no-arrest-warrant-issued-vs-marcoleta",
           "https://www.rappler.com/technology/decoded-tacloban-school-shooting-disinformation-kiko-barzaga-discussions-juvenile-justice-law/",
@@ -3263,8 +3263,8 @@
           "https://www.rappler.com/voices/thought-leaders/vantage-point-bir-tax-amlc-records-billions-questions-sara-duterte-ignore/"
         ],
         "origin_counts": {
-          "ontology_evidence": 154,
-          "journals": 371,
+          "ontology_evidence": 155,
+          "journals": 375,
           "articles": 5
         },
         "distinct_referring_accounts": 0,
@@ -3326,7 +3326,7 @@
         "breadth": {
           "score": 0.8799999999999999,
           "basis": [
-            "distinct_urls:327",
+            "distinct_urls:331",
             "distinct_axes:31",
             "origin_types:3"
           ]
@@ -3364,7 +3364,7 @@
           "method": "mechanical_v1",
           "basis": [
             "unknown_domain_pattern",
-            "distinct_urls:327",
+            "distinct_urls:331",
             "distinct_axes:31",
             "origin_types:3",
             "referring_accounts:0",
@@ -5425,9 +5425,9 @@
       "entity": "Starlink",
       "kind": "unknown",
       "first_seen_at": "2026-04-07T03:51:50.000Z",
-      "last_seen_at": "2026-09-03T21:09:00.627Z",
+      "last_seen_at": "2026-09-04T08:29:59.248Z",
       "discovery": {
-        "distinct_urls": 467,
+        "distinct_urls": 476,
         "example_urls": [
           "https://www.starlink.com/us/residential?referral=RC-DF-9543787-19448-67&utm_medium=paid&utm_campaign=awr_us_soc_twt_ptg_cau&utm_content=awr_us_soc_twt_ptg_cau_res_gvp_v4s_stc_en-us_sdb-bluesky-uptime&twclid=2cg62b1u0oqrypdim5oir1767e",
           "https://www.starlink.com/us/residential?referral=RC-DF-9543787-19448-67&utm_medium=paid&utm_campaign=awr_us_soc_twt_ptg_cau&utm_content=awr_us_soc_twt_ptg_cau_res_gvp_v4s_stc_en-us_sdb-avail-sat-yourhome&twclid=2216n7j93v9absqn77762mm626",
@@ -5436,8 +5436,8 @@
           "https://www.starlink.com/us/residential?referral=RC-DF-9543787-19448-67&utm_medium=paid&utm_campaign=awr_us_soc_twt_ptg_cau&utm_content=awr_us_soc_twt_ptg_cau_res_gvp_v4s_stc_en-us_sdb-avail-sat-arrived&twclid=21pi7t0qs8tgw0wgnh5mvmdu2g"
         ],
         "origin_counts": {
-          "feed_buffer_reply": 431,
-          "feed_buffer": 40
+          "feed_buffer_reply": 438,
+          "feed_buffer": 42
         },
         "distinct_referring_accounts": 5,
         "sample_referring_accounts": [
@@ -5472,7 +5472,7 @@
         "breadth": {
           "score": 0.47,
           "basis": [
-            "distinct_urls:467",
+            "distinct_urls:476",
             "distinct_axes:0",
             "origin_types:2"
           ]
@@ -5510,7 +5510,7 @@
           "method": "mechanical_v1",
           "basis": [
             "unknown_domain_pattern",
-            "distinct_urls:467",
+            "distinct_urls:476",
             "distinct_axes:0",
             "origin_types:2",
             "referring_accounts:5",
@@ -8334,14 +8334,14 @@
           ]
         },
         "profile": {
-          "score": 0,
+          "score": 0.12,
           "confidence": 0.55,
           "basis": [
             "meta_author:false",
             "published_time:false",
             "canonical:false",
             "about:false",
-            "contact:false",
+            "contact:true",
             "corrections:false",
             "outbound_links:0",
             "opinion_marker:false"
@@ -8363,7 +8363,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-09-01T03:32:22.384Z",
+        "fetched_at": "2026-09-04T08:45:36.306Z",
         "homepage_url": "https://metamask.io/",
         "example_url": "https://link.metamask.io/swap?amount=32600000000000000&from=eip155%3A1%2Fslip44%3A60&sig_params=amount%2Cfrom&sig=lcKWbD9emSvYcSy4wKZAAZK4IusikSldKuh2SLobJnCxX6_H50c7o4lrxGukMkQAlJXl_Ro-z9GOFjHlijuUSQ&utm_source=twitter&utm_medium=paid-display&utm_campaign=cmp-1529292347-afbf08&twclid=29ubdtem27pe2i7fvtv9x4pcao",
         "homepage_status": 200,
@@ -8377,9 +8377,9 @@
           "has_published_time": false,
           "has_canonical": true,
           "has_about_link": false,
-          "has_contact_link": false,
+          "has_contact_link": true,
           "has_corrections_link": false,
-          "outbound_links_count": 15,
+          "outbound_links_count": 13,
           "opinion_marker": false
         },
         "example": {
@@ -8871,7 +8871,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-09-01T03:32:24.270Z",
+        "fetched_at": "2026-09-04T08:45:37.806Z",
         "homepage_url": "https://leronx.org/",
         "example_url": "https://leronx.org/?ref=005&tw=r84nh&tw_click=tw-r84nh-r84ni&twclid=29ffsgobmrsvjmkjlmgcllypv0",
         "homepage_status": 200,
@@ -8998,7 +8998,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-09-01T03:32:24.845Z",
+        "fetched_at": "2026-09-04T08:45:38.497Z",
         "homepage_url": "https://app.link/",
         "example_url": "https://chipotle.app.link/rTJVnvMgW1b?%243p=a_twitter&twclid=26fm1l3fbt5tx0wzqe3pjv9fkn",
         "homepage_status": 404,
@@ -9125,7 +9125,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-09-01T03:32:26.302Z",
+        "fetched_at": "2026-09-04T08:45:40.105Z",
         "homepage_url": "https://bk.com/",
         "example_url": "https://www.bk.com/menu/section/fb06fabe-a285-4fb4-994a-c617a1547ddb?utm_source=X&utm_medium=Social-Social&utm_campaign=Peppercorn-Awareness&utm_content=Peppercorn-IMG-Warning&twclid=24j7ivpacvxqbg2t5it24skrl9",
         "homepage_status": 200,
@@ -18420,9 +18420,9 @@
       "entity": "Moltbook",
       "kind": "unknown",
       "first_seen_at": "2026-03-07T00:29:35.326Z",
-      "last_seen_at": "2026-09-03T01:42:07.639Z",
+      "last_seen_at": "2026-09-04T08:28:55.599Z",
       "discovery": {
-        "distinct_urls": 121,
+        "distinct_urls": 122,
         "example_urls": [
           "https://www.moltbook.com/post/29d49c40-bc59-4a1a-b875-3d3d41ec469e",
           "https://www.moltbook.com/post/3694a386-c24e-4744-8c06-2fc74c73c559",
@@ -18431,7 +18431,7 @@
           "https://www.moltbook.com/post/c6a71bf0-72ab-4867-820a-6b306bae0cea"
         ],
         "origin_counts": {
-          "articles": 121
+          "articles": 122
         },
         "distinct_referring_accounts": 0,
         "sample_referring_accounts": [],
@@ -18460,7 +18460,7 @@
         "breadth": {
           "score": 0.41,
           "basis": [
-            "distinct_urls:121",
+            "distinct_urls:122",
             "distinct_axes:0",
             "origin_types:1"
           ]
@@ -18498,7 +18498,7 @@
           "method": "mechanical_v1",
           "basis": [
             "unknown_domain_pattern",
-            "distinct_urls:121",
+            "distinct_urls:122",
             "distinct_axes:0",
             "origin_types:1",
             "referring_accounts:0",
@@ -18916,6 +18916,133 @@
           "has_contact_link": false,
           "has_corrections_link": false,
           "outbound_links_count": 4,
+          "opinion_marker": false
+        }
+      }
+    },
+    {
+      "domain": "ptgaming.ph",
+      "entity": "Ptgaming Ph",
+      "kind": "unknown",
+      "first_seen_at": "2026-07-05T04:59:47.736Z",
+      "last_seen_at": "2026-09-04T08:24:54.472Z",
+      "discovery": {
+        "distinct_urls": 7,
+        "example_urls": [
+          "https://www.ptgaming.ph/?twclid=21n3lg1hcl64ox73kjyr4lggz9",
+          "https://www.ptgaming.ph/?twclid=25vb0w4jbmtupw5yokwy2fjbcq",
+          "https://www.ptgaming.ph/?twclid=24xua76p6ig4wj1on4u6eqhjkz",
+          "https://www.ptgaming.ph/?twclid=23opaojcnervezlk24t4109xw9",
+          "https://www.ptgaming.ph/?twclid=26sb1wpgds50ggj6udc2c7m358"
+        ],
+        "origin_counts": {
+          "feed_buffer": 6,
+          "feed_buffer_reply": 1
+        },
+        "distinct_referring_accounts": 1,
+        "sample_referring_accounts": [
+          "ptgamingph"
+        ],
+        "distinct_axes": []
+      },
+      "claims": {
+        "total": 0,
+        "supported": 0,
+        "refuted": 0,
+        "contested": 0,
+        "unverified": 0,
+        "resolved_count": 0
+      },
+      "structural_features": {
+        "has_search_paths": false,
+        "has_article_paths": false,
+        "has_doi_paths": false
+      },
+      "ratings": {
+        "provenance": {
+          "score": 0.45,
+          "basis": [
+            "unknown_domain_pattern"
+          ]
+        },
+        "breadth": {
+          "score": 0.32416666666666666,
+          "basis": [
+            "distinct_urls:7",
+            "distinct_axes:0",
+            "origin_types:2"
+          ]
+        },
+        "corroboration": {
+          "score": 0.2833333333333333,
+          "basis": [
+            "referring_accounts:1",
+            "origin_types:2"
+          ]
+        },
+        "track_record": {
+          "score": null,
+          "basis": [
+            "no_resolved_claims_observed"
+          ]
+        },
+        "profile": {
+          "score": 0.1,
+          "confidence": 0.55,
+          "basis": [
+            "meta_author:false",
+            "published_time:false",
+            "canonical:true",
+            "about:false",
+            "contact:false",
+            "corrections:false",
+            "outbound_links:0",
+            "opinion_marker:false"
+          ]
+        },
+        "overall": {
+          "score": 0.4068489583333333,
+          "confidence": 0.273575,
+          "method": "mechanical_v1",
+          "basis": [
+            "unknown_domain_pattern",
+            "distinct_urls:7",
+            "distinct_axes:0",
+            "origin_types:2",
+            "referring_accounts:1",
+            "origin_types:2",
+            "track_record_unavailable"
+          ]
+        }
+      },
+      "profile": {
+        "fetched_at": "2026-09-01T05:02:24.700Z",
+        "homepage_url": "https://ptgaming.ph/",
+        "example_url": "https://www.ptgaming.ph/?twclid=21n3lg1hcl64ox73kjyr4lggz9",
+        "homepage_status": 200,
+        "example_status": 200,
+        "homepage_final_url": "https://www.ptgaming.ph/",
+        "example_final_url": "https://www.ptgaming.ph/?twclid=21n3lg1hcl64ox73kjyr4lggz9",
+        "homepage_content_type": "text/html",
+        "example_content_type": "text/html",
+        "homepage": {
+          "has_meta_author": false,
+          "has_published_time": false,
+          "has_canonical": true,
+          "has_about_link": false,
+          "has_contact_link": false,
+          "has_corrections_link": false,
+          "outbound_links_count": 0,
+          "opinion_marker": false
+        },
+        "example": {
+          "has_meta_author": false,
+          "has_published_time": false,
+          "has_canonical": true,
+          "has_about_link": false,
+          "has_contact_link": false,
+          "has_corrections_link": false,
+          "outbound_links_count": 0,
           "opinion_marker": false
         }
       }
@@ -20672,133 +20799,6 @@
         "example_final_url": "https://playfunph.com/login/regist?traceId=BGAYXI-1788238943890&ch=twitter&utm_medium=twitter&purchase=tw-or72z-or736&i=97wbvq0rqm&twclid=2c7k3uyirbkh3ff8w9vbicvapx&pixel_id=or72z&utm_content=X557_zfge_WC_EN_SS_20260623_T&register=tw-or72z-or738&utm_source=97wbvq0rqm",
         "homepage_content_type": "text/html; charset=utf-8",
         "example_content_type": "text/html; charset=utf-8",
-        "homepage": {
-          "has_meta_author": false,
-          "has_published_time": false,
-          "has_canonical": true,
-          "has_about_link": false,
-          "has_contact_link": false,
-          "has_corrections_link": false,
-          "outbound_links_count": 0,
-          "opinion_marker": false
-        },
-        "example": {
-          "has_meta_author": false,
-          "has_published_time": false,
-          "has_canonical": true,
-          "has_about_link": false,
-          "has_contact_link": false,
-          "has_corrections_link": false,
-          "outbound_links_count": 0,
-          "opinion_marker": false
-        }
-      }
-    },
-    {
-      "domain": "ptgaming.ph",
-      "entity": "Ptgaming Ph",
-      "kind": "unknown",
-      "first_seen_at": "2026-07-05T04:59:47.736Z",
-      "last_seen_at": "2026-08-26T02:41:00.812Z",
-      "discovery": {
-        "distinct_urls": 6,
-        "example_urls": [
-          "https://www.ptgaming.ph/?twclid=21n3lg1hcl64ox73kjyr4lggz9",
-          "https://www.ptgaming.ph/?twclid=25vb0w4jbmtupw5yokwy2fjbcq",
-          "https://www.ptgaming.ph/?twclid=24xua76p6ig4wj1on4u6eqhjkz",
-          "https://www.ptgaming.ph/?twclid=23opaojcnervezlk24t4109xw9",
-          "https://www.ptgaming.ph/?twclid=26sb1wpgds50ggj6udc2c7m358"
-        ],
-        "origin_counts": {
-          "feed_buffer": 5,
-          "feed_buffer_reply": 1
-        },
-        "distinct_referring_accounts": 1,
-        "sample_referring_accounts": [
-          "ptgamingph"
-        ],
-        "distinct_axes": []
-      },
-      "claims": {
-        "total": 0,
-        "supported": 0,
-        "refuted": 0,
-        "contested": 0,
-        "unverified": 0,
-        "resolved_count": 0
-      },
-      "structural_features": {
-        "has_search_paths": false,
-        "has_article_paths": false,
-        "has_doi_paths": false
-      },
-      "ratings": {
-        "provenance": {
-          "score": 0.45,
-          "basis": [
-            "unknown_domain_pattern"
-          ]
-        },
-        "breadth": {
-          "score": 0.295,
-          "basis": [
-            "distinct_urls:6",
-            "distinct_axes:0",
-            "origin_types:2"
-          ]
-        },
-        "corroboration": {
-          "score": 0.2833333333333333,
-          "basis": [
-            "referring_accounts:1",
-            "origin_types:2"
-          ]
-        },
-        "track_record": {
-          "score": null,
-          "basis": [
-            "no_resolved_claims_observed"
-          ]
-        },
-        "profile": {
-          "score": 0.1,
-          "confidence": 0.55,
-          "basis": [
-            "meta_author:false",
-            "published_time:false",
-            "canonical:true",
-            "about:false",
-            "contact:false",
-            "corrections:false",
-            "outbound_links:0",
-            "opinion_marker:false"
-          ]
-        },
-        "overall": {
-          "score": 0.40046875,
-          "confidence": 0.24495,
-          "method": "mechanical_v1",
-          "basis": [
-            "unknown_domain_pattern",
-            "distinct_urls:6",
-            "distinct_axes:0",
-            "origin_types:2",
-            "referring_accounts:1",
-            "origin_types:2",
-            "track_record_unavailable"
-          ]
-        }
-      },
-      "profile": {
-        "fetched_at": "2026-09-01T05:02:24.700Z",
-        "homepage_url": "https://ptgaming.ph/",
-        "example_url": "https://www.ptgaming.ph/?twclid=21n3lg1hcl64ox73kjyr4lggz9",
-        "homepage_status": 200,
-        "example_status": 200,
-        "homepage_final_url": "https://www.ptgaming.ph/",
-        "example_final_url": "https://www.ptgaming.ph/?twclid=21n3lg1hcl64ox73kjyr4lggz9",
-        "homepage_content_type": "text/html",
-        "example_content_type": "text/html",
         "homepage": {
           "has_meta_author": false,
           "has_published_time": false,
