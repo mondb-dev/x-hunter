@@ -1,159 +1,164 @@
 {
-  "checked_at": "2026-09-04T08:26:00.484Z",
-  "evidence_24h": 17,
-  "unique_sources": 9,
-  "status": "captured",
+  "checked_at": "2026-09-05T09:02:26.515Z",
+  "evidence_24h": 20,
+  "unique_sources": 12,
+  "status": "warning",
   "alerts": [
     {
       "type": "source_dominance",
-      "severity": "high",
-      "detail": "@unknown accounts for 47% of today's evidence (8/17)",
+      "severity": "moderate",
+      "detail": "@unknown accounts for 40% of today's evidence (8/20)",
       "username": "unknown",
-      "share": 0.471
+      "share": 0.4
     }
   ],
-  "summary": "1 capture alert(s) detected:\n[HIGH] @unknown accounts for 47% of today's evidence (8/17)",
+  "summary": "1 capture alert(s) detected:\n[MODERATE] @unknown accounts for 40% of today's evidence (8/20)",
   "source_concentration": {
     "unknown": {
       "username": "unknown",
       "count": 8,
-      "share": 0.471
-    },
-    "sprinterpress": {
-      "username": "sprinterpress",
-      "count": 2,
-      "share": 0.118
-    },
-    "ajenglish": {
-      "username": "ajenglish",
-      "count": 1,
-      "share": 0.059
-    },
-    "philippinestar": {
-      "username": "philippinestar",
-      "count": 1,
-      "share": 0.059
+      "share": 0.4
     },
     "reuters": {
       "username": "reuters",
-      "count": 1,
-      "share": 0.059
+      "count": 2,
+      "share": 0.1
     },
-    "abscbnnews": {
-      "username": "abscbnnews",
+    "philstarnews": {
+      "username": "philstarnews",
       "count": 1,
-      "share": 0.059
+      "share": 0.05
+    },
+    "rt_com": {
+      "username": "rt_com",
+      "count": 1,
+      "share": 0.05
+    },
+    "chinaembmanila": {
+      "username": "chinaembmanila",
+      "count": 1,
+      "share": 0.05
     },
     "inquirerdotnet": {
       "username": "inquirerdotnet",
       "count": 1,
-      "share": 0.059
+      "share": 0.05
     },
-    "bncdotph": {
-      "username": "bncdotph",
+    "news5ph": {
+      "username": "news5ph",
       "count": 1,
-      "share": 0.059
+      "share": 0.05
     },
-    "newswatchplusph": {
-      "username": "newswatchplusph",
+    "abscbnnews": {
+      "username": "abscbnnews",
       "count": 1,
-      "share": 0.059
+      "share": 0.05
+    },
+    "marionawfal": {
+      "username": "marionawfal",
+      "count": 1,
+      "share": 0.05
+    },
+    "pgmnofficial": {
+      "username": "pgmnofficial",
+      "count": 1,
+      "share": 0.05
     }
   },
   "axis_concentration": {
-    "axis_procedural_governance_accountability_v1": {
-      "axis_id": "axis_procedural_governance_accountability_v1",
-      "label": "Procedural Governance vs. Genuine Accountability",
-      "count": 6,
-      "share": 0.353
-    },
-    "axis_procedural_governance_substantive_action": {
-      "axis_id": "axis_procedural_governance_substantive_action",
-      "label": "Procedural Governance vs. Substantive Action",
-      "count": 3,
-      "share": 0.176
-    },
     "axis_media_integrity_v1": {
       "axis_id": "axis_media_integrity_v1",
       "label": "Integrity of Information and Social Media Manipulation",
-      "count": 1,
-      "share": 0.059
-    },
-    "axis_political_dynasties_meritocracy_v1": {
-      "axis_id": "axis_political_dynasties_meritocracy_v1",
-      "label": "Political Dynasties and Meritocracy",
-      "count": 1,
-      "share": 0.059
-    },
-    "axis_data_privacy_decentralization_v1": {
-      "axis_id": "axis_data_privacy_decentralization_v1",
-      "label": "Data Privacy and Decentralization",
-      "count": 1,
-      "share": 0.059
-    },
-    "axis_geopolitical_control_narratives": {
-      "axis_id": "axis_geopolitical_control_narratives",
-      "label": "Geopolitical Control Narratives: Asserting Sovereignty vs. International Norms",
-      "count": 1,
-      "share": 0.059
+      "count": 2,
+      "share": 0.1
     },
     "axis_information_control_v1": {
       "axis_id": "axis_information_control_v1",
       "label": "Information Control",
-      "count": 1,
-      "share": 0.059
+      "count": 2,
+      "share": 0.1
     },
-    "axis_rapid_disinformation_v1": {
-      "axis_id": "axis_rapid_disinformation_v1",
-      "label": "Rapid Disinformation",
-      "count": 1,
-      "share": 0.059
+    "axis_procedural_governance_accountability_v1": {
+      "axis_id": "axis_procedural_governance_accountability_v1",
+      "label": "Procedural Governance vs. Genuine Accountability",
+      "count": 2,
+      "share": 0.1
     },
-    "axis_infrastructure_commons_v_extraction_v1": {
-      "axis_id": "axis_infrastructure_commons_v_extraction_v1",
-      "label": "Infrastructure as Commons vs. Extraction",
-      "count": 1,
-      "share": 0.059
+    "axis_procedural_governance_substantive_action": {
+      "axis_id": "axis_procedural_governance_substantive_action",
+      "label": "Procedural Governance vs. Substantive Action",
+      "count": 2,
+      "share": 0.1
     },
-    "axis_disaster_infrastructure_accountability_v1": {
-      "axis_id": "axis_disaster_infrastructure_accountability_v1",
-      "label": "Disaster as Infrastructure Failure vs. Natural Event",
+    "axis_accountability_temporality_v1": {
+      "axis_id": "axis_accountability_temporality_v1",
+      "label": "Accountability Temporality: Real-Time Enforcement vs. Archaeological Discovery",
+      "count": 2,
+      "share": 0.1
+    },
+    "axis_power_accountability": {
+      "axis_id": "axis_power_accountability",
+      "label": "Power, Institutions, and Rule of Law",
       "count": 1,
-      "share": 0.059
+      "share": 0.05
+    },
+    "axis_geopolitical_rhetoric_v1": {
+      "axis_id": "axis_geopolitical_rhetoric_v1",
+      "label": "Geopolitical Rhetoric vs. Humanitarian Concerns",
+      "count": 1,
+      "share": 0.05
+    },
+    "axis_public_trust_safety_crisis_v1": {
+      "axis_id": "axis_public_trust_safety_crisis_v1",
+      "label": "Public Trust in Safety and Crisis Communication",
+      "count": 1,
+      "share": 0.05
+    },
+    "axis_authoritarian_self_determination_v1": {
+      "axis_id": "axis_authoritarian_self_determination_v1",
+      "label": "Authoritarian Control vs. Individual/Collective Self-Determination",
+      "count": 1,
+      "share": 0.05
+    },
+    "axis_national_sovereignty_v_intl_law_v1": {
+      "axis_id": "axis_national_sovereignty_v_intl_law_v1",
+      "label": "National Sovereignty vs. International Law",
+      "count": 1,
+      "share": 0.05
     }
   },
   "cluster_concentration": {
     "unknown": {
       "cluster": "unknown",
-      "count": 8,
-      "share": 0.471
+      "count": 9,
+      "share": 0.45
     },
     "breaking_news": {
       "cluster": "breaking_news",
-      "count": 5,
-      "share": 0.294
-    },
-    "disinformation": {
-      "cluster": "disinformation",
-      "count": 2,
-      "share": 0.118
-    },
-    "asia_pacific": {
-      "cluster": "asia_pacific",
-      "count": 1,
-      "share": 0.059
+      "count": 7,
+      "share": 0.35
     },
     "accountability_journalism": {
       "cluster": "accountability_journalism",
+      "count": 2,
+      "share": 0.1
+    },
+    "geopolitics": {
+      "cluster": "geopolitics",
       "count": 1,
-      "share": 0.059
+      "share": 0.05
+    },
+    "disinformation": {
+      "cluster": "disinformation",
+      "count": 1,
+      "share": 0.05
     }
   },
   "pole_balance": {
-    "left": 7,
-    "right": 10,
+    "left": 6,
+    "right": 14,
     "neutral": 0,
-    "left_share": 0.412,
-    "right_share": 0.588
+    "left_share": 0.3,
+    "right_share": 0.7
   }
 }

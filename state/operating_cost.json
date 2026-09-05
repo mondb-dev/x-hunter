@@ -1,221 +1,233 @@
 {
-  "generated_at": "2026-09-04T08:28:55.724Z",
+  "generated_at": "2026-09-05T09:05:12.541Z",
   "monthly_usd": {
-    "llm": 94.83,
+    "llm": 92.13,
     "fixed": 101.25,
-    "total": 196.08
+    "total": 193.38
   },
   "llm_recent": {
     "window_days": 7,
-    "usd": 22.1261,
-    "calls": 10112,
-    "daily_avg_usd": 3.1609,
+    "usd": 21.4968,
+    "calls": 9311,
+    "daily_avg_usd": 3.071,
     "by_tag": {
-      "llm": {
-        "calls": 9363,
-        "usd": 7.535896999999977
-      },
       "browse": {
-        "calls": 111,
-        "usd": 4.765798
+        "calls": 108,
+        "usd": 4.574712999999998
+      },
+      "llm": {
+        "calls": 8605,
+        "usd": 7.098751999999985
       },
       "brain": {
-        "calls": 105,
-        "usd": 1.3025039999999994
-      },
-      "adversarial_eval": {
-        "calls": 43,
-        "usd": 0.25791600000000003
-      },
-      "quote": {
-        "calls": 36,
-        "usd": 2.2492520000000003
-      },
-      "quote:factcheck": {
-        "calls": 16,
-        "usd": 0.019623
-      },
-      "quote:coherence": {
-        "calls": 16,
-        "usd": 0.03768
+        "calls": 102,
+        "usd": 1.318451
       },
       "x_reply": {
-        "calls": 17,
-        "usd": 0.14079
+        "calls": 15,
+        "usd": 0.12489800000000001
       },
       "x_reply:factcheck": {
-        "calls": 14,
-        "usd": 0.016533000000000003
+        "calls": 13,
+        "usd": 0.015449999999999998
       },
       "x_reply:coherence": {
-        "calls": 14,
-        "usd": 0.032388
+        "calls": 13,
+        "usd": 0.029568
       },
       "tweet": {
-        "calls": 36,
-        "usd": 1.6525219999999998
+        "calls": 34,
+        "usd": 1.5646039999999999
       },
       "tweet:factcheck": {
-        "calls": 36,
-        "usd": 0.043505999999999996
+        "calls": 34,
+        "usd": 0.04103399999999998
       },
-      "linkedin_plan": {
-        "calls": 11,
-        "usd": 0.14859799999999998
+      "adversarial_eval": {
+        "calls": 41,
+        "usd": 0.24783300000000003
       },
-      "dr-triage": {
-        "calls": 19,
-        "usd": 0.09277799999999999
+      "quote": {
+        "calls": 33,
+        "usd": 2.1024939999999996
       },
-      "dr-plan": {
-        "calls": 12,
-        "usd": 0.204496
+      "quote:factcheck": {
+        "calls": 13,
+        "usd": 0.015807
       },
-      "linkedin_draft": {
-        "calls": 11,
-        "usd": 0.242091
-      },
-      "linkedin_draft:factcheck": {
-        "calls": 11,
-        "usd": 0.018258
-      },
-      "chart:plan": {
-        "calls": 11,
-        "usd": 0.05669500000000001
-      },
-      "article": {
-        "calls": 7,
-        "usd": 0.36248199999999997
-      },
-      "process_reflection": {
-        "calls": 6,
-        "usd": 0.207941
-      },
-      "evaluate_vocation": {
-        "calls": 6,
-        "usd": 0.045054000000000004
-      },
-      "sprint_tracker": {
-        "calls": 6,
-        "usd": 0.069626
-      },
-      "sprint_retro": {
-        "calls": 1,
-        "usd": 0.007535
-      },
-      "thread_draft": {
-        "calls": 6,
-        "usd": 0.242348
-      },
-      "helmstack_feedback": {
-        "calls": 6,
-        "usd": 0.084735
-      },
-      "stance-resolve": {
-        "calls": 12,
-        "usd": 0.020349
-      },
-      "stance_video": {
-        "calls": 6,
-        "usd": 0.023565
-      },
-      "dr-classify": {
-        "calls": 3,
-        "usd": 0.005331000000000001
-      },
-      "dr-decompose": {
-        "calls": 2,
-        "usd": 0.050519999999999995
-      },
-      "dr-pick": {
-        "calls": 38,
-        "usd": 0.10614199999999999
-      },
-      "dr-review": {
-        "calls": 2,
-        "usd": 0.02284
-      },
-      "dr-leaf": {
-        "calls": 14,
-        "usd": 0.09338999999999999
-      },
-      "dr-gap": {
-        "calls": 36,
-        "usd": 0.7611379999999998
-      },
-      "dr-node": {
-        "calls": 18,
-        "usd": 0.21841500000000005
-      },
-      "dr-synth": {
-        "calls": 10,
-        "usd": 0.45324700000000007
-      },
-      "dr-thread": {
-        "calls": 1,
-        "usd": 0.007344
-      },
-      "dr-thread:factcheck": {
-        "calls": 4,
-        "usd": 0.004806
-      },
-      "dr-synth-tree": {
-        "calls": 2,
-        "usd": 0.068647
-      },
-      "x_amplify_quote": {
-        "calls": 4,
-        "usd": 0.02913
-      },
-      "x_amplify_quote:factcheck": {
-        "calls": 4,
-        "usd": 0.0047279999999999996
-      },
-      "x_amplify_quote:coherence": {
-        "calls": 4,
-        "usd": 0.008757000000000001
-      },
-      "linkedin_comment": {
-        "calls": 4,
-        "usd": 0.034315
-      },
-      "linkedin_comment:factcheck": {
-        "calls": 4,
-        "usd": 0.004929
-      },
-      "linkedin_comment:coherence": {
-        "calls": 4,
-        "usd": 0.010092
+      "quote:coherence": {
+        "calls": 13,
+        "usd": 0.029874
       },
       "x_mention_reply": {
-        "calls": 1,
-        "usd": 0.023008
+        "calls": 2,
+        "usd": 0.042821
       },
       "x_mention_reply:factcheck": {
         "calls": 1,
         "usd": 0.001203
       },
+      "x_amplify_quote": {
+        "calls": 4,
+        "usd": 0.029396000000000002
+      },
+      "x_amplify_quote:factcheck": {
+        "calls": 4,
+        "usd": 0.00477
+      },
+      "x_amplify_quote:coherence": {
+        "calls": 4,
+        "usd": 0.008885999999999998
+      },
+      "article": {
+        "calls": 7,
+        "usd": 0.368212
+      },
+      "process_reflection": {
+        "calls": 6,
+        "usd": 0.20920500000000003
+      },
+      "evaluate_vocation": {
+        "calls": 6,
+        "usd": 0.045163
+      },
+      "sprint_tracker": {
+        "calls": 6,
+        "usd": 0.081458
+      },
+      "thread_draft": {
+        "calls": 6,
+        "usd": 0.274891
+      },
+      "linkedin_plan": {
+        "calls": 11,
+        "usd": 0.147121
+      },
+      "dr-triage": {
+        "calls": 19,
+        "usd": 0.09562200000000001
+      },
+      "dr-plan": {
+        "calls": 13,
+        "usd": 0.22524399999999997
+      },
+      "dr-gap": {
+        "calls": 32,
+        "usd": 0.771716
+      },
+      "dr-synth": {
+        "calls": 12,
+        "usd": 0.7434710000000001
+      },
+      "linkedin_draft": {
+        "calls": 11,
+        "usd": 0.24425399999999997
+      },
+      "linkedin_draft:factcheck": {
+        "calls": 11,
+        "usd": 0.017643
+      },
+      "chart:plan": {
+        "calls": 11,
+        "usd": 0.05587700000000002
+      },
+      "helmstack_feedback": {
+        "calls": 6,
+        "usd": 0.07800000000000001
+      },
+      "stance-resolve": {
+        "calls": 12,
+        "usd": 0.019929
+      },
+      "stance_video": {
+        "calls": 6,
+        "usd": 0.022169999999999995
+      },
       "stance_check": {
-        "calls": 5,
-        "usd": 0.0029519999999999998
+        "calls": 6,
+        "usd": 0.0035489999999999996
       },
       "stance_video:factcheck": {
         "calls": 5,
         "usd": 0.0056819999999999996
       },
       "tweet-retry": {
-        "calls": 7,
-        "usd": 0.326125
+        "calls": 8,
+        "usd": 0.373909
+      },
+      "linkedin_comment": {
+        "calls": 5,
+        "usd": 0.043447
+      },
+      "linkedin_comment:factcheck": {
+        "calls": 5,
+        "usd": 0.00615
+      },
+      "linkedin_comment:coherence": {
+        "calls": 5,
+        "usd": 0.012794999999999999
+      },
+      "dr-pick": {
+        "calls": 30,
+        "usd": 0.10049200000000003
       },
       "linkedin_connect": {
+        "calls": 2,
+        "usd": 0.004395
+      },
+      "dr-classify": {
+        "calls": 3,
+        "usd": 0.005151
+      },
+      "dr-decompose": {
         "calls": 1,
-        "usd": 0.002409
+        "usd": 0.026955
+      },
+      "dr-review": {
+        "calls": 1,
+        "usd": 0.01118
+      },
+      "dr-leaf": {
+        "calls": 6,
+        "usd": 0.04179
+      },
+      "dr-node": {
+        "calls": 9,
+        "usd": 0.10293899999999999
+      },
+      "dr-synth-tree": {
+        "calls": 1,
+        "usd": 0.031569
+      },
+      "sprint_retro": {
+        "calls": 1,
+        "usd": 0.014731
+      },
+      "dr-thread": {
+        "calls": 1,
+        "usd": 0.008101
+      },
+      "dr-thread:factcheck": {
+        "calls": 5,
+        "usd": 0.005954999999999999
+      },
+      "dr-article": {
+        "calls": 1,
+        "usd": 0.024725
+      },
+      "dr-article-title:factcheck": {
+        "calls": 1,
+        "usd": 0.001131
+      },
+      "dr-article:factcheck": {
+        "calls": 1,
+        "usd": 0.021605
       }
     },
     "by_model": {
       "claude": {
-        "calls": 10112,
-        "usd": 22.12611000000005
+        "calls": 9311,
+        "usd": 21.496781000000112
       }
     }
   },
@@ -228,7 +240,7 @@
   },
   "storage_wallet": {
     "sol_balance": 0.000020209,
-    "checked_at": "2026-09-03T21:42:52.616Z"
+    "checked_at": "2026-09-05T07:59:53.705Z"
   },
   "funding_goal": {
     "mode": "mac",
