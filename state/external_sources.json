@@ -1,17 +1,17 @@
 {
   "schema_version": "1.0",
-  "generated_at": "2026-09-04T22:42:15.784Z",
+  "generated_at": "2026-09-05T01:42:22.652Z",
   "method": "mechanical_registry_v1",
-  "profiled_at": "2026-09-04T22:42:19.862Z",
+  "profiled_at": "2026-09-05T01:42:29.252Z",
   "sources": [
     {
       "domain": "theguardian.com",
       "entity": "Theguardian",
       "kind": "news",
       "first_seen_at": "2026-03-27T23:17:00Z",
-      "last_seen_at": "2026-08-31T07:32:38.367Z",
+      "last_seen_at": "2026-09-05T01:13:12.331Z",
       "discovery": {
-        "distinct_urls": 1141,
+        "distinct_urls": 1144,
         "example_urls": [
           "https://www.theguardian.com/us-news/2026/jun/23/trump-immigration-courthouse-arrest-policy",
           "https://www.theguardian.com/us-news/2026/jun/28/ice-minnesota-defending-democracy",
@@ -20,9 +20,9 @@
           "https://www.theguardian.com/global-development/2026/jun/26/woman-sadia-moalim-ali-three-year-jail-sentence-somalia-online-comments-governement"
         ],
         "origin_counts": {
-          "ontology_evidence": 54,
-          "reading_queue": 1095,
-          "journals": 151,
+          "ontology_evidence": 55,
+          "reading_queue": 1097,
+          "journals": 152,
           "articles": 5
         },
         "distinct_referring_accounts": 0,
@@ -78,7 +78,7 @@
         "breadth": {
           "score": 0.94,
           "basis": [
-            "distinct_urls:1141",
+            "distinct_urls:1144",
             "distinct_axes:23",
             "origin_types:4"
           ]
@@ -118,7 +118,7 @@
             "newsroom_domain_pattern",
             "article_path_seen",
             "doi_or_identifier_path_seen",
-            "distinct_urls:1141",
+            "distinct_urls:1144",
             "distinct_axes:23",
             "origin_types:4",
             "referring_accounts:0",
@@ -291,9 +291,9 @@
       "entity": "Aljazeera",
       "kind": "news",
       "first_seen_at": "2026-06-22T02:45:00Z",
-      "last_seen_at": "2026-09-04T22:13:18.407Z",
+      "last_seen_at": "2026-09-05T01:13:12.331Z",
       "discovery": {
-        "distinct_urls": 472,
+        "distinct_urls": 474,
         "example_urls": [
           "https://www.aljazeera.com/opinions/2026/6/24/south-africas-crises-will-not-be-solved-by-blaming-migrants",
           "https://www.aljazeera.com/video/newsfeed/2026/6/27/newly-released-video-exposes-henry-nowak-killers-lies?traffic_source=rss",
@@ -302,9 +302,9 @@
           "https://www.aljazeera.com/video/newsfeed/2026/7/1/why-is-maga-in-meltdown-over-the-supreme-court-birthright-ruling-2?traffic_source=rss"
         ],
         "origin_counts": {
-          "ontology_evidence": 203,
+          "ontology_evidence": 205,
           "reading_queue": 25,
-          "journals": 575,
+          "journals": 576,
           "articles": 11
         },
         "distinct_referring_accounts": 0,
@@ -367,7 +367,7 @@
         "breadth": {
           "score": 0.94,
           "basis": [
-            "distinct_urls:472",
+            "distinct_urls:474",
             "distinct_axes:31",
             "origin_types:4"
           ]
@@ -406,7 +406,7 @@
           "basis": [
             "newsroom_domain_pattern",
             "article_path_seen",
-            "distinct_urls:472",
+            "distinct_urls:474",
             "distinct_axes:31",
             "origin_types:4",
             "referring_accounts:0",
@@ -835,7 +835,7 @@
       "first_seen_at": "2026-06-26T07:05:00Z",
       "last_seen_at": "2026-08-28T17:35:46.989Z",
       "discovery": {
-        "distinct_urls": 726,
+        "distinct_urls": 727,
         "example_urls": [
           "https://www.bbc.co.uk/news/articles/cn8qxz6qypyo",
           "https://www.bbc.co.uk/news/articles/cn075j04pnyo?at_medium=RSS&amp;at_campaign=rss",
@@ -845,7 +845,7 @@
         ],
         "origin_counts": {
           "ontology_evidence": 10,
-          "reading_queue": 741,
+          "reading_queue": 742,
           "journals": 23,
           "articles": 2
         },
@@ -884,7 +884,7 @@
         "breadth": {
           "score": 0.94,
           "basis": [
-            "distinct_urls:726",
+            "distinct_urls:727",
             "distinct_axes:7",
             "origin_types:4"
           ]
@@ -922,7 +922,7 @@
           "method": "mechanical_v1",
           "basis": [
             "newsroom_domain_pattern",
-            "distinct_urls:726",
+            "distinct_urls:727",
             "distinct_axes:7",
             "origin_types:4",
             "referring_accounts:0",
@@ -3113,9 +3113,9 @@
       "entity": "T Co",
       "kind": "unknown",
       "first_seen_at": "2016-05-05T18:57:30.000Z",
-      "last_seen_at": "2026-09-04T22:00:01.000Z",
+      "last_seen_at": "2026-09-05T01:33:31.000Z",
       "discovery": {
-        "distinct_urls": 18402,
+        "distinct_urls": 18574,
         "example_urls": [
           "https://t.co/pJSE124ec4",
           "https://t.co/Soz8BXPWaa",
@@ -3124,11 +3124,11 @@
           "https://t.co/cYaqYDRp08"
         ],
         "origin_counts": {
-          "feed_buffer": 16312,
-          "feed_buffer_reply": 5491,
+          "feed_buffer": 16494,
+          "feed_buffer_reply": 5513,
           "articles": 3
         },
-        "distinct_referring_accounts": 2973,
+        "distinct_referring_accounts": 2984,
         "sample_referring_accounts": [
           "0808iveta",
           "09abracadabra",
@@ -3167,7 +3167,7 @@
         "breadth": {
           "score": 0.53,
           "basis": [
-            "distinct_urls:18402",
+            "distinct_urls:18574",
             "distinct_axes:0",
             "origin_types:3"
           ]
@@ -3175,7 +3175,7 @@
         "corroboration": {
           "score": 0.9125,
           "basis": [
-            "referring_accounts:2973",
+            "referring_accounts:2984",
             "origin_types:3"
           ]
         },
@@ -3206,10 +3206,10 @@
           "basis": [
             "unknown_domain_pattern",
             "doi_or_identifier_path_seen",
-            "distinct_urls:18402",
+            "distinct_urls:18574",
             "distinct_axes:0",
             "origin_types:3",
-            "referring_accounts:2973",
+            "referring_accounts:2984",
             "origin_types:3",
             "track_record_unavailable"
           ]
@@ -3252,9 +3252,9 @@
       "entity": "Rappler",
       "kind": "unknown",
       "first_seen_at": "2026-06-22T04:04:30.428Z",
-      "last_seen_at": "2026-09-04T08:46:21.635Z",
+      "last_seen_at": "2026-09-05T01:13:12.331Z",
       "discovery": {
-        "distinct_urls": 331,
+        "distinct_urls": 332,
         "example_urls": [
           "https://www.rappler.com/fact-check-no-arrest-warrant-issued-vs-marcoleta",
           "https://www.rappler.com/technology/decoded-tacloban-school-shooting-disinformation-kiko-barzaga-discussions-juvenile-justice-law/",
@@ -3263,8 +3263,8 @@
           "https://www.rappler.com/voices/thought-leaders/vantage-point-bir-tax-amlc-records-billions-questions-sara-duterte-ignore/"
         ],
         "origin_counts": {
-          "ontology_evidence": 156,
-          "journals": 378,
+          "ontology_evidence": 157,
+          "journals": 379,
           "articles": 5
         },
         "distinct_referring_accounts": 0,
@@ -3326,7 +3326,7 @@
         "breadth": {
           "score": 0.8799999999999999,
           "basis": [
-            "distinct_urls:331",
+            "distinct_urls:332",
             "distinct_axes:31",
             "origin_types:3"
           ]
@@ -3364,7 +3364,7 @@
           "method": "mechanical_v1",
           "basis": [
             "unknown_domain_pattern",
-            "distinct_urls:331",
+            "distinct_urls:332",
             "distinct_axes:31",
             "origin_types:3",
             "referring_accounts:0",
@@ -3410,9 +3410,9 @@
       "entity": "Techcrunch",
       "kind": "unknown",
       "first_seen_at": "2026-06-22T23:31:00Z",
-      "last_seen_at": "2026-09-03T19:04:17.722Z",
+      "last_seen_at": "2026-09-04T23:43:18.986Z",
       "discovery": {
-        "distinct_urls": 156,
+        "distinct_urls": 157,
         "example_urls": [
           "https://techcrunch.com/2026/07/30/judge-says-trump-admin-still-lacks-evidence-for-anthropic-supply-chain-risk-label/",
           "https://techcrunch.com/2026/06/22/shareholders-sue-ubers-board-over-sexual-assaults-other-incidents/",
@@ -3422,7 +3422,7 @@
         ],
         "origin_counts": {
           "ontology_evidence": 65,
-          "journals": 177
+          "journals": 178
         },
         "distinct_referring_accounts": 0,
         "sample_referring_accounts": [],
@@ -3470,7 +3470,7 @@
         "breadth": {
           "score": 0.82,
           "basis": [
-            "distinct_urls:156",
+            "distinct_urls:157",
             "distinct_axes:17",
             "origin_types:2"
           ]
@@ -3509,7 +3509,7 @@
           "basis": [
             "unknown_domain_pattern",
             "article_path_seen",
-            "distinct_urls:156",
+            "distinct_urls:157",
             "distinct_axes:17",
             "origin_types:2",
             "referring_accounts:0",
@@ -3555,9 +3555,9 @@
       "entity": "Arstechnica",
       "kind": "unknown",
       "first_seen_at": "2026-06-24T20:02:00Z",
-      "last_seen_at": "2026-09-02T22:05:29.130Z",
+      "last_seen_at": "2026-09-04T23:43:18.986Z",
       "discovery": {
-        "distinct_urls": 20,
+        "distinct_urls": 21,
         "example_urls": [
           "https://arstechnica.com/security/2026/06/users-cry-foul-after-amd-stripped-memory-crypto-from-its-consumer-cpus/",
           "https://arstechnica.com/security/2026/06/24/dashlane-explains-how-attackers-managed-to-download-encrypted-password-vaults/",
@@ -3567,7 +3567,7 @@
         ],
         "origin_counts": {
           "ontology_evidence": 9,
-          "journals": 28
+          "journals": 29
         },
         "distinct_referring_accounts": 0,
         "sample_referring_accounts": [],
@@ -3603,7 +3603,7 @@
         "breadth": {
           "score": 0.7616666666666666,
           "basis": [
-            "distinct_urls:20",
+            "distinct_urls:21",
             "distinct_axes:5",
             "origin_types:2"
           ]
@@ -3642,7 +3642,7 @@
           "basis": [
             "unknown_domain_pattern",
             "article_path_seen",
-            "distinct_urls:20",
+            "distinct_urls:21",
             "distinct_axes:5",
             "origin_types:2",
             "referring_accounts:0",
@@ -4631,9 +4631,9 @@
       "entity": "Grok",
       "kind": "unknown",
       "first_seen_at": "2026-04-03T01:20:27.000Z",
-      "last_seen_at": "2026-09-04T14:30:39.000Z",
+      "last_seen_at": "2026-09-04T23:30:36.000Z",
       "discovery": {
-        "distinct_urls": 691,
+        "distinct_urls": 694,
         "example_urls": [
           "https://grok.com/imagine/post/9b92ff60-ec59-45db-8a35-8e1b743e5339",
           "https://grok.com/imagine/post/42c16172-4296-42be-b3d0-aa45ad7b6b97",
@@ -4642,7 +4642,7 @@
           "https://grok.com/imagine/post/3289422f-50b2-4655-8527-e2b1c950ce5e"
         ],
         "origin_counts": {
-          "feed_buffer_reply": 578,
+          "feed_buffer_reply": 581,
           "feed_buffer": 161
         },
         "distinct_referring_accounts": 420,
@@ -4683,7 +4683,7 @@
         "breadth": {
           "score": 0.47,
           "basis": [
-            "distinct_urls:691",
+            "distinct_urls:694",
             "distinct_axes:0",
             "origin_types:2"
           ]
@@ -4721,7 +4721,7 @@
           "method": "mechanical_v1",
           "basis": [
             "unknown_domain_pattern",
-            "distinct_urls:691",
+            "distinct_urls:694",
             "distinct_axes:0",
             "origin_types:2",
             "referring_accounts:420",
@@ -5425,9 +5425,9 @@
       "entity": "Starlink",
       "kind": "unknown",
       "first_seen_at": "2026-04-07T03:51:50.000Z",
-      "last_seen_at": "2026-09-04T19:31:38.110Z",
+      "last_seen_at": "2026-09-05T00:56:16.000Z",
       "discovery": {
-        "distinct_urls": 597,
+        "distinct_urls": 637,
         "example_urls": [
           "https://www.starlink.com/us/residential?referral=RC-DF-9543787-19448-67&utm_medium=paid&utm_campaign=awr_us_soc_twt_ptg_cau&utm_content=awr_us_soc_twt_ptg_cau_res_gvp_v4s_stc_en-us_sdb-bluesky-uptime&twclid=2cg62b1u0oqrypdim5oir1767e",
           "https://www.starlink.com/us/residential?referral=RC-DF-9543787-19448-67&utm_medium=paid&utm_campaign=awr_us_soc_twt_ptg_cau&utm_content=awr_us_soc_twt_ptg_cau_res_gvp_v4s_stc_en-us_sdb-avail-sat-yourhome&twclid=2216n7j93v9absqn77762mm626",
@@ -5436,8 +5436,8 @@
           "https://www.starlink.com/us/residential?referral=RC-DF-9543787-19448-67&utm_medium=paid&utm_campaign=awr_us_soc_twt_ptg_cau&utm_content=awr_us_soc_twt_ptg_cau_res_gvp_v4s_stc_en-us_sdb-avail-sat-arrived&twclid=21pi7t0qs8tgw0wgnh5mvmdu2g"
         ],
         "origin_counts": {
-          "feed_buffer_reply": 549,
-          "feed_buffer": 52
+          "feed_buffer_reply": 587,
+          "feed_buffer": 54
         },
         "distinct_referring_accounts": 5,
         "sample_referring_accounts": [
@@ -5472,7 +5472,7 @@
         "breadth": {
           "score": 0.47,
           "basis": [
-            "distinct_urls:597",
+            "distinct_urls:637",
             "distinct_axes:0",
             "origin_types:2"
           ]
@@ -5510,7 +5510,7 @@
           "method": "mechanical_v1",
           "basis": [
             "unknown_domain_pattern",
-            "distinct_urls:597",
+            "distinct_urls:637",
             "distinct_axes:0",
             "origin_types:2",
             "referring_accounts:5",
@@ -5680,9 +5680,9 @@
       "entity": "Inquirer",
       "kind": "unknown",
       "first_seen_at": "2026-05-09T10:15:15.053Z",
-      "last_seen_at": "2026-09-04T22:13:18.427Z",
+      "last_seen_at": "2026-09-04T23:43:19.014Z",
       "discovery": {
-        "distinct_urls": 521,
+        "distinct_urls": 523,
         "example_urls": [
           "https://newsinfo.inquirer.net/2266316/nbi-on-cayetano-position-that-cant-be-defended-by-facts-is-done-with-insults",
           "https://www.inquirer.net/capiz-broadcaster-shooting-probe-widens-as-cops-form-task-force",
@@ -5691,8 +5691,8 @@
           "https://newsinfo.inquirer.net/2251702/chr-seeks-swift-passage-of-bills-creating-detention-monitoring-body"
         ],
         "origin_counts": {
-          "ontology_evidence": 195,
-          "journals": 627,
+          "ontology_evidence": 196,
+          "journals": 629,
           "articles": 9
         },
         "distinct_referring_accounts": 0,
@@ -5753,7 +5753,7 @@
         "breadth": {
           "score": 0.8799999999999999,
           "basis": [
-            "distinct_urls:521",
+            "distinct_urls:523",
             "distinct_axes:29",
             "origin_types:3"
           ]
@@ -5792,7 +5792,7 @@
           "basis": [
             "unknown_domain_pattern",
             "search_results_seen",
-            "distinct_urls:521",
+            "distinct_urls:523",
             "distinct_axes:29",
             "origin_types:3",
             "referring_accounts:0",
@@ -5838,9 +5838,9 @@
       "entity": "Huawei",
       "kind": "unknown",
       "first_seen_at": "2026-04-28T08:12:51.000Z",
-      "last_seen_at": "2026-09-03T18:52:03.575Z",
+      "last_seen_at": "2026-09-05T01:06:58.774Z",
       "discovery": {
-        "distinct_urls": 39,
+        "distinct_urls": 40,
         "example_urls": [
           "https://www.huawei.com/en/media-center/transform/24/06-jason-lee?utm_medium=psm&utm_source=twitter&utm_campaign=Transform",
           "https://e.huawei.com/ae/events/branding/gitex-ca?utm_medium=psm&utm_source=twitter&source=corp_sc_en&utm_campaign=GITEX2026",
@@ -5850,7 +5850,7 @@
         ],
         "origin_counts": {
           "feed_buffer_reply": 17,
-          "feed_buffer": 22
+          "feed_buffer": 23
         },
         "distinct_referring_accounts": 2,
         "sample_referring_accounts": [
@@ -5883,7 +5883,7 @@
         "breadth": {
           "score": 0.47,
           "basis": [
-            "distinct_urls:39",
+            "distinct_urls:40",
             "distinct_axes:0",
             "origin_types:2"
           ]
@@ -5922,7 +5922,7 @@
           "basis": [
             "unknown_domain_pattern",
             "article_path_seen",
-            "distinct_urls:39",
+            "distinct_urls:40",
             "distinct_axes:0",
             "origin_types:2",
             "referring_accounts:2",
@@ -7065,16 +7065,16 @@
           ]
         },
         "profile": {
-          "score": 0,
+          "score": 0.27,
           "confidence": 0.55,
           "basis": [
             "meta_author:false",
             "published_time:false",
-            "canonical:false",
+            "canonical:true",
             "about:false",
-            "contact:false",
+            "contact:true",
             "corrections:false",
-            "outbound_links:0",
+            "outbound_links:5",
             "opinion_marker:false"
           ]
         },
@@ -7094,33 +7094,33 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-09-02T00:30:30.295Z",
+        "fetched_at": "2026-09-05T01:12:26.302Z",
         "homepage_url": "https://springermedicine.com/",
         "example_url": "https://www.springermedicine.com/webinar-breakthroughs-in-bladder-cancer-care/52496396?utm_source=x&utm_medium=cpc&utm_campaign=bladder-cancer-care-webinar&utm_content=ad-4&twclid=27am5hqwt8x5t4o745p030f1a4",
-        "homepage_status": null,
-        "example_status": null,
-        "homepage_final_url": "https://springermedicine.com/",
+        "homepage_status": 200,
+        "example_status": 200,
+        "homepage_final_url": "https://www.springermedicine.com/",
         "example_final_url": "https://www.springermedicine.com/webinar-breakthroughs-in-bladder-cancer-care/52496396?utm_source=x&utm_medium=cpc&utm_campaign=bladder-cancer-care-webinar&utm_content=ad-4&twclid=27am5hqwt8x5t4o745p030f1a4",
-        "homepage_content_type": "",
-        "example_content_type": "",
+        "homepage_content_type": "text/html; charset=UTF-8",
+        "example_content_type": "text/html; charset=UTF-8",
         "homepage": {
           "has_meta_author": false,
           "has_published_time": false,
-          "has_canonical": false,
+          "has_canonical": true,
           "has_about_link": false,
-          "has_contact_link": false,
+          "has_contact_link": true,
           "has_corrections_link": false,
-          "outbound_links_count": 0,
+          "outbound_links_count": 6,
           "opinion_marker": false
         },
         "example": {
           "has_meta_author": false,
           "has_published_time": false,
-          "has_canonical": false,
+          "has_canonical": true,
           "has_about_link": false,
-          "has_contact_link": false,
+          "has_contact_link": true,
           "has_corrections_link": false,
-          "outbound_links_count": 0,
+          "outbound_links_count": 5,
           "opinion_marker": false
         }
       }
@@ -7954,12 +7954,12 @@
           ]
         },
         "profile": {
-          "score": 0,
+          "score": 0.1,
           "confidence": 0.55,
           "basis": [
             "meta_author:false",
             "published_time:false",
-            "canonical:false",
+            "canonical:true",
             "about:false",
             "contact:false",
             "corrections:false",
@@ -7983,19 +7983,19 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-09-02T00:30:30.303Z",
+        "fetched_at": "2026-09-05T01:12:27.082Z",
         "homepage_url": "https://travala.com/",
         "example_url": "https://www.travala.com/?camp_name=&camp_offer=credit&camp_content=Sign-up-or-log-in-to-receive-%2450-off-flights%2C-hotels-and-activities.&camp_code=BTCASIA50&camp_value=50&utm_campaign=BTCASIA50&utm_medium=by-travala-cpc&utm_source=twitter&twclid=26wz3yk3m5mtcltdzivyfesoom",
-        "homepage_status": null,
-        "example_status": null,
-        "homepage_final_url": "https://travala.com/",
+        "homepage_status": 200,
+        "example_status": 200,
+        "homepage_final_url": "https://www.travala.com/",
         "example_final_url": "https://www.travala.com/?camp_name=&camp_offer=credit&camp_content=Sign-up-or-log-in-to-receive-%2450-off-flights%2C-hotels-and-activities.&camp_code=BTCASIA50&camp_value=50&utm_campaign=BTCASIA50&utm_medium=by-travala-cpc&utm_source=twitter&twclid=26wz3yk3m5mtcltdzivyfesoom",
-        "homepage_content_type": "",
-        "example_content_type": "",
+        "homepage_content_type": "text/html; charset=utf-8",
+        "example_content_type": "text/html; charset=utf-8",
         "homepage": {
           "has_meta_author": false,
           "has_published_time": false,
-          "has_canonical": false,
+          "has_canonical": true,
           "has_about_link": false,
           "has_contact_link": false,
           "has_corrections_link": false,
@@ -8005,7 +8005,7 @@
         "example": {
           "has_meta_author": false,
           "has_published_time": false,
-          "has_canonical": false,
+          "has_canonical": true,
           "has_about_link": false,
           "has_contact_link": false,
           "has_corrections_link": false,
@@ -8462,7 +8462,7 @@
           ]
         },
         "profile": {
-          "score": 0,
+          "score": 0.009999999999999998,
           "confidence": 0.55,
           "basis": [
             "meta_author:false",
@@ -8471,7 +8471,7 @@
             "about:false",
             "contact:false",
             "corrections:false",
-            "outbound_links:0",
+            "outbound_links:1",
             "opinion_marker:false"
           ]
         },
@@ -8491,15 +8491,15 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-09-02T00:30:30.309Z",
+        "fetched_at": "2026-09-05T01:12:27.446Z",
         "homepage_url": "https://fundingpips.com/",
         "example_url": "https://fundingpips.com/?utm_source=x&utm_medium=paid_social&utm_campaign=2026_q3_global_acquisition_all_in_sale&utm_content=2073786412856660020&twclid=24njria5jvt4ka7ejelux4oc97",
-        "homepage_status": null,
-        "example_status": null,
+        "homepage_status": 429,
+        "example_status": 429,
         "homepage_final_url": "https://fundingpips.com/",
         "example_final_url": "https://fundingpips.com/?utm_source=x&utm_medium=paid_social&utm_campaign=2026_q3_global_acquisition_all_in_sale&utm_content=2073786412856660020&twclid=24njria5jvt4ka7ejelux4oc97",
-        "homepage_content_type": "",
-        "example_content_type": "",
+        "homepage_content_type": "text/html; charset=utf-8",
+        "example_content_type": "text/html; charset=utf-8",
         "homepage": {
           "has_meta_author": false,
           "has_published_time": false,
@@ -8507,7 +8507,7 @@
           "has_about_link": false,
           "has_contact_link": false,
           "has_corrections_link": false,
-          "outbound_links_count": 0,
+          "outbound_links_count": 1,
           "opinion_marker": false
         },
         "example": {
@@ -8517,7 +8517,7 @@
           "has_about_link": false,
           "has_contact_link": false,
           "has_corrections_link": false,
-          "outbound_links_count": 0,
+          "outbound_links_count": 1,
           "opinion_marker": false
         }
       }
@@ -8745,15 +8745,15 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-09-02T00:30:30.314Z",
+        "fetched_at": "2026-09-05T01:12:27.760Z",
         "homepage_url": "https://bybet.com/",
         "example_url": "https://bybet.com/promotion/detail/10/70?utm_source=x&utm_medium=cpc&utm_campaign=Awarenes-DTS-Football&twclid=2aetcv0gphixdtyqc7k0t0any5",
-        "homepage_status": null,
-        "example_status": null,
+        "homepage_status": 200,
+        "example_status": 200,
         "homepage_final_url": "https://bybet.com/",
         "example_final_url": "https://bybet.com/promotion/detail/10/70?utm_source=x&utm_medium=cpc&utm_campaign=Awarenes-DTS-Football&twclid=2aetcv0gphixdtyqc7k0t0any5",
-        "homepage_content_type": "",
-        "example_content_type": "",
+        "homepage_content_type": "text/html; charset=utf-8",
+        "example_content_type": "text/html; charset=utf-8",
         "homepage": {
           "has_meta_author": false,
           "has_published_time": false,
@@ -10936,6 +10936,133 @@
       }
     },
     {
+      "domain": "playtime.ph",
+      "entity": "Playtime Ph",
+      "kind": "unknown",
+      "first_seen_at": "2026-08-26T04:08:56.467Z",
+      "last_seen_at": "2026-09-05T01:31:59.527Z",
+      "discovery": {
+        "distinct_urls": 15,
+        "example_urls": [
+          "https://www.playtime.ph/?twclid=2ehhsiuw72qcjnqiqckbnej4r9",
+          "https://www.playtime.ph/?twclid=22gk162di36wv9rhjspsrbvpox",
+          "https://www.playtime.ph/?twclid=2ac6trqw2m7rrb6ja8ocybxznz",
+          "https://www.playtime.ph/?twclid=2ao33doqyf21nd4rrgz99zizhm",
+          "https://www.playtime.ph/?twclid=27i9xid1pakhuq0do2hugpynxs"
+        ],
+        "origin_counts": {
+          "feed_buffer": 5,
+          "feed_buffer_reply": 10
+        },
+        "distinct_referring_accounts": 1,
+        "sample_referring_accounts": [
+          "playtime_ent"
+        ],
+        "distinct_axes": []
+      },
+      "claims": {
+        "total": 0,
+        "supported": 0,
+        "refuted": 0,
+        "contested": 0,
+        "unverified": 0,
+        "resolved_count": 0
+      },
+      "structural_features": {
+        "has_search_paths": false,
+        "has_article_paths": false,
+        "has_doi_paths": false
+      },
+      "ratings": {
+        "provenance": {
+          "score": 0.45,
+          "basis": [
+            "unknown_domain_pattern"
+          ]
+        },
+        "breadth": {
+          "score": 0.47,
+          "basis": [
+            "distinct_urls:15",
+            "distinct_axes:0",
+            "origin_types:2"
+          ]
+        },
+        "corroboration": {
+          "score": 0.2833333333333333,
+          "basis": [
+            "referring_accounts:1",
+            "origin_types:2"
+          ]
+        },
+        "track_record": {
+          "score": null,
+          "basis": [
+            "no_resolved_claims_observed"
+          ]
+        },
+        "profile": {
+          "score": 0,
+          "confidence": 0.55,
+          "basis": [
+            "meta_author:false",
+            "published_time:false",
+            "canonical:false",
+            "about:false",
+            "contact:false",
+            "corrections:false",
+            "outbound_links:0",
+            "opinion_marker:false"
+          ]
+        },
+        "overall": {
+          "score": 0.43875,
+          "confidence": 0.4842,
+          "method": "mechanical_v1",
+          "basis": [
+            "unknown_domain_pattern",
+            "distinct_urls:15",
+            "distinct_axes:0",
+            "origin_types:2",
+            "referring_accounts:1",
+            "origin_types:2",
+            "track_record_unavailable"
+          ]
+        }
+      },
+      "profile": {
+        "fetched_at": "2026-09-03T10:03:19.987Z",
+        "homepage_url": "https://playtime.ph/",
+        "example_url": "https://www.playtime.ph/?twclid=2ehhsiuw72qcjnqiqckbnej4r9",
+        "homepage_status": 200,
+        "example_status": 200,
+        "homepage_final_url": "https://www.playtime.ph/",
+        "example_final_url": "https://www.playtime.ph/?twclid=2ehhsiuw72qcjnqiqckbnej4r9",
+        "homepage_content_type": "text/html",
+        "example_content_type": "text/html",
+        "homepage": {
+          "has_meta_author": false,
+          "has_published_time": false,
+          "has_canonical": false,
+          "has_about_link": false,
+          "has_contact_link": false,
+          "has_corrections_link": false,
+          "outbound_links_count": 0,
+          "opinion_marker": false
+        },
+        "example": {
+          "has_meta_author": false,
+          "has_published_time": false,
+          "has_canonical": false,
+          "has_about_link": false,
+          "has_contact_link": false,
+          "has_corrections_link": false,
+          "outbound_links_count": 0,
+          "opinion_marker": false
+        }
+      }
+    },
+    {
       "domain": "smart.link",
       "entity": "Smart Link",
       "kind": "unknown",
@@ -13099,27 +13226,27 @@
       }
     },
     {
-      "domain": "playtime.ph",
-      "entity": "Playtime Ph",
+      "domain": "oppo.com",
+      "entity": "Oppo",
       "kind": "unknown",
-      "first_seen_at": "2026-08-26T04:08:56.467Z",
-      "last_seen_at": "2026-09-03T07:02:20.000Z",
+      "first_seen_at": "2026-08-13T09:57:07.277Z",
+      "last_seen_at": "2026-09-04T18:29:34.000Z",
       "discovery": {
         "distinct_urls": 11,
         "example_urls": [
-          "https://www.playtime.ph/?twclid=2ehhsiuw72qcjnqiqckbnej4r9",
-          "https://www.playtime.ph/?twclid=22gk162di36wv9rhjspsrbvpox",
-          "https://www.playtime.ph/?twclid=2ac6trqw2m7rrb6ja8ocybxznz",
-          "https://www.playtime.ph/?twclid=2ao33doqyf21nd4rrgz99zizhm",
-          "https://www.playtime.ph/?twclid=27i9xid1pakhuq0do2hugpynxs"
+          "https://www.oppo.com/ph/store?utm_source=x&utm_medium=cpm&utm_campaign=OPPO_RENO16_LAUNCH&utm_content=Babymonster&twclid=23rip3pnfc4fzj8wf4kuwjdu8m",
+          "https://www.oppo.com/ph/store?utm_source=x&utm_medium=cpm&utm_campaign=OPPO_RENO16_LAUNCH&utm_content=Bubble&twclid=263t9ffc6n0ccfie73ppvdnz3w",
+          "https://www.oppo.com/ph/store?utm_source=x&utm_medium=cpm&utm_campaign=OPPO_RENO16_LAUNCH&utm_content=Bubble&twclid=2dhtn8a401tkqo8fgjpuyzy4i2",
+          "https://www.oppo.com/ph/store?utm_source=x&utm_medium=cpm&utm_campaign=OPPO_RENO16_LAUNCH&utm_content=Brand_Tour_Vlog_UGC&twclid=2dmroo8nzzsfj1l9wi94bnquid",
+          "https://www.oppo.com/ph/store?utm_source=x&utm_medium=cpm&utm_campaign=OPPO_RENO16_LAUNCH&utm_content=Brand_Tour_Vlog_UGC&twclid=2cznrhr3poa1gt6yd481w58i6a"
         ],
         "origin_counts": {
-          "feed_buffer": 4,
-          "feed_buffer_reply": 7
+          "feed_buffer": 8,
+          "feed_buffer_reply": 3
         },
         "distinct_referring_accounts": 1,
         "sample_referring_accounts": [
-          "playtime_ent"
+          "oppophilippines"
         ],
         "distinct_axes": []
       },
@@ -13165,16 +13292,16 @@
           ]
         },
         "profile": {
-          "score": 0,
-          "confidence": 0.55,
+          "score": 0.36,
+          "confidence": 0.65,
           "basis": [
             "meta_author:false",
             "published_time:false",
             "canonical:false",
-            "about:false",
-            "contact:false",
+            "about:true",
+            "contact:true",
             "corrections:false",
-            "outbound_links:0",
+            "outbound_links:10",
             "opinion_marker:false"
           ]
         },
@@ -13194,33 +13321,33 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-09-03T10:03:19.987Z",
-        "homepage_url": "https://playtime.ph/",
-        "example_url": "https://www.playtime.ph/?twclid=2ehhsiuw72qcjnqiqckbnej4r9",
+        "fetched_at": "2026-09-04T10:15:32.549Z",
+        "homepage_url": "https://oppo.com/",
+        "example_url": "https://www.oppo.com/ph/store?utm_source=x&utm_medium=cpm&utm_campaign=OPPO_RENO16_LAUNCH&utm_content=Babymonster&twclid=23rip3pnfc4fzj8wf4kuwjdu8m",
         "homepage_status": 200,
         "example_status": 200,
-        "homepage_final_url": "https://www.playtime.ph/",
-        "example_final_url": "https://www.playtime.ph/?twclid=2ehhsiuw72qcjnqiqckbnej4r9",
-        "homepage_content_type": "text/html",
-        "example_content_type": "text/html",
+        "homepage_final_url": "https://www.oppo.com/ph/",
+        "example_final_url": "https://www.oppo.com/ph/store?utm_source=x&utm_medium=cpm&utm_campaign=OPPO_RENO16_LAUNCH&utm_content=Babymonster&twclid=23rip3pnfc4fzj8wf4kuwjdu8m",
+        "homepage_content_type": "text/html;charset=utf-8",
+        "example_content_type": "text/html;charset=utf-8",
         "homepage": {
           "has_meta_author": false,
           "has_published_time": false,
-          "has_canonical": false,
-          "has_about_link": false,
-          "has_contact_link": false,
+          "has_canonical": true,
+          "has_about_link": true,
+          "has_contact_link": true,
           "has_corrections_link": false,
-          "outbound_links_count": 0,
+          "outbound_links_count": 10,
           "opinion_marker": false
         },
         "example": {
           "has_meta_author": false,
           "has_published_time": false,
           "has_canonical": false,
-          "has_about_link": false,
-          "has_contact_link": false,
+          "has_about_link": true,
+          "has_contact_link": true,
           "has_corrections_link": false,
-          "outbound_links_count": 0,
+          "outbound_links_count": 10,
           "opinion_marker": false
         }
       }
@@ -13602,133 +13729,6 @@
           "has_contact_link": false,
           "has_corrections_link": false,
           "outbound_links_count": 0,
-          "opinion_marker": false
-        }
-      }
-    },
-    {
-      "domain": "oppo.com",
-      "entity": "Oppo",
-      "kind": "unknown",
-      "first_seen_at": "2026-08-13T09:57:07.277Z",
-      "last_seen_at": "2026-09-04T14:08:13.685Z",
-      "discovery": {
-        "distinct_urls": 10,
-        "example_urls": [
-          "https://www.oppo.com/ph/store?utm_source=x&utm_medium=cpm&utm_campaign=OPPO_RENO16_LAUNCH&utm_content=Babymonster&twclid=23rip3pnfc4fzj8wf4kuwjdu8m",
-          "https://www.oppo.com/ph/store?utm_source=x&utm_medium=cpm&utm_campaign=OPPO_RENO16_LAUNCH&utm_content=Bubble&twclid=263t9ffc6n0ccfie73ppvdnz3w",
-          "https://www.oppo.com/ph/store?utm_source=x&utm_medium=cpm&utm_campaign=OPPO_RENO16_LAUNCH&utm_content=Bubble&twclid=2dhtn8a401tkqo8fgjpuyzy4i2",
-          "https://www.oppo.com/ph/store?utm_source=x&utm_medium=cpm&utm_campaign=OPPO_RENO16_LAUNCH&utm_content=Brand_Tour_Vlog_UGC&twclid=2dmroo8nzzsfj1l9wi94bnquid",
-          "https://www.oppo.com/ph/store?utm_source=x&utm_medium=cpm&utm_campaign=OPPO_RENO16_LAUNCH&utm_content=Brand_Tour_Vlog_UGC&twclid=2cznrhr3poa1gt6yd481w58i6a"
-        ],
-        "origin_counts": {
-          "feed_buffer": 8,
-          "feed_buffer_reply": 2
-        },
-        "distinct_referring_accounts": 1,
-        "sample_referring_accounts": [
-          "oppophilippines"
-        ],
-        "distinct_axes": []
-      },
-      "claims": {
-        "total": 0,
-        "supported": 0,
-        "refuted": 0,
-        "contested": 0,
-        "unverified": 0,
-        "resolved_count": 0
-      },
-      "structural_features": {
-        "has_search_paths": false,
-        "has_article_paths": false,
-        "has_doi_paths": false
-      },
-      "ratings": {
-        "provenance": {
-          "score": 0.45,
-          "basis": [
-            "unknown_domain_pattern"
-          ]
-        },
-        "breadth": {
-          "score": 0.4116666666666667,
-          "basis": [
-            "distinct_urls:10",
-            "distinct_axes:0",
-            "origin_types:2"
-          ]
-        },
-        "corroboration": {
-          "score": 0.2833333333333333,
-          "basis": [
-            "referring_accounts:1",
-            "origin_types:2"
-          ]
-        },
-        "track_record": {
-          "score": null,
-          "basis": [
-            "no_resolved_claims_observed"
-          ]
-        },
-        "profile": {
-          "score": 0.36,
-          "confidence": 0.65,
-          "basis": [
-            "meta_author:false",
-            "published_time:false",
-            "canonical:false",
-            "about:true",
-            "contact:true",
-            "corrections:false",
-            "outbound_links:10",
-            "opinion_marker:false"
-          ]
-        },
-        "overall": {
-          "score": 0.42598958333333337,
-          "confidence": 0.35945000000000005,
-          "method": "mechanical_v1",
-          "basis": [
-            "unknown_domain_pattern",
-            "distinct_urls:10",
-            "distinct_axes:0",
-            "origin_types:2",
-            "referring_accounts:1",
-            "origin_types:2",
-            "track_record_unavailable"
-          ]
-        }
-      },
-      "profile": {
-        "fetched_at": "2026-09-04T10:15:32.549Z",
-        "homepage_url": "https://oppo.com/",
-        "example_url": "https://www.oppo.com/ph/store?utm_source=x&utm_medium=cpm&utm_campaign=OPPO_RENO16_LAUNCH&utm_content=Babymonster&twclid=23rip3pnfc4fzj8wf4kuwjdu8m",
-        "homepage_status": 200,
-        "example_status": 200,
-        "homepage_final_url": "https://www.oppo.com/ph/",
-        "example_final_url": "https://www.oppo.com/ph/store?utm_source=x&utm_medium=cpm&utm_campaign=OPPO_RENO16_LAUNCH&utm_content=Babymonster&twclid=23rip3pnfc4fzj8wf4kuwjdu8m",
-        "homepage_content_type": "text/html;charset=utf-8",
-        "example_content_type": "text/html;charset=utf-8",
-        "homepage": {
-          "has_meta_author": false,
-          "has_published_time": false,
-          "has_canonical": true,
-          "has_about_link": true,
-          "has_contact_link": true,
-          "has_corrections_link": false,
-          "outbound_links_count": 10,
-          "opinion_marker": false
-        },
-        "example": {
-          "has_meta_author": false,
-          "has_published_time": false,
-          "has_canonical": false,
-          "has_about_link": true,
-          "has_contact_link": true,
-          "has_corrections_link": false,
-          "outbound_links_count": 10,
           "opinion_marker": false
         }
       }
@@ -25228,7 +25228,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-09-01T12:32:41.280Z",
+        "fetched_at": "2026-09-04T23:42:22.782Z",
         "homepage_url": "https://abnormal.ai/",
         "example_url": "https://abnormal.ai/products/inbound-email-security?utm_source=twitter&utm_medium=paidsocial&twclid=2asl0bbzb83c9oc3nr0k101b56",
         "homepage_status": 200,
@@ -25353,7 +25353,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-09-01T12:32:45.509Z",
+        "fetched_at": "2026-09-04T23:42:27.405Z",
         "homepage_url": "https://geopoliticalfutures.com/",
         "example_url": "https://www.geopoliticalfutures.com/article/the-strait-of-hormuz-reopens-with-conditions/",
         "homepage_status": 200,
@@ -25457,7 +25457,7 @@
             "about:true",
             "contact:false",
             "corrections:false",
-            "outbound_links:25",
+            "outbound_links:26",
             "opinion_marker:false"
           ]
         },
@@ -25478,7 +25478,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-09-01T12:32:49.098Z",
+        "fetched_at": "2026-09-04T23:42:29.126Z",
         "homepage_url": "https://redstate.com/",
         "example_url": "https://redstate.com/mike_miller/2026/06/25/ro-khanna-clashes-with-maria-bartiromo-over-the-save-america-act-calls-it-voter-suppression-n2088497",
         "homepage_status": 200,
@@ -25504,7 +25504,7 @@
           "has_about_link": true,
           "has_contact_link": false,
           "has_corrections_link": false,
-          "outbound_links_count": 25,
+          "outbound_links_count": 26,
           "opinion_marker": false
         }
       }
@@ -25604,7 +25604,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-09-01T16:19:24.714Z",
+        "fetched_at": "2026-09-04T23:42:32.653Z",
         "homepage_url": "https://dlvr.it/",
         "example_url": "http://dlvr.it/TRwWsL",
         "homepage_status": 200,
@@ -25730,7 +25730,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-09-01T16:19:27.298Z",
+        "fetched_at": "2026-09-05T00:12:25.826Z",
         "homepage_url": "https://aikido.dev/",
         "example_url": "https://www.aikido.dev/attack/infinite?utm_source=twitter&utm_medium=paidsocial&utm_campaign=US_tofu&utm_content=2026-02-26-Mack-Infinte-2-A&twclid=28a2h7kzzful35m0kfwtl23x0c",
         "homepage_status": 200,
@@ -25856,7 +25856,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-09-01T16:19:28.542Z",
+        "fetched_at": "2026-09-05T00:12:27.906Z",
         "homepage_url": "https://absinthe.network/",
         "example_url": "https://boost.absinthe.network/8hhp-sfkk/home?utm_source=x&utm_medium=cpc&utm_campaign=Absinthe&utm_id=sero&utm_content=Mar26&twclid=25502jccgfzmkpf20p6sbvaj8t",
         "homepage_status": 200,
@@ -25982,7 +25982,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-09-01T16:19:40.960Z",
+        "fetched_at": "2026-09-05T00:12:40.553Z",
         "homepage_url": "https://onnicotine.com/",
         "example_url": "https://www.onnicotine.com/?twclid=230cc01l01rnnwfflnn397ispz",
         "homepage_status": null,
@@ -26108,7 +26108,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-09-01T16:49:24.320Z",
+        "fetched_at": "2026-09-05T00:12:40.862Z",
         "homepage_url": "https://vast.ai/",
         "example_url": "https://vast.ai/developers/sdk?utm_source=x&utm_medium=paid&utm_campaign=cloud_agents&twclid=293vnkv04bn84l1eoqab2a2ekc",
         "homepage_status": 200,
@@ -26234,7 +26234,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-09-01T16:49:25.661Z",
+        "fetched_at": "2026-09-05T01:42:23.708Z",
         "homepage_url": "https://scalahosting.com/",
         "example_url": "https://www.scalahosting.com/cloud-servers.html?twclid=2cnyz64aududoywwu2d0iw7jhx",
         "homepage_status": 200,
@@ -26360,7 +26360,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-09-01T16:49:27.933Z",
+        "fetched_at": "2026-09-05T01:42:26.374Z",
         "homepage_url": "https://havelsan.com/",
         "example_url": "https://www.havelsan.com/en/products/eyeminer-video-analytic-system-iot?utm_source=x&utm_medium=PaidSocial&utm_campaign=eyeminer_traffic&twclid=26xxdxm61rvq0o921lrv322jio",
         "homepage_status": null,
@@ -26486,7 +26486,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-09-01T17:49:20.933Z",
+        "fetched_at": "2026-09-05T01:42:26.875Z",
         "homepage_url": "https://houseofkaisers.com/",
         "example_url": "https://houseofkaisers.com/kai-portal/beta?twclid=26t8hp42r8pe5p1i02xmt53ngc",
         "homepage_status": 200,
@@ -26738,7 +26738,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-09-01T17:49:23.867Z",
+        "fetched_at": "2026-09-05T01:42:29.252Z",
         "homepage_url": "https://spanel.io/",
         "example_url": "https://www.spanel.io/pricing.html?twclid=2arqqjpqxtpmtbpl4vdri6fkg9",
         "homepage_status": 200,
@@ -93923,6 +93923,83 @@
         "distinct_referring_accounts": 1,
         "sample_referring_accounts": [
           "huawei"
+        ],
+        "distinct_axes": []
+      },
+      "claims": {
+        "total": 0,
+        "supported": 0,
+        "refuted": 0,
+        "contested": 0,
+        "unverified": 0,
+        "resolved_count": 0
+      },
+      "structural_features": {
+        "has_search_paths": false,
+        "has_article_paths": false,
+        "has_doi_paths": false
+      },
+      "ratings": {
+        "provenance": {
+          "score": 0.45,
+          "basis": [
+            "unknown_domain_pattern"
+          ]
+        },
+        "breadth": {
+          "score": 0.08916666666666666,
+          "basis": [
+            "distinct_urls:1",
+            "distinct_axes:0",
+            "origin_types:1"
+          ]
+        },
+        "corroboration": {
+          "score": 0.19583333333333333,
+          "basis": [
+            "referring_accounts:1",
+            "origin_types:1"
+          ]
+        },
+        "track_record": {
+          "score": null,
+          "basis": [
+            "no_resolved_claims_observed"
+          ]
+        },
+        "overall": {
+          "score": 0.3472395833333333,
+          "confidence": 0.08135,
+          "method": "mechanical_v1",
+          "basis": [
+            "unknown_domain_pattern",
+            "distinct_urls:1",
+            "distinct_axes:0",
+            "origin_types:1",
+            "referring_accounts:1",
+            "origin_types:1",
+            "track_record_unavailable"
+          ]
+        }
+      }
+    },
+    {
+      "domain": "tabeertours.com",
+      "entity": "Tabeertours",
+      "kind": "unknown",
+      "first_seen_at": "2026-09-04T23:26:53.641Z",
+      "last_seen_at": "2026-09-04T23:26:53.641Z",
+      "discovery": {
+        "distinct_urls": 1,
+        "example_urls": [
+          "https://ph.tabeertours.com/?twclid=296avoazpiqqi9g1ypkfksve9t"
+        ],
+        "origin_counts": {
+          "feed_buffer": 1
+        },
+        "distinct_referring_accounts": 1,
+        "sample_referring_accounts": [
+          "tabeertourism"
         ],
         "distinct_axes": []
       },
