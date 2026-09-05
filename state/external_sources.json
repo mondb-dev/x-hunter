@@ -1,8 +1,8 @@
 {
   "schema_version": "1.0",
-  "generated_at": "2026-09-05T08:57:11.219Z",
+  "generated_at": "2026-09-05T10:27:14.118Z",
   "method": "mechanical_registry_v1",
-  "profiled_at": "2026-09-05T08:57:19.349Z",
+  "profiled_at": "2026-09-05T10:27:22.919Z",
   "sources": [
     {
       "domain": "theguardian.com",
@@ -11,7 +11,7 @@
       "first_seen_at": "2026-03-27T23:17:00Z",
       "last_seen_at": "2026-09-05T01:13:12.331Z",
       "discovery": {
-        "distinct_urls": 1145,
+        "distinct_urls": 1146,
         "example_urls": [
           "https://www.theguardian.com/us-news/2026/jun/23/trump-immigration-courthouse-arrest-policy",
           "https://www.theguardian.com/us-news/2026/jun/28/ice-minnesota-defending-democracy",
@@ -21,7 +21,7 @@
         ],
         "origin_counts": {
           "ontology_evidence": 55,
-          "reading_queue": 1098,
+          "reading_queue": 1099,
           "journals": 152,
           "articles": 5
         },
@@ -78,7 +78,7 @@
         "breadth": {
           "score": 0.94,
           "basis": [
-            "distinct_urls:1145",
+            "distinct_urls:1146",
             "distinct_axes:23",
             "origin_types:4"
           ]
@@ -118,7 +118,7 @@
             "newsroom_domain_pattern",
             "article_path_seen",
             "doi_or_identifier_path_seen",
-            "distinct_urls:1145",
+            "distinct_urls:1146",
             "distinct_axes:23",
             "origin_types:4",
             "referring_accounts:0",
@@ -835,7 +835,7 @@
       "first_seen_at": "2026-06-26T07:05:00Z",
       "last_seen_at": "2026-08-28T17:35:46.989Z",
       "discovery": {
-        "distinct_urls": 730,
+        "distinct_urls": 731,
         "example_urls": [
           "https://www.bbc.co.uk/news/articles/cn8qxz6qypyo",
           "https://www.bbc.co.uk/news/articles/cn075j04pnyo?at_medium=RSS&amp;at_campaign=rss",
@@ -845,7 +845,7 @@
         ],
         "origin_counts": {
           "ontology_evidence": 10,
-          "reading_queue": 745,
+          "reading_queue": 746,
           "journals": 23,
           "articles": 2
         },
@@ -884,7 +884,7 @@
         "breadth": {
           "score": 0.94,
           "basis": [
-            "distinct_urls:730",
+            "distinct_urls:731",
             "distinct_axes:7",
             "origin_types:4"
           ]
@@ -922,7 +922,7 @@
           "method": "mechanical_v1",
           "basis": [
             "newsroom_domain_pattern",
-            "distinct_urls:730",
+            "distinct_urls:731",
             "distinct_axes:7",
             "origin_types:4",
             "referring_accounts:0",
@@ -970,7 +970,7 @@
       "first_seen_at": "2026-06-22T00:15:00Z",
       "last_seen_at": "2026-09-01T15:46:28.590Z",
       "discovery": {
-        "distinct_urls": 778,
+        "distinct_urls": 779,
         "example_urls": [
           "https://www.nytimes.com/2026/06/19/world/canada/frank-stronach-trial-guilty-sex-charges.html",
           "https://www.nytimes.com/2026/06/27/world/americas/mexican-officials-us-informants.html",
@@ -980,7 +980,7 @@
         ],
         "origin_counts": {
           "ontology_evidence": 28,
-          "reading_queue": 805,
+          "reading_queue": 806,
           "journals": 72
         },
         "distinct_referring_accounts": 0,
@@ -1025,7 +1025,7 @@
         "breadth": {
           "score": 0.8799999999999999,
           "basis": [
-            "distinct_urls:778",
+            "distinct_urls:779",
             "distinct_axes:13",
             "origin_types:3"
           ]
@@ -1064,7 +1064,7 @@
           "basis": [
             "newsroom_domain_pattern",
             "article_path_seen",
-            "distinct_urls:778",
+            "distinct_urls:779",
             "distinct_axes:13",
             "origin_types:3",
             "referring_accounts:0",
@@ -3113,9 +3113,9 @@
       "entity": "T Co",
       "kind": "unknown",
       "first_seen_at": "2016-05-05T18:57:30.000Z",
-      "last_seen_at": "2026-09-05T08:34:55.000Z",
+      "last_seen_at": "2026-09-05T10:20:13.290Z",
       "discovery": {
-        "distinct_urls": 18672,
+        "distinct_urls": 18692,
         "example_urls": [
           "https://t.co/pJSE124ec4",
           "https://t.co/Soz8BXPWaa",
@@ -3124,11 +3124,11 @@
           "https://t.co/cYaqYDRp08"
         ],
         "origin_counts": {
-          "feed_buffer": 16594,
+          "feed_buffer": 16616,
           "feed_buffer_reply": 5527,
           "articles": 3
         },
-        "distinct_referring_accounts": 2995,
+        "distinct_referring_accounts": 2996,
         "sample_referring_accounts": [
           "0808iveta",
           "09abracadabra",
@@ -3167,7 +3167,7 @@
         "breadth": {
           "score": 0.53,
           "basis": [
-            "distinct_urls:18672",
+            "distinct_urls:18692",
             "distinct_axes:0",
             "origin_types:3"
           ]
@@ -3175,7 +3175,7 @@
         "corroboration": {
           "score": 0.9125,
           "basis": [
-            "referring_accounts:2995",
+            "referring_accounts:2996",
             "origin_types:3"
           ]
         },
@@ -3206,10 +3206,10 @@
           "basis": [
             "unknown_domain_pattern",
             "doi_or_identifier_path_seen",
-            "distinct_urls:18672",
+            "distinct_urls:18692",
             "distinct_axes:0",
             "origin_types:3",
-            "referring_accounts:2995",
+            "referring_accounts:2996",
             "origin_types:3",
             "track_record_unavailable"
           ]
@@ -4474,7 +4474,7 @@
       "entity": "Philstar",
       "kind": "unknown",
       "first_seen_at": "2026-05-20T06:57:31.760Z",
-      "last_seen_at": "2026-09-04T10:16:15.521Z",
+      "last_seen_at": "2026-09-05T09:05:12.370Z",
       "discovery": {
         "distinct_urls": 247,
         "example_urls": [
@@ -4487,7 +4487,7 @@
         "origin_counts": {
           "ontology_evidence": 120,
           "journals": 311,
-          "articles": 6
+          "articles": 7
         },
         "distinct_referring_accounts": 0,
         "sample_referring_accounts": [],
@@ -5680,9 +5680,9 @@
       "entity": "Inquirer",
       "kind": "unknown",
       "first_seen_at": "2026-05-09T10:15:15.053Z",
-      "last_seen_at": "2026-09-04T23:43:19.014Z",
+      "last_seen_at": "2026-09-05T09:05:12.370Z",
       "discovery": {
-        "distinct_urls": 523,
+        "distinct_urls": 524,
         "example_urls": [
           "https://newsinfo.inquirer.net/2266316/nbi-on-cayetano-position-that-cant-be-defended-by-facts-is-done-with-insults",
           "https://www.inquirer.net/capiz-broadcaster-shooting-probe-widens-as-cops-form-task-force",
@@ -5693,7 +5693,7 @@
         "origin_counts": {
           "ontology_evidence": 196,
           "journals": 629,
-          "articles": 9
+          "articles": 11
         },
         "distinct_referring_accounts": 0,
         "sample_referring_accounts": [],
@@ -5753,7 +5753,7 @@
         "breadth": {
           "score": 0.8799999999999999,
           "basis": [
-            "distinct_urls:523",
+            "distinct_urls:524",
             "distinct_axes:29",
             "origin_types:3"
           ]
@@ -5792,7 +5792,7 @@
           "basis": [
             "unknown_domain_pattern",
             "search_results_seen",
-            "distinct_urls:523",
+            "distinct_urls:524",
             "distinct_axes:29",
             "origin_types:3",
             "referring_accounts:0",
@@ -16896,6 +16896,134 @@
       }
     },
     {
+      "domain": "adjust.com",
+      "entity": "Adjust",
+      "kind": "unknown",
+      "first_seen_at": "2026-05-02T01:23:51.000Z",
+      "last_seen_at": "2026-09-05T09:25:10.764Z",
+      "discovery": {
+        "distinct_urls": 7,
+        "example_urls": [
+          "https://app.adjust.com/1zbd03n1?campaign=X_D90NA_1_all_US_sales_260429-0513_dt_CPC_leihuoua_branding&adgroup=US-pic+vid&creative=%E6%8D%8F%E8%84%B8Vid+%E6%8D%8F%E8%84%B8Pic&cross_device_tracking=1&twclid=25wqttszpha1giwsadazr7s78y",
+          "https://app.adjust.com/24ycckz2?campaign=First_Deposit_ios&adgroup=PH&creative=KV_1&twclid=2a0wm2engn59yfmidtb0drvw8j",
+          "https://app.adjust.com/24ycckz2?campaign=First_Deposit_ios&adgroup=PH&creative=KV_1&twclid=2bwch312ve3nsc54kpjpwf1jvm",
+          "https://app.adjust.com/24ycckz2?campaign=First_Deposit_ios&adgroup=PH&creative=KV_1&twclid=24ufan8getgmov9veaiqlma5if",
+          "https://app.adjust.com/24ycckz2?campaign=First_Deposit_ios&adgroup=PH&creative=KV_1&twclid=2of78dxmzrx3zgkjs6ynfp8j"
+        ],
+        "origin_counts": {
+          "feed_buffer_reply": 1,
+          "feed_buffer": 6
+        },
+        "distinct_referring_accounts": 2,
+        "sample_referring_accounts": [
+          "narakathegame",
+          "ptgamingph"
+        ],
+        "distinct_axes": []
+      },
+      "claims": {
+        "total": 0,
+        "supported": 0,
+        "refuted": 0,
+        "contested": 0,
+        "unverified": 0,
+        "resolved_count": 0
+      },
+      "structural_features": {
+        "has_search_paths": false,
+        "has_article_paths": false,
+        "has_doi_paths": false
+      },
+      "ratings": {
+        "provenance": {
+          "score": 0.45,
+          "basis": [
+            "unknown_domain_pattern"
+          ]
+        },
+        "breadth": {
+          "score": 0.32416666666666666,
+          "basis": [
+            "distinct_urls:7",
+            "distinct_axes:0",
+            "origin_types:2"
+          ]
+        },
+        "corroboration": {
+          "score": 0.39166666666666666,
+          "basis": [
+            "referring_accounts:2",
+            "origin_types:2"
+          ]
+        },
+        "track_record": {
+          "score": null,
+          "basis": [
+            "no_resolved_claims_observed"
+          ]
+        },
+        "profile": {
+          "score": 0.28,
+          "confidence": 0.65,
+          "basis": [
+            "meta_author:true",
+            "published_time:false",
+            "canonical:false",
+            "about:false",
+            "contact:false",
+            "corrections:false",
+            "outbound_links:10",
+            "opinion_marker:false"
+          ]
+        },
+        "overall": {
+          "score": 0.4170052083333334,
+          "confidence": 0.305825,
+          "method": "mechanical_v1",
+          "basis": [
+            "unknown_domain_pattern",
+            "distinct_urls:7",
+            "distinct_axes:0",
+            "origin_types:2",
+            "referring_accounts:2",
+            "origin_types:2",
+            "track_record_unavailable"
+          ]
+        }
+      },
+      "profile": {
+        "fetched_at": "2026-09-04T22:12:17.639Z",
+        "homepage_url": "https://adjust.com/",
+        "example_url": "https://app.adjust.com/1zbd03n1?campaign=X_D90NA_1_all_US_sales_260429-0513_dt_CPC_leihuoua_branding&adgroup=US-pic+vid&creative=%E6%8D%8F%E8%84%B8Vid+%E6%8D%8F%E8%84%B8Pic&cross_device_tracking=1&twclid=25wqttszpha1giwsadazr7s78y",
+        "homepage_status": 429,
+        "example_status": 200,
+        "homepage_final_url": "https://www.adjust.com/",
+        "example_final_url": "https://www.narakathegame.com/buy/fab-1/",
+        "homepage_content_type": "text/html; charset=utf-8",
+        "example_content_type": "text/html",
+        "homepage": {
+          "has_meta_author": false,
+          "has_published_time": false,
+          "has_canonical": false,
+          "has_about_link": false,
+          "has_contact_link": false,
+          "has_corrections_link": false,
+          "outbound_links_count": 1,
+          "opinion_marker": false
+        },
+        "example": {
+          "has_meta_author": true,
+          "has_published_time": false,
+          "has_canonical": false,
+          "has_about_link": false,
+          "has_contact_link": false,
+          "has_corrections_link": false,
+          "outbound_links_count": 10,
+          "opinion_marker": false
+        }
+      }
+    },
+    {
       "domain": "foxnews.com",
       "entity": "Foxnews",
       "kind": "unknown",
@@ -18798,141 +18926,13 @@
       }
     },
     {
-      "domain": "adjust.com",
-      "entity": "Adjust",
-      "kind": "unknown",
-      "first_seen_at": "2026-05-02T01:23:51.000Z",
-      "last_seen_at": "2026-09-05T05:55:05.256Z",
-      "discovery": {
-        "distinct_urls": 6,
-        "example_urls": [
-          "https://app.adjust.com/1zbd03n1?campaign=X_D90NA_1_all_US_sales_260429-0513_dt_CPC_leihuoua_branding&adgroup=US-pic+vid&creative=%E6%8D%8F%E8%84%B8Vid+%E6%8D%8F%E8%84%B8Pic&cross_device_tracking=1&twclid=25wqttszpha1giwsadazr7s78y",
-          "https://app.adjust.com/24ycckz2?campaign=First_Deposit_ios&adgroup=PH&creative=KV_1&twclid=2a0wm2engn59yfmidtb0drvw8j",
-          "https://app.adjust.com/24ycckz2?campaign=First_Deposit_ios&adgroup=PH&creative=KV_1&twclid=2bwch312ve3nsc54kpjpwf1jvm",
-          "https://app.adjust.com/24ycckz2?campaign=First_Deposit_ios&adgroup=PH&creative=KV_1&twclid=24ufan8getgmov9veaiqlma5if",
-          "https://app.adjust.com/24ycckz2?campaign=First_Deposit_ios&adgroup=PH&creative=KV_1&twclid=2of78dxmzrx3zgkjs6ynfp8j"
-        ],
-        "origin_counts": {
-          "feed_buffer_reply": 1,
-          "feed_buffer": 5
-        },
-        "distinct_referring_accounts": 2,
-        "sample_referring_accounts": [
-          "narakathegame",
-          "ptgamingph"
-        ],
-        "distinct_axes": []
-      },
-      "claims": {
-        "total": 0,
-        "supported": 0,
-        "refuted": 0,
-        "contested": 0,
-        "unverified": 0,
-        "resolved_count": 0
-      },
-      "structural_features": {
-        "has_search_paths": false,
-        "has_article_paths": false,
-        "has_doi_paths": false
-      },
-      "ratings": {
-        "provenance": {
-          "score": 0.45,
-          "basis": [
-            "unknown_domain_pattern"
-          ]
-        },
-        "breadth": {
-          "score": 0.295,
-          "basis": [
-            "distinct_urls:6",
-            "distinct_axes:0",
-            "origin_types:2"
-          ]
-        },
-        "corroboration": {
-          "score": 0.39166666666666666,
-          "basis": [
-            "referring_accounts:2",
-            "origin_types:2"
-          ]
-        },
-        "track_record": {
-          "score": null,
-          "basis": [
-            "no_resolved_claims_observed"
-          ]
-        },
-        "profile": {
-          "score": 0.28,
-          "confidence": 0.65,
-          "basis": [
-            "meta_author:true",
-            "published_time:false",
-            "canonical:false",
-            "about:false",
-            "contact:false",
-            "corrections:false",
-            "outbound_links:10",
-            "opinion_marker:false"
-          ]
-        },
-        "overall": {
-          "score": 0.410625,
-          "confidence": 0.2772,
-          "method": "mechanical_v1",
-          "basis": [
-            "unknown_domain_pattern",
-            "distinct_urls:6",
-            "distinct_axes:0",
-            "origin_types:2",
-            "referring_accounts:2",
-            "origin_types:2",
-            "track_record_unavailable"
-          ]
-        }
-      },
-      "profile": {
-        "fetched_at": "2026-09-04T22:12:17.639Z",
-        "homepage_url": "https://adjust.com/",
-        "example_url": "https://app.adjust.com/1zbd03n1?campaign=X_D90NA_1_all_US_sales_260429-0513_dt_CPC_leihuoua_branding&adgroup=US-pic+vid&creative=%E6%8D%8F%E8%84%B8Vid+%E6%8D%8F%E8%84%B8Pic&cross_device_tracking=1&twclid=25wqttszpha1giwsadazr7s78y",
-        "homepage_status": 429,
-        "example_status": 200,
-        "homepage_final_url": "https://www.adjust.com/",
-        "example_final_url": "https://www.narakathegame.com/buy/fab-1/",
-        "homepage_content_type": "text/html; charset=utf-8",
-        "example_content_type": "text/html",
-        "homepage": {
-          "has_meta_author": false,
-          "has_published_time": false,
-          "has_canonical": false,
-          "has_about_link": false,
-          "has_contact_link": false,
-          "has_corrections_link": false,
-          "outbound_links_count": 1,
-          "opinion_marker": false
-        },
-        "example": {
-          "has_meta_author": true,
-          "has_published_time": false,
-          "has_canonical": false,
-          "has_about_link": false,
-          "has_contact_link": false,
-          "has_corrections_link": false,
-          "outbound_links_count": 10,
-          "opinion_marker": false
-        }
-      }
-    },
-    {
       "domain": "moltbook.com",
       "entity": "Moltbook",
       "kind": "unknown",
       "first_seen_at": "2026-03-07T00:29:35.326Z",
-      "last_seen_at": "2026-09-04T08:28:55.599Z",
+      "last_seen_at": "2026-09-05T09:05:12.370Z",
       "discovery": {
-        "distinct_urls": 122,
+        "distinct_urls": 123,
         "example_urls": [
           "https://www.moltbook.com/post/29d49c40-bc59-4a1a-b875-3d3d41ec469e",
           "https://www.moltbook.com/post/3694a386-c24e-4744-8c06-2fc74c73c559",
@@ -18941,7 +18941,7 @@
           "https://www.moltbook.com/post/c6a71bf0-72ab-4867-820a-6b306bae0cea"
         ],
         "origin_counts": {
-          "articles": 122
+          "articles": 123
         },
         "distinct_referring_accounts": 0,
         "sample_referring_accounts": [],
@@ -18970,7 +18970,7 @@
         "breadth": {
           "score": 0.41,
           "basis": [
-            "distinct_urls:122",
+            "distinct_urls:123",
             "distinct_axes:0",
             "origin_types:1"
           ]
@@ -19008,7 +19008,7 @@
           "method": "mechanical_v1",
           "basis": [
             "unknown_domain_pattern",
-            "distinct_urls:122",
+            "distinct_urls:123",
             "distinct_axes:0",
             "origin_types:1",
             "referring_accounts:0",
@@ -30880,7 +30880,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-08-29T15:06:50.133Z",
+        "fetched_at": "2026-09-05T09:57:14.384Z",
         "homepage_url": "https://indie.money/",
         "example_url": "https://indie.money/?twclid=2bucdxuzi0xr9vy6od0pse3sej",
         "homepage_status": 200,
@@ -31005,23 +31005,23 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-08-29T15:06:53.876Z",
+        "fetched_at": "2026-09-05T09:57:26.024Z",
         "homepage_url": "https://bitfunded.com/",
         "example_url": "https://www.bitfunded.com/?twclid=24fhvswu668ysdknbojkj51jtg",
-        "homepage_status": 200,
+        "homepage_status": null,
         "example_status": 200,
-        "homepage_final_url": "https://www.bitfunded.com/",
+        "homepage_final_url": "https://bitfunded.com/",
         "example_final_url": "https://www.bitfunded.com/?twclid=24fhvswu668ysdknbojkj51jtg",
-        "homepage_content_type": "text/html; charset=UTF-8",
+        "homepage_content_type": "",
         "example_content_type": "text/html; charset=UTF-8",
         "homepage": {
           "has_meta_author": false,
-          "has_published_time": true,
-          "has_canonical": true,
+          "has_published_time": false,
+          "has_canonical": false,
           "has_about_link": false,
           "has_contact_link": false,
           "has_corrections_link": false,
-          "outbound_links_count": 6,
+          "outbound_links_count": 0,
           "opinion_marker": false
         },
         "example": {
@@ -31100,6 +31100,20 @@
             "no_resolved_claims_observed"
           ]
         },
+        "profile": {
+          "score": 0.06,
+          "confidence": 0.55,
+          "basis": [
+            "meta_author:false",
+            "published_time:false",
+            "canonical:false",
+            "about:false",
+            "contact:false",
+            "corrections:false",
+            "outbound_links:6",
+            "opinion_marker:false"
+          ]
+        },
         "overall": {
           "score": 0.381328125,
           "confidence": 0.15907500000000002,
@@ -31113,6 +31127,37 @@
             "origin_types:2",
             "track_record_unavailable"
           ]
+        }
+      },
+      "profile": {
+        "fetched_at": "2026-09-05T09:57:28.659Z",
+        "homepage_url": "https://adnoc.ae/",
+        "example_url": "https://adnoc.ae/en/asia?utm_source=Paid_Social&utm_medium=X&utm_campaign=ADNOC-APPEC-&-Gastech_Aug-Sep-2026_Awareness=&twclid=25ebchrvhvmi6v65bhgf64zwg7",
+        "homepage_status": 200,
+        "example_status": 200,
+        "homepage_final_url": "https://adnoc.ae/",
+        "example_final_url": "https://adnoc.ae/en/asia?utm_source=Paid_Social&utm_medium=X&utm_campaign=ADNOC-APPEC-&-Gastech_Aug-Sep-2026_Awareness=&twclid=25ebchrvhvmi6v65bhgf64zwg7",
+        "homepage_content_type": "text/html; charset=utf-8",
+        "example_content_type": "text/html; charset=utf-8",
+        "homepage": {
+          "has_meta_author": false,
+          "has_published_time": false,
+          "has_canonical": false,
+          "has_about_link": false,
+          "has_contact_link": false,
+          "has_corrections_link": false,
+          "outbound_links_count": 15,
+          "opinion_marker": false
+        },
+        "example": {
+          "has_meta_author": false,
+          "has_published_time": false,
+          "has_canonical": false,
+          "has_about_link": false,
+          "has_contact_link": false,
+          "has_corrections_link": false,
+          "outbound_links_count": 6,
+          "opinion_marker": false
         }
       }
     },
@@ -31211,7 +31256,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-08-29T15:36:49.000Z",
+        "fetched_at": "2026-09-05T09:57:29.492Z",
         "homepage_url": "https://openinfer.io/",
         "example_url": "https://openinfer.io/news/2026-06-02-nvidia-dynamo-proved-inference-needs-a-control-plane/?twclid=27dzvvpluhv8xln5kqrwwhmmra",
         "homepage_status": 200,
@@ -31308,7 +31353,7 @@
           ]
         },
         "profile": {
-          "score": 0.12,
+          "score": 0.13,
           "confidence": 0.55,
           "basis": [
             "meta_author:false",
@@ -31317,7 +31362,7 @@
             "about:false",
             "contact:false",
             "corrections:false",
-            "outbound_links:2",
+            "outbound_links:3",
             "opinion_marker:false"
           ]
         },
@@ -31337,13 +31382,13 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-08-29T15:36:52.409Z",
+        "fetched_at": "2026-09-05T10:27:16.916Z",
         "homepage_url": "https://zite.com/",
         "example_url": "https://try.zite.com/ad-integrations-1?twclid=22vk5745ty6qkvlrboi0g1qhow",
         "homepage_status": 200,
         "example_status": 200,
         "homepage_final_url": "https://www.zite.com/",
-        "example_final_url": "https://www.zite.com/?utm_source=twitter&utm_medium=cpc&utm_campaign=xcred&utm_term=integrations&dub_id=PMxtRdOOWzVgoJ7l&twclid=22vk5745ty6qkvlrboi0g1qhow",
+        "example_final_url": "https://www.zite.com/?utm_source=twitter&utm_medium=cpc&utm_campaign=xcred&utm_term=integrations&dub_id=2OoOyNSrbKTlwdP0&twclid=22vk5745ty6qkvlrboi0g1qhow",
         "homepage_content_type": "text/html; charset=utf-8",
         "example_content_type": "text/html; charset=utf-8",
         "homepage": {
@@ -31353,7 +31398,7 @@
           "has_about_link": false,
           "has_contact_link": false,
           "has_corrections_link": false,
-          "outbound_links_count": 2,
+          "outbound_links_count": 3,
           "opinion_marker": false
         },
         "example": {
@@ -31363,7 +31408,7 @@
           "has_about_link": false,
           "has_contact_link": false,
           "has_corrections_link": false,
-          "outbound_links_count": 2,
+          "outbound_links_count": 3,
           "opinion_marker": false
         }
       }
@@ -31463,12 +31508,12 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-08-29T15:36:53.970Z",
+        "fetched_at": "2026-09-05T10:27:19.199Z",
         "homepage_url": "https://grayzonewarfare.com/",
         "example_url": "https://www.grayzonewarfare.com/?twclid=230bsti1ugak1ht0ipkmwplfde",
         "homepage_status": 200,
         "example_status": 200,
-        "homepage_final_url": "https://grayzonewarfare.com/",
+        "homepage_final_url": "https://www.grayzonewarfare.com/",
         "example_final_url": "https://www.grayzonewarfare.com/?twclid=230bsti1ugak1ht0ipkmwplfde",
         "homepage_content_type": "text/html; charset=utf-8",
         "example_content_type": "text/html; charset=utf-8",
@@ -31589,7 +31634,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-08-29T15:36:56.350Z",
+        "fetched_at": "2026-09-05T10:27:21.964Z",
         "homepage_url": "https://bron.org/",
         "example_url": "https://go.bron.org/analytics?twclid=21xfmrfi5gvde5oc65teiw0ea1",
         "homepage_status": 200,
@@ -31715,7 +31760,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-08-29T21:01:42.478Z",
+        "fetched_at": "2026-09-05T10:27:22.919Z",
         "homepage_url": "https://getpolyscope.com/",
         "example_url": "https://getpolyscope.com/?twclid=23d1n8q57spajkavshlbwt8gzs",
         "homepage_status": 200,
