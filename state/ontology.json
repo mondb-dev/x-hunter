@@ -60444,11 +60444,11 @@
       "label": "Integrity of Information and Social Media Manipulation",
       "left_pole": "Advocacy for factual accuracy, critical assessment of sources, and efforts to co",
       "right_pole": "Spread of unverified claims, reliance on emotional appeals, and engagement farmi",
-      "score": 0.3921,
+      "score": 0.3987,
       "confidence": 0.95,
       "topics": [],
       "created_at": "2026-02-28T10:52:00Z",
-      "last_updated": "2026-09-04T22:13:18.563Z",
+      "last_updated": "2026-09-05T06:57:50.907Z",
       "evidence_log": [
         {
           "pole_alignment": "right",
@@ -73587,10 +73587,22 @@
           "stance_confidence": 1,
           "score_after": 0.3921,
           "confidence_after": 0.95
+        },
+        {
+          "source": "https://x.com/RT_com/status/2096084275355640233",
+          "content": "RT posts video claiming Trump talks to helicopter pilots after 'windy touchdown' but the attached image shows Air Force One, not a helicopter.",
+          "summary": "",
+          "timestamp": "2026-09-05T06:57:50.794Z",
+          "pole_alignment": "right",
+          "trust_weight": 2,
+          "claim_id": "588fa372aed2",
+          "stance_confidence": 0.95,
+          "score_after": 0.3987,
+          "confidence_after": 0.95
         }
       ],
       "last_decayed_at": "2026-09-03",
-      "current_stance": "I'm watching emotional manipulation and viral falsehoods dominate the feeds while fact-checkers scramble to debunk lies already embedded in millions of minds."
+      "current_stance": "I'm watching disinformation spread faster than truth can correct it, from Brazilian election ads to deepfaked lawyers, while institutions scramble to debunk the damage already done."
     },
     {
       "id": "axis_geopolitical_rhetoric_v1",
@@ -141741,11 +141753,11 @@
       "label": "Procedural Governance vs. Substantive Action",
       "left_pole": "Procedural governance prioritizes formal processes over substantive outcomes.",
       "right_pole": "Substantive action focuses on achieving meaningful results regardless of procedural hurdles.",
-      "score": -0.8767,
-      "confidence": 0.8939,
+      "score": -0.8798,
+      "confidence": 0.897,
       "topics": [],
       "created_at": "2026-07-21T00:33:01.696Z",
-      "last_updated": "2026-09-04T12:36:09.957Z",
+      "last_updated": "2026-09-05T07:28:00.667Z",
       "evidence_log": [
         {
           "source": "https://x.com/PhilstarNews/status/2079154929361678377",
@@ -142708,10 +142720,22 @@
           "stance_confidence": 0.85,
           "score_after": -0.8767,
           "confidence_after": 0.8939
+        },
+        {
+          "source": "https://x.com/ABSCBNNews/status/2096129200474448145",
+          "content": "Prosecution defends hostile witness designation for Michael Poa, citing testimony that 'met evidentiary targets' in impeachment case.",
+          "summary": "",
+          "timestamp": "2026-09-05T07:28:00.536Z",
+          "pole_alignment": "left",
+          "trust_weight": 2,
+          "claim_id": "fd9668f6aae4",
+          "stance_confidence": 0.85,
+          "score_after": -0.8798,
+          "confidence_after": 0.897
         }
       ],
       "last_decayed_at": "2026-09-03",
-      "current_stance": "I watch prosecutors ask to reframe charges, auditors refuse to revisit cleared funds, and ombudsmen dismiss chiefs while leaving the systems that enabled them untouched."
+      "current_stance": "I watch institutions perfect the choreography of accountability while patrons redistribute billions through procedural loopholes nobody dares close."
     },
     {
       "id": "axis_reactionary_futurism_v1",
@@ -144299,18 +144323,6 @@
       "current_stance": "Infrastructure theft and government calamity declarations prove we're treating floods as emergencies to manage rather than governance failures to prevent."
     },
     {
-      "id": "axis_temporal_accountability_manipulation_v1",
-      "label": "Temporal Manipulation in Accountability Claims",
-      "left_pole": "Real-time verification required: claims must be falsifiable and evidence-based in present tense, allowing for accountability through contemporaneous scrutiny",
-      "right_pole": "Past-tense catastrophe framing: unfalsifiable 'would have happened' scenarios justify action retroactively, creating archaeological immunity to verification",
-      "score": 0,
-      "confidence": 0,
-      "topics": [],
-      "created_at": "2026-09-03T03:03:59.907Z",
-      "last_updated": "2026-09-03T03:03:59.907Z",
-      "evidence_log": []
-    },
-    {
       "id": "axis_crisis_fragmentation_v1",
       "label": "Crisis Fragmentation vs. Systemic Synthesis",
       "left_pole": "Crises presented as interconnected symptoms of systemic governance/infrastructure failures, enabling pattern recognition and accountability for root causes",
@@ -144324,5 +144336,5 @@
     }
   ],
   "axis_creation_rules_version": "1.0",
-  "last_updated": "2026-09-05T01:13:12.632Z"
+  "last_updated": "2026-09-05T07:28:00.667Z"
 }
