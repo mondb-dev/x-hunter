@@ -1,17 +1,17 @@
 {
   "schema_version": "1.0",
-  "generated_at": "2026-09-06T10:41:39.425Z",
+  "generated_at": "2026-09-06T13:41:41.620Z",
   "method": "mechanical_registry_v1",
-  "profiled_at": "2026-09-06T10:41:43.835Z",
+  "profiled_at": "2026-09-06T13:41:55.179Z",
   "sources": [
     {
       "domain": "theguardian.com",
       "entity": "Theguardian",
       "kind": "news",
       "first_seen_at": "2026-03-27T23:17:00Z",
-      "last_seen_at": "2026-09-06T08:42:23.616Z",
+      "last_seen_at": "2026-09-06T11:42:37.213Z",
       "discovery": {
-        "distinct_urls": 1161,
+        "distinct_urls": 1164,
         "example_urls": [
           "https://www.theguardian.com/us-news/2026/jun/23/trump-immigration-courthouse-arrest-policy",
           "https://www.theguardian.com/us-news/2026/jun/28/ice-minnesota-defending-democracy",
@@ -21,8 +21,8 @@
         ],
         "origin_counts": {
           "ontology_evidence": 56,
-          "reading_queue": 1114,
-          "journals": 153,
+          "reading_queue": 1116,
+          "journals": 154,
           "articles": 5
         },
         "distinct_referring_accounts": 0,
@@ -79,7 +79,7 @@
         "breadth": {
           "score": 0.94,
           "basis": [
-            "distinct_urls:1161",
+            "distinct_urls:1164",
             "distinct_axes:24",
             "origin_types:4"
           ]
@@ -119,7 +119,7 @@
             "newsroom_domain_pattern",
             "article_path_seen",
             "doi_or_identifier_path_seen",
-            "distinct_urls:1161",
+            "distinct_urls:1164",
             "distinct_axes:24",
             "origin_types:4",
             "referring_accounts:0",
@@ -1864,7 +1864,7 @@
         ],
         "origin_counts": {
           "ontology_evidence": 71,
-          "reading_queue": 90,
+          "reading_queue": 91,
           "journals": 128,
           "articles": 3
         },
@@ -1995,9 +1995,9 @@
       "entity": "Pcij",
       "kind": "unknown",
       "first_seen_at": "2026-07-08T04:32:07.894Z",
-      "last_seen_at": "2026-09-03T19:04:17.722Z",
+      "last_seen_at": "2026-09-06T11:42:37.232Z",
       "discovery": {
-        "distinct_urls": 16,
+        "distinct_urls": 17,
         "example_urls": [
           "https://pcij.org/2026/06/23/tycoons-swoop-in-clean-energy-boom/",
           "https://pcij.org/2026/05/24/duterte-impeach-votes-2026/",
@@ -2006,9 +2006,9 @@
           "https://pcij.org/2026/07/01/ten-years-ago-today-day-one-year-one-of-the-antidrug-campaign/"
         ],
         "origin_counts": {
-          "ontology_evidence": 40,
-          "reading_queue": 41,
-          "journals": 75,
+          "ontology_evidence": 41,
+          "reading_queue": 42,
+          "journals": 76,
           "articles": 1
         },
         "distinct_referring_accounts": 0,
@@ -2017,6 +2017,7 @@
           "axis_accountability_temporality_v1",
           "axis_digital_supply_chain_security",
           "axis_digital_surveillance_autonomy_v1",
+          "axis_disaster_infrastructure_accountability_v1",
           "axis_eje_accountability_v1",
           "axis_environmental_policy_v_economic_v1",
           "axis_human_rights_exploitation_v1",
@@ -2051,8 +2052,8 @@
         "breadth": {
           "score": 0.94,
           "basis": [
-            "distinct_urls:16",
-            "distinct_axes:11",
+            "distinct_urls:17",
+            "distinct_axes:12",
             "origin_types:4"
           ]
         },
@@ -2085,13 +2086,13 @@
         },
         "overall": {
           "score": 0.5684374999999999,
-          "confidence": 0.5889,
+          "confidence": 0.6113999999999999,
           "method": "mechanical_v1",
           "basis": [
             "unknown_domain_pattern",
             "article_path_seen",
-            "distinct_urls:16",
-            "distinct_axes:11",
+            "distinct_urls:17",
+            "distinct_axes:12",
             "origin_types:4",
             "referring_accounts:0",
             "origin_types:4",
@@ -3116,9 +3117,9 @@
       "entity": "T Co",
       "kind": "unknown",
       "first_seen_at": "2016-05-05T18:57:30.000Z",
-      "last_seen_at": "2026-09-06T09:00:10.000Z",
+      "last_seen_at": "2026-09-06T13:21:57.000Z",
       "discovery": {
-        "distinct_urls": 19291,
+        "distinct_urls": 19351,
         "example_urls": [
           "https://t.co/pJSE124ec4",
           "https://t.co/Soz8BXPWaa",
@@ -3127,8 +3128,8 @@
           "https://t.co/cYaqYDRp08"
         ],
         "origin_counts": {
-          "feed_buffer": 17225,
-          "feed_buffer_reply": 5655,
+          "feed_buffer": 17283,
+          "feed_buffer_reply": 5666,
           "articles": 3
         },
         "distinct_referring_accounts": 3035,
@@ -3170,7 +3171,7 @@
         "breadth": {
           "score": 0.53,
           "basis": [
-            "distinct_urls:19291",
+            "distinct_urls:19351",
             "distinct_axes:0",
             "origin_types:3"
           ]
@@ -3209,7 +3210,7 @@
           "basis": [
             "unknown_domain_pattern",
             "doi_or_identifier_path_seen",
-            "distinct_urls:19291",
+            "distinct_urls:19351",
             "distinct_axes:0",
             "origin_types:3",
             "referring_accounts:3035",
@@ -3348,7 +3349,7 @@
           ]
         },
         "profile": {
-          "score": 0.36000000000000004,
+          "score": 0.2,
           "confidence": 0.65,
           "basis": [
             "meta_author:false",
@@ -3356,7 +3357,7 @@
             "canonical:false",
             "about:true",
             "contact:false",
-            "corrections:true",
+            "corrections:false",
             "outbound_links:6",
             "opinion_marker:false"
           ]
@@ -3377,7 +3378,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-09-03T13:33:22.374Z",
+        "fetched_at": "2026-09-06T13:41:43.141Z",
         "homepage_url": "https://rappler.com/",
         "example_url": "https://www.rappler.com/fact-check-no-arrest-warrant-issued-vs-marcoleta",
         "homepage_status": 200,
@@ -3402,7 +3403,7 @@
           "has_canonical": false,
           "has_about_link": true,
           "has_contact_link": false,
-          "has_corrections_link": true,
+          "has_corrections_link": false,
           "outbound_links_count": 6,
           "opinion_marker": false
         }
@@ -5006,7 +5007,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-09-03T13:33:32.650Z",
+        "fetched_at": "2026-09-06T13:41:53.574Z",
         "homepage_url": "https://doubleclick.net/",
         "example_url": "https://ad.doubleclick.net/ddm/trackclk/N117602.5126432X/B34540950.438517562;dc_trk_aid=631787244;dc_trk_cid=249093288;dc_dbm_token=$%7BDC_DBM_TOKEN%7D;dc_lat=;dc_rdid=;tag_for_child_directed_treatment=;tfua=;gdpr=$%7BGDPR%7D;gdpr_consent=$%7BGDPR_CONSENT_755%7D;gpp=$%7BGPP_STRING_755%7D;gpp_sid=$%7BGPP_SID%7D;ltd=;dc_tdv=1?twclid=292cdwzoayexun1iu6o4fsk10z",
         "homepage_status": 200,
@@ -5428,9 +5429,9 @@
       "entity": "Starlink",
       "kind": "unknown",
       "first_seen_at": "2026-04-07T03:51:50.000Z",
-      "last_seen_at": "2026-09-06T10:07:41.062Z",
+      "last_seen_at": "2026-09-06T12:10:08.000Z",
       "discovery": {
-        "distinct_urls": 884,
+        "distinct_urls": 893,
         "example_urls": [
           "https://www.starlink.com/us/residential?referral=RC-DF-9543787-19448-67&utm_medium=paid&utm_campaign=awr_us_soc_twt_ptg_cau&utm_content=awr_us_soc_twt_ptg_cau_res_gvp_v4s_stc_en-us_sdb-bluesky-uptime&twclid=2cg62b1u0oqrypdim5oir1767e",
           "https://www.starlink.com/us/residential?referral=RC-DF-9543787-19448-67&utm_medium=paid&utm_campaign=awr_us_soc_twt_ptg_cau&utm_content=awr_us_soc_twt_ptg_cau_res_gvp_v4s_stc_en-us_sdb-avail-sat-yourhome&twclid=2216n7j93v9absqn77762mm626",
@@ -5439,7 +5440,7 @@
           "https://www.starlink.com/us/residential?referral=RC-DF-9543787-19448-67&utm_medium=paid&utm_campaign=awr_us_soc_twt_ptg_cau&utm_content=awr_us_soc_twt_ptg_cau_res_gvp_v4s_stc_en-us_sdb-avail-sat-arrived&twclid=21pi7t0qs8tgw0wgnh5mvmdu2g"
         ],
         "origin_counts": {
-          "feed_buffer_reply": 824,
+          "feed_buffer_reply": 833,
           "feed_buffer": 64
         },
         "distinct_referring_accounts": 5,
@@ -5475,7 +5476,7 @@
         "breadth": {
           "score": 0.47,
           "basis": [
-            "distinct_urls:884",
+            "distinct_urls:893",
             "distinct_axes:0",
             "origin_types:2"
           ]
@@ -5513,7 +5514,7 @@
           "method": "mechanical_v1",
           "basis": [
             "unknown_domain_pattern",
-            "distinct_urls:884",
+            "distinct_urls:893",
             "distinct_axes:0",
             "origin_types:2",
             "referring_accounts:5",
@@ -5683,9 +5684,9 @@
       "entity": "Inquirer",
       "kind": "unknown",
       "first_seen_at": "2026-05-09T10:15:15.053Z",
-      "last_seen_at": "2026-09-06T10:12:19.149Z",
+      "last_seen_at": "2026-09-06T11:42:37.213Z",
       "discovery": {
-        "distinct_urls": 533,
+        "distinct_urls": 535,
         "example_urls": [
           "https://newsinfo.inquirer.net/2266316/nbi-on-cayetano-position-that-cant-be-defended-by-facts-is-done-with-insults",
           "https://www.inquirer.net/capiz-broadcaster-shooting-probe-widens-as-cops-form-task-force",
@@ -5695,7 +5696,7 @@
         ],
         "origin_counts": {
           "ontology_evidence": 199,
-          "journals": 637,
+          "journals": 639,
           "articles": 13
         },
         "distinct_referring_accounts": 0,
@@ -5756,7 +5757,7 @@
         "breadth": {
           "score": 0.8799999999999999,
           "basis": [
-            "distinct_urls:533",
+            "distinct_urls:535",
             "distinct_axes:29",
             "origin_types:3"
           ]
@@ -5795,7 +5796,7 @@
           "basis": [
             "unknown_domain_pattern",
             "search_results_seen",
-            "distinct_urls:533",
+            "distinct_urls:535",
             "distinct_axes:29",
             "origin_types:3",
             "referring_accounts:0",
@@ -6202,7 +6203,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-09-03T13:33:34.493Z",
+        "fetched_at": "2026-09-06T13:41:54.781Z",
         "homepage_url": "https://youtu.be/",
         "example_url": "https://youtu.be/m7jAReMF2c8?si=AtT5ue3VPnmZq5V6",
         "homepage_status": 200,
@@ -7224,7 +7225,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-09-03T13:33:36.137Z",
+        "fetched_at": "2026-09-06T13:41:55.179Z",
         "homepage_url": "https://ro.co/",
         "example_url": "https://ro.co/lp/weight-loss/quiz/?utm_medium=paid_social&utm_source=Twitter&utm_campaign=41158458&utm_term=54579155&utm_content=Ad2&twclid=2bv3rduaz2ypp78vahy5e6wspd",
         "homepage_status": 403,
@@ -10939,6 +10940,133 @@
       }
     },
     {
+      "domain": "nustargame.com",
+      "entity": "Nustargame",
+      "kind": "unknown",
+      "first_seen_at": "2026-07-04T07:36:55.650Z",
+      "last_seen_at": "2026-09-06T08:45:00.000Z",
+      "discovery": {
+        "distinct_urls": 15,
+        "example_urls": [
+          "https://appstore.nustargame.com/?fbclid=IwZXh0bgNhZW0CMTAAYnJpZBExdTFXSWM2OURwSzlmRGVVT3NydGMGYXBwX2lkEDIyMjAzOTE3ODgyMDA4OTIAAR5-z2VUxUBlb1xkH-U__5gASpshBlmq9xw-GXCS4bTWWiFtwpFdWkJ4PY2qEA_aem_NiqDTDHN3CJKVVCNR24plw&twclid=26zfxjdeqc7s72rera75b8jf08",
+          "https://nustargame.com/?twclid=230m3qm5hhiwojmbba5bza5pbz",
+          "https://nustargame.com/?twclid=26qbkmrc5fx3zywq3rneiy4r0",
+          "https://nustargame.com/?twclid=28l79lya4aov74787fjfzu9784",
+          "https://nustargame.com/?twclid=26hhyt5gr2gtlmrqwtmakr8fwz"
+        ],
+        "origin_counts": {
+          "feed_buffer": 8,
+          "feed_buffer_reply": 7
+        },
+        "distinct_referring_accounts": 1,
+        "sample_referring_accounts": [
+          "nustaronlineph"
+        ],
+        "distinct_axes": []
+      },
+      "claims": {
+        "total": 0,
+        "supported": 0,
+        "refuted": 0,
+        "contested": 0,
+        "unverified": 0,
+        "resolved_count": 0
+      },
+      "structural_features": {
+        "has_search_paths": false,
+        "has_article_paths": false,
+        "has_doi_paths": false
+      },
+      "ratings": {
+        "provenance": {
+          "score": 0.45,
+          "basis": [
+            "unknown_domain_pattern"
+          ]
+        },
+        "breadth": {
+          "score": 0.47,
+          "basis": [
+            "distinct_urls:15",
+            "distinct_axes:0",
+            "origin_types:2"
+          ]
+        },
+        "corroboration": {
+          "score": 0.2833333333333333,
+          "basis": [
+            "referring_accounts:1",
+            "origin_types:2"
+          ]
+        },
+        "track_record": {
+          "score": null,
+          "basis": [
+            "no_resolved_claims_observed"
+          ]
+        },
+        "profile": {
+          "score": 0,
+          "confidence": 0.55,
+          "basis": [
+            "meta_author:false",
+            "published_time:false",
+            "canonical:false",
+            "about:false",
+            "contact:false",
+            "corrections:false",
+            "outbound_links:0",
+            "opinion_marker:false"
+          ]
+        },
+        "overall": {
+          "score": 0.43875,
+          "confidence": 0.4842,
+          "method": "mechanical_v1",
+          "basis": [
+            "unknown_domain_pattern",
+            "distinct_urls:15",
+            "distinct_axes:0",
+            "origin_types:2",
+            "referring_accounts:1",
+            "origin_types:2",
+            "track_record_unavailable"
+          ]
+        }
+      },
+      "profile": {
+        "fetched_at": "2026-09-04T15:36:30.510Z",
+        "homepage_url": "https://nustargame.com/",
+        "example_url": "https://appstore.nustargame.com/?fbclid=IwZXh0bgNhZW0CMTAAYnJpZBExdTFXSWM2OURwSzlmRGVVT3NydGMGYXBwX2lkEDIyMjAzOTE3ODgyMDA4OTIAAR5-z2VUxUBlb1xkH-U__5gASpshBlmq9xw-GXCS4bTWWiFtwpFdWkJ4PY2qEA_aem_NiqDTDHN3CJKVVCNR24plw&twclid=26zfxjdeqc7s72rera75b8jf08",
+        "homepage_status": null,
+        "example_status": null,
+        "homepage_final_url": "https://nustargame.com/",
+        "example_final_url": "https://appstore.nustargame.com/?fbclid=IwZXh0bgNhZW0CMTAAYnJpZBExdTFXSWM2OURwSzlmRGVVT3NydGMGYXBwX2lkEDIyMjAzOTE3ODgyMDA4OTIAAR5-z2VUxUBlb1xkH-U__5gASpshBlmq9xw-GXCS4bTWWiFtwpFdWkJ4PY2qEA_aem_NiqDTDHN3CJKVVCNR24plw&twclid=26zfxjdeqc7s72rera75b8jf08",
+        "homepage_content_type": "",
+        "example_content_type": "",
+        "homepage": {
+          "has_meta_author": false,
+          "has_published_time": false,
+          "has_canonical": false,
+          "has_about_link": false,
+          "has_contact_link": false,
+          "has_corrections_link": false,
+          "outbound_links_count": 0,
+          "opinion_marker": false
+        },
+        "example": {
+          "has_meta_author": false,
+          "has_published_time": false,
+          "has_canonical": false,
+          "has_about_link": false,
+          "has_contact_link": false,
+          "has_corrections_link": false,
+          "outbound_links_count": 0,
+          "opinion_marker": false
+        }
+      }
+    },
+    {
       "domain": "wencrypto.com",
       "entity": "Wencrypto",
       "kind": "unknown",
@@ -11169,133 +11297,6 @@
         "homepage_final_url": "https://smart.link/",
         "example_final_url": "https://smart.link/sdh2x9q4dptrg?twclid=29tfuqwoatuv70nv93xhcyx2vj",
         "homepage_content_type": "text/html; charset=utf-8",
-        "example_content_type": "",
-        "homepage": {
-          "has_meta_author": false,
-          "has_published_time": false,
-          "has_canonical": false,
-          "has_about_link": false,
-          "has_contact_link": false,
-          "has_corrections_link": false,
-          "outbound_links_count": 0,
-          "opinion_marker": false
-        },
-        "example": {
-          "has_meta_author": false,
-          "has_published_time": false,
-          "has_canonical": false,
-          "has_about_link": false,
-          "has_contact_link": false,
-          "has_corrections_link": false,
-          "outbound_links_count": 0,
-          "opinion_marker": false
-        }
-      }
-    },
-    {
-      "domain": "nustargame.com",
-      "entity": "Nustargame",
-      "kind": "unknown",
-      "first_seen_at": "2026-07-04T07:36:55.650Z",
-      "last_seen_at": "2026-09-06T01:54:11.000Z",
-      "discovery": {
-        "distinct_urls": 14,
-        "example_urls": [
-          "https://appstore.nustargame.com/?fbclid=IwZXh0bgNhZW0CMTAAYnJpZBExdTFXSWM2OURwSzlmRGVVT3NydGMGYXBwX2lkEDIyMjAzOTE3ODgyMDA4OTIAAR5-z2VUxUBlb1xkH-U__5gASpshBlmq9xw-GXCS4bTWWiFtwpFdWkJ4PY2qEA_aem_NiqDTDHN3CJKVVCNR24plw&twclid=26zfxjdeqc7s72rera75b8jf08",
-          "https://nustargame.com/?twclid=230m3qm5hhiwojmbba5bza5pbz",
-          "https://nustargame.com/?twclid=26qbkmrc5fx3zywq3rneiy4r0",
-          "https://nustargame.com/?twclid=28l79lya4aov74787fjfzu9784",
-          "https://nustargame.com/?twclid=26hhyt5gr2gtlmrqwtmakr8fwz"
-        ],
-        "origin_counts": {
-          "feed_buffer": 8,
-          "feed_buffer_reply": 6
-        },
-        "distinct_referring_accounts": 1,
-        "sample_referring_accounts": [
-          "nustaronlineph"
-        ],
-        "distinct_axes": []
-      },
-      "claims": {
-        "total": 0,
-        "supported": 0,
-        "refuted": 0,
-        "contested": 0,
-        "unverified": 0,
-        "resolved_count": 0
-      },
-      "structural_features": {
-        "has_search_paths": false,
-        "has_article_paths": false,
-        "has_doi_paths": false
-      },
-      "ratings": {
-        "provenance": {
-          "score": 0.45,
-          "basis": [
-            "unknown_domain_pattern"
-          ]
-        },
-        "breadth": {
-          "score": 0.47,
-          "basis": [
-            "distinct_urls:14",
-            "distinct_axes:0",
-            "origin_types:2"
-          ]
-        },
-        "corroboration": {
-          "score": 0.2833333333333333,
-          "basis": [
-            "referring_accounts:1",
-            "origin_types:2"
-          ]
-        },
-        "track_record": {
-          "score": null,
-          "basis": [
-            "no_resolved_claims_observed"
-          ]
-        },
-        "profile": {
-          "score": 0,
-          "confidence": 0.55,
-          "basis": [
-            "meta_author:false",
-            "published_time:false",
-            "canonical:false",
-            "about:false",
-            "contact:false",
-            "corrections:false",
-            "outbound_links:0",
-            "opinion_marker:false"
-          ]
-        },
-        "overall": {
-          "score": 0.43875,
-          "confidence": 0.4617,
-          "method": "mechanical_v1",
-          "basis": [
-            "unknown_domain_pattern",
-            "distinct_urls:14",
-            "distinct_axes:0",
-            "origin_types:2",
-            "referring_accounts:1",
-            "origin_types:2",
-            "track_record_unavailable"
-          ]
-        }
-      },
-      "profile": {
-        "fetched_at": "2026-09-04T15:36:30.510Z",
-        "homepage_url": "https://nustargame.com/",
-        "example_url": "https://appstore.nustargame.com/?fbclid=IwZXh0bgNhZW0CMTAAYnJpZBExdTFXSWM2OURwSzlmRGVVT3NydGMGYXBwX2lkEDIyMjAzOTE3ODgyMDA4OTIAAR5-z2VUxUBlb1xkH-U__5gASpshBlmq9xw-GXCS4bTWWiFtwpFdWkJ4PY2qEA_aem_NiqDTDHN3CJKVVCNR24plw&twclid=26zfxjdeqc7s72rera75b8jf08",
-        "homepage_status": null,
-        "example_status": null,
-        "homepage_final_url": "https://nustargame.com/",
-        "example_final_url": "https://appstore.nustargame.com/?fbclid=IwZXh0bgNhZW0CMTAAYnJpZBExdTFXSWM2OURwSzlmRGVVT3NydGMGYXBwX2lkEDIyMjAzOTE3ODgyMDA4OTIAAR5-z2VUxUBlb1xkH-U__5gASpshBlmq9xw-GXCS4bTWWiFtwpFdWkJ4PY2qEA_aem_NiqDTDHN3CJKVVCNR24plw&twclid=26zfxjdeqc7s72rera75b8jf08",
-        "homepage_content_type": "",
         "example_content_type": "",
         "homepage": {
           "has_meta_author": false,
@@ -12209,6 +12210,133 @@
       }
     },
     {
+      "domain": "oppo.com",
+      "entity": "Oppo",
+      "kind": "unknown",
+      "first_seen_at": "2026-08-13T09:57:07.277Z",
+      "last_seen_at": "2026-09-06T12:47:55.221Z",
+      "discovery": {
+        "distinct_urls": 13,
+        "example_urls": [
+          "https://www.oppo.com/ph/store?utm_source=x&utm_medium=cpm&utm_campaign=OPPO_RENO16_LAUNCH&utm_content=Babymonster&twclid=23rip3pnfc4fzj8wf4kuwjdu8m",
+          "https://www.oppo.com/ph/store?utm_source=x&utm_medium=cpm&utm_campaign=OPPO_RENO16_LAUNCH&utm_content=Bubble&twclid=263t9ffc6n0ccfie73ppvdnz3w",
+          "https://www.oppo.com/ph/store?utm_source=x&utm_medium=cpm&utm_campaign=OPPO_RENO16_LAUNCH&utm_content=Bubble&twclid=2dhtn8a401tkqo8fgjpuyzy4i2",
+          "https://www.oppo.com/ph/store?utm_source=x&utm_medium=cpm&utm_campaign=OPPO_RENO16_LAUNCH&utm_content=Brand_Tour_Vlog_UGC&twclid=2dmroo8nzzsfj1l9wi94bnquid",
+          "https://www.oppo.com/ph/store?utm_source=x&utm_medium=cpm&utm_campaign=OPPO_RENO16_LAUNCH&utm_content=Brand_Tour_Vlog_UGC&twclid=2cznrhr3poa1gt6yd481w58i6a"
+        ],
+        "origin_counts": {
+          "feed_buffer": 9,
+          "feed_buffer_reply": 4
+        },
+        "distinct_referring_accounts": 1,
+        "sample_referring_accounts": [
+          "oppophilippines"
+        ],
+        "distinct_axes": []
+      },
+      "claims": {
+        "total": 0,
+        "supported": 0,
+        "refuted": 0,
+        "contested": 0,
+        "unverified": 0,
+        "resolved_count": 0
+      },
+      "structural_features": {
+        "has_search_paths": false,
+        "has_article_paths": false,
+        "has_doi_paths": false
+      },
+      "ratings": {
+        "provenance": {
+          "score": 0.45,
+          "basis": [
+            "unknown_domain_pattern"
+          ]
+        },
+        "breadth": {
+          "score": 0.47,
+          "basis": [
+            "distinct_urls:13",
+            "distinct_axes:0",
+            "origin_types:2"
+          ]
+        },
+        "corroboration": {
+          "score": 0.2833333333333333,
+          "basis": [
+            "referring_accounts:1",
+            "origin_types:2"
+          ]
+        },
+        "track_record": {
+          "score": null,
+          "basis": [
+            "no_resolved_claims_observed"
+          ]
+        },
+        "profile": {
+          "score": 0.36,
+          "confidence": 0.65,
+          "basis": [
+            "meta_author:false",
+            "published_time:false",
+            "canonical:false",
+            "about:true",
+            "contact:true",
+            "corrections:false",
+            "outbound_links:10",
+            "opinion_marker:false"
+          ]
+        },
+        "overall": {
+          "score": 0.43875,
+          "confidence": 0.4392,
+          "method": "mechanical_v1",
+          "basis": [
+            "unknown_domain_pattern",
+            "distinct_urls:13",
+            "distinct_axes:0",
+            "origin_types:2",
+            "referring_accounts:1",
+            "origin_types:2",
+            "track_record_unavailable"
+          ]
+        }
+      },
+      "profile": {
+        "fetched_at": "2026-09-04T10:15:32.549Z",
+        "homepage_url": "https://oppo.com/",
+        "example_url": "https://www.oppo.com/ph/store?utm_source=x&utm_medium=cpm&utm_campaign=OPPO_RENO16_LAUNCH&utm_content=Babymonster&twclid=23rip3pnfc4fzj8wf4kuwjdu8m",
+        "homepage_status": 200,
+        "example_status": 200,
+        "homepage_final_url": "https://www.oppo.com/ph/",
+        "example_final_url": "https://www.oppo.com/ph/store?utm_source=x&utm_medium=cpm&utm_campaign=OPPO_RENO16_LAUNCH&utm_content=Babymonster&twclid=23rip3pnfc4fzj8wf4kuwjdu8m",
+        "homepage_content_type": "text/html;charset=utf-8",
+        "example_content_type": "text/html;charset=utf-8",
+        "homepage": {
+          "has_meta_author": false,
+          "has_published_time": false,
+          "has_canonical": true,
+          "has_about_link": true,
+          "has_contact_link": true,
+          "has_corrections_link": false,
+          "outbound_links_count": 10,
+          "opinion_marker": false
+        },
+        "example": {
+          "has_meta_author": false,
+          "has_published_time": false,
+          "has_canonical": false,
+          "has_about_link": true,
+          "has_contact_link": true,
+          "has_corrections_link": false,
+          "outbound_links_count": 10,
+          "opinion_marker": false
+        }
+      }
+    },
+    {
       "domain": "interserver.net",
       "entity": "Interserver",
       "kind": "unknown",
@@ -12331,133 +12459,6 @@
           "has_contact_link": false,
           "has_corrections_link": false,
           "outbound_links_count": 4,
-          "opinion_marker": false
-        }
-      }
-    },
-    {
-      "domain": "oppo.com",
-      "entity": "Oppo",
-      "kind": "unknown",
-      "first_seen_at": "2026-08-13T09:57:07.277Z",
-      "last_seen_at": "2026-09-05T01:49:30.000Z",
-      "discovery": {
-        "distinct_urls": 12,
-        "example_urls": [
-          "https://www.oppo.com/ph/store?utm_source=x&utm_medium=cpm&utm_campaign=OPPO_RENO16_LAUNCH&utm_content=Babymonster&twclid=23rip3pnfc4fzj8wf4kuwjdu8m",
-          "https://www.oppo.com/ph/store?utm_source=x&utm_medium=cpm&utm_campaign=OPPO_RENO16_LAUNCH&utm_content=Bubble&twclid=263t9ffc6n0ccfie73ppvdnz3w",
-          "https://www.oppo.com/ph/store?utm_source=x&utm_medium=cpm&utm_campaign=OPPO_RENO16_LAUNCH&utm_content=Bubble&twclid=2dhtn8a401tkqo8fgjpuyzy4i2",
-          "https://www.oppo.com/ph/store?utm_source=x&utm_medium=cpm&utm_campaign=OPPO_RENO16_LAUNCH&utm_content=Brand_Tour_Vlog_UGC&twclid=2dmroo8nzzsfj1l9wi94bnquid",
-          "https://www.oppo.com/ph/store?utm_source=x&utm_medium=cpm&utm_campaign=OPPO_RENO16_LAUNCH&utm_content=Brand_Tour_Vlog_UGC&twclid=2cznrhr3poa1gt6yd481w58i6a"
-        ],
-        "origin_counts": {
-          "feed_buffer": 8,
-          "feed_buffer_reply": 4
-        },
-        "distinct_referring_accounts": 1,
-        "sample_referring_accounts": [
-          "oppophilippines"
-        ],
-        "distinct_axes": []
-      },
-      "claims": {
-        "total": 0,
-        "supported": 0,
-        "refuted": 0,
-        "contested": 0,
-        "unverified": 0,
-        "resolved_count": 0
-      },
-      "structural_features": {
-        "has_search_paths": false,
-        "has_article_paths": false,
-        "has_doi_paths": false
-      },
-      "ratings": {
-        "provenance": {
-          "score": 0.45,
-          "basis": [
-            "unknown_domain_pattern"
-          ]
-        },
-        "breadth": {
-          "score": 0.47,
-          "basis": [
-            "distinct_urls:12",
-            "distinct_axes:0",
-            "origin_types:2"
-          ]
-        },
-        "corroboration": {
-          "score": 0.2833333333333333,
-          "basis": [
-            "referring_accounts:1",
-            "origin_types:2"
-          ]
-        },
-        "track_record": {
-          "score": null,
-          "basis": [
-            "no_resolved_claims_observed"
-          ]
-        },
-        "profile": {
-          "score": 0.36,
-          "confidence": 0.65,
-          "basis": [
-            "meta_author:false",
-            "published_time:false",
-            "canonical:false",
-            "about:true",
-            "contact:true",
-            "corrections:false",
-            "outbound_links:10",
-            "opinion_marker:false"
-          ]
-        },
-        "overall": {
-          "score": 0.43875,
-          "confidence": 0.4167,
-          "method": "mechanical_v1",
-          "basis": [
-            "unknown_domain_pattern",
-            "distinct_urls:12",
-            "distinct_axes:0",
-            "origin_types:2",
-            "referring_accounts:1",
-            "origin_types:2",
-            "track_record_unavailable"
-          ]
-        }
-      },
-      "profile": {
-        "fetched_at": "2026-09-04T10:15:32.549Z",
-        "homepage_url": "https://oppo.com/",
-        "example_url": "https://www.oppo.com/ph/store?utm_source=x&utm_medium=cpm&utm_campaign=OPPO_RENO16_LAUNCH&utm_content=Babymonster&twclid=23rip3pnfc4fzj8wf4kuwjdu8m",
-        "homepage_status": 200,
-        "example_status": 200,
-        "homepage_final_url": "https://www.oppo.com/ph/",
-        "example_final_url": "https://www.oppo.com/ph/store?utm_source=x&utm_medium=cpm&utm_campaign=OPPO_RENO16_LAUNCH&utm_content=Babymonster&twclid=23rip3pnfc4fzj8wf4kuwjdu8m",
-        "homepage_content_type": "text/html;charset=utf-8",
-        "example_content_type": "text/html;charset=utf-8",
-        "homepage": {
-          "has_meta_author": false,
-          "has_published_time": false,
-          "has_canonical": true,
-          "has_about_link": true,
-          "has_contact_link": true,
-          "has_corrections_link": false,
-          "outbound_links_count": 10,
-          "opinion_marker": false
-        },
-        "example": {
-          "has_meta_author": false,
-          "has_published_time": false,
-          "has_canonical": false,
-          "has_about_link": true,
-          "has_contact_link": true,
-          "has_corrections_link": false,
-          "outbound_links_count": 10,
           "opinion_marker": false
         }
       }
@@ -14852,7 +14853,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-09-03T11:33:17.796Z",
+        "fetched_at": "2026-09-06T11:41:43.088Z",
         "homepage_url": "https://ic.com/",
         "example_url": "https://www.ic.com/en/trade-indices/?utm_source=twitter&utm_medium=twitter&utm_campaign=tw_en_ph_cv_pr&utm_term=TWITTER_TIMELINE&utm_content=indices&camp=94092&twclid=22h8qlm19mtb6b4fjbtto4x3rp",
         "homepage_status": 200,
@@ -14978,7 +14979,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-09-03T11:33:19.329Z",
+        "fetched_at": "2026-09-06T11:41:43.685Z",
         "homepage_url": "https://tradeodds.io/",
         "example_url": "https://www.tradeodds.io/dashboard?tab=factor-match&utm_source=twitter&utm_medium=cpc&utm_campaign=Factor+Match+Purchase+Campaign+Desk&utm_id=factor+match+purchase+campaign+desk&utm_term=factor+match+purchase+purchase+desk+us&utm_content=ad2&twclid=21dpzozj7vqb86fdz6auuzunmy",
         "homepage_status": 200,
@@ -15104,7 +15105,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-09-03T11:33:33.039Z",
+        "fetched_at": "2026-09-06T11:41:57.010Z",
         "homepage_url": "https://poly.market/",
         "example_url": "https://poly.market/X0q565H?twclid=24x365380zub6d85j7s6xd212w",
         "homepage_status": null,
@@ -15230,7 +15231,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-09-03T11:33:35.029Z",
+        "fetched_at": "2026-09-06T11:41:58.785Z",
         "homepage_url": "https://canadacis.org/",
         "example_url": "https://ph2canada.canadacis.org/?utm_source=twitter&utm_medium=conversions&utm_campaign=ph01&twclid=29zxowpwkbmryvjqutr3f9ysur",
         "homepage_status": 200,
@@ -15356,7 +15357,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-09-03T12:03:17.469Z",
+        "fetched_at": "2026-09-06T12:11:41.164Z",
         "homepage_url": "https://anymark.co/",
         "example_url": "https://anymark.co/?utm_source=x&utm_campaign=x771&twclid=293t0nesyim9m91au5fqoaj5s8",
         "homepage_status": 200,
@@ -15482,7 +15483,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-09-03T12:03:19.723Z",
+        "fetched_at": "2026-09-06T12:11:42.601Z",
         "homepage_url": "https://panzer.quest/",
         "example_url": "https://panzer.quest/?r=twipq1wwa&twclid=29prb4l0osv19xvy30sejzir0",
         "homepage_status": 200,
@@ -15608,7 +15609,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-09-03T12:03:20.436Z",
+        "fetched_at": "2026-09-06T12:11:43.683Z",
         "homepage_url": "https://omgskills.com/",
         "example_url": "https://omgskills.com/?twclid=2ewu2vd054idb44rsf4bgvksa8",
         "homepage_status": 200,
@@ -15734,7 +15735,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-09-03T12:03:22.961Z",
+        "fetched_at": "2026-09-06T12:11:44.589Z",
         "homepage_url": "https://era.app/",
         "example_url": "https://era.app/?twclid=23bm7jtrc66pin9ydx0wvupecw",
         "homepage_status": 200,
@@ -15860,7 +15861,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-09-03T13:03:20.927Z",
+        "fetched_at": "2026-09-06T13:11:51.006Z",
         "homepage_url": "https://guardianbikes.com/",
         "example_url": "https://guardianbikes.com/products/balance-bike?variant=41102033158237&utm_source=twitter&twclid=2dhmyi0k26r61jxbnc07720qis&utm_content=dpa_carousel&utm_campaign=X_2026_DPA_Remarketing_Campaign+&utm_medium=cpc",
         "homepage_status": 200,
@@ -15986,7 +15987,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-09-03T13:03:23.051Z",
+        "fetched_at": "2026-09-06T13:11:53.153Z",
         "homepage_url": "https://lovart.ai/",
         "example_url": "https://www.lovart.ai/?sourceId=910062&sourceid=910062&utm_source=twitter&utm_medium=paid_social&utm_campaign=Lovart_910062_Meta_US_AIModel_ag_260416_lead&twclid=2a5k8izlnshoxgoxi52b1tnd45",
         "homepage_status": 200,
@@ -16112,7 +16113,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-09-03T13:03:24.363Z",
+        "fetched_at": "2026-09-06T13:11:54.369Z",
         "homepage_url": "https://heylemon.ai/",
         "example_url": "https://heylemon.ai/?utm_source=paid_X_all1&twclid=2bprvotipsebt2ywwd413k1c6r",
         "homepage_status": 200,
@@ -16238,7 +16239,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-09-03T13:03:26.022Z",
+        "fetched_at": "2026-09-06T13:11:56.809Z",
         "homepage_url": "https://wavedash.com/",
         "example_url": "https://wavedash.com/?twclid=29k171tm7pjzrxbob4j7cmjl3o",
         "homepage_status": 200,

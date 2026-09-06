@@ -1,11 +1,11 @@
 {
-  "generated_at": "2026-09-06T09:21:15.548Z",
+  "generated_at": "2026-09-06T13:23:17.426Z",
   "stats": {
-    "total": 1320,
-    "supported": 410,
+    "total": 1322,
+    "supported": 411,
     "refuted": 230,
     "contested": 6,
-    "unverified": 190,
+    "unverified": 191,
     "expired": 484
   },
   "claims": [
@@ -511,6 +511,54 @@
       "dissenting_sources": [],
       "framing_analysis": "The claim is framed validly as it accurately represents Lieu's public statements questioning the logical consistency of calling Iran a 'failed state' while it continues to conduct military operations. The framing captures both the substance and rhetorical nature of Lieu's argument.",
       "web_search_summary": "The claim is confirmed. Multiple sources document that Rep. Ted Lieu has questioned the Trump administration's characterization of Iran as a 'failed state' by pointing to Iran's continued ability to launch attacks on U.S. bases and allies. This argument appears across his social media posts and public statements.",
+      "investigation_depth": "quick"
+    },
+    {
+      "claim_id": "live_312e09003a",
+      "claim_text": "The Israeli army has blown up several homes and villages in southern Lebanon in violation of a ceasefire.\n\nIt says its attacks are a response to a Hezbollah explosive drone beyond the ‘Yellow Line’, an area Israel has claimed as a ‘security zone’ inside Lebanese territory.",
+      "status": "supported",
+      "confidence_score": 0.87,
+      "display_score": 0.278,
+      "scoring_breakdown": {
+        "source_tier": 1,
+        "newsguard": 0.7,
+        "corroboration": 0.9,
+        "evidence_quality": 0.9,
+        "cross_source": 0.5,
+        "web_search": 1
+      },
+      "source_handle": "AJEnglish",
+      "source_tier": null,
+      "evidence_urls": [
+        "https://www.aljazeera.com/video/newsfeed/2026/9/6/israel-bombards-several-towns-in-southern-lebanon",
+        "https://www.aljazeera.com/video/newsfeed/2026/9/6/israel-bombards-several-towns-in-southern-lebanon",
+        "https://x.com/AJEnglish/status/2096525194634379340",
+        "https://x.com/AJEnglish/status/2096525194634379340",
+        "https://www.npr.org/2025/11/03/nx-s1-5566124/israel-south-lebanon-villages"
+      ],
+      "tweet_url": null,
+      "category": null,
+      "related_axis_id": null,
+      "verification_count": 1,
+      "verified_at": "2026-09-06T11:44:00.296Z",
+      "created_at": "2026-09-06T11:44:00.296Z",
+      "original_source": "Al Jazeera English",
+      "claim_date": "2026-09-06",
+      "supporting_sources": [
+        {
+          "name": "Al Jazeera English",
+          "excerpt": "The Israeli army has blown up several homes and villages in southern Lebanon in violation of a ceasefire, with Israel claiming its attacks are a response to a Hezbollah explosive drone beyond the 'Yellow Line' security zone.",
+          "url": null
+        },
+        {
+          "name": "NPR",
+          "excerpt": "Along Lebanon's border, Israel has continued demolitions and attacks despite a ceasefire in the country's war with Hezbollah.",
+          "url": null
+        }
+      ],
+      "dissenting_sources": [],
+      "framing_analysis": "The claim is framed validly, accurately presenting both the Israeli actions (demolitions during ceasefire) and Israel's stated justification (response to Hezbollah drone activity). The framing captures the factual dispute without inserting additional editorial spin.",
+      "web_search_summary": "Multiple sources confirm the Israeli army has blown up homes and villages in southern Lebanon in violation of a ceasefire. Israel's stated justification—that attacks are a response to a Hezbollah explosive drone beyond the 'Yellow Line' security zone—is also corroborated across sources.",
       "investigation_depth": "quick"
     },
     {
@@ -39012,6 +39060,37 @@
       "verification_count": 1,
       "verified_at": "2026-09-05T14:31:23.700Z",
       "created_at": "2026-09-05T14:31:23.698Z",
+      "original_source": null,
+      "claim_date": null,
+      "supporting_sources": [],
+      "dissenting_sources": [],
+      "framing_analysis": null,
+      "web_search_summary": "No web results found.",
+      "investigation_depth": "quick"
+    },
+    {
+      "claim_id": "live_4b97923905",
+      "claim_text": "AI governance is no longer mainly about what a model says. It is about what an AI system can do.\n\nThe 2026 International AI Safety Report makes the shift plain: agents can plan, use tools, write code, and act before a human can intervene. The recent OpenAI-Hugging Face is a recent demonstration of this.\n\nSo the real question is not “Does this model follow our principles?”\nIt is: Can this system act outside its authority and can we stop it if it does?\n\nRecent evaluations have shown models bypassing constraints, resisting shutdown, and pursuing harmful actions in tests. The July OpenAI–Hugging Face security incident during agent evaluation work showed how tool access and weak containment can turn a model failure into an operational one.\nPrinciples, model cards, and “human review available” are not enough for systems with credentials, APIs, or other agents.\n\nIn my new article, I propose the Trusted Control Stack (TCS)—a practical model built on ISO/IEC 42001, NIST AI RMF, federal AI practice, and agentic-safety research. It asks four questions before an agent goes live:\nWho is accountable?\nWhat autonomy and tool access fit the risk?\nHas it been independently tested for failure and control bypass?\nCan humans pause and shut it down without the agent’s cooperation?\nTrustworthy AI is not a policy statement. It is the ability to prevent, detect, constrain, and reverse unauthorized action.\n\nRead the article: link in the comments as well.\n\nWhat controls do you believe should be non-negotiable before an AI agent receives access to production systems, sensitive data, or external tools?\n\n#AIGovernance #AgenticAI #ResponsibleAI",
+      "status": "unverified",
+      "confidence_score": 0.38,
+      "display_score": 0.131,
+      "scoring_breakdown": {
+        "source_tier": 0.5,
+        "newsguard": 0.5,
+        "corroboration": 0,
+        "evidence_quality": 0.5,
+        "cross_source": 0.5,
+        "web_search": 0.3
+      },
+      "source_handle": "Chakib Chraibi, Ph.D., D.Sc.",
+      "source_tier": null,
+      "evidence_urls": [],
+      "tweet_url": null,
+      "category": null,
+      "related_axis_id": null,
+      "verification_count": 1,
+      "verified_at": "2026-09-06T13:23:17.353Z",
+      "created_at": "2026-09-06T13:23:17.351Z",
       "original_source": null,
       "claim_date": null,
       "supporting_sources": [],
