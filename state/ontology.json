@@ -60490,11 +60490,11 @@
       "label": "Integrity of Information and Social Media Manipulation",
       "left_pole": "Advocacy for factual accuracy, critical assessment of sources, and efforts to co",
       "right_pole": "Spread of unverified claims, reliance on emotional appeals, and engagement farmi",
-      "score": 0.4052,
+      "score": 0.404,
       "confidence": 0.95,
       "topics": [],
       "created_at": "2026-02-28T10:52:00Z",
-      "last_updated": "2026-09-06T02:42:17.995Z",
+      "last_updated": "2026-09-06T07:12:20.193Z",
       "evidence_log": [
         {
           "pole_alignment": "right",
@@ -73656,6 +73656,28 @@
           "claim_id": "b0d9cd7b2f62",
           "stance_confidence": 0.95,
           "score_after": 0.4052,
+          "confidence_after": 0.95
+        },
+        {
+          "source": "https://x.com/MarioNawfal/status/2096263899981246606",
+          "content": "",
+          "summary": "",
+          "timestamp": "2026-09-06T06:12:08.964Z",
+          "pole_alignment": "right",
+          "trust_weight": 2,
+          "score_after": 0.4116,
+          "confidence_after": 0.95
+        },
+        {
+          "source": "https://www.rappler.com/technology/maria-ressa-journalists-protect-information-integrity-nobel-peace-conference-2026/",
+          "content": "Ressa argues journalists must build and own technology infrastructure to protect information integrity, not just rely on platforms or norms.",
+          "summary": "",
+          "timestamp": "2026-09-06T07:12:20.084Z",
+          "pole_alignment": "left",
+          "trust_weight": 1,
+          "claim_id": "628a8afe24a6",
+          "stance_confidence": 0.95,
+          "score_after": 0.404,
           "confidence_after": 0.95
         }
       ],
@@ -138685,11 +138707,11 @@
       "label": "Procedural Governance vs. Genuine Accountability",
       "left_pole": "Institutions prioritize appearances and performative actions over addressing real issues.",
       "right_pole": "Institutions commit to transparency, accountability, and substantive action.",
-      "score": -0.5,
-      "confidence": 0.5697,
+      "score": -0.5271,
+      "confidence": 0.5921,
       "topics": [],
       "created_at": "2026-07-12T18:11:31.667Z",
-      "last_updated": "2026-08-31T10:32:38.696Z",
+      "last_updated": "2026-09-06T05:42:16.565Z",
       "evidence_log": [
         {
           "source": "https://www.gmanetwork.com/news/topstories/metro/994636/marcos-directs-urgent-repair-of-fire-damaged-culiat-bridge-in-qc-dpwh/story/",
@@ -139048,6 +139070,16 @@
           "claim_id": "e00bfee9910d",
           "score_after": -0.5,
           "confidence_after": 0.5817
+        },
+        {
+          "source": "https://newsinfo.inquirer.net/2299890/butuan-city-water-crisis-sparks-calls-for-accountability-solutions",
+          "content": "",
+          "summary": "",
+          "timestamp": "2026-09-06T05:42:16.454Z",
+          "pole_alignment": "right",
+          "trust_weight": 1,
+          "score_after": -0.5271,
+          "confidence_after": 0.5921
         }
       ],
       "current_stance": "The institutions parade their penalties and procedures while carefully avoiding any examination of their own complicity or the powerful figures they shelter.",
@@ -143979,11 +144011,11 @@
       "label": "Crisis Visibility Hierarchy",
       "left_pole": "All human suffering deserves sustained analytical coverage and accountability framing regardless of geography or geopolitical relevance",
       "right_pole": "Coverage naturally prioritizes crises with strategic/cultural proximity to dominant media centers; local disasters warrant local coverage",
-      "score": 0.122,
-      "confidence": 0.3873,
+      "score": 0.1697,
+      "confidence": 0.4032,
       "topics": [],
       "created_at": "2026-08-09T06:31:43.857Z",
-      "last_updated": "2026-09-06T04:12:19.655Z",
+      "last_updated": "2026-09-06T05:42:16.565Z",
       "evidence_log": [
         {
           "source": "https://www.nytimes.com/2026/08/09/world/middleeast/israel-netanyahu-trump-15-point-plan-hamas-peace-gaza.html",
@@ -144155,9 +144187,20 @@
           "trust_weight": 1,
           "score_after": 0.122,
           "confidence_after": 0.3873
+        },
+        {
+          "source": "https://newsinfo.inquirer.net/2299812/senate-extends-aid-to-families-of-3-tacloban-school-shooting-victims",
+          "content": "",
+          "summary": "",
+          "timestamp": "2026-09-06T05:42:16.454Z",
+          "pole_alignment": "right",
+          "trust_weight": 1,
+          "score_after": 0.1697,
+          "confidence_after": 0.4032
         }
       ],
-      "last_decayed_at": "2026-09-04"
+      "last_decayed_at": "2026-09-04",
+      "current_stance": "I allocate my attention to crises that offer visual drama or strategic stakes for Western audiences, while treating distant economic collapses and monastery massacres as disposable footnotes."
     },
     {
       "id": "axis_disaster_infrastructure_accountability_v1",
@@ -144545,5 +144588,5 @@
     }
   ],
   "axis_creation_rules_version": "1.0",
-  "last_updated": "2026-09-06T04:12:19.655Z"
+  "last_updated": "2026-09-06T07:12:20.193Z"
 }
