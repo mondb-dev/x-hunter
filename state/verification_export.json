@@ -1,8 +1,8 @@
 {
-  "generated_at": "2026-09-06T09:17:53.119Z",
+  "generated_at": "2026-09-06T09:21:15.548Z",
   "stats": {
-    "total": 1314,
-    "supported": 404,
+    "total": 1320,
+    "supported": 410,
     "refuted": 230,
     "contested": 6,
     "unverified": 190,
@@ -5878,6 +5878,113 @@
       "investigation_depth": "quick"
     },
     {
+      "claim_id": "live_a4733fc31f",
+      "claim_text": "AI-manipulated video fabricated lawyer's remarks in active Sara Duterte impeachment proceeding",
+      "status": "supported",
+      "confidence_score": 0.69,
+      "display_score": 0.424,
+      "scoring_breakdown": {
+        "source_tier": 0.5,
+        "newsguard": 0.5,
+        "corroboration": 0.9,
+        "evidence_quality": 0.9,
+        "cross_source": 0.5,
+        "web_search": 1
+      },
+      "source_handle": null,
+      "source_tier": null,
+      "evidence_urls": [
+        "https://www.rappler.com/newsbreak/fact-check/ai-sara-duterte-counsel-opening-statement-impeachment/",
+        "https://www.rappler.com/newsbreak/fact-check/ai-sara-duterte-counsel-opening-statement-impeachment/",
+        "https://news-brain.net/en/news/2a0cdf6f-1b85-4798-afeb-c0041e7eca97",
+        "https://news-brain.net/en/news/2a0cdf6f-1b85-4798-afeb-c0041e7eca97",
+        "https://www.rappler.com/philippines/ai-question-sara-duterte-impeachment-trial/"
+      ],
+      "tweet_url": null,
+      "category": null,
+      "related_axis_id": "axis_media_integrity_v1",
+      "verification_count": 1,
+      "verified_at": "2026-09-06T09:20:00.986Z",
+      "created_at": "2026-09-06T09:20:00.986Z",
+      "original_source": "Rappler",
+      "claim_date": null,
+      "supporting_sources": [
+        {
+          "name": "Rappler",
+          "excerpt": "A misleading video altered the real opening statement delivered by Sheila Sison, lead counsel for Vice President Sara Duterte, on the first day of the impeachment trial.",
+          "url": null
+        },
+        {
+          "name": "News-Brain",
+          "excerpt": "An AI-manipulated video falsely claiming Vice President Sara Duterte's legal counsel demanded immediate proof from prosecutors during her impeachment trial opening statement has been debunked by fact-checkers.",
+          "url": null
+        }
+      ],
+      "dissenting_sources": [],
+      "framing_analysis": "The claim is framed validly and accurately describes the fact-check findings. It correctly identifies that AI was used to manipulate video content, that it involved a lawyer's remarks, and that it occurred in the context of an active Sara Duterte impeachment proceeding.",
+      "web_search_summary": "Multiple fact-checking sources confirm that an AI-manipulated video falsely altered the opening statement of Sheila Sison, lead counsel for Vice President Sara Duterte, during her impeachment proceedings. The fabricated video distorted the lawyer's actual remarks, with fact-checkers from Rappler and other outlets debunking the misleading content.",
+      "investigation_depth": "quick"
+    },
+    {
+      "claim_id": "live_ed786e3bd8",
+      "claim_text": "EU research findings identified Russia and Israel as disinformation sources during Spain's Ceuta crisis",
+      "status": "supported",
+      "confidence_score": 0.69,
+      "display_score": 0.424,
+      "scoring_breakdown": {
+        "source_tier": 0.5,
+        "newsguard": 0.5,
+        "corroboration": 0.9,
+        "evidence_quality": 0.9,
+        "cross_source": 0.5,
+        "web_search": 1
+      },
+      "source_handle": null,
+      "source_tier": null,
+      "evidence_urls": [
+        "https://www.aljazeera.com/news/2026/8/31/spains-sanchez-condemns-russia-israel-disinformation-during-ceuta-crisis",
+        "https://www.aljazeera.com/news/2026/8/31/spains-sanchez-condemns-russia-israel-disinformation-during-ceuta-crisis",
+        "https://www.usnews.com/news/world/articles/2026-08-31/spanish-pm-blames-russia-israel-for-disinformation-in-ceuta-migrant-crisis",
+        "https://www.usnews.com/news/world/articles/2026-08-31/spanish-pm-blames-russia-israel-for-disinformation-in-ceuta-migrant-crisis",
+        "https://eutoday.net/spain-russia-israel-ceuta-disinformation/"
+      ],
+      "tweet_url": null,
+      "category": null,
+      "related_axis_id": "axis_media_integrity_v1",
+      "verification_count": 1,
+      "verified_at": "2026-09-06T09:20:51.023Z",
+      "created_at": "2026-09-06T09:20:51.023Z",
+      "original_source": "Spanish PM Sanchez citing EU diplomatic service (EEAS) research",
+      "claim_date": "2026-08-31",
+      "supporting_sources": [
+        {
+          "name": "Al Jazeera",
+          "excerpt": "Sanchez cited EU research which had found that Russia and Israel both spread disinformation during the crisis.",
+          "url": null
+        },
+        {
+          "name": "U.S. News & World Report",
+          "excerpt": "Sanchez said research by the EU's diplomatic service EEAS had indicated that Russian and Israeli networks had been behind the spread of disinformation in conjunction with far-right networks.",
+          "url": null
+        },
+        {
+          "name": "EU Today",
+          "excerpt": "Madrid says EU analysis identified foreign-linked online networks that amplified false claims around July's deadly mass rush towards the Spanish enclave.",
+          "url": null
+        }
+      ],
+      "dissenting_sources": [
+        {
+          "name": "EU Today",
+          "excerpt": "Israel and Russia have rejected the allegation.",
+          "url": null
+        }
+      ],
+      "framing_analysis": "The claim is framed validly. It accurately reflects that EU research findings identified these sources, though it should be noted that Israel and Russia have denied the allegations.",
+      "web_search_summary": "Multiple sources confirm that Spanish PM Sanchez cited EU research identifying Russia and Israel as disinformation sources during Spain's Ceuta crisis. Specifically, research by the EU's diplomatic service (EEAS) found that Russian and Israeli networks spread disinformation during the crisis, often in conjunction with far-right networks.",
+      "investigation_depth": "quick"
+    },
+    {
       "claim_id": "claim_57",
       "claim_text": "US imposed naval blockade on Iranian ports on April 13, 2026.",
       "status": "supported",
@@ -8323,6 +8430,55 @@
       "dissenting_sources": [],
       "framing_analysis": "The claim's assertion about UN peacekeepers documenting Lebanon's destruction is supported, but the characterization of the UN High Commissioner for Human Rights as 'silent' cannot be verified from these search results. The use of 'genocided' is a charged framing not substantiated by the UN reports provided.",
       "web_search_summary": "Search results confirm UN peacekeepers have documented destruction and crisis in Lebanon, and that the Security Council held emergency meetings on the situation. However, the search results do not provide evidence regarding whether the UN High Commissioner for Human Rights has remained silent on Lebanon or Gaza, nor do they verify the specific footage claim.",
+      "investigation_depth": "quick"
+    },
+    {
+      "claim_id": "live_0b340e3154",
+      "claim_text": "Multiple news outlets published Romeo Jalosjos obituaries that omitted his criminal conviction while detailing political and business career",
+      "status": "supported",
+      "confidence_score": 0.67,
+      "display_score": 0.418,
+      "scoring_breakdown": {
+        "source_tier": 0.5,
+        "newsguard": 0.5,
+        "corroboration": 0.9,
+        "evidence_quality": 0.9,
+        "cross_source": 0.5,
+        "web_search": 0.8
+      },
+      "source_handle": null,
+      "source_tier": null,
+      "evidence_urls": [
+        "https://en.wikipedia.org/wiki/Romeo_Jalosjos_Sr.",
+        "https://en.wikipedia.org/wiki/Romeo_Jalosjos_Sr.",
+        "https://www.rappler.com/people/obituary/romeo-jalosjos-former-zamboanga-del-norte-congressman-dies/",
+        "https://www.rappler.com/people/obituary/romeo-jalosjos-former-zamboanga-del-norte-congressman-dies/",
+        "https://www.philstar.com/nation/2026/08/04/2546765/ex-congressman-jalosjos-dies-85"
+      ],
+      "tweet_url": null,
+      "category": null,
+      "related_axis_id": "axis_media_integrity_v1",
+      "verification_count": 1,
+      "verified_at": "2026-09-06T09:20:35.472Z",
+      "created_at": "2026-09-06T09:20:35.472Z",
+      "original_source": null,
+      "claim_date": null,
+      "supporting_sources": [
+        {
+          "name": "Philstar.com",
+          "excerpt": "The obituary described Jalosjos only as a former congressman and television producer-turned-politician who pioneered the country, with no mention of his criminal conviction in the provided excerpts.",
+          "url": null
+        }
+      ],
+      "dissenting_sources": [
+        {
+          "name": "Rappler",
+          "excerpt": "The obituary explicitly stated 'Despite his conviction and removal from office, Jalosjos remained a major political figure in Zamboanga del Norte.'",
+          "url": null
+        }
+      ],
+      "framing_analysis": "The claim is partially accurate but uses 'multiple news outlets' which cannot be fully verified from the limited search results. Only one outlet (Philstar) appears to omit the conviction based on available excerpts, while Rappler included it prominently.",
+      "web_search_summary": "The search results show that Rappler's obituary explicitly mentioned Jalosjos's conviction and removal from office. However, the Philstar obituary excerpts provided only describe him as a 'television producer-turned-politician' without any mention of his criminal conviction, supporting part of the claim. Insufficient excerpts are available to determine if other outlets also omitted the conviction.",
       "investigation_depth": "quick"
     },
     {
@@ -19797,6 +19953,112 @@
       "investigation_depth": "quick"
     },
     {
+      "claim_id": "live_c233b0d374",
+      "claim_text": "Meta failed to effectively address election-related disinformation spread through Facebook Advertisements ahead of Brazil presidential elections",
+      "status": "supported",
+      "confidence_score": 0.62,
+      "display_score": 0.403,
+      "scoring_breakdown": {
+        "source_tier": 0.5,
+        "newsguard": 0.5,
+        "corroboration": 0.7,
+        "evidence_quality": 0.7,
+        "cross_source": 0.5,
+        "web_search": 1
+      },
+      "source_handle": null,
+      "source_tier": null,
+      "evidence_urls": [
+        "https://www.amnesty.org/en/latest/news/2026/08/brazil-election-disinformation/",
+        "https://www.amnesty.org/en/latest/news/2026/08/brazil-election-disinformation/",
+        "https://www.amnestyusa.org/press-releases/brazil-amnesty-international-experiment-exposes-metas-failure-to-catch-election-related-disinformation-ads-on-facebook/",
+        "https://www.amnestyusa.org/press-releases/brazil-amnesty-international-experiment-exposes-metas-failure-to-catch-election-related-disinformation-ads-on-facebook/",
+        "https://www.amnesty.org.uk/latest/brazil-meta-fails-to-spot-mock-ads-spreading-election-based-disinformation-amnesty-experiment-reveals-as-global-pressure-mounts/"
+      ],
+      "tweet_url": null,
+      "category": null,
+      "related_axis_id": "axis_media_integrity_v1",
+      "verification_count": 1,
+      "verified_at": "2026-09-06T09:20:17.375Z",
+      "created_at": "2026-09-06T09:20:17.375Z",
+      "original_source": "Amnesty International",
+      "claim_date": "2026-08",
+      "supporting_sources": [
+        {
+          "name": "Amnesty International",
+          "excerpt": "An experiment exposed Meta's failure to detect election-related disinformation ads on Facebook in Brazil ahead of the October presidential election.",
+          "url": null
+        },
+        {
+          "name": "Amnesty International UK",
+          "excerpt": "More than half of the ads spreading election-related disinformation, including incorrect details on when or how to vote, were accepted by Meta's moderation system.",
+          "url": null
+        },
+        {
+          "name": "Amnesty International USA",
+          "excerpt": "Meta may be failing to effectively address election-related disinformation spread through Facebook ads ahead of Brazil's October presidential election.",
+          "url": null
+        }
+      ],
+      "dissenting_sources": [],
+      "framing_analysis": "The claim is framed validly and accurately reflects the findings of Amnesty International's experiment. The use of 'failed to effectively address' aligns with the documented finding that more than half of disinformation test ads were accepted by Meta's system.",
+      "web_search_summary": "Multiple sources confirm that Amnesty International conducted an experiment demonstrating Meta's failure to detect election-related disinformation ads on Facebook ahead of Brazil's presidential election. More than half of the test ads containing election disinformation, including incorrect voting information, were accepted by Meta's moderation system.",
+      "investigation_depth": "quick"
+    },
+    {
+      "claim_id": "live_7e85f25f90",
+      "claim_text": "Viral posts with hundreds of thousands of views and reactions described events incorrectly, according to PhilStar fact-check",
+      "status": "supported",
+      "confidence_score": 0.62,
+      "display_score": 0.403,
+      "scoring_breakdown": {
+        "source_tier": 0.5,
+        "newsguard": 0.5,
+        "corroboration": 0.7,
+        "evidence_quality": 0.7,
+        "cross_source": 0.5,
+        "web_search": 1
+      },
+      "source_handle": null,
+      "source_tier": null,
+      "evidence_urls": [
+        "https://www.philstar.com/headlines/2026/06/16/2535623/fact-check-altered-image-falsely-depicts-rene-baterbonia-restrained",
+        "https://www.philstar.com/headlines/2026/06/16/2535623/fact-check-altered-image-falsely-depicts-rene-baterbonia-restrained",
+        "https://www.philstar.com/headlines/2026/07/03/2539595/fact-check-viral-video-does-not-show-muslims-joining-inc-rally-edsa",
+        "https://www.philstar.com/headlines/2026/07/03/2539595/fact-check-viral-video-does-not-show-muslims-joining-inc-rally-edsa",
+        "https://www.facebook.com/philstarnews/posts/philstarfactcheck-the-posts-earned-hundreds-of-thousands-of-views-and-reactions-/1554879990016082/"
+      ],
+      "tweet_url": null,
+      "category": null,
+      "related_axis_id": "axis_media_integrity_v1",
+      "verification_count": 1,
+      "verified_at": "2026-09-06T09:21:15.517Z",
+      "created_at": "2026-09-06T09:21:15.516Z",
+      "original_source": "PhilStar fact-check reports",
+      "claim_date": null,
+      "supporting_sources": [
+        {
+          "name": "PhilStar (Facebook)",
+          "excerpt": "The posts earned hundreds of thousands of views and reactions, but didn't describe what they were laughing at correctly.",
+          "url": null
+        },
+        {
+          "name": "PhilStar",
+          "excerpt": "A viral Facebook reel falsely claimed a group of Muslims joined the INC rally in EDSA, but the footage was taken at a different protest in Cotabato City.",
+          "url": null
+        },
+        {
+          "name": "PhilStar",
+          "excerpt": "An altered photo falsely shows the late Rene Baterbonia restrained on a beach, with no official evidence supporting the claim.",
+          "url": null
+        }
+      ],
+      "dissenting_sources": [],
+      "framing_analysis": "The claim is validly framed as it accurately represents PhilStar's fact-checking findings. The search results confirm that PhilStar documented viral posts with massive engagement that incorrectly described events.",
+      "web_search_summary": "The claim is confirmed by multiple PhilStar fact-check reports. Search results [5] and [6] explicitly state that posts earned hundreds of thousands of views and reactions but didn't describe events correctly. Additional PhilStar fact-checks ([1-4]) demonstrate a pattern of viral posts with false or misleading descriptions of events.",
+      "investigation_depth": "quick"
+    },
+    {
       "claim_id": "claim_85",
       "claim_text": "Israeli military planes are unable to fly due to the largest swarm of bees in recorded history.",
       "status": "supported",
@@ -22060,6 +22322,54 @@
       "dissenting_sources": [],
       "framing_analysis": "The claim is framed as a critique of current AI governance approaches, positioning execution authority as the overlooked critical element. While search results confirm governance discussions focus on the traditional topics mentioned, none validate the specific execution control framework or paper referenced, making verification of the central thesis incomplete.",
       "web_search_summary": "The claim that AI governance focuses on alignment, bias, and monitoring rather than execution authority is partially supported. Search results confirm governance discussions center on bias, hallucination, and model behavior, and that AI failures stem from poor governance rather than just ethics. However, no search results directly discuss or validate the specific paper mentioned or the execution authority framework proposed.",
+      "investigation_depth": "quick"
+    },
+    {
+      "claim_id": "live_ebf2c8fcfd",
+      "claim_text": "₱5 million was allegedly spent on a coordinated online campaign using misleading photographs and videos to portray La Union flooding as far worse than reality",
+      "status": "supported",
+      "confidence_score": 0.6,
+      "display_score": 0.397,
+      "scoring_breakdown": {
+        "source_tier": 0.5,
+        "newsguard": 0.5,
+        "corroboration": 0.7,
+        "evidence_quality": 0.7,
+        "cross_source": 0.5,
+        "web_search": 0.8
+      },
+      "source_handle": null,
+      "source_tier": null,
+      "evidence_urls": [
+        "https://www.msn.com/en-ph/news/other/ortega-slams-p5-m-online-campaign-on-misleading-la-union-flooding/ar-AA29DIJ2",
+        "https://www.msn.com/en-ph/news/other/ortega-slams-p5-m-online-campaign-on-misleading-la-union-flooding/ar-AA29DIJ2",
+        "https://bnc.bilyonaryo.com/garin-claims-coordinated-disinformation-campaign-targets-house-prosecutors/news/",
+        "https://bnc.bilyonaryo.com/garin-claims-coordinated-disinformation-campaign-targets-house-prosecutors/news/",
+        "https://www.facebook.com/younggunsph/videos/an-estimated-p5-million-was-allegedly-spent-on-a-coordinated-online-campaign-usi/999370129750802/"
+      ],
+      "tweet_url": null,
+      "category": null,
+      "related_axis_id": "axis_media_integrity_v1",
+      "verification_count": 1,
+      "verified_at": "2026-09-06T09:19:43.365Z",
+      "created_at": "2026-09-06T09:19:43.365Z",
+      "original_source": "House Deputy Speaker and La Union Rep. Francisco Paolo Ortega V",
+      "claim_date": null,
+      "supporting_sources": [
+        {
+          "name": "MSN Philippines",
+          "excerpt": "An estimated P5 million was allegedly spent on a coordinated online campaign using misleading photographs and videos to portray the flooding in La Union as far worse than reality.",
+          "url": null
+        },
+        {
+          "name": "Bilyonaryo News",
+          "excerpt": "House Deputy Speaker and La Union Rep. Francisco Paolo Ortega V claimed that an estimated P5 million was spent on an online campaign using misleading photos and videos to exaggerate the extent of flooding in his province.",
+          "url": null
+        }
+      ],
+      "dissenting_sources": [],
+      "framing_analysis": "The claim is framed as an allegation ('allegedly') which is appropriate since the search results show this as a statement by a politician rather than a confirmed finding. The claim accurately represents what was alleged but does not clarify this remains unverified.",
+      "web_search_summary": "The claim accurately reflects a statement made by La Union Rep. Francisco Paolo Ortega V, who alleged that ₱5 million was spent on a coordinated campaign using misleading photos and videos to exaggerate flooding in La Union. However, the search results only show this as an allegation/claim by Ortega, not as a verified fact established through investigation or evidence.",
       "investigation_depth": "quick"
     },
     {
