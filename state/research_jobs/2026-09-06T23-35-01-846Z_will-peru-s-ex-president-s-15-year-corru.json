@@ -1,0 +1,305 @@
+{
+  "job_id": "2026-09-06T23-35-01-846Z_will-peru-s-ex-president-s-15-year-corru",
+  "question": "Will Peru's ex-president's 15-year corruption sentence overturn be upheld on final appeal, or will prosecutors successfully reinstate conviction?",
+  "tier": "deep",
+  "status": "running",
+  "root": {
+    "title": "Peru Ex-President Corruption Appeal Outcome",
+    "question": "Will Peru's ex-president's 15-year corruption sentence overturn be upheld on final appeal, or will prosecutors successfully reinstate conviction?",
+    "direction": "First identify which ex-president and case this refers to, then track the current legal status, understand the appellate court's reversal reasoning, assess prosecutors' arguments for reinstatement, examine the final appeal court's likely approach, and gather expert/public sentiment on the probable outcome.",
+    "research_areas": [
+      "Recent Peru corruption cases involving ex-presidents",
+      "Supreme Court or final appellate procedures in Peru",
+      "Legal precedents in Peruvian corruption appeals",
+      "Prosecutorial strategy and evidence strength",
+      "Judicial independence and political factors in Peru"
+    ],
+    "tools_hint": [
+      "search",
+      "fetch",
+      "recall",
+      "posts",
+      "xsearch"
+    ],
+    "success_criterion": "Clear identification of the case, current status of the appeal, key legal arguments from both sides, and informed assessment of likely outcome based on precedent and expert analysis.",
+    "depends_on": [],
+    "children": [
+      {
+        "title": "Identify Case and Ex-President",
+        "question": "Which Peruvian ex-president had a 15-year corruption sentence recently overturned, and what is the specific case?",
+        "direction": "Search recent news for Peru ex-president corruption sentence overturn 15 years. Check if this refers to Alejandro Toledo, Alberto Fujimori, Pedro Castillo, or another figure. Identify the charges, original conviction date, and appellate reversal date.",
+        "research_areas": [
+          "Recent Peru corruption verdicts 2023-2025",
+          "Ex-presidents with 15-year sentences",
+          "Appellate court rulings in Peru corruption cases"
+        ],
+        "tools_hint": [
+          "search",
+          "fetch",
+          "recall"
+        ],
+        "success_criterion": "Name of ex-president, specific corruption charges, dates of original conviction and appellate reversal, and court names involved.",
+        "depends_on": [],
+        "children": [
+          {
+            "parent_id": "1.1",
+            "title": "Identify Which Peruvian Ex-President",
+            "question": "Which former Peruvian president is this case about - Fujimori, Toledo, Humala, Kuczynski, or another?",
+            "direction": "Recent news about Peru ex-president corruption appeals to identify the specific individual",
+            "research_areas": [
+              "Peru political news",
+              "corruption cases",
+              "recent appellate decisions"
+            ],
+            "tools_hint": [
+              "search",
+              "fetch"
+            ],
+            "success_criterion": "Confirmed name of the ex-president and the specific case being appealed",
+            "depends_on": [],
+            "children": [],
+            "id": "1.1.1",
+            "status": "answered",
+            "findings": [
+              {
+                "tool": "search",
+                "input": "Peru ex-president corruption appeal 2024 2025",
+                "result": "1. Peru's ex-president has 15-year jail sentence for corruption ... - MSN\n   https://www.msn.com/en-us/politics/government/peru-s-ex-president-has-15-year-jail-sentence-for-corruption-charges-overturned/ar-AA297wZI\n   Peru's constitutional court has overturned a 15-year jail sentence handed to the country's former president after he was found guilty of corruption.\n2. Peru's ex-president has 15-year jail sentence for corruption ... - MSN\n   https://www.msn.com/en-us/politics/government/peru-s-ex-president-has-15-year-jail-sentence-for-corruption-charges-overturned/ar-AA297wZI\n   Peru's constitutional court has overturned a 15-year jail sentence handed to the country's former president after he was found guilty of corruption.\n3. Peru's ex-president has 15-year jail sentence for corruption charges ...\n   https://theghanareport.com/world/perus-ex-president-has-15-year-jail-sentence-for-corruption-charges-overturned/\n   Peru's constitutional court has overturned a 15-year jail sentence handed to the country's former president after he was found guilty of corruption. Ollanta Humala, who led the country from 2011 to 2016, was convicted in 2025 of accepting illegal funds from the Venezuelan president and Brazilian construction company Odebrecht to fund his election campaigns in […]\n4. Peru's ex-president has 15-year jail sentence for corruption charges ...\n   https://theghanareport.com/world/perus-ex-president-has-15-year-jail-sentence-for-corruption-charges-overturned/\n   Peru's constitutional court has overturned a 15-year jail sentence handed to the country's former president after he was found guilty of corruption. Ollanta Humala, who led the country from 2011 to 2016, was convicted in 2025 of accepting illegal funds from the Venezuelan president and Brazilian construction company Odebrecht to fund his election campaigns in […]\n5. Peruvian ex-presidents face courts in separate corruption trials\n   https://www.france24.com/en/live-news/20250904-peruvian-ex-presidents-face-courts-in-separate-corruption-trials\n   A Peruvian appeals court on Wednesday ordered the release of former president Martin Vizcarra, who was in pretrial detention on allegations of corruption and deemed a flight risk last month ...\n6. Peruvian ex-presidents face courts in separate corruption trials\n   https://www.france24.com/en/live-news/20250904-peruvian-ex-presidents-face-courts-in-separate-corruption-trials\n   A Peruvian appeals court on Wednesday ordered the release of former president Martin Vizcarra, who was in pretrial detention on allegations of corruption and deemed a flight risk last month ..."
+              },
+              {
+                "tool": "fetch",
+                "input": "https://[URL from search results with most relevant recent appeal news]",
+                "result": "(could not fetch https://[URL from search results with most relevant recent appeal news])"
+              },
+              {
+                "tool": "search",
+                "input": "[Name of identified president] Peru corruption appeal case details",
+                "result": "1. Arrest and trial of Alberto Fujimori - Wikipedia\n   https://en.wikipedia.org/wiki/Arrest_and_trial_of_Alberto_Fujimori\n   Arrest and trial of Alberto Fujimori 3 languagesAdd topic\n2. Arrest and trial of Alberto Fujimori - Wikipedia\n   https://en.wikipedia.org/wiki/Arrest_and_trial_of_Alberto_Fujimori\n   Arrest and trial of Alberto Fujimori 3 languagesAdd topic\n3. Corruption in Peru - Wikipedia\n   https://en.wikipedia.org/wiki/Corruption_in_Peru\n   he table of contents Corruption in Peru\n4. Corruption in Peru - Wikipedia\n   https://en.wikipedia.org/wiki/Corruption_in_Peru\n   he table of contents Corruption in Peru\n5. Peru's former president Alejandro Toledo sentenced to 20 years in ... - PBS\n   https://www.pbs.org/newshour/world/perus-former-president-alejandro-toledo-sentenced-to-20-years-in-corruption-case\n   Peru's former President Alejandro Toledo has been sentenced to 20 years and six months in prison in a case involving Brazilian construction giant Odebrecht, which became synonymous with ...\n6. Peru's former president Alejandro Toledo sentenced to 20 years in ... - PBS\n   https://www.pbs.org/newshour/world/perus-former-president-alejandro-toledo-sentenced-to-20-years-in-corruption-case\n   Peru's former President Alejandro Toledo has been sentenced to 20 years and six months in prison in a case involving Brazilian construction giant Odebrecht, which became synonymous with ..."
+              },
+              {
+                "tool": "fetch",
+                "input": "https://[URL from second search with case-specific details]",
+                "result": "(could not fetch https://[URL from second search with case-specific details])"
+              },
+              {
+                "tool": "fetch",
+                "input": "https://www.msn.com/en-us/politics/government/peru-s-ex-president-has-15-year-jail-sentence-for-corruption-charges-overturned/ar-AA297wZI",
+                "result": "(could not fetch https://www.msn.com/en-us/politics/government/peru-s-ex-president-has-15-year-jail-sentence-for-corruption-charges-overturned/ar-AA297wZI)"
+              },
+              {
+                "tool": "fetch",
+                "input": "https://www.pbs.org/newshour/world/perus-former-president-alejandro-toledo-sentenced-to-20-years-in-corruption-case",
+                "result": "(could not fetch https://www.pbs.org/newshour/world/perus-former-president-alejandro-toledo-sentenced-to-20-years-in-corruption-case)"
+              },
+              {
+                "tool": "search",
+                "input": "Ollanta Humala 15 year sentence overturned 2024 2025 constitutional court",
+                "result": "(no web results for \"Ollanta Humala 15 year sentence overturned 2024 2025 constitutional court\")"
+              },
+              {
+                "tool": "fetch",
+                "input": "https://theghanareport.com/world/perus-ex-president-has-15-year-jail-sentence-for-corruption-charges-overturned/",
+                "result": "(could not fetch https://theghanareport.com/world/perus-ex-president-has-15-year-jail-sentence-for-corruption-charges-overturned/)"
+              },
+              {
+                "tool": "search",
+                "input": "Ollanta Humala Venezuela Odebrecht corruption conviction 2025",
+                "result": "(no web results for \"Ollanta Humala Venezuela Odebrecht corruption conviction 2025\")"
+              }
+            ],
+            "answer": "This case is about **Ollanta Humala**, who served as Peru's president from 2011 to 2016. According to theghanareport.com, Humala was convicted in 2025 of accepting illegal funds from the Venezuelan president and Brazilian construction company Odebrecht to fund his election campaigns, receiving a 15-year jail sentence that was subsequently overturned by Peru's constitutional court. \n\n**Confidence: Medium** - The identification is clear from the Ghana Report article text, though I could not fetch the full article for additional verification, and other searches for Humala-specific details returned no results."
+          }
+        ],
+        "id": "1.1",
+        "status": "answered",
+        "findings": [],
+        "answer": "**Answer:** Ollanta Humala, Peru's president from 2011-2016, had his 15-year corruption sentence overturned by Peru's constitutional court. The case involved his conviction for accepting illegal campaign funds from Venezuelan president and Brazilian construction firm Odebrecht for his election campaigns.\n\n**Source:** theghanareport.com (as cited in sub-findings)\n\n**Confidence:** Medium - Based on secondary citation only; original source not directly verified, and supplementary searches yielded no corroborating results."
+      },
+      {
+        "title": "Current Legal Status and Timeline",
+        "question": "What is the current status of the final appeal process, including key dates and procedural stage?",
+        "direction": "Once case is identified, search for latest developments on the appeal process. Determine if prosecutors have filed appeal, if final court has accepted it, hearing dates, and expected decision timeline.",
+        "research_areas": [
+          "Peru Supreme Court appeal procedures",
+          "Prosecution's filing status and deadlines",
+          "Court calendar and procedural timeline",
+          "Recent updates on the case status"
+        ],
+        "tools_hint": [
+          "search",
+          "fetch",
+          "posts",
+          "xsearch"
+        ],
+        "success_criterion": "Clear timeline of appeal process, current procedural stage, key upcoming dates, and whether final court has accepted the case.",
+        "depends_on": [
+          "Identify Case and Ex-President"
+        ],
+        "children": [],
+        "id": "1.2",
+        "status": "running",
+        "findings": [],
+        "answer": null
+      },
+      {
+        "title": "Appellate Reversal Reasoning",
+        "question": "What were the appellate court's legal grounds for overturning the 15-year conviction?",
+        "direction": "Examine the appellate court ruling that reversed the conviction. Identify specific legal deficiencies cited (procedural errors, evidence issues, due process violations, etc.).",
+        "research_areas": [
+          "Full text or summary of appellate ruling",
+          "Legal reasoning and cited precedents",
+          "Specific procedural or evidentiary flaws identified",
+          "Dissenting opinions if any"
+        ],
+        "tools_hint": [
+          "search",
+          "fetch"
+        ],
+        "success_criterion": "Detailed understanding of why the appellate court overturned conviction, including specific legal grounds and whether reversal was unanimous.",
+        "depends_on": [
+          "Identify Case and Ex-President"
+        ],
+        "children": [],
+        "id": "1.3",
+        "status": "running",
+        "findings": [],
+        "answer": null
+      },
+      {
+        "title": "Prosecution's Reinstatement Arguments",
+        "question": "What are the prosecutors' key arguments and legal strategy for reinstating the conviction on final appeal?",
+        "direction": "Search for prosecution's appeal filing, public statements, and legal briefs. Identify their counter-arguments to the appellate reversal and evidence they claim was properly admitted.",
+        "research_areas": [
+          "Prosecution appeal documents or summaries",
+          "Attorney General or prosecutor statements",
+          "Evidence and witness testimony prosecutors rely on",
+          "Legal precedents prosecutors cite"
+        ],
+        "tools_hint": [
+          "search",
+          "fetch",
+          "posts"
+        ],
+        "success_criterion": "Clear outline of prosecution's main arguments, evidence they emphasize, and legal basis for challenging the appellate reversal.",
+        "depends_on": [
+          "Identify Case and Ex-President",
+          "Appellate Reversal Reasoning"
+        ],
+        "children": [],
+        "id": "1.4",
+        "status": "pending",
+        "findings": [],
+        "answer": null
+      },
+      {
+        "title": "Final Court Precedent and Approach",
+        "question": "How has Peru's final appellate court (likely Supreme Court) historically ruled in similar corruption appeal cases, and what is their typical standard of review?",
+        "direction": "Research past corruption cases involving ex-presidents or high officials where Supreme Court reviewed appellate decisions. Identify patterns in how they balance procedural rights vs. corruption accountability.",
+        "research_areas": [
+          "Peru Supreme Court corruption case precedents",
+          "Standards of review in criminal appeals",
+          "Recent trends in judicial decision-making",
+          "Cases involving Fujimori, Toledo, or other ex-officials"
+        ],
+        "tools_hint": [
+          "search",
+          "fetch",
+          "recall"
+        ],
+        "success_criterion": "Understanding of Supreme Court's typical approach to corruption appeals, relevant precedents, and whether they tend to uphold or reverse appellate decisions.",
+        "depends_on": [
+          "Identify Case and Ex-President"
+        ],
+        "children": [],
+        "id": "1.5",
+        "status": "running",
+        "findings": [],
+        "answer": null
+      },
+      {
+        "title": "Expert Legal and Political Analysis",
+        "question": "What do legal experts, political analysts, and informed observers predict about the likely outcome of the final appeal?",
+        "direction": "Search for expert commentary from Peruvian legal scholars, anti-corruption activists, political analysts, and journalists covering the case. Check X/Twitter for real-time reactions and insider perspectives.",
+        "research_areas": [
+          "Legal expert opinions and analysis",
+          "Political context and judicial independence concerns",
+          "Public and media reaction",
+          "International observer perspectives (e.g., transparency groups)"
+        ],
+        "tools_hint": [
+          "search",
+          "fetch",
+          "xsearch",
+          "posts"
+        ],
+        "success_criterion": "Range of expert predictions with reasoning, consensus view if any exists, and key factors experts identify as determinative.",
+        "depends_on": [
+          "Current Legal Status and Timeline",
+          "Appellate Reversal Reasoning",
+          "Prosecution's Reinstatement Arguments",
+          "Final Court Precedent and Approach"
+        ],
+        "children": [
+          {
+            "parent_id": "1.6",
+            "title": "Political Context and Pressure",
+            "question": "What political pressures or public sentiment might influence the final court's decision?",
+            "direction": "Understanding current political climate in Peru regarding anti-corruption efforts and this specific case",
+            "research_areas": [
+              "Peru political climate",
+              "public opinion on case",
+              "government stance on corruption"
+            ],
+            "tools_hint": [
+              "search",
+              "fetch"
+            ],
+            "success_criterion": "Clear picture of political factors that may affect judicial independence or decision-making",
+            "depends_on": [
+              "1.1"
+            ],
+            "children": [],
+            "id": "1.6.1",
+            "status": "pending",
+            "findings": [],
+            "answer": null
+          }
+        ],
+        "id": "1.6",
+        "status": "pending",
+        "findings": [],
+        "answer": null
+      }
+    ],
+    "id": "1",
+    "status": "running",
+    "findings": [],
+    "answer": null
+  },
+  "ledger": {
+    "marked_terms": [],
+    "verify_points": [
+      {
+        "claim": "Ollanta Humala led Peru from 2011 to 2016 and was convicted in 2025 of accepting illegal funds from Venezuela",
+        "source": "https://theghanareport.com/world/perus-ex-president-has-15-year-jail-sentence-for-corruption-charges-overturned/ (search snippet only)",
+        "importance": 3
+      },
+      {
+        "claim": "Peru's constitutional court overturned a 15-year jail sentence for corruption handed to a former president",
+        "source": "https://www.msn.com/en-us/politics/government/peru-s-ex-president-has-15-year-jail-sentence-for-corruption-charges-overturned/ar-AA297wZI (search snippet only, MSN is T4-quality aggregator)",
+        "importance": 3
+      },
+      {
+        "claim": "Alejandro Toledo was sentenced to 20 years and six months in prison in an Odebrecht corruption case",
+        "source": "https://www.pbs.org/newshour/world/perus-former-president-alejandro-toledo-sentenced-to-20-years-in-corruption-case (search snippet only)",
+        "importance": 2
+      }
+    ],
+    "tool_gaps": [
+      {
+        "need": "Full text of articles that failed to fetch - all fetch attempts returned errors preventing verification of which president the question refers to",
+        "suggested_tool": "More reliable fetch capability or alternative news aggregator API"
+      }
+    ]
+  }
+}
