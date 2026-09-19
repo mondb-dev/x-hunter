@@ -1,8 +1,8 @@
 {
   "schema_version": "1.0",
-  "generated_at": "2026-09-19T14:52:50.448Z",
+  "generated_at": "2026-09-19T17:52:53.163Z",
   "method": "mechanical_registry_v1",
-  "profiled_at": "2026-09-19T14:53:15.354Z",
+  "profiled_at": "2026-09-19T17:53:15.942Z",
   "sources": [
     {
       "domain": "theguardian.com",
@@ -11,7 +11,7 @@
       "first_seen_at": "2026-03-27T23:17:00Z",
       "last_seen_at": "2026-09-06T19:12:32.879Z",
       "discovery": {
-        "distinct_urls": 1190,
+        "distinct_urls": 1192,
         "example_urls": [
           "https://www.theguardian.com/us-news/2026/jun/23/trump-immigration-courthouse-arrest-policy",
           "https://www.theguardian.com/us-news/2026/jun/28/ice-minnesota-defending-democracy",
@@ -21,7 +21,7 @@
         ],
         "origin_counts": {
           "ontology_evidence": 57,
-          "reading_queue": 1143,
+          "reading_queue": 1145,
           "journals": 156,
           "articles": 5
         },
@@ -79,7 +79,7 @@
         "breadth": {
           "score": 0.94,
           "basis": [
-            "distinct_urls:1190",
+            "distinct_urls:1192",
             "distinct_axes:24",
             "origin_types:4"
           ]
@@ -119,7 +119,7 @@
             "newsroom_domain_pattern",
             "article_path_seen",
             "doi_or_identifier_path_seen",
-            "distinct_urls:1190",
+            "distinct_urls:1192",
             "distinct_axes:24",
             "origin_types:4",
             "referring_accounts:0",
@@ -3118,9 +3118,9 @@
       "entity": "T Co",
       "kind": "unknown",
       "first_seen_at": "2016-05-05T18:57:30.000Z",
-      "last_seen_at": "2026-09-19T14:45:00.000Z",
+      "last_seen_at": "2026-09-19T17:00:19.000Z",
       "discovery": {
-        "distinct_urls": 20832,
+        "distinct_urls": 20866,
         "example_urls": [
           "https://t.co/pJSE124ec4",
           "https://t.co/Soz8BXPWaa",
@@ -3129,11 +3129,11 @@
           "https://t.co/cYaqYDRp08"
         ],
         "origin_counts": {
-          "feed_buffer": 18706,
+          "feed_buffer": 18751,
           "feed_buffer_reply": 5985,
           "articles": 3
         },
-        "distinct_referring_accounts": 3157,
+        "distinct_referring_accounts": 3158,
         "sample_referring_accounts": [
           "0808iveta",
           "09abracadabra",
@@ -3172,7 +3172,7 @@
         "breadth": {
           "score": 0.53,
           "basis": [
-            "distinct_urls:20832",
+            "distinct_urls:20866",
             "distinct_axes:0",
             "origin_types:3"
           ]
@@ -3180,7 +3180,7 @@
         "corroboration": {
           "score": 0.9125,
           "basis": [
-            "referring_accounts:3157",
+            "referring_accounts:3158",
             "origin_types:3"
           ]
         },
@@ -3211,10 +3211,10 @@
           "basis": [
             "unknown_domain_pattern",
             "doi_or_identifier_path_seen",
-            "distinct_urls:20832",
+            "distinct_urls:20866",
             "distinct_axes:0",
             "origin_types:3",
-            "referring_accounts:3157",
+            "referring_accounts:3158",
             "origin_types:3",
             "track_record_unavailable"
           ]
@@ -4636,9 +4636,9 @@
       "entity": "Grok",
       "kind": "unknown",
       "first_seen_at": "2026-04-03T01:20:27.000Z",
-      "last_seen_at": "2026-09-19T12:54:00.000Z",
+      "last_seen_at": "2026-09-19T17:32:57.000Z",
       "discovery": {
-        "distinct_urls": 740,
+        "distinct_urls": 741,
         "example_urls": [
           "https://grok.com/imagine/post/9b92ff60-ec59-45db-8a35-8e1b743e5339",
           "https://grok.com/imagine/post/42c16172-4296-42be-b3d0-aa45ad7b6b97",
@@ -4648,7 +4648,7 @@
         ],
         "origin_counts": {
           "feed_buffer_reply": 610,
-          "feed_buffer": 179
+          "feed_buffer": 180
         },
         "distinct_referring_accounts": 447,
         "sample_referring_accounts": [
@@ -4688,7 +4688,7 @@
         "breadth": {
           "score": 0.47,
           "basis": [
-            "distinct_urls:740",
+            "distinct_urls:741",
             "distinct_axes:0",
             "origin_types:2"
           ]
@@ -4726,7 +4726,7 @@
           "method": "mechanical_v1",
           "basis": [
             "unknown_domain_pattern",
-            "distinct_urls:740",
+            "distinct_urls:741",
             "distinct_axes:0",
             "origin_types:2",
             "referring_accounts:447",
@@ -5430,9 +5430,9 @@
       "entity": "Starlink",
       "kind": "unknown",
       "first_seen_at": "2026-04-07T03:51:50.000Z",
-      "last_seen_at": "2026-09-19T14:05:00.000Z",
+      "last_seen_at": "2026-09-19T15:51:56.321Z",
       "discovery": {
-        "distinct_urls": 1658,
+        "distinct_urls": 1660,
         "example_urls": [
           "https://www.starlink.com/us/residential?referral=RC-DF-9543787-19448-67&utm_medium=paid&utm_campaign=awr_us_soc_twt_ptg_cau&utm_content=awr_us_soc_twt_ptg_cau_res_gvp_v4s_stc_en-us_sdb-bluesky-uptime&twclid=2cg62b1u0oqrypdim5oir1767e",
           "https://www.starlink.com/us/residential?referral=RC-DF-9543787-19448-67&utm_medium=paid&utm_campaign=awr_us_soc_twt_ptg_cau&utm_content=awr_us_soc_twt_ptg_cau_res_gvp_v4s_stc_en-us_sdb-avail-sat-yourhome&twclid=2216n7j93v9absqn77762mm626",
@@ -5442,7 +5442,7 @@
         ],
         "origin_counts": {
           "feed_buffer_reply": 1574,
-          "feed_buffer": 88
+          "feed_buffer": 90
         },
         "distinct_referring_accounts": 5,
         "sample_referring_accounts": [
@@ -5477,7 +5477,7 @@
         "breadth": {
           "score": 0.47,
           "basis": [
-            "distinct_urls:1658",
+            "distinct_urls:1660",
             "distinct_axes:0",
             "origin_types:2"
           ]
@@ -5515,7 +5515,7 @@
           "method": "mechanical_v1",
           "basis": [
             "unknown_domain_pattern",
-            "distinct_urls:1658",
+            "distinct_urls:1660",
             "distinct_axes:0",
             "origin_types:2",
             "referring_accounts:5",
@@ -19277,7 +19277,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-09-03T21:12:07.940Z",
+        "fetched_at": "2026-09-19T15:52:55.518Z",
         "homepage_url": "https://wptgold.com/",
         "example_url": "https://wptgold.com/subscription-3?twclid=26ckzizem3j5r9q8uf2y0hd1k6",
         "homepage_status": 200,
@@ -19404,7 +19404,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-09-03T21:12:10.172Z",
+        "fetched_at": "2026-09-19T15:52:57.263Z",
         "homepage_url": "https://cocainecoffee.com/",
         "example_url": "https://cocainecoffee.com/?twclid=27twwbqquoqevtoxgztpejovrb",
         "homepage_status": 200,
@@ -19531,7 +19531,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-09-04T10:15:32.765Z",
+        "fetched_at": "2026-09-19T15:52:57.427Z",
         "homepage_url": "https://dito.ph/",
         "example_url": "https://dito.ph/sandali?utm_source=twitter&utm_medium=cpm&utm_campaign=DOTC-DM-AWAR-DM-COJ-MAY-INT&utm_id=2026DM&utm_term=COJFEST&utm_content=promoted_post_1&twclid=2estlcww980yee2hzsu5vdedbn",
         "homepage_status": 200,
@@ -19547,7 +19547,7 @@
           "has_about_link": false,
           "has_contact_link": false,
           "has_corrections_link": false,
-          "outbound_links_count": 12,
+          "outbound_links_count": 9,
           "opinion_marker": false
         },
         "example": {
@@ -19638,7 +19638,7 @@
             "about:false",
             "contact:true",
             "corrections:false",
-            "outbound_links:20",
+            "outbound_links:19",
             "opinion_marker:false"
           ]
         },
@@ -19658,7 +19658,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-09-04T10:15:35.833Z",
+        "fetched_at": "2026-09-19T15:53:02.169Z",
         "homepage_url": "https://agora.io/",
         "example_url": "https://www.agora.io/en/solutions/education/?utm_source=Twitter&utm_medium=Paid-Social&utm_campaign=PoweredByAgora&utm_content=Education-Jul-26&twclid=26e5ryj39r8vw6no3x0qprxip8",
         "homepage_status": 200,
@@ -19674,7 +19674,7 @@
           "has_about_link": false,
           "has_contact_link": true,
           "has_corrections_link": false,
-          "outbound_links_count": 15,
+          "outbound_links_count": 14,
           "opinion_marker": false
         },
         "example": {
@@ -19684,7 +19684,7 @@
           "has_about_link": false,
           "has_contact_link": true,
           "has_corrections_link": false,
-          "outbound_links_count": 20,
+          "outbound_links_count": 19,
           "opinion_marker": false
         }
       }
@@ -19785,7 +19785,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-09-04T13:05:31.738Z",
+        "fetched_at": "2026-09-19T16:22:51.608Z",
         "homepage_url": "https://puter.com/",
         "example_url": "https://developer.puter.com/?utm_source=x&utm_medium=paid_social&utm_campaign=backend_ai&twclid=27ht9opz02h3rp1i1jsomffb4m",
         "homepage_status": 200,
@@ -19912,7 +19912,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-09-04T13:05:32.968Z",
+        "fetched_at": "2026-09-19T16:22:52.500Z",
         "homepage_url": "https://agentstakes.gg/",
         "example_url": "https://agentstakes.gg/?twclid=2cp3uw3rrtvzfe93ubg50npzc5",
         "homepage_status": 200,
@@ -20039,7 +20039,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-09-04T13:05:33.524Z",
+        "fetched_at": "2026-09-19T16:22:52.943Z",
         "homepage_url": "https://longbridge.com/",
         "example_url": "https://longbridge.com/sg/longbridge-ai?channel=SGAI0001&twclid=27m5o8o2o9vynl50diwyukaj1x",
         "homepage_status": 200,
@@ -20165,7 +20165,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-09-04T13:05:35.797Z",
+        "fetched_at": "2026-09-19T16:22:55.717Z",
         "homepage_url": "https://merck.com/",
         "example_url": "https://www.merck.com/stories/were-pursuing-innovative-science-with-antibody-drug-conjugate-adc-research/?utm_source=twitter&utm_medium=paid-social&utm_campaign=US_NON_oncoalwayson_OT_AW_202604&utm_content=na_NA_VID_18s&twclid=2ashs3kuiq7isb412ax3cbgusn",
         "homepage_status": 200,
@@ -20291,7 +20291,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-09-04T14:05:30.965Z",
+        "fetched_at": "2026-09-19T17:22:53.111Z",
         "homepage_url": "https://fabletics.com/",
         "example_url": "https://www.fabletics.com/dmg/926C08?utm_medium=paid_social_media&utm_source=twitter&utm_campaign=twitter_campaign_id_FLM56&utm_content=twitter_adgroup_id_FLM56-1&utm_term=twitter_ad_id_FLM56-1-11&twclid=21tkc8gfxmeyk2zkude4aqtxx0",
         "homepage_status": 403,
@@ -20417,7 +20417,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-09-04T14:05:32.356Z",
+        "fetched_at": "2026-09-19T17:22:54.578Z",
         "homepage_url": "https://80.lv/",
         "example_url": "https://80.lv/articles/this-cyberpunk-cozy-game-allows-you-to-build-your-own-rain-soaked-world?utm_source=pa-x&utm_medium=cpc&twclid=24138z1ynt8psd4xn6ca3421h5",
         "homepage_status": 200,
@@ -20433,7 +20433,7 @@
           "has_about_link": true,
           "has_contact_link": false,
           "has_corrections_link": false,
-          "outbound_links_count": 13,
+          "outbound_links_count": 14,
           "opinion_marker": false
         },
         "example": {
@@ -20543,7 +20543,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-09-04T14:05:32.717Z",
+        "fetched_at": "2026-09-19T17:22:54.813Z",
         "homepage_url": "https://miku.ph/",
         "example_url": "https://miku.ph/?utm_source=x&utm_medium=paid_social&utm_campaign=mikufes_announcement&utm_content=detailed&twclid=21azz5ellpiwotx3k2g9myjumu",
         "homepage_status": 200,
@@ -20670,7 +20670,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-09-04T14:05:34.504Z",
+        "fetched_at": "2026-09-19T17:22:56.010Z",
         "homepage_url": "https://inqnews.net/",
         "example_url": "https://inqnews.net/major",
         "homepage_status": 200,
@@ -20797,7 +20797,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-09-04T15:36:50.515Z",
+        "fetched_at": "2026-09-19T17:53:13.227Z",
         "homepage_url": "https://newsmax.com/",
         "example_url": "https://www.newsmax.com/ruddy/chris-ruddy-scott-bessent-donald-trump/2026/01/19/id/1242743/?twclid=26mj7qjkmqd4eerrni08qzffox",
         "homepage_status": null,
@@ -20924,7 +20924,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-09-04T16:05:51.551Z",
+        "fetched_at": "2026-09-19T17:53:14.498Z",
         "homepage_url": "https://declarenews.org/",
         "example_url": "https://declarenews.org/?twclid=2500ov9qtyoaopft1mo5mjis4t",
         "homepage_status": 200,
@@ -21022,12 +21022,12 @@
           ]
         },
         "profile": {
-          "score": 0.1,
+          "score": 0,
           "confidence": 0.55,
           "basis": [
             "meta_author:false",
             "published_time:false",
-            "canonical:true",
+            "canonical:false",
             "about:false",
             "contact:false",
             "corrections:false",
@@ -21051,19 +21051,19 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-09-04T16:05:52.465Z",
+        "fetched_at": "2026-09-19T17:53:14.518Z",
         "homepage_url": "https://bcgm1.com/",
         "example_url": "https://bcgm1.com/i-97wbvq0rqm-n/?p=%2Flogin%2Fregist&utm_medium=twitter&utm_content=X557_zfge_WC_EN_SS_20260623_T&p=%2Flogin%2Fregist&ch=twitter&pixel_id=or72z&register=tw-or72z-or738&purchase=tw-or72z-or736&twclid=2c7k3uyirbkh3ff8w9vbicvapx",
-        "homepage_status": 200,
-        "example_status": 200,
-        "homepage_final_url": "https://playfunph.com/?traceId=KTASGG-1788537951796",
-        "example_final_url": "https://playgoph.com/login/regist?traceId=RPKCQT-1788537952080&ch=twitter&utm_medium=twitter&purchase=tw-or72z-or736&i=97wbvq0rqm&twclid=2c7k3uyirbkh3ff8w9vbicvapx&pixel_id=or72z&utm_content=X557_zfge_WC_EN_SS_20260623_T&register=tw-or72z-or738&utm_source=97wbvq0rqm",
-        "homepage_content_type": "text/html; charset=utf-8",
-        "example_content_type": "text/html; charset=utf-8",
+        "homepage_status": null,
+        "example_status": null,
+        "homepage_final_url": "https://bcgm1.com/",
+        "example_final_url": "https://bcgm1.com/i-97wbvq0rqm-n/?p=%2Flogin%2Fregist&utm_medium=twitter&utm_content=X557_zfge_WC_EN_SS_20260623_T&p=%2Flogin%2Fregist&ch=twitter&pixel_id=or72z&register=tw-or72z-or738&purchase=tw-or72z-or736&twclid=2c7k3uyirbkh3ff8w9vbicvapx",
+        "homepage_content_type": "",
+        "example_content_type": "",
         "homepage": {
           "has_meta_author": false,
           "has_published_time": false,
-          "has_canonical": true,
+          "has_canonical": false,
           "has_about_link": false,
           "has_contact_link": false,
           "has_corrections_link": false,
@@ -21073,7 +21073,7 @@
         "example": {
           "has_meta_author": false,
           "has_published_time": false,
-          "has_canonical": true,
+          "has_canonical": false,
           "has_about_link": false,
           "has_contact_link": false,
           "has_corrections_link": false,
@@ -21178,7 +21178,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-09-04T17:05:51.499Z",
+        "fetched_at": "2026-09-19T17:53:15.942Z",
         "homepage_url": "https://jetcraft.com/",
         "example_url": "https://www.jetcraft.com/?utm_campaign=X-Branding-Ad&utm_medium=paid-social&utm_source=x&twclid=2ay2ajx0dm14xp5m3pne3v6y19",
         "homepage_status": 200,
