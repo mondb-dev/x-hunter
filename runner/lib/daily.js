@@ -90,12 +90,19 @@ function reports() {
       shell: true, stdio: 'ignore', timeout: 60000,
     });
   } catch {}
-  try {
-    const generateScript = path.join(config.RUNNER_DIR, 'intelligence', 'generate_conflict_claims.js');
-    execSync(`node "${generateScript}" >> "${config.RUNNER_LOG_PATH}" 2>&1`, {
-      shell: true, stdio: 'ignore', timeout: 300000,
-    });
-  } catch {}
+  // generate_conflict_claims.js is hardcoded to the Iran/US/Israel topic and was
+  // ~85-90% of ALL inference (one claude call per claim, ~1,300-2,100/day). Off
+  // while a research agenda is active — the /intelligence page keeps its last
+  // export. INTEL_CONFLICT_CLAIMS=1 forces it back on (label cache keeps reruns cheap).
+  const { getAgenda } = require('./research_agenda');
+  if (process.env.INTEL_CONFLICT_CLAIMS === '1' || !getAgenda()) {
+    try {
+      const generateScript = path.join(config.RUNNER_DIR, 'intelligence', 'generate_conflict_claims.js');
+      execSync(`node "${generateScript}" >> "${config.RUNNER_LOG_PATH}" 2>&1`, {
+        shell: true, stdio: 'ignore', timeout: 300000,
+      });
+    } catch {}
+  }
   try {
     const exportScript = path.join(config.RUNNER_DIR, 'intelligence', 'export.js');
     execSync(`node "${exportScript}" >> "${config.RUNNER_LOG_PATH}" 2>&1`, {
@@ -110,6 +117,10 @@ function reports() {
       shell: true, stdio: 'ignore', timeout: 600000,
     });
   } catch {}
+
+  // Public machine-readable interface (web/public/data/**) — versioned export of
+  // axes, solution briefs, predictions and the agenda for external consumers.
+  runScript('export_public_data.js');
 
   // Daily belief report
   runScript('generate_daily_report.js');
@@ -330,7 +341,9 @@ function housekeeping({ today, vercelDeployHook }) {
 
   // Git commit daily outputs
   commitAndPush({
-    paths: ['journals/', 'checkpoints/', 'state/', 'articles/', 'daily/', 'ponders/'],
+    // web/public/data/ carries the public research export (export_public_data.js)
+    // — without it the export is written but never deployed.
+    paths: ['journals/', 'checkpoints/', 'state/', 'articles/', 'daily/', 'ponders/', 'web/public/data/'],
     message: `daily: ${today}`,
   });
 
