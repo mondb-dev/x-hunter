@@ -1,8 +1,8 @@
 {
   "schema_version": "1.0",
-  "generated_at": "2026-09-19T08:52:45.652Z",
+  "generated_at": "2026-09-19T11:52:48.720Z",
   "method": "mechanical_registry_v1",
-  "profiled_at": "2026-09-19T08:52:53.889Z",
+  "profiled_at": "2026-09-19T11:52:52.945Z",
   "sources": [
     {
       "domain": "theguardian.com",
@@ -11,7 +11,7 @@
       "first_seen_at": "2026-03-27T23:17:00Z",
       "last_seen_at": "2026-09-06T19:12:32.879Z",
       "discovery": {
-        "distinct_urls": 1186,
+        "distinct_urls": 1188,
         "example_urls": [
           "https://www.theguardian.com/us-news/2026/jun/23/trump-immigration-courthouse-arrest-policy",
           "https://www.theguardian.com/us-news/2026/jun/28/ice-minnesota-defending-democracy",
@@ -21,7 +21,7 @@
         ],
         "origin_counts": {
           "ontology_evidence": 57,
-          "reading_queue": 1139,
+          "reading_queue": 1141,
           "journals": 156,
           "articles": 5
         },
@@ -79,7 +79,7 @@
         "breadth": {
           "score": 0.94,
           "basis": [
-            "distinct_urls:1186",
+            "distinct_urls:1188",
             "distinct_axes:24",
             "origin_types:4"
           ]
@@ -119,7 +119,7 @@
             "newsroom_domain_pattern",
             "article_path_seen",
             "doi_or_identifier_path_seen",
-            "distinct_urls:1186",
+            "distinct_urls:1188",
             "distinct_axes:24",
             "origin_types:4",
             "referring_accounts:0",
@@ -836,7 +836,7 @@
       "first_seen_at": "2026-06-26T07:05:00Z",
       "last_seen_at": "2026-09-06T14:42:26.825Z",
       "discovery": {
-        "distinct_urls": 758,
+        "distinct_urls": 760,
         "example_urls": [
           "https://www.bbc.co.uk/news/articles/cn8qxz6qypyo",
           "https://www.bbc.co.uk/news/articles/cn075j04pnyo?at_medium=RSS&amp;at_campaign=rss",
@@ -846,7 +846,7 @@
         ],
         "origin_counts": {
           "ontology_evidence": 11,
-          "reading_queue": 774,
+          "reading_queue": 776,
           "journals": 24,
           "articles": 2
         },
@@ -886,7 +886,7 @@
         "breadth": {
           "score": 0.94,
           "basis": [
-            "distinct_urls:758",
+            "distinct_urls:760",
             "distinct_axes:8",
             "origin_types:4"
           ]
@@ -924,7 +924,7 @@
           "method": "mechanical_v1",
           "basis": [
             "newsroom_domain_pattern",
-            "distinct_urls:758",
+            "distinct_urls:760",
             "distinct_axes:8",
             "origin_types:4",
             "referring_accounts:0",
@@ -972,7 +972,7 @@
       "first_seen_at": "2026-06-22T00:15:00Z",
       "last_seen_at": "2026-09-06T19:12:32.922Z",
       "discovery": {
-        "distinct_urls": 806,
+        "distinct_urls": 808,
         "example_urls": [
           "https://www.nytimes.com/2026/06/19/world/canada/frank-stronach-trial-guilty-sex-charges.html",
           "https://www.nytimes.com/2026/06/27/world/americas/mexican-officials-us-informants.html",
@@ -982,7 +982,7 @@
         ],
         "origin_counts": {
           "ontology_evidence": 33,
-          "reading_queue": 831,
+          "reading_queue": 833,
           "journals": 77
         },
         "distinct_referring_accounts": 0,
@@ -1029,7 +1029,7 @@
         "breadth": {
           "score": 0.8799999999999999,
           "basis": [
-            "distinct_urls:806",
+            "distinct_urls:808",
             "distinct_axes:15",
             "origin_types:3"
           ]
@@ -1068,7 +1068,7 @@
           "basis": [
             "newsroom_domain_pattern",
             "article_path_seen",
-            "distinct_urls:806",
+            "distinct_urls:808",
             "distinct_axes:15",
             "origin_types:3",
             "referring_accounts:0",
@@ -3118,9 +3118,9 @@
       "entity": "T Co",
       "kind": "unknown",
       "first_seen_at": "2016-05-05T18:57:30.000Z",
-      "last_seen_at": "2026-09-19T08:37:00.000Z",
+      "last_seen_at": "2026-09-19T11:37:06.020Z",
       "discovery": {
-        "distinct_urls": 20587,
+        "distinct_urls": 20713,
         "example_urls": [
           "https://t.co/pJSE124ec4",
           "https://t.co/Soz8BXPWaa",
@@ -3129,11 +3129,11 @@
           "https://t.co/cYaqYDRp08"
         ],
         "origin_counts": {
-          "feed_buffer": 18474,
-          "feed_buffer_reply": 5928,
+          "feed_buffer": 18600,
+          "feed_buffer_reply": 5953,
           "articles": 3
         },
-        "distinct_referring_accounts": 3118,
+        "distinct_referring_accounts": 3132,
         "sample_referring_accounts": [
           "0808iveta",
           "09abracadabra",
@@ -3172,7 +3172,7 @@
         "breadth": {
           "score": 0.53,
           "basis": [
-            "distinct_urls:20587",
+            "distinct_urls:20713",
             "distinct_axes:0",
             "origin_types:3"
           ]
@@ -3180,7 +3180,7 @@
         "corroboration": {
           "score": 0.9125,
           "basis": [
-            "referring_accounts:3118",
+            "referring_accounts:3132",
             "origin_types:3"
           ]
         },
@@ -3211,10 +3211,10 @@
           "basis": [
             "unknown_domain_pattern",
             "doi_or_identifier_path_seen",
-            "distinct_urls:20587",
+            "distinct_urls:20713",
             "distinct_axes:0",
             "origin_types:3",
-            "referring_accounts:3118",
+            "referring_accounts:3132",
             "origin_types:3",
             "track_record_unavailable"
           ]
@@ -4636,9 +4636,9 @@
       "entity": "Grok",
       "kind": "unknown",
       "first_seen_at": "2026-04-03T01:20:27.000Z",
-      "last_seen_at": "2026-09-19T05:24:18.000Z",
+      "last_seen_at": "2026-09-19T07:28:47.000Z",
       "discovery": {
-        "distinct_urls": 734,
+        "distinct_urls": 736,
         "example_urls": [
           "https://grok.com/imagine/post/9b92ff60-ec59-45db-8a35-8e1b743e5339",
           "https://grok.com/imagine/post/42c16172-4296-42be-b3d0-aa45ad7b6b97",
@@ -4648,7 +4648,7 @@
         ],
         "origin_counts": {
           "feed_buffer_reply": 608,
-          "feed_buffer": 175
+          "feed_buffer": 177
         },
         "distinct_referring_accounts": 443,
         "sample_referring_accounts": [
@@ -4688,7 +4688,7 @@
         "breadth": {
           "score": 0.47,
           "basis": [
-            "distinct_urls:734",
+            "distinct_urls:736",
             "distinct_axes:0",
             "origin_types:2"
           ]
@@ -4726,7 +4726,7 @@
           "method": "mechanical_v1",
           "basis": [
             "unknown_domain_pattern",
-            "distinct_urls:734",
+            "distinct_urls:736",
             "distinct_axes:0",
             "origin_types:2",
             "referring_accounts:443",
@@ -5430,9 +5430,9 @@
       "entity": "Starlink",
       "kind": "unknown",
       "first_seen_at": "2026-04-07T03:51:50.000Z",
-      "last_seen_at": "2026-09-19T07:28:49.000Z",
+      "last_seen_at": "2026-09-19T11:30:14.000Z",
       "discovery": {
-        "distinct_urls": 1528,
+        "distinct_urls": 1576,
         "example_urls": [
           "https://www.starlink.com/us/residential?referral=RC-DF-9543787-19448-67&utm_medium=paid&utm_campaign=awr_us_soc_twt_ptg_cau&utm_content=awr_us_soc_twt_ptg_cau_res_gvp_v4s_stc_en-us_sdb-bluesky-uptime&twclid=2cg62b1u0oqrypdim5oir1767e",
           "https://www.starlink.com/us/residential?referral=RC-DF-9543787-19448-67&utm_medium=paid&utm_campaign=awr_us_soc_twt_ptg_cau&utm_content=awr_us_soc_twt_ptg_cau_res_gvp_v4s_stc_en-us_sdb-avail-sat-yourhome&twclid=2216n7j93v9absqn77762mm626",
@@ -5441,8 +5441,8 @@
           "https://www.starlink.com/us/residential?referral=RC-DF-9543787-19448-67&utm_medium=paid&utm_campaign=awr_us_soc_twt_ptg_cau&utm_content=awr_us_soc_twt_ptg_cau_res_gvp_v4s_stc_en-us_sdb-avail-sat-arrived&twclid=21pi7t0qs8tgw0wgnh5mvmdu2g"
         ],
         "origin_counts": {
-          "feed_buffer_reply": 1447,
-          "feed_buffer": 85
+          "feed_buffer_reply": 1493,
+          "feed_buffer": 87
         },
         "distinct_referring_accounts": 5,
         "sample_referring_accounts": [
@@ -5477,7 +5477,7 @@
         "breadth": {
           "score": 0.47,
           "basis": [
-            "distinct_urls:1528",
+            "distinct_urls:1576",
             "distinct_axes:0",
             "origin_types:2"
           ]
@@ -5515,7 +5515,7 @@
           "method": "mechanical_v1",
           "basis": [
             "unknown_domain_pattern",
-            "distinct_urls:1528",
+            "distinct_urls:1576",
             "distinct_axes:0",
             "origin_types:2",
             "referring_accounts:5",
@@ -5843,9 +5843,9 @@
       "entity": "Huawei",
       "kind": "unknown",
       "first_seen_at": "2026-04-28T08:12:51.000Z",
-      "last_seen_at": "2026-09-18T11:54:57.000Z",
+      "last_seen_at": "2026-09-19T10:42:10.000Z",
       "discovery": {
-        "distinct_urls": 50,
+        "distinct_urls": 53,
         "example_urls": [
           "https://www.huawei.com/en/media-center/transform/24/06-jason-lee?utm_medium=psm&utm_source=twitter&utm_campaign=Transform",
           "https://e.huawei.com/ae/events/branding/gitex-ca?utm_medium=psm&utm_source=twitter&source=corp_sc_en&utm_campaign=GITEX2026",
@@ -5855,7 +5855,7 @@
         ],
         "origin_counts": {
           "feed_buffer_reply": 20,
-          "feed_buffer": 31
+          "feed_buffer": 34
         },
         "distinct_referring_accounts": 2,
         "sample_referring_accounts": [
@@ -5888,7 +5888,7 @@
         "breadth": {
           "score": 0.47,
           "basis": [
-            "distinct_urls:50",
+            "distinct_urls:53",
             "distinct_axes:0",
             "origin_types:2"
           ]
@@ -5927,7 +5927,7 @@
           "basis": [
             "unknown_domain_pattern",
             "article_path_seen",
-            "distinct_urls:50",
+            "distinct_urls:53",
             "distinct_axes:0",
             "origin_types:2",
             "referring_accounts:2",
@@ -10433,6 +10433,133 @@
       }
     },
     {
+      "domain": "imbue.com",
+      "entity": "Imbue",
+      "kind": "unknown",
+      "first_seen_at": "2026-07-10T02:02:24.517Z",
+      "last_seen_at": "2026-09-19T10:32:00.610Z",
+      "discovery": {
+        "distinct_urls": 17,
+        "example_urls": [
+          "https://imbue.com/product/bouncer/redirect.html?utm_source=x&utm_medium=paid_social&utm_campaign=omni&authuser=0&hl=en&twclid=28wps3duhy1q7hzrcdj2h5pxpl",
+          "https://imbue.com/product/bouncer/redirect.html?utm_source=x&utm_campaign=omni_redirect_garb&authuser=0&hl=en&twclid=22x2rpdpk6869weht7xv9qxc64",
+          "https://imbue.com/product/bouncer/redirect.html?utm_source=x&utm_medium=paid_social&utm_campaign=omni&authuser=0&hl=en&twclid=2agk2hjxe1cv0p3529yhw8fwiq",
+          "https://imbue.com/product/bouncer/redirect.html?utm_source=x&utm_campaign=omni_redirect_garb&authuser=0&hl=en&twclid=2aso6mvjhl3syanq0q4dwmdkrr",
+          "https://imbue.com/product/bouncer/redirect.html?utm_source=x&utm_campaign=omni_redirect_garb&authuser=0&hl=en&twclid=21vnj6c6qh2t3kmuo81kvepqzx"
+        ],
+        "origin_counts": {
+          "feed_buffer": 14,
+          "feed_buffer_reply": 3
+        },
+        "distinct_referring_accounts": 1,
+        "sample_referring_accounts": [
+          "millanphilipose"
+        ],
+        "distinct_axes": []
+      },
+      "claims": {
+        "total": 0,
+        "supported": 0,
+        "refuted": 0,
+        "contested": 0,
+        "unverified": 0,
+        "resolved_count": 0
+      },
+      "structural_features": {
+        "has_search_paths": false,
+        "has_article_paths": false,
+        "has_doi_paths": false
+      },
+      "ratings": {
+        "provenance": {
+          "score": 0.45,
+          "basis": [
+            "unknown_domain_pattern"
+          ]
+        },
+        "breadth": {
+          "score": 0.47,
+          "basis": [
+            "distinct_urls:17",
+            "distinct_axes:0",
+            "origin_types:2"
+          ]
+        },
+        "corroboration": {
+          "score": 0.2833333333333333,
+          "basis": [
+            "referring_accounts:1",
+            "origin_types:2"
+          ]
+        },
+        "track_record": {
+          "score": null,
+          "basis": [
+            "no_resolved_claims_observed"
+          ]
+        },
+        "profile": {
+          "score": 0.14,
+          "confidence": 0.65,
+          "basis": [
+            "meta_author:false",
+            "published_time:false",
+            "canonical:false",
+            "about:true",
+            "contact:false",
+            "corrections:false",
+            "outbound_links:0",
+            "opinion_marker:false"
+          ]
+        },
+        "overall": {
+          "score": 0.43875,
+          "confidence": 0.5292,
+          "method": "mechanical_v1",
+          "basis": [
+            "unknown_domain_pattern",
+            "distinct_urls:17",
+            "distinct_axes:0",
+            "origin_types:2",
+            "referring_accounts:1",
+            "origin_types:2",
+            "track_record_unavailable"
+          ]
+        }
+      },
+      "profile": {
+        "fetched_at": "2026-09-18T21:09:12.999Z",
+        "homepage_url": "https://imbue.com/",
+        "example_url": "https://imbue.com/product/bouncer/redirect.html?utm_source=x&utm_medium=paid_social&utm_campaign=omni&authuser=0&hl=en&twclid=28wps3duhy1q7hzrcdj2h5pxpl",
+        "homepage_status": 200,
+        "example_status": 200,
+        "homepage_final_url": "https://imbue.com/",
+        "example_final_url": "https://imbue.com/product/bouncer/redirect.html?utm_source=x&utm_medium=paid_social&utm_campaign=omni&authuser=0&hl=en&twclid=28wps3duhy1q7hzrcdj2h5pxpl",
+        "homepage_content_type": "text/html",
+        "example_content_type": "text/html; charset=UTF-8",
+        "homepage": {
+          "has_meta_author": false,
+          "has_published_time": false,
+          "has_canonical": true,
+          "has_about_link": true,
+          "has_contact_link": false,
+          "has_corrections_link": false,
+          "outbound_links_count": 7,
+          "opinion_marker": false
+        },
+        "example": {
+          "has_meta_author": false,
+          "has_published_time": false,
+          "has_canonical": false,
+          "has_about_link": false,
+          "has_contact_link": false,
+          "has_corrections_link": false,
+          "outbound_links_count": 0,
+          "opinion_marker": false
+        }
+      }
+    },
+    {
       "domain": "utspaycashback.com",
       "entity": "Utspaycashback",
       "kind": "unknown",
@@ -10809,133 +10936,6 @@
           "has_contact_link": true,
           "has_corrections_link": false,
           "outbound_links_count": 1,
-          "opinion_marker": false
-        }
-      }
-    },
-    {
-      "domain": "imbue.com",
-      "entity": "Imbue",
-      "kind": "unknown",
-      "first_seen_at": "2026-07-10T02:02:24.517Z",
-      "last_seen_at": "2026-08-15T14:27:20.160Z",
-      "discovery": {
-        "distinct_urls": 16,
-        "example_urls": [
-          "https://imbue.com/product/bouncer/redirect.html?utm_source=x&utm_medium=paid_social&utm_campaign=omni&authuser=0&hl=en&twclid=28wps3duhy1q7hzrcdj2h5pxpl",
-          "https://imbue.com/product/bouncer/redirect.html?utm_source=x&utm_campaign=omni_redirect_garb&authuser=0&hl=en&twclid=22x2rpdpk6869weht7xv9qxc64",
-          "https://imbue.com/product/bouncer/redirect.html?utm_source=x&utm_medium=paid_social&utm_campaign=omni&authuser=0&hl=en&twclid=2agk2hjxe1cv0p3529yhw8fwiq",
-          "https://imbue.com/product/bouncer/redirect.html?utm_source=x&utm_campaign=omni_redirect_garb&authuser=0&hl=en&twclid=2aso6mvjhl3syanq0q4dwmdkrr",
-          "https://imbue.com/product/bouncer/redirect.html?utm_source=x&utm_campaign=omni_redirect_garb&authuser=0&hl=en&twclid=21vnj6c6qh2t3kmuo81kvepqzx"
-        ],
-        "origin_counts": {
-          "feed_buffer": 13,
-          "feed_buffer_reply": 3
-        },
-        "distinct_referring_accounts": 1,
-        "sample_referring_accounts": [
-          "millanphilipose"
-        ],
-        "distinct_axes": []
-      },
-      "claims": {
-        "total": 0,
-        "supported": 0,
-        "refuted": 0,
-        "contested": 0,
-        "unverified": 0,
-        "resolved_count": 0
-      },
-      "structural_features": {
-        "has_search_paths": false,
-        "has_article_paths": false,
-        "has_doi_paths": false
-      },
-      "ratings": {
-        "provenance": {
-          "score": 0.45,
-          "basis": [
-            "unknown_domain_pattern"
-          ]
-        },
-        "breadth": {
-          "score": 0.47,
-          "basis": [
-            "distinct_urls:16",
-            "distinct_axes:0",
-            "origin_types:2"
-          ]
-        },
-        "corroboration": {
-          "score": 0.2833333333333333,
-          "basis": [
-            "referring_accounts:1",
-            "origin_types:2"
-          ]
-        },
-        "track_record": {
-          "score": null,
-          "basis": [
-            "no_resolved_claims_observed"
-          ]
-        },
-        "profile": {
-          "score": 0.14,
-          "confidence": 0.65,
-          "basis": [
-            "meta_author:false",
-            "published_time:false",
-            "canonical:false",
-            "about:true",
-            "contact:false",
-            "corrections:false",
-            "outbound_links:0",
-            "opinion_marker:false"
-          ]
-        },
-        "overall": {
-          "score": 0.43875,
-          "confidence": 0.5066999999999999,
-          "method": "mechanical_v1",
-          "basis": [
-            "unknown_domain_pattern",
-            "distinct_urls:16",
-            "distinct_axes:0",
-            "origin_types:2",
-            "referring_accounts:1",
-            "origin_types:2",
-            "track_record_unavailable"
-          ]
-        }
-      },
-      "profile": {
-        "fetched_at": "2026-09-18T21:09:12.999Z",
-        "homepage_url": "https://imbue.com/",
-        "example_url": "https://imbue.com/product/bouncer/redirect.html?utm_source=x&utm_medium=paid_social&utm_campaign=omni&authuser=0&hl=en&twclid=28wps3duhy1q7hzrcdj2h5pxpl",
-        "homepage_status": 200,
-        "example_status": 200,
-        "homepage_final_url": "https://imbue.com/",
-        "example_final_url": "https://imbue.com/product/bouncer/redirect.html?utm_source=x&utm_medium=paid_social&utm_campaign=omni&authuser=0&hl=en&twclid=28wps3duhy1q7hzrcdj2h5pxpl",
-        "homepage_content_type": "text/html",
-        "example_content_type": "text/html; charset=UTF-8",
-        "homepage": {
-          "has_meta_author": false,
-          "has_published_time": false,
-          "has_canonical": true,
-          "has_about_link": true,
-          "has_contact_link": false,
-          "has_corrections_link": false,
-          "outbound_links_count": 7,
-          "opinion_marker": false
-        },
-        "example": {
-          "has_meta_author": false,
-          "has_published_time": false,
-          "has_canonical": false,
-          "has_about_link": false,
-          "has_contact_link": false,
-          "has_corrections_link": false,
-          "outbound_links_count": 0,
           "opinion_marker": false
         }
       }
@@ -15232,7 +15232,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-09-06T11:41:58.785Z",
+        "fetched_at": "2026-09-19T09:52:50.858Z",
         "homepage_url": "https://canadacis.org/",
         "example_url": "https://ph2canada.canadacis.org/?utm_source=twitter&utm_medium=conversions&utm_campaign=ph01&twclid=29zxowpwkbmryvjqutr3f9ysur",
         "homepage_status": 200,
@@ -15358,7 +15358,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-09-06T12:11:41.164Z",
+        "fetched_at": "2026-09-19T09:52:51.789Z",
         "homepage_url": "https://anymark.co/",
         "example_url": "https://anymark.co/?utm_source=x&utm_campaign=x771&twclid=293t0nesyim9m91au5fqoaj5s8",
         "homepage_status": 200,
@@ -15484,7 +15484,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-09-06T12:11:42.601Z",
+        "fetched_at": "2026-09-19T09:52:52.738Z",
         "homepage_url": "https://panzer.quest/",
         "example_url": "https://panzer.quest/?r=twipq1wwa&twclid=29prb4l0osv19xvy30sejzir0",
         "homepage_status": 200,
@@ -15610,7 +15610,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-09-06T12:11:43.683Z",
+        "fetched_at": "2026-09-19T09:52:54.331Z",
         "homepage_url": "https://omgskills.com/",
         "example_url": "https://omgskills.com/?twclid=2ewu2vd054idb44rsf4bgvksa8",
         "homepage_status": 200,
@@ -15736,7 +15736,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-09-06T12:11:44.589Z",
+        "fetched_at": "2026-09-19T10:22:49.856Z",
         "homepage_url": "https://era.app/",
         "example_url": "https://era.app/?twclid=23bm7jtrc66pin9ydx0wvupecw",
         "homepage_status": 200,
@@ -15862,7 +15862,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-09-06T13:11:51.006Z",
+        "fetched_at": "2026-09-19T10:22:50.909Z",
         "homepage_url": "https://guardianbikes.com/",
         "example_url": "https://guardianbikes.com/products/balance-bike?variant=41102033158237&utm_source=twitter&twclid=2dhmyi0k26r61jxbnc07720qis&utm_content=dpa_carousel&utm_campaign=X_2026_DPA_Remarketing_Campaign+&utm_medium=cpc",
         "homepage_status": 200,
@@ -15988,7 +15988,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-09-06T13:11:53.153Z",
+        "fetched_at": "2026-09-19T10:22:52.623Z",
         "homepage_url": "https://lovart.ai/",
         "example_url": "https://www.lovart.ai/?sourceId=910062&sourceid=910062&utm_source=twitter&utm_medium=paid_social&utm_campaign=Lovart_910062_Meta_US_AIModel_ag_260416_lead&twclid=2a5k8izlnshoxgoxi52b1tnd45",
         "homepage_status": 200,
@@ -16114,7 +16114,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-09-06T13:11:54.369Z",
+        "fetched_at": "2026-09-19T10:22:53.415Z",
         "homepage_url": "https://heylemon.ai/",
         "example_url": "https://heylemon.ai/?utm_source=paid_X_all1&twclid=2bprvotipsebt2ywwd413k1c6r",
         "homepage_status": 200,
@@ -16240,7 +16240,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-09-06T13:11:56.809Z",
+        "fetched_at": "2026-09-19T11:22:50.940Z",
         "homepage_url": "https://wavedash.com/",
         "example_url": "https://wavedash.com/?twclid=29k171tm7pjzrxbob4j7cmjl3o",
         "homepage_status": 200,
@@ -16366,7 +16366,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-09-06T14:41:45.369Z",
+        "fetched_at": "2026-09-19T11:22:51.464Z",
         "homepage_url": "https://babbily.com/",
         "example_url": "https://platform.babbily.com/?twclid=28ntbg85b8teebnlu9ilz4yxht",
         "homepage_status": 200,
@@ -16492,7 +16492,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-09-06T14:41:45.922Z",
+        "fetched_at": "2026-09-19T11:22:52.092Z",
         "homepage_url": "https://spacex.com/",
         "example_url": "https://shop.spacex.com/products/spacex-mission-ready-sunglasses?variant=44537843744847&utm_source=twitter&utm_medium=product_sync&utm_campaign=twitter_44537843744847&twclid=298d45vmtw4pu78lan6k2cs4ha",
         "homepage_status": 200,
@@ -16618,7 +16618,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-09-06T14:41:47.551Z",
+        "fetched_at": "2026-09-19T11:22:54.039Z",
         "homepage_url": "https://hypeddit.com/",
         "example_url": "https://hypeddit.com/psychicfeverfromexiletribe/ifyouremine?twclid=23rtj49iasvoyuwyxn3g4hwi03",
         "homepage_status": 200,
@@ -16744,7 +16744,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-09-06T14:41:48.491Z",
+        "fetched_at": "2026-09-19T11:52:49.747Z",
         "homepage_url": "https://teslahubs.com/",
         "example_url": "https://teslahubs.com/products/teslahubs-proguard-advanced-noise-reduction-weatherproofing-kit?tw_source=twitter&tw_campaign=May_2_ProGuard_Sales__Men_25_34_Web_02_05_2026&utm_term=Static_PG_img_224_1.1&twclid=22spdhzoczolm0ipnjon5bt2pn",
         "homepage_status": 200,
@@ -16870,7 +16870,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-09-06T15:11:44.386Z",
+        "fetched_at": "2026-09-19T11:52:50.604Z",
         "homepage_url": "https://hypemarkets.xyz/",
         "example_url": "https://hypemarkets.xyz/?twclid=27lmvj7zap2yyfs7n0ndgenluy",
         "homepage_status": 200,
@@ -16996,7 +16996,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-09-06T15:11:44.967Z",
+        "fetched_at": "2026-09-19T11:52:51.469Z",
         "homepage_url": "https://h-tech.space/",
         "example_url": "https://teamlore.h-tech.space/?twclid=21cpesmzgsrh5ius8yd25zbe9t",
         "homepage_status": null,
@@ -17124,7 +17124,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-09-04T22:12:17.639Z",
+        "fetched_at": "2026-09-19T11:52:52.945Z",
         "homepage_url": "https://adjust.com/",
         "example_url": "https://app.adjust.com/1zbd03n1?campaign=X_D90NA_1_all_US_sales_260429-0513_dt_CPC_leihuoua_branding&adgroup=US-pic+vid&creative=%E6%8D%8F%E8%84%B8Vid+%E6%8D%8F%E8%84%B8Pic&cross_device_tracking=1&twclid=25wqttszpha1giwsadazr7s78y",
         "homepage_status": 429,
