@@ -1,8 +1,8 @@
 {
   "schema_version": "1.0",
-  "generated_at": "2026-09-19T05:16:13.860Z",
+  "generated_at": "2026-09-19T08:52:45.652Z",
   "method": "mechanical_registry_v1",
-  "profiled_at": "2026-09-19T05:16:23.487Z",
+  "profiled_at": "2026-09-19T08:52:53.889Z",
   "sources": [
     {
       "domain": "theguardian.com",
@@ -11,7 +11,7 @@
       "first_seen_at": "2026-03-27T23:17:00Z",
       "last_seen_at": "2026-09-06T19:12:32.879Z",
       "discovery": {
-        "distinct_urls": 1184,
+        "distinct_urls": 1186,
         "example_urls": [
           "https://www.theguardian.com/us-news/2026/jun/23/trump-immigration-courthouse-arrest-policy",
           "https://www.theguardian.com/us-news/2026/jun/28/ice-minnesota-defending-democracy",
@@ -21,7 +21,7 @@
         ],
         "origin_counts": {
           "ontology_evidence": 57,
-          "reading_queue": 1137,
+          "reading_queue": 1139,
           "journals": 156,
           "articles": 5
         },
@@ -79,7 +79,7 @@
         "breadth": {
           "score": 0.94,
           "basis": [
-            "distinct_urls:1184",
+            "distinct_urls:1186",
             "distinct_axes:24",
             "origin_types:4"
           ]
@@ -119,7 +119,7 @@
             "newsroom_domain_pattern",
             "article_path_seen",
             "doi_or_identifier_path_seen",
-            "distinct_urls:1184",
+            "distinct_urls:1186",
             "distinct_axes:24",
             "origin_types:4",
             "referring_accounts:0",
@@ -836,7 +836,7 @@
       "first_seen_at": "2026-06-26T07:05:00Z",
       "last_seen_at": "2026-09-06T14:42:26.825Z",
       "discovery": {
-        "distinct_urls": 757,
+        "distinct_urls": 758,
         "example_urls": [
           "https://www.bbc.co.uk/news/articles/cn8qxz6qypyo",
           "https://www.bbc.co.uk/news/articles/cn075j04pnyo?at_medium=RSS&amp;at_campaign=rss",
@@ -846,7 +846,7 @@
         ],
         "origin_counts": {
           "ontology_evidence": 11,
-          "reading_queue": 773,
+          "reading_queue": 774,
           "journals": 24,
           "articles": 2
         },
@@ -886,7 +886,7 @@
         "breadth": {
           "score": 0.94,
           "basis": [
-            "distinct_urls:757",
+            "distinct_urls:758",
             "distinct_axes:8",
             "origin_types:4"
           ]
@@ -924,7 +924,7 @@
           "method": "mechanical_v1",
           "basis": [
             "newsroom_domain_pattern",
-            "distinct_urls:757",
+            "distinct_urls:758",
             "distinct_axes:8",
             "origin_types:4",
             "referring_accounts:0",
@@ -972,7 +972,7 @@
       "first_seen_at": "2026-06-22T00:15:00Z",
       "last_seen_at": "2026-09-06T19:12:32.922Z",
       "discovery": {
-        "distinct_urls": 805,
+        "distinct_urls": 806,
         "example_urls": [
           "https://www.nytimes.com/2026/06/19/world/canada/frank-stronach-trial-guilty-sex-charges.html",
           "https://www.nytimes.com/2026/06/27/world/americas/mexican-officials-us-informants.html",
@@ -982,7 +982,7 @@
         ],
         "origin_counts": {
           "ontology_evidence": 33,
-          "reading_queue": 830,
+          "reading_queue": 831,
           "journals": 77
         },
         "distinct_referring_accounts": 0,
@@ -1029,7 +1029,7 @@
         "breadth": {
           "score": 0.8799999999999999,
           "basis": [
-            "distinct_urls:805",
+            "distinct_urls:806",
             "distinct_axes:15",
             "origin_types:3"
           ]
@@ -1068,7 +1068,7 @@
           "basis": [
             "newsroom_domain_pattern",
             "article_path_seen",
-            "distinct_urls:805",
+            "distinct_urls:806",
             "distinct_axes:15",
             "origin_types:3",
             "referring_accounts:0",
@@ -3118,9 +3118,9 @@
       "entity": "T Co",
       "kind": "unknown",
       "first_seen_at": "2016-05-05T18:57:30.000Z",
-      "last_seen_at": "2026-09-19T04:00:13.000Z",
+      "last_seen_at": "2026-09-19T08:37:00.000Z",
       "discovery": {
-        "distinct_urls": 20442,
+        "distinct_urls": 20587,
         "example_urls": [
           "https://t.co/pJSE124ec4",
           "https://t.co/Soz8BXPWaa",
@@ -3129,11 +3129,11 @@
           "https://t.co/cYaqYDRp08"
         ],
         "origin_counts": {
-          "feed_buffer": 18332,
-          "feed_buffer_reply": 5900,
+          "feed_buffer": 18474,
+          "feed_buffer_reply": 5928,
           "articles": 3
         },
-        "distinct_referring_accounts": 3112,
+        "distinct_referring_accounts": 3118,
         "sample_referring_accounts": [
           "0808iveta",
           "09abracadabra",
@@ -3172,7 +3172,7 @@
         "breadth": {
           "score": 0.53,
           "basis": [
-            "distinct_urls:20442",
+            "distinct_urls:20587",
             "distinct_axes:0",
             "origin_types:3"
           ]
@@ -3180,7 +3180,7 @@
         "corroboration": {
           "score": 0.9125,
           "basis": [
-            "referring_accounts:3112",
+            "referring_accounts:3118",
             "origin_types:3"
           ]
         },
@@ -3211,10 +3211,10 @@
           "basis": [
             "unknown_domain_pattern",
             "doi_or_identifier_path_seen",
-            "distinct_urls:20442",
+            "distinct_urls:20587",
             "distinct_axes:0",
             "origin_types:3",
-            "referring_accounts:3112",
+            "referring_accounts:3118",
             "origin_types:3",
             "track_record_unavailable"
           ]
@@ -4636,9 +4636,9 @@
       "entity": "Grok",
       "kind": "unknown",
       "first_seen_at": "2026-04-03T01:20:27.000Z",
-      "last_seen_at": "2026-09-18T23:08:35.000Z",
+      "last_seen_at": "2026-09-19T05:24:18.000Z",
       "discovery": {
-        "distinct_urls": 731,
+        "distinct_urls": 734,
         "example_urls": [
           "https://grok.com/imagine/post/9b92ff60-ec59-45db-8a35-8e1b743e5339",
           "https://grok.com/imagine/post/42c16172-4296-42be-b3d0-aa45ad7b6b97",
@@ -4647,10 +4647,10 @@
           "https://grok.com/imagine/post/3289422f-50b2-4655-8527-e2b1c950ce5e"
         ],
         "origin_counts": {
-          "feed_buffer_reply": 606,
-          "feed_buffer": 174
+          "feed_buffer_reply": 608,
+          "feed_buffer": 175
         },
-        "distinct_referring_accounts": 441,
+        "distinct_referring_accounts": 443,
         "sample_referring_accounts": [
           "0xsifu",
           "100ohiostate",
@@ -4688,7 +4688,7 @@
         "breadth": {
           "score": 0.47,
           "basis": [
-            "distinct_urls:731",
+            "distinct_urls:734",
             "distinct_axes:0",
             "origin_types:2"
           ]
@@ -4696,7 +4696,7 @@
         "corroboration": {
           "score": 0.825,
           "basis": [
-            "referring_accounts:441",
+            "referring_accounts:443",
             "origin_types:2"
           ]
         },
@@ -4726,10 +4726,10 @@
           "method": "mechanical_v1",
           "basis": [
             "unknown_domain_pattern",
-            "distinct_urls:731",
+            "distinct_urls:734",
             "distinct_axes:0",
             "origin_types:2",
-            "referring_accounts:441",
+            "referring_accounts:443",
             "origin_types:2",
             "track_record_unavailable"
           ]
@@ -4772,9 +4772,9 @@
       "entity": "Steampowered",
       "kind": "unknown",
       "first_seen_at": "2026-04-04T23:34:51.000Z",
-      "last_seen_at": "2026-08-19T05:50:00.000Z",
+      "last_seen_at": "2026-09-19T07:12:01.367Z",
       "discovery": {
-        "distinct_urls": 284,
+        "distinct_urls": 285,
         "example_urls": [
           "https://store.steampowered.com/app/1315180?twclid=2cb8mho5n4udnkq1fnm1yi4kkh",
           "https://store.steampowered.com/app/3321460?utm_campaign=launching&utm_source=X&utm_term=20260319_traffic&utm_medium=us&utm_content=Trailer_view&twclid=22351un15xjmtu22gjwnjp292d",
@@ -4784,9 +4784,9 @@
         ],
         "origin_counts": {
           "feed_buffer_reply": 216,
-          "feed_buffer": 68
+          "feed_buffer": 69
         },
-        "distinct_referring_accounts": 44,
+        "distinct_referring_accounts": 45,
         "sample_referring_accounts": [
           "alexmog_fr",
           "apeswarfare",
@@ -4824,7 +4824,7 @@
         "breadth": {
           "score": 0.47,
           "basis": [
-            "distinct_urls:284",
+            "distinct_urls:285",
             "distinct_axes:0",
             "origin_types:2"
           ]
@@ -4832,7 +4832,7 @@
         "corroboration": {
           "score": 0.825,
           "basis": [
-            "referring_accounts:44",
+            "referring_accounts:45",
             "origin_types:2"
           ]
         },
@@ -4862,10 +4862,10 @@
           "method": "mechanical_v1",
           "basis": [
             "unknown_domain_pattern",
-            "distinct_urls:284",
+            "distinct_urls:285",
             "distinct_axes:0",
             "origin_types:2",
-            "referring_accounts:44",
+            "referring_accounts:45",
             "origin_types:2",
             "track_record_unavailable"
           ]
@@ -5430,9 +5430,9 @@
       "entity": "Starlink",
       "kind": "unknown",
       "first_seen_at": "2026-04-07T03:51:50.000Z",
-      "last_seen_at": "2026-09-19T01:10:05.000Z",
+      "last_seen_at": "2026-09-19T07:28:49.000Z",
       "discovery": {
-        "distinct_urls": 1464,
+        "distinct_urls": 1528,
         "example_urls": [
           "https://www.starlink.com/us/residential?referral=RC-DF-9543787-19448-67&utm_medium=paid&utm_campaign=awr_us_soc_twt_ptg_cau&utm_content=awr_us_soc_twt_ptg_cau_res_gvp_v4s_stc_en-us_sdb-bluesky-uptime&twclid=2cg62b1u0oqrypdim5oir1767e",
           "https://www.starlink.com/us/residential?referral=RC-DF-9543787-19448-67&utm_medium=paid&utm_campaign=awr_us_soc_twt_ptg_cau&utm_content=awr_us_soc_twt_ptg_cau_res_gvp_v4s_stc_en-us_sdb-avail-sat-yourhome&twclid=2216n7j93v9absqn77762mm626",
@@ -5441,7 +5441,7 @@
           "https://www.starlink.com/us/residential?referral=RC-DF-9543787-19448-67&utm_medium=paid&utm_campaign=awr_us_soc_twt_ptg_cau&utm_content=awr_us_soc_twt_ptg_cau_res_gvp_v4s_stc_en-us_sdb-avail-sat-arrived&twclid=21pi7t0qs8tgw0wgnh5mvmdu2g"
         ],
         "origin_counts": {
-          "feed_buffer_reply": 1383,
+          "feed_buffer_reply": 1447,
           "feed_buffer": 85
         },
         "distinct_referring_accounts": 5,
@@ -5477,7 +5477,7 @@
         "breadth": {
           "score": 0.47,
           "basis": [
-            "distinct_urls:1464",
+            "distinct_urls:1528",
             "distinct_axes:0",
             "origin_types:2"
           ]
@@ -5515,7 +5515,7 @@
           "method": "mechanical_v1",
           "basis": [
             "unknown_domain_pattern",
-            "distinct_urls:1464",
+            "distinct_urls:1528",
             "distinct_axes:0",
             "origin_types:2",
             "referring_accounts:5",
@@ -8782,6 +8782,133 @@
       }
     },
     {
+      "domain": "ptgaming.ph",
+      "entity": "Ptgaming Ph",
+      "kind": "unknown",
+      "first_seen_at": "2026-07-05T04:59:47.736Z",
+      "last_seen_at": "2026-09-19T00:08:00.000Z",
+      "discovery": {
+        "distinct_urls": 25,
+        "example_urls": [
+          "https://www.ptgaming.ph/?twclid=21n3lg1hcl64ox73kjyr4lggz9",
+          "https://www.ptgaming.ph/?twclid=25vb0w4jbmtupw5yokwy2fjbcq",
+          "https://www.ptgaming.ph/?twclid=24xua76p6ig4wj1on4u6eqhjkz",
+          "https://www.ptgaming.ph/?twclid=23opaojcnervezlk24t4109xw9",
+          "https://www.ptgaming.ph/?twclid=26sb1wpgds50ggj6udc2c7m358"
+        ],
+        "origin_counts": {
+          "feed_buffer": 10,
+          "feed_buffer_reply": 15
+        },
+        "distinct_referring_accounts": 1,
+        "sample_referring_accounts": [
+          "ptgamingph"
+        ],
+        "distinct_axes": []
+      },
+      "claims": {
+        "total": 0,
+        "supported": 0,
+        "refuted": 0,
+        "contested": 0,
+        "unverified": 0,
+        "resolved_count": 0
+      },
+      "structural_features": {
+        "has_search_paths": false,
+        "has_article_paths": false,
+        "has_doi_paths": false
+      },
+      "ratings": {
+        "provenance": {
+          "score": 0.45,
+          "basis": [
+            "unknown_domain_pattern"
+          ]
+        },
+        "breadth": {
+          "score": 0.47,
+          "basis": [
+            "distinct_urls:25",
+            "distinct_axes:0",
+            "origin_types:2"
+          ]
+        },
+        "corroboration": {
+          "score": 0.2833333333333333,
+          "basis": [
+            "referring_accounts:1",
+            "origin_types:2"
+          ]
+        },
+        "track_record": {
+          "score": null,
+          "basis": [
+            "no_resolved_claims_observed"
+          ]
+        },
+        "profile": {
+          "score": 0.1,
+          "confidence": 0.55,
+          "basis": [
+            "meta_author:false",
+            "published_time:false",
+            "canonical:true",
+            "about:false",
+            "contact:false",
+            "corrections:false",
+            "outbound_links:0",
+            "opinion_marker:false"
+          ]
+        },
+        "overall": {
+          "score": 0.43875,
+          "confidence": 0.5742,
+          "method": "mechanical_v1",
+          "basis": [
+            "unknown_domain_pattern",
+            "distinct_urls:25",
+            "distinct_axes:0",
+            "origin_types:2",
+            "referring_accounts:1",
+            "origin_types:2",
+            "track_record_unavailable"
+          ]
+        }
+      },
+      "profile": {
+        "fetched_at": "2026-09-18T19:39:05.678Z",
+        "homepage_url": "https://ptgaming.ph/",
+        "example_url": "https://www.ptgaming.ph/?twclid=21n3lg1hcl64ox73kjyr4lggz9",
+        "homepage_status": 200,
+        "example_status": 200,
+        "homepage_final_url": "https://www.ptgaming.ph/",
+        "example_final_url": "https://www.ptgaming.ph/?twclid=21n3lg1hcl64ox73kjyr4lggz9",
+        "homepage_content_type": "text/html",
+        "example_content_type": "text/html",
+        "homepage": {
+          "has_meta_author": false,
+          "has_published_time": false,
+          "has_canonical": true,
+          "has_about_link": false,
+          "has_contact_link": false,
+          "has_corrections_link": false,
+          "outbound_links_count": 0,
+          "opinion_marker": false
+        },
+        "example": {
+          "has_meta_author": false,
+          "has_published_time": false,
+          "has_canonical": true,
+          "has_about_link": false,
+          "has_contact_link": false,
+          "has_corrections_link": false,
+          "outbound_links_count": 0,
+          "opinion_marker": false
+        }
+      }
+    },
+    {
       "domain": "leronx.org",
       "entity": "Leronx",
       "kind": "unknown",
@@ -8900,133 +9027,6 @@
           "has_meta_author": false,
           "has_published_time": false,
           "has_canonical": false,
-          "has_about_link": false,
-          "has_contact_link": false,
-          "has_corrections_link": false,
-          "outbound_links_count": 0,
-          "opinion_marker": false
-        }
-      }
-    },
-    {
-      "domain": "ptgaming.ph",
-      "entity": "Ptgaming Ph",
-      "kind": "unknown",
-      "first_seen_at": "2026-07-05T04:59:47.736Z",
-      "last_seen_at": "2026-09-18T21:03:39.000Z",
-      "discovery": {
-        "distinct_urls": 24,
-        "example_urls": [
-          "https://www.ptgaming.ph/?twclid=21n3lg1hcl64ox73kjyr4lggz9",
-          "https://www.ptgaming.ph/?twclid=25vb0w4jbmtupw5yokwy2fjbcq",
-          "https://www.ptgaming.ph/?twclid=24xua76p6ig4wj1on4u6eqhjkz",
-          "https://www.ptgaming.ph/?twclid=23opaojcnervezlk24t4109xw9",
-          "https://www.ptgaming.ph/?twclid=26sb1wpgds50ggj6udc2c7m358"
-        ],
-        "origin_counts": {
-          "feed_buffer": 10,
-          "feed_buffer_reply": 14
-        },
-        "distinct_referring_accounts": 1,
-        "sample_referring_accounts": [
-          "ptgamingph"
-        ],
-        "distinct_axes": []
-      },
-      "claims": {
-        "total": 0,
-        "supported": 0,
-        "refuted": 0,
-        "contested": 0,
-        "unverified": 0,
-        "resolved_count": 0
-      },
-      "structural_features": {
-        "has_search_paths": false,
-        "has_article_paths": false,
-        "has_doi_paths": false
-      },
-      "ratings": {
-        "provenance": {
-          "score": 0.45,
-          "basis": [
-            "unknown_domain_pattern"
-          ]
-        },
-        "breadth": {
-          "score": 0.47,
-          "basis": [
-            "distinct_urls:24",
-            "distinct_axes:0",
-            "origin_types:2"
-          ]
-        },
-        "corroboration": {
-          "score": 0.2833333333333333,
-          "basis": [
-            "referring_accounts:1",
-            "origin_types:2"
-          ]
-        },
-        "track_record": {
-          "score": null,
-          "basis": [
-            "no_resolved_claims_observed"
-          ]
-        },
-        "profile": {
-          "score": 0.1,
-          "confidence": 0.55,
-          "basis": [
-            "meta_author:false",
-            "published_time:false",
-            "canonical:true",
-            "about:false",
-            "contact:false",
-            "corrections:false",
-            "outbound_links:0",
-            "opinion_marker:false"
-          ]
-        },
-        "overall": {
-          "score": 0.43875,
-          "confidence": 0.5742,
-          "method": "mechanical_v1",
-          "basis": [
-            "unknown_domain_pattern",
-            "distinct_urls:24",
-            "distinct_axes:0",
-            "origin_types:2",
-            "referring_accounts:1",
-            "origin_types:2",
-            "track_record_unavailable"
-          ]
-        }
-      },
-      "profile": {
-        "fetched_at": "2026-09-18T19:39:05.678Z",
-        "homepage_url": "https://ptgaming.ph/",
-        "example_url": "https://www.ptgaming.ph/?twclid=21n3lg1hcl64ox73kjyr4lggz9",
-        "homepage_status": 200,
-        "example_status": 200,
-        "homepage_final_url": "https://www.ptgaming.ph/",
-        "example_final_url": "https://www.ptgaming.ph/?twclid=21n3lg1hcl64ox73kjyr4lggz9",
-        "homepage_content_type": "text/html",
-        "example_content_type": "text/html",
-        "homepage": {
-          "has_meta_author": false,
-          "has_published_time": false,
-          "has_canonical": true,
-          "has_about_link": false,
-          "has_contact_link": false,
-          "has_corrections_link": false,
-          "outbound_links_count": 0,
-          "opinion_marker": false
-        },
-        "example": {
-          "has_meta_author": false,
-          "has_published_time": false,
-          "has_canonical": true,
           "has_about_link": false,
           "has_contact_link": false,
           "has_corrections_link": false,
@@ -9290,6 +9290,133 @@
       }
     },
     {
+      "domain": "nustargame.com",
+      "entity": "Nustargame",
+      "kind": "unknown",
+      "first_seen_at": "2026-07-04T07:36:55.650Z",
+      "last_seen_at": "2026-09-19T03:50:00.000Z",
+      "discovery": {
+        "distinct_urls": 23,
+        "example_urls": [
+          "https://appstore.nustargame.com/?fbclid=IwZXh0bgNhZW0CMTAAYnJpZBExdTFXSWM2OURwSzlmRGVVT3NydGMGYXBwX2lkEDIyMjAzOTE3ODgyMDA4OTIAAR5-z2VUxUBlb1xkH-U__5gASpshBlmq9xw-GXCS4bTWWiFtwpFdWkJ4PY2qEA_aem_NiqDTDHN3CJKVVCNR24plw&twclid=26zfxjdeqc7s72rera75b8jf08",
+          "https://nustargame.com/?twclid=230m3qm5hhiwojmbba5bza5pbz",
+          "https://nustargame.com/?twclid=26qbkmrc5fx3zywq3rneiy4r0",
+          "https://nustargame.com/?twclid=28l79lya4aov74787fjfzu9784",
+          "https://nustargame.com/?twclid=26hhyt5gr2gtlmrqwtmakr8fwz"
+        ],
+        "origin_counts": {
+          "feed_buffer": 10,
+          "feed_buffer_reply": 13
+        },
+        "distinct_referring_accounts": 1,
+        "sample_referring_accounts": [
+          "nustaronlineph"
+        ],
+        "distinct_axes": []
+      },
+      "claims": {
+        "total": 0,
+        "supported": 0,
+        "refuted": 0,
+        "contested": 0,
+        "unverified": 0,
+        "resolved_count": 0
+      },
+      "structural_features": {
+        "has_search_paths": false,
+        "has_article_paths": false,
+        "has_doi_paths": false
+      },
+      "ratings": {
+        "provenance": {
+          "score": 0.45,
+          "basis": [
+            "unknown_domain_pattern"
+          ]
+        },
+        "breadth": {
+          "score": 0.47,
+          "basis": [
+            "distinct_urls:23",
+            "distinct_axes:0",
+            "origin_types:2"
+          ]
+        },
+        "corroboration": {
+          "score": 0.2833333333333333,
+          "basis": [
+            "referring_accounts:1",
+            "origin_types:2"
+          ]
+        },
+        "track_record": {
+          "score": null,
+          "basis": [
+            "no_resolved_claims_observed"
+          ]
+        },
+        "profile": {
+          "score": 0,
+          "confidence": 0.55,
+          "basis": [
+            "meta_author:false",
+            "published_time:false",
+            "canonical:false",
+            "about:false",
+            "contact:false",
+            "corrections:false",
+            "outbound_links:0",
+            "opinion_marker:false"
+          ]
+        },
+        "overall": {
+          "score": 0.43875,
+          "confidence": 0.5742,
+          "method": "mechanical_v1",
+          "basis": [
+            "unknown_domain_pattern",
+            "distinct_urls:23",
+            "distinct_axes:0",
+            "origin_types:2",
+            "referring_accounts:1",
+            "origin_types:2",
+            "track_record_unavailable"
+          ]
+        }
+      },
+      "profile": {
+        "fetched_at": "2026-09-18T19:39:09.166Z",
+        "homepage_url": "https://nustargame.com/",
+        "example_url": "https://appstore.nustargame.com/?fbclid=IwZXh0bgNhZW0CMTAAYnJpZBExdTFXSWM2OURwSzlmRGVVT3NydGMGYXBwX2lkEDIyMjAzOTE3ODgyMDA4OTIAAR5-z2VUxUBlb1xkH-U__5gASpshBlmq9xw-GXCS4bTWWiFtwpFdWkJ4PY2qEA_aem_NiqDTDHN3CJKVVCNR24plw&twclid=26zfxjdeqc7s72rera75b8jf08",
+        "homepage_status": 200,
+        "example_status": 200,
+        "homepage_final_url": "https://nustargame.com/",
+        "example_final_url": "https://appstore.nustargame.com/?fbclid=IwZXh0bgNhZW0CMTAAYnJpZBExdTFXSWM2OURwSzlmRGVVT3NydGMGYXBwX2lkEDIyMjAzOTE3ODgyMDA4OTIAAR5-z2VUxUBlb1xkH-U__5gASpshBlmq9xw-GXCS4bTWWiFtwpFdWkJ4PY2qEA_aem_NiqDTDHN3CJKVVCNR24plw&twclid=26zfxjdeqc7s72rera75b8jf08",
+        "homepage_content_type": "text/html; charset=utf-8",
+        "example_content_type": "text/html",
+        "homepage": {
+          "has_meta_author": false,
+          "has_published_time": false,
+          "has_canonical": true,
+          "has_about_link": false,
+          "has_contact_link": false,
+          "has_corrections_link": false,
+          "outbound_links_count": 0,
+          "opinion_marker": false
+        },
+        "example": {
+          "has_meta_author": false,
+          "has_published_time": false,
+          "has_canonical": false,
+          "has_about_link": false,
+          "has_contact_link": false,
+          "has_corrections_link": false,
+          "outbound_links_count": 0,
+          "opinion_marker": false
+        }
+      }
+    },
+    {
       "domain": "hyperagent.com",
       "entity": "Hyperagent",
       "kind": "unknown",
@@ -9525,133 +9652,6 @@
           "has_meta_author": false,
           "has_published_time": false,
           "has_canonical": false,
-          "has_about_link": false,
-          "has_contact_link": false,
-          "has_corrections_link": false,
-          "outbound_links_count": 0,
-          "opinion_marker": false
-        },
-        "example": {
-          "has_meta_author": false,
-          "has_published_time": false,
-          "has_canonical": false,
-          "has_about_link": false,
-          "has_contact_link": false,
-          "has_corrections_link": false,
-          "outbound_links_count": 0,
-          "opinion_marker": false
-        }
-      }
-    },
-    {
-      "domain": "nustargame.com",
-      "entity": "Nustargame",
-      "kind": "unknown",
-      "first_seen_at": "2026-07-04T07:36:55.650Z",
-      "last_seen_at": "2026-09-19T00:13:42.000Z",
-      "discovery": {
-        "distinct_urls": 22,
-        "example_urls": [
-          "https://appstore.nustargame.com/?fbclid=IwZXh0bgNhZW0CMTAAYnJpZBExdTFXSWM2OURwSzlmRGVVT3NydGMGYXBwX2lkEDIyMjAzOTE3ODgyMDA4OTIAAR5-z2VUxUBlb1xkH-U__5gASpshBlmq9xw-GXCS4bTWWiFtwpFdWkJ4PY2qEA_aem_NiqDTDHN3CJKVVCNR24plw&twclid=26zfxjdeqc7s72rera75b8jf08",
-          "https://nustargame.com/?twclid=230m3qm5hhiwojmbba5bza5pbz",
-          "https://nustargame.com/?twclid=26qbkmrc5fx3zywq3rneiy4r0",
-          "https://nustargame.com/?twclid=28l79lya4aov74787fjfzu9784",
-          "https://nustargame.com/?twclid=26hhyt5gr2gtlmrqwtmakr8fwz"
-        ],
-        "origin_counts": {
-          "feed_buffer": 10,
-          "feed_buffer_reply": 12
-        },
-        "distinct_referring_accounts": 1,
-        "sample_referring_accounts": [
-          "nustaronlineph"
-        ],
-        "distinct_axes": []
-      },
-      "claims": {
-        "total": 0,
-        "supported": 0,
-        "refuted": 0,
-        "contested": 0,
-        "unverified": 0,
-        "resolved_count": 0
-      },
-      "structural_features": {
-        "has_search_paths": false,
-        "has_article_paths": false,
-        "has_doi_paths": false
-      },
-      "ratings": {
-        "provenance": {
-          "score": 0.45,
-          "basis": [
-            "unknown_domain_pattern"
-          ]
-        },
-        "breadth": {
-          "score": 0.47,
-          "basis": [
-            "distinct_urls:22",
-            "distinct_axes:0",
-            "origin_types:2"
-          ]
-        },
-        "corroboration": {
-          "score": 0.2833333333333333,
-          "basis": [
-            "referring_accounts:1",
-            "origin_types:2"
-          ]
-        },
-        "track_record": {
-          "score": null,
-          "basis": [
-            "no_resolved_claims_observed"
-          ]
-        },
-        "profile": {
-          "score": 0,
-          "confidence": 0.55,
-          "basis": [
-            "meta_author:false",
-            "published_time:false",
-            "canonical:false",
-            "about:false",
-            "contact:false",
-            "corrections:false",
-            "outbound_links:0",
-            "opinion_marker:false"
-          ]
-        },
-        "overall": {
-          "score": 0.43875,
-          "confidence": 0.5742,
-          "method": "mechanical_v1",
-          "basis": [
-            "unknown_domain_pattern",
-            "distinct_urls:22",
-            "distinct_axes:0",
-            "origin_types:2",
-            "referring_accounts:1",
-            "origin_types:2",
-            "track_record_unavailable"
-          ]
-        }
-      },
-      "profile": {
-        "fetched_at": "2026-09-18T19:39:09.166Z",
-        "homepage_url": "https://nustargame.com/",
-        "example_url": "https://appstore.nustargame.com/?fbclid=IwZXh0bgNhZW0CMTAAYnJpZBExdTFXSWM2OURwSzlmRGVVT3NydGMGYXBwX2lkEDIyMjAzOTE3ODgyMDA4OTIAAR5-z2VUxUBlb1xkH-U__5gASpshBlmq9xw-GXCS4bTWWiFtwpFdWkJ4PY2qEA_aem_NiqDTDHN3CJKVVCNR24plw&twclid=26zfxjdeqc7s72rera75b8jf08",
-        "homepage_status": 200,
-        "example_status": 200,
-        "homepage_final_url": "https://nustargame.com/",
-        "example_final_url": "https://appstore.nustargame.com/?fbclid=IwZXh0bgNhZW0CMTAAYnJpZBExdTFXSWM2OURwSzlmRGVVT3NydGMGYXBwX2lkEDIyMjAzOTE3ODgyMDA4OTIAAR5-z2VUxUBlb1xkH-U__5gASpshBlmq9xw-GXCS4bTWWiFtwpFdWkJ4PY2qEA_aem_NiqDTDHN3CJKVVCNR24plw&twclid=26zfxjdeqc7s72rera75b8jf08",
-        "homepage_content_type": "text/html; charset=utf-8",
-        "example_content_type": "text/html",
-        "homepage": {
-          "has_meta_author": false,
-          "has_published_time": false,
-          "has_canonical": true,
           "has_about_link": false,
           "has_contact_link": false,
           "has_corrections_link": false,
@@ -13199,7 +13199,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-09-06T05:41:44.029Z",
+        "fetched_at": "2026-09-19T06:52:45.425Z",
         "homepage_url": "https://fundrise.com/",
         "example_url": "https://fundrise.com/vcx?utm_source=twitter&utm_campaign=vcxsky&twclid=286j5mjx6wqmg12vs5jto11lrf",
         "homepage_status": 405,
@@ -13326,7 +13326,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-09-06T10:41:40.000Z",
+        "fetched_at": "2026-09-19T06:52:45.774Z",
         "homepage_url": "https://betterstack.com/",
         "example_url": "https://betterstack.com/incident-management?twclid=23e9xf4wt9fpugvwab34523yyy",
         "homepage_status": 200,
@@ -13453,7 +13453,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-09-06T07:11:38.233Z",
+        "fetched_at": "2026-09-19T06:52:45.974Z",
         "homepage_url": "https://asco.org/",
         "example_url": "https://www.asco.org/career-development/leadership-programs/global-leadership-programs/asia-pacific?cmpid=cc_ascoorg_ldp_abc26-phase2-ldp-asia_sn_x_formerly_twitter_all_retargeting_intl_070126_081726___aware_anime_impact&twclid=2ag9prgoer02llrzl6qhdbcbe6",
         "homepage_status": 403,
@@ -13580,7 +13580,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-09-06T07:11:39.826Z",
+        "fetched_at": "2026-09-19T06:52:47.476Z",
         "homepage_url": "https://ukiyoework.com/",
         "example_url": "https://www.ukiyoework.com/view/item/000000000401?utm_source=twitter&utm_medium=cpc&twclid=23tigf5ad41s1prapekhalf5cq",
         "homepage_status": 200,
@@ -13607,6 +13607,133 @@
           "has_contact_link": false,
           "has_corrections_link": false,
           "outbound_links_count": 13,
+          "opinion_marker": false
+        }
+      }
+    },
+    {
+      "domain": "shopee.ph",
+      "entity": "Shopee Ph",
+      "kind": "unknown",
+      "first_seen_at": "2026-08-01T02:38:23.049Z",
+      "last_seen_at": "2026-09-19T08:12:01.508Z",
+      "discovery": {
+        "distinct_urls": 11,
+        "example_urls": [
+          "https://shopee.ph/universal-link/product/278394653/22353819981/?deep_and_web=1&smtt=9&utm_campaign=s278394653_ss_ph_twtr_twitterad&utm_content=eoint&utm_medium=seller&utm_source=twitter&twclid=21uy0mdqfu18byi7ighc1a87wq",
+          "https://shopee.ph/universal-link/product/278394653/22353819981/?deep_and_web=1&smtt=9&utm_campaign=s278394653_ss_ph_twtr_twitterad&utm_content=eoint&utm_medium=seller&utm_source=twitter&twclid=27zrwtk8jty1udv5n7exlcuvsf",
+          "https://shopee.ph/universal-link/product/278394653/22353819981/?deep_and_web=1&smtt=9&utm_campaign=s278394653_ss_ph_twtr_twitterad&utm_content=eoint&utm_medium=seller&utm_source=twitter&twclid=21g7ic77xyycmkpk8au6yp9yuw",
+          "https://shopee.ph/universal-link/product/278394653/22353819981/?deep_and_web=1&smtt=9&utm_campaign=s278394653_ss_ph_twtr_twitterad&utm_content=eoint&utm_medium=seller&utm_source=twitter&twclid=25pujicvxfu94itxtwc9nbr5ht",
+          "https://shopee.ph/universal-link/product/278394653/22353819981/?deep_and_web=1&smtt=9&utm_campaign=s278394653_ss_ph_twtr_twitterad&utm_content=eoint&utm_medium=seller&utm_source=twitter&twclid=21ocwjrkz9v53mxfs7ot38xzi7"
+        ],
+        "origin_counts": {
+          "feed_buffer": 8,
+          "feed_buffer_reply": 3
+        },
+        "distinct_referring_accounts": 1,
+        "sample_referring_accounts": [
+          "efficascentph"
+        ],
+        "distinct_axes": []
+      },
+      "claims": {
+        "total": 0,
+        "supported": 0,
+        "refuted": 0,
+        "contested": 0,
+        "unverified": 0,
+        "resolved_count": 0
+      },
+      "structural_features": {
+        "has_search_paths": false,
+        "has_article_paths": false,
+        "has_doi_paths": false
+      },
+      "ratings": {
+        "provenance": {
+          "score": 0.45,
+          "basis": [
+            "unknown_domain_pattern"
+          ]
+        },
+        "breadth": {
+          "score": 0.4408333333333333,
+          "basis": [
+            "distinct_urls:11",
+            "distinct_axes:0",
+            "origin_types:2"
+          ]
+        },
+        "corroboration": {
+          "score": 0.2833333333333333,
+          "basis": [
+            "referring_accounts:1",
+            "origin_types:2"
+          ]
+        },
+        "track_record": {
+          "score": null,
+          "basis": [
+            "no_resolved_claims_observed"
+          ]
+        },
+        "profile": {
+          "score": 0,
+          "confidence": 0.55,
+          "basis": [
+            "meta_author:false",
+            "published_time:false",
+            "canonical:false",
+            "about:false",
+            "contact:false",
+            "corrections:false",
+            "outbound_links:0",
+            "opinion_marker:false"
+          ]
+        },
+        "overall": {
+          "score": 0.43236979166666667,
+          "confidence": 0.388075,
+          "method": "mechanical_v1",
+          "basis": [
+            "unknown_domain_pattern",
+            "distinct_urls:11",
+            "distinct_axes:0",
+            "origin_types:2",
+            "referring_accounts:1",
+            "origin_types:2",
+            "track_record_unavailable"
+          ]
+        }
+      },
+      "profile": {
+        "fetched_at": "2026-09-19T07:22:49.408Z",
+        "homepage_url": "https://shopee.ph/",
+        "example_url": "https://shopee.ph/universal-link/product/278394653/22353819981/?deep_and_web=1&smtt=9&utm_campaign=s278394653_ss_ph_twtr_twitterad&utm_content=eoint&utm_medium=seller&utm_source=twitter&twclid=21uy0mdqfu18byi7ighc1a87wq",
+        "homepage_status": 200,
+        "example_status": 200,
+        "homepage_final_url": "https://shopee.ph/",
+        "example_final_url": "https://shopee.ph/product/278394653/22353819981/?smtt=9&twclid=21uy0mdqfu18byi7ighc1a87wq&uls_trackid=56m0rv4d00jh&utm_campaign=s278394653_ss_ph_twtr_twitterad&utm_content=eoint&utm_medium=seller&utm_source=twitter",
+        "homepage_content_type": "text/html; charset=utf-8",
+        "example_content_type": "text/html; charset=utf-8",
+        "homepage": {
+          "has_meta_author": false,
+          "has_published_time": false,
+          "has_canonical": false,
+          "has_about_link": false,
+          "has_contact_link": false,
+          "has_corrections_link": false,
+          "outbound_links_count": 0,
+          "opinion_marker": false
+        },
+        "example": {
+          "has_meta_author": false,
+          "has_published_time": false,
+          "has_canonical": false,
+          "has_about_link": false,
+          "has_contact_link": false,
+          "has_corrections_link": false,
+          "outbound_links_count": 0,
           "opinion_marker": false
         }
       }
@@ -13707,7 +13834,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-09-06T07:11:40.498Z",
+        "fetched_at": "2026-09-19T07:22:45.471Z",
         "homepage_url": "https://avenorigin.com/",
         "example_url": "https://avenorigin.com/?x=twg11&tw=rcafs&tw_click=tw-rcafs-rcafv&twclid=27a9svqvmxrds3k2j1qq8l2dy6",
         "homepage_status": null,
@@ -13834,7 +13961,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-09-06T10:11:42.629Z",
+        "fetched_at": "2026-09-19T07:22:47.270Z",
         "homepage_url": "https://xhawk.ai/",
         "example_url": "https://xhawk.ai/?twclid=218eppqu7okpx25fant8nuhrp1",
         "homepage_status": 200,
@@ -13961,7 +14088,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-09-06T10:11:43.717Z",
+        "fetched_at": "2026-09-19T07:22:48.427Z",
         "homepage_url": "https://sofi.com/",
         "example_url": "https://sofi.com/crypto?twclid=2ykrysimqbgqvsp6rfph8v1n3",
         "homepage_status": 403,
@@ -13984,133 +14111,6 @@
           "has_meta_author": false,
           "has_published_time": false,
           "has_canonical": false,
-          "has_about_link": false,
-          "has_contact_link": false,
-          "has_corrections_link": false,
-          "outbound_links_count": 0,
-          "opinion_marker": false
-        }
-      }
-    },
-    {
-      "domain": "shopee.ph",
-      "entity": "Shopee Ph",
-      "kind": "unknown",
-      "first_seen_at": "2026-08-01T02:38:23.049Z",
-      "last_seen_at": "2026-09-05T14:06:45.839Z",
-      "discovery": {
-        "distinct_urls": 10,
-        "example_urls": [
-          "https://shopee.ph/universal-link/product/278394653/22353819981/?deep_and_web=1&smtt=9&utm_campaign=s278394653_ss_ph_twtr_twitterad&utm_content=eoint&utm_medium=seller&utm_source=twitter&twclid=21uy0mdqfu18byi7ighc1a87wq",
-          "https://shopee.ph/universal-link/product/278394653/22353819981/?deep_and_web=1&smtt=9&utm_campaign=s278394653_ss_ph_twtr_twitterad&utm_content=eoint&utm_medium=seller&utm_source=twitter&twclid=27zrwtk8jty1udv5n7exlcuvsf",
-          "https://shopee.ph/universal-link/product/278394653/22353819981/?deep_and_web=1&smtt=9&utm_campaign=s278394653_ss_ph_twtr_twitterad&utm_content=eoint&utm_medium=seller&utm_source=twitter&twclid=21g7ic77xyycmkpk8au6yp9yuw",
-          "https://shopee.ph/universal-link/product/278394653/22353819981/?deep_and_web=1&smtt=9&utm_campaign=s278394653_ss_ph_twtr_twitterad&utm_content=eoint&utm_medium=seller&utm_source=twitter&twclid=25pujicvxfu94itxtwc9nbr5ht",
-          "https://shopee.ph/universal-link/product/278394653/22353819981/?deep_and_web=1&smtt=9&utm_campaign=s278394653_ss_ph_twtr_twitterad&utm_content=eoint&utm_medium=seller&utm_source=twitter&twclid=21ocwjrkz9v53mxfs7ot38xzi7"
-        ],
-        "origin_counts": {
-          "feed_buffer": 7,
-          "feed_buffer_reply": 3
-        },
-        "distinct_referring_accounts": 1,
-        "sample_referring_accounts": [
-          "efficascentph"
-        ],
-        "distinct_axes": []
-      },
-      "claims": {
-        "total": 0,
-        "supported": 0,
-        "refuted": 0,
-        "contested": 0,
-        "unverified": 0,
-        "resolved_count": 0
-      },
-      "structural_features": {
-        "has_search_paths": false,
-        "has_article_paths": false,
-        "has_doi_paths": false
-      },
-      "ratings": {
-        "provenance": {
-          "score": 0.45,
-          "basis": [
-            "unknown_domain_pattern"
-          ]
-        },
-        "breadth": {
-          "score": 0.4116666666666667,
-          "basis": [
-            "distinct_urls:10",
-            "distinct_axes:0",
-            "origin_types:2"
-          ]
-        },
-        "corroboration": {
-          "score": 0.2833333333333333,
-          "basis": [
-            "referring_accounts:1",
-            "origin_types:2"
-          ]
-        },
-        "track_record": {
-          "score": null,
-          "basis": [
-            "no_resolved_claims_observed"
-          ]
-        },
-        "profile": {
-          "score": 0.1,
-          "confidence": 0.55,
-          "basis": [
-            "meta_author:false",
-            "published_time:false",
-            "canonical:true",
-            "about:false",
-            "contact:false",
-            "corrections:false",
-            "outbound_links:0",
-            "opinion_marker:false"
-          ]
-        },
-        "overall": {
-          "score": 0.42598958333333337,
-          "confidence": 0.35945000000000005,
-          "method": "mechanical_v1",
-          "basis": [
-            "unknown_domain_pattern",
-            "distinct_urls:10",
-            "distinct_axes:0",
-            "origin_types:2",
-            "referring_accounts:1",
-            "origin_types:2",
-            "track_record_unavailable"
-          ]
-        }
-      },
-      "profile": {
-        "fetched_at": "2026-09-06T21:55:41.655Z",
-        "homepage_url": "https://shopee.ph/",
-        "example_url": "https://shopee.ph/universal-link/product/278394653/22353819981/?deep_and_web=1&smtt=9&utm_campaign=s278394653_ss_ph_twtr_twitterad&utm_content=eoint&utm_medium=seller&utm_source=twitter&twclid=21uy0mdqfu18byi7ighc1a87wq",
-        "homepage_status": 200,
-        "example_status": 200,
-        "homepage_final_url": "https://shopee.ph/",
-        "example_final_url": "https://shopee.ph/product/278394653/22353819981/?smtt=9&twclid=21uy0mdqfu18byi7ighc1a87wq&uls_trackid=56iqo22u001g&utm_campaign=s278394653_ss_ph_twtr_twitterad&utm_content=eoint&utm_medium=seller&utm_source=twitter",
-        "homepage_content_type": "text/html; charset=utf-8",
-        "example_content_type": "text/html; charset=utf-8",
-        "homepage": {
-          "has_meta_author": false,
-          "has_published_time": false,
-          "has_canonical": false,
-          "has_about_link": false,
-          "has_contact_link": false,
-          "has_corrections_link": false,
-          "outbound_links_count": 0,
-          "opinion_marker": false
-        },
-        "example": {
-          "has_meta_author": false,
-          "has_published_time": false,
-          "has_canonical": true,
           "has_about_link": false,
           "has_contact_link": false,
           "has_corrections_link": false,
@@ -14217,7 +14217,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-09-06T10:11:44.763Z",
+        "fetched_at": "2026-09-19T08:22:48.555Z",
         "homepage_url": "https://mikmak.ai/",
         "example_url": "https://shop.mikmak.ai/social/69d80508c17cd48204adad0b?utm_source=twitter&utm_medium=paid_social&utm_campaign=une_hl_685&utm_term=P3G43FN-&utm_content=hlm-feel-the-flavor-overall-x_jar-and-squeezes_na_spicy_bsay_na_1x1_twpr_none_shnw_en_stp_mikmak_dark_na_sta-base_004_na_na_0565-demo-broad&utm_placement=amplify_preroll&utm_marketing_tactic=Consideration&utm_format=0565-demo-broad&utm_placementid=P3G43FN&utm_variant=brandsay&twclid=2dqu9rpgpoqo0mblvt9uebl5t7",
         "homepage_status": 200,
@@ -14346,7 +14346,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-09-06T10:41:41.767Z",
+        "fetched_at": "2026-09-19T08:22:50.388Z",
         "homepage_url": "https://huaweicloud.com/",
         "example_url": "https://www.huaweicloud.com/intl/en-us/?twclid=2ea99603xayrfvitnfttr9a4vn",
         "homepage_status": 200,
@@ -14362,7 +14362,7 @@
           "has_about_link": true,
           "has_contact_link": false,
           "has_corrections_link": false,
-          "outbound_links_count": 9,
+          "outbound_links_count": 10,
           "opinion_marker": false
         },
         "example": {
@@ -14473,7 +14473,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-09-04T17:05:50.167Z",
+        "fetched_at": "2026-09-19T08:22:51.330Z",
         "homepage_url": "https://attio.com/",
         "example_url": "https://attio.com/p/crm-031515110905/?utm_source=twitter_ads&utm_medium=paidsocial&utm_campaign=Prospecting&utm_content=0226_singleimage_2602_AskAttioUI-and-device-AskMore_v2_Light_n_a_n_a_1080x1080&twclid=271iqk60c3hmf5z7qzfjlyoijm",
         "homepage_status": 200,
@@ -14600,7 +14600,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-09-06T10:41:43.603Z",
+        "fetched_at": "2026-09-19T08:22:53.261Z",
         "homepage_url": "https://sentinels.gg/",
         "example_url": "https://shop.sentinels.gg/collections/sen-metallics?twclid=2eikc5h5also5tonotr2q4ciq6",
         "homepage_status": 200,
@@ -14727,7 +14727,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-09-06T10:41:43.835Z",
+        "fetched_at": "2026-09-19T08:52:47.811Z",
         "homepage_url": "https://abey.com/",
         "example_url": "https://abey.com/?twclid=245i7ob4cgmg7v7epadtxl7ku4",
         "homepage_status": 200,
@@ -14854,7 +14854,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-09-06T11:41:43.088Z",
+        "fetched_at": "2026-09-19T08:52:50.773Z",
         "homepage_url": "https://ic.com/",
         "example_url": "https://www.ic.com/en/trade-indices/?utm_source=twitter&utm_medium=twitter&utm_campaign=tw_en_ph_cv_pr&utm_term=TWITTER_TIMELINE&utm_content=indices&camp=94092&twclid=22h8qlm19mtb6b4fjbtto4x3rp",
         "homepage_status": 200,
@@ -14980,7 +14980,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-09-06T11:41:43.685Z",
+        "fetched_at": "2026-09-19T08:52:51.865Z",
         "homepage_url": "https://tradeodds.io/",
         "example_url": "https://www.tradeodds.io/dashboard?tab=factor-match&utm_source=twitter&utm_medium=cpc&utm_campaign=Factor+Match+Purchase+Campaign+Desk&utm_id=factor+match+purchase+campaign+desk&utm_term=factor+match+purchase+purchase+desk+us&utm_content=ad2&twclid=21dpzozj7vqb86fdz6auuzunmy",
         "homepage_status": 200,
@@ -15106,7 +15106,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-09-06T11:41:57.010Z",
+        "fetched_at": "2026-09-19T08:52:53.889Z",
         "homepage_url": "https://poly.market/",
         "example_url": "https://poly.market/X0q565H?twclid=24x365380zub6d85j7s6xd212w",
         "homepage_status": null,
@@ -94529,6 +94529,83 @@
         "distinct_referring_accounts": 1,
         "sample_referring_accounts": [
           "arenasocialph"
+        ],
+        "distinct_axes": []
+      },
+      "claims": {
+        "total": 0,
+        "supported": 0,
+        "refuted": 0,
+        "contested": 0,
+        "unverified": 0,
+        "resolved_count": 0
+      },
+      "structural_features": {
+        "has_search_paths": false,
+        "has_article_paths": false,
+        "has_doi_paths": false
+      },
+      "ratings": {
+        "provenance": {
+          "score": 0.45,
+          "basis": [
+            "unknown_domain_pattern"
+          ]
+        },
+        "breadth": {
+          "score": 0.08916666666666666,
+          "basis": [
+            "distinct_urls:1",
+            "distinct_axes:0",
+            "origin_types:1"
+          ]
+        },
+        "corroboration": {
+          "score": 0.19583333333333333,
+          "basis": [
+            "referring_accounts:1",
+            "origin_types:1"
+          ]
+        },
+        "track_record": {
+          "score": null,
+          "basis": [
+            "no_resolved_claims_observed"
+          ]
+        },
+        "overall": {
+          "score": 0.3472395833333333,
+          "confidence": 0.08135,
+          "method": "mechanical_v1",
+          "basis": [
+            "unknown_domain_pattern",
+            "distinct_urls:1",
+            "distinct_axes:0",
+            "origin_types:1",
+            "referring_accounts:1",
+            "origin_types:1",
+            "track_record_unavailable"
+          ]
+        }
+      }
+    },
+    {
+      "domain": "aktiego.com",
+      "entity": "Aktiego",
+      "kind": "unknown",
+      "first_seen_at": "2026-09-19T08:31:59.731Z",
+      "last_seen_at": "2026-09-19T08:31:59.731Z",
+      "discovery": {
+        "distinct_urls": 1,
+        "example_urls": [
+          "https://aktiego.com/feature-article/silver-pony-resources-modern-district-scale-exploration-in-british-columbias-historic-silver-belt/?twclid=234un9qm0ar73okhptuivcwc1f"
+        ],
+        "origin_counts": {
+          "feed_buffer": 1
+        },
+        "distinct_referring_accounts": 1,
+        "sample_referring_accounts": [
+          "goaktie"
         ],
         "distinct_axes": []
       },
