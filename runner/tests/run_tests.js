@@ -664,6 +664,43 @@ section("Research agenda + periodic gating");
     const seed = JSON.parse(fs.readFileSync(path.join(ROOT, agenda.follow_seed), "utf-8"));
     if (seed.approved === false) pass("follow seed list ships unapproved (operator must opt in)");
     else fail("follow seed", "follow seed list must ship with approved: false");
+
+    // Research evidence: the model proposes entries, the validator decides. A
+    // research pass must never be able to file an invented URL or an off-agenda
+    // axis, because that evidence is indistinguishable once it is in the log.
+    const re = require(path.join(RUNNER, "lib/research_evidence.js"));
+    const pool = {
+      read: new Set(["https://metr.org/research"]),
+      seen: new Set(["https://metr.org/research", "https://epoch.ai/data-insights"]),
+    };
+    const proposed = [
+      { axis_id: agenda.axes[0].id, pole_alignment: "right", source: "https://metr.org/research",
+        content: "METR measured a doubling trend in autonomous task length, with wide intervals" },
+      { axis_id: "axis_power_accountability", pole_alignment: "left", source: "https://metr.org/research",
+        content: "a pre-pivot axis that a research pass must never file evidence against" },
+      { axis_id: agenda.axes[0].id, pole_alignment: "right", source: "https://example.com/invented-source",
+        content: "a finding whose source the research never actually retrieved" },
+      { axis_id: agenda.axes[0].id, pole_alignment: "sideways", source: "https://epoch.ai/data-insights",
+        content: "a pole alignment that exists on no axis in the ontology" },
+    ];
+    const v = re.validate(proposed, { axes: agenda.axes, pool });
+    if (v.kept.length === 1 && v.kept[0].source === "https://metr.org/research" && v.dropped.length === 3)
+      pass("research evidence drops off-agenda axes, invented sources and bad poles");
+    else fail("research evidence validation", `kept ${v.kept.length} (expected 1), dropped ${v.dropped.length} (expected 3)`);
+
+    // The boot policy (research 3x/day, outbound held, feed engagement paused)
+    // must stay inert until agenda_bootstrap.js --apply has installed the plan:
+    // merging this code must not silence a system whose pivot was never applied.
+    const ap = require(path.join(RUNNER, "lib/agenda_phase.js")).agendaPhase();
+    let installedPlan = null;
+    try { installedPlan = JSON.parse(fs.readFileSync(path.join(ROOT, "state", "active_plan.json"), "utf-8")); } catch { /* none */ }
+    const installed = !!installedPlan && installedPlan.status === "active" &&
+      String(installedPlan.source || "").startsWith("research_agenda:");
+    if (installed === ap.active) pass(`boot policy tracks the installed plan (agenda plan installed: ${installed})`);
+    else fail("boot policy", `agendaPhase().active=${ap.active} but agenda plan installed=${installed}`);
+    if (installed || (!ap.holdOutbound && !ap.pauseFeedEngagement && ap.researchPerDay === 1))
+      pass("no agenda plan → nothing held, nothing paused, one research pass/day");
+    else fail("boot policy defaults", "boot policy applied without an installed agenda plan");
   } catch (e) {
     fail("research agenda", e.message);
   } finally {

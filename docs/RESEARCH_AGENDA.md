@@ -74,10 +74,11 @@ the seeded axes start at zero evidence, and a brief written on day 2 would stand
 almost nothing. To go back to interleaving (a track's solutions as soon as its own
 foundations are done), swap the two outer loops in `orderedQuestions()`.
 
-Note what the foundation phase does *not* do: deep-research reports do not write
-belief evidence. The axes are grounded by the browse/reading loop over the agenda's
-feeds and source pages, which runs every cycle from the bootstrap onward, independent
-of the plan. The foundation phase grounds the *briefs*; the feeds ground the *axes*.
+The foundation phase grounds the axes as well as the briefs. A finished research
+pass now files belief evidence through `runner/lib/research_evidence.js` (see
+**Research as evidence** below), so a day spent reading primary sources moves the
+ontology instead of only producing a page. The browse/reading loop over the agenda's
+feeds and source pages runs alongside it and contributes the rest.
 
 | Track | Foundations | Solutions (examples) |
 |---|---|---|
@@ -104,6 +105,90 @@ operational detail.
 **Caveat carried over from the ontology assessment:** axis scores measure the composition of
 what was read. The feed list is deliberately balanced across camps. Keep it that way when
 editing, or the new axes will be captured the same way the old ones were.
+
+## The initial phase
+
+While foundation questions remain unanswered, `runner/lib/agenda_phase.js` puts the
+runner in research mode — operator decision, 2026-09-19 ("intensive research before
+the usual feed"). It reads `agenda.boot`:
+
+| Setting | Default | Effect |
+|---|---|---|
+| `research_per_day` | 3 | `orchestrator.js` spawns `plan_research.js` every 8h instead of every 24h, so 15 foundation reports take ~5 days, not ~15 |
+| `hold_outbound` | true | `x_control.js` suppresses tweets, quotes and reposts (`suppressionReason` → `agenda_foundation_phase`). **Replies are not held** — answering a person who asked something is not broadcasting an ungrounded opinion |
+| `pause_feed_engagement` | true | `pre_browse.js` skips comment candidates and the discourse scan/digest. Reading, RSS, browse and evidence filing continue |
+
+It flips to normal operation by itself the moment the last foundation report lands —
+nothing to remember, nothing to unset.
+
+Two deliberate properties:
+
+- **Inert until the bootstrap runs.** The policy requires `state/active_plan.json` to
+  carry `source: "research_agenda:<id>"`, which only `agenda_bootstrap.js --apply`
+  writes. Merging this code cannot silence a system whose pivot was never applied.
+  A test asserts this.
+- **`AGENDA_BOOT=off`** disables the phase policy while leaving the agenda itself on.
+
+What is NOT paused: the X scraper loop keeps running (it is a separate process and the
+browser session depends on it), and the feed still reaches the browse cycle. Under
+`full_pivot` browse evidence may only be filed against agenda axes, so feed noise has
+nowhere to land anyway.
+
+## Research as evidence
+
+`runner/lib/research_evidence.js` turns a finished research pass into belief evidence.
+It runs after every foundation report and after the research pass inside every solution
+brief (so it counts even when the brief is later withheld).
+
+```
+deep research ─▶ report page
+      │
+      └─▶ extract ─▶ mechanical validation ─▶ state/ontology_delta_inbox/<ts>-<hash>.json
+                                                        │
+ browse agent ─▶ state/ontology_delta.json ──────────────┼─▶ apply_ontology_delta.js
+                                                        │     (stance check, trust weight,
+                                                        │      diversity guard, drift cap)
+                                                        └─▶ ontology.json, entries tagged
+                                                             with their `writer`
+```
+
+The model proposes entries; validation decides. An entry is dropped unless it names an
+agenda axis, a pole, a finding of at least 20 characters, and **a URL the research
+actually retrieved** — invented sources cannot enter the ontology. At most 2 entries per
+axis and 8 per pass; `RESEARCH_EVIDENCE=off` disables filing, `RESEARCH_EVIDENCE_MAX`
+changes the cap.
+
+An entry records *what a source shows*, not what Sebastian concludes — the same contract
+as browse evidence, and the reason the public export calls the score
+`observed_pole_balance`. What changes is the source mix: research evidence comes from
+primary sources the agent actually fetched, not from whatever the feed happened to carry.
+
+**Why an inbox rather than the existing file:** `state/ontology_delta.json` belongs to
+the browse agent and `apply_ontology_delta.js` deletes it after applying, so a second
+writer to that path is silently clobbered. Every pending delta is now drained in one
+pass, and each evidence entry carries `writer` (`deep_research`, `solution_brief`, or
+absent for browse) into its `evidence_log` entry. Inbox files may not create axes — only
+the browse agent may.
+
+## Later: certifications
+
+Once there is enough grounding, an obvious next step is for Sebastian to take public AI
+safety / policy courses through the HelmStack browser and hold the certificates as
+externally checkable evidence of what he has actually learned — a better signal than a
+self-reported reading list, and a natural self-study artifact.
+
+Not built, and not purely a code question. Before it can be tried:
+
+- **The operator must create every account and handle any identity or payment step.**
+  Sebastian's runner may not create accounts or enter credentials.
+- **Check each provider's terms.** Some prohibit automated access outright; some require
+  a personal attestation that the work is the candidate's own, which an autonomous agent
+  cannot honestly make on a human's behalf. A certificate is only worth holding if how it
+  was earned can be stated plainly, so the honest framing is "an AI agent completed this
+  course", never a person's name on the certificate.
+- Free, no-attestation material (course content, public syllabi, open problem sets) is
+  reading he can already do today through the normal reading queue — worth pointing the
+  agenda's source pages at before any of the above.
 
 ## Operating it
 
@@ -153,11 +238,12 @@ see [PUBLIC_DATA.md](PUBLIC_DATA.md). It carries the agenda, the solution briefs
 `agenda`/`legacy` status, and the prediction record. Internal `state/` files are not an
 interface and should not be read as one.
 
-A future contributing agent would additionally need (neither exists yet): a **delta
-inbox** — `apply_ontology_delta.js` currently reads one fixed `state/ontology_delta.json`
-and deletes it, so a second writer silently clobbers the first — and **per-agent
-attribution** on every assertion, since evidence entries record a source but never an
-author. `cleanStaleLocks()` is a stub, so the system is single-writer by assumption.
+A future contributing agent now has two of the three pieces it needs. The **delta
+inbox** exists (`state/ontology_delta_inbox/`, drained by `apply_ontology_delta.js`), and
+evidence entries carry **`writer`** attribution. Still missing: attribution on every
+*other* kind of assertion (claims, stances, predictions record a source but never an
+author), and real locking — `cleanStaleLocks()` is a stub, so concurrent writers to
+`ontology.json` itself are still single-writer by assumption.
 
 ## Inference budget
 

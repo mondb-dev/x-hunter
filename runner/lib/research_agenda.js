@@ -47,6 +47,17 @@ const BETTER_AI = {
   mode: "full_pivot", // off-agenda inputs paused, planning restricted to the agenda
   since: "2026-09-15",
 
+  // Initial phase, while foundation questions remain unanswered
+  // (lib/agenda_phase.js reads this; AGENDA_BOOT=off disables it). Operator
+  // decision 2026-09-19: research intensively first, do not broadcast, and
+  // leave the X feed's engagement machinery off until there is something
+  // grounded to say.
+  boot: {
+    research_per_day: 3,          // 15 foundation reports in ~5 days, not ~15
+    hold_outbound: true,          // tweets/quotes/reposts held; replies still answered
+    pause_feed_engagement: true,  // no comment candidates, no discourse scan/digest
+  },
+
   vocation: {
     label: "Well-Founded Solutions for Better AI",
     description:

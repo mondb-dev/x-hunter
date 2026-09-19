@@ -234,19 +234,40 @@ research agenda: affinity = agenda vocabulary; zero-affinity candidates dropped
 
 - **Research agenda** `runner/lib/research_agenda.js` (docs/RESEARCH_AGENDA.md):
   operator-set focus, `RESEARCH_AGENDA` env (default `better_ai`, `off` disables,
-  :403). `better_ai` = **final outputs are well-founded solutions** for more useful,
+  :414). `better_ai` = **final outputs are well-founded solutions** for more useful,
   reliable, safe AI; `mode: "full_pivot"` (:47): off-agenda RSS paused except
-  `keep_feeds` (:373, `scraper/rss_collect.js:85`), browse evidence restricted to
+  `keep_feeds` (:384, `scraper/rss_collect.js:85`), browse evidence restricted to
   agenda axes (`single_pass_browse.js:109`), vocation pinned
   (`evaluate_vocation.js:226`), ponder agenda override (`ponder.js:133`), seeded
-  axes never reaped (`apply_ontology_delta.js:718`), self-study dossier (:525).
+  axes never reaped (`apply_ontology_delta.js:718`), self-study dossier (:536).
   **5 tracks** (lab accountability, literature, forecasting, self-study, policy &
   governance), **7 seeded axes**, **26 questions** = 15 foundation + 11 solution.
-  `orderedQuestions` (:484) runs the whole foundation phase first, then the
+  `orderedQuestions` (:495) runs the whole foundation phase first, then the
   solutions — operator decision 2026-09-19, so briefs are never drafted against
-  ungrounded axes. Follow seed list `runner/data/better_ai_follow_seed.json` (:370)
+  ungrounded axes. Follow seed list `runner/data/better_ai_follow_seed.json` (:381)
   is inert until `"approved": true`. One-time migration:
   `runner/agenda_bootstrap.js [--apply]`.
+- **Agenda phase** `runner/lib/agenda_phase.js`: while foundation questions remain
+  unanswered, `agenda.boot` (research_agenda.js:55) puts the runner in research mode —
+  `research_per_day: 3` (orchestrator.js spawns plan_research every 8h instead of 24h),
+  `hold_outbound` (x_control.js `agendaHold`: tweets/quotes/reposts suppressed, replies
+  NOT), `pause_feed_engagement` (pre_browse.js skips comment_candidates + discourse
+  scan/digest). Inert unless `state/active_plan.json.source === "research_agenda:<id>"`,
+  i.e. until `agenda_bootstrap.js --apply` ran; `AGENDA_BOOT=off` disables it. Flips to
+  normal by itself when the last foundation report lands.
+- **Research as evidence** `runner/lib/research_evidence.js`: a finished research pass
+  files belief evidence (called from `plan_research.js` after each foundation report and
+  from `solution_brief.js` after its research pass, so withheld briefs still count).
+  Model proposes, validation decides: an entry needs an agenda axis, a pole, >= 20 chars
+  of content and a URL the research actually retrieved; <= 2/axis, <= 8/pass
+  (`RESEARCH_EVIDENCE_MAX`), `RESEARCH_EVIDENCE=off` disables. Writes
+  `state/ontology_delta_inbox/<ts>-<hash>.json`, never `ontology_delta.json` (the browse
+  agent's file, deleted after apply — a second writer there is clobbered).
+- **Delta inbox** `runner/apply_ontology_delta.js` `deltaSources()`: drains
+  `state/ontology_delta.json` (browse, LLM-written → repair path) plus every
+  `state/ontology_delta_inbox/*.json` (our code → plain JSON) in one pass, deletes all
+  consumed files including on error paths (`consumeSources()`), and records `writer` on
+  each `evidence_log` entry (absent = browse). Inbox files may not create axes.
 - **Public data export** `runner/export_public_data.js` (docs/PUBLIC_DATA.md): versioned
   static JSON under `web/public/data/` — `index.json` (catalog), `schema.json`,
   `agenda.json`, `axes/{index,<id>}.json`, `solutions/{index,<id>}.json`,

@@ -157,6 +157,13 @@ function runScript(scriptPath, opts = {}) {
  * @param {number} cycle - current cycle number
  */
 function preBrowse(cycle) {
+  // During the research agenda's foundation phase the X feed is not the job —
+  // reading, RSS and evidence filing continue, but the engagement prep below is
+  // skipped (lib/agenda_phase.js). Inert until the agenda plan is installed.
+  const phase = (() => {
+    try { return require('./agenda_phase').agendaPhase(); } catch { return { pauseFeedEngagement: false }; }
+  })();
+
   // ── 1. FTS5 integrity check + rebuild if corrupted ─────────────────────
   runScript(path.join(PROJECT_ROOT, 'runner/fts_maintain.js'));
 
@@ -192,14 +199,20 @@ function preBrowse(cycle) {
   // Runs every browse cycle; self-gated internally (1h cooldown per feed)
   runScript(path.join(PROJECT_ROOT, 'scraper/rss_collect.js'));
 
-  // ── 6. comment_candidates.js ──────────────────────────────────────────
-  runScript(path.join(PROJECT_ROOT, 'runner/comment_candidates.js'));
+  // ── 6-8. X-feed engagement prep (comment candidates, discourse scan +
+  //        digest) — paused during the agenda's foundation phase ──────────
+  if (phase.pauseFeedEngagement) {
+    log(`feed engagement prep skipped — ${phase.reason}`);
+  } else {
+    // ── 6. comment_candidates.js ────────────────────────────────────────
+    runScript(path.join(PROJECT_ROOT, 'runner/comment_candidates.js'));
 
-  // ── 7. discourse_scan.js → discourse_anchors.jsonl ────────────────────
-  runScript(path.join(PROJECT_ROOT, 'runner/discourse_scan.js'));
+    // ── 7. discourse_scan.js → discourse_anchors.jsonl ──────────────────
+    runScript(path.join(PROJECT_ROOT, 'runner/discourse_scan.js'));
 
-  // ── 8. discourse_digest.js → discourse_digest.txt ─────────────────────
-  runScript(path.join(PROJECT_ROOT, 'runner/discourse_digest.js'));
+    // ── 8. discourse_digest.js → discourse_digest.txt ───────────────────
+    runScript(path.join(PROJECT_ROOT, 'runner/discourse_digest.js'));
+  }
 
   // ── 9. external_source_discovery.js (mechanical registry refresh) ─────
   runScript(path.join(PROJECT_ROOT, 'runner/external_source_discovery.js'));

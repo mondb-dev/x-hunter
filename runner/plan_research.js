@@ -115,6 +115,14 @@ Each question standalone and specific (name actors, claims, mechanisms). Output 
           shortAnswer: b.one_line || (b.failures || []).join('; ') || b.reason || '' };
   } else {
     r = await researchAndDeliver(question, { source: 'plan', format, dossier });
+    // The findings are evidence, not just a page: file them against the agenda
+    // axes so a research day moves the ontology (lib/research_evidence.js).
+    try {
+      const { fileResearchEvidence } = require('./lib/research_evidence');
+      await fileResearchEvidence(r, {
+        question, track: track ? track.id : null, url: r.url || null, writer: 'deep_research',
+      });
+    } catch (e) { log(`evidence filing failed (non-fatal): ${e.message}`); }
   }
 
   state.done.push(qHash(question));

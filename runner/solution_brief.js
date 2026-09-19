@@ -283,6 +283,13 @@ async function solutionBrief(question, { track = null, foundations = [], dossier
   const allowSelf = !!dossier;
   log(`foundation: ${res.findings ? res.findings.length : 0} findings, ${pool.read.size} pages read, ${pool.seen.size} URLs retrieved`);
 
+  // A brief's research is evidence in its own right — file it before the draft,
+  // so it counts even if the brief is later withheld by the gate.
+  try {
+    const { fileResearchEvidence } = require('./lib/research_evidence');
+    await fileResearchEvidence(res, { question, track, writer: 'solution_brief', extraText: foundationText });
+  } catch (e) { log(`evidence filing failed (non-fatal): ${e.message}`); }
+
   // 2. Draft
   let brief = cleanJson(await think(draftPrompt({ question, trackLabel: track, report: res.report, allowed, context }), 'solution:draft', 3500));
   if (!brief) { ledger({ ...base, status: 'failed', reason: 'draft_unparseable' }); return { gated: true, reason: 'draft_unparseable' }; }
