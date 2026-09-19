@@ -38,7 +38,14 @@ function convictionLine(axis) {
 }
 
 function buildConvictions({ ontology, vocation, maxAxes = 8, minConf = 0.45 } = {}) {
+  // Under a full-pivot research agenda only the agenda's axes speak for him —
+  // the pre-pivot axes still hold the highest confidence and would otherwise
+  // supply every "what I hold" line long after the pivot.
+  const { getAgenda, isFullPivot, isAgendaAxis } = require('./research_agenda');
+  const agenda = getAgenda();
+  const onAgenda = (a) => !isFullPivot(agenda) || isAgendaAxis(a, agenda);
   const axes = Object.values(ontology?.axes || ontology || {})
+    .filter(onAgenda)
     .filter(a => (a.confidence || 0) >= minConf && Math.abs(a.score || 0) > 0.1)
     .sort((a, b) => (b.confidence * Math.abs(b.score)) - (a.confidence * Math.abs(a.score)))
     .slice(0, maxAxes);
@@ -57,6 +64,12 @@ function buildConvictions({ ontology, vocation, maxAxes = 8, minConf = 0.45 } = 
   if (lines.length) {
     parts.push(`## What I hold`);
     parts.push(...lines);
+  } else if (agenda) {
+    // Agenda axes have not hardened yet: say what he is working on rather than
+    // falling back to pre-pivot convictions.
+    parts.push(`## What I hold`);
+    parts.push(`- Positions on ${agenda.label.toLowerCase()} are still forming; I argue from cited evidence and published briefs, not from settled belief.`);
+    parts.push(...agenda.tracks.map(t => `- ${t.label}: ${t.why}`));
   }
 
   // Committed stances (lib/stances): specific sides already taken on live

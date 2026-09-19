@@ -6,6 +6,9 @@
  *   1. discourse  — someone provided substantive counter-reasoning in a reply exchange
  *   2. agent_hint — agent flagged a mid-cycle discovery worth follow-up
  *   3. sprint_research — silent hours + active sprint research task
+ *   3b. agenda    — operator research agenda (lib/research_agenda.js): rotates its
+ *                   tracks + search terms. When an agenda is active, drivers 1-2
+ *                   only fire for on-agenda topics and 4-6 are never reached.
  *   4. contradiction — two established axes pulling in opposing directions
  *   5. uncertainty_axis — a belief axis has partial evidence but low confidence
  *   6. trending   — local Ollama picks the most interesting keyword from top 5 scraped
@@ -37,6 +40,12 @@ const SPRINT_CTX   = path.join(ROOT, "state", "sprint_context.txt");
 
 const config = require("./lib/config");
 const { createSelfEchoDetector } = require("./lib/self_echo.js");
+const { getAgenda, isOnAgenda } = require("./lib/research_agenda");
+
+// Operator research agenda (lib/research_agenda.js). When active, discourse and
+// agent-hint drivers only fire for on-agenda topics, and the agenda driver
+// replaces the emergent contradiction / uncertainty / trending drivers.
+const AGENDA = getAgenda();
 
 const { generate: llmGenerate } = require("./llm.js");
 
@@ -471,7 +480,9 @@ function getUnprocessedDiscourseAnchor() {
   for (let i = anchors.length - 1; i >= 0; i--) {
     if (processedIds.has(anchors[i].post_id)) continue;
     if (selfEchoDetector.findMatch(anchors[i].their_text || '')) continue;
-    return anchors[i];
+    const a = anchors[i];
+    if (AGENDA && !isOnAgenda(`${a.topic || ""} ${a.summary || ""} ${a.their_text || ""}`, AGENDA)) continue;
+    return a;
   }
   return null;
 }
@@ -565,6 +576,10 @@ function markAnchorProcessed(postId) {
   if (fs.existsSync(HINT_PATH)) {
     let hint = null;
     try { hint = JSON.parse(fs.readFileSync(HINT_PATH, "utf-8")); } catch {}
+    if (hint && hint.suggested_query && AGENDA && !isOnAgenda(`${hint.suggested_query} ${hint.reason || ""}`, AGENDA)) {
+      console.log(`[curiosity] agent_hint off-agenda — dropped: "${String(hint.suggested_query).slice(0, 80)}"`);
+      hint = null;
+    }
     if (hint && hint.suggested_query) {
       const topicSlug  = toSlug(hint.suggested_query);
       const expireLine = CURRENT_CYCLE > 0
@@ -620,7 +635,9 @@ function markAnchorProcessed(postId) {
     const sprintTask = extractSprintTask();
     // [reflect] tasks are local-only — no external search needed. Fall through
     // to normal curiosity paths so prefetch navigates to something useful.
-    if (sprintTask && sprintTask.type !== 'reflect') {
+    // With an agenda active, only on-agenda sprint tasks steer search (a stale
+    // pre-pivot sprint context must not override the agenda driver).
+    if (sprintTask && sprintTask.type !== 'reflect' && (!AGENDA || isOnAgenda(sprintTask.title, AGENDA))) {
       const searchTerms = sprintSearchTerms(sprintTask);
       const taskSlug    = toSlug(sprintTask.title);
       const expireLine  = CURRENT_CYCLE > 0
@@ -669,6 +686,71 @@ function markAnchorProcessed(postId) {
       );
       process.exit(0);
     }
+  }
+
+  // ── Path 3b: research agenda (operator-set) ─────────────────────────────────
+  // Rotates tracks round-robin and, within a track, its search terms. The
+  // RESEARCH FOCUS term drives search_curiosity.js (web search → reading queue);
+  // the SEARCH_URLs pair the term with a skeptical angle and a scholarly/source
+  // page. With an agenda active this path always fires, so the emergent
+  // contradiction / uncertainty / trending drivers below are not reached.
+  if (AGENDA) {
+    const prior = (() => {
+      try {
+        return fs.readFileSync(LOG, "utf-8").split("\n")
+          .filter(l => l.includes('"driver":"agenda"')).length;
+      } catch { return 0; }
+    })();
+    const track = AGENDA.tracks[prior % AGENDA.tracks.length];
+    const round = Math.floor(prior / AGENDA.tracks.length);
+    const term  = track.search_terms[round % track.search_terms.length];
+    const seeded = AGENDA.axes.find(a => a.track === track.id) || null;
+    const axis  = seeded ? (allAxesData.find(a => a.id === seeded.id) || seeded) : null;
+    const sources = AGENDA.sources.filter(s => s.track === track.id);
+    const source  = sources.length ? sources[round % sources.length] : null;
+
+    const angles = [
+      `https://x.com/search?q=${encodeURIComponent(term)}&f=live`,
+      `https://x.com/search?q=${encodeURIComponent(`${term} (critique OR overstated OR flawed OR skeptical)`)}&f=live`,
+      ...(source ? [source.url.replace("{q}", encodeURIComponent(term))] : []),
+    ];
+    const termSlug   = toSlug(`${track.id}_${term}`);
+    const expireLine = CURRENT_CYCLE > 0
+      ? `refreshes at cycle ${EXPIRES_CYCLE}`
+      : `refreshes in ~${CURIOSITY_EVERY} cycles`;
+    const lines = [
+      `── curiosity directive · ${tsHuman} ${HR.slice(tsHuman.length + 25)}`,
+      `RESEARCH FOCUS: "${term}"`,
+      `  Why: ${AGENDA.label} — ${track.label} track. ${track.why}`,
+      ...(axis ? [`  Axis: "${axis.left_pole}" ↔ "${axis.right_pole}" [${axis.id}]`] : []),
+      ``,
+      `ACTIVE SEARCH (rotates each cycle — prefetch picks automatically):`,
+      angles.map((u, i) => `  SEARCH_URL_${i + 1}: ${u}`).join("\n"),
+      `  Look for primary sources (papers, system cards, policy text, eval reports),`,
+      `  what they demonstrate versus what is claimed about them, and the strongest critique.`,
+      ``,
+      `AMBIENT FOCUS (all browse cycles until directive refreshes):`,
+      `  Prioritise feed items that touch this track; record axis-worthy evidence`,
+      axis ? `  against ${axis.id}. Tag: [CURIOSITY: ${termSlug}]` : `  Tag: [CURIOSITY: ${termSlug}]`,
+      ``,
+      hitRateLine ? `NOTE: ${hitRateLine}` : ``,
+      `── end directive (${expireLine}) ${HR.slice(expireLine.length + 22)}`,
+    ];
+
+    fs.writeFileSync(DIRECTIVE, lines.join("\n"), "utf-8");
+    appendLog({
+      cycle:            CURRENT_CYCLE,
+      ts,
+      driver:           "agenda",
+      agenda:           AGENDA.id,
+      track:            track.id,
+      search_terms:     term,
+      axis_id:          axis ? axis.id : null,
+      axis_label:       axis ? axis.label : null,
+      expires_at_cycle: EXPIRES_CYCLE,
+    });
+    console.log(`[curiosity] driver: agenda — ${track.id}: "${term}"`);
+    process.exit(0);
   }
 
   // ── Path 1c: cross-axis contradiction ───────────────────────────────────────

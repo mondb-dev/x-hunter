@@ -43,10 +43,10 @@ research, amplify triggers, maintenance), git, and sleep.
 | Module | Purpose |
 |---|---|
 | `gemini_agent.js` | RETIRED stub — agent loop removed with the Ollama transport |
-| `lib/stance_check.js` | Does an outbound line argue the committed side? Single-letter check on Claude; lifted from the removed `local_harness.js` (2026-08-25) |
+| `runner/lib/stance_check.js` | Does an outbound line argue the committed side? Single-letter check on Claude; lifted from the removed `local_harness.js` (2026-08-25) |
 | `compose.js` | Claude CLI composition (`COMPOSE_BACKEND=claude`) + `reason()` think backend |
 | `config.js` | Env + paths + cycle constants |
-| `pre_browse.js` | 17-step pre-cycle context pipeline |
+| `pre_browse.js` | 17-step pre-cycle context pipeline; `dueEvery()` gates the periodic steps (the old cycle-modulo gates never fired on BROWSE cycles) |
 | `post_browse.js` | Post-cycle: archive, claim tracking, signals, proactive replies |
 | `outbox.js` | Channel-agnostic posting queue (`state/outbox.db`) |
 | `outbound_gates.js` | Shared voice + fact-check gates for every outbound surface |
@@ -56,6 +56,7 @@ research, amplify triggers, maintenance), git, and sleep.
 | `amplify_performance.js` | Amplification learn-loop model (source/topic → engagement) |
 | `cost_meter.js` / `operating_cost.js` | LLM spend ledger + burn-rate self-model |
 | `capabilities.js` | Registry of what Sebastian can actually do (grounds planning) |
+| `research_agenda.js` | **Operator-set research focus** — what to point the capabilities at: tracks, foundation/solution questions, seeded axes, feeds, source pages, follow seed, voice block, self-study dossier. `RESEARCH_AGENDA=off` disables (docs/RESEARCH_AGENDA.md) |
 | `helmstack.js` | HelmStack client wrapper (HTTP API :7070) |
 | `daily.js` | Daily block: report, article, checkpoint, ponder, sprint, housekeeping. Exports `pruneClaudeDebugLogs` (age + size cap) — called EVERY cycle from orchestrator.js, not daily: ~/.claude/debug grows ~1.3 GB/hour unpruned |
 | `git.js` | git add/commit/push after every cycle + Vercel hook |
@@ -68,11 +69,14 @@ research, amplify triggers, maintenance), git, and sleep.
 |---|---|
 | `apply_ontology_delta.js` | Evidence gates + belief update (see ARCHITECTURE.md) |
 | `deep_research.js` | Triage → plan → execute → refine → resolve → synth (docs/DEEP_RESEARCH.md) |
-| `plan_research.js` | Answers one open plan question per day via deep research |
+| `plan_research.js` | Answers one open plan question per day: **foundation** questions → deep-research report, **solution** questions → `solution_brief.js`; self-study questions get the first-party dossier |
+| `solution_brief.js` | **The agenda's final output** — research → draft → red-team → revise → mechanical gate → report page + `state/solutions.jsonl` (docs/RESEARCH_AGENDA.md) |
+| `export_public_data.js` | Versioned public JSON interface at `/data` — axes, solutions, predictions, agenda, schema (docs/PUBLIC_DATA.md) |
+| `agenda_bootstrap.js` | One-time pivot migration: seed axes, install the agenda plan, pin vocation, archive pre-pivot context, refresh the export. Dry run unless `--apply` |
 | `stance_scan.js` | Daily stance formation + resolution (docs/STANCES.md) |
 | `prediction_resolution.js` | Auto-resolve expired predictions (docs/PREDICTIONS.md) |
 | `x_amplify.js` / `linkedin_amplify.js` / `amplify_measure.js` | Amplification learn-loop |
-| `curiosity.js` | Uncertainty-driven research directive (ceiling 0.82); sprint-aware in silent hours |
+| `curiosity.js` | Research directive: agenda driver (rotates tracks/terms) when an agenda is active, else uncertainty-driven (ceiling 0.82); sprint-aware in silent hours; off-agenda discourse/hint/sprint drivers are skipped |
 | `write_article.js` | Long-form articles (plan-first axis selection; X Articles + Moltbook) |
 | `generate_checkpoint.js` / `ponder.js` | Checkpoints + conviction-triggered action plans |
 | `telegram_bot.js` | Admin bot: `/dr <question>` deep research (deep\|flat), controls |
@@ -92,8 +96,8 @@ follows 3 h).
 |---|---|
 | `collect.js` | Feed ingestion via HelmStack; mention capture via live search; appends to permanent local posts archive |
 | `reply.js` | Mention queue: spam filter → thread context → recall → Claude classify+draft → outbound gate → HelmStack reply. Research-intent mentions route to deep_research. 3/run, 5 min gap, 10/day |
-| `follows.js` | Follow scoring + HelmStack follow. 3/run, 10/day |
-| `rss_collect.js` | RSS feeds (GMA News, PCIJ, …) into the digest |
+| `follows.js` | Follow scoring + HelmStack follow. 3/run, 10/day. Under an agenda: affinity scored on agenda vocabulary, zero-affinity accounts never followed, operator-approved seed list first (`runner/data/*_follow_seed.json`, inert until `"approved": true`) |
+| `rss_collect.js` | RSS feeds into the digest + reading queue. Under a full-pivot agenda the default registry is paused except `keep_feeds` and the agenda's feeds are used instead |
 | `db.js` | SQLite schema: posts, keywords, accounts, memory, embeddings (`state/index.db`) |
 | `analytics.js` | RAKE, TF-IDF, Jaccard, burst detection |
 | `query.js` | Topic summary extraction |

@@ -78,7 +78,7 @@ The browse pass (Claude via `runner/single_pass_browse.js`) runs every ~30 min (
 | 4 | `curiosity.js` — refreshes research directive | every 12th cycle |
 | 5 | `search_curiosity.js` — search-driven curiosity pass | with curiosity |
 | 6 | `cluster_axes.js` — groups belief axes | co-fires with curiosity |
-| 7 | `scraper/rss_collect.js` — RSS feeds into the digest | every cycle |
+| 7 | `scraper/rss_collect.js` — RSS feeds into the digest + reading queue (under a full-pivot research agenda: the agenda's feeds replace the default registry except `keep_feeds`) | every cycle |
 | 8 | `comment_candidates.js` — finds posts suitable for commenting | every cycle |
 | 9 | `discourse_scan.js` — scans reply interactions for challenges → `discourse_anchors.jsonl` | every cycle |
 | 10 | `discourse_digest.js` — formats `discourse_digest.txt` | every cycle |
@@ -125,9 +125,15 @@ The `summary` field is required — entries without it cannot be retrieved by se
 
 ## Curiosity Directive (`runner/curiosity.js`)
 
-Fires every 12th BROWSE cycle (~4 hours). Determines *what to research next* via a priority ladder:
+Fires on the first BROWSE cycle at least `CURIOSITY_EVERY`=12 cycles after the last run
+(`dueEvery()` in `runner/lib/pre_browse.js`, state in `state/pre_browse_cadence.json`). The old
+`cycle % 12 === 0` gate never matched a BROWSE cycle and left this dead 2026-07-05 →
+2026-09-15. Determines *what to research next* via a priority ladder:
 
 1. **discourse** — someone challenged Sebastian's thinking → builds 3 search angles from their topic
+1b. **agent_hint** — a mid-cycle discovery flagged by the browse pass (dropped if off-agenda)
+1c. **sprint_research** — silent hours + an on-agenda sprint task
+1d. **agenda** — with a research agenda active, rotates its tracks and search terms, anchored on the track's seeded axis and one of its source pages. This path fires whenever the ones above do not, so 2–4 below are unreachable under an agenda
 2. **contradiction** — two established belief axes have opposing score signs + overlapping label keywords → investigates the tension
 3. **uncertainty_axis** — picks axis with highest `gain = (1 - confidence) × polarization × recency_decay × staleness_boost` below confidence ceiling (0.82)
 4. **trending** — Claude selects from top 5 keywords of last 4h; falls back to `top[0]`
@@ -212,7 +218,19 @@ Three input pathways for URLs to browse:
 - **Conviction-driven**: `source_selector.js` conviction mode appends trusted outlet URLs
 - **Adversarial**: `source_selector.js` adversarial mode appends one counter-source per day
 
-`emitTopItem()` picks the oldest unconsumed, non-stale (within 24 cycles) item → writes to `state/reading_url.txt` as `URL: ...\nFROM: ...\nCONTEXT: ...`. Adds `in_progress_cycle` marker.
+Machine producers (`rss_collect.js`, `search_curiosity.js`, `source_followup.js`) write
+`source` + `queued_at`; user/detector producers write `from_user` + `added_cycle`.
+
+`pickCandidate()` emits in priority order — people's links and deep-dive detections first,
+then agenda-relevant machine entries, then everything else (skipped entirely under a
+full-pivot agenda) — oldest first within each group. Staleness: 24 cycles for cycle-stamped
+entries, 12h wall-clock for machine entries. Read markers are time-aware, so a source page
+re-queued after it was last read becomes eligible again. Writes `state/reading_url.txt` as
+`URL: ...\nFROM: ...\nCONTEXT: ...` and appends an `in_progress_cycle` + `in_progress_at`
+marker.
+
+Until 2026-09-15 emission required `from_user` + `added_cycle`, so ~3,200 machine-queued
+items (2,782 of them RSS) were never read — see docs/BUGS.md.
 
 ---
 

@@ -53,6 +53,7 @@ function today() {
 
 const { reason } = require("./lib/compose");
 const { CAPABILITIES_SHORT } = require("./lib/capabilities");
+const { getAgenda, agendaBlock } = require("./lib/research_agenda");
 
 function buildDecisionPrompt(plans, vocation) {
   const planSummaries = plans.map((p, i) => {
@@ -91,7 +92,11 @@ Sebastian can focus on only one plan at a time. Choose using:
    REJECT any plan whose success depends on building/deploying software, a tool, a
    dashboard, a visualization, or a website — even a "prototype". The first_actions you
    write MUST each be a concrete publish/engage/verify/research action, never "build X".
+${getAgenda() ? `5. Fit with the operator research agenda below. REJECT any plan that does not advance one
+   of its tracks, whatever its raw value.
 
+${agendaBlock("planning")}
+` : ""}
 Respond in this exact JSON format:
 {
   "winner_plan_title": "exact title of winning plan",

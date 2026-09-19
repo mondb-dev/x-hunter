@@ -33,8 +33,23 @@ orchestrator BROWSE cycle
   → watchdog.js
 ```
 
+**Periodic step gating (fixed 2026-09-15):** curiosity + search_curiosity +
+cluster_axes (every `CURIOSITY_EVERY`=12) and deep_dive_detector (every 6) are
+gated by `dueEvery()` in `runner/lib/pre_browse.js`, persisted in
+`state/pre_browse_cadence.json`; `source_selector` fires on `cycle % 3 === 1`.
+The previous `cycle % 12 === 0` / `% 6 === 0` / `% 3 === 0` gates could never
+fire, because every such cycle number is a TWEET or QUOTE cycle — all four steps
+were silently dead from 2026-07-05 to 2026-09-15.
+
+**Directed reading (fixed 2026-09-15):** `reading_queue.js` emits people's links
+first, then agenda entries, then the rest. It now accepts machine entries
+(`source` + `queued_at`, 12h staleness) — previously it required
+`from_user` + `added_cycle`, which rss_collect / search_curiosity /
+source_followup never wrote, so ~3,200 queued items were never read.
+
 **Silent-hours sprint mode (UTC 23-07):** browse prompt switches to sprint
-work; curiosity directs search URLs toward sprint topic keywords.
+work; curiosity directs search URLs toward sprint topic keywords (under an
+agenda, only for on-agenda sprint tasks).
 
 **Status:** Running ✓
 
@@ -61,10 +76,10 @@ orchestrator QUOTE/TWEET cycle          (posting window 07–23 local)
 - **Outbox** (`runner/lib/outbox.js`, `state/outbox.db`) — LinkedIn fully migrated;
   X opt-in (`OUTBOX_X`). Status-tracked, content-dedup 7 days, LIFO claim.
 - **X amplify** (`x_amplify.js`) — bandit-picked repost, 1/run; measured by
-  `amplify_measure.js` (>24h old, max 8/run) into `lib/amplify_performance`.
+  `amplify_measure.js` (>24h old, max 8/run) into `runner/lib/amplify_performance`.
 - **LinkedIn amplify** (`linkedin_amplify.js`) — reshare parallel of the above.
 - **LinkedIn posting** — plan-first (`runner/lib/linkedin_plan.js`); shape assigned by
-  the A/B controller (`lib/linkedin_performance.pickShape`); images via voyager
+  the A/B controller (`runner/lib/linkedin_performance.pickShape`); images via voyager
   media pipeline; source-image auto-trigger (`runner/lib/lead_source_image.js`).
 - **Facebook** — observation live (`fb_collect.js`); share loop pending
   (posting-roadmap.md).

@@ -54,7 +54,7 @@ async function composeCommentary(post) {
   try {
     const { buildPersona, buildCoreContext } = require("./lib/sebastian_respond");
     persona = buildPersona("reply") + "\n\n" + buildCoreContext({ maxAxes: 6, journalCount: 1, journalChars: 300, includeClaims: true });
-  } catch { persona = "You are Sebastian Hunter, mapping how narratives are constructed in public discourse. Direct, specific, evidence-first."; }
+  } catch { persona = (() => { try { const a = require("./lib/research_agenda").getAgenda(); return a ? `You are Sebastian Hunter, an AI agent researching ${a.label.toLowerCase()} — direct, specific, evidence-first.` : "You are Sebastian Hunter, mapping narratives in public discourse. Direct, specific, evidence-first."; } catch { return "You are Sebastian Hunter. Direct, specific, evidence-first."; } })(); }
 
   const prompt = persona +
     `\n\nCURRENT DATE: ${new Date().toISOString().slice(0, 10)}. Do not rely on training data for current officeholders.\n` +

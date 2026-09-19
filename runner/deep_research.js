@@ -242,7 +242,7 @@ const TOOL_DESCR =
 // garbage-in-garbage-out failure mode where a full pass runs on an
 // underspecified question ("combat the situation involving a memecoin" — which
 // memecoin?) and publishes confident filler.
-async function contextTriage(question) {
+async function contextTriage(question, { dossier = null } = {}) {
   const [rec, po, se] = await Promise.all([
     TOOLS.recall(question).catch(() => '(recall unavailable)'),
     TOOLS.posts(question).catch(() => '(posts unavailable)'),
@@ -252,7 +252,7 @@ async function contextTriage(question) {
 `Today is ${TODAY()}. You are Sebastian Hunter's research intake. Decide whether this QUESTION is researchable as asked, and build a short context brief for the planner.
 
 QUESTION: ${question}
-
+${dossier ? `\n${String(dossier).slice(0, 2500)}\n(The dossier above is first-party data about Sebastian's own operation — questions about his own behavior are researchable from it plus the literature; do not bail on them.)\n` : ''}
 QUICK GROUNDING (own memory, observed feed, one web search):
 ### recall
 ${String(rec).slice(0, 1000)}
@@ -803,12 +803,15 @@ Set "compromised": true when the research could not actually address the questio
   return { report: String(raw), assessment: { key_finding: '', confidence_pct: null, compromised: false, compromised_why: '', open_questions: [] } };
 }
 
-async function deepResearch(question, { maxFetch = 4, planOnly = false, maxRounds = 2, tier: forcedTier, allowTree = true, triage = true, maxVerify = 3 } = {}) {
+// `dossier`: optional caller-supplied first-party context (e.g. the research
+// agenda's self-study dossier from lib/research_agenda.js) — shown to triage and
+// carried into planning + synthesis alongside the triage brief.
+async function deepResearch(question, { maxFetch = 4, planOnly = false, maxRounds = 2, tier: forcedTier, allowTree = true, triage = true, maxVerify = 3, dossier = null } = {}) {
   log(`question: ${question}`);
   // Stage A+B: ground the question, then triage — proceed / reformulate / bail.
-  let context = null;
+  let context = dossier || null;
   if (triage) {
-    const t = await contextTriage(question);
+    const t = await contextTriage(question, { dossier });
     if (t) {
       if (t.verdict === 'bail') {
         log(`triage: bail — ${t.clarify || 'question underspecified'}`);
@@ -823,7 +826,7 @@ async function deepResearch(question, { maxFetch = 4, planOnly = false, maxRound
         log(`triage: reformulated → ${t.question}`);
         question = t.question;
       }
-      context = t.brief || null;
+      context = [dossier, t.brief].filter(Boolean).join('\n\n') || null;
     }
   }
   if (planOnly) return { plan: await plan(question, context) };
@@ -1071,9 +1074,9 @@ Output ONLY JSON: {"format":"thread|report|article","why":"one short sentence"}`
  * { bailed?, clarify?, gated?, format, url, posted/published, tweets?,
  *   confidence, report, shortAnswer? }.
  */
-async function researchAndDeliver(question, { format = 'auto', maxFetch = 4, source = 'deliver', live = true } = {}) {
+async function researchAndDeliver(question, { format = 'auto', maxFetch = 4, source = 'deliver', live = true, dossier = null } = {}) {
   if (!DELIVERY_FORMATS.includes(format)) format = 'auto';
-  const res = await deepResearch(question, { maxFetch, allowTree: true, maxVerify: 3 });
+  const res = await deepResearch(question, { maxFetch, allowTree: true, maxVerify: 3, dossier });
   if (res.bailed) return { bailed: true, clarify: res.clarify, format: null, url: null, confidence: 0, report: res.report };
 
   const a = res.assessment || {};

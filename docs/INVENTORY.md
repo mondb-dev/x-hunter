@@ -9,7 +9,7 @@ the doc is wrong or the code moved — re-verify here first.
 | Agent (`~/Library/LaunchAgents`) | Runs | Notes |
 |---|---|---|
 | `com.sebastian.runner` | `bash runner/run.sh` (KeepAlive) | init → `runner/orchestrator.js` main loop; logs `runner/runner.log` |
-| `com.sebastian.browser` | `~/.local/bin/chrome-hunter --remote-debugging-port=18801` | legacy CDP Chrome, KeepAlive. Runs **Chrome for Testing** (`com.google.chrome.for.testing`) via a wrapper script — never `/Applications/Google Chrome.app`, whose `com.google.Chrome` bundle id is shared with the user's desktop browser and makes a headless instance swallow their Chrome launches. Binary/profile from `CHROME_BIN` + `CHROME_USER_DATA_DIR` (.env), honored by `runner/lib/browser.js:launchChrome` and `runner/run.sh:64`. `CDP_AUTOSTART=0` kills autostart (`run.sh:57`, `lib/browser.js:startBrowser/ensureBrowser/waitForBrowserService`, `orchestrator.js:701,720`) |
+| `com.sebastian.browser` | `~/.local/bin/chrome-hunter --remote-debugging-port=18801` | legacy CDP Chrome, KeepAlive. Runs **Chrome for Testing** (`com.google.chrome.for.testing`) via a wrapper script — never `/Applications/Google Chrome.app`, whose `com.google.Chrome` bundle id is shared with the user's desktop browser and makes a headless instance swallow their Chrome launches. Binary/profile from `CHROME_BIN` + `CHROME_USER_DATA_DIR` (.env), honored by `runner/lib/browser.js:launchChrome` and `runner/run.sh:64`. `CDP_AUTOSTART=0` kills autostart (`run.sh:57`, `runner/lib/browser.js:startBrowser/ensureBrowser/waitForBrowserService`, `orchestrator.js:701,720`) |
 | `com.sebastian.hunter-helmstack` | HelmStack app (dedicated `hunter-helmstack` profile) | browser substrate; HTTP API `:7070` (`HELMSTACK_URL`) |
 | `com.sebastian.telegram-bot` | `node runner/telegram_bot.js` | admin commands incl. `/dr` deep research |
 | `ai.openclaw.x-hunter` | openclaw gateway | **legacy** — run.sh:195 says "openclaw gateway removed"; agent now runs via `runner/lib/gemini_agent.js` directly. Plist still loaded; candidate for disabling. |
@@ -67,7 +67,15 @@ Two behaviours changed with the removal:
   only in `state/posts_archive/*.jsonl`, which nothing reads. Rows archive with
   empty values (the writer already handles `|| ""`). `COLLECT_ENRICH_CLAUDE=1`
   opts back in and pays for it; `COLLECT_ENRICH=0` disables the phase entirely.
-- **`lib/outbound_gates.js factCheck()` is now uniformly fail-OPEN.** The
+- **`intelligence/generate_conflict_claims.js` is skipped while a research agenda
+  is active** (`runner/lib/daily.js:98`). It rebuilt its Iran/US/Israel table
+  daily with one Claude call per claim — ~1,300–2,100 calls/day, ~85–90% of all
+  inference, invisible under the untagged `llm` bucket. `INTEL_CONFLICT_CLAIMS=1`
+  forces it on; labels are now cached by claim text
+  (`state/conflict_claims_label_cache.json`) so a rerun only pays for new claims.
+- **Untagged `llm` calls are tagged `llm:<calling file>`** (`runner/llm.js`
+  `callerTag()`), so the next hidden bulk caller shows up in the cost ledger.
+- **`runner/lib/outbound_gates.js factCheck()` is now uniformly fail-OPEN.** The
   fail-CLOSED branch existed because under local routing the checker and the
   writer were the same weak model. With Claude the checker is stronger than the
   writer, so a checker failure is an outage, not an inability to judge.
@@ -83,7 +91,7 @@ into local generation, and nothing on the Claude path called them.
 
 
 Composition, gating, and fact-checking stay on Claude. In particular the
-fact-check gate (`lib/outbound_gates.js`) must not run locally: it fails *open*,
+fact-check gate (`runner/lib/outbound_gates.js`) must not run locally: it fails *open*,
 so a weak checker does not block bad output, it waves it through.
 
 Cold start is ~75-110s on this M4/16GB, then ~0.2-1.4s warm; `isAvailable()` warms
@@ -126,6 +134,14 @@ curiosity → search_curiosity → cluster_axes → rss_collect → comment_cand
 discourse_scan → discourse_digest → external_source_discovery →
 external_source_profile → source_selector → reading_queue → deep_dive_detector →
 prefetch → source-label classification. (Old "14-step" count is stale.)
+Periodic steps are gated by `dueEvery()` (`runner/lib/pre_browse.js:124`; curiosity
++ search_curiosity + cluster_axes every `CURIOSITY_EVERY`=12 cycles at :178,
+deep_dive_detector every 6 at :221), persisted in `state/pre_browse_cadence.json`.
+The old `cycle % 12/6 === 0` gates never fired (those cycles are always TWEET) —
+dead 2026-07-05 → 2026-09-15. `source_selector.js:357` gates on `cycle % 3 === 1`
+for the same reason. Reading queue (`runner/reading_queue.js:176`): emits
+people's links → agenda entries → rest; machine entries (`source`+`queued_at`)
+go stale after 12h (:134).
 
 **Browse**: `single_pass_browse.js` (one Claude `composeJSON` call); writes
 `browse_notes.md` + `ontology_delta.json`. Social pipeline (LinkedIn+X activity via
@@ -147,13 +163,17 @@ formula): score = recency-weighted mean, half-life 100 entries
 **Axis creation** (AGENTS.md:45-53): tension ≥6× in 24h, ≥4 distinct accounts,
 ≥2 topic clusters, two definable poles, no semantic duplicate.
 
-**Curiosity** (`runner/curiosity.js:50`): confidence ceiling 0.82.
+**Curiosity** (`runner/curiosity.js:50`): confidence ceiling 0.82. With a research
+agenda active, the agenda driver (:691) replaces contradiction/uncertainty/trending
+and off-agenda discourse/hint/sprint drivers are skipped.
 
 **Scraper collect** (`scraper/collect.js`): sanitize → RAKE → dedup (Jaccard 0.65,
 `scraper/analytics.js:136`) → TF-IDF novelty → LLM enrichment (post.gemini_meta
 field name is legacy; enrichment runs on Claude via `_llmGenerate`) →
 burst detection → SQLite insert + inline embedding → permanent local posts archive (`state/posts_archive/YYYY-MM.jsonl`; replaced BigQuery in the GCP exit, 2026-07).
-Follows (`scraper/follows.js:18,45`): max 3/run, 10/day, 1 min between.
+Follows (`scraper/follows.js:18,45`): max 3/run, 10/day, 1 min between. Under the
+research agenda: affinity = agenda vocabulary; zero-affinity candidates dropped
+(:344); approved seed list queued first (`populateSeedQueue`, :185).
 
 ## 4. Outbound pipeline
 
@@ -193,7 +213,7 @@ Follows (`scraper/follows.js:18,45`): max 3/run, 10/day, 1 min between.
   `runner/linkedin_engage.js`), because each score is a Claude CLI subprocess.
   Fanning all ~25 feed candidates out with `Promise.all` timed every call out and
   scored everything 0 — LinkedIn liked/commented nothing 2026-07-06 → 2026-08-10.
-  Scorer timeout 90s (`linkedin_engage.js`, `lib/content_relevance.js`); regression
+  Scorer timeout 90s (`linkedin_engage.js`, `runner/lib/content_relevance.js`); regression
   test in `runner/tests/run_tests.js` → "LinkedIn engagement wiring".
 - **LinkedIn**: plan-first posting (`runner/lib/linkedin_plan.js` — shape assigned by
   A/B controller `linkedin_performance.pickShape`, planner fits material, overrides
@@ -211,6 +231,47 @@ Follows (`scraper/follows.js:18,45`): max 3/run, 10/day, 1 min between.
   cold, Connect for warm), `fb` follow parallel.
 
 ## 5. Research / stances / predictions / costs
+
+- **Research agenda** `runner/lib/research_agenda.js` (docs/RESEARCH_AGENDA.md):
+  operator-set focus, `RESEARCH_AGENDA` env (default `better_ai`, `off` disables,
+  :317). `better_ai` = **final outputs are well-founded solutions** for more useful,
+  reliable, safe AI; `mode: "full_pivot"` (:47): off-agenda RSS paused except
+  `keep_feeds` (:288, `scraper/rss_collect.js:85`), browse evidence restricted to
+  agenda axes (`single_pass_browse.js:109`), vocation pinned
+  (`evaluate_vocation.js:226`), ponder agenda override (`ponder.js:133`), seeded
+  axes never reaped (`apply_ontology_delta.js:718`), self-study dossier (:432).
+  Each track has foundation + solution questions, ordered by `orderedQuestions`
+  (:393). Follow seed list `runner/data/better_ai_follow_seed.json` (:285) is inert
+  until `"approved": true`. One-time migration: `runner/agenda_bootstrap.js [--apply]`.
+- **Public data export** `runner/export_public_data.js` (docs/PUBLIC_DATA.md): versioned
+  static JSON under `web/public/data/` — `index.json` (catalog), `schema.json`,
+  `agenda.json`, `axes/{index,<id>}.json`, `solutions/{index,<id>}.json`,
+  `predictions/index.json`; links `reports/index.json` (owned by publish_report.js).
+  SCHEMA_VERSION 1.0.0. Renames the two misleading fields at the boundary:
+  `score` → `observed_pole_balance`, `confidence` → `evidence_breadth`, each carrying its
+  semantics inline, plus axis `status` agenda|legacy so pre-pivot axes cannot read as
+  current positions. Caps evidence at 20 entries/axis (ontology.json is never exposed).
+  Runs daily (`runner/lib/daily.js` reports block) and at the end of `agenda_bootstrap.js`.
+- **Persona retirement (2026-09-16)**: with an agenda active the pre-pivot persona is
+  gone from the live path — `research_agenda.voice` replaces it in
+  `lib/prompts/{tweet,quote,thread}.js`, `voice_filter.js` (`PERSONA`) and
+  `sebastian_respond.buildPersona`; `voice_filter` takes the conviction tier from
+  grounding (`convictionFromGrounding`) because seeded axes at confidence 0 pinned
+  every draft to "lightly"/160 chars; `prompts/context.js`, `runner/lib/convictions.js`,
+  `runner/lib/sebastian_respond.js` and `runner/lib/content_relevance.js` read agenda axes/vocabulary
+  only; `runner/lib/stances.js activeStances()` drops off-agenda stances. `agenda_bootstrap.js`
+  archives the pre-pivot working context to `state/pre_pivot/<ts>/`, retires open
+  stances, archives open claims and stages `profile.json.pending_bio` (X bio is a
+  manual step — `update_bio.js` is CDP-dead).
+- **Solution briefs** `runner/solution_brief.js` — the agenda's final product:
+  deepResearch foundation → draft (problem → cited evidence → prior approaches →
+  mechanism → falsifiable test → risks) → independent red-team → revise (≤3
+  rounds) → mechanical gate (:159: every source actually retrieved, ≥3 evidence
+  / ≥2 read, metric + threshold + falsifier, no fatal and ≤2 major open objections, confidence ≤80%)
+  → report page + `state/solutions.jsonl` + `[SOLUTION]` browse note. Draft/review
+  run on `CLAUDE_SOLUTION_MODEL` (default opus). Invoked by `plan_research.js:113`
+  for solution-kind questions. Report URLs verify as sprint artifacts
+  (`sprint/verify_artifact.js:123`).
 
 - **Deep research** `runner/deep_research.js`: TRIAGE (proceed/reformulate/bail) →
   PLAN → EXECUTE (tools: recall, posts, xsearch, search, fetch, rugcheck, trending)

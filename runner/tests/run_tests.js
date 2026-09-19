@@ -599,6 +599,248 @@ section("Daily stance video: locked voice");
   else fail("character sheet", "buildVideoPrompt dropped CHARACTER_DIRECTIVE");
 }
 
+// ── Research agenda + periodic-step gating ────────────────────────────────────
+// Guards the research agenda (runner/lib/research_agenda.js — "better_ai":
+// well-founded solutions as the final output), the solution-brief gate, and the
+// cycle-gating bug it uncovered: curiosity (`cycle % 12`), deep-dive detection
+// (`% 6`) and source selection (`% 3 === 0`) only ran on BROWSE cycles, yet every
+// such cycle number is a TWEET/QUOTE cycle — so all three silently never fired.
+section("Research agenda + periodic gating");
+{
+  const ra = require(path.join(RUNNER, "lib/research_agenda.js"));
+  const prevEnv = process.env.RESEARCH_AGENDA;
+  try {
+    delete process.env.RESEARCH_AGENDA;
+    const agenda = ra.getAgenda();
+    if (agenda && agenda.id === "better_ai") pass("better_ai agenda loads by default");
+    else fail("agenda load", "getAgenda() did not return better_ai");
+
+    process.env.RESEARCH_AGENDA = "off";
+    if (ra.getAgenda() === null && ra.isOnAgenda("anything at all")) pass("RESEARCH_AGENDA=off disables the agenda (everything on-agenda)");
+    else fail("agenda off", "RESEARCH_AGENDA=off still returns an agenda");
+    process.env.RESEARCH_AGENDA = "better_ai";
+
+    // Political phrasings that share words with AI-safety vocabulary must not match.
+    const offTopic = ["Senate oversight hearing on flood control", "PH alignment with the US on the WPS", "deceptive narratives from the palace", "scheming senators"];
+    const leaks = offTopic.filter((t) => ra.isOnAgenda(t, agenda));
+    if (!leaks.length) pass("political text with overlapping words stays off-agenda");
+    else fail("agenda false positives", `matched: ${leaks.join(" | ")}`);
+
+    const offTerms = agenda.tracks.flatMap((t) => t.search_terms).filter((s) => !ra.isOnAgenda(s, agenda));
+    if (!offTerms.length) pass("every agenda search term is itself on-agenda (reading queue keeps its results)");
+    else fail("agenda search terms", `off-agenda: ${offTerms.join(", ")}`);
+
+    if (agenda.axes.every((a) => ra.isAgendaAxis(a, agenda) && a.left_pole && a.right_pole && agenda.tracks.some((t) => t.id === a.track)))
+      pass("seeded axes are well-formed and tied to a track");
+    else fail("seeded axes", "an axis is missing poles, a track, or agenda membership");
+
+    const qs = ra.agendaQuestions(agenda).map((q) => q.question);
+    if (qs.length >= 8 && new Set(qs).size === qs.length) pass(`${qs.length} unique seeded research questions`);
+    else fail("agenda questions", "fewer than 8 or duplicated");
+
+    // Solutions are the final output: every track has them, and each track's
+    // first solution is ordered after its first foundation.
+    const ordered = ra.orderedQuestions(agenda);
+    const orderOk = ordered.length === qs.length && agenda.tracks.every((t) =>
+      (t.solutions || []).length && (t.foundations || []).length &&
+      ordered.indexOf(t.solutions[0]) > ordered.indexOf(t.foundations[0]));
+    if (orderOk) pass("every track has solutions, each ordered after its foundation");
+    else fail("question order", "a track lacks solutions or a solution precedes its foundation");
+
+    const seed = JSON.parse(fs.readFileSync(path.join(ROOT, agenda.follow_seed), "utf-8"));
+    if (seed.approved === false) pass("follow seed list ships unapproved (operator must opt in)");
+    else fail("follow seed", "follow seed list must ship with approved: false");
+  } catch (e) {
+    fail("research agenda", e.message);
+  } finally {
+    if (prevEnv === undefined) delete process.env.RESEARCH_AGENDA; else process.env.RESEARCH_AGENDA = prevEnv;
+  }
+
+  // Solution-brief gate: grounding is mechanical, not model-judged.
+  try {
+    const { gate, groundingPool } = require(path.join(RUNNER, "solution_brief.js"));
+    const pool = groundingPool({
+      findings: [
+        { tool: "fetch", input: "https://arxiv.org/abs/1", result: "..." },
+        { tool: "fetch", input: "https://www.example.org/paper/", result: "..." },
+        { tool: "search", input: "q", result: "see https://seen.example.com/x for more" },
+      ],
+      report: "",
+    });
+    const good = () => ({
+      evidence: [
+        { claim: "a", source: "https://arxiv.org/abs/1" },
+        { claim: "b", source: "http://example.org/paper" },
+        { claim: "c", source: "https://seen.example.com/x" },
+        { claim: "d", source: "https://invented.example.net/fake" },
+      ],
+      proposal: { mechanism: "Deployers route every agent action above a risk threshold through a second-model monitor and log disagreements for weekly human audit." },
+      test: { metric: "caught incidents", success_threshold: ">50% caught", falsified_if: "<10% caught" },
+      expected_outcome: { confidence_pct: 95 },
+    });
+    const b1 = good();
+    const g1 = gate(b1, { verdict: "sound", objections: [] }, pool);
+    if (g1.ok && g1.dropped.includes("https://invented.example.net/fake") && b1.evidence.length === 3 && b1.expected_outcome.confidence_pct === 80)
+      pass("solution gate drops unretrieved sources and caps confidence at 80%");
+    else fail("solution gate (grounded)", JSON.stringify({ ok: g1.ok, failures: g1.failures, dropped: g1.dropped, conf: b1.expected_outcome.confidence_pct }));
+    const b2 = good(); b2.test = { metric: "x" };
+    const g2 = gate(b2, { verdict: "revise", objections: [{ objection: "circular", severity: "fatal" }] }, pool);
+    if (!g2.ok && g2.failures.some((f) => /falsifier/.test(f)) && g2.failures.some((f) => /fatal/.test(f)))
+      pass("solution gate withholds briefs with no falsifier or an unresolved fatal objection");
+    else fail("solution gate (withhold)", JSON.stringify(g2.failures));
+    const majors = Array.from({ length: 3 }, (_, i) => ({ objection: `m${i}`, severity: "major" }));
+    const g3 = gate(good(), { verdict: "revise", objections: majors }, pool);
+    if (!g3.ok && g3.failures.some((f) => /major/.test(f))) pass("solution gate withholds briefs with >2 unresolved major objections");
+    else fail("solution gate (majors)", JSON.stringify(g3.failures));
+  } catch (e) { fail("solution gate", e.message); }
+
+  // Report pages (solution briefs) count as verified sprint artifacts.
+  try {
+    const { verifyArtifact } = require(path.join(RUNNER, "sprint", "verify_artifact.js"));
+    const dir = path.join(ROOT, "web", "public", "data", "reports");
+    const one = fs.existsSync(dir) && fs.readdirSync(dir).find((f) => f.endsWith(".json") && f !== "index.json");
+    if (!one) skip("report-URL artifact", "no published reports in this checkout");
+    else if (verifyArtifact(`https://sebastianhunter.fun/report/${one.replace(/\.json$/, "")}`).ok &&
+             !verifyArtifact("https://sebastianhunter.fun/report/does-not-exist-000").ok)
+      pass("sprint verification accepts published report pages, rejects missing ones");
+    else fail("report-URL artifact", "verifyArtifact mis-handles sebastianhunter.fun/report URLs");
+  } catch (e) { fail("report-URL artifact", e.message); }
+
+  // The pivot must retire the OLD persona everywhere the writing layer reads:
+  // vocation, the voice block, the axes shown, convictions, the reply persona,
+  // the relevance rubric and the stances he argues from.
+  try {
+    const loadContext = require(path.join(RUNNER, "lib/prompts/context.js"));
+    const common = { cycle: 6, dayNumber: 200, today: "2026-09-16", now: "12:00", hour: "12" };
+    // The voice block names the retired persona in order to forbid it — strip it before scanning.
+    const strip = (p) => String(p).replace(/── VOICE \(research agenda[\s\S]*?(?=\n\n)/g, "");
+    const LEGACY = [/watchdog/i, /TAGALOG RULE/, /disinformation/i, /Guardian of Democratic/i,
+                    /narrative construction/i, /Filipino politics/i, /\bOFW\b/];
+    // Two separate questions. (1) Does the PROMPT SCAFFOLDING still carry the old
+    // persona? That is a code property — hold state constant with a stub vocation
+    // and stub axes so the check does not depend on whether the pivot has been
+    // applied to this checkout.
+    const stub = (ctx) => ({ ...ctx, vocation: "Vocation: (stub)", currentAxes: "(stub)", topAxes: "(stub)" });
+    const prompts = {
+      tweet: require(path.join(RUNNER, "lib/prompts/tweet.js"))(stub(loadContext({ type: "tweet", ...common }))),
+      quote: require(path.join(RUNNER, "lib/prompts/quote.js"))(stub(loadContext({ type: "quote", ...common }))),
+      thread: require(path.join(RUNNER, "lib/prompts/thread.js"))(stub(loadContext({ type: "tweet", ...common }))),
+    };
+    const leaks = Object.entries(prompts).flatMap(([k, p]) => LEGACY.filter((re) => re.test(strip(p))).map((re) => `${k}:${re}`));
+    if (!leaks.length) pass("prompt scaffolding carries no pre-pivot persona (watchdog / PH-politics / Tagalog default)");
+    else fail("persona leak", leaks.join(", "));
+
+    // (2) Does the live STATE still feed the old identity in? Only meaningful once
+    // agenda_bootstrap.js has run on this checkout.
+    const voc = JSON.parse(fs.readFileSync(path.join(STATE, "vocation.json"), "utf-8"));
+    if (!voc.pinned_by) {
+      skip("state persona", "vocation not agenda-pinned here — run runner/agenda_bootstrap.js --apply");
+    } else {
+      const live = Object.entries({
+        tweet: require(path.join(RUNNER, "lib/prompts/tweet.js"))(loadContext({ type: "tweet", ...common })),
+        quote: require(path.join(RUNNER, "lib/prompts/quote.js"))(loadContext({ type: "quote", ...common })),
+      }).flatMap(([k, p]) => LEGACY.filter((re) => re.test(strip(p))).map((re) => `${k}:${re}`));
+      if (!live.length) pass("live state feeds no pre-pivot identity into the prompts");
+      else fail("state persona leak", live.join(", "));
+    }
+
+    const voiced = Object.values(prompts).every((p) => /VOICE \(research agenda/.test(p));
+    if (voiced) pass("tweet/quote/thread prompts all carry the agenda voice block");
+    else fail("voice block", "a prompt is missing the agenda voice block");
+
+    const { buildPersona } = require(path.join(RUNNER, "lib/sebastian_respond.js"));
+    if (/VOICE \(research agenda/.test(buildPersona("reply"))) pass("X reply persona is the agenda voice");
+    else fail("reply persona", "buildPersona('reply') has no agenda voice");
+
+    const kw = require(path.join(RUNNER, "lib/content_relevance.js")).loadAxisKeywords();
+    if (kw.includes("interpretability") && !kw.includes("propaganda")) pass("engagement relevance uses agenda vocabulary, not pre-pivot axes");
+    else fail("relevance vocabulary", `unexpected keywords: ${kw.slice(0, 8).join(", ")}`);
+  } catch (e) { fail("persona retirement", e.message); }
+
+  // Conviction tier must not collapse to "lightly" just because the agenda axes
+  // are newly seeded — a cited, red-teamed brief has to be able to speak.
+  try {
+    const vf = require(path.join(RUNNER, "voice_filter.js"));
+    const onto = JSON.parse(fs.readFileSync(path.join(STATE, "ontology.json"), "utf-8")).axes || [];
+    const plain = "Labs keep publishing safety frameworks and quietly loosening them.";
+    const cited = "What would make lab safety commitments verifiable: https://sebastianhunter.fun/report/x-123";
+    const tier = (t) => {
+      const axisConv = vf.computeConviction(vf.findRelevantAxes(t, onto));
+      return (axisConv.meanConf < 0.25 ? vf.convictionFromGrounding(t) : axisConv).tier;
+    };
+    if (tier(plain) !== "lightly" && tier(cited) === "strongly") pass(`conviction comes from grounding under the agenda (plain=${tier(plain)}, cited=${tier(cited)})`);
+    else fail("conviction tier", `plain=${tier(plain)}, cited=${tier(cited)} — zero-confidence agenda axes pinned the voice`);
+    if (/VOICE \(research agenda/.test(vf.PERSONA)) pass("voice_filter persona is the agenda voice, not the pre-pivot persona");
+    else fail("voice_filter persona", "PERSONA is still the legacy persona");
+  } catch (e) { fail("conviction tier", e.message); }
+
+  // Pre-pivot stances must not be argued as current positions.
+  try {
+    const stances = require(path.join(RUNNER, "lib/stances.js"));
+    const raw = JSON.parse(fs.readFileSync(path.join(STATE, "stances.json"), "utf-8")).stances || [];
+    const openOffAgenda = raw.filter((x) => x.status === "open")
+      .filter((x) => !require(path.join(RUNNER, "lib/research_agenda.js")).isOnAgenda(`${x.event || ""} ${x.question || ""}`));
+    if (!stances.activeStances().some((x) => openOffAgenda.includes(x))) pass("off-agenda stances are excluded from active stances");
+    else fail("stances", "a pre-pivot stance is still argued as a current position");
+  } catch (e) { fail("stances filter", e.message); }
+
+  // Public data export: the external interface contract (stable ids, links,
+  // honest field names, no full evidence dump).
+  try {
+    const os = require("os");
+    const { exportAll, SCHEMA_VERSION } = require(path.join(RUNNER, "export_public_data.js"));
+    const out = fs.mkdtempSync(path.join(os.tmpdir(), "pubdata-"));
+    exportAll(out);
+    const catalog = JSON.parse(fs.readFileSync(path.join(out, "index.json"), "utf-8"));
+    const axesIx = JSON.parse(fs.readFileSync(path.join(out, "axes", "index.json"), "utf-8"));
+    const first = axesIx.items[0];
+    const axis = JSON.parse(fs.readFileSync(path.join(out, "axes", `${first.id}.json`), "utf-8"));
+
+    if (catalog.schema_version === SCHEMA_VERSION && catalog.collections.length >= 4 && fs.existsSync(path.join(out, "schema.json")))
+      pass("public export writes a versioned catalog + schema");
+    else fail("public export catalog", "missing schema_version, collections or schema.json");
+
+    // The internal names are the ones that mislead — they must not appear.
+    if (axis.observed_pole_balance !== undefined && axis.evidence_breadth !== undefined &&
+        axis.score === undefined && axis.confidence === undefined)
+      pass("exported axes use honest field names (observed_pole_balance / evidence_breadth)");
+    else fail("public export naming", `axis still exposes score/confidence: ${Object.keys(axis).join(", ")}`);
+
+    if (/COMPOSITION OF WHAT WAS READ/.test(axis.semantics.observed_pole_balance) && axis.status_meaning)
+      pass("every exported axis carries its semantics and status meaning");
+    else fail("public export semantics", "axis is missing the semantics caveat");
+
+    if (axis.recent_evidence.length <= 20 && axis.links.self.startsWith("http"))
+      pass("axis files are addressable and bounded (recent evidence only, not the full log)");
+    else fail("public export axis", `unbounded evidence (${axis.recent_evidence.length}) or missing self link`);
+
+    const solIx = JSON.parse(fs.readFileSync(path.join(out, "solutions", "index.json"), "utf-8"));
+    if (typeof solIx.count === "number" && solIx.status_meaning && /withheld/.test(solIx.status_meaning))
+      pass("solutions index publishes withheld briefs as part of the record");
+    else fail("public export solutions", "solutions index missing count or status meaning");
+    fs.rmSync(out, { recursive: true, force: true });
+  } catch (e) { fail("public data export", e.message); }
+
+  // dueEvery must fire on BROWSE cycles at roughly the requested cadence.
+  const os = require("os");
+  const { dueEvery } = require(path.join(RUNNER, "lib/pre_browse.js"));
+  const cfg = require(path.join(RUNNER, "lib/config.js"));
+  const tmp = path.join(os.tmpdir(), `pre_browse_cadence_test_${process.pid}.json`);
+  try {
+    const isBrowse = (c) => c % cfg.TWEET_EVERY !== 0 && c % cfg.TWEET_EVERY !== cfg.QUOTE_OFFSET;
+    let fires = 0;
+    for (let c = 6000; c < 6240; c++) if (isBrowse(c) && dueEvery("curiosity", c, cfg.CURIOSITY_EVERY, tmp)) fires++;
+    const expected = 240 / cfg.CURIOSITY_EVERY;
+    if (fires >= expected - 1 && fires <= expected + 1) pass(`dueEvery fires ${fires}x over 240 cycles (every ${cfg.CURIOSITY_EVERY})`);
+    else fail("dueEvery cadence", `fired ${fires}x, expected ~${expected}`);
+    if (isBrowse(6301) && isBrowse(6304) && [...Array(300).keys()].every((c) => c % 3 !== 1 || isBrowse(c)))
+      pass("source_selector gate (cycle % 3 === 1) always lands on a BROWSE cycle");
+    else fail("source_selector gate", "cycle % 3 === 1 hits a TWEET/QUOTE cycle");
+  } finally {
+    try { fs.unlinkSync(tmp); } catch {}
+  }
+}
+
 // ── LinkedIn engagement wiring ────────────────────────────────────────────────
 // Regression guard for a bug that silently killed LinkedIn engagement for a
 // month: engage() ranked candidates with `score: score(p)` and no `await`, so

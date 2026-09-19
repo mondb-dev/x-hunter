@@ -78,6 +78,21 @@ const FEEDS = [
   { url: "https://www.amnesty.org/en/feed/", name: "Amnesty International", tier: 1, axis_hint: "human_rights_accountability" },
 ];
 
+// ── Research agenda (runner/lib/research_agenda.js) ──────────────────────────
+// The agenda's feeds are added and flagged `agenda`. Under a full_pivot agenda
+// the default registry is paused except agenda.keep_feeds, so the digest and
+// reading queue carry the agenda instead of week-one news topics.
+function activeFeeds() {
+  let agenda = null;
+  try { agenda = require("../runner/lib/research_agenda").getAgenda(); } catch { /* no agenda */ }
+  if (!agenda) return FEEDS;
+  const base = agenda.mode === "full_pivot"
+    ? FEEDS.filter(f => (agenda.keep_feeds || []).includes(f.name))
+    : FEEDS;
+  const known = new Set(base.map(f => f.url));
+  return [...base, ...agenda.feeds.filter(f => !known.has(f.url)).map(f => ({ ...f, agenda: true }))];
+}
+
 // ── Helpers ───────────────────────────────────────────────────────────────────
 
 function loadJson(p, fallback = {}) {
@@ -118,9 +133,12 @@ function stripHtml(str) {
 function fetchUrl(url, timeoutMs = FETCH_TIMEOUT) {
   return new Promise((resolve, reject) => {
     const protocol = url.startsWith("https") ? https : http;
-    const timer = setTimeout(() => reject(new Error("timeout")), timeoutMs);
+    // Destroy the socket on timeout — a merely-rejected request keeps the
+    // connection (and so the process) alive until the runner's 2-min kill.
+    let req;
+    const timer = setTimeout(() => { reject(new Error("timeout")); if (req) req.destroy(); }, timeoutMs);
 
-    const req = protocol.get(url, {
+    req = protocol.get(url, {
       headers: {
         "User-Agent": "Mozilla/5.0 (compatible; SebastianHunter/1.0; +https://sebastianhunter.fun)",
         "Accept": "application/rss+xml, application/atom+xml, application/xml, text/xml",
@@ -224,8 +242,9 @@ async function main() {
 
   let totalNew   = 0;
   const toQueue  = [];   // top items to add to reading_queue
+  const feeds    = activeFeeds();
 
-  for (const feed of FEEDS) {
+  for (const feed of feeds) {
     // Rate-limit: skip if fetched recently
     const lastFetched = state[feed.url]?.last_fetched;
     if (secondsSince(lastFetched) < FETCH_COOLDOWN) {
@@ -234,7 +253,7 @@ async function main() {
 
     let xml;
     try {
-      xml = await fetchUrl(feed.url);
+      xml = await fetchUrl(feed.url, feed.timeout || FETCH_TIMEOUT);
     } catch (err) {
       console.log(`[rss_collect] ${feed.name}: fetch failed — ${err.message}`);
       continue;
@@ -275,7 +294,7 @@ async function main() {
 
     // Queue top item from tier 1 sources for browse cycle
     if (feed.tier === 1 && batch[0]) {
-      toQueue.push({ url: batch[0].url, title: batch[0].title, feed: feed.name, axis_hint: feed.axis_hint });
+      toQueue.push({ url: batch[0].url, title: batch[0].title, feed: feed.name, axis_hint: feed.axis_hint, agenda: !!feed.agenda });
     }
 
     state[feed.url] = { last_fetched: now, items_found: items.length, new_items: batch.length };
@@ -283,7 +302,8 @@ async function main() {
     console.log(`[rss_collect] ${feed.name}: ${batch.length} new items appended to digest`);
   }
 
-  // Queue top items to reading_queue (max MAX_QUEUE_URLS, tier 1 sources first)
+  // Queue top items to reading_queue (max MAX_QUEUE_URLS, agenda feeds first)
+  toQueue.sort((a, b) => Number(b.agenda) - Number(a.agenda));
   const queueItems = toQueue.slice(0, MAX_QUEUE_URLS);
   for (const item of queueItems) {
     appendLine(QUEUE_FILE, JSON.stringify({
@@ -292,6 +312,7 @@ async function main() {
       feed: item.feed,
       title: item.title,
       axis_hint: item.axis_hint,
+      ...(item.agenda ? { agenda: true } : {}),
       queued_at: now,
     }));
     console.log(`[rss_collect] queued for browse: ${item.feed} — ${item.url}`);
@@ -300,10 +321,10 @@ async function main() {
   saveJson(SEEN_FILE, seen);
   saveJson(STATE_FILE, state);
 
-  console.log(`[rss_collect] done — ${totalNew} new items across ${FEEDS.length} feeds, ${queueItems.length} queued`);
+  console.log(`[rss_collect] done — ${totalNew} new items across ${feeds.length} feeds, ${queueItems.length} queued`);
 }
 
-main().catch(err => {
+main().then(() => process.exit(0)).catch(err => {
   console.error(`[rss_collect] fatal: ${err.message}`);
   process.exit(0); // non-fatal
 });

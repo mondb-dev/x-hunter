@@ -713,7 +713,11 @@ const REAP_HOURS = 48;
 const GRAVEYARD = path.join(ROOT, "state", "axes_graveyard.json");
 const nowMs = Date.now();
 const reaped = [];
+// Research-agenda seeded axes (runner/agenda_bootstrap.js) are exempt: they are
+// planted before evidence exists, on purpose.
+const protectedAxes = new Set(require("./lib/research_agenda").agendaAxisIds());
 onto.axes = onto.axes.filter(a => {
+  if (protectedAxes.has(a.id) || a.seeded_by) return true;
   const age = nowMs - new Date(a.created_at || now).getTime();
   const ageHours = age / (1000 * 60 * 60);
   if (ageHours >= REAP_HOURS && (a.evidence_log || []).length === 0) {

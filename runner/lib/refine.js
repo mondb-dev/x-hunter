@@ -94,7 +94,7 @@ function textOf(draft) {
 // REJECT is reserved for structural failure: incoherence or two-unrelated-ideas.
 function buildCritiquePrompt({ text, surface, goal, grounding, minSpecificity }) {
   return (
-`You are a strict internal editor for Sebastian Hunter, who maps narrative construction in public discourse. His voice is direct, specific, evidence-first — never vague, never two unrelated ideas jammed together.
+`You are a strict internal editor for ${(() => { try { const a = require('./research_agenda').getAgenda(); return a ? `Sebastian Hunter, an AI agent researching ${a.label.toLowerCase()}` : 'Sebastian Hunter, who maps narrative construction in public discourse'; } catch { return 'Sebastian Hunter'; } })()}. His voice is direct, specific, evidence-first — never vague, never two unrelated ideas jammed together.
 
 Evaluate this ${surface} draft. Be honest; most drafts have a real flaw.
 
@@ -106,7 +106,7 @@ ${goal ? `\nWHAT IT SHOULD DO: ${goal}\n` : ""}${grounding ? `\nWHAT SEBASTIAN A
 Score each 0-5:
 - coherence: Does it hold together as ONE thought? A draft that welds two unrelated topics with "yet"/"and"/"but" (e.g. a religion claim next to an unrelated food joke) scores 0-1.
 - one_topic: A single subject/argument, not a grab-bag? 0-1 if it lists unrelated items.
-- specificity: Names a concrete account, claim, statistic, or event? Generic musings about "institutions"/"narratives" score 0-1.
+- specificity: Names a concrete account, paper, lab, model, result, statistic, or event? Generic musings about "institutions", "narratives", "AI risk" or "the industry" score 0-1.
 - falsifiability: Could a thoughtful person disagree? Platitudes score 0-1.
 
 Verdict rules:

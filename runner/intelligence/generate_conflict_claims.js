@@ -18,6 +18,11 @@
  *
  * Fixes from v1:
  *   - MAX_LLM_CALLS = 2000 (was 30 — caused 43% misc)
+ *   - 2026-09-16: LLM labels cached by claim text (state/conflict_claims_label_cache.json).
+ *     The table is rebuilt daily, so without the cache every run re-labelled the
+ *     same claims — ~1,300-2,100 claude calls/day, ~85-90% of all inference.
+ *     Only NEW claims cost a call now. (Skipped entirely while a research agenda
+ *     is active — see runner/lib/daily.js.)
  *   - Clears tables before writing (idempotent re-runs)
  *   - Embedding-based grouping (not Jaccard) → catches more contradictions
  *
@@ -36,6 +41,8 @@ try { llm = require('../llm'); } catch { llm = null; }
 
 const TOPIC_ID = 'iran-us-israel';
 const MAX_LLM_CALLS = 2000;
+const LABEL_CACHE_PATH = path.join(config.STATE_DIR, 'conflict_claims_label_cache.json');
+const labelKey = (text) => crypto.createHash('sha1').update(String(text)).digest('hex').slice(0, 16);
 
 const STOPWORDS = new Set([
   'a','an','the','and','or','but','in','on','at','to','for','of','with','by',
@@ -309,25 +316,41 @@ async function main() {
 
   // ── Step 3: Categorize ────────────────────────────────────────────────────
   let llmCallsUsed = 0;
+  let cacheHits = 0;
+  let labelCache = {};
+  try { labelCache = JSON.parse(fs.readFileSync(LABEL_CACHE_PATH, 'utf8')); } catch {}
+  const liveKeys = new Set();
   for (const c of allClaims) {
+    const key = labelKey(c.text);
+    liveKeys.add(key);
+    const cached = labelCache[key] || {};
+    const next = {}; // only model-produced (or previously cached) labels are cached
     const keywordCat = matchCategories(TOPIC_ID, c.text);
     if (keywordCat !== 'misc') {
       c.category = keywordCat;
+    } else if (cached.category) {
+      c.category = next.category = cached.category; cacheHits++;
     } else if (llmCallsUsed < MAX_LLM_CALLS) {
-      c.category = await llmCategorize(c.text);
+      c.category = next.category = await llmCategorize(c.text);
       llmCallsUsed++;
     } else {
       c.category = 'misc';
     }
 
     // Assign axis if not already known
-    if (!c.axis_id && llmCallsUsed < MAX_LLM_CALLS) {
-      c.axis_id = await llmAssignAxis(c.text);
+    if (!c.axis_id && 'axis_id' in cached) {
+      c.axis_id = next.axis_id = cached.axis_id; cacheHits++;
+    } else if (!c.axis_id && llmCallsUsed < MAX_LLM_CALLS) {
+      c.axis_id = next.axis_id = await llmAssignAxis(c.text);
       llmCallsUsed++;
     }
+    if (Object.keys(next).length) labelCache[key] = next;
   }
+  // Keep only labels for claims still in play so the cache can't grow forever.
+  for (const k of Object.keys(labelCache)) if (!liveKeys.has(k)) delete labelCache[k];
+  try { fs.writeFileSync(LABEL_CACHE_PATH, JSON.stringify(labelCache)); } catch {}
 
-  log(`Categorized (${llmCallsUsed} LLM calls used)`);
+  log(`Categorized (${llmCallsUsed} LLM calls used, ${cacheHits} cached labels reused)`);
 
   // ── Step 4: Enrich from sources table ────────────────────────────────────
   const sourceCache = new Map();

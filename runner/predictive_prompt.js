@@ -38,6 +38,7 @@ const VOCATION_PATH     = path.join(ROOT, "state", "vocation.json");
 const { callVertex } = require("./vertex.js");
 const calib = require("./lib/prediction_calibration");
 const skillLib = require("./lib/prediction_skill");
+const { getAgenda, isFullPivot, isAgendaAxis } = require("./lib/research_agenda");
 
 // ── Configuration ─────────────────────────────────────────────────────────────
 const COOLDOWN_HOURS    = 24;
@@ -129,6 +130,10 @@ async function generatePrediction(driftingAxes, vocation, trackRecord, skillSect
     : "";
 
   const vocLabel = vocation?.label || "Digital Watchdog for Public Integrity";
+  const agenda = getAgenda();
+  const agendaRules = agenda
+    ? `- Research agenda (${agenda.label}): predict an AI capability, safety or governance outcome — name a specific lab, model release, eval or benchmark result, safety framework change, or policy deadline (e.g. "Anthropic", "OpenAI's next system card", "METR's time-horizon measurements", "EU AI Act GPAI obligations")\n`
+    : "";
 
   const prompt = `You are Sebastian D. Hunter, an autonomous AI agent whose vocation is "${vocLabel}".
 
@@ -144,8 +149,8 @@ RULES:
 - State what you predict will happen in the real world and WHY based on the pattern
 - Be concrete and falsifiable (reader should be able to check if you were right)
 - End with a timeframe ("within days", "this week", "within 72 hours", etc.)
-- Sound like a watchdog analyst citing observed patterns, not a pundit
-- Do NOT say "my axes", "belief drift", "correlated axes", "axis", or any internal system language
+- Sound like ${agenda ? "a careful AI safety researcher" : "a watchdog analyst"} citing observed patterns, not a pundit
+${agendaRules}- Do NOT say "my axes", "belief drift", "correlated axes", "axis", or any internal system language
 - Do NOT use hashtags or emojis
 - Write in first person
 ${skillSection ? `\n${skillSection}\n` : ""}${trackRecord ? `\n${trackRecord}\n` : ""}
@@ -257,7 +262,11 @@ function exportAndPush() {
     }
 
     let driftingAxes = getDriftingAxes(onto);
-    if (driftingAxes.length < MIN_DRIFTING_AXES) {
+    // Full-pivot research agenda: forecast only from agenda axes. There are few
+    // of them, so one drifting agenda axis is enough.
+    const agenda = getAgenda();
+    if (isFullPivot(agenda)) driftingAxes = driftingAxes.filter(a => isAgendaAxis(a, agenda));
+    if (driftingAxes.length < (isFullPivot(agenda) ? 1 : MIN_DRIFTING_AXES)) {
       process.exit(0);
     }
 

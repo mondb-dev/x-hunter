@@ -15,6 +15,10 @@
  *   6. Process pending items (up to 3/run): navigate x.com/username → Follow → log
  *   7. Persist queue + trust_graph
  *
+ * Research agenda (runner/lib/research_agenda.js): affinity is scored against the
+ * agenda vocabulary; under full_pivot only on-agenda accounts are followed; an
+ * operator-approved seed list (agenda.follow_seed, "approved": true) is queued first.
+ *
  * Rate limits: max 3 follows/run, 10/day cap, 1 min between follows
  *
  * Usage: node scraper/follows.js
@@ -32,6 +36,13 @@ const fs   = require("fs");
 const path = require("path");
 const db   = require("./db");
 const { callVertex } = require("../runner/vertex.js");
+const { getAgenda, isFullPivot, agendaMatchCount } = require("../runner/lib/research_agenda");
+
+// Operator research agenda: topic affinity is scored against the agenda's
+// vocabulary instead of ontology axis labels (which reflect the old feed); under
+// full_pivot, accounts with zero agenda affinity are never followed; and an
+// operator-approved seed list is queued ahead of feed-derived candidates.
+const AGENDA = getAgenda();
 
 // ── Paths ─────────────────────────────────────────────────────────────────────
 const ROOT          = path.resolve(__dirname, "..");
@@ -102,6 +113,14 @@ function countTodayFollows(queue) {
 function computeFollowScore(account, ontologyAxes) {
   // topic_affinity
   const accountKws = (account.top_keywords || "").split(", ").filter(Boolean);
+  if (AGENDA) {
+    const hits = agendaMatchCount(accountKws.join(" | "), AGENDA);
+    account.agenda_affinity = hits;
+    const affinity = Math.min(10, hits * 2.5);
+    const ageH = Math.max(0, (Date.now() - (account.last_seen || 0)) / 3_600_000);
+    return (account.avg_velocity || 0) * 0.35 + (account.avg_score || 0) * 0.30 +
+      affinity * 0.25 + 10 * Math.exp(-ageH / 48) * 0.10;
+  }
   const axisWords  = new Set(
     (ontologyAxes || []).flatMap(ax =>
       (ax.label || "").toLowerCase().split(/\W+/).filter(w => w.length > 3)
@@ -156,6 +175,34 @@ function populateQueue(queue, candidates) {
   }
 
   return { added: toAdd.length, queue };
+}
+
+/**
+ * Queue the operator-approved agenda seed list (research_agenda.follow_seed).
+ * No-op unless the file says "approved": true. Seeds outrank feed candidates
+ * (follow_score 100) but still obey MAX_PER_RUN / MAX_PER_DAY.
+ */
+function populateSeedQueue(queue, trustGraph) {
+  if (!AGENDA || !AGENDA.follow_seed) return 0;
+  const seed = loadJson(path.join(ROOT, AGENDA.follow_seed), null);
+  if (!seed || seed.approved !== true) return 0;
+  const existing = new Set(queue.map(i => String(i.username).toLowerCase()));
+  const now = new Date().toISOString();
+  let added = 0;
+  for (const a of seed.accounts || []) {
+    const handle = String(a.handle || "").replace(/^@/, "");
+    if (!handle || a.verify === true) continue;
+    const key = handle.toLowerCase();
+    if (existing.has(key) || trustGraph.accounts?.[key]?.followed) continue;
+    queue.push({
+      username: handle, follow_score: 100, top_keywords: a.why || "", avg_score: 0, post_count: 0,
+      source: "agenda_seed", camp: a.camp || null,
+      queued_at: now, status: "pending", followed_at: null, skip_reason: null,
+    });
+    existing.add(key);
+    added++;
+  }
+  return added;
 }
 
 // ── HelmStack: follow a user ──────────────────────────────────────────────────
@@ -293,11 +340,15 @@ function logFollow(trustGraph, username, item, classification) {
   // Filter accounts already in trust_graph as followed, compute follow_score
   const candidates = rawCandidates
     .filter(a => !trustGraph.accounts?.[a.username.toLowerCase()]?.followed)
-    .map(a => ({ ...a, follow_score: computeFollowScore(a, ontology.axes) }))
+    .map(a => { const s = computeFollowScore(a, ontology.axes); return { ...a, follow_score: s }; })
+    .filter(a => !isFullPivot(AGENDA) || a.agenda_affinity > 0)
     .sort((a, b) => b.follow_score - a.follow_score);
 
-  // 3. Populate queue with new top candidates
-  const { added } = populateQueue(queue, candidates);
+  // 3. Populate queue: approved agenda seeds first, then top feed candidates
+  const seeded = populateSeedQueue(queue, trustGraph);
+  if (seeded) console.log(`[follows] queued ${seeded} approved agenda seed account(s)`);
+  const { added: feedAdded } = populateQueue(queue, candidates);
+  const added = seeded + feedAdded;
   if (added > 0) {
     writeQueue(queue);
     queue = readQueue();
@@ -305,7 +356,9 @@ function logFollow(trustGraph, username, item, classification) {
   console.log(`[follows] added ${added} new candidate(s). pending: ${queue.filter(i => i.status === "pending").length}`);
 
   // 4. Get pending items sorted by follow_score DESC (best first)
+  // Under full_pivot, off-agenda items queued before the pivot are left pending.
   const pending = queue.filter(i => i.status === "pending")
+    .filter(i => !isFullPivot(AGENDA) || i.source === "agenda_seed" || agendaMatchCount(i.top_keywords || "", AGENDA) > 0)
     .sort((a, b) => b.follow_score - a.follow_score);
 
   if (pending.length === 0) {

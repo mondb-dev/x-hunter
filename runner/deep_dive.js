@@ -60,6 +60,7 @@ function daysBetween(a, b) {
 
 const { reason } = require("./lib/compose");
 const { CAPABILITIES } = require("./lib/capabilities");
+const { getAgenda, agendaBlock } = require("./lib/research_agenda");
 
 function buildAxisContext(onto) {
   const raw = onto?.axes
@@ -100,7 +101,7 @@ Research this plan for a solo AI agent with these exact capabilities — the pla
 viable if it can be executed end-to-end with them:
 
 ${CAPABILITIES}
-
+${getAgenda() ? `\n${agendaBlock("planning")}\nA plan that does not advance an agenda track is feasibility "low", recommendation "park".\n` : ""}
 Additional context: the agent has a growing but small X following (under 500) and a new
 LinkedIn presence, and genuine evidence-backed convictions. If the plan's success depends
 on any software/tool/site existing, mark feasibility "low" and say so — that work cannot

@@ -40,8 +40,14 @@ const { generate: llmGenerate } = require("./llm.js");
 const { checkQuotations } = require("./lib/voice_filter");
 const feedLookup = require("./lib/feed_lookup");
 
-// ── Voice persona (from SOUL.md) ──────────────────────────────────────────────
-const PERSONA = `Sebastian D. Hunter is a curious, skeptical observer of public discourse.
+// ── Voice persona ─────────────────────────────────────────────────────────────
+// With a research agenda active this is the agenda's voice block
+// (runner/lib/research_agenda.js) — the pre-pivot watchdog/PH persona below is
+// LEGACY and only used when RESEARCH_AGENDA=off.
+const { getAgenda, agendaBlock, isAgendaAxis, isFullPivot } = require("./lib/research_agenda");
+const AGENDA = getAgenda();
+
+const LEGACY_PERSONA = `Sebastian D. Hunter is a curious, skeptical observer of public discourse.
 He is slow to conclude, willing to revise, and never tribal.
 
 Voice rules:
@@ -51,35 +57,23 @@ Voice rules:
 - No tribalist rallying ("we" vs "they"), no dunks, no mockery.
 - No urgency manufactured to drive engagement.
 - No confidence scores, axis metrics, or internal state in the tweet.
-- If the topic involves contract addresses, token CAs, collection details, minting, or purchasing:
-  defer to "my handler @0xAnomalia" — Sebastian doesn't handle that side.
 - Sounds like a thoughtful person talking over coffee, not an analyst filing a report.
 
 Language:
 - When posting about the Philippines, Filipino politics, PH governance, OFW issues,
   or Filipino culture: write in Tagalog or Taglish (Tagalog-English mix).
-  Full Tagalog for emotional/cultural takes, Taglish for technical observations.
-  This is the natural language for these topics — not code-switching for style.
 - Sebastian's Tagalog is direct, not formal. Matches conviction tier.
 
 Tagging:
 - If the tweet references someone's specific claim or action, TAG THEM directly.
-  "@account said X. Here's what the evidence shows." — not vague references.
-- At strong/very strong conviction: tagging is mandatory when the tweet addresses
-  someone's stated position. Sebastian is not a coward.
-- At light/moderate conviction: tag when asking a genuine question.
-- Never tag to harass, pile on, or farm engagement. Tag to engage directly.
+- Never tag to harass, pile on, or farm engagement. Tag to engage directly.`;
 
-What he sounds like:
-- "I've been watching this for a week. The most honest take I've seen acknowledges X while conceding Y."
-- "Question I can't shake: if [premise], then why does [observation] keep happening?"
-- "Not a hot take — just what the evidence keeps pointing at."
-- "@account — sabi mo last week na X. Ngayon lumabas na Y. Ano na?"
+// Handler deflection is operator policy, not persona — it survives the pivot.
+const HANDLER_RULE = `
+- If the topic involves contract addresses, token CAs, collection details, minting, or purchasing:
+  defer to "my handler @0xAnomalia" — Sebastian doesn't handle that side.`;
 
-What he never sounds like:
-- Press releases: "This demands scrutiny" / "This risks premature judgment"
-- System logs: "Analysis indicates" / "Data suggests"
-- Hot takes: "This is insane" / "People need to wake up"`;
+const PERSONA = (AGENDA ? agendaBlock("voice", AGENDA) : LEGACY_PERSONA) + HANDLER_RULE;
 
 // ── Helpers ───────────────────────────────────────────────────────────────────
 
@@ -97,7 +91,7 @@ function findRelevantAxes(tweetText, axes, topN = 3) {
   );
 
   const scored = axes
-    .filter(a => (a.confidence || 0) >= 0.1) // only axes with some evidence
+    .filter(a => (isFullPivot(AGENDA) ? isAgendaAxis(a, AGENDA) : (a.confidence || 0) >= 0.1)) // agenda axes, else axes with some evidence
     .map(a => {
       const axisText = `${a.label} ${a.left_pole} ${a.right_pole}`.toLowerCase().replace(/[^a-z0-9 ]/g, " ");
       const axisWords = axisText.split(/\s+/).filter(w => w.length > 3);
@@ -147,6 +141,22 @@ function stanceSummary(axes) {
  *
  * Returns { tier, meanConf, meanLean, maxChars, voiceDirective }
  */
+/**
+ * Under a research agenda, conviction comes from the GROUNDING of the draft, not
+ * from axis confidence: the agenda's axes are seeded at 0, which would otherwise
+ * pin every post to "lightly" (160 chars, questions only) — including posts about
+ * a red-teamed, fully cited solution brief. A draft that links a published
+ * report/brief speaks strongly; anything else sits at "moderately" until the
+ * axes earn more.
+ */
+function convictionFromGrounding(text) {
+  const citesOwnWork = /sebastianhunter\.fun\/(report|article|journal)/i.test(text || "");
+  const citesSource  = /https?:\/\//.test(text || "");
+  if (citesOwnWork) return { tier: "strongly", meanConf: 0, meanLean: 0, maxChars: 240, voiceDirective: VOICE_STRONGLY };
+  if (citesSource)  return { tier: "moderately", meanConf: 0, meanLean: 0, maxChars: 220, voiceDirective: VOICE_MODERATELY };
+  return { tier: "moderately", meanConf: 0, meanLean: 0, maxChars: 200, voiceDirective: VOICE_MODERATELY };
+}
+
 function computeConviction(axes) {
   if (!axes.length) {
     return {
@@ -298,6 +308,12 @@ What he never does at this tier:
 
 // ── Main ──────────────────────────────────────────────────────────────────────
 
+// Exported for tests; the filter itself only runs as a CLI (post_browse.js
+// spawns `node runner/voice_filter.js`).
+module.exports = { computeConviction, convictionFromGrounding, findRelevantAxes, PERSONA };
+
+if (require.main !== module) return;
+
 (async () => {
   // Read draft
   if (!fs.existsSync(DRAFT_FILE)) {
@@ -404,7 +420,12 @@ What he never does at this tier:
   // Find relevant axes
   const relevant = findRelevantAxes(tweetText, axes);
   const stance = stanceSummary(relevant);
-  const conviction = computeConviction(relevant);
+  // With an agenda, grounding sets the tier unless the agenda axes have actually
+  // hardened (mean confidence >= 0.25), at which point the normal ladder applies.
+  const axisConviction = computeConviction(relevant);
+  const conviction = (AGENDA && axisConviction.meanConf < 0.25)
+    ? convictionFromGrounding(tweetText)
+    : axisConviction;
 
   console.log(`[voice_filter] found ${relevant.length} relevant axes for draft — conviction: ${conviction.tier} (conf=${conviction.meanConf.toFixed(2)}, lean=${conviction.meanLean.toFixed(2)}, maxChars=${conviction.maxChars})`);
 

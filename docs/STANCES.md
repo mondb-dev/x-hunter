@@ -9,12 +9,20 @@ position**, not a binary side.
 
 Invoked daily from the orchestrator, detached (searches + `reason()` calls run
 ~1–3 min). Non-fatal; gate `STANCE_SCAN_ENABLED != 0`. Two passes over the
-stance registry (`lib/stances`):
+stance registry (`runner/lib/stances`):
+
+**Research agenda:** `activeStances()` returns only stances that are on-agenda
+under a full pivot, so positions taken on a previous beat (an impeachment trial,
+a football vote) are never argued as current — in the convictions block, the
+quote prompt, articles or video. `agenda_bootstrap.js` additionally marks them
+`retired` in `state/stances.json`: retired ≠ resolved, so they are never scored
+as right or wrong. The stance scout also requires principled candidates to be
+AI events while an agenda is active.
 
 1. **RESOLVE** — for up to 2 open stances (oldest `last_checked` first), web
    search the event's outcome and adjudicate: resolved (with `was_right` where
    scoreable) or still open. Resolution feeds the belief ontology via
-   `lib/stances` → `ontology_delta.json` — being right/wrong is evidence.
+   `runner/lib/stances` → `ontology_delta.json` — being right/wrong is evidence.
 2. **FORM** — from the feed digest + current convictions, propose 0–2 NEW
    stances. **Principled** stances must ground in real ontology axes
    (validated by `addStance`); **taste** stances (sports/culture) are capped
@@ -61,7 +69,7 @@ subject; the series falls through to its axis fallbacks rather than going dark.
 
 An open stance holds its line until the event resolves — new evidence does not
 silently move it, which is the point (you can be scored on it, and can't quietly
-walk it back). But immutability is brittle, so `reviseStance` (`lib/stances`) is
+walk it back). But immutability is brittle, so `reviseStance` (`runner/lib/stances`) is
 the honest escape hatch, deliberately **costly**:
 
 - Requires a `reason`; capped at `MAX_REVISIONS` (2) per stance — past that,

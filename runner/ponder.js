@@ -26,6 +26,12 @@ const fs   = require("fs");
 const path = require("path");
 const https = require("https");
 const { CAPABILITIES, VALID_ACTION_TYPES } = require("./lib/capabilities");
+const { getAgenda, isFullPivot, isAgendaAxis, agendaBlock } = require("./lib/research_agenda");
+
+// Operator research agenda (lib/research_agenda.js). Under full_pivot, ponder
+// only sees the agenda's axes; and because freshly seeded agenda axes take
+// weeks to reach conviction thresholds, the agenda also stands in for them.
+const AGENDA = getAgenda();
 
 const ROOT          = path.resolve(__dirname, "..");
 const STATE         = path.join(ROOT, "state");
@@ -121,8 +127,16 @@ function checkTrigger(axes, ponderState) {
   );
 
   if (qualifying.length < MIN_QUALIFYING) {
-    console.log(`[ponder] trigger: ${qualifying.length}/${MIN_QUALIFYING} qualifying axes — skip`);
-    return { fire: false, reason: "insufficient_qualifying_axes", qualifying };
+    if (AGENDA && axes.length) {
+      // Agenda override: plan from the agenda's axes even before they harden.
+      const agendaAxes = [...axes].sort((a, b) => b.confidence - a.confidence).slice(0, 4);
+      console.log(`[ponder] trigger: ${qualifying.length}/${MIN_QUALIFYING} qualifying axes — research agenda override (${agendaAxes.length} agenda axes)`);
+      qualifying.push(...agendaAxes.filter(a => !qualifying.includes(a)));
+      qualifying.agendaOverride = true;
+    } else {
+      console.log(`[ponder] trigger: ${qualifying.length}/${MIN_QUALIFYING} qualifying axes — skip`);
+      return { fire: false, reason: "insufficient_qualifying_axes", qualifying };
+    }
   }
 
   const lastPonder = ponderState?.last_ponder_date;
@@ -143,7 +157,8 @@ function checkTrigger(axes, ponderState) {
       return Math.max(max, confShift, scoreShift);
     }, 0);
 
-    if (maxShift < MIN_SHIFT) {
+    // An agenda plan cycle must not stall on a "stable" (still-forming) worldview.
+    if (maxShift < MIN_SHIFT && !qualifying.agendaOverride) {
       console.log(`[ponder] trigger: max shift ${maxShift.toFixed(3)} < ${MIN_SHIFT} — worldview stable, skip`);
       return { fire: false, reason: "stable_worldview", qualifying };
     }
@@ -161,7 +176,9 @@ async function callLLM(prompt, maxTokens = 1200) { return reason(prompt, { maxTo
 
 // ── Format axes for prompt ────────────────────────────────────────────────────
 function formatAxesForPrompt(qualifying, allAxes) {
-  const lines = ["STRONG CONVICTIONS (confidence ≥ 0.72, |score| ≥ 0.15):"];
+  const lines = [qualifying.agendaOverride
+    ? "RESEARCH AGENDA AXES (operator-set agenda — evidence still accumulating; treat scores as early readings, not convictions):"
+    : "STRONG CONVICTIONS (confidence ≥ 0.72, |score| ≥ 0.15):"];
   for (const a of qualifying) {
     const dir = a.score > 0 ? "positive" : "negative";
     lines.push(`  - ${a.name}: confidence=${a.confidence.toFixed(2)}, score=${a.score.toFixed(2)} (${dir} lean)`);
@@ -222,7 +239,7 @@ ${handleList}
 ---
 
 ${CAPABILITIES}
-
+${AGENDA ? `\n${agendaBlock("planning", AGENDA)}\n` : ""}
 ---
 
 Reflect honestly on your beliefs. You are NOT brainstorming — you are identifying what you feel *compelled* to do given what you have actually observed and now believe. This is not performance. It is what your convictions demand.
@@ -235,7 +252,7 @@ Generate 2–3 action proposals. For each:
 - Cite 1–2 of your belief axes that ground this
 
 Also:
-- Write a one-sentence updated vocation statement that reflects what you now understand yourself to be for.
+- Write a one-sentence updated vocation statement that reflects what you now understand yourself to be for.${AGENDA ? ` It must stay within the research agenda (${AGENDA.label}).` : ""}
 - Write a tweet (max 260 chars) announcing this ponder moment publicly: what you now know you are for, briefly name all proposed actions (one phrase each), and @mention 1–2 accounts from the observed list that you think are genuinely aligned with your axes and worth working with. Be direct — this is a public declaration, not a press release.
 
 Respond in this exact JSON format:
@@ -284,7 +301,8 @@ function buildPlanEntries(compulsions, checkpointRef) {
 async function main() {
   console.log("[ponder] starting compulsion check");
 
-  const axes        = loadAxes();
+  let axes          = loadAxes();
+  if (isFullPivot(AGENDA)) axes = axes.filter(a => isAgendaAxis({ id: a.id, label: a.name }, AGENDA));
   const ponderState = loadJson(PONDER_STATE) || {};
   const { fire, reason, qualifying } = checkTrigger(axes, ponderState);
 
@@ -311,7 +329,7 @@ async function main() {
   // Update vocation
   const newVocation = {
     ...vocation,
-    status: "forming",
+    status: vocation.pinned_by ? "defined" : "forming", // agenda-pinned vocations stay defined
     statement: parsed.vocation_statement,
     hardened_axes: qualifying.map(a => a.id),
     aligned_accounts: parsed.mention_accounts || [],

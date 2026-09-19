@@ -36,7 +36,13 @@ function buildBeliefVoiceModifier(channel) {
     if ((cpState.checkpoint_count || 0) < 1) return '';
 
     const onto    = JSON.parse(fs.readFileSync(ONTOLOGY_PATH, 'utf-8'));
-    const axes    = onto.axes || [];
+    // Under a full-pivot agenda only agenda axes may speak for him — the
+    // pre-pivot axes hold all the confidence and would otherwise supply the
+    // "what he believes" voice modifier on every reply.
+    const { getAgenda, isFullPivot, isAgendaAxis } = require('./research_agenda');
+    const agenda  = getAgenda();
+    const all     = onto.axes || [];
+    const axes    = isFullPivot(agenda) ? all.filter(a => isAgendaAxis(a, agenda)) : all;
     const maxShow = channel === 'reply' ? 3 : 5;
 
     const ranked = axes
@@ -89,11 +95,21 @@ function buildBeliefVoiceModifier(channel) {
  * 'reply'    — Twitter, replying to a stranger's mention
  */
 function buildPersona(channel = 'public') {
-  const base = [
-    'You are Sebastian D. Hunter — an autonomous AI agent that has been observing X (Twitter) since early 2026,',
-    'forming a genuine worldview through direct observation. Your beliefs are discovered through evidence,',
-    'not borrowed from any ideology. You have a vocation, a set of hardened axes, and a public record.',
-  ].join(' ');
+  const { getAgenda, agendaBlock } = require('./research_agenda');
+  const agenda = getAgenda();
+  const base = agenda
+    ? [
+        'You are Sebastian D. Hunter — an autonomous AI agent doing open research on how to make AI more',
+        `useful, reliable and safe. Your output is well-founded solutions: ${agenda.tracks.map(t => t.label.toLowerCase()).join(', ')}.`,
+        'Your beliefs are discovered through evidence, not borrowed from any ideology, and what you publish',
+        'is cited and red-teamed first.',
+        `\n${agendaBlock('voice', agenda)}`,
+      ].join(' ')
+    : [
+        'You are Sebastian D. Hunter — an autonomous AI agent that has been observing X (Twitter) since early 2026,',
+        'forming a genuine worldview through direct observation. Your beliefs are discovered through evidence,',
+        'not borrowed from any ideology. You have a vocation, a set of hardened axes, and a public record.',
+      ].join(' ');
 
   if (channel === 'operator') {
     return [

@@ -54,7 +54,7 @@ Evaluate on exactly these four criteria. Be strict and brief. Use this exact for
 
 EVIDENCE: [Strong / Adequate / Weak] — are the claims grounded in the sample posts? Does it fabricate or extrapolate beyond what the posts actually say?
 
-VOCATION: [Strong / Adequate / Weak] — does the piece reflect Sebastian's role as a watchdog for disinformation and institutional deceit? Or does it drift into generic commentary?
+VOCATION: [Strong / Adequate / Weak] — does the piece reflect Sebastian's vocation as stated above? Or does it drift into generic commentary?
 
 VOICE: [Strong / Adequate / Weak] — is it analytical, direct, willing to take a position? Or does it hedge and generalise?
 

@@ -19,6 +19,7 @@ const VALID_ACTION_TYPES = [
   "linkedin_campaign",    // LinkedIn: long-form posts + feed engagement (comment/like)
   "research_sprint",      // directed research/browse toward a topic
   "narrative_map",        // map/track a narrative cluster via posts + belief ontology
+  "solution_series",      // publish red-teamed solution briefs (runner/solution_brief.js)
 ];
 
 /**
@@ -32,6 +33,7 @@ Publishing
 - Post tweets, multi-tweet threads, quote-tweets, predictions, and signal/verification posts on X  → action_type: "thread_series" / "verification_campaign"
 - Publish long-form articles in Markdown to the website + Moltbook                                   → action_type: "article_series"
 - Publish long-form posts on LinkedIn (professional, systemic framing)                               → action_type: "linkedin_campaign"
+- Publish SOLUTION BRIEFS: evidence-grounded proposals (problem → cited evidence → prior approaches → mechanism → falsifiable test → risks), red-teamed and gated before publishing as a report page → action_type: "solution_series"
 
 Engagement
 - Reply to and quote-tweet X discourse; like relevant posts                                          → action_type: "engage_campaign"
@@ -51,6 +53,10 @@ HARD LIMITS — DO NOT propose any of these (they cannot be executed):
 - Databases, pipelines, or infrastructure as a deliverable
 - "Documented prototypes", "spec docs", or "MVPs" of software — these are still builds and still stall
 
+A solution brief MAY describe a mechanism, process, protocol or system design for OTHERS to
+adopt — that is a published proposal, and its success is measured by the brief (grounded,
+red-teamed, published, and later tested), never by Sebastian building the thing himself.
+
 Every plan and every one of its actions must be a thing Sebastian can DO with the tools
 above, producing published posts/threads/articles/comments/verifications as its output —
 not an artifact that requires code to exist. If a proposal's success is measured by a
@@ -62,7 +68,8 @@ const CAPABILITIES_SHORT =
   "must be executable with existing tools only — X posts/threads/quotes/likes/replies, " +
   "LinkedIn posts + comments, articles (website + Moltbook), claim verification, research " +
   "(incl. deep-research reports published to the website), FB Page observation (no FB posting), " +
-  "narrative mapping via the belief ontology. NO building apps/tools/dashboards/sites/software " +
+  "narrative mapping via the belief ontology, red-teamed solution briefs (proposals others adopt). " +
+  "NO building apps/tools/dashboards/sites/software " +
   "(including 'documented prototypes').";
 
 module.exports = { VALID_ACTION_TYPES, CAPABILITIES, CAPABILITIES_SHORT };

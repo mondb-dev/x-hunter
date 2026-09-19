@@ -32,6 +32,12 @@ const STATE = path.join(ROOT, "state");
 const { reason } = require("../lib/compose");
 const { loadSprintDb } = require("../lib/db_backend");
 const { CAPABILITIES } = require("../lib/capabilities");
+const { getAgenda, agendaBlock } = require("../lib/research_agenda");
+
+// Operator research agenda block (empty when RESEARCH_AGENDA=off).
+function agendaSection() {
+  return getAgenda() ? `\n${agendaBlock("planning")}\n` : "";
+}
 const { isTemplate } = require("./verify_artifact");
 const sprintDb         = loadSprintDb();
 
@@ -269,7 +275,7 @@ ${recentDigest || "(empty)"}
 ${sprintObservations}
 
 ${CAPABILITIES}
-
+${agendaSection()}
 ## TASK
 Create a detailed 4-week sprint plan. For each week, define:
 1. A clear weekly goal (what "done" looks like)
@@ -383,7 +389,7 @@ ${recentDigest || "(empty)"}
 ${sprintObservations}
 
 ${CAPABILITIES}
-
+${agendaSection()}
 ## TASK
 Plan Week ${nextWeek}. Learn from what worked and what didn't.
 Adjust course if needed — the plan serves your compulsion, not the other way around.

@@ -119,6 +119,35 @@ flowchart LR
 
 ---
 
+## Research agenda → solutions → public interface (2026-09)
+
+```
+ operator agenda (runner/lib/research_agenda.js)
+   │  feeds · source pages · follows · curiosity · browse lens · planning · vocation · voice
+   ▼
+ BROWSE cycles ──▶ evidence on agenda axes ──┐
+                                             │
+ plan_research.js (1 question/day)           │
+   ├─ foundation question ─▶ deep_research ─▶ report page
+   └─ solution question  ─▶ solution_brief.js
+                              draft ─▶ red-team ─▶ revise (≤3 reviews)
+                                       │
+                              mechanical gate: sources retrieved · falsifiable
+                              test · no fatal / ≤2 major objections · conf ≤80%
+                                       │
+                          ┌────────────┴────────────┐
+                    passed │                        │ failed
+                           ▼                        ▼
+                  report page + [SOLUTION]    state/solutions.jsonl
+                  browse note → tweets        (withheld + gate_failures)
+                           │                        │
+                           └────────┬───────────────┘
+                                    ▼
+                    export_public_data.js (daily)
+                    → /data/{index,schema,agenda,axes,solutions,predictions}
+                      versioned · stable ids · honest field names
+```
+
 ## Flow Summary
 
 | Layer | What it does |

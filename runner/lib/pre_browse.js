@@ -6,7 +6,9 @@
  * Ported 1:1 from run.sh lines ~430-487 (inside the BROWSE elif block,
  * before the prompt construction + agent_run).
  *
- * Order and conditional gating match the bash original exactly.
+ * Order matches the bash original. Periodic steps (curiosity, deep-dive
+ * detection) are gated by dueEvery() rather than the original cycle-modulo
+ * checks, which never fired on BROWSE cycles (see dueEvery).
  * All scripts are invoked synchronously via execSync.
  */
 
@@ -109,6 +111,26 @@ function buildSprintBriefRecallQuery() {
   return query;
 }
 
+/**
+ * Cycle-due gate for periodic pre-browse steps. preBrowse only runs on BROWSE
+ * cycles, and every multiple of TWEET_EVERY (6) is a TWEET cycle — so the old
+ * `cycle % 12 === 0` / `cycle % 6 === 0` gates could never fire, which silently
+ * killed curiosity, search_curiosity, cluster_axes and deep_dive_detector from
+ * 2026-07-05 on. Instead: fire on the first BROWSE cycle at least `every` cycles
+ * after the last run (persisted in state/pre_browse_cadence.json).
+ */
+const CADENCE_PATH = path.join(config.STATE_DIR, 'pre_browse_cadence.json');
+
+function dueEvery(key, cycle, every, cadencePath = CADENCE_PATH) {
+  const state = readJson(cadencePath) || {};
+  const last = Number.isFinite(state[key]) ? state[key] : null;
+  // Cycle counter went backwards (reset) or never ran → due now.
+  if (last !== null && cycle >= last && cycle - last < every) return false;
+  state[key] = cycle;
+  try { fs.writeFileSync(cadencePath, JSON.stringify(state, null, 2)); } catch {}
+  return true;
+}
+
 /** Run a node script, logging to runner.log. Failures are swallowed (|| true). */
 function runScript(scriptPath, opts = {}) {
   const { env = {}, stdout = 'log', args = '' } = opts;
@@ -153,7 +175,7 @@ function preBrowse(cycle) {
   }
 
   // ── 4. curiosity.js (every CURIOSITY_EVERY cycles) ────────────────────
-  if (cycle % config.CURIOSITY_EVERY === 0) {
+  if (dueEvery('curiosity', cycle, config.CURIOSITY_EVERY)) {
     runScript(path.join(PROJECT_ROOT, 'runner/curiosity.js'), {
       env: { CURIOSITY_CYCLE: String(cycle), CURIOSITY_EVERY: String(config.CURIOSITY_EVERY) },
     });
@@ -196,7 +218,7 @@ function preBrowse(cycle) {
   });
 
   // ── 13. deep_dive_detector.js (every 6 cycles) ───────────────────────
-  if (cycle % 6 === 0) {
+  if (dueEvery('deep_dive_detector', cycle, 6)) {
     runScript(path.join(PROJECT_ROOT, 'runner/deep_dive_detector.js'), {
       env: { READING_CYCLE: String(cycle) },
     });
@@ -213,4 +235,5 @@ module.exports = {
   buildSprintBriefRecallQuery,
   loadTopicSummaryRecallQuery,
   parseSprintContext,
+  dueEvery,
 };
