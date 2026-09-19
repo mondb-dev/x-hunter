@@ -247,6 +247,17 @@ research agenda: affinity = agenda vocabulary; zero-affinity candidates dropped
   ungrounded axes. Follow seed list `runner/data/better_ai_follow_seed.json` (:381)
   is inert until `"approved": true`. One-time migration:
   `runner/agenda_bootstrap.js [--apply]`.
+- **Knowledge base** `runner/lib/knowledge_base.js`: `state/knowledge/findings.jsonl`
+  (append-only). `recordReport` (plan_research.js, every pass: key finding, confidence,
+  report URL, cited claims) and `recordBrief` (solution_brief.js `ledger()`, every
+  outcome incl. withheld). Retrieval is keyword scoring + recency (`search`, `recent`,
+  `stats`, `knowledgeBlock({purpose:"voice"|"planning"})`) — no embeddings, `embed()`
+  has returned null since 2026-07-30. **Substance/anchor split (2026-09-19):** axes are
+  research anchors (where to look, where evidence lands); the knowledge base is what he
+  says and plans from. Read by `prompts/context.js` `formatKnowledge` (tweet/quote/browse),
+  `lib/convictions.js` (replaces `I hold that <pole>` under an agenda),
+  `lib/sebastian_respond.js` (replies/web chat — `current_stance` no longer quoted), and
+  `agendaBlock("planning")` (ponder/deep_dive/decision/sprint planner).
 - **Agenda phase** `runner/lib/agenda_phase.js`: while foundation questions remain
   unanswered, `agenda.boot` (research_agenda.js:55) puts the runner in research mode —
   `research_per_day: 3` (orchestrator.js spawns plan_research every 8h instead of 24h),

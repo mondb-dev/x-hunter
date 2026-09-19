@@ -248,6 +248,16 @@ function toBlocks(brief, { track, review, foundations, confidence }) {
 
 function ledger(entry) {
   try { fs.appendFileSync(LEDGER, JSON.stringify(entry) + '\n'); } catch (e) { log(`ledger write failed: ${e.message}`); }
+  // Every outcome goes to the knowledge base too, withheld ones included: what
+  // failed the gate, and why, is exactly what should stop him re-proposing it.
+  try {
+    require('./lib/knowledge_base').recordBrief({
+      question: entry.question, track: entry.track, title: entry.title,
+      oneLine: entry.one_line, test: entry.test, status: entry.status || 'proposed',
+      url: entry.url || null,
+      reason: entry.reason || (entry.gate_failures || []).join('; ') || null,
+    });
+  } catch (e) { log(`knowledge record failed (non-fatal): ${e.message}`); }
 }
 
 function noteForTweetCycle(title, oneLine, url) {

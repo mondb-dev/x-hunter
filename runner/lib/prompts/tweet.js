@@ -24,8 +24,9 @@ module.exports = function buildTweetPrompt(ctx) {
     ctx.browseNotesFull + '\n' +
     '\u2500\u2500 MEMORY RECALL \u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\n' +
     ctx.memoryRecall + '\n' +
-    '\u2500\u2500 CURRENT BELIEF AXES (read before updating ontology) \u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\n' +
+    '\u2500\u2500 RESEARCH ANCHORS \u2014 where you file observations. Directions, NOT positions you hold \u2500\u2500\n' +
     ctx.currentAxes + '\n' +
+    (ctx.knowledge ? '\n' + ctx.knowledge + '\n' : '') +
     require('../stances').stancesPromptBlock() +
     '\u2500\u2500 SPRINT PLAN (ACTIVE \u2014 your in-progress tasks ARE your priority) \u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\n' +
     ctx.activePlanContext + '\n' +

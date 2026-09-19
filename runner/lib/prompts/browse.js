@@ -49,8 +49,9 @@ module.exports = function buildBrowsePrompt(ctx) {
     ctx.curiosityDirective + '\n' +
     '\u2500\u2500 COMMENT CANDIDATES \u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\n' +
     ctx.commentCandidates + '\n' +
-    '\u2500\u2500 CURRENT BELIEF AXES (read before updating ontology) \u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\n' +
+    '\u2500\u2500 RESEARCH ANCHORS \u2014 file observations against these; they are directions, not positions \u2500\u2500\n' +
     ctx.currentAxes + '\n' +
+    (ctx.knowledge ? '\n' + ctx.knowledge + '\n' : '') +
     (ctx.synthesisPending ? (
       '\u2500\u2500 SYNTHESIS PENDING (tension pairs with sufficient evidence on both sides) \u2500\u2500\u2500\u2500\u2500\n' +
       ctx.synthesisPending + '\n'

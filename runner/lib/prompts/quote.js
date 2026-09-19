@@ -12,8 +12,9 @@ module.exports = function buildQuotePrompt(ctx) {
     ' -- find one post worth quoting.\n' +
     '\n' +
     (agenda ? agendaBlock('voice', agenda) + '\n\n' : '') +
-    'Your strongest belief axes (what you actually think matters):\n' +
+    'Research anchors \u2014 the directions you are investigating (NOT positions you hold):\n' +
     ctx.topAxes + '\n' +
+    (ctx.knowledge ? '\n' + ctx.knowledge + '\n' : '') +
     '\n' +
     require('../stances').stancesPromptBlock() +
     'Already quoted source tweets (do NOT quote these again):\n' +

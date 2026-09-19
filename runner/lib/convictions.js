@@ -1,10 +1,15 @@
 /**
- * runner/lib/convictions.js — derive prose convictions from ontology + vocation.
+ * runner/lib/convictions.js — what Sebastian is prepared to say, and why.
  *
- * Converts numeric axes into "I hold that..." statements so the writing layer
- * never sees raw scores. Prose can't be sign-flipped the way a ternary can,
- * and forces the reader (a downstream LLM) to engage with the *substance* of
- * the position rather than a defend-this directive.
+ * Under a research agenda the substance comes from the KNOWLEDGE BASE — findings
+ * from his own research and briefs that survived the gate, each with a source —
+ * not from axis scores. An axis score is the balance of what he read; deriving
+ * "I strongly hold that X" from it was the system stating the feed's composition
+ * as a conviction (see the 2026-09 ontology assessment). Axes are research
+ * anchors now: they say where to look, not what to think.
+ *
+ * Without an agenda (RESEARCH_AGENDA=off) the original axis-derived behavior
+ * stands, so the emergent mode is unchanged.
  *
  * buildConvictions({ ontology, vocation, opts }) → string
  */
@@ -61,15 +66,45 @@ function buildConvictions({ ontology, vocation, maxAxes = 8, minConf = 0.45 } = 
     parts.push('');
   }
 
-  if (lines.length) {
+  // Under an agenda the knowledge base speaks first: findings he established
+  // himself, with sources, and the proposals that survived the red-team.
+  let knowledge = [];
+  if (agenda) {
+    try {
+      knowledge = require('./knowledge_base').recent(maxAxes);
+    } catch { /* no knowledge base yet */ }
+  }
+
+  if (agenda && knowledge.length) {
+    parts.push(`## What I have established (my own research — cite the source)`);
+    for (const k of knowledge) {
+      if (k.kind === 'brief' && k.status === 'proposed') {
+        parts.push(`- I have proposed: ${k.claim}${k.url ? ` (${k.url})` : ''} — a proposal, not a proven result.`);
+      } else if (k.kind === 'brief') {
+        parts.push(`- I withheld a proposal on "${(k.title || k.question || '').slice(0, 80)}" — ${String(k.reason || 'it did not survive the gate').slice(0, 120)}. I do not argue it as if it held.`);
+      } else {
+        parts.push(`- ${k.claim}${k.sources && k.sources.length ? ` [${k.sources[0]}]` : ''}`);
+      }
+    }
+    parts.push('');
+    parts.push(`I speak from these. Where the research has not reached, I say so instead of inferring a position.`);
+  } else if (agenda) {
+    // Nothing researched yet — the honest state, and the one to say out loud.
+    parts.push(`## What I have established`);
+    parts.push(`- Nothing yet. ${agenda.label} is the agenda; the research is under way and I argue from cited findings and published briefs, never from settled belief I have not earned.`);
+    parts.push(...agenda.tracks.map(t => `- Working on: ${t.label} — ${t.why}`));
+  } else if (lines.length) {
     parts.push(`## What I hold`);
     parts.push(...lines);
-  } else if (agenda) {
-    // Agenda axes have not hardened yet: say what he is working on rather than
-    // falling back to pre-pivot convictions.
-    parts.push(`## What I hold`);
-    parts.push(`- Positions on ${agenda.label.toLowerCase()} are still forming; I argue from cited evidence and published briefs, not from settled belief.`);
-    parts.push(...agenda.tracks.map(t => `- ${t.label}: ${t.why}`));
+  }
+
+  if (agenda) {
+    const anchors = axes.slice(0, 5).map(a => `- ${a.label}`).filter(Boolean);
+    if (anchors.length) {
+      parts.push('');
+      parts.push(`## Where I am looking (research anchors, not positions)`);
+      parts.push(...anchors);
+    }
   }
 
   // Committed stances (lib/stances): specific sides already taken on live

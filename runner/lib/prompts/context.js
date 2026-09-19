@@ -312,6 +312,21 @@ function formatVocation() {
   }
 }
 
+/**
+ * What he KNOWS — findings from his own research and the briefs that survived
+ * the gate, each with its source (lib/knowledge_base.js). This is the substance
+ * the writing layer speaks from; the axes above it are research anchors, not
+ * positions. Empty until research has produced something, which is the honest
+ * state to be in.
+ */
+function formatKnowledge(topic = '', purpose = 'voice', limit = 8) {
+  try {
+    return require('../knowledge_base').knowledgeBlock({ topic, purpose, limit });
+  } catch (e) {
+    return '';
+  }
+}
+
 function formatUnresolvedClaims() {
   try {
     const raw = fs.readFileSync(config.CLAIM_TRACKER_PATH, 'utf-8');
@@ -418,6 +433,7 @@ function loadContext(opts) {
     ctx.prefetchSource    = readState(config.PREFETCH_SOURCE_PATH, { fallback: '' }).trim();
     ctx.unresolvedClaims  = formatUnresolvedClaims();
     ctx.currentAxes       = formatCurrentAxes();
+    ctx.knowledge         = formatKnowledge('', 'voice', 6);
     ctx.vocation          = formatVocation();
     ctx.journalTask       = buildJournalTask('browse', today, hour, dayNumber);
     ctx.nextTweet         = (Math.floor(cycle / config.TWEET_EVERY) + 1) * config.TWEET_EVERY;
@@ -431,6 +447,7 @@ function loadContext(opts) {
     ctx.quotedSources     = formatQuotedSources();
     ctx.digest            = readState(config.FEED_DIGEST_PATH, { tail: 120, fallback: '(not available)' });
     ctx.topAxes           = formatTopAxes();
+    ctx.knowledge         = formatKnowledge('', 'voice', 8);
     ctx.lastToolResult    = loadLastToolResult();
   }
 
@@ -440,6 +457,7 @@ function loadContext(opts) {
     ctx.discourseDigest   = readState(config.DISCOURSE_DIGEST_PATH, { fallback: '(no discourse yet)' });
     ctx.activePlanContext = loadActivePlanContext();
     ctx.currentAxes       = formatCurrentAxes();
+    ctx.knowledge         = formatKnowledge('', 'voice', 8);
     ctx.vocation          = formatVocation();
     ctx.journalTask       = buildJournalTask('tweet', today, hour, dayNumber);
     ctx.toolManifest      = buildToolManifest();
@@ -453,6 +471,7 @@ function loadContext(opts) {
 module.exports = loadContext;
 module.exports.readState = readState;
 module.exports.formatCurrentAxes = formatCurrentAxes;
+module.exports.formatKnowledge = formatKnowledge;
 module.exports.formatTopAxes = formatTopAxes;
 module.exports.formatQuotedSources = formatQuotedSources;
 module.exports.loadActivePlanContext = loadActivePlanContext;

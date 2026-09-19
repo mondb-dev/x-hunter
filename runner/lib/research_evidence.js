@@ -186,7 +186,14 @@ async function fileResearchEvidence(res, meta = {}) {
   }
   const file = writeInbox(kept, meta);
   log(`filed ${kept.length} evidence entr${kept.length === 1 ? "y" : "ies"} (${kept.filter((k) => k.read).length} from pages actually read${dropped.length ? `, ${dropped.length} dropped` : ""}) → ${path.basename(file)}`);
-  return { filed: kept.length, dropped: dropped.length, file };
+  // The same validated claims are the substance the writing layer speaks from
+  // (lib/knowledge_base.js) — an axis says where to look, these say what he found.
+  return {
+    filed: kept.length,
+    dropped: dropped.length,
+    file,
+    claims: kept.map((k) => ({ claim: k.content, source: k.source })),
+  };
 }
 
 module.exports = { fileResearchEvidence, sourcePool, validate, INBOX };

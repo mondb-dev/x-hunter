@@ -688,6 +688,30 @@ section("Research agenda + periodic gating");
       pass("research evidence drops off-agenda axes, invented sources and bad poles");
     else fail("research evidence validation", `kept ${v.kept.length} (expected 1), dropped ${v.dropped.length} (expected 3)`);
 
+    // The substance must come from the knowledge base, not from axis scores.
+    // An axis score is the balance of what the feed carried; rendering it as
+    // "I strongly hold that X" was the system asserting its own reading list.
+    const kbase = require(path.join(RUNNER, "lib/knowledge_base.js"));
+    const st = kbase.stats();
+    if (typeof st.reports === "number" && typeof st.published_briefs === "number" && typeof st.withheld_briefs === "number")
+      pass(`knowledge base readable (${st.reports} research pass(es), ${st.briefs} brief(s))`);
+    else fail("knowledge base", "stats() shape wrong");
+
+    const { buildConvictions } = require(path.join(RUNNER, "lib/convictions.js"));
+    let ontoForConv = { axes: [] };
+    try { ontoForConv = JSON.parse(fs.readFileSync(config.ONTOLOGY_PATH, "utf-8")); } catch { /* none */ }
+    const conv = buildConvictions({ ontology: ontoForConv, vocation: { label: "x", intent: "y" }, maxAxes: 8 });
+    if (!/I (strongly|clearly|cautiously|tentatively) hold that/i.test(conv))
+      pass("convictions assert nothing from an axis score under the agenda");
+    else fail("convictions", "an axis score still renders as 'I hold that ...'");
+    if (/What I have established/.test(conv)) pass("convictions speak from the knowledge base");
+    else fail("convictions", "no knowledge-base section");
+
+    const core = require(path.join(RUNNER, "lib/sebastian_respond.js")).buildCoreContext({ maxAxes: 4, journalCount: 0 });
+    if (!/## Belief axes \(top/.test(core) && /What I have established/.test(core))
+      pass("reply/web context drops axis scores and current_stance for the knowledge base");
+    else fail("reply context", "still ships the belief-axes block with scores/current_stance");
+
     // The boot policy (research 3x/day, outbound held, feed engagement paused)
     // must stay inert until agenda_bootstrap.js --apply has installed the plan:
     // merging this code must not silence a system whose pivot was never applied.

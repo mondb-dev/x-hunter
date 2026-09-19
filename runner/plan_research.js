@@ -117,12 +117,24 @@ Each question standalone and specific (name actors, claims, mechanisms). Output 
     r = await researchAndDeliver(question, { source: 'plan', format, dossier });
     // The findings are evidence, not just a page: file them against the agenda
     // axes so a research day moves the ontology (lib/research_evidence.js).
+    let cited = [];
     try {
       const { fileResearchEvidence } = require('./lib/research_evidence');
-      await fileResearchEvidence(r, {
+      const filed = await fileResearchEvidence(r, {
         question, track: track ? track.id : null, url: r.url || null, writer: 'deep_research',
       });
+      cited = filed.claims || [];
     } catch (e) { log(`evidence filing failed (non-fatal): ${e.message}`); }
+    // What he now KNOWS — the substance the writing and planning layers read,
+    // instead of deriving positions from axis scores (lib/knowledge_base.js).
+    try {
+      require('./lib/knowledge_base').recordReport({
+        question, track: track ? track.id : null,
+        keyFinding: String(r.shortAnswer || '').trim(),
+        confidence: Number.isFinite(r.confidence) ? r.confidence : null,
+        url: r.url || null, claims: cited, gated: !!r.gated,
+      });
+    } catch (e) { log(`knowledge record failed (non-fatal): ${e.message}`); }
   }
 
   state.done.push(qHash(question));

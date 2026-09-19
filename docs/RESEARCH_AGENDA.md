@@ -170,6 +170,50 @@ pass, and each evidence entry carries `writer` (`deep_research`, `solution_brief
 absent for browse) into its `evidence_log` entry. Inbox files may not create axes — only
 the browse agent may.
 
+## Axes anchor; the knowledge base speaks
+
+Operator decision, 2026-09-19. The two roles were conflated and are now separated:
+
+| | Role | Used for |
+|---|---|---|
+| **Belief axes** | *anchors* — where to look, and where an observation gets filed | curiosity, source selection, follows, evidence filing, drift tracking |
+| **Knowledge base** (`runner/lib/knowledge_base.js`) | *substance* — findings from his own research, each with its source, plus the briefs that survived the gate | what he says, what he replies, what he plans |
+
+An axis score is the balance of what he read. Rendering it as "I strongly hold that
+X" made the system assert its own reading list — the central finding of the September
+ontology assessment, and the reason the public export calls the field
+`observed_pole_balance`. Vocation says who he is; the knowledge base says what he has
+earned the right to claim; axes say where he is looking.
+
+**Store:** `state/knowledge/findings.jsonl`, append-only. Written by `plan_research.js`
+after every research pass (headline finding, research confidence, report URL, and the
+cited claims that were grounded enough to file as evidence) and by `solution_brief.js`
+for every outcome — published, withheld, no-solution. A withheld brief is knowledge:
+it records what did not survive the red-team, so he does not re-propose it as if it had.
+
+**Read by:**
+
+- `prompts/context.js` `formatKnowledge()` → the tweet, quote and browse prompts. The
+  axis block above it is now headed *"RESEARCH ANCHORS — where you file observations.
+  Directions, NOT positions you hold."*
+- `lib/convictions.js` — under an agenda, "What I have established" (findings with
+  sources; proposals flagged as proposals; withheld ones flagged as withheld) replaces
+  the axis-derived `I {strongly|clearly} hold that <pole>` lines. With
+  `RESEARCH_AGENDA=off` the original axis behaviour is untouched.
+- `lib/sebastian_respond.js` — X replies and the website chat. The old block quoted
+  `current_stance`, which is generated *from* the axis score; under an agenda it is
+  gone, replaced by established findings plus anchor labels with no scores.
+- `agendaBlock("planning")` — so ponder, deep dive, decision and the sprint planner all
+  see what is already known, with the instruction to extend a finding, test a proposal
+  or answer something they left open, rather than re-planning what is answered.
+
+Tests assert that no axis score renders as a conviction and that the reply context
+carries no `current_stance` while an agenda is active.
+
+When the knowledge base is empty, every surface says so plainly — "nothing yet, the
+research is under way" — instead of falling back to a position. That is the honest
+state at bootstrap, and it is why the foundation phase holds outbound.
+
 ## Later: certifications
 
 Once there is enough grounding, an obvious next step is for Sebastian to take public AI
