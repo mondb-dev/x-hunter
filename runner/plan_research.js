@@ -14,6 +14,14 @@
  *   2. a research_sprint plan with no open questions → one report derived from
  *      the plan's compulsion/title (single-shot per plan)
  *
+ * Research-agenda questions (lib/research_agenda.js) carry a kind:
+ *   foundation → deep_research report (the evidence base)
+ *   solution   → runner/solution_brief.js — the agenda's final output: a
+ *                red-teamed, gated proposal built on the track's foundation
+ *                reports answered earlier in this plan
+ * Self-study questions (track use_dossier) get the self-study dossier —
+ * first-party measurements from Sebastian's own state files — as context.
+ *
  * Progress persists in state/plan_research_state.json (reset when the active
  * plan changes) so each question is answered exactly once per plan.
  *
@@ -28,7 +36,7 @@ const config = require('./lib/config');
 
 const STATE_PATH = path.join(config.STATE_DIR, 'plan_research_state.json');
 const ACTIVE_PLAN_PATH = path.join(config.STATE_DIR, 'active_plan.json');
-const MAX_RUN_MS = 10 * 60 * 1000;
+const MAX_RUN_MS = 20 * 60 * 1000; // solution briefs add a red-team loop on top of deep research
 
 const log = (m) => console.log(`[plan_research] ${m}`);
 
@@ -90,11 +98,30 @@ Each question standalone and specific (name actors, claims, mechanisms). Output 
   const FORMAT_BY_ACTION = { thread_series: 'thread', engage_campaign: 'thread', article_series: 'article' };
   const format = FORMAT_BY_ACTION[plan.action_type] || 'auto';
   const { researchAndDeliver } = require('./deep_research');
-  const r = await researchAndDeliver(question, { source: 'plan', format });
+  const { questionMeta, trackFor, selfStudyDossier } = require('./lib/research_agenda');
+  const meta = questionMeta(question);
+  const track = trackFor(question);
+  const dossier = track && track.use_dossier ? selfStudyDossier() : null;
+  if (dossier) log(`self-study question — attaching dossier (${dossier.length} chars)`);
+
+  let r;
+  if (meta && meta.kind === 'solution') {
+    // Build on this track's published foundation reports from earlier in the plan.
+    const foundations = state.results.filter((x) => x.track === meta.track && x.kind === 'foundation' && x.url);
+    log(`solution question (${meta.track}) — ${foundations.length} foundation report(s) to build on`);
+    const { solutionBrief } = require('./solution_brief');
+    const b = await solutionBrief(question, { track: meta.track, foundations, dossier });
+    r = { format: b.url ? 'solution' : null, url: b.url || null, gated: !!b.gated,
+          shortAnswer: b.one_line || (b.failures || []).join('; ') || b.reason || '' };
+  } else {
+    r = await researchAndDeliver(question, { source: 'plan', format, dossier });
+  }
 
   state.done.push(qHash(question));
   state.results.push({
     question,
+    track: track ? track.id : null,
+    kind: meta ? meta.kind : null,
     format: r.format || null,
     url: r.url || null,
     gated: r.gated || false,
