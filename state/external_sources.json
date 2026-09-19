@@ -1,8 +1,8 @@
 {
   "schema_version": "1.0",
-  "generated_at": "2026-09-19T11:52:48.720Z",
+  "generated_at": "2026-09-19T14:52:50.448Z",
   "method": "mechanical_registry_v1",
-  "profiled_at": "2026-09-19T11:52:52.945Z",
+  "profiled_at": "2026-09-19T14:53:15.354Z",
   "sources": [
     {
       "domain": "theguardian.com",
@@ -11,7 +11,7 @@
       "first_seen_at": "2026-03-27T23:17:00Z",
       "last_seen_at": "2026-09-06T19:12:32.879Z",
       "discovery": {
-        "distinct_urls": 1188,
+        "distinct_urls": 1190,
         "example_urls": [
           "https://www.theguardian.com/us-news/2026/jun/23/trump-immigration-courthouse-arrest-policy",
           "https://www.theguardian.com/us-news/2026/jun/28/ice-minnesota-defending-democracy",
@@ -21,7 +21,7 @@
         ],
         "origin_counts": {
           "ontology_evidence": 57,
-          "reading_queue": 1141,
+          "reading_queue": 1143,
           "journals": 156,
           "articles": 5
         },
@@ -79,7 +79,7 @@
         "breadth": {
           "score": 0.94,
           "basis": [
-            "distinct_urls:1188",
+            "distinct_urls:1190",
             "distinct_axes:24",
             "origin_types:4"
           ]
@@ -119,7 +119,7 @@
             "newsroom_domain_pattern",
             "article_path_seen",
             "doi_or_identifier_path_seen",
-            "distinct_urls:1188",
+            "distinct_urls:1190",
             "distinct_axes:24",
             "origin_types:4",
             "referring_accounts:0",
@@ -836,7 +836,7 @@
       "first_seen_at": "2026-06-26T07:05:00Z",
       "last_seen_at": "2026-09-06T14:42:26.825Z",
       "discovery": {
-        "distinct_urls": 760,
+        "distinct_urls": 761,
         "example_urls": [
           "https://www.bbc.co.uk/news/articles/cn8qxz6qypyo",
           "https://www.bbc.co.uk/news/articles/cn075j04pnyo?at_medium=RSS&amp;at_campaign=rss",
@@ -846,7 +846,7 @@
         ],
         "origin_counts": {
           "ontology_evidence": 11,
-          "reading_queue": 776,
+          "reading_queue": 777,
           "journals": 24,
           "articles": 2
         },
@@ -886,7 +886,7 @@
         "breadth": {
           "score": 0.94,
           "basis": [
-            "distinct_urls:760",
+            "distinct_urls:761",
             "distinct_axes:8",
             "origin_types:4"
           ]
@@ -924,7 +924,7 @@
           "method": "mechanical_v1",
           "basis": [
             "newsroom_domain_pattern",
-            "distinct_urls:760",
+            "distinct_urls:761",
             "distinct_axes:8",
             "origin_types:4",
             "referring_accounts:0",
@@ -972,7 +972,7 @@
       "first_seen_at": "2026-06-22T00:15:00Z",
       "last_seen_at": "2026-09-06T19:12:32.922Z",
       "discovery": {
-        "distinct_urls": 808,
+        "distinct_urls": 810,
         "example_urls": [
           "https://www.nytimes.com/2026/06/19/world/canada/frank-stronach-trial-guilty-sex-charges.html",
           "https://www.nytimes.com/2026/06/27/world/americas/mexican-officials-us-informants.html",
@@ -982,7 +982,7 @@
         ],
         "origin_counts": {
           "ontology_evidence": 33,
-          "reading_queue": 833,
+          "reading_queue": 835,
           "journals": 77
         },
         "distinct_referring_accounts": 0,
@@ -1029,7 +1029,7 @@
         "breadth": {
           "score": 0.8799999999999999,
           "basis": [
-            "distinct_urls:808",
+            "distinct_urls:810",
             "distinct_axes:15",
             "origin_types:3"
           ]
@@ -1068,7 +1068,7 @@
           "basis": [
             "newsroom_domain_pattern",
             "article_path_seen",
-            "distinct_urls:808",
+            "distinct_urls:810",
             "distinct_axes:15",
             "origin_types:3",
             "referring_accounts:0",
@@ -3118,9 +3118,9 @@
       "entity": "T Co",
       "kind": "unknown",
       "first_seen_at": "2016-05-05T18:57:30.000Z",
-      "last_seen_at": "2026-09-19T11:37:06.020Z",
+      "last_seen_at": "2026-09-19T14:45:00.000Z",
       "discovery": {
-        "distinct_urls": 20713,
+        "distinct_urls": 20832,
         "example_urls": [
           "https://t.co/pJSE124ec4",
           "https://t.co/Soz8BXPWaa",
@@ -3129,11 +3129,11 @@
           "https://t.co/cYaqYDRp08"
         ],
         "origin_counts": {
-          "feed_buffer": 18600,
-          "feed_buffer_reply": 5953,
+          "feed_buffer": 18706,
+          "feed_buffer_reply": 5985,
           "articles": 3
         },
-        "distinct_referring_accounts": 3132,
+        "distinct_referring_accounts": 3157,
         "sample_referring_accounts": [
           "0808iveta",
           "09abracadabra",
@@ -3172,7 +3172,7 @@
         "breadth": {
           "score": 0.53,
           "basis": [
-            "distinct_urls:20713",
+            "distinct_urls:20832",
             "distinct_axes:0",
             "origin_types:3"
           ]
@@ -3180,7 +3180,7 @@
         "corroboration": {
           "score": 0.9125,
           "basis": [
-            "referring_accounts:3132",
+            "referring_accounts:3157",
             "origin_types:3"
           ]
         },
@@ -3211,10 +3211,10 @@
           "basis": [
             "unknown_domain_pattern",
             "doi_or_identifier_path_seen",
-            "distinct_urls:20713",
+            "distinct_urls:20832",
             "distinct_axes:0",
             "origin_types:3",
-            "referring_accounts:3132",
+            "referring_accounts:3157",
             "origin_types:3",
             "track_record_unavailable"
           ]
@@ -4636,9 +4636,9 @@
       "entity": "Grok",
       "kind": "unknown",
       "first_seen_at": "2026-04-03T01:20:27.000Z",
-      "last_seen_at": "2026-09-19T07:28:47.000Z",
+      "last_seen_at": "2026-09-19T12:54:00.000Z",
       "discovery": {
-        "distinct_urls": 736,
+        "distinct_urls": 740,
         "example_urls": [
           "https://grok.com/imagine/post/9b92ff60-ec59-45db-8a35-8e1b743e5339",
           "https://grok.com/imagine/post/42c16172-4296-42be-b3d0-aa45ad7b6b97",
@@ -4647,10 +4647,10 @@
           "https://grok.com/imagine/post/3289422f-50b2-4655-8527-e2b1c950ce5e"
         ],
         "origin_counts": {
-          "feed_buffer_reply": 608,
-          "feed_buffer": 177
+          "feed_buffer_reply": 610,
+          "feed_buffer": 179
         },
-        "distinct_referring_accounts": 443,
+        "distinct_referring_accounts": 447,
         "sample_referring_accounts": [
           "0xsifu",
           "100ohiostate",
@@ -4688,7 +4688,7 @@
         "breadth": {
           "score": 0.47,
           "basis": [
-            "distinct_urls:736",
+            "distinct_urls:740",
             "distinct_axes:0",
             "origin_types:2"
           ]
@@ -4696,7 +4696,7 @@
         "corroboration": {
           "score": 0.825,
           "basis": [
-            "referring_accounts:443",
+            "referring_accounts:447",
             "origin_types:2"
           ]
         },
@@ -4726,10 +4726,10 @@
           "method": "mechanical_v1",
           "basis": [
             "unknown_domain_pattern",
-            "distinct_urls:736",
+            "distinct_urls:740",
             "distinct_axes:0",
             "origin_types:2",
-            "referring_accounts:443",
+            "referring_accounts:447",
             "origin_types:2",
             "track_record_unavailable"
           ]
@@ -5430,9 +5430,9 @@
       "entity": "Starlink",
       "kind": "unknown",
       "first_seen_at": "2026-04-07T03:51:50.000Z",
-      "last_seen_at": "2026-09-19T11:30:14.000Z",
+      "last_seen_at": "2026-09-19T14:05:00.000Z",
       "discovery": {
-        "distinct_urls": 1576,
+        "distinct_urls": 1658,
         "example_urls": [
           "https://www.starlink.com/us/residential?referral=RC-DF-9543787-19448-67&utm_medium=paid&utm_campaign=awr_us_soc_twt_ptg_cau&utm_content=awr_us_soc_twt_ptg_cau_res_gvp_v4s_stc_en-us_sdb-bluesky-uptime&twclid=2cg62b1u0oqrypdim5oir1767e",
           "https://www.starlink.com/us/residential?referral=RC-DF-9543787-19448-67&utm_medium=paid&utm_campaign=awr_us_soc_twt_ptg_cau&utm_content=awr_us_soc_twt_ptg_cau_res_gvp_v4s_stc_en-us_sdb-avail-sat-yourhome&twclid=2216n7j93v9absqn77762mm626",
@@ -5441,8 +5441,8 @@
           "https://www.starlink.com/us/residential?referral=RC-DF-9543787-19448-67&utm_medium=paid&utm_campaign=awr_us_soc_twt_ptg_cau&utm_content=awr_us_soc_twt_ptg_cau_res_gvp_v4s_stc_en-us_sdb-avail-sat-arrived&twclid=21pi7t0qs8tgw0wgnh5mvmdu2g"
         ],
         "origin_counts": {
-          "feed_buffer_reply": 1493,
-          "feed_buffer": 87
+          "feed_buffer_reply": 1574,
+          "feed_buffer": 88
         },
         "distinct_referring_accounts": 5,
         "sample_referring_accounts": [
@@ -5477,7 +5477,7 @@
         "breadth": {
           "score": 0.47,
           "basis": [
-            "distinct_urls:1576",
+            "distinct_urls:1658",
             "distinct_axes:0",
             "origin_types:2"
           ]
@@ -5515,7 +5515,7 @@
           "method": "mechanical_v1",
           "basis": [
             "unknown_domain_pattern",
-            "distinct_urls:1576",
+            "distinct_urls:1658",
             "distinct_axes:0",
             "origin_types:2",
             "referring_accounts:5",
@@ -8786,9 +8786,9 @@
       "entity": "Ptgaming Ph",
       "kind": "unknown",
       "first_seen_at": "2026-07-05T04:59:47.736Z",
-      "last_seen_at": "2026-09-19T00:08:00.000Z",
+      "last_seen_at": "2026-09-19T11:17:54.000Z",
       "discovery": {
-        "distinct_urls": 25,
+        "distinct_urls": 26,
         "example_urls": [
           "https://www.ptgaming.ph/?twclid=21n3lg1hcl64ox73kjyr4lggz9",
           "https://www.ptgaming.ph/?twclid=25vb0w4jbmtupw5yokwy2fjbcq",
@@ -8798,7 +8798,7 @@
         ],
         "origin_counts": {
           "feed_buffer": 10,
-          "feed_buffer_reply": 15
+          "feed_buffer_reply": 16
         },
         "distinct_referring_accounts": 1,
         "sample_referring_accounts": [
@@ -8829,7 +8829,7 @@
         "breadth": {
           "score": 0.47,
           "basis": [
-            "distinct_urls:25",
+            "distinct_urls:26",
             "distinct_axes:0",
             "origin_types:2"
           ]
@@ -8867,7 +8867,7 @@
           "method": "mechanical_v1",
           "basis": [
             "unknown_domain_pattern",
-            "distinct_urls:25",
+            "distinct_urls:26",
             "distinct_axes:0",
             "origin_types:2",
             "referring_accounts:1",
@@ -10179,6 +10179,133 @@
       }
     },
     {
+      "domain": "imbue.com",
+      "entity": "Imbue",
+      "kind": "unknown",
+      "first_seen_at": "2026-07-10T02:02:24.517Z",
+      "last_seen_at": "2026-09-19T12:42:04.874Z",
+      "discovery": {
+        "distinct_urls": 18,
+        "example_urls": [
+          "https://imbue.com/product/bouncer/redirect.html?utm_source=x&utm_medium=paid_social&utm_campaign=omni&authuser=0&hl=en&twclid=28wps3duhy1q7hzrcdj2h5pxpl",
+          "https://imbue.com/product/bouncer/redirect.html?utm_source=x&utm_campaign=omni_redirect_garb&authuser=0&hl=en&twclid=22x2rpdpk6869weht7xv9qxc64",
+          "https://imbue.com/product/bouncer/redirect.html?utm_source=x&utm_medium=paid_social&utm_campaign=omni&authuser=0&hl=en&twclid=2agk2hjxe1cv0p3529yhw8fwiq",
+          "https://imbue.com/product/bouncer/redirect.html?utm_source=x&utm_campaign=omni_redirect_garb&authuser=0&hl=en&twclid=2aso6mvjhl3syanq0q4dwmdkrr",
+          "https://imbue.com/product/bouncer/redirect.html?utm_source=x&utm_campaign=omni_redirect_garb&authuser=0&hl=en&twclid=21vnj6c6qh2t3kmuo81kvepqzx"
+        ],
+        "origin_counts": {
+          "feed_buffer": 15,
+          "feed_buffer_reply": 3
+        },
+        "distinct_referring_accounts": 1,
+        "sample_referring_accounts": [
+          "millanphilipose"
+        ],
+        "distinct_axes": []
+      },
+      "claims": {
+        "total": 0,
+        "supported": 0,
+        "refuted": 0,
+        "contested": 0,
+        "unverified": 0,
+        "resolved_count": 0
+      },
+      "structural_features": {
+        "has_search_paths": false,
+        "has_article_paths": false,
+        "has_doi_paths": false
+      },
+      "ratings": {
+        "provenance": {
+          "score": 0.45,
+          "basis": [
+            "unknown_domain_pattern"
+          ]
+        },
+        "breadth": {
+          "score": 0.47,
+          "basis": [
+            "distinct_urls:18",
+            "distinct_axes:0",
+            "origin_types:2"
+          ]
+        },
+        "corroboration": {
+          "score": 0.2833333333333333,
+          "basis": [
+            "referring_accounts:1",
+            "origin_types:2"
+          ]
+        },
+        "track_record": {
+          "score": null,
+          "basis": [
+            "no_resolved_claims_observed"
+          ]
+        },
+        "profile": {
+          "score": 0.14,
+          "confidence": 0.65,
+          "basis": [
+            "meta_author:false",
+            "published_time:false",
+            "canonical:false",
+            "about:true",
+            "contact:false",
+            "corrections:false",
+            "outbound_links:0",
+            "opinion_marker:false"
+          ]
+        },
+        "overall": {
+          "score": 0.43875,
+          "confidence": 0.5517,
+          "method": "mechanical_v1",
+          "basis": [
+            "unknown_domain_pattern",
+            "distinct_urls:18",
+            "distinct_axes:0",
+            "origin_types:2",
+            "referring_accounts:1",
+            "origin_types:2",
+            "track_record_unavailable"
+          ]
+        }
+      },
+      "profile": {
+        "fetched_at": "2026-09-18T21:09:12.999Z",
+        "homepage_url": "https://imbue.com/",
+        "example_url": "https://imbue.com/product/bouncer/redirect.html?utm_source=x&utm_medium=paid_social&utm_campaign=omni&authuser=0&hl=en&twclid=28wps3duhy1q7hzrcdj2h5pxpl",
+        "homepage_status": 200,
+        "example_status": 200,
+        "homepage_final_url": "https://imbue.com/",
+        "example_final_url": "https://imbue.com/product/bouncer/redirect.html?utm_source=x&utm_medium=paid_social&utm_campaign=omni&authuser=0&hl=en&twclid=28wps3duhy1q7hzrcdj2h5pxpl",
+        "homepage_content_type": "text/html",
+        "example_content_type": "text/html; charset=UTF-8",
+        "homepage": {
+          "has_meta_author": false,
+          "has_published_time": false,
+          "has_canonical": true,
+          "has_about_link": true,
+          "has_contact_link": false,
+          "has_corrections_link": false,
+          "outbound_links_count": 7,
+          "opinion_marker": false
+        },
+        "example": {
+          "has_meta_author": false,
+          "has_published_time": false,
+          "has_canonical": false,
+          "has_about_link": false,
+          "has_contact_link": false,
+          "has_corrections_link": false,
+          "outbound_links_count": 0,
+          "opinion_marker": false
+        }
+      }
+    },
+    {
       "domain": "aramco.com",
       "entity": "Aramco",
       "kind": "unknown",
@@ -10428,133 +10555,6 @@
           "has_contact_link": true,
           "has_corrections_link": false,
           "outbound_links_count": 7,
-          "opinion_marker": false
-        }
-      }
-    },
-    {
-      "domain": "imbue.com",
-      "entity": "Imbue",
-      "kind": "unknown",
-      "first_seen_at": "2026-07-10T02:02:24.517Z",
-      "last_seen_at": "2026-09-19T10:32:00.610Z",
-      "discovery": {
-        "distinct_urls": 17,
-        "example_urls": [
-          "https://imbue.com/product/bouncer/redirect.html?utm_source=x&utm_medium=paid_social&utm_campaign=omni&authuser=0&hl=en&twclid=28wps3duhy1q7hzrcdj2h5pxpl",
-          "https://imbue.com/product/bouncer/redirect.html?utm_source=x&utm_campaign=omni_redirect_garb&authuser=0&hl=en&twclid=22x2rpdpk6869weht7xv9qxc64",
-          "https://imbue.com/product/bouncer/redirect.html?utm_source=x&utm_medium=paid_social&utm_campaign=omni&authuser=0&hl=en&twclid=2agk2hjxe1cv0p3529yhw8fwiq",
-          "https://imbue.com/product/bouncer/redirect.html?utm_source=x&utm_campaign=omni_redirect_garb&authuser=0&hl=en&twclid=2aso6mvjhl3syanq0q4dwmdkrr",
-          "https://imbue.com/product/bouncer/redirect.html?utm_source=x&utm_campaign=omni_redirect_garb&authuser=0&hl=en&twclid=21vnj6c6qh2t3kmuo81kvepqzx"
-        ],
-        "origin_counts": {
-          "feed_buffer": 14,
-          "feed_buffer_reply": 3
-        },
-        "distinct_referring_accounts": 1,
-        "sample_referring_accounts": [
-          "millanphilipose"
-        ],
-        "distinct_axes": []
-      },
-      "claims": {
-        "total": 0,
-        "supported": 0,
-        "refuted": 0,
-        "contested": 0,
-        "unverified": 0,
-        "resolved_count": 0
-      },
-      "structural_features": {
-        "has_search_paths": false,
-        "has_article_paths": false,
-        "has_doi_paths": false
-      },
-      "ratings": {
-        "provenance": {
-          "score": 0.45,
-          "basis": [
-            "unknown_domain_pattern"
-          ]
-        },
-        "breadth": {
-          "score": 0.47,
-          "basis": [
-            "distinct_urls:17",
-            "distinct_axes:0",
-            "origin_types:2"
-          ]
-        },
-        "corroboration": {
-          "score": 0.2833333333333333,
-          "basis": [
-            "referring_accounts:1",
-            "origin_types:2"
-          ]
-        },
-        "track_record": {
-          "score": null,
-          "basis": [
-            "no_resolved_claims_observed"
-          ]
-        },
-        "profile": {
-          "score": 0.14,
-          "confidence": 0.65,
-          "basis": [
-            "meta_author:false",
-            "published_time:false",
-            "canonical:false",
-            "about:true",
-            "contact:false",
-            "corrections:false",
-            "outbound_links:0",
-            "opinion_marker:false"
-          ]
-        },
-        "overall": {
-          "score": 0.43875,
-          "confidence": 0.5292,
-          "method": "mechanical_v1",
-          "basis": [
-            "unknown_domain_pattern",
-            "distinct_urls:17",
-            "distinct_axes:0",
-            "origin_types:2",
-            "referring_accounts:1",
-            "origin_types:2",
-            "track_record_unavailable"
-          ]
-        }
-      },
-      "profile": {
-        "fetched_at": "2026-09-18T21:09:12.999Z",
-        "homepage_url": "https://imbue.com/",
-        "example_url": "https://imbue.com/product/bouncer/redirect.html?utm_source=x&utm_medium=paid_social&utm_campaign=omni&authuser=0&hl=en&twclid=28wps3duhy1q7hzrcdj2h5pxpl",
-        "homepage_status": 200,
-        "example_status": 200,
-        "homepage_final_url": "https://imbue.com/",
-        "example_final_url": "https://imbue.com/product/bouncer/redirect.html?utm_source=x&utm_medium=paid_social&utm_campaign=omni&authuser=0&hl=en&twclid=28wps3duhy1q7hzrcdj2h5pxpl",
-        "homepage_content_type": "text/html",
-        "example_content_type": "text/html; charset=UTF-8",
-        "homepage": {
-          "has_meta_author": false,
-          "has_published_time": false,
-          "has_canonical": true,
-          "has_about_link": true,
-          "has_contact_link": false,
-          "has_corrections_link": false,
-          "outbound_links_count": 7,
-          "opinion_marker": false
-        },
-        "example": {
-          "has_meta_author": false,
-          "has_published_time": false,
-          "has_canonical": false,
-          "has_about_link": false,
-          "has_contact_link": false,
-          "has_corrections_link": false,
-          "outbound_links_count": 0,
           "opinion_marker": false
         }
       }
@@ -17232,7 +17232,7 @@
             "about:true",
             "contact:true",
             "corrections:false",
-            "outbound_links:30",
+            "outbound_links:34",
             "opinion_marker:false"
           ]
         },
@@ -17252,7 +17252,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-09-06T15:11:46.430Z",
+        "fetched_at": "2026-09-19T12:52:50.303Z",
         "homepage_url": "https://foxnews.com/",
         "example_url": "https://www.foxnews.com/politics/breaking-president-trump-vows-eradicate-what-he-calls-horrible-thread-cancer-quietly-moving-through-nation-issuing-stark-w",
         "homepage_status": 200,
@@ -17268,7 +17268,7 @@
           "has_about_link": true,
           "has_contact_link": true,
           "has_corrections_link": false,
-          "outbound_links_count": 39,
+          "outbound_links_count": 47,
           "opinion_marker": false
         },
         "example": {
@@ -17278,7 +17278,7 @@
           "has_about_link": true,
           "has_contact_link": true,
           "has_corrections_link": false,
-          "outbound_links_count": 30,
+          "outbound_links_count": 34,
           "opinion_marker": false
         }
       }
@@ -17379,7 +17379,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-09-06T15:11:49.252Z",
+        "fetched_at": "2026-09-19T12:52:52.030Z",
         "homepage_url": "https://davidprotein.com/",
         "example_url": "https://davidprotein.com/pages/meet-david-gold?utm_source=X&utm_medium=paid&utm_campaign=CPC_2026&utm_term=GOLD_CPC_2026&twclid=2beqsd3kifgmiz3bgaf4s8hcjs",
         "homepage_status": 200,
@@ -17477,14 +17477,14 @@
           ]
         },
         "profile": {
-          "score": 0.19,
-          "confidence": 0.55,
+          "score": 0.44999999999999996,
+          "confidence": 0.65,
           "basis": [
             "meta_author:false",
             "published_time:false",
             "canonical:true",
-            "about:false",
-            "contact:false",
+            "about:true",
+            "contact:true",
             "corrections:false",
             "outbound_links:9",
             "opinion_marker:false"
@@ -17506,23 +17506,23 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-09-06T16:11:57.531Z",
+        "fetched_at": "2026-09-19T12:52:55.807Z",
         "homepage_url": "https://ethos.com/",
         "example_url": "https://www.ethos.com/life/life-insurance-now/?utm_source=twitter&utm_medium=cpc&utm_campaign=Broad01162026&utm_campaign_id=40806420&utm_adgroup=Broad01162026&utm_adgroup_id=54091382&utm_ad_id=2024963714831835547&ad_name=hiking+%28convert%29&twclid=2eck112qrn4y0a9og1cs3anquo",
-        "homepage_status": null,
+        "homepage_status": 200,
         "example_status": 200,
-        "homepage_final_url": "https://ethos.com/",
+        "homepage_final_url": "https://www.ethos.com/",
         "example_final_url": "https://www.ethos.com/life/life-insurance-now/?utm_source=twitter&utm_medium=cpc&utm_campaign=Broad01162026&utm_campaign_id=40806420&utm_adgroup=Broad01162026&utm_adgroup_id=54091382&utm_ad_id=2024963714831835547&ad_name=hiking+%28convert%29&twclid=2eck112qrn4y0a9og1cs3anquo",
-        "homepage_content_type": "",
+        "homepage_content_type": "text/html; charset=utf-8",
         "example_content_type": "text/html; charset=utf-8",
         "homepage": {
           "has_meta_author": false,
           "has_published_time": false,
-          "has_canonical": false,
-          "has_about_link": false,
-          "has_contact_link": false,
+          "has_canonical": true,
+          "has_about_link": true,
+          "has_contact_link": true,
           "has_corrections_link": false,
-          "outbound_links_count": 0,
+          "outbound_links_count": 11,
           "opinion_marker": false
         },
         "example": {
@@ -17633,7 +17633,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-09-06T16:12:00.312Z",
+        "fetched_at": "2026-09-19T12:52:56.999Z",
         "homepage_url": "https://flow.com/",
         "example_url": "https://flow.com/post/stablecoin-market-cap-on-flow-hits-all-time-high-of-74-6m?twclid=2czuzc6x3hqaue58fju5it9nms",
         "homepage_status": 200,
@@ -17760,7 +17760,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-09-06T16:12:10.354Z",
+        "fetched_at": "2026-09-19T13:22:51.591Z",
         "homepage_url": "https://par.bz/",
         "example_url": "https://par.bz/nep?twclid=2cqyfqbi1emcrdcv6yo3eddsrk",
         "homepage_status": 403,
@@ -17867,7 +17867,7 @@
             "about:true",
             "contact:true",
             "corrections:false",
-            "outbound_links:20",
+            "outbound_links:21",
             "opinion_marker:false"
           ]
         },
@@ -17887,7 +17887,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-09-06T16:12:18.323Z",
+        "fetched_at": "2026-09-19T13:22:54.443Z",
         "homepage_url": "https://pickleball.mov/",
         "example_url": "https://pickleball.mov/?twclid=2dap2o6t8b0iplizc69goovrfk",
         "homepage_status": 200,
@@ -17903,7 +17903,7 @@
           "has_about_link": true,
           "has_contact_link": true,
           "has_corrections_link": false,
-          "outbound_links_count": 20,
+          "outbound_links_count": 21,
           "opinion_marker": false
         },
         "example": {
@@ -17913,7 +17913,7 @@
           "has_about_link": true,
           "has_contact_link": true,
           "has_corrections_link": false,
-          "outbound_links_count": 20,
+          "outbound_links_count": 21,
           "opinion_marker": false
         }
       }
@@ -18014,7 +18014,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-09-06T16:41:45.836Z",
+        "fetched_at": "2026-09-19T13:22:55.215Z",
         "homepage_url": "https://aitradingbotreview.com/",
         "example_url": "https://aitradingbotreview.com/cointech2u-okx-testimonial/?utm_source=x&utm_medium=cpc&utm_campaign=ct2u_cici_testimonial_v1&utm_content=v3_architecture&twclid=29n2yshl33pi6gwhsndaezd9zg",
         "homepage_status": 200,
@@ -18141,7 +18141,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-09-06T16:41:46.647Z",
+        "fetched_at": "2026-09-19T13:22:56.062Z",
         "homepage_url": "https://floxnar.com/",
         "example_url": "https://www.floxnar.com/products/raineren?utm_source=twitter&utm_campaign=41855548&twclid=2irtlfucdq7bk7pzbe9l7xo7v",
         "homepage_status": 403,
@@ -18268,7 +18268,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-09-06T16:41:47.467Z",
+        "fetched_at": "2026-09-19T14:22:52.375Z",
         "homepage_url": "https://pyrenva.com/",
         "example_url": "https://www.pyrenva.com/products/havern-polo?utm_source=twitter&utm_campaign=HpoloSWC02&twclid=285udvuvfb3zz15rwylu1v9etj",
         "homepage_status": 403,
@@ -18395,7 +18395,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-09-06T16:41:47.582Z",
+        "fetched_at": "2026-09-19T14:22:52.551Z",
         "homepage_url": "https://pipfarm.com/",
         "example_url": "https://pipfarm.com/pay-with-profits?utm_source=twitter&utm_medium=paid_social&utm_campaign=x_global&utm_content=pwp&twclid=24kvuhbhl6j5q4afmd9e50y0ha",
         "homepage_status": 403,
@@ -18521,7 +18521,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-09-06T17:41:46.912Z",
+        "fetched_at": "2026-09-19T14:22:53.749Z",
         "homepage_url": "https://kubit.ai/",
         "example_url": "https://kubit.ai/agent-analytics-landing/?utm_source=x_ads&utm_medium=paid_social&utm_campaign=claude_group&twclid=2eb9hv62es2e93pzc1qorbclgf",
         "homepage_status": 200,
@@ -18647,7 +18647,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-09-06T21:55:41.727Z",
+        "fetched_at": "2026-09-19T14:22:53.900Z",
         "homepage_url": "https://ridge.com/",
         "example_url": "https://ridge.com/collections/fday-rings-3rlp?utm_source=social&utm_medium=twitter&utm_campaign=TW+%7C+ACQ+%7C+RINGS+%7C+PCH+%7C+FDAY26+%28IO%29&utm_term=5.17+-+PCH+-+FDAY+-+IMGs+-+FDAY-RINGS-3RLP&utm_content=05250b_GIFT_FDAY_JEWELRY_WEDDING-RINGS_MIX-COLOR_OFFER-%25OFF_The-gift-your-man-actually-wants-%28we-asked%29_RINGS-FDAY-Branded__META_NN_IH_DR__FDAY-RINGS-3RLP_5-12-26%3Fnb_platform%3Dtwitter&twclid=2cpbcoko2qkg7u5nrw2y5g1wdo",
         "homepage_status": 403,
@@ -18773,7 +18773,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-09-06T21:56:01.733Z",
+        "fetched_at": "2026-09-19T14:53:10.507Z",
         "homepage_url": "https://makofy.com/",
         "example_url": "https://makofy.com/openclaw?twclid=217okoej56crajhkd22b6nsfzf",
         "homepage_status": null,
@@ -18899,7 +18899,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-09-06T21:56:04.100Z",
+        "fetched_at": "2026-09-19T14:53:12.835Z",
         "homepage_url": "https://gobob.xyz/",
         "example_url": "https://app.gobob.xyz/?utm_campaign=stables&utm_medium=paidads&utm_source=x&twclid=21mgv5jwnbc2895vpeqnlit4hv",
         "homepage_status": 200,
@@ -19023,7 +19023,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-09-03T21:12:02.439Z",
+        "fetched_at": "2026-09-19T14:53:14.452Z",
         "homepage_url": "https://moltbook.com/",
         "example_url": "https://www.moltbook.com/post/29d49c40-bc59-4a1a-b875-3d3d41ec469e",
         "homepage_status": 200,
@@ -19150,7 +19150,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-09-03T21:12:03.215Z",
+        "fetched_at": "2026-09-19T14:53:15.354Z",
         "homepage_url": "https://framia.pro/",
         "example_url": "https://framia.pro/?utm_source=x&utm_campaign=twitter_adsmarch_framia_14_20260331&utm_medium=paid_social&twclid=2e6c8vey7aaz8sdwedu4gd0jgx",
         "homepage_status": 403,
