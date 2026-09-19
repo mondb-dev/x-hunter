@@ -44,7 +44,7 @@ lever on **every** stage.
 
 | Stage | File | Behavior under `better_ai` (full_pivot) |
 |---|---|---|
-| RSS inputs | `scraper/rss_collect.js` `activeFeeds()` | 17 AI feeds added (Alignment Forum, LessWrong curated, arXiv safety query, DeepMind safety, OpenAI, METR, Redwood, Epoch, CAIS, Import AI, Transformer, Zvi, AI Impacts, plus skeptics: AI Snake Oil, Gary Marcus, Understanding AI). Default news/PH feeds paused except `keep_feeds`. Agenda items are queued for reading first. |
+| RSS inputs | `scraper/rss_collect.js` `activeFeeds()` | 20 AI feeds added (Alignment Forum, LessWrong curated, arXiv safety query, DeepMind safety, OpenAI, METR, Redwood, Epoch, CAIS, Import AI, Transformer, Zvi, AI Impacts; policy: EU AI Act, CSET, AI Policy Perspectives; plus skeptics: AI Snake Oil, Gary Marcus, Understanding AI). Default news/PH feeds paused except `keep_feeds`. Agenda items are queued for reading first. |
 | Source pages | `runner/source_selector.js` `queueAgendaSource()` | Rotates the agenda's non-RSS pages (Anthropic research/RSP/alignment blog, DeepMind safety, UK AISI, GovAI, Apollo, FAR.AI, CAIS, METR, Epoch, arXiv search) instead of conviction axes. |
 | Reading queue | `runner/reading_queue.js` `pickCandidate()` | Emits people's links first, then agenda entries, then the rest; under full_pivot, off-agenda machine entries are never emitted. Static source pages can be re-read once re-queued (`lastMarks`). |
 | Curiosity | `runner/curiosity.js` Path 3b | Agenda driver rotates tracks and search terms, anchored on the track's seeded axis. Discourse, agent-hint, and sprint drivers fire only for on-agenda topics. Contradiction/uncertainty/trending are not reached. |
@@ -64,17 +64,28 @@ lever on **every** stage.
 
 ## The Better-AI agenda
 
-Four tracks. Each has **foundation** questions (evidence), **solution** questions (the output),
-search terms, source pages, and a seeded axis. `orderedQuestions()` schedules them as
-foundation round → solution round → …, so a track's solutions always follow its foundation work
-(17 questions ≈ 17 days).
+Five tracks. Each has **foundation** questions (evidence), **solution** questions (the output),
+search terms, source pages, and a seeded axis.
+
+**The foundation phase runs first.** `orderedQuestions()` emits every foundation
+(round-robin across tracks) before any solution: 15 foundation days, then 11 solution
+days — 26 questions ≈ 26 days at one per day. This is an operator decision (2026-09-19):
+the seeded axes start at zero evidence, and a brief written on day 2 would stand on
+almost nothing. To go back to interleaving (a track's solutions as soon as its own
+foundations are done), swap the two outer loops in `orderedQuestions()`.
+
+Note what the foundation phase does *not* do: deep-research reports do not write
+belief evidence. The axes are grounded by the browse/reading loop over the agenda's
+feeds and source pages, which runs every cycle from the bootstrap onward, independent
+of the plan. The foundation phase grounds the *briefs*; the feeds ground the *axes*.
 
 | Track | Foundations | Solutions (examples) |
 |---|---|---|
 | **Lab accountability** | how safety frameworks changed; third-party evals in system cards | a mechanism that makes lab commitments verifiable; a minimum release-disclosure standard for deployers |
 | **Literature** | CoT-monitoring reliability; alignment-faking evidence | a practical monitoring setup for LLM-agent deployers; deployable sycophancy mitigations |
 | **Forecasting** | METR task horizons; benchmark saturation | leading indicators that capability is outgrowing oversight; a decision rule for how much autonomy to grant an agent |
-| **Self-study** | LLM calibration vs his own record; failure modes of long-running agents | fix his 79%-stated / 29%-actual calibration; capture-resistant belief formation; safeguards that would have caught his two-month silent failure |
+| **Self-study** | LLM calibration vs his own record; failure modes of long-running agents; which self-checks actually improve reliability | fix his 79%-stated / 29%-actual calibration; capture-resistant belief formation; safeguards that would have caught his two-month silent failure |
+| **Policy & governance** | what the EU AI Act actually requires and who enforces it; what powers the AI safety institutes hold; which instruments outside the EU bind rather than advise | the enforcement/verification mechanism with the best evidence behind it; a minimum control set for a mid-size deployer across the EU AI Act and NIST AI RMF |
 
 Self-study solutions are the ones that can actually be **tested**, on Sebastian himself. Each
 brief carries a `self_test` field saying how. Running those tests is an operator decision
@@ -82,7 +93,8 @@ brief carries a `self_test` field saying how. Running those tests is an operator
 
 Seeded axes (left = −1, right = +1; the score is where observed evidence falls, not a preset):
 `axis_ai_lab_commitments_v1`, `axis_alignment_tractability_v1`, `axis_safety_verification_v1`,
-`axis_ai_progress_pace_v1`, `axis_ai_oversight_model_v1`, `axis_agent_self_reliability_v1`.
+`axis_ai_progress_pace_v1`, `axis_ai_oversight_model_v1`, `axis_ai_policy_efficacy_v1`,
+`axis_agent_self_reliability_v1`.
 
 Integrity rules are injected with the lens. The main ones: no lab is exempt, **including
 Anthropic, whose model Sebastian runs on** (disclose the dependency); separate demonstrated results
@@ -111,8 +123,15 @@ produces.
 
 The bootstrap is idempotent. It supersedes every other `active` plan (in `action_plans.json` and
 `sprints.db`), so the single-active-plan invariant holds. `sprint_manager.js` plans the
-new plan's sprints on its next daily run. `plan_research.js` then answers one of the 12
-seeded questions per day.
+new plan's sprints on its next daily run. `plan_research.js` then answers one of the 26
+seeded questions per day — the 15 foundations first, then the 11 solutions.
+
+**Preseed before you bootstrap.** `plan_research.js` keys its progress to the plan id, so
+re-running the bootstrap on a later date installs a new plan and re-answers foundations
+already done. And do not hand-edit questions into `state/active_plan.json`: `questionMeta()`
+matches the question string against `research_agenda.js`, so a question that exists only in
+the plan gets `kind: null` and routes to deep research, never to `solution_brief.js`. Edit
+the agenda file.
 
 - **Disable**: set `RESEARCH_AGENDA=off` in `.env` and restart in the sleep window. Every consumer
   falls back to emergent behavior. (Vocation stays as last written until the next checkpoint

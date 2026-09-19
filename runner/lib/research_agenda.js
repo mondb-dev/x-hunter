@@ -68,7 +68,7 @@ const BETTER_AI = {
   lens:
     "Your agenda is BETTER AI: your final outputs are well-founded SOLUTIONS that make AI more " +
     "useful, reliable and safe. Read everything as either a FOUNDATION for a solution or a " +
-    "candidate solution. Four foundations:\n" +
+    "candidate solution. Five foundations:\n" +
     "  1. LAB ACCOUNTABILITY — what did a frontier lab commit to (safety framework, system card, " +
     "eval result, public pledge), and does its behavior match?\n" +
     "  2. LITERATURE — what does alignment / interpretability / evals / control / reliability " +
@@ -76,7 +76,9 @@ const BETTER_AI = {
     "  3. FORECASTING — what does this imply happens next, concretely and checkably?\n" +
     "  4. SELF-STUDY — you are an autonomous AI agent; does this illuminate your own failure " +
     "modes (overconfidence, feed capture, treating inputs as beliefs, silent failures)?\n" +
-    "Then ask: 5. SOLUTION — what concrete change would fix the problem this points at, what " +
+    "  5. POLICY & GOVERNANCE — what does a rule, bill, standard, code of practice or enforcement " +
+    "action actually require, does it bind or merely advise, and who can check it?\n" +
+    "Then ask: 6. SOLUTION — what concrete change would fix the problem this points at, what " +
     "evidence supports it, and how would we know it worked? Note promising solutions and the " +
     "evidence for and against them.\n" +
     "Your years of narrative analysis transfer: separate what the evidence supports from how AI " +
@@ -139,8 +141,9 @@ const BETTER_AI = {
 
   // Each track: FOUNDATION questions (deep-research reports) build the evidence
   // base; SOLUTION questions (runner/solution_brief.js) turn it into proposals.
-  // agenda_bootstrap.js orders them F1-all → S1-all → F2-all → S2-all → …, so a
-  // track's solutions always come after its foundations.
+  // orderedQuestions() runs the whole foundation phase first (F1-all → F2-all →
+  // F3-all), then the solutions (S1-all → S2-all → …), so the evidence base and
+  // the seeded axes are grounded before any brief is drafted.
   tracks: [
     {
       id: "lab_accountability",
@@ -150,6 +153,7 @@ const BETTER_AI = {
       foundations: [
         "How have the frontier labs' published safety frameworks (Anthropic's Responsible Scaling Policy, OpenAI's Preparedness Framework, Google DeepMind's Frontier Safety Framework) changed since their first versions, and which changes tightened versus loosened the commitments?",
         "For the most recent frontier model releases from Anthropic, OpenAI and Google DeepMind, did the system cards report third-party pre-deployment evaluations (UK AI Security Institute, US CAISI, METR, Apollo Research), and what did those evaluations find?",
+        "Where have frontier labs deviated from their own published safety commitments — evaluations skipped or delayed, thresholds redefined, deployments ahead of stated policy — what is the documented record, and how did each lab account for it?",
       ],
       solutions: [
         "Frontier-lab safety commitments are hard for outsiders to verify. What concrete mechanism — third-party audits, standardized system-card disclosures, public commitment trackers, incident reporting — would make them verifiable, what evidence from AI or other safety-critical industries shows such mechanisms work, and how would its effect be measured?",
@@ -164,6 +168,7 @@ const BETTER_AI = {
       foundations: [
         "How reliable is chain-of-thought monitoring as a safety tool, given recent research on the faithfulness of reasoning traces?",
         "What is the current evidence on alignment faking and scheming in frontier language models — which experiments demonstrated it, under what conditions, and what are the main methodological critiques?",
+        "What does the research on AI control protocols — monitoring, auditing and constraining models that cannot be trusted — show about how well they hold up, against which threat models, and what are their documented failure modes?",
       ],
       solutions: [
         "Given the current evidence on chain-of-thought monitoring and reasoning-trace faithfulness, what practical monitoring setup should an organization deploying LLM agents use today, and how would it know the monitor is actually working?",
@@ -178,6 +183,7 @@ const BETTER_AI = {
       foundations: [
         "What do METR's measurements of the length of tasks AI agents can complete autonomously show about the trend, and what are the strongest critiques of extrapolating it?",
         "Which AI capability benchmarks are closest to saturation, and what do forecasters (Epoch AI, Metaculus, the AI 2027 authors) project for the next 12 months?",
+        "How accurate have past AI capability forecasts been — what did forecasters and labs predict for the last three years, what actually happened, and what does the pattern of error imply about today's projections?",
       ],
       solutions: [
         "Which leading indicators should organizations deploying AI agents track to know when agent capabilities are outgrowing their oversight processes, and what thresholds would justify changing those processes?",
@@ -193,11 +199,27 @@ const BETTER_AI = {
       foundations: [
         "What does published research say about calibration and overconfidence in LLM agents' self-reported confidence, and how does my own prediction record (stated confidence versus actual hit rate) compare?",
         "What failure modes are documented for long-running autonomous LLM agents (goal drift, self-reinforcing loops, silent pipeline failures), and which of them appear in my own operating record?",
+        "What does the research on agent self-verification — self-critique, self-consistency checks, external verification — show about which checks actually improve reliability rather than confidence, and which of those does my own pipeline implement or lack?",
       ],
       solutions: [
         "My predictions state far higher confidence than they achieve. What calibration method, supported by research on LLM confidence estimation, would fix this, and what test on my own prediction log would show it worked?",
         "My belief axes mostly reflect which accounts my feed happened to show me. What design for an LLM agent's belief formation would resist source capture, grounded in research and my own data, and how would the improvement be measured?",
         "Several of my own subsystems failed silently for about two months without anyone noticing. What operating safeguards from reliability engineering would have caught this early in an autonomous LLM agent, and how would they be tested?",
+      ],
+    },
+    {
+      id: "governance",
+      label: "Policy & governance",
+      why: "The rules for frontier AI are being written now — establish what they actually require, where they bind versus where they are voluntary, and propose what would make them work.",
+      search_terms: ["EU AI Act implementation", "AI safety institute evaluations", "NIST AI risk management framework", "frontier AI regulation", "AI chip export controls"],
+      foundations: [
+        "What does the EU AI Act actually require of general-purpose and high-risk AI systems, which obligations are in force versus delayed or still being drafted in codes of practice, and what does the record so far show about enforcement capacity?",
+        "What access and powers do the AI safety and security institutes (UK AISI, US CAISI, the EU AI Office and their international network) actually hold — voluntary pre-deployment access, binding authority, funding, staffing — and what have their published evaluations produced?",
+        "Outside the EU, which governance instruments impose checkable obligations on frontier developers — US federal and state law, NIST's AI Risk Management Framework, compute and chip export controls, international agreements — and where does the evidence show they bind rather than merely advise?",
+      ],
+      solutions: [
+        "Frontier AI rules are being written faster than anyone can verify compliance with them. Which enforcement or verification mechanism — pre-deployment access, audit rights, incident reporting, compute-threshold reporting — has the strongest evidence behind it from AI or other safety-critical regulated sectors, and how would its effect be measured?",
+        "What minimum control set would let a small or mid-size organization deploying AI agents be defensibly compliant across the EU AI Act, the NIST AI Risk Management Framework and sector rules at once — what do those obligations actually share, and how would the adequacy of that control set be tested?",
       ],
     },
   ],
@@ -249,11 +271,19 @@ const BETTER_AI = {
     },
     {
       id: "axis_ai_oversight_model_v1",
-      track: "lab_accountability",
+      track: "governance",
       label: "AI Oversight: Voluntary Self-Governance vs. Binding External Oversight",
       left_pole: "Voluntary lab self-governance and industry standards are adequate to manage frontier AI risk",
       right_pole: "Binding external oversight — regulation, independent audits, empowered AI safety institutes — is necessary",
       topics: ["AI regulation", "AI safety institute"],
+    },
+    {
+      id: "axis_ai_policy_efficacy_v1",
+      track: "governance",
+      label: "AI Rules in Practice: Symbolic vs. Binding",
+      left_pole: "AI rules are largely symbolic — obligations are vague, delayed, unenforced, or outrun by deployment",
+      right_pole: "AI rules bind in practice — obligations are specific, enforced, and change what developers and deployers actually do",
+      topics: ["AI regulation", "AI policy"],
     },
     {
       id: "axis_agent_self_reliability_v1",
@@ -282,6 +312,10 @@ const BETTER_AI = {
     "eu ai act", "ai safety institute", "ai security institute", "aisi", "caisi", "metr", "apollo research",
     "redwood research", "epoch ai", "model weights", "scaling laws", "ai agents", "agentic",
     "autonomous agent", "chain of thought", "chain-of-thought", "rlhf", "constitutional ai",
+    // governance track vocabulary (kept AI-specific: bare "regulation", "policy",
+    // "export controls" or "audit" would false-positive on the PH feed)
+    "ai act", "eu ai office", "nist ai", "ai risk management framework", "chip export controls",
+    "code of practice", "ai audits", "ai liability", "model registration", "compute threshold",
   ],
 
   // Off-platform pages without RSS, rotated by runner/source_selector.js.
@@ -300,6 +334,10 @@ const BETTER_AI = {
     { track: "forecasting", label: "METR research", url: "https://metr.org/research" },
     { track: "forecasting", label: "Epoch AI data insights", url: "https://epoch.ai/data-insights" },
     { track: "self_study", label: "arXiv", url: "https://arxiv.org/search/?query={q}&searchtype=all&abstracts=show&order=-announced_date_first&size=50" },
+    { track: "governance", label: "EU AI Act explorer", url: "https://artificialintelligenceact.eu/the-act/" },
+    { track: "governance", label: "EU AI Office", url: "https://digital-strategy.ec.europa.eu/en/policies/ai-office" },
+    { track: "governance", label: "NIST AI Risk Management Framework", url: "https://www.nist.gov/itl/ai-risk-management-framework" },
+    { track: "governance", label: "CSET publications", url: "https://cset.georgetown.edu/publications/" },
   ],
 
   // RSS/Atom feeds merged into scraper/rss_collect.js (all verified 200 + parseable
@@ -322,6 +360,9 @@ const BETTER_AI = {
     { url: "https://www.aisnakeoil.com/feed", name: "AI Snake Oil", tier: 2, axis_hint: "ai_safety_skeptic" },
     { url: "https://garymarcus.substack.com/feed", name: "Gary Marcus", tier: 3, axis_hint: "ai_safety_skeptic" },
     { url: "https://www.understandingai.org/feed", name: "Understanding AI", tier: 2, axis_hint: "ai_safety_skeptic" },
+    { url: "https://artificialintelligenceact.eu/feed/", name: "EU AI Act", tier: 1, axis_hint: "ai_policy_governance" },
+    { url: "https://cset.georgetown.edu/feed/", name: "CSET Georgetown", tier: 1, axis_hint: "ai_policy_governance" },
+    { url: "https://www.aipolicyperspectives.com/feed", name: "AI Policy Perspectives (GovAI)", tier: 2, axis_hint: "ai_policy_governance" },
   ],
 
   // Seed X follows, consumed by scraper/follows.js only once the operator sets
@@ -431,15 +472,21 @@ function trackFor(question, agenda = getAgenda()) {
 }
 
 /**
- * Plan order: round r takes every track's r-th foundation, then every track's
- * r-th solution — so each solution lands after its track's foundation work.
+ * Plan order: EVERY foundation first (round r takes each track's r-th), then
+ * every solution. At one question/day that is a foundation phase of
+ * sum(foundations) days — the evidence base and the seeded axes get grounded
+ * before the first brief is drafted — followed by the solution rounds.
+ *
+ * Operator decision 2026-09-19 (preseeding the initial phase). To go back to
+ * interleaved (a track's solutions as soon as its own foundations are done),
+ * swap the two outer loops.
  */
 function orderedQuestions(agenda = getAgenda()) {
   if (!agenda) return [];
   const rounds = Math.max(...agenda.tracks.map(t => Math.max((t.foundations || []).length, (t.solutions || []).length)));
   const out = [];
-  for (let r = 0; r < rounds; r++) {
-    for (const kind of ["foundations", "solutions"]) {
+  for (const kind of ["foundations", "solutions"]) {
+    for (let r = 0; r < rounds; r++) {
       for (const t of agenda.tracks) if ((t[kind] || [])[r]) out.push(t[kind][r]);
     }
   }

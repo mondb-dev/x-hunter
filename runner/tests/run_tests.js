@@ -647,6 +647,20 @@ section("Research agenda + periodic gating");
     if (orderOk) pass("every track has solutions, each ordered after its foundation");
     else fail("question order", "a track lacks solutions or a solution precedes its foundation");
 
+    // Operator decision 2026-09-19: the whole foundation phase runs before any
+    // solution, so briefs are never drafted against ungrounded axes.
+    const kindOf = new Map(ra.agendaQuestions(agenda).map((q) => [q.question, q.kind]));
+    const kinds = ordered.map((q) => kindOf.get(q));
+    if (!kinds.includes(undefined) && kinds.lastIndexOf("foundation") < kinds.indexOf("solution"))
+      pass(`foundation phase (${kinds.filter((k) => k === "foundation").length}) runs before every solution (${kinds.filter((k) => k === "solution").length})`);
+    else fail("foundation phase", "a solution is scheduled before the last foundation");
+
+    // Every track carries a seeded axis, or its evidence has nowhere to land
+    // under full_pivot (single_pass_browse files only against agenda axes).
+    const trackless = agenda.tracks.filter((t) => !agenda.axes.some((a) => a.track === t.id));
+    if (!trackless.length) pass("every track has at least one seeded axis");
+    else fail("track axes", `no seeded axis for: ${trackless.map((t) => t.id).join(", ")}`);
+
     const seed = JSON.parse(fs.readFileSync(path.join(ROOT, agenda.follow_seed), "utf-8"));
     if (seed.approved === false) pass("follow seed list ships unapproved (operator must opt in)");
     else fail("follow seed", "follow seed list must ship with approved: false");

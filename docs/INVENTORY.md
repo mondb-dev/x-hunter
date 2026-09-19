@@ -234,15 +234,19 @@ research agenda: affinity = agenda vocabulary; zero-affinity candidates dropped
 
 - **Research agenda** `runner/lib/research_agenda.js` (docs/RESEARCH_AGENDA.md):
   operator-set focus, `RESEARCH_AGENDA` env (default `better_ai`, `off` disables,
-  :317). `better_ai` = **final outputs are well-founded solutions** for more useful,
+  :403). `better_ai` = **final outputs are well-founded solutions** for more useful,
   reliable, safe AI; `mode: "full_pivot"` (:47): off-agenda RSS paused except
-  `keep_feeds` (:288, `scraper/rss_collect.js:85`), browse evidence restricted to
+  `keep_feeds` (:373, `scraper/rss_collect.js:85`), browse evidence restricted to
   agenda axes (`single_pass_browse.js:109`), vocation pinned
   (`evaluate_vocation.js:226`), ponder agenda override (`ponder.js:133`), seeded
-  axes never reaped (`apply_ontology_delta.js:718`), self-study dossier (:432).
-  Each track has foundation + solution questions, ordered by `orderedQuestions`
-  (:393). Follow seed list `runner/data/better_ai_follow_seed.json` (:285) is inert
-  until `"approved": true`. One-time migration: `runner/agenda_bootstrap.js [--apply]`.
+  axes never reaped (`apply_ontology_delta.js:718`), self-study dossier (:525).
+  **5 tracks** (lab accountability, literature, forecasting, self-study, policy &
+  governance), **7 seeded axes**, **26 questions** = 15 foundation + 11 solution.
+  `orderedQuestions` (:484) runs the whole foundation phase first, then the
+  solutions — operator decision 2026-09-19, so briefs are never drafted against
+  ungrounded axes. Follow seed list `runner/data/better_ai_follow_seed.json` (:370)
+  is inert until `"approved": true`. One-time migration:
+  `runner/agenda_bootstrap.js [--apply]`.
 - **Public data export** `runner/export_public_data.js` (docs/PUBLIC_DATA.md): versioned
   static JSON under `web/public/data/` — `index.json` (catalog), `schema.json`,
   `agenda.json`, `axes/{index,<id>}.json`, `solutions/{index,<id>}.json`,

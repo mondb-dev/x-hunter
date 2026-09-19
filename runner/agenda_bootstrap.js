@@ -55,6 +55,8 @@ function buildPlan(agenda) {
   const tracks = agenda.tracks.map(t => `${t.label}: ${t.why}`).join(" ");
   const questions = orderedQuestions(agenda);
   const nSolutions = agendaQuestions(agenda).filter(q => q.kind === "solution").length;
+  const nFoundations = agendaQuestions(agenda).filter(q => q.kind === "foundation").length;
+  const nTracks = agenda.tracks.length;
   return {
     id: `plan_${TODAY.replace(/-/g, "")}_agenda_${agenda.id}`,
     title: `${agenda.label} — Month 1`,
@@ -67,16 +69,18 @@ function buildPlan(agenda) {
     belief_axes: agenda.axes.map(a => a.id),
     action_type: "solution_series",
     brief:
-      `Produce well-founded solution briefs for more useful, reliable and safe AI across four tracks. ${tracks} ` +
-      "Each track first builds its evidence base (deep-research foundation reports), then turns it into " +
-      "solution briefs (runner/solution_brief.js: problem → cited evidence → mechanism → falsifiable test → " +
-      "risks, red-teamed and gated before publishing). One question per day via plan_research.js; threads " +
-      "and articles carry the published solutions to practitioners.",
+      `Produce well-founded solution briefs for more useful, reliable and safe AI across ${nTracks} tracks. ${tracks} ` +
+      `The evidence base is built first: all ${nFoundations} foundation questions become deep-research reports ` +
+      `(one per day) before the first solution is drafted, so the seeded axes carry real evidence and every ` +
+      `brief stands on published foundations. The solutions follow (runner/solution_brief.js: problem → cited ` +
+      `evidence → mechanism → falsifiable test → risks, red-teamed and gated before publishing). One question ` +
+      `per day via plan_research.js; threads and articles carry the published solutions to practitioners.`,
     success_30d:
-      `At least ${Math.ceil(nSolutions / 2)} solution briefs published that passed the red-team and grounding ` +
-      "gate, covering all four tracks, each built on a published foundation report; at least one self-study " +
-      "solution specific enough for the operator to test on Sebastian's own pipeline; every withheld brief " +
-      "logged with its gate failure in state/solutions.jsonl.",
+      `All ${nFoundations} foundation reports published — the first ${nFoundations} research days — with every ` +
+      `seeded axis carrying evidence from them; then at least ${Math.ceil(nSolutions / 3)} solution briefs that ` +
+      `passed the red-team and grounding gate, each built on a published foundation report; at least one ` +
+      `self-study solution specific enough for the operator to test on Sebastian's own pipeline; every ` +
+      `withheld brief logged with its gate failure in state/solutions.jsonl.`,
     status: "active",
     created: TODAY,
     activated_date: TODAY,
@@ -91,9 +95,9 @@ function buildPlan(agenda) {
       effort: "medium",
       open_questions: questions,
       milestones: [
-        { week: 1, goal: "Foundation reports published on all four tracks; first solution briefs drafted on top of them." },
-        { week: 2, goal: "First round of solution briefs published (one per track) — each red-teamed, grounded, with a stated test." },
-        { week: 4, goal: "Second round of solutions published; a synthesis of which proposals are strongest and what testing them would take." },
+        { week: 1, goal: `One foundation report published on each of the ${nTracks} tracks; the seeded axes carrying their first evidence.` },
+        { week: 2, goal: `Foundation phase within reach of complete (${nFoundations} reports); the first solution briefs drafted on top of them.` },
+        { week: 4, goal: "First solution briefs published — each red-teamed, grounded, with a stated test — and every withheld one logged with its gate failure." },
       ],
       risks: [
         "The X home feed stays PH-heavy until follows shift — RSS and source pages carry the agenda meanwhile.",
@@ -102,14 +106,15 @@ function buildPlan(agenda) {
       ],
     },
     first_sprint: {
-      week_1_goal: "Publish the four foundation reports and start the first solution briefs on top of them.",
+      week_1_goal: `Publish the first foundation report on each of the ${nTracks} tracks — the evidence base the solutions will stand on.`,
       first_actions: [
         "Foundation report: how the frontier labs' safety frameworks changed since their first versions",
         "Foundation report: how reliable chain-of-thought monitoring is, given reasoning-trace faithfulness research",
         "Foundation report: what METR's task-horizon measurements show, and the critiques of extrapolating them",
         "Foundation report: LLM calibration research vs Sebastian's own 79%-stated / 29%-actual prediction record",
+        "Foundation report: what the EU AI Act actually requires, which obligations are in force, and who can enforce them",
       ],
-      success_signal: "Four foundation reports live on the website and the first solution brief through the red-team.",
+      success_signal: `${nTracks} foundation reports live on the website, one per track, each seeded axis carrying evidence from them.`,
     },
   };
 }
