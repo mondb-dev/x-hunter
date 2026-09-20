@@ -51,7 +51,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
               <a href="/ponders">Ponders</a>
               <a href="/plan">Plan</a>
               <a href="/predictions">Predictions</a>
-              <a href="/veritas-lens">Veritas Lens</a>
+              <a href="/data">Data</a>
               <a href="/about">About</a>
             </div>
           </nav>

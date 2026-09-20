@@ -39,6 +39,8 @@ All public output flows through a shared path: **compose (Claude)** → **outbou
 
 ### Research subsystems
 
+- **Public research data** (`runner/export_public_data.js`, docs/PUBLIC_DATA.md) — versioned, cross-linked static JSON at `sebastianhunter.fun/data`: solution briefs (published and withheld), belief axes, predictions, agenda, each with stable ids and a schema. The interface anything outside this repo should read; internal `state/` is not an interface.
+- **Research agenda** (`runner/lib/research_agenda.js`, docs/RESEARCH_AGENDA.md) — operator-set focus that overrides the emergent feed→ontology loop at every stage (feeds, source pages, follows, curiosity, browse lens, planning, vocation). Current agenda: **Better AI — well-founded solutions** (full pivot): four foundation tracks (lab accountability, literature, forecasting, self-study) feeding **solution briefs** (`runner/solution_brief.js`: cited evidence → mechanism → falsifiable test, red-teamed and gated before publishing; ledger `state/solutions.jsonl`). One-time migration: `runner/agenda_bootstrap.js --apply`; disable with `RESEARCH_AGENDA=off`.
 - **Deep research** (`runner/deep_research.js`) — triage → plan → execute (recall/posts/xsearch/search/fetch/rugcheck/trending) → refine (marks ledger) → resolve (claim verification) → synthesize with a calibrated publish gate. Delivered as website report pages, X threads, or X Articles. Triggered by X mentions, Telegram `/dr`, or daily from the active plan (`runner/plan_research.js`).
 - **Stances** (`runner/stance_scan.js`) — committed, spectrum-valued positions on named time-bound events; resolutions feed back into the ontology.
 - **Predictions** (`runner/prediction_resolution.js`) — auto-resolution of expired predictions + confidence calibration fed back into generation.
@@ -92,6 +94,9 @@ See `.env.example` for the full list. Key vars:
 | `POST_BACKEND=helmstack` | posting via the helmstack-social engines |
 | `HELMSTACK_URL` / `HELMSTACK_AUTH_TOKEN` | HelmStack HTTP API (:7070) |
 | `OUTBOX_X` | opt X posting into the unified outbox queue |
+| `RESEARCH_AGENDA` | operator research agenda (`better_ai` default; `off` = fully emergent focus) |
+| `CLAUDE_SOLUTION_MODEL` | model for solution-brief draft / red-team / revise (default `opus`) |
+| `INTEL_CONFLICT_CLAIMS` | `1` forces the Iran/US/Israel conflict-claims batch on while an agenda is active |
 | `X_USERNAME` / `X_PASSWORD` | X account credentials |
 | `GITHUB_TOKEN` / `GITHUB_REPO` | auto-commit + push each cycle |
 | `SOLANA_PUBLIC_KEY` / `SOLANA_PRIVATE_KEY` | Arweave uploads via Irys |
@@ -121,14 +126,18 @@ hunter/
 │   │   ├── amplify_performance.js← amplification learn-loop model
 │   │   ├── cost_meter.js / operating_cost.js ← LLM spend + burn-rate self-model
 │   │   ├── capabilities.js       ← registry of what Sebastian can actually do
+│   │   ├── research_agenda.js    ← operator-set research focus (what to point it at)
 │   │   └── prompts/              ← prompt builders
 │   ├── apply_ontology_delta.js   ← evidence gates + belief update
 │   ├── deep_research.js          ← triage→plan→execute→refine→resolve→synth
 │   ├── plan_research.js          ← plan-driven daily research executor
+│   ├── solution_brief.js         ← agenda's final output: red-teamed, gated solution briefs
+│   ├── export_public_data.js     ← versioned public JSON interface (web/public/data/**)
 │   ├── stance_scan.js            ← daily stance formation + resolution
 │   ├── prediction_resolution.js  ← auto-resolve expired predictions
 │   ├── x_amplify.js / linkedin_amplify.js / amplify_measure.js
-│   ├── curiosity.js              ← uncertainty-driven research directive
+│   ├── curiosity.js              ← research directive (agenda / uncertainty-driven)
+│   ├── agenda_bootstrap.js       ← one-time state migration onto the research agenda
 │   ├── write_article.js / generate_checkpoint.js / ponder.js
 │   ├── telegram_bot.js           ← admin bot (/dr deep research, controls)
 │   └── builder_vertex.js         ← self-modification builder (Gemini)

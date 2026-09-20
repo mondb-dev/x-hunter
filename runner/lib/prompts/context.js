@@ -4,6 +4,21 @@ const fs = require('fs');
 const path = require('path');
 const config = require('../config');
 const { buildToolManifest, loadLastToolResult } = require('../tools');
+const { getAgenda } = require('../research_agenda');
+
+/**
+ * Axes that may be shown to the writing layer. Under a full-pivot agenda that is
+ * the agenda's axes only: the pre-pivot axes carry all the confidence and would
+ * otherwise keep supplying "his positions" to every tweet/quote/thread prompt.
+ * Falls back to all axes if the agenda's are not seeded yet.
+ */
+function onAgendaAxes(axes) {
+  const { isFullPivot, isAgendaAxis } = require('../research_agenda');
+  const agenda = getAgenda();
+  if (!isFullPivot(agenda)) return axes;
+  const kept = axes.filter(a => isAgendaAxis(a, agenda));
+  return kept.length ? kept : axes;
+}
 
 // ── Helpers ─────────────────────────────────────────────────────────────────
 
@@ -35,6 +50,7 @@ function formatCurrentAxes() {
   try {
     const d = JSON.parse(fs.readFileSync(config.ONTOLOGY_PATH, 'utf-8'));
     let axes = d.axes || [];
+    axes = onAgendaAxes(axes);
     if (axes.length === 0) return '  (none yet)';
     // For local models, cap to top 15 axes by evidence count to keep prompt manageable
     const isLocalModel = !!process.env.OLLAMA_BASE_URL;
@@ -83,7 +99,7 @@ function loadSynthesisProposals() {
 function formatTopAxes() {
   try {
     const o = JSON.parse(fs.readFileSync(config.ONTOLOGY_PATH, 'utf-8'));
-    const raw = Array.isArray(o.axes) ? o.axes : Object.values(o.axes || {});
+    const raw = onAgendaAxes(Array.isArray(o.axes) ? o.axes : Object.values(o.axes || {}));
     const axes = raw
       .filter(a => a.confidence >= 0.65)
       .sort((a, b) => b.confidence - a.confidence)
@@ -208,16 +224,25 @@ function buildJournalTask(type, today, hour, dayNumber) {
       '.html ALREADY EXISTS. DO NOT write or overwrite this file \u2014 it has been permanently archived to Arweave.';
   }
   if (type === 'browse') {
+    const agenda = getAgenda();
+    const persona = agenda
+      ? '   Write as Sebastian D. Hunter: ' + agenda.vocation.label + '.\n'
+      : '   Write as Sebastian D. Hunter: a digital watchdog for public integrity.\n';
+    const thread = agenda
+      ? '   Which agenda track does what you observed touch — lab accountability, the\n' +
+        '   research literature, what happens next, or your own failure modes as an agent?\n' +
+        '   That is the thread. Pull on it.\n'
+      : '   Where does what you observed connect to disinformation, accountability, power, or\n' +
+        '   the integrity of public information? That is the thread. Pull on it.\n';
     return 'Use the write_file tool to write journals/' + today + '_' + hour + '.html now. This is Day ' + dayNumber + '.\n' +
       '   The journal has TWO required sections inside <article>:\n' +
       '\n' +
       '   SECTION 1 — synthesis (required): Your interpretive narrative for this cycle.\n' +
-      '   Write as Sebastian D. Hunter: a digital watchdog for public integrity.\n' +
+      persona +
       '   Your vocation (WHO YOU ARE above) is the lens. What you choose to notice,\n' +
       '   what you find significant, and how you frame it should reflect that identity.\n' +
       '   One or two key tensions or signals you noticed. What is new or surprising.\n' +
-      '   Where does what you observed connect to disinformation, accountability, power, or\n' +
-      '   the integrity of public information? That is the thread. Pull on it.\n' +
+      thread +
       '   ~150-200 words. Use <section class="stream">, <section class="tensions">,\n' +
       '   <section class="images">, <section class="footnotes"> as usual.\n' +
       '\n' +
@@ -279,9 +304,26 @@ function formatVocation() {
       out += 'When deciding what to write about or how to frame an observation, these axes\n';
       out += 'are your primary filter. Prioritise signals that touch them.';
     }
+    const agenda = getAgenda();
+    if (agenda) out += '\n\n' + require('../research_agenda').agendaBlock('lens', agenda);
     return out.trim();
   } catch {
     return '(vocation not yet formed)';
+  }
+}
+
+/**
+ * What he KNOWS — findings from his own research and the briefs that survived
+ * the gate, each with its source (lib/knowledge_base.js). This is the substance
+ * the writing layer speaks from; the axes above it are research anchors, not
+ * positions. Empty until research has produced something, which is the honest
+ * state to be in.
+ */
+function formatKnowledge(topic = '', purpose = 'voice', limit = 8) {
+  try {
+    return require('../knowledge_base').knowledgeBlock({ topic, purpose, limit });
+  } catch (e) {
+    return '';
   }
 }
 
@@ -391,6 +433,7 @@ function loadContext(opts) {
     ctx.prefetchSource    = readState(config.PREFETCH_SOURCE_PATH, { fallback: '' }).trim();
     ctx.unresolvedClaims  = formatUnresolvedClaims();
     ctx.currentAxes       = formatCurrentAxes();
+    ctx.knowledge         = formatKnowledge('', 'voice', 6);
     ctx.vocation          = formatVocation();
     ctx.journalTask       = buildJournalTask('browse', today, hour, dayNumber);
     ctx.nextTweet         = (Math.floor(cycle / config.TWEET_EVERY) + 1) * config.TWEET_EVERY;
@@ -404,6 +447,7 @@ function loadContext(opts) {
     ctx.quotedSources     = formatQuotedSources();
     ctx.digest            = readState(config.FEED_DIGEST_PATH, { tail: 120, fallback: '(not available)' });
     ctx.topAxes           = formatTopAxes();
+    ctx.knowledge         = formatKnowledge('', 'voice', 8);
     ctx.lastToolResult    = loadLastToolResult();
   }
 
@@ -413,6 +457,7 @@ function loadContext(opts) {
     ctx.discourseDigest   = readState(config.DISCOURSE_DIGEST_PATH, { fallback: '(no discourse yet)' });
     ctx.activePlanContext = loadActivePlanContext();
     ctx.currentAxes       = formatCurrentAxes();
+    ctx.knowledge         = formatKnowledge('', 'voice', 8);
     ctx.vocation          = formatVocation();
     ctx.journalTask       = buildJournalTask('tweet', today, hour, dayNumber);
     ctx.toolManifest      = buildToolManifest();
@@ -426,6 +471,7 @@ function loadContext(opts) {
 module.exports = loadContext;
 module.exports.readState = readState;
 module.exports.formatCurrentAxes = formatCurrentAxes;
+module.exports.formatKnowledge = formatKnowledge;
 module.exports.formatTopAxes = formatTopAxes;
 module.exports.formatQuotedSources = formatQuotedSources;
 module.exports.loadActivePlanContext = loadActivePlanContext;

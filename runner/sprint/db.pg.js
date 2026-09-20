@@ -41,6 +41,12 @@ async function completePlan(plan_id, date) {
   await query("UPDATE plans SET status = 'completed', completed_date = $1 WHERE plan_id = $2", [date, plan_id]);
 }
 
+/** Retire every other active plan (keeps getActivePlan unambiguous). */
+async function supersedeOtherPlans(keep_plan_id, date) {
+  const r = await query("UPDATE plans SET status = 'superseded', completed_date = $1 WHERE status = 'active' AND plan_id != $2", [date, keep_plan_id]);
+  return r.rowCount || 0;
+}
+
 // ── Sprint helpers ──────────────────────────────────────────────────────────
 
 async function getSprints(plan_id) {
@@ -300,7 +306,7 @@ async function close() {
 
 module.exports = {
   // Plan
-  getActivePlan, upsertPlan, completePlan,
+  getActivePlan, upsertPlan, completePlan, supersedeOtherPlans,
   // Sprint
   getSprints, getCurrentSprint, upsertSprint, activateSprint, completeSprint,
   // Task

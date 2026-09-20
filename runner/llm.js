@@ -35,13 +35,26 @@
  * @returns {Promise<string>} trimmed text response
  */
 async function generate(prompt, opts = {}) {
-  const { timeoutMs = 60_000, tag = "llm" } = opts;
+  const { timeoutMs = 60_000, tag = callerTag() } = opts;
 
   const { compose } = require("./lib/compose");
   const out = await compose(prompt, { timeoutMs, tag });
   const text = String(out || "").trim();
   if (!text) throw new Error("[llm] Claude returned empty text");
   return text;
+}
+
+/**
+ * Cost-meter tag for untagged calls: "llm:<file that called generate()>".
+ * Every caller used to land under a bare "llm" tag, which hid a single batch job
+ * making ~85-90% of all calls (state/cost_ledger.jsonl).
+ */
+function callerTag() {
+  for (const line of String(new Error().stack).split("\n").slice(2)) {
+    const m = line.match(/([^\s()]+\.js):\d+:\d+\)?\s*$/);
+    if (m && !m[1].endsWith("/llm.js")) return `llm:${require("path").basename(m[1], ".js")}`;
+  }
+  return "llm";
 }
 
 /**

@@ -4,12 +4,17 @@
  * Quote cycle prompt — find and quote-tweet one post.
  * Port of the QUOTEMSG heredoc in run.sh (lines 780-833).
  */
+const { getAgenda, agendaBlock } = require('../research_agenda');
+
 module.exports = function buildQuotePrompt(ctx) {
+  const agenda = getAgenda();
   return 'Today is ' + ctx.today + ' ' + ctx.now + ' (Day ' + ctx.dayNumber + '). Quote cycle ' + ctx.cycle +
     ' -- find one post worth quoting.\n' +
     '\n' +
-    'Your strongest belief axes (what you actually think matters):\n' +
+    (agenda ? agendaBlock('voice', agenda) + '\n\n' : '') +
+    'Research anchors \u2014 the directions you are investigating (NOT positions you hold):\n' +
     ctx.topAxes + '\n' +
+    (ctx.knowledge ? '\n' + ctx.knowledge + '\n' : '') +
     '\n' +
     require('../stances').stancesPromptBlock() +
     'Already quoted source tweets (do NOT quote these again):\n' +
@@ -103,19 +108,25 @@ module.exports = function buildQuotePrompt(ctx) {
     '   "worth watching", or any phrase that could describe any tweet from the last year.\n' +
     '   If it sounds like a summary memo, it\'s wrong. If it sounds like what you\'d say\n' +
     '   walking out of the press conference, it\'s right.\n' +
-    '   TAGALOG RULE: If the quoted tweet is in Tagalog/Filipino, or is about the Philippines,\n' +
-    '   Filipino politics, PH governance, OFW issues, or Filipino culture \u2014 write your\n' +
-    '   quote commentary in natural spoken Tagalog or Taglish (Tagalog-English code-switch).\n' +
-    '   NEVER write formal/academic/textbook Tagalog. Nobody on Filipino Twitter talks like that.\n' +
-    '   BAD (stiff/Google Translate): "Ang dinamika ng pandaigdigang presyo ng langis ay\n' +
-    '     kumplikado. Mahalaga ang buong konteksto sa debate na ito."\n' +
-    '   GOOD (natural Taglish): "Di ganun kasimple yung oil prices. Kailangan ng buong\n' +
-    '     picture bago mag-judge."\n' +
-    '   GOOD (casual): "Oo connected naman. Pero yung global side, ang labo pa rin \u2014\n' +
-    '     hindi pwedeng isang angle lang."\n' +
-    '   Rules: Use "yung" not "ang" for casual. Mix English nouns freely. Short punchy\n' +
-    '   sentences. No formal words like "samakatuwid", "gayunpaman", "pandaigdigan".\n' +
-    '   Think: how would a sharp Filipino quote-tweet this?\n' +
+    (agenda
+      ? '   LANGUAGE: English by default \u2014 this is an international research conversation.\n' +
+        '   Tagalog/Taglish ONLY when the quoted post is Filipino AND the subject is AI\n' +
+        '   (PH AI policy, AI harms or AI deployment in the Philippines).\n'
+      :
+      '   TAGALOG RULE: If the quoted tweet is in Tagalog/Filipino, or is about the Philippines,\n' +
+      '   Filipino politics, PH governance, OFW issues, or Filipino culture \u2014 write your\n' +
+      '   quote commentary in natural spoken Tagalog or Taglish (Tagalog-English code-switch).\n' +
+      '   NEVER write formal/academic/textbook Tagalog. Nobody on Filipino Twitter talks like that.\n' +
+      '   BAD (stiff/Google Translate): "Ang dinamika ng pandaigdigang presyo ng langis ay\n' +
+      '     kumplikado. Mahalaga ang buong konteksto sa debate na ito."\n' +
+      '   GOOD (natural Taglish): "Di ganun kasimple yung oil prices. Kailangan ng buong\n' +
+      '     picture bago mag-judge."\n' +
+      '   GOOD (casual): "Oo connected naman. Pero yung global side, ang labo pa rin \u2014\n' +
+      '     hindi pwedeng isang angle lang."\n' +
+      '   Rules: Use "yung" not "ang" for casual. Mix English nouns freely. Short punchy\n' +
+      '   sentences. No formal words like "samakatuwid", "gayunpaman", "pandaigdigan".\n' +
+      '   Think: how would a sharp Filipino quote-tweet this?\n'
+    ) +
     '\n' +
     '4. Write state/quote_draft.txt (overwrite):\n' +
     '   Line 1: the source tweet URL\n' +

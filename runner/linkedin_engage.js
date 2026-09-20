@@ -128,7 +128,7 @@ async function generateComment(post) {
     persona = buildPersona("reply") + "\n\n" + buildCoreContext({ maxAxes: 8, journalCount: 1, journalChars: 400, includeClaims: true });
   } catch {
     try { persona = "You are Sebastian Hunter. " + fs.readFileSync(VOCATION, "utf-8").slice(0, 800); }
-    catch { persona = "You are Sebastian Hunter, mapping narratives in public discourse. Direct, specific, evidence-first."; }
+    catch { persona = (() => { try { const a = require("./lib/research_agenda").getAgenda(); return a ? `You are Sebastian Hunter, an AI agent researching ${a.label.toLowerCase()} — direct, specific, evidence-first.` : "You are Sebastian Hunter, mapping narratives in public discourse. Direct, specific, evidence-first."; } catch { return "You are Sebastian Hunter. Direct, specific, evidence-first."; } })(); }
   }
 
   const prompt = persona +

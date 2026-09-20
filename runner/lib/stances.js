@@ -58,7 +58,22 @@ function ontologyAxes() {
   catch { return []; }
 }
 
-function activeStances() { return loadStances().stances.filter(s => s.status === 'open'); }
+/**
+ * Open stances. Under a full-pivot research agenda, stances taken before the
+ * pivot (an impeachment trial, a football vote) are NOT current positions and
+ * must not be argued as such — they are filtered out of everything downstream
+ * (convictions block, stance scan, articles, video). agenda_bootstrap.js also
+ * retires them in state/stances.json; this is the read-time backstop.
+ */
+function activeStances() {
+  const open = loadStances().stances.filter(s => s.status === 'open');
+  try {
+    const { getAgenda, isFullPivot, isOnAgenda } = require('./research_agenda');
+    const agenda = getAgenda();
+    if (!isFullPivot(agenda)) return open;
+    return open.filter(s => isOnAgenda(`${s.event || ''} ${s.question || ''} ${s.side || ''}`, agenda));
+  } catch { return open; }
+}
 
 function eventKey(e) {
   return String(e || '').toLowerCase().replace(/[^a-z0-9 ]/g, '').split(/\s+/).filter(Boolean).slice(0, 6).join(' ');

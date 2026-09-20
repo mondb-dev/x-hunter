@@ -133,6 +133,12 @@ function completePlan(plan_id, date) {
   db.prepare("UPDATE plans SET status = 'completed', completed_date = ? WHERE plan_id = ?").run(date, plan_id);
 }
 
+/** Retire every other active plan (keeps getActivePlan unambiguous). */
+function supersedeOtherPlans(keep_plan_id, date) {
+  return db.prepare("UPDATE plans SET status = 'superseded', completed_date = ? WHERE status = 'active' AND plan_id != ?")
+    .run(date, keep_plan_id).changes;
+}
+
 // ── Sprint helpers ────────────────────────────────────────────────────────────
 
 function getSprints(plan_id) {
@@ -394,7 +400,7 @@ function close() {
 module.exports = {
   db,
   // Plan
-  getActivePlan, upsertPlan, completePlan,
+  getActivePlan, upsertPlan, completePlan, supersedeOtherPlans,
   // Sprint
   getSprints, getCurrentSprint, upsertSprint, activateSprint, completeSprint,
   // Task

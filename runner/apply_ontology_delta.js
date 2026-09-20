@@ -14,7 +14,14 @@
  * to confirm the pole_alignment is genuinely supported. Entries with confidence < 0.5
  * are rejected (logged). Ollama unavailable → accept entry (non-fatal fallback).
  *
- * Delta format (state/ontology_delta.json):
+ * WRITERS. state/ontology_delta.json belongs to the browse agent. Anything else
+ * that produces evidence (runner/lib/research_evidence.js, from a finished deep
+ * research pass) drops a delta into state/ontology_delta_inbox/ instead, because
+ * this script deletes the file it consumed — a second writer to the same path
+ * would be silently clobbered. Every source is drained in one pass and each
+ * entry carries `writer` into its evidence_log entry, so attribution survives.
+ *
+ * Delta format (state/ontology_delta.json, and each inbox file):
  * {
  *   "evidence": [
  *     { "axis_id": "axis_power_accountability",
@@ -300,8 +307,28 @@ function recordDiversity(axisId, poleAlignment, diversityState) {
   else if (poleAlignment === "right") diversityState.axes[axisId].right++;
 }
 
-if (!fs.existsSync(DELTA)) {
-  // Nothing to do — agent chose not to update ontology this cycle
+const INBOX_DIR = path.join(ROOT, "state", "ontology_delta_inbox");
+
+/** Every pending delta: the browse agent's file, then the inbox, oldest first. */
+function deltaSources() {
+  const out = [];
+  if (fs.existsSync(DELTA)) out.push({ file: DELTA, main: true });
+  try {
+    for (const f of fs.readdirSync(INBOX_DIR).filter(f => f.endsWith(".json")).sort())
+      out.push({ file: path.join(INBOX_DIR, f), main: false });
+  } catch { /* no inbox yet */ }
+  return out;
+}
+
+const SOURCES = deltaSources();
+
+/** Delete every file consumed this run — including on the error paths. */
+function consumeSources() {
+  for (const src of SOURCES) { try { fs.unlinkSync(src.file); } catch { /* already gone */ } }
+}
+
+if (!SOURCES.length) {
+  // Nothing to do — no agent chose to update the ontology this cycle
   process.exit(0);
 }
 
@@ -351,20 +378,42 @@ const trustMap = loadTrustMap();
 
 // ── Load files ────────────────────────────────────────────────────────────────
 
-let delta;
-try {
-  const raw = fs.readFileSync(DELTA, "utf-8");
-  const parsed = parseOntologyDelta(raw);
-  delta = parsed.delta;
-  if (parsed.repaired) {
-    console.log(
-      `[apply_delta] repaired ontology_delta.json via ${parsed.method}` +
-      ` (evidence=${delta.evidence.length}, new_axes=${delta.new_axes.length})`
-    );
+const delta = { evidence: [], new_axes: [] };
+for (const src of SOURCES) {
+  const name = path.basename(src.file);
+  try {
+    const raw = fs.readFileSync(src.file, "utf-8");
+    let writer = src.main ? "browse" : "inbox";
+    let part;
+    if (src.main) {
+      // The browse agent writes this one via an LLM, so it may need repair.
+      const parsed = parseOntologyDelta(raw);
+      part = parsed.delta;
+      if (parsed.repaired) {
+        console.log(
+          `[apply_delta] repaired ${name} via ${parsed.method}` +
+          ` (evidence=${part.evidence.length}, new_axes=${part.new_axes.length})`
+        );
+      }
+    } else {
+      // Inbox files are written by our own code — plain JSON, no repair path.
+      const j = JSON.parse(raw);
+      writer = String(j.writer || "inbox");
+      part = { evidence: Array.isArray(j.evidence) ? j.evidence : [], new_axes: [] };
+      if (Array.isArray(j.new_axes) && j.new_axes.length) {
+        console.log(`[apply_delta] ${name}: ignoring ${j.new_axes.length} new_axes — only the browse agent may create axes`);
+      }
+    }
+    for (const e of part.evidence || []) delta.evidence.push({ ...e, writer });
+    for (const a of part.new_axes || []) delta.new_axes.push(a);
+    if (!src.main) console.log(`[apply_delta] ${name}: ${(part.evidence || []).length} entr(ies) from ${writer}`);
+  } catch (e) {
+    console.error(`[apply_delta] could not parse ${name}: ${e.message}`);
+    try { fs.unlinkSync(src.file); } catch { /* already gone */ }
   }
-} catch (e) {
-  console.error(`[apply_delta] could not parse ontology_delta.json: ${e.message}`);
-  fs.unlinkSync(DELTA);
+}
+if (!delta.evidence.length && !delta.new_axes.length) {
+  consumeSources();
   process.exit(0);
 }
 
@@ -373,7 +422,7 @@ try {
   onto = JSON.parse(fs.readFileSync(ONTO, "utf-8"));
 } catch (e) {
   console.error(`[apply_delta] could not parse ontology.json: ${e.message}`);
-  fs.unlinkSync(DELTA);
+  consumeSources();
   process.exit(1);
 }
 
@@ -534,6 +583,10 @@ for (const entry of (delta.evidence || [])) {
     timestamp:      timestamp || now,
     pole_alignment: pole_alignment,
     trust_weight:   parseFloat(weight.toFixed(3)),
+    // Which writer produced this — "browse" (the feed) or e.g. "deep_research".
+    // Without it, research-grounded evidence is indistinguishable from feed
+    // evidence once it is in the log.
+    ...(entry.writer && entry.writer !== "browse" ? { writer: entry.writer } : {}),
     ...(entry.claim_id ? { claim_id: entry.claim_id } : {}),
   };
   if (stanceConf !== null) logEntry.stance_confidence = parseFloat(stanceConf.toFixed(3));
@@ -713,7 +766,11 @@ const REAP_HOURS = 48;
 const GRAVEYARD = path.join(ROOT, "state", "axes_graveyard.json");
 const nowMs = Date.now();
 const reaped = [];
+// Research-agenda seeded axes (runner/agenda_bootstrap.js) are exempt: they are
+// planted before evidence exists, on purpose.
+const protectedAxes = new Set(require("./lib/research_agenda").agendaAxisIds());
 onto.axes = onto.axes.filter(a => {
+  if (protectedAxes.has(a.id) || a.seeded_by) return true;
   const age = nowMs - new Date(a.created_at || now).getTime();
   const ageHours = age / (1000 * 60 * 60);
   if (ageHours >= REAP_HOURS && (a.evidence_log || []).length === 0) {
@@ -735,7 +792,7 @@ if (reaped.length > 0) {
 onto.last_updated = now;
 
 fs.writeFileSync(ONTO, JSON.stringify(onto, null, 2), "utf-8");
-fs.unlinkSync(DELTA);
+consumeSources();
 
 const rejMsg    = evidenceRejected ? `, ${evidenceRejected} rejected by stance check` : "";
 const echoMsg   = evidenceSelfEcho ? `, ${evidenceSelfEcho} rejected as self-echo` : "";

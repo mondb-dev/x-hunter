@@ -28,7 +28,7 @@ pass when every retained fragment is in the source; shorter spans are treated as
 scare quotes and skipped. Enforced at three points:
 
 1. `runner/compose_quote.js` — source text is looked up by tweet ID via
-   `lib/feed_lookup.js` (it previously sliced the digest by offset, which silently
+   `runner/lib/feed_lookup.js` (it previously sliced the digest by offset, which silently
    yielded the wrong entry or none, and an empty source made the coherence gate a
    no-op). ~4% of recent quote targets aren't in the feed buffer at all, so an
    unrecoverable source degrades the coherence check rather than killing the

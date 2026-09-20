@@ -103,13 +103,17 @@ async function formPass() {
   const ontology = loadJson(path.join(ROOT, 'state', 'ontology.json'), {});
   const vocation = loadJson(path.join(ROOT, 'state', 'vocation.json'), {});
   const convictions = buildConvictions({ ontology, vocation, maxAxes: 10 });
+  const { getAgenda, agendaBlock } = require('./lib/research_agenda');
+  const agendaRule = getAgenda()
+    ? `\n${agendaBlock('short')} Under this agenda, "principled" candidates must be AI events — a model release, a safety-framework or eval outcome, an AI bill or regulatory deadline, a lab governance decision. Taste picks are unaffected.\n`
+    : '';
 
   // Step 1: spot candidate events (cheap — no commitment yet).
   const rawCand = await reason(
 `Today is ${TODAY()}. You are Sebastian Hunter's stance scout. From today's feed, list up to 2 CANDIDATE events he might commit a side on — named, time-bound, contested, with a checkable outcome (a vote, verdict, election, match, deadline). Not vague themes. Zero candidates is a fine answer.
 
 ${convictions}
-
+${agendaRule}
 ── EXISTING OPEN STANCES (do NOT duplicate these events) ──
 ${open.map((s) => `- ${s.event}: ${s.side}`).join('\n') || '(none)'}
 

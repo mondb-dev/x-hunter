@@ -42,6 +42,7 @@ if (fs.existsSync(path.join(ROOT, ".env"))) {
 }
 
 const { reason } = require("./lib/compose");
+const { getAgenda } = require("./lib/research_agenda");
 async function callLLM(prompt) { return reason(prompt, { maxTokens: 2048, tag: "evaluate_vocation" }); }
 
 function loadJson(p) {
@@ -70,6 +71,16 @@ function getDayNumber() {
     const axes    = onto?.axes || [];
     const cpNum   = cpState?.checkpoint_count || 0;
     const dayNum  = getDayNumber();
+
+    // ── Research agenda: vocation is pinned, not re-derived from the feed ──
+    const agenda = getAgenda();
+    if (agenda) {
+      const voc = pinVocation(loadJson(VOC_PATH) || {}, agenda, axes);
+      saveJson(VOC_PATH, voc);
+      writeVocationMd(voc, axes, cpNum, dayNum);
+      console.log(`[vocation] pinned to research agenda "${agenda.id}": "${voc.label}" (core axes: ${voc.core_axes.join(", ") || "none yet"})`);
+      return;
+    }
 
     // Get high-confidence axes
     const highConfAxes = axes
@@ -208,6 +219,40 @@ function getDayNumber() {
   }
 })();
 
+// ── Research agenda: pin vocation.json to the operator-set agenda ─────────────
+// Label/description/intent come from lib/research_agenda.js. The first-person
+// statement is seeded from the agenda once, then left to ponder.js to rephrase.
+// Core axes are the agenda's seeded axes that exist, most evidence first.
+function pinVocation(voc, agenda, axes) {
+  const tag = `research_agenda:${agenda.id}`;
+  const v = agenda.vocation;
+  if (voc.label && voc.label !== v.label) {
+    voc.vocation_history = voc.vocation_history || [];
+    voc.vocation_history.push({
+      label: voc.label,
+      description: voc.description,
+      replaced_at: today,
+      reason: `operator research agenda: ${agenda.id}`,
+    });
+  }
+  const byId = new Map(axes.map(a => [a.id, a]));
+  const core = agenda.axes.map(a => byId.get(a.id)).filter(Boolean)
+    .sort((a, b) => (b.evidence_log || []).length - (a.evidence_log || []).length)
+    .slice(0, 3).map(a => a.id);
+  return {
+    ...voc,
+    status: "defined",
+    label: v.label,
+    description: v.description,
+    intent: v.intent,
+    statement: voc.pinned_by === tag ? (voc.statement || v.statement) : v.statement,
+    core_axes: core.length ? core : (voc.core_axes || []),
+    pinned_by: tag,
+    created_at: voc.created_at || today,
+    last_updated: today,
+  };
+}
+
 // ── LLM: synthesize vocation from high-confidence axes ──────────────────────
 async function synthesizeVocation(highConfAxes, currentVoc, cpNum, dayNum) {
   const axesDesc = highConfAxes.slice(0, 10).map(a => {
@@ -321,8 +366,12 @@ ${coreAxesText || "(none selected)"}
 ${voc.intent || "(not yet determined)"}
 
 ## What would sharpen or redirect this
-Evidence that contradicts the core axes, strong counterarguments to current leanings,
-or discovery of a domain that better integrates the high-confidence beliefs.
+${voc.pinned_by
+  ? `The domain is set by the operator research agenda (\`${voc.pinned_by}\`, runner/lib/research_agenda.js).
+Within it: evidence that contradicts the core axes, strong counterarguments to current
+leanings, and my own measured failures.`
+  : `Evidence that contradicts the core axes, strong counterarguments to current leanings,
+or discovery of a domain that better integrates the high-confidence beliefs.`}
 
 ## Last updated
 Day ${dayNum}, Checkpoint ${cpNum} (${today})

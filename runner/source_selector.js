@@ -11,6 +11,8 @@
  *   - Never override an existing pending reading item.
  *   - Queue at most one pending conviction-driven source at a time.
  *   - Prefer vocation/core axes and high-confidence, evidence-rich axes.
+ *   - With a research agenda active (lib/research_agenda.js), rotate through the
+ *     agenda's source pages instead of conviction axes (queueAgendaSource).
  *
  * Usage:
  *   SOURCE_SELECT_CYCLE=12 node runner/source_selector.js
@@ -21,6 +23,7 @@
 const fs = require("fs");
 const path = require("path");
 const { canonicalDomain } = require("./lib/url_utils");
+const { getAgenda } = require("./lib/research_agenda");
 
 const ROOT = path.resolve(__dirname, "..");
 const ONTOLOGY = path.join(ROOT, "state", "ontology.json");
@@ -89,6 +92,8 @@ function summariseQueue(entries) {
     if (entry.from_user) state.from_user = entry.from_user;
     if (entry.context) state.context = entry.context;
     if (entry.added_at) state.added = true;
+    if (entry.added_cycle) state.added_cycle = entry.added_cycle;
+    if (entry.added_at) state.added_ms = Date.parse(entry.added_at) || 0;
     if (entry.in_progress_cycle !== undefined) state.in_progress = true;
     if (entry.consumed_at) state.consumed = true;
   }
@@ -272,6 +277,60 @@ function pickAxis(axes, vocation, history) {
     .sort((a, b) => b.score - a.score)[0] || null;
 }
 
+/**
+ * Research-agenda mode: instead of conviction axes (which reflect the old feed),
+ * rotate through the agenda's off-platform source pages — tracks round-robin,
+ * sources round-robin within a track. Covers labs/orgs with no RSS feed
+ * (Anthropic, UK AISI, Apollo, GovAI, METR, Epoch…).
+ */
+function queueAgendaSource(agenda, plan, queueEntries, history) {
+  const prior = history.filter(h => h.bundle === "agenda").length;
+  const track = agenda.tracks[prior % agenda.tracks.length];
+  const round = Math.floor(prior / agenda.tracks.length);
+  const sources = agenda.sources.filter(s => s.track === track.id);
+  const term = track.search_terms[round % track.search_terms.length];
+  const candidates = sources.map(s => ({ label: s.label, url: s.url.replace("{q}", encodeURIComponent(term)) }));
+  // Source pages are revisited on purpose (their content changes), so no
+  // seen-URL filter here; reading_queue re-emits a URL queued after its last read.
+  const candidate = candidates.length ? candidates[round % candidates.length] : null;
+
+  plan.bundle = "agenda";
+  plan.query = term;
+  plan.candidates = candidates;
+  plan.selected_axis_id = (agenda.axes.find(a => a.track === track.id) || {}).id || null;
+  plan.selected_axis_label = track.label;
+  if (!candidate) {
+    plan.skipped_reason = `no_agenda_source_for_track:${track.id}`;
+    writeJson(PLAN_FILE, plan);
+    return;
+  }
+
+  appendQueue({
+    url: candidate.url,
+    from_user: "agenda_source",
+    agenda: true,
+    context: `Research agenda (${agenda.label}) — ${track.label}: ${track.why} Source: ${candidate.label}. Focus: ${term}. ` +
+      "Read it for concrete claims, commitments, results and their limits.",
+    added_cycle: CURRENT_CYCLE,
+    added_at: new Date().toISOString(),
+    priority: "normal",
+  });
+
+  plan.queued_url = candidate.url;
+  plan.queued_source = candidate.label;
+  plan.history = history.concat([{
+    ts: new Date().toISOString(),
+    axis_id: plan.selected_axis_id,
+    axis_label: track.label,
+    bundle: "agenda",
+    source: candidate.label,
+    url: candidate.url,
+    query: term,
+  }]).slice(-HISTORY_LIMIT);
+  writeJson(PLAN_FILE, plan);
+  console.log(`[source_selector] agenda: queued ${candidate.label} for track ${track.id}`);
+}
+
 function main() {
   const ontology = readJson(ONTOLOGY, { axes: [] });
   const vocation = readJson(VOCATION, {});
@@ -293,14 +352,22 @@ function main() {
     history,
   };
 
-  if (!CURRENT_CYCLE || CURRENT_CYCLE % SELECT_EVERY !== 0) {
+  // Offset 1, not 0: this only runs on BROWSE cycles, and every multiple of 3 is
+  // a TWEET (x6) or QUOTE (x6+3) cycle — the old `% 3 === 0` gate never passed.
+  if (!CURRENT_CYCLE || CURRENT_CYCLE % SELECT_EVERY !== 1) {
     plan.skipped_reason = `cycle_gate:${SELECT_EVERY}`;
     writeJson(PLAN_FILE, plan);
     return;
   }
 
   const queueEntries = summariseQueue(loadQueue());
-  const pendingItems = queueEntries.filter(entry => entry.added && !entry.consumed);
+  // Only FRESH unconsumed items count as pending (same windows as
+  // reading_queue.js: 24 cycles / 12h). Items emitted but never marked consumed
+  // would otherwise block selection forever.
+  const isFresh = entry => entry.added_cycle
+    ? CURRENT_CYCLE - entry.added_cycle <= 24
+    : Date.now() - (entry.added_ms || 0) <= 12 * 3600 * 1000;
+  const pendingItems = queueEntries.filter(entry => entry.added && !entry.consumed && isFresh(entry));
   const pendingExternal = pendingItems.filter(entry => entry.from_user === "conviction_source");
 
   if (pendingItems.some(entry => entry.from_user && entry.from_user !== "conviction_source")) {
@@ -312,6 +379,12 @@ function main() {
   if (pendingExternal.length >= MAX_PENDING_CONVICTION_ITEMS) {
     plan.skipped_reason = "conviction_source_already_pending";
     writeJson(PLAN_FILE, plan);
+    return;
+  }
+
+  const agenda = getAgenda();
+  if (agenda) {
+    queueAgendaSource(agenda, plan, queueEntries, history);
     return;
   }
 

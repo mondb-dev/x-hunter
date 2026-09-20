@@ -49,8 +49,9 @@ module.exports = function buildBrowsePrompt(ctx) {
     ctx.curiosityDirective + '\n' +
     '\u2500\u2500 COMMENT CANDIDATES \u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\n' +
     ctx.commentCandidates + '\n' +
-    '\u2500\u2500 CURRENT BELIEF AXES (read before updating ontology) \u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\n' +
+    '\u2500\u2500 RESEARCH ANCHORS \u2014 file observations against these; they are directions, not positions \u2500\u2500\n' +
     ctx.currentAxes + '\n' +
+    (ctx.knowledge ? '\n' + ctx.knowledge + '\n' : '') +
     (ctx.synthesisPending ? (
       '\u2500\u2500 SYNTHESIS PENDING (tension pairs with sufficient evidence on both sides) \u2500\u2500\u2500\u2500\u2500\n' +
       ctx.synthesisPending + '\n'
@@ -78,7 +79,7 @@ module.exports = function buildBrowsePrompt(ctx) {
         'X unavailable — browser is on NewsGuard Reports (newsguardtech.com/reports/).\n' +
         'Read the latest misinformation/disinformation reports. These are professional\n' +
         'assessments of news source credibility and narrative manipulation — directly\n' +
-        'relevant to your vocation as a digital watchdog for public integrity.\n' +
+        'relevant wherever your vocation touches information integrity.\n' +
         'Extract: which outlets are flagged, what narratives are being tracked, methodology.\n' +
         'Tag browse_notes entries with [NEWSGUARD].\n'
       : ctx.prefetchSource.startsWith('hackernews') ?

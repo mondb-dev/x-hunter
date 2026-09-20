@@ -6,7 +6,9 @@
  * Ported 1:1 from run.sh lines ~430-487 (inside the BROWSE elif block,
  * before the prompt construction + agent_run).
  *
- * Order and conditional gating match the bash original exactly.
+ * Order matches the bash original. Periodic steps (curiosity, deep-dive
+ * detection) are gated by dueEvery() rather than the original cycle-modulo
+ * checks, which never fired on BROWSE cycles (see dueEvery).
  * All scripts are invoked synchronously via execSync.
  */
 
@@ -109,6 +111,26 @@ function buildSprintBriefRecallQuery() {
   return query;
 }
 
+/**
+ * Cycle-due gate for periodic pre-browse steps. preBrowse only runs on BROWSE
+ * cycles, and every multiple of TWEET_EVERY (6) is a TWEET cycle — so the old
+ * `cycle % 12 === 0` / `cycle % 6 === 0` gates could never fire, which silently
+ * killed curiosity, search_curiosity, cluster_axes and deep_dive_detector from
+ * 2026-07-05 on. Instead: fire on the first BROWSE cycle at least `every` cycles
+ * after the last run (persisted in state/pre_browse_cadence.json).
+ */
+const CADENCE_PATH = path.join(config.STATE_DIR, 'pre_browse_cadence.json');
+
+function dueEvery(key, cycle, every, cadencePath = CADENCE_PATH) {
+  const state = readJson(cadencePath) || {};
+  const last = Number.isFinite(state[key]) ? state[key] : null;
+  // Cycle counter went backwards (reset) or never ran → due now.
+  if (last !== null && cycle >= last && cycle - last < every) return false;
+  state[key] = cycle;
+  try { fs.writeFileSync(cadencePath, JSON.stringify(state, null, 2)); } catch {}
+  return true;
+}
+
 /** Run a node script, logging to runner.log. Failures are swallowed (|| true). */
 function runScript(scriptPath, opts = {}) {
   const { env = {}, stdout = 'log', args = '' } = opts;
@@ -135,6 +157,13 @@ function runScript(scriptPath, opts = {}) {
  * @param {number} cycle - current cycle number
  */
 function preBrowse(cycle) {
+  // During the research agenda's foundation phase the X feed is not the job —
+  // reading, RSS and evidence filing continue, but the engagement prep below is
+  // skipped (lib/agenda_phase.js). Inert until the agenda plan is installed.
+  const phase = (() => {
+    try { return require('./agenda_phase').agendaPhase(); } catch { return { pauseFeedEngagement: false }; }
+  })();
+
   // ── 1. FTS5 integrity check + rebuild if corrupted ─────────────────────
   runScript(path.join(PROJECT_ROOT, 'runner/fts_maintain.js'));
 
@@ -153,7 +182,7 @@ function preBrowse(cycle) {
   }
 
   // ── 4. curiosity.js (every CURIOSITY_EVERY cycles) ────────────────────
-  if (cycle % config.CURIOSITY_EVERY === 0) {
+  if (dueEvery('curiosity', cycle, config.CURIOSITY_EVERY)) {
     runScript(path.join(PROJECT_ROOT, 'runner/curiosity.js'), {
       env: { CURIOSITY_CYCLE: String(cycle), CURIOSITY_EVERY: String(config.CURIOSITY_EVERY) },
     });
@@ -170,14 +199,20 @@ function preBrowse(cycle) {
   // Runs every browse cycle; self-gated internally (1h cooldown per feed)
   runScript(path.join(PROJECT_ROOT, 'scraper/rss_collect.js'));
 
-  // ── 6. comment_candidates.js ──────────────────────────────────────────
-  runScript(path.join(PROJECT_ROOT, 'runner/comment_candidates.js'));
+  // ── 6-8. X-feed engagement prep (comment candidates, discourse scan +
+  //        digest) — paused during the agenda's foundation phase ──────────
+  if (phase.pauseFeedEngagement) {
+    log(`feed engagement prep skipped — ${phase.reason}`);
+  } else {
+    // ── 6. comment_candidates.js ────────────────────────────────────────
+    runScript(path.join(PROJECT_ROOT, 'runner/comment_candidates.js'));
 
-  // ── 7. discourse_scan.js → discourse_anchors.jsonl ────────────────────
-  runScript(path.join(PROJECT_ROOT, 'runner/discourse_scan.js'));
+    // ── 7. discourse_scan.js → discourse_anchors.jsonl ──────────────────
+    runScript(path.join(PROJECT_ROOT, 'runner/discourse_scan.js'));
 
-  // ── 8. discourse_digest.js → discourse_digest.txt ─────────────────────
-  runScript(path.join(PROJECT_ROOT, 'runner/discourse_digest.js'));
+    // ── 8. discourse_digest.js → discourse_digest.txt ───────────────────
+    runScript(path.join(PROJECT_ROOT, 'runner/discourse_digest.js'));
+  }
 
   // ── 9. external_source_discovery.js (mechanical registry refresh) ─────
   runScript(path.join(PROJECT_ROOT, 'runner/external_source_discovery.js'));
@@ -196,7 +231,7 @@ function preBrowse(cycle) {
   });
 
   // ── 13. deep_dive_detector.js (every 6 cycles) ───────────────────────
-  if (cycle % 6 === 0) {
+  if (dueEvery('deep_dive_detector', cycle, 6)) {
     runScript(path.join(PROJECT_ROOT, 'runner/deep_dive_detector.js'), {
       env: { READING_CYCLE: String(cycle) },
     });
@@ -213,4 +248,5 @@ module.exports = {
   buildSprintBriefRecallQuery,
   loadTopicSummaryRecallQuery,
   parseSprintContext,
+  dueEvery,
 };

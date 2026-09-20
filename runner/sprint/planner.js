@@ -32,6 +32,12 @@ const STATE = path.join(ROOT, "state");
 const { reason } = require("../lib/compose");
 const { loadSprintDb } = require("../lib/db_backend");
 const { CAPABILITIES } = require("../lib/capabilities");
+const { getAgenda, agendaBlock } = require("../lib/research_agenda");
+
+// Operator research agenda block (empty when RESEARCH_AGENDA=off).
+function agendaSection() {
+  return getAgenda() ? `\n${agendaBlock("planning")}\n` : "";
+}
 const { isTemplate } = require("./verify_artifact");
 const sprintDb         = loadSprintDb();
 
@@ -269,7 +275,7 @@ ${recentDigest || "(empty)"}
 ${sprintObservations}
 
 ${CAPABILITIES}
-
+${agendaSection()}
 ## TASK
 Create a detailed 4-week sprint plan. For each week, define:
 1. A clear weekly goal (what "done" looks like)
@@ -339,7 +345,7 @@ Respond in this exact JSON format:
         {
           "title": "Concrete task name",
           "description": "What exactly to do and what 'done' looks like",
-          "task_type": "research|write|publish|post_x|post_linkedin|engage|reflect",
+          "task_type": "research|write|publish|post_x|post_linkedin|engage|experiment|reflect",
           "priority": 1,
           "estimated_hours": 4,
           "artifact": "articles/reports/Report_1.md, or null if this task produces no file. For post_x/post_linkedin leave it null — the tracker fills in the real posted URL."
@@ -383,7 +389,7 @@ ${recentDigest || "(empty)"}
 ${sprintObservations}
 
 ${CAPABILITIES}
-
+${agendaSection()}
 ## TASK
 Plan Week ${nextWeek}. Learn from what worked and what didn't.
 Adjust course if needed — the plan serves your compulsion, not the other way around.
@@ -421,7 +427,7 @@ Respond in this exact JSON format:
     {
       "title": "Concrete task name",
       "description": "What exactly to do",
-      "task_type": "research|write|publish|post_x|post_linkedin|engage|reflect",
+      "task_type": "research|write|publish|post_x|post_linkedin|engage|experiment|reflect",
       "priority": 1,
       "estimated_hours": 4,
       "artifact": "articles/reports/Report_${nextWeek}.md, or null if this task produces no file. For post_x/post_linkedin leave it null — the tracker fills in the real posted URL."

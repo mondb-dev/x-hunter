@@ -349,12 +349,18 @@ function runSocialPipeline() {
     } catch (e) { log(`stance_article spawn failed (non-fatal): ${e.message}`); }
   }
 
-  // Plan-driven deep research — answer one of the active plan's open research
-  // questions per day with a full deep-research pass, published to the website.
+  // Plan-driven deep research — answer the active plan's open research questions
+  // with a full deep-research pass, published to the website. Once per day
+  // normally; during the agenda's foundation phase, agenda.boot.research_per_day
+  // times a day, because that phase IS the work (lib/agenda_phase.js).
   // Detached: a deep pass runs 1-5 min, far beyond runScriptLog's 120s cap;
-  // plan_research.js has its own 10-min watchdog.
-  if (process.env.PLAN_RESEARCH_ENABLED !== '0' && dueForRun('plan_research', 24 * HOUR)) {
-    log('plan: deep-research executor (detached)');
+  // plan_research.js has its own watchdog.
+  const researchPhase = (() => {
+    try { return require('./lib/agenda_phase').agendaPhase(); } catch { return { researchPerDay: 1 }; }
+  })();
+  const researchEvery = Math.floor((24 * HOUR) / Math.max(1, researchPhase.researchPerDay || 1));
+  if (process.env.PLAN_RESEARCH_ENABLED !== '0' && dueForRun('plan_research', researchEvery)) {
+    log(`plan: deep-research executor (detached${researchPhase.researchPerDay > 1 ? `, ${researchPhase.researchPerDay}x/day — ${researchPhase.reason}` : ''})`);
     try {
       const out = fs.openSync(config.RUNNER_LOG_PATH, 'a');
       const child = spawn(process.execPath, [path.join(PROJECT_ROOT, 'runner/plan_research.js')], {
@@ -363,6 +369,30 @@ function runSocialPipeline() {
       child.unref();
       fs.closeSync(out);
     } catch (e) { log(`plan_research spawn failed (non-fatal): ${e.message}`); }
+  }
+
+  // Pre-registered experiments (runner/experiment.js). Without this the register
+  // fills up and nothing is ever measured. One per run, oldest first; a
+  // pipeline_self_test is skipped here by design — it changes a live system, so
+  // it waits for the operator. Detached, like plan_research.
+  if (process.env.EXPERIMENTS_ENABLED !== '0' && dueForRun('experiment', 12 * HOUR)) {
+    let pending = null;
+    try {
+      pending = require('./lib/experiments').list()
+        .filter((r) => r.status === 'planned' && r.kind !== 'pipeline_self_test')
+        .sort((a, b) => String(a.preregistered_at).localeCompare(String(b.preregistered_at)))[0] || null;
+    } catch { /* no register yet */ }
+    if (pending) {
+      log(`experiment: running ${pending.id} (detached) — ${String(pending.question).slice(0, 80)}`);
+      try {
+        const out = fs.openSync(config.RUNNER_LOG_PATH, 'a');
+        const child = spawn(process.execPath, [path.join(PROJECT_ROOT, 'runner/experiment.js'), '--run', pending.id], {
+          cwd: PROJECT_ROOT, env: process.env, detached: true, stdio: ['ignore', out, out],
+        });
+        child.unref();
+        fs.closeSync(out);
+      } catch (e) { log(`experiment spawn failed (non-fatal): ${e.message}`); }
+    }
   }
 }
 

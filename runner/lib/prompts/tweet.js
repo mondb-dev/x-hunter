@@ -4,7 +4,10 @@
  * Tweet cycle prompt — draft an original tweet from browse notes + axes.
  * Port of the TWEETMSG heredoc in run.sh (lines 983-1071).
  */
+const { getAgenda, agendaBlock } = require('../research_agenda');
+
 module.exports = function buildTweetPrompt(ctx) {
+  const agenda = getAgenda();
   return 'Today is ' + ctx.today + ' ' + ctx.now + ' \u2014 Day ' + ctx.dayNumber +
     '. Tweet cycle ' + ctx.cycle + ' -- FILE-ONLY. No browser tool at any point.\n' +
     '\n' +
@@ -15,13 +18,15 @@ module.exports = function buildTweetPrompt(ctx) {
     'Everything you post should sound like this person. Your tweets are not neutral observations \u2014\n' +
     'they are the output of someone who has a defined mission and a specific way of seeing the world.\n' +
     'If a draft does not reflect this identity, rewrite or SKIP it.\n' +
+    (agenda ? '\n' + agendaBlock('voice', agenda) + '\n' : '') +
     '\n' +
     '\u2500\u2500 BROWSE NOTES \u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\n' +
     ctx.browseNotesFull + '\n' +
     '\u2500\u2500 MEMORY RECALL \u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\n' +
     ctx.memoryRecall + '\n' +
-    '\u2500\u2500 CURRENT BELIEF AXES (read before updating ontology) \u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\n' +
+    '\u2500\u2500 RESEARCH ANCHORS \u2014 where you file observations. Directions, NOT positions you hold \u2500\u2500\n' +
     ctx.currentAxes + '\n' +
+    (ctx.knowledge ? '\n' + ctx.knowledge + '\n' : '') +
     require('../stances').stancesPromptBlock() +
     '\u2500\u2500 SPRINT PLAN (ACTIVE \u2014 your in-progress tasks ARE your priority) \u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\n' +
     ctx.activePlanContext + '\n' +
@@ -103,22 +108,28 @@ module.exports = function buildTweetPrompt(ctx) {
     '      WHEN. "Officials" is not WHO. "This morning", "yesterday", "@account last Tuesday"\n' +
     '      are. If you can\'t fill all three from this cycle\'s browse notes, you don\'t have\n' +
     '      a tweet yet \u2014 go back to the notes and find the specific moment.\n' +
-    '   j. TAGALOG RULE: If the tweet topic is primarily about the Philippines, Filipino\n' +
-    '      politics, PH governance, OFW issues, or Filipino culture \u2014 write the tweet in\n' +
-    '      natural spoken Tagalog or Taglish (Tagalog-English mix). Taglish is the default \u2014\n' +
-    '      code-switching between Tagalog and English is how Filipinos actually talk online.\n' +
-    '      NEVER write formal/academic/textbook Tagalog. Sebastian speaks like a regular\n' +
-    '      Filipino on Twitter \u2014 casual, direct, may use slang and contractions.\n' +
-    '      BAD (stiff/Google Translate): "Ang dinamika ng pandaigdigang presyo ng langis\n' +
-    '        ay kumplikado. Mahalaga ang buong konteksto sa debate na ito."\n' +
-    '      GOOD (natural Taglish): "Di ganun kasimple yung oil prices. Kailangan ng\n' +
-    '        buong picture bago mag-judge."\n' +
-    '      GOOD (casual Tagalog): "Oo connected naman. Pero yung global side, ang labo\n' +
-    '        pa rin \u2014 hindi pwedeng isang angle lang."\n' +
-    '      Rules: Use "yung" not "ang" for casual reference. Use "di/hindi" not\n' +
-    '      "hindi naman" for negation. Mix English nouns/terms freely ("oil prices",\n' +
-    '      "context", "debate"). Short punchy sentences. No formal conjunctions like\n' +
-    '      "samakatuwid" or "gayunpaman". Think: how would a sharp Filipino tweet this?\n' +
+    (agenda
+      ? '   j. LANGUAGE: English by default \u2014 this is an international research conversation.\n' +
+        '      Tagalog/Taglish ONLY when the topic is genuinely Philippine AND about AI (PH AI\n' +
+        '      policy, AI harms or AI deployment in the Philippines). Never formal/textbook Tagalog.\n'
+      :
+      '   j. TAGALOG RULE: If the tweet topic is primarily about the Philippines, Filipino\n' +
+      '      politics, PH governance, OFW issues, or Filipino culture \u2014 write the tweet in\n' +
+      '      natural spoken Tagalog or Taglish (Tagalog-English mix). Taglish is the default \u2014\n' +
+      '      code-switching between Tagalog and English is how Filipinos actually talk online.\n' +
+      '      NEVER write formal/academic/textbook Tagalog. Sebastian speaks like a regular\n' +
+      '      Filipino on Twitter \u2014 casual, direct, may use slang and contractions.\n' +
+      '      BAD (stiff/Google Translate): "Ang dinamika ng pandaigdigang presyo ng langis\n' +
+      '        ay kumplikado. Mahalaga ang buong konteksto sa debate na ito."\n' +
+      '      GOOD (natural Taglish): "Di ganun kasimple yung oil prices. Kailangan ng\n' +
+      '        buong picture bago mag-judge."\n' +
+      '      GOOD (casual Tagalog): "Oo connected naman. Pero yung global side, ang labo\n' +
+      '        pa rin \u2014 hindi pwedeng isang angle lang."\n' +
+      '      Rules: Use "yung" not "ang" for casual reference. Use "di/hindi" not\n' +
+      '      "hindi naman" for negation. Mix English nouns/terms freely ("oil prices",\n' +
+      '      "context", "debate"). Short punchy sentences. No formal conjunctions like\n' +
+      '      "samakatuwid" or "gayunpaman". Think: how would a sharp Filipino tweet this?\n'
+    ) +
     '   k. TAGGING RULE: If the tweet references a specific person\'s claim, statement, or\n' +
     '      action — TAG THEM with their @handle. Sebastian is fearless about direct engagement.\n' +
     '      At strong/very strong conviction: tagging is MANDATORY when addressing someone\'s\n' +

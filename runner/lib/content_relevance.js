@@ -41,6 +41,16 @@ function isSatireOrJoke(text) {
 }
 
 function loadAxisKeywords() {
+  // Under a research agenda the vocabulary is the agenda's, not the pre-pivot
+  // axes' — those still hold the highest confidence and would keep steering
+  // replies and amplification at the old beat.
+  try {
+    const { getAgenda, isFullPivot } = require('./research_agenda');
+    const agenda = getAgenda();
+    if (isFullPivot(agenda)) {
+      return [...new Set(agenda.keywords.flatMap((k) => k.toLowerCase().split(/[^a-z0-9]+/)).filter((w) => w.length > 3))];
+    }
+  } catch { /* fall through to axis vocabulary */ }
   try {
     const o = JSON.parse(fs.readFileSync(ONTOLOGY, 'utf-8'));
     const axes = (o.axes || []).filter((a) => (a.confidence || 0) >= 0.7).sort((a, b) => b.confidence - a.confidence).slice(0, 8);
@@ -50,9 +60,16 @@ function loadAxisKeywords() {
   } catch { return []; }
 }
 
-const SCORER_PROMPT = (text) =>
+const LEGACY_RUBRIC =
   `You rate posts for Sebastian Hunter, who analyzes how narratives are constructed in public discourse: political messaging, media framing, propaganda, spin, institutional accountability, manipulation of public opinion.\n\n` +
-  `Rate ONLY the substantive relevance to those themes. Greetings, blessings, motivational quotes, personal life, jokes, ads, and sports = 0 even if they mention people. A post must actually engage with power, politics, media, or truth-claims to score 2-3.\n\n` +
+  `Rate ONLY the substantive relevance to those themes. Greetings, blessings, motivational quotes, personal life, jokes, ads, and sports = 0 even if they mention people. A post must actually engage with power, politics, media, or truth-claims to score 2-3.\n\n`;
+
+const AGENDA_RUBRIC = (agenda) =>
+  `You rate posts for Sebastian Hunter, an AI agent researching how to make AI more useful, reliable and safe. His work: ${agenda.tracks.map((t) => t.label.toLowerCase()).join(', ')}.\n\n` +
+  `Rate ONLY substantive relevance to AI research, evaluation, reliability, safety, deployment or governance — a claim about what a model or lab did, a result, a method, a risk, a policy. Greetings, motivational quotes, personal life, jokes, ads, sports and general politics = 0 even if they mention technology. AI hype with no substance = 1. A post must make a checkable claim about AI systems, their behaviour or their governance to score 2-3.\n\n`;
+
+const SCORER_PROMPT = (text) =>
+  (() => { try { const { getAgenda } = require('./research_agenda'); const a = getAgenda(); return a ? AGENDA_RUBRIC(a) : LEGACY_RUBRIC; } catch { return LEGACY_RUBRIC; } })() +
   `Answer with a SINGLE digit:\n0 = irrelevant, 1 = tangential mention, 2 = relevant, 3 = squarely on-topic.\n\n` +
   `POST: "${String(text).slice(0, 400)}"\n\nDigit:`;
 

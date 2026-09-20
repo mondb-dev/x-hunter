@@ -118,6 +118,29 @@ function verifyArtifact(ref, opts = {}) {
     return { ok: false, kind: 'url', reason: 'URL not found in posts_log — nothing was published there', ref: raw };
   }
 
+  // Experiment records: "experiment:<id>" counts only once it has actually run
+  // and carries a verdict — a registered-but-unrun experiment is not an artifact.
+  const exp = raw.match(/^experiment:([A-Za-z0-9_.-]+)$/i);
+  if (exp) {
+    let rec = null;
+    try { rec = require('../lib/experiments').get(exp[1]); } catch { /* none */ }
+    if (!rec) return { ok: false, kind: 'experiment', reason: `no experiment registered as ${exp[1]}`, ref: raw };
+    if (rec.status !== 'done' || !rec.result) {
+      return { ok: false, kind: 'experiment', reason: `experiment ${exp[1]} is ${rec.status} — registered, not yet a result`, ref: raw };
+    }
+    return { ok: true, kind: 'experiment', reason: `experiment complete (${rec.result.verdict})`, ref: raw };
+  }
+
+  // Website report pages (deep-research reports, solution briefs) are verified
+  // by the published report JSON that backs them (runner/publish_report.js).
+  const report = raw.match(/^(?:https?:\/\/)?(?:www\.)?sebastianhunter\.fun\/report\/([a-z0-9-]+)\/?(?:[?#].*)?$/i);
+  if (report) {
+    const file = path.join(ROOT, 'web', 'public', 'data', 'reports', `${report[1]}.json`);
+    return fs.existsSync(file)
+      ? { ok: true, kind: 'url', reason: 'report page published', ref: raw }
+      : { ok: false, kind: 'url', reason: 'report page not found in web/public/data/reports', ref: raw };
+  }
+
   // Otherwise treat it as a repo-relative file path.
   if (raw.includes('://')) return { ok: false, kind: 'none', reason: 'unrecognized URL host', ref: raw };
   const abs = path.resolve(ROOT, raw);

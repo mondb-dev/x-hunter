@@ -11,9 +11,10 @@
  *
  * linkedin_connect.js rotates through these one query per run (pointer in the
  * ledger), searches People, and sends note-personalized invites (capped/day).
+ * With a research agenda active, the agenda's linkedin_queries replace these.
  */
 
-module.exports = [
+const DEFAULT_QUERIES = [
   "Philippines disinformation researcher",
   "Philippine investigative journalist",
   "fact-checker Philippines",
@@ -27,3 +28,7 @@ module.exports = [
   "AI policy narrative researcher",
   "computational propaganda",
 ];
+
+// An active research agenda (lib/research_agenda.js) supplies its own queries.
+const agenda = require("./research_agenda").getAgenda();
+module.exports = agenda && agenda.linkedin_queries ? agenda.linkedin_queries : DEFAULT_QUERIES;

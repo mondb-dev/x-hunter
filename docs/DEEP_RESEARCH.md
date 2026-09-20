@@ -30,7 +30,12 @@ with no fallback backend (Claude is the only LLM).
 |---|---|
 | X mention with research intent | `scraper/reply.js` → spam-filter exemption → focused research-intent re-check → `deep_research` (`X_AUTO_RESEARCH`) |
 | Telegram `/dr <question>` | `runner/telegram_bot.js` |
-| Active plan open questions | `runner/plan_research.js` — one question per day, detached from the orchestrator maintenance block; progress in `state/plan_research_state.json` (reset when the active plan changes); a research_sprint plan with no questions gets one report derived from its compulsion/title |
+| Active plan open questions | `runner/plan_research.js` — one question per day, detached from the orchestrator maintenance block; progress in `state/plan_research_state.json` (reset when the active plan changes); a research_sprint plan with no questions gets one report derived from its compulsion/title. Under a research agenda the question's **kind** routes it: `foundation` → a report (below), `solution` → `runner/solution_brief.js`, which runs this pipeline first and then drafts/red-teams/gates a proposal on top of it. Self-study questions are passed the first-party dossier (`research_agenda.selfStudyDossier()`) as `dossier`, which reaches triage, planning and synthesis |
+
+`deepResearch(question, { dossier })` — the optional `dossier` is caller-supplied
+first-party context (measurements from Sebastian's own state files). It is shown to
+triage so self-referential questions are not bailed as unresearchable, and carried
+into planning + synthesis alongside the triage brief.
 
 ## Delivery formats
 

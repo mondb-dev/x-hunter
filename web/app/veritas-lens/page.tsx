@@ -4,6 +4,14 @@ import ClaimsSearch from "./ClaimsSearch";
 
 export const dynamic = "force-dynamic";
 
+// Unlisted since the 2026-09 research-agenda pivot: claim verification still runs,
+// but it is no longer a headline surface. The page stays reachable so existing
+// links (and the /verified redirects in next.config.ts) do not break.
+export const metadata = {
+  title: "Veritas Lens — Sebastian D. Hunter",
+  robots: { index: false, follow: false },
+};
+
 export default async function VerifiedPage() {
   const data = await readVerification();
   if (!data) return notFound();

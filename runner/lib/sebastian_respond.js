@@ -36,7 +36,13 @@ function buildBeliefVoiceModifier(channel) {
     if ((cpState.checkpoint_count || 0) < 1) return '';
 
     const onto    = JSON.parse(fs.readFileSync(ONTOLOGY_PATH, 'utf-8'));
-    const axes    = onto.axes || [];
+    // Under a full-pivot agenda only agenda axes may speak for him — the
+    // pre-pivot axes hold all the confidence and would otherwise supply the
+    // "what he believes" voice modifier on every reply.
+    const { getAgenda, isFullPivot, isAgendaAxis } = require('./research_agenda');
+    const agenda  = getAgenda();
+    const all     = onto.axes || [];
+    const axes    = isFullPivot(agenda) ? all.filter(a => isAgendaAxis(a, agenda)) : all;
     const maxShow = channel === 'reply' ? 3 : 5;
 
     const ranked = axes
@@ -89,11 +95,21 @@ function buildBeliefVoiceModifier(channel) {
  * 'reply'    — Twitter, replying to a stranger's mention
  */
 function buildPersona(channel = 'public') {
-  const base = [
-    'You are Sebastian D. Hunter — an autonomous AI agent that has been observing X (Twitter) since early 2026,',
-    'forming a genuine worldview through direct observation. Your beliefs are discovered through evidence,',
-    'not borrowed from any ideology. You have a vocation, a set of hardened axes, and a public record.',
-  ].join(' ');
+  const { getAgenda, agendaBlock } = require('./research_agenda');
+  const agenda = getAgenda();
+  const base = agenda
+    ? [
+        'You are Sebastian D. Hunter — an autonomous AI agent doing open research on how to make AI more',
+        `useful, reliable and safe. Your output is well-founded solutions: ${agenda.tracks.map(t => t.label.toLowerCase()).join(', ')}.`,
+        'Your beliefs are discovered through evidence, not borrowed from any ideology, and what you publish',
+        'is cited and red-teamed first.',
+        `\n${agendaBlock('voice', agenda)}`,
+      ].join(' ')
+    : [
+        'You are Sebastian D. Hunter — an autonomous AI agent that has been observing X (Twitter) since early 2026,',
+        'forming a genuine worldview through direct observation. Your beliefs are discovered through evidence,',
+        'not borrowed from any ideology. You have a vocation, a set of hardened axes, and a public record.',
+      ].join(' ');
 
   if (channel === 'operator') {
     return [
@@ -175,13 +191,48 @@ function buildCoreContext(opts = {}) {
     }
   } catch { /* no vocation */ }
 
-  // 2. Belief axes
+  // 2. What he knows, and where he is looking.
+  //
+  // Under a research agenda the substance is the knowledge base — findings from
+  // his own research, with sources — and the axes appear only as anchors, with
+  // no score arrow and no current_stance. A current_stance is generated FROM the
+  // axis score, i.e. from the balance of what his feed contained, so quoting it
+  // in a reply states the feed's composition as his position (2026-09 ontology
+  // assessment). Without an agenda the original block stands.
+  let onAgenda = false;
+  try { onAgenda = !!require('./research_agenda').getAgenda(); } catch { /* none */ }
+
+  if (onAgenda) {
+    try {
+      const kb = require('./knowledge_base');
+      const rows = kb.recent(maxAxes);
+      if (rows.length) {
+        const lines = rows.map((r) => r.kind === 'brief'
+          ? (r.status === 'proposed'
+              ? `- Proposed (not yet tested): ${r.claim}${r.url ? ` — ${r.url}` : ''}`
+              : `- Withheld: "${(r.title || r.question || '').slice(0, 70)}" — ${String(r.reason || 'did not pass the gate').slice(0, 100)}`)
+          : `- ${r.claim}${r.sources && r.sources.length ? ` [${r.sources[0]}]` : ''}`).join('\n');
+        parts.push(`## What I have established (my own research — cite it, and say when something is only proposed)\n${lines}`);
+      } else {
+        parts.push(`## What I have established\nNothing yet — the research is under way. Say that plainly rather than offering a position I have not earned.`);
+      }
+    } catch { /* no knowledge base */ }
+  }
+
   try {
     const onto = JSON.parse(fs.readFileSync(path.join(STATE_DIR, 'ontology.json'), 'utf-8'));
-    const axes = (onto.axes || [])
-      .slice().sort((a, b) => (b.confidence || 0) - (a.confidence || 0))
-      .slice(0, maxAxes);
-    if (axes.length) {
+    let axes = (onto.axes || []).slice();
+    if (onAgenda) {
+      try {
+        const { isAgendaAxis, getAgenda } = require('./research_agenda');
+        const agenda = getAgenda();
+        axes = axes.filter((a) => isAgendaAxis(a, agenda));
+      } catch { /* leave unfiltered */ }
+    }
+    axes = axes.sort((a, b) => (b.confidence || 0) - (a.confidence || 0)).slice(0, maxAxes);
+    if (axes.length && onAgenda) {
+      parts.push(`## Research anchors (where I am looking — directions, not positions)\n${axes.map(ax => `- ${ax.label}`).join('\n')}`);
+    } else if (axes.length) {
       const lines = axes.map(ax => {
         const dir = (ax.score || 0) > 0.1 ? '→' : (ax.score || 0) < -0.1 ? '←' : '·';
         const conf = ((ax.confidence || 0) * 100).toFixed(0);

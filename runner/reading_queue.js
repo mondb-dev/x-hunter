@@ -123,26 +123,77 @@ function scanInteractions(lastScannedId) {
 
 // --- emit top item -----------------------------------------------------------
 
+// Machine producers. rss_collect / search_curiosity / source_followup write
+// `source` + `queued_at` instead of `from_user` + `added_cycle`; before
+// 2026-09-15 this function required the latter, so those producers' thousands
+// of entries were never emitted. Machine entries go stale by wall clock.
+const MACHINE_ORIGINS = new Set([
+  "rss_collect", "search_curiosity", "source_followup",
+  "conviction_source", "adversarial_selector", "agenda_source",
+]);
+const STALE_MS = 12 * 60 * 60 * 1000;
+
+function entryOrigin(e) {
+  return e.from_user || e.source || null;
+}
+
+function entryTime(e) {
+  const raw = e.added_at || e.queued_at; // adversarial_selector writes queued_at as epoch ms
+  const t = typeof raw === "number" ? raw : Date.parse(raw || "");
+  return Number.isFinite(t) ? t : 0;
+}
+
+function isFresh(e) {
+  if (e.added_cycle) return CYCLE - e.added_cycle <= STALE_CYCLES;
+  const t = entryTime(e);
+  return t > 0 && Date.now() - t <= STALE_MS;
+}
+
+/**
+ * Latest read-marker time per URL. A queue entry is eligible only if it was
+ * added AFTER its URL was last emitted/consumed, so a source page re-queued
+ * later (agenda sources are revisited on purpose) can be read again. Legacy
+ * in-progress markers carry no timestamp and block their URL forever, which
+ * preserves the old read-once behavior for them.
+ */
+function lastMarks(entries) {
+  const marks = new Map();
+  const bump = (url, t) => { if (!(marks.get(url) >= t)) marks.set(url, t); };
+  for (const e of entries) {
+    if (!e.url) continue;
+    if (e.consumed_at) bump(e.url, Date.parse(e.consumed_at) || Infinity);
+    else if (e.in_progress_cycle !== undefined) bump(e.url, e.in_progress_at ? Date.parse(e.in_progress_at) : Infinity);
+  }
+  return marks;
+}
+
+/**
+ * Emission order: people who sent Sebastian a link (and deep-dive detection)
+ * first, then agenda-relevant machine entries, then the rest — oldest first
+ * within each group. Under a full_pivot research agenda, off-agenda machine
+ * entries are never emitted.
+ */
+function pickCandidate(entries) {
+  const marks = lastMarks(entries);
+  const { getAgenda, isFullPivot, isOnAgenda } = require("./lib/research_agenda");
+  const agenda = getAgenda();
+
+  const groups = [[], [], []];
+  for (const e of entries) {
+    const origin = entryOrigin(e);
+    if (!e.url || !origin) continue; // markers (in-progress / consumed)
+    if (marks.get(e.url) >= entryTime(e) || !isFresh(e)) continue;
+    if (!MACHINE_ORIGINS.has(origin)) { groups[0].push(e); continue; }
+    const onAgenda = !!agenda && (e.agenda === true ||
+      isOnAgenda([e.url, e.title, e.context, e.why, e.research_focus, e.axis_hint].join(" "), agenda));
+    if (onAgenda) groups[1].push(e);
+    else if (!isFullPivot(agenda)) groups[2].push(e);
+  }
+  return groups[0][0] || groups[1][0] || groups[2][0] || null;
+}
+
 function emitTopItem() {
-  const entries = loadQueue();
-
-  // Build consumed + in-progress URL sets
-  const consumed = new Set(
-    entries.filter(e => e.consumed_at).map(e => e.url)
-  );
-  const inProgress = new Set(
-    entries.filter(e => e.in_progress_cycle !== undefined && !e.consumed_at).map(e => e.url)
-  );
-
-  // Find oldest unread item that is not stale
-  const candidate = entries.find(e => {
-    if (!e.url || !e.added_cycle) return false;
-    if (consumed.has(e.url)) return false;
-    if (inProgress.has(e.url)) return false;
-    if (CYCLE - e.added_cycle > STALE_CYCLES) return false;
-    // Only consider queue entries (has from_user), not markers
-    return Boolean(e.from_user);
-  });
+  const candidate = pickCandidate(loadQueue());
 
   if (!candidate) {
     fs.writeFileSync(READING_URL, "", "utf-8");
@@ -150,15 +201,18 @@ function emitTopItem() {
   }
 
   // Write reading_url.txt
+  const context = candidate.context ||
+    [candidate.title, candidate.why, candidate.research_focus && `research focus: ${candidate.research_focus}`]
+      .filter(Boolean).join(" — ");
   const content = [
     `URL: ${candidate.url}`,
-    `FROM: @${candidate.from_user}`,
-    `CONTEXT: ${candidate.context || ""}`,
+    `FROM: @${entryOrigin(candidate)}`,
+    `CONTEXT: ${context}`,
   ].join("\n");
   fs.writeFileSync(READING_URL, content + "\n", "utf-8");
 
   // Append in-progress marker
-  appendQueue({ url: candidate.url, in_progress_cycle: CYCLE });
+  appendQueue({ url: candidate.url, in_progress_cycle: CYCLE, in_progress_at: new Date().toISOString() });
 
   return candidate.url;
 }

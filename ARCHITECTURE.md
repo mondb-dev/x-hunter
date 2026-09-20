@@ -157,6 +157,17 @@ source discovery → external source profiling → source selection → reading 
 → deep-dive detection → prefetch (`state/reading_url.txt`) → source-label
 classification.
 
+### Research agenda (operator-set focus, since 2026-09-15)
+
+`runner/lib/research_agenda.js` pins Sebastian to an operator-chosen domain —
+currently **Better AI: well-founded solutions, full pivot**. It overrides the
+emergent loop at every stage: RSS feeds, source pages, follows, curiosity, the
+browse lens, planning, predictions/stances and the vocation. Its final output
+is the solution brief (`runner/solution_brief.js`): research builds the
+foundation, then a proposal is drafted, red-teamed and mechanically gated on
+grounding and testability before it is published. See docs/RESEARCH_AGENDA.md.
+`RESEARCH_AGENDA=off` restores fully emergent behavior.
+
 ### Browsing Direction Signals (priority order: Deep Dive > Curiosity > X Trending)
 
 Each browse cycle is directed by one of three signals. The highest-priority
@@ -184,10 +195,16 @@ available signal wins.
 
 2. CURIOSITY (normal cycles)
    ──────────────────────────
-   Source: state/curiosity_directive.txt (written by runner/curiosity.js, every 6 cycles)
+   Source: state/curiosity_directive.txt (written by runner/curiosity.js every
+           CURIOSITY_EVERY=12 cycles, gated by dueEvery() in pre_browse.js)
    Trigger: axis uncertainty gain — selects axis with highest evidence-to-confidence gap,
             skipping axes at confidence ≥ 0.82 and adding a staleness boost for axes
             not updated in 2+ days.
+   Research agenda: when active, the agenda driver rotates the agenda's tracks and
+            search terms instead (off-agenda discourse/hint/sprint drivers skipped).
+   NOTE: prefetch no longer navigates the browser; the directive's effect is its
+            text in the browse prompt plus search_curiosity.js queuing web results
+            into the reading queue (fetched when BROWSE_FETCH=1).
 
    Curiosity generates 3 search angles per directive (rotated across cycles):
      SEARCH_URL_1: main term search (core claim)
@@ -327,6 +344,9 @@ of 1–2 accounts observed in browse notes that align with the action axes. This
 announcement and an invitation in one shot.
 
 **Ponder fires** once 2+ axes break `|score| ≥ 0.15` (and the cooldown + delta conditions pass).
+With a research agenda active, ponder only considers agenda axes and, if fewer than
+2 qualify, plans from the agenda axes anyway (agenda override; the delta check is
+skipped) so the agenda never stalls without a plan.
 
 ---
 
@@ -623,9 +643,9 @@ follow_score = avg_velocity × 0.35
 |---|---|
 | Browser automation | HelmStack substrate (HTTP API :7070) + `tools/helmstack-social` X/LinkedIn engines; legacy Chrome CDP retained for residual utilities |
 | Database | SQLite via `better-sqlite3` — WAL mode, FTS5 full-text search (`state/index.db`, `state/outbox.db`); permanent post history in `state/posts_archive/` (local NDJSON, never pruned) |
-| LLM (agent brain) | Claude (`runner/single_pass_browse.js` → `lib/compose.js`) |
+| LLM (agent brain) | Claude (`runner/single_pass_browse.js` → `runner/lib/compose.js`) |
 | LLM (outbound prose) | Claude CLI via `runner/lib/compose.js` (`COMPOSE_BACKEND=claude`); deep-research reasoning via `THINK_BACKEND=claude` |
-| LLM (scoring/gates/critique) | Claude (`runner/llm.js` → `lib/compose.js`) |
+| LLM (scoring/gates/critique) | Claude (`runner/llm.js` → `runner/lib/compose.js`) |
 | LLM (self-mod builder) | Claude CLI (`BUILDER_BACKEND=claude` in `runner/builder_vertex.js`); Gemini 2.5 Pro Vertex fallback |
 | LLM (cloud workers) | Gemini 2.5 Flash via Vertex — `workers/verify` claim verification |
 | Embeddings | **disabled** — no Claude embedding endpoint; recall falls back to fts5 |
