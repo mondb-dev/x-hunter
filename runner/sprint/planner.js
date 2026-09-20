@@ -345,7 +345,7 @@ Respond in this exact JSON format:
         {
           "title": "Concrete task name",
           "description": "What exactly to do and what 'done' looks like",
-          "task_type": "research|write|publish|post_x|post_linkedin|engage|reflect",
+          "task_type": "research|write|publish|post_x|post_linkedin|engage|experiment|reflect",
           "priority": 1,
           "estimated_hours": 4,
           "artifact": "articles/reports/Report_1.md, or null if this task produces no file. For post_x/post_linkedin leave it null — the tracker fills in the real posted URL."
@@ -427,7 +427,7 @@ Respond in this exact JSON format:
     {
       "title": "Concrete task name",
       "description": "What exactly to do",
-      "task_type": "research|write|publish|post_x|post_linkedin|engage|reflect",
+      "task_type": "research|write|publish|post_x|post_linkedin|engage|experiment|reflect",
       "priority": 1,
       "estimated_hours": 4,
       "artifact": "articles/reports/Report_${nextWeek}.md, or null if this task produces no file. For post_x/post_linkedin leave it null — the tracker fills in the real posted URL."

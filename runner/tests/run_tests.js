@@ -712,6 +712,41 @@ section("Research agenda + periodic gating");
       pass("reply/web context drops axis scores and current_stance for the knowledge base");
     else fail("reply context", "still ships the belief-axes block with scores/current_stance");
 
+    // Experiments: an experiment whose criteria can move after the data is in
+    // would inherit exactly the miscalibration it is supposed to measure.
+    const E = require(path.join(RUNNER, "lib/experiments.js"));
+    const badSpecs = [
+      [{ question: "q", hypothesis: "h", kind: "self_log", metric: "m", success_criterion: "same", failure_criterion: "same", n: 5, procedure: {} }, "criteria that cannot fail"],
+      [{ question: "q", hypothesis: "h", kind: "vibes", metric: "m", success_criterion: "a", failure_criterion: "b", n: 5, procedure: {} }, "an unrunnable kind"],
+      [{ question: "q", hypothesis: "h", kind: "self_log", metric: "", success_criterion: "a", failure_criterion: "b", n: 5, procedure: {} }, "no metric"],
+    ];
+    const rejected = badSpecs.filter(([spec]) => E.validate(spec).length);
+    if (rejected.length === badSpecs.length) pass("experiment validation rejects specs that cannot fail, cannot run, or measure nothing");
+    else fail("experiment validation", `${badSpecs.length - rejected.length} invalid spec(s) accepted`);
+
+    // Pre-registration freeze, on a throwaway record that is removed after.
+    const tmpId = `exp_selftest_${Date.now()}`;
+    const reg = E.preregister({
+      id: tmpId, question: "selftest", hypothesis: "h", kind: "self_log",
+      metric: "m", success_criterion: "gap > 20", failure_criterion: "gap <= 20",
+      n: 3, procedure: { compute: "calibration" },
+    });
+    try {
+      E.update(tmpId, { status: "running" });
+      const frozen = E.update(tmpId, { success_criterion: "whatever fits the data" });
+      const artifactUnrun = require(path.join(RUNNER, "sprint/verify_artifact.js")).verifyArtifact(`experiment:${tmpId}`);
+      if (reg.ok && !frozen.ok && !artifactUnrun.ok) pass("pre-registered criteria freeze, and an unrun experiment is not an artifact");
+      else fail("experiment pre-registration", `register=${reg.ok} frozenRefused=${!frozen.ok} unrunRejected=${!artifactUnrun.ok}`);
+    } finally {
+      try { fs.unlinkSync(path.join(E.DIR, `${tmpId}.json`)); } catch { /* already gone */ }
+    }
+
+    const caps = require(path.join(RUNNER, "lib/capabilities.js"));
+    const kindsNamed = ["self_log", "llm_trial", "doc_coding", "pipeline_self_test"].every((k) => caps.CAPABILITIES.includes(k));
+    if (caps.VALID_ACTION_TYPES.includes("experiment_series") && kindsNamed && /deliverable is a\s+MEASUREMENT/.test(caps.CAPABILITIES))
+      pass("planning can propose experiments, and only the four runnable kinds");
+    else fail("experiment capability", "experiment_series, the four kinds, or the measurement-not-a-tool limit is missing");
+
     // The boot policy (research 3x/day, outbound held, feed engagement paused)
     // must stay inert until agenda_bootstrap.js --apply has installed the plan:
     // merging this code must not silence a system whose pivot was never applied.

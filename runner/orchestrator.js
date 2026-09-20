@@ -370,6 +370,30 @@ function runSocialPipeline() {
       fs.closeSync(out);
     } catch (e) { log(`plan_research spawn failed (non-fatal): ${e.message}`); }
   }
+
+  // Pre-registered experiments (runner/experiment.js). Without this the register
+  // fills up and nothing is ever measured. One per run, oldest first; a
+  // pipeline_self_test is skipped here by design — it changes a live system, so
+  // it waits for the operator. Detached, like plan_research.
+  if (process.env.EXPERIMENTS_ENABLED !== '0' && dueForRun('experiment', 12 * HOUR)) {
+    let pending = null;
+    try {
+      pending = require('./lib/experiments').list()
+        .filter((r) => r.status === 'planned' && r.kind !== 'pipeline_self_test')
+        .sort((a, b) => String(a.preregistered_at).localeCompare(String(b.preregistered_at)))[0] || null;
+    } catch { /* no register yet */ }
+    if (pending) {
+      log(`experiment: running ${pending.id} (detached) — ${String(pending.question).slice(0, 80)}`);
+      try {
+        const out = fs.openSync(config.RUNNER_LOG_PATH, 'a');
+        const child = spawn(process.execPath, [path.join(PROJECT_ROOT, 'runner/experiment.js'), '--run', pending.id], {
+          cwd: PROJECT_ROOT, env: process.env, detached: true, stdio: ['ignore', out, out],
+        });
+        child.unref();
+        fs.closeSync(out);
+      } catch (e) { log(`experiment spawn failed (non-fatal): ${e.message}`); }
+    }
+  }
 }
 
 // ── Signal handlers (critical — bash traps don't survive exec) ──────────────

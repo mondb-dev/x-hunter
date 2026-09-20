@@ -527,11 +527,19 @@ function agendaBlock(kind = "lens", agenda = getAgenda()) {
     try {
       const kb = require("./knowledge_base");
       const s = kb.stats();
-      known = `\n\n${kb.knowledgeBlock({ purpose: "planning", limit: 10 })}\n` +
+      let expBlock = "";
+      try {
+        const eb = require("./experiments").experimentsBlock(6);
+        if (eb) expBlock = `\n\n${eb}`;
+      } catch { /* no experiments yet */ }
+      known = `\n\n${kb.knowledgeBlock({ purpose: "planning", limit: 10 })}${expBlock}\n` +
         `(knowledge base: ${s.reports} research pass(es), ${s.cited_claims} cited claim(s), ` +
         `${s.briefs} brief(s) — ${s.published_briefs} published, ${s.withheld_briefs} withheld)\n` +
-        `A plan must build on these: extend a finding, test a proposal, or answer something they left open. ` +
-        `Do not plan work that is already answered above, and do not plan publication of a position the findings do not support.`;
+        `A plan must build on these: extend a finding, TEST a proposal (action_type "experiment_series" — ` +
+        `pre-register question, hypothesis, metric, success AND failure criteria, n, then run it and publish ` +
+        `whichever way it comes out), or answer something they left open. A published brief that has never been ` +
+        `tested is a candidate for an experiment before it is a candidate for another brief. Do not plan work ` +
+        `that is already answered above, and do not plan publication of a position the findings do not support.`;
     } catch { /* no knowledge base yet */ }
     return `## RESEARCH AGENDA (operator-set: ${agenda.label})\n${agenda.planning}\n\nTracks:\n${tracks}\n\nIntegrity rules:\n${integrity}${known}`;
   }

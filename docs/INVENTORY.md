@@ -247,6 +247,18 @@ research agenda: affinity = agenda vocabulary; zero-affinity candidates dropped
   ungrounded axes. Follow seed list `runner/data/better_ai_follow_seed.json` (:381)
   is inert until `"approved": true`. One-time migration:
   `runner/agenda_bootstrap.js [--apply]`.
+- **Experiments** `runner/lib/experiments.js` (register) + `runner/experiment.js` (executor):
+  pre-registration in `state/experiments/<id>.json` — question/hypothesis/metric/success+
+  failure criteria/n frozen once status leaves `planned` (`FROZEN`), specs whose criteria
+  cannot fail are rejected (`validate`). Kinds: `self_log` (calibration,
+  source_concentration, field_counts over his own files — no network/model),
+  `llm_trial` (items × conditions, regex or fixed-label judge, `max_calls` cap 400),
+  `doc_coding` (fetch + 2 independent codings + agreement, max 60 urls),
+  `pipeline_self_test` (**never auto-runs**, parks at `needs_operator`). Orchestrator runs
+  one pending experiment per 12h (`EXPERIMENTS_ENABLED=0` disables). Results →
+  `knowledge_base.recordExperiment` + `[EXPERIMENT <verdict>]` browse note; verdict is
+  decided by the pre-registered criteria. Plan action type `experiment_series`, sprint
+  task type `experiment`, artifact ref `experiment:<id>` (verifies only with a result).
 - **Knowledge base** `runner/lib/knowledge_base.js`: `state/knowledge/findings.jsonl`
   (append-only). `recordReport` (plan_research.js, every pass: key finding, confidence,
   report URL, cited claims) and `recordBrief` (solution_brief.js `ledger()`, every

@@ -214,6 +214,53 @@ When the knowledge base is empty, every surface says so plainly — "nothing yet
 research is under way" — instead of falling back to a position. That is the honest
 state at bootstrap, and it is why the foundation phase holds outbound.
 
+## Experiments
+
+A brief states a falsifiable test; until now nothing could run one, so every proposal
+stayed "proposed — not yet tested" forever. `runner/lib/experiments.js` (the register)
+and `runner/experiment.js` (the executor) close that. `experiment_series` is a plan
+action type, `experiment` is a sprint task type, and `experiment:<id>` verifies as a
+sprint artifact — but only once it has a verdict.
+
+**Pre-registration is enforced, not encouraged.** Question, hypothesis, metric, success
+criterion, failure criterion and n are written down first and frozen the moment the
+experiment leaves `planned`; `update()` refuses to move them afterwards. A spec whose
+success and failure criteria are identical is rejected outright. This is aimed squarely
+at his own record — 79% stated confidence against a 29% hit rate — which is exactly what
+criteria edited after seeing the data would reproduce.
+
+**Four kinds, because these are what the runtime can actually execute:**
+
+| Kind | What it does | Cost |
+|---|---|---|
+| `self_log` | measures his own history — prediction calibration by confidence bucket, source concentration per axis, counts over any of his logs | no network, no model calls |
+| `llm_trial` | N items × conditions through the model, scored by regex or a judge restricted to fixed labels | budgeted by `max_calls`, hard cap 400 |
+| `doc_coding` | fetches public documents, codes each against a rubric twice independently, reports counts + inter-pass agreement | one fetch + 2 calls per document, max 60 docs |
+| `pipeline_self_test` | a change to his own pipeline | **never auto-runs** — parks at `needs_operator` |
+
+The executor runs *declarative specs* through a fixed interpreter — the planning layer
+may propose experiments, and it must never be able to talk the runtime into executing
+code it wrote. The capability is explicitly not an exception to the no-building rule:
+an experiment's deliverable is a measurement, never a tool or a harness someone else has
+to run. If it needs code written to be possible, it is either recast into one of the four
+kinds or registered as a `pipeline_self_test` for the operator.
+
+The orchestrator runs one pending experiment every 12h, oldest first, skipping
+`pipeline_self_test`. Results go to the knowledge base as `kind: "experiment"` — the
+strongest evidence this system can produce, because it is first-party, pre-registered and
+could have come out the other way — and to the browse notes so the writing layer can say
+so. A null result is published exactly like a positive one.
+
+```bash
+node runner/experiment.js --list
+node runner/experiment.js --preregister spec.json
+node runner/experiment.js --run <id> [--dry-run]
+```
+
+Verified against his real prediction log on 2026-09-20: the `calibration` computation
+reproduces 79% stated vs 29% actual over 31 resolved predictions, a 50-point gap,
+concentrated in the 70–84% bucket (n=21, gap 51).
+
 ## Later: certifications
 
 Once there is enough grounding, an obvious next step is for Sebastian to take public AI

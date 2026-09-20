@@ -107,9 +107,33 @@ function recordBrief({ question, track, title, oneLine, test, status, url, reaso
   return entry;
 }
 
+/** A pre-registered experiment that ran. First-party, and it could have failed. */
+function recordExperiment({ id, question, track, hypothesis, metric, verdict, metric_value, summary, url, n, preregistered_at }) {
+  const entry = {
+    id: `exp_${String(id).replace(/^exp_/, "")}`,
+    ts: new Date().toISOString(),
+    kind: "experiment",
+    track: track || null,
+    question: question || null,
+    claim: `${verdict === "supported" ? "Tested and supported" : verdict === "not_supported" ? "Tested and NOT supported" : "Tested, inconclusive"}: ${hypothesis || question}`,
+    hypothesis: hypothesis || null,
+    metric: metric || null,
+    metric_value: metric_value === undefined ? null : metric_value,
+    verdict,
+    n: n || null,
+    summary: String(summary || "").slice(0, 600),
+    preregistered_at: preregistered_at || null,
+    url: url || null,
+    published: !!url,
+  };
+  append(entry);
+  log(`recorded experiment (${verdict}): "${String(question || "").slice(0, 70)}"`);
+  return entry;
+}
+
 function score(entry, qTokens) {
   if (!qTokens.length) return 0;
-  const hay = new Set(tokens(`${entry.claim} ${entry.question} ${entry.title || ""} ${entry.track || ""} ${(entry.claims || []).map((c) => c.claim).join(" ")}`));
+  const hay = new Set(tokens(`${entry.claim} ${entry.question} ${entry.title || ""} ${entry.hypothesis || ""} ${entry.track || ""} ${(entry.claims || []).map((c) => c.claim).join(" ")}`));
   let hits = 0;
   for (const t of qTokens) if (hay.has(t)) hits++;
   return hits / qTokens.length;
@@ -138,6 +162,9 @@ function stats() {
   const briefs = rows.filter((r) => r.kind === "brief");
   return {
     total: rows.length,
+    experiments: rows.filter((r) => r.kind === "experiment").length,
+    experiments_supported: rows.filter((r) => r.kind === "experiment" && r.verdict === "supported").length,
+    experiments_not_supported: rows.filter((r) => r.kind === "experiment" && r.verdict === "not_supported").length,
     reports: rows.filter((r) => r.kind === "report").length,
     published_reports: rows.filter((r) => r.kind === "report" && r.published).length,
     briefs: briefs.length,
@@ -150,6 +177,11 @@ function stats() {
 
 function line(r) {
   const when = String(r.ts || "").slice(0, 10);
+  if (r.kind === "experiment") {
+    // Pre-registered and run: the only kind of claim here that was ever at risk.
+    return `- ${r.claim}${r.metric_value != null ? ` — ${r.metric}: ${JSON.stringify(r.metric_value)}` : ""}${r.n ? ` (n=${r.n}` : ""}${r.n ? `, pre-registered ${String(r.preregistered_at || "").slice(0, 10)})` : ""}` +
+      `${r.summary ? `\n    ${r.summary}` : ""}${r.url ? `\n    ${r.url}` : ""}  [${when}]`;
+  }
   if (r.kind === "brief") {
     const head = r.status === "proposed"
       ? `PROPOSAL: ${r.claim}`
@@ -179,6 +211,6 @@ function knowledgeBlock({ topic = "", limit = 8, purpose = "voice" } = {}) {
 }
 
 module.exports = {
-  recordReport, recordBrief, search, recent, stats, knowledgeBlock, readAll,
+  recordReport, recordBrief, recordExperiment, search, recent, stats, knowledgeBlock, readAll,
   FINDINGS,
 };
