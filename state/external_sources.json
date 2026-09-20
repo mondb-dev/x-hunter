@@ -1,8 +1,8 @@
 {
   "schema_version": "1.0",
-  "generated_at": "2026-09-20T03:39:06.305Z",
+  "generated_at": "2026-09-20T03:40:28.686Z",
   "method": "mechanical_registry_v1",
-  "profiled_at": "2026-09-20T03:39:22.525Z",
+  "profiled_at": "2026-09-20T03:40:33.713Z",
   "sources": [
     {
       "domain": "theguardian.com",
@@ -3118,9 +3118,9 @@
       "entity": "T Co",
       "kind": "unknown",
       "first_seen_at": "2016-05-05T18:57:30.000Z",
-      "last_seen_at": "2026-09-20T02:50:14.000Z",
+      "last_seen_at": "2026-09-20T03:20:00.000Z",
       "discovery": {
-        "distinct_urls": 20970,
+        "distinct_urls": 20977,
         "example_urls": [
           "https://t.co/pJSE124ec4",
           "https://t.co/Soz8BXPWaa",
@@ -3129,8 +3129,8 @@
           "https://t.co/cYaqYDRp08"
         ],
         "origin_counts": {
-          "feed_buffer": 18884,
-          "feed_buffer_reply": 5993,
+          "feed_buffer": 18894,
+          "feed_buffer_reply": 5994,
           "articles": 3
         },
         "distinct_referring_accounts": 3158,
@@ -3172,7 +3172,7 @@
         "breadth": {
           "score": 0.53,
           "basis": [
-            "distinct_urls:20970",
+            "distinct_urls:20977",
             "distinct_axes:0",
             "origin_types:3"
           ]
@@ -3211,7 +3211,7 @@
           "basis": [
             "unknown_domain_pattern",
             "doi_or_identifier_path_seen",
-            "distinct_urls:20970",
+            "distinct_urls:20977",
             "distinct_axes:0",
             "origin_types:3",
             "referring_accounts:3158",
@@ -5432,7 +5432,7 @@
       "first_seen_at": "2026-04-07T03:51:50.000Z",
       "last_seen_at": "2026-09-20T03:35:19.239Z",
       "discovery": {
-        "distinct_urls": 1720,
+        "distinct_urls": 1724,
         "example_urls": [
           "https://www.starlink.com/us/residential?referral=RC-DF-9543787-19448-67&utm_medium=paid&utm_campaign=awr_us_soc_twt_ptg_cau&utm_content=awr_us_soc_twt_ptg_cau_res_gvp_v4s_stc_en-us_sdb-bluesky-uptime&twclid=2cg62b1u0oqrypdim5oir1767e",
           "https://www.starlink.com/us/residential?referral=RC-DF-9543787-19448-67&utm_medium=paid&utm_campaign=awr_us_soc_twt_ptg_cau&utm_content=awr_us_soc_twt_ptg_cau_res_gvp_v4s_stc_en-us_sdb-avail-sat-yourhome&twclid=2216n7j93v9absqn77762mm626",
@@ -5441,7 +5441,7 @@
           "https://www.starlink.com/us/residential?referral=RC-DF-9543787-19448-67&utm_medium=paid&utm_campaign=awr_us_soc_twt_ptg_cau&utm_content=awr_us_soc_twt_ptg_cau_res_gvp_v4s_stc_en-us_sdb-avail-sat-arrived&twclid=21pi7t0qs8tgw0wgnh5mvmdu2g"
         ],
         "origin_counts": {
-          "feed_buffer_reply": 1633,
+          "feed_buffer_reply": 1637,
           "feed_buffer": 91
         },
         "distinct_referring_accounts": 5,
@@ -5477,7 +5477,7 @@
         "breadth": {
           "score": 0.47,
           "basis": [
-            "distinct_urls:1720",
+            "distinct_urls:1724",
             "distinct_axes:0",
             "origin_types:2"
           ]
@@ -5515,7 +5515,7 @@
           "method": "mechanical_v1",
           "basis": [
             "unknown_domain_pattern",
-            "distinct_urls:1720",
+            "distinct_urls:1724",
             "distinct_axes:0",
             "origin_types:2",
             "referring_accounts:5",
@@ -22348,6 +22348,133 @@
       }
     },
     {
+      "domain": "anthropic.com",
+      "entity": "Anthropic",
+      "kind": "unknown",
+      "first_seen_at": "2026-09-20T03:16:16.243Z",
+      "last_seen_at": "2026-09-20T03:24:40.589Z",
+      "discovery": {
+        "distinct_urls": 5,
+        "example_urls": [
+          "https://anthropic.com/news/responsible-scaling-policy-v3",
+          "https://www-cdn.anthropic.com/e670587677525f28df69b59e5fb4c22cc5461a17.pdf",
+          "https://www.anthropic.com/news/anthropics-responsible-scaling-policy",
+          "https://www.anthropic.com/responsible-scaling-policy",
+          "https://www.anthropic.com/research"
+        ],
+        "origin_counts": {
+          "ontology_evidence": 1,
+          "reading_queue": 6
+        },
+        "distinct_referring_accounts": 0,
+        "sample_referring_accounts": [],
+        "distinct_axes": [
+          "axis_ai_lab_commitments_v1"
+        ]
+      },
+      "claims": {
+        "total": 0,
+        "supported": 0,
+        "refuted": 0,
+        "contested": 0,
+        "unverified": 0,
+        "resolved_count": 0
+      },
+      "structural_features": {
+        "has_search_paths": false,
+        "has_article_paths": false,
+        "has_doi_paths": false
+      },
+      "ratings": {
+        "provenance": {
+          "score": 0.45,
+          "basis": [
+            "unknown_domain_pattern"
+          ]
+        },
+        "breadth": {
+          "score": 0.32416666666666666,
+          "basis": [
+            "distinct_urls:5",
+            "distinct_axes:1",
+            "origin_types:2"
+          ]
+        },
+        "corroboration": {
+          "score": 0.175,
+          "basis": [
+            "referring_accounts:0",
+            "origin_types:2"
+          ]
+        },
+        "track_record": {
+          "score": null,
+          "basis": [
+            "no_resolved_claims_observed"
+          ]
+        },
+        "overall": {
+          "score": 0.39669270833333337,
+          "confidence": 0.196325,
+          "method": "mechanical_v1",
+          "basis": [
+            "unknown_domain_pattern",
+            "distinct_urls:5",
+            "distinct_axes:1",
+            "origin_types:2",
+            "referring_accounts:0",
+            "origin_types:2",
+            "track_record_unavailable"
+          ]
+        },
+        "profile": {
+          "score": 0.36,
+          "confidence": 0.65,
+          "basis": [
+            "meta_author:false",
+            "published_time:false",
+            "canonical:true",
+            "about:true",
+            "contact:false",
+            "corrections:false",
+            "outbound_links:68",
+            "opinion_marker:false"
+          ]
+        }
+      },
+      "profile": {
+        "fetched_at": "2026-09-20T03:40:29.272Z",
+        "homepage_url": "https://anthropic.com/",
+        "example_url": "https://anthropic.com/news/responsible-scaling-policy-v3",
+        "homepage_status": 200,
+        "example_status": 200,
+        "homepage_final_url": "https://www.anthropic.com/",
+        "example_final_url": "https://www.anthropic.com/news/responsible-scaling-policy-v3",
+        "homepage_content_type": "text/html; charset=utf-8",
+        "example_content_type": "text/html; charset=utf-8",
+        "homepage": {
+          "has_meta_author": false,
+          "has_published_time": false,
+          "has_canonical": true,
+          "has_about_link": true,
+          "has_contact_link": false,
+          "has_corrections_link": false,
+          "outbound_links_count": 60,
+          "opinion_marker": false
+        },
+        "example": {
+          "has_meta_author": false,
+          "has_published_time": false,
+          "has_canonical": true,
+          "has_about_link": false,
+          "has_contact_link": false,
+          "has_corrections_link": false,
+          "outbound_links_count": 68,
+          "opinion_marker": false
+        }
+      }
+    },
+    {
       "domain": "oracle.com",
       "entity": "Oracle",
       "kind": "unknown",
@@ -26365,7 +26492,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-09-05T01:42:26.374Z",
+        "fetched_at": "2026-09-20T03:40:31.201Z",
         "homepage_url": "https://havelsan.com/",
         "example_url": "https://www.havelsan.com/en/products/eyeminer-video-analytic-system-iot?utm_source=x&utm_medium=PaidSocial&utm_campaign=eyeminer_traffic&twclid=26xxdxm61rvq0o921lrv322jio",
         "homepage_status": null,
@@ -26491,7 +26618,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-09-05T01:42:26.875Z",
+        "fetched_at": "2026-09-20T03:40:31.505Z",
         "homepage_url": "https://houseofkaisers.com/",
         "example_url": "https://houseofkaisers.com/kai-portal/beta?twclid=26t8hp42r8pe5p1i02xmt53ngc",
         "homepage_status": 200,
@@ -26617,7 +26744,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-09-06T19:41:55.333Z",
+        "fetched_at": "2026-09-20T03:40:33.713Z",
         "homepage_url": "https://hubs.ly/",
         "example_url": "https://eu1.hubs.ly/H0wRBM_0?twclid=228g94ew2dkgzbh2vwlnrvcczu",
         "homepage_status": 200,
@@ -33132,85 +33259,6 @@
           "has_corrections_link": false,
           "outbound_links_count": 0,
           "opinion_marker": false
-        }
-      }
-    },
-    {
-      "domain": "anthropic.com",
-      "entity": "Anthropic",
-      "kind": "unknown",
-      "first_seen_at": "2026-09-20T03:16:16.243Z",
-      "last_seen_at": "2026-09-20T03:39:06.302Z",
-      "discovery": {
-        "distinct_urls": 4,
-        "example_urls": [
-          "https://www-cdn.anthropic.com/e670587677525f28df69b59e5fb4c22cc5461a17.pdf",
-          "https://www.anthropic.com/news/anthropics-responsible-scaling-policy",
-          "https://www.anthropic.com/responsible-scaling-policy",
-          "https://www.anthropic.com/research"
-        ],
-        "origin_counts": {
-          "reading_queue": 6,
-          "prefetch": 1
-        },
-        "distinct_referring_accounts": 0,
-        "sample_referring_accounts": [],
-        "distinct_axes": []
-      },
-      "claims": {
-        "total": 0,
-        "supported": 0,
-        "refuted": 0,
-        "contested": 0,
-        "unverified": 0,
-        "resolved_count": 0
-      },
-      "structural_features": {
-        "has_search_paths": false,
-        "has_article_paths": false,
-        "has_doi_paths": false
-      },
-      "ratings": {
-        "provenance": {
-          "score": 0.45,
-          "basis": [
-            "unknown_domain_pattern"
-          ]
-        },
-        "breadth": {
-          "score": 0.23666666666666664,
-          "basis": [
-            "distinct_urls:4",
-            "distinct_axes:0",
-            "origin_types:2"
-          ]
-        },
-        "corroboration": {
-          "score": 0.175,
-          "basis": [
-            "referring_accounts:0",
-            "origin_types:2"
-          ]
-        },
-        "track_record": {
-          "score": null,
-          "basis": [
-            "no_resolved_claims_observed"
-          ]
-        },
-        "overall": {
-          "score": 0.3775520833333333,
-          "confidence": 0.15544999999999998,
-          "method": "mechanical_v1",
-          "basis": [
-            "unknown_domain_pattern",
-            "distinct_urls:4",
-            "distinct_axes:0",
-            "origin_types:2",
-            "referring_accounts:0",
-            "origin_types:2",
-            "track_record_unavailable"
-          ]
         }
       }
     },

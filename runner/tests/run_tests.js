@@ -747,6 +747,33 @@ section("Research agenda + periodic gating");
       pass("planning can propose experiments, and only the four runnable kinds");
     else fail("experiment capability", "experiment_series, the four kinds, or the measurement-not-a-tool limit is missing");
 
+    // Silence is a valid outcome: he posts when he has established something,
+    // not because a cycle counter came round. A quota is how an agent ends up
+    // narrating its feed to fill airtime.
+    const gate = require(path.join(RUNNER, "lib/posting_gate.js"));
+    const verdict = gate.somethingToSay();
+    if (typeof verdict.ok === "boolean" && typeof verdict.reason === "string" && typeof verdict.newFindings === "number")
+      pass(`posting gate answers with a reason ("${verdict.reason.slice(0, 48)}")`);
+    else fail("posting gate", "shape wrong");
+
+    process.env.POSTING_GATE = "off";
+    const gateOffOk = gate.somethingToSay().ok === true;
+    delete process.env.POSTING_GATE;
+    process.env.RESEARCH_AGENDA = "off";
+    const noAgendaOk = gate.somethingToSay().ok === true;
+    process.env.RESEARCH_AGENDA = "better_ai";
+    if (gateOffOk && noAgendaOk) pass("posting gate is opt-out, and inert without an agenda");
+    else fail("posting gate", `POSTING_GATE=off → ${gateOffOk}; no agenda → ${noAgendaOk}`);
+
+    // The prompts must carry the same rule in words, or the model reads SKIP as
+    // a failure to meet requirements rather than a legitimate answer.
+    const tweetSrc = fs.readFileSync(path.join(RUNNER, "lib/prompts/tweet.js"), "utf-8");
+    const quoteSrc = fs.readFileSync(path.join(RUNNER, "lib/prompts/quote.js"), "utf-8");
+    if (/SILENCE IS A VALID OUTCOME/.test(tweetSrc) && /SILENCE IS A VALID OUTCOME/.test(quoteSrc) &&
+        /no posting quota/.test(tweetSrc))
+      pass("tweet and quote prompts say silence is an answer, not a failed cycle");
+    else fail("silence framing", "a prompt still treats SKIP only as a requirements failure");
+
     // Model routing: mechanical work must not run on the reasoning model. On a
     // subscription this is quota, not dollars — the foundation phase is 3
     // research passes a day on top of every browse cycle.

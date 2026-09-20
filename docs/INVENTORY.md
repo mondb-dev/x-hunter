@@ -270,6 +270,15 @@ research agenda: affinity = agenda vocabulary; zero-affinity candidates dropped
   `lib/convictions.js` (replaces `I hold that <pole>` under an agenda),
   `lib/sebastian_respond.js` (replies/web chat — `current_stance` no longer quoted), and
   `agendaBlock("planning")` (ponder/deep_dive/decision/sprint planner).
+- **Posting gate** `runner/lib/posting_gate.js` → `orchestrator.js` (before the
+  posting-window check): a TWEET/QUOTE cycle is downgraded to BROWSE unless
+  something was established since the last broadcast — a knowledge-base entry
+  (finding, brief published or withheld, experiment result) newer than the last
+  `posts_log` broadcast, or a `[SOLUTION`/`[EXPERIMENT` marker in browse notes.
+  Replies are never gated (they answer someone). `POSTING_GATE=off` disables;
+  inert without an agenda. The tweet/quote prompts carry the same rule in words
+  ("SILENCE IS A VALID OUTCOME… there is no posting quota"), so SKIP reads as a
+  legitimate answer rather than a failure to meet requirements.
 - **Model routing** `runner/lib/model_routing.js` → applied in `lib/compose.js`
   (single funnel, `opts.claudeModel` always wins): mechanical tags (`*:factcheck`,
   `*:coherence`, `llm:content_relevance`, `llm:apply_ontology_delta`,

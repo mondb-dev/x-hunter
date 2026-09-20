@@ -12,6 +12,9 @@ module.exports = function buildQuotePrompt(ctx) {
     ' -- find one post worth quoting.\n' +
     '\n' +
     (agenda ? agendaBlock('voice', agenda) + '\n\n' : '') +
+    'SILENCE IS A VALID OUTCOME: quote something only when your own research gives you a\n' +
+    'specific, sourced thing to add. Having an opinion about a post is not a reason to quote it.\n' +
+    'If you have nothing established to bring, write SKIP — there is no quota.\n\n' +
     'Research anchors \u2014 the directions you are investigating (NOT positions you hold):\n' +
     ctx.topAxes + '\n' +
     (ctx.knowledge ? '\n' + ctx.knowledge + '\n' : '') +

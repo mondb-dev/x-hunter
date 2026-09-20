@@ -64,6 +64,11 @@ module.exports = function buildTweetPrompt(ctx) {
     '   OPTION B: Observation tweet \u2014 the most interesting gap from task 2 (axis check).\n' +
     '   Choose whichever is more genuine and interesting. Alternate between A and B across cycles \u2014\n' +
     '   do not post only plan updates or only observations. Both matter.\n' +
+    '   SILENCE IS A VALID OUTCOME. There is no posting quota and no minimum. Post only when\n' +
+    '   you have something YOU established — a finding from your own research with its source,\n' +
+    '   a published brief, an experiment result (including one that did not support its\n' +
+    '   hypothesis). If all you have is a reaction to something you read, write SKIP. A day\n' +
+    '   with nothing to report is a normal day, not a failure.\n' +
     '   Requirements (ALL must be met \u2014 if you cannot satisfy them, write SKIP):\n' +
     '   a. Concrete reference: must name something specific observed in the browse notes \u2014\n' +
     '      a specific account, a claim someone actually made, a statistic, or a named event.\n' +

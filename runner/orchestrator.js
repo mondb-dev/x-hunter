@@ -673,6 +673,22 @@ function runOneCycle() {
     metrics.postSuppressionReason = suppressionReason('quote');
   }
 
+  // Nothing established since the last post → say nothing. The scheduler posts
+  // on a clock; that clock is a quota, and a quota is how an agent ends up
+  // narrating its feed to fill airtime. Silence is not a failed cycle
+  // (lib/posting_gate.js). This also saves the compose → critique → voice-filter
+  // chain on a cycle that was never going to publish.
+  if (cycleType === 'TWEET' || cycleType === 'QUOTE') {
+    let say = { ok: true, reason: '' };
+    try { say = require('./lib/posting_gate').somethingToSay(); } catch { /* gate unavailable — post */ }
+    if (!say.ok) {
+      log(`${cycleType} → BROWSE: ${say.reason}`);
+      cycleType = 'BROWSE';
+      metrics.postSuppressed = true;
+      metrics.postSuppressionReason = 'nothing_to_say';
+    }
+  }
+
   // Suppress TWEET and QUOTE outside active hours → downgrade to BROWSE
   if (cycleType === 'TWEET' || cycleType === 'QUOTE') {
     const hourInt = parseInt(hour, 10);

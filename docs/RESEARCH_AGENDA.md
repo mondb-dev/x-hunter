@@ -170,6 +170,27 @@ pass, and each evidence entry carries `writer` (`deep_research`, `solution_brief
 absent for browse) into its `evidence_log` entry. Inbox files may not create axes — only
 the browse agent may.
 
+## He posts when he has something, not when the clock says so
+
+The scheduler used to post every `TWEET_EVERY` cycles, and the prompts treated
+`SKIP` as a failure to meet requirements. That is a quota, and a quota is how an
+agent ends up narrating its feed to fill airtime.
+
+`runner/lib/posting_gate.js` downgrades a TWEET or QUOTE cycle to BROWSE unless
+something was **established** since the last broadcast: a new knowledge-base
+entry (a research finding, a brief — published *or* withheld, an experiment
+result), or a brief/experiment explicitly waiting to be shared. Replies are never
+gated: answering someone who asked is not broadcasting. `POSTING_GATE=off`
+restores clock-based posting.
+
+The prompts carry the same rule in words, so the model does not read silence as
+having failed the requirements: *"SILENCE IS A VALID OUTCOME. There is no posting
+quota and no minimum… A day with nothing to report is a normal day, not a
+failure."*
+
+This also saves the compose → critique → voice-filter chain on a cycle that was
+never going to publish.
+
 ## Axes anchor; the knowledge base speaks
 
 Operator decision, 2026-09-19. The two roles were conflated and are now separated:
