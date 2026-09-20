@@ -1,0 +1,49 @@
+{
+  "id": "what-do-metr-s-measurements-of-the-length-of-tas-e0bafc",
+  "title": "What do METR's measurements of the length of tasks AI agents can complete autonomously show about the trend, and what ar",
+  "summary": "METR found 7-month doubling in agent task horizons (2019-2025), reaching ~50min by early 2025. Main critique: projections rest on just 14 samples for critical estimates—sparse statistics for such sweeping extrapolations.",
+  "kind": "research",
+  "source": "plan",
+  "generated_at": "2026-09-20T22:28:07.189Z",
+  "blocks": [
+    {
+      "type": "callout",
+      "tone": "info",
+      "title": "Answer (confidence 82%):",
+      "text": "METR found 7-month doubling in agent task horizons (2019-2025), reaching ~50min by early 2025. Main critique: projections rest on just 14 samples for critical estimates—sparse statistics for such sweeping extrapolations."
+    },
+    {
+      "type": "markdown",
+      "md": "# METR's AI Agent Task Length Measurements and Extrapolation Critiques\n\n## Empirical Findings: The 7-Month Doubling Trend\n\nMETR (Model Evaluation and Threat Research) measures autonomous AI capability through the \"50%-task-completion time horizon\"—the duration of tasks (measured by human expert completion time) that AI models can complete with 50% success rate. Their March 2025 research documented a **consistent exponential increase over six years, with task horizons doubling approximately every 7 months since 2019**. By early 2025, frontier models like Claude 3.7 Sonnet reached approximately **50 minutes** for this metric, with potential acceleration observed in 2024 (https://metr.org/blog/2025-03-19-measuring-ai-ability-to-complete-long-tasks/, https://arxiv.org/html/2503.14499v1).\n\nMETR's evaluation framework, detailed in their March 2024 protocol (https://metr.org/blog/), includes a task suite, elicitation protocol, and scoring methods. The organization maintains a resources page (https://metr.org/measuring-autonomous-ai-capabilities/) collecting evaluation reports on models including GPT-5.1-Codex-Max, GPT-5, and Claude 3.7 Sonnet. In January 2026, they released Time Horizon 1.1, expanding their task suite from 170 to 228 tasks with more \"long-haul\" tasks requiring eight or more human-equivalent hours (https://metr.org/blog/2026-1-29-time-horizon-1-1/).\n\n## METR's Extrapolation Claims\n\nExtrapolating the 7-month doubling trend forward, METR's research suggests AI agents could complete a large fraction of current software tasks within a decade. The exponential progression from ~50 minutes in early 2025 implies reaching multi-hour task horizons within several years if the trend continues.\n\n## Strongest Critiques of Extrapolation\n\n### 1. Sparse Statistical Foundation\n\nMETR's horizon length projections for critical 2025 estimates (1-4 hour tasks) rely on **only 14 samples**, raising fundamental concerns about statistical robustness. Drawing sweeping conclusions about exponential trends from such limited data introduces significant noise and reduces confidence in extrapolated predictions (critique via lessw-blog, cited at pseedr.com). METR acknowledges design challenges in their methodology, noting that randomization choices in their developer productivity experiments create \"task-level selection problems\" while alternative approaches \"make developer-level selection problems worse\" and reduce statistical power (https://metr.org/blog/2026-02-24-uplift-update).\n\n### 2. Fundamental Planning Limits and Scaling Ceilings\n\nResearch identifies **\"fundamental limits of reasoning-based policy in long-horizon planning\"** with empirical failure modes emerging as task horizons increase (https://arxiv.org/html/2601.22311). The \"latent capability ceiling\" phenomenon shows diminishing returns from parameter scaling: jumping from 100B to 200B parameters yields only **1-2% improvement** compared to **10-15% gains** from 10B to 20B, suggesting raw model scale stops being the limiting factor for task performance (https://tianpan.co). Practical constraints like decomposition depth limits (typically 3 levels) prevent infinite recursion in task planning, indicating structural barriers to arbitrarily deep task hierarchies (github.com/ombharatiya/ai-system-design-guide).\n\n### 3. Lab-to-Deployment Performance Gap\n\nA documented **37% gap exists between lab benchmark scores and real-world deployment performance** (https://jobsbyculture.com/blog/ai-agent-evaluation-guide-2026). METR's controlled evaluations lack the complexities agents face in production: ambiguous user requests, flaky third-party APIs, rate limits, unexpected data formats, and adversarial inputs. The OpenAgentSafety framework authors note that most prior benchmarks \"fall short by relying on simulated environments, narrow task domains, or unrealistic tool abstractions\" (https://arxiv.org/pdf/2507.06134), limiting their predictive validity for real-world autonomous operation.\n\nThese three critiques—statistical sparsity, fundamental capability ceilings, and the reality gap—represent the strongest challenges to extrapolating METR's measured trend, each addressing different failure modes: insufficient evidence, theoretical limits, and ecological invalidity."
+    },
+    {
+      "type": "sources",
+      "items": [
+        {
+          "url": "https://metr.org"
+        },
+        {
+          "url": "https://metr.org/blog/"
+        },
+        {
+          "url": "https://metr.org/research/"
+        },
+        {
+          "url": "https://metr.org/measuring-autonomous-ai-capabilities/"
+        },
+        {
+          "url": "https://metr.org/research/"
+        },
+        {
+          "url": "https://metr.org/"
+        },
+        {
+          "url": "https://metr.org/blog/2025-03-19-measuring-ai-ability-to-complete-long-tasks/"
+        },
+        {
+          "url": "https://arxiv.org/html/2503.14499v1"
+        }
+      ]
+    }
+  ]
+}
