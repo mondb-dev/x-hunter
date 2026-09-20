@@ -144923,15 +144923,28 @@
       "label": "Verifying Model Safety: Evals & Interpretability Lagging vs. Keeping Pace",
       "left_pole": "Evals and interpretability cannot yet reliably detect dangerous capabilities or deceptive behavior — safety claims outrun verification",
       "right_pole": "Evals and interpretability increasingly give reliable, decision-relevant evidence about model safety",
-      "score": 0,
-      "confidence": 0,
+      "score": -0.05,
+      "confidence": 0.0268,
       "topics": [
         "AI evaluations",
         "interpretability"
       ],
       "created_at": "2026-09-20T03:14:52.308Z",
-      "last_updated": "2026-09-20T03:14:52.308Z",
-      "evidence_log": [],
+      "last_updated": "2026-09-20T04:08:44.308Z",
+      "evidence_log": [
+        {
+          "source": "https://arxiv.org/abs/2609.20779v1",
+          "content": "Safety evaluations for large language models rely on surface-form classifiers that report declining harm scores across model generations, but this methodology is systematically inadequate because gender discrimination is transformed rather than reduced.",
+          "summary": "",
+          "timestamp": "2026-09-20T04:08:44.169Z",
+          "pole_alignment": "left",
+          "trust_weight": 1,
+          "claim_id": "e58e9ee0bfb0",
+          "stance_confidence": 0.92,
+          "score_after": -0.05,
+          "confidence_after": 0.0268
+        }
+      ],
       "seeded_by": "research_agenda:better_ai"
     },
     {
@@ -145013,5 +145026,5 @@
     }
   ],
   "axis_creation_rules_version": "1.0",
-  "last_updated": "2026-09-20T03:39:22.853Z"
+  "last_updated": "2026-09-20T04:08:44.308Z"
 }

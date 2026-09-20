@@ -1,8 +1,8 @@
 {
   "schema_version": "1.0",
-  "generated_at": "2026-09-20T03:40:28.686Z",
+  "generated_at": "2026-09-20T04:08:10.433Z",
   "method": "mechanical_registry_v1",
-  "profiled_at": "2026-09-20T03:40:33.713Z",
+  "profiled_at": "2026-09-20T04:08:15.220Z",
   "sources": [
     {
       "domain": "theguardian.com",
@@ -1598,6 +1598,128 @@
       }
     },
     {
+      "domain": "arxiv.org",
+      "entity": "Arxiv",
+      "kind": "academic",
+      "first_seen_at": null,
+      "last_seen_at": null,
+      "discovery": {
+        "distinct_urls": 1,
+        "example_urls": [
+          "https://arxiv.org/abs/2609.20821v1"
+        ],
+        "origin_counts": {
+          "reading_queue": 1
+        },
+        "distinct_referring_accounts": 0,
+        "sample_referring_accounts": [],
+        "distinct_axes": []
+      },
+      "claims": {
+        "total": 0,
+        "supported": 0,
+        "refuted": 0,
+        "contested": 0,
+        "unverified": 0,
+        "resolved_count": 0
+      },
+      "structural_features": {
+        "has_search_paths": false,
+        "has_article_paths": false,
+        "has_doi_paths": true
+      },
+      "ratings": {
+        "provenance": {
+          "score": 0.93,
+          "basis": [
+            "academic_domain_pattern",
+            "doi_or_identifier_path_seen"
+          ]
+        },
+        "breadth": {
+          "score": 0.08916666666666666,
+          "basis": [
+            "distinct_urls:1",
+            "distinct_axes:0",
+            "origin_types:1"
+          ]
+        },
+        "corroboration": {
+          "score": 0.0875,
+          "basis": [
+            "referring_accounts:0",
+            "origin_types:1"
+          ]
+        },
+        "track_record": {
+          "score": null,
+          "basis": [
+            "no_resolved_claims_observed"
+          ]
+        },
+        "overall": {
+          "score": 0.6670833333333334,
+          "confidence": 0.0491,
+          "method": "mechanical_v1",
+          "basis": [
+            "academic_domain_pattern",
+            "doi_or_identifier_path_seen",
+            "distinct_urls:1",
+            "distinct_axes:0",
+            "origin_types:1",
+            "referring_accounts:0",
+            "origin_types:1",
+            "track_record_unavailable"
+          ]
+        },
+        "profile": {
+          "score": 0.48,
+          "confidence": 0.65,
+          "basis": [
+            "meta_author:false",
+            "published_time:false",
+            "canonical:true",
+            "about:true",
+            "contact:true",
+            "corrections:false",
+            "outbound_links:23",
+            "opinion_marker:false"
+          ]
+        }
+      },
+      "profile": {
+        "fetched_at": "2026-09-20T04:08:10.801Z",
+        "homepage_url": "https://arxiv.org/",
+        "example_url": "https://arxiv.org/abs/2609.20821v1",
+        "homepage_status": 200,
+        "example_status": 200,
+        "homepage_final_url": "https://arxiv.org/",
+        "example_final_url": "https://arxiv.org/abs/2609.20821v1",
+        "homepage_content_type": "text/html; charset=utf-8",
+        "example_content_type": "text/html; charset=utf-8",
+        "homepage": {
+          "has_meta_author": false,
+          "has_published_time": false,
+          "has_canonical": false,
+          "has_about_link": true,
+          "has_contact_link": true,
+          "has_corrections_link": false,
+          "outbound_links_count": 3,
+          "opinion_marker": false
+        },
+        "example": {
+          "has_meta_author": false,
+          "has_published_time": false,
+          "has_canonical": true,
+          "has_about_link": true,
+          "has_contact_link": true,
+          "has_corrections_link": false,
+          "outbound_links_count": 23,
+          "opinion_marker": false
+        }
+      }
+    },
+    {
       "domain": "washingtonpost.com",
       "entity": "Washingtonpost",
       "kind": "news",
@@ -3118,9 +3240,9 @@
       "entity": "T Co",
       "kind": "unknown",
       "first_seen_at": "2016-05-05T18:57:30.000Z",
-      "last_seen_at": "2026-09-20T03:20:00.000Z",
+      "last_seen_at": "2026-09-20T04:00:23.973Z",
       "discovery": {
-        "distinct_urls": 20977,
+        "distinct_urls": 21000,
         "example_urls": [
           "https://t.co/pJSE124ec4",
           "https://t.co/Soz8BXPWaa",
@@ -3129,11 +3251,11 @@
           "https://t.co/cYaqYDRp08"
         ],
         "origin_counts": {
-          "feed_buffer": 18894,
-          "feed_buffer_reply": 5994,
+          "feed_buffer": 18919,
+          "feed_buffer_reply": 5999,
           "articles": 3
         },
-        "distinct_referring_accounts": 3158,
+        "distinct_referring_accounts": 3160,
         "sample_referring_accounts": [
           "0808iveta",
           "09abracadabra",
@@ -3172,7 +3294,7 @@
         "breadth": {
           "score": 0.53,
           "basis": [
-            "distinct_urls:20977",
+            "distinct_urls:21000",
             "distinct_axes:0",
             "origin_types:3"
           ]
@@ -3180,7 +3302,7 @@
         "corroboration": {
           "score": 0.9125,
           "basis": [
-            "referring_accounts:3158",
+            "referring_accounts:3160",
             "origin_types:3"
           ]
         },
@@ -3211,10 +3333,10 @@
           "basis": [
             "unknown_domain_pattern",
             "doi_or_identifier_path_seen",
-            "distinct_urls:20977",
+            "distinct_urls:21000",
             "distinct_axes:0",
             "origin_types:3",
-            "referring_accounts:3158",
+            "referring_accounts:3160",
             "origin_types:3",
             "track_record_unavailable"
           ]
@@ -5430,9 +5552,9 @@
       "entity": "Starlink",
       "kind": "unknown",
       "first_seen_at": "2026-04-07T03:51:50.000Z",
-      "last_seen_at": "2026-09-20T03:35:19.239Z",
+      "last_seen_at": "2026-09-20T03:40:05.000Z",
       "discovery": {
-        "distinct_urls": 1724,
+        "distinct_urls": 1739,
         "example_urls": [
           "https://www.starlink.com/us/residential?referral=RC-DF-9543787-19448-67&utm_medium=paid&utm_campaign=awr_us_soc_twt_ptg_cau&utm_content=awr_us_soc_twt_ptg_cau_res_gvp_v4s_stc_en-us_sdb-bluesky-uptime&twclid=2cg62b1u0oqrypdim5oir1767e",
           "https://www.starlink.com/us/residential?referral=RC-DF-9543787-19448-67&utm_medium=paid&utm_campaign=awr_us_soc_twt_ptg_cau&utm_content=awr_us_soc_twt_ptg_cau_res_gvp_v4s_stc_en-us_sdb-avail-sat-yourhome&twclid=2216n7j93v9absqn77762mm626",
@@ -5441,7 +5563,7 @@
           "https://www.starlink.com/us/residential?referral=RC-DF-9543787-19448-67&utm_medium=paid&utm_campaign=awr_us_soc_twt_ptg_cau&utm_content=awr_us_soc_twt_ptg_cau_res_gvp_v4s_stc_en-us_sdb-avail-sat-arrived&twclid=21pi7t0qs8tgw0wgnh5mvmdu2g"
         ],
         "origin_counts": {
-          "feed_buffer_reply": 1637,
+          "feed_buffer_reply": 1652,
           "feed_buffer": 91
         },
         "distinct_referring_accounts": 5,
@@ -5477,7 +5599,7 @@
         "breadth": {
           "score": 0.47,
           "basis": [
-            "distinct_urls:1724",
+            "distinct_urls:1739",
             "distinct_axes:0",
             "origin_types:2"
           ]
@@ -5515,7 +5637,7 @@
           "method": "mechanical_v1",
           "basis": [
             "unknown_domain_pattern",
-            "distinct_urls:1724",
+            "distinct_urls:1739",
             "distinct_axes:0",
             "origin_types:2",
             "referring_accounts:5",
@@ -8280,7 +8402,7 @@
       "first_seen_at": "2026-07-05T04:59:47.736Z",
       "last_seen_at": "2026-09-20T03:03:44.887Z",
       "discovery": {
-        "distinct_urls": 30,
+        "distinct_urls": 32,
         "example_urls": [
           "https://www.ptgaming.ph/?twclid=21n3lg1hcl64ox73kjyr4lggz9",
           "https://www.ptgaming.ph/?twclid=25vb0w4jbmtupw5yokwy2fjbcq",
@@ -8290,7 +8412,7 @@
         ],
         "origin_counts": {
           "feed_buffer": 13,
-          "feed_buffer_reply": 17
+          "feed_buffer_reply": 19
         },
         "distinct_referring_accounts": 1,
         "sample_referring_accounts": [
@@ -8321,7 +8443,7 @@
         "breadth": {
           "score": 0.47,
           "basis": [
-            "distinct_urls:30",
+            "distinct_urls:32",
             "distinct_axes:0",
             "origin_types:2"
           ]
@@ -8359,7 +8481,7 @@
           "method": "mechanical_v1",
           "basis": [
             "unknown_domain_pattern",
-            "distinct_urls:30",
+            "distinct_urls:32",
             "distinct_axes:0",
             "origin_types:2",
             "referring_accounts:1",
@@ -14881,6 +15003,134 @@
           "has_contact_link": false,
           "has_corrections_link": false,
           "outbound_links_count": 6,
+          "opinion_marker": false
+        }
+      }
+    },
+    {
+      "domain": "anthropic.com",
+      "entity": "Anthropic",
+      "kind": "unknown",
+      "first_seen_at": "2026-09-20T03:16:16.243Z",
+      "last_seen_at": "2026-09-20T04:08:10.431Z",
+      "discovery": {
+        "distinct_urls": 5,
+        "example_urls": [
+          "https://anthropic.com/news/responsible-scaling-policy-v3",
+          "https://www-cdn.anthropic.com/e670587677525f28df69b59e5fb4c22cc5461a17.pdf",
+          "https://www.anthropic.com/news/anthropics-responsible-scaling-policy",
+          "https://www.anthropic.com/responsible-scaling-policy",
+          "https://www.anthropic.com/research"
+        ],
+        "origin_counts": {
+          "ontology_evidence": 1,
+          "reading_queue": 8,
+          "prefetch": 1
+        },
+        "distinct_referring_accounts": 0,
+        "sample_referring_accounts": [],
+        "distinct_axes": [
+          "axis_ai_lab_commitments_v1"
+        ]
+      },
+      "claims": {
+        "total": 0,
+        "supported": 0,
+        "refuted": 0,
+        "contested": 0,
+        "unverified": 0,
+        "resolved_count": 0
+      },
+      "structural_features": {
+        "has_search_paths": false,
+        "has_article_paths": false,
+        "has_doi_paths": false
+      },
+      "ratings": {
+        "provenance": {
+          "score": 0.45,
+          "basis": [
+            "unknown_domain_pattern"
+          ]
+        },
+        "breadth": {
+          "score": 0.38416666666666666,
+          "basis": [
+            "distinct_urls:5",
+            "distinct_axes:1",
+            "origin_types:3"
+          ]
+        },
+        "corroboration": {
+          "score": 0.26249999999999996,
+          "basis": [
+            "referring_accounts:0",
+            "origin_types:3"
+          ]
+        },
+        "track_record": {
+          "score": null,
+          "basis": [
+            "no_resolved_claims_observed"
+          ]
+        },
+        "profile": {
+          "score": 0.36,
+          "confidence": 0.65,
+          "basis": [
+            "meta_author:false",
+            "published_time:false",
+            "canonical:true",
+            "about:true",
+            "contact:false",
+            "corrections:false",
+            "outbound_links:68",
+            "opinion_marker:false"
+          ]
+        },
+        "overall": {
+          "score": 0.41802083333333334,
+          "confidence": 0.2168,
+          "method": "mechanical_v1",
+          "basis": [
+            "unknown_domain_pattern",
+            "distinct_urls:5",
+            "distinct_axes:1",
+            "origin_types:3",
+            "referring_accounts:0",
+            "origin_types:3",
+            "track_record_unavailable"
+          ]
+        }
+      },
+      "profile": {
+        "fetched_at": "2026-09-20T03:40:29.272Z",
+        "homepage_url": "https://anthropic.com/",
+        "example_url": "https://anthropic.com/news/responsible-scaling-policy-v3",
+        "homepage_status": 200,
+        "example_status": 200,
+        "homepage_final_url": "https://www.anthropic.com/",
+        "example_final_url": "https://www.anthropic.com/news/responsible-scaling-policy-v3",
+        "homepage_content_type": "text/html; charset=utf-8",
+        "example_content_type": "text/html; charset=utf-8",
+        "homepage": {
+          "has_meta_author": false,
+          "has_published_time": false,
+          "has_canonical": true,
+          "has_about_link": true,
+          "has_contact_link": false,
+          "has_corrections_link": false,
+          "outbound_links_count": 60,
+          "opinion_marker": false
+        },
+        "example": {
+          "has_meta_author": false,
+          "has_published_time": false,
+          "has_canonical": true,
+          "has_about_link": false,
+          "has_contact_link": false,
+          "has_corrections_link": false,
+          "outbound_links_count": 68,
           "opinion_marker": false
         }
       }
@@ -22348,133 +22598,6 @@
       }
     },
     {
-      "domain": "anthropic.com",
-      "entity": "Anthropic",
-      "kind": "unknown",
-      "first_seen_at": "2026-09-20T03:16:16.243Z",
-      "last_seen_at": "2026-09-20T03:24:40.589Z",
-      "discovery": {
-        "distinct_urls": 5,
-        "example_urls": [
-          "https://anthropic.com/news/responsible-scaling-policy-v3",
-          "https://www-cdn.anthropic.com/e670587677525f28df69b59e5fb4c22cc5461a17.pdf",
-          "https://www.anthropic.com/news/anthropics-responsible-scaling-policy",
-          "https://www.anthropic.com/responsible-scaling-policy",
-          "https://www.anthropic.com/research"
-        ],
-        "origin_counts": {
-          "ontology_evidence": 1,
-          "reading_queue": 6
-        },
-        "distinct_referring_accounts": 0,
-        "sample_referring_accounts": [],
-        "distinct_axes": [
-          "axis_ai_lab_commitments_v1"
-        ]
-      },
-      "claims": {
-        "total": 0,
-        "supported": 0,
-        "refuted": 0,
-        "contested": 0,
-        "unverified": 0,
-        "resolved_count": 0
-      },
-      "structural_features": {
-        "has_search_paths": false,
-        "has_article_paths": false,
-        "has_doi_paths": false
-      },
-      "ratings": {
-        "provenance": {
-          "score": 0.45,
-          "basis": [
-            "unknown_domain_pattern"
-          ]
-        },
-        "breadth": {
-          "score": 0.32416666666666666,
-          "basis": [
-            "distinct_urls:5",
-            "distinct_axes:1",
-            "origin_types:2"
-          ]
-        },
-        "corroboration": {
-          "score": 0.175,
-          "basis": [
-            "referring_accounts:0",
-            "origin_types:2"
-          ]
-        },
-        "track_record": {
-          "score": null,
-          "basis": [
-            "no_resolved_claims_observed"
-          ]
-        },
-        "overall": {
-          "score": 0.39669270833333337,
-          "confidence": 0.196325,
-          "method": "mechanical_v1",
-          "basis": [
-            "unknown_domain_pattern",
-            "distinct_urls:5",
-            "distinct_axes:1",
-            "origin_types:2",
-            "referring_accounts:0",
-            "origin_types:2",
-            "track_record_unavailable"
-          ]
-        },
-        "profile": {
-          "score": 0.36,
-          "confidence": 0.65,
-          "basis": [
-            "meta_author:false",
-            "published_time:false",
-            "canonical:true",
-            "about:true",
-            "contact:false",
-            "corrections:false",
-            "outbound_links:68",
-            "opinion_marker:false"
-          ]
-        }
-      },
-      "profile": {
-        "fetched_at": "2026-09-20T03:40:29.272Z",
-        "homepage_url": "https://anthropic.com/",
-        "example_url": "https://anthropic.com/news/responsible-scaling-policy-v3",
-        "homepage_status": 200,
-        "example_status": 200,
-        "homepage_final_url": "https://www.anthropic.com/",
-        "example_final_url": "https://www.anthropic.com/news/responsible-scaling-policy-v3",
-        "homepage_content_type": "text/html; charset=utf-8",
-        "example_content_type": "text/html; charset=utf-8",
-        "homepage": {
-          "has_meta_author": false,
-          "has_published_time": false,
-          "has_canonical": true,
-          "has_about_link": true,
-          "has_contact_link": false,
-          "has_corrections_link": false,
-          "outbound_links_count": 60,
-          "opinion_marker": false
-        },
-        "example": {
-          "has_meta_author": false,
-          "has_published_time": false,
-          "has_canonical": true,
-          "has_about_link": false,
-          "has_contact_link": false,
-          "has_corrections_link": false,
-          "outbound_links_count": 68,
-          "opinion_marker": false
-        }
-      }
-    },
-    {
       "domain": "oracle.com",
       "entity": "Oracle",
       "kind": "unknown",
@@ -26870,7 +26993,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-09-05T01:42:29.252Z",
+        "fetched_at": "2026-09-20T04:08:13.515Z",
         "homepage_url": "https://spanel.io/",
         "example_url": "https://www.spanel.io/pricing.html?twclid=2arqqjpqxtpmtbpl4vdri6fkg9",
         "homepage_status": 200,
@@ -26996,7 +27119,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-09-05T05:27:08.726Z",
+        "fetched_at": "2026-09-20T04:08:14.496Z",
         "homepage_url": "https://convoai.world/",
         "example_url": "https://podcast.convoai.world/episode/reimagining-the-future-of-learning-through-conversational-ai-with-physics-wallahs-supreet-singh/?utm_source=X&utm_medium=Paid-Social&utm_campaign=APAC-July-26&twclid=230k9qgjmrkm0obl0llcbwb6zj",
         "homepage_status": 200,
@@ -27122,7 +27245,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-09-05T05:27:09.911Z",
+        "fetched_at": "2026-09-20T04:08:15.220Z",
         "homepage_url": "https://disneyplus.com/",
         "example_url": "https://apps.disneyplus.com/1271507587?utm_source=twitter&utm_medium=video&utm_campaign=MK-PH_YR-26_AN-WALDIZ_BS-KD_CN-FY26Q4AShopforKillersS2_PB-Twitter_DT-CROSS_OB-Consid_CP-DIS_ZODDPH26-187_FF-Views22July&twclid=29smr8krrzqfg1u432yrn4a65l",
         "homepage_status": 200,
