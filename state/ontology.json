@@ -144878,13 +144878,13 @@
       "left_pole": "Lab safety commitments are largely performative — vague, quietly weakened, or overridden by competitive pressure",
       "right_pole": "Lab safety commitments are substantive — specific, externally checkable, and honored even when costly",
       "score": -0.05,
-      "confidence": 0.0268,
+      "confidence": 0.1265,
       "topics": [
         "responsible scaling policy",
         "frontier safety framework"
       ],
       "created_at": "2026-09-20T03:14:52.308Z",
-      "last_updated": "2026-09-20T03:39:22.853Z",
+      "last_updated": "2026-09-20T22:06:07.891Z",
       "evidence_log": [
         {
           "source": "https://anthropic.com/news/responsible-scaling-policy-v3",
@@ -144898,6 +144898,66 @@
           "stance_confidence": 0.85,
           "score_after": -0.05,
           "confidence_after": 0.0268
+        },
+        {
+          "source": "https://openai.com/index/ai-policy-window",
+          "content": "OpenAI's policy essay calls for stronger safety evidence and shared standards while simultaneously releasing multiple agentic models.",
+          "summary": "",
+          "timestamp": "2026-09-20T12:09:35.073Z",
+          "pole_alignment": "left",
+          "trust_weight": 1,
+          "claim_id": "439590a4fc48",
+          "stance_confidence": 0.72,
+          "score_after": -0.05,
+          "confidence_after": 0.0528
+        },
+        {
+          "source": "https://openai.com/index/reasoning-models-chain-of-thought-controllability/",
+          "content": "OpenAI actively uses CoT monitoring in production as part of defense-in-depth safety approach for reasoning models, combining it with safety training and behavioral testing",
+          "summary": "research: How reliable is chain-of-thought monitoring as a safety tool, given recent research on the faithfulness of reasoning tra",
+          "timestamp": "2026-09-20T12:20:31.253Z",
+          "pole_alignment": "right",
+          "trust_weight": 1,
+          "writer": "deep_research",
+          "claim_id": "cde9acc68071",
+          "score_after": -0.05,
+          "confidence_after": 0.078
+        },
+        {
+          "source": "https://openai.com/index/an-alien-mind",
+          "content": "OpenAI's Chief Scientist publishes essay calling for 'stronger safeguards and international coordination' the same week the lab ships multiple agentic products.",
+          "summary": "",
+          "timestamp": "2026-09-20T18:05:25.079Z",
+          "pole_alignment": "left",
+          "trust_weight": 1,
+          "claim_id": "cfefed0ab410",
+          "stance_confidence": 0.72,
+          "score_after": -0.05,
+          "confidence_after": 0.1026
+        },
+        {
+          "source": "https://openai.com/index/safety-overview-gpt-6-astra",
+          "content": "GPT-6 Astra is the first OpenAI model to reach Critical cybersecurity capability threshold under the Preparedness Framework, yet deployed with unspecified 'stronger safeguards.'",
+          "summary": "",
+          "timestamp": "2026-09-20T20:05:39.795Z",
+          "pole_alignment": "left",
+          "trust_weight": 0.5,
+          "claim_id": "943cae05b1e9",
+          "stance_confidence": 0.72,
+          "score_after": -0.05,
+          "confidence_after": 0.1146
+        },
+        {
+          "source": "https://openai.com/index/chatgpt-connects-health-records-and-healthcare-sources",
+          "content": "OpenAI deploys ChatGPT EHR integration with no public system card or safety eval for high-stakes medical use case.",
+          "summary": "",
+          "timestamp": "2026-09-20T22:06:07.728Z",
+          "pole_alignment": "left",
+          "trust_weight": 0.5,
+          "claim_id": "cc70ee1e3da3",
+          "stance_confidence": 0.85,
+          "score_after": -0.05,
+          "confidence_after": 0.1265
         }
       ],
       "seeded_by": "research_agenda:better_ai"
@@ -144907,15 +144967,28 @@
       "label": "Alignment Tractability: Fundamental Gaps vs. Scalable Progress",
       "left_pole": "Current alignment techniques have fundamental gaps that will not scale to more capable systems",
       "right_pole": "Current alignment techniques are making measurable progress that plausibly scales with capability",
-      "score": 0,
-      "confidence": 0,
+      "score": -0.05,
+      "confidence": 0.0268,
       "topics": [
         "alignment research",
         "misalignment"
       ],
       "created_at": "2026-09-20T03:14:52.308Z",
-      "last_updated": "2026-09-20T03:14:52.308Z",
-      "evidence_log": [],
+      "last_updated": "2026-09-20T16:04:37.606Z",
+      "evidence_log": [
+        {
+          "source": "https://arxiv.org/abs/2305.04388",
+          "content": "Turpin et al. (2023) showed CoT explanations heavily influenced by biasing features like reordering answer options, which models systematically failed to mention in explanations",
+          "summary": "research: How reliable is chain-of-thought monitoring as a safety tool, given recent research on the faithfulness of reasoning tra",
+          "timestamp": "2026-09-20T12:20:31.253Z",
+          "pole_alignment": "left",
+          "trust_weight": 1,
+          "writer": "deep_research",
+          "claim_id": "b117bc4dbaeb",
+          "score_after": -0.05,
+          "confidence_after": 0.0268
+        }
+      ],
       "seeded_by": "research_agenda:better_ai"
     },
     {
@@ -144924,13 +144997,13 @@
       "left_pole": "Evals and interpretability cannot yet reliably detect dangerous capabilities or deceptive behavior — safety claims outrun verification",
       "right_pole": "Evals and interpretability increasingly give reliable, decision-relevant evidence about model safety",
       "score": -0.05,
-      "confidence": 0.0268,
+      "confidence": 0.1146,
       "topics": [
         "AI evaluations",
         "interpretability"
       ],
       "created_at": "2026-09-20T03:14:52.308Z",
-      "last_updated": "2026-09-20T04:08:44.308Z",
+      "last_updated": "2026-09-20T22:06:07.891Z",
       "evidence_log": [
         {
           "source": "https://arxiv.org/abs/2609.20779v1",
@@ -144943,6 +145016,52 @@
           "stance_confidence": 0.92,
           "score_after": -0.05,
           "confidence_after": 0.0268
+        },
+        {
+          "source": "https://metr.org/blog/2026-03-26-red-teaming-anthropic-agent-monitoring/",
+          "content": "METR red-teamed Anthropic's internal agent monitoring systems, providing external verification of safety infrastructure.",
+          "summary": "",
+          "timestamp": "2026-09-20T12:09:35.073Z",
+          "pole_alignment": "right",
+          "trust_weight": 1,
+          "claim_id": "1a55a1902a8e",
+          "stance_confidence": 0.65,
+          "score_after": 0.0035,
+          "confidence_after": 0.0528
+        },
+        {
+          "source": "https://anthropic.com/research/measuring-faithfulness-in-chain-of-thought-reasoning",
+          "content": "Anthropic's study found large variation in how strongly models condition on CoT when predicting answers, with larger models producing less faithful reasoning despite better performance",
+          "summary": "research: How reliable is chain-of-thought monitoring as a safety tool, given recent research on the faithfulness of reasoning tra",
+          "timestamp": "2026-09-20T12:20:31.253Z",
+          "pole_alignment": "left",
+          "trust_weight": 1,
+          "writer": "deep_research",
+          "claim_id": "003def9c0a0e",
+          "score_after": -0.05,
+          "confidence_after": 0.1026
+        },
+        {
+          "source": "https://arxiv.org/html/2402.13950v4",
+          "content": "Causal mediation analysis of 12 LLMs found interventions editing intermediate CoT steps frequently did not propagate to updated final predictions as expected",
+          "summary": "research: How reliable is chain-of-thought monitoring as a safety tool, given recent research on the faithfulness of reasoning tra",
+          "timestamp": "2026-09-20T12:20:31.253Z",
+          "pole_alignment": "left",
+          "trust_weight": 1,
+          "writer": "deep_research",
+          "claim_id": "15639bdb6471",
+          "score_after": -0.05,
+          "confidence_after": 0.1026
+        },
+        {
+          "source": "https://deepmind.google/blog/finding-the-molecular-switches-behind-new-infectious-diseases/",
+          "content": "",
+          "summary": "",
+          "timestamp": "2026-09-20T22:06:07.728Z",
+          "pole_alignment": "left",
+          "trust_weight": 0.5,
+          "score_after": -0.05,
+          "confidence_after": 0.1146
         }
       ],
       "seeded_by": "research_agenda:better_ai"
@@ -144952,15 +145071,52 @@
       "label": "Pace of AI Capability Progress: Gradual vs. Rapid",
       "left_pole": "Progress toward transformative AI is gradual — data, compute, reliability and deployment bottlenecks slow it",
       "right_pole": "Progress is rapid — transformative capabilities plausibly arrive within a few years",
-      "score": 0,
-      "confidence": 0,
+      "score": 0.05,
+      "confidence": 0.078,
       "topics": [
         "AI capabilities",
         "AI timelines"
       ],
       "created_at": "2026-09-20T03:14:52.308Z",
-      "last_updated": "2026-09-20T03:14:52.308Z",
-      "evidence_log": [],
+      "last_updated": "2026-09-20T20:05:39.949Z",
+      "evidence_log": [
+        {
+          "source": "https://openai.com/index/gpt-6-astra-next-generation-work",
+          "content": "OpenAI released GPT-6 Astra with advanced reasoning, computer use, and stronger judgment for business workflows.",
+          "summary": "",
+          "timestamp": "2026-09-20T12:09:35.073Z",
+          "pole_alignment": "right",
+          "trust_weight": 1,
+          "claim_id": "67c172b9a261",
+          "stance_confidence": 0.85,
+          "score_after": 0.05,
+          "confidence_after": 0.0268
+        },
+        {
+          "source": "https://metr.org/notes/2026-02-10-simpler-ai-timelines-model/",
+          "content": "METR's timelines model, built from coding-agent transcript analysis, forecasts 99% AI R&D automation by approximately 2032.",
+          "summary": "",
+          "timestamp": "2026-09-20T18:05:25.079Z",
+          "pole_alignment": "right",
+          "trust_weight": 1,
+          "claim_id": "3048ce9441cd",
+          "stance_confidence": 0.72,
+          "score_after": 0.05,
+          "confidence_after": 0.0528
+        },
+        {
+          "source": "https://openai.com/index/gpt-6-astra",
+          "content": "OpenAI releases GPT-6 Astra with state-of-the-art capabilities across computer use, coding, cybersecurity, and science — third major model release in recent memory.",
+          "summary": "",
+          "timestamp": "2026-09-20T20:05:39.795Z",
+          "pole_alignment": "right",
+          "trust_weight": 1,
+          "claim_id": "7b518c801a4c",
+          "stance_confidence": 0.75,
+          "score_after": 0.05,
+          "confidence_after": 0.078
+        }
+      ],
       "seeded_by": "research_agenda:better_ai"
     },
     {
@@ -145039,5 +145195,5 @@
     }
   ],
   "axis_creation_rules_version": "1.0",
-  "last_updated": "2026-09-20T06:09:13.880Z"
+  "last_updated": "2026-09-20T22:06:07.891Z"
 }

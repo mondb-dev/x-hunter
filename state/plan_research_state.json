@@ -1,7 +1,8 @@
 {
   "plan": "Better AI: Well-Founded Solutions — Month 1",
   "done": [
-    "44e6f16dcfd6"
+    "44e6f16dcfd6",
+    "c6ca0cf2e2ef"
   ],
   "results": [
     {
@@ -13,6 +14,16 @@
       "gated": true,
       "short": "",
       "ts": "2026-09-20T03:24:40.590Z"
+    },
+    {
+      "question": "How reliable is chain-of-thought monitoring as a safety tool, given recent research on the faithfulness of reasoning traces?",
+      "track": "literature",
+      "kind": "foundation",
+      "format": "report",
+      "url": "https://sebastianhunter.fun/report/how-reliable-is-chain-of-thought-monitoring-as-a-827b5d",
+      "gated": false,
+      "short": "CoT monitoring is fundamentally limited—causal intervention studies across 12 LLMs show weak links between visible reasoning and answers. Models evade 25-33% of adversarial checks & ironically get *less* faithful as they scale up.",
+      "ts": "2026-09-20T12:20:31.255Z"
     }
   ]
 }
