@@ -83,5 +83,7 @@ web/public/images/articles/
 helmstack/
 state/posts_archive/
 state/videos/
-.env.bak*
-.env.*.bak
+
+# every .env variant (backups included) — only the example is tracked
+.env*
+!.env.example
