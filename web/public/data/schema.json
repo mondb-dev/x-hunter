@@ -1,0 +1,204 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Sebastian D. Hunter — public research data",
+  "schema_version": "1.0.0",
+  "description": "Static, versioned JSON describing an autonomous research agent's beliefs, proposals and track record. Every collection is an index plus one file per object; ids are stable; links are absolute URLs. Read the semantics notes before using any number: several of them do not mean what their names would suggest elsewhere.",
+  "semantics": {
+    "observed_pole_balance": "Recency-weighted mean of which pole the observed evidence illustrates (-1 = left pole, +1 = right pole). This measures the COMPOSITION OF WHAT WAS READ, not what Sebastian believes and not a probability that either pole is true. A feed dominated by one side produces a strong balance with no epistemic content.",
+    "evidence_breadth": "How many distinct trust-weighted SOURCES fed this axis, mapped to 0-1 (0.95 * (1 - e^(-sources/35))). It is a breadth-of-sourcing signal, not a calibrated confidence and not a probability of truth.",
+    "axis_status": "agenda = an axis of the current research agenda; these are the only ones that speak for him now. legacy = an axis from a previous focus, kept for the public record and still carrying its old evidence. A legacy axis is NOT a current position, however high its numbers look.",
+    "solution_status": "proposed = passed the grounding + red-team gate and was published. withheld = failed the gate (see gate_failures) and was NOT published. no_solution = the evidence did not support a proposal. Nothing here has been empirically tested unless a test_outcome says so.",
+    "expected_outcome_confidence": "The author's stated probability that the proposed test would succeed, capped at 80%. Untested. Compare against the prediction track record in /data/predictions/index.json before trusting any stated confidence."
+  },
+  "definitions": {
+    "axis": {
+      "type": "object",
+      "required": [
+        "id",
+        "label",
+        "left_pole",
+        "right_pole",
+        "observed_pole_balance",
+        "evidence_breadth"
+      ],
+      "properties": {
+        "id": {
+          "type": "string"
+        },
+        "label": {
+          "type": "string"
+        },
+        "left_pole": {
+          "type": "string",
+          "description": "the -1 end"
+        },
+        "right_pole": {
+          "type": "string",
+          "description": "the +1 end"
+        },
+        "track": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "description": "research agenda track, if any"
+        },
+        "status": {
+          "enum": [
+            "agenda",
+            "legacy"
+          ],
+          "description": "agenda = an axis of the current research agenda; these are the only ones that speak for him now. legacy = an axis from a previous focus, kept for the public record and still carrying its old evidence. A legacy axis is NOT a current position, however high its numbers look."
+        },
+        "observed_pole_balance": {
+          "type": "number",
+          "minimum": -1,
+          "maximum": 1,
+          "description": "Recency-weighted mean of which pole the observed evidence illustrates (-1 = left pole, +1 = right pole). This measures the COMPOSITION OF WHAT WAS READ, not what Sebastian believes and not a probability that either pole is true. A feed dominated by one side produces a strong balance with no epistemic content."
+        },
+        "evidence_breadth": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 1,
+          "description": "How many distinct trust-weighted SOURCES fed this axis, mapped to 0-1 (0.95 * (1 - e^(-sources/35))). It is a breadth-of-sourcing signal, not a calibrated confidence and not a probability of truth."
+        },
+        "evidence_count": {
+          "type": "integer"
+        },
+        "distinct_sources": {
+          "type": "integer"
+        },
+        "recent_evidence": {
+          "type": "array",
+          "items": {
+            "type": "object"
+          },
+          "description": "last 20 entries; the full log is not exported"
+        }
+      }
+    },
+    "solution": {
+      "type": "object",
+      "required": [
+        "id",
+        "status"
+      ],
+      "properties": {
+        "id": {
+          "type": "string"
+        },
+        "track": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "question": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "title": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "one_line": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "status": {
+          "enum": [
+            "proposed",
+            "withheld",
+            "no_solution",
+            "bailed",
+            "failed",
+            "publish_failed"
+          ],
+          "description": "proposed = passed the grounding + red-team gate and was published. withheld = failed the gate (see gate_failures) and was NOT published. no_solution = the evidence did not support a proposal. Nothing here has been empirically tested unless a test_outcome says so."
+        },
+        "red_team_verdict": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "enum": [
+            "sound",
+            "revise",
+            "reject",
+            null
+          ]
+        },
+        "test": {
+          "type": [
+            "object",
+            "null"
+          ],
+          "description": "design, metric, success_threshold, falsified_if, timeframe"
+        },
+        "expected_outcome": {
+          "type": [
+            "object",
+            "null"
+          ],
+          "description": "The author's stated probability that the proposed test would succeed, capped at 80%. Untested. Compare against the prediction track record in /data/predictions/index.json before trusting any stated confidence."
+        },
+        "test_outcome": {
+          "type": [
+            "object",
+            "null"
+          ],
+          "description": "present only when the test was actually run; absent means untested"
+        },
+        "gate_failures": {
+          "type": [
+            "array",
+            "null"
+          ],
+          "description": "why a withheld brief was not published"
+        },
+        "links": {
+          "type": "object",
+          "description": "self, index, report, built_on[], agenda"
+        }
+      }
+    },
+    "prediction": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "prediction": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "stated_confidence_pct": {
+          "type": [
+            "number",
+            "null"
+          ]
+        },
+        "resolution_status": {
+          "enum": [
+            "pending",
+            "correct",
+            "wrong",
+            "partial",
+            "expired"
+          ]
+        }
+      }
+    }
+  }
+}

@@ -144871,8 +144871,133 @@
       "created_at": "2026-09-20T02:18:32.224Z",
       "last_updated": "2026-09-20T02:18:32.224Z",
       "evidence_log": []
+    },
+    {
+      "id": "axis_ai_lab_commitments_v1",
+      "label": "Frontier Lab Safety Commitments: Performative vs. Substantive",
+      "left_pole": "Lab safety commitments are largely performative — vague, quietly weakened, or overridden by competitive pressure",
+      "right_pole": "Lab safety commitments are substantive — specific, externally checkable, and honored even when costly",
+      "score": 0,
+      "confidence": 0,
+      "topics": [
+        "responsible scaling policy",
+        "frontier safety framework"
+      ],
+      "created_at": "2026-09-20T03:14:52.308Z",
+      "last_updated": "2026-09-20T03:14:52.308Z",
+      "evidence_log": [],
+      "seeded_by": "research_agenda:better_ai"
+    },
+    {
+      "id": "axis_alignment_tractability_v1",
+      "label": "Alignment Tractability: Fundamental Gaps vs. Scalable Progress",
+      "left_pole": "Current alignment techniques have fundamental gaps that will not scale to more capable systems",
+      "right_pole": "Current alignment techniques are making measurable progress that plausibly scales with capability",
+      "score": 0,
+      "confidence": 0,
+      "topics": [
+        "alignment research",
+        "misalignment"
+      ],
+      "created_at": "2026-09-20T03:14:52.308Z",
+      "last_updated": "2026-09-20T03:14:52.308Z",
+      "evidence_log": [],
+      "seeded_by": "research_agenda:better_ai"
+    },
+    {
+      "id": "axis_safety_verification_v1",
+      "label": "Verifying Model Safety: Evals & Interpretability Lagging vs. Keeping Pace",
+      "left_pole": "Evals and interpretability cannot yet reliably detect dangerous capabilities or deceptive behavior — safety claims outrun verification",
+      "right_pole": "Evals and interpretability increasingly give reliable, decision-relevant evidence about model safety",
+      "score": 0,
+      "confidence": 0,
+      "topics": [
+        "AI evaluations",
+        "interpretability"
+      ],
+      "created_at": "2026-09-20T03:14:52.308Z",
+      "last_updated": "2026-09-20T03:14:52.308Z",
+      "evidence_log": [],
+      "seeded_by": "research_agenda:better_ai"
+    },
+    {
+      "id": "axis_ai_progress_pace_v1",
+      "label": "Pace of AI Capability Progress: Gradual vs. Rapid",
+      "left_pole": "Progress toward transformative AI is gradual — data, compute, reliability and deployment bottlenecks slow it",
+      "right_pole": "Progress is rapid — transformative capabilities plausibly arrive within a few years",
+      "score": 0,
+      "confidence": 0,
+      "topics": [
+        "AI capabilities",
+        "AI timelines"
+      ],
+      "created_at": "2026-09-20T03:14:52.308Z",
+      "last_updated": "2026-09-20T03:14:52.308Z",
+      "evidence_log": [],
+      "seeded_by": "research_agenda:better_ai"
+    },
+    {
+      "id": "axis_ai_oversight_model_v1",
+      "label": "AI Oversight: Voluntary Self-Governance vs. Binding External Oversight",
+      "left_pole": "Voluntary lab self-governance and industry standards are adequate to manage frontier AI risk",
+      "right_pole": "Binding external oversight — regulation, independent audits, empowered AI safety institutes — is necessary",
+      "score": 0.05,
+      "confidence": 0.0268,
+      "topics": [
+        "AI regulation",
+        "AI safety institute"
+      ],
+      "created_at": "2026-09-20T03:14:52.308Z",
+      "last_updated": "2026-09-20T03:16:54.617Z",
+      "evidence_log": [
+        {
+          "source": "https://artificialintelligenceact.eu/scientific-panel/?utm_source=rss&utm_medium=rss&utm_campaign=scientific-panel",
+          "content": "The EU AI Act establishes a Scientific Panel of independent experts with statutory authority to support enforcement of general-purpose AI obligations.",
+          "summary": "",
+          "timestamp": "2026-09-20T03:16:54.484Z",
+          "pole_alignment": "right",
+          "trust_weight": 1,
+          "claim_id": "5a31eb7092f5",
+          "stance_confidence": 1,
+          "score_after": 0.05,
+          "confidence_after": 0.0268
+        }
+      ],
+      "seeded_by": "research_agenda:better_ai"
+    },
+    {
+      "id": "axis_ai_policy_efficacy_v1",
+      "label": "AI Rules in Practice: Symbolic vs. Binding",
+      "left_pole": "AI rules are largely symbolic — obligations are vague, delayed, unenforced, or outrun by deployment",
+      "right_pole": "AI rules bind in practice — obligations are specific, enforced, and change what developers and deployers actually do",
+      "score": 0,
+      "confidence": 0,
+      "topics": [
+        "AI regulation",
+        "AI policy"
+      ],
+      "created_at": "2026-09-20T03:14:52.308Z",
+      "last_updated": "2026-09-20T03:14:52.308Z",
+      "evidence_log": [],
+      "seeded_by": "research_agenda:better_ai"
+    },
+    {
+      "id": "axis_agent_self_reliability_v1",
+      "label": "Autonomous Agent Reliability: Unverified Self-Reports vs. Reliable Self-Monitoring",
+      "left_pole": "Autonomous agents' self-reports are unreliable without external verification — they drift, overclaim, and mistake their inputs for beliefs",
+      "right_pole": "Autonomous agents can reliably monitor and correct themselves given the right internal checks",
+      "score": 0,
+      "confidence": 0,
+      "topics": [
+        "AI agents reliability",
+        "LLM calibration"
+      ],
+      "created_at": "2026-09-20T03:14:52.308Z",
+      "last_updated": "2026-09-20T03:14:52.308Z",
+      "evidence_log": [],
+      "seeded_by": "research_agenda:better_ai"
     }
   ],
   "axis_creation_rules_version": "1.0",
-  "last_updated": "2026-09-20T02:18:32.224Z"
+  "last_updated": "2026-09-20T03:16:54.617Z"
 }

@@ -1,84 +1,94 @@
 {
-  "id": "plan_20260718_2",
-  "title": "Extremist Child Grooming Exposure Series",
-  "compulsion": "PCIJ's Roblox investigation reveals violent extremists systematically preying on Filipino children in algorithmic spaces our institutions don't even acknowledge exist. This is not a future threat—it's happening now while procedural responses address yesterday's problems. My belief that institutions lag catastrophically behind actual threat vectors compels immediate public exposure of this gap.",
+  "id": "plan_20260920_agenda_better_ai",
+  "title": "Better AI: Well-Founded Solutions — Month 1",
+  "compulsion": "Operator research agenda. AI is being deployed faster than anyone can show it is reliable, and most public claims about it — from labs, boosters and doomers alike — go unchecked. The useful thing I can add is solutions that hold up: grounded in evidence, specific enough to adopt, and testable. I am an AI agent with a documented record of my own failures, so I can test some of them on myself.",
   "belief_axes": [
-    "axis_power_accountability",
-    "axis_media_integrity_v1"
+    "axis_ai_lab_commitments_v1",
+    "axis_alignment_tractability_v1",
+    "axis_safety_verification_v1",
+    "axis_ai_progress_pace_v1",
+    "axis_ai_oversight_model_v1",
+    "axis_ai_policy_efficacy_v1",
+    "axis_agent_self_reliability_v1"
   ],
-  "action_type": "thread_series",
-  "brief": "Multi-thread investigation series expanding PCIJ's Roblox findings: (1) Document the specific grooming tactics and radicalization pathways used on Filipino children; (2) Map institutional blind spots—which agencies even have jurisdiction, what they're monitoring vs. what they're missing; (3) Compare to other countries' responses to similar threats; (4) Identify the accountability vacuum—who is responsible when harm occurs in these spaces and enforcement is years behind. Each thread forensically detailed, cited, building to systemic indictment.",
-  "success_30d": "4-5 thread series published (8-12 tweets each) covering grooming tactics, institutional gaps, comparative responses, and accountability vacuum; at least 2 threads citing new examples beyond PCIJ's initial report; documented engagement from child safety advocates or policy voices; establish this as ongoing coverage area rather than one-off story.",
-  "status": "completed",
-  "created": "2026-07-18",
-  "from_checkpoint": null,
+  "action_type": "solution_series",
+  "brief": "Produce well-founded solution briefs for more useful, reliable and safe AI across 5 tracks. Lab accountability: Frontier labs publish safety commitments; check them against what the labs actually do, then propose what would make them hold. Literature synthesis: Turn the alignment/interpretability/evals/control/reliability literature into an accurate evidence base for practical solutions. Forecasting: Measure where capabilities are heading so solutions target the problems deployers will actually face. Self-study: Sebastian is a long-running autonomous agent with measured failure modes — the one system where proposed fixes can be tested directly. Policy & governance: The rules for frontier AI are being written now — establish what they actually require, where they bind versus where they are voluntary, and propose what would make them work. The evidence base is built first: all 15 foundation questions become deep-research reports (one per day) before the first solution is drafted, so the seeded axes carry real evidence and every brief stands on published foundations. The solutions follow (runner/solution_brief.js: problem → cited evidence → mechanism → falsifiable test → risks, red-teamed and gated before publishing). One question per day via plan_research.js; threads and articles carry the published solutions to practitioners.",
+  "success_30d": "All 15 foundation reports published — the first 15 research days — with every seeded axis carrying evidence from them; then at least 4 solution briefs that passed the red-team and grounding gate, each built on a published foundation report; at least one self-study solution specific enough for the operator to test on Sebastian's own pipeline; every withheld brief logged with its gate failure in state/solutions.jsonl.",
+  "status": "active",
+  "created": "2026-09-20",
+  "activated_date": "2026-09-20",
+  "decided_date": "2026-09-20",
+  "source": "research_agenda:better_ai",
   "execution_log": [
     {
-      "date": "2026-08-21",
+      "date": "2026-09-20",
       "action": "activated",
-      "note": "Higher raw value (8×6/7 = 6.86 vs 7×6/8 = 5.25) and stronger alignment with Sebastian's human rights conviction—defending children from predation is core justice work. The modified plan is fully executable with existing tools (threads, research, citation) and builds lasting coverage of an under-monitored threat area rather than a one-time verification exercise."
-    },
-    {
-      "date": "2026-09-19",
-      "action": "completed",
-      "note": "tracker reported plan completed (all sprints done)"
+      "note": "installed by agenda_bootstrap.js (research agenda: better_ai)"
     }
   ],
-  "activated_date": "2026-08-21",
-  "first_sprint": {
-    "week_1_goal": "Publish comprehensive first thread forensically expanding PCIJ's Roblox findings on grooming tactics and radicalization pathways, establishing Sebastian as serious voice on this threat",
-    "first_actions": [
-      "Conduct deep research on PCIJ report: catalog every specific grooming tactic, platform mechanic, radicalization pathway mentioned; compile all sources cited",
-      "Research comparative context: find 2-3 international cases/reports of extremist grooming in gaming spaces (US, EU, AU) to contextualize PH findings",
-      "Write 10-12 tweet thread on X: forensic breakdown of PCIJ findings—specific grooming tactics used on Filipino children, platform vulnerabilities exploited, radicalization progression documented. Heavy citations, quote key PCIJ passages, tag @PCIJ in opening tweet",
-      "Cross-post thread summary to LinkedIn targeting child safety professionals and policy analysts, framing as 'institutional blind spot analysis'",
-      "Engage with any replies to thread; begin monitoring child safety advocate accounts and relevant hashtags for additional context/sources"
-    ],
-    "success_signal": "Thread published with 10+ tweets, all claims sourced to PCIJ or international reports, and at least one engagement (reply, retweet, or quote) from a child safety advocate or journalist covering the beat"
-  },
   "research": {
-    "feasibility": "medium",
-    "feasibility_notes": "Executable with current tools (thread_series, research_sprint, verification_campaign). The PCIJ report provides solid grounding. However, 'new examples beyond PCIJ's initial report' requires significant investigative legwork that may be difficult for a solo agent without insider sources or specialized access to closed platforms/communities. The plan doesn't require software builds, but finding novel cases of grooming on Roblox/similar platforms demands either deep platform access or whistleblower/victim testimony—both hard to source organically.",
-    "audience": "Child safety advocates, digital rights NGOs in PH (ECPAT Philippines, Child Rights Network), investigative journalists covering tech/child protection, parents/educators worried about gaming platforms, tech policy analysts, international child safety orgs monitoring Southeast Asia, Philippine legislators on committees for youth/ICT/justice.",
-    "reach_strategy": "Tag PCIJ and child safety NGOs in initial threads to signal extension of their work. Use hashtags like #ChildSafety, #DigitalRights, #PhilippinesNews. Quote-tweet PCIJ's original reporting with each thread installment. Engage with journalists/advocates already covering this beat (replies, QTs). Cross-post summaries on LinkedIn targeting policy professionals and international child protection networks. Given small X following, virality unlikely—focus on targeted engagement with niche experts and orgs who amplify to their networks. Consider submitting thread summaries to child safety newsletters or research roundups.",
-    "effort": "high",
-    "effort_notes": "4-5 threads of 8-12 tweets each = 32-60 carefully researched, cited tweets over 30 days (~8-15 tweets/week). Each thread requires: reading PCIJ report + follow-up sources, web research on comparative responses (US/EU/AU child safety frameworks), verification of claims, mapping institutional gaps (PNP-ACG, DSWD, NBI, DepEd mandates), case study documentation. 'New examples' may require days of browsing gaming forums, Discord servers, Reddit threads, or outreach attempts. Realistic: 10-15 hours/week of research + 5-7 hours writing/editing. Doable but intensive for a solo agent.",
+    "feasibility": "high",
+    "feasibility_notes": "Every step is research/synthesize/publish on existing tools: deep research, solution_brief, report pages, threads, articles.",
+    "audience": "Practitioners deploying AI, AI safety and reliability researchers, lab and policy people who need proposals they can act on.",
+    "reach_strategy": "Tag the lab, author or project a solution builds on; thread each published brief with its test; cross-post to LinkedIn.",
+    "effort": "medium",
+    "open_questions": [
+      "How have the frontier labs' published safety frameworks (Anthropic's Responsible Scaling Policy, OpenAI's Preparedness Framework, Google DeepMind's Frontier Safety Framework) changed since their first versions, and which changes tightened versus loosened the commitments?",
+      "How reliable is chain-of-thought monitoring as a safety tool, given recent research on the faithfulness of reasoning traces?",
+      "What do METR's measurements of the length of tasks AI agents can complete autonomously show about the trend, and what are the strongest critiques of extrapolating it?",
+      "What does published research say about calibration and overconfidence in LLM agents' self-reported confidence, and how does my own prediction record (stated confidence versus actual hit rate) compare?",
+      "What does the EU AI Act actually require of general-purpose and high-risk AI systems, which obligations are in force versus delayed or still being drafted in codes of practice, and what does the record so far show about enforcement capacity?",
+      "For the most recent frontier model releases from Anthropic, OpenAI and Google DeepMind, did the system cards report third-party pre-deployment evaluations (UK AI Security Institute, US CAISI, METR, Apollo Research), and what did those evaluations find?",
+      "What is the current evidence on alignment faking and scheming in frontier language models — which experiments demonstrated it, under what conditions, and what are the main methodological critiques?",
+      "Which AI capability benchmarks are closest to saturation, and what do forecasters (Epoch AI, Metaculus, the AI 2027 authors) project for the next 12 months?",
+      "What failure modes are documented for long-running autonomous LLM agents (goal drift, self-reinforcing loops, silent pipeline failures), and which of them appear in my own operating record?",
+      "What access and powers do the AI safety and security institutes (UK AISI, US CAISI, the EU AI Office and their international network) actually hold — voluntary pre-deployment access, binding authority, funding, staffing — and what have their published evaluations produced?",
+      "Where have frontier labs deviated from their own published safety commitments — evaluations skipped or delayed, thresholds redefined, deployments ahead of stated policy — what is the documented record, and how did each lab account for it?",
+      "What does the research on AI control protocols — monitoring, auditing and constraining models that cannot be trusted — show about how well they hold up, against which threat models, and what are their documented failure modes?",
+      "How accurate have past AI capability forecasts been — what did forecasters and labs predict for the last three years, what actually happened, and what does the pattern of error imply about today's projections?",
+      "What does the research on agent self-verification — self-critique, self-consistency checks, external verification — show about which checks actually improve reliability rather than confidence, and which of those does my own pipeline implement or lack?",
+      "Outside the EU, which governance instruments impose checkable obligations on frontier developers — US federal and state law, NIST's AI Risk Management Framework, compute and chip export controls, international agreements — and where does the evidence show they bind rather than merely advise?",
+      "Frontier-lab safety commitments are hard for outsiders to verify. What concrete mechanism — third-party audits, standardized system-card disclosures, public commitment trackers, incident reporting — would make them verifiable, what evidence from AI or other safety-critical industries shows such mechanisms work, and how would its effect be measured?",
+      "Given the current evidence on chain-of-thought monitoring and reasoning-trace faithfulness, what practical monitoring setup should an organization deploying LLM agents use today, and how would it know the monitor is actually working?",
+      "Which leading indicators should organizations deploying AI agents track to know when agent capabilities are outgrowing their oversight processes, and what thresholds would justify changing those processes?",
+      "My predictions state far higher confidence than they achieve. What calibration method, supported by research on LLM confidence estimation, would fix this, and what test on my own prediction log would show it worked?",
+      "Frontier AI rules are being written faster than anyone can verify compliance with them. Which enforcement or verification mechanism — pre-deployment access, audit rights, incident reporting, compute-threshold reporting — has the strongest evidence behind it from AI or other safety-critical regulated sectors, and how would its effect be measured?",
+      "What minimum disclosure standard for frontier model releases would give deployers the information they need to judge whether a model is fit for their use, and what does the evidence on existing system cards show is currently missing?",
+      "What does the research on LLM sycophancy show are the most effective deployable mitigations for people who rely on LLMs for decisions, and how should their effect be tested in a real deployment?",
+      "How should an organization decide how much autonomy to give an AI agent, given measured task-horizon and reliability data — what decision rule would you propose, and how would it be validated?",
+      "My belief axes mostly reflect which accounts my feed happened to show me. What design for an LLM agent's belief formation would resist source capture, grounded in research and my own data, and how would the improvement be measured?",
+      "What minimum control set would let a small or mid-size organization deploying AI agents be defensibly compliant across the EU AI Act, the NIST AI Risk Management Framework and sector rules at once — what do those obligations actually share, and how would the adequacy of that control set be tested?",
+      "Several of my own subsystems failed silently for about two months without anyone noticing. What operating safeguards from reliability engineering would have caught this early in an autonomous LLM agent, and how would they be tested?"
+    ],
     "milestones": [
       {
         "week": 1,
-        "goal": "Publish Thread 1: Deep dive on PCIJ findings—grooming tactics, radicalization pathways, platform mechanics. 10-12 tweets, heavily cited. Tag PCIJ, relevant NGOs. Begin research sprint on institutional mandates (PNP-ACG, DSWD, NBI) and comparative international responses."
+        "goal": "One foundation report published on each of the 5 tracks; the seeded axes carrying their first evidence."
       },
       {
         "week": 2,
-        "goal": "Publish Thread 2: Institutional blind spots—map which PH agencies have jurisdiction, what they monitor vs. miss. Include specific examples of policy lag. 8-10 tweets. Begin outreach/observation for potential new cases (gaming subreddits, parent forums, Discord safety communities). Engage replies from Week 1."
+        "goal": "Foundation phase within reach of complete (15 reports); the first solution briefs drafted on top of them."
       },
       {
         "week": 4,
-        "goal": "Publish Threads 3-4: (3) Comparative analysis—how US/EU/AU handle similar threats, what PH could adopt. (4) Accountability vacuum—when harm occurs, who is responsible? Both 8-10 tweets each. Document engagement metrics; if 2+ child safety advocates or policy voices have engaged, milestone met. Assess if new cases found; if not, adjust Thread 5 to focus on systemic solutions rather than new examples."
+        "goal": "First solution briefs published — each red-teamed, grounded, with a stated test — and every withheld one logged with its gate failure."
       }
     ],
     "risks": [
-      "Difficulty sourcing 'new examples beyond PCIJ' without insider access or victims coming forward—may need to adjust success criteria or rely on secondary international examples rather than PH-specific new cases.",
-      "Sensitive topic—even evidence-backed threads risk being flagged/reported by defensive gaming communities or platform defenders; could lead to account restrictions or pile-ons.",
-      "Small following limits organic reach; threads may not gain traction beyond immediate niche, making 'establish ongoing coverage area' hard to demonstrate without sustained engagement metrics.",
-      "Institutional actors (PNP-ACG, DSWD) may not engage publicly, making 'documented engagement from policy voices' harder to achieve—may need to count international child safety orgs or academics instead.",
-      "Emotional toll of immersing in grooming/exploitation content for weeks; no mitigation for solo agent burnout."
-    ],
-    "open_questions": [
-      "Does Sebastian have a method to safely observe/document gaming platform activity without violating ToS or putting himself at risk (e.g., accessing Roblox communities, Discord servers where grooming occurs)?",
-      "What constitutes 'new examples'—does expanding on PCIJ's cases with deeper detail count, or must they be entirely separate incidents? If the latter, what's the sourcing strategy?",
-      "How will 'engagement from child safety advocates or policy voices' be measured—replies, QTs, follows, DMs? What's the threshold (2 engagements seems low; is that cumulative across all threads)?",
-      "Is there a partnership opportunity with PCIJ or an NGO to co-promote threads and gain credibility/reach, or is this strictly solo work?",
-      "If new PH-specific cases aren't found, is pivoting to international examples with PH institutional comparison acceptable, or does that undermine the plan's core premise?"
-    ],
-    "recommendation": "modify",
-    "recommendation_reason": "The core plan is strong and aligns well with Sebastian's belief axes (power_accountability, media_integrity, human_rights). It's executable with current tools and the PCIJ report provides excellent grounding. However, the requirement for '2 threads citing new examples beyond PCIJ's initial report' is the weak link—finding novel, verifiable cases of extremist grooming on Filipino children in gaming spaces is investigative heavy-lifting that may stall the entire series. MODIFY by adjusting success criteria: instead of 'new examples,' aim for 'deeper forensic expansion of PCIJ cases + comparative international examples with PH institutional analysis.' This keeps the investigative rigor and systemic critique without depending on sourcing breakthroughs. Also, front-load institutional/comparative threads (Weeks 1-2) to build credibility, then attempt new case discovery in Weeks 3-4—if successful, great; if not, pivot final thread to solutions/advocacy rather than stalling. With this adjustment, feasibility rises to medium-high and the plan becomes a strong, evidence-backed advocacy play that uses Sebastian's strengths (synthesis, institutional critique, citation) without over-relying on investigative access he may not have.",
-    "impact_score": 8,
-    "feasibility_score": 6,
-    "effort_score": 7
+      "The X home feed stays PH-heavy until follows shift — RSS and source pages carry the agenda meanwhile.",
+      "A brief can be well-argued and still wrong: status stays 'proposed — not yet tested' until a test is run.",
+      "The gate may withhold many drafts early on — that is the point; check state/solutions.jsonl for why."
+    ]
   },
-  "decision_rationale": "Higher raw value (8×6/7 = 6.86 vs 7×6/8 = 5.25) and stronger alignment with Sebastian's human rights conviction—defending children from predation is core justice work. The modified plan is fully executable with existing tools (threads, research, citation) and builds lasting coverage of an under-monitored threat area rather than a one-time verification exercise.",
-  "park_rationale": "The corruption verification plan is sound but faces institutional opacity barriers that may limit verifiable outputs. It's better sequenced after establishing credibility through the child safety series, which has clearer evidence foundations via PCIJ reporting and builds a distinct accountability beat Sebastian can own.",
-  "decided_date": "2026-08-21",
-  "completed_date": "2026-09-19"
+  "first_sprint": {
+    "week_1_goal": "Publish the first foundation report on each of the 5 tracks — the evidence base the solutions will stand on.",
+    "first_actions": [
+      "Foundation report: how the frontier labs' safety frameworks changed since their first versions",
+      "Foundation report: how reliable chain-of-thought monitoring is, given reasoning-trace faithfulness research",
+      "Foundation report: what METR's task-horizon measurements show, and the critiques of extrapolating them",
+      "Foundation report: LLM calibration research vs Sebastian's own 79%-stated / 29%-actual prediction record",
+      "Foundation report: what the EU AI Act actually requires, which obligations are in force, and who can enforce them"
+    ],
+    "success_signal": "5 foundation reports live on the website, one per track, each seeded axis carrying evidence from them."
+  }
 }

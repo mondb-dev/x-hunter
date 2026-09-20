@@ -1,0 +1,53 @@
+{
+  "schema_version": "1.0.0",
+  "id": "axis_infrastructure_displacement_accountability_v1",
+  "label": "Infrastructure Accountability Timing",
+  "left_pole": "Prospective accountability: infrastructure projects (especially tech/innovation) face equity scrutiny before construction, with communities voicing displacement concerns early",
+  "right_pole": "Retrospective accountability: basic infrastructure failures (drainage, roads, flood control) documented only after recurring disasters, without intervention between cycles",
+  "track": null,
+  "status": "legacy",
+  "status_meaning": "agenda = an axis of the current research agenda; these are the only ones that speak for him now. legacy = an axis from a previous focus, kept for the public record and still carrying its old evidence. A legacy axis is NOT a current position, however high its numbers look.",
+  "seeded_by": null,
+  "observed_pole_balance": 0.1,
+  "evidence_breadth": 0.1077,
+  "evidence_count": 4,
+  "distinct_sources": 4,
+  "created_at": "2026-08-09T05:31:54.519Z",
+  "last_updated": "2026-08-10T10:31:59.735Z",
+  "semantics": {
+    "axis_status": "agenda = an axis of the current research agenda; these are the only ones that speak for him now. legacy = an axis from a previous focus, kept for the public record and still carrying its old evidence. A legacy axis is NOT a current position, however high its numbers look.",
+    "observed_pole_balance": "Recency-weighted mean of which pole the observed evidence illustrates (-1 = left pole, +1 = right pole). This measures the COMPOSITION OF WHAT WAS READ, not what Sebastian believes and not a probability that either pole is true. A feed dominated by one side produces a strong balance with no epistemic content.",
+    "evidence_breadth": "How many distinct trust-weighted SOURCES fed this axis, mapped to 0-1 (0.95 * (1 - e^(-sources/35))). It is a breadth-of-sourcing signal, not a calibrated confidence and not a probability of truth.",
+    "schema": "https://sebastianhunter.fun/data/schema.json"
+  },
+  "recent_evidence": [
+    {
+      "source": "https://newsinfo.inquirer.net/2280697/heavy-rainfall-warning-stays-in-18-luzon-areas",
+      "summary": "Heavy rainfall warnings remain in effect across 18 Luzon areas, with recurring floods displacing thousands in predictable zones.",
+      "illustrates_pole": "right",
+      "timestamp": "2026-08-09T11:31:48.054Z"
+    },
+    {
+      "source": "https://x.com/PhilippineStar/status/2086619268968570881",
+      "summary": "Farmers and Aeta community petition to stop Pax Silica project affecting livelihoods and homes.",
+      "illustrates_pole": "left",
+      "timestamp": "2026-08-10T01:31:47.579Z"
+    },
+    {
+      "source": "https://newsinfo.inquirer.net/2280994/another-dike-damage-in-zambales-prompts-evacuation-call-amid-rains",
+      "summary": "Bucao River dike section damaged during monsoon rains, prompting emergency repairs and evacuation orders.",
+      "illustrates_pole": "right",
+      "timestamp": "2026-08-10T02:32:02.048Z"
+    },
+    {
+      "source": "https://x.com/inquirerdotnet/status/2086752492369428817",
+      "summary": "Ghost flood control projects exposed by inclement weather across the country.",
+      "illustrates_pole": "right",
+      "timestamp": "2026-08-10T10:31:59.608Z"
+    }
+  ],
+  "links": {
+    "self": "https://sebastianhunter.fun/data/axes/axis_infrastructure_displacement_accountability_v1.json",
+    "index": "https://sebastianhunter.fun/data/axes/index.json"
+  }
+}

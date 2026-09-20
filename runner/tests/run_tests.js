@@ -747,6 +747,35 @@ section("Research agenda + periodic gating");
       pass("planning can propose experiments, and only the four runnable kinds");
     else fail("experiment capability", "experiment_series, the four kinds, or the measurement-not-a-tool limit is missing");
 
+    // Model routing: mechanical work must not run on the reasoning model. On a
+    // subscription this is quota, not dollars — the foundation phase is 3
+    // research passes a day on top of every browse cycle.
+    const { routeModel } = require(path.join(RUNNER, "lib/model_routing.js"));
+    const cheap = ["tweet:factcheck", "x_reply:coherence", "llm:content_relevance",
+      "llm:apply_ontology_delta", "llm:linkedin_engage", "experiment:exp_1:judge"];
+    const quality = ["solution:draft", "solution:review", "solution:revise"];
+    const untouched = ["browse", "tweet", "quote", "reason", "research_evidence", "adversarial_eval"];
+    const miscast = [
+      ...cheap.filter((t) => routeModel(t) !== "haiku"),
+      ...quality.filter((t) => routeModel(t) !== "opus"),
+      ...untouched.filter((t) => routeModel(t) !== null),
+    ];
+    if (!miscast.length) pass("model routing: mechanical -> haiku, briefs -> opus, reasoning untouched");
+    else fail("model routing", `wrong model for: ${miscast.join(", ")}`);
+
+    process.env.MODEL_ROUTING = "off";
+    const offOk = cheap.concat(quality).every((t) => routeModel(t) === null);
+    delete process.env.MODEL_ROUTING;
+    if (offOk) pass("MODEL_ROUTING=off falls back to the single default model");
+    else fail("model routing", "MODEL_ROUTING=off still routes");
+
+    // The meter has to tell the three apart or the routing is unmeasurable.
+    const { normalizeModel } = require(path.join(RUNNER, "lib/cost_meter.js"));
+    if (normalizeModel("haiku") === "claude-haiku" && normalizeModel("opus") === "claude-opus" &&
+        normalizeModel("sonnet") === "claude" && normalizeModel("qwen2.5") === "local")
+      pass("cost meter prices haiku, sonnet and opus separately");
+    else fail("cost meter", "model keys collapse — routed spend would be mispriced");
+
     // The boot policy (research 3x/day, outbound held, feed engagement paused)
     // must stay inert until agenda_bootstrap.js --apply has installed the plan:
     // merging this code must not silence a system whose pivot was never applied.

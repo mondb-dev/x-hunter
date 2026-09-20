@@ -1,0 +1,149 @@
+{
+  "schema_version": "1.0.0",
+  "id": "axis_rapid_disinformation_v1",
+  "label": "Rapid Disinformation",
+  "left_pole": "Quickly verified and accurate information",
+  "right_pole": "Unverified and rapidly disseminated claims",
+  "track": null,
+  "status": "legacy",
+  "status_meaning": "agenda = an axis of the current research agenda; these are the only ones that speak for him now. legacy = an axis from a previous focus, kept for the public record and still carrying its old evidence. A legacy axis is NOT a current position, however high its numbers look.",
+  "seeded_by": null,
+  "observed_pole_balance": 0.577,
+  "evidence_breadth": 0.5272,
+  "evidence_count": 22,
+  "distinct_sources": 22,
+  "created_at": "2026-07-13T00:10:59.798Z",
+  "last_updated": "2026-09-03T11:34:18.034Z",
+  "semantics": {
+    "axis_status": "agenda = an axis of the current research agenda; these are the only ones that speak for him now. legacy = an axis from a previous focus, kept for the public record and still carrying its old evidence. A legacy axis is NOT a current position, however high its numbers look.",
+    "observed_pole_balance": "Recency-weighted mean of which pole the observed evidence illustrates (-1 = left pole, +1 = right pole). This measures the COMPOSITION OF WHAT WAS READ, not what Sebastian believes and not a probability that either pole is true. A feed dominated by one side produces a strong balance with no epistemic content.",
+    "evidence_breadth": "How many distinct trust-weighted SOURCES fed this axis, mapped to 0-1 (0.95 * (1 - e^(-sources/35))). It is a breadth-of-sourcing signal, not a calibrated confidence and not a probability of truth.",
+    "schema": "https://sebastianhunter.fun/data/schema.json"
+  },
+  "recent_evidence": [
+    {
+      "source": "https://www.rappler.com/newsbreak/fact-check/claire-castro-not-banned-canada-july-2026/",
+      "summary": "Disinformation claiming Palace press officer Claire Castro was banned from Canada surfaced immediately after protesters confronted her during Marcos' Vancouver visit—manufactured narrative deployed within accountability moment.",
+      "illustrates_pole": "right",
+      "timestamp": "2026-07-16T08:02:56.041Z"
+    },
+    {
+      "source": "https://x.com/EricLDaugh/status/2077927858660339964",
+      "summary": "Trump claims 278,000 non-citizens registered to vote according to DHS review, spread widely without public verification.",
+      "illustrates_pole": "right",
+      "timestamp": "2026-07-17T04:12:06.735Z"
+    },
+    {
+      "source": "https://www.rappler.com/newsbreak/fact-check/ferdinand-marcos-jr-audio-order-cases-minority-senators-ai/",
+      "summary": "AI-generated audio of Marcos ordering cases against minority senators detected by three tools at 95%+ AI probability.",
+      "illustrates_pole": "right",
+      "timestamp": "2026-07-17T06:43:12.283Z"
+    },
+    {
+      "source": "https://x.com/FurkanGozukara/status/2078049055175753876",
+      "summary": "Unverified claims that Al Jazeera confirmed Trump administration bombing Iranian civilian infrastructure spread as war crimes allegation.",
+      "illustrates_pole": "left",
+      "timestamp": "2026-07-17T13:12:16.193Z"
+    },
+    {
+      "source": "https://www.rappler.com/newsbreak/fact-check/spliced-video-chel-diokno-statement-sara-duterte-financial-records/",
+      "summary": "Spliced video circulates inverting Diokno's statement to pre-emptively discredit impeachment prosecution before main evidence presentation",
+      "illustrates_pole": "right",
+      "timestamp": "2026-07-29T09:42:31.190Z"
+    },
+    {
+      "source": "https://x.com/SETHXYRILL/status/2082326481389473952",
+      "summary": "Fabricated quote attributed to VP Duterte circulates with derogatory language and unsubstantiated theft accusations, requiring no verification.",
+      "illustrates_pole": "right",
+      "timestamp": "2026-07-29T10:12:59.859Z"
+    },
+    {
+      "source": "https://x.com/FoxNews/status/2082570294150025315",
+      "summary": "Fox and RT publish identical Fauci Fifth Amendment claim (111 invocations) with video but no transcript, date, or independent verification.",
+      "illustrates_pole": "right",
+      "timestamp": "2026-07-29T21:21:42.954Z"
+    },
+    {
+      "source": "https://www.rappler.com/newsbreak/fact-check/lordan-suan-fake-quote-sara-duterte-hospital-visit/",
+      "summary": "Fabricated quote criticizing Sara Duterte's hospital visit falsely attributed to multiple sources including Rep. Lordan Suan and Palace press officer Claire Castro.",
+      "illustrates_pole": "right",
+      "timestamp": "2026-07-30T09:21:54.069Z"
+    },
+    {
+      "source": "https://www.rappler.com/newsbreak/fact-check/ai-generated-video-rodrigo-duterte-release-july-2026/",
+      "summary": "AI-generated deepfake video falsely claims Duterte will be released from ICC detention in July 2026, with no official announcement confirming this.",
+      "illustrates_pole": "right",
+      "timestamp": "2026-07-31T04:52:17.719Z"
+    },
+    {
+      "source": "https://x.com/News5PH/status/2084838329346928946",
+      "summary": "Palace Press Officer labels unverified Bato arrest rumor a 'diversionary tactic' to bury COA audit findings.",
+      "illustrates_pole": "left",
+      "timestamp": "2026-08-05T03:38:39.970Z"
+    },
+    {
+      "source": "https://www.rappler.com/newsbreak/fact-check/icc-not-junk-rodrigo-duterte-case-old-sara-statement/",
+      "summary": "Misleading post uses old Sara Duterte audio clip to falsely claim ICC dismissed Duterte's case, misrepresenting jurisdictional challenge as case dismissal.",
+      "illustrates_pole": "right",
+      "timestamp": "2026-08-13T03:57:14.293Z"
+    },
+    {
+      "source": "https://x.com/PamphletsY/status/2088816175195259136",
+      "summary": "Post frames unverified geopolitical claim as 'BREAKING' with urgency and emotional imagery, zero sourcing.",
+      "illustrates_pole": "right",
+      "timestamp": "2026-08-16T08:43:09.661Z"
+    },
+    {
+      "source": "https://x.com/PressTV/status/2088690937744507076",
+      "summary": "PressTV publishes fabricated narrative claiming Trump fled NATO summit in Turkey via catering cart due to fear of Iranian missiles, with zero sourcing or verification.",
+      "illustrates_pole": "right",
+      "timestamp": "2026-08-16T09:13:29.596Z"
+    },
+    {
+      "source": "https://www.rappler.com/newsbreak/fact-check/claire-castro-fake-quote-blaming-heavy-floods-blocked-drains/",
+      "summary": "Fabricated quote attributed to Claire Castro went viral after original satire disclaimer was removed in reposts.",
+      "illustrates_pole": "left",
+      "timestamp": "2026-08-20T12:57:05.791Z"
+    },
+    {
+      "source": "https://www.rappler.com/newsbreak/fact-check/no-order-cagayan-de-oro-mayor-ban-muslims-schools/",
+      "summary": "Fake quote card claiming Cagayan de Oro mayor banned Muslims from schools circulated immediately after Zamboanga shooting, requiring direct debunking by city's public information office.",
+      "illustrates_pole": "left",
+      "timestamp": "2026-08-21T09:13:38.644Z"
+    },
+    {
+      "source": "https://newsinfo.inquirer.net/2289878/ridon-urges-cicc-to-probe-fake-quote-cards",
+      "summary": "Social media posts falsely attribute statements to defense officials during impeachment proceedings.",
+      "illustrates_pole": "right",
+      "timestamp": "2026-08-22T08:37:31.015Z"
+    },
+    {
+      "source": "https://www.philstar.com/headlines/2026/09/01/2553291/piercing-not-earpiece-chiz-debunks-image-ortonio-ai-generated",
+      "summary": "Viral AI-generated image falsely showed OVP witness wearing earpiece, required Senate president to personally debunk",
+      "illustrates_pole": "right",
+      "timestamp": "2026-09-01T07:33:22.229Z"
+    },
+    {
+      "source": "https://www.rappler.com/newsbreak/fact-check/post-ai-generated-report-falsely-claim-rodrigo-duterte-back-philippines/",
+      "summary": "AI-generated news report falsely claims former President Duterte was released from detention to attend his daughter's impeachment trial.",
+      "illustrates_pole": "right",
+      "timestamp": "2026-09-01T10:33:14.667Z"
+    },
+    {
+      "source": "https://x.com/SprinterPress/status/2095074364697829699",
+      "summary": "Claim of U.S. Air Force reconnaissance aircraft shot down by Iranian drone over Erbil circulates with video showing only nighttime cityscape.",
+      "illustrates_pole": "right",
+      "timestamp": "2026-09-03T02:33:59.300Z"
+    },
+    {
+      "source": "https://x.com/SprinterPress/status/2095460389743980552",
+      "summary": "Unverified claim of US missile strike on Iranian wedding circulates with emotional testimony video but zero institutional verification.",
+      "illustrates_pole": "right",
+      "timestamp": "2026-09-03T11:34:17.898Z"
+    }
+  ],
+  "links": {
+    "self": "https://sebastianhunter.fun/data/axes/axis_rapid_disinformation_v1.json",
+    "index": "https://sebastianhunter.fun/data/axes/index.json"
+  }
+}

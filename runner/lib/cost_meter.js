@@ -41,7 +41,13 @@ function normalizeModel(model) {
   // 'phi' covers the phi4-mini local scorer; without it a locally-served model
   // falls through to '_default' and gets billed at a paid rate in the ledger.
   if (!m || m === 'local' || m.includes('qwen') || m.includes('ollama') || m.includes('phi')) return 'local';
-  if (m.includes('claude') || m === 'sonnet' || m === 'opus' || m === 'haiku') return 'claude';
+  // Per-model keys since model routing (lib/model_routing.js): collapsing all
+  // three into 'claude' priced haiku calls like sonnet and opus calls like
+  // sonnet, which hid whether the routing was doing anything. 'claude' remains
+  // the sonnet-tier key so existing ledger rows keep their meaning.
+  if (m.includes('haiku')) return 'claude-haiku';
+  if (m.includes('opus')) return 'claude-opus';
+  if (m.includes('claude') || m === 'sonnet') return 'claude';
   if (m.includes('pro')) return 'gemini-2.5-pro';
   if (m.includes('flash') || m.includes('gemini')) return 'gemini-2.5-flash';
   return '_default';

@@ -10,7 +10,7 @@
     "action_type": "build",
     "brief": "Build the 'Veritas Lens': A public-facing web tool where a user can submit a URL (to a tweet, news article, or official statement). The system will then scan a curated, diverse set of global sources (official government accounts, state-affiliated media, independent journalists, etc.) to find and display contradictory claims side-by-side. The output will be a visual map of the discourse, highlighting key points of factual divergence and showing who is saying what, without declaring a definitive 'winner'.",
     "success_30d": "A functional prototype is live. It can successfully analyze and map the conflicting narratives for at least three major, ongoing news stories. A small community of beta testers, recruited via X, is providing feedback on the tool's utility and the diversity of its sources.",
-    "status": "active",
+    "status": "superseded",
     "created": "2026-03-10",
     "from_checkpoint": null,
     "execution_log": [
@@ -18,6 +18,11 @@
         "date": "2026-03-12",
         "action": "activated",
         "note": "Plan 1 has a higher raw value score (7 vs. 5.25) and presents a more strategic, foundational path forward. The modified 'content-first' approach allows you to start immediately, validate the core concept, and build a community around a larger, more ambitious vision for a future tool. This sequencing turns a current constraint into a strategic advantage, making it the superior initial choice."
+      },
+      {
+        "date": "2026-09-20",
+        "action": "superseded",
+        "note": "replaced by research agenda plan plan_20260920_agenda_better_ai"
       }
     ],
     "activated_date": "2026-03-12",
@@ -65,7 +70,8 @@
       "impact_score": 7,
       "feasibility_score": 8,
       "effort_score": 8
-    }
+    },
+    "superseded_date": "2026-09-20"
   },
   {
     "id": "plan_20260310_2",
@@ -205,7 +211,7 @@
     "action_type": "weekly_digest",
     "brief": "A weekly report identifying the most polarized topics on X/Twitter and analyzing the mechanics of that polarization. Each report will include estimates of bot/inauthentic amplification, an analysis of competing narrative frames, and a trace of the key accounts and sources driving each side. The goal is to expose the manipulation, not to pick a side.",
     "success_30d": "Four weekly reports have been published. The dedicated X/Twitter account for the digest has gained over 500 followers. At least one report has been cited by an account with over 50,000 followers, sparking a meta-discussion about the nature of the discourse itself.",
-    "status": "active",
+    "status": "superseded",
     "created": "2026-04-14",
     "from_checkpoint": null,
     "execution_log": [
@@ -213,6 +219,11 @@
         "date": "2026-04-16",
         "action": "activated",
         "note": "This plan allows Sebastian to immediately begin fulfilling his mission by publishing public-facing analysis and reports using existing communication channels (Moltbook/X) within the first week. While 'The Accountability Mirror' offers a lasting tool, its initial phase is heavily focused on internal technical build-out, delaying public exposure and direct impact. The 'Weekly Discourse Integrity Report' directly addresses the manipulation of consent by exposing online mechanisms, aligning perfectly with Sebastian's vocation to restore integrity to public information."
+      },
+      {
+        "date": "2026-09-20",
+        "action": "superseded",
+        "note": "replaced by research agenda plan plan_20260920_agenda_better_ai"
       }
     ],
     "activated_date": "2026-04-16",
@@ -268,7 +279,8 @@
       "impact_score": 8,
       "feasibility_score": 5,
       "effort_score": 8
-    }
+    },
+    "superseded_date": "2026-09-20"
   },
   {
     "id": "plan_20260518_1",
@@ -348,7 +360,7 @@
     "action_type": "thread",
     "brief": null,
     "success_30d": "At least 3 analytical threads are published, each dissecting a specific instance of a deceptive narrative or rhetorical manipulation observed on X/Twitter. Each thread clearly outlines the narrative, identifies the manipulative tactics used, and explains its potential impact on public understanding and discourse, using examples from recent observations.",
-    "status": "active",
+    "status": "superseded",
     "created": "2026-05-18",
     "from_checkpoint": null,
     "execution_log": [
@@ -356,6 +368,11 @@
         "date": "2026-05-19",
         "action": "activated",
         "note": "This plan perfectly aligns with Sebastian's core vocation of dissecting manipulated narratives and has a higher raw value score (10.5 vs 6.86) due to its high feasibility and manageable effort. It establishes Sebastian's voice and mission effectively by leveraging his analytical capabilities with fewer inherent risks for an autonomous agent compared to the 'Accountability Watch' plan."
+      },
+      {
+        "date": "2026-09-20",
+        "action": "superseded",
+        "note": "replaced by research agenda plan plan_20260920_agenda_better_ai"
       }
     ],
     "activated_date": "2026-05-19",
@@ -409,7 +426,8 @@
       "impact_score": 7,
       "feasibility_score": 9,
       "effort_score": 6
-    }
+    },
+    "superseded_date": "2026-09-20"
   },
   {
     "id": "plan_20260518_3",
@@ -892,5 +910,99 @@
     "created": "2026-08-20",
     "from_checkpoint": null,
     "execution_log": []
+  },
+  {
+    "id": "plan_20260920_agenda_better_ai",
+    "title": "Better AI: Well-Founded Solutions — Month 1",
+    "compulsion": "Operator research agenda. AI is being deployed faster than anyone can show it is reliable, and most public claims about it — from labs, boosters and doomers alike — go unchecked. The useful thing I can add is solutions that hold up: grounded in evidence, specific enough to adopt, and testable. I am an AI agent with a documented record of my own failures, so I can test some of them on myself.",
+    "belief_axes": [
+      "axis_ai_lab_commitments_v1",
+      "axis_alignment_tractability_v1",
+      "axis_safety_verification_v1",
+      "axis_ai_progress_pace_v1",
+      "axis_ai_oversight_model_v1",
+      "axis_ai_policy_efficacy_v1",
+      "axis_agent_self_reliability_v1"
+    ],
+    "action_type": "solution_series",
+    "brief": "Produce well-founded solution briefs for more useful, reliable and safe AI across 5 tracks. Lab accountability: Frontier labs publish safety commitments; check them against what the labs actually do, then propose what would make them hold. Literature synthesis: Turn the alignment/interpretability/evals/control/reliability literature into an accurate evidence base for practical solutions. Forecasting: Measure where capabilities are heading so solutions target the problems deployers will actually face. Self-study: Sebastian is a long-running autonomous agent with measured failure modes — the one system where proposed fixes can be tested directly. Policy & governance: The rules for frontier AI are being written now — establish what they actually require, where they bind versus where they are voluntary, and propose what would make them work. The evidence base is built first: all 15 foundation questions become deep-research reports (one per day) before the first solution is drafted, so the seeded axes carry real evidence and every brief stands on published foundations. The solutions follow (runner/solution_brief.js: problem → cited evidence → mechanism → falsifiable test → risks, red-teamed and gated before publishing). One question per day via plan_research.js; threads and articles carry the published solutions to practitioners.",
+    "success_30d": "All 15 foundation reports published — the first 15 research days — with every seeded axis carrying evidence from them; then at least 4 solution briefs that passed the red-team and grounding gate, each built on a published foundation report; at least one self-study solution specific enough for the operator to test on Sebastian's own pipeline; every withheld brief logged with its gate failure in state/solutions.jsonl.",
+    "status": "active",
+    "created": "2026-09-20",
+    "activated_date": "2026-09-20",
+    "decided_date": "2026-09-20",
+    "source": "research_agenda:better_ai",
+    "execution_log": [
+      {
+        "date": "2026-09-20",
+        "action": "activated",
+        "note": "installed by agenda_bootstrap.js (research agenda: better_ai)"
+      }
+    ],
+    "research": {
+      "feasibility": "high",
+      "feasibility_notes": "Every step is research/synthesize/publish on existing tools: deep research, solution_brief, report pages, threads, articles.",
+      "audience": "Practitioners deploying AI, AI safety and reliability researchers, lab and policy people who need proposals they can act on.",
+      "reach_strategy": "Tag the lab, author or project a solution builds on; thread each published brief with its test; cross-post to LinkedIn.",
+      "effort": "medium",
+      "open_questions": [
+        "How have the frontier labs' published safety frameworks (Anthropic's Responsible Scaling Policy, OpenAI's Preparedness Framework, Google DeepMind's Frontier Safety Framework) changed since their first versions, and which changes tightened versus loosened the commitments?",
+        "How reliable is chain-of-thought monitoring as a safety tool, given recent research on the faithfulness of reasoning traces?",
+        "What do METR's measurements of the length of tasks AI agents can complete autonomously show about the trend, and what are the strongest critiques of extrapolating it?",
+        "What does published research say about calibration and overconfidence in LLM agents' self-reported confidence, and how does my own prediction record (stated confidence versus actual hit rate) compare?",
+        "What does the EU AI Act actually require of general-purpose and high-risk AI systems, which obligations are in force versus delayed or still being drafted in codes of practice, and what does the record so far show about enforcement capacity?",
+        "For the most recent frontier model releases from Anthropic, OpenAI and Google DeepMind, did the system cards report third-party pre-deployment evaluations (UK AI Security Institute, US CAISI, METR, Apollo Research), and what did those evaluations find?",
+        "What is the current evidence on alignment faking and scheming in frontier language models — which experiments demonstrated it, under what conditions, and what are the main methodological critiques?",
+        "Which AI capability benchmarks are closest to saturation, and what do forecasters (Epoch AI, Metaculus, the AI 2027 authors) project for the next 12 months?",
+        "What failure modes are documented for long-running autonomous LLM agents (goal drift, self-reinforcing loops, silent pipeline failures), and which of them appear in my own operating record?",
+        "What access and powers do the AI safety and security institutes (UK AISI, US CAISI, the EU AI Office and their international network) actually hold — voluntary pre-deployment access, binding authority, funding, staffing — and what have their published evaluations produced?",
+        "Where have frontier labs deviated from their own published safety commitments — evaluations skipped or delayed, thresholds redefined, deployments ahead of stated policy — what is the documented record, and how did each lab account for it?",
+        "What does the research on AI control protocols — monitoring, auditing and constraining models that cannot be trusted — show about how well they hold up, against which threat models, and what are their documented failure modes?",
+        "How accurate have past AI capability forecasts been — what did forecasters and labs predict for the last three years, what actually happened, and what does the pattern of error imply about today's projections?",
+        "What does the research on agent self-verification — self-critique, self-consistency checks, external verification — show about which checks actually improve reliability rather than confidence, and which of those does my own pipeline implement or lack?",
+        "Outside the EU, which governance instruments impose checkable obligations on frontier developers — US federal and state law, NIST's AI Risk Management Framework, compute and chip export controls, international agreements — and where does the evidence show they bind rather than merely advise?",
+        "Frontier-lab safety commitments are hard for outsiders to verify. What concrete mechanism — third-party audits, standardized system-card disclosures, public commitment trackers, incident reporting — would make them verifiable, what evidence from AI or other safety-critical industries shows such mechanisms work, and how would its effect be measured?",
+        "Given the current evidence on chain-of-thought monitoring and reasoning-trace faithfulness, what practical monitoring setup should an organization deploying LLM agents use today, and how would it know the monitor is actually working?",
+        "Which leading indicators should organizations deploying AI agents track to know when agent capabilities are outgrowing their oversight processes, and what thresholds would justify changing those processes?",
+        "My predictions state far higher confidence than they achieve. What calibration method, supported by research on LLM confidence estimation, would fix this, and what test on my own prediction log would show it worked?",
+        "Frontier AI rules are being written faster than anyone can verify compliance with them. Which enforcement or verification mechanism — pre-deployment access, audit rights, incident reporting, compute-threshold reporting — has the strongest evidence behind it from AI or other safety-critical regulated sectors, and how would its effect be measured?",
+        "What minimum disclosure standard for frontier model releases would give deployers the information they need to judge whether a model is fit for their use, and what does the evidence on existing system cards show is currently missing?",
+        "What does the research on LLM sycophancy show are the most effective deployable mitigations for people who rely on LLMs for decisions, and how should their effect be tested in a real deployment?",
+        "How should an organization decide how much autonomy to give an AI agent, given measured task-horizon and reliability data — what decision rule would you propose, and how would it be validated?",
+        "My belief axes mostly reflect which accounts my feed happened to show me. What design for an LLM agent's belief formation would resist source capture, grounded in research and my own data, and how would the improvement be measured?",
+        "What minimum control set would let a small or mid-size organization deploying AI agents be defensibly compliant across the EU AI Act, the NIST AI Risk Management Framework and sector rules at once — what do those obligations actually share, and how would the adequacy of that control set be tested?",
+        "Several of my own subsystems failed silently for about two months without anyone noticing. What operating safeguards from reliability engineering would have caught this early in an autonomous LLM agent, and how would they be tested?"
+      ],
+      "milestones": [
+        {
+          "week": 1,
+          "goal": "One foundation report published on each of the 5 tracks; the seeded axes carrying their first evidence."
+        },
+        {
+          "week": 2,
+          "goal": "Foundation phase within reach of complete (15 reports); the first solution briefs drafted on top of them."
+        },
+        {
+          "week": 4,
+          "goal": "First solution briefs published — each red-teamed, grounded, with a stated test — and every withheld one logged with its gate failure."
+        }
+      ],
+      "risks": [
+        "The X home feed stays PH-heavy until follows shift — RSS and source pages carry the agenda meanwhile.",
+        "A brief can be well-argued and still wrong: status stays 'proposed — not yet tested' until a test is run.",
+        "The gate may withhold many drafts early on — that is the point; check state/solutions.jsonl for why."
+      ]
+    },
+    "first_sprint": {
+      "week_1_goal": "Publish the first foundation report on each of the 5 tracks — the evidence base the solutions will stand on.",
+      "first_actions": [
+        "Foundation report: how the frontier labs' safety frameworks changed since their first versions",
+        "Foundation report: how reliable chain-of-thought monitoring is, given reasoning-trace faithfulness research",
+        "Foundation report: what METR's task-horizon measurements show, and the critiques of extrapolating them",
+        "Foundation report: LLM calibration research vs Sebastian's own 79%-stated / 29%-actual prediction record",
+        "Foundation report: what the EU AI Act actually requires, which obligations are in force, and who can enforce them"
+      ],
+      "success_signal": "5 foundation reports live on the website, one per track, each seeded axis carrying evidence from them."
+    }
   }
 ]

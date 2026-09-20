@@ -1228,7 +1228,22 @@ function runOneCycle() {
   // ── Wait out remainder of interval + post-sleep detection ─────────────
   // Read cadence-adjusted interval (may differ from config default)
   const cadenceDir = readDirectives();
-  const effectiveInterval = cadenceDir.cycle_interval_sec || config.BROWSE_INTERVAL;
+  // During the agenda's foundation phase the browse cycle is the largest
+  // consumer of inference and the least useful work: feed engagement prep is
+  // already paused and the research passes are the point. Stretch the interval
+  // (BROWSE_INTERVAL_FOUNDATION, default 2h) and let it snap back by itself
+  // when the last foundation report lands.
+  const foundationInterval = (() => {
+    try {
+      const p = require('./lib/agenda_phase').agendaPhase();
+      if (!p.active || p.phase !== 'foundation') return null;
+      return Math.max(config.BROWSE_INTERVAL, parseInt(process.env.BROWSE_INTERVAL_FOUNDATION, 10) || 7200);
+    } catch { return null; }
+  })();
+  const effectiveInterval = cadenceDir.cycle_interval_sec || foundationInterval || config.BROWSE_INTERVAL;
+  if (foundationInterval && !cadenceDir.cycle_interval_sec) {
+    log(`foundation phase: browse interval ${foundationInterval}s (default ${config.BROWSE_INTERVAL}s)`);
+  }
   const elapsed = Math.floor((Date.now() - cycleStart) / 1000);
   const wait = effectiveInterval - elapsed;
 

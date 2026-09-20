@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+     viewBox="0 0 600 840" width="600" height="840">
+  <defs>
+    <!-- Darken gradient over art for readability -->
+    <linearGradient id="fadeBottom" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%"  stop-color="#000" stop-opacity="0" />
+      <stop offset="50%" stop-color="#000" stop-opacity="0.15" />
+      <stop offset="75%" stop-color="#000" stop-opacity="0.7" />
+      <stop offset="100%" stop-color="#000" stop-opacity="0.92" />
+    </linearGradient>
+    <!-- Darken top for header -->
+    <linearGradient id="fadeTop" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%"  stop-color="#000" stop-opacity="0.75" />
+      <stop offset="100%" stop-color="#000" stop-opacity="0" />
+    </linearGradient>
+    <!-- Vintage grain filter -->
+    <filter id="grain">
+      <feTurbulence type="fractalNoise" baseFrequency="0.65" numOctaves="3" stitchTiles="stitch" result="noise" />
+      <feColorMatrix type="saturate" values="0" in="noise" result="mono" />
+      <feBlend in="SourceGraphic" in2="mono" mode="multiply" />
+    </filter>
+    
+  </defs>
+
+  <!-- Background -->
+  <rect width="600" height="840" rx="12" fill="#16161E" />
+
+  <!-- Hero art (full bleed behind everything) -->
+  <g clip-path="url(#cardClip)">
+    
+    <defs>
+      <radialGradient id="spotLight" cx="50%" cy="35%" r="50%">
+        <stop offset="0%" stop-color="#C0C0C0" stop-opacity="0.12" />
+        <stop offset="100%" stop-color="#16161E" stop-opacity="0" />
+      </radialGradient>
+    </defs>
+    <rect width="600" height="840" fill="#16161E" />
+    <rect width="600" height="840" fill="url(#spotLight)" />
+    <circle cx="300" cy="300" r="120" fill="#C0C0C0" opacity="0.04" />
+    <circle cx="300" cy="300" r="200" fill="#C0C0C0" opacity="0.02" />
+    <line x1="100" y1="0" x2="100" y2="840" stroke="#C0C0C0" stroke-opacity="0.03" />
+    <line x1="500" y1="0" x2="500" y2="840" stroke="#C0C0C0" stroke-opacity="0.03" />
+  </g>
+  <defs>
+    <clipPath id="cardClip"><rect width="600" height="840" rx="12" /></clipPath>
+  </defs>
+
+  
+
+  <!-- Vintage grain overlay -->
+  <rect width="600" height="840" rx="12" fill="transparent" filter="url(#grain)" opacity="0.08" />
+
+  <!-- Top gradient (header zone) -->
+  <rect width="600" height="120" rx="12" fill="url(#fadeTop)" />
+
+  <!-- Bottom gradient (data zone) -->
+  <rect y="400" width="600" height="440" fill="url(#fadeBottom)" />
+
+  <!-- ─── TOP HEADER ─── -->
+  <text x="30" y="40" fill="#C0C0C0" font-size="11" font-family="monospace" letter-spacing="3" opacity="0.9">
+    LANDMARK EVENT #2
+  </text>
+  <text x="570" y="40" fill="#AAAAAA" font-size="11" font-family="monospace" text-anchor="end" opacity="0.8">
+    2026-07-17 00:00
+  </text>
+
+  <!-- Tier + signal badge (top-right corner) -->
+  <rect x="420" y="54" width="150" height="28" rx="4" fill="#C0C0C0" opacity="0.2" />
+  <text x="495" y="73" fill="#C0C0C0" font-size="12" font-weight="bold" font-family="monospace" text-anchor="middle">
+    ARTICLE SIGNAL · 4/6
+  </text>
+
+  <!-- ─── TITLE (movie poster style) ─── -->
+  <text x="300" y="556" fill="#FFFFFF" font-size="26" font-weight="bold"
+       font-family="'Georgia', 'Times New Roman', serif" text-anchor="middle"
+       letter-spacing="1" stroke="#C0C0C0" stroke-width="0.3" stroke-opacity="0.5">Trump's China Conspiracies</text>
+  <text x="300" y="588" fill="#FFFFFF" font-size="26" font-weight="bold"
+       font-family="'Georgia', 'Times New Roman', serif" text-anchor="middle"
+       letter-spacing="1" stroke="#C0C0C0" stroke-width="0.3" stroke-opacity="0.5">Surge Amid Geopolitical</text>
+  <text x="300" y="620" fill="#FFFFFF" font-size="26" font-weight="bold"
+       font-family="'Georgia', 'Times New Roman', serif" text-anchor="middle"
+       letter-spacing="1" stroke="#C0C0C0" stroke-width="0.3" stroke-opacity="0.5">Tensions</text>
+
+  <!-- ─── DATA PANEL ─── -->
+  <!-- Divider line -->
+  <line x1="60" y1="662" x2="540" y2="662" stroke="#C0C0C0" stroke-opacity="0.4" stroke-width="1" />
+
+  <!-- Signals fired -->
+  <text x="30" y="686" fill="#C0C0C0" font-size="10" font-family="monospace" letter-spacing="2" opacity="0.7">SIGNALS</text>
+  <text x="30" y="704" fill="#DDDDDD" font-size="12" font-family="monospace">CROSS CLUSTER · VELOCITY · MULTI AXIS · SENTIMENT</text>
+
+  <!-- Keywords -->
+  <text x="30" y="730" fill="#C0C0C0" font-size="10" font-family="monospace" letter-spacing="2" opacity="0.7">KEYWORDS</text>
+  <text x="30" y="748" fill="#DDDDDD" font-size="12" font-family="monospace">2026 · president · national · director · identify</text>
+
+  <!-- Belief axes -->
+  <text x="30" y="774" fill="#C0C0C0" font-size="10" font-family="monospace" letter-spacing="2" opacity="0.7">BELIEF AXES</text>
+  <text x="30" y="792" fill="#BBBBBB" font-size="11" font-family="monospace">geopolitical rhetoric</text>
+  <text x="30" y="808" fill="#BBBBBB" font-size="11" font-family="monospace">historical legacy</text>
+  <text x="30" y="824" fill="#BBBBBB" font-size="11" font-family="monospace">global economic stability</text>
+
+  <!-- ─── BOTTOM BAR ─── -->
+  <line x1="0" y1="790" x2="600" y2="790" stroke="#C0C0C0" stroke-opacity="0.2" />
+  <text x="30" y="812" fill="#777777" font-size="11" font-family="monospace">
+    #1 of 30
+  </text>
+  <text x="300" y="812" fill="#555555" font-size="10" font-family="monospace" text-anchor="middle">
+    SEBASTIAN D. HUNTER
+  </text>
+  <text x="570" y="812" fill="#777777" font-size="10" font-family="monospace" text-anchor="end">
+    sebastianhunter.fun
+  </text>
+
+  <!-- Card border (outermost, on top of everything) -->
+  <rect x="1.5" y="1.5" width="597" height="837" rx="12"
+        fill="none" stroke="#C0C0C0" stroke-width="3" />
+</svg>

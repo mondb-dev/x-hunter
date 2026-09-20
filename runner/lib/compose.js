@@ -99,7 +99,14 @@ async function withRetry(fn, tag = 'claude') {
  * opts.timeoutMs    kill timeout     (default: env CLAUDE_COMPOSE_TIMEOUT_MS || 120000)
  */
 function claudeCompose(prompt, opts = {}) {
-  const model     = opts.claudeModel || process.env.CLAUDE_COMPOSE_MODEL || 'sonnet';
+  // Model routing by call tag (lib/model_routing.js): mechanical work — scoring,
+  // fact-checks, stance validation, label-picking — runs on the cheap model;
+  // solution drafting and red-teaming run on the quality model; everything else
+  // keeps the default. An explicit opts.claudeModel always wins.
+  const routed    = (() => {
+    try { return require('./model_routing').routeModel(opts.tag); } catch { return null; }
+  })();
+  const model     = opts.claudeModel || routed || process.env.CLAUDE_COMPOSE_MODEL || 'sonnet';
   const system    = opts.system || DEFAULT_SYSTEM;
   const timeoutMs = opts.timeoutMs || Number(process.env.CLAUDE_COMPOSE_TIMEOUT_MS) || 120_000;
   const bin       = process.env.CLAUDE_BIN || 'claude';

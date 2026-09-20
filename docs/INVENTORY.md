@@ -270,6 +270,23 @@ research agenda: affinity = agenda vocabulary; zero-affinity candidates dropped
   `lib/convictions.js` (replaces `I hold that <pole>` under an agenda),
   `lib/sebastian_respond.js` (replies/web chat — `current_stance` no longer quoted), and
   `agendaBlock("planning")` (ponder/deep_dive/decision/sprint planner).
+- **Model routing** `runner/lib/model_routing.js` → applied in `lib/compose.js`
+  (single funnel, `opts.claudeModel` always wins): mechanical tags (`*:factcheck`,
+  `*:coherence`, `llm:content_relevance`, `llm:apply_ontology_delta`,
+  `llm:linkedin_engage`, `dr-pick`, `dr-gap`, `experiment:*:judge|code`) → haiku;
+  `solution:draft|review|revise` → opus; everything else keeps sonnet.
+  `MODEL_ROUTING=off` disables; `CLAUDE_CHEAP_MODEL` / `CLAUDE_QUALITY_MODEL`
+  override the aliases. On the subscription this saves QUOTA, not dollars — the
+  Batch API's 50% discount does not exist behind `claude -p`.
+  `lib/cost_meter.js` `normalizeModel` now keys `claude-haiku` / `claude` (sonnet)
+  / `claude-opus` separately, with matching rates in `state/cost_config.json`,
+  so routed spend is measurable rather than all billed at one rate.
+- **Foundation-phase cadence** `runner/orchestrator.js` (~:1231): while
+  `agenda_phase` reports the foundation phase, the browse interval stretches to
+  `BROWSE_INTERVAL_FOUNDATION` (default 7200s) instead of `BROWSE_INTERVAL`
+  (1800s) — feed engagement prep is already paused in that phase, so the browse
+  cycle is the least useful inference being bought. Snaps back by itself when the
+  last foundation report lands. A cadence directive still overrides both.
 - **Agenda phase** `runner/lib/agenda_phase.js`: while foundation questions remain
   unanswered, `agenda.boot` (research_agenda.js:55) puts the runner in research mode —
   `research_per_day: 3` (orchestrator.js spawns plan_research every 8h instead of 24h),

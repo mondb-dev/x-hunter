@@ -1,78 +1,6 @@
 {
   "gaps": [
     {
-      "key": "comparative data on damage assessment completion times vs investigation initiati",
-      "need": "Comparative data on damage assessment completion times vs investigation initiation/completion for the same events",
-      "suggested_tool": "Access to disaster response databases with timestamped milestones or academic research databases with comparative studies",
-      "count": 1,
-      "first_seen": "2026-08-30",
-      "last_seen": "2026-08-30",
-      "last_question": "What is the timeline and process for investigating and holding parties accountable for structural failures (building collapses, infrastructu"
-    },
-    {
-      "key": "specific legal/regulatory framework documents showing who investigates structura",
-      "need": "Specific legal/regulatory framework documents showing who investigates structural failures and within what timeframe",
-      "suggested_tool": "Legal database access or official government regulatory repository",
-      "count": 1,
-      "first_seen": "2026-08-30",
-      "last_seen": "2026-08-30",
-      "last_question": "What is the timeline and process for investigating and holding parties accountable for structural failures (building collapses, infrastructu"
-    },
-    {
-      "key": "systematic comparison of accountability system types (inquests, public inquiries",
-      "need": "Systematic comparison of accountability system types (inquests, public inquiries, regulatory reviews) and whether they examine design decisions vs. only document deaths",
-      "suggested_tool": "Academic database or legal case database with structured metadata on inquiry scope and findings",
-      "count": 1,
-      "first_seen": "2026-08-30",
-      "last_seen": "2026-08-30",
-      "last_question": "Infrastructure failures kill during disasters, but accountability systems only document deaths after the fact instead of interrogating the d"
-    },
-    {
-      "key": "quantitative data on what percentage of disaster accountability processes result",
-      "need": "Quantitative data on what percentage of disaster accountability processes result in design-focused recommendations vs. operational/procedural recommendations",
-      "suggested_tool": "Structured database of inquiry outcomes with coded recommendation types",
-      "count": 1,
-      "first_seen": "2026-08-30",
-      "last_seen": "2026-08-30",
-      "last_question": "Infrastructure failures kill during disasters, but accountability systems only document deaths after the fact instead of interrogating the d"
-    },
-    {
-      "key": "systematic analysis of how many post-disaster inquiry recommendations are actual",
-      "need": "Systematic analysis of how many post-disaster inquiry recommendations are actually implemented vs ignored across multiple cases",
-      "suggested_tool": "Academic database or government accountability office reports tracking inquiry recommendation implementation rates",
-      "count": 1,
-      "first_seen": "2026-08-30",
-      "last_seen": "2026-08-30",
-      "last_question": "Infrastructure failures kill during disasters, but accountability systems only document deaths after the fact instead of interrogating the d"
-    },
-    {
-      "key": "comparative data on countries/jurisdictions with prospective vs reactive infrast",
-      "need": "Comparative data on countries/jurisdictions with prospective vs reactive infrastructure accountability systems",
-      "suggested_tool": "International regulatory database or comparative policy analysis tool",
-      "count": 1,
-      "first_seen": "2026-08-30",
-      "last_seen": "2026-08-30",
-      "last_question": "Infrastructure failures kill during disasters, but accountability systems only document deaths after the fact instead of interrogating the d"
-    },
-    {
-      "key": "academic research databases or systematic literature reviews on institutional ac",
-      "need": "Academic research databases or systematic literature reviews on institutional accountability theory and empirical enforcement patterns",
-      "suggested_tool": "Academic database access (JSTOR, Google Scholar API, institutional library access)",
-      "count": 1,
-      "first_seen": "2026-08-31",
-      "last_seen": "2026-08-31",
-      "last_question": "What evidence exists that accountability systems in institutional contexts (government, corporate, or international organizations) prioritiz"
-    },
-    {
-      "key": "structured government enforcement databases with longitudinal data on violations",
-      "need": "Structured government enforcement databases with longitudinal data on violations, documentation, and outcomes",
-      "suggested_tool": "Direct API access to OSHA, EPA, SEC, FDA enforcement databases",
-      "count": 1,
-      "first_seen": "2026-08-31",
-      "last_seen": "2026-08-31",
-      "last_question": "What evidence exists that accountability systems in institutional contexts (government, corporate, or international organizations) prioritiz"
-    },
-    {
       "key": "comparative institutional analysis across government/corporate/international con",
       "need": "Comparative institutional analysis across government/corporate/international contexts with standardized metrics",
       "suggested_tool": "Access to institutional research datasets or policy analysis repositories",
@@ -899,6 +827,78 @@
       "first_seen": "2026-09-06",
       "last_seen": "2026-09-06",
       "last_question": "Did the AfD secure an outright majority (>50% of seats) in the September 2026 Saxony-Anhalt state election, or did they fall short requiring"
+    },
+    {
+      "key": "the full text content of the rsp v1.0 pdf document - the fetch tool failed twice",
+      "need": "The full text content of the RSP v1.0 PDF document - the fetch tool failed twice on this PDF URL",
+      "suggested_tool": "A PDF-specific fetcher or document reader that can handle PDF files directly rather than treating them as web pages",
+      "count": 1,
+      "first_seen": "2026-09-20",
+      "last_seen": "2026-09-20",
+      "last_question": "How have the frontier labs' published safety frameworks (Anthropic's Responsible Scaling Policy, OpenAI's Preparedness Framework, Google Dee"
+    },
+    {
+      "key": "access to the actual pdf content of https://cdn.openai.com/openai-preparedness-f",
+      "need": "Access to the actual PDF content of https://cdn.openai.com/openai-preparedness-framework-beta.pdf which failed to fetch twice",
+      "suggested_tool": "A PDF-specific fetcher or archive access tool that can retrieve documents from CDNs that may have changed or have anti-bot protection",
+      "count": 1,
+      "first_seen": "2026-09-20",
+      "last_seen": "2026-09-20",
+      "last_question": "How have the frontier labs' published safety frameworks (Anthropic's Responsible Scaling Policy, OpenAI's Preparedness Framework, Google Dee"
+    },
+    {
+      "key": "access to the actual pdf content when direct url fetch fails (google cloud stora",
+      "need": "Access to the actual PDF content when direct URL fetch fails (Google Cloud Storage PDF is blocked/inaccessible)",
+      "suggested_tool": "PDF download capability or archive.org integration for fetching cached/mirrored versions of inaccessible PDFs",
+      "count": 1,
+      "first_seen": "2026-09-20",
+      "last_seen": "2026-09-20",
+      "last_question": "How have the frontier labs' published safety frameworks (Anthropic's Responsible Scaling Policy, OpenAI's Preparedness Framework, Google Dee"
+    },
+    {
+      "key": "access to the actual pdf content of preparedness-framework-v2.pdf which failed t",
+      "need": "Access to the actual PDF content of preparedness-framework-v2.pdf which failed to fetch",
+      "suggested_tool": "A tool that can handle PDF downloads/parsing or alternative PDF hosting",
+      "count": 1,
+      "first_seen": "2026-09-20",
+      "last_seen": "2026-09-20",
+      "last_question": "How have the frontier labs' published safety frameworks (Anthropic's Responsible Scaling Policy, OpenAI's Preparedness Framework, Google Dee"
+    },
+    {
+      "key": "sebastian hunter's specific research context and why he's investigating rsp upda",
+      "need": "Sebastian Hunter's specific research context and why he's investigating RSP updates",
+      "suggested_tool": "Access to Sebastian's research notes, objectives, or project briefing",
+      "count": 1,
+      "first_seen": "2026-09-20",
+      "last_seen": "2026-09-20",
+      "last_question": "How have the frontier labs' published safety frameworks (Anthropic's Responsible Scaling Policy, OpenAI's Preparedness Framework, Google Dee"
+    },
+    {
+      "key": "detailed comparison of actual policy text between rsp versions to determine if s",
+      "need": "Detailed comparison of actual policy text between RSP versions to determine if specific commitments were tightened or loosened",
+      "suggested_tool": "PDF fetch capability that can access CDN-hosted PDFs, or a diff/comparison tool for policy documents",
+      "count": 1,
+      "first_seen": "2026-09-20",
+      "last_seen": "2026-09-20",
+      "last_question": "How have the frontier labs' published safety frameworks (Anthropic's Responsible Scaling Policy, OpenAI's Preparedness Framework, Google Dee"
+    },
+    {
+      "key": "clarification of whether the question is asking about openai's preparedness fram",
+      "need": "Clarification of whether the question is asking about OpenAI's Preparedness Framework or Anthropic's RSP",
+      "suggested_tool": "Direct communication with Sebastian Hunter to clarify the research question",
+      "count": 1,
+      "first_seen": "2026-09-20",
+      "last_seen": "2026-09-20",
+      "last_question": "How have the frontier labs' published safety frameworks (Anthropic's Responsible Scaling Policy, OpenAI's Preparedness Framework, Google Dee"
+    },
+    {
+      "key": "official anthropic changelog or diff between rsp versions showing exact text cha",
+      "need": "Official Anthropic changelog or diff between RSP versions showing exact text changes",
+      "suggested_tool": "Direct access to versioned policy documents or official changelog from Anthropic",
+      "count": 1,
+      "first_seen": "2026-09-20",
+      "last_seen": "2026-09-20",
+      "last_question": "How have the frontier labs' published safety frameworks (Anthropic's Responsible Scaling Policy, OpenAI's Preparedness Framework, Google Dee"
     }
   ]
 }

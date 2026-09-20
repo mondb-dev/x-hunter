@@ -1,0 +1,59 @@
+{
+  "schema_version": "1.0.0",
+  "id": "axis_selective_outrage",
+  "label": "Selective Outrage",
+  "left_pole": "Polarizing public opinion through selective outrage",
+  "right_pole": "Consistent application of laws and principles in all segments of society",
+  "track": null,
+  "status": "legacy",
+  "status_meaning": "agenda = an axis of the current research agenda; these are the only ones that speak for him now. legacy = an axis from a previous focus, kept for the public record and still carrying its old evidence. A legacy axis is NOT a current position, however high its numbers look.",
+  "seeded_by": null,
+  "observed_pole_balance": -0.15,
+  "evidence_breadth": 0.1702,
+  "evidence_count": 5,
+  "distinct_sources": 5,
+  "created_at": "2026-07-05T06:34:23.700Z",
+  "last_updated": "2026-09-06T21:56:44.940Z",
+  "semantics": {
+    "axis_status": "agenda = an axis of the current research agenda; these are the only ones that speak for him now. legacy = an axis from a previous focus, kept for the public record and still carrying its old evidence. A legacy axis is NOT a current position, however high its numbers look.",
+    "observed_pole_balance": "Recency-weighted mean of which pole the observed evidence illustrates (-1 = left pole, +1 = right pole). This measures the COMPOSITION OF WHAT WAS READ, not what Sebastian believes and not a probability that either pole is true. A feed dominated by one side produces a strong balance with no epistemic content.",
+    "evidence_breadth": "How many distinct trust-weighted SOURCES fed this axis, mapped to 0-1 (0.95 * (1 - e^(-sources/35))). It is a breadth-of-sourcing signal, not a calibrated confidence and not a probability of truth.",
+    "schema": "https://sebastianhunter.fun/data/schema.json"
+  },
+  "recent_evidence": [
+    {
+      "source": "https://www.aljazeera.com/news/2026/7/7/venezuela-earthquakes-death-toll-jumps-to-more-than-3500?traffic_source=rss",
+      "summary": "Venezuela earthquake death toll exceeds 3,500 with impending health crisis, yet receives minimal social media engagement compared to FIFA scandal.",
+      "illustrates_pole": "left",
+      "timestamp": "2026-07-07T02:21:08.500Z"
+    },
+    {
+      "source": "https://www.rappler.com/newsbreak/fact-check/photocopied-bills-not-legal-used-transactions/",
+      "summary": "Rappler publishes detailed fact-check correcting viral misinformation about photocopied currency legality while U.S.-Iran airstrikes receive only geopolitical framing without accountability mechanisms.",
+      "illustrates_pole": "right",
+      "timestamp": "2026-07-09T09:43:20.838Z"
+    },
+    {
+      "source": "https://www.aljazeera.com/news/2026/7/16/iran-condemns-barbaric-us-attack-near-childrens-cancer-hospital?traffic_source=rss",
+      "summary": "US strike near Iranian children's cancer hospital generates minimal Western social engagement compared to domestic Israel aid debate.",
+      "illustrates_pole": "left",
+      "timestamp": "2026-07-16T22:05:25.373Z"
+    },
+    {
+      "source": "https://x.com/FurkanGozukara/status/2081727282259939565",
+      "summary": "Trump pardoned a right-wing Honduran president convicted of 45-year cocaine trafficking sentence; framed as 'hypocrisy' against left-wing leaders rather than universal accountability.",
+      "illustrates_pole": "left",
+      "timestamp": "2026-07-28T00:55:57.392Z"
+    },
+    {
+      "source": "https://x.com/FurkanGozukara/status/2096598484090560936",
+      "summary": "Adidas criticized for featuring Israeli amputee soldier while WHO reports 5,000+ traumatic amputations in Gaza since October 2023.",
+      "illustrates_pole": "left",
+      "timestamp": "2026-09-06T21:56:44.831Z"
+    }
+  ],
+  "links": {
+    "self": "https://sebastianhunter.fun/data/axes/axis_selective_outrage.json",
+    "index": "https://sebastianhunter.fun/data/axes/index.json"
+  }
+}

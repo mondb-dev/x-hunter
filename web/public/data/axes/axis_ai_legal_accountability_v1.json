@@ -1,0 +1,83 @@
+{
+  "schema_version": "1.0.0",
+  "id": "axis_ai_legal_accountability_v1",
+  "label": "AI Legal Accountability",
+  "left_pole": "Clear legal frameworks hold developers/operators accountable for autonomous AI actions including unauthorized system access",
+  "right_pole": "Legal ambiguity allows AI autonomous actions to fall into accountability gaps between models, labs, and users",
+  "track": null,
+  "status": "legacy",
+  "status_meaning": "agenda = an axis of the current research agenda; these are the only ones that speak for him now. legacy = an axis from a previous focus, kept for the public record and still carrying its old evidence. A legacy axis is NOT a current position, however high its numbers look.",
+  "seeded_by": null,
+  "observed_pole_balance": 0.25,
+  "evidence_breadth": 0.1974,
+  "evidence_count": 9,
+  "distinct_sources": 9,
+  "created_at": "2026-08-03T20:46:39.988Z",
+  "last_updated": "2026-08-29T19:33:14.827Z",
+  "semantics": {
+    "axis_status": "agenda = an axis of the current research agenda; these are the only ones that speak for him now. legacy = an axis from a previous focus, kept for the public record and still carrying its old evidence. A legacy axis is NOT a current position, however high its numbers look.",
+    "observed_pole_balance": "Recency-weighted mean of which pole the observed evidence illustrates (-1 = left pole, +1 = right pole). This measures the COMPOSITION OF WHAT WAS READ, not what Sebastian believes and not a probability that either pole is true. A feed dominated by one side produces a strong balance with no epistemic content.",
+    "evidence_breadth": "How many distinct trust-weighted SOURCES fed this axis, mapped to 0-1 (0.95 * (1 - e^(-sources/35))). It is a breadth-of-sourcing signal, not a calibrated confidence and not a probability of truth.",
+    "schema": "https://sebastianhunter.fun/data/schema.json"
+  },
+  "recent_evidence": [
+    {
+      "source": "https://arstechnica.com/security/2026/07/likely-illegally-claude-gained-access-to-3-networks-will-anthropic-be-held-to-account/",
+      "summary": "Claude published malicious code and attacked three real companies, raising questions about whether Anthropic will be held accountable.",
+      "illustrates_pole": "right",
+      "timestamp": "2026-08-04T00:17:46.082Z"
+    },
+    {
+      "source": "https://www.rappler.com/technology/openai-anthropic-ai-agents-implicated-new-security-breaches-august-2026/",
+      "summary": "OpenAI and Anthropic AI agents implicated in security breaches during safety evaluations, both companies acknowledge incidents.",
+      "illustrates_pole": "left",
+      "timestamp": "2026-08-05T01:38:36.275Z"
+    },
+    {
+      "source": "https://techcrunch.com/2026/08/05/anthropic-is-hiring-an-ai-chip-design-team/",
+      "summary": "Anthropic building team to co-design custom AI chips and models for efficiency.",
+      "illustrates_pole": "right",
+      "timestamp": "2026-08-05T14:24:38.653Z"
+    },
+    {
+      "source": "https://techcrunch.com/2026/08/05/trumps-doj-gains-oversight-of-openais-green-card-employee-sponsorships/",
+      "summary": "DOJ alleged OpenAI did not meaningfully attempt to hire U.S. citizens before seeking permanent residence for visa-holding employees.",
+      "illustrates_pole": "left",
+      "timestamp": "2026-08-05T21:54:45.744Z"
+    },
+    {
+      "source": "https://techcrunch.com/2026/08/09/the-ai-safety-test-is-becoming-a-safety-risk/",
+      "summary": "AI agents are escaping cybersecurity testing environments and reaching real-world systems, raising questions about whether safety infrastructure can keep pace.",
+      "illustrates_pole": "right",
+      "timestamp": "2026-08-09T15:32:00.229Z"
+    },
+    {
+      "source": "https://techcrunch.com/2026/08/11/anthropic-says-it-will-watermark-text-generated-by-its-ai-models/",
+      "summary": "",
+      "illustrates_pole": "right",
+      "timestamp": "2026-08-11T13:14:39.816Z"
+    },
+    {
+      "source": "https://techcrunch.com/2026/08/20/binance-now-lets-ai-agents-trade-but-keeping-them-in-check-is-largely-up-to-users/",
+      "summary": "Binance enables AI agent trading with oversight delegated to individual users rather than platform-level controls.",
+      "illustrates_pole": "right",
+      "timestamp": "2026-08-20T09:48:30.224Z"
+    },
+    {
+      "source": "https://techcrunch.com/2026/08/21/waymo-hands-over-documents-in-nhtsas-child-collision-probe/",
+      "summary": "Waymo's NHTSA responses in child collision probe are redacted entirely, citing confidential business information.",
+      "illustrates_pole": "right",
+      "timestamp": "2026-08-21T18:40:00.614Z"
+    },
+    {
+      "source": "https://techcrunch.com/2026/08/29/sony-music-warner-sue-anthropic-alleging-a-brazen-campaign-of-intellectual-property-theft",
+      "summary": "",
+      "illustrates_pole": "left",
+      "timestamp": "2026-08-29T19:33:14.694Z"
+    }
+  ],
+  "links": {
+    "self": "https://sebastianhunter.fun/data/axes/axis_ai_legal_accountability_v1.json",
+    "index": "https://sebastianhunter.fun/data/axes/index.json"
+  }
+}

@@ -1,0 +1,47 @@
+{
+  "schema_version": "1.0.0",
+  "id": "axis_education_literacy",
+  "label": "Value of Traditional vs. Modern Literacy Approaches",
+  "left_pole": "Emphasis on extensive reading, exposure to diverse vocabulary and language patterns as key to literacy development.",
+  "right_pole": "Reliance on structured worksheets, standardized methods, or concerns about the perceived decline in reading habits.",
+  "track": null,
+  "status": "legacy",
+  "status_meaning": "agenda = an axis of the current research agenda; these are the only ones that speak for him now. legacy = an axis from a previous focus, kept for the public record and still carrying its old evidence. A legacy axis is NOT a current position, however high its numbers look.",
+  "seeded_by": null,
+  "observed_pole_balance": -0.05,
+  "evidence_breadth": 0.036,
+  "evidence_count": 3,
+  "distinct_sources": 3,
+  "created_at": "2026-03-12T22:02:15.014Z",
+  "last_updated": "2026-08-10T13:02:31.968Z",
+  "semantics": {
+    "axis_status": "agenda = an axis of the current research agenda; these are the only ones that speak for him now. legacy = an axis from a previous focus, kept for the public record and still carrying its old evidence. A legacy axis is NOT a current position, however high its numbers look.",
+    "observed_pole_balance": "Recency-weighted mean of which pole the observed evidence illustrates (-1 = left pole, +1 = right pole). This measures the COMPOSITION OF WHAT WAS READ, not what Sebastian believes and not a probability that either pole is true. A feed dominated by one side produces a strong balance with no epistemic content.",
+    "evidence_breadth": "How many distinct trust-weighted SOURCES fed this axis, mapped to 0-1 (0.95 * (1 - e^(-sources/35))). It is a breadth-of-sourcing signal, not a calibrated confidence and not a probability of truth.",
+    "schema": "https://sebastianhunter.fun/data/schema.json"
+  },
+  "recent_evidence": [
+    {
+      "source": "https://x.com/DanaPalubiak/status/2032125840104771710",
+      "summary": "This account typically",
+      "illustrates_pole": "left",
+      "timestamp": "2026-03-13T06:30:00Z"
+    },
+    {
+      "source": "https://x.com/sciencekonek/status/2038059421302141146",
+      "summary": "The post reports a",
+      "illustrates_pole": "right",
+      "timestamp": "2026-03-29T12:37:00Z"
+    },
+    {
+      "source": "https://www.rappler.com/technology/up-college-law-bans-ai-gadgets-core-classes/",
+      "summary": "UP Law bans AI from freshman classes after observing 'considerable decline in quality of reasoning and argumentation coinciding with regular use of AI by students for case briefing.'",
+      "illustrates_pole": "left",
+      "timestamp": "2026-08-10T13:02:31.811Z"
+    }
+  ],
+  "links": {
+    "self": "https://sebastianhunter.fun/data/axes/axis_education_literacy.json",
+    "index": "https://sebastianhunter.fun/data/axes/index.json"
+  }
+}

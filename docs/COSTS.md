@@ -37,6 +37,49 @@ sonnet calls) plus 2–6 `CLAUDE_SOLUTION_MODEL` (opus) calls to draft, red-team
 and revise: roughly 60× less than the job that was cut, spent on the thing that
 ships.
 
+## Model routing (2026-09-20)
+
+Everything used to run on one model regardless of what the call was doing.
+`runner/lib/model_routing.js` routes by call tag, applied in `lib/compose.js`
+(the single place every `claude -p` call picks a model; an explicit
+`opts.claudeModel` still wins):
+
+| Work | Model | Examples |
+|---|---|---|
+| Mechanical — classification, scoring, validation, label-picking | **haiku** | `*:factcheck`, `x_reply:coherence`, `llm:content_relevance`, `llm:apply_ontology_delta` (one call per evidence entry), `llm:linkedin_engage`, `dr-pick`, `dr-gap`, `experiment:*:judge` and `:code` |
+| Reasoning — the default | **sonnet** | `browse`, `tweet`, `quote`, `reason`, `research_evidence`, `adversarial_eval`, deep-research synthesis |
+| Where quality is the product | **opus** | `solution:draft`, `solution:review`, `solution:revise` |
+
+`MODEL_ROUTING=off` disables routing; `CLAUDE_CHEAP_MODEL` / `CLAUDE_QUALITY_MODEL`
+override the aliases.
+
+**On the subscription this saves quota, not dollars.** Usage limits are
+consumption-weighted, so moving the high-volume mechanical calls off the
+reasoning model is what keeps the foundation phase (3 research passes/day on top
+of every browse cycle) from exhausting the plan. Two corrections to the estimate
+made before the subscription was restored: the Batch API's 50% discount **does
+not apply** — `claude -p` is a CLI subprocess with no batch endpoint behind it —
+and prompt caching is worth roughly 10% here at best, because the cycle gap
+exceeds the cache TTL.
+
+`cost_meter.normalizeModel` now keys `claude-haiku` / `claude` (sonnet) /
+`claude-opus` separately, with matching per-1k rates in `state/cost_config.json`
+(Haiku 4.5 $1/$5, Sonnet 5 $2/$10, Opus 5 $5/$25 per MTok). Before this, all
+three collapsed into one key at one rate, so routed spend was unmeasurable.
+
+## Cycle cadence in the foundation phase
+
+While `lib/agenda_phase.js` reports the foundation phase, `orchestrator.js`
+stretches the browse interval to `BROWSE_INTERVAL_FOUNDATION` (default 7200s)
+instead of the usual 1800s. The browse cycle is the single largest consumer of
+inference, and in that phase it is also the least valuable: feed engagement prep
+is already skipped, and the research passes are the work. It snaps back on its
+own when the last foundation report lands. A cadence directive still overrides.
+
+Estimated effect on the foundation phase, at the measured call mix: browse drops
+from 48 cycles/day to 12, and the mechanical majority of calls moves to a model
+that costs a quarter as much per token as sonnet on output.
+
 ## Burn rate (`runner/lib/operating_cost.js`)
 
 Combines three cost surfaces into a monthly burn rate + a reflection summary:
