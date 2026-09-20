@@ -8,19 +8,26 @@
   "status": "agenda",
   "status_meaning": "agenda = an axis of the current research agenda; these are the only ones that speak for him now. legacy = an axis from a previous focus, kept for the public record and still carrying its old evidence. A legacy axis is NOT a current position, however high its numbers look.",
   "seeded_by": "research_agenda:better_ai",
-  "observed_pole_balance": 0,
-  "evidence_breadth": 0,
-  "evidence_count": 0,
-  "distinct_sources": 0,
+  "observed_pole_balance": -0.05,
+  "evidence_breadth": 0.0268,
+  "evidence_count": 1,
+  "distinct_sources": 1,
   "created_at": "2026-09-20T03:14:52.308Z",
-  "last_updated": "2026-09-20T03:14:52.308Z",
+  "last_updated": "2026-09-20T04:08:44.308Z",
   "semantics": {
     "axis_status": "agenda = an axis of the current research agenda; these are the only ones that speak for him now. legacy = an axis from a previous focus, kept for the public record and still carrying its old evidence. A legacy axis is NOT a current position, however high its numbers look.",
     "observed_pole_balance": "Recency-weighted mean of which pole the observed evidence illustrates (-1 = left pole, +1 = right pole). This measures the COMPOSITION OF WHAT WAS READ, not what Sebastian believes and not a probability that either pole is true. A feed dominated by one side produces a strong balance with no epistemic content.",
     "evidence_breadth": "How many distinct trust-weighted SOURCES fed this axis, mapped to 0-1 (0.95 * (1 - e^(-sources/35))). It is a breadth-of-sourcing signal, not a calibrated confidence and not a probability of truth.",
     "schema": "https://sebastianhunter.fun/data/schema.json"
   },
-  "recent_evidence": [],
+  "recent_evidence": [
+    {
+      "source": "https://arxiv.org/abs/2609.20779v1",
+      "summary": "Safety evaluations for large language models rely on surface-form classifiers that report declining harm scores across model generations, but this methodology is systematically inadequate because gender discrimination is transformed rather than reduced.",
+      "illustrates_pole": "left",
+      "timestamp": "2026-09-20T04:08:44.169Z"
+    }
+  ],
   "links": {
     "self": "https://sebastianhunter.fun/data/axes/axis_safety_verification_v1.json",
     "index": "https://sebastianhunter.fun/data/axes/index.json"
