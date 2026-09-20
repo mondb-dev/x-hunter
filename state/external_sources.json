@@ -1,8 +1,8 @@
 {
   "schema_version": "1.0",
-  "generated_at": "2026-09-20T03:16:01.758Z",
+  "generated_at": "2026-09-20T03:39:06.305Z",
   "method": "mechanical_registry_v1",
-  "profiled_at": "2026-09-20T03:16:16.156Z",
+  "profiled_at": "2026-09-20T03:39:22.525Z",
   "sources": [
     {
       "domain": "theguardian.com",
@@ -3120,7 +3120,7 @@
       "first_seen_at": "2016-05-05T18:57:30.000Z",
       "last_seen_at": "2026-09-20T02:50:14.000Z",
       "discovery": {
-        "distinct_urls": 20967,
+        "distinct_urls": 20970,
         "example_urls": [
           "https://t.co/pJSE124ec4",
           "https://t.co/Soz8BXPWaa",
@@ -3129,7 +3129,7 @@
           "https://t.co/cYaqYDRp08"
         ],
         "origin_counts": {
-          "feed_buffer": 18880,
+          "feed_buffer": 18884,
           "feed_buffer_reply": 5993,
           "articles": 3
         },
@@ -3172,7 +3172,7 @@
         "breadth": {
           "score": 0.53,
           "basis": [
-            "distinct_urls:20967",
+            "distinct_urls:20970",
             "distinct_axes:0",
             "origin_types:3"
           ]
@@ -3211,7 +3211,7 @@
           "basis": [
             "unknown_domain_pattern",
             "doi_or_identifier_path_seen",
-            "distinct_urls:20967",
+            "distinct_urls:20970",
             "distinct_axes:0",
             "origin_types:3",
             "referring_accounts:3158",
@@ -5430,9 +5430,9 @@
       "entity": "Starlink",
       "kind": "unknown",
       "first_seen_at": "2026-04-07T03:51:50.000Z",
-      "last_seen_at": "2026-09-20T02:23:47.000Z",
+      "last_seen_at": "2026-09-20T03:35:19.239Z",
       "discovery": {
-        "distinct_urls": 1719,
+        "distinct_urls": 1720,
         "example_urls": [
           "https://www.starlink.com/us/residential?referral=RC-DF-9543787-19448-67&utm_medium=paid&utm_campaign=awr_us_soc_twt_ptg_cau&utm_content=awr_us_soc_twt_ptg_cau_res_gvp_v4s_stc_en-us_sdb-bluesky-uptime&twclid=2cg62b1u0oqrypdim5oir1767e",
           "https://www.starlink.com/us/residential?referral=RC-DF-9543787-19448-67&utm_medium=paid&utm_campaign=awr_us_soc_twt_ptg_cau&utm_content=awr_us_soc_twt_ptg_cau_res_gvp_v4s_stc_en-us_sdb-avail-sat-yourhome&twclid=2216n7j93v9absqn77762mm626",
@@ -5442,7 +5442,7 @@
         ],
         "origin_counts": {
           "feed_buffer_reply": 1633,
-          "feed_buffer": 90
+          "feed_buffer": 91
         },
         "distinct_referring_accounts": 5,
         "sample_referring_accounts": [
@@ -5477,7 +5477,7 @@
         "breadth": {
           "score": 0.47,
           "basis": [
-            "distinct_urls:1719",
+            "distinct_urls:1720",
             "distinct_axes:0",
             "origin_types:2"
           ]
@@ -5515,7 +5515,7 @@
           "method": "mechanical_v1",
           "basis": [
             "unknown_domain_pattern",
-            "distinct_urls:1719",
+            "distinct_urls:1720",
             "distinct_axes:0",
             "origin_types:2",
             "referring_accounts:5",
@@ -25861,7 +25861,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-09-05T00:12:27.906Z",
+        "fetched_at": "2026-09-20T03:39:08.652Z",
         "homepage_url": "https://absinthe.network/",
         "example_url": "https://boost.absinthe.network/8hhp-sfkk/home?utm_source=x&utm_medium=cpc&utm_campaign=Absinthe&utm_id=sero&utm_content=Mar26&twclid=25502jccgfzmkpf20p6sbvaj8t",
         "homepage_status": 200,
@@ -25873,11 +25873,11 @@
         "homepage": {
           "has_meta_author": false,
           "has_published_time": false,
-          "has_canonical": true,
+          "has_canonical": false,
           "has_about_link": false,
           "has_contact_link": false,
           "has_corrections_link": false,
-          "outbound_links_count": 4,
+          "outbound_links_count": 1,
           "opinion_marker": false
         },
         "example": {
@@ -25987,7 +25987,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-09-05T00:12:40.553Z",
+        "fetched_at": "2026-09-20T03:39:21.560Z",
         "homepage_url": "https://onnicotine.com/",
         "example_url": "https://www.onnicotine.com/?twclid=230cc01l01rnnwfflnn397ispz",
         "homepage_status": null,
@@ -26113,7 +26113,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-09-05T00:12:40.862Z",
+        "fetched_at": "2026-09-20T03:39:21.784Z",
         "homepage_url": "https://vast.ai/",
         "example_url": "https://vast.ai/developers/sdk?utm_source=x&utm_medium=paid&utm_campaign=cloud_agents&twclid=293vnkv04bn84l1eoqab2a2ekc",
         "homepage_status": 200,
@@ -26239,7 +26239,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-09-05T01:42:23.708Z",
+        "fetched_at": "2026-09-20T03:39:22.525Z",
         "homepage_url": "https://scalahosting.com/",
         "example_url": "https://www.scalahosting.com/cloud-servers.html?twclid=2cnyz64aududoywwu2d0iw7jhx",
         "homepage_status": 200,
@@ -28912,6 +28912,86 @@
           "has_corrections_link": false,
           "outbound_links_count": 14,
           "opinion_marker": false
+        }
+      }
+    },
+    {
+      "domain": "artificialintelligenceact.eu",
+      "entity": "Artificialintelligenceact",
+      "kind": "unknown",
+      "first_seen_at": "2026-09-20T03:16:54.465Z",
+      "last_seen_at": "2026-09-20T03:16:54.484Z",
+      "discovery": {
+        "distinct_urls": 3,
+        "example_urls": [
+          "https://artificialintelligenceact.eu/scientific-panel/?utm_source=rss&utm_medium=rss&utm_campaign=scientific-panel",
+          "https://artificialintelligenceact.eu/scientific-panel/?utm_source=rss&amp;utm_medium=rss&amp;utm_campaign=scientific-panel",
+          "https://artificialintelligenceact.eu/transparency-rules-article-50/?utm_source=rss&amp;utm_medium=rss&amp;utm_campaign=transparency-rules-article-50"
+        ],
+        "origin_counts": {
+          "ontology_evidence": 1,
+          "journals": 2
+        },
+        "distinct_referring_accounts": 0,
+        "sample_referring_accounts": [],
+        "distinct_axes": [
+          "axis_ai_oversight_model_v1"
+        ]
+      },
+      "claims": {
+        "total": 0,
+        "supported": 0,
+        "refuted": 0,
+        "contested": 0,
+        "unverified": 0,
+        "resolved_count": 0
+      },
+      "structural_features": {
+        "has_search_paths": false,
+        "has_article_paths": false,
+        "has_doi_paths": false
+      },
+      "ratings": {
+        "provenance": {
+          "score": 0.45,
+          "basis": [
+            "unknown_domain_pattern"
+          ]
+        },
+        "breadth": {
+          "score": 0.2658333333333333,
+          "basis": [
+            "distinct_urls:3",
+            "distinct_axes:1",
+            "origin_types:2"
+          ]
+        },
+        "corroboration": {
+          "score": 0.175,
+          "basis": [
+            "referring_accounts:0",
+            "origin_types:2"
+          ]
+        },
+        "track_record": {
+          "score": null,
+          "basis": [
+            "no_resolved_claims_observed"
+          ]
+        },
+        "overall": {
+          "score": 0.38393229166666665,
+          "confidence": 0.139075,
+          "method": "mechanical_v1",
+          "basis": [
+            "unknown_domain_pattern",
+            "distinct_urls:3",
+            "distinct_axes:1",
+            "origin_types:2",
+            "referring_accounts:0",
+            "origin_types:2",
+            "track_record_unavailable"
+          ]
         }
       }
     },
@@ -33052,6 +33132,85 @@
           "has_corrections_link": false,
           "outbound_links_count": 0,
           "opinion_marker": false
+        }
+      }
+    },
+    {
+      "domain": "anthropic.com",
+      "entity": "Anthropic",
+      "kind": "unknown",
+      "first_seen_at": "2026-09-20T03:16:16.243Z",
+      "last_seen_at": "2026-09-20T03:39:06.302Z",
+      "discovery": {
+        "distinct_urls": 4,
+        "example_urls": [
+          "https://www-cdn.anthropic.com/e670587677525f28df69b59e5fb4c22cc5461a17.pdf",
+          "https://www.anthropic.com/news/anthropics-responsible-scaling-policy",
+          "https://www.anthropic.com/responsible-scaling-policy",
+          "https://www.anthropic.com/research"
+        ],
+        "origin_counts": {
+          "reading_queue": 6,
+          "prefetch": 1
+        },
+        "distinct_referring_accounts": 0,
+        "sample_referring_accounts": [],
+        "distinct_axes": []
+      },
+      "claims": {
+        "total": 0,
+        "supported": 0,
+        "refuted": 0,
+        "contested": 0,
+        "unverified": 0,
+        "resolved_count": 0
+      },
+      "structural_features": {
+        "has_search_paths": false,
+        "has_article_paths": false,
+        "has_doi_paths": false
+      },
+      "ratings": {
+        "provenance": {
+          "score": 0.45,
+          "basis": [
+            "unknown_domain_pattern"
+          ]
+        },
+        "breadth": {
+          "score": 0.23666666666666664,
+          "basis": [
+            "distinct_urls:4",
+            "distinct_axes:0",
+            "origin_types:2"
+          ]
+        },
+        "corroboration": {
+          "score": 0.175,
+          "basis": [
+            "referring_accounts:0",
+            "origin_types:2"
+          ]
+        },
+        "track_record": {
+          "score": null,
+          "basis": [
+            "no_resolved_claims_observed"
+          ]
+        },
+        "overall": {
+          "score": 0.3775520833333333,
+          "confidence": 0.15544999999999998,
+          "method": "mechanical_v1",
+          "basis": [
+            "unknown_domain_pattern",
+            "distinct_urls:4",
+            "distinct_axes:0",
+            "origin_types:2",
+            "referring_accounts:0",
+            "origin_types:2",
+            "track_record_unavailable"
+          ]
         }
       }
     },
@@ -41033,6 +41192,130 @@
       }
     },
     {
+      "domain": "georgetown.edu",
+      "entity": "Georgetown",
+      "kind": "unknown",
+      "first_seen_at": "2026-03-28T00:20:44.800Z",
+      "last_seen_at": "2026-09-20T03:16:54.465Z",
+      "discovery": {
+        "distinct_urls": 3,
+        "example_urls": [
+          "https://gjia.georgetown.edu/2026/03/26/the-war-against-iran-and-global-risks-tell-me-how-this-ends/",
+          "https://georgetown.edu/2026/03/26/the-war-against-iran-and-global-risks-tell-me-how-this-ends/",
+          "https://cset.georgetown.edu/article/inside-beijings-chipmaking-offensive-one-year-on/"
+        ],
+        "origin_counts": {
+          "journals": 3
+        },
+        "distinct_referring_accounts": 0,
+        "sample_referring_accounts": [],
+        "distinct_axes": []
+      },
+      "claims": {
+        "total": 0,
+        "supported": 0,
+        "refuted": 0,
+        "contested": 0,
+        "unverified": 0,
+        "resolved_count": 0
+      },
+      "structural_features": {
+        "has_search_paths": false,
+        "has_article_paths": true,
+        "has_doi_paths": false
+      },
+      "ratings": {
+        "provenance": {
+          "score": 0.48,
+          "basis": [
+            "unknown_domain_pattern",
+            "article_path_seen"
+          ]
+        },
+        "breadth": {
+          "score": 0.1475,
+          "basis": [
+            "distinct_urls:3",
+            "distinct_axes:0",
+            "origin_types:1"
+          ]
+        },
+        "corroboration": {
+          "score": 0.0875,
+          "basis": [
+            "referring_accounts:0",
+            "origin_types:1"
+          ]
+        },
+        "track_record": {
+          "score": null,
+          "basis": [
+            "no_resolved_claims_observed"
+          ]
+        },
+        "profile": {
+          "score": 0.84,
+          "confidence": 0.85,
+          "basis": [
+            "meta_author:true",
+            "published_time:true",
+            "canonical:true",
+            "about:true",
+            "contact:true",
+            "corrections:false",
+            "outbound_links:33",
+            "opinion_marker:false"
+          ]
+        },
+        "overall": {
+          "score": 0.37046874999999996,
+          "confidence": 0.10635,
+          "method": "mechanical_v1",
+          "basis": [
+            "unknown_domain_pattern",
+            "article_path_seen",
+            "distinct_urls:3",
+            "distinct_axes:0",
+            "origin_types:1",
+            "referring_accounts:0",
+            "origin_types:1",
+            "track_record_unavailable"
+          ]
+        }
+      },
+      "profile": {
+        "fetched_at": "2026-08-20T02:47:57.231Z",
+        "homepage_url": "https://georgetown.edu/",
+        "example_url": "https://gjia.georgetown.edu/2026/03/26/the-war-against-iran-and-global-risks-tell-me-how-this-ends/",
+        "homepage_status": 200,
+        "example_status": 200,
+        "homepage_final_url": "https://www.georgetown.edu/",
+        "example_final_url": "https://gjia.georgetown.edu/conflict-security/the-war-against-iran-and-global-risks-tell-me-how-this-ends/",
+        "homepage_content_type": "text/html; charset=UTF-8",
+        "example_content_type": "text/html; charset=UTF-8",
+        "homepage": {
+          "has_meta_author": false,
+          "has_published_time": true,
+          "has_canonical": true,
+          "has_about_link": true,
+          "has_contact_link": true,
+          "has_corrections_link": false,
+          "outbound_links_count": 8,
+          "opinion_marker": false
+        },
+        "example": {
+          "has_meta_author": true,
+          "has_published_time": true,
+          "has_canonical": true,
+          "has_about_link": true,
+          "has_contact_link": true,
+          "has_corrections_link": false,
+          "outbound_links_count": 33,
+          "opinion_marker": false
+        }
+      }
+    },
+    {
       "domain": "abs-cbn.com",
       "entity": "Abs-Cbn",
       "kind": "unknown",
@@ -44763,129 +45046,6 @@
           "has_contact_link": false,
           "has_corrections_link": false,
           "outbound_links_count": 0,
-          "opinion_marker": false
-        }
-      }
-    },
-    {
-      "domain": "georgetown.edu",
-      "entity": "Georgetown",
-      "kind": "unknown",
-      "first_seen_at": "2026-03-28T00:20:44.800Z",
-      "last_seen_at": "2026-03-30T06:47:58.191Z",
-      "discovery": {
-        "distinct_urls": 2,
-        "example_urls": [
-          "https://gjia.georgetown.edu/2026/03/26/the-war-against-iran-and-global-risks-tell-me-how-this-ends/",
-          "https://georgetown.edu/2026/03/26/the-war-against-iran-and-global-risks-tell-me-how-this-ends/"
-        ],
-        "origin_counts": {
-          "journals": 2
-        },
-        "distinct_referring_accounts": 0,
-        "sample_referring_accounts": [],
-        "distinct_axes": []
-      },
-      "claims": {
-        "total": 0,
-        "supported": 0,
-        "refuted": 0,
-        "contested": 0,
-        "unverified": 0,
-        "resolved_count": 0
-      },
-      "structural_features": {
-        "has_search_paths": false,
-        "has_article_paths": true,
-        "has_doi_paths": false
-      },
-      "ratings": {
-        "provenance": {
-          "score": 0.48,
-          "basis": [
-            "unknown_domain_pattern",
-            "article_path_seen"
-          ]
-        },
-        "breadth": {
-          "score": 0.11833333333333332,
-          "basis": [
-            "distinct_urls:2",
-            "distinct_axes:0",
-            "origin_types:1"
-          ]
-        },
-        "corroboration": {
-          "score": 0.0875,
-          "basis": [
-            "referring_accounts:0",
-            "origin_types:1"
-          ]
-        },
-        "track_record": {
-          "score": null,
-          "basis": [
-            "no_resolved_claims_observed"
-          ]
-        },
-        "profile": {
-          "score": 0.84,
-          "confidence": 0.85,
-          "basis": [
-            "meta_author:true",
-            "published_time:true",
-            "canonical:true",
-            "about:true",
-            "contact:true",
-            "corrections:false",
-            "outbound_links:33",
-            "opinion_marker:false"
-          ]
-        },
-        "overall": {
-          "score": 0.3640885416666667,
-          "confidence": 0.07772499999999999,
-          "method": "mechanical_v1",
-          "basis": [
-            "unknown_domain_pattern",
-            "article_path_seen",
-            "distinct_urls:2",
-            "distinct_axes:0",
-            "origin_types:1",
-            "referring_accounts:0",
-            "origin_types:1",
-            "track_record_unavailable"
-          ]
-        }
-      },
-      "profile": {
-        "fetched_at": "2026-08-20T02:47:57.231Z",
-        "homepage_url": "https://georgetown.edu/",
-        "example_url": "https://gjia.georgetown.edu/2026/03/26/the-war-against-iran-and-global-risks-tell-me-how-this-ends/",
-        "homepage_status": 200,
-        "example_status": 200,
-        "homepage_final_url": "https://www.georgetown.edu/",
-        "example_final_url": "https://gjia.georgetown.edu/conflict-security/the-war-against-iran-and-global-risks-tell-me-how-this-ends/",
-        "homepage_content_type": "text/html; charset=UTF-8",
-        "example_content_type": "text/html; charset=UTF-8",
-        "homepage": {
-          "has_meta_author": false,
-          "has_published_time": true,
-          "has_canonical": true,
-          "has_about_link": true,
-          "has_contact_link": true,
-          "has_corrections_link": false,
-          "outbound_links_count": 8,
-          "opinion_marker": false
-        },
-        "example": {
-          "has_meta_author": true,
-          "has_published_time": true,
-          "has_canonical": true,
-          "has_about_link": true,
-          "has_contact_link": true,
-          "has_corrections_link": false,
-          "outbound_links_count": 33,
           "opinion_marker": false
         }
       }
@@ -61060,83 +61220,6 @@
             "distinct_axes:0",
             "origin_types:1",
             "referring_accounts:1",
-            "origin_types:1",
-            "track_record_unavailable"
-          ]
-        }
-      }
-    },
-    {
-      "domain": "anthropic.com",
-      "entity": "Anthropic",
-      "kind": "unknown",
-      "first_seen_at": null,
-      "last_seen_at": null,
-      "discovery": {
-        "distinct_urls": 3,
-        "example_urls": [
-          "https://www-cdn.anthropic.com/e670587677525f28df69b59e5fb4c22cc5461a17.pdf",
-          "https://www.anthropic.com/news/anthropics-responsible-scaling-policy",
-          "https://www.anthropic.com/responsible-scaling-policy"
-        ],
-        "origin_counts": {
-          "reading_queue": 3
-        },
-        "distinct_referring_accounts": 0,
-        "sample_referring_accounts": [],
-        "distinct_axes": []
-      },
-      "claims": {
-        "total": 0,
-        "supported": 0,
-        "refuted": 0,
-        "contested": 0,
-        "unverified": 0,
-        "resolved_count": 0
-      },
-      "structural_features": {
-        "has_search_paths": false,
-        "has_article_paths": false,
-        "has_doi_paths": false
-      },
-      "ratings": {
-        "provenance": {
-          "score": 0.45,
-          "basis": [
-            "unknown_domain_pattern"
-          ]
-        },
-        "breadth": {
-          "score": 0.1475,
-          "basis": [
-            "distinct_urls:3",
-            "distinct_axes:0",
-            "origin_types:1"
-          ]
-        },
-        "corroboration": {
-          "score": 0.0875,
-          "basis": [
-            "referring_accounts:0",
-            "origin_types:1"
-          ]
-        },
-        "track_record": {
-          "score": null,
-          "basis": [
-            "no_resolved_claims_observed"
-          ]
-        },
-        "overall": {
-          "score": 0.34984375,
-          "confidence": 0.10635,
-          "method": "mechanical_v1",
-          "basis": [
-            "unknown_domain_pattern",
-            "distinct_urls:3",
-            "distinct_axes:0",
-            "origin_types:1",
-            "referring_accounts:0",
             "origin_types:1",
             "track_record_unavailable"
           ]
@@ -99242,6 +99325,81 @@
         "distinct_urls": 1,
         "example_urls": [
           "https://quirer.net/2294695/lacson-flags-4-fraudulently-titled-parcels-of-reclaimed-land-in-taguig-2"
+        ],
+        "origin_counts": {
+          "journals": 1
+        },
+        "distinct_referring_accounts": 0,
+        "sample_referring_accounts": [],
+        "distinct_axes": []
+      },
+      "claims": {
+        "total": 0,
+        "supported": 0,
+        "refuted": 0,
+        "contested": 0,
+        "unverified": 0,
+        "resolved_count": 0
+      },
+      "structural_features": {
+        "has_search_paths": false,
+        "has_article_paths": false,
+        "has_doi_paths": false
+      },
+      "ratings": {
+        "provenance": {
+          "score": 0.45,
+          "basis": [
+            "unknown_domain_pattern"
+          ]
+        },
+        "breadth": {
+          "score": 0.08916666666666666,
+          "basis": [
+            "distinct_urls:1",
+            "distinct_axes:0",
+            "origin_types:1"
+          ]
+        },
+        "corroboration": {
+          "score": 0.0875,
+          "basis": [
+            "referring_accounts:0",
+            "origin_types:1"
+          ]
+        },
+        "track_record": {
+          "score": null,
+          "basis": [
+            "no_resolved_claims_observed"
+          ]
+        },
+        "overall": {
+          "score": 0.3370833333333333,
+          "confidence": 0.0491,
+          "method": "mechanical_v1",
+          "basis": [
+            "unknown_domain_pattern",
+            "distinct_urls:1",
+            "distinct_axes:0",
+            "origin_types:1",
+            "referring_accounts:0",
+            "origin_types:1",
+            "track_record_unavailable"
+          ]
+        }
+      }
+    },
+    {
+      "domain": "aipolicyperspectives.com",
+      "entity": "Aipolicyperspectives",
+      "kind": "unknown",
+      "first_seen_at": "2026-09-20T03:16:54.465Z",
+      "last_seen_at": "2026-09-20T03:16:54.465Z",
+      "discovery": {
+        "distinct_urls": 1,
+        "example_urls": [
+          "https://www.aipolicyperspectives.com/p/the-ai-discourse-a-guide"
         ],
         "origin_counts": {
           "journals": 1

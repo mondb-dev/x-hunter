@@ -1240,9 +1240,16 @@ function runOneCycle() {
       return Math.max(config.BROWSE_INTERVAL, parseInt(process.env.BROWSE_INTERVAL_FOUNDATION, 10) || 7200);
     } catch { return null; }
   })();
-  const effectiveInterval = cadenceDir.cycle_interval_sec || foundationInterval || config.BROWSE_INTERVAL;
-  if (foundationInterval && !cadenceDir.cycle_interval_sec) {
-    log(`foundation phase: browse interval ${foundationInterval}s (default ${config.BROWSE_INTERVAL}s)`);
+  // The foundation floor wins over a cadence directive rather than losing to it:
+  // cadence is the system tuning itself against feed conditions (it sets 1800s
+  // by default), and the whole point of the phase is that the feed is not the
+  // job right now. Take the longer of the two, never the shorter.
+  const cadenceInterval = cadenceDir.cycle_interval_sec || 0;
+  const effectiveInterval = foundationInterval
+    ? Math.max(foundationInterval, cadenceInterval)
+    : (cadenceInterval || config.BROWSE_INTERVAL);
+  if (foundationInterval) {
+    log(`foundation phase: browse interval ${effectiveInterval}s (default ${config.BROWSE_INTERVAL}s, cadence ${cadenceInterval || 'unset'})`);
   }
   const elapsed = Math.floor((Date.now() - cycleStart) / 1000);
   const wait = effectiveInterval - elapsed;

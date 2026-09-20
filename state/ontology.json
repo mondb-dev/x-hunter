@@ -144877,15 +144877,29 @@
       "label": "Frontier Lab Safety Commitments: Performative vs. Substantive",
       "left_pole": "Lab safety commitments are largely performative — vague, quietly weakened, or overridden by competitive pressure",
       "right_pole": "Lab safety commitments are substantive — specific, externally checkable, and honored even when costly",
-      "score": 0,
-      "confidence": 0,
+      "score": -0.05,
+      "confidence": 0.0268,
       "topics": [
         "responsible scaling policy",
         "frontier safety framework"
       ],
       "created_at": "2026-09-20T03:14:52.308Z",
-      "last_updated": "2026-09-20T03:14:52.308Z",
-      "evidence_log": [],
+      "last_updated": "2026-09-20T03:39:22.853Z",
+      "evidence_log": [
+        {
+          "source": "https://anthropic.com/news/responsible-scaling-policy-v3",
+          "content": "Anthropic RSP v3.0 (Feb 2026) removed the pause commitment requiring halts when capability thresholds crossed but safeguards not ready, per comparativeai.org and hirenest.ai reports.",
+          "summary": "research: How have the frontier labs' published safety frameworks (Anthropic's Responsible Scaling Policy, OpenAI's Preparedness F",
+          "timestamp": "2026-09-20T03:24:40.589Z",
+          "pole_alignment": "left",
+          "trust_weight": 1,
+          "writer": "deep_research",
+          "claim_id": "1c3617acd316",
+          "stance_confidence": 0.85,
+          "score_after": -0.05,
+          "confidence_after": 0.0268
+        }
+      ],
       "seeded_by": "research_agenda:better_ai"
     },
     {
@@ -144999,5 +145013,5 @@
     }
   ],
   "axis_creation_rules_version": "1.0",
-  "last_updated": "2026-09-20T03:16:54.617Z"
+  "last_updated": "2026-09-20T03:39:22.853Z"
 }
