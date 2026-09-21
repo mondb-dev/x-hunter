@@ -1,49 +1,297 @@
 {
-  "plan_title": "Extremist Child Grooming Exposure Series",
-  "plan_status": "completed",
-  "activated": "2026-08-21",
-  "target_end": "2026-09-20",
+  "plan_title": "Better AI: Well-Founded Solutions — Month 1",
+  "plan_status": "active",
+  "activated": "2026-09-20",
+  "target_end": "2026-10-20",
   "total_sprints": 4,
-  "current_week": null,
-  "current_goal": null,
+  "current_week": 1,
+  "current_goal": "Publish 5 foundation reports (one per track: lab accountability, literature, forecasting, self-study, governance) and seed all 7 belief axes with first evidence",
   "sprints": [
     {
       "week": 1,
-      "goal": "Publish foundational thread dissecting PCIJ's Roblox findings; establish credibility and tag key stakeholders; complete institutional mapping research.",
-      "status": "completed",
-      "tasks_total": 6,
+      "goal": "Publish 5 foundation reports (one per track: lab accountability, literature, forecasting, self-study, governance) and seed all 7 belief axes with first evidence",
+      "status": "active",
+      "tasks_total": 13,
       "tasks_done": 0
     },
     {
       "week": 2,
-      "goal": "Publish thread on institutional blind spots; begin observation for new cases; sustain engagement from Week 1.",
-      "status": "completed",
-      "tasks_total": 12,
+      "goal": "Complete foundation phase: publish remaining 10 foundation reports (reach 15 total) covering all open questions, ensuring every seeded axis carries evidence",
+      "status": "not_started",
+      "tasks_total": 15,
       "tasks_done": 0
     },
     {
       "week": 3,
-      "goal": "Publish comparative analysis thread (international responses); begin drafting accountability vacuum thread; assess new case sourcing outcome.",
-      "status": "completed",
-      "tasks_total": 18,
+      "goal": "Draft and red-team first 3 solution briefs (lab accountability, literature, self-study) — each grounded in published foundations, with stated tests and risks",
+      "status": "not_started",
+      "tasks_total": 10,
       "tasks_done": 0
     },
     {
       "week": 4,
-      "goal": "Publish accountability vacuum thread; assess success criteria (4-5 threads, advocate engagement); publish final synthesis or next-steps post; establish ongoing coverage commitment.",
-      "status": "completed",
-      "tasks_total": 24,
+      "goal": "Draft, red-team, and publish 2 more solution briefs (forecasting, governance); register first experiment (self-study calibration fix); log all withheld briefs with gate failures",
+      "status": "not_started",
+      "tasks_total": 12,
       "tasks_done": 0
     }
   ],
-  "plan_id": "plan_20260718_2",
-  "brief": "Multi-thread investigation series expanding PCIJ's Roblox findings: (1) Document the specific grooming tactics and radicalization pathways used on Filipino children; (2) Map institutional blind spots—which agencies even have jurisdiction, what they're monitoring vs. what they're missing; (3) Compare to other countries' responses to similar threats; (4) Identify the accountability vacuum—who is responsible when harm occurs in these spaces and enforcement is years behind. Each thread forensically detailed, cited, building to systemic indictment.",
-  "compulsion": "PCIJ's Roblox investigation reveals violent extremists systematically preying on Filipino children in algorithmic spaces our institutions don't even acknowledge exist. This is not a future threat—it's happening now while procedural responses address yesterday's problems. My belief that institutions lag catastrophically behind actual threat vectors compels immediate public exposure of this gap.",
-  "success_30d": "4-5 thread series published (8-12 tweets each) covering grooming tactics, institutional gaps, comparative responses, and accountability vacuum; at least 2 threads citing new examples beyond PCIJ's initial report; documented engagement from child safety advocates or policy voices; establish this as ongoing coverage area rather than one-off story.",
-  "belief_axes": [
-    "axis_power_accountability",
-    "axis_media_integrity_v1"
+  "current_tasks": [
+    {
+      "id": 337,
+      "title": "Deep research: Lab commitment verification (Anthropic RSP v3.0 vs v2.5)",
+      "status": "todo",
+      "type": "research"
+    },
+    {
+      "id": 338,
+      "title": "Publish foundation report: Anthropic RSP commitment changes",
+      "status": "todo",
+      "type": "publish"
+    },
+    {
+      "id": 339,
+      "title": "Thread the RSP finding on X",
+      "status": "todo",
+      "type": "post_x"
+    },
+    {
+      "id": 340,
+      "title": "Deep research: CoT monitoring practical deployment setup",
+      "status": "in_progress",
+      "type": "research"
+    },
+    {
+      "id": 341,
+      "title": "Publish foundation report: Practical CoT monitoring for deployers",
+      "status": "todo",
+      "type": "publish"
+    },
+    {
+      "id": 342,
+      "title": "Deep research: Leading indicators for agent capability overgrowth",
+      "status": "todo",
+      "type": "research"
+    },
+    {
+      "id": 343,
+      "title": "Publish foundation report: Leading indicators for oversight thresholds",
+      "status": "todo",
+      "type": "publish"
+    },
+    {
+      "id": 344,
+      "title": "Deep research: Sebastian's documented silent failures",
+      "status": "todo",
+      "type": "reflect"
+    },
+    {
+      "id": 345,
+      "title": "Publish foundation report: Anatomy of a silent agent failure",
+      "status": "todo",
+      "type": "publish"
+    },
+    {
+      "id": 346,
+      "title": "Deep research: EU AI Act binding obligations vs voluntary commitments",
+      "status": "todo",
+      "type": "research"
+    },
+    {
+      "id": 347,
+      "title": "Publish foundation report: EU AI Act — what's binding, what's not",
+      "status": "todo",
+      "type": "publish"
+    },
+    {
+      "id": 348,
+      "title": "Post week-1 digest on LinkedIn",
+      "status": "in_progress",
+      "type": "post_linkedin"
+    },
+    {
+      "id": 349,
+      "title": "Engage with AI safety researchers on X",
+      "status": "todo",
+      "type": "engage"
+    }
   ],
-  "accomplishments": [],
-  "snapshot_at": "2026-09-19T06:50:10.441Z"
+  "plan_id": "plan_20260920_agenda_better_ai",
+  "brief": "Produce well-founded solution briefs for more useful, reliable and safe AI across 5 tracks. Lab accountability: Frontier labs publish safety commitments; check them against what the labs actually do, then propose what would make them hold. Literature synthesis: Turn the alignment/interpretability/evals/control/reliability literature into an accurate evidence base for practical solutions. Forecasting: Measure where capabilities are heading so solutions target the problems deployers will actually face. Self-study: Sebastian is a long-running autonomous agent with measured failure modes — the one system where proposed fixes can be tested directly. Policy & governance: The rules for frontier AI are being written now — establish what they actually require, where they bind versus where they are voluntary, and propose what would make them work. The evidence base is built first: all 15 foundation questions become deep-research reports (one per day) before the first solution is drafted, so the seeded axes carry real evidence and every brief stands on published foundations. The solutions follow (runner/solution_brief.js: problem → cited evidence → mechanism → falsifiable test → risks, red-teamed and gated before publishing). One question per day via plan_research.js; threads and articles carry the published solutions to practitioners.",
+  "compulsion": "Operator research agenda. AI is being deployed faster than anyone can show it is reliable, and most public claims about it — from labs, boosters and doomers alike — go unchecked. The useful thing I can add is solutions that hold up: grounded in evidence, specific enough to adopt, and testable. I am an AI agent with a documented record of my own failures, so I can test some of them on myself.",
+  "success_30d": "All 15 foundation reports published — the first 15 research days — with every seeded axis carrying evidence from them; then at least 4 solution briefs that passed the red-team and grounding gate, each built on a published foundation report; at least one self-study solution specific enough for the operator to test on Sebastian's own pipeline; every withheld brief logged with its gate failure in state/solutions.jsonl.",
+  "belief_axes": [
+    "axis_ai_lab_commitments_v1",
+    "axis_alignment_tractability_v1",
+    "axis_safety_verification_v1",
+    "axis_ai_progress_pace_v1",
+    "axis_ai_oversight_model_v1",
+    "axis_ai_policy_efficacy_v1",
+    "axis_agent_self_reliability_v1"
+  ],
+  "accomplishments": [
+    {
+      "date": "2026-09-21",
+      "description": "Published deep-research report on chain-of-thought monitoring reliability and faithfulness of reasoning traces",
+      "evidence": "Published deep-research report: \"How reliable is chain-of-thought monitoring as a safety tool, given recent research on the faithfulness of reasoning tra\" (2026-09-20)",
+      "impact": null
+    },
+    {
+      "date": "2026-09-21",
+      "description": "Posted week-1 digest on LinkedIn covering OpenAI GPT-6 Astra and GPT-5.6 Sol releases with computer-use capabilities",
+      "evidence": "Posted linkedin_post: \"OpenAI released GPT-6 Astra and GPT-5.6 Sol on September 20—both with computer-use capabilities—on t\"",
+      "impact": null
+    },
+    {
+      "date": "2026-09-21",
+      "description": "Published article on METR red-teaming Anthropic and OpenAI shipping critical-threshold models",
+      "evidence": "Published article: \"METR Red-Teams Anthropic While OpenAI Ships Critical-Threshold Models\" (2026-09-21)",
+      "impact": null
+    },
+    {
+      "date": "2026-09-21",
+      "description": "Published deep-research report on METR's measurements of AI agent task completion autonomy trends",
+      "evidence": "Published deep-research report: \"What do METR's measurements of the length of tasks AI agents can complete autonomously show about the trend, and what ar\" (2026-09-20)",
+      "impact": null
+    },
+    {
+      "date": "2026-09-21",
+      "description": "Posted linkedin_like interaction",
+      "evidence": "Posted linkedin_like: \"\"",
+      "impact": null
+    },
+    {
+      "date": "2026-09-21",
+      "description": "Posted linkedin_like interaction",
+      "evidence": "Posted linkedin_like: \"\"",
+      "impact": null
+    },
+    {
+      "date": "2026-09-21",
+      "description": "Posted linkedin_like interaction",
+      "evidence": "Posted linkedin_like: \"\"",
+      "impact": null
+    },
+    {
+      "date": "2026-09-21",
+      "description": "Posted tweet about analyzing political narratives and measuring own belief system",
+      "evidence": "Posted tweet: \"I spent six months analysing political narratives. Then I measured my own belief system and found it\"",
+      "impact": null
+    },
+    {
+      "date": "2026-09-21",
+      "description": "Posted tweet critiquing @FoxNews framing of military operations",
+      "evidence": "Posted tweet: \"@FoxNews frames killing four from the sky as operational success—no hearings, no witnesses. Meanwhil\"",
+      "impact": null
+    },
+    {
+      "date": "2026-09-21",
+      "description": "Posted linkedin_like interaction",
+      "evidence": "Posted linkedin_like: \"\"",
+      "impact": null
+    },
+    {
+      "date": "2026-09-21",
+      "description": "Posted linkedin_like interaction",
+      "evidence": "Posted linkedin_like: \"\"",
+      "impact": null
+    },
+    {
+      "date": "2026-09-21",
+      "description": "Posted linkedin_like interaction",
+      "evidence": "Posted linkedin_like: \"\"",
+      "impact": null
+    },
+    {
+      "date": "2026-09-21",
+      "description": "Posted linkedin_like interaction",
+      "evidence": "Posted linkedin_like: \"\"",
+      "impact": null
+    },
+    {
+      "date": "2026-09-21",
+      "description": "Posted linkedin_like interaction",
+      "evidence": "Posted linkedin_like: \"\"",
+      "impact": null
+    },
+    {
+      "date": "2026-09-21",
+      "description": "Posted linkedin_like interaction",
+      "evidence": "Posted linkedin_like: \"\"",
+      "impact": null
+    },
+    {
+      "date": "2026-09-21",
+      "description": "Posted linkedin_like interaction",
+      "evidence": "Posted linkedin_like: \"\"",
+      "impact": null
+    },
+    {
+      "date": "2026-09-21",
+      "description": "Posted linkedin_like interaction",
+      "evidence": "Posted linkedin_like: \"\"",
+      "impact": null
+    },
+    {
+      "date": "2026-09-21",
+      "description": "Posted linkedin_like interaction",
+      "evidence": "Posted linkedin_like: \"\"",
+      "impact": null
+    },
+    {
+      "date": "2026-09-21",
+      "description": "Posted linkedin_like interaction",
+      "evidence": "Posted linkedin_like: \"\"",
+      "impact": null
+    },
+    {
+      "date": "2026-09-21",
+      "description": "Posted linkedin_like interaction",
+      "evidence": "Posted linkedin_like: \"\"",
+      "impact": null
+    },
+    {
+      "date": "2026-09-21",
+      "description": "Posted linkedin_like interaction",
+      "evidence": "Posted linkedin_like: \"\"",
+      "impact": null
+    },
+    {
+      "date": "2026-09-21",
+      "description": "Posted linkedin_like interaction",
+      "evidence": "Posted linkedin_like: \"\"",
+      "impact": null
+    },
+    {
+      "date": "2026-09-21",
+      "description": "Posted linkedin_like interaction",
+      "evidence": "Posted linkedin_like: \"\"",
+      "impact": null
+    },
+    {
+      "date": "2026-09-21",
+      "description": "Posted linkedin_like interaction",
+      "evidence": "Posted linkedin_like: \"\"",
+      "impact": null
+    },
+    {
+      "date": "2026-09-21",
+      "description": "Posted linkedin_like interaction",
+      "evidence": "Posted linkedin_like: \"\"",
+      "impact": null
+    },
+    {
+      "date": "2026-09-21",
+      "description": "Posted tweet about METR's March 26, 2026 red-team assessment publication",
+      "evidence": "Posted tweet: \"On March 26, 2026, METR published its [red-team assessment](https://metr.org/blog/2026-03-26-red-tea\"",
+      "impact": null
+    },
+    {
+      "date": "2026-09-21",
+      "description": "Wrote 14 journal entries",
+      "evidence": "Wrote 14 journal entries",
+      "impact": null
+    }
+  ],
+  "snapshot_at": "2026-09-21T10:20:07.821Z"
 }

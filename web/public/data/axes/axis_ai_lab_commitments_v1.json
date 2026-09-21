@@ -9,11 +9,11 @@
   "status_meaning": "agenda = an axis of the current research agenda; these are the only ones that speak for him now. legacy = an axis from a previous focus, kept for the public record and still carrying its old evidence. A legacy axis is NOT a current position, however high its numbers look.",
   "seeded_by": "research_agenda:better_ai",
   "observed_pole_balance": -0.05,
-  "evidence_breadth": 0.0268,
-  "evidence_count": 1,
-  "distinct_sources": 1,
+  "evidence_breadth": 0.1265,
+  "evidence_count": 6,
+  "distinct_sources": 6,
   "created_at": "2026-09-20T03:14:52.308Z",
-  "last_updated": "2026-09-20T03:39:22.853Z",
+  "last_updated": "2026-09-20T22:06:07.891Z",
   "semantics": {
     "axis_status": "agenda = an axis of the current research agenda; these are the only ones that speak for him now. legacy = an axis from a previous focus, kept for the public record and still carrying its old evidence. A legacy axis is NOT a current position, however high its numbers look.",
     "observed_pole_balance": "Recency-weighted mean of which pole the observed evidence illustrates (-1 = left pole, +1 = right pole). This measures the COMPOSITION OF WHAT WAS READ, not what Sebastian believes and not a probability that either pole is true. A feed dominated by one side produces a strong balance with no epistemic content.",
@@ -26,6 +26,36 @@
       "summary": "research: How have the frontier labs' published safety frameworks (Anthropic's Responsible Scaling Policy, OpenAI's Preparedness F",
       "illustrates_pole": "left",
       "timestamp": "2026-09-20T03:24:40.589Z"
+    },
+    {
+      "source": "https://openai.com/index/ai-policy-window",
+      "summary": "OpenAI's policy essay calls for stronger safety evidence and shared standards while simultaneously releasing multiple agentic models.",
+      "illustrates_pole": "left",
+      "timestamp": "2026-09-20T12:09:35.073Z"
+    },
+    {
+      "source": "https://openai.com/index/reasoning-models-chain-of-thought-controllability/",
+      "summary": "research: How reliable is chain-of-thought monitoring as a safety tool, given recent research on the faithfulness of reasoning tra",
+      "illustrates_pole": "right",
+      "timestamp": "2026-09-20T12:20:31.253Z"
+    },
+    {
+      "source": "https://openai.com/index/an-alien-mind",
+      "summary": "OpenAI's Chief Scientist publishes essay calling for 'stronger safeguards and international coordination' the same week the lab ships multiple agentic products.",
+      "illustrates_pole": "left",
+      "timestamp": "2026-09-20T18:05:25.079Z"
+    },
+    {
+      "source": "https://openai.com/index/safety-overview-gpt-6-astra",
+      "summary": "GPT-6 Astra is the first OpenAI model to reach Critical cybersecurity capability threshold under the Preparedness Framework, yet deployed with unspecified 'stronger safeguards.'",
+      "illustrates_pole": "left",
+      "timestamp": "2026-09-20T20:05:39.795Z"
+    },
+    {
+      "source": "https://openai.com/index/chatgpt-connects-health-records-and-healthcare-sources",
+      "summary": "OpenAI deploys ChatGPT EHR integration with no public system card or safety eval for high-stakes medical use case.",
+      "illustrates_pole": "left",
+      "timestamp": "2026-09-20T22:06:07.728Z"
     }
   ],
   "links": {

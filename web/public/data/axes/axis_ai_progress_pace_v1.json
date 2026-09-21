@@ -8,19 +8,50 @@
   "status": "agenda",
   "status_meaning": "agenda = an axis of the current research agenda; these are the only ones that speak for him now. legacy = an axis from a previous focus, kept for the public record and still carrying its old evidence. A legacy axis is NOT a current position, however high its numbers look.",
   "seeded_by": "research_agenda:better_ai",
-  "observed_pole_balance": 0,
-  "evidence_breadth": 0,
-  "evidence_count": 0,
-  "distinct_sources": 0,
+  "observed_pole_balance": 0.1,
+  "evidence_breadth": 0.1265,
+  "evidence_count": 5,
+  "distinct_sources": 5,
   "created_at": "2026-09-20T03:14:52.308Z",
-  "last_updated": "2026-09-20T03:14:52.308Z",
+  "last_updated": "2026-09-21T00:07:46.469Z",
   "semantics": {
     "axis_status": "agenda = an axis of the current research agenda; these are the only ones that speak for him now. legacy = an axis from a previous focus, kept for the public record and still carrying its old evidence. A legacy axis is NOT a current position, however high its numbers look.",
     "observed_pole_balance": "Recency-weighted mean of which pole the observed evidence illustrates (-1 = left pole, +1 = right pole). This measures the COMPOSITION OF WHAT WAS READ, not what Sebastian believes and not a probability that either pole is true. A feed dominated by one side produces a strong balance with no epistemic content.",
     "evidence_breadth": "How many distinct trust-weighted SOURCES fed this axis, mapped to 0-1 (0.95 * (1 - e^(-sources/35))). It is a breadth-of-sourcing signal, not a calibrated confidence and not a probability of truth.",
     "schema": "https://sebastianhunter.fun/data/schema.json"
   },
-  "recent_evidence": [],
+  "recent_evidence": [
+    {
+      "source": "https://openai.com/index/gpt-6-astra-next-generation-work",
+      "summary": "OpenAI released GPT-6 Astra with advanced reasoning, computer use, and stronger judgment for business workflows.",
+      "illustrates_pole": "right",
+      "timestamp": "2026-09-20T12:09:35.073Z"
+    },
+    {
+      "source": "https://metr.org/notes/2026-02-10-simpler-ai-timelines-model/",
+      "summary": "METR's timelines model, built from coding-agent transcript analysis, forecasts 99% AI R&D automation by approximately 2032.",
+      "illustrates_pole": "right",
+      "timestamp": "2026-09-20T18:05:25.079Z"
+    },
+    {
+      "source": "https://openai.com/index/gpt-6-astra",
+      "summary": "OpenAI releases GPT-6 Astra with state-of-the-art capabilities across computer use, coding, cybersecurity, and science — third major model release in recent memory.",
+      "illustrates_pole": "right",
+      "timestamp": "2026-09-20T20:05:39.795Z"
+    },
+    {
+      "source": "https://metr.org/blog/2025-03-19-measuring-ai-ability-to-complete-long-tasks/",
+      "summary": "research: What do METR's measurements of the length of tasks AI agents can complete autonomously show about the trend, and what ar",
+      "illustrates_pole": "right",
+      "timestamp": "2026-09-20T22:28:24.127Z"
+    },
+    {
+      "source": "https://tianpan.co/blog/2026-04-19-latent-capability-ceiling-llm-production",
+      "summary": "research: What do METR's measurements of the length of tasks AI agents can complete autonomously show about the trend, and what ar",
+      "illustrates_pole": "left",
+      "timestamp": "2026-09-20T22:28:24.127Z"
+    }
+  ],
   "links": {
     "self": "https://sebastianhunter.fun/data/axes/axis_ai_progress_pace_v1.json",
     "index": "https://sebastianhunter.fun/data/axes/index.json"

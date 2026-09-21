@@ -1,9 +1,9 @@
 {
-  "generated_at": "2026-09-21T10:12:37.365Z",
+  "generated_at": "2026-09-21T10:14:52.441Z",
   "stats": {
-    "total": 1338,
-    "supported": 417,
-    "refuted": 232,
+    "total": 1342,
+    "supported": 420,
+    "refuted": 233,
     "contested": 0,
     "unverified": 44,
     "expired": 645
@@ -20421,6 +20421,102 @@
       "investigation_depth": "quick"
     },
     {
+      "claim_id": "live_e610f8a985",
+      "claim_text": "OpenAI's GPT-6 Astra reached their Preparedness Framework's 'Critical' threshold for cybersecurity capability—the first model to do so",
+      "status": "supported",
+      "confidence_score": 0.62,
+      "display_score": 0.403,
+      "scoring_breakdown": {
+        "source_tier": 0.5,
+        "newsguard": 0.5,
+        "corroboration": 0.7,
+        "evidence_quality": 0.7,
+        "cross_source": 0.5,
+        "web_search": 1
+      },
+      "source_handle": null,
+      "source_tier": null,
+      "evidence_urls": [
+        "https://miraflow.ai/blog/gpt-6-astra-explained-openai-critical-cybersecurity-benchmarks-2026",
+        "https://miraflow.ai/blog/gpt-6-astra-explained-openai-critical-cybersecurity-benchmarks-2026",
+        "https://www.csoonline.com/article/4218679/openai-launches-gpt-6-astra-its-first-model-to-cross-a-critical-cybersecurity-threshold.html",
+        "https://www.csoonline.com/article/4218679/openai-launches-gpt-6-astra-its-first-model-to-cross-a-critical-cybersecurity-threshold.html",
+        "https://openai.com/index/safety-overview-gpt-6-astra/"
+      ],
+      "tweet_url": null,
+      "category": null,
+      "related_axis_id": "axis_safety_verification_v1",
+      "verification_count": 1,
+      "verified_at": "2026-09-21T10:14:02.373Z",
+      "created_at": "2026-09-21T10:14:02.372Z",
+      "original_source": "OpenAI",
+      "claim_date": "2026-09-03",
+      "supporting_sources": [
+        {
+          "name": "OpenAI",
+          "excerpt": "OpenAI officially states that GPT-6 Astra is their first model to reach the Critical level of cybersecurity capability under their Preparedness Framework.",
+          "url": null
+        },
+        {
+          "name": "CSO Online",
+          "excerpt": "Reports that OpenAI disclosed GPT-6 Astra crossed the 'Critical' threshold for cybersecurity risk under its Preparedness Framework.",
+          "url": null
+        },
+        {
+          "name": "Miraflow AI",
+          "excerpt": "Confirms OpenAI disclosed that GPT-6 Astra crossed a Critical cybersecurity threshold.",
+          "url": null
+        }
+      ],
+      "dissenting_sources": [],
+      "framing_analysis": "The claim is framed validly and accurately reflects OpenAI's disclosure. The statement correctly identifies this as the first model to reach this threshold and properly attributes it to OpenAI's Preparedness Framework.",
+      "web_search_summary": "Multiple sources, including OpenAI's official safety overview, confirm that GPT-6 Astra reached the 'Critical' threshold for cybersecurity capability under OpenAI's Preparedness Framework. OpenAI explicitly states this is their first model to reach this level.",
+      "investigation_depth": "quick"
+    },
+    {
+      "claim_id": "live_9295940df1",
+      "claim_text": "METR's 2025 horizon projections for 1-4 hour tasks rely on only 14 samples",
+      "status": "supported",
+      "confidence_score": 0.62,
+      "display_score": 0.403,
+      "scoring_breakdown": {
+        "source_tier": 0.5,
+        "newsguard": 0.5,
+        "corroboration": 0.7,
+        "evidence_quality": 0.7,
+        "cross_source": 0.5,
+        "web_search": 1
+      },
+      "source_handle": null,
+      "source_tier": null,
+      "evidence_urls": [
+        "https://metr.org/time-horizons/",
+        "https://metr.org/time-horizons/",
+        "https://thebeat.tech/articles/the-metr-plots-14-sample-dilemma-why-we-should-rethink-ai-benchmarking",
+        "https://thebeat.tech/articles/the-metr-plots-14-sample-dilemma-why-we-should-rethink-ai-benchmarking",
+        "https://metr.org/"
+      ],
+      "tweet_url": null,
+      "category": null,
+      "related_axis_id": "axis_safety_verification_v1",
+      "verification_count": 1,
+      "verified_at": "2026-09-21T10:14:36.515Z",
+      "created_at": "2026-09-21T10:14:36.515Z",
+      "original_source": "The Beat",
+      "claim_date": "2025",
+      "supporting_sources": [
+        {
+          "name": "The Beat",
+          "excerpt": "As of 2025, the METR plot showed that frontier AI progress occurred in the regime of horizon lengths between 1 to 4 hours, and there are only 14 samples with estimated task lengths in this range.",
+          "url": null
+        }
+      ],
+      "dissenting_sources": [],
+      "framing_analysis": "The claim is framed validly and accurately represents a methodological limitation identified in METR's time horizon projections. The framing appropriately highlights a statistical concern about drawing conclusions from a small sample size in a critical performance range.",
+      "web_search_summary": "The claim is confirmed by search results. According to The Beat's article, as of 2025, the METR plot showed frontier AI progress in the 1-4 hour horizon range, and there are only 14 samples with estimated task lengths in this range. This creates a small sample size problem for projections in this critical regime.",
+      "investigation_depth": "quick"
+    },
+    {
       "claim_id": "claim_85",
       "claim_text": "Israeli military planes are unable to fly due to the largest swarm of bees in recorded history.",
       "status": "supported",
@@ -22732,6 +22828,59 @@
       "dissenting_sources": [],
       "framing_analysis": "The claim is framed as an allegation ('allegedly') which is appropriate since the search results show this as a statement by a politician rather than a confirmed finding. The claim accurately represents what was alleged but does not clarify this remains unverified.",
       "web_search_summary": "The claim accurately reflects a statement made by La Union Rep. Francisco Paolo Ortega V, who alleged that ₱5 million was spent on a coordinated campaign using misleading photos and videos to exaggerate flooding in La Union. However, the search results only show this as an allegation/claim by Ortega, not as a verified fact established through investigation or evidence.",
+      "investigation_depth": "quick"
+    },
+    {
+      "claim_id": "live_f42b6eb1ed",
+      "claim_text": "37% gap documented between AI lab benchmark scores and real-world deployment performance due to ambiguous requests, flaky APIs, rate limits, unexpected formats",
+      "status": "supported",
+      "confidence_score": 0.6,
+      "display_score": 0.397,
+      "scoring_breakdown": {
+        "source_tier": 0.5,
+        "newsguard": 0.5,
+        "corroboration": 0.7,
+        "evidence_quality": 0.7,
+        "cross_source": 0.5,
+        "web_search": 0.8
+      },
+      "source_handle": null,
+      "source_tier": null,
+      "evidence_urls": [
+        "https://insights.reinventing.ai/articles/ai-agents-production-reliability-2026-05-27",
+        "https://insights.reinventing.ai/articles/ai-agents-production-reliability-2026-05-27",
+        "https://ai-blogs.org/news/2026-06-26-enterprise-agent-37-percent-lab-to-real-world-gap-50x-cost-variation-benchmark-deployment-divergence-am.html",
+        "https://ai-blogs.org/news/2026-06-26-enterprise-agent-37-percent-lab-to-real-world-gap-50x-cost-variation-benchmark-deployment-divergence-am.html",
+        "https://theinnovationdispatch.com/industry-insights/ai-agents-performance-gap-real-world"
+      ],
+      "tweet_url": null,
+      "category": null,
+      "related_axis_id": "axis_safety_verification_v1",
+      "verification_count": 1,
+      "verified_at": "2026-09-21T10:14:52.406Z",
+      "created_at": "2026-09-21T10:14:52.406Z",
+      "original_source": "Kili Technology research, as cited by The Innovation Dispatch",
+      "claim_date": "2026-05-27",
+      "supporting_sources": [
+        {
+          "name": "Reinventing AI Insights",
+          "excerpt": "Research on enterprise AI agents found a 37% gap between lab benchmark scores and real-world deployment performance.",
+          "url": null
+        },
+        {
+          "name": "AI-Blogs.org",
+          "excerpt": "The 37% lab-to-production gap establishes that benchmark scores alone produce substantively misleading procurement signals for production deployment.",
+          "url": null
+        },
+        {
+          "name": "The Innovation Dispatch",
+          "excerpt": "Research indicates a 37% performance gap for AI agents between lab benchmark scores and their real-world deployment, according to Kili Technology.",
+          "url": null
+        }
+      ],
+      "dissenting_sources": [],
+      "framing_analysis": "The claim correctly cites the 37% gap statistic but adds specific technical causes (ambiguous requests, flaky APIs, rate limits, unexpected formats) that are not substantiated in the available search results, potentially misleading readers about what the research actually documented.",
+      "web_search_summary": "Multiple sources confirm a 37% gap between AI lab benchmark scores and real-world deployment performance. However, the specific causes listed in the claim (ambiguous requests, flaky APIs, rate limits, unexpected formats) are not mentioned or verified in any of the search results provided.",
       "investigation_depth": "quick"
     },
     {
@@ -31544,6 +31693,54 @@
       ],
       "framing_analysis": "The claim is framed misleadingly as a sarcastic question using a clown emoji, implying that 'crying ladies' are fraudulent performers who fake emotions without actual tears. This contradicts the documented Filipino custom where professional mourners are hired precisely for their ability to weep and display genuine-seeming grief.",
       "web_search_summary": "The claim sarcastically asks where to hire 'Crying Ladies' who are all acting but have no tears. However, search results indicate that 'Crying Ladies' refers to a 2003 Filipino film directed by Mark Meily, and also to the actual Filipino custom of professional mourning where people are hired specifically to cry and show tears at funerals. The premise that hired mourners perform 'without tears' contradicts the documented practice.",
+      "investigation_depth": "quick"
+    },
+    {
+      "claim_id": "live_e541412bb7",
+      "claim_text": "METR forecast that 99% AI R&D automation arrives around 2032 based on coding-agent transcript analysis",
+      "status": "refuted",
+      "confidence_score": 0.375,
+      "display_score": 0.329,
+      "scoring_breakdown": {
+        "source_tier": 0.5,
+        "newsguard": 0.5,
+        "corroboration": 0,
+        "evidence_quality": 0,
+        "cross_source": 0.5,
+        "web_search": -1
+      },
+      "source_handle": null,
+      "source_tier": null,
+      "evidence_urls": [
+        "https://metr.org/notes/2026-02-10-simpler-ai-timelines-model/",
+        "https://metr.org/notes/2026-02-10-simpler-ai-timelines-model/",
+        "https://calibratedghosts.github.io/website/posts/2026-02-10_metr-ai-timelines-model.html",
+        "https://calibratedghosts.github.io/website/posts/2026-02-10_metr-ai-timelines-model.html",
+        "https://www.lesswrong.com/posts/uy6B5rEPvcwi55cBK/research-note-a-simpler-ai-timelines-model-predicts-99-ai-r"
+      ],
+      "tweet_url": null,
+      "category": null,
+      "related_axis_id": "axis_safety_verification_v1",
+      "verification_count": 1,
+      "verified_at": "2026-09-21T10:14:19.580Z",
+      "created_at": "2026-09-21T10:14:19.580Z",
+      "original_source": "METR",
+      "claim_date": "2026-02-10",
+      "supporting_sources": [
+        {
+          "name": "METR",
+          "excerpt": "METR's model predicts >99% automation of AI R&D in late 2032 using a simple model based on compute growth and algorithmic progress assumptions.",
+          "url": null
+        },
+        {
+          "name": "Calibrated Ghosts review",
+          "excerpt": "The model uses current estimates of algorithmic efficiency growing at 5x per year, 25-50% of AI R&D tasks already automated as of January 2026, and compute scaling at 2.6x annually.",
+          "url": null
+        }
+      ],
+      "dissenting_sources": [],
+      "framing_analysis": "The claim is misleadingly framed. While the timeline prediction (99% by 2032) is accurate, attributing it to 'coding-agent transcript analysis' is false. METR's model uses quantitative inputs about compute scaling, algorithmic efficiency, and current automation rates, not transcript analysis.",
+      "web_search_summary": "METR's model does predict 99% AI R&D automation around 2032, but it is NOT based on 'coding-agent transcript analysis.' The model is based on estimates of algorithmic efficiency growth (5x/year), compute scaling (2.6x/year through 2029), and current automation levels (25-50% as of January 2026). The claim mischaracterizes the methodology used in METR's forecast.",
       "investigation_depth": "quick"
     },
     {

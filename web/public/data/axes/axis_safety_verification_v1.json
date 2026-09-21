@@ -8,12 +8,12 @@
   "status": "agenda",
   "status_meaning": "agenda = an axis of the current research agenda; these are the only ones that speak for him now. legacy = an axis from a previous focus, kept for the public record and still carrying its old evidence. A legacy axis is NOT a current position, however high its numbers look.",
   "seeded_by": "research_agenda:better_ai",
-  "observed_pole_balance": -0.05,
-  "evidence_breadth": 0.0268,
-  "evidence_count": 1,
-  "distinct_sources": 1,
+  "observed_pole_balance": -0.1,
+  "evidence_breadth": 0.2048,
+  "evidence_count": 9,
+  "distinct_sources": 9,
   "created_at": "2026-09-20T03:14:52.308Z",
-  "last_updated": "2026-09-20T04:08:44.308Z",
+  "last_updated": "2026-09-21T10:05:59.397Z",
   "semantics": {
     "axis_status": "agenda = an axis of the current research agenda; these are the only ones that speak for him now. legacy = an axis from a previous focus, kept for the public record and still carrying its old evidence. A legacy axis is NOT a current position, however high its numbers look.",
     "observed_pole_balance": "Recency-weighted mean of which pole the observed evidence illustrates (-1 = left pole, +1 = right pole). This measures the COMPOSITION OF WHAT WAS READ, not what Sebastian believes and not a probability that either pole is true. A feed dominated by one side produces a strong balance with no epistemic content.",
@@ -26,6 +26,54 @@
       "summary": "Safety evaluations for large language models rely on surface-form classifiers that report declining harm scores across model generations, but this methodology is systematically inadequate because gender discrimination is transformed rather than reduced.",
       "illustrates_pole": "left",
       "timestamp": "2026-09-20T04:08:44.169Z"
+    },
+    {
+      "source": "https://metr.org/blog/2026-03-26-red-teaming-anthropic-agent-monitoring/",
+      "summary": "METR red-teamed Anthropic's internal agent monitoring systems, providing external verification of safety infrastructure.",
+      "illustrates_pole": "right",
+      "timestamp": "2026-09-20T12:09:35.073Z"
+    },
+    {
+      "source": "https://anthropic.com/research/measuring-faithfulness-in-chain-of-thought-reasoning",
+      "summary": "research: How reliable is chain-of-thought monitoring as a safety tool, given recent research on the faithfulness of reasoning tra",
+      "illustrates_pole": "left",
+      "timestamp": "2026-09-20T12:20:31.253Z"
+    },
+    {
+      "source": "https://arxiv.org/html/2402.13950v4",
+      "summary": "research: How reliable is chain-of-thought monitoring as a safety tool, given recent research on the faithfulness of reasoning tra",
+      "illustrates_pole": "left",
+      "timestamp": "2026-09-20T12:20:31.253Z"
+    },
+    {
+      "source": "https://deepmind.google/blog/finding-the-molecular-switches-behind-new-infectious-diseases/",
+      "summary": "",
+      "illustrates_pole": "left",
+      "timestamp": "2026-09-20T22:06:07.728Z"
+    },
+    {
+      "source": "https://pseedr.com/platforms/the-fragility-of-ai-benchmarks-a-critical-look-at-the-metr-plot",
+      "summary": "research: What do METR's measurements of the length of tasks AI agents can complete autonomously show about the trend, and what ar",
+      "illustrates_pole": "left",
+      "timestamp": "2026-09-20T22:28:24.127Z"
+    },
+    {
+      "source": "https://medium.com/@adnanmasood/closing-the-eval-deployment-gap-in-ai-systems-discrepancy-between-benchmark-performance-and-d27c33361b93",
+      "summary": "research: What do METR's measurements of the length of tasks AI agents can complete autonomously show about the trend, and what ar",
+      "illustrates_pole": "left",
+      "timestamp": "2026-09-20T22:28:24.127Z"
+    },
+    {
+      "source": "https://arxiv.org/abs/2609.21763v1",
+      "summary": "Medical vision-language model audit shows benchmark scores do not reliably predict performance under distribution shift for tuberculosis screening.",
+      "illustrates_pole": "left",
+      "timestamp": "2026-09-21T08:06:35.744Z"
+    },
+    {
+      "source": "https://arxiv.org/abs/2609.21748v1",
+      "summary": "Behavioral failures can make a transformer appear to lack a world model even when it has learned faithful representations of its environment.",
+      "illustrates_pole": "left",
+      "timestamp": "2026-09-21T10:05:59.210Z"
     }
   ],
   "links": {

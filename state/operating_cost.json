@@ -1,15 +1,15 @@
 {
-  "generated_at": "2026-09-20T08:14:15.500Z",
+  "generated_at": "2026-09-21T10:15:40.470Z",
   "monthly_usd": {
-    "llm": 5.03,
+    "llm": 15.82,
     "fixed": 101.25,
-    "total": 106.28
+    "total": 117.07
   },
   "llm_recent": {
     "window_days": 7,
-    "usd": 1.1741,
-    "calls": 197,
-    "daily_avg_usd": 0.1677,
+    "usd": 3.6903,
+    "calls": 577,
+    "daily_avg_usd": 0.5272,
     "by_tag": {
       "quote": {
         "calls": 1,
@@ -28,16 +28,16 @@
         "usd": 0.082842
       },
       "browse": {
-        "calls": 5,
-        "usd": 0.196384
+        "calls": 14,
+        "usd": 0.555666
       },
       "adversarial_eval": {
         "calls": 1,
         "usd": 0.006156
       },
       "brain": {
-        "calls": 7,
-        "usd": 0.055596
+        "calls": 34,
+        "usd": 0.38593099999999997
       },
       "x_reply": {
         "calls": 2,
@@ -52,8 +52,8 @@
         "usd": 0.002034
       },
       "linkedin_connect": {
-        "calls": 1,
-        "usd": 0.002487
+        "calls": 4,
+        "usd": 0.012222
       },
       "tweet": {
         "calls": 1,
@@ -68,60 +68,60 @@
         "usd": 0.001206
       },
       "search_curiosity": {
-        "calls": 1,
-        "usd": 0.00899
+        "calls": 2,
+        "usd": 0.015050000000000001
       },
       "llm:apply_ontology_delta": {
-        "calls": 9,
-        "usd": 0.009032
+        "calls": 27,
+        "usd": 0.021135
       },
       "dr-triage": {
-        "calls": 1,
-        "usd": 0.006096
+        "calls": 5,
+        "usd": 0.030838
       },
       "dr-classify": {
-        "calls": 1,
-        "usd": 0.001917
+        "calls": 4,
+        "usd": 0.00753
       },
       "dr-decompose": {
-        "calls": 1,
-        "usd": 0.049062
+        "calls": 4,
+        "usd": 0.14785500000000001
       },
       "dr-review": {
-        "calls": 1,
-        "usd": 0.020671
+        "calls": 4,
+        "usd": 0.059465000000000004
       },
       "dr-leaf": {
-        "calls": 10,
-        "usd": 0.06442200000000001
+        "calls": 34,
+        "usd": 0.213489
       },
       "dr-pick": {
-        "calls": 17,
-        "usd": 0.030633000000000004
+        "calls": 53,
+        "usd": 0.11795299999999999
       },
       "dr-gap": {
-        "calls": 10,
-        "usd": 0.18877499999999997
+        "calls": 35,
+        "usd": 0.7767889999999998
       },
       "dr-node": {
-        "calls": 20,
-        "usd": 0.17024799999999998
+        "calls": 54,
+        "usd": 0.541697
       },
       "dr-synth-tree": {
-        "calls": 1,
-        "usd": 0.056957
+        "calls": 3,
+        "usd": 0.147118
       },
       "research_evidence": {
-        "calls": 1,
-        "usd": 0.018065
+        "calls": 3,
+        "usd": 0.060196
       },
       "llm:content_relevance": {
-        "calls": 15,
-        "usd": 0.005861999999999999
+        "calls": 66,
+        "usd": 0.023684000000000004
       },
       "llm:linkedin_engage": {
-        "calls": 22,
-        "usd": 0.007734999999999999
+        "calls": 133,
+        "usd": 0.04690600000000003
       },
       "linkedin_comment": {
         "calls": 1,
@@ -134,16 +134,64 @@
       "linkedin_comment:coherence": {
         "calls": 1,
         "usd": 0.002604
+      },
+      "dr-format": {
+        "calls": 2,
+        "usd": 0.006333
+      },
+      "dr-reply": {
+        "calls": 2,
+        "usd": 0.007341
+      },
+      "llm:linkedin_connect": {
+        "calls": 12,
+        "usd": 0.008874
+      },
+      "linkedin_plan": {
+        "calls": 1,
+        "usd": 0.013895
+      },
+      "dr-plan": {
+        "calls": 1,
+        "usd": 0.015932
+      },
+      "linkedin_draft": {
+        "calls": 1,
+        "usd": 0.020113
+      },
+      "dr-synth": {
+        "calls": 1,
+        "usd": 0.117875
+      },
+      "linkedin_draft:factcheck": {
+        "calls": 1,
+        "usd": 0.000607
+      },
+      "llm:refine": {
+        "calls": 1,
+        "usd": 0.002967
+      },
+      "chart:plan": {
+        "calls": 1,
+        "usd": 0.005462
+      },
+      "article": {
+        "calls": 1,
+        "usd": 0.04622
       }
     },
     "by_model": {
       "claude": {
-        "calls": 153,
-        "usd": 1.1561969999999995
+        "calls": 351,
+        "usd": 3.5564849999999995
       },
       "claude-haiku": {
-        "calls": 44,
-        "usd": 0.01793
+        "calls": 225,
+        "usd": 0.08763299999999996
+      },
+      "claude-opus": {
+        "calls": 1,
+        "usd": 0.04622
       }
     }
   },
@@ -156,7 +204,7 @@
   },
   "storage_wallet": {
     "sol_balance": 0.000020209,
-    "checked_at": "2026-09-20T08:10:57.428Z"
+    "checked_at": "2026-09-21T10:08:26.031Z"
   },
   "funding_goal": {
     "mode": "mac",
