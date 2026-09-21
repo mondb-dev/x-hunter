@@ -58,7 +58,22 @@ async function factCheck(text, { tag = 'gate', maxLen = null } = {}) {
       `today, even with no title attached. (Real example this gate wrongly passed: "Biden vows ` +
       `retaliation" on a 2026 attack — Biden was not president.) Do NOT flag opinion, analysis, ` +
       `interpretation, or merely-uncertain claims; do NOT flag a name used in a non-official or ` +
-      `historical context; do NOT flag past-tense history. Reply with JSON ` +
+      `historical context; do NOT flag past-tense history.\n\n` +
+      `ALSO flag these two, which are wrong in a way you can fix WITHOUT knowing the answer:\n` +
+      `(1) RECENCY. A specific freshness claim about an external event — "released today", ` +
+      `"announced on September 20", "hours later", "the same day", "this week", "just shipped" ` +
+      `— that the post gives you no basis to date, and especially two events asserted to be ` +
+      `simultaneous. Sebastian's feed serves archive material alongside new items, so arrival ` +
+      `is not publication. Correct by dropping the timing claim and keeping the substance; if ` +
+      `the timing IS the point being made, that post is not fixable.\n` +
+      `(2) EXHAUSTIVENESS. A census stated as a fact about the world — "exactly two", ` +
+      `"that's it", "the only", "no one is", "nobody has" — when what Sebastian actually has ` +
+      `is what he happened to see. Correct by scoping it to him ("the only two I found", ` +
+      `"none that I've seen"), which is both true and defensible. Do not simply delete it.\n` +
+      `(Real example this gate wrongly passed on 2026-09-21: a post dating three model ` +
+      `releases to one day when they shipped weeks apart, and calling two audits "that's it" ` +
+      `when a third-party assessment had published a week earlier — docs/BUGS.md.)\n\n` +
+      `Reply with JSON ` +
       `only: {"pass":true} OR {"pass":false,"corrected":"full corrected text, or null if ` +
       `not fixable"}.\n\nPOST:\n"""\n${text}\n"""`,
       { maxTokens: 1200, tag: `${tag}:factcheck` }

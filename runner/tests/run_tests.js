@@ -1109,6 +1109,97 @@ section("LinkedIn engagement wiring");
       });
 }
 
+// ── RSS freshness (the 2026-09-21 backfill incident) ─────────────────────────
+// A LinkedIn post dated three model releases to "September 20" that had shipped
+// weeks apart, and called two March audits "this cycle". Cause: rss_collect
+// stamped undated items with now(), and a newly-registered feed served its whole
+// archive unseen, so the collector paged backward through it 5 items per run and
+// the digest presented months-old posts as current. Pure-shape assertions: no
+// network, no state writes.
+section("RSS freshness");
+{
+  const rc = path.join(SCRAPER, "rss_collect.js");
+  if (!fileExists(rc)) { fail("rss_collect.js", "file missing"); }
+  else {
+    const rss = require(rc);
+    const DAY = 86_400_000;
+    const iso = ms => new Date(Date.now() - ms).toISOString();
+
+    // 1. An undated item must stay undated — never backfilled to now().
+    if (rss.parseFeedDate(null) === null && rss.parseFeedDate("") === null) pass("missing date → null, not now()");
+    else fail("missing date", `got ${rss.parseFeedDate(null)} — a dateless item would look fresh`);
+
+    // 2. A malformed date must not crash the collector (toISOString throws on Invalid Date).
+    if (rss.parseFeedDate("not a date") === null) pass("malformed date → null, no throw");
+    else fail("malformed date", `got ${rss.parseFeedDate("not a date")}`);
+
+    // 3. A real pubDate must survive intact.
+    const real = rss.parseFeedDate("Wed, 25 Mar 2026 00:00:00 -0700");
+    if (real && real.startsWith("2026-03-25")) pass("valid pubDate parsed");
+    else fail("valid pubDate", `got ${real}`);
+
+    // 4. The seen window must outlast EVERY freshness window, or an item ages
+    //    out of dedup while still fresh and re-enters the digest as new.
+    const widest = Math.max(rss.MAX_ITEM_AGE_DAYS, rss.MAX_AGENDA_ITEM_AGE_DAYS);
+    if (rss.SEEN_TTL_DAYS > widest) pass(`seen TTL (${rss.SEEN_TTL_DAYS}d) > widest freshness window (${widest}d)`);
+    else fail("dedup window", `SEEN_TTL_DAYS=${rss.SEEN_TTL_DAYS} <= ${widest} — items re-enter as new`);
+
+    // 4b. Low-volume research feeds get the longer window, or the freshness fix
+    //     silently cuts METR/arXiv out of the digest altogether.
+    const news   = rss.feedMaxAge({ name: "BBC World", tier: 1 });
+    const agenda = rss.feedMaxAge({ name: "METR", tier: 1, agenda: true });
+    if (agenda > news) pass(`agenda feeds get a wider window (${agenda}d vs ${news}d)`);
+    else fail("agenda window", `agenda=${agenda} news=${news} — research feeds would be starved`);
+    if (rss.feedMaxAge({ name: "x", max_age_days: 3 }) === 3) pass("per-feed max_age_days override honoured");
+    else fail("per-feed override", "max_age_days ignored");
+
+    // 5. The digest entry must state the item's age, not just its date.
+    const feed = { name: "METR", tier: 1, axis_hint: "ai_evals_forecasting" };
+    const old  = rss.formatDigestEntry({ title: "t", url: "https://e.x", description: "", pub_date: iso(179 * DAY) }, feed);
+    if (/179d old/.test(old)) pass("digest stamps age in days");
+    else fail("digest age stamp", `no age in: ${old.split("\n")[0]}`);
+
+    const undated = rss.formatDigestEntry({ title: "t", url: "https://e.x", description: "", pub_date: null }, feed);
+    if (/UNDATED/.test(undated)) pass("undated item labelled UNDATED");
+    else fail("undated label", `got: ${undated.split("\n")[0]}`);
+  }
+}
+
+// ── Browse prompt must warn on dates and scope ───────────────────────────────
+// Same incident: the prompt asserted the whole digest was "the discourse you
+// observed this cycle", overriding the true dates the digest carries, and
+// nothing stopped a feed-census being written as a claim about the world.
+section("Browse prompt date/scope guards");
+{
+  const sp = path.join(RUNNER, "single_pass_browse.js");
+  if (!fileExists(sp)) { fail("single_pass_browse.js", "file missing"); }
+  else {
+    const src = fs.readFileSync(sp, "utf-8");
+    if (/DATES:/.test(src) && /not necessarily new/i.test(src)) pass("prompt carries DATES guard");
+    else fail("DATES guard", "browse prompt does not warn that arrival != publication");
+
+    if (/SCOPE:/.test(src) && /census/i.test(src)) pass("prompt carries SCOPE guard");
+    else fail("SCOPE guard", "browse prompt does not warn against feed-as-census claims");
+
+    if (!/discourse you observed this cycle/.test(src)) pass("no blanket 'observed this cycle' framing");
+    else fail("stale framing", "prompt still asserts the whole digest is from this cycle");
+  }
+}
+
+// ── Outbound factcheck covers recency + exhaustiveness ───────────────────────
+section("Factcheck gate scope");
+{
+  const gp = path.join(RUNNER, "lib", "outbound_gates.js");
+  if (!fileExists(gp)) { fail("outbound_gates.js", "file missing"); }
+  else {
+    const src = fs.readFileSync(gp, "utf-8");
+    if (/RECENCY/.test(src)) pass("factcheck prompt covers recency claims");
+    else fail("recency check", "gate cannot catch 'released today' / 'hours later'");
+    if (/EXHAUSTIVENESS/.test(src)) pass("factcheck prompt covers exhaustiveness claims");
+    else fail("exhaustiveness check", "gate cannot catch \"that's it\" / \"the only\"");
+  }
+}
+
 // ── Summary ───────────────────────────────────────────────────────────────────
 
 function printSummary() {

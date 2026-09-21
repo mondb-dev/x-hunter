@@ -134,6 +134,16 @@ curiosity → search_curiosity → cluster_axes → rss_collect → comment_cand
 discourse_scan → discourse_digest → external_source_discovery →
 external_source_profile → source_selector → reading_queue → deep_dive_detector →
 prefetch → source-label classification. (Old "14-step" count is stale.)
+**RSS freshness** (`scraper/rss_collect.js`): `MAX_ITEM_AGE_DAYS`=14 (:55) drops
+archive backfill *before* dedup — a newly-registered feed serves its whole history
+unseen, and without this the collector pages backward through it 5 items per run.
+`SEEN_TTL_DAYS`=30 (:50) must stay **greater** than the freshness window or a URL
+ages out of dedup while still fresh and re-enters as new. `parseFeedDate()` (:137)
+returns null for a missing/malformed date — never `now()`. Digest entries stamp
+age (`2026-03-25 (179d old)`) or `(UNDATED)`; `single_pass_browse.js` prompts
+DATES + SCOPE guards over them. All of this dates from the 2026-09-21 backfill
+incident (docs/BUGS.md) — treat the ordering constraint as load-bearing.
+
 Periodic steps are gated by `dueEvery()` (`runner/lib/pre_browse.js:124`; curiosity
 + search_curiosity + cluster_axes every `CURIOSITY_EVERY`=12 cycles at :178,
 deep_dive_detector every 6 at :221), persisted in `state/pre_browse_cadence.json`.
@@ -183,7 +193,12 @@ research agenda: affinity = agenda vocabulary; zero-affinity candidates dropped
   X opt-in via `OUTBOX_X=1` (`runner/lib/post_x_helmstack.js:26-30`).
 - **Shared gates** `runner/lib/outbound_gates.js` — every outbound surface passes
   `voice` (voice_filter) + `factcheck` (composes via compose.js → Claude); fact-check
-  fails OPEN on LLM error.
+  fails OPEN on LLM error. `factCheck()` covers officeholder/title errors plus
+  (since 2026-09-21) **RECENCY** ("released today", "hours later", two events
+  asserted simultaneous) and **EXHAUSTIVENESS** ("exactly two", "that's it",
+  "the only") — both correctable without retrieval: drop the timing claim, scope
+  the census to "the only ones I found". Added after the RSS backfill incident
+  (docs/BUGS.md); the gate has no retrieval and cannot verify a date itself.
 - **Quotation gate** `runner/lib/voice_filter.js:checkQuotations` — quoted spans of
   ≥`QUOTE_MIN_WORDS` (4) must appear verbatim in the quoted source; **fails CLOSED**
   (unrecoverable source ⇒ reject). Enforced at `runner/compose_quote.js`,
