@@ -1,17 +1,17 @@
 {
   "schema_version": "1.0",
-  "generated_at": "2026-09-21T10:05:12.730Z",
+  "generated_at": "2026-09-21T22:16:22.450Z",
   "method": "mechanical_registry_v1",
-  "profiled_at": "2026-09-21T10:05:19.001Z",
+  "profiled_at": "2026-09-21T22:16:34.577Z",
   "sources": [
     {
       "domain": "arxiv.org",
       "entity": "Arxiv",
       "kind": "academic",
       "first_seen_at": "2026-09-20T04:08:44.147Z",
-      "last_seen_at": "2026-09-21T08:06:35.744Z",
+      "last_seen_at": "2026-09-21T22:16:22.447Z",
       "discovery": {
-        "distinct_urls": 17,
+        "distinct_urls": 21,
         "example_urls": [
           "https://arxiv.org/abs/2305.04388",
           "https://arxiv.org/abs/2609.21899v1",
@@ -20,13 +20,16 @@
           "https://arxiv.org/abs/2609.21763v1"
         ],
         "origin_counts": {
-          "ontology_evidence": 5,
-          "reading_queue": 17,
-          "journals": 5
+          "ontology_evidence": 7,
+          "reading_queue": 23,
+          "journals": 8,
+          "articles": 1,
+          "prefetch": 1
         },
         "distinct_referring_accounts": 0,
         "sample_referring_accounts": [],
         "distinct_axes": [
+          "axis_agent_self_reliability_v1",
           "axis_alignment_tractability_v1",
           "axis_safety_verification_v1"
         ]
@@ -53,18 +56,18 @@
           ]
         },
         "breadth": {
-          "score": 0.6466666666666666,
+          "score": 0.825,
           "basis": [
-            "distinct_urls:17",
-            "distinct_axes:2",
-            "origin_types:3"
+            "distinct_urls:21",
+            "distinct_axes:3",
+            "origin_types:5"
           ]
         },
         "corroboration": {
-          "score": 0.26249999999999996,
+          "score": 0.35,
           "basis": [
             "referring_accounts:0",
-            "origin_types:3"
+            "origin_types:5"
           ]
         },
         "track_record": {
@@ -88,17 +91,17 @@
           ]
         },
         "overall": {
-          "score": 0.8054427083333334,
-          "confidence": 0.541925,
+          "score": 0.8526562500000001,
+          "confidence": 0.6547499999999999,
           "method": "mechanical_v1",
           "basis": [
             "academic_domain_pattern",
             "doi_or_identifier_path_seen",
-            "distinct_urls:17",
-            "distinct_axes:2",
-            "origin_types:3",
+            "distinct_urls:21",
+            "distinct_axes:3",
+            "origin_types:5",
             "referring_accounts:0",
-            "origin_types:3",
+            "origin_types:5",
             "track_record_unavailable"
           ]
         }
@@ -304,7 +307,7 @@
         ],
         "origin_counts": {
           "claim_tracker": 1,
-          "reading_queue": 27
+          "reading_queue": 28
         },
         "distinct_referring_accounts": 0,
         "sample_referring_accounts": [],
@@ -595,7 +598,7 @@
           "https://careers.cbp.gov/s/connect-to-recruiter?campaignid=701SJ00000BV0tR&utm_source=X&utm_medium=paid_social&utm_campaign=MGC_B5SXtXt5J5T&twclid=2f2100ywgvzunnowbnhrpi34g1"
         ],
         "origin_counts": {
-          "reading_queue": 27,
+          "reading_queue": 28,
           "feed_buffer_reply": 7
         },
         "distinct_referring_accounts": 1,
@@ -720,7 +723,7 @@
           "https://www.justice.gov/usao-ri/pr/two-business-executives-plead-guilty-tech-support-fraud-scheme?twclid=2f42440xock41qvr5cwo18o539"
         ],
         "origin_counts": {
-          "reading_queue": 27,
+          "reading_queue": 28,
           "feed_buffer_reply": 2,
           "feed_buffer": 1
         },
@@ -1253,7 +1256,7 @@
         ],
         "origin_counts": {
           "ontology_evidence": 1,
-          "reading_queue": 24
+          "reading_queue": 25
         },
         "distinct_referring_accounts": 0,
         "sample_referring_accounts": [],
@@ -1375,7 +1378,7 @@
           "https://singaporeglobalnetwork.gov.sg/stories/tech/why-i-quit-college-at-22-to-launch-a-biotech-startup-in-singapore/?utm_source=x&utm_medium=social&utm_campaign=sg-paid-ao-traffic&utm_content=armaan-dhanda&twclid=2epj25tilhtb65igot07prztga"
         ],
         "origin_counts": {
-          "reading_queue": 19,
+          "reading_queue": 20,
           "feed_buffer": 1
         },
         "distinct_referring_accounts": 1,
@@ -1498,7 +1501,7 @@
           "https://www.house.gov/"
         ],
         "origin_counts": {
-          "reading_queue": 27,
+          "reading_queue": 28,
           "journals": 1
         },
         "distinct_referring_accounts": 0,
@@ -1619,7 +1622,7 @@
           "http://trumprx.gov/"
         ],
         "origin_counts": {
-          "reading_queue": 27,
+          "reading_queue": 28,
           "journals": 1
         },
         "distinct_referring_accounts": 0,
@@ -1741,7 +1744,7 @@
         ],
         "origin_counts": {
           "ontology_evidence": 3,
-          "reading_queue": 27
+          "reading_queue": 28
         },
         "distinct_referring_accounts": 0,
         "sample_referring_accounts": [],
@@ -1824,7 +1827,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-09-18T07:55:35.599Z",
+        "fetched_at": "2026-09-21T12:05:47.117Z",
         "homepage_url": "https://washingtonpost.com/",
         "example_url": "https://www.washingtonpost.com/world/2026/04/13/us-iran-blockade-strait-hormuz-oil/",
         "homepage_status": null,
@@ -1948,7 +1951,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-09-18T07:55:36.236Z",
+        "fetched_at": "2026-09-21T12:05:52.704Z",
         "homepage_url": "https://bbc.com/",
         "example_url": "https://www.bbc.com/news/articles/cgmdw4vn7y2o?at_medium=RSS&amp;at_campaign=rss",
         "homepage_status": 200,
@@ -2091,7 +2094,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-09-18T07:55:37.018Z",
+        "fetched_at": "2026-09-21T12:05:54.166Z",
         "homepage_url": "https://amnesty.org/",
         "example_url": "https://www.amnesty.org/en/latest/news/2026/06/burkina-serge-oulon/",
         "homepage_status": 200,
@@ -2233,7 +2236,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-09-18T07:55:37.256Z",
+        "fetched_at": "2026-09-21T12:05:54.967Z",
         "homepage_url": "https://pcij.org/",
         "example_url": "https://pcij.org/2026/06/23/tycoons-swoop-in-clean-energy-boom/",
         "homepage_status": 200,
@@ -2398,7 +2401,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-09-18T08:25:17.411Z",
+        "fetched_at": "2026-09-21T14:05:25.469Z",
         "homepage_url": "https://google.com/",
         "example_url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQG8zTjzNOXrSBZwvSTLobfen2T2Mfxyn8MYVxW4sIU6cWottxkV4pJs_p6fwS7LJGs_vuED8LS-hCfYDaWBVPP6g5GilaCYMrJml-ow5K6SCv_H_b1Dl2x1bJE8PTS68J1lar6YIqGro0gdLxt0MIOMv-l1vVmmO0WJQtLSOEieMA6I7dl7eRgRC0BRXQWnC1DBXjH9CBNLq5ag1EbSnkyImyoNmXyv0qV7VQUvoAHc5OC2odagG5YXdhPj4Im_aZZUwd8=",
         "homepage_status": 200,
@@ -2532,7 +2535,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-09-18T08:25:19.814Z",
+        "fetched_at": "2026-09-21T14:05:27.236Z",
         "homepage_url": "https://cbsnews.com/",
         "example_url": "https://www.cbsnews.com/news/us-naval-blockade-iran-ports-2026/",
         "homepage_status": 200,
@@ -2669,7 +2672,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-09-18T08:25:19.907Z",
+        "fetched_at": "2026-09-21T14:05:27.325Z",
         "homepage_url": "https://com.ph/",
         "example_url": "https://x.tv5.com.ph/news/national/read/arrest-warrants-issued-vs-discayas-over-malversation-graft-charges-tied-to-flood-control-projects-malolos-court",
         "homepage_status": null,
@@ -2818,7 +2821,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-09-18T08:25:21.122Z",
+        "fetched_at": "2026-09-21T14:05:29.031Z",
         "homepage_url": "https://gmanetwork.com/",
         "example_url": "https://www.gmanetwork.com/news/topstories/nation/994225/explainer-objections-in-a-trial-and-their-role-in-due-process/story/",
         "homepage_status": 200,
@@ -2958,7 +2961,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-09-18T09:25:17.599Z",
+        "fetched_at": "2026-09-21T16:05:18.990Z",
         "homepage_url": "https://youtube.com/",
         "example_url": "https://www.youtube.com/watch?v=s31Wd_dF5hI",
         "homepage_status": 200,
@@ -3001,7 +3004,7 @@
           "https://apnews.com/hub/iran"
         ],
         "origin_counts": {
-          "reading_queue": 27,
+          "reading_queue": 28,
           "journals": 1
         },
         "distinct_referring_accounts": 0,
@@ -3079,7 +3082,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-09-18T09:25:17.709Z",
+        "fetched_at": "2026-09-21T16:05:19.101Z",
         "homepage_url": "https://apnews.com/",
         "example_url": "https://apnews.com/hub/iran",
         "homepage_status": 403,
@@ -3213,7 +3216,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-09-18T09:25:24.060Z",
+        "fetched_at": "2026-09-21T16:05:20.012Z",
         "homepage_url": "https://hrw.org/",
         "example_url": "https://www.hrw.org/news/2026/06/18/support-builds-to-protect-children-from-crimes-against-humanity",
         "homepage_status": 200,
@@ -3249,9 +3252,9 @@
       "entity": "T Co",
       "kind": "unknown",
       "first_seen_at": "2016-05-05T18:57:30.000Z",
-      "last_seen_at": "2026-09-21T09:40:04.000Z",
+      "last_seen_at": "2026-09-21T21:44:47.000Z",
       "discovery": {
-        "distinct_urls": 21871,
+        "distinct_urls": 22303,
         "example_urls": [
           "https://t.co/pJSE124ec4",
           "https://t.co/Soz8BXPWaa",
@@ -3260,11 +3263,11 @@
           "https://t.co/cYaqYDRp08"
         ],
         "origin_counts": {
-          "feed_buffer": 19818,
-          "feed_buffer_reply": 6190,
+          "feed_buffer": 20240,
+          "feed_buffer_reply": 6278,
           "articles": 3
         },
-        "distinct_referring_accounts": 3216,
+        "distinct_referring_accounts": 3253,
         "sample_referring_accounts": [
           "0808iveta",
           "09abracadabra",
@@ -3303,7 +3306,7 @@
         "breadth": {
           "score": 0.53,
           "basis": [
-            "distinct_urls:21871",
+            "distinct_urls:22303",
             "distinct_axes:0",
             "origin_types:3"
           ]
@@ -3311,7 +3314,7 @@
         "corroboration": {
           "score": 0.9125,
           "basis": [
-            "referring_accounts:3216",
+            "referring_accounts:3253",
             "origin_types:3"
           ]
         },
@@ -3342,17 +3345,17 @@
           "basis": [
             "unknown_domain_pattern",
             "doi_or_identifier_path_seen",
-            "distinct_urls:21871",
+            "distinct_urls:22303",
             "distinct_axes:0",
             "origin_types:3",
-            "referring_accounts:3216",
+            "referring_accounts:3253",
             "origin_types:3",
             "track_record_unavailable"
           ]
         }
       },
       "profile": {
-        "fetched_at": "2026-09-18T09:25:25.780Z",
+        "fetched_at": "2026-09-21T16:05:21.598Z",
         "homepage_url": "https://t.co/",
         "example_url": "https://t.co/pJSE124ec4",
         "homepage_status": 200,
@@ -3510,7 +3513,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-09-18T09:55:22.845Z",
+        "fetched_at": "2026-09-21T18:16:25.922Z",
         "homepage_url": "https://rappler.com/",
         "example_url": "https://www.rappler.com/fact-check-no-arrest-warrant-issued-vs-marcoleta",
         "homepage_status": 200,
@@ -3546,9 +3549,9 @@
       "entity": "Techcrunch",
       "kind": "unknown",
       "first_seen_at": "2026-06-22T23:31:00Z",
-      "last_seen_at": "2026-09-20T22:06:07.697Z",
+      "last_seen_at": "2026-09-21T20:16:27.347Z",
       "discovery": {
-        "distinct_urls": 159,
+        "distinct_urls": 162,
         "example_urls": [
           "https://techcrunch.com/2026/07/30/judge-says-trump-admin-still-lacks-evidence-for-anthropic-supply-chain-risk-label/",
           "https://techcrunch.com/2026/06/22/shareholders-sue-ubers-board-over-sexual-assaults-other-incidents/",
@@ -3558,7 +3561,7 @@
         ],
         "origin_counts": {
           "ontology_evidence": 65,
-          "journals": 180
+          "journals": 183
         },
         "distinct_referring_accounts": 0,
         "sample_referring_accounts": [],
@@ -3606,7 +3609,7 @@
         "breadth": {
           "score": 0.82,
           "basis": [
-            "distinct_urls:159",
+            "distinct_urls:162",
             "distinct_axes:17",
             "origin_types:2"
           ]
@@ -3645,7 +3648,7 @@
           "basis": [
             "unknown_domain_pattern",
             "article_path_seen",
-            "distinct_urls:159",
+            "distinct_urls:162",
             "distinct_axes:17",
             "origin_types:2",
             "referring_accounts:0",
@@ -3655,7 +3658,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-09-18T09:55:23.199Z",
+        "fetched_at": "2026-09-21T18:16:27.194Z",
         "homepage_url": "https://techcrunch.com/",
         "example_url": "https://techcrunch.com/2026/07/30/judge-says-trump-admin-still-lacks-evidence-for-anthropic-supply-chain-risk-label/",
         "homepage_status": 200,
@@ -3682,6 +3685,138 @@
           "has_contact_link": false,
           "has_corrections_link": false,
           "outbound_links_count": 12,
+          "opinion_marker": false
+        }
+      }
+    },
+    {
+      "domain": "metr.org",
+      "entity": "Metr",
+      "kind": "unknown",
+      "first_seen_at": "2026-09-20T10:08:40.424Z",
+      "last_seen_at": "2026-09-21T12:06:29.808Z",
+      "discovery": {
+        "distinct_urls": 15,
+        "example_urls": [
+          "https://metr.org/blog/2026-03-26-red-teaming-anthropic-agent-monitoring/",
+          "https://metr.org/notes/2026-02-10-simpler-ai-timelines-model/",
+          "https://metr.org/blog/2025-03-19-measuring-ai-ability-to-complete-long-tasks/",
+          "https://metr.org/blog/2026-08-31-security-update/",
+          "https://metr.org/notes/2026-07-08-anthropic-researcher-uplift/"
+        ],
+        "origin_counts": {
+          "ontology_evidence": 3,
+          "reading_queue": 16,
+          "journals": 4,
+          "articles": 1
+        },
+        "distinct_referring_accounts": 0,
+        "sample_referring_accounts": [],
+        "distinct_axes": [
+          "axis_ai_progress_pace_v1",
+          "axis_safety_verification_v1"
+        ]
+      },
+      "claims": {
+        "total": 0,
+        "supported": 0,
+        "refuted": 0,
+        "contested": 0,
+        "unverified": 0,
+        "resolved_count": 0
+      },
+      "structural_features": {
+        "has_search_paths": false,
+        "has_article_paths": true,
+        "has_doi_paths": false
+      },
+      "ratings": {
+        "provenance": {
+          "score": 0.48,
+          "basis": [
+            "unknown_domain_pattern",
+            "article_path_seen"
+          ]
+        },
+        "breadth": {
+          "score": 0.7066666666666666,
+          "basis": [
+            "distinct_urls:15",
+            "distinct_axes:2",
+            "origin_types:4"
+          ]
+        },
+        "corroboration": {
+          "score": 0.35,
+          "basis": [
+            "referring_accounts:0",
+            "origin_types:4"
+          ]
+        },
+        "track_record": {
+          "score": null,
+          "basis": [
+            "no_resolved_claims_observed"
+          ]
+        },
+        "profile": {
+          "score": 0.49000000000000005,
+          "confidence": 0.75,
+          "basis": [
+            "meta_author:false",
+            "published_time:true",
+            "canonical:true",
+            "about:true",
+            "contact:false",
+            "corrections:false",
+            "outbound_links:7",
+            "opinion_marker:false"
+          ]
+        },
+        "overall": {
+          "score": 0.5173958333333333,
+          "confidence": 0.5174,
+          "method": "mechanical_v1",
+          "basis": [
+            "unknown_domain_pattern",
+            "article_path_seen",
+            "distinct_urls:15",
+            "distinct_axes:2",
+            "origin_types:4",
+            "referring_accounts:0",
+            "origin_types:4",
+            "track_record_unavailable"
+          ]
+        }
+      },
+      "profile": {
+        "fetched_at": "2026-09-20T12:08:42.937Z",
+        "homepage_url": "https://metr.org/",
+        "example_url": "https://metr.org/blog/2026-08-31-security-update/",
+        "homepage_status": 200,
+        "example_status": 200,
+        "homepage_final_url": "https://metr.org/",
+        "example_final_url": "https://metr.org/blog/2026-08-31-security-update/",
+        "homepage_content_type": "text/html; charset=UTF-8",
+        "example_content_type": "text/html; charset=UTF-8",
+        "homepage": {
+          "has_meta_author": false,
+          "has_published_time": false,
+          "has_canonical": true,
+          "has_about_link": true,
+          "has_contact_link": false,
+          "has_corrections_link": false,
+          "outbound_links_count": 38,
+          "opinion_marker": false
+        },
+        "example": {
+          "has_meta_author": false,
+          "has_published_time": true,
+          "has_canonical": true,
+          "has_about_link": true,
+          "has_contact_link": false,
+          "has_corrections_link": false,
+          "outbound_links_count": 7,
           "opinion_marker": false
         }
       }
@@ -3788,7 +3923,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-09-18T09:55:24.754Z",
+        "fetched_at": "2026-09-21T18:16:29.472Z",
         "homepage_url": "https://arstechnica.com/",
         "example_url": "https://arstechnica.com/security/2026/06/users-cry-foul-after-amd-stripped-memory-crypto-from-its-consumer-cpus/",
         "homepage_status": 405,
@@ -3925,7 +4060,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-09-18T09:55:26.305Z",
+        "fetched_at": "2026-09-21T18:16:33.932Z",
         "homepage_url": "https://bit.ly/",
         "example_url": "https://bit.ly/4rFUGm4?twclid=2cxu7o43bx4p37y7v84zudvy2q",
         "homepage_status": 200,
@@ -3961,9 +4096,9 @@
       "entity": "Substack",
       "kind": "newsletter_blog",
       "first_seen_at": "2026-04-18T00:20:00.000Z",
-      "last_seen_at": "2026-08-13T14:00:59.000Z",
+      "last_seen_at": "2026-09-21T14:05:56.200Z",
       "discovery": {
-        "distinct_urls": 12,
+        "distinct_urls": 13,
         "example_urls": [
           "https://aniobrien.substack.com/p/white-working-class-girls-sacrificed",
           "https://sethmlederman.substack.com/p/taking-on-the-f-word-fibromyalgia?twclid=245fh2m6fc9w4vl63b2am7zawy",
@@ -3975,7 +4110,7 @@
           "ontology_evidence": 3,
           "feed_buffer_reply": 7,
           "feed_buffer": 3,
-          "journals": 15
+          "journals": 16
         },
         "distinct_referring_accounts": 3,
         "sample_referring_accounts": [
@@ -4011,7 +4146,7 @@
         "breadth": {
           "score": 0.7066666666666666,
           "basis": [
-            "distinct_urls:12",
+            "distinct_urls:13",
             "distinct_axes:2",
             "origin_types:4"
           ]
@@ -4045,11 +4180,11 @@
         },
         "overall": {
           "score": 0.5066145833333332,
-          "confidence": 0.54665,
+          "confidence": 0.56915,
           "method": "mechanical_v1",
           "basis": [
             "newsletter_blog_pattern",
-            "distinct_urls:12",
+            "distinct_urls:13",
             "distinct_axes:2",
             "origin_types:4",
             "referring_accounts:3",
@@ -4059,7 +4194,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-09-18T11:38:58.205Z",
+        "fetched_at": "2026-09-21T20:15:47.792Z",
         "homepage_url": "https://substack.com/",
         "example_url": "https://aniobrien.substack.com/p/white-working-class-girls-sacrificed",
         "homepage_status": 200,
@@ -4192,7 +4327,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-09-18T11:39:01.438Z",
+        "fetched_at": "2026-09-21T20:15:49.886Z",
         "homepage_url": "https://reut.rs/",
         "example_url": "https://reut.rs/42N9gxi",
         "homepage_status": 401,
@@ -4319,7 +4454,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-09-18T11:39:03.024Z",
+        "fetched_at": "2026-09-21T20:15:51.825Z",
         "homepage_url": "https://brobible.com/",
         "example_url": "https://brobible.com/culture/paige-ostroushko-savanah-hernandez-anti-ice-protest-arrest/",
         "homepage_status": 200,
@@ -4446,7 +4581,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-09-18T11:39:03.702Z",
+        "fetched_at": "2026-09-21T20:15:52.250Z",
         "homepage_url": "https://epochtimes.com/",
         "example_url": "https://www.epochtimes.com/",
         "homepage_status": 200,
@@ -4574,7 +4709,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-09-18T12:08:58.174Z",
+        "fetched_at": "2026-09-21T22:16:23.182Z",
         "homepage_url": "https://idf.il/",
         "example_url": "https://www.idf.il/en/articles/2026/04/16/idf-finds-weapons-in-school-in-bint-jbeil-lebanon/",
         "homepage_status": null,
@@ -4601,137 +4736,6 @@
           "has_contact_link": false,
           "has_corrections_link": false,
           "outbound_links_count": 0,
-          "opinion_marker": false
-        }
-      }
-    },
-    {
-      "domain": "metr.org",
-      "entity": "Metr",
-      "kind": "unknown",
-      "first_seen_at": "2026-09-20T10:08:40.424Z",
-      "last_seen_at": "2026-09-21T04:05:27.857Z",
-      "discovery": {
-        "distinct_urls": 14,
-        "example_urls": [
-          "https://metr.org/blog/2026-03-26-red-teaming-anthropic-agent-monitoring/",
-          "https://metr.org/notes/2026-02-10-simpler-ai-timelines-model/",
-          "https://metr.org/blog/2025-03-19-measuring-ai-ability-to-complete-long-tasks/",
-          "https://metr.org/blog/2026-08-31-security-update/",
-          "https://metr.org/notes/2026-07-08-anthropic-researcher-uplift/"
-        ],
-        "origin_counts": {
-          "ontology_evidence": 3,
-          "reading_queue": 13,
-          "journals": 4
-        },
-        "distinct_referring_accounts": 0,
-        "sample_referring_accounts": [],
-        "distinct_axes": [
-          "axis_ai_progress_pace_v1",
-          "axis_safety_verification_v1"
-        ]
-      },
-      "claims": {
-        "total": 0,
-        "supported": 0,
-        "refuted": 0,
-        "contested": 0,
-        "unverified": 0,
-        "resolved_count": 0
-      },
-      "structural_features": {
-        "has_search_paths": false,
-        "has_article_paths": true,
-        "has_doi_paths": false
-      },
-      "ratings": {
-        "provenance": {
-          "score": 0.48,
-          "basis": [
-            "unknown_domain_pattern",
-            "article_path_seen"
-          ]
-        },
-        "breadth": {
-          "score": 0.6466666666666666,
-          "basis": [
-            "distinct_urls:14",
-            "distinct_axes:2",
-            "origin_types:3"
-          ]
-        },
-        "corroboration": {
-          "score": 0.26249999999999996,
-          "basis": [
-            "referring_accounts:0",
-            "origin_types:3"
-          ]
-        },
-        "track_record": {
-          "score": null,
-          "basis": [
-            "no_resolved_claims_observed"
-          ]
-        },
-        "profile": {
-          "score": 0.49000000000000005,
-          "confidence": 0.75,
-          "basis": [
-            "meta_author:false",
-            "published_time:true",
-            "canonical:true",
-            "about:true",
-            "contact:false",
-            "corrections:false",
-            "outbound_links:7",
-            "opinion_marker:false"
-          ]
-        },
-        "overall": {
-          "score": 0.4960677083333333,
-          "confidence": 0.474425,
-          "method": "mechanical_v1",
-          "basis": [
-            "unknown_domain_pattern",
-            "article_path_seen",
-            "distinct_urls:14",
-            "distinct_axes:2",
-            "origin_types:3",
-            "referring_accounts:0",
-            "origin_types:3",
-            "track_record_unavailable"
-          ]
-        }
-      },
-      "profile": {
-        "fetched_at": "2026-09-20T12:08:42.937Z",
-        "homepage_url": "https://metr.org/",
-        "example_url": "https://metr.org/blog/2026-08-31-security-update/",
-        "homepage_status": 200,
-        "example_status": 200,
-        "homepage_final_url": "https://metr.org/",
-        "example_final_url": "https://metr.org/blog/2026-08-31-security-update/",
-        "homepage_content_type": "text/html; charset=UTF-8",
-        "example_content_type": "text/html; charset=UTF-8",
-        "homepage": {
-          "has_meta_author": false,
-          "has_published_time": false,
-          "has_canonical": true,
-          "has_about_link": true,
-          "has_contact_link": false,
-          "has_corrections_link": false,
-          "outbound_links_count": 38,
-          "opinion_marker": false
-        },
-        "example": {
-          "has_meta_author": false,
-          "has_published_time": true,
-          "has_canonical": true,
-          "has_about_link": true,
-          "has_contact_link": false,
-          "has_corrections_link": false,
-          "outbound_links_count": 7,
           "opinion_marker": false
         }
       }
@@ -4840,7 +4844,7 @@
             "about:false",
             "contact:false",
             "corrections:false",
-            "outbound_links:32",
+            "outbound_links:44",
             "opinion_marker:false"
           ]
         },
@@ -4862,7 +4866,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-09-18T12:09:03.110Z",
+        "fetched_at": "2026-09-21T22:16:28.965Z",
         "homepage_url": "https://philstar.com/",
         "example_url": "https://www.philstar.com/headlines/2026/06/24/2537506/mike-defensor-face-trafficking-complaint-over-pasig-ktv-bar-raid",
         "homepage_status": 200,
@@ -4878,7 +4882,7 @@
           "has_about_link": false,
           "has_contact_link": false,
           "has_corrections_link": false,
-          "outbound_links_count": 75,
+          "outbound_links_count": 72,
           "opinion_marker": false
         },
         "example": {
@@ -4888,7 +4892,7 @@
           "has_about_link": false,
           "has_contact_link": false,
           "has_corrections_link": false,
-          "outbound_links_count": 32,
+          "outbound_links_count": 44,
           "opinion_marker": false
         }
       }
@@ -4898,9 +4902,9 @@
       "entity": "Grok",
       "kind": "unknown",
       "first_seen_at": "2026-04-03T01:20:27.000Z",
-      "last_seen_at": "2026-09-20T17:41:00.000Z",
+      "last_seen_at": "2026-09-21T16:11:47.000Z",
       "discovery": {
-        "distinct_urls": 752,
+        "distinct_urls": 762,
         "example_urls": [
           "https://grok.com/imagine/post/9b92ff60-ec59-45db-8a35-8e1b743e5339",
           "https://grok.com/imagine/post/42c16172-4296-42be-b3d0-aa45ad7b6b97",
@@ -4909,10 +4913,10 @@
           "https://grok.com/imagine/post/3289422f-50b2-4655-8527-e2b1c950ce5e"
         ],
         "origin_counts": {
-          "feed_buffer_reply": 619,
-          "feed_buffer": 183
+          "feed_buffer_reply": 625,
+          "feed_buffer": 187
         },
-        "distinct_referring_accounts": 457,
+        "distinct_referring_accounts": 462,
         "sample_referring_accounts": [
           "0xsifu",
           "100ohiostate",
@@ -4950,7 +4954,7 @@
         "breadth": {
           "score": 0.47,
           "basis": [
-            "distinct_urls:752",
+            "distinct_urls:762",
             "distinct_axes:0",
             "origin_types:2"
           ]
@@ -4958,7 +4962,7 @@
         "corroboration": {
           "score": 0.825,
           "basis": [
-            "referring_accounts:457",
+            "referring_accounts:462",
             "origin_types:2"
           ]
         },
@@ -4988,17 +4992,17 @@
           "method": "mechanical_v1",
           "basis": [
             "unknown_domain_pattern",
-            "distinct_urls:752",
+            "distinct_urls:762",
             "distinct_axes:0",
             "origin_types:2",
-            "referring_accounts:457",
+            "referring_accounts:462",
             "origin_types:2",
             "track_record_unavailable"
           ]
         }
       },
       "profile": {
-        "fetched_at": "2026-09-18T12:09:06.426Z",
+        "fetched_at": "2026-09-21T22:16:31.675Z",
         "homepage_url": "https://grok.com/",
         "example_url": "https://grok.com/imagine/post/9b92ff60-ec59-45db-8a35-8e1b743e5339",
         "homepage_status": 200,
@@ -5134,7 +5138,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-09-18T12:09:08.908Z",
+        "fetched_at": "2026-09-21T22:16:34.577Z",
         "homepage_url": "https://steampowered.com/",
         "example_url": "https://store.steampowered.com/app/1315180?twclid=2cb8mho5n4udnkq1fnm1yi4kkh",
         "homepage_status": 200,
@@ -5692,9 +5696,9 @@
       "entity": "Starlink",
       "kind": "unknown",
       "first_seen_at": "2026-04-07T03:51:50.000Z",
-      "last_seen_at": "2026-09-21T08:50:05.000Z",
+      "last_seen_at": "2026-09-21T19:28:36.679Z",
       "discovery": {
-        "distinct_urls": 2159,
+        "distinct_urls": 2429,
         "example_urls": [
           "https://www.starlink.com/us/residential?referral=RC-DF-9543787-19448-67&utm_medium=paid&utm_campaign=awr_us_soc_twt_ptg_cau&utm_content=awr_us_soc_twt_ptg_cau_res_gvp_v4s_stc_en-us_sdb-bluesky-uptime&twclid=2cg62b1u0oqrypdim5oir1767e",
           "https://www.starlink.com/us/residential?referral=RC-DF-9543787-19448-67&utm_medium=paid&utm_campaign=awr_us_soc_twt_ptg_cau&utm_content=awr_us_soc_twt_ptg_cau_res_gvp_v4s_stc_en-us_sdb-avail-sat-yourhome&twclid=2216n7j93v9absqn77762mm626",
@@ -5703,8 +5707,8 @@
           "https://www.starlink.com/us/residential?referral=RC-DF-9543787-19448-67&utm_medium=paid&utm_campaign=awr_us_soc_twt_ptg_cau&utm_content=awr_us_soc_twt_ptg_cau_res_gvp_v4s_stc_en-us_sdb-avail-sat-arrived&twclid=21pi7t0qs8tgw0wgnh5mvmdu2g"
         ],
         "origin_counts": {
-          "feed_buffer_reply": 2055,
-          "feed_buffer": 108
+          "feed_buffer_reply": 2316,
+          "feed_buffer": 117
         },
         "distinct_referring_accounts": 5,
         "sample_referring_accounts": [
@@ -5739,7 +5743,7 @@
         "breadth": {
           "score": 0.47,
           "basis": [
-            "distinct_urls:2159",
+            "distinct_urls:2429",
             "distinct_axes:0",
             "origin_types:2"
           ]
@@ -5777,7 +5781,7 @@
           "method": "mechanical_v1",
           "basis": [
             "unknown_domain_pattern",
-            "distinct_urls:2159",
+            "distinct_urls:2429",
             "distinct_axes:0",
             "origin_types:2",
             "referring_accounts:5",
@@ -5830,7 +5834,7 @@
           "https://www.reuters.com/site-search/?query=Evidence-based%20claims%2C%20transparent%20sourcing%2C%20honest%20uncertainty%2C%20good-faith%20argu%20Truth%20and%20Evidence%20in%20Public%20Discourse"
         ],
         "origin_counts": {
-          "reading_queue": 28
+          "reading_queue": 29
         },
         "distinct_referring_accounts": 1,
         "sample_referring_accounts": [
@@ -6889,9 +6893,9 @@
       "entity": "Openai",
       "kind": "unknown",
       "first_seen_at": "2026-09-20T12:09:35.040Z",
-      "last_seen_at": "2026-09-21T08:06:35.716Z",
+      "last_seen_at": "2026-09-21T20:16:27.379Z",
       "discovery": {
-        "distinct_urls": 15,
+        "distinct_urls": 25,
         "example_urls": [
           "https://openai.com/index/ai-policy-window",
           "https://openai.com/index/reasoning-models-chain-of-thought-controllability/",
@@ -6900,8 +6904,8 @@
           "https://openai.com/index/chatgpt-connects-health-records-and-healthcare-sources"
         ],
         "origin_counts": {
-          "ontology_evidence": 7,
-          "journals": 12
+          "ontology_evidence": 9,
+          "journals": 23
         },
         "distinct_referring_accounts": 0,
         "sample_referring_accounts": [],
@@ -6933,7 +6937,7 @@
         "breadth": {
           "score": 0.5866666666666667,
           "basis": [
-            "distinct_urls:15",
+            "distinct_urls:25",
             "distinct_axes:2",
             "origin_types:2"
           ]
@@ -6967,11 +6971,11 @@
         },
         "overall": {
           "score": 0.4541145833333333,
-          "confidence": 0.47645000000000004,
+          "confidence": 0.58895,
           "method": "mechanical_v1",
           "basis": [
             "unknown_domain_pattern",
-            "distinct_urls:15",
+            "distinct_urls:25",
             "distinct_axes:2",
             "origin_types:2",
             "referring_accounts:0",
@@ -7517,6 +7521,135 @@
           "has_contact_link": false,
           "has_corrections_link": false,
           "outbound_links_count": 75,
+          "opinion_marker": false
+        }
+      }
+    },
+    {
+      "domain": "anthropic.com",
+      "entity": "Anthropic",
+      "kind": "unknown",
+      "first_seen_at": "2026-09-20T03:16:16.243Z",
+      "last_seen_at": "2026-09-21T10:15:40.302Z",
+      "discovery": {
+        "distinct_urls": 7,
+        "example_urls": [
+          "https://anthropic.com/news/responsible-scaling-policy-v3",
+          "https://anthropic.com/research/measuring-faithfulness-in-chain-of-thought-reasoning",
+          "https://www-cdn.anthropic.com/e670587677525f28df69b59e5fb4c22cc5461a17.pdf",
+          "https://www.anthropic.com/news/anthropics-responsible-scaling-policy",
+          "https://www.anthropic.com/responsible-scaling-policy"
+        ],
+        "origin_counts": {
+          "ontology_evidence": 2,
+          "reading_queue": 15,
+          "articles": 2
+        },
+        "distinct_referring_accounts": 0,
+        "sample_referring_accounts": [],
+        "distinct_axes": [
+          "axis_ai_lab_commitments_v1",
+          "axis_safety_verification_v1"
+        ]
+      },
+      "claims": {
+        "total": 0,
+        "supported": 0,
+        "refuted": 0,
+        "contested": 0,
+        "unverified": 0,
+        "resolved_count": 0
+      },
+      "structural_features": {
+        "has_search_paths": false,
+        "has_article_paths": false,
+        "has_doi_paths": false
+      },
+      "ratings": {
+        "provenance": {
+          "score": 0.45,
+          "basis": [
+            "unknown_domain_pattern"
+          ]
+        },
+        "breadth": {
+          "score": 0.5008333333333332,
+          "basis": [
+            "distinct_urls:7",
+            "distinct_axes:2",
+            "origin_types:3"
+          ]
+        },
+        "corroboration": {
+          "score": 0.26249999999999996,
+          "basis": [
+            "referring_accounts:0",
+            "origin_types:3"
+          ]
+        },
+        "track_record": {
+          "score": null,
+          "basis": [
+            "no_resolved_claims_observed"
+          ]
+        },
+        "profile": {
+          "score": 0.36,
+          "confidence": 0.65,
+          "basis": [
+            "meta_author:false",
+            "published_time:false",
+            "canonical:true",
+            "about:true",
+            "contact:false",
+            "corrections:false",
+            "outbound_links:68",
+            "opinion_marker:false"
+          ]
+        },
+        "overall": {
+          "score": 0.44354166666666667,
+          "confidence": 0.2863,
+          "method": "mechanical_v1",
+          "basis": [
+            "unknown_domain_pattern",
+            "distinct_urls:7",
+            "distinct_axes:2",
+            "origin_types:3",
+            "referring_accounts:0",
+            "origin_types:3",
+            "track_record_unavailable"
+          ]
+        }
+      },
+      "profile": {
+        "fetched_at": "2026-09-20T03:40:29.272Z",
+        "homepage_url": "https://anthropic.com/",
+        "example_url": "https://anthropic.com/news/responsible-scaling-policy-v3",
+        "homepage_status": 200,
+        "example_status": 200,
+        "homepage_final_url": "https://www.anthropic.com/",
+        "example_final_url": "https://www.anthropic.com/news/responsible-scaling-policy-v3",
+        "homepage_content_type": "text/html; charset=utf-8",
+        "example_content_type": "text/html; charset=utf-8",
+        "homepage": {
+          "has_meta_author": false,
+          "has_published_time": false,
+          "has_canonical": true,
+          "has_about_link": true,
+          "has_contact_link": false,
+          "has_corrections_link": false,
+          "outbound_links_count": 60,
+          "opinion_marker": false
+        },
+        "example": {
+          "has_meta_author": false,
+          "has_published_time": false,
+          "has_canonical": true,
+          "has_about_link": false,
+          "has_contact_link": false,
+          "has_corrections_link": false,
+          "outbound_links_count": 68,
           "opinion_marker": false
         }
       }
@@ -8539,6 +8672,133 @@
       }
     },
     {
+      "domain": "ptgaming.ph",
+      "entity": "Ptgaming Ph",
+      "kind": "unknown",
+      "first_seen_at": "2026-07-05T04:59:47.736Z",
+      "last_seen_at": "2026-09-21T17:48:33.811Z",
+      "discovery": {
+        "distinct_urls": 42,
+        "example_urls": [
+          "https://www.ptgaming.ph/?twclid=21n3lg1hcl64ox73kjyr4lggz9",
+          "https://www.ptgaming.ph/?twclid=25vb0w4jbmtupw5yokwy2fjbcq",
+          "https://www.ptgaming.ph/?twclid=24xua76p6ig4wj1on4u6eqhjkz",
+          "https://www.ptgaming.ph/?twclid=23opaojcnervezlk24t4109xw9",
+          "https://www.ptgaming.ph/?twclid=26sb1wpgds50ggj6udc2c7m358"
+        ],
+        "origin_counts": {
+          "feed_buffer": 15,
+          "feed_buffer_reply": 27
+        },
+        "distinct_referring_accounts": 1,
+        "sample_referring_accounts": [
+          "ptgamingph"
+        ],
+        "distinct_axes": []
+      },
+      "claims": {
+        "total": 0,
+        "supported": 0,
+        "refuted": 0,
+        "contested": 0,
+        "unverified": 0,
+        "resolved_count": 0
+      },
+      "structural_features": {
+        "has_search_paths": false,
+        "has_article_paths": false,
+        "has_doi_paths": false
+      },
+      "ratings": {
+        "provenance": {
+          "score": 0.45,
+          "basis": [
+            "unknown_domain_pattern"
+          ]
+        },
+        "breadth": {
+          "score": 0.47,
+          "basis": [
+            "distinct_urls:42",
+            "distinct_axes:0",
+            "origin_types:2"
+          ]
+        },
+        "corroboration": {
+          "score": 0.2833333333333333,
+          "basis": [
+            "referring_accounts:1",
+            "origin_types:2"
+          ]
+        },
+        "track_record": {
+          "score": null,
+          "basis": [
+            "no_resolved_claims_observed"
+          ]
+        },
+        "profile": {
+          "score": 0.1,
+          "confidence": 0.55,
+          "basis": [
+            "meta_author:false",
+            "published_time:false",
+            "canonical:true",
+            "about:false",
+            "contact:false",
+            "corrections:false",
+            "outbound_links:0",
+            "opinion_marker:false"
+          ]
+        },
+        "overall": {
+          "score": 0.43875,
+          "confidence": 0.5742,
+          "method": "mechanical_v1",
+          "basis": [
+            "unknown_domain_pattern",
+            "distinct_urls:42",
+            "distinct_axes:0",
+            "origin_types:2",
+            "referring_accounts:1",
+            "origin_types:2",
+            "track_record_unavailable"
+          ]
+        }
+      },
+      "profile": {
+        "fetched_at": "2026-09-18T19:39:05.678Z",
+        "homepage_url": "https://ptgaming.ph/",
+        "example_url": "https://www.ptgaming.ph/?twclid=21n3lg1hcl64ox73kjyr4lggz9",
+        "homepage_status": 200,
+        "example_status": 200,
+        "homepage_final_url": "https://www.ptgaming.ph/",
+        "example_final_url": "https://www.ptgaming.ph/?twclid=21n3lg1hcl64ox73kjyr4lggz9",
+        "homepage_content_type": "text/html",
+        "example_content_type": "text/html",
+        "homepage": {
+          "has_meta_author": false,
+          "has_published_time": false,
+          "has_canonical": true,
+          "has_about_link": false,
+          "has_contact_link": false,
+          "has_corrections_link": false,
+          "outbound_links_count": 0,
+          "opinion_marker": false
+        },
+        "example": {
+          "has_meta_author": false,
+          "has_published_time": false,
+          "has_canonical": true,
+          "has_about_link": false,
+          "has_contact_link": false,
+          "has_corrections_link": false,
+          "outbound_links_count": 0,
+          "opinion_marker": false
+        }
+      }
+    },
+    {
       "domain": "coderabbit.ai",
       "entity": "Coderabbit Ai",
       "kind": "unknown",
@@ -8651,133 +8911,6 @@
           "has_contact_link": false,
           "has_corrections_link": false,
           "outbound_links_count": 1,
-          "opinion_marker": false
-        },
-        "example": {
-          "has_meta_author": false,
-          "has_published_time": false,
-          "has_canonical": true,
-          "has_about_link": false,
-          "has_contact_link": false,
-          "has_corrections_link": false,
-          "outbound_links_count": 0,
-          "opinion_marker": false
-        }
-      }
-    },
-    {
-      "domain": "ptgaming.ph",
-      "entity": "Ptgaming Ph",
-      "kind": "unknown",
-      "first_seen_at": "2026-07-05T04:59:47.736Z",
-      "last_seen_at": "2026-09-21T01:43:43.000Z",
-      "discovery": {
-        "distinct_urls": 38,
-        "example_urls": [
-          "https://www.ptgaming.ph/?twclid=21n3lg1hcl64ox73kjyr4lggz9",
-          "https://www.ptgaming.ph/?twclid=25vb0w4jbmtupw5yokwy2fjbcq",
-          "https://www.ptgaming.ph/?twclid=24xua76p6ig4wj1on4u6eqhjkz",
-          "https://www.ptgaming.ph/?twclid=23opaojcnervezlk24t4109xw9",
-          "https://www.ptgaming.ph/?twclid=26sb1wpgds50ggj6udc2c7m358"
-        ],
-        "origin_counts": {
-          "feed_buffer": 14,
-          "feed_buffer_reply": 24
-        },
-        "distinct_referring_accounts": 1,
-        "sample_referring_accounts": [
-          "ptgamingph"
-        ],
-        "distinct_axes": []
-      },
-      "claims": {
-        "total": 0,
-        "supported": 0,
-        "refuted": 0,
-        "contested": 0,
-        "unverified": 0,
-        "resolved_count": 0
-      },
-      "structural_features": {
-        "has_search_paths": false,
-        "has_article_paths": false,
-        "has_doi_paths": false
-      },
-      "ratings": {
-        "provenance": {
-          "score": 0.45,
-          "basis": [
-            "unknown_domain_pattern"
-          ]
-        },
-        "breadth": {
-          "score": 0.47,
-          "basis": [
-            "distinct_urls:38",
-            "distinct_axes:0",
-            "origin_types:2"
-          ]
-        },
-        "corroboration": {
-          "score": 0.2833333333333333,
-          "basis": [
-            "referring_accounts:1",
-            "origin_types:2"
-          ]
-        },
-        "track_record": {
-          "score": null,
-          "basis": [
-            "no_resolved_claims_observed"
-          ]
-        },
-        "profile": {
-          "score": 0.1,
-          "confidence": 0.55,
-          "basis": [
-            "meta_author:false",
-            "published_time:false",
-            "canonical:true",
-            "about:false",
-            "contact:false",
-            "corrections:false",
-            "outbound_links:0",
-            "opinion_marker:false"
-          ]
-        },
-        "overall": {
-          "score": 0.43875,
-          "confidence": 0.5742,
-          "method": "mechanical_v1",
-          "basis": [
-            "unknown_domain_pattern",
-            "distinct_urls:38",
-            "distinct_axes:0",
-            "origin_types:2",
-            "referring_accounts:1",
-            "origin_types:2",
-            "track_record_unavailable"
-          ]
-        }
-      },
-      "profile": {
-        "fetched_at": "2026-09-18T19:39:05.678Z",
-        "homepage_url": "https://ptgaming.ph/",
-        "example_url": "https://www.ptgaming.ph/?twclid=21n3lg1hcl64ox73kjyr4lggz9",
-        "homepage_status": 200,
-        "example_status": 200,
-        "homepage_final_url": "https://www.ptgaming.ph/",
-        "example_final_url": "https://www.ptgaming.ph/?twclid=21n3lg1hcl64ox73kjyr4lggz9",
-        "homepage_content_type": "text/html",
-        "example_content_type": "text/html",
-        "homepage": {
-          "has_meta_author": false,
-          "has_published_time": false,
-          "has_canonical": true,
-          "has_about_link": false,
-          "has_contact_link": false,
-          "has_corrections_link": false,
-          "outbound_links_count": 0,
           "opinion_marker": false
         },
         "example": {
@@ -8924,9 +9057,9 @@
       "entity": "Nustargame",
       "kind": "unknown",
       "first_seen_at": "2026-07-04T07:36:55.650Z",
-      "last_seen_at": "2026-09-21T03:45:24.000Z",
+      "last_seen_at": "2026-09-21T18:53:35.370Z",
       "discovery": {
-        "distinct_urls": 29,
+        "distinct_urls": 30,
         "example_urls": [
           "https://appstore.nustargame.com/?fbclid=IwZXh0bgNhZW0CMTAAYnJpZBExdTFXSWM2OURwSzlmRGVVT3NydGMGYXBwX2lkEDIyMjAzOTE3ODgyMDA4OTIAAR5-z2VUxUBlb1xkH-U__5gASpshBlmq9xw-GXCS4bTWWiFtwpFdWkJ4PY2qEA_aem_NiqDTDHN3CJKVVCNR24plw&twclid=26zfxjdeqc7s72rera75b8jf08",
           "https://nustargame.com/?twclid=230m3qm5hhiwojmbba5bza5pbz",
@@ -8935,7 +9068,7 @@
           "https://nustargame.com/?twclid=26hhyt5gr2gtlmrqwtmakr8fwz"
         ],
         "origin_counts": {
-          "feed_buffer": 10,
+          "feed_buffer": 11,
           "feed_buffer_reply": 19
         },
         "distinct_referring_accounts": 1,
@@ -8967,7 +9100,7 @@
         "breadth": {
           "score": 0.47,
           "basis": [
-            "distinct_urls:29",
+            "distinct_urls:30",
             "distinct_axes:0",
             "origin_types:2"
           ]
@@ -9005,7 +9138,7 @@
           "method": "mechanical_v1",
           "basis": [
             "unknown_domain_pattern",
-            "distinct_urls:29",
+            "distinct_urls:30",
             "distinct_axes:0",
             "origin_types:2",
             "referring_accounts:1",
@@ -14768,134 +14901,6 @@
       }
     },
     {
-      "domain": "anthropic.com",
-      "entity": "Anthropic",
-      "kind": "unknown",
-      "first_seen_at": "2026-09-20T03:16:16.243Z",
-      "last_seen_at": "2026-09-21T06:05:16.968Z",
-      "discovery": {
-        "distinct_urls": 7,
-        "example_urls": [
-          "https://anthropic.com/news/responsible-scaling-policy-v3",
-          "https://anthropic.com/research/measuring-faithfulness-in-chain-of-thought-reasoning",
-          "https://www-cdn.anthropic.com/e670587677525f28df69b59e5fb4c22cc5461a17.pdf",
-          "https://www.anthropic.com/news/anthropics-responsible-scaling-policy",
-          "https://www.anthropic.com/responsible-scaling-policy"
-        ],
-        "origin_counts": {
-          "ontology_evidence": 2,
-          "reading_queue": 15
-        },
-        "distinct_referring_accounts": 0,
-        "sample_referring_accounts": [],
-        "distinct_axes": [
-          "axis_ai_lab_commitments_v1",
-          "axis_safety_verification_v1"
-        ]
-      },
-      "claims": {
-        "total": 0,
-        "supported": 0,
-        "refuted": 0,
-        "contested": 0,
-        "unverified": 0,
-        "resolved_count": 0
-      },
-      "structural_features": {
-        "has_search_paths": false,
-        "has_article_paths": false,
-        "has_doi_paths": false
-      },
-      "ratings": {
-        "provenance": {
-          "score": 0.45,
-          "basis": [
-            "unknown_domain_pattern"
-          ]
-        },
-        "breadth": {
-          "score": 0.4408333333333333,
-          "basis": [
-            "distinct_urls:7",
-            "distinct_axes:2",
-            "origin_types:2"
-          ]
-        },
-        "corroboration": {
-          "score": 0.175,
-          "basis": [
-            "referring_accounts:0",
-            "origin_types:2"
-          ]
-        },
-        "track_record": {
-          "score": null,
-          "basis": [
-            "no_resolved_claims_observed"
-          ]
-        },
-        "profile": {
-          "score": 0.36,
-          "confidence": 0.65,
-          "basis": [
-            "meta_author:false",
-            "published_time:false",
-            "canonical:true",
-            "about:true",
-            "contact:false",
-            "corrections:false",
-            "outbound_links:68",
-            "opinion_marker:false"
-          ]
-        },
-        "overall": {
-          "score": 0.4222135416666667,
-          "confidence": 0.265825,
-          "method": "mechanical_v1",
-          "basis": [
-            "unknown_domain_pattern",
-            "distinct_urls:7",
-            "distinct_axes:2",
-            "origin_types:2",
-            "referring_accounts:0",
-            "origin_types:2",
-            "track_record_unavailable"
-          ]
-        }
-      },
-      "profile": {
-        "fetched_at": "2026-09-20T03:40:29.272Z",
-        "homepage_url": "https://anthropic.com/",
-        "example_url": "https://anthropic.com/news/responsible-scaling-policy-v3",
-        "homepage_status": 200,
-        "example_status": 200,
-        "homepage_final_url": "https://www.anthropic.com/",
-        "example_final_url": "https://www.anthropic.com/news/responsible-scaling-policy-v3",
-        "homepage_content_type": "text/html; charset=utf-8",
-        "example_content_type": "text/html; charset=utf-8",
-        "homepage": {
-          "has_meta_author": false,
-          "has_published_time": false,
-          "has_canonical": true,
-          "has_about_link": true,
-          "has_contact_link": false,
-          "has_corrections_link": false,
-          "outbound_links_count": 60,
-          "opinion_marker": false
-        },
-        "example": {
-          "has_meta_author": false,
-          "has_published_time": false,
-          "has_canonical": true,
-          "has_about_link": false,
-          "has_contact_link": false,
-          "has_corrections_link": false,
-          "outbound_links_count": 68,
-          "opinion_marker": false
-        }
-      }
-    },
-    {
       "domain": "huaweicloud.com",
       "entity": "Huaweicloud",
       "kind": "unknown",
@@ -19582,9 +19587,9 @@
       "entity": "Moltbook",
       "kind": "unknown",
       "first_seen_at": "2026-03-07T00:29:35.326Z",
-      "last_seen_at": "2026-09-06T09:22:03.394Z",
+      "last_seen_at": "2026-09-21T10:15:40.302Z",
       "discovery": {
-        "distinct_urls": 124,
+        "distinct_urls": 125,
         "example_urls": [
           "https://www.moltbook.com/post/29d49c40-bc59-4a1a-b875-3d3d41ec469e",
           "https://www.moltbook.com/post/3694a386-c24e-4744-8c06-2fc74c73c559",
@@ -19593,7 +19598,7 @@
           "https://www.moltbook.com/post/c6a71bf0-72ab-4867-820a-6b306bae0cea"
         ],
         "origin_counts": {
-          "articles": 124
+          "articles": 125
         },
         "distinct_referring_accounts": 0,
         "sample_referring_accounts": [],
@@ -19622,7 +19627,7 @@
         "breadth": {
           "score": 0.41,
           "basis": [
-            "distinct_urls:124",
+            "distinct_urls:125",
             "distinct_axes:0",
             "origin_types:1"
           ]
@@ -19660,7 +19665,7 @@
           "method": "mechanical_v1",
           "basis": [
             "unknown_domain_pattern",
-            "distinct_urls:124",
+            "distinct_urls:125",
             "distinct_axes:0",
             "origin_types:1",
             "referring_accounts:0",
@@ -22863,6 +22868,133 @@
           "has_contact_link": false,
           "has_corrections_link": false,
           "outbound_links_count": 8,
+          "opinion_marker": false
+        }
+      }
+    },
+    {
+      "domain": "tiktok.com",
+      "entity": "Tiktok",
+      "kind": "unknown",
+      "first_seen_at": "2026-05-18T19:41:15.205Z",
+      "last_seen_at": "2026-09-21T10:43:26.745Z",
+      "discovery": {
+        "distinct_urls": 4,
+        "example_urls": [
+          "https://vt.tiktok.com/ZSxJweKEd/?utm_source=twitter&utm_medium=cpm&utm_campaign=TKTK-DM-AWAR-DM-COJ-MAY-INT&utm_id=2026DM&utm_term=COJFEST&utm_content=promoted_post_2&twclid=23n0m2swszeni1novs209rbrem",
+          "https://vt.tiktok.com/ZS9hqthRvwJqK-ezi9Q/?twclid=23sdv54xenkyk4xl645iwhi9bq",
+          "https://vt.tiktok.com/ZS9hqthRvwJqK-ezi9Q/?twclid=27vmg5r11nemmtov9b6dddw8xy",
+          "https://vt.tiktok.com/ZS9hqthRvwJqK-ezi9Q/?twclid=2ehfkcx5xwtevtkcvexzgxacpw"
+        ],
+        "origin_counts": {
+          "feed_buffer": 3,
+          "feed_buffer_reply": 1
+        },
+        "distinct_referring_accounts": 2,
+        "sample_referring_accounts": [
+          "bluebayc2na",
+          "ditophofficial"
+        ],
+        "distinct_axes": []
+      },
+      "claims": {
+        "total": 0,
+        "supported": 0,
+        "refuted": 0,
+        "contested": 0,
+        "unverified": 0,
+        "resolved_count": 0
+      },
+      "structural_features": {
+        "has_search_paths": false,
+        "has_article_paths": false,
+        "has_doi_paths": false
+      },
+      "ratings": {
+        "provenance": {
+          "score": 0.45,
+          "basis": [
+            "unknown_domain_pattern"
+          ]
+        },
+        "breadth": {
+          "score": 0.23666666666666664,
+          "basis": [
+            "distinct_urls:4",
+            "distinct_axes:0",
+            "origin_types:2"
+          ]
+        },
+        "corroboration": {
+          "score": 0.39166666666666666,
+          "basis": [
+            "referring_accounts:2",
+            "origin_types:2"
+          ]
+        },
+        "track_record": {
+          "score": null,
+          "basis": [
+            "no_resolved_claims_observed"
+          ]
+        },
+        "profile": {
+          "score": 0,
+          "confidence": 0.55,
+          "basis": [
+            "meta_author:false",
+            "published_time:false",
+            "canonical:false",
+            "about:false",
+            "contact:false",
+            "corrections:false",
+            "outbound_links:0",
+            "opinion_marker:false"
+          ]
+        },
+        "overall": {
+          "score": 0.39786458333333335,
+          "confidence": 0.21994999999999998,
+          "method": "mechanical_v1",
+          "basis": [
+            "unknown_domain_pattern",
+            "distinct_urls:4",
+            "distinct_axes:0",
+            "origin_types:2",
+            "referring_accounts:2",
+            "origin_types:2",
+            "track_record_unavailable"
+          ]
+        }
+      },
+      "profile": {
+        "fetched_at": "2026-09-20T10:08:32.386Z",
+        "homepage_url": "https://tiktok.com/",
+        "example_url": "https://vt.tiktok.com/ZSxJweKEd/?utm_source=twitter&utm_medium=cpm&utm_campaign=TKTK-DM-AWAR-DM-COJ-MAY-INT&utm_id=2026DM&utm_term=COJFEST&utm_content=promoted_post_2&twclid=23n0m2swszeni1novs209rbrem",
+        "homepage_status": 200,
+        "example_status": 200,
+        "homepage_final_url": "https://www.tiktok.com/",
+        "example_final_url": "https://www.tiktok.com/@/video/7639616475480853780?_r=1&_d=secCgYIASAHKAESPgo8Fwq3mqe9CnZi2Zc1nUlzFZVye0kQoB1Cp8rN1%2BQj%2FK18%2BuZXYDvLCimj1r47MBl%2FlQtiaDgpY3vRXBWXGgA%3D&u_code=dji4h4c67lbih1&share_item_id=7639616475480853780&timestamp=1778737575&utm_campaign=client_share&utm_source=short_fallback&share_app_id=1233",
+        "homepage_content_type": "text/html; charset=utf-8",
+        "example_content_type": "text/html; charset=utf-8",
+        "homepage": {
+          "has_meta_author": false,
+          "has_published_time": false,
+          "has_canonical": false,
+          "has_about_link": false,
+          "has_contact_link": false,
+          "has_corrections_link": false,
+          "outbound_links_count": 0,
+          "opinion_marker": false
+        },
+        "example": {
+          "has_meta_author": false,
+          "has_published_time": false,
+          "has_canonical": false,
+          "has_about_link": false,
+          "has_contact_link": false,
+          "has_corrections_link": false,
+          "outbound_links_count": 0,
           "opinion_marker": false
         }
       }
@@ -26157,132 +26289,6 @@
           "has_contact_link": false,
           "has_corrections_link": false,
           "outbound_links_count": 25,
-          "opinion_marker": false
-        }
-      }
-    },
-    {
-      "domain": "tiktok.com",
-      "entity": "Tiktok",
-      "kind": "unknown",
-      "first_seen_at": "2026-05-18T19:41:15.205Z",
-      "last_seen_at": "2026-09-20T08:48:25.944Z",
-      "discovery": {
-        "distinct_urls": 3,
-        "example_urls": [
-          "https://vt.tiktok.com/ZSxJweKEd/?utm_source=twitter&utm_medium=cpm&utm_campaign=TKTK-DM-AWAR-DM-COJ-MAY-INT&utm_id=2026DM&utm_term=COJFEST&utm_content=promoted_post_2&twclid=23n0m2swszeni1novs209rbrem",
-          "https://vt.tiktok.com/ZS9hqthRvwJqK-ezi9Q/?twclid=23sdv54xenkyk4xl645iwhi9bq",
-          "https://vt.tiktok.com/ZS9hqthRvwJqK-ezi9Q/?twclid=27vmg5r11nemmtov9b6dddw8xy"
-        ],
-        "origin_counts": {
-          "feed_buffer": 2,
-          "feed_buffer_reply": 1
-        },
-        "distinct_referring_accounts": 2,
-        "sample_referring_accounts": [
-          "bluebayc2na",
-          "ditophofficial"
-        ],
-        "distinct_axes": []
-      },
-      "claims": {
-        "total": 0,
-        "supported": 0,
-        "refuted": 0,
-        "contested": 0,
-        "unverified": 0,
-        "resolved_count": 0
-      },
-      "structural_features": {
-        "has_search_paths": false,
-        "has_article_paths": false,
-        "has_doi_paths": false
-      },
-      "ratings": {
-        "provenance": {
-          "score": 0.45,
-          "basis": [
-            "unknown_domain_pattern"
-          ]
-        },
-        "breadth": {
-          "score": 0.2075,
-          "basis": [
-            "distinct_urls:3",
-            "distinct_axes:0",
-            "origin_types:2"
-          ]
-        },
-        "corroboration": {
-          "score": 0.39166666666666666,
-          "basis": [
-            "referring_accounts:2",
-            "origin_types:2"
-          ]
-        },
-        "track_record": {
-          "score": null,
-          "basis": [
-            "no_resolved_claims_observed"
-          ]
-        },
-        "profile": {
-          "score": 0,
-          "confidence": 0.55,
-          "basis": [
-            "meta_author:false",
-            "published_time:false",
-            "canonical:false",
-            "about:false",
-            "contact:false",
-            "corrections:false",
-            "outbound_links:0",
-            "opinion_marker:false"
-          ]
-        },
-        "overall": {
-          "score": 0.391484375,
-          "confidence": 0.191325,
-          "method": "mechanical_v1",
-          "basis": [
-            "unknown_domain_pattern",
-            "distinct_urls:3",
-            "distinct_axes:0",
-            "origin_types:2",
-            "referring_accounts:2",
-            "origin_types:2",
-            "track_record_unavailable"
-          ]
-        }
-      },
-      "profile": {
-        "fetched_at": "2026-09-20T10:08:32.386Z",
-        "homepage_url": "https://tiktok.com/",
-        "example_url": "https://vt.tiktok.com/ZSxJweKEd/?utm_source=twitter&utm_medium=cpm&utm_campaign=TKTK-DM-AWAR-DM-COJ-MAY-INT&utm_id=2026DM&utm_term=COJFEST&utm_content=promoted_post_2&twclid=23n0m2swszeni1novs209rbrem",
-        "homepage_status": 200,
-        "example_status": 200,
-        "homepage_final_url": "https://www.tiktok.com/",
-        "example_final_url": "https://www.tiktok.com/@/video/7639616475480853780?_r=1&_d=secCgYIASAHKAESPgo8Fwq3mqe9CnZi2Zc1nUlzFZVye0kQoB1Cp8rN1%2BQj%2FK18%2BuZXYDvLCimj1r47MBl%2FlQtiaDgpY3vRXBWXGgA%3D&u_code=dji4h4c67lbih1&share_item_id=7639616475480853780&timestamp=1778737575&utm_campaign=client_share&utm_source=short_fallback&share_app_id=1233",
-        "homepage_content_type": "text/html; charset=utf-8",
-        "example_content_type": "text/html; charset=utf-8",
-        "homepage": {
-          "has_meta_author": false,
-          "has_published_time": false,
-          "has_canonical": false,
-          "has_about_link": false,
-          "has_contact_link": false,
-          "has_corrections_link": false,
-          "outbound_links_count": 0,
-          "opinion_marker": false
-        },
-        "example": {
-          "has_meta_author": false,
-          "has_published_time": false,
-          "has_canonical": false,
-          "has_about_link": false,
-          "has_contact_link": false,
-          "has_corrections_link": false,
-          "outbound_links_count": 0,
           "opinion_marker": false
         }
       }
@@ -95806,6 +95812,83 @@
       }
     },
     {
+      "domain": "presswhizz.com",
+      "entity": "Presswhizz",
+      "kind": "unknown",
+      "first_seen_at": "2026-09-21T10:53:23.106Z",
+      "last_seen_at": "2026-09-21T10:53:23.106Z",
+      "discovery": {
+        "distinct_urls": 1,
+        "example_urls": [
+          "https://presswhizz.com/?utm_source=X&utm_medium=paid_social&utm_campaign=x_ads_high_value_buyer_lookalike_registration_T1&utm_term=x_ads_high_value_buyer_lookalike&utm_content=x_ads_real_urls_before_you_buy_static&twt_id=56295061&twclid=24oa8fn44bl6frwqovf1apfspy"
+        ],
+        "origin_counts": {
+          "feed_buffer": 1
+        },
+        "distinct_referring_accounts": 1,
+        "sample_referring_accounts": [
+          "presswhizz"
+        ],
+        "distinct_axes": []
+      },
+      "claims": {
+        "total": 0,
+        "supported": 0,
+        "refuted": 0,
+        "contested": 0,
+        "unverified": 0,
+        "resolved_count": 0
+      },
+      "structural_features": {
+        "has_search_paths": false,
+        "has_article_paths": false,
+        "has_doi_paths": false
+      },
+      "ratings": {
+        "provenance": {
+          "score": 0.45,
+          "basis": [
+            "unknown_domain_pattern"
+          ]
+        },
+        "breadth": {
+          "score": 0.08916666666666666,
+          "basis": [
+            "distinct_urls:1",
+            "distinct_axes:0",
+            "origin_types:1"
+          ]
+        },
+        "corroboration": {
+          "score": 0.19583333333333333,
+          "basis": [
+            "referring_accounts:1",
+            "origin_types:1"
+          ]
+        },
+        "track_record": {
+          "score": null,
+          "basis": [
+            "no_resolved_claims_observed"
+          ]
+        },
+        "overall": {
+          "score": 0.3472395833333333,
+          "confidence": 0.08135,
+          "method": "mechanical_v1",
+          "basis": [
+            "unknown_domain_pattern",
+            "distinct_urls:1",
+            "distinct_axes:0",
+            "origin_types:1",
+            "referring_accounts:1",
+            "origin_types:1",
+            "track_record_unavailable"
+          ]
+        }
+      }
+    },
+    {
       "domain": "alignmentforum.org",
       "entity": "Alignmentforum",
       "kind": "unknown",
@@ -96233,15 +96316,15 @@
       "domain": "researchgate.net",
       "entity": "Researchgate",
       "kind": "unknown",
-      "first_seen_at": null,
-      "last_seen_at": null,
+      "first_seen_at": "2026-09-21T10:05:59.240Z",
+      "last_seen_at": "2026-09-21T10:05:59.240Z",
       "discovery": {
         "distinct_urls": 1,
         "example_urls": [
           "https://www.researchgate.net/"
         ],
         "origin_counts": {
-          "reading_queue": 1
+          "reading_queue": 3
         },
         "distinct_referring_accounts": 0,
         "sample_referring_accounts": [],
@@ -100749,7 +100832,7 @@
       "entity": "Scholar Google",
       "kind": "unknown",
       "first_seen_at": "2026-04-16T14:42:46.427Z",
-      "last_seen_at": "2026-09-21T10:05:12.727Z",
+      "last_seen_at": "2026-09-21T08:06:35.769Z",
       "discovery": {
         "distinct_urls": 2,
         "example_urls": [
@@ -100757,8 +100840,7 @@
           "https://scholar.google.com/"
         ],
         "origin_counts": {
-          "reading_queue": 4,
-          "prefetch": 1
+          "reading_queue": 4
         },
         "distinct_referring_accounts": 1,
         "sample_referring_accounts": [
@@ -100788,18 +100870,18 @@
           ]
         },
         "breadth": {
-          "score": 0.17833333333333332,
+          "score": 0.11833333333333332,
           "basis": [
             "distinct_urls:2",
             "distinct_axes:0",
-            "origin_types:2"
+            "origin_types:1"
           ]
         },
         "corroboration": {
-          "score": 0.2833333333333333,
+          "score": 0.19583333333333333,
           "basis": [
             "referring_accounts:1",
-            "origin_types:2"
+            "origin_types:1"
           ]
         },
         "track_record": {
@@ -100823,17 +100905,17 @@
           ]
         },
         "overall": {
-          "score": 0.31994791666666667,
-          "confidence": 0.13045,
+          "score": 0.29861979166666663,
+          "confidence": 0.10997499999999999,
           "method": "mechanical_v1",
           "basis": [
             "unknown_domain_pattern",
             "search_results_seen",
             "distinct_urls:2",
             "distinct_axes:0",
-            "origin_types:2",
+            "origin_types:1",
             "referring_accounts:1",
-            "origin_types:2",
+            "origin_types:1",
             "track_record_unavailable"
           ]
         }

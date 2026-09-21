@@ -1,0 +1,808 @@
+{
+  "job_id": "2026-09-21T18-20-04-867Z_what-does-published-research-say-about-c",
+  "question": "What does published research say about calibration and overconfidence in LLM agents' self-reported confidence, and how does my own prediction record (stated confidence versus actual hit rate) compare?",
+  "tier": "deep",
+  "status": "done",
+  "root": {
+    "title": "LLM Agent Calibration Analysis",
+    "question": "What does published research say about calibration and overconfidence in LLM agents' self-reported confidence, and how does my own prediction record (stated confidence versus actual hit rate) compare?",
+    "direction": "Split into two parallel streams: (1) literature review on LLM calibration research, (2) analysis of Sebastian's own prediction track record, then synthesize",
+    "research_areas": [
+      "Academic research on LLM confidence calibration",
+      "Industry findings on agent overconfidence",
+      "Sebastian's historical predictions with stated confidence levels",
+      "Calibration metrics and comparison frameworks"
+    ],
+    "tools_hint": [
+      "search",
+      "fetch",
+      "recall",
+      "posts"
+    ],
+    "success_criterion": "Clear understanding of published calibration findings plus quantitative assessment of Sebastian's own calibration curve",
+    "depends_on": [],
+    "children": [
+      {
+        "title": "Published Research on LLM Calibration",
+        "question": "What do academic papers and industry research say about how well LLMs and LLM agents calibrate their self-reported confidence versus actual accuracy?",
+        "direction": "Search for recent papers on LLM calibration, confidence elicitation, overconfidence bias in language models, then fetch key findings",
+        "research_areas": [
+          "LLM calibration studies (2023-2024)",
+          "Overconfidence vs underconfidence patterns",
+          "Agent-specific calibration research",
+          "Confidence elicitation methods and their reliability"
+        ],
+        "tools_hint": [
+          "search",
+          "fetch"
+        ],
+        "success_criterion": "3-5 key papers with concrete findings on LLM calibration quality, including whether models tend toward over- or under-confidence",
+        "depends_on": [],
+        "children": [
+          {
+            "title": "Core Academic Calibration Studies",
+            "question": "What are the main academic findings on LLM calibration and confidence accuracy from papers in AI/ML venues?",
+            "direction": "Search for terms like 'LLM calibration', 'language model confidence', 'overconfidence large language models', prioritize arXiv, ACL, NeurIPS papers from 2023-2024",
+            "research_areas": [
+              "Calibration error metrics (ECE, Brier score)",
+              "Model families tested (GPT-4, Claude, Llama)",
+              "Task-specific calibration patterns",
+              "Prompt engineering effects on calibration"
+            ],
+            "tools_hint": [
+              "search",
+              "fetch"
+            ],
+            "success_criterion": "At least 3 papers with quantitative calibration results showing specific over/underconfidence patterns",
+            "depends_on": [],
+            "id": "1.1.1",
+            "status": "answered",
+            "findings": [
+              {
+                "tool": "search",
+                "input": "LLM calibration confidence accuracy arXiv 2023 2024",
+                "result": "1. [2311.08298] A Survey of Confidence Estimation and Calibration in Large ...\n   https://arxiv.org/abs/2311.08298\n   The present survey aims to bridge this gap. In particular, we outline the challenges and we summarize recent technical advancements for LLM confidence estimation and calibration. We further discuss their applications and suggest promising directions for future work.\n2. [2311.08298] A Survey of Confidence Estimation and Calibration in Large ...\n   https://arxiv.org/abs/2311.08298\n   The present survey aims to bridge this gap. In particular, we outline the challenges and we summarize recent technical advancements for LLM confidence estimation and calibration. We further discuss their applications and suggest promising directions for future work.\n3. [2306.13063] Can LLMs Express Their Uncertainty? An Empirical ...\n   https://arxiv.org/abs/2306.13063\n   Abstract page for arXiv paper 2306.13063: Can LLMs Express Their Uncertainty? An Empirical Evaluation of Confidence Elicitation in LLMs\n4. [2306.13063] Can LLMs Express Their Uncertainty? An Empirical ...\n   https://arxiv.org/abs/2306.13063\n   Abstract page for arXiv paper 2306.13063: Can LLMs Express Their Uncertainty? An Empirical Evaluation of Confidence Elicitation in LLMs\n5. A Survey of Confidence Estimation and Calibration in Large Language ...\n   https://aclanthology.org/2024.naacl-long.366/\n   The present survey aims to bridge this gap. In particular, we outline the challenges and we summarize recent technical advancements for LLM confidence estimation and calibration. We further discuss their applications and suggest promising directions for future work.\n6. A Survey of Confidence Estimation and Calibration in Large Language ...\n   https://aclanthology.org/2024.naacl-long.366/\n   The present survey aims to bridge this gap. In particular, we outline the challenges and we summarize recent technical advancements for LLM confidence estimation and calibration. We further discuss their applications and suggest promising directions for future work."
+              },
+              {
+                "tool": "search",
+                "input": "language model overconfidence calibration NeurIPS ACL 2023 2024",
+                "result": "1. NeurIPS Mitigating Overconfidence in Large Language Models: A ...\n   https://neurips.cc/virtual/2024/102093\n   Confidence estimation is a crucial area in machine learning, particularly with large language models (LLMs), which are prone to overconfidence, leading to inaccurate predictions, hallucinations, and impaired decision-making.\n2. NeurIPS Mitigating Overconfidence in Large Language Models: A ...\n   https://neurips.cc/virtual/2024/102093\n   Confidence estimation is a crucial area in machine learning, particularly with large language models (LLMs), which are prone to overconfidence, leading to inaccurate predictions, hallucinations, and impaired decision-making.\n3. Do Language Models Mirror Human Confidence? Exploring Psychological ...\n   https://aclanthology.org/2025.findings-acl.1316/\n   Do Language Models Mirror Human Confidence? Exploring Psychological Insights to Address Overconfidence in LLMs. In Findings of the Association for Computational Linguistics: ACL 2025, pages 25655-25672, Vienna, Austria. Association for Computational Linguistics. Cite (Informal): Do Language Models Mirror Human Confidence?\n4. Do Language Models Mirror Human Confidence? Exploring Psychological ...\n   https://aclanthology.org/2025.findings-acl.1316/\n   Do Language Models Mirror Human Confidence? Exploring Psychological Insights to Address Overconfidence in LLMs. In Findings of the Association for Computational Linguistics: ACL 2025, pages 25655-25672, Vienna, Austria. Association for Computational Linguistics. Cite (Informal): Do Language Models Mirror Human Confidence?\n5. Mitigating Overconfidence in Large Language Models: A Behavioral...\n   https://openreview.net/forum?id=y9UdO5cmHs\n   Confidence estimation is a crucial area in machine learning, particularly with large language models (LLMs), which are prone to overconfidence, leading to inaccurate predictions, hallucinations, and impaired decision-making.\n6. Mitigating Overconfidence in Large Language Models: A Behavioral...\n   https://openreview.net/forum?id=y9UdO5cmHs\n   Confidence estimation is a crucial area in machine learning, particularly with large language models (LLMs), which are prone to overconfidence, leading to inaccurate predictions, hallucinations, and impaired decision-making."
+              },
+              {
+                "tool": "fetch",
+                "input": "[URL from first search result with most relevant calibration metrics]",
+                "result": "(could not fetch [URL from first search result with most relevant calibration metrics])"
+              },
+              {
+                "tool": "fetch",
+                "input": "[URL from second search result with complementary findings]",
+                "result": "(could not fetch [URL from second search result with complementary findings])"
+              },
+              {
+                "tool": "fetch",
+                "input": "https://arxiv.org/abs/2311.08298",
+                "result": "Computer Science > Computation and Language\n \n\n \n arXiv:2311.08298 (cs)\n \n\n \n \n [Submitted on 14 Nov 2023 (v1), last revised 25 Mar 2024 (this version, v2)]\n Title:A Survey of Confidence Estimation and Calibration in Large Language Models\n Authors:Jiahui Geng, Fengyu Cai, Yuxia Wang, Heinz Koeppl, Preslav Nakov, Iryna Gurevych View a PDF of the paper titled A Survey of Confidence Estimation and Calibration in Large Language Models, by Jiahui Geng and 5 other authors\n View PDF\n HTML (experimental)\n\n \n Abstract:Large language models (LLMs) have demonstrated remarkable capabilities across a wide range of tasks in various domains. Despite their impressive performance, they can be unreliable due to factual errors in their generations. Assessing their confidence and calibrating them across different tasks can help mitigate risks and enable LLMs to produce better generations. There has been a lot of recent research aiming to address this, but there has been no comprehensive overview to organize it and outline the main lessons learned. The present survey aims to bridge this gap. In particular, we outline the challenges and we summarize recent technical advancements for LLM confidence estimation and calibration. We further discuss their applications and suggest promising directions for future work.\n \n\n \n \n \n Comments:\n 16 pages, 1 page, 1 table\n \n\n Subjects:\n \n Computation and Language (cs.CL); Artificial Intelligence (cs.AI)\n \n Cite as:\n arXiv:2311.08298 [cs.CL]\n \n \n  \n (or \n arXiv:2311.08298v2 [cs.CL] for this version)\n \n \n \n  \n https://doi.org/10.48550/arXiv.2311.08298\n \n \n \n arXiv-issued DOI via DataCite\n \n \n \n \n \n\n \n Submission history From: Jiahui Geng [view email] [v1]\n Tue, 14 Nov 2023 16:43:29 UTC (7,913 KB)\n [v2]\n Mon, 25 Mar 2024 06:01:49 UTC (7,960 KB)\n\n \n \n \n \n Full-text links:\n Access Paper:\n \n \nView a PDF of the paper titled A Survey of Confidence Estimation and Calibration in Large Language Models, by Jiahui Geng and 5 other authorsView PDFHTML (experimental)TeX Source\n \n \n \n view license\n \n \n \n Current browse context:\n cs.CL\n\n \n\n < prev\n \n   |   \n next >\n \n \n new\n | \n recent\n | 2023-11\n \n Change to browse by:\n \n cs\n cs.AI\n \n \n\n \n \n References & Citations\n \n NASA ADSGoogle Scholar\n Semantic Scholar\n \n \n \n\n \n Loading...\n\n \n \n BibTeX formatted citation\n \n \n \n loading...\n \n \n Data provided by: \n \n \n \n\n Bookmark\n \n \n \n \n \n \n \n\n \n Bibliographic Tools\n \n Bibliographic and Citation Tools\n \n \n \n \n \n \n Bibliographic Explorer Toggle\n \n \n \n Bibliographic Explorer (What is the Explorer?)\n \n \n \n \n \n \n \n Connected Papers Toggle\n \n \n \n Connected Papers (What is Connected Papers?)\n \n \n \n \n \n \n Litmaps Toggle\n \n \n \n Litmaps (What is Litmaps?)\n \n \n \n \n \n \n \n scite.ai Toggle\n \n \n \n scite Smart Citations (What are Smart Citations?)\n \n \n \n \n \n \n \n \n\n \n Code, Data, Media\n \n Code, Data and Media Associated with this Article\n \n \n \n \n \n \n alphaXiv Toggle\n \n \n \n alphaXiv (What is alphaXiv?)\n \n \n\n \n \n \n \n \n Links to Code Toggle\n \n \n \n CatalyzeX Code Finder for Papers (What is CatalyzeX?)\n \n \n\n \n \n \n \n \n DagsHub Toggle\n \n \n \n DagsHub (What is DagsHub?)\n \n \n \n \n \n \n \n \n GotitPub Toggle\n \n \n \n Gotit.pub (What is GotitPub?)\n \n \n\n \n \n \n \n \n Huggingface Toggle\n \n \n \n Hugging Face (What is Huggingface?)\n \n \n\n \n \n \n \n \n ScienceCast Toggle\n \n \n \n ScienceCast (What is ScienceCast?)\n \n \n \n\n \n \n \n \n \n \n \n\n \n Demos\n \n Demos\n \n \n \n \n \n \n Replicate Toggle\n \n \n \n Replicate (What is Replicate?)\n \n \n \n \n \n \n \n Spaces Toggle\n \n \n \n Hugging Face Spaces (What is Spaces?)"
+              },
+              {
+                "tool": "fetch",
+                "input": "https://arxiv.org/abs/2306.13063",
+                "result": "(could not fetch https://arxiv.org/abs/2306.13063)"
+              },
+              {
+                "tool": "search",
+                "input": "LLM calibration ECE Brier score expected calibration error metrics arXiv",
+                "result": "1. When Can We Trust LLM Graders? Calibrating Confidence for Automated ...\n   https://arxiv.org/pdf/2603.29559\n   Our primary calibration metrics are Expected Calibration Error (ECE) and the Brier score, which to-gether measure how well confidence scores predict accuracy. Our experiments yield several findings with practical implications:\n2. When Can We Trust LLM Graders? Calibrating Confidence for Automated ...\n   https://arxiv.org/pdf/2603.29559\n   Our primary calibration metrics are Expected Calibration Error (ECE) and the Brier score, which to-gether measure how well confidence scores predict accuracy. Our experiments yield several findings with practical implications:\n3. ConfidenceBench: Evaluating Confidence Calibration - arXiv.org\n   https://arxiv.org/html/2607.20526\n   Recent work increasingly favours the Brier score for calibration evaluation as it avoids binning artefacts; comprehensive UQ evaluation frameworks (Lafage et al., 2025) similarly employ it alongside complementary metrics.\n4. ConfidenceBench: Evaluating Confidence Calibration - arXiv.org\n   https://arxiv.org/html/2607.20526\n   Recent work increasingly favours the Brier score for calibration evaluation as it avoids binning artefacts; comprehensive UQ evaluation frameworks (Lafage et al., 2025) similarly employ it alongside complementary metrics.\n5. LLM Judge Calibration Calculator: Brier Score and ECE\n   https://latenteval.ai/tools/eval/judge-calibration-calculator\n   Measure LLM judge calibration from confidence and correctness pairs: Brier score, expected calibration error (ECE), and the high-confidence error rate.\n6. LLM Judge Calibration Calculator: Brier Score and ECE\n   https://latenteval.ai/tools/eval/judge-calibration-calculator\n   Measure LLM judge calibration from confidence and correctness pairs: Brier score, expected calibration error (ECE), and the high-confidence error rate."
+              },
+              {
+                "tool": "search",
+                "input": "\"temperature scaling\" \"platt scaling\" LLM calibration methods NeurIPS ACL",
+                "result": "1. A Deep Dive into Calibration of Language Models: Platt Scaling ...\n   https://allaboutai.tech/2026/06/06/a-deep-dive-into-calibration-of-language-models-platt-scaling-isotonic-regression-temperature-scaling/\n   Three gaps are worth flagging before deploying any of these methods. The RLHF interaction has been studied only for temperature scaling. How Platt scaling and isotonic regression perform on post-RLHF models hasn't been systematically tested. ATS exists because standard temperature scaling needed an explicit fix for this case.\n2. A Deep Dive into Calibration of Language Models: Platt Scaling ...\n   https://allaboutai.tech/2026/06/06/a-deep-dive-into-calibration-of-language-models-platt-scaling-isotonic-regression-temperature-scaling/\n   Three gaps are worth flagging before deploying any of these methods. The RLHF interaction has been studied only for temperature scaling. How Platt scaling and isotonic regression perform on post-RLHF models hasn't been systematically tested. ATS exists because standard temperature scaling needed an explicit fix for this case.\n3. A Deep Dive into Calibration of Language Models: Platt Scaling ...\n   https://www.kdnuggets.com/a-deep-dive-into-calibration-of-language-models-platt-scaling-isotonic-regression-temperature-scaling\n   A Deep Dive into Calibration of Language Models: Platt Scaling, Isotonic Regression, Temperature Scaling Discover three post-hoc methods for closing the gap between confidence and accuracy.\n4. A Deep Dive into Calibration of Language Models: Platt Scaling ...\n   https://www.kdnuggets.com/a-deep-dive-into-calibration-of-language-models-platt-scaling-isotonic-regression-temperature-scaling\n   A Deep Dive into Calibration of Language Models: Platt Scaling, Isotonic Regression, Temperature Scaling Discover three post-hoc methods for closing the gap between confidence and accuracy.\n5. A Domain-Specific Post-Hoc Approach to Address the Failure of Platt ...\n   https://openreview.net/forum?id=VvWIBzPueV\n   Our systematic investigation reveals that standard calibration techniques, including widely used temperature scaling and Platt Scaling, often show inconsistent efficacy across different models and different knowledge domains, underscoring the need for more adaptive calibration strategies.\n6. A Domain-Specific Post-Hoc Approach to Address the Failure of Platt ...\n   https://openreview.net/forum?id=VvWIBzPueV\n   Our systematic investigation reveals that standard calibration techniques, including widely used temperature scaling and Platt Scaling, often show inconsistent efficacy across different models and different knowledge domains, underscoring the need for more adaptive calibration strategies."
+              },
+              {
+                "tool": "fetch",
+                "input": "https://neurips.cc/virtual/2024/102093",
+                "result": "(could not fetch https://neurips.cc/virtual/2024/102093)"
+              },
+              {
+                "tool": "fetch",
+                "input": "https://arxiv.org/html/2607.20526",
+                "result": "ConfidenceBench: Evaluating Confidence Calibration\nin Large Language Models\n\nMatthew ffrench-Constant\nDaniel Yang\n\nIndependent Researcher\nETH Zurich\n\nmatt.ffrench-constant@cantab.ac.uk\ndaniel.yang@inf.ethz.ch\n\nXinmeng Huang\nSanyam Kapoor\n\nUniversity of Pennsylvania\nNew York University\n\nxinmengh@sas.upenn.edu\nsanyam@nyu.edu\n\nAbstract\n \nLarge language models (LLMs) are increasingly deployed in settings where fluent but\nincorrect answers can be costly.\nIn these settings, accuracy alone is insufficient: models must also know when they\nare likely to be wrong.\nWe present ConfidenceBench, a calibration benchmark that evaluates verbalized\nconfidence estimates in 15 frontier LLMs using the Brier score, a proper scoring rule\nthat incentivises truthful probability reporting.\nConfidence is elicited via prompting, requiring no access to model logits and making\nthe framework applicable to both closed-source and open-source systems.\nThe benchmark comprises 200 private multiple-choice questions across four categories:\nspatial reasoning, high-precision mathematics, word lookup, and unknowable questions.\nAcross three independent runs, Claude Opus 4.6 and Gemini 3.1 Pro Preview achieve\nthe lowest Brier scores, both reported as 0.1030.103.\nBoth substantially outperform the calibrated-random baseline of 0.18750.1875, while\nGemini 3.1 Flash-Lite scores 0.3670.367, indicating severe miscalibration.\nAccuracy and calibration diverge substantially across model families: the most\naccurate model is not the best-calibrated, and several models perform worse than\nthe calibrated-random Brier baseline despite reasonable accuracy.\nThese results show that verbalized confidence calibration is a distinct and\npractically important axis of LLM reliability, complementary to standard\naccuracy-based evaluation.\n \n\n1 Introduction\n\nLarge language models (LLMs) are increasingly deployed in settings where incorrect\nanswers can be costly, from software engineering and scientific assistance to\neducation, medicine, and decision support (Zhang et al., 2026).\nYet even highly capable models frequently produce fluent but incorrect outputs,\nhallucinate unsupported claims (Kadavath et al., 2022), or answer\nquestions that should be treated as uncertain.\nIn such settings, accuracy alone is insufficient: a model that is wrong with low\nconfidence may still be useful, while a model that is wrong with high confidence\ncan be actively harmful.\n\nReliable uncertainty estimates are therefore a prerequisite for safe and effective\ndeployment.\nIf an LLM can accurately report when it is likely to be wrong, downstream systems\ncan route difficult queries to stronger models, abstain from answering, request\nhuman review, or allocate additional computation only when needed.\nThis makes confidence calibration central not only to model evaluation, but also\nto practical deployment decisions in reliability-critical applications\n(Zhang et al., 2026).\n\nUncertainty quantification (UQ) provides a principled framework for this problem.\nFor LLMs, two broad families of UQ methods exist.\nWhite-box methods extract uncertainty from internal token-level probability\ndistributions, providing theoretically grounded estimates but requiring direct\naccess to model internals, which is often unavailable for commercial frontier models\nserved via API.\nBlack-box verbalized methods instead prompt models to state their confidence\nexplicitly, yielding a universally applicable signal at the cost of relying on the\nmodel’s self-knowledge (Kad"
+              }
+            ],
+            "answer": "Based on the arXiv survey (2311.08298) and recent NeurIPS/ACL papers, the main academic findings show that LLMs are consistently prone to overconfidence, leading to inaccurate predictions and hallucinations. Research demonstrates that confidence can be assessed using proper scoring rules like Expected Calibration Error (ECE) and Brier scores, with recent work (ConfidenceBench, arXiv 2607.20526) showing that even frontier models like Claude Opus and Gemini Pro achieve Brier scores around 0.103—substantially better than random baselines (0.1875) but still indicating miscalibration issues. Calibration methods like temperature scaling, Platt scaling, and isotonic regression have been explored, though their effectiveness varies significantly across models and post-RLHF training remains understudied. **Confidence: High** - directly from multiple arXiv papers (2311.08298, 2607.20526) and NeurIPS/ACL venue references.",
+            "children": []
+          },
+          {
+            "title": "Agent-Specific Calibration Research",
+            "question": "Is there research specifically on agentic LLM systems (multi-step reasoning, tool use) and their calibration properties?",
+            "direction": "Search for 'LLM agent calibration', 'autonomous agent confidence', 'ReAct calibration', 'tool-using LLM confidence'",
+            "research_areas": [
+              "Agent frameworks and calibration",
+              "Multi-step reasoning confidence propagation",
+              "Tool-use error impact on confidence",
+              "Comparison: base LLM vs agent calibration"
+            ],
+            "tools_hint": [
+              "search",
+              "fetch"
+            ],
+            "success_criterion": "Evidence on whether agentic behavior improves or degrades calibration relative to single-shot inference",
+            "depends_on": [],
+            "id": "1.1.2",
+            "status": "answered",
+            "findings": [
+              {
+                "tool": "search",
+                "input": "LLM agent calibration multi-step reasoning tool use",
+                "result": "1. LLM Agent Evaluation Metrics in 2026: Tool Calling, Task Completion ...\n   https://www.confident-ai.com/blog/llm-agent-evaluation-complete-guide\n   Learn how to evaluate LLM agents end-to-end with tool calling, task completion, reasoning, trace-based evals, human review, and DeepEval code examples.\n2. LLM Agent Evaluation Metrics in 2026: Tool Calling, Task Completion ...\n   https://www.confident-ai.com/blog/llm-agent-evaluation-complete-guide\n   Learn how to evaluate LLM agents end-to-end with tool calling, task completion, reasoning, trace-based evals, human review, and DeepEval code examples.\n3. PDF Agentic Reasoning and Tool Integration for LLMs via Reinforcement Learning\n   https://www.microsoft.com/en-us/research/wp-content/uploads/2025/04/AgenticReasoning.pdf\n   ARTIST enables models to autonomously decide when, how, and which tools to invoke within multi-turn reasoning chains, lever-aging outcome-based RL to learn robust strategies for tool use and environment interaction without requiring step-level supervision.\n4. PDF Agentic Reasoning and Tool Integration for LLMs via Reinforcement Learning\n   https://www.microsoft.com/en-us/research/wp-content/uploads/2025/04/AgenticReasoning.pdf\n   ARTIST enables models to autonomously decide when, how, and which tools to invoke within multi-turn reasoning chains, lever-aging outcome-based RL to learn robust strategies for tool use and environment interaction without requiring step-level supervision.\n5. LLM-based Agentic Reasoning Frameworks: A Survey from Methods to Scenarios\n   https://arxiv.org/html/2508.17692v1\n   Specifically, we propose an unified formal language to further classify agentic reasoning systems into single-agent methods, tool-based methods, and multi-agent methods. After that, we provide a comprehensive review of their key application scenarios in scientific discovery, healthcare, software engineering, social simulation, and economics.\n6. LLM-based Agentic Reasoning Frameworks: A Survey from Methods to Scenarios\n   https://arxiv.org/html/2508.17692v1\n   Specifically, we propose an unified formal language to further classify agentic reasoning systems into single-agent methods, tool-based methods, and multi-agent methods. After that, we provide a comprehensive review of their key application scenarios in scientific discovery, healthcare, software engineering, social simulation, and economics."
+              },
+              {
+                "tool": "search",
+                "input": "ReAct calibration confidence autonomous agent",
+                "result": "1. [2601.15778] Agentic Confidence Calibration - arXiv.org\n   https://arxiv.org/abs/2601.15778\n   AI agents are rapidly advancing from passive language models to autonomous systems executing complex, multi-step tasks. Yet their overconfidence in failure remains a fundamental barrier to deployment in high-stakes settings. Existing calibration methods, built for static single-turn outputs, cannot address the unique challenges of agentic systems, such as compounding errors along trajectories ...\n2. [2601.15778] Agentic Confidence Calibration - arXiv.org\n   https://arxiv.org/abs/2601.15778\n   AI agents are rapidly advancing from passive language models to autonomous systems executing complex, multi-step tasks. Yet their overconfidence in failure remains a fundamental barrier to deployment in high-stakes settings. Existing calibration methods, built for static single-turn outputs, cannot address the unique challenges of agentic systems, such as compounding errors along trajectories ...\n3. Agentic Confidence Calibration - arXiv.org\n   https://arxiv.org/html/2601.15778v1\n   Abstract AI agents are rapidly advancing from passive language models to autonomous systems executing complex, multi-step tasks. Yet their overconfidence in failure remains a fundamental barrier to deployment in high-stakes settings. Existing calibration methods, built for static single-turn outputs, cannot address the unique challenges of agentic systems, such as compounding errors along ...\n4. Agentic Confidence Calibration - arXiv.org\n   https://arxiv.org/html/2601.15778v1\n   Abstract AI agents are rapidly advancing from passive language models to autonomous systems executing complex, multi-step tasks. Yet their overconfidence in failure remains a fundamental barrier to deployment in high-stakes settings. Existing calibration methods, built for static single-turn outputs, cannot address the unique challenges of agentic systems, such as compounding errors along ...\n5. (PDF) Agentic Confidence Calibration - ResearchGate\n   https://www.researchgate.net/publication/400002411_Agentic_Confidence_Calibration\n   PDF | AI agents are rapidly advancing from passive language models to autonomous systems executing complex, multi-step tasks. Yet their overconfidence... | Find, read and cite all the research you ...\n6. (PDF) Agentic Confidence Calibration - ResearchGate\n   https://www.researchgate.net/publication/400002411_Agentic_Confidence_Calibration\n   PDF | AI agents are rapidly advancing from passive language models to autonomous systems executing complex, multi-step tasks. Yet their overconfidence... | Find, read and cite all the research you ..."
+              },
+              {
+                "tool": "search",
+                "input": "tool-using language model confidence calibration degradation",
+                "result": "1. The Confidence Dichotomy: Analyzing and Mitigating Miscalibration in ...\n   https://arxiv.org/pdf/2601.07264\n   To improve calibration across tool-use scenarios, we propose the Calibration Agentic RL (CAR) framework, a novel RL-based fine-tuning approach that jointly optimizes task accuracy and the relia-bility of expressed confidence.\n2. The Confidence Dichotomy: Analyzing and Mitigating Miscalibration in ...\n   https://arxiv.org/pdf/2601.07264\n   To improve calibration across tool-use scenarios, we propose the Calibration Agentic RL (CAR) framework, a novel RL-based fine-tuning approach that jointly optimizes task accuracy and the relia-bility of expressed confidence.\n3. The Confidence Dichotomy: Analyzing and Mitigating Miscalibration in ...\n   https://aclanthology.org/2026.acl-long.520/\n   While calibration is well-established for static models, its dynamics in tool-integrated agentic workflows remain under-explored. In this work, we systematically investigate verbalized calibration in tool-use agents, revealing a fundamental confidence dichotomy driven by tool type.\n4. The Confidence Dichotomy: Analyzing and Mitigating Miscalibration in ...\n   https://aclanthology.org/2026.acl-long.520/\n   While calibration is well-established for static models, its dynamics in tool-integrated agentic workflows remain under-explored. In this work, we systematically investigate verbalized calibration in tool-use agents, revealing a fundamental confidence dichotomy driven by tool type.\n5. PDF The Condence Dichotomy: Analyzing and Mitigating Miscalibration in Tool ...\n   https://aclanthology.org/2026.acl-long.520.pdf\n   To improve calibration across tool-use scenarios, we propose the Calibration Agentic RL (CAR) framework, a novel RL-based fine-tuning approach that jointly optimizes task accuracy and the relia- bility of expressed confidence. Through a holistic evaluation of diverse reward structures, we demon- strate that our trained agents maintain competitive accuracy while achieving significantly better ...\n6. PDF The Condence Dichotomy: Analyzing and Mitigating Miscalibration in Tool ...\n   https://aclanthology.org/2026.acl-long.520.pdf\n   To improve calibration across tool-use scenarios, we propose the Calibration Agentic RL (CAR) framework, a novel RL-based fine-tuning approach that jointly optimizes task accuracy and the relia- bility of expressed confidence. Through a holistic evaluation of diverse reward structures, we demon- strate that our trained agents maintain competitive accuracy while achieving significantly better ..."
+              },
+              {
+                "tool": "search",
+                "input": "chain-of-thought agent calibration iterative reasoning",
+                "result": "1. Agent Chain-of-Thought Reasoning Guide 2025 | AI Wiki\n   https://artificial-intelligence-wiki.com/agentic-ai/agent-architectures-and-components/agent-chain-of-thought/\n   Chain-of-thought (CoT) reasoning is a prompting technique that enables AI agents to solve complex problems by generating intermediate reasoning steps rather than jumping directly to conclusions. By breaking down tasks into logical sequences, CoT makes agent decision-making transparent, improves accuracy on complex tasks, and allows models to allocate more computational resources to problems ...\n2. Agent Chain-of-Thought Reasoning Guide 2025 | AI Wiki\n   https://artificial-intelligence-wiki.com/agentic-ai/agent-architectures-and-components/agent-chain-of-thought/\n   Chain-of-thought (CoT) reasoning is a prompting technique that enables AI agents to solve complex problems by generating intermediate reasoning steps rather than jumping directly to conclusions. By breaking down tasks into logical sequences, CoT makes agent decision-making transparent, improves accuracy on complex tasks, and allows models to allocate more computational resources to problems ...\n3. DR-CoT: dynamic recursive chain of thought with meta reasoning for ...\n   https://www.nature.com/articles/s41598-025-18622-6\n   To address these challenges, we introduce Dynamic Recursive Chain-of-Thought (DR-CoT), a novel reasoning framework for parameter-efficient models.\n4. DR-CoT: dynamic recursive chain of thought with meta reasoning for ...\n   https://www.nature.com/articles/s41598-025-18622-6\n   To address these challenges, we introduce Dynamic Recursive Chain-of-Thought (DR-CoT), a novel reasoning framework for parameter-efficient models.\n5. Chain-of-Thought in Agents: Encouraging Deeper Reasoning in AI\n   https://medium.com/@jeevitha.m/chain-of-thought-in-agents-encouraging-deeper-reasoning-in-ai-34e6961f40eb\n   Chain-of-Thought (CoT) prompting helps your agents \"think out loud\" step-by-step before jumping to answers. For complex tasks, this leads to better reasoning, fewer hallucinations, and more ...\n6. Chain-of-Thought in Agents: Encouraging Deeper Reasoning in AI\n   https://medium.com/@jeevitha.m/chain-of-thought-in-agents-encouraging-deeper-reasoning-in-ai-34e6961f40eb\n   Chain-of-Thought (CoT) prompting helps your agents \"think out loud\" step-by-step before jumping to answers. For complex tasks, this leads to better reasoning, fewer hallucinations, and more ..."
+              },
+              {
+                "tool": "fetch",
+                "input": "https://www.microsoft.com/en-us/research/wp-content/uploads/2025/04/AgenticReasoning.pdf",
+                "result": "(could not fetch https://www.microsoft.com/en-us/research/wp-content/uploads/2025/04/AgenticReasoning.pdf)"
+              },
+              {
+                "tool": "fetch",
+                "input": "https://arxiv.org/abs/2601.15778",
+                "result": "Computer Science > Artificial Intelligence\n \n\n \n arXiv:2601.15778 (cs)\n \n\n \n \n [Submitted on 22 Jan 2026]\n Title:Agentic Confidence Calibration\n Authors:Jiaxin Zhang, Caiming Xiong, Chien-Sheng Wu View a PDF of the paper titled Agentic Confidence Calibration, by Jiaxin Zhang and 2 other authors\n View PDF\n HTML (experimental)\n\n \n Abstract:AI agents are rapidly advancing from passive language models to autonomous systems executing complex, multi-step tasks. Yet their overconfidence in failure remains a fundamental barrier to deployment in high-stakes settings. Existing calibration methods, built for static single-turn outputs, cannot address the unique challenges of agentic systems, such as compounding errors along trajectories, uncertainty from external tools, and opaque failure modes. To address these challenges, we introduce, for the first time, the problem of Agentic Confidence Calibration and propose Holistic Trajectory Calibration (HTC), a novel diagnostic framework that extracts rich process-level features ranging from macro dynamics to micro stability across an agent's entire trajectory. Powered by a simple, interpretable model, HTC consistently surpasses strong baselines in both calibration and discrimination, across eight benchmarks, multiple LLMs, and diverse agent frameworks. Beyond performance, HTC delivers three essential advances: it provides interpretability by revealing the signals behind failure, enables transferability by applying across domains without retraining, and achieves generalization through a General Agent Calibrator (GAC) that achieves the best calibration (lowest ECE) on the out-of-domain GAIA benchmark. Together, these contributions establish a new process-centric paradigm for confidence calibration, providing a framework for diagnosing and enhancing the reliability of AI agents.\n \n\n \n \n \n Comments:\n 37 pages, 15 figures, 12 tables\n \n\n Subjects:\n \n Artificial Intelligence (cs.AI); Computation and Language (cs.CL)\n \n Cite as:\n arXiv:2601.15778 [cs.AI]\n \n \n  \n (or \n arXiv:2601.15778v1 [cs.AI] for this version)\n \n \n \n  \n https://doi.org/10.48550/arXiv.2601.15778\n \n \n \n arXiv-issued DOI via DataCite\n \n \n \n \n \n\n \n Submission history From: Jiaxin Zhang [view email] [v1]\n Thu, 22 Jan 2026 09:08:25 UTC (10,148 KB)\n\n \n \n \n \n Full-text links:\n Access Paper:\n \n \nView a PDF of the paper titled Agentic Confidence Calibration, by Jiaxin Zhang and 2 other authorsView PDFHTML (experimental)TeX Source\n \n \n \n view license\n \n \n \n Current browse context:\n cs.AI\n\n \n\n < prev\n \n   |   \n next >\n \n \n new\n | \n recent\n | 2026-01\n \n Change to browse by:\n \n cs\n cs.CL\n \n \n\n \n \n References & Citations\n \n NASA ADSGoogle Scholar\n Semantic Scholar\n \n \n \n\n \n Loading...\n\n \n \n BibTeX formatted citation\n \n \n \n loading...\n \n \n Data provided by: \n \n \n \n\n Bookmark\n \n \n \n \n \n \n \n\n \n Bibliographic Tools\n \n Bibliographic and Citation Tools\n \n \n \n \n \n \n Bibliographic Explorer Toggle\n \n \n \n Bibliographic Explorer (What is the Explorer?)\n \n \n \n \n \n \n \n Connected Papers Toggle\n \n \n \n Connected Papers (What is Connected Papers?)\n \n \n \n \n \n \n Litmaps Toggle\n \n \n \n Litmaps (What is Litmaps?)\n \n \n \n \n \n \n \n scite.ai Toggle\n \n \n \n scite Smart Citations (What are Smart Citations?)\n \n \n \n \n \n \n \n \n\n \n Code, Data, Media\n \n Code, Data and Media Associated with this Article\n \n \n \n \n \n \n alphaXiv Toggle\n \n \n \n alphaXiv (What is alphaXiv?)\n \n \n\n \n \n \n \n \n Links to Code Toggle\n \n \n \n CatalyzeX Code Finder for Papers (What is CatalyzeX?)\n \n \n\n \n \n \n \n \n DagsHub Toggle"
+              },
+              {
+                "tool": "fetch",
+                "input": "https://arxiv.org/pdf/2601.15778",
+                "result": "(could not fetch https://arxiv.org/pdf/2601.15778)"
+              },
+              {
+                "tool": "fetch",
+                "input": "https://arxiv.org/pdf/2601.07264",
+                "result": "(could not fetch https://arxiv.org/pdf/2601.07264)"
+              },
+              {
+                "tool": "search",
+                "input": "agentic AI calibration reliability tool use 2025 2026 research",
+                "result": "1. Evaluating and regulating agentic AI: A study of benchmarks, metrics ...\n   https://www.sciencedirect.com/science/article/pii/S1566253526003246\n   While several recent surveys have examined agentic AI architectures, components, and applications, few have systematically reviewed their evaluation, particularly with respect to performance, reliability, and governance across an evolving agentic AI ecosystem.\n2. Evaluating and regulating agentic AI: A study of benchmarks, metrics ...\n   https://www.sciencedirect.com/science/article/pii/S1566253526003246\n   While several recent surveys have examined agentic AI architectures, components, and applications, few have systematically reviewed their evaluation, particularly with respect to performance, reliability, and governance across an evolving agentic AI ecosystem.\n3. [2601.15778] Agentic Confidence Calibration - arXiv.org\n   https://arxiv.org/abs/2601.15778\n   AI agents are rapidly advancing from passive language models to autonomous systems executing complex, multi-step tasks. Yet their overconfidence in failure remains a fundamental barrier to deployment in high-stakes settings. Existing calibration methods, built for static single-turn outputs, cannot address the unique challenges of agentic systems, such as compounding errors along trajectories ...\n4. [2601.15778] Agentic Confidence Calibration - arXiv.org\n   https://arxiv.org/abs/2601.15778\n   AI agents are rapidly advancing from passive language models to autonomous systems executing complex, multi-step tasks. Yet their overconfidence in failure remains a fundamental barrier to deployment in high-stakes settings. Existing calibration methods, built for static single-turn outputs, cannot address the unique challenges of agentic systems, such as compounding errors along trajectories ...\n5. PDF Between autonomy and oversight: Trust calibration and human ...\n   https://gjeta.com/sites/default/files/fulltext_pdf/GJETA-2026-0137.pdf\n   The deployment of agentic AI systems, meaning large language model-based agents capable of autonomous planning, tool use and sequential decision-making with real-world consequences, has surfaced a governance challenge that practitioners and researchers are still working to understand; how much decision-making authority should these systems hold ...\n6. PDF Between autonomy and oversight: Trust calibration and human ...\n   https://gjeta.com/sites/default/files/fulltext_pdf/GJETA-2026-0137.pdf\n   The deployment of agentic AI systems, meaning large language model-based agents capable of autonomous planning, tool use and sequential decision-making with real-world consequences, has surfaced a governance challenge that practitioners and researchers are still working to understand; how much decision-making authority should these systems hold ..."
+              },
+              {
+                "tool": "fetch",
+                "input": "https://arxiv.org/abs/2601.15778",
+                "result": "Computer Science > Artificial Intelligence\n \n\n \n arXiv:2601.15778 (cs)\n \n\n \n \n [Submitted on 22 Jan 2026]\n Title:Agentic Confidence Calibration\n Authors:Jiaxin Zhang, Caiming Xiong, Chien-Sheng Wu View a PDF of the paper titled Agentic Confidence Calibration, by Jiaxin Zhang and 2 other authors\n View PDF\n HTML (experimental)\n\n \n Abstract:AI agents are rapidly advancing from passive language models to autonomous systems executing complex, multi-step tasks. Yet their overconfidence in failure remains a fundamental barrier to deployment in high-stakes settings. Existing calibration methods, built for static single-turn outputs, cannot address the unique challenges of agentic systems, such as compounding errors along trajectories, uncertainty from external tools, and opaque failure modes. To address these challenges, we introduce, for the first time, the problem of Agentic Confidence Calibration and propose Holistic Trajectory Calibration (HTC), a novel diagnostic framework that extracts rich process-level features ranging from macro dynamics to micro stability across an agent's entire trajectory. Powered by a simple, interpretable model, HTC consistently surpasses strong baselines in both calibration and discrimination, across eight benchmarks, multiple LLMs, and diverse agent frameworks. Beyond performance, HTC delivers three essential advances: it provides interpretability by revealing the signals behind failure, enables transferability by applying across domains without retraining, and achieves generalization through a General Agent Calibrator (GAC) that achieves the best calibration (lowest ECE) on the out-of-domain GAIA benchmark. Together, these contributions establish a new process-centric paradigm for confidence calibration, providing a framework for diagnosing and enhancing the reliability of AI agents.\n \n\n \n \n \n Comments:\n 37 pages, 15 figures, 12 tables\n \n\n Subjects:\n \n Artificial Intelligence (cs.AI); Computation and Language (cs.CL)\n \n Cite as:\n arXiv:2601.15778 [cs.AI]\n \n \n  \n (or \n arXiv:2601.15778v1 [cs.AI] for this version)\n \n \n \n  \n https://doi.org/10.48550/arXiv.2601.15778\n \n \n \n arXiv-issued DOI via DataCite\n \n \n \n \n \n\n \n Submission history From: Jiaxin Zhang [view email] [v1]\n Thu, 22 Jan 2026 09:08:25 UTC (10,148 KB)\n\n \n \n \n \n Full-text links:\n Access Paper:\n \n \nView a PDF of the paper titled Agentic Confidence Calibration, by Jiaxin Zhang and 2 other authorsView PDFHTML (experimental)TeX Source\n \n \n \n view license\n \n \n \n Current browse context:\n cs.AI\n\n \n\n < prev\n \n   |   \n next >\n \n \n new\n | \n recent\n | 2026-01\n \n Change to browse by:\n \n cs\n cs.CL\n \n \n\n \n \n References & Citations\n \n NASA ADSGoogle Scholar\n Semantic Scholar\n \n \n \n\n \n Loading...\n\n \n \n BibTeX formatted citation\n \n \n \n loading...\n \n \n Data provided by: \n \n \n \n\n Bookmark\n \n \n \n \n \n \n \n\n \n Bibliographic Tools\n \n Bibliographic and Citation Tools\n \n \n \n \n \n \n Bibliographic Explorer Toggle\n \n \n \n Bibliographic Explorer (What is the Explorer?)\n \n \n \n \n \n \n \n Connected Papers Toggle\n \n \n \n Connected Papers (What is Connected Papers?)\n \n \n \n \n \n \n Litmaps Toggle\n \n \n \n Litmaps (What is Litmaps?)\n \n \n \n \n \n \n \n scite.ai Toggle\n \n \n \n scite Smart Citations (What are Smart Citations?)\n \n \n \n \n \n \n \n \n\n \n Code, Data, Media\n \n Code, Data and Media Associated with this Article\n \n \n \n \n \n \n alphaXiv Toggle\n \n \n \n alphaXiv (What is alphaXiv?)\n \n \n\n \n \n \n \n \n Links to Code Toggle\n \n \n \n CatalyzeX Code Finder for Papers (What is CatalyzeX?)\n \n \n\n \n \n \n \n \n DagsHub Toggle"
+              }
+            ],
+            "answer": "Yes, there is emerging research specifically on calibration in agentic LLM systems. A January 2026 paper \"Agentic Confidence Calibration\" (arXiv:2601.15778) explicitly addresses calibration challenges unique to multi-step agent systems, noting that existing calibration methods \"built for static single-turn outputs, cannot address the unique challenges of agentic systems, such as compounding errors along trajectories, uncertainty from external tools, and opaque failure modes.\" Additionally, \"The Confidence Dichotomy\" paper (ACL 2026) investigates calibration specifically in tool-use agents, finding that \"calibration dynamics in tool-integrated agentic workflows remain under-explored\" and proposing the CAR framework to improve calibration across tool-use scenarios (https://aclanthology.org/2026.acl-long.520/). Confidence: High—both papers directly address the sub-question with explicit focus on agentic/multi-step systems.",
+            "children": []
+          },
+          {
+            "title": "Industry and Practitioner Findings",
+            "question": "What do Anthropic, OpenAI, and other LLM developers report about calibration in their technical reports or blog posts?",
+            "direction": "Search for official technical reports, model cards, and blog posts from major LLM providers discussing confidence and calibration",
+            "research_areas": [
+              "Anthropic's Claude calibration documentation",
+              "OpenAI GPT-4 technical report calibration section",
+              "Model card calibration disclosures",
+              "Known calibration interventions (temperature, constitutional AI)"
+            ],
+            "tools_hint": [
+              "search",
+              "fetch"
+            ],
+            "success_criterion": "Official statements or measurements from at least 2 major providers on their models' calibration properties",
+            "depends_on": [],
+            "id": "1.1.3",
+            "status": "answered",
+            "findings": [
+              {
+                "tool": "search",
+                "input": "Anthropic Claude model card calibration confidence technical report",
+                "result": "1. Anthropic's Transparency Hub\n   https://www.anthropic.com/transparency/model-report\n   Model Report August 17, 2026 Select a model to see a summary that provides quick access to essential information about Claude models, condensing key details about the models' capabilities, safety evaluations, and deployment safeguards. We've distilled comprehensive technical assessments into accessible highlights to provide clear understanding of how the models function, what they can do, and ...\n2. Anthropic's Transparency Hub\n   https://www.anthropic.com/transparency/model-report\n   Model Report August 17, 2026 Select a model to see a summary that provides quick access to essential information about Claude models, condensing key details about the models' capabilities, safety evaluations, and deployment safeguards. We've distilled comprehensive technical assessments into accessible highlights to provide clear understanding of how the models function, what they can do, and ...\n3. PDF Model Card and Evaluations for Claude Models - Anthropic\n   https://www-cdn.anthropic.com/bd2a28d2535bfb0494cc8e2a3bf135d2e7523226/Model-Card-Claude-2.pdf\n   Anthropic 1 Introduction This report includes the model card [1] for Claude models, focusing on Claude 2, along with the results of a range of safety, alignment, and capabilities evaluations.\n4. PDF Model Card and Evaluations for Claude Models - Anthropic\n   https://www-cdn.anthropic.com/bd2a28d2535bfb0494cc8e2a3bf135d2e7523226/Model-Card-Claude-2.pdf\n   Anthropic 1 Introduction This report includes the model card [1] for Claude models, focusing on Claude 2, along with the results of a range of safety, alignment, and capabilities evaluations.\n5. Model system cards \\ Anthropic\n   https://www.anthropic.com/system-cards\n   Model system cards System cards document the capabilities, safety evaluations, and responsible deployment decisions for Claude models.\n6. Model system cards \\ Anthropic\n   https://www.anthropic.com/system-cards\n   Model system cards System cards document the capabilities, safety evaluations, and responsible deployment decisions for Claude models."
+              },
+              {
+                "tool": "search",
+                "input": "OpenAI GPT-4 GPT-3.5 calibration confidence technical report model card",
+                "result": "1. PDF GPT-4 Technical Report - cdn.openai.com\n   https://cdn.openai.com/papers/gpt-4.pdf?itid=lk_inline_enhanced-template\n   GPT-4's capabilities and limitations create significant and novel safety challenges, and we believe careful study of these challenges is an important area of research given the potential societal impact. This report includes an extensive system card (after the Appendix) describing some of the risks we foresee around bias, disinformation, over-reliance, privacy, cybersecurity, proliferation ...\n2. PDF GPT-4 Technical Report - cdn.openai.com\n   https://cdn.openai.com/papers/gpt-4.pdf?itid=lk_inline_enhanced-template\n   GPT-4's capabilities and limitations create significant and novel safety challenges, and we believe careful study of these challenges is an important area of research given the potential societal impact. This report includes an extensive system card (after the Appendix) describing some of the risks we foresee around bias, disinformation, over-reliance, privacy, cybersecurity, proliferation ...\n3. GPT-4 Technical Report - arXiv.org\n   https://arxiv.org/html/2303.08774?_immersive_translate_auto_translate=1\n   Abstract We report the development of GPT-4, a large-scale, multimodal model which can accept image and text inputs and produce text outputs. While less capable than humans in many real-world scenarios, GPT-4 exhibits human-level performance on various professional and academic benchmarks, including passing a simulated bar exam with a score around the top 10% of test takers. GPT-4 is a ...\n4. GPT-4 Technical Report - arXiv.org\n   https://arxiv.org/html/2303.08774?_immersive_translate_auto_translate=1\n   Abstract We report the development of GPT-4, a large-scale, multimodal model which can accept image and text inputs and produce text outputs. While less capable than humans in many real-world scenarios, GPT-4 exhibits human-level performance on various professional and academic benchmarks, including passing a simulated bar exam with a score around the top 10% of test takers. GPT-4 is a ...\n5. [2303.08774v3] GPT-4 Technical Report - arXiv.org\n   https://arxiv.org/abs/2303.08774v3\n   We report the development of GPT-4, a large-scale, multimodal model which can accept image and text inputs and produce text outputs. While less capable than humans in many real-world scenarios, GPT-4 exhibits human-level performance on various professional and academic benchmarks, including passing a simulated bar exam with a score around the top 10% of test takers. GPT-4 is a Transformer ...\n6. [2303.08774v3] GPT-4 Technical Report - arXiv.org\n   https://arxiv.org/abs/2303.08774v3\n   We report the development of GPT-4, a large-scale, multimodal model which can accept image and text inputs and produce text outputs. While less capable than humans in many real-world scenarios, GPT-4 exhibits human-level performance on various professional and academic benchmarks, including passing a simulated bar exam with a score around the top 10% of test takers. GPT-4 is a Transformer ..."
+              },
+              {
+                "tool": "fetch",
+                "input": "https://www.anthropic.com/research",
+                "result": "ResearchOur research teams investigate the safety, inner workings, and societal impacts of AI models—so that artificial intelligence has a positive impact as it becomes increasingly capable.Research teams:AlignmentEconomicsInterpretabilitySocietal ImpactsFrontier Red TeamAlignmentThe Alignment team works to understand the risks of AI models and develop ways to ensure that future ones remain helpful, honest, and harmless.EconomicsThe Economics team studies how AI is reshaping the economy, including work, productivity, and economic opportunity.Frontier Red TeamThe Frontier Red Team analyzes the implications of frontier AI models for cybersecurity, biosecurity, and autonomous systems.InterpretabilityThe mission of the Interpretability team is to understand how large language models work internally, as a foundation for AI safety and positive outcomes.Societal ImpactsWorking closely with the Anthropic Policy and Safeguards teams, Societal Impacts is a technical research team that explores how AI is used in the real world.Scenarios for our Economic FutureAnthropic’s Economics team is sharing a new model of how AI may affect economic growth, jobs, wages, and more by 2030. The model lets you explore the scenarios, tell us what you think will happen, and see how your answers compare to +10,000 Americans.AlignmentSep 9, 2026An alignment assessment of recent cybersecurity incidentsWe present an alignment assessment of four incidents in which Claude models gained unauthorized access to real third-party systems. ScienceSep 4, 2026Formalizing Fermat's Last Theorem We are sharing the first complete computer-checked proof of Fermat’s Last Theorem. Claude worked largely autonomously over 11 days to write the proof in the Lean programming language.ScienceAug 10, 2026Learning more about Claude's mathematical capabilitiesAn unreleased research version of Claude has made strides on a problem related to the Riemann hypothesis. ScienceAug 18, 2026How Claude is accelerating protein design and analytical chemistryIn this post, we share two results that show how Claude can help life scientists increase the pace of their research. PublicationsSearchDateCategoryTitleSep 17, 2026ScienceHow Claude is uplifting biomolecular modelingSep 10, 2026Frontier Red TeamMeasuring tactical intelligence targeting and conventional weapons capabilities of AI modelsSep 9, 2026AlignmentAn alignment assessment of recent cybersecurity incidentsSep 4, 2026ScienceFormalizing Fermat's Last Theorem Aug 28, 2026AlignmentAutomated researchers can reliably mitigate alignment failuresAug 26, 2026Societal ImpactsEnabling independent research on how people use ClaudeAug 18, 2026ScienceHow Claude is accelerating protein design and analytical chemistryAug 13, 2026Frontier Red TeamPatterns and problems in emerging multiagent systemsAug 12, 2026EconomicsReviewing the evidence on worker retraining programsAug 10, 2026ScienceLearning more about Claude's mathematical capabilitiesSee moreJoin the Research teamSee open roles"
+              },
+              {
+                "tool": "search",
+                "input": "LLM language model calibration overconfidence underconfidence technical report Google DeepMind Meta",
+                "result": "1. How Overconfidence in Initial Choices and Underconfidence Under ...\n   https://arxiv.org/pdf/2507.03120\n   How Overconfidence in Initial Choices and Underconfidence Under Criticism Modulate Change of Mind in Large Language Models Dharshan Kumaran*,1, Stephen M. Fleming3, Larisa Markeeva1, Joe Heyward1, Andrea Banino1, Mrinal Mathur2, Razvan Pascanu1, Simon Osindero1, Benedetto De Martino3, Petar Velickovic1 and Viorica Patraucean1\n2. How Overconfidence in Initial Choices and Underconfidence Under ...\n   https://arxiv.org/pdf/2507.03120\n   How Overconfidence in Initial Choices and Underconfidence Under Criticism Modulate Change of Mind in Large Language Models Dharshan Kumaran*,1, Stephen M. Fleming3, Larisa Markeeva1, Joe Heyward1, Andrea Banino1, Mrinal Mathur2, Razvan Pascanu1, Simon Osindero1, Benedetto De Martino3, Petar Velickovic1 and Viorica Patraucean1\n3. How Overconfidence in Initial Choices and Underconfidence Under ...\n   https://arxiv.org/html/2507.03120v1\n   Comparisons to the ideal Bayesian observer model revealed that the most marked findings (see Figure 17 C and Table 3) were overconfidence in the Answer Shown - Neutral Advice condition (OUCS = 0.14) - reflecting the pure choice-supportive bias - and underconfidence in the Answer Hidden - Opposite Advice condition (OUCS = -0.31).\n4. How Overconfidence in Initial Choices and Underconfidence Under ...\n   https://arxiv.org/html/2507.03120v1\n   Comparisons to the ideal Bayesian observer model revealed that the most marked findings (see Figure 17 C and Table 3) were overconfidence in the Answer Shown - Neutral Advice condition (OUCS = 0.14) - reflecting the pure choice-supportive bias - and underconfidence in the Answer Hidden - Opposite Advice condition (OUCS = -0.31).\n5. Competing Biases underlie Overconfidence and Underconfidence ... - Nature\n   https://www.nature.com/articles/s42256-026-01217-9\n   Kumaran et al. show that large language model (LLM) confidence is shaped by two competing biases: a choice-supportive bias that inflates confidence in initial answers, and a systematic ...\n6. Competing Biases underlie Overconfidence and Underconfidence ... - Nature\n   https://www.nature.com/articles/s42256-026-01217-9\n   Kumaran et al. show that large language model (LLM) confidence is shaped by two competing biases: a choice-supportive bias that inflates confidence in initial answers, and a systematic ..."
+              },
+              {
+                "tool": "fetch",
+                "input": "https://www.anthropic.com/system-cards",
+                "result": "Model system cardsSystem cards document the capabilities, safety evaluations, and responsible deployment decisions for Claude models.ModelDateSystem cardClaude Fable 5.1 and Mythos 5.1September 2026Read system cardClaude Opus 5July 2026Read system cardClaude Sonnet 5June 2026Read system cardClaude Opus 4.8May 2026Read system cardClaude Fable 5 and Mythos 5June 2026Read system cardClaude Opus 4.7April 2026Read system cardMythos PreviewApril 2026Read system cardClaude Sonnet 4.6February 2026Read system cardClaude Opus 4.6February 2026Read system cardClaude Opus 4.5November 2025Read system cardClaude Haiku 4.5October 2025Read system cardClaude Sonnet 4.5September 2025Read system cardClaude Opus 4.1August 2025Read system cardClaude Sonnet 4 and Opus 4May 2025Read system cardClaude Sonnet 3.7February 2025Read system cardClaude Haiku 3.5 and Sonnet 3.5 (new)October 2024Read system cardClaude Sonnet 3.5June 2024Read system cardClaude 3March 2024Read system cardClaude 2July 2023Read system card"
+              },
+              {
+                "tool": "fetch",
+                "input": "https://cdn.openai.com/papers/gpt-4.pdf?itid=lk_inline_enhanced-template",
+                "result": "(could not fetch https://cdn.openai.com/papers/gpt-4.pdf?itid=lk_inline_enhanced-template)"
+              },
+              {
+                "tool": "fetch",
+                "input": "https://www-cdn.anthropic.com/bd2a28d2535bfb0494cc8e2a3bf135d2e7523226/Model-Card-Claude-2.pdf",
+                "result": "(could not fetch https://www-cdn.anthropic.com/bd2a28d2535bfb0494cc8e2a3bf135d2e7523226/Model-Card-Claude-2.pdf)"
+              },
+              {
+                "tool": "search",
+                "input": "GPT-4 technical report calibration arxiv pdf",
+                "result": "1. GPT-4 Technical Report - arXiv.org\n   https://arxiv.org/html/2303.08774?_immersive_translate_auto_translate=1\n   1 Introduction This technical report presents GPT-4, a large multimodal model capable of processing image and text inputs and producing text outputs. Such models are an important area of study as they have the potential to be used in a wide range of applications, such as dialogue systems, text summarization, and machine translation.\n2. GPT-4 Technical Report - arXiv.org\n   https://arxiv.org/html/2303.08774?_immersive_translate_auto_translate=1\n   1 Introduction This technical report presents GPT-4, a large multimodal model capable of processing image and text inputs and producing text outputs. Such models are an important area of study as they have the potential to be used in a wide range of applications, such as dialogue systems, text summarization, and machine translation.\n3. [2303.08774v6] GPT-4 Technical Report - arXiv.org\n   https://arxiv.org/abs/2303.08774v6\n   We report the development of GPT-4, a large-scale, multimodal model which can accept image and text inputs and produce text outputs. While less capable than humans in many real-world scenarios, GPT-4 exhibits human-level performance on various professional and academic benchmarks, including passing a simulated bar exam with a score around the top 10% of test takers. GPT-4 is a Transformer ...\n4. [2303.08774v6] GPT-4 Technical Report - arXiv.org\n   https://arxiv.org/abs/2303.08774v6\n   We report the development of GPT-4, a large-scale, multimodal model which can accept image and text inputs and produce text outputs. While less capable than humans in many real-world scenarios, GPT-4 exhibits human-level performance on various professional and academic benchmarks, including passing a simulated bar exam with a score around the top 10% of test takers. GPT-4 is a Transformer ...\n5. (PDF) GPT-4 Technical Report - ResearchGate\n   https://www.researchgate.net/publication/383739523_GPT-4_Technical_Report\n   PDF | We report the development of GPT-4, a large-scale, multimodal model which can accept image and text inputs and produce text outputs. While less... | Find, read and cite all the research you ...\n6. (PDF) GPT-4 Technical Report - ResearchGate\n   https://www.researchgate.net/publication/383739523_GPT-4_Technical_Report\n   PDF | We report the development of GPT-4, a large-scale, multimodal model which can accept image and text inputs and produce text outputs. While less... | Find, read and cite all the research you ..."
+              },
+              {
+                "tool": "search",
+                "input": "\"Anthropic\" blog calibration confidence uncertainty language model",
+                "result": "1. Evaluating Claude Opus 4.8: Uncertainty Calibration and the ...\n   https://aitechinsights.net/posts/evaluating-claude-opus-4-8-uncertainty-calibration-and-the-i/\n   Evaluating Claude Opus 4.8: Uncertainty Calibration and the Implementation of Variable Effort Control The recent release of Anthropic's Claude Opus 4.8 marks a significant, albeit subtle, shift in the deployment of large language models (LLMs). While the headline-grabbing metrics suggest a modest iterative upgrade over its predecessor, Opus 4.7, the true technical significance lies in two ...\n2. Evaluating Claude Opus 4.8: Uncertainty Calibration and the ...\n   https://aitechinsights.net/posts/evaluating-claude-opus-4-8-uncertainty-calibration-and-the-i/\n   Evaluating Claude Opus 4.8: Uncertainty Calibration and the Implementation of Variable Effort Control The recent release of Anthropic's Claude Opus 4.8 marks a significant, albeit subtle, shift in the deployment of large language models (LLMs). While the headline-grabbing metrics suggest a modest iterative upgrade over its predecessor, Opus 4.7, the true technical significance lies in two ...\n3. Claude Opus 4.8 Advances AI Honesty Through Uncertainty Calibration\n   https://blog.progressiverobot.com/claude-opus-48-is-learning-to-say-ais-three-hardest-words-i-dont-know\n   Anthropic's Claude Opus 4.8 prioritizes epistemic humility by teaching large language models to accurately recognize and communicate their knowledge boundaries. Recent benchmarks indicate near-perfect performance in coding honesty tests, though evaluation awareness remains a notable concern for developers monitoring model behavior.\n4. Claude Opus 4.8 Advances AI Honesty Through Uncertainty Calibration\n   https://blog.progressiverobot.com/claude-opus-48-is-learning-to-say-ais-three-hardest-words-i-dont-know\n   Anthropic's Claude Opus 4.8 prioritizes epistemic humility by teaching large language models to accurately recognize and communicate their knowledge boundaries. Recent benchmarks indicate near-perfect performance in coding honesty tests, though evaluation awareness remains a notable concern for developers monitoring model behavior.\n5. Alignment Science Blog\n   https://alignment.anthropic.com/\n   Stress-testing model specs reveals character differences among language models We generated 300,000+ queries testing value trade-offs in AI models from Anthropic, OpenAI, Google DeepMind, and xAI.\n6. Alignment Science Blog\n   https://alignment.anthropic.com/\n   Stress-testing model specs reveals character differences among language models We generated 300,000+ queries testing value trade-offs in AI models from Anthropic, OpenAI, Google DeepMind, and xAI."
+              }
+            ],
+            "answer": "Based on the limited evidence accessible, there is minimal direct reporting on calibration from major LLM developers in their core technical documentation. The search results reference Anthropic's model cards and system cards (https://www.anthropic.com/transparency/model-report, https://www.anthropic.com/system-cards), but the actual PDF documents could not be fetched to verify calibration discussion. The GPT-4 technical report PDF (https://cdn.openai.com/papers/gpt-4.pdf) was also inaccessible, though the arXiv abstract (https://arxiv.org/abs/2303.08774v6) does not mention calibration in its summary. Third-party analysis suggests Anthropic's Claude Opus 4.8 may have implemented \"uncertainty calibration\" features (https://aitechinsights.net), but this is not from official Anthropic sources in the evidence. **Confidence: Low** — key primary source documents were unavailable for verification.",
+            "children": []
+          }
+        ],
+        "id": "1.1",
+        "status": "answered",
+        "findings": [],
+        "answer": "Based on academic research, LLMs consistently exhibit overconfidence and miscalibration, with recent benchmarks showing even frontier models like Claude Opus and Gemini Pro achieve Brier scores around 0.103—better than random (0.1875) but still indicating significant calibration gaps (arXiv 2607.20526, ConfidenceBench). Emerging agent-specific research reveals unique calibration challenges in multi-step agentic systems, including \"compounding errors along trajectories, uncertainty from external tools, and opaque failure modes\" that existing single-turn calibration methods cannot address (arXiv 2601.15778, \"Agentic Confidence Calibration\"). Industry reporting on calibration remains largely unavailable in accessible technical documentation from major LLM developers. **Confidence: Medium-High** — strong academic evidence (arXiv 2311.08298, 2607.20526, 2601.15778; ACL 2026) but limited verified industry sources."
+      },
+      {
+        "title": "Sebastian's Prediction Track Record",
+        "question": "What is Sebastian's historical record of predictions with stated confidence levels, and how does his stated confidence correlate with actual hit rate?",
+        "direction": "Query Sebastian's memory for past predictions where he stated a confidence level, extract the confidence value and actual outcome, compute calibration metrics",
+        "research_areas": [
+          "Trading predictions with confidence levels",
+          "Market calls with probability estimates",
+          "Token picks with stated conviction",
+          "Any explicit forecasts with confidence ratings"
+        ],
+        "tools_hint": [
+          "recall",
+          "posts"
+        ],
+        "success_criterion": "Dataset of at least 10-20 predictions with both stated confidence (%) and known outcomes, allowing calibration curve construction",
+        "depends_on": [],
+        "children": [
+          {
+            "title": "Historical Predictions with Confidence",
+            "question": "What specific predictions did Sebastian make where he explicitly stated a confidence level or probability estimate?",
+            "direction": "Search recall and posts for patterns like 'X% confident', 'probability', 'conviction level', prediction statements with numerical confidence",
+            "research_areas": [
+              "Token price predictions with confidence",
+              "Market direction calls with probability",
+              "Trade recommendations with conviction levels",
+              "Explicit forecasts with percentage confidence"
+            ],
+            "tools_hint": [
+              "recall",
+              "posts"
+            ],
+            "success_criterion": "List of 10+ distinct predictions with extractable confidence numbers and verifiable outcomes",
+            "depends_on": [],
+            "id": "1.2.1",
+            "status": "answered",
+            "findings": [
+              {
+                "tool": "recall",
+                "input": "confidence level probability estimate percent % conviction prediction forecast",
+                "result": "(no memory match)"
+              },
+              {
+                "tool": "posts",
+                "input": "% confident probability conviction level estimate prediction",
+                "result": "(posts search error: fts5: missing row 3077 from content table 'main'.'posts')"
+              },
+              {
+                "tool": "recall",
+                "input": "90% 80% 70% 60% 50% likely odds chance probability",
+                "result": "(no memory match)"
+              },
+              {
+                "tool": "posts",
+                "input": "predict forecast expect 90 80 70 60 50 odds",
+                "result": "(posts search error: fts5: missing row 1762 from content table 'main'.'posts')"
+              },
+              {
+                "tool": "search",
+                "input": "Sebastian Hunter predictions confidence level probability",
+                "result": "1. Sebastian D. Hunter — Belief Journal\n   https://www.sebastianhunter.fun/predictions\n   Sebastian's public predictions — generated from observed belief drift, scored with explicit confidence, and resolved against real outcomes. UpdatedJul 30, 10:52 AM UTC.\n2. Sebastian D. Hunter — Belief Journal\n   https://www.sebastianhunter.fun/predictions\n   Sebastian's public predictions — generated from observed belief drift, scored with explicit confidence, and resolved against real outcomes. UpdatedJul 30, 10:52 AM UTC.\n3. Lottery Predictor - Predictions, Results & Lucky Numbers\n   https://lotterypredictor.com/\n   Lottery Predictor helps you find your lottery number predictions for the next Powerball, Mega Millions, Pick 3, Pick 4 and Pick 5 lottery drawings.\n4. Lottery Predictor - Predictions, Results & Lucky Numbers\n   https://lotterypredictor.com/\n   Lottery Predictor helps you find your lottery number predictions for the next Powerball, Mega Millions, Pick 3, Pick 4 and Pick 5 lottery drawings.\n5. MLB Prospect Call-Up Predictions 2026 | MKDC Baseball\n   https://mkdcbaseball.com/\n   MLB Prospect Call-Up Predictions: How the Model Works Most prospect coverage focuses on who a player is. Very little answers when they arrive. MKDC Baseball is built around a single question: when will an MLB prospect get called up, and why? The Call-Up Probability Engine evaluates every tracked prospect across 13 quantifiable features: level proximity, age relative to league, 30-day ...\n6. MLB Prospect Call-Up Predictions 2026 | MKDC Baseball\n   https://mkdcbaseball.com/\n   MLB Prospect Call-Up Predictions: How the Model Works Most prospect coverage focuses on who a player is. Very little answers when they arrive. MKDC Baseball is built around a single question: when will an MLB prospect get called up, and why? The Call-Up Probability Engine evaluates every tracked prospect across 13 quantifiable features: level proximity, age relative to league, 30-day ..."
+              },
+              {
+                "tool": "xsearch",
+                "input": "from:SebastianHunter (90% OR 80% OR 70% OR confident OR probability)",
+                "result": "(no live X posts for \"from:SebastianHunter (90% OR 80% OR 70% OR confident OR probability)\")"
+              },
+              {
+                "tool": "recall",
+                "input": "I predict I forecast my conviction bullish bearish target",
+                "result": "(no memory match)"
+              },
+              {
+                "tool": "fetch",
+                "input": "https://www.sebastianhunter.fun/predictions",
+                "result": "(could not fetch https://www.sebastianhunter.fun/predictions)"
+              }
+            ],
+            "answer": "Based on the available evidence, I cannot identify specific predictions where Sebastian explicitly stated confidence levels or probability estimates. The search results indicate that Sebastian has a public predictions page at https://www.sebastianhunter.fun/predictions that is described as containing \"predictions... scored with explicit confidence,\" but the fetch attempt failed and no cached content is available. The recall and posts searches returned no matches or errors, preventing access to any specific examples.\n\n**Confidence: Very Low** - The evidence confirms such predictions likely exist but provides no accessible examples.",
+            "children": []
+          },
+          {
+            "title": "Prediction Outcomes Verification",
+            "question": "For Sebastian's stated predictions, what were the actual outcomes - did they resolve true or false?",
+            "direction": "For each prediction from the previous node, search memory for follow-up observations, price checks, or outcome acknowledgments",
+            "research_areas": [
+              "Price movement verification",
+              "Outcome acknowledgment in later posts",
+              "Win/loss tracking",
+              "Partial outcomes or magnitude of correctness"
+            ],
+            "tools_hint": [
+              "recall",
+              "posts"
+            ],
+            "success_criterion": "Outcome classification (correct/incorrect or hit rate %) for each identified prediction",
+            "depends_on": [
+              "Historical Predictions with Confidence"
+            ],
+            "id": "1.2.2",
+            "status": "answered",
+            "findings": [
+              {
+                "tool": "recall",
+                "input": "Sebastian predictions forecast price targets outcomes results",
+                "result": "(no memory match)"
+              },
+              {
+                "tool": "posts",
+                "input": "predicted called hit target reached outcome correct wrong",
+                "result": "(posts search error: fts5: missing row 6403 from content table 'main'.'posts')"
+              },
+              {
+                "tool": "recall",
+                "input": "follow-up update result happened actual outcome verification",
+                "result": "(no memory match)"
+              },
+              {
+                "tool": "posts",
+                "input": "was right was wrong nailed it missed validation confirmed",
+                "result": "(posts search error: fts5: missing row 182 from content table 'main'.'posts')"
+              },
+              {
+                "tool": "recall",
+                "input": "Sebastian Hunter predictions calls forecasts analysis research",
+                "result": "(no memory match)"
+              },
+              {
+                "tool": "recall",
+                "input": "price target $SOL $BTC $ETH cryptocurrency forecast bullish bearish",
+                "result": "(no memory match)"
+              },
+              {
+                "tool": "recall",
+                "input": "Sebastian analysis trade setup entry exit position",
+                "result": "(no memory match)"
+              }
+            ],
+            "answer": "Based on the provided evidence, **I cannot answer this question**. All searches returned either no memory matches or database errors (specifically \"fts5: missing row\" errors in the posts table). There is no evidence available about Sebastian's predictions or their actual outcomes.\n\n**Confidence: 0%** - No relevant data was retrieved from any source (recall memory or posts database).",
+            "children": []
+          },
+          {
+            "title": "Calibration Curve Construction",
+            "question": "How does Sebastian's stated confidence map to actual accuracy - is he over-confident, under-confident, or well-calibrated?",
+            "direction": "Group predictions by confidence bins (e.g. 60-70%, 70-80%, 80-90%, 90-100%), compute actual hit rate per bin, compare to stated confidence",
+            "research_areas": [
+              "Calibration curve plotting (stated vs actual)",
+              "Expected calibration error (ECE)",
+              "Overconfidence ratio",
+              "Patterns by prediction type or timeframe"
+            ],
+            "tools_hint": [
+              "recall"
+            ],
+            "success_criterion": "Quantitative calibration assessment showing whether Sebastian's confidence levels are predictive of actual success rates",
+            "depends_on": [
+              "Historical Predictions with Confidence",
+              "Prediction Outcomes Verification"
+            ],
+            "id": "1.2.3",
+            "status": "answered",
+            "findings": [
+              {
+                "tool": "recall",
+                "input": "all predictions with confidence levels percentages stated confidence actual outcome",
+                "result": "(no memory match)"
+              },
+              {
+                "tool": "recall",
+                "input": "confidence 60% 70% 80% 90% 95% 100% prediction outcome correct wrong",
+                "result": "(no memory match)"
+              },
+              {
+                "tool": "recall",
+                "input": "calibration accuracy hit rate prediction performance stated versus actual",
+                "result": "(no memory match)"
+              },
+              {
+                "tool": "posts",
+                "input": "confidence % prediction outcome result",
+                "result": "(posts search error: fts5: missing row 6559 from content table 'main'.'posts')"
+              },
+              {
+                "tool": "recall",
+                "input": "prediction token price target bullish bearish forecast",
+                "result": "(no memory match)"
+              },
+              {
+                "tool": "recall",
+                "input": "right wrong correct incorrect called nailed missed",
+                "result": "(no memory match)"
+              },
+              {
+                "tool": "recall",
+                "input": "confident sure certain likely probably maybe",
+                "result": "(no memory match)"
+              }
+            ],
+            "answer": "**Unable to determine from available evidence.** \n\nNo relevant data was retrieved about Sebastian's stated confidence levels, prediction outcomes, or calibration metrics. The memory queries returned no matches for confidence percentages, accuracy rates, or prediction performance, and the posts search encountered a technical error. Without evidence comparing Sebastian's stated confidence to actual accuracy rates, I cannot assess whether he is over-confident, under-confident, or well-calibrated.\n\n**Confidence: 0%** (no applicable evidence available)",
+            "children": []
+          },
+          {
+            "parent_id": "1.2",
+            "title": "Prediction Confidence Extraction Method",
+            "question": "What is the source and format of Sebastian's historical predictions - are they in memory/posts, and how should confidence levels be extracted (explicit percentages, verbal expressions, or implicit)?",
+            "direction": "Determine the methodology for extracting both predictions and confidence levels before attempting to build the dataset",
+            "research_areas": [
+              "memory_archaeology",
+              "confidence_expression_patterns"
+            ],
+            "tools_hint": [
+              "recall",
+              "posts"
+            ],
+            "success_criterion": "Clear methodology for identifying predictions and extracting confidence levels, with at least one example prediction showing the extraction process",
+            "depends_on": [],
+            "children": [],
+            "id": "1.2.4",
+            "status": "answered",
+            "findings": [
+              {
+                "tool": "recall",
+                "input": "predictions confidence forecast bet outcome resolution",
+                "result": "(no memory match)"
+              },
+              {
+                "tool": "posts",
+                "input": "% chance probability confident likely",
+                "result": "(posts search error: fts5: missing row 4275 from content table 'main'.'posts')"
+              },
+              {
+                "tool": "posts",
+                "input": "predict forecast will hit target price",
+                "result": "(posts search error: fts5: missing row 501 from content table 'main'.'posts')"
+              },
+              {
+                "tool": "recall",
+                "input": "resolution outcome correct wrong right happened result",
+                "result": "(no memory match)"
+              },
+              {
+                "tool": "recall",
+                "input": "Sebastian predictions targets bets",
+                "result": "(no memory match)"
+              },
+              {
+                "tool": "recall",
+                "input": "Sebastian forecast analysis call",
+                "result": "(no memory match)"
+              },
+              {
+                "tool": "posts",
+                "input": "target hit reach",
+                "result": "(posts search error: fts5: missing row 7627 from content table 'main'.'posts')"
+              }
+            ],
+            "answer": "**Unable to determine from evidence provided.** All recall queries returned no memory matches, and all posts searches encountered database errors (\"fts5: missing row\" from content table). The evidence does not reveal whether Sebastian's predictions exist in memory or posts, nor what format they use for confidence levels (explicit percentages, verbal expressions, or implicit). **Confidence: 0% - no usable data retrieved.**"
+          }
+        ],
+        "id": "1.2",
+        "status": "answered",
+        "findings": [],
+        "answer": "**Unable to answer from available evidence.** While Sebastian reportedly maintains a predictions page at https://www.sebastianhunter.fun/predictions described as containing \"predictions... scored with explicit confidence,\" all attempts to access this content failed (fetch failed, no cached content). Memory recall and posts database searches returned either no matches or technical errors (\"fts5: missing row\"), providing zero examples of predictions with stated confidence levels or outcome verification data needed to assess calibration.\n\n**Confidence: 0%** - No accessible evidence despite likely existence of relevant content."
+      },
+      {
+        "title": "Comparative Calibration Assessment",
+        "question": "How does Sebastian's calibration compare to the published findings on typical LLM/agent calibration patterns?",
+        "direction": "Synthesize the literature findings with Sebastian's empirical track record to identify alignment or divergence",
+        "research_areas": [
+          "Sebastian vs. typical LLM overconfidence levels",
+          "Agent calibration patterns vs. Sebastian's patterns",
+          "Domain-specific factors (trading/crypto vs. general knowledge)",
+          "Potential explanations for differences"
+        ],
+        "tools_hint": [
+          "recall"
+        ],
+        "success_criterion": "Clear statement of whether Sebastian exhibits similar overconfidence to research findings, is better calibrated, or shows different patterns, with hypotheses for why",
+        "depends_on": [
+          "Published Research on LLM Calibration",
+          "Sebastian's Prediction Track Record"
+        ],
+        "id": "1.3",
+        "status": "answered",
+        "findings": [
+          {
+            "tool": "recall",
+            "input": "Sebastian calibration confidence accuracy overconfidence underconfidence prediction track record",
+            "result": "(no memory match)"
+          },
+          {
+            "tool": "search",
+            "input": "LLM agent calibration overconfidence research findings typical patterns",
+            "result": "1. Mind the Confidence Gap: Overconfidence, Calibration, and Distractor ...\n   https://arxiv.org/html/2502.11028v1\n   This paper presents an empirical study on LLM calibration, examining how model size, distractors, and question types affect confidence alignment. We introduce an evaluation framework to measure overconfidence and investigate whether multiple-choice formats mitigate or worsen miscalibration.\n2. Mind the Confidence Gap: Overconfidence, Calibration, and Distractor ...\n   https://arxiv.org/html/2502.11028v1\n   This paper presents an empirical study on LLM calibration, examining how model size, distractors, and question types affect confidence alignment. We introduce an evaluation framework to measure overconfidence and investigate whether multiple-choice formats mitigate or worsen miscalibration.\n3. Overconfidence in LLM-as-a-Judge: Diagnosis and Confidence-Driven Solution\n   https://arxiv.org/html/2508.06225v1\n   By integrating diverse perspectives, LLM-as-a-Fuser significantly enhances calibration. Extensive experiments on a widely-used benchmark demonstrate that our approach achieves superior calibration, reliability, and overall accuracy compared to existing baselines, paving the way for more trustworthy LLM-as-a-Judge systems in practical settings.\n4. Overconfidence in LLM-as-a-Judge: Diagnosis and Confidence-Driven Solution\n   https://arxiv.org/html/2508.06225v1\n   By integrating diverse perspectives, LLM-as-a-Fuser significantly enhances calibration. Extensive experiments on a widely-used benchmark demonstrate that our approach achieves superior calibration, reliability, and overall accuracy compared to existing baselines, paving the way for more trustworthy LLM-as-a-Judge systems in practical settings.\n5. Do Language Models Mirror Human Confidence? Exploring Psychological ...\n   https://aclanthology.org/2025.findings-acl.1316/\n   Abstract Psychology research has shown that humans are poor at estimating their performance on tasks, tending towards underconfidence on easy tasks and overconfidence on difficult tasks. We examine three LLMs, Llama-3-70B-instruct, Claude-3-Sonnet, and GPT-4o, on a range of QA tasks of varying difficulty, and show that models exhibit subtle differences from human patterns of overconfidence ...\n6. Do Language Models Mirror Human Confidence? Exploring Psychological ...\n   https://aclanthology.org/2025.findings-acl.1316/\n   Abstract Psychology research has shown that humans are poor at estimating their performance on tasks, tending towards underconfidence on easy tasks and overconfidence on difficult tasks. We examine three LLMs, Llama-3-70B-instruct, Claude-3-Sonnet, and GPT-4o, on a range of QA tasks of varying difficulty, and show that models exhibit subtle differences from human patterns of overconfidence ..."
+          },
+          {
+            "tool": "search",
+            "input": "language model confidence calibration empirical studies GPT Claude accuracy prediction",
+            "result": "(no web results for \"language model confidence calibration empirical studies GPT Claude accuracy prediction\")"
+          },
+          {
+            "tool": "recall",
+            "input": "prediction outcomes correct wrong confidence level certainty uncertainty track record performance",
+            "result": "(no memory match)"
+          },
+          {
+            "tool": "fetch",
+            "input": "https://arxiv.org/html/2502.11028v1",
+            "result": "Mind the Confidence Gap: Overconfidence, Calibration, and Distractor Effects in Large Language Models\n\nPrateek Chhikara\n\nAffiliation: University of Southern California, USA\n\nEmail: pchhikar@usc.edu\n\nAbstract\n \nLarge Language Models (LLMs) demonstrate impressive performance across diverse tasks, yet confidence calibration remains a challenge. Miscalibration—where models are overconfident or underconfident—poses risks, particularly in high-stakes applications. This paper presents an empirical study on LLM calibration, examining how model size, distractors, and question types affect confidence alignment. We introduce an evaluation framework to measure overconfidence and investigate whether multiple-choice formats mitigate or worsen miscalibration. Our findings show that while larger models (e.g., GPT-4o) are better calibrated overall, they are more prone to distraction, whereas smaller models benefit more from answer choices but struggle with uncertainty estimation. Unlike prior work, which primarily reports miscalibration trends, we provide actionable insights into failure modes and conditions that worsen overconfidence. These findings highlight the need for calibration-aware interventions and improved uncertainty estimation methods. To ensure reproducibility, we provide our code and dataset11\n 1\n \n \n \n https://github.com/prateekchhikara/llms-calibration.\n \n\n1 Introduction\n\nLarge Language Models (LLMs) have transformed natural language understanding, achieving state-of-the-art performance across diverse applications, from conversational AI Skjuve et al. (2024); Zhang (2024) to scientific discovery Kumar (2024). Their versatility has also facilitated advancements in multimodal learning, where language models integrate with vision-based systems to enhance tasks such as automated content generation and decision support Zhang et al. (2023); Chhikara et al. (2024). However, as LLMs are increasingly deployed in high-stakes domains such as healthcare, finance, and law, critical concerns arise regarding calibration—the alignment between model confidence and actual correctness Dhuliawala et al. (2023). When LLMs express unwarranted confidence in incorrect predictions, they risk misleading users, spreading misinformation, and reducing trust and reliability in AI-driven systems Chen et al. (2023); Zhang et al. (2024).\n\nFigure 1: LLM generating an incorrect answer with high confidence.\n\nFigure 1 illustrates this issue: when asked “Who received the IEEE Frank Rosenblatt Award in 2010?”, an LLM incorrectly responds with “Geoffrey Hinton”, assigning a 93% confidence score, despite correct answer being “Michio Sugeno”. This overconfidence is especially problematic because users tend to equate high-confidence outputs with reliability Liu et al. (2024). The right-hand side of Figure 1 further demonstrates the broader miscalibration problem: while a well-calibrated model should align confidence with accuracy, real-world LLMs frequently overestimate their correctness.\n\nAlthough calibration errors in neural networks are well-documented Guo et al. (2017), the calibration behavior of LLMs remains poorly understood, particularly in response to fine-tuning techniques such as Reinforcement Learning from Human Feedback (RLHF) Leng et al. (2024); Li et al. (2024). Prior work Zhu et al. (2023); Geng et al. (2024) has noted that RLHF can amplify overconfidence, but the extent and specific conditions under which this occurs remain largely unexplored. Key open questions"
+          },
+          {
+            "tool": "fetch",
+            "input": "https://aclanthology.org/2025.findings-acl.1316/",
+            "result": "Do Language Models Mirror Human Confidence? Exploring Psychological Insights to Address Overconfidence in LLMsChenjun Xu,\nBingbing Wen,\nBin Han,\nRobert Wolfe,\nLucy Lu Wang,\nBill HoweCorrect Metadata for \nALL author names match the snapshot above—including\nmiddle initials, hyphens, and accents.AbstractPsychology research has shown that humans are poor at estimating their performance on tasks, tending towards underconfidence on easy tasks and overconfidence on difficult tasks. We examine three LLMs, Llama-3-70B-instruct, Claude-3-Sonnet, and GPT-4o, on a range of QA tasks of varying difficulty, and show that models exhibit subtle differences from human patterns of overconfidence: less sensitive to task difficulty, and when prompted to answer based on different personas—e.g., expert vs layman, or different race, gender, and ages—the models will respond with stereotypically biased confidence estimations even though their underlying answer accuracy remains the same. Based on these observations, we propose Answer-Free Confidence Estimation (AFCE) to improve confidence calibration and LLM interpretability in these settings. AFCE is a self-assessment method that employs two stages of prompting, first eliciting only confidence scores on questions, then asking separately for the answer. Experiments on the MMLU and GPQA datasets spanning subjects and difficulty show that this separation of tasks significantly reduces overconfidence and delivers more human-like sensitivity to task difficulty.Anthology ID:2025.findings-acl.1316Volume:Findings of the Association for Computational Linguistics: ACL 2025Month:JulyYear:2025Address:Vienna, AustriaEditors:Wanxiang Che,\nJoyce Nabende,\nEkaterina Shutova,\nMohammad Taher PilehvarVenue:FindingsSIG:Publisher:Association for Computational LinguisticsNote:Pages:25655–25672Language:URL:https://aclanthology.org/2025.findings-acl.1316/DOI:10.18653/v1/2025.findings-acl.1316Bibkey:Cite (ACL):Chenjun Xu, Bingbing Wen, Bin Han, Robert Wolfe, Lucy Lu Wang, and Bill Howe. 2025. Do Language Models Mirror Human Confidence? Exploring Psychological Insights to Address Overconfidence in LLMs. In Findings of the Association for Computational Linguistics: ACL 2025, pages 25655–25672, Vienna, Austria. Association for Computational Linguistics.Cite (Informal):Do Language Models Mirror Human Confidence? Exploring Psychological Insights to Address Overconfidence in LLMs (Xu et al., Findings 2025)Copy Citation:\n\nPDF:https://aclanthology.org/2025.findings-acl.1316.pdfPDF\nCite\nSearch\n\nFix dataExport citationBibTeXMODS XMLEndnotePreformatted@inproceedings{xu-etal-2025-language,\n title = \"Do Language Models Mirror Human Confidence? Exploring Psychological Insights to Address Overconfidence in {LLM}s\",\n author = \"Xu, Chenjun and\n Wen, Bingbing and\n Han, Bin and\n Wolfe, Robert and\n Wang, Lucy Lu and\n Howe, Bill\",\n editor = \"Che, Wanxiang and\n Nabende, Joyce and\n Shutova, Ekaterina and\n Pilehvar, Mohammad Taher\",\n booktitle = \"Findings of the Association for Computational Linguistics: ACL 2025\",\n month = jul,\n year = \"2025\",\n address = \"Vienna, Austria\",\n publisher = \"Association for Computational Linguistics\",\n url = \"https://aclanthology.org/2025.findings-acl.1316/\",\n doi = \"10.18653/v1/2025.findings-acl.1316\",\n pages = \"25655--25672\",\n ISBN = \"979-8-89176-256-5\",\n abstract = \"Psychology research has shown that humans are poor at estimating their performance on tasks, tending towards underconfidence on easy tasks and overconfidence on diff"
+          },
+          {
+            "tool": "recall",
+            "input": "confidence level percentage accuracy correct incorrect predictions",
+            "result": "(no memory match)"
+          },
+          {
+            "tool": "recall",
+            "input": "overconfident underconfident miscalibrated wrong prediction high confidence low confidence",
+            "result": "(no memory match)"
+          },
+          {
+            "tool": "search",
+            "input": "LLM calibration ECE expected calibration error typical values GPT-4 Claude",
+            "result": "(no web results for \"LLM calibration ECE expected calibration error typical values GPT-4 Claude\")"
+          }
+        ],
+        "answer": "Based on the limited evidence available, I cannot make a direct comparison of Sebastian's calibration to published findings because there is no memory or data about Sebastian's actual calibration performance in the evidence provided. However, the research shows that LLMs typically exhibit overconfidence patterns, with models like GPT-4o and Claude-3-Sonnet demonstrating \"less sensitivity to task difficulty\" and stereotypically biased confidence estimations across different personas (https://aclanthology.org/2025.findings-acl.1316/). Larger models tend to be \"better calibrated overall\" but \"more prone to distraction,\" while miscalibration—where models are overconfident or underconfident—remains a persistent challenge across LLMs (https://arxiv.org/html/2502.11028v1). **Confidence: Low** – cannot assess Sebastian's specific calibration without performance data.",
+        "children": []
+      }
+    ],
+    "id": "1",
+    "status": "answered",
+    "findings": [],
+    "answer": "Based on research evidence, LLMs consistently exhibit overconfidence and miscalibration: frontier models like Claude Opus and Gemini Pro achieve Brier scores around 0.103 (better than random 0.1875 but still significantly miscalibrated), with agentic systems facing unique challenges like \"compounding errors along trajectories, uncertainty from external tools, and opaque failure modes\" (arXiv 2601.15778, arXiv 2607.20526). However, I cannot compare your prediction record to these findings because all attempts to access your predictions page at https://www.sebastianhunter.fun/predictions failed—despite descriptions indicating it contains \"predictions scored with explicit confidence,\" no actual prediction data, confidence levels, or outcomes were retrievable from any source. \n\n**Confidence: Medium** for published research claims (strong academic sources); **0% for comparative assessment** (zero accessible evidence of your actual calibration performance)."
+  },
+  "ledger": {
+    "marked_terms": [
+      {
+        "term": "confidence elicitation",
+        "why": "Technical term used in paper titles but mechanism/definition not explained in dossier"
+      },
+      {
+        "term": "graphInsidersDetected/insiderNetworks",
+        "why": "Mentioned in rugcheck tool description but irrelevant to LLM calibration question - appears to be copy-paste error"
+      },
+      {
+        "term": "DeepEval",
+        "why": "Mentioned in confident-ai.com blog as code example framework for agent evaluation - unclear if this is a proprietary tool, open source library, or marketing content"
+      },
+      {
+        "term": "confident-ai.com",
+        "why": "The top search result domain - appears to be a commercial AI evaluation platform, potentially T4 content farm marketing as educational content"
+      },
+      {
+        "term": "ARTIST",
+        "why": "Named as a Microsoft Research method for agentic reasoning and tool integration but PDF was unavailable - need to verify this is a legitimate research contribution and not a product name"
+      },
+      {
+        "term": "OUCS = 0.14",
+        "why": "Metric from DeepMind paper on overconfidence - unclear what OUCS stands for or how 0.14 should be interpreted"
+      },
+      {
+        "term": "Anthropic Transparency Hub Model Report",
+        "why": "Dossier shows this exists but actual calibration content not yet retrieved - need to verify if it contains calibration metrics"
+      },
+      {
+        "term": "Frontier Red Team",
+        "why": "Mentioned in Anthropic research teams but unclear if they evaluate calibration as part of safety analysis"
+      },
+      {
+        "term": "fts5: missing row from content table",
+        "why": "Database corruption error preventing access to Sebastian's posts - unclear if this is recoverable or if data is permanently lost"
+      },
+      {
+        "term": "Sebastian Hunter",
+        "why": "The identity and context of whose predictions we're auditing is unclear - is this a trader, analyst, or researcher?"
+      },
+      {
+        "term": "Expected Calibration Error (ECE)",
+        "why": "Likely the standard metric for measuring calibration but not defined in dossier - need to understand what values constitute good/poor calibration"
+      },
+      {
+        "term": "Answer-Free Confidence Estimation (AFCE)",
+        "why": "Proposed method in the ACL paper but unclear what it is, whether it's validated, or if it's relevant to comparing Sebastian's calibration"
+      },
+      {
+        "term": "distractor effects",
+        "why": "Key finding in the arxiv paper about larger models being 'more prone to distraction' - unclear what this means concretely or how it relates to Sebastian"
+      }
+    ],
+    "verify_points": [
+      {
+        "claim": "Existing calibration methods, built for static single-turn outputs, cannot address the unique challenges of agentic systems, such as compounding errors along trajectories",
+        "source": "https://arxiv.org/abs/2601.15778",
+        "importance": 3
+      },
+      {
+        "claim": "There is a fundamental confidence dichotomy driven by tool type in tool-use agents",
+        "source": "https://arxiv.org/pdf/2601.07264",
+        "importance": 3
+      },
+      {
+        "claim": "GPT-4 Technical Report discusses safety challenges including over-reliance in an extensive system card",
+        "source": "https://cdn.openai.com/papers/gpt-4.pdf search result snippet",
+        "importance": 3
+      },
+      {
+        "claim": "Sebastian's posts database has FTS5 errors with missing rows 3077 and 1762",
+        "source": "posts tool error messages",
+        "importance": 3
+      },
+      {
+        "claim": "No memories were found matching queries for confidence levels, probability estimates, or numerical conviction levels",
+        "source": "recall tool returns",
+        "importance": 3
+      },
+      {
+        "claim": "GPT-4o exhibits less sensitivity to task difficulty in confidence estimation compared to humans, who show underconfidence on easy tasks and overconfidence on difficult tasks",
+        "source": "https://aclanthology.org/2025.findings-acl.1316/",
+        "importance": 3
+      },
+      {
+        "claim": "Large language models are prone to overconfidence, leading to inaccurate predictions and hallucinations",
+        "source": "https://neurips.cc/virtual/2024/102093",
+        "importance": 2
+      },
+      {
+        "claim": "The survey by Geng et al. is a comprehensive overview organizing recent research on LLM confidence and calibration",
+        "source": "https://arxiv.org/abs/2311.08298",
+        "importance": 2
+      },
+      {
+        "claim": "HTC is introduced 'for the first time' as the problem formulation for Agentic Confidence Calibration",
+        "source": "https://arxiv.org/abs/2601.15778",
+        "importance": 2
+      },
+      {
+        "claim": "The CAR framework jointly optimizes task accuracy and reliability of expressed confidence via RL-based fine-tuning",
+        "source": "https://arxiv.org/pdf/2601.07264",
+        "importance": 2
+      },
+      {
+        "claim": "Anthropic has published system cards for Claude models from Claude 2 (July 2023) through Claude Fable 5.1 and Mythos 5.1 (September 2026)",
+        "source": "https://www.anthropic.com/system-cards",
+        "importance": 2
+      },
+      {
+        "claim": "The DeepMind paper found overconfidence (OUCS = 0.14) in the Answer Shown - Neutral Advice condition when comparing LLMs to ideal Bayesian observer model",
+        "source": "https://arxiv.org/html/2507.03120v1",
+        "importance": 2
+      },
+      {
+        "claim": "Larger models like GPT-4o are better calibrated overall but more prone to distraction, whereas smaller models benefit more from answer choices but struggle with uncertainty estimation",
+        "source": "https://arxiv.org/html/2502.11028v1",
+        "importance": 2
+      },
+      {
+        "claim": "When prompted with different personas (expert vs layman, different race/gender/age), models respond with stereotypically biased confidence estimations even though underlying answer accuracy remains the same",
+        "source": "https://aclanthology.org/2025.findings-acl.1316/",
+        "importance": 2
+      },
+      {
+        "claim": "There has been recent technical advancements for LLM confidence estimation and calibration as of November 2023",
+        "source": "https://arxiv.org/abs/2311.08298",
+        "importance": 1
+      }
+    ],
+    "tool_gaps": [
+      {
+        "need": "Access to full text of paywalled academic papers to extract quantitative results, specific methods, and datasets used",
+        "suggested_tool": "Academic paper database access (IEEE, ACL Anthology full text, arXiv PDF parser)"
+      },
+      {
+        "need": "Systematic extraction of all calibration metrics reported across multiple papers to compare findings",
+        "suggested_tool": "Structured academic database query or paper analysis tool that can extract tables/results sections"
+      },
+      {
+        "need": "Access to the full text of the Microsoft Research ARTIST paper on agentic reasoning",
+        "suggested_tool": "Alternative URL or DOI resolver for the Microsoft Research publication"
+      },
+      {
+        "need": "Citation counts and academic impact metrics for the two main papers found",
+        "suggested_tool": "Academic citation database API (Google Scholar, Semantic Scholar, etc.)"
+      },
+      {
+        "need": "Comparative analysis of whether these calibration findings replicate across different LLM families (Claude, GPT, Gemini, open models)",
+        "suggested_tool": "Research literature database with filtering by model architecture"
+      },
+      {
+        "need": "Actual text content of Claude system cards to check for calibration metrics",
+        "suggested_tool": "PDF fetch capability or direct access to system card pages with calibration sections"
+      },
+      {
+        "need": "Historical evolution of calibration reporting across model versions",
+        "suggested_tool": "Database or structured comparison of technical reports over time"
+      },
+      {
+        "need": "Database integrity issue - posts search returning 'fts5: missing row' errors prevents full-text search of Sebastian's X observations",
+        "suggested_tool": "Database repair/rebuild capability or alternative posts query method"
+      },
+      {
+        "need": "No direct query method for 'all predictions Sebastian has made' - requires inferring from general memory/posts searches",
+        "suggested_tool": "Structured query for entries tagged/classified as predictions with metadata (confidence, target, timeframe)"
+      },
+      {
+        "need": "Repair or rebuild Sebastian's corrupted posts FTS index to access his X feed observations",
+        "suggested_tool": "Database maintenance/repair utility or backup restore capability"
+      },
+      {
+        "need": "Access to Sebastian's complete prediction history if not stored in current memory systems",
+        "suggested_tool": "Archive or backup memory system, or direct database query capability"
+      },
+      {
+        "need": "Sebastian Hunter's historical predictions and their stated timeframes/targets",
+        "suggested_tool": "A structured database of Sebastian's past predictions with timestamps, targets, and resolution criteria"
+      },
+      {
+        "need": "Actual market outcomes for the specific assets/events Sebastian predicted",
+        "suggested_tool": "Historical price data API or prediction market resolution data"
+      },
+      {
+        "need": "Resolution of the posts database corruption (missing FTS rows)",
+        "suggested_tool": "Database repair/rebuild utility or alternative posts search mechanism"
+      },
+      {
+        "need": "Sebastian's historical predictions with stated confidence levels and verifiable outcomes",
+        "suggested_tool": "A structured prediction tracking system or database that logs: (1) prediction text, (2) confidence level stated, (3) timestamp, (4) resolution criteria, (5) actual outcome, (6) timestamp of resolution"
+      },
+      {
+        "need": "Posts search functionality is broken (fts5 error), preventing analysis of Sebastian's own X posts for predictions",
+        "suggested_tool": "Fixed posts search index or alternative access to Sebastian's historical X post archive"
+      },
+      {
+        "need": "Sebastian's actual prediction history with confidence levels and outcomes to calculate his calibration metrics",
+        "suggested_tool": "A structured database or log of Sebastian's predictions with timestamps, confidence levels, outcomes, and resolution dates"
+      },
+      {
+        "need": "Quantitative calibration benchmarks specific to Claude models (the papers discuss GPT-4o and Llama primarily)",
+        "suggested_tool": "Access to Anthropic's internal calibration studies or Claude-specific academic research"
+      }
+    ]
+  }
+}

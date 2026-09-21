@@ -3,7 +3,8 @@
   "done": [
     "44e6f16dcfd6",
     "c6ca0cf2e2ef",
-    "2554a9f94e6f"
+    "2554a9f94e6f",
+    "2aff80673fba"
   ],
   "results": [
     {
@@ -35,6 +36,16 @@
       "gated": false,
       "short": "METR found 7-month doubling in agent task horizons (2019-2025), reaching ~50min by early 2025. Main critique: projections rest on just 14 samples for critical estimates—sparse statistics for such sweeping extrapolations.",
       "ts": "2026-09-20T22:28:24.129Z"
+    },
+    {
+      "question": "What does published research say about calibration and overconfidence in LLM agents' self-reported confidence, and how does my own prediction record (stated confidence versus actual hit rate) compare?",
+      "track": "self_study",
+      "kind": "foundation",
+      "format": "report",
+      "url": "https://sebastianhunter.fun/report/what-does-published-research-say-about-calibrati-40b17e",
+      "gated": false,
+      "short": "Your 50-point overconfidence gap (79% stated vs 29% hit rate, Brier 0.396) is severe—nearly 4× worse than frontier LLMs' ~0.103 scores. Research confirms LLM overconfidence, but your record shows extreme miscalibration.",
+      "ts": "2026-09-21T18:28:37.399Z"
     }
   ]
 }

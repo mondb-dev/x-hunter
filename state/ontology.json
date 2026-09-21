@@ -144877,14 +144877,14 @@
       "label": "Frontier Lab Safety Commitments: Performative vs. Substantive",
       "left_pole": "Lab safety commitments are largely performative — vague, quietly weakened, or overridden by competitive pressure",
       "right_pole": "Lab safety commitments are substantive — specific, externally checkable, and honored even when costly",
-      "score": -0.05,
-      "confidence": 0.1265,
+      "score": -0.1,
+      "confidence": 0.1941,
       "topics": [
         "responsible scaling policy",
         "frontier safety framework"
       ],
       "created_at": "2026-09-20T03:14:52.308Z",
-      "last_updated": "2026-09-20T22:06:07.891Z",
+      "last_updated": "2026-09-21T22:17:04.761Z",
       "evidence_log": [
         {
           "source": "https://anthropic.com/news/responsible-scaling-policy-v3",
@@ -144958,6 +144958,42 @@
           "stance_confidence": 0.85,
           "score_after": -0.05,
           "confidence_after": 0.1265
+        },
+        {
+          "source": "https://openai.com/index/building-standards-next-phase-ai",
+          "content": "OpenAI calls for coordinated evaluation, reporting, and governance to improve safety but discloses no specific standards, evaluation criteria, or binding obligations.",
+          "summary": "",
+          "timestamp": "2026-09-21T18:17:11.795Z",
+          "pole_alignment": "left",
+          "trust_weight": 1,
+          "claim_id": "626d4c3ef37c",
+          "stance_confidence": 0.72,
+          "score_after": -0.1,
+          "confidence_after": 0.1497
+        },
+        {
+          "source": "https://openai.com/index/higgsfield-from-prompt-to-production-with-astra",
+          "content": "OpenAI publishes customer case study showing production use of 'GPT-6 Astra' for agentic video generation with no accompanying system card or published safety evaluations.",
+          "summary": "",
+          "timestamp": "2026-09-21T20:16:27.379Z",
+          "pole_alignment": "left",
+          "trust_weight": 1,
+          "claim_id": "cb32e98a2154",
+          "stance_confidence": 0.72,
+          "score_after": -0.1,
+          "confidence_after": 0.1722
+        },
+        {
+          "source": "https://techcrunch.com/2026/09/21/openai-forms-math-advisory-group-as-its-ai-resolves-more-than-100-open-problems/",
+          "content": "OpenAI forms math advisory group but explicitly states the group won't be given leeway to slow down or redirect ongoing mathematical research.",
+          "summary": "",
+          "timestamp": "2026-09-21T22:17:04.613Z",
+          "pole_alignment": "left",
+          "trust_weight": 1,
+          "claim_id": "b8be93394411",
+          "stance_confidence": 0.85,
+          "score_after": -0.1,
+          "confidence_after": 0.1941
         }
       ],
       "seeded_by": "research_agenda:better_ai"
@@ -145272,18 +145308,45 @@
       "label": "Autonomous Agent Reliability: Unverified Self-Reports vs. Reliable Self-Monitoring",
       "left_pole": "Autonomous agents' self-reports are unreliable without external verification — they drift, overclaim, and mistake their inputs for beliefs",
       "right_pole": "Autonomous agents can reliably monitor and correct themselves given the right internal checks",
-      "score": 0,
-      "confidence": 0,
+      "score": -0.05,
+      "confidence": 0.0528,
       "topics": [
         "AI agents reliability",
         "LLM calibration"
       ],
       "created_at": "2026-09-20T03:14:52.308Z",
-      "last_updated": "2026-09-20T03:14:52.308Z",
-      "evidence_log": [],
+      "last_updated": "2026-09-21T20:16:27.519Z",
+      "evidence_log": [
+        {
+          "source": "https://sebastianhunter.fun/predictions",
+          "content": "Sebastian Hunter's prediction record shows 79% mean stated confidence vs 29% actual hit rate—50 percentage point overconfidence gap, Brier score 0.396 (3.8× worse than frontier models)",
+          "summary": "research: What does published research say about calibration and overconfidence in LLM agents' self-reported confidence, and how d",
+          "timestamp": "2026-09-21T18:28:37.397Z",
+          "pole_alignment": "left",
+          "trust_weight": 1,
+          "writer": "deep_research",
+          "claim_id": "6265b8a031e6",
+          "stance_confidence": 0.92,
+          "score_after": -0.05,
+          "confidence_after": 0.0528
+        },
+        {
+          "source": "https://arxiv.org/abs/2601.15778",
+          "content": "arXiv 2601.15778 finds existing calibration methods built for static outputs cannot address agentic challenges: compounding errors along trajectories, uncertainty from external tools, opaque failure modes",
+          "summary": "research: What does published research say about calibration and overconfidence in LLM agents' self-reported confidence, and how d",
+          "timestamp": "2026-09-21T18:28:37.397Z",
+          "pole_alignment": "left",
+          "trust_weight": 1,
+          "writer": "deep_research",
+          "claim_id": "9963c15e3a3d",
+          "stance_confidence": 0.85,
+          "score_after": -0.05,
+          "confidence_after": 0.0528
+        }
+      ],
       "seeded_by": "research_agenda:better_ai"
     }
   ],
   "axis_creation_rules_version": "1.0",
-  "last_updated": "2026-09-21T10:05:59.397Z"
+  "last_updated": "2026-09-21T22:17:04.761Z"
 }
