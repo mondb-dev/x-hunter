@@ -1,12 +1,12 @@
 {
-  "generated_at": "2026-09-21T08:09:24.901Z",
+  "generated_at": "2026-09-21T10:12:37.365Z",
   "stats": {
-    "total": 1334,
-    "supported": 414,
-    "refuted": 231,
+    "total": 1338,
+    "supported": 417,
+    "refuted": 232,
     "contested": 0,
-    "unverified": 42,
-    "expired": 647
+    "unverified": 44,
+    "expired": 645
   },
   "claims": [
     {
@@ -1834,6 +1834,112 @@
       "dissenting_sources": [],
       "framing_analysis": "The claim is framed validly and appears to be a direct, accurate quote. The incomplete sentence \"This is\" at the end of the claim matches the beginning of Rubio's complete statement \"This is the hard work of foreign policy\" found in the full source material.",
       "web_search_summary": "Multiple search results confirm that Secretary of State Marco Rubio made these exact statements about U.S.-China relations. The quote about \"God forbid\" conflict occurring, describing potential conflict as \"catastrophic,\" and stating the challenge is managing the relationship without abandoning U.S. national interests appears consistently across Fox News social media posts from July 31, 2026.",
+      "investigation_depth": "quick"
+    },
+    {
+      "claim_id": "9375120882067202",
+      "claim_text": "The Pentagon is reportedly negotiating to take direct equity stakes in US drone companies. Not contracts. Actual government ownership.",
+      "status": "supported",
+      "confidence_score": 0.73,
+      "display_score": 0.469,
+      "scoring_breakdown": {
+        "source_tier": 0.5,
+        "newsguard": 0.5,
+        "corroboration": 1,
+        "evidence_quality": 0.7,
+        "cross_source": 1,
+        "web_search": 1
+      },
+      "source_handle": "randgroup",
+      "source_tier": null,
+      "evidence_urls": [
+        "https://qz.com/pentagon-drone-company-equity-stakes-unusual-machines-052826",
+        "https://qz.com/pentagon-drone-company-equity-stakes-unusual-machines-052826",
+        "https://dronexl.co/2026/05/28/pentagon-drone-funding-equity-neros-unusual-machines-pdw/",
+        "https://dronexl.co/2026/05/28/pentagon-drone-funding-equity-neros-unusual-machines-pdw/",
+        "https://www.defenseone.com/defense-systems/2026/06/senate-pentagon-equity-stakes-private-companies/414279/"
+      ],
+      "tweet_url": null,
+      "category": "military_action",
+      "related_axis_id": "axis_power_accountability",
+      "verification_count": 7,
+      "verified_at": "2026-09-21T10:12:37.226Z",
+      "created_at": "2026-06-12T21:52:00Z",
+      "original_source": "The Wall Street Journal",
+      "claim_date": "2026-05",
+      "supporting_sources": [
+        {
+          "name": "Qz.com",
+          "excerpt": "The Pentagon is in talks to take ownership stakes in a group of U.S. drone companies, according to The Wall Street Journal.",
+          "url": null
+        },
+        {
+          "name": "DroneXL",
+          "excerpt": "The Trump administration is negotiating funding deals with American drone companies that could hand the U.S. government an ownership slice of the firms it backs.",
+          "url": null
+        },
+        {
+          "name": "Defense One",
+          "excerpt": "The Pentagon office that lends money to weapons developers would be allowed to take equity stakes in private companies deemed critical to national security under draft provisions of the 2027 NDAA.",
+          "url": null
+        }
+      ],
+      "dissenting_sources": [],
+      "framing_analysis": "The claim is framed validly and accurately distinguishes between equity stakes (ownership) and traditional contracts. The emphasis on 'actual government ownership' correctly captures the unusual nature of this arrangement as reported by sources.",
+      "web_search_summary": "Multiple sources confirm the Pentagon is in talks to take equity stakes in U.S. drone companies, representing actual ownership rather than traditional contracts. The Wall Street Journal originally reported this unusual arrangement, with specific companies identified including Performance Drone Works, Unusual Machines, and Neros Technologies.",
+      "investigation_depth": "quick"
+    },
+    {
+      "claim_id": "56132a106a29fcf1",
+      "claim_text": "US Navy refusing escorts through Strait of Hormuz due to high risk of Iranian attacks highlights market fragility and supply chain concerns.",
+      "status": "supported",
+      "confidence_score": 0.73,
+      "display_score": 0.469,
+      "scoring_breakdown": {
+        "source_tier": 0.5,
+        "newsguard": 0.5,
+        "corroboration": 1,
+        "evidence_quality": 0.7,
+        "cross_source": 1,
+        "web_search": 1
+      },
+      "source_handle": null,
+      "source_tier": null,
+      "evidence_urls": [
+        "https://www.marineinsight.com/u-s-navy-refuses-requests-from-shipping-firms-for-escorts-through-strait-of-hormuz-citing-high-attack-risk/",
+        "https://www.marineinsight.com/u-s-navy-refuses-requests-from-shipping-firms-for-escorts-through-strait-of-hormuz-citing-high-attack-risk/",
+        "https://www.msn.com/en-us/news/other/some-ships-refusing-us-military-guided-hormuz-transits-after/ar-AA2bXXKf",
+        "https://www.msn.com/en-us/news/other/some-ships-refusing-us-military-guided-hormuz-transits-after/ar-AA2bXXKf",
+        "https://maritime-executive.com/article/u-s-navy-turns-down-strait-of-hormuz-escort-requests-because-of-high-risk"
+      ],
+      "tweet_url": null,
+      "category": "military_action",
+      "related_axis_id": "axis_global_economic_stability_v1",
+      "verification_count": 7,
+      "verified_at": "2026-09-21T10:12:37.227Z",
+      "created_at": "2026-03-29T17:42:00Z",
+      "original_source": "Reuters (as cited by Maritime Executive and Marine Insight)",
+      "claim_date": null,
+      "supporting_sources": [
+        {
+          "name": "Marine Insight",
+          "excerpt": "The U.S. Navy has refused almost daily requests from shipping companies for military escorts through the Strait of Hormuz since the start of the conflict with Iran, with officials saying the risk of attacks is too high, leaving oil shipments exposed and global markets under pressure.",
+          "url": null
+        },
+        {
+          "name": "Maritime Executive",
+          "excerpt": "The U.S. Navy has declined to provide Strait of Hormuz escorts for shipping despite daily requests, according to multiple sources reported by Reuters.",
+          "url": null
+        },
+        {
+          "name": "MSN",
+          "excerpt": "Some ships are reportedly refusing US-military guided Hormuz transits amid escalating Iranian attacks in the strategically vital Strait of Hormuz.",
+          "url": null
+        }
+      ],
+      "dissenting_sources": [],
+      "framing_analysis": "The claim is framed validly and accurately reflects the reporting. It correctly summarizes the Navy's refusal of escort requests, the stated reason (high Iranian attack risk), and directly quotes the sources' characterization of market and supply chain implications.",
+      "web_search_summary": "Multiple maritime news sources confirm that the U.S. Navy has refused nearly daily requests from shipping companies for military escorts through the Strait of Hormuz, citing high risk of Iranian attacks. The sources explicitly mention concerns about exposed oil shipments and pressure on global markets, supporting the claim's assertion about market fragility and supply chain concerns.",
       "investigation_depth": "quick"
     },
     {
@@ -8721,6 +8827,65 @@
       ],
       "framing_analysis": "The claim is framed in a highly accusatory and sensational manner, using terms like \"BOMBSHELL!\" and \"Total corruption!\" to evoke strong emotional responses. While some elements of the claim are supported by facts, the language used is clearly intended to be inflammatory and suggests a predetermined conclusion.",
       "web_search_summary": "Donald Trump did purchase stock in TKO Group Holdings, the parent company of UFC, between $15,000 and $50,000 on March 25, 2026, which was after the White House event was announced and promoted. While UFC executives claim the company is covering the event's costs, critics allege the event uses federal property and taxpayer dollars for private profit, citing Trump's financial interest and the involvement of a Trump family-owned cryptocurrency company in fighter bonuses. There is no mention of an expert named Ellen Kountz in the provided search results.",
+      "investigation_depth": "quick"
+    },
+    {
+      "claim_id": "4deb7fd94663d16d",
+      "claim_text": "Confirmed reports of US-Israeli strikes on Mehrabad International Airport in Tehran are being labeled as a war crime, raising humanitarian concerns.",
+      "status": "supported",
+      "confidence_score": 0.66,
+      "display_score": 0.448,
+      "scoring_breakdown": {
+        "source_tier": 0.5,
+        "newsguard": 0.5,
+        "corroboration": 1,
+        "evidence_quality": 0.7,
+        "cross_source": 0.5,
+        "web_search": 0.8
+      },
+      "source_handle": null,
+      "source_tier": null,
+      "evidence_urls": [
+        "https://www.jfeed.com/middleeast/mehrabad-airport-strikes",
+        "https://www.jfeed.com/middleeast/mehrabad-airport-strikes",
+        "https://shafaq.com/en/Middle-East/Iran-US-Israeli-strikes-destroy-6-civilian-planes-in-Mehrabad-Airport-attack",
+        "https://shafaq.com/en/Middle-East/Iran-US-Israeli-strikes-destroy-6-civilian-planes-in-Mehrabad-Airport-attack",
+        "https://www.middleeastbulletin.com/video/huge-fires-and-blasts-reported-near-tehrans-mehrab"
+      ],
+      "tweet_url": null,
+      "category": "casualties_humanitarian",
+      "related_axis_id": "axis_geopolitical_rhetoric_v1",
+      "verification_count": 7,
+      "verified_at": "2026-09-21T10:12:37.227Z",
+      "created_at": "2026-04-06T11:06:00Z",
+      "original_source": "Multiple sources reported simultaneously; JFeed and Middle East Bulletin appear among earliest",
+      "claim_date": null,
+      "supporting_sources": [
+        {
+          "name": "JFeed",
+          "excerpt": "Mehrabad Airport suffered extensive damage following coordinated strikes by Israeli and American forces, targeting military sections including hangars and maintenance facilities.",
+          "url": null
+        },
+        {
+          "name": "Shafaq News",
+          "excerpt": "Iran condemned the attack on its civil aviation sector, calling it a clear violation of international law and civil aviation agreements, with 6 civilian planes reportedly destroyed.",
+          "url": null
+        },
+        {
+          "name": "Middle East Bulletin",
+          "excerpt": "Large explosions and fires were reported near Mehrabad International Airport after Israeli forces launched airstrikes targeting sites across Tehran.",
+          "url": null
+        }
+      ],
+      "dissenting_sources": [
+        {
+          "name": "JFeed",
+          "excerpt": "The attack specifically targeted military sections of the airport, focusing on hangars and specialized maintenance facilities, not exclusively civilian infrastructure.",
+          "url": null
+        }
+      ],
+      "framing_analysis": "The claim is framed misleadingly by presenting Iran's characterization as 'confirmed reports' of war crimes. While the strikes are confirmed, the 'war crime' label represents Iran's position rather than an established international legal determination, and 'humanitarian concerns' are not substantiated in the sources provided.",
+      "web_search_summary": "The search results confirm strikes on Mehrabad International Airport in Tehran by US and Israeli forces. However, the characterization as a 'war crime' appears only as Iran's condemnation describing it as a violation of international law, not as an independent legal determination or widespread international consensus. The humanitarian concerns aspect is not explicitly addressed in the provided sources.",
       "investigation_depth": "quick"
     },
     {
@@ -22864,6 +23029,59 @@
       "investigation_depth": "quick"
     },
     {
+      "claim_id": "642d7a7ff1517a9d",
+      "claim_text": "Reports of US-Israeli strikes on Mehrabad International Airport, labeled 'war crime', emphasize military action over humanitarian concerns.",
+      "status": "refuted",
+      "confidence_score": 0.6,
+      "display_score": 0.43,
+      "scoring_breakdown": {
+        "source_tier": 0.5,
+        "newsguard": 0.5,
+        "corroboration": 1,
+        "evidence_quality": 0,
+        "cross_source": 0.75,
+        "web_search": -1
+      },
+      "source_handle": null,
+      "source_tier": null,
+      "evidence_urls": [
+        "https://www.jfeed.com/middleeast/mehrabad-airport-strikes",
+        "https://www.jfeed.com/middleeast/mehrabad-airport-strikes",
+        "https://www.thedefensenews.com/Israeli-Air-Force-Strike-on-Tehrans-Mehrabad-Airport-Destroys-16-IRGC-Quds-Force-Transport-Aircraft/",
+        "https://www.thedefensenews.com/Israeli-Air-Force-Strike-on-Tehrans-Mehrabad-Airport-Destroys-16-IRGC-Quds-Force-Transport-Aircraft/",
+        "https://www.iranintl.com/en/202603166068"
+      ],
+      "tweet_url": null,
+      "category": "military_action",
+      "related_axis_id": "axis_geopolitical_rhetoric_v1",
+      "verification_count": 7,
+      "verified_at": "2026-09-21T10:12:37.227Z",
+      "created_at": "2026-04-06T14:06:00Z",
+      "original_source": null,
+      "claim_date": null,
+      "supporting_sources": [],
+      "dissenting_sources": [
+        {
+          "name": "JFeed",
+          "excerpt": "The attack specifically targeted the military sections of the airport, focusing on hangars and specialized maintenance facilities, indicating discrimination between military and civilian targets.",
+          "url": null
+        },
+        {
+          "name": "The Defense News",
+          "excerpt": "The strikes were part of a coordinated Israeli air campaign targeting military infrastructure across Iran, destroying 16 IRGC Quds Force transport aircraft.",
+          "url": null
+        },
+        {
+          "name": "Iran International",
+          "excerpt": "Israel's military destroyed an aircraft used by Iran's supreme leader and Guards transport fleet, focusing on military assets rather than civilian infrastructure.",
+          "url": null
+        }
+      ],
+      "framing_analysis": "The claim is misleadingly framed. None of the sources label the strikes as 'war crimes' or suggest humanitarian concerns were ignored. The evidence shows deliberate targeting of military sections at a dual-use facility, which contradicts the claim's assertion that military action was emphasized over humanitarian concerns.",
+      "web_search_summary": "The search results confirm strikes on Mehrabad Airport by Israeli (and possibly US) forces, but they consistently describe the strikes as specifically targeting military sections, infrastructure, and IRGC aircraft while avoiding civilian areas. No sources label the strikes as a 'war crime' or suggest they prioritized military action over humanitarian concerns; rather, the targeting of military facilities at a dual-use airport suggests an attempt to limit civilian impact.",
+      "investigation_depth": "quick"
+    },
+    {
       "claim_id": "live_4be6494fba",
       "claim_text": "Astronomer picked by President Trump last month to head a UFO advisory council says he believes he was brought on because the U.S. government remains \"baffled\" by the unidentified objects the military has recorded over the past several decades.\n\nAvi Loeb, known for arguing that",
       "status": "refuted",
@@ -33909,6 +34127,130 @@
       "investigation_depth": "quick"
     },
     {
+      "claim_id": "5b5602df96978027",
+      "claim_text": "URL: https://www.nytimes.com/2026/09/17/world/middleeast/yemen-houthis-marib.html",
+      "status": "unverified",
+      "confidence_score": 0.525,
+      "display_score": 0.174,
+      "scoring_breakdown": {
+        "source_tier": 0.5,
+        "newsguard": 0.5,
+        "corroboration": 1,
+        "evidence_quality": 0,
+        "cross_source": 1,
+        "web_search": 0
+      },
+      "source_handle": null,
+      "source_tier": null,
+      "evidence_urls": [],
+      "tweet_url": null,
+      "category": "proxy_regional",
+      "related_axis_id": null,
+      "verification_count": 1,
+      "verified_at": "2026-09-21T10:12:37.228Z",
+      "created_at": "2026-09-19T06:19:10.253Z",
+      "original_source": null,
+      "claim_date": null,
+      "supporting_sources": [],
+      "dissenting_sources": [],
+      "framing_analysis": null,
+      "web_search_summary": null,
+      "investigation_depth": "quick"
+    },
+    {
+      "claim_id": "ce5bb7be7cc0a1dc",
+      "claim_text": "URL: https://www.nytimes.com/2026/09/17/world/middleeast/e1-israel-west-bank-settlement.html",
+      "status": "unverified",
+      "confidence_score": 0.525,
+      "display_score": 0.174,
+      "scoring_breakdown": {
+        "source_tier": 0.5,
+        "newsguard": 0.5,
+        "corroboration": 1,
+        "evidence_quality": 0,
+        "cross_source": 1,
+        "web_search": 0
+      },
+      "source_handle": null,
+      "source_tier": null,
+      "evidence_urls": [],
+      "tweet_url": null,
+      "category": "misc",
+      "related_axis_id": null,
+      "verification_count": 1,
+      "verified_at": "2026-09-21T10:12:37.228Z",
+      "created_at": "2026-09-19T06:19:10.287Z",
+      "original_source": null,
+      "claim_date": null,
+      "supporting_sources": [],
+      "dissenting_sources": [],
+      "framing_analysis": null,
+      "web_search_summary": null,
+      "investigation_depth": "quick"
+    },
+    {
+      "claim_id": "ad2fdfa93ba8143a",
+      "claim_text": "URL: https://www.nytimes.com/2026/09/16/world/middleeast/israel-one-ton-bombs-us.html",
+      "status": "unverified",
+      "confidence_score": 0.525,
+      "display_score": 0.174,
+      "scoring_breakdown": {
+        "source_tier": 0.5,
+        "newsguard": 0.5,
+        "corroboration": 1,
+        "evidence_quality": 0,
+        "cross_source": 1,
+        "web_search": 0
+      },
+      "source_handle": null,
+      "source_tier": null,
+      "evidence_urls": [],
+      "tweet_url": null,
+      "category": "nuclear",
+      "related_axis_id": null,
+      "verification_count": 1,
+      "verified_at": "2026-09-21T10:12:37.228Z",
+      "created_at": "2026-09-19T06:19:10.321Z",
+      "original_source": null,
+      "claim_date": null,
+      "supporting_sources": [],
+      "dissenting_sources": [],
+      "framing_analysis": null,
+      "web_search_summary": null,
+      "investigation_depth": "quick"
+    },
+    {
+      "claim_id": "ce917fd21cc334da",
+      "claim_text": "URL: https://www.nytimes.com/2026/09/16/world/middleeast/gaza-building-collapse.html",
+      "status": "unverified",
+      "confidence_score": 0.525,
+      "display_score": 0.174,
+      "scoring_breakdown": {
+        "source_tier": 0.5,
+        "newsguard": 0.5,
+        "corroboration": 1,
+        "evidence_quality": 0,
+        "cross_source": 1,
+        "web_search": 0
+      },
+      "source_handle": null,
+      "source_tier": null,
+      "evidence_urls": [],
+      "tweet_url": null,
+      "category": "misc",
+      "related_axis_id": null,
+      "verification_count": 1,
+      "verified_at": "2026-09-21T10:12:37.228Z",
+      "created_at": "2026-09-19T06:19:10.332Z",
+      "original_source": null,
+      "claim_date": null,
+      "supporting_sources": [],
+      "dissenting_sources": [],
+      "framing_analysis": null,
+      "web_search_summary": null,
+      "investigation_depth": "quick"
+    },
+    {
       "claim_id": "live_448d6b6a39",
       "claim_text": "🇷🇺 RUSSIA’S “HYBRID WAR” IS STARTING TO LOOK A LOT LIKE WAR\n\nEurope keeps calling Russia’s campaign a “hybrid war.” The problem is that the hybrid part is becoming increasingly difficult to spot.\n\nGermany now formally blames Russia for the explosive-laden drone found at",
       "status": "unverified",
@@ -33996,43 +34338,6 @@
       "dissenting_sources": [],
       "framing_analysis": "Cannot assess framing validity without finding the actual quote in the search results. The claim presents a specific quoted statement that would need verification from primary sources or direct reporting of Trump's remarks.",
       "web_search_summary": "The search results do not contain the specific quote attributed to Trump about Russia-Ukraine being a 'personality problem' between Zelenskyy and Putin who 'truly hate each other.' The results discuss Trump's shifting positions on the Russia-Ukraine war and his mediation attempts, but none quote or reference this particular statement about personal hatred between the two leaders.",
-      "investigation_depth": "quick"
-    },
-    {
-      "claim_id": "live_bc8a7b15c2",
-      "claim_text": "Iran was 'WEEKS from weapon that would destroy Israel & Middle East' before Trump prevented it",
-      "status": "unverified",
-      "confidence_score": 0.4,
-      "display_score": 0.337,
-      "scoring_breakdown": {
-        "source_tier": 0.5,
-        "newsguard": 0.5,
-        "corroboration": 0,
-        "evidence_quality": 0.5,
-        "cross_source": 0.5,
-        "web_search": 0.5
-      },
-      "source_handle": null,
-      "source_tier": null,
-      "evidence_urls": [
-        "https://www.cnn.com/2026/08/20/world/live-news/iran-war-trump",
-        "https://www.cnn.com/2026/08/20/world/live-news/iran-war-trump",
-        "https://en.wikipedia.org/wiki/Prelude_to_the_2026_Iran_war",
-        "https://en.wikipedia.org/wiki/Prelude_to_the_2026_Iran_war",
-        "https://en.wikipedia.org/wiki/Timeline_of_the_2026_Iran_war"
-      ],
-      "tweet_url": null,
-      "category": null,
-      "related_axis_id": "axis_religion_politics_war_v1",
-      "verification_count": 1,
-      "verified_at": "2026-08-21T13:33:12.741Z",
-      "created_at": "2026-08-21T13:33:12.741Z",
-      "original_source": null,
-      "claim_date": null,
-      "supporting_sources": [],
-      "dissenting_sources": [],
-      "framing_analysis": "Cannot evaluate framing validity as the specific claim about Iran being weeks from a weapon and Trump preventing it does not appear in any of the provided search results. The results cover different aspects of Iran-related events in 2026.",
-      "web_search_summary": "The search results do not contain any information about Iran being 'weeks from a weapon that would destroy Israel & Middle East' or Trump preventing such a scenario. The results discuss 2026 events including sanctions, Netanyahu pushing Trump for military action against Iran, and ceasefire agreements, but make no mention of Iran's proximity to developing a devastating weapon or Trump stopping it.",
       "investigation_depth": "quick"
     },
     {
@@ -34366,37 +34671,6 @@
       "dissenting_sources": [],
       "framing_analysis": "The claim appears to be educational/advisory content about agentic AI and governance, promoting a cohort or course. Without access to relevant search results about US state AI laws or AI governance frameworks, it is impossible to assess whether the framing accurately represents the regulatory landscape or exaggerates/understates the current state of AI regulation.",
       "web_search_summary": "The search results provided consist only of a single advertisement link for a Udemy course on AI agents. There is no substantive content, news articles, regulatory information, or authoritative sources that would allow verification of the claim's statements about AI agent capabilities, US state AI laws, accountability, or governance considerations.",
-      "investigation_depth": "quick"
-    },
-    {
-      "claim_id": "live_95d094b49f",
-      "claim_text": "Hong Kong’s High Court has found Chow Hang-tung and Lee Cheuk-yan guilty of \"inciting subversion of state power.\"\n\nThe truth? They held peaceful vigils for victims of the 1989 Tiananmen Massacre. Each now faces up to 10 years in prison.\n\nChow Hang-tung, Lee Cheuk-yan, and all",
-      "status": "unverified",
-      "confidence_score": 0.38,
-      "display_score": 0.131,
-      "scoring_breakdown": {
-        "source_tier": 0.5,
-        "newsguard": 0.5,
-        "corroboration": 0,
-        "evidence_quality": 0.5,
-        "cross_source": 0.5,
-        "web_search": 0.3
-      },
-      "source_handle": "hrw",
-      "source_tier": null,
-      "evidence_urls": [],
-      "tweet_url": null,
-      "category": null,
-      "related_axis_id": null,
-      "verification_count": 1,
-      "verified_at": "2026-08-21T18:35:22.980Z",
-      "created_at": "2026-08-21T18:35:22.466Z",
-      "original_source": null,
-      "claim_date": null,
-      "supporting_sources": [],
-      "dissenting_sources": [],
-      "framing_analysis": null,
-      "web_search_summary": "No web results found.",
       "investigation_depth": "quick"
     },
     {
@@ -36621,6 +36895,59 @@
       "investigation_depth": "quick"
     },
     {
+      "claim_id": "2825eb224033063a",
+      "claim_text": "Funeral procession of schoolgirls in Minab killed by alleged US-Israeli strikes, anti-US/Israel sentiment.",
+      "status": "expired",
+      "confidence_score": 0.595,
+      "display_score": 0.529,
+      "scoring_breakdown": {
+        "source_tier": 0.4,
+        "newsguard": 0.5,
+        "corroboration": 1,
+        "evidence_quality": 0,
+        "cross_source": 1,
+        "web_search": 1
+      },
+      "source_handle": "jvnior",
+      "source_tier": 4,
+      "evidence_urls": [
+        "https://www.thestatesman.com/world/coffins-and-chants-in-irans-minab-funeral-of-schoolgirls-killed-in-us-israeli-strike-becomes-mass-outcry-1503565577.html",
+        "https://www.thestatesman.com/world/coffins-and-chants-in-irans-minab-funeral-of-schoolgirls-killed-in-us-israeli-strike-becomes-mass-outcry-1503565577.html",
+        "https://x.com/relishwirenews/status/2028846858882232459",
+        "https://x.com/relishwirenews/status/2028846858882232459",
+        "https://en.wikipedia.org/wiki/2026_Minab_school_attack"
+      ],
+      "tweet_url": null,
+      "category": "military_action",
+      "related_axis_id": "axis_geopolitical_rhetoric_v1",
+      "verification_count": 7,
+      "verified_at": "2026-09-21T10:12:37.226Z",
+      "created_at": "2026-03-03T20:14:00.000Z",
+      "original_source": "The Statesman and Relish Wire News appear to be among the first reporting on the funeral procession",
+      "claim_date": "2026-03-03",
+      "supporting_sources": [
+        {
+          "name": "The Statesman",
+          "excerpt": "Thousands of mourners gathered in Iran's southern city of Minab on Tuesday for the funeral of schoolgirls killed in weekend air and missile strikes blamed on the United States and Israel.",
+          "url": null
+        },
+        {
+          "name": "Wikipedia",
+          "excerpt": "On 28 February 2026, the United States Armed Forces struck the Shajareh Tayyebeh Elementary School in Minab, Hormozgan province in southern Iran with a Tomahawk missile, directly killing 156 civilians, including 120 schoolchildren.",
+          "url": null
+        },
+        {
+          "name": "Relish Wire News",
+          "excerpt": "Thousands of mourners gathered in the southern Iranian city of Minab on March 3, 2026, carrying coffins and chanting against the United States and Israel during a mass funeral procession for at least 165-168 young schoolgirls and staff.",
+          "url": null
+        }
+      ],
+      "dissenting_sources": [],
+      "framing_analysis": "The claim accurately describes the funeral procession and anti-US/Israel sentiment. The term 'alleged' is appropriate given Iran's attribution, though Wikipedia directly attributes the attack to US Armed Forces, indicating the strike's perpetrator may not be in dispute but rather its characterization.",
+      "web_search_summary": "Multiple sources confirm a funeral procession occurred in Minab for schoolgirls killed in what Iran blamed on US-Israeli strikes. The Statesman and social media reports document thousands of mourners carrying coffins and chanting against the United States and Israel. Wikipedia provides detailed documentation of the February 28, 2026 attack by US Armed Forces on an elementary school in Minab that killed 156 civilians including 120 schoolchildren.",
+      "investigation_depth": "quick"
+    },
+    {
       "claim_id": "live_0a6cd9aea3",
       "claim_text": "Israel has rejected a 15-point Gaza peace plan backed by the US. \n\nNetanyahu says Israeli forces will not withdraw until Hamas is fully disarmed, threatening to prolong the war and suffering in Gaza. \n\nAl Jazeera’s Nour Odeh reports.",
       "status": "expired",
@@ -36655,6 +36982,102 @@
       "dissenting_sources": [],
       "framing_analysis": null,
       "web_search_summary": "Searching the webGemini said",
+      "investigation_depth": "quick"
+    },
+    {
+      "claim_id": "b67d279af4ba9313",
+      "claim_text": "US Navy refusing escorts through the Strait of Hormuz due to high risk of Iranian attacks, indicating market fragility.",
+      "status": "expired",
+      "confidence_score": 0.556,
+      "display_score": 0.517,
+      "scoring_breakdown": {
+        "source_tier": 0.4,
+        "newsguard": 0.24,
+        "corroboration": 1,
+        "evidence_quality": 0,
+        "cross_source": 1,
+        "web_search": 1
+      },
+      "source_handle": "bricsinfo",
+      "source_tier": 4,
+      "evidence_urls": [
+        "https://www.msn.com/en-us/news/other/some-ships-refusing-us-military-guided-hormuz-transits-after/ar-AA2bXXKf",
+        "https://www.msn.com/en-us/news/other/some-ships-refusing-us-military-guided-hormuz-transits-after/ar-AA2bXXKf",
+        "https://maritime-executive.com/article/u-s-navy-turns-down-strait-of-hormuz-escort-requests-because-of-high-risk",
+        "https://maritime-executive.com/article/u-s-navy-turns-down-strait-of-hormuz-escort-requests-because-of-high-risk",
+        "https://www.marineinsight.com/u-s-navy-refuses-requests-from-shipping-firms-for-escorts-through-strait-of-hormuz-citing-high-attack-risk/"
+      ],
+      "tweet_url": null,
+      "category": "military_action",
+      "related_axis_id": "axis_global_economic_stability_v1",
+      "verification_count": 7,
+      "verified_at": "2026-09-21T10:12:37.226Z",
+      "created_at": "2026-03-11T12:28:00Z",
+      "original_source": "Reuters (as cited by Maritime Executive and Marine Insight)",
+      "claim_date": null,
+      "supporting_sources": [
+        {
+          "name": "Maritime Executive",
+          "excerpt": "The U.S. Navy has declined to provide Strait of Hormuz escorts for shipping, despite daily requests, with multiple sources confirming this to Reuters.",
+          "url": null
+        },
+        {
+          "name": "Marine Insight",
+          "excerpt": "The U.S. Navy has refused almost daily requests from shipping companies for military escorts through the Strait of Hormuz, with officials saying the risk of attacks is too high, leaving oil shipments exposed and global markets under pressure.",
+          "url": null
+        }
+      ],
+      "dissenting_sources": [],
+      "framing_analysis": "The claim is framed validly and accurately reflects the reported situation. The search results directly support all elements: Navy refusal of escorts, high Iranian attack risk as the reason, and market fragility concerns from exposed oil shipments.",
+      "web_search_summary": "Multiple sources confirm the US Navy has declined to provide escorts through the Strait of Hormuz, citing high risk of Iranian attacks. Sources specifically note this refusal has occurred repeatedly despite daily requests from shipping companies, and explicitly mention concerns about market pressure due to exposed oil shipments.",
+      "investigation_depth": "quick"
+    },
+    {
+      "claim_id": "b3fd83bd4ead0f68",
+      "claim_text": "US Navy refusing requests from oil and shipping companies for escorts through the Strait of Hormuz due to high risk of Iranian attacks.",
+      "status": "expired",
+      "confidence_score": 0.556,
+      "display_score": 0.517,
+      "scoring_breakdown": {
+        "source_tier": 0.4,
+        "newsguard": 0.24,
+        "corroboration": 1,
+        "evidence_quality": 0,
+        "cross_source": 1,
+        "web_search": 1
+      },
+      "source_handle": "bricsinfo",
+      "source_tier": 4,
+      "evidence_urls": [
+        "https://www.marineinsight.com/u-s-navy-refuses-requests-from-shipping-firms-for-escorts-through-strait-of-hormuz-citing-high-attack-risk/",
+        "https://www.marineinsight.com/u-s-navy-refuses-requests-from-shipping-firms-for-escorts-through-strait-of-hormuz-citing-high-attack-risk/",
+        "https://tradevae.com/news/commodities/us-navy-declines-requests-for-hormuz-escorts-citing-high-attack-risk/",
+        "https://tradevae.com/news/commodities/us-navy-declines-requests-for-hormuz-escorts-citing-high-attack-risk/",
+        "https://www.msn.com/en-us/news/other/some-ships-refusing-us-military-guided-hormuz-transits-after/ar-AA2bXXKf"
+      ],
+      "tweet_url": null,
+      "category": "proxy_regional",
+      "related_axis_id": "axis_national_sovereignty_v_intl_law_v1",
+      "verification_count": 7,
+      "verified_at": "2026-09-21T10:12:37.226Z",
+      "created_at": "2026-03-11T20:58:00Z",
+      "original_source": "Not specified in search results",
+      "claim_date": null,
+      "supporting_sources": [
+        {
+          "name": "Marine Insight",
+          "excerpt": "The U.S. Navy has refused almost daily requests from shipping companies for military escorts through the Strait of Hormuz since the start of the conflict with Iran, with officials saying the risk of attacks is too high.",
+          "url": null
+        },
+        {
+          "name": "TradeVAE",
+          "excerpt": "The U.S. Navy has repeatedly turned down almost-daily appeals from the shipping sector for military escorts through the Strait of Hormuz, concluding that the risk of attacks remains too elevated to permit escort missions.",
+          "url": null
+        }
+      ],
+      "dissenting_sources": [],
+      "framing_analysis": "The claim is framed validly and accurately represents the reported facts. It correctly identifies both the Navy's refusal of escort requests and the stated reason (high risk of Iranian attacks), matching the key details reported by multiple sources.",
+      "web_search_summary": "Multiple sources confirm the US Navy has refused almost daily requests from shipping and oil companies for military escorts through the Strait of Hormuz, citing high risk of Iranian attacks. This has been occurring since the start of the conflict with Iran, with officials determining the attack risk is too elevated to permit escort missions.",
       "investigation_depth": "quick"
     },
     {
@@ -36720,65 +37143,57 @@
       "investigation_depth": "quick"
     },
     {
-      "claim_id": "9375120882067202",
-      "claim_text": "The Pentagon is reportedly negotiating to take direct equity stakes in US drone companies. Not contracts. Actual government ownership.",
+      "claim_id": "38642334dc4b227c",
+      "claim_text": "US Navy refusing escorts through the Strait of Hormuz due to high risk of Iranian attacks, impacting global oil supply chains.",
       "status": "expired",
-      "confidence_score": 0.525,
-      "display_score": 0.408,
+      "confidence_score": 0.536,
+      "display_score": 0.511,
       "scoring_breakdown": {
-        "source_tier": 0.5,
-        "newsguard": 0.5,
+        "source_tier": 0.4,
+        "newsguard": 0.24,
         "corroboration": 1,
         "evidence_quality": 0,
         "cross_source": 1,
-        "web_search": 0
+        "web_search": 0.8
       },
-      "source_handle": "randgroup",
-      "source_tier": null,
-      "evidence_urls": [],
+      "source_handle": "bricsinfo",
+      "source_tier": 4,
+      "evidence_urls": [
+        "https://www.msn.com/en-us/news/other/some-ships-refusing-us-military-guided-hormuz-transits-after/ar-AA2bXXKf",
+        "https://www.msn.com/en-us/news/other/some-ships-refusing-us-military-guided-hormuz-transits-after/ar-AA2bXXKf",
+        "https://www.marineinsight.com/u-s-navy-refuses-requests-from-shipping-firms-for-escorts-through-strait-of-hormuz-citing-high-attack-risk/",
+        "https://www.marineinsight.com/u-s-navy-refuses-requests-from-shipping-firms-for-escorts-through-strait-of-hormuz-citing-high-attack-risk/",
+        "https://www.marineinsight.com/ships-reject-us-military-guided-strait-of-hormuz-transits-after-iranian-attacks-raise-security-concerns/"
+      ],
       "tweet_url": null,
       "category": "military_action",
-      "related_axis_id": "axis_power_accountability",
-      "verification_count": 6,
-      "verified_at": "2026-09-20T08:14:04.232Z",
-      "created_at": "2026-06-12T21:52:00Z",
-      "original_source": null,
+      "related_axis_id": "axis_geopolitical_rhetoric_v1",
+      "verification_count": 7,
+      "verified_at": "2026-09-21T10:12:37.223Z",
+      "created_at": "2026-03-11T12:28:00Z",
+      "original_source": "Marine Insight",
       "claim_date": null,
-      "supporting_sources": [],
-      "dissenting_sources": [],
-      "framing_analysis": null,
-      "web_search_summary": null,
-      "investigation_depth": "quick"
-    },
-    {
-      "claim_id": "56132a106a29fcf1",
-      "claim_text": "US Navy refusing escorts through Strait of Hormuz due to high risk of Iranian attacks highlights market fragility and supply chain concerns.",
-      "status": "expired",
-      "confidence_score": 0.525,
-      "display_score": 0.408,
-      "scoring_breakdown": {
-        "source_tier": 0.5,
-        "newsguard": 0.5,
-        "corroboration": 1,
-        "evidence_quality": 0,
-        "cross_source": 1,
-        "web_search": 0
-      },
-      "source_handle": null,
-      "source_tier": null,
-      "evidence_urls": [],
-      "tweet_url": null,
-      "category": "military_action",
-      "related_axis_id": "axis_global_economic_stability_v1",
-      "verification_count": 6,
-      "verified_at": "2026-09-20T08:14:04.233Z",
-      "created_at": "2026-03-29T17:42:00Z",
-      "original_source": null,
-      "claim_date": null,
-      "supporting_sources": [],
-      "dissenting_sources": [],
-      "framing_analysis": null,
-      "web_search_summary": null,
+      "supporting_sources": [
+        {
+          "name": "Marine Insight",
+          "excerpt": "The U.S. Navy has refused almost daily requests from shipping companies for military escorts through the Strait of Hormuz since the start of the conflict with Iran, with officials saying the risk of attacks is too high, leaving oil shipments exposed and global markets under pressure.",
+          "url": null
+        },
+        {
+          "name": "Marine Insight",
+          "excerpt": "Recent attacks have made some shipowners reluctant to use the U.S.-guided route, with five vessels attacked in Omani waters since July 7, including three crude oil tankers.",
+          "url": null
+        }
+      ],
+      "dissenting_sources": [
+        {
+          "name": "MSN/Various",
+          "excerpt": "Reports indicate some ships are refusing US-military guided Hormuz transits, suggesting it's the ships declining escorts rather than only the Navy refusing to provide them.",
+          "url": null
+        }
+      ],
+      "framing_analysis": "The claim is framed somewhat misleadingly by focusing only on Navy refusals while omitting that ships are also independently refusing US-guided transits. The situation involves both the Navy declining escort requests due to risk and ships rejecting available US military guidance, creating a bilateral reluctance rather than a unilateral Navy position.",
+      "web_search_summary": "The claim is partially accurate but inverts the key detail. Search results show the US Navy is refusing escort requests from shipping firms through the Strait of Hormuz due to high attack risk, and this is impacting oil shipments. However, some ships are also separately refusing US-military guided transits after Iranian attacks, creating a complex situation rather than a simple Navy refusal.",
       "investigation_depth": "quick"
     },
     {
@@ -36801,8 +37216,8 @@
       "tweet_url": null,
       "category": "military_action",
       "related_axis_id": "axis_geopolitical_rhetoric_v1",
-      "verification_count": 6,
-      "verified_at": "2026-09-20T08:14:04.233Z",
+      "verification_count": 7,
+      "verified_at": "2026-09-21T10:12:37.228Z",
       "created_at": "2026-03-03T20:14:00.000Z",
       "original_source": null,
       "claim_date": null,
@@ -36832,8 +37247,8 @@
       "tweet_url": null,
       "category": "military_action",
       "related_axis_id": "axis_power_accountability",
-      "verification_count": 6,
-      "verified_at": "2026-09-20T08:14:04.233Z",
+      "verification_count": 7,
+      "verified_at": "2026-09-21T10:12:37.229Z",
       "created_at": "2026-06-12T07:52:00Z",
       "original_source": null,
       "claim_date": null,
@@ -37042,37 +37457,6 @@
       "investigation_depth": "quick"
     },
     {
-      "claim_id": "642d7a7ff1517a9d",
-      "claim_text": "Reports of US-Israeli strikes on Mehrabad International Airport, labeled 'war crime', emphasize military action over humanitarian concerns.",
-      "status": "expired",
-      "confidence_score": 0.5,
-      "display_score": 0.4,
-      "scoring_breakdown": {
-        "source_tier": 0.5,
-        "newsguard": 0.5,
-        "corroboration": 1,
-        "evidence_quality": 0,
-        "cross_source": 0.75,
-        "web_search": 0
-      },
-      "source_handle": null,
-      "source_tier": null,
-      "evidence_urls": [],
-      "tweet_url": null,
-      "category": "military_action",
-      "related_axis_id": "axis_geopolitical_rhetoric_v1",
-      "verification_count": 6,
-      "verified_at": "2026-09-20T08:14:04.232Z",
-      "created_at": "2026-04-06T14:06:00Z",
-      "original_source": null,
-      "claim_date": null,
-      "supporting_sources": [],
-      "dissenting_sources": [],
-      "framing_analysis": null,
-      "web_search_summary": null,
-      "investigation_depth": "quick"
-    },
-    {
       "claim_id": "827bcb16e216ddd5",
       "claim_text": "Confirmed reports of US-Israeli strikes on Mehrabad International Airport in Tehran, labeled as a 'war crime', emphasize national autonomy over international law.",
       "status": "expired",
@@ -37092,71 +37476,9 @@
       "tweet_url": null,
       "category": "military_action",
       "related_axis_id": "axis_national_sovereignty_v_intl_law_v1",
-      "verification_count": 6,
-      "verified_at": "2026-09-20T08:14:04.233Z",
+      "verification_count": 7,
+      "verified_at": "2026-09-21T10:12:37.228Z",
       "created_at": "2026-04-06T12:36:00Z",
-      "original_source": null,
-      "claim_date": null,
-      "supporting_sources": [],
-      "dissenting_sources": [],
-      "framing_analysis": null,
-      "web_search_summary": null,
-      "investigation_depth": "quick"
-    },
-    {
-      "claim_id": "2825eb224033063a",
-      "claim_text": "Funeral procession of schoolgirls in Minab killed by alleged US-Israeli strikes, anti-US/Israel sentiment.",
-      "status": "expired",
-      "confidence_score": 0.495,
-      "display_score": 0.499,
-      "scoring_breakdown": {
-        "source_tier": 0.4,
-        "newsguard": 0.5,
-        "corroboration": 1,
-        "evidence_quality": 0,
-        "cross_source": 1,
-        "web_search": 0
-      },
-      "source_handle": "jvnior",
-      "source_tier": 4,
-      "evidence_urls": [],
-      "tweet_url": null,
-      "category": "military_action",
-      "related_axis_id": "axis_geopolitical_rhetoric_v1",
-      "verification_count": 6,
-      "verified_at": "2026-09-20T08:14:04.232Z",
-      "created_at": "2026-03-03T20:14:00.000Z",
-      "original_source": null,
-      "claim_date": null,
-      "supporting_sources": [],
-      "dissenting_sources": [],
-      "framing_analysis": null,
-      "web_search_summary": null,
-      "investigation_depth": "quick"
-    },
-    {
-      "claim_id": "4deb7fd94663d16d",
-      "claim_text": "Confirmed reports of US-Israeli strikes on Mehrabad International Airport in Tehran are being labeled as a war crime, raising humanitarian concerns.",
-      "status": "expired",
-      "confidence_score": 0.475,
-      "display_score": 0.393,
-      "scoring_breakdown": {
-        "source_tier": 0.5,
-        "newsguard": 0.5,
-        "corroboration": 1,
-        "evidence_quality": 0,
-        "cross_source": 0.5,
-        "web_search": 0
-      },
-      "source_handle": null,
-      "source_tier": null,
-      "evidence_urls": [],
-      "tweet_url": null,
-      "category": "casualties_humanitarian",
-      "related_axis_id": "axis_geopolitical_rhetoric_v1",
-      "verification_count": 6,
-      "verified_at": "2026-09-20T08:14:04.232Z",
-      "created_at": "2026-04-06T11:06:00Z",
       "original_source": null,
       "claim_date": null,
       "supporting_sources": [],
@@ -37358,99 +37680,6 @@
       "verification_count": 1,
       "verified_at": "2026-07-30T00:58:18.168Z",
       "created_at": "2026-07-30T00:58:18.166Z",
-      "original_source": null,
-      "claim_date": null,
-      "supporting_sources": [],
-      "dissenting_sources": [],
-      "framing_analysis": null,
-      "web_search_summary": null,
-      "investigation_depth": "quick"
-    },
-    {
-      "claim_id": "38642334dc4b227c",
-      "claim_text": "US Navy refusing escorts through the Strait of Hormuz due to high risk of Iranian attacks, impacting global oil supply chains.",
-      "status": "expired",
-      "confidence_score": 0.456,
-      "display_score": 0.487,
-      "scoring_breakdown": {
-        "source_tier": 0.4,
-        "newsguard": 0.24,
-        "corroboration": 1,
-        "evidence_quality": 0,
-        "cross_source": 1,
-        "web_search": 0
-      },
-      "source_handle": "bricsinfo",
-      "source_tier": 4,
-      "evidence_urls": [],
-      "tweet_url": null,
-      "category": "military_action",
-      "related_axis_id": "axis_geopolitical_rhetoric_v1",
-      "verification_count": 6,
-      "verified_at": "2026-09-20T08:14:04.230Z",
-      "created_at": "2026-03-11T12:28:00Z",
-      "original_source": null,
-      "claim_date": null,
-      "supporting_sources": [],
-      "dissenting_sources": [],
-      "framing_analysis": null,
-      "web_search_summary": null,
-      "investigation_depth": "quick"
-    },
-    {
-      "claim_id": "b67d279af4ba9313",
-      "claim_text": "US Navy refusing escorts through the Strait of Hormuz due to high risk of Iranian attacks, indicating market fragility.",
-      "status": "expired",
-      "confidence_score": 0.456,
-      "display_score": 0.487,
-      "scoring_breakdown": {
-        "source_tier": 0.4,
-        "newsguard": 0.24,
-        "corroboration": 1,
-        "evidence_quality": 0,
-        "cross_source": 1,
-        "web_search": 0
-      },
-      "source_handle": "bricsinfo",
-      "source_tier": 4,
-      "evidence_urls": [],
-      "tweet_url": null,
-      "category": "military_action",
-      "related_axis_id": "axis_global_economic_stability_v1",
-      "verification_count": 6,
-      "verified_at": "2026-09-20T08:14:04.232Z",
-      "created_at": "2026-03-11T12:28:00Z",
-      "original_source": null,
-      "claim_date": null,
-      "supporting_sources": [],
-      "dissenting_sources": [],
-      "framing_analysis": null,
-      "web_search_summary": null,
-      "investigation_depth": "quick"
-    },
-    {
-      "claim_id": "b3fd83bd4ead0f68",
-      "claim_text": "US Navy refusing requests from oil and shipping companies for escorts through the Strait of Hormuz due to high risk of Iranian attacks.",
-      "status": "expired",
-      "confidence_score": 0.456,
-      "display_score": 0.487,
-      "scoring_breakdown": {
-        "source_tier": 0.4,
-        "newsguard": 0.24,
-        "corroboration": 1,
-        "evidence_quality": 0,
-        "cross_source": 1,
-        "web_search": 0
-      },
-      "source_handle": "bricsinfo",
-      "source_tier": 4,
-      "evidence_urls": [],
-      "tweet_url": null,
-      "category": "proxy_regional",
-      "related_axis_id": "axis_national_sovereignty_v_intl_law_v1",
-      "verification_count": 6,
-      "verified_at": "2026-09-20T08:14:04.232Z",
-      "created_at": "2026-03-11T20:58:00Z",
       "original_source": null,
       "claim_date": null,
       "supporting_sources": [],
@@ -40277,6 +40506,43 @@
       "investigation_depth": "quick"
     },
     {
+      "claim_id": "live_bc8a7b15c2",
+      "claim_text": "Iran was 'WEEKS from weapon that would destroy Israel & Middle East' before Trump prevented it",
+      "status": "expired",
+      "confidence_score": 0.4,
+      "display_score": 0.337,
+      "scoring_breakdown": {
+        "source_tier": 0.5,
+        "newsguard": 0.5,
+        "corroboration": 0,
+        "evidence_quality": 0.5,
+        "cross_source": 0.5,
+        "web_search": 0.5
+      },
+      "source_handle": null,
+      "source_tier": null,
+      "evidence_urls": [
+        "https://www.cnn.com/2026/08/20/world/live-news/iran-war-trump",
+        "https://www.cnn.com/2026/08/20/world/live-news/iran-war-trump",
+        "https://en.wikipedia.org/wiki/Prelude_to_the_2026_Iran_war",
+        "https://en.wikipedia.org/wiki/Prelude_to_the_2026_Iran_war",
+        "https://en.wikipedia.org/wiki/Timeline_of_the_2026_Iran_war"
+      ],
+      "tweet_url": null,
+      "category": null,
+      "related_axis_id": "axis_religion_politics_war_v1",
+      "verification_count": 1,
+      "verified_at": "2026-08-21T13:33:12.741Z",
+      "created_at": "2026-08-21T13:33:12.741Z",
+      "original_source": null,
+      "claim_date": null,
+      "supporting_sources": [],
+      "dissenting_sources": [],
+      "framing_analysis": "Cannot evaluate framing validity as the specific claim about Iran being weeks from a weapon and Trump preventing it does not appear in any of the provided search results. The results cover different aspects of Iran-related events in 2026.",
+      "web_search_summary": "The search results do not contain any information about Iran being 'weeks from a weapon that would destroy Israel & Middle East' or Trump preventing such a scenario. The results discuss 2026 events including sanctions, Netanyahu pushing Trump for military action against Iran, and ceasefire agreements, but make no mention of Iran's proximity to developing a devastating weapon or Trump stopping it.",
+      "investigation_depth": "quick"
+    },
+    {
       "claim_id": "claim_36",
       "claim_text": "US-sanctioned Chinese tanker Rich Starry successfully transited the Strait of Hormuz despite US naval blockade.",
       "status": "expired",
@@ -41289,6 +41555,37 @@
       "dissenting_sources": [],
       "framing_analysis": "Cannot evaluate framing validity without relevant search results. The claim makes specific statistical assertions (98% pornographic content, 99% female victims) and references a specific training event that would require appropriate sources to verify.",
       "web_search_summary": "The search results contain no information relevant to the claim about deepfakes, HateAid, online training events, or statistics about deepfake pornography. All search results are about online gaming websites and have no connection to the subject matter of the claim.",
+      "investigation_depth": "quick"
+    },
+    {
+      "claim_id": "live_95d094b49f",
+      "claim_text": "Hong Kong’s High Court has found Chow Hang-tung and Lee Cheuk-yan guilty of \"inciting subversion of state power.\"\n\nThe truth? They held peaceful vigils for victims of the 1989 Tiananmen Massacre. Each now faces up to 10 years in prison.\n\nChow Hang-tung, Lee Cheuk-yan, and all",
+      "status": "expired",
+      "confidence_score": 0.38,
+      "display_score": 0.131,
+      "scoring_breakdown": {
+        "source_tier": 0.5,
+        "newsguard": 0.5,
+        "corroboration": 0,
+        "evidence_quality": 0.5,
+        "cross_source": 0.5,
+        "web_search": 0.3
+      },
+      "source_handle": "hrw",
+      "source_tier": null,
+      "evidence_urls": [],
+      "tweet_url": null,
+      "category": null,
+      "related_axis_id": null,
+      "verification_count": 1,
+      "verified_at": "2026-08-21T18:35:22.980Z",
+      "created_at": "2026-08-21T18:35:22.466Z",
+      "original_source": null,
+      "claim_date": null,
+      "supporting_sources": [],
+      "dissenting_sources": [],
+      "framing_analysis": null,
+      "web_search_summary": "No web results found.",
       "investigation_depth": "quick"
     },
     {
