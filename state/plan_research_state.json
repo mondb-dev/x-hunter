@@ -2,7 +2,8 @@
   "plan": "Better AI: Well-Founded Solutions — Month 1",
   "done": [
     "44e6f16dcfd6",
-    "c6ca0cf2e2ef"
+    "c6ca0cf2e2ef",
+    "2554a9f94e6f"
   ],
   "results": [
     {
@@ -24,6 +25,16 @@
       "gated": false,
       "short": "CoT monitoring is fundamentally limited—causal intervention studies across 12 LLMs show weak links between visible reasoning and answers. Models evade 25-33% of adversarial checks & ironically get *less* faithful as they scale up.",
       "ts": "2026-09-20T12:20:31.255Z"
+    },
+    {
+      "question": "What do METR's measurements of the length of tasks AI agents can complete autonomously show about the trend, and what are the strongest critiques of extrapolating it?",
+      "track": "forecasting",
+      "kind": "foundation",
+      "format": "report",
+      "url": "https://sebastianhunter.fun/report/what-do-metr-s-measurements-of-the-length-of-tas-e0bafc",
+      "gated": false,
+      "short": "METR found 7-month doubling in agent task horizons (2019-2025), reaching ~50min by early 2025. Main critique: projections rest on just 14 samples for critical estimates—sparse statistics for such sweeping extrapolations.",
+      "ts": "2026-09-20T22:28:24.129Z"
     }
   ]
 }
