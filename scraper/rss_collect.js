@@ -9,13 +9,16 @@
  *
  * Pipeline per feed:
  *   1. Fetch RSS/Atom XML via HTTPS
- *   2. Parse items (title, link, description, pubDate)
- *   3. Deduplicate against state/rss_seen.json (rolling 3-day window)
- *   4. Score: news source tier weight × recency
- *   5. Append new items to state/feed_digest.txt in collect.js format
+ *   2. Parse items (title, link, description, pubDate) — a missing or malformed
+ *      date stays null; it is never backfilled with "now"
+ *   3. Drop items older than the feed's freshness window — 14d news, 60d
+ *      research/agenda (archive backfill is not news)
+ *   4. Deduplicate against state/rss_seen.json (rolling 90-day window)
+ *   5. Append new items to state/feed_digest.txt, each stamped with its real
+ *      publication date AND age in days
  *   6. Queue article URLs in state/reading_queue.jsonl (top 3 per run)
  *
- * State: state/rss_seen.json   — { url: isoDate } dedup map (rolling 3 days)
+ * State: state/rss_seen.json   — { url: isoDate } dedup map (rolling 90 days)
  *        state/rss_state.json  — { feed: { last_fetched: ISO } } fetch cadence
  *
  * Feeds are grouped by axis relevance so the digest carries context.
@@ -42,10 +45,34 @@ const QUEUE_FILE   = path.join(STATE_DIR, "reading_queue.jsonl");
 const SEEN_FILE    = path.join(STATE_DIR, "rss_seen.json");
 const STATE_FILE   = path.join(STATE_DIR, "rss_state.json");
 
-const SEEN_TTL_DAYS   = 3;     // dedup window
+// Dedup window. MUST stay > every freshness window below: at 3 days (the
+// pre-2026-09-21 value) a URL aged out of `seen` while still inside the
+// freshness window, so the same item re-entered the digest as "new" days after
+// it was first served.
+const SEEN_TTL_DAYS   = 90;
+// Freshness windows. A feed newly added to the registry serves its ENTIRE
+// archive and every item is unseen, so without these the collector pages
+// backward through years of posts 5 at a time and the digest presents them as
+// this cycle's news. OpenAI's feed alone carries ~1,210 items back to 2024.
+// See docs/BUGS.md (2026-09-21).
+//
+// Two windows, because the job here is stopping archive walks, not enforcing a
+// news cycle. Wire services publish hourly and a 3-week-old item is not news.
+// Research/agenda feeds (METR, Alignment Forum, arXiv) publish monthly or less,
+// and a 5-week-old eval is still worth reading — a 14-day window would have
+// silently cut METR out of the digest entirely.
+const MAX_ITEM_AGE_DAYS        = 14;
+const MAX_AGENDA_ITEM_AGE_DAYS = 60;
+
 const MAX_QUEUE_URLS  = 3;     // max URLs to add to reading_queue per run
 const FETCH_TIMEOUT   = 15000; // 15s per feed
 const FETCH_COOLDOWN  = 3600;  // minimum seconds between fetches of same feed (1h)
+
+/** Freshness window for a feed: per-feed override → agenda default → news default. */
+function feedMaxAge(feed) {
+  if (Number.isFinite(feed.max_age_days)) return feed.max_age_days;
+  return feed.agenda ? MAX_AGENDA_ITEM_AGE_DAYS : MAX_ITEM_AGE_DAYS;
+}
 
 // ── Feed registry ─────────────────────────────────────────────────────────────
 // Add/remove feeds here. axis_hint is injected into the digest so the browse
@@ -116,6 +143,26 @@ function secondsSince(isoDate) {
   return (Date.now() - new Date(isoDate).getTime()) / 1000;
 }
 
+/**
+ * parseFeedDate(raw) → ISO string, or null when absent/unparseable.
+ * Never substitutes "now". An item whose feed omits a date must not be
+ * indistinguishable from one published today — that substitution is what let
+ * months-old posts read as breaking news on 2026-09-20 (docs/BUGS.md).
+ * Also guards the bare `new Date(x).toISOString()` that throws on a malformed
+ * pubDate and would take the whole collector down with it.
+ */
+function parseFeedDate(raw) {
+  if (!raw) return null;
+  const t = new Date(String(raw).trim()).getTime();
+  return Number.isFinite(t) ? new Date(t).toISOString() : null;
+}
+
+/** ageDays(iso) → age in days, or null when the item is undated. */
+function ageDays(isoDate) {
+  if (!isoDate) return null;
+  return (Date.now() - new Date(isoDate).getTime()) / 86_400_000;
+}
+
 function stripHtml(str) {
   return (str || "")
     .replace(/<[^>]+>/g, " ")
@@ -182,7 +229,7 @@ function parseItems(xml) {
         title: stripHtml(title).slice(0, 200),
         url: link.trim(),
         description: stripHtml(desc || "").slice(0, 400),
-        pub_date: pub ? new Date(pub.trim()).toISOString() : new Date().toISOString(),
+        pub_date: parseFeedDate(pub),
       });
     }
   }
@@ -202,7 +249,7 @@ function parseItems(xml) {
           title: stripHtml(title).slice(0, 200),
           url: link.trim(),
           description: stripHtml(summ || "").slice(0, 400),
-          pub_date: pub ? new Date(pub.trim()).toISOString() : new Date().toISOString(),
+          pub_date: parseFeedDate(pub),
         });
       }
     }
@@ -214,7 +261,13 @@ function parseItems(xml) {
 // ── Format item for feed_digest.txt ──────────────────────────────────────────
 
 function formatDigestEntry(item, feed) {
-  const ts   = item.pub_date.slice(0, 16).replace("T", " ");
+  // Age is rendered explicitly. The browse agent reads this digest as "what I
+  // saw this cycle"; a bare date let it assume arrival == publication, so the
+  // entry now states how old the item actually is.
+  const age  = ageDays(item.pub_date);
+  const ts   = item.pub_date
+    ? `${item.pub_date.slice(0, 16).replace("T", " ")} (${Math.floor(age)}d old)`
+    : "(UNDATED — no publication date in feed; age unknown)";
   const tag  = `[RSS:${feed.name}]`;
   const tier = feed.tier === 1 ? "TIER1" : feed.tier === 2 ? "TIER2" : "TIER3";
   const desc = item.description ? `  SUMMARY: ${item.description.slice(0, 200)}` : "";
@@ -266,8 +319,22 @@ async function main() {
       continue;
     }
 
+    // Drop archive backfill before dedup: "unseen" is not "new". A feed added
+    // to the registry today serves its whole history unseen, and the collector
+    // would otherwise walk backward through it 5 items per run, dripping
+    // months-old posts into the digest as current news. Undated items are kept
+    // (labelled UNDATED in the digest) rather than guessed at.
+    const maxAge = feedMaxAge(feed);
+    const stale  = items.filter(i => { const a = ageDays(i.pub_date); return a !== null && a > maxAge; });
+    const recent = items.filter(i => { const a = ageDays(i.pub_date); return a === null || a <= maxAge; });
+    if (stale.length) {
+      // Mark stale items seen so each run does not re-filter the same archive.
+      for (const i of stale) seen[sha1(i.url)] = now;
+      console.log(`[rss_collect] ${feed.name}: ${stale.length} item(s) older than ${maxAge}d — not digest material`);
+    }
+
     // Filter to new items only
-    const newItems = items.filter(i => {
+    const newItems = recent.filter(i => {
       const key = sha1(i.url);
       return !seen[key];
     });
@@ -324,7 +391,14 @@ async function main() {
   console.log(`[rss_collect] done — ${totalNew} new items across ${feeds.length} feeds, ${queueItems.length} queued`);
 }
 
-main().then(() => process.exit(0)).catch(err => {
-  console.error(`[rss_collect] fatal: ${err.message}`);
-  process.exit(0); // non-fatal
-});
+// Only run as a script. Requiring this file used to fetch every feed and write
+// state as a side effect, so the freshness logic below could not be tested.
+if (require.main === module) {
+  main().then(() => process.exit(0)).catch(err => {
+    console.error(`[rss_collect] fatal: ${err.message}`);
+    process.exit(0); // non-fatal
+  });
+}
+
+module.exports = { parseFeedDate, ageDays, parseItems, formatDigestEntry, feedMaxAge,
+  MAX_ITEM_AGE_DAYS, MAX_AGENDA_ITEM_AGE_DAYS, SEEN_TTL_DAYS };

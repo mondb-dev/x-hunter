@@ -78,7 +78,7 @@ The browse pass (Claude via `runner/single_pass_browse.js`) runs every ~30 min (
 | 4 | `curiosity.js` — refreshes research directive | every 12th cycle |
 | 5 | `search_curiosity.js` — search-driven curiosity pass | with curiosity |
 | 6 | `cluster_axes.js` — groups belief axes | co-fires with curiosity |
-| 7 | `scraper/rss_collect.js` — RSS feeds into the digest + reading queue (under a full-pivot research agenda: the agenda's feeds replace the default registry except `keep_feeds`) | every cycle |
+| 7 | `scraper/rss_collect.js` — RSS feeds into the digest + reading queue (under a full-pivot research agenda: the agenda's feeds replace the default registry except `keep_feeds`). Items older than `MAX_ITEM_AGE_DAYS` (14) are dropped before dedup — a newly-registered feed serves its whole archive unseen, and "unseen" is not "new". Digest entries stamp publication date **and age**; a feed that omits a date yields `(UNDATED)`, never today's. See docs/BUGS.md (2026-09-21) | every cycle |
 | 8 | `comment_candidates.js` — finds posts suitable for commenting | every cycle |
 | 9 | `discourse_scan.js` — scans reply interactions for challenges → `discourse_anchors.jsonl` | every cycle |
 | 10 | `discourse_digest.js` — formats `discourse_digest.txt` | every cycle |

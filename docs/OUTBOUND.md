@@ -18,6 +18,18 @@ Every outbound surface passes the same bar via `passOutbound(text, opts)`:
 - `factcheck` — verifiably-wrong-fact pass (stale officeholder titles, datable
   claims); corrects when possible, else rejects; **fails OPEN** on LLM error so
   an outage never blocks posting. Composes via compose.js (Claude).
+  Since 2026-09-21 it also flags two classes it can fix *without* retrieval:
+  **RECENCY** — a specific freshness claim ("released today", "hours later",
+  "the same day", two events asserted simultaneous) that the post gives no basis
+  to date; corrected by dropping the timing and keeping the substance, rejected
+  when the timing *is* the point. **EXHAUSTIVENESS** — a census written as fact
+  about the world ("exactly two", "that's it", "the only", "no one is") when
+  what Sebastian has is what he happened to see; corrected by scoping it to him
+  ("the only two I found"), never deleted outright.
+  **The gate has no retrieval and cannot confirm a date or a count itself** —
+  that is what the upstream freshness fix in `scraper/rss_collect.js` is for.
+  Both clauses were added after a LinkedIn post misdated three model releases
+  and declared two audits exhaustive; see docs/BUGS.md.
 
 ### Quotation gate (`runner/lib/voice_filter.js` → `checkQuotations`)
 

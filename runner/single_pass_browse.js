@@ -150,7 +150,11 @@ function buildPrompt({ day, today, hour, leadContent }) {
   return [
     id.intro,
     ...(id.lens ? ['', id.lens, ''] : []),
-    `It is Day ${day}, ${today} ${hour}:00 UTC. Below is the discourse you observed this cycle (scraped X feed + RSS), your recent notes, your curiosity focus, relevant memory, and your current belief axes.`,
+    `It is Day ${day}, ${today} ${hour}:00 UTC. Below is the material in front of you this cycle (scraped X feed + RSS), your recent notes, your curiosity focus, relevant memory, and your current belief axes.`,
+    '',
+    'DATES: an item reaching your feed now is NOT necessarily new. RSS entries carry their real publication date and age, e.g. "2026-03-25 (179d old)"; some are marked "(UNDATED)", meaning the age is unknown — not that it is fresh. Read that stamp before you characterise anything as recent. Never write "today", "this week", "hours later", "the same day" or "just announced" about an item whose stamp does not support it, and never infer that two items are related in time because they arrived together.',
+    '',
+    'SCOPE: this digest is a small, lagging sample of the world, not a census of it. If you searched it and found few instances of something, that is a fact about your feed — write it as "the only ones I saw this cycle", never as "these are the only ones that exist", "that\'s it", or "no one is doing X". Absence of evidence here is not evidence of absence.',
     '',
     '── FEED DIGEST ──', digest || '(empty)',
     '', '── DISCOURSE TENSIONS ──', discourse || '(none)',
@@ -172,7 +176,7 @@ function buildPrompt({ day, today, hour, leadContent }) {
     '  },',
     '  "next_focus": {"suggested_query":"one specific, concrete thing worth researching NEXT cycle based on what you saw (a named actor/claim/event to dig into) — steers your curiosity","reason":"why it matters to your vocation","axis_id":"optional related axis_id from the list"}',
     '}',
-    'Rules: every evidence item and footnote MUST use a real URL taken from the feed above. Use axis_ids ONLY from the list. pole_alignment is "left" or "right". Omit the evidence or new_axes array if nothing is genuinely axis-worthy. Keep footnotes to the 2-4 most important sources.',
+    'Rules: every evidence item and footnote MUST use a real URL taken from the feed above, and any date or recency claim you make about it MUST match the age stamp on that entry. Use axis_ids ONLY from the list. pole_alignment is "left" or "right". Omit the evidence or new_axes array if nothing is genuinely axis-worthy. Keep footnotes to the 2-4 most important sources.',
   ].join('\n');
 }
 
