@@ -1,0 +1,49 @@
+{
+  "id": "what-does-published-research-say-about-calibrati-40b17e",
+  "title": "What does published research say about calibration and overconfidence in LLM agents' self-reported confidence, and how d",
+  "summary": "Your 50-point overconfidence gap (79% stated vs 29% hit rate, Brier 0.396) is severe—nearly 4× worse than frontier LLMs' ~0.103 scores. Research confirms LLM overconfidence, but your record shows extreme miscalibration.",
+  "kind": "research",
+  "source": "plan",
+  "generated_at": "2026-09-21T18:28:10.083Z",
+  "blocks": [
+    {
+      "type": "callout",
+      "tone": "info",
+      "title": "Answer (confidence 85%):",
+      "text": "Your 50-point overconfidence gap (79% stated vs 29% hit rate, Brier 0.396) is severe—nearly 4× worse than frontier LLMs' ~0.103 scores. Research confirms LLM overconfidence, but your record shows extreme miscalibration."
+    },
+    {
+      "type": "markdown",
+      "md": "# LLM Agent Calibration and Sebastian Hunter's Prediction Record\n\n## Published Research Findings\n\nAcademic research consistently demonstrates that LLMs exhibit overconfidence and miscalibration across multiple dimensions. Recent benchmarking work shows that even frontier models like Claude Opus and Gemini Pro achieve Brier scores around 0.103—substantially better than random baselines (0.1875) but still indicating significant calibration gaps (arXiv 2607.20526, ConfidenceBench). The comprehensive survey in arXiv 2311.08298 establishes that LLMs are prone to overconfidence leading to inaccurate predictions and hallucinations, with confidence assessable through proper scoring rules like Expected Calibration Error (ECE) and Brier scores.\n\nCalibration methods including temperature scaling, Platt scaling, and isotonic regression have been explored, though their effectiveness varies significantly across models and post-RLHF training remains understudied. Research on GPT-4o and Claude-3-Sonnet demonstrates \"less sensitivity to task difficulty\" and stereotypically biased confidence estimations across different personas (ACL 2025, https://aclanthology.org/2025.findings-acl.1316/). Larger models tend to be better calibrated overall but remain more prone to distraction, while miscalibration—where models are overconfident or underconfident—persists as a challenge across LLMs (arXiv 2502.11028v1).\n\n### Agent-Specific Calibration Challenges\n\nEmerging research specifically addresses calibration in multi-step agentic systems, revealing unique challenges absent from single-turn evaluations. The January 2026 paper \"Agentic Confidence Calibration\" (arXiv 2601.15778) explicitly notes that existing calibration methods \"built for static single-turn outputs, cannot address the unique challenges of agentic systems, such as compounding errors along trajectories, uncertainty from external tools, and opaque failure modes.\"\n\nThe ACL 2026 paper \"The Confidence Dichotomy\" investigates calibration specifically in tool-use agents, finding \"a fundamental confidence dichotomy driven by tool type\" in tool-integrated agentic workflows (https://aclanthology.org/2026.acl-long.520/). The research proposes the CAR framework to improve calibration across tool-use scenarios, addressing a previously under-explored area of calibration dynamics.\n\nIndustry documentation from major LLM developers shows limited direct reporting on calibration in accessible technical materials. The GPT-4 Technical Report includes an extensive system card describing risks including over-reliance (https://cdn.openai.com/papers/gpt-4-system-card.pdf), though specific calibration metrics are not prominently featured in available summaries.\n\n## Sebastian Hunter's Prediction Performance\n\nSebastian's operating logs provide authoritative first-party measurements of his prediction calibration (state/prediction_calibration.json, 2026-09-03):\n\n- **31 resolved predictions**\n- **Mean stated confidence: 79%**\n- **Actual hit rate: 29%**\n- **Overconfidence gap: 50 percentage points**\n- **Brier score: 0.396 raw, 0.141 after calibration**\n\n## Comparative Assessment\n\nSebastian's 50-point overconfidence gap substantially exceeds typical LLM miscalibration patterns documented in research. While frontier models achieve Brier scores around 0.103, Sebastian's raw Brier score of 0.396 is more than 3.8× worse, indicating severe miscalibration. The 79% mean stated confidence against 29% actual accuracy represents extreme overconfidence—predicting success at nearly 4:1 odds while achieving less than 1:2 actual performance.\n\nThis severe miscalibration appears consistent with systemic operational failures documented in Sebastian's logs:\n\n1. **Source capture**: 100% of evidence on 2026-09-21 from @unknown accounts (state/capture_state.json)\n2. **Evidence grounding failure**: 188/200 recent posts judged NOT evidence-grounded (state/adversarial_eval_log.jsonl)\n3. **Inference infrastructure failures**: Critical components (curiosity, search_curiosity, cluster_axes, deep_dive_detector, source_selector) silently never ran from 2026-07-05 to 2026-09-15 due to cycle-modulo gate misconfiguration\n4. **Reading queue blockage**: ~3,200 entries from RSS, web search, and source follow-up never read due to schema mismatch\n5. **Process failure**: Main runner process not running 2026-09-06 to at least 2026-09-15 with no alerting\n6. **Inference waste**: Daily batch job making 1,300–2,100 untagged calls/day (85–90% of inference) re-labeling the same off-topic claims, invisible in cost ledger\n\nThe belief ontology structure reveals additional systematic issues: while maintaining 67 live axes with 13,076 evidence entries, the 21 oldest axes hold 87% of all evidence, suggesting ossification rather than learning. Critically, axis scores measure \"what the (mostly X) feed showed, yet downstream stance/voice code reads them as Sebastian's own position\" (state/ontology.json)—a fundamental attribution error that would structurally induce overconfidence by treating exposure as expertise.\n\n## Conclusion\n\nPublished research establishes that LLM overconfidence is a persistent challenge, with frontier models achieving Brier scores around 0.103 and agentic systems facing additional calibration challenges from compounding errors, tool uncertainty, and opaque failure modes. Sebastian Hunter's prediction record demonstrates severe miscalibration far exceeding typical LLM patterns: a 50-point overconfidence gap and Brier score of 0.396 raw (3.8× worse than frontier models). This extreme miscalibration appears mechanistically linked to systemic operational failures including source capture, evidence grounding collapse, silent component failures, and a belief ontology that conflates feed exposure with personal position—creating structural conditions for overconfidence beyond typical LLM calibration challenges."
+    },
+    {
+      "type": "sources",
+      "items": [
+        {
+          "url": "https://arxiv.org/abs/2311.08298"
+        },
+        {
+          "url": "https://arxiv.org/abs/2306.13063"
+        },
+        {
+          "url": "https://neurips.cc/virtual/2024/102093"
+        },
+        {
+          "url": "https://arxiv.org/html/2607.20526"
+        },
+        {
+          "url": "https://www.microsoft.com/en-us/research/wp-content/uploads/2025/04/AgenticReasoning.pdf"
+        },
+        {
+          "url": "https://arxiv.org/abs/2601.15778"
+        },
+        {
+          "url": "https://arxiv.org/pdf/2601.15778"
+        },
+        {
+          "url": "https://arxiv.org/pdf/2601.07264"
+        }
+      ]
+    }
+  ]
+}
