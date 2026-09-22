@@ -1,15 +1,15 @@
 {
   "schema_version": "1.0",
-  "generated_at": "2026-09-22T10:48:43.365Z",
+  "generated_at": "2026-09-22T15:23:34.790Z",
   "method": "mechanical_registry_v1",
-  "profiled_at": "2026-09-22T10:48:55.672Z",
+  "profiled_at": "2026-09-22T15:23:49.370Z",
   "sources": [
     {
       "domain": "arxiv.org",
       "entity": "Arxiv",
       "kind": "academic",
       "first_seen_at": "2026-09-20T04:08:44.147Z",
-      "last_seen_at": "2026-09-22T00:18:42.267Z",
+      "last_seen_at": "2026-09-22T15:23:34.787Z",
       "discovery": {
         "distinct_urls": 25,
         "example_urls": [
@@ -21,9 +21,10 @@
         ],
         "origin_counts": {
           "ontology_evidence": 7,
-          "reading_queue": 27,
+          "reading_queue": 29,
           "journals": 8,
-          "articles": 1
+          "articles": 1,
+          "prefetch": 1
         },
         "distinct_referring_accounts": 0,
         "sample_referring_accounts": [],
@@ -56,18 +57,18 @@
           ]
         },
         "breadth": {
-          "score": 0.7649999999999999,
+          "score": 0.825,
           "basis": [
             "distinct_urls:25",
             "distinct_axes:3",
-            "origin_types:4"
+            "origin_types:5"
           ]
         },
         "corroboration": {
           "score": 0.35,
           "basis": [
             "referring_accounts:0",
-            "origin_types:4"
+            "origin_types:5"
           ]
         },
         "track_record": {
@@ -91,8 +92,8 @@
           ]
         },
         "overall": {
-          "score": 0.7845312500000001,
-          "confidence": 0.64215,
+          "score": 0.7976562500000001,
+          "confidence": 0.6547499999999999,
           "method": "mechanical_v1",
           "basis": [
             "academic_domain_pattern",
@@ -100,9 +101,9 @@
             "doi_or_identifier_path_seen",
             "distinct_urls:25",
             "distinct_axes:3",
-            "origin_types:4",
+            "origin_types:5",
             "referring_accounts:0",
-            "origin_types:4",
+            "origin_types:5",
             "track_record_unavailable"
           ]
         }
@@ -3253,9 +3254,9 @@
       "entity": "T Co",
       "kind": "unknown",
       "first_seen_at": "2016-05-05T18:57:30.000Z",
-      "last_seen_at": "2026-09-22T10:25:23.000Z",
+      "last_seen_at": "2026-09-22T14:55:00.000Z",
       "discovery": {
-        "distinct_urls": 22579,
+        "distinct_urls": 22709,
         "example_urls": [
           "https://t.co/pJSE124ec4",
           "https://t.co/Soz8BXPWaa",
@@ -3264,11 +3265,11 @@
           "https://t.co/cYaqYDRp08"
         ],
         "origin_counts": {
-          "feed_buffer": 20491,
-          "feed_buffer_reply": 6360,
+          "feed_buffer": 20598,
+          "feed_buffer_reply": 6405,
           "articles": 3
         },
-        "distinct_referring_accounts": 3273,
+        "distinct_referring_accounts": 3279,
         "sample_referring_accounts": [
           "0808iveta",
           "09abracadabra",
@@ -3307,7 +3308,7 @@
         "breadth": {
           "score": 0.53,
           "basis": [
-            "distinct_urls:22579",
+            "distinct_urls:22709",
             "distinct_axes:0",
             "origin_types:3"
           ]
@@ -3315,7 +3316,7 @@
         "corroboration": {
           "score": 0.9125,
           "basis": [
-            "referring_accounts:3273",
+            "referring_accounts:3279",
             "origin_types:3"
           ]
         },
@@ -3346,10 +3347,10 @@
           "basis": [
             "unknown_domain_pattern",
             "doi_or_identifier_path_seen",
-            "distinct_urls:22579",
+            "distinct_urls:22709",
             "distinct_axes:0",
             "origin_types:3",
-            "referring_accounts:3273",
+            "referring_accounts:3279",
             "origin_types:3",
             "track_record_unavailable"
           ]
@@ -4361,129 +4362,6 @@
       }
     },
     {
-      "domain": "wikipedia.org",
-      "entity": "Wikipedia",
-      "kind": "reference",
-      "first_seen_at": "2026-03-30T06:47:58.191Z",
-      "last_seen_at": "2026-09-22T10:48:43.361Z",
-      "discovery": {
-        "distinct_urls": 2,
-        "example_urls": [
-          "https://en.wikipedia.org/wiki/Research",
-          "https://en.wikipedia.org/wiki/2026_Iran_war"
-        ],
-        "origin_counts": {
-          "reading_queue": 3,
-          "journals": 2,
-          "prefetch": 1
-        },
-        "distinct_referring_accounts": 0,
-        "sample_referring_accounts": [],
-        "distinct_axes": []
-      },
-      "claims": {
-        "total": 0,
-        "supported": 0,
-        "refuted": 0,
-        "contested": 0,
-        "unverified": 0,
-        "resolved_count": 0
-      },
-      "structural_features": {
-        "has_search_paths": false,
-        "has_article_paths": false,
-        "has_doi_paths": false
-      },
-      "ratings": {
-        "provenance": {
-          "score": 0.62,
-          "basis": [
-            "reference_archive_pattern"
-          ]
-        },
-        "breadth": {
-          "score": 0.2383333333333333,
-          "basis": [
-            "distinct_urls:2",
-            "distinct_axes:0",
-            "origin_types:3"
-          ]
-        },
-        "corroboration": {
-          "score": 0.26249999999999996,
-          "basis": [
-            "referring_accounts:0",
-            "origin_types:3"
-          ]
-        },
-        "track_record": {
-          "score": null,
-          "basis": [
-            "no_resolved_claims_observed"
-          ]
-        },
-        "profile": {
-          "score": 0.15000000000000002,
-          "confidence": 0.55,
-          "basis": [
-            "meta_author:false",
-            "published_time:false",
-            "canonical:true",
-            "about:false",
-            "contact:false",
-            "corrections:false",
-            "outbound_links:5",
-            "opinion_marker:false"
-          ]
-        },
-        "overall": {
-          "score": 0.5029947916666666,
-          "confidence": 0.118675,
-          "method": "mechanical_v1",
-          "basis": [
-            "reference_archive_pattern",
-            "distinct_urls:2",
-            "distinct_axes:0",
-            "origin_types:3",
-            "referring_accounts:0",
-            "origin_types:3",
-            "track_record_unavailable"
-          ]
-        }
-      },
-      "profile": {
-        "fetched_at": "2026-09-22T00:18:37.503Z",
-        "homepage_url": "https://wikipedia.org/",
-        "example_url": "https://en.wikipedia.org/wiki/Research",
-        "homepage_status": 200,
-        "example_status": 200,
-        "homepage_final_url": "https://www.wikipedia.org/",
-        "example_final_url": "https://en.wikipedia.org/wiki/Research",
-        "homepage_content_type": "text/html",
-        "example_content_type": "text/html; charset=UTF-8",
-        "homepage": {
-          "has_meta_author": false,
-          "has_published_time": false,
-          "has_canonical": false,
-          "has_about_link": false,
-          "has_contact_link": false,
-          "has_corrections_link": false,
-          "outbound_links_count": 8,
-          "opinion_marker": false
-        },
-        "example": {
-          "has_meta_author": false,
-          "has_published_time": false,
-          "has_canonical": true,
-          "has_about_link": true,
-          "has_contact_link": false,
-          "has_corrections_link": false,
-          "outbound_links_count": 5,
-          "opinion_marker": false
-        }
-      }
-    },
-    {
       "domain": "brobible.com",
       "entity": "Brobible",
       "kind": "unknown",
@@ -5027,9 +4905,9 @@
       "entity": "Grok",
       "kind": "unknown",
       "first_seen_at": "2026-04-03T01:20:27.000Z",
-      "last_seen_at": "2026-09-22T04:52:34.000Z",
+      "last_seen_at": "2026-09-22T12:33:28.000Z",
       "discovery": {
-        "distinct_urls": 765,
+        "distinct_urls": 766,
         "example_urls": [
           "https://grok.com/imagine/post/9b92ff60-ec59-45db-8a35-8e1b743e5339",
           "https://grok.com/imagine/post/42c16172-4296-42be-b3d0-aa45ad7b6b97",
@@ -5039,7 +4917,7 @@
         ],
         "origin_counts": {
           "feed_buffer_reply": 627,
-          "feed_buffer": 188
+          "feed_buffer": 189
         },
         "distinct_referring_accounts": 464,
         "sample_referring_accounts": [
@@ -5079,7 +4957,7 @@
         "breadth": {
           "score": 0.47,
           "basis": [
-            "distinct_urls:765",
+            "distinct_urls:766",
             "distinct_axes:0",
             "origin_types:2"
           ]
@@ -5117,7 +4995,7 @@
           "method": "mechanical_v1",
           "basis": [
             "unknown_domain_pattern",
-            "distinct_urls:765",
+            "distinct_urls:766",
             "distinct_axes:0",
             "origin_types:2",
             "referring_accounts:464",
@@ -5565,6 +5443,128 @@
       }
     },
     {
+      "domain": "wikipedia.org",
+      "entity": "Wikipedia",
+      "kind": "reference",
+      "first_seen_at": "2026-03-30T06:47:58.191Z",
+      "last_seen_at": "2026-09-22T07:04:07.447Z",
+      "discovery": {
+        "distinct_urls": 2,
+        "example_urls": [
+          "https://en.wikipedia.org/wiki/Research",
+          "https://en.wikipedia.org/wiki/2026_Iran_war"
+        ],
+        "origin_counts": {
+          "reading_queue": 3,
+          "journals": 2
+        },
+        "distinct_referring_accounts": 0,
+        "sample_referring_accounts": [],
+        "distinct_axes": []
+      },
+      "claims": {
+        "total": 0,
+        "supported": 0,
+        "refuted": 0,
+        "contested": 0,
+        "unverified": 0,
+        "resolved_count": 0
+      },
+      "structural_features": {
+        "has_search_paths": false,
+        "has_article_paths": false,
+        "has_doi_paths": false
+      },
+      "ratings": {
+        "provenance": {
+          "score": 0.62,
+          "basis": [
+            "reference_archive_pattern"
+          ]
+        },
+        "breadth": {
+          "score": 0.17833333333333332,
+          "basis": [
+            "distinct_urls:2",
+            "distinct_axes:0",
+            "origin_types:2"
+          ]
+        },
+        "corroboration": {
+          "score": 0.175,
+          "basis": [
+            "referring_accounts:0",
+            "origin_types:2"
+          ]
+        },
+        "track_record": {
+          "score": null,
+          "basis": [
+            "no_resolved_claims_observed"
+          ]
+        },
+        "profile": {
+          "score": 0.15000000000000002,
+          "confidence": 0.55,
+          "basis": [
+            "meta_author:false",
+            "published_time:false",
+            "canonical:true",
+            "about:false",
+            "contact:false",
+            "corrections:false",
+            "outbound_links:5",
+            "opinion_marker:false"
+          ]
+        },
+        "overall": {
+          "score": 0.4816666666666667,
+          "confidence": 0.0982,
+          "method": "mechanical_v1",
+          "basis": [
+            "reference_archive_pattern",
+            "distinct_urls:2",
+            "distinct_axes:0",
+            "origin_types:2",
+            "referring_accounts:0",
+            "origin_types:2",
+            "track_record_unavailable"
+          ]
+        }
+      },
+      "profile": {
+        "fetched_at": "2026-09-22T00:18:37.503Z",
+        "homepage_url": "https://wikipedia.org/",
+        "example_url": "https://en.wikipedia.org/wiki/Research",
+        "homepage_status": 200,
+        "example_status": 200,
+        "homepage_final_url": "https://www.wikipedia.org/",
+        "example_final_url": "https://en.wikipedia.org/wiki/Research",
+        "homepage_content_type": "text/html",
+        "example_content_type": "text/html; charset=UTF-8",
+        "homepage": {
+          "has_meta_author": false,
+          "has_published_time": false,
+          "has_canonical": false,
+          "has_about_link": false,
+          "has_contact_link": false,
+          "has_corrections_link": false,
+          "outbound_links_count": 8,
+          "opinion_marker": false
+        },
+        "example": {
+          "has_meta_author": false,
+          "has_published_time": false,
+          "has_canonical": true,
+          "has_about_link": true,
+          "has_contact_link": false,
+          "has_corrections_link": false,
+          "outbound_links_count": 5,
+          "opinion_marker": false
+        }
+      }
+    },
+    {
       "domain": "newsguardtech.com",
       "entity": "Newsguardtech",
       "kind": "unknown",
@@ -5821,9 +5821,9 @@
       "entity": "Starlink",
       "kind": "unknown",
       "first_seen_at": "2026-04-07T03:51:50.000Z",
-      "last_seen_at": "2026-09-22T10:44:51.250Z",
+      "last_seen_at": "2026-09-22T14:35:00.000Z",
       "discovery": {
-        "distinct_urls": 2563,
+        "distinct_urls": 2637,
         "example_urls": [
           "https://www.starlink.com/us/residential?referral=RC-DF-9543787-19448-67&utm_medium=paid&utm_campaign=awr_us_soc_twt_ptg_cau&utm_content=awr_us_soc_twt_ptg_cau_res_gvp_v4s_stc_en-us_sdb-bluesky-uptime&twclid=2cg62b1u0oqrypdim5oir1767e",
           "https://www.starlink.com/us/residential?referral=RC-DF-9543787-19448-67&utm_medium=paid&utm_campaign=awr_us_soc_twt_ptg_cau&utm_content=awr_us_soc_twt_ptg_cau_res_gvp_v4s_stc_en-us_sdb-avail-sat-yourhome&twclid=2216n7j93v9absqn77762mm626",
@@ -5832,8 +5832,8 @@
           "https://www.starlink.com/us/residential?referral=RC-DF-9543787-19448-67&utm_medium=paid&utm_campaign=awr_us_soc_twt_ptg_cau&utm_content=awr_us_soc_twt_ptg_cau_res_gvp_v4s_stc_en-us_sdb-avail-sat-arrived&twclid=21pi7t0qs8tgw0wgnh5mvmdu2g"
         ],
         "origin_counts": {
-          "feed_buffer_reply": 2445,
-          "feed_buffer": 122
+          "feed_buffer_reply": 2518,
+          "feed_buffer": 123
         },
         "distinct_referring_accounts": 5,
         "sample_referring_accounts": [
@@ -5868,7 +5868,7 @@
         "breadth": {
           "score": 0.47,
           "basis": [
-            "distinct_urls:2563",
+            "distinct_urls:2637",
             "distinct_axes:0",
             "origin_types:2"
           ]
@@ -5906,7 +5906,7 @@
           "method": "mechanical_v1",
           "basis": [
             "unknown_domain_pattern",
-            "distinct_urls:2563",
+            "distinct_urls:2637",
             "distinct_axes:0",
             "origin_types:2",
             "referring_accounts:5",
@@ -6236,7 +6236,7 @@
       "first_seen_at": "2026-04-28T08:12:51.000Z",
       "last_seen_at": "2026-09-22T09:25:29.000Z",
       "discovery": {
-        "distinct_urls": 56,
+        "distinct_urls": 57,
         "example_urls": [
           "https://www.huawei.com/en/media-center/transform/24/06-jason-lee?utm_medium=psm&utm_source=twitter&utm_campaign=Transform",
           "https://e.huawei.com/ae/events/branding/gitex-ca?utm_medium=psm&utm_source=twitter&source=corp_sc_en&utm_campaign=GITEX2026",
@@ -6246,7 +6246,7 @@
         ],
         "origin_counts": {
           "feed_buffer_reply": 21,
-          "feed_buffer": 38
+          "feed_buffer": 39
         },
         "distinct_referring_accounts": 2,
         "sample_referring_accounts": [
@@ -6279,7 +6279,7 @@
         "breadth": {
           "score": 0.47,
           "basis": [
-            "distinct_urls:56",
+            "distinct_urls:57",
             "distinct_axes:0",
             "origin_types:2"
           ]
@@ -6318,7 +6318,7 @@
           "basis": [
             "unknown_domain_pattern",
             "article_path_seen",
-            "distinct_urls:56",
+            "distinct_urls:57",
             "distinct_axes:0",
             "origin_types:2",
             "referring_accounts:2",
@@ -8235,12 +8235,12 @@
           ]
         },
         "profile": {
-          "score": 0.24000000000000002,
+          "score": 0.14,
           "confidence": 0.65,
           "basis": [
             "meta_author:false",
             "published_time:false",
-            "canonical:true",
+            "canonical:false",
             "about:true",
             "contact:false",
             "corrections:false",
@@ -8264,15 +8264,15 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-09-18T16:39:03.761Z",
+        "fetched_at": "2026-09-22T15:23:46.285Z",
         "homepage_url": "https://athena.com/",
         "example_url": "https://www.athena.com/cl/x?utm_source=twitter&utm_medium=paid_social&utm_campaign=%7B%7Bcampaign_name%7D%7D&utm_term=%7B%7Badgroup_name%7D%7D&utm_content=%7B%7Bad_name%7D%7D&twclid=27k7ut43wxglvx2o2e2nj7pszs",
         "homepage_status": 200,
-        "example_status": 200,
+        "example_status": null,
         "homepage_final_url": "https://www.athena.com/",
         "example_final_url": "https://www.athena.com/cl/x?utm_source=twitter&utm_medium=paid_social&utm_campaign=%7B%7Bcampaign_name%7D%7D&utm_term=%7B%7Badgroup_name%7D%7D&utm_content=%7B%7Bad_name%7D%7D&twclid=27k7ut43wxglvx2o2e2nj7pszs",
         "homepage_content_type": "text/html; charset=utf-8",
-        "example_content_type": "text/html; charset=utf-8",
+        "example_content_type": "",
         "homepage": {
           "has_meta_author": false,
           "has_published_time": false,
@@ -8286,7 +8286,7 @@
         "example": {
           "has_meta_author": false,
           "has_published_time": false,
-          "has_canonical": true,
+          "has_canonical": false,
           "has_about_link": false,
           "has_contact_link": false,
           "has_corrections_link": false,
@@ -8391,7 +8391,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-09-18T16:39:05.540Z",
+        "fetched_at": "2026-09-22T15:23:48.125Z",
         "homepage_url": "https://jamf.com/",
         "example_url": "https://www.jamf.com/blog/mac-management-security-trends-enterprise-it-2025/?utm_source=twitter&utm_medium=sponsored-social&utm_campaign=am_icf_smas_mms_banner_icp&utm_content=20260213_com_ent-midmkt_p_jmac_blog_6679_SIT&twclid=26vc3aicbe9m10pi19ume82b0z",
         "homepage_status": 200,
@@ -8518,7 +8518,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-09-18T16:39:05.871Z",
+        "fetched_at": "2026-09-22T15:23:48.383Z",
         "homepage_url": "https://maventrading.com/",
         "example_url": "https://maventrading.com/lp/choose-your-challenge?twt_id=54608379&twclid=24irm75xuuvw6vkz1dgb8ui0sz",
         "homepage_status": 200,
@@ -8645,7 +8645,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-09-18T16:39:07.327Z",
+        "fetched_at": "2026-09-22T15:23:49.370Z",
         "homepage_url": "https://travala.com/",
         "example_url": "https://www.travala.com/?camp_name=&camp_offer=credit&camp_content=Sign-up-or-log-in-to-receive-%2450-off-flights%2C-hotels-and-activities.&camp_code=BTCASIA50&camp_value=50&utm_campaign=BTCASIA50&utm_medium=by-travala-cpc&utm_source=twitter&twclid=26wz3yk3m5mtcltdzivyfesoom",
         "homepage_status": 200,
@@ -9062,9 +9062,9 @@
       "entity": "Nustargame",
       "kind": "unknown",
       "first_seen_at": "2026-07-04T07:36:55.650Z",
-      "last_seen_at": "2026-09-21T18:53:35.370Z",
+      "last_seen_at": "2026-09-22T10:35:22.000Z",
       "discovery": {
-        "distinct_urls": 30,
+        "distinct_urls": 31,
         "example_urls": [
           "https://appstore.nustargame.com/?fbclid=IwZXh0bgNhZW0CMTAAYnJpZBExdTFXSWM2OURwSzlmRGVVT3NydGMGYXBwX2lkEDIyMjAzOTE3ODgyMDA4OTIAAR5-z2VUxUBlb1xkH-U__5gASpshBlmq9xw-GXCS4bTWWiFtwpFdWkJ4PY2qEA_aem_NiqDTDHN3CJKVVCNR24plw&twclid=26zfxjdeqc7s72rera75b8jf08",
           "https://nustargame.com/?twclid=230m3qm5hhiwojmbba5bza5pbz",
@@ -9074,7 +9074,7 @@
         ],
         "origin_counts": {
           "feed_buffer": 11,
-          "feed_buffer_reply": 19
+          "feed_buffer_reply": 20
         },
         "distinct_referring_accounts": 1,
         "sample_referring_accounts": [
@@ -9105,7 +9105,7 @@
         "breadth": {
           "score": 0.47,
           "basis": [
-            "distinct_urls:30",
+            "distinct_urls:31",
             "distinct_axes:0",
             "origin_types:2"
           ]
@@ -9143,7 +9143,7 @@
           "method": "mechanical_v1",
           "basis": [
             "unknown_domain_pattern",
-            "distinct_urls:30",
+            "distinct_urls:31",
             "distinct_axes:0",
             "origin_types:2",
             "referring_accounts:1",
@@ -21232,6 +21232,134 @@
       }
     },
     {
+      "domain": "tiktok.com",
+      "entity": "Tiktok",
+      "kind": "unknown",
+      "first_seen_at": "2026-05-18T19:41:15.205Z",
+      "last_seen_at": "2026-09-22T13:48:20.483Z",
+      "discovery": {
+        "distinct_urls": 5,
+        "example_urls": [
+          "https://vt.tiktok.com/ZSxJweKEd/?utm_source=twitter&utm_medium=cpm&utm_campaign=TKTK-DM-AWAR-DM-COJ-MAY-INT&utm_id=2026DM&utm_term=COJFEST&utm_content=promoted_post_2&twclid=23n0m2swszeni1novs209rbrem",
+          "https://vt.tiktok.com/ZS9hqthRvwJqK-ezi9Q/?twclid=23sdv54xenkyk4xl645iwhi9bq",
+          "https://vt.tiktok.com/ZS9hqthRvwJqK-ezi9Q/?twclid=27vmg5r11nemmtov9b6dddw8xy",
+          "https://vt.tiktok.com/ZS9hqthRvwJqK-ezi9Q/?twclid=2ehfkcx5xwtevtkcvexzgxacpw",
+          "https://vt.tiktok.com/ZS9hqthRvwJqK-ezi9Q/?twclid=24uv4avz9l6zurcqjlhdey1ld0"
+        ],
+        "origin_counts": {
+          "feed_buffer": 4,
+          "feed_buffer_reply": 1
+        },
+        "distinct_referring_accounts": 2,
+        "sample_referring_accounts": [
+          "bluebayc2na",
+          "ditophofficial"
+        ],
+        "distinct_axes": []
+      },
+      "claims": {
+        "total": 0,
+        "supported": 0,
+        "refuted": 0,
+        "contested": 0,
+        "unverified": 0,
+        "resolved_count": 0
+      },
+      "structural_features": {
+        "has_search_paths": false,
+        "has_article_paths": false,
+        "has_doi_paths": false
+      },
+      "ratings": {
+        "provenance": {
+          "score": 0.45,
+          "basis": [
+            "unknown_domain_pattern"
+          ]
+        },
+        "breadth": {
+          "score": 0.26583333333333337,
+          "basis": [
+            "distinct_urls:5",
+            "distinct_axes:0",
+            "origin_types:2"
+          ]
+        },
+        "corroboration": {
+          "score": 0.39166666666666666,
+          "basis": [
+            "referring_accounts:2",
+            "origin_types:2"
+          ]
+        },
+        "track_record": {
+          "score": null,
+          "basis": [
+            "no_resolved_claims_observed"
+          ]
+        },
+        "profile": {
+          "score": 0,
+          "confidence": 0.55,
+          "basis": [
+            "meta_author:false",
+            "published_time:false",
+            "canonical:false",
+            "about:false",
+            "contact:false",
+            "corrections:false",
+            "outbound_links:0",
+            "opinion_marker:false"
+          ]
+        },
+        "overall": {
+          "score": 0.40424479166666666,
+          "confidence": 0.248575,
+          "method": "mechanical_v1",
+          "basis": [
+            "unknown_domain_pattern",
+            "distinct_urls:5",
+            "distinct_axes:0",
+            "origin_types:2",
+            "referring_accounts:2",
+            "origin_types:2",
+            "track_record_unavailable"
+          ]
+        }
+      },
+      "profile": {
+        "fetched_at": "2026-09-20T10:08:32.386Z",
+        "homepage_url": "https://tiktok.com/",
+        "example_url": "https://vt.tiktok.com/ZSxJweKEd/?utm_source=twitter&utm_medium=cpm&utm_campaign=TKTK-DM-AWAR-DM-COJ-MAY-INT&utm_id=2026DM&utm_term=COJFEST&utm_content=promoted_post_2&twclid=23n0m2swszeni1novs209rbrem",
+        "homepage_status": 200,
+        "example_status": 200,
+        "homepage_final_url": "https://www.tiktok.com/",
+        "example_final_url": "https://www.tiktok.com/@/video/7639616475480853780?_r=1&_d=secCgYIASAHKAESPgo8Fwq3mqe9CnZi2Zc1nUlzFZVye0kQoB1Cp8rN1%2BQj%2FK18%2BuZXYDvLCimj1r47MBl%2FlQtiaDgpY3vRXBWXGgA%3D&u_code=dji4h4c67lbih1&share_item_id=7639616475480853780&timestamp=1778737575&utm_campaign=client_share&utm_source=short_fallback&share_app_id=1233",
+        "homepage_content_type": "text/html; charset=utf-8",
+        "example_content_type": "text/html; charset=utf-8",
+        "homepage": {
+          "has_meta_author": false,
+          "has_published_time": false,
+          "has_canonical": false,
+          "has_about_link": false,
+          "has_contact_link": false,
+          "has_corrections_link": false,
+          "outbound_links_count": 0,
+          "opinion_marker": false
+        },
+        "example": {
+          "has_meta_author": false,
+          "has_published_time": false,
+          "has_canonical": false,
+          "has_about_link": false,
+          "has_contact_link": false,
+          "has_corrections_link": false,
+          "outbound_links_count": 0,
+          "opinion_marker": false
+        }
+      }
+    },
+    {
       "domain": "inqnews.net",
       "entity": "Inqnews",
       "kind": "unknown",
@@ -22873,133 +23001,6 @@
           "has_contact_link": false,
           "has_corrections_link": false,
           "outbound_links_count": 8,
-          "opinion_marker": false
-        }
-      }
-    },
-    {
-      "domain": "tiktok.com",
-      "entity": "Tiktok",
-      "kind": "unknown",
-      "first_seen_at": "2026-05-18T19:41:15.205Z",
-      "last_seen_at": "2026-09-21T10:43:26.745Z",
-      "discovery": {
-        "distinct_urls": 4,
-        "example_urls": [
-          "https://vt.tiktok.com/ZSxJweKEd/?utm_source=twitter&utm_medium=cpm&utm_campaign=TKTK-DM-AWAR-DM-COJ-MAY-INT&utm_id=2026DM&utm_term=COJFEST&utm_content=promoted_post_2&twclid=23n0m2swszeni1novs209rbrem",
-          "https://vt.tiktok.com/ZS9hqthRvwJqK-ezi9Q/?twclid=23sdv54xenkyk4xl645iwhi9bq",
-          "https://vt.tiktok.com/ZS9hqthRvwJqK-ezi9Q/?twclid=27vmg5r11nemmtov9b6dddw8xy",
-          "https://vt.tiktok.com/ZS9hqthRvwJqK-ezi9Q/?twclid=2ehfkcx5xwtevtkcvexzgxacpw"
-        ],
-        "origin_counts": {
-          "feed_buffer": 3,
-          "feed_buffer_reply": 1
-        },
-        "distinct_referring_accounts": 2,
-        "sample_referring_accounts": [
-          "bluebayc2na",
-          "ditophofficial"
-        ],
-        "distinct_axes": []
-      },
-      "claims": {
-        "total": 0,
-        "supported": 0,
-        "refuted": 0,
-        "contested": 0,
-        "unverified": 0,
-        "resolved_count": 0
-      },
-      "structural_features": {
-        "has_search_paths": false,
-        "has_article_paths": false,
-        "has_doi_paths": false
-      },
-      "ratings": {
-        "provenance": {
-          "score": 0.45,
-          "basis": [
-            "unknown_domain_pattern"
-          ]
-        },
-        "breadth": {
-          "score": 0.23666666666666664,
-          "basis": [
-            "distinct_urls:4",
-            "distinct_axes:0",
-            "origin_types:2"
-          ]
-        },
-        "corroboration": {
-          "score": 0.39166666666666666,
-          "basis": [
-            "referring_accounts:2",
-            "origin_types:2"
-          ]
-        },
-        "track_record": {
-          "score": null,
-          "basis": [
-            "no_resolved_claims_observed"
-          ]
-        },
-        "profile": {
-          "score": 0,
-          "confidence": 0.55,
-          "basis": [
-            "meta_author:false",
-            "published_time:false",
-            "canonical:false",
-            "about:false",
-            "contact:false",
-            "corrections:false",
-            "outbound_links:0",
-            "opinion_marker:false"
-          ]
-        },
-        "overall": {
-          "score": 0.39786458333333335,
-          "confidence": 0.21994999999999998,
-          "method": "mechanical_v1",
-          "basis": [
-            "unknown_domain_pattern",
-            "distinct_urls:4",
-            "distinct_axes:0",
-            "origin_types:2",
-            "referring_accounts:2",
-            "origin_types:2",
-            "track_record_unavailable"
-          ]
-        }
-      },
-      "profile": {
-        "fetched_at": "2026-09-20T10:08:32.386Z",
-        "homepage_url": "https://tiktok.com/",
-        "example_url": "https://vt.tiktok.com/ZSxJweKEd/?utm_source=twitter&utm_medium=cpm&utm_campaign=TKTK-DM-AWAR-DM-COJ-MAY-INT&utm_id=2026DM&utm_term=COJFEST&utm_content=promoted_post_2&twclid=23n0m2swszeni1novs209rbrem",
-        "homepage_status": 200,
-        "example_status": 200,
-        "homepage_final_url": "https://www.tiktok.com/",
-        "example_final_url": "https://www.tiktok.com/@/video/7639616475480853780?_r=1&_d=secCgYIASAHKAESPgo8Fwq3mqe9CnZi2Zc1nUlzFZVye0kQoB1Cp8rN1%2BQj%2FK18%2BuZXYDvLCimj1r47MBl%2FlQtiaDgpY3vRXBWXGgA%3D&u_code=dji4h4c67lbih1&share_item_id=7639616475480853780&timestamp=1778737575&utm_campaign=client_share&utm_source=short_fallback&share_app_id=1233",
-        "homepage_content_type": "text/html; charset=utf-8",
-        "example_content_type": "text/html; charset=utf-8",
-        "homepage": {
-          "has_meta_author": false,
-          "has_published_time": false,
-          "has_canonical": false,
-          "has_about_link": false,
-          "has_contact_link": false,
-          "has_corrections_link": false,
-          "outbound_links_count": 0,
-          "opinion_marker": false
-        },
-        "example": {
-          "has_meta_author": false,
-          "has_published_time": false,
-          "has_canonical": false,
-          "has_about_link": false,
-          "has_contact_link": false,
-          "has_corrections_link": false,
-          "outbound_links_count": 0,
           "opinion_marker": false
         }
       }
