@@ -1,63 +1,65 @@
 {
-  "checked_at": "2026-09-21T10:12:40.349Z",
-  "evidence_24h": 20,
+  "checked_at": "2026-09-22T10:50:31.995Z",
+  "evidence_24h": 5,
   "unique_sources": 1,
   "status": "captured",
   "alerts": [
     {
       "type": "source_dominance",
       "severity": "high",
-      "detail": "@unknown accounts for 100% of today's evidence (20/20)",
+      "detail": "@unknown accounts for 100% of today's evidence (5/5)",
       "username": "unknown",
       "share": 1
+    },
+    {
+      "type": "pole_skew",
+      "severity": "high",
+      "detail": "100% of evidence pushes \"left\" — risk of one-sided belief drift",
+      "dominant_pole": "left",
+      "share": 1
+    },
+    {
+      "type": "axis_concentration",
+      "severity": "moderate",
+      "detail": "\"Frontier Lab Safety Commitments: Performative vs. Substantive\" received 60% of today's evidence (3/5)",
+      "axis_id": "axis_ai_lab_commitments_v1",
+      "share": 0.6
     }
   ],
-  "summary": "1 capture alert(s) detected:\n[HIGH] @unknown accounts for 100% of today's evidence (20/20)",
+  "summary": "3 capture alert(s) detected:\n[HIGH] @unknown accounts for 100% of today's evidence (5/5)\n[HIGH] 100% of evidence pushes \"left\" — risk of one-sided belief drift\n[MODERATE] \"Frontier Lab Safety Commitments: Performative vs. Substantive\" received 60% of today's evidence (3/5)",
   "source_concentration": {
     "unknown": {
       "username": "unknown",
-      "count": 20,
+      "count": 5,
       "share": 1
     }
   },
   "axis_concentration": {
-    "axis_safety_verification_v1": {
-      "axis_id": "axis_safety_verification_v1",
-      "label": "Verifying Model Safety: Evals & Interpretability Lagging vs. Keeping Pace",
-      "count": 8,
-      "share": 0.4
-    },
     "axis_ai_lab_commitments_v1": {
       "axis_id": "axis_ai_lab_commitments_v1",
       "label": "Frontier Lab Safety Commitments: Performative vs. Substantive",
-      "count": 5,
-      "share": 0.25
+      "count": 3,
+      "share": 0.6
     },
-    "axis_ai_progress_pace_v1": {
-      "axis_id": "axis_ai_progress_pace_v1",
-      "label": "Pace of AI Capability Progress: Gradual vs. Rapid",
-      "count": 5,
-      "share": 0.25
-    },
-    "axis_alignment_tractability_v1": {
-      "axis_id": "axis_alignment_tractability_v1",
-      "label": "Alignment Tractability: Fundamental Gaps vs. Scalable Progress",
+    "axis_agent_self_reliability_v1": {
+      "axis_id": "axis_agent_self_reliability_v1",
+      "label": "Autonomous Agent Reliability: Unverified Self-Reports vs. Reliable Self-Monitoring",
       "count": 2,
-      "share": 0.1
+      "share": 0.4
     }
   },
   "cluster_concentration": {
     "unknown": {
       "cluster": "unknown",
-      "count": 20,
+      "count": 5,
       "share": 1
     }
   },
   "pole_balance": {
-    "left": 13,
-    "right": 7,
+    "left": 5,
+    "right": 0,
     "neutral": 0,
-    "left_share": 0.65,
-    "right_share": 0.35
+    "left_share": 1,
+    "right_share": 0
   }
 }

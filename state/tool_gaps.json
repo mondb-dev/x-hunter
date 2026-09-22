@@ -1,60 +1,6 @@
 {
   "gaps": [
     {
-      "key": "official legal analysis of whether peruvian prosecutors can appeal constitutiona",
-      "need": "Official legal analysis of whether Peruvian prosecutors can appeal Constitutional Court habeas corpus rulings that order case dismissal",
-      "suggested_tool": "Access to Peruvian legal databases, constitutional law treatises, or expert legal commentary on Tribunal Constitucional jurisprudence",
-      "count": 1,
-      "first_seen": "2026-09-04",
-      "last_seen": "2026-09-04",
-      "last_question": "Will Peru's ex-president's 15-year corruption sentence overturn be upheld on final appeal, or will prosecutors successfully reinstate convic"
-    },
-    {
-      "key": "official statements from peru's fiscalía/public ministry regarding intent to cha",
-      "need": "Official statements from Peru's Fiscalía/Public Ministry regarding intent to challenge the ruling",
-      "suggested_tool": "Access to Peruvian government press releases, official Fiscalía website/communications, or Peruvian legal news services",
-      "count": 1,
-      "first_seen": "2026-09-04",
-      "last_seen": "2026-09-04",
-      "last_question": "Will Peru's ex-president's 15-year corruption sentence overturn be upheld on final appeal, or will prosecutors successfully reinstate convic"
-    },
-    {
-      "key": "spanish-language legal documents including the actual tc ruling text to verify p",
-      "need": "Spanish-language legal documents including the actual TC ruling text to verify procedural finality and grounds",
-      "suggested_tool": "PDF reader capable of processing Spanish legal documents from tc.gob.pe or ability to fetch non-English primary sources",
-      "count": 1,
-      "first_seen": "2026-09-04",
-      "last_seen": "2026-09-04",
-      "last_question": "Will Peru's ex-president's 15-year corruption sentence overturn be upheld on final appeal, or will prosecutors successfully reinstate convic"
-    },
-    {
-      "key": "systematic content analysis of multiple news outlets' coverage of both events to",
-      "need": "Systematic content analysis of multiple news outlets' coverage of both events to identify framing patterns",
-      "suggested_tool": "Media monitoring/content analysis API or database with coded framing variables",
-      "count": 1,
-      "first_seen": "2026-09-05",
-      "last_seen": "2026-09-05",
-      "last_question": "How do media coverage and institutional responses to the Dover protests and Treasury Secretary Bessent's Iran oil sanctions announcement in "
-    },
-    {
-      "key": "official uk government statements and policy documents responding to dover prote",
-      "need": "Official UK government statements and policy documents responding to Dover protests",
-      "suggested_tool": "UK Government publications API or parliamentary records database",
-      "count": 1,
-      "first_seen": "2026-09-05",
-      "last_seen": "2026-09-05",
-      "last_question": "How do media coverage and institutional responses to the Dover protests and Treasury Secretary Bessent's Iran oil sanctions announcement in "
-    },
-    {
-      "key": "academic literature on crisis framing theory and procedural legitimacy vs. accou",
-      "need": "Academic literature on crisis framing theory and procedural legitimacy vs. accountability framing in media",
-      "suggested_tool": "Academic database access (JSTOR, Google Scholar API with full-text access)",
-      "count": 1,
-      "first_seen": "2026-09-05",
-      "last_seen": "2026-09-05",
-      "last_question": "How do media coverage and institutional responses to the Dover protests and Treasury Secretary Bessent's Iran oil sanctions announcement in "
-    },
-    {
       "key": "academic peer-reviewed analysis of media framing patterns in august 2024 crisis ",
       "need": "Academic peer-reviewed analysis of media framing patterns in August 2024 crisis coverage",
       "suggested_tool": "Academic database access (JSTOR, Google Scholar API with full-text)",
@@ -899,6 +845,60 @@
       "first_seen": "2026-09-21",
       "last_seen": "2026-09-21",
       "last_question": "What does published research say about calibration and overconfidence in LLM agents' self-reported confidence, and how does my own predictio"
+    },
+    {
+      "key": "actual functionality and data format of fda/cpsc databases since fetch failed on",
+      "need": "Actual functionality and data format of FDA/CPSC databases since fetch failed on their search interfaces",
+      "suggested_tool": "Browser automation or interactive session to navigate database search forms and examine result formats",
+      "count": 1,
+      "first_seen": "2026-09-21",
+      "last_seen": "2026-09-21",
+      "last_question": "What are the best sources and methods for accessing product safety evaluations, incident reports, and adverse event data instead of marketin"
+    },
+    {
+      "key": "pricing and subscription tiers for commercial safety intelligence services (ecri",
+      "need": "Pricing and subscription tiers for commercial safety intelligence services (ECRI, ISMP, Med Safety Board)",
+      "suggested_tool": "Contact form submission or credential-required access to gated pricing pages",
+      "count": 1,
+      "first_seen": "2026-09-21",
+      "last_seen": "2026-09-21",
+      "last_question": "What are the best sources and methods for accessing product safety evaluations, incident reports, and adverse event data instead of marketin"
+    },
+    {
+      "key": "comparison of signal-to-noise ratio and marketing content prevalence across diff",
+      "need": "Comparison of signal-to-noise ratio and marketing content prevalence across different professional feed sources",
+      "suggested_tool": "Sample dataset analysis or systematic content classification of feed outputs",
+      "count": 1,
+      "first_seen": "2026-09-21",
+      "last_seen": "2026-09-21",
+      "last_question": "What are the best sources and methods for accessing product safety evaluations, incident reports, and adverse event data instead of marketin"
+    },
+    {
+      "key": "actual content and quality comparison of ecri vs ismp safety alerts to assess wh",
+      "need": "Actual content and quality comparison of ECRI vs ISMP safety alerts to assess which is more suitable for specific use cases",
+      "suggested_tool": "Sample database access or trial subscription capability",
+      "count": 1,
+      "first_seen": "2026-09-21",
+      "last_seen": "2026-09-21",
+      "last_question": "What are the best sources and methods for accessing product safety evaluations, incident reports, and adverse event data instead of marketin"
+    },
+    {
+      "key": "concrete examples of rss feed filtering rules or email filtering configurations ",
+      "need": "Concrete examples of RSS feed filtering rules or email filtering configurations to separate safety alerts from marketing in existing feeds",
+      "suggested_tool": "Access to example feed configurations or filtering rule repositories",
+      "count": 1,
+      "first_seen": "2026-09-21",
+      "last_seen": "2026-09-21",
+      "last_question": "What are the best sources and methods for accessing product safety evaluations, incident reports, and adverse event data instead of marketin"
+    },
+    {
+      "key": "comparison of data completeness and reporting timeliness across faers, eudravigi",
+      "need": "Comparison of data completeness and reporting timeliness across FAERS, EudraVigilance, MAUDE, and CPSC databases",
+      "suggested_tool": "Academic meta-analysis database or systematic review access",
+      "count": 1,
+      "first_seen": "2026-09-21",
+      "last_seen": "2026-09-21",
+      "last_question": "What are the best sources and methods for accessing product safety evaluations, incident reports, and adverse event data instead of marketin"
     }
   ]
 }

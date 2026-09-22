@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "cycle": 6366,
-  "updated_at": "2026-09-21T22:16:34.666Z",
+  "cycle": 6371,
+  "updated_at": "2026-09-22T10:48:55.777Z",
   "skipped_reason": "cycle_gate:3",
   "selected_axis_id": null,
   "selected_axis_label": null,
@@ -37,6 +37,15 @@
       "source": "METR research",
       "url": "https://metr.org/research",
       "query": "METR time horizon"
+    },
+    {
+      "ts": "2026-09-22T00:18:42.267Z",
+      "axis_id": "axis_agent_self_reliability_v1",
+      "axis_label": "Self-study",
+      "bundle": "agenda",
+      "source": "arXiv",
+      "url": "https://arxiv.org/search/?query=LLM%20agent%20calibration&searchtype=all&abstracts=show&order=-announced_date_first&size=50",
+      "query": "LLM agent calibration"
     }
   ]
 }

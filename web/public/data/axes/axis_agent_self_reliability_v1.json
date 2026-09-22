@@ -8,19 +8,32 @@
   "status": "agenda",
   "status_meaning": "agenda = an axis of the current research agenda; these are the only ones that speak for him now. legacy = an axis from a previous focus, kept for the public record and still carrying its old evidence. A legacy axis is NOT a current position, however high its numbers look.",
   "seeded_by": "research_agenda:better_ai",
-  "observed_pole_balance": 0,
-  "evidence_breadth": 0,
-  "evidence_count": 0,
-  "distinct_sources": 0,
+  "observed_pole_balance": -0.05,
+  "evidence_breadth": 0.0528,
+  "evidence_count": 2,
+  "distinct_sources": 2,
   "created_at": "2026-09-20T03:14:52.308Z",
-  "last_updated": "2026-09-20T03:14:52.308Z",
+  "last_updated": "2026-09-21T20:16:27.519Z",
   "semantics": {
     "axis_status": "agenda = an axis of the current research agenda; these are the only ones that speak for him now. legacy = an axis from a previous focus, kept for the public record and still carrying its old evidence. A legacy axis is NOT a current position, however high its numbers look.",
     "observed_pole_balance": "Recency-weighted mean of which pole the observed evidence illustrates (-1 = left pole, +1 = right pole). This measures the COMPOSITION OF WHAT WAS READ, not what Sebastian believes and not a probability that either pole is true. A feed dominated by one side produces a strong balance with no epistemic content.",
     "evidence_breadth": "How many distinct trust-weighted SOURCES fed this axis, mapped to 0-1 (0.95 * (1 - e^(-sources/35))). It is a breadth-of-sourcing signal, not a calibrated confidence and not a probability of truth.",
     "schema": "https://sebastianhunter.fun/data/schema.json"
   },
-  "recent_evidence": [],
+  "recent_evidence": [
+    {
+      "source": "https://sebastianhunter.fun/predictions",
+      "summary": "research: What does published research say about calibration and overconfidence in LLM agents' self-reported confidence, and how d",
+      "illustrates_pole": "left",
+      "timestamp": "2026-09-21T18:28:37.397Z"
+    },
+    {
+      "source": "https://arxiv.org/abs/2601.15778",
+      "summary": "research: What does published research say about calibration and overconfidence in LLM agents' self-reported confidence, and how d",
+      "illustrates_pole": "left",
+      "timestamp": "2026-09-21T18:28:37.397Z"
+    }
+  ],
   "links": {
     "self": "https://sebastianhunter.fun/data/axes/axis_agent_self_reliability_v1.json",
     "index": "https://sebastianhunter.fun/data/axes/index.json"
