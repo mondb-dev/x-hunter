@@ -1,17 +1,17 @@
 {
   "schema_version": "1.0",
-  "generated_at": "2026-09-22T15:23:34.790Z",
+  "generated_at": "2026-09-23T07:33:01.616Z",
   "method": "mechanical_registry_v1",
-  "profiled_at": "2026-09-22T15:23:49.370Z",
+  "profiled_at": "2026-09-23T07:33:05.564Z",
   "sources": [
     {
       "domain": "arxiv.org",
       "entity": "Arxiv",
       "kind": "academic",
       "first_seen_at": "2026-09-20T04:08:44.147Z",
-      "last_seen_at": "2026-09-22T15:23:34.787Z",
+      "last_seen_at": "2026-09-23T07:33:01.613Z",
       "discovery": {
-        "distinct_urls": 25,
+        "distinct_urls": 30,
         "example_urls": [
           "https://arxiv.org/abs/2305.04388",
           "https://arxiv.org/abs/2609.21899v1",
@@ -21,7 +21,7 @@
         ],
         "origin_counts": {
           "ontology_evidence": 7,
-          "reading_queue": 29,
+          "reading_queue": 43,
           "journals": 8,
           "articles": 1,
           "prefetch": 1
@@ -59,7 +59,7 @@
         "breadth": {
           "score": 0.825,
           "basis": [
-            "distinct_urls:25",
+            "distinct_urls:30",
             "distinct_axes:3",
             "origin_types:5"
           ]
@@ -87,7 +87,7 @@
             "about:true",
             "contact:true",
             "corrections:false",
-            "outbound_links:23",
+            "outbound_links:22",
             "opinion_marker:false"
           ]
         },
@@ -99,7 +99,7 @@
             "academic_domain_pattern",
             "search_results_seen",
             "doi_or_identifier_path_seen",
-            "distinct_urls:25",
+            "distinct_urls:30",
             "distinct_axes:3",
             "origin_types:5",
             "referring_accounts:0",
@@ -109,13 +109,13 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-09-20T04:08:10.801Z",
+        "fetched_at": "2026-09-23T05:33:21.766Z",
         "homepage_url": "https://arxiv.org/",
-        "example_url": "https://arxiv.org/abs/2609.20821v1",
+        "example_url": "https://arxiv.org/abs/2305.04388",
         "homepage_status": 200,
         "example_status": 200,
         "homepage_final_url": "https://arxiv.org/",
-        "example_final_url": "https://arxiv.org/abs/2609.20821v1",
+        "example_final_url": "https://arxiv.org/abs/2305.04388",
         "homepage_content_type": "text/html; charset=utf-8",
         "example_content_type": "text/html; charset=utf-8",
         "homepage": {
@@ -135,7 +135,7 @@
           "has_about_link": true,
           "has_contact_link": true,
           "has_corrections_link": false,
-          "outbound_links_count": 23,
+          "outbound_links_count": 22,
           "opinion_marker": false
         }
       }
@@ -3254,9 +3254,9 @@
       "entity": "T Co",
       "kind": "unknown",
       "first_seen_at": "2016-05-05T18:57:30.000Z",
-      "last_seen_at": "2026-09-22T14:55:00.000Z",
+      "last_seen_at": "2026-09-23T06:45:00.000Z",
       "discovery": {
-        "distinct_urls": 22709,
+        "distinct_urls": 23015,
         "example_urls": [
           "https://t.co/pJSE124ec4",
           "https://t.co/Soz8BXPWaa",
@@ -3265,11 +3265,11 @@
           "https://t.co/cYaqYDRp08"
         ],
         "origin_counts": {
-          "feed_buffer": 20598,
-          "feed_buffer_reply": 6405,
+          "feed_buffer": 20918,
+          "feed_buffer_reply": 6451,
           "articles": 3
         },
-        "distinct_referring_accounts": 3279,
+        "distinct_referring_accounts": 3293,
         "sample_referring_accounts": [
           "0808iveta",
           "09abracadabra",
@@ -3308,7 +3308,7 @@
         "breadth": {
           "score": 0.53,
           "basis": [
-            "distinct_urls:22709",
+            "distinct_urls:23015",
             "distinct_axes:0",
             "origin_types:3"
           ]
@@ -3316,7 +3316,7 @@
         "corroboration": {
           "score": 0.9125,
           "basis": [
-            "referring_accounts:3279",
+            "referring_accounts:3293",
             "origin_types:3"
           ]
         },
@@ -3347,10 +3347,10 @@
           "basis": [
             "unknown_domain_pattern",
             "doi_or_identifier_path_seen",
-            "distinct_urls:22709",
+            "distinct_urls:23015",
             "distinct_axes:0",
             "origin_types:3",
-            "referring_accounts:3279",
+            "referring_accounts:3293",
             "origin_types:3",
             "track_record_unavailable"
           ]
@@ -3699,7 +3699,7 @@
       "first_seen_at": "2026-09-20T10:08:40.424Z",
       "last_seen_at": "2026-09-21T22:17:04.638Z",
       "discovery": {
-        "distinct_urls": 15,
+        "distinct_urls": 16,
         "example_urls": [
           "https://metr.org/blog/2026-03-26-red-teaming-anthropic-agent-monitoring/",
           "https://metr.org/notes/2026-02-10-simpler-ai-timelines-model/",
@@ -3709,7 +3709,7 @@
         ],
         "origin_counts": {
           "ontology_evidence": 3,
-          "reading_queue": 18,
+          "reading_queue": 19,
           "journals": 4,
           "articles": 1
         },
@@ -3744,7 +3744,7 @@
         "breadth": {
           "score": 0.7066666666666666,
           "basis": [
-            "distinct_urls:15",
+            "distinct_urls:16",
             "distinct_axes:2",
             "origin_types:4"
           ]
@@ -3778,12 +3778,12 @@
         },
         "overall": {
           "score": 0.5173958333333333,
-          "confidence": 0.5174,
+          "confidence": 0.5399,
           "method": "mechanical_v1",
           "basis": [
             "unknown_domain_pattern",
             "article_path_seen",
-            "distinct_urls:15",
+            "distinct_urls:16",
             "distinct_axes:2",
             "origin_types:4",
             "referring_accounts:0",
@@ -4905,9 +4905,9 @@
       "entity": "Grok",
       "kind": "unknown",
       "first_seen_at": "2026-04-03T01:20:27.000Z",
-      "last_seen_at": "2026-09-22T12:33:28.000Z",
+      "last_seen_at": "2026-09-22T16:19:51.000Z",
       "discovery": {
-        "distinct_urls": 766,
+        "distinct_urls": 771,
         "example_urls": [
           "https://grok.com/imagine/post/9b92ff60-ec59-45db-8a35-8e1b743e5339",
           "https://grok.com/imagine/post/42c16172-4296-42be-b3d0-aa45ad7b6b97",
@@ -4916,10 +4916,10 @@
           "https://grok.com/imagine/post/3289422f-50b2-4655-8527-e2b1c950ce5e"
         ],
         "origin_counts": {
-          "feed_buffer_reply": 627,
-          "feed_buffer": 189
+          "feed_buffer_reply": 631,
+          "feed_buffer": 190
         },
-        "distinct_referring_accounts": 464,
+        "distinct_referring_accounts": 466,
         "sample_referring_accounts": [
           "0xsifu",
           "100ohiostate",
@@ -4957,7 +4957,7 @@
         "breadth": {
           "score": 0.47,
           "basis": [
-            "distinct_urls:766",
+            "distinct_urls:771",
             "distinct_axes:0",
             "origin_types:2"
           ]
@@ -4965,7 +4965,7 @@
         "corroboration": {
           "score": 0.825,
           "basis": [
-            "referring_accounts:464",
+            "referring_accounts:466",
             "origin_types:2"
           ]
         },
@@ -4995,10 +4995,10 @@
           "method": "mechanical_v1",
           "basis": [
             "unknown_domain_pattern",
-            "distinct_urls:766",
+            "distinct_urls:771",
             "distinct_axes:0",
             "origin_types:2",
-            "referring_accounts:464",
+            "referring_accounts:466",
             "origin_types:2",
             "track_record_unavailable"
           ]
@@ -5821,9 +5821,9 @@
       "entity": "Starlink",
       "kind": "unknown",
       "first_seen_at": "2026-04-07T03:51:50.000Z",
-      "last_seen_at": "2026-09-22T14:35:00.000Z",
+      "last_seen_at": "2026-09-23T05:52:03.178Z",
       "discovery": {
-        "distinct_urls": 2637,
+        "distinct_urls": 2803,
         "example_urls": [
           "https://www.starlink.com/us/residential?referral=RC-DF-9543787-19448-67&utm_medium=paid&utm_campaign=awr_us_soc_twt_ptg_cau&utm_content=awr_us_soc_twt_ptg_cau_res_gvp_v4s_stc_en-us_sdb-bluesky-uptime&twclid=2cg62b1u0oqrypdim5oir1767e",
           "https://www.starlink.com/us/residential?referral=RC-DF-9543787-19448-67&utm_medium=paid&utm_campaign=awr_us_soc_twt_ptg_cau&utm_content=awr_us_soc_twt_ptg_cau_res_gvp_v4s_stc_en-us_sdb-avail-sat-yourhome&twclid=2216n7j93v9absqn77762mm626",
@@ -5832,8 +5832,8 @@
           "https://www.starlink.com/us/residential?referral=RC-DF-9543787-19448-67&utm_medium=paid&utm_campaign=awr_us_soc_twt_ptg_cau&utm_content=awr_us_soc_twt_ptg_cau_res_gvp_v4s_stc_en-us_sdb-avail-sat-arrived&twclid=21pi7t0qs8tgw0wgnh5mvmdu2g"
         ],
         "origin_counts": {
-          "feed_buffer_reply": 2518,
-          "feed_buffer": 123
+          "feed_buffer_reply": 2679,
+          "feed_buffer": 128
         },
         "distinct_referring_accounts": 5,
         "sample_referring_accounts": [
@@ -5868,7 +5868,7 @@
         "breadth": {
           "score": 0.47,
           "basis": [
-            "distinct_urls:2637",
+            "distinct_urls:2803",
             "distinct_axes:0",
             "origin_types:2"
           ]
@@ -5906,7 +5906,7 @@
           "method": "mechanical_v1",
           "basis": [
             "unknown_domain_pattern",
-            "distinct_urls:2637",
+            "distinct_urls:2803",
             "distinct_axes:0",
             "origin_types:2",
             "referring_accounts:5",
@@ -7014,6 +7014,135 @@
       }
     },
     {
+      "domain": "artificialintelligenceact.eu",
+      "entity": "Artificialintelligenceact",
+      "kind": "unknown",
+      "first_seen_at": "2026-09-20T03:16:54.465Z",
+      "last_seen_at": "2026-09-23T03:28:06.725Z",
+      "discovery": {
+        "distinct_urls": 9,
+        "example_urls": [
+          "https://artificialintelligenceact.eu/scientific-panel/?utm_source=rss&utm_medium=rss&utm_campaign=scientific-panel",
+          "https://artificialintelligenceact.eu/code-of-practice-overview/?utm_source=rss&",
+          "https://artificialintelligenceact.eu/why-work-at-the-eu-ai-office/?utm_source=rss&",
+          "https://artificialintelligenceact.eu/high-level-summary/?utm_source=rss&",
+          "https://artificialintelligenceact.eu/the-act/"
+        ],
+        "origin_counts": {
+          "ontology_evidence": 2,
+          "reading_queue": 5,
+          "journals": 4
+        },
+        "distinct_referring_accounts": 0,
+        "sample_referring_accounts": [],
+        "distinct_axes": [
+          "axis_ai_oversight_model_v1",
+          "axis_ai_policy_efficacy_v1"
+        ]
+      },
+      "claims": {
+        "total": 0,
+        "supported": 0,
+        "refuted": 0,
+        "contested": 0,
+        "unverified": 0,
+        "resolved_count": 0
+      },
+      "structural_features": {
+        "has_search_paths": false,
+        "has_article_paths": false,
+        "has_doi_paths": false
+      },
+      "ratings": {
+        "provenance": {
+          "score": 0.45,
+          "basis": [
+            "unknown_domain_pattern"
+          ]
+        },
+        "breadth": {
+          "score": 0.5591666666666666,
+          "basis": [
+            "distinct_urls:9",
+            "distinct_axes:2",
+            "origin_types:3"
+          ]
+        },
+        "corroboration": {
+          "score": 0.26249999999999996,
+          "basis": [
+            "referring_accounts:0",
+            "origin_types:3"
+          ]
+        },
+        "track_record": {
+          "score": null,
+          "basis": [
+            "no_resolved_claims_observed"
+          ]
+        },
+        "profile": {
+          "score": 0.29000000000000004,
+          "confidence": 0.65,
+          "basis": [
+            "meta_author:false",
+            "published_time:false",
+            "canonical:true",
+            "about:true",
+            "contact:false",
+            "corrections:false",
+            "outbound_links:5",
+            "opinion_marker:false"
+          ]
+        },
+        "overall": {
+          "score": 0.4563020833333333,
+          "confidence": 0.34354999999999997,
+          "method": "mechanical_v1",
+          "basis": [
+            "unknown_domain_pattern",
+            "distinct_urls:9",
+            "distinct_axes:2",
+            "origin_types:3",
+            "referring_accounts:0",
+            "origin_types:3",
+            "track_record_unavailable"
+          ]
+        }
+      },
+      "profile": {
+        "fetched_at": "2026-09-20T08:08:32.924Z",
+        "homepage_url": "https://artificialintelligenceact.eu/",
+        "example_url": "https://artificialintelligenceact.eu/scientific-panel/?utm_source=rss&utm_medium=rss&utm_campaign=scientific-panel",
+        "homepage_status": 200,
+        "example_status": 200,
+        "homepage_final_url": "https://artificialintelligenceact.eu/",
+        "example_final_url": "https://artificialintelligenceact.eu/scientific-panel/?utm_source=rss&utm_medium=rss&utm_campaign=scientific-panel",
+        "homepage_content_type": "text/html; charset=UTF-8",
+        "example_content_type": "text/html; charset=UTF-8",
+        "homepage": {
+          "has_meta_author": false,
+          "has_published_time": false,
+          "has_canonical": true,
+          "has_about_link": true,
+          "has_contact_link": false,
+          "has_corrections_link": false,
+          "outbound_links_count": 7,
+          "opinion_marker": false
+        },
+        "example": {
+          "has_meta_author": false,
+          "has_published_time": false,
+          "has_canonical": true,
+          "has_about_link": true,
+          "has_contact_link": false,
+          "has_corrections_link": false,
+          "outbound_links_count": 5,
+          "opinion_marker": false
+        }
+      }
+    },
+    {
       "domain": "openai.com",
       "entity": "Openai",
       "kind": "unknown",
@@ -7137,135 +7266,6 @@
           "has_contact_link": false,
           "has_corrections_link": false,
           "outbound_links_count": 0,
-          "opinion_marker": false
-        }
-      }
-    },
-    {
-      "domain": "artificialintelligenceact.eu",
-      "entity": "Artificialintelligenceact",
-      "kind": "unknown",
-      "first_seen_at": "2026-09-20T03:16:54.465Z",
-      "last_seen_at": "2026-09-20T06:09:13.705Z",
-      "discovery": {
-        "distinct_urls": 8,
-        "example_urls": [
-          "https://artificialintelligenceact.eu/scientific-panel/?utm_source=rss&utm_medium=rss&utm_campaign=scientific-panel",
-          "https://artificialintelligenceact.eu/code-of-practice-overview/?utm_source=rss&",
-          "https://artificialintelligenceact.eu/why-work-at-the-eu-ai-office/?utm_source=rss&",
-          "https://artificialintelligenceact.eu/high-level-summary/?utm_source=rss&",
-          "https://artificialintelligenceact.eu/scientific-panel/?utm_source=rss&amp;utm_medium=rss&amp;utm_campaign=scientific-panel"
-        ],
-        "origin_counts": {
-          "ontology_evidence": 2,
-          "reading_queue": 2,
-          "journals": 4
-        },
-        "distinct_referring_accounts": 0,
-        "sample_referring_accounts": [],
-        "distinct_axes": [
-          "axis_ai_oversight_model_v1",
-          "axis_ai_policy_efficacy_v1"
-        ]
-      },
-      "claims": {
-        "total": 0,
-        "supported": 0,
-        "refuted": 0,
-        "contested": 0,
-        "unverified": 0,
-        "resolved_count": 0
-      },
-      "structural_features": {
-        "has_search_paths": false,
-        "has_article_paths": false,
-        "has_doi_paths": false
-      },
-      "ratings": {
-        "provenance": {
-          "score": 0.45,
-          "basis": [
-            "unknown_domain_pattern"
-          ]
-        },
-        "breadth": {
-          "score": 0.53,
-          "basis": [
-            "distinct_urls:8",
-            "distinct_axes:2",
-            "origin_types:3"
-          ]
-        },
-        "corroboration": {
-          "score": 0.26249999999999996,
-          "basis": [
-            "referring_accounts:0",
-            "origin_types:3"
-          ]
-        },
-        "track_record": {
-          "score": null,
-          "basis": [
-            "no_resolved_claims_observed"
-          ]
-        },
-        "profile": {
-          "score": 0.29000000000000004,
-          "confidence": 0.65,
-          "basis": [
-            "meta_author:false",
-            "published_time:false",
-            "canonical:true",
-            "about:true",
-            "contact:false",
-            "corrections:false",
-            "outbound_links:5",
-            "opinion_marker:false"
-          ]
-        },
-        "overall": {
-          "score": 0.449921875,
-          "confidence": 0.314925,
-          "method": "mechanical_v1",
-          "basis": [
-            "unknown_domain_pattern",
-            "distinct_urls:8",
-            "distinct_axes:2",
-            "origin_types:3",
-            "referring_accounts:0",
-            "origin_types:3",
-            "track_record_unavailable"
-          ]
-        }
-      },
-      "profile": {
-        "fetched_at": "2026-09-20T08:08:32.924Z",
-        "homepage_url": "https://artificialintelligenceact.eu/",
-        "example_url": "https://artificialintelligenceact.eu/scientific-panel/?utm_source=rss&utm_medium=rss&utm_campaign=scientific-panel",
-        "homepage_status": 200,
-        "example_status": 200,
-        "homepage_final_url": "https://artificialintelligenceact.eu/",
-        "example_final_url": "https://artificialintelligenceact.eu/scientific-panel/?utm_source=rss&utm_medium=rss&utm_campaign=scientific-panel",
-        "homepage_content_type": "text/html; charset=UTF-8",
-        "example_content_type": "text/html; charset=UTF-8",
-        "homepage": {
-          "has_meta_author": false,
-          "has_published_time": false,
-          "has_canonical": true,
-          "has_about_link": true,
-          "has_contact_link": false,
-          "has_corrections_link": false,
-          "outbound_links_count": 7,
-          "opinion_marker": false
-        },
-        "example": {
-          "has_meta_author": false,
-          "has_published_time": false,
-          "has_canonical": true,
-          "has_about_link": true,
-          "has_contact_link": false,
-          "has_corrections_link": false,
-          "outbound_links_count": 5,
           "opinion_marker": false
         }
       }
@@ -7608,7 +7608,7 @@
             "about:true",
             "contact:false",
             "corrections:false",
-            "outbound_links:68",
+            "outbound_links:69",
             "opinion_marker:false"
           ]
         },
@@ -7628,7 +7628,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-09-20T03:40:29.272Z",
+        "fetched_at": "2026-09-23T05:33:22.736Z",
         "homepage_url": "https://anthropic.com/",
         "example_url": "https://anthropic.com/news/responsible-scaling-policy-v3",
         "homepage_status": 200,
@@ -7644,7 +7644,7 @@
           "has_about_link": true,
           "has_contact_link": false,
           "has_corrections_link": false,
-          "outbound_links_count": 60,
+          "outbound_links_count": 61,
           "opinion_marker": false
         },
         "example": {
@@ -7654,7 +7654,7 @@
           "has_about_link": false,
           "has_contact_link": false,
           "has_corrections_link": false,
-          "outbound_links_count": 68,
+          "outbound_links_count": 69,
           "opinion_marker": false
         }
       }
@@ -8681,9 +8681,9 @@
       "entity": "Ptgaming Ph",
       "kind": "unknown",
       "first_seen_at": "2026-07-05T04:59:47.736Z",
-      "last_seen_at": "2026-09-22T10:04:46.924Z",
+      "last_seen_at": "2026-09-22T15:42:08.000Z",
       "discovery": {
-        "distinct_urls": 44,
+        "distinct_urls": 46,
         "example_urls": [
           "https://www.ptgaming.ph/?twclid=21n3lg1hcl64ox73kjyr4lggz9",
           "https://www.ptgaming.ph/?twclid=25vb0w4jbmtupw5yokwy2fjbcq",
@@ -8693,7 +8693,7 @@
         ],
         "origin_counts": {
           "feed_buffer": 17,
-          "feed_buffer_reply": 27
+          "feed_buffer_reply": 29
         },
         "distinct_referring_accounts": 1,
         "sample_referring_accounts": [
@@ -8724,7 +8724,7 @@
         "breadth": {
           "score": 0.47,
           "basis": [
-            "distinct_urls:44",
+            "distinct_urls:46",
             "distinct_axes:0",
             "origin_types:2"
           ]
@@ -8762,7 +8762,7 @@
           "method": "mechanical_v1",
           "basis": [
             "unknown_domain_pattern",
-            "distinct_urls:44",
+            "distinct_urls:46",
             "distinct_axes:0",
             "origin_types:2",
             "referring_accounts:1",
@@ -8772,7 +8772,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-09-18T19:39:05.678Z",
+        "fetched_at": "2026-09-22T17:23:38.442Z",
         "homepage_url": "https://ptgaming.ph/",
         "example_url": "https://www.ptgaming.ph/?twclid=21n3lg1hcl64ox73kjyr4lggz9",
         "homepage_status": 200,
@@ -8899,7 +8899,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-09-18T17:39:03.480Z",
+        "fetched_at": "2026-09-22T17:23:38.862Z",
         "homepage_url": "https://coderabbit.ai/",
         "example_url": "https://www.coderabbit.ai/agent?utm_source=twitter&utm_medium=cpc&utm_campaign=brandawareness_slack&twclid=25ohyy1nnhx1vb6p888i79f380",
         "homepage_status": 200,
@@ -9026,7 +9026,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-09-18T17:39:06.121Z",
+        "fetched_at": "2026-09-22T17:23:40.315Z",
         "homepage_url": "https://nizima-action.com/",
         "example_url": "https://site.nizima-action.com/en/?twclid=2diqibk9zmfi9zdpw7jnuyzo3e",
         "homepage_status": 200,
@@ -9153,7 +9153,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-09-18T19:39:09.166Z",
+        "fetched_at": "2026-09-22T17:23:40.756Z",
         "homepage_url": "https://nustargame.com/",
         "example_url": "https://appstore.nustargame.com/?fbclid=IwZXh0bgNhZW0CMTAAYnJpZBExdTFXSWM2OURwSzlmRGVVT3NydGMGYXBwX2lkEDIyMjAzOTE3ODgyMDA4OTIAAR5-z2VUxUBlb1xkH-U__5gASpshBlmq9xw-GXCS4bTWWiFtwpFdWkJ4PY2qEA_aem_NiqDTDHN3CJKVVCNR24plw&twclid=26zfxjdeqc7s72rera75b8jf08",
         "homepage_status": 200,
@@ -9280,7 +9280,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-09-18T17:39:09.079Z",
+        "fetched_at": "2026-09-22T19:22:00.939Z",
         "homepage_url": "https://metamask.io/",
         "example_url": "https://link.metamask.io/swap?amount=32600000000000000&from=eip155%3A1%2Fslip44%3A60&sig_params=amount%2Cfrom&sig=lcKWbD9emSvYcSy4wKZAAZK4IusikSldKuh2SLobJnCxX6_H50c7o4lrxGukMkQAlJXl_Ro-z9GOFjHlijuUSQ&utm_source=twitter&utm_medium=paid-display&utm_campaign=cmp-1529292347-afbf08&twclid=29ubdtem27pe2i7fvtv9x4pcao",
         "homepage_status": 200,
@@ -9407,7 +9407,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-09-18T17:39:09.352Z",
+        "fetched_at": "2026-09-22T19:22:01.302Z",
         "homepage_url": "https://fundingpips.com/",
         "example_url": "https://fundingpips.com/?utm_source=x&utm_medium=paid_social&utm_campaign=2026_q3_global_acquisition_all_in_sale&utm_content=2073786412856660020&twclid=24njria5jvt4ka7ejelux4oc97",
         "homepage_status": 429,
@@ -9534,7 +9534,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-09-18T18:09:03.993Z",
+        "fetched_at": "2026-09-22T19:22:01.764Z",
         "homepage_url": "https://bcgame-bet.com/",
         "example_url": "https://bcall-global.bcgame-bet.com/dispatch-v6?i=45zn3497p&utm_medium=twitter&utm_content=%7B%7Bad_name%7D%7D&p=%2Flogin%2Fregist&ch=twitter&pixel_id=or72z&register=tw-or72z-or738&purchase=tw-or72z-or736&twclid=2cjhb3kupxi19emmjqo3fks82g",
         "homepage_status": null,
@@ -9661,7 +9661,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-09-18T18:09:04.232Z",
+        "fetched_at": "2026-09-22T19:22:01.995Z",
         "homepage_url": "https://bybet.com/",
         "example_url": "https://bybet.com/promotion/detail/10/70?utm_source=x&utm_medium=cpc&utm_campaign=Awarenes-DTS-Football&twclid=2aetcv0gphixdtyqc7k0t0any5",
         "homepage_status": 200,
@@ -9759,16 +9759,16 @@
           ]
         },
         "profile": {
-          "score": 0,
-          "confidence": 0.55,
+          "score": 0.39999999999999997,
+          "confidence": 0.65,
           "basis": [
             "meta_author:false",
             "published_time:false",
-            "canonical:false",
-            "about:false",
-            "contact:false",
+            "canonical:true",
+            "about:true",
+            "contact:true",
             "corrections:false",
-            "outbound_links:0",
+            "outbound_links:4",
             "opinion_marker:false"
           ]
         },
@@ -9788,33 +9788,33 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-09-18T18:09:04.380Z",
+        "fetched_at": "2026-09-23T01:27:53.541Z",
         "homepage_url": "https://leronx.org/",
         "example_url": "https://leronx.org/?ref=005&tw=r84nh&tw_click=tw-r84nh-r84ni&twclid=29ffsgobmrsvjmkjlmgcllypv0",
-        "homepage_status": null,
-        "example_status": null,
+        "homepage_status": 200,
+        "example_status": 200,
         "homepage_final_url": "https://leronx.org/",
         "example_final_url": "https://leronx.org/?ref=005&tw=r84nh&tw_click=tw-r84nh-r84ni&twclid=29ffsgobmrsvjmkjlmgcllypv0",
-        "homepage_content_type": "",
-        "example_content_type": "",
+        "homepage_content_type": "text/html; charset=UTF-8",
+        "example_content_type": "text/html; charset=UTF-8",
         "homepage": {
           "has_meta_author": false,
           "has_published_time": false,
-          "has_canonical": false,
-          "has_about_link": false,
-          "has_contact_link": false,
+          "has_canonical": true,
+          "has_about_link": true,
+          "has_contact_link": true,
           "has_corrections_link": false,
-          "outbound_links_count": 0,
+          "outbound_links_count": 4,
           "opinion_marker": false
         },
         "example": {
           "has_meta_author": false,
           "has_published_time": false,
-          "has_canonical": false,
-          "has_about_link": false,
-          "has_contact_link": false,
+          "has_canonical": true,
+          "has_about_link": true,
+          "has_contact_link": true,
           "has_corrections_link": false,
-          "outbound_links_count": 0,
+          "outbound_links_count": 4,
           "opinion_marker": false
         }
       }
@@ -9915,7 +9915,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-09-18T18:09:05.097Z",
+        "fetched_at": "2026-09-23T01:27:54.223Z",
         "homepage_url": "https://app.link/",
         "example_url": "https://chipotle.app.link/rTJVnvMgW1b?%243p=a_twitter&twclid=26fm1l3fbt5tx0wzqe3pjv9fkn",
         "homepage_status": 404,
@@ -10042,7 +10042,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-09-18T19:09:06.860Z",
+        "fetched_at": "2026-09-23T01:27:56.358Z",
         "homepage_url": "https://bk.com/",
         "example_url": "https://www.bk.com/menu/section/fb06fabe-a285-4fb4-994a-c617a1547ddb?utm_source=X&utm_medium=Social-Social&utm_campaign=Peppercorn-Awareness&utm_content=Peppercorn-IMG-Warning&twclid=24j7ivpacvxqbg2t5it24skrl9",
         "homepage_status": 200,
@@ -10169,7 +10169,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-09-18T19:09:08.620Z",
+        "fetched_at": "2026-09-23T01:27:58.134Z",
         "homepage_url": "https://hyperagent.com/",
         "example_url": "https://www.hyperagent.com/?promo=FIRST1000&utm_source=twitter&utm_medium=paidsocial&utm_campaign=hyperagent_conversions&utm_content=ag3_fleet&utm_term=ag3_ai_dev_followers&utm_id=recNjFFq2Yg5747V4&twclid=2dzs7nc78iuf64njs9fxab27tl",
         "homepage_status": 200,
@@ -10296,7 +10296,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-09-18T19:09:08.959Z",
+        "fetched_at": "2026-09-23T03:27:58.813Z",
         "homepage_url": "https://serus.ai/",
         "example_url": "https://www.serus.ai/?twclid=29v4lxmzvo39j1dtelbj405bc3",
         "homepage_status": 403,
@@ -10423,7 +10423,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-09-18T19:09:09.348Z",
+        "fetched_at": "2026-09-23T03:27:59.197Z",
         "homepage_url": "https://playtime.ph/",
         "example_url": "https://www.playtime.ph/?twclid=2ehhsiuw72qcjnqiqckbnej4r9",
         "homepage_status": 200,
@@ -10530,7 +10530,7 @@
             "about:false",
             "contact:false",
             "corrections:false",
-            "outbound_links:58",
+            "outbound_links:57",
             "opinion_marker:false"
           ]
         },
@@ -10550,7 +10550,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-09-18T19:39:07.059Z",
+        "fetched_at": "2026-09-23T03:28:00.257Z",
         "homepage_url": "https://shipaton.com/",
         "example_url": "https://www.shipaton.com/events/?utm_source=x&utm_medium=cpc&utm_campaign=shipaton-traffic&twclid=2d8n4jkad805fesk63uxwuffy9",
         "homepage_status": 200,
@@ -10576,7 +10576,7 @@
           "has_about_link": false,
           "has_contact_link": false,
           "has_corrections_link": false,
-          "outbound_links_count": 58,
+          "outbound_links_count": 57,
           "opinion_marker": false
         }
       }
@@ -10677,7 +10677,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-09-18T19:39:08.874Z",
+        "fetched_at": "2026-09-23T03:28:01.578Z",
         "homepage_url": "https://amro-asia.org/",
         "example_url": "https://amro-asia.org/about-us/who-we-are/?utm_source=X&twclid=2n1gu531399vzt4gm709so7oz",
         "homepage_status": 200,
@@ -10804,7 +10804,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-09-18T21:09:12.999Z",
+        "fetched_at": "2026-09-23T05:33:24.285Z",
         "homepage_url": "https://imbue.com/",
         "example_url": "https://imbue.com/product/bouncer/redirect.html?utm_source=x&utm_medium=paid_social&utm_campaign=omni&authuser=0&hl=en&twclid=28wps3duhy1q7hzrcdj2h5pxpl",
         "homepage_status": 200,
@@ -10931,7 +10931,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-09-18T20:39:06.821Z",
+        "fetched_at": "2026-09-23T05:33:28.669Z",
         "homepage_url": "https://wsj.com/",
         "example_url": "https://www.wsj.com/video/three-things-to-consider-before-buying-an-electric-vehicle/BF3DA411-C296-4CB8-A22D-BE3A2E943ACB?mod=WSJvidctr_watchnow_pos2%3FUCID%3DWSJ_SMD_TWT_BRA_BND_MBC_NAP_NAP_EVS_NAP&twclid=2227k5fcsvy3eazrqjlp63r0go",
         "homepage_status": 401,
@@ -11058,7 +11058,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-09-18T20:39:10.668Z",
+        "fetched_at": "2026-09-23T07:33:02.153Z",
         "homepage_url": "https://utspaycashback.com/",
         "example_url": "https://www.utspaycashback.com/?twclid=2650deq3k4trsekhk3xdbpt9o7",
         "homepage_status": 200,
@@ -11185,7 +11185,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-09-18T20:39:08.660Z",
+        "fetched_at": "2026-09-23T07:33:04.232Z",
         "homepage_url": "https://aramco.com/",
         "example_url": "https://www.aramco.com/en/what-we-do/energy-innovation/innovation-ecosystem/aramco-fifa-partnership?utm_source=x&utm_medium=cpm&utm_term=en_vid_cpm_inf-ftbl_na_football-fans&utm_content=en_4x5_vid_6s_global_fifa-whatif_na_m3&twclid=2f1bxdfhmr1if32n1ssvcc3xtc",
         "homepage_status": 200,
@@ -11312,7 +11312,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-09-18T20:39:09.685Z",
+        "fetched_at": "2026-09-23T07:33:05.231Z",
         "homepage_url": "https://parksystems.com/",
         "example_url": "https://www.parksystems.com/en/products/research-afm/small-sample-afm/fx40?utm_source=paid-x&utm_medium=social&utm_campaign=hq-FX40_paper_Autonomous_AI-DrivenAFM_260701-2026-06-15-CM005+&twclid=26i21embi38s4z9rci48kmjdf8",
         "homepage_status": 200,
@@ -11439,7 +11439,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-09-18T21:09:07.996Z",
+        "fetched_at": "2026-09-23T07:33:05.564Z",
         "homepage_url": "https://walrus.xyz/",
         "example_url": "https://memory.walrus.xyz/?utm_source=twitter&utm_medium=paid_social&utm_campaign=walrus_memory&twclid=25m14v5tjdgue38tcgv9nyht3e",
         "homepage_status": 200,
@@ -62219,6 +62219,83 @@
       }
     },
     {
+      "domain": "redwoodresearch.org",
+      "entity": "Redwoodresearch",
+      "kind": "unknown",
+      "first_seen_at": null,
+      "last_seen_at": null,
+      "discovery": {
+        "distinct_urls": 3,
+        "example_urls": [
+          "https://blog.redwoodresearch.org/p/are-we-existentially-threatened-by",
+          "https://blog.redwoodresearch.org/p/retrying-vs-resampling-in-ai-control",
+          "https://blog.redwoodresearch.org/p/astra-is-much-better-at-reasoning"
+        ],
+        "origin_counts": {
+          "reading_queue": 3
+        },
+        "distinct_referring_accounts": 0,
+        "sample_referring_accounts": [],
+        "distinct_axes": []
+      },
+      "claims": {
+        "total": 0,
+        "supported": 0,
+        "refuted": 0,
+        "contested": 0,
+        "unverified": 0,
+        "resolved_count": 0
+      },
+      "structural_features": {
+        "has_search_paths": false,
+        "has_article_paths": false,
+        "has_doi_paths": false
+      },
+      "ratings": {
+        "provenance": {
+          "score": 0.45,
+          "basis": [
+            "unknown_domain_pattern"
+          ]
+        },
+        "breadth": {
+          "score": 0.1475,
+          "basis": [
+            "distinct_urls:3",
+            "distinct_axes:0",
+            "origin_types:1"
+          ]
+        },
+        "corroboration": {
+          "score": 0.0875,
+          "basis": [
+            "referring_accounts:0",
+            "origin_types:1"
+          ]
+        },
+        "track_record": {
+          "score": null,
+          "basis": [
+            "no_resolved_claims_observed"
+          ]
+        },
+        "overall": {
+          "score": 0.34984375,
+          "confidence": 0.10635,
+          "method": "mechanical_v1",
+          "basis": [
+            "unknown_domain_pattern",
+            "distinct_urls:3",
+            "distinct_axes:0",
+            "origin_types:1",
+            "referring_accounts:0",
+            "origin_types:1",
+            "track_record_unavailable"
+          ]
+        }
+      }
+    },
+    {
       "domain": "irys.xyz",
       "entity": "Irys Xyz",
       "kind": "unknown",
@@ -95909,82 +95986,6 @@
         ],
         "origin_counts": {
           "reading_queue": 6
-        },
-        "distinct_referring_accounts": 0,
-        "sample_referring_accounts": [],
-        "distinct_axes": []
-      },
-      "claims": {
-        "total": 0,
-        "supported": 0,
-        "refuted": 0,
-        "contested": 0,
-        "unverified": 0,
-        "resolved_count": 0
-      },
-      "structural_features": {
-        "has_search_paths": false,
-        "has_article_paths": false,
-        "has_doi_paths": false
-      },
-      "ratings": {
-        "provenance": {
-          "score": 0.45,
-          "basis": [
-            "unknown_domain_pattern"
-          ]
-        },
-        "breadth": {
-          "score": 0.11833333333333332,
-          "basis": [
-            "distinct_urls:2",
-            "distinct_axes:0",
-            "origin_types:1"
-          ]
-        },
-        "corroboration": {
-          "score": 0.0875,
-          "basis": [
-            "referring_accounts:0",
-            "origin_types:1"
-          ]
-        },
-        "track_record": {
-          "score": null,
-          "basis": [
-            "no_resolved_claims_observed"
-          ]
-        },
-        "overall": {
-          "score": 0.34346354166666665,
-          "confidence": 0.07772499999999999,
-          "method": "mechanical_v1",
-          "basis": [
-            "unknown_domain_pattern",
-            "distinct_urls:2",
-            "distinct_axes:0",
-            "origin_types:1",
-            "referring_accounts:0",
-            "origin_types:1",
-            "track_record_unavailable"
-          ]
-        }
-      }
-    },
-    {
-      "domain": "redwoodresearch.org",
-      "entity": "Redwoodresearch",
-      "kind": "unknown",
-      "first_seen_at": null,
-      "last_seen_at": null,
-      "discovery": {
-        "distinct_urls": 2,
-        "example_urls": [
-          "https://blog.redwoodresearch.org/p/are-we-existentially-threatened-by",
-          "https://blog.redwoodresearch.org/p/retrying-vs-resampling-in-ai-control"
-        ],
-        "origin_counts": {
-          "reading_queue": 2
         },
         "distinct_referring_accounts": 0,
         "sample_referring_accounts": [],
