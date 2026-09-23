@@ -1,15 +1,15 @@
 {
   "schema_version": "1.0",
-  "generated_at": "2026-09-23T11:49:20.349Z",
+  "generated_at": "2026-09-23T21:57:35.209Z",
   "method": "mechanical_registry_v1",
-  "profiled_at": "2026-09-23T11:49:26.989Z",
+  "profiled_at": "2026-09-23T21:57:41.879Z",
   "sources": [
     {
       "domain": "arxiv.org",
       "entity": "Arxiv",
       "kind": "academic",
       "first_seen_at": "2026-09-20T04:08:44.147Z",
-      "last_seen_at": "2026-09-23T05:33:39.728Z",
+      "last_seen_at": "2026-09-23T21:57:35.206Z",
       "discovery": {
         "distinct_urls": 32,
         "example_urls": [
@@ -21,9 +21,10 @@
         ],
         "origin_counts": {
           "ontology_evidence": 7,
-          "reading_queue": 45,
+          "reading_queue": 51,
           "journals": 8,
-          "articles": 1
+          "articles": 1,
+          "prefetch": 1
         },
         "distinct_referring_accounts": 0,
         "sample_referring_accounts": [],
@@ -56,18 +57,18 @@
           ]
         },
         "breadth": {
-          "score": 0.7649999999999999,
+          "score": 0.825,
           "basis": [
             "distinct_urls:32",
             "distinct_axes:3",
-            "origin_types:4"
+            "origin_types:5"
           ]
         },
         "corroboration": {
           "score": 0.35,
           "basis": [
             "referring_accounts:0",
-            "origin_types:4"
+            "origin_types:5"
           ]
         },
         "track_record": {
@@ -91,8 +92,8 @@
           ]
         },
         "overall": {
-          "score": 0.7845312500000001,
-          "confidence": 0.64215,
+          "score": 0.7976562500000001,
+          "confidence": 0.6547499999999999,
           "method": "mechanical_v1",
           "basis": [
             "academic_domain_pattern",
@@ -100,9 +101,9 @@
             "doi_or_identifier_path_seen",
             "distinct_urls:32",
             "distinct_axes:3",
-            "origin_types:4",
+            "origin_types:5",
             "referring_accounts:0",
-            "origin_types:4",
+            "origin_types:5",
             "track_record_unavailable"
           ]
         }
@@ -3253,9 +3254,9 @@
       "entity": "T Co",
       "kind": "unknown",
       "first_seen_at": "2016-05-05T18:57:30.000Z",
-      "last_seen_at": "2026-09-23T11:05:00.000Z",
+      "last_seen_at": "2026-09-23T19:45:08.000Z",
       "discovery": {
-        "distinct_urls": 23026,
+        "distinct_urls": 23059,
         "example_urls": [
           "https://t.co/pJSE124ec4",
           "https://t.co/Soz8BXPWaa",
@@ -3264,11 +3265,11 @@
           "https://t.co/cYaqYDRp08"
         ],
         "origin_counts": {
-          "feed_buffer": 20937,
+          "feed_buffer": 20986,
           "feed_buffer_reply": 6451,
           "articles": 3
         },
-        "distinct_referring_accounts": 3293,
+        "distinct_referring_accounts": 3294,
         "sample_referring_accounts": [
           "0808iveta",
           "09abracadabra",
@@ -3307,7 +3308,7 @@
         "breadth": {
           "score": 0.53,
           "basis": [
-            "distinct_urls:23026",
+            "distinct_urls:23059",
             "distinct_axes:0",
             "origin_types:3"
           ]
@@ -3315,7 +3316,7 @@
         "corroboration": {
           "score": 0.9125,
           "basis": [
-            "referring_accounts:3293",
+            "referring_accounts:3294",
             "origin_types:3"
           ]
         },
@@ -3346,10 +3347,10 @@
           "basis": [
             "unknown_domain_pattern",
             "doi_or_identifier_path_seen",
-            "distinct_urls:23026",
+            "distinct_urls:23059",
             "distinct_axes:0",
             "origin_types:3",
-            "referring_accounts:3293",
+            "referring_accounts:3294",
             "origin_types:3",
             "track_record_unavailable"
           ]
@@ -3762,16 +3763,16 @@
           ]
         },
         "profile": {
-          "score": 0.49000000000000005,
-          "confidence": 0.75,
+          "score": 0.29000000000000004,
+          "confidence": 0.65,
           "basis": [
             "meta_author:false",
-            "published_time:true",
+            "published_time:false",
             "canonical:true",
             "about:true",
             "contact:false",
             "corrections:false",
-            "outbound_links:7",
+            "outbound_links:5",
             "opinion_marker:false"
           ]
         },
@@ -3792,15 +3793,15 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-09-20T12:08:42.937Z",
+        "fetched_at": "2026-09-23T15:34:16.951Z",
         "homepage_url": "https://metr.org/",
-        "example_url": "https://metr.org/blog/2026-08-31-security-update/",
+        "example_url": "https://metr.org/blog/2026-03-26-red-teaming-anthropic-agent-monitoring/",
         "homepage_status": 200,
-        "example_status": 200,
+        "example_status": 404,
         "homepage_final_url": "https://metr.org/",
-        "example_final_url": "https://metr.org/blog/2026-08-31-security-update/",
+        "example_final_url": "https://metr.org/blog/2026-03-26-red-teaming-anthropic-agent-monitoring/",
         "homepage_content_type": "text/html; charset=UTF-8",
-        "example_content_type": "text/html; charset=UTF-8",
+        "example_content_type": "text/html; charset=utf-8",
         "homepage": {
           "has_meta_author": false,
           "has_published_time": false,
@@ -3808,17 +3809,17 @@
           "has_about_link": true,
           "has_contact_link": false,
           "has_corrections_link": false,
-          "outbound_links_count": 38,
+          "outbound_links_count": 39,
           "opinion_marker": false
         },
         "example": {
           "has_meta_author": false,
-          "has_published_time": true,
+          "has_published_time": false,
           "has_canonical": true,
           "has_about_link": true,
           "has_contact_link": false,
           "has_corrections_link": false,
-          "outbound_links_count": 7,
+          "outbound_links_count": 5,
           "opinion_marker": false
         }
       }
@@ -7238,7 +7239,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-09-20T16:04:28.118Z",
+        "fetched_at": "2026-09-23T17:58:53.048Z",
         "homepage_url": "https://openai.com/",
         "example_url": "https://openai.com/index/ai-policy-window",
         "homepage_status": 403,
@@ -8680,9 +8681,9 @@
       "entity": "Ptgaming Ph",
       "kind": "unknown",
       "first_seen_at": "2026-07-05T04:59:47.736Z",
-      "last_seen_at": "2026-09-22T15:42:08.000Z",
+      "last_seen_at": "2026-09-23T13:02:30.060Z",
       "discovery": {
-        "distinct_urls": 46,
+        "distinct_urls": 47,
         "example_urls": [
           "https://www.ptgaming.ph/?twclid=21n3lg1hcl64ox73kjyr4lggz9",
           "https://www.ptgaming.ph/?twclid=25vb0w4jbmtupw5yokwy2fjbcq",
@@ -8691,7 +8692,7 @@
           "https://www.ptgaming.ph/?twclid=26sb1wpgds50ggj6udc2c7m358"
         ],
         "origin_counts": {
-          "feed_buffer": 17,
+          "feed_buffer": 18,
           "feed_buffer_reply": 29
         },
         "distinct_referring_accounts": 1,
@@ -8723,7 +8724,7 @@
         "breadth": {
           "score": 0.47,
           "basis": [
-            "distinct_urls:46",
+            "distinct_urls:47",
             "distinct_axes:0",
             "origin_types:2"
           ]
@@ -8761,7 +8762,7 @@
           "method": "mechanical_v1",
           "basis": [
             "unknown_domain_pattern",
-            "distinct_urls:46",
+            "distinct_urls:47",
             "distinct_axes:0",
             "origin_types:2",
             "referring_accounts:1",
@@ -12454,7 +12455,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-09-19T00:50:38.868Z",
+        "fetched_at": "2026-09-23T15:34:16.987Z",
         "homepage_url": "https://bitget.com/",
         "example_url": "https://partner.bitget.com/bg/SMTwittercfd?twclid=2dlbmypv93aoxlr6pzrilrub21",
         "homepage_status": null,
@@ -12581,7 +12582,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-09-19T00:50:40.060Z",
+        "fetched_at": "2026-09-23T15:34:19.457Z",
         "homepage_url": "https://oppo.com/",
         "example_url": "https://www.oppo.com/ph/store?utm_source=x&utm_medium=cpm&utm_campaign=OPPO_RENO16_LAUNCH&utm_content=Babymonster&twclid=23rip3pnfc4fzj8wf4kuwjdu8m",
         "homepage_status": 200,
@@ -12708,7 +12709,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-09-19T00:50:40.283Z",
+        "fetched_at": "2026-09-23T15:34:19.693Z",
         "homepage_url": "https://combos.fun/",
         "example_url": "https://combos.fun/?utm_source=X&utm_campaign=promote%3Dcar2&twclid=2aswwo64b7owkoq09axl1gyba6",
         "homepage_status": 403,
@@ -12835,7 +12836,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-09-19T01:50:41.550Z",
+        "fetched_at": "2026-09-23T17:58:54.466Z",
         "homepage_url": "https://valvolineglobal.com/",
         "example_url": "https://www.valvolineglobal.com/en/fifa-national-sweeps/?utm_source=X&utm_medium=paidsocial&utm_campaign=WC26_GM_US_AWE&utm_content=wcsimplified&twclid=299i90helnojknptru820mqim9",
         "homepage_status": 200,
@@ -12962,7 +12963,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-09-19T01:50:41.785Z",
+        "fetched_at": "2026-09-23T17:58:54.819Z",
         "homepage_url": "https://trenchers.ai/",
         "example_url": "https://trenchers.ai/?twclid=2di75phbt55c7y0zfq5ihrqinv",
         "homepage_status": 200,
@@ -13060,7 +13061,7 @@
           ]
         },
         "profile": {
-          "score": 0.19,
+          "score": 0.18,
           "confidence": 0.55,
           "basis": [
             "meta_author:false",
@@ -13069,7 +13070,7 @@
             "about:false",
             "contact:false",
             "corrections:false",
-            "outbound_links:9",
+            "outbound_links:8",
             "opinion_marker:false"
           ]
         },
@@ -13089,7 +13090,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-09-19T01:50:42.948Z",
+        "fetched_at": "2026-09-23T17:58:56.550Z",
         "homepage_url": "https://proxy-cheap.com/",
         "example_url": "https://www.proxy-cheap.com/?twclid=241rx3okk7tuov8hduxv4r27su",
         "homepage_status": 200,
@@ -13105,7 +13106,7 @@
           "has_about_link": false,
           "has_contact_link": false,
           "has_corrections_link": false,
-          "outbound_links_count": 9,
+          "outbound_links_count": 8,
           "opinion_marker": false
         },
         "example": {
@@ -13115,7 +13116,7 @@
           "has_about_link": false,
           "has_contact_link": false,
           "has_corrections_link": false,
-          "outbound_links_count": 9,
+          "outbound_links_count": 8,
           "opinion_marker": false
         }
       }
@@ -13216,7 +13217,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-09-19T01:50:44.292Z",
+        "fetched_at": "2026-09-23T19:58:57.306Z",
         "homepage_url": "https://interserver.net/",
         "example_url": "https://www.interserver.net/vps/?twclid=29rh8w2who6jt1ovqguffmygqn",
         "homepage_status": 200,
@@ -13343,13 +13344,13 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-09-19T07:22:49.408Z",
+        "fetched_at": "2026-09-23T19:59:05.255Z",
         "homepage_url": "https://shopee.ph/",
         "example_url": "https://shopee.ph/universal-link/product/278394653/22353819981/?deep_and_web=1&smtt=9&utm_campaign=s278394653_ss_ph_twtr_twitterad&utm_content=eoint&utm_medium=seller&utm_source=twitter&twclid=21uy0mdqfu18byi7ighc1a87wq",
         "homepage_status": 200,
         "example_status": 200,
         "homepage_final_url": "https://shopee.ph/",
-        "example_final_url": "https://shopee.ph/product/278394653/22353819981/?smtt=9&twclid=21uy0mdqfu18byi7ighc1a87wq&uls_trackid=56m0rv4d00jh&utm_campaign=s278394653_ss_ph_twtr_twitterad&utm_content=eoint&utm_medium=seller&utm_source=twitter",
+        "example_final_url": "https://shopee.ph/product/278394653/22353819981/?smtt=9&twclid=21uy0mdqfu18byi7ighc1a87wq&uls_trackid=56n653sq00kb&utm_campaign=s278394653_ss_ph_twtr_twitterad&utm_content=eoint&utm_medium=seller&utm_source=twitter",
         "homepage_content_type": "text/html; charset=utf-8",
         "example_content_type": "text/html; charset=utf-8",
         "homepage": {
@@ -13441,12 +13442,12 @@
           ]
         },
         "profile": {
-          "score": 0.1,
+          "score": 0,
           "confidence": 0.55,
           "basis": [
             "meta_author:false",
             "published_time:false",
-            "canonical:true",
+            "canonical:false",
             "about:false",
             "contact:false",
             "corrections:false",
@@ -13471,15 +13472,15 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-09-19T05:16:16.364Z",
+        "fetched_at": "2026-09-23T19:59:18.557Z",
         "homepage_url": "https://metaphysicalarticles.org/",
         "example_url": "https://www.metaphysicalarticles.org/2025/12/ufos-uap-space-people-disclosure.html?twclid=25s2j2s4i47jn3wcdf6ujpfrmp",
         "homepage_status": 200,
-        "example_status": 200,
+        "example_status": null,
         "homepage_final_url": "https://www.metaphysicalarticles.org/",
         "example_final_url": "https://www.metaphysicalarticles.org/2025/12/ufos-uap-space-people-disclosure.html?twclid=25s2j2s4i47jn3wcdf6ujpfrmp",
         "homepage_content_type": "text/html; charset=UTF-8",
-        "example_content_type": "text/html; charset=UTF-8",
+        "example_content_type": "",
         "homepage": {
           "has_meta_author": false,
           "has_published_time": false,
@@ -13493,7 +13494,7 @@
         "example": {
           "has_meta_author": false,
           "has_published_time": false,
-          "has_canonical": true,
+          "has_canonical": false,
           "has_about_link": false,
           "has_contact_link": false,
           "has_corrections_link": false,
@@ -13599,19 +13600,19 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-09-19T05:16:19.702Z",
+        "fetched_at": "2026-09-23T19:59:32.681Z",
         "homepage_url": "https://amazon.com/",
         "example_url": "https://www.amazon.com/The-Boys-Season-5/dp/B0FX3G8F44/ref_=dvm_us_c_soc_THBY_tw_rb?twclid=2e4zyrzur7iapo7e8zxfmiz1fu",
-        "homepage_status": 200,
+        "homepage_status": null,
         "example_status": 200,
-        "homepage_final_url": "https://www.amazon.com/",
+        "homepage_final_url": "https://amazon.com/",
         "example_final_url": "https://www.amazon.com/The-Boys-Season-5/dp/B0FX3G8F44",
-        "homepage_content_type": "text/html;charset=UTF-8",
+        "homepage_content_type": "",
         "example_content_type": "text/html;charset=UTF-8",
         "homepage": {
           "has_meta_author": false,
           "has_published_time": false,
-          "has_canonical": true,
+          "has_canonical": false,
           "has_about_link": false,
           "has_contact_link": false,
           "has_corrections_link": false,
@@ -13728,7 +13729,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-09-19T05:16:22.270Z",
+        "fetched_at": "2026-09-23T21:57:37.648Z",
         "homepage_url": "https://onelink.me/",
         "example_url": "https://vix.onelink.me/Z4oU/hyuh928w?twclid=24s36ffdjwv85ew8o2yfteqmxu",
         "homepage_status": 200,
@@ -13744,7 +13745,7 @@
           "has_about_link": true,
           "has_contact_link": true,
           "has_corrections_link": false,
-          "outbound_links_count": 122,
+          "outbound_links_count": 124,
           "opinion_marker": false
         },
         "example": {
@@ -13855,7 +13856,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-09-19T05:16:23.487Z",
+        "fetched_at": "2026-09-23T21:57:38.845Z",
         "homepage_url": "https://falconx.io/",
         "example_url": "https://focal.falconx.io/workflows/discovery/crypto?utm_source=x&utm_medium=ads&utm_campaign=discover&utm_id=discover&twclid=24ydefk7qg32l97smp6icteh83",
         "homepage_status": 200,
@@ -13982,7 +13983,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-09-19T06:52:45.425Z",
+        "fetched_at": "2026-09-23T21:57:40.488Z",
         "homepage_url": "https://fundrise.com/",
         "example_url": "https://fundrise.com/vcx?utm_source=twitter&utm_campaign=vcxsky&twclid=286j5mjx6wqmg12vs5jto11lrf",
         "homepage_status": 405,
@@ -14109,7 +14110,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-09-19T06:52:45.774Z",
+        "fetched_at": "2026-09-23T21:57:41.879Z",
         "homepage_url": "https://betterstack.com/",
         "example_url": "https://betterstack.com/incident-management?twclid=23e9xf4wt9fpugvwab34523yyy",
         "homepage_status": 200,
@@ -41331,84 +41332,6 @@
       }
     },
     {
-      "domain": "redwoodresearch.org",
-      "entity": "Redwoodresearch",
-      "kind": "unknown",
-      "first_seen_at": "2026-09-23T09:35:17.266Z",
-      "last_seen_at": "2026-09-23T11:49:20.346Z",
-      "discovery": {
-        "distinct_urls": 3,
-        "example_urls": [
-          "https://blog.redwoodresearch.org/p/are-we-existentially-threatened-by",
-          "https://blog.redwoodresearch.org/p/retrying-vs-resampling-in-ai-control",
-          "https://blog.redwoodresearch.org/p/astra-is-much-better-at-reasoning"
-        ],
-        "origin_counts": {
-          "reading_queue": 5,
-          "prefetch": 1
-        },
-        "distinct_referring_accounts": 0,
-        "sample_referring_accounts": [],
-        "distinct_axes": []
-      },
-      "claims": {
-        "total": 0,
-        "supported": 0,
-        "refuted": 0,
-        "contested": 0,
-        "unverified": 0,
-        "resolved_count": 0
-      },
-      "structural_features": {
-        "has_search_paths": false,
-        "has_article_paths": false,
-        "has_doi_paths": false
-      },
-      "ratings": {
-        "provenance": {
-          "score": 0.45,
-          "basis": [
-            "unknown_domain_pattern"
-          ]
-        },
-        "breadth": {
-          "score": 0.2075,
-          "basis": [
-            "distinct_urls:3",
-            "distinct_axes:0",
-            "origin_types:2"
-          ]
-        },
-        "corroboration": {
-          "score": 0.175,
-          "basis": [
-            "referring_accounts:0",
-            "origin_types:2"
-          ]
-        },
-        "track_record": {
-          "score": null,
-          "basis": [
-            "no_resolved_claims_observed"
-          ]
-        },
-        "overall": {
-          "score": 0.371171875,
-          "confidence": 0.126825,
-          "method": "mechanical_v1",
-          "basis": [
-            "unknown_domain_pattern",
-            "distinct_urls:3",
-            "distinct_axes:0",
-            "origin_types:2",
-            "referring_accounts:0",
-            "origin_types:2",
-            "track_record_unavailable"
-          ]
-        }
-      }
-    },
-    {
       "domain": "straitstimes.com",
       "entity": "Straitstimes",
       "kind": "unknown",
@@ -52207,6 +52130,84 @@
       }
     },
     {
+      "domain": "redwoodresearch.org",
+      "entity": "Redwoodresearch",
+      "kind": "unknown",
+      "first_seen_at": "2026-09-23T09:35:17.266Z",
+      "last_seen_at": "2026-09-23T09:35:17.266Z",
+      "discovery": {
+        "distinct_urls": 4,
+        "example_urls": [
+          "https://blog.redwoodresearch.org/p/are-we-existentially-threatened-by",
+          "https://blog.redwoodresearch.org/p/retrying-vs-resampling-in-ai-control",
+          "https://blog.redwoodresearch.org/p/astra-is-much-better-at-reasoning",
+          "https://blog.redwoodresearch.org/p/latent-reasoning-architectures-would"
+        ],
+        "origin_counts": {
+          "reading_queue": 6
+        },
+        "distinct_referring_accounts": 0,
+        "sample_referring_accounts": [],
+        "distinct_axes": []
+      },
+      "claims": {
+        "total": 0,
+        "supported": 0,
+        "refuted": 0,
+        "contested": 0,
+        "unverified": 0,
+        "resolved_count": 0
+      },
+      "structural_features": {
+        "has_search_paths": false,
+        "has_article_paths": false,
+        "has_doi_paths": false
+      },
+      "ratings": {
+        "provenance": {
+          "score": 0.45,
+          "basis": [
+            "unknown_domain_pattern"
+          ]
+        },
+        "breadth": {
+          "score": 0.17666666666666664,
+          "basis": [
+            "distinct_urls:4",
+            "distinct_axes:0",
+            "origin_types:1"
+          ]
+        },
+        "corroboration": {
+          "score": 0.0875,
+          "basis": [
+            "referring_accounts:0",
+            "origin_types:1"
+          ]
+        },
+        "track_record": {
+          "score": null,
+          "basis": [
+            "no_resolved_claims_observed"
+          ]
+        },
+        "overall": {
+          "score": 0.3562239583333333,
+          "confidence": 0.134975,
+          "method": "mechanical_v1",
+          "basis": [
+            "unknown_domain_pattern",
+            "distinct_urls:4",
+            "distinct_axes:0",
+            "origin_types:1",
+            "referring_accounts:0",
+            "origin_types:1",
+            "track_record_unavailable"
+          ]
+        }
+      }
+    },
+    {
       "domain": "edicek.com",
       "entity": "Edicek",
       "kind": "unknown",
@@ -62289,6 +62290,83 @@
             "distinct_axes:0",
             "origin_types:1",
             "referring_accounts:1",
+            "origin_types:1",
+            "track_record_unavailable"
+          ]
+        }
+      }
+    },
+    {
+      "domain": "alignmentforum.org",
+      "entity": "Alignmentforum",
+      "kind": "unknown",
+      "first_seen_at": "2026-09-20T06:09:13.737Z",
+      "last_seen_at": "2026-09-20T18:05:25.100Z",
+      "discovery": {
+        "distinct_urls": 3,
+        "example_urls": [
+          "https://www.alignmentforum.org/posts/virawHQekJsozwotz/paper-stringological-sequence-prediction-iii",
+          "https://www.alignmentforum.org/posts/x8BvtWxtoajBGHS3g/an-operationalization-of-opaque-serial-depth",
+          "https://www.alignmentforum.org/posts/LcQ9x72eNji2gpS9b/why-i-m-scared-of-rl"
+        ],
+        "origin_counts": {
+          "reading_queue": 7
+        },
+        "distinct_referring_accounts": 0,
+        "sample_referring_accounts": [],
+        "distinct_axes": []
+      },
+      "claims": {
+        "total": 0,
+        "supported": 0,
+        "refuted": 0,
+        "contested": 0,
+        "unverified": 0,
+        "resolved_count": 0
+      },
+      "structural_features": {
+        "has_search_paths": false,
+        "has_article_paths": false,
+        "has_doi_paths": false
+      },
+      "ratings": {
+        "provenance": {
+          "score": 0.45,
+          "basis": [
+            "unknown_domain_pattern"
+          ]
+        },
+        "breadth": {
+          "score": 0.1475,
+          "basis": [
+            "distinct_urls:3",
+            "distinct_axes:0",
+            "origin_types:1"
+          ]
+        },
+        "corroboration": {
+          "score": 0.0875,
+          "basis": [
+            "referring_accounts:0",
+            "origin_types:1"
+          ]
+        },
+        "track_record": {
+          "score": null,
+          "basis": [
+            "no_resolved_claims_observed"
+          ]
+        },
+        "overall": {
+          "score": 0.34984375,
+          "confidence": 0.10635,
+          "method": "mechanical_v1",
+          "basis": [
+            "unknown_domain_pattern",
+            "distinct_urls:3",
+            "distinct_axes:0",
+            "origin_types:1",
+            "referring_accounts:0",
             "origin_types:1",
             "track_record_unavailable"
           ]
@@ -95973,82 +96051,6 @@
       }
     },
     {
-      "domain": "alignmentforum.org",
-      "entity": "Alignmentforum",
-      "kind": "unknown",
-      "first_seen_at": "2026-09-20T06:09:13.737Z",
-      "last_seen_at": "2026-09-20T18:05:25.100Z",
-      "discovery": {
-        "distinct_urls": 2,
-        "example_urls": [
-          "https://www.alignmentforum.org/posts/virawHQekJsozwotz/paper-stringological-sequence-prediction-iii",
-          "https://www.alignmentforum.org/posts/x8BvtWxtoajBGHS3g/an-operationalization-of-opaque-serial-depth"
-        ],
-        "origin_counts": {
-          "reading_queue": 6
-        },
-        "distinct_referring_accounts": 0,
-        "sample_referring_accounts": [],
-        "distinct_axes": []
-      },
-      "claims": {
-        "total": 0,
-        "supported": 0,
-        "refuted": 0,
-        "contested": 0,
-        "unverified": 0,
-        "resolved_count": 0
-      },
-      "structural_features": {
-        "has_search_paths": false,
-        "has_article_paths": false,
-        "has_doi_paths": false
-      },
-      "ratings": {
-        "provenance": {
-          "score": 0.45,
-          "basis": [
-            "unknown_domain_pattern"
-          ]
-        },
-        "breadth": {
-          "score": 0.11833333333333332,
-          "basis": [
-            "distinct_urls:2",
-            "distinct_axes:0",
-            "origin_types:1"
-          ]
-        },
-        "corroboration": {
-          "score": 0.0875,
-          "basis": [
-            "referring_accounts:0",
-            "origin_types:1"
-          ]
-        },
-        "track_record": {
-          "score": null,
-          "basis": [
-            "no_resolved_claims_observed"
-          ]
-        },
-        "overall": {
-          "score": 0.34346354166666665,
-          "confidence": 0.07772499999999999,
-          "method": "mechanical_v1",
-          "basis": [
-            "unknown_domain_pattern",
-            "distinct_urls:2",
-            "distinct_axes:0",
-            "origin_types:1",
-            "referring_accounts:0",
-            "origin_types:1",
-            "track_record_unavailable"
-          ]
-        }
-      }
-    },
-    {
       "domain": "iranintl.com",
       "entity": "Iranintl",
       "kind": "unknown",
@@ -96405,6 +96407,81 @@
         "distinct_urls": 1,
         "example_urls": [
           "https://www.academia.edu/"
+        ],
+        "origin_counts": {
+          "reading_queue": 1
+        },
+        "distinct_referring_accounts": 0,
+        "sample_referring_accounts": [],
+        "distinct_axes": []
+      },
+      "claims": {
+        "total": 0,
+        "supported": 0,
+        "refuted": 0,
+        "contested": 0,
+        "unverified": 0,
+        "resolved_count": 0
+      },
+      "structural_features": {
+        "has_search_paths": false,
+        "has_article_paths": false,
+        "has_doi_paths": false
+      },
+      "ratings": {
+        "provenance": {
+          "score": 0.45,
+          "basis": [
+            "unknown_domain_pattern"
+          ]
+        },
+        "breadth": {
+          "score": 0.08916666666666666,
+          "basis": [
+            "distinct_urls:1",
+            "distinct_axes:0",
+            "origin_types:1"
+          ]
+        },
+        "corroboration": {
+          "score": 0.0875,
+          "basis": [
+            "referring_accounts:0",
+            "origin_types:1"
+          ]
+        },
+        "track_record": {
+          "score": null,
+          "basis": [
+            "no_resolved_claims_observed"
+          ]
+        },
+        "overall": {
+          "score": 0.3370833333333333,
+          "confidence": 0.0491,
+          "method": "mechanical_v1",
+          "basis": [
+            "unknown_domain_pattern",
+            "distinct_urls:1",
+            "distinct_axes:0",
+            "origin_types:1",
+            "referring_accounts:0",
+            "origin_types:1",
+            "track_record_unavailable"
+          ]
+        }
+      }
+    },
+    {
+      "domain": "apolloresearch.ai",
+      "entity": "Apolloresearch Ai",
+      "kind": "unknown",
+      "first_seen_at": "2026-09-23T17:58:56.649Z",
+      "last_seen_at": "2026-09-23T17:58:56.649Z",
+      "discovery": {
+        "distinct_urls": 1,
+        "example_urls": [
+          "https://www.apolloresearch.ai/blog"
         ],
         "origin_counts": {
           "reading_queue": 1
