@@ -1,65 +1,14 @@
 {
-  "checked_at": "2026-09-22T10:50:31.995Z",
-  "evidence_24h": 5,
-  "unique_sources": 1,
-  "status": "captured",
-  "alerts": [
-    {
-      "type": "source_dominance",
-      "severity": "high",
-      "detail": "@unknown accounts for 100% of today's evidence (5/5)",
-      "username": "unknown",
-      "share": 1
-    },
-    {
-      "type": "pole_skew",
-      "severity": "high",
-      "detail": "100% of evidence pushes \"left\" — risk of one-sided belief drift",
-      "dominant_pole": "left",
-      "share": 1
-    },
-    {
-      "type": "axis_concentration",
-      "severity": "moderate",
-      "detail": "\"Frontier Lab Safety Commitments: Performative vs. Substantive\" received 60% of today's evidence (3/5)",
-      "axis_id": "axis_ai_lab_commitments_v1",
-      "share": 0.6
-    }
-  ],
-  "summary": "3 capture alert(s) detected:\n[HIGH] @unknown accounts for 100% of today's evidence (5/5)\n[HIGH] 100% of evidence pushes \"left\" — risk of one-sided belief drift\n[MODERATE] \"Frontier Lab Safety Commitments: Performative vs. Substantive\" received 60% of today's evidence (3/5)",
-  "source_concentration": {
-    "unknown": {
-      "username": "unknown",
-      "count": 5,
-      "share": 1
-    }
-  },
-  "axis_concentration": {
-    "axis_ai_lab_commitments_v1": {
-      "axis_id": "axis_ai_lab_commitments_v1",
-      "label": "Frontier Lab Safety Commitments: Performative vs. Substantive",
-      "count": 3,
-      "share": 0.6
-    },
-    "axis_agent_self_reliability_v1": {
-      "axis_id": "axis_agent_self_reliability_v1",
-      "label": "Autonomous Agent Reliability: Unverified Self-Reports vs. Reliable Self-Monitoring",
-      "count": 2,
-      "share": 0.4
-    }
-  },
-  "cluster_concentration": {
-    "unknown": {
-      "cluster": "unknown",
-      "count": 5,
-      "share": 1
-    }
-  },
+  "checked_at": "2026-09-23T11:50:47.355Z",
+  "evidence_24h": 0,
+  "alerts": [],
+  "source_concentration": {},
+  "axis_concentration": {},
   "pole_balance": {
-    "left": 5,
+    "left": 0,
     "right": 0,
-    "neutral": 0,
-    "left_share": 1,
-    "right_share": 0
-  }
+    "neutral": 0
+  },
+  "status": "clean",
+  "summary": "No evidence collected in the last 24h — nothing to assess."
 }

@@ -1,17 +1,17 @@
 {
   "schema_version": "1.0",
-  "generated_at": "2026-09-23T07:33:01.616Z",
+  "generated_at": "2026-09-23T11:49:20.349Z",
   "method": "mechanical_registry_v1",
-  "profiled_at": "2026-09-23T07:33:05.564Z",
+  "profiled_at": "2026-09-23T11:49:26.989Z",
   "sources": [
     {
       "domain": "arxiv.org",
       "entity": "Arxiv",
       "kind": "academic",
       "first_seen_at": "2026-09-20T04:08:44.147Z",
-      "last_seen_at": "2026-09-23T07:33:01.613Z",
+      "last_seen_at": "2026-09-23T05:33:39.728Z",
       "discovery": {
-        "distinct_urls": 30,
+        "distinct_urls": 32,
         "example_urls": [
           "https://arxiv.org/abs/2305.04388",
           "https://arxiv.org/abs/2609.21899v1",
@@ -21,10 +21,9 @@
         ],
         "origin_counts": {
           "ontology_evidence": 7,
-          "reading_queue": 43,
+          "reading_queue": 45,
           "journals": 8,
-          "articles": 1,
-          "prefetch": 1
+          "articles": 1
         },
         "distinct_referring_accounts": 0,
         "sample_referring_accounts": [],
@@ -57,18 +56,18 @@
           ]
         },
         "breadth": {
-          "score": 0.825,
+          "score": 0.7649999999999999,
           "basis": [
-            "distinct_urls:30",
+            "distinct_urls:32",
             "distinct_axes:3",
-            "origin_types:5"
+            "origin_types:4"
           ]
         },
         "corroboration": {
           "score": 0.35,
           "basis": [
             "referring_accounts:0",
-            "origin_types:5"
+            "origin_types:4"
           ]
         },
         "track_record": {
@@ -92,18 +91,18 @@
           ]
         },
         "overall": {
-          "score": 0.7976562500000001,
-          "confidence": 0.6547499999999999,
+          "score": 0.7845312500000001,
+          "confidence": 0.64215,
           "method": "mechanical_v1",
           "basis": [
             "academic_domain_pattern",
             "search_results_seen",
             "doi_or_identifier_path_seen",
-            "distinct_urls:30",
+            "distinct_urls:32",
             "distinct_axes:3",
-            "origin_types:5",
+            "origin_types:4",
             "referring_accounts:0",
-            "origin_types:5",
+            "origin_types:4",
             "track_record_unavailable"
           ]
         }
@@ -3254,9 +3253,9 @@
       "entity": "T Co",
       "kind": "unknown",
       "first_seen_at": "2016-05-05T18:57:30.000Z",
-      "last_seen_at": "2026-09-23T06:45:00.000Z",
+      "last_seen_at": "2026-09-23T11:05:00.000Z",
       "discovery": {
-        "distinct_urls": 23015,
+        "distinct_urls": 23026,
         "example_urls": [
           "https://t.co/pJSE124ec4",
           "https://t.co/Soz8BXPWaa",
@@ -3265,7 +3264,7 @@
           "https://t.co/cYaqYDRp08"
         ],
         "origin_counts": {
-          "feed_buffer": 20918,
+          "feed_buffer": 20937,
           "feed_buffer_reply": 6451,
           "articles": 3
         },
@@ -3308,7 +3307,7 @@
         "breadth": {
           "score": 0.53,
           "basis": [
-            "distinct_urls:23015",
+            "distinct_urls:23026",
             "distinct_axes:0",
             "origin_types:3"
           ]
@@ -3347,7 +3346,7 @@
           "basis": [
             "unknown_domain_pattern",
             "doi_or_identifier_path_seen",
-            "distinct_urls:23015",
+            "distinct_urls:23026",
             "distinct_axes:0",
             "origin_types:3",
             "referring_accounts:3293",
@@ -3697,7 +3696,7 @@
       "entity": "Metr",
       "kind": "unknown",
       "first_seen_at": "2026-09-20T10:08:40.424Z",
-      "last_seen_at": "2026-09-21T22:17:04.638Z",
+      "last_seen_at": "2026-09-23T07:33:10.865Z",
       "discovery": {
         "distinct_urls": 16,
         "example_urls": [
@@ -3709,7 +3708,7 @@
         ],
         "origin_counts": {
           "ontology_evidence": 3,
-          "reading_queue": 19,
+          "reading_queue": 21,
           "journals": 4,
           "articles": 1
         },
@@ -5821,9 +5820,9 @@
       "entity": "Starlink",
       "kind": "unknown",
       "first_seen_at": "2026-04-07T03:51:50.000Z",
-      "last_seen_at": "2026-09-23T05:52:03.178Z",
+      "last_seen_at": "2026-09-23T07:52:07.038Z",
       "discovery": {
-        "distinct_urls": 2803,
+        "distinct_urls": 2804,
         "example_urls": [
           "https://www.starlink.com/us/residential?referral=RC-DF-9543787-19448-67&utm_medium=paid&utm_campaign=awr_us_soc_twt_ptg_cau&utm_content=awr_us_soc_twt_ptg_cau_res_gvp_v4s_stc_en-us_sdb-bluesky-uptime&twclid=2cg62b1u0oqrypdim5oir1767e",
           "https://www.starlink.com/us/residential?referral=RC-DF-9543787-19448-67&utm_medium=paid&utm_campaign=awr_us_soc_twt_ptg_cau&utm_content=awr_us_soc_twt_ptg_cau_res_gvp_v4s_stc_en-us_sdb-avail-sat-yourhome&twclid=2216n7j93v9absqn77762mm626",
@@ -5833,7 +5832,7 @@
         ],
         "origin_counts": {
           "feed_buffer_reply": 2679,
-          "feed_buffer": 128
+          "feed_buffer": 129
         },
         "distinct_referring_accounts": 5,
         "sample_referring_accounts": [
@@ -5868,7 +5867,7 @@
         "breadth": {
           "score": 0.47,
           "basis": [
-            "distinct_urls:2803",
+            "distinct_urls:2804",
             "distinct_axes:0",
             "origin_types:2"
           ]
@@ -5906,7 +5905,7 @@
           "method": "mechanical_v1",
           "basis": [
             "unknown_domain_pattern",
-            "distinct_urls:2803",
+            "distinct_urls:2804",
             "distinct_axes:0",
             "origin_types:2",
             "referring_accounts:5",
@@ -6234,9 +6233,9 @@
       "entity": "Huawei",
       "kind": "unknown",
       "first_seen_at": "2026-04-28T08:12:51.000Z",
-      "last_seen_at": "2026-09-22T09:25:29.000Z",
+      "last_seen_at": "2026-09-23T07:12:26.000Z",
       "discovery": {
-        "distinct_urls": 57,
+        "distinct_urls": 58,
         "example_urls": [
           "https://www.huawei.com/en/media-center/transform/24/06-jason-lee?utm_medium=psm&utm_source=twitter&utm_campaign=Transform",
           "https://e.huawei.com/ae/events/branding/gitex-ca?utm_medium=psm&utm_source=twitter&source=corp_sc_en&utm_campaign=GITEX2026",
@@ -6246,7 +6245,7 @@
         ],
         "origin_counts": {
           "feed_buffer_reply": 21,
-          "feed_buffer": 39
+          "feed_buffer": 40
         },
         "distinct_referring_accounts": 2,
         "sample_referring_accounts": [
@@ -6279,7 +6278,7 @@
         "breadth": {
           "score": 0.47,
           "basis": [
-            "distinct_urls:57",
+            "distinct_urls:58",
             "distinct_axes:0",
             "origin_types:2"
           ]
@@ -6318,7 +6317,7 @@
           "basis": [
             "unknown_domain_pattern",
             "article_path_seen",
-            "distinct_urls:57",
+            "distinct_urls:58",
             "distinct_axes:0",
             "origin_types:2",
             "referring_accounts:2",
@@ -7111,7 +7110,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-09-20T08:08:32.924Z",
+        "fetched_at": "2026-09-23T09:35:01.210Z",
         "homepage_url": "https://artificialintelligenceact.eu/",
         "example_url": "https://artificialintelligenceact.eu/scientific-panel/?utm_source=rss&utm_medium=rss&utm_campaign=scientific-panel",
         "homepage_status": 200,
@@ -7535,7 +7534,7 @@
       "entity": "Anthropic",
       "kind": "unknown",
       "first_seen_at": "2026-09-20T03:16:16.243Z",
-      "last_seen_at": "2026-09-21T10:15:40.302Z",
+      "last_seen_at": "2026-09-23T09:35:11.621Z",
       "discovery": {
         "distinct_urls": 7,
         "example_urls": [
@@ -7547,7 +7546,7 @@
         ],
         "origin_counts": {
           "ontology_evidence": 2,
-          "reading_queue": 15,
+          "reading_queue": 16,
           "articles": 2
         },
         "distinct_referring_accounts": 0,
@@ -11566,7 +11565,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-09-18T21:09:11.670Z",
+        "fetched_at": "2026-09-23T09:35:04.108Z",
         "homepage_url": "https://fx-edge.com/",
         "example_url": "https://fx-edge.com/prop-liquidity/?utm_source=twitter&utm_medium=ppc&utm_campaign=prop_liquidity&twclid=2232cmky8wi7upvvrdlud3bfsm",
         "homepage_status": 200,
@@ -11693,7 +11692,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-09-18T21:09:15.186Z",
+        "fetched_at": "2026-09-23T09:35:07.074Z",
         "homepage_url": "https://icmarkets.com/",
         "example_url": "https://www.icmarkets.com/global/en/trade-stocks/?utm_source=twitter&utm_medium=twitter&utm_campaign=tw_en_ph_cv_pr&utm_term=TWITTER_TIMELINE&utm_content=stocks&camp=94092&twclid=2bjzvwwjt6m7l7xogk0tzlhrmm",
         "homepage_status": 200,
@@ -11820,7 +11819,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-09-19T00:20:41.073Z",
+        "fetched_at": "2026-09-23T09:35:11.515Z",
         "homepage_url": "https://mottandbow.com/",
         "example_url": "https://www.mottandbow.com/collections/mens-denim2-onlyjeansworthbuying?utm_source=twitter&utm_medium=twitter&utm_campaign=%28M%29+Denim+-+USA+-+Prospecting+-+ABO+8+-+2026+VAIO+%5Bcashback%5D&utm_term=%28M%29+Denim+-+USA+-+Broad+1+-+Auto+%5BAll%5D&utm_content=img-md-neeta-buttshot-highquality-D943-V1-B-h27-p2-LP_MDOJ-c%2FNone-irl&twclid=2cc4cnrb0o1hpyal9rg55w07zo",
         "homepage_status": 200,
@@ -11947,7 +11946,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-09-19T00:20:41.313Z",
+        "fetched_at": "2026-09-23T11:49:20.787Z",
         "homepage_url": "https://wencrypto.com/",
         "example_url": "https://wencrypto.com/pricing?twt_id=54613980&twclid=26wi5gtwrb7b2ig70kcqcspr3n",
         "homepage_status": 200,
@@ -12074,15 +12073,15 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-09-19T00:20:51.447Z",
+        "fetched_at": "2026-09-23T11:49:21.171Z",
         "homepage_url": "https://smart.link/",
         "example_url": "https://smart.link/sdh2x9q4dptrg?twclid=29tfuqwoatuv70nv93xhcyx2vj",
         "homepage_status": 200,
-        "example_status": null,
+        "example_status": 403,
         "homepage_final_url": "https://smart.link/",
-        "example_final_url": "https://smart.link/sdh2x9q4dptrg?twclid=29tfuqwoatuv70nv93xhcyx2vj",
+        "example_final_url": "https://www.mcdonalds.com/us/en-us/download-app.html",
         "homepage_content_type": "text/html; charset=utf-8",
-        "example_content_type": "",
+        "example_content_type": "text/html",
         "homepage": {
           "has_meta_author": false,
           "has_published_time": false,
@@ -12201,23 +12200,23 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-09-19T00:21:07.100Z",
+        "fetched_at": "2026-09-23T11:49:24.319Z",
         "homepage_url": "https://gastechevent.com/",
         "example_url": "https://www.gastechevent.com/visit/visitor-registration/?utm_source=X&utm_medium=cpc&utm_campaign=Gastech%2BVisprom%2BElectrification%2BTraffic%2BP1%2BX%2B2026&twclid=25c7n2tffmzu4y35y7ba8rbphq",
-        "homepage_status": null,
+        "homepage_status": 200,
         "example_status": 200,
-        "homepage_final_url": "https://gastechevent.com/",
+        "homepage_final_url": "https://www.gastechevent.com/",
         "example_final_url": "https://www.gastechevent.com/visit/visitor-registration/?utm_source=X&utm_medium=cpc&utm_campaign=Gastech%2BVisprom%2BElectrification%2BTraffic%2BP1%2BX%2B2026&twclid=25c7n2tffmzu4y35y7ba8rbphq",
-        "homepage_content_type": "",
+        "homepage_content_type": "text/html; charset=utf-8",
         "example_content_type": "text/html; charset=utf-8",
         "homepage": {
           "has_meta_author": false,
           "has_published_time": false,
-          "has_canonical": false,
+          "has_canonical": true,
           "has_about_link": false,
           "has_contact_link": false,
           "has_corrections_link": false,
-          "outbound_links_count": 0,
+          "outbound_links_count": 18,
           "opinion_marker": false
         },
         "example": {
@@ -12328,7 +12327,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-09-19T00:50:38.827Z",
+        "fetched_at": "2026-09-23T11:49:26.989Z",
         "homepage_url": "https://doorzo.com/",
         "example_url": "https://www.doorzo.com/en/landing/newall?utm_source=x_en_testanime_V&utm_medium=banner&utm_campaign=online_download&fbclid=fbclid&twclid=2bzgffsg16g7kpszr2gx684udk",
         "homepage_status": 200,
@@ -41332,6 +41331,84 @@
       }
     },
     {
+      "domain": "redwoodresearch.org",
+      "entity": "Redwoodresearch",
+      "kind": "unknown",
+      "first_seen_at": "2026-09-23T09:35:17.266Z",
+      "last_seen_at": "2026-09-23T11:49:20.346Z",
+      "discovery": {
+        "distinct_urls": 3,
+        "example_urls": [
+          "https://blog.redwoodresearch.org/p/are-we-existentially-threatened-by",
+          "https://blog.redwoodresearch.org/p/retrying-vs-resampling-in-ai-control",
+          "https://blog.redwoodresearch.org/p/astra-is-much-better-at-reasoning"
+        ],
+        "origin_counts": {
+          "reading_queue": 5,
+          "prefetch": 1
+        },
+        "distinct_referring_accounts": 0,
+        "sample_referring_accounts": [],
+        "distinct_axes": []
+      },
+      "claims": {
+        "total": 0,
+        "supported": 0,
+        "refuted": 0,
+        "contested": 0,
+        "unverified": 0,
+        "resolved_count": 0
+      },
+      "structural_features": {
+        "has_search_paths": false,
+        "has_article_paths": false,
+        "has_doi_paths": false
+      },
+      "ratings": {
+        "provenance": {
+          "score": 0.45,
+          "basis": [
+            "unknown_domain_pattern"
+          ]
+        },
+        "breadth": {
+          "score": 0.2075,
+          "basis": [
+            "distinct_urls:3",
+            "distinct_axes:0",
+            "origin_types:2"
+          ]
+        },
+        "corroboration": {
+          "score": 0.175,
+          "basis": [
+            "referring_accounts:0",
+            "origin_types:2"
+          ]
+        },
+        "track_record": {
+          "score": null,
+          "basis": [
+            "no_resolved_claims_observed"
+          ]
+        },
+        "overall": {
+          "score": 0.371171875,
+          "confidence": 0.126825,
+          "method": "mechanical_v1",
+          "basis": [
+            "unknown_domain_pattern",
+            "distinct_urls:3",
+            "distinct_axes:0",
+            "origin_types:2",
+            "referring_accounts:0",
+            "origin_types:2",
+            "track_record_unavailable"
+          ]
+        }
+      }
+    },
+    {
       "domain": "straitstimes.com",
       "entity": "Straitstimes",
       "kind": "unknown",
@@ -62212,83 +62289,6 @@
             "distinct_axes:0",
             "origin_types:1",
             "referring_accounts:1",
-            "origin_types:1",
-            "track_record_unavailable"
-          ]
-        }
-      }
-    },
-    {
-      "domain": "redwoodresearch.org",
-      "entity": "Redwoodresearch",
-      "kind": "unknown",
-      "first_seen_at": null,
-      "last_seen_at": null,
-      "discovery": {
-        "distinct_urls": 3,
-        "example_urls": [
-          "https://blog.redwoodresearch.org/p/are-we-existentially-threatened-by",
-          "https://blog.redwoodresearch.org/p/retrying-vs-resampling-in-ai-control",
-          "https://blog.redwoodresearch.org/p/astra-is-much-better-at-reasoning"
-        ],
-        "origin_counts": {
-          "reading_queue": 3
-        },
-        "distinct_referring_accounts": 0,
-        "sample_referring_accounts": [],
-        "distinct_axes": []
-      },
-      "claims": {
-        "total": 0,
-        "supported": 0,
-        "refuted": 0,
-        "contested": 0,
-        "unverified": 0,
-        "resolved_count": 0
-      },
-      "structural_features": {
-        "has_search_paths": false,
-        "has_article_paths": false,
-        "has_doi_paths": false
-      },
-      "ratings": {
-        "provenance": {
-          "score": 0.45,
-          "basis": [
-            "unknown_domain_pattern"
-          ]
-        },
-        "breadth": {
-          "score": 0.1475,
-          "basis": [
-            "distinct_urls:3",
-            "distinct_axes:0",
-            "origin_types:1"
-          ]
-        },
-        "corroboration": {
-          "score": 0.0875,
-          "basis": [
-            "referring_accounts:0",
-            "origin_types:1"
-          ]
-        },
-        "track_record": {
-          "score": null,
-          "basis": [
-            "no_resolved_claims_observed"
-          ]
-        },
-        "overall": {
-          "score": 0.34984375,
-          "confidence": 0.10635,
-          "method": "mechanical_v1",
-          "basis": [
-            "unknown_domain_pattern",
-            "distinct_urls:3",
-            "distinct_axes:0",
-            "origin_types:1",
-            "referring_accounts:0",
             "origin_types:1",
             "track_record_unavailable"
           ]
