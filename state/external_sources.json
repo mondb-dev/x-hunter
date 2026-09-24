@@ -1,15 +1,15 @@
 {
   "schema_version": "1.0",
-  "generated_at": "2026-09-23T21:57:35.209Z",
+  "generated_at": "2026-09-24T12:27:12.807Z",
   "method": "mechanical_registry_v1",
-  "profiled_at": "2026-09-23T21:57:41.879Z",
+  "profiled_at": "2026-09-24T12:27:32.041Z",
   "sources": [
     {
       "domain": "arxiv.org",
       "entity": "Arxiv",
       "kind": "academic",
       "first_seen_at": "2026-09-20T04:08:44.147Z",
-      "last_seen_at": "2026-09-23T21:57:35.206Z",
+      "last_seen_at": "2026-09-23T19:59:38.373Z",
       "discovery": {
         "distinct_urls": 32,
         "example_urls": [
@@ -23,8 +23,7 @@
           "ontology_evidence": 7,
           "reading_queue": 51,
           "journals": 8,
-          "articles": 1,
-          "prefetch": 1
+          "articles": 1
         },
         "distinct_referring_accounts": 0,
         "sample_referring_accounts": [],
@@ -57,18 +56,18 @@
           ]
         },
         "breadth": {
-          "score": 0.825,
+          "score": 0.7649999999999999,
           "basis": [
             "distinct_urls:32",
             "distinct_axes:3",
-            "origin_types:5"
+            "origin_types:4"
           ]
         },
         "corroboration": {
           "score": 0.35,
           "basis": [
             "referring_accounts:0",
-            "origin_types:5"
+            "origin_types:4"
           ]
         },
         "track_record": {
@@ -92,8 +91,8 @@
           ]
         },
         "overall": {
-          "score": 0.7976562500000001,
-          "confidence": 0.6547499999999999,
+          "score": 0.7845312500000001,
+          "confidence": 0.64215,
           "method": "mechanical_v1",
           "basis": [
             "academic_domain_pattern",
@@ -101,9 +100,9 @@
             "doi_or_identifier_path_seen",
             "distinct_urls:32",
             "distinct_axes:3",
-            "origin_types:5",
+            "origin_types:4",
             "referring_accounts:0",
-            "origin_types:5",
+            "origin_types:4",
             "track_record_unavailable"
           ]
         }
@@ -157,7 +156,7 @@
         ],
         "origin_counts": {
           "ontology_evidence": 57,
-          "reading_queue": 1150,
+          "reading_queue": 1151,
           "journals": 156,
           "articles": 5
         },
@@ -265,7 +264,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-09-21T06:04:39.170Z",
+        "fetched_at": "2026-09-24T08:32:58.130Z",
         "homepage_url": "https://theguardian.com/",
         "example_url": "https://www.theguardian.com/us-news/2026/jun/23/trump-immigration-courthouse-arrest-policy",
         "homepage_status": 200,
@@ -392,7 +391,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-09-21T06:04:43.832Z",
+        "fetched_at": "2026-09-24T08:33:09.056Z",
         "homepage_url": "https://ojp.gov/",
         "example_url": "https://bjs.ojp.gov/library/publications/violent-victimization-race-or-hispanic-origin-2008-2012",
         "homepage_status": 200,
@@ -553,7 +552,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-09-21T06:04:45.630Z",
+        "fetched_at": "2026-09-24T08:33:14.030Z",
         "homepage_url": "https://aljazeera.com/",
         "example_url": "https://www.aljazeera.com/opinions/2026/6/24/south-africas-crises-will-not-be-solved-by-blaming-migrants",
         "homepage_status": 200,
@@ -680,7 +679,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-09-21T06:04:46.564Z",
+        "fetched_at": "2026-09-24T08:33:15.888Z",
         "homepage_url": "https://cbp.gov/",
         "example_url": "https://careers.cbp.gov/s/connect-to-recruiter?campaignid=701SJ00000BV0tR&utm_source=X&utm_medium=paid_social&utm_campaign=MGC_C5SXt125J11T&twclid=24uhcrvlvs0lo9d4mk5w8lgcjg",
         "homepage_status": 200,
@@ -806,7 +805,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-09-21T08:05:39.883Z",
+        "fetched_at": "2026-09-24T12:27:15.157Z",
         "homepage_url": "https://justice.gov/",
         "example_url": "https://www.justice.gov/usao-ri/pr/two-business-executives-plead-guilty-tech-support-fraud-scheme?twclid=29h44gflnugo1w0tbpbxpo8m7s",
         "homepage_status": 200,
@@ -934,7 +933,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-09-21T08:05:42.624Z",
+        "fetched_at": "2026-09-24T12:27:15.444Z",
         "homepage_url": "https://doi.org/",
         "example_url": "https://doi.org/10.1002/ped4.70061?twclid=2p92o0thcwkaxz6o70plj8t4q",
         "homepage_status": 200,
@@ -982,7 +981,7 @@
         ],
         "origin_counts": {
           "ontology_evidence": 11,
-          "reading_queue": 781,
+          "reading_queue": 782,
           "journals": 24,
           "articles": 2
         },
@@ -1070,7 +1069,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-09-21T08:05:43.549Z",
+        "fetched_at": "2026-09-24T12:27:26.655Z",
         "homepage_url": "https://bbc.co.uk/",
         "example_url": "https://www.bbc.co.uk/news/articles/cn8qxz6qypyo",
         "homepage_status": 200,
@@ -1118,7 +1117,7 @@
         ],
         "origin_counts": {
           "ontology_evidence": 33,
-          "reading_queue": 839,
+          "reading_queue": 840,
           "journals": 77
         },
         "distinct_referring_accounts": 0,
@@ -1214,7 +1213,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-09-21T08:05:55.719Z",
+        "fetched_at": "2026-09-24T12:27:32.041Z",
         "homepage_url": "https://nytimes.com/",
         "example_url": "https://www.nytimes.com/2026/06/19/world/canada/frank-stronach-trial-guilty-sex-charges.html",
         "homepage_status": 403,
@@ -3254,9 +3253,9 @@
       "entity": "T Co",
       "kind": "unknown",
       "first_seen_at": "2016-05-05T18:57:30.000Z",
-      "last_seen_at": "2026-09-23T19:45:08.000Z",
+      "last_seen_at": "2026-09-24T10:18:00.000Z",
       "discovery": {
-        "distinct_urls": 23059,
+        "distinct_urls": 23102,
         "example_urls": [
           "https://t.co/pJSE124ec4",
           "https://t.co/Soz8BXPWaa",
@@ -3265,7 +3264,7 @@
           "https://t.co/cYaqYDRp08"
         ],
         "origin_counts": {
-          "feed_buffer": 20986,
+          "feed_buffer": 21040,
           "feed_buffer_reply": 6451,
           "articles": 3
         },
@@ -3308,7 +3307,7 @@
         "breadth": {
           "score": 0.53,
           "basis": [
-            "distinct_urls:23059",
+            "distinct_urls:23102",
             "distinct_axes:0",
             "origin_types:3"
           ]
@@ -3347,7 +3346,7 @@
           "basis": [
             "unknown_domain_pattern",
             "doi_or_identifier_path_seen",
-            "distinct_urls:23059",
+            "distinct_urls:23102",
             "distinct_axes:0",
             "origin_types:3",
             "referring_accounts:3294",
@@ -3962,9 +3961,9 @@
       "entity": "Bit Ly",
       "kind": "unknown",
       "first_seen_at": "2026-04-06T16:33:36.000Z",
-      "last_seen_at": "2026-09-22T03:22:38.000Z",
+      "last_seen_at": "2026-09-23T23:34:23.663Z",
       "discovery": {
-        "distinct_urls": 45,
+        "distinct_urls": 46,
         "example_urls": [
           "https://bit.ly/4rFUGm4?twclid=2cxu7o43bx4p37y7v84zudvy2q",
           "https://bit.ly/4rFUGm4?twclid=2bcgwzcedehb1ong389c8zjnsb",
@@ -3974,7 +3973,7 @@
         ],
         "origin_counts": {
           "feed_buffer_reply": 25,
-          "feed_buffer": 19,
+          "feed_buffer": 20,
           "journals": 10
         },
         "distinct_referring_accounts": 12,
@@ -4015,7 +4014,7 @@
         "breadth": {
           "score": 0.53,
           "basis": [
-            "distinct_urls:45",
+            "distinct_urls:46",
             "distinct_axes:0",
             "origin_types:3"
           ]
@@ -4053,7 +4052,7 @@
           "method": "mechanical_v1",
           "basis": [
             "unknown_domain_pattern",
-            "distinct_urls:45",
+            "distinct_urls:46",
             "distinct_axes:0",
             "origin_types:3",
             "referring_accounts:12",
@@ -4905,9 +4904,9 @@
       "entity": "Grok",
       "kind": "unknown",
       "first_seen_at": "2026-04-03T01:20:27.000Z",
-      "last_seen_at": "2026-09-22T16:19:51.000Z",
+      "last_seen_at": "2026-09-23T21:20:45.000Z",
       "discovery": {
-        "distinct_urls": 771,
+        "distinct_urls": 772,
         "example_urls": [
           "https://grok.com/imagine/post/9b92ff60-ec59-45db-8a35-8e1b743e5339",
           "https://grok.com/imagine/post/42c16172-4296-42be-b3d0-aa45ad7b6b97",
@@ -4917,7 +4916,7 @@
         ],
         "origin_counts": {
           "feed_buffer_reply": 631,
-          "feed_buffer": 190
+          "feed_buffer": 191
         },
         "distinct_referring_accounts": 466,
         "sample_referring_accounts": [
@@ -4957,7 +4956,7 @@
         "breadth": {
           "score": 0.47,
           "basis": [
-            "distinct_urls:771",
+            "distinct_urls:772",
             "distinct_axes:0",
             "origin_types:2"
           ]
@@ -4995,7 +4994,7 @@
           "method": "mechanical_v1",
           "basis": [
             "unknown_domain_pattern",
-            "distinct_urls:771",
+            "distinct_urls:772",
             "distinct_axes:0",
             "origin_types:2",
             "referring_accounts:466",
@@ -5821,9 +5820,9 @@
       "entity": "Starlink",
       "kind": "unknown",
       "first_seen_at": "2026-04-07T03:51:50.000Z",
-      "last_seen_at": "2026-09-23T07:52:07.038Z",
+      "last_seen_at": "2026-09-24T11:47:45.928Z",
       "discovery": {
-        "distinct_urls": 2804,
+        "distinct_urls": 2822,
         "example_urls": [
           "https://www.starlink.com/us/residential?referral=RC-DF-9543787-19448-67&utm_medium=paid&utm_campaign=awr_us_soc_twt_ptg_cau&utm_content=awr_us_soc_twt_ptg_cau_res_gvp_v4s_stc_en-us_sdb-bluesky-uptime&twclid=2cg62b1u0oqrypdim5oir1767e",
           "https://www.starlink.com/us/residential?referral=RC-DF-9543787-19448-67&utm_medium=paid&utm_campaign=awr_us_soc_twt_ptg_cau&utm_content=awr_us_soc_twt_ptg_cau_res_gvp_v4s_stc_en-us_sdb-avail-sat-yourhome&twclid=2216n7j93v9absqn77762mm626",
@@ -5833,7 +5832,7 @@
         ],
         "origin_counts": {
           "feed_buffer_reply": 2679,
-          "feed_buffer": 129
+          "feed_buffer": 147
         },
         "distinct_referring_accounts": 5,
         "sample_referring_accounts": [
@@ -5868,7 +5867,7 @@
         "breadth": {
           "score": 0.47,
           "basis": [
-            "distinct_urls:2804",
+            "distinct_urls:2822",
             "distinct_axes:0",
             "origin_types:2"
           ]
@@ -5906,7 +5905,7 @@
           "method": "mechanical_v1",
           "basis": [
             "unknown_domain_pattern",
-            "distinct_urls:2804",
+            "distinct_urls:2822",
             "distinct_axes:0",
             "origin_types:2",
             "referring_accounts:5",
@@ -6234,9 +6233,9 @@
       "entity": "Huawei",
       "kind": "unknown",
       "first_seen_at": "2026-04-28T08:12:51.000Z",
-      "last_seen_at": "2026-09-23T07:12:26.000Z",
+      "last_seen_at": "2026-09-24T02:34:34.000Z",
       "discovery": {
-        "distinct_urls": 58,
+        "distinct_urls": 62,
         "example_urls": [
           "https://www.huawei.com/en/media-center/transform/24/06-jason-lee?utm_medium=psm&utm_source=twitter&utm_campaign=Transform",
           "https://e.huawei.com/ae/events/branding/gitex-ca?utm_medium=psm&utm_source=twitter&source=corp_sc_en&utm_campaign=GITEX2026",
@@ -6246,7 +6245,7 @@
         ],
         "origin_counts": {
           "feed_buffer_reply": 21,
-          "feed_buffer": 40
+          "feed_buffer": 44
         },
         "distinct_referring_accounts": 2,
         "sample_referring_accounts": [
@@ -6279,7 +6278,7 @@
         "breadth": {
           "score": 0.47,
           "basis": [
-            "distinct_urls:58",
+            "distinct_urls:62",
             "distinct_axes:0",
             "origin_types:2"
           ]
@@ -6318,7 +6317,7 @@
           "basis": [
             "unknown_domain_pattern",
             "article_path_seen",
-            "distinct_urls:58",
+            "distinct_urls:62",
             "distinct_axes:0",
             "origin_types:2",
             "referring_accounts:2",
@@ -7535,7 +7534,7 @@
       "entity": "Anthropic",
       "kind": "unknown",
       "first_seen_at": "2026-09-20T03:16:16.243Z",
-      "last_seen_at": "2026-09-23T09:35:11.621Z",
+      "last_seen_at": "2026-09-23T21:57:47.940Z",
       "discovery": {
         "distinct_urls": 7,
         "example_urls": [
@@ -7547,7 +7546,7 @@
         ],
         "origin_counts": {
           "ontology_evidence": 2,
-          "reading_queue": 16,
+          "reading_queue": 18,
           "articles": 2
         },
         "distinct_referring_accounts": 0,
@@ -14237,7 +14236,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-09-19T06:52:45.974Z",
+        "fetched_at": "2026-09-23T23:59:58.219Z",
         "homepage_url": "https://asco.org/",
         "example_url": "https://www.asco.org/career-development/leadership-programs/global-leadership-programs/asia-pacific?cmpid=cc_ascoorg_ldp_abc26-phase2-ldp-asia_sn_x_formerly_twitter_all_retargeting_intl_070126_081726___aware_anime_impact&twclid=2ag9prgoer02llrzl6qhdbcbe6",
         "homepage_status": 403,
@@ -14364,7 +14363,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-09-19T06:52:47.476Z",
+        "fetched_at": "2026-09-23T23:59:59.705Z",
         "homepage_url": "https://ukiyoework.com/",
         "example_url": "https://www.ukiyoework.com/view/item/000000000401?utm_source=twitter&utm_medium=cpc&twclid=23tigf5ad41s1prapekhalf5cq",
         "homepage_status": 200,
@@ -14491,7 +14490,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-09-19T07:22:45.471Z",
+        "fetched_at": "2026-09-24T00:00:00.261Z",
         "homepage_url": "https://avenorigin.com/",
         "example_url": "https://avenorigin.com/?x=twg11&tw=rcafs&tw_click=tw-rcafs-rcafv&twclid=27a9svqvmxrds3k2j1qq8l2dy6",
         "homepage_status": null,
@@ -14618,7 +14617,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-09-19T07:22:47.270Z",
+        "fetched_at": "2026-09-24T00:00:01.740Z",
         "homepage_url": "https://xhawk.ai/",
         "example_url": "https://xhawk.ai/?twclid=218eppqu7okpx25fant8nuhrp1",
         "homepage_status": 200,
@@ -14716,16 +14715,16 @@
           ]
         },
         "profile": {
-          "score": 0,
+          "score": 0.14,
           "confidence": 0.55,
           "basis": [
             "meta_author:false",
             "published_time:false",
-            "canonical:false",
+            "canonical:true",
             "about:false",
             "contact:false",
             "corrections:false",
-            "outbound_links:0",
+            "outbound_links:4",
             "opinion_marker:false"
           ]
         },
@@ -14745,13 +14744,13 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-09-19T07:22:48.427Z",
+        "fetched_at": "2026-09-24T02:00:28.306Z",
         "homepage_url": "https://sofi.com/",
         "example_url": "https://sofi.com/crypto?twclid=2ykrysimqbgqvsp6rfph8v1n3",
         "homepage_status": 403,
-        "example_status": 403,
-        "homepage_final_url": "https://sofi.com/",
-        "example_final_url": "https://sofi.com/crypto?twclid=2ykrysimqbgqvsp6rfph8v1n3",
+        "example_status": 200,
+        "homepage_final_url": "https://www.sofi.com/",
+        "example_final_url": "https://www.sofi.com/crypto/?twclid=2ykrysimqbgqvsp6rfph8v1n3",
         "homepage_content_type": "text/html; charset=UTF-8",
         "example_content_type": "text/html; charset=UTF-8",
         "homepage": {
@@ -14767,11 +14766,11 @@
         "example": {
           "has_meta_author": false,
           "has_published_time": false,
-          "has_canonical": false,
+          "has_canonical": true,
           "has_about_link": false,
           "has_contact_link": false,
           "has_corrections_link": false,
-          "outbound_links_count": 0,
+          "outbound_links_count": 4,
           "opinion_marker": false
         }
       }
@@ -14874,7 +14873,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-09-19T08:22:48.555Z",
+        "fetched_at": "2026-09-24T02:00:32.129Z",
         "homepage_url": "https://mikmak.ai/",
         "example_url": "https://shop.mikmak.ai/social/69d80508c17cd48204adad0b?utm_source=twitter&utm_medium=paid_social&utm_campaign=une_hl_685&utm_term=P3G43FN-&utm_content=hlm-feel-the-flavor-overall-x_jar-and-squeezes_na_spicy_bsay_na_1x1_twpr_none_shnw_en_stp_mikmak_dark_na_sta-base_004_na_na_0565-demo-broad&utm_placement=amplify_preroll&utm_marketing_tactic=Consideration&utm_format=0565-demo-broad&utm_placementid=P3G43FN&utm_variant=brandsay&twclid=2dqu9rpgpoqo0mblvt9uebl5t7",
         "homepage_status": 200,
@@ -14974,13 +14973,13 @@
           ]
         },
         "profile": {
-          "score": 0.49000000000000005,
-          "confidence": 0.75,
+          "score": 0.35000000000000003,
+          "confidence": 0.65,
           "basis": [
             "meta_author:false",
             "published_time:true",
             "canonical:true",
-            "about:true",
+            "about:false",
             "contact:false",
             "corrections:false",
             "outbound_links:7",
@@ -15003,23 +15002,23 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-09-19T08:22:50.388Z",
+        "fetched_at": "2026-09-24T02:00:43.626Z",
         "homepage_url": "https://huaweicloud.com/",
         "example_url": "https://www.huaweicloud.com/intl/en-us/?twclid=2ea99603xayrfvitnfttr9a4vn",
-        "homepage_status": 200,
+        "homepage_status": null,
         "example_status": 200,
-        "homepage_final_url": "https://www.huaweicloud.com/",
+        "homepage_final_url": "https://huaweicloud.com/",
         "example_final_url": "https://www.huaweicloud.com/intl/en-us/?twclid=2ea99603xayrfvitnfttr9a4vn",
-        "homepage_content_type": "text/html; charset=utf-8",
+        "homepage_content_type": "",
         "example_content_type": "text/html; charset=utf-8",
         "homepage": {
           "has_meta_author": false,
-          "has_published_time": true,
-          "has_canonical": true,
-          "has_about_link": true,
+          "has_published_time": false,
+          "has_canonical": false,
+          "has_about_link": false,
           "has_contact_link": false,
           "has_corrections_link": false,
-          "outbound_links_count": 10,
+          "outbound_links_count": 0,
           "opinion_marker": false
         },
         "example": {
@@ -15130,7 +15129,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-09-19T08:22:51.330Z",
+        "fetched_at": "2026-09-24T02:00:46.052Z",
         "homepage_url": "https://attio.com/",
         "example_url": "https://attio.com/p/crm-031515110905/?utm_source=twitter_ads&utm_medium=paidsocial&utm_campaign=Prospecting&utm_content=0226_singleimage_2602_AskAttioUI-and-device-AskMore_v2_Light_n_a_n_a_1080x1080&twclid=271iqk60c3hmf5z7qzfjlyoijm",
         "homepage_status": 200,
@@ -15146,7 +15145,7 @@
           "has_about_link": false,
           "has_contact_link": true,
           "has_corrections_link": false,
-          "outbound_links_count": 0,
+          "outbound_links_count": 1,
           "opinion_marker": false
         },
         "example": {
@@ -15257,7 +15256,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-09-19T08:22:53.261Z",
+        "fetched_at": "2026-09-24T04:00:26.964Z",
         "homepage_url": "https://sentinels.gg/",
         "example_url": "https://shop.sentinels.gg/collections/sen-metallics?twclid=2eikc5h5also5tonotr2q4ciq6",
         "homepage_status": 200,
@@ -15384,7 +15383,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-09-19T08:52:47.811Z",
+        "fetched_at": "2026-09-24T04:00:29.948Z",
         "homepage_url": "https://abey.com/",
         "example_url": "https://abey.com/?twclid=245i7ob4cgmg7v7epadtxl7ku4",
         "homepage_status": 200,
@@ -15511,7 +15510,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-09-19T08:52:50.773Z",
+        "fetched_at": "2026-09-24T04:00:33.822Z",
         "homepage_url": "https://ic.com/",
         "example_url": "https://www.ic.com/en/trade-indices/?utm_source=twitter&utm_medium=twitter&utm_campaign=tw_en_ph_cv_pr&utm_term=TWITTER_TIMELINE&utm_content=indices&camp=94092&twclid=22h8qlm19mtb6b4fjbtto4x3rp",
         "homepage_status": 200,
@@ -15637,7 +15636,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-09-19T08:52:51.865Z",
+        "fetched_at": "2026-09-24T04:00:36.019Z",
         "homepage_url": "https://tradeodds.io/",
         "example_url": "https://www.tradeodds.io/dashboard?tab=factor-match&utm_source=twitter&utm_medium=cpc&utm_campaign=Factor+Match+Purchase+Campaign+Desk&utm_id=factor+match+purchase+campaign+desk&utm_term=factor+match+purchase+purchase+desk+us&utm_content=ad2&twclid=21dpzozj7vqb86fdz6auuzunmy",
         "homepage_status": 200,
@@ -33964,6 +33963,85 @@
           "has_corrections_link": false,
           "outbound_links_count": 0,
           "opinion_marker": false
+        }
+      }
+    },
+    {
+      "domain": "alignmentforum.org",
+      "entity": "Alignmentforum",
+      "kind": "unknown",
+      "first_seen_at": "2026-09-20T06:09:13.737Z",
+      "last_seen_at": "2026-09-24T12:27:12.804Z",
+      "discovery": {
+        "distinct_urls": 4,
+        "example_urls": [
+          "https://www.alignmentforum.org/posts/virawHQekJsozwotz/paper-stringological-sequence-prediction-iii",
+          "https://www.alignmentforum.org/posts/x8BvtWxtoajBGHS3g/an-operationalization-of-opaque-serial-depth",
+          "https://www.alignmentforum.org/posts/LcQ9x72eNji2gpS9b/why-i-m-scared-of-rl",
+          "https://www.alignmentforum.org/posts/Zeg2JztbdhguL48uH/workspacebench-evaluating-interpretability-methods-for-the"
+        ],
+        "origin_counts": {
+          "reading_queue": 12,
+          "prefetch": 1
+        },
+        "distinct_referring_accounts": 0,
+        "sample_referring_accounts": [],
+        "distinct_axes": []
+      },
+      "claims": {
+        "total": 0,
+        "supported": 0,
+        "refuted": 0,
+        "contested": 0,
+        "unverified": 0,
+        "resolved_count": 0
+      },
+      "structural_features": {
+        "has_search_paths": false,
+        "has_article_paths": false,
+        "has_doi_paths": false
+      },
+      "ratings": {
+        "provenance": {
+          "score": 0.45,
+          "basis": [
+            "unknown_domain_pattern"
+          ]
+        },
+        "breadth": {
+          "score": 0.23666666666666664,
+          "basis": [
+            "distinct_urls:4",
+            "distinct_axes:0",
+            "origin_types:2"
+          ]
+        },
+        "corroboration": {
+          "score": 0.175,
+          "basis": [
+            "referring_accounts:0",
+            "origin_types:2"
+          ]
+        },
+        "track_record": {
+          "score": null,
+          "basis": [
+            "no_resolved_claims_observed"
+          ]
+        },
+        "overall": {
+          "score": 0.3775520833333333,
+          "confidence": 0.15544999999999998,
+          "method": "mechanical_v1",
+          "basis": [
+            "unknown_domain_pattern",
+            "distinct_urls:4",
+            "distinct_axes:0",
+            "origin_types:2",
+            "referring_accounts:0",
+            "origin_types:2",
+            "track_record_unavailable"
+          ]
         }
       }
     },
@@ -62290,83 +62368,6 @@
             "distinct_axes:0",
             "origin_types:1",
             "referring_accounts:1",
-            "origin_types:1",
-            "track_record_unavailable"
-          ]
-        }
-      }
-    },
-    {
-      "domain": "alignmentforum.org",
-      "entity": "Alignmentforum",
-      "kind": "unknown",
-      "first_seen_at": "2026-09-20T06:09:13.737Z",
-      "last_seen_at": "2026-09-20T18:05:25.100Z",
-      "discovery": {
-        "distinct_urls": 3,
-        "example_urls": [
-          "https://www.alignmentforum.org/posts/virawHQekJsozwotz/paper-stringological-sequence-prediction-iii",
-          "https://www.alignmentforum.org/posts/x8BvtWxtoajBGHS3g/an-operationalization-of-opaque-serial-depth",
-          "https://www.alignmentforum.org/posts/LcQ9x72eNji2gpS9b/why-i-m-scared-of-rl"
-        ],
-        "origin_counts": {
-          "reading_queue": 7
-        },
-        "distinct_referring_accounts": 0,
-        "sample_referring_accounts": [],
-        "distinct_axes": []
-      },
-      "claims": {
-        "total": 0,
-        "supported": 0,
-        "refuted": 0,
-        "contested": 0,
-        "unverified": 0,
-        "resolved_count": 0
-      },
-      "structural_features": {
-        "has_search_paths": false,
-        "has_article_paths": false,
-        "has_doi_paths": false
-      },
-      "ratings": {
-        "provenance": {
-          "score": 0.45,
-          "basis": [
-            "unknown_domain_pattern"
-          ]
-        },
-        "breadth": {
-          "score": 0.1475,
-          "basis": [
-            "distinct_urls:3",
-            "distinct_axes:0",
-            "origin_types:1"
-          ]
-        },
-        "corroboration": {
-          "score": 0.0875,
-          "basis": [
-            "referring_accounts:0",
-            "origin_types:1"
-          ]
-        },
-        "track_record": {
-          "score": null,
-          "basis": [
-            "no_resolved_claims_observed"
-          ]
-        },
-        "overall": {
-          "score": 0.34984375,
-          "confidence": 0.10635,
-          "method": "mechanical_v1",
-          "basis": [
-            "unknown_domain_pattern",
-            "distinct_urls:3",
-            "distinct_axes:0",
-            "origin_types:1",
-            "referring_accounts:0",
             "origin_types:1",
             "track_record_unavailable"
           ]
@@ -96477,11 +96478,86 @@
       "entity": "Apolloresearch Ai",
       "kind": "unknown",
       "first_seen_at": "2026-09-23T17:58:56.649Z",
-      "last_seen_at": "2026-09-23T17:58:56.649Z",
+      "last_seen_at": "2026-09-24T04:00:42.317Z",
       "discovery": {
         "distinct_urls": 1,
         "example_urls": [
           "https://www.apolloresearch.ai/blog"
+        ],
+        "origin_counts": {
+          "reading_queue": 3
+        },
+        "distinct_referring_accounts": 0,
+        "sample_referring_accounts": [],
+        "distinct_axes": []
+      },
+      "claims": {
+        "total": 0,
+        "supported": 0,
+        "refuted": 0,
+        "contested": 0,
+        "unverified": 0,
+        "resolved_count": 0
+      },
+      "structural_features": {
+        "has_search_paths": false,
+        "has_article_paths": false,
+        "has_doi_paths": false
+      },
+      "ratings": {
+        "provenance": {
+          "score": 0.45,
+          "basis": [
+            "unknown_domain_pattern"
+          ]
+        },
+        "breadth": {
+          "score": 0.08916666666666666,
+          "basis": [
+            "distinct_urls:1",
+            "distinct_axes:0",
+            "origin_types:1"
+          ]
+        },
+        "corroboration": {
+          "score": 0.0875,
+          "basis": [
+            "referring_accounts:0",
+            "origin_types:1"
+          ]
+        },
+        "track_record": {
+          "score": null,
+          "basis": [
+            "no_resolved_claims_observed"
+          ]
+        },
+        "overall": {
+          "score": 0.3370833333333333,
+          "confidence": 0.0491,
+          "method": "mechanical_v1",
+          "basis": [
+            "unknown_domain_pattern",
+            "distinct_urls:1",
+            "distinct_axes:0",
+            "origin_types:1",
+            "referring_accounts:0",
+            "origin_types:1",
+            "track_record_unavailable"
+          ]
+        }
+      }
+    },
+    {
+      "domain": "epoch.ai",
+      "entity": "Epoch Ai",
+      "kind": "unknown",
+      "first_seen_at": "2026-09-24T08:33:16.006Z",
+      "last_seen_at": "2026-09-24T08:33:16.006Z",
+      "discovery": {
+        "distinct_urls": 1,
+        "example_urls": [
+          "https://epoch.ai/data-insights"
         ],
         "origin_counts": {
           "reading_queue": 1
