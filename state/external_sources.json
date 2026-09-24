@@ -1,8 +1,8 @@
 {
   "schema_version": "1.0",
-  "generated_at": "2026-09-24T12:27:12.807Z",
+  "generated_at": "2026-09-24T14:27:18.418Z",
   "method": "mechanical_registry_v1",
-  "profiled_at": "2026-09-24T12:27:32.041Z",
+  "profiled_at": "2026-09-24T14:27:29.113Z",
   "sources": [
     {
       "domain": "arxiv.org",
@@ -439,7 +439,7 @@
         ],
         "origin_counts": {
           "ontology_evidence": 209,
-          "reading_queue": 28,
+          "reading_queue": 29,
           "journals": 588,
           "articles": 12
         },
@@ -852,7 +852,7 @@
           "https://doi.org/10.1002/ped4.12452?twclid=28oa9acpke7pmuki11c7ktutsz"
         ],
         "origin_counts": {
-          "reading_queue": 21,
+          "reading_queue": 22,
           "feed_buffer": 7,
           "feed_buffer_reply": 1
         },
@@ -1336,7 +1336,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-09-21T10:05:15.500Z",
+        "fetched_at": "2026-09-24T14:27:21.932Z",
         "homepage_url": "https://census.gov/",
         "example_url": "https://www.census.gov/",
         "homepage_status": 200,
@@ -1459,7 +1459,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-09-21T10:05:16.436Z",
+        "fetched_at": "2026-09-24T14:27:25.702Z",
         "homepage_url": "https://gov.sg/",
         "example_url": "https://singaporeglobalnetwork.gov.sg/stories/tech/why-i-quit-college-at-22-to-launch-a-biotech-startup-in-singapore/?utm_source=x&utm_medium=social&utm_campaign=sg-paid-ao-traffic&utm_content=armaan-dhanda&twclid=2epj25tilhtb65igot07prztga",
         "homepage_status": 200,
@@ -1580,7 +1580,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-09-21T10:05:17.193Z",
+        "fetched_at": "2026-09-24T14:27:26.523Z",
         "homepage_url": "https://house.gov/",
         "example_url": "https://www.house.gov/",
         "homepage_status": 200,
@@ -1701,7 +1701,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-09-21T10:05:19.000Z",
+        "fetched_at": "2026-09-24T14:27:29.113Z",
         "homepage_url": "https://trumprx.gov/",
         "example_url": "http://trumprx.gov/",
         "homepage_status": 200,
@@ -1875,7 +1875,7 @@
           "https://www.bbc.com/news/articles/cp3xqkxp3x5o?at_medium=RSS&amp;at_campaign=rss"
         ],
         "origin_counts": {
-          "reading_queue": 46
+          "reading_queue": 47
         },
         "distinct_referring_accounts": 0,
         "sample_referring_accounts": [],
@@ -3253,9 +3253,9 @@
       "entity": "T Co",
       "kind": "unknown",
       "first_seen_at": "2016-05-05T18:57:30.000Z",
-      "last_seen_at": "2026-09-24T10:18:00.000Z",
+      "last_seen_at": "2026-09-24T12:46:54.000Z",
       "discovery": {
-        "distinct_urls": 23102,
+        "distinct_urls": 23108,
         "example_urls": [
           "https://t.co/pJSE124ec4",
           "https://t.co/Soz8BXPWaa",
@@ -3264,7 +3264,7 @@
           "https://t.co/cYaqYDRp08"
         ],
         "origin_counts": {
-          "feed_buffer": 21040,
+          "feed_buffer": 21048,
           "feed_buffer_reply": 6451,
           "articles": 3
         },
@@ -3307,7 +3307,7 @@
         "breadth": {
           "score": 0.53,
           "basis": [
-            "distinct_urls:23102",
+            "distinct_urls:23108",
             "distinct_axes:0",
             "origin_types:3"
           ]
@@ -3346,7 +3346,7 @@
           "basis": [
             "unknown_domain_pattern",
             "doi_or_identifier_path_seen",
-            "distinct_urls:23102",
+            "distinct_urls:23108",
             "distinct_axes:0",
             "origin_types:3",
             "referring_accounts:3294",
@@ -33967,85 +33967,6 @@
       }
     },
     {
-      "domain": "alignmentforum.org",
-      "entity": "Alignmentforum",
-      "kind": "unknown",
-      "first_seen_at": "2026-09-20T06:09:13.737Z",
-      "last_seen_at": "2026-09-24T12:27:12.804Z",
-      "discovery": {
-        "distinct_urls": 4,
-        "example_urls": [
-          "https://www.alignmentforum.org/posts/virawHQekJsozwotz/paper-stringological-sequence-prediction-iii",
-          "https://www.alignmentforum.org/posts/x8BvtWxtoajBGHS3g/an-operationalization-of-opaque-serial-depth",
-          "https://www.alignmentforum.org/posts/LcQ9x72eNji2gpS9b/why-i-m-scared-of-rl",
-          "https://www.alignmentforum.org/posts/Zeg2JztbdhguL48uH/workspacebench-evaluating-interpretability-methods-for-the"
-        ],
-        "origin_counts": {
-          "reading_queue": 12,
-          "prefetch": 1
-        },
-        "distinct_referring_accounts": 0,
-        "sample_referring_accounts": [],
-        "distinct_axes": []
-      },
-      "claims": {
-        "total": 0,
-        "supported": 0,
-        "refuted": 0,
-        "contested": 0,
-        "unverified": 0,
-        "resolved_count": 0
-      },
-      "structural_features": {
-        "has_search_paths": false,
-        "has_article_paths": false,
-        "has_doi_paths": false
-      },
-      "ratings": {
-        "provenance": {
-          "score": 0.45,
-          "basis": [
-            "unknown_domain_pattern"
-          ]
-        },
-        "breadth": {
-          "score": 0.23666666666666664,
-          "basis": [
-            "distinct_urls:4",
-            "distinct_axes:0",
-            "origin_types:2"
-          ]
-        },
-        "corroboration": {
-          "score": 0.175,
-          "basis": [
-            "referring_accounts:0",
-            "origin_types:2"
-          ]
-        },
-        "track_record": {
-          "score": null,
-          "basis": [
-            "no_resolved_claims_observed"
-          ]
-        },
-        "overall": {
-          "score": 0.3775520833333333,
-          "confidence": 0.15544999999999998,
-          "method": "mechanical_v1",
-          "basis": [
-            "unknown_domain_pattern",
-            "distinct_urls:4",
-            "distinct_axes:0",
-            "origin_types:2",
-            "referring_accounts:0",
-            "origin_types:2",
-            "track_record_unavailable"
-          ]
-        }
-      }
-    },
-    {
       "domain": "understandingwar.org",
       "entity": "Understandingwar",
       "kind": "unknown",
@@ -51598,6 +51519,82 @@
       }
     },
     {
+      "domain": "epoch.ai",
+      "entity": "Epoch Ai",
+      "kind": "unknown",
+      "first_seen_at": "2026-09-24T08:33:16.006Z",
+      "last_seen_at": "2026-09-24T14:27:18.414Z",
+      "discovery": {
+        "distinct_urls": 1,
+        "example_urls": [
+          "https://epoch.ai/data-insights"
+        ],
+        "origin_counts": {
+          "reading_queue": 3,
+          "prefetch": 1
+        },
+        "distinct_referring_accounts": 0,
+        "sample_referring_accounts": [],
+        "distinct_axes": []
+      },
+      "claims": {
+        "total": 0,
+        "supported": 0,
+        "refuted": 0,
+        "contested": 0,
+        "unverified": 0,
+        "resolved_count": 0
+      },
+      "structural_features": {
+        "has_search_paths": false,
+        "has_article_paths": false,
+        "has_doi_paths": false
+      },
+      "ratings": {
+        "provenance": {
+          "score": 0.45,
+          "basis": [
+            "unknown_domain_pattern"
+          ]
+        },
+        "breadth": {
+          "score": 0.14916666666666667,
+          "basis": [
+            "distinct_urls:1",
+            "distinct_axes:0",
+            "origin_types:2"
+          ]
+        },
+        "corroboration": {
+          "score": 0.175,
+          "basis": [
+            "referring_accounts:0",
+            "origin_types:2"
+          ]
+        },
+        "track_record": {
+          "score": null,
+          "basis": [
+            "no_resolved_claims_observed"
+          ]
+        },
+        "overall": {
+          "score": 0.3584114583333334,
+          "confidence": 0.069575,
+          "method": "mechanical_v1",
+          "basis": [
+            "unknown_domain_pattern",
+            "distinct_urls:1",
+            "distinct_axes:0",
+            "origin_types:2",
+            "referring_accounts:0",
+            "origin_types:2",
+            "track_record_unavailable"
+          ]
+        }
+      }
+    },
+    {
       "domain": "rice.edu",
       "entity": "Rice",
       "kind": "unknown",
@@ -52204,6 +52201,84 @@
           "has_corrections_link": false,
           "outbound_links_count": 2,
           "opinion_marker": false
+        }
+      }
+    },
+    {
+      "domain": "alignmentforum.org",
+      "entity": "Alignmentforum",
+      "kind": "unknown",
+      "first_seen_at": "2026-09-20T06:09:13.737Z",
+      "last_seen_at": "2026-09-24T08:33:20.985Z",
+      "discovery": {
+        "distinct_urls": 4,
+        "example_urls": [
+          "https://www.alignmentforum.org/posts/virawHQekJsozwotz/paper-stringological-sequence-prediction-iii",
+          "https://www.alignmentforum.org/posts/x8BvtWxtoajBGHS3g/an-operationalization-of-opaque-serial-depth",
+          "https://www.alignmentforum.org/posts/LcQ9x72eNji2gpS9b/why-i-m-scared-of-rl",
+          "https://www.alignmentforum.org/posts/Zeg2JztbdhguL48uH/workspacebench-evaluating-interpretability-methods-for-the"
+        ],
+        "origin_counts": {
+          "reading_queue": 12
+        },
+        "distinct_referring_accounts": 0,
+        "sample_referring_accounts": [],
+        "distinct_axes": []
+      },
+      "claims": {
+        "total": 0,
+        "supported": 0,
+        "refuted": 0,
+        "contested": 0,
+        "unverified": 0,
+        "resolved_count": 0
+      },
+      "structural_features": {
+        "has_search_paths": false,
+        "has_article_paths": false,
+        "has_doi_paths": false
+      },
+      "ratings": {
+        "provenance": {
+          "score": 0.45,
+          "basis": [
+            "unknown_domain_pattern"
+          ]
+        },
+        "breadth": {
+          "score": 0.17666666666666664,
+          "basis": [
+            "distinct_urls:4",
+            "distinct_axes:0",
+            "origin_types:1"
+          ]
+        },
+        "corroboration": {
+          "score": 0.0875,
+          "basis": [
+            "referring_accounts:0",
+            "origin_types:1"
+          ]
+        },
+        "track_record": {
+          "score": null,
+          "basis": [
+            "no_resolved_claims_observed"
+          ]
+        },
+        "overall": {
+          "score": 0.3562239583333333,
+          "confidence": 0.134975,
+          "method": "mechanical_v1",
+          "basis": [
+            "unknown_domain_pattern",
+            "distinct_urls:4",
+            "distinct_axes:0",
+            "origin_types:1",
+            "referring_accounts:0",
+            "origin_types:1",
+            "track_record_unavailable"
+          ]
         }
       }
     },
@@ -96052,6 +96127,83 @@
       }
     },
     {
+      "domain": "cnbc.com",
+      "entity": "Cnbc",
+      "kind": "unknown",
+      "first_seen_at": "2026-09-24T09:19:50.000Z",
+      "last_seen_at": "2026-09-24T09:19:50.000Z",
+      "discovery": {
+        "distinct_urls": 1,
+        "example_urls": [
+          "https://www.cnbc.com/advertorial/banks-prepare-for-ai-enabled-customer"
+        ],
+        "origin_counts": {
+          "feed_buffer": 1
+        },
+        "distinct_referring_accounts": 1,
+        "sample_referring_accounts": [
+          "huawei"
+        ],
+        "distinct_axes": []
+      },
+      "claims": {
+        "total": 0,
+        "supported": 0,
+        "refuted": 0,
+        "contested": 0,
+        "unverified": 0,
+        "resolved_count": 0
+      },
+      "structural_features": {
+        "has_search_paths": false,
+        "has_article_paths": false,
+        "has_doi_paths": false
+      },
+      "ratings": {
+        "provenance": {
+          "score": 0.45,
+          "basis": [
+            "unknown_domain_pattern"
+          ]
+        },
+        "breadth": {
+          "score": 0.08916666666666666,
+          "basis": [
+            "distinct_urls:1",
+            "distinct_axes:0",
+            "origin_types:1"
+          ]
+        },
+        "corroboration": {
+          "score": 0.19583333333333333,
+          "basis": [
+            "referring_accounts:1",
+            "origin_types:1"
+          ]
+        },
+        "track_record": {
+          "score": null,
+          "basis": [
+            "no_resolved_claims_observed"
+          ]
+        },
+        "overall": {
+          "score": 0.3472395833333333,
+          "confidence": 0.08135,
+          "method": "mechanical_v1",
+          "basis": [
+            "unknown_domain_pattern",
+            "distinct_urls:1",
+            "distinct_axes:0",
+            "origin_types:1",
+            "referring_accounts:1",
+            "origin_types:1",
+            "track_record_unavailable"
+          ]
+        }
+      }
+    },
+    {
       "domain": "iranintl.com",
       "entity": "Iranintl",
       "kind": "unknown",
@@ -96486,81 +96638,6 @@
         ],
         "origin_counts": {
           "reading_queue": 3
-        },
-        "distinct_referring_accounts": 0,
-        "sample_referring_accounts": [],
-        "distinct_axes": []
-      },
-      "claims": {
-        "total": 0,
-        "supported": 0,
-        "refuted": 0,
-        "contested": 0,
-        "unverified": 0,
-        "resolved_count": 0
-      },
-      "structural_features": {
-        "has_search_paths": false,
-        "has_article_paths": false,
-        "has_doi_paths": false
-      },
-      "ratings": {
-        "provenance": {
-          "score": 0.45,
-          "basis": [
-            "unknown_domain_pattern"
-          ]
-        },
-        "breadth": {
-          "score": 0.08916666666666666,
-          "basis": [
-            "distinct_urls:1",
-            "distinct_axes:0",
-            "origin_types:1"
-          ]
-        },
-        "corroboration": {
-          "score": 0.0875,
-          "basis": [
-            "referring_accounts:0",
-            "origin_types:1"
-          ]
-        },
-        "track_record": {
-          "score": null,
-          "basis": [
-            "no_resolved_claims_observed"
-          ]
-        },
-        "overall": {
-          "score": 0.3370833333333333,
-          "confidence": 0.0491,
-          "method": "mechanical_v1",
-          "basis": [
-            "unknown_domain_pattern",
-            "distinct_urls:1",
-            "distinct_axes:0",
-            "origin_types:1",
-            "referring_accounts:0",
-            "origin_types:1",
-            "track_record_unavailable"
-          ]
-        }
-      }
-    },
-    {
-      "domain": "epoch.ai",
-      "entity": "Epoch Ai",
-      "kind": "unknown",
-      "first_seen_at": "2026-09-24T08:33:16.006Z",
-      "last_seen_at": "2026-09-24T08:33:16.006Z",
-      "discovery": {
-        "distinct_urls": 1,
-        "example_urls": [
-          "https://epoch.ai/data-insights"
-        ],
-        "origin_counts": {
-          "reading_queue": 1
         },
         "distinct_referring_accounts": 0,
         "sample_referring_accounts": [],
