@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "cycle": 6390,
-  "updated_at": "2026-09-24T14:27:29.188Z",
+  "cycle": 6396,
+  "updated_at": "2026-09-25T05:25:39.975Z",
   "skipped_reason": "cycle_gate:3",
   "selected_axis_id": null,
   "selected_axis_label": null,
@@ -82,6 +82,24 @@
       "source": "Epoch AI data insights",
       "url": "https://epoch.ai/data-insights",
       "query": "frontier AI capabilities forecast"
+    },
+    {
+      "ts": "2026-09-24T16:27:47.303Z",
+      "axis_id": "axis_agent_self_reliability_v1",
+      "axis_label": "Self-study",
+      "bundle": "agenda",
+      "source": "arXiv",
+      "url": "https://arxiv.org/search/?query=LLM%20sycophancy&searchtype=all&abstracts=show&order=-announced_date_first&size=50",
+      "query": "LLM sycophancy"
+    },
+    {
+      "ts": "2026-09-24T22:27:17.306Z",
+      "axis_id": "axis_ai_oversight_model_v1",
+      "axis_label": "Policy & governance",
+      "bundle": "agenda",
+      "source": "EU AI Office",
+      "url": "https://digital-strategy.ec.europa.eu/en/policies/ai-office",
+      "query": "AI safety institute evaluations"
     }
   ]
 }

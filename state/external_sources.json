@@ -1,17 +1,17 @@
 {
   "schema_version": "1.0",
-  "generated_at": "2026-09-24T14:27:18.418Z",
+  "generated_at": "2026-09-25T05:25:29.076Z",
   "method": "mechanical_registry_v1",
-  "profiled_at": "2026-09-24T14:27:29.113Z",
+  "profiled_at": "2026-09-25T05:25:39.880Z",
   "sources": [
     {
       "domain": "arxiv.org",
       "entity": "Arxiv",
       "kind": "academic",
       "first_seen_at": "2026-09-20T04:08:44.147Z",
-      "last_seen_at": "2026-09-23T19:59:38.373Z",
+      "last_seen_at": "2026-09-24T20:29:06.889Z",
       "discovery": {
-        "distinct_urls": 32,
+        "distinct_urls": 33,
         "example_urls": [
           "https://arxiv.org/abs/2305.04388",
           "https://arxiv.org/abs/2609.21899v1",
@@ -21,7 +21,7 @@
         ],
         "origin_counts": {
           "ontology_evidence": 7,
-          "reading_queue": 51,
+          "reading_queue": 54,
           "journals": 8,
           "articles": 1
         },
@@ -58,7 +58,7 @@
         "breadth": {
           "score": 0.7649999999999999,
           "basis": [
-            "distinct_urls:32",
+            "distinct_urls:33",
             "distinct_axes:3",
             "origin_types:4"
           ]
@@ -98,7 +98,7 @@
             "academic_domain_pattern",
             "search_results_seen",
             "doi_or_identifier_path_seen",
-            "distinct_urls:32",
+            "distinct_urls:33",
             "distinct_axes:3",
             "origin_types:4",
             "referring_accounts:0",
@@ -308,7 +308,7 @@
         ],
         "origin_counts": {
           "claim_tracker": 1,
-          "reading_queue": 28
+          "reading_queue": 29
         },
         "distinct_referring_accounts": 0,
         "sample_referring_accounts": [],
@@ -599,7 +599,7 @@
           "https://careers.cbp.gov/s/connect-to-recruiter?campaignid=701SJ00000BV0tR&utm_source=X&utm_medium=paid_social&utm_campaign=MGC_B5SXtXt5J5T&twclid=2f2100ywgvzunnowbnhrpi34g1"
         ],
         "origin_counts": {
-          "reading_queue": 28,
+          "reading_queue": 29,
           "feed_buffer_reply": 7
         },
         "distinct_referring_accounts": 1,
@@ -724,7 +724,7 @@
           "https://www.justice.gov/usao-ri/pr/two-business-executives-plead-guilty-tech-support-fraud-scheme?twclid=2f42440xock41qvr5cwo18o539"
         ],
         "origin_counts": {
-          "reading_queue": 28,
+          "reading_queue": 29,
           "feed_buffer_reply": 2,
           "feed_buffer": 1
         },
@@ -1257,7 +1257,7 @@
         ],
         "origin_counts": {
           "ontology_evidence": 1,
-          "reading_queue": 25
+          "reading_queue": 26
         },
         "distinct_referring_accounts": 0,
         "sample_referring_accounts": [],
@@ -1379,7 +1379,7 @@
           "https://singaporeglobalnetwork.gov.sg/stories/tech/why-i-quit-college-at-22-to-launch-a-biotech-startup-in-singapore/?utm_source=x&utm_medium=social&utm_campaign=sg-paid-ao-traffic&utm_content=armaan-dhanda&twclid=2epj25tilhtb65igot07prztga"
         ],
         "origin_counts": {
-          "reading_queue": 20,
+          "reading_queue": 21,
           "feed_buffer": 1
         },
         "distinct_referring_accounts": 1,
@@ -1502,7 +1502,7 @@
           "https://www.house.gov/"
         ],
         "origin_counts": {
-          "reading_queue": 28,
+          "reading_queue": 29,
           "journals": 1
         },
         "distinct_referring_accounts": 0,
@@ -1623,7 +1623,7 @@
           "http://trumprx.gov/"
         ],
         "origin_counts": {
-          "reading_queue": 28,
+          "reading_queue": 29,
           "journals": 1
         },
         "distinct_referring_accounts": 0,
@@ -1733,6 +1733,127 @@
       }
     },
     {
+      "domain": "europa.eu",
+      "entity": "Europa",
+      "kind": "official",
+      "first_seen_at": "2026-09-24T22:27:17.306Z",
+      "last_seen_at": "2026-09-25T05:25:29.073Z",
+      "discovery": {
+        "distinct_urls": 1,
+        "example_urls": [
+          "https://digital-strategy.ec.europa.eu/en/policies/ai-office"
+        ],
+        "origin_counts": {
+          "reading_queue": 4,
+          "prefetch": 1
+        },
+        "distinct_referring_accounts": 0,
+        "sample_referring_accounts": [],
+        "distinct_axes": []
+      },
+      "claims": {
+        "total": 0,
+        "supported": 0,
+        "refuted": 0,
+        "contested": 0,
+        "unverified": 0,
+        "resolved_count": 0
+      },
+      "structural_features": {
+        "has_search_paths": false,
+        "has_article_paths": false,
+        "has_doi_paths": false
+      },
+      "ratings": {
+        "provenance": {
+          "score": 0.95,
+          "basis": [
+            "official_domain_pattern"
+          ]
+        },
+        "breadth": {
+          "score": 0.14916666666666667,
+          "basis": [
+            "distinct_urls:1",
+            "distinct_axes:0",
+            "origin_types:2"
+          ]
+        },
+        "corroboration": {
+          "score": 0.175,
+          "basis": [
+            "referring_accounts:0",
+            "origin_types:2"
+          ]
+        },
+        "track_record": {
+          "score": null,
+          "basis": [
+            "no_resolved_claims_observed"
+          ]
+        },
+        "profile": {
+          "score": 0.37,
+          "confidence": 0.65,
+          "basis": [
+            "meta_author:false",
+            "published_time:true",
+            "canonical:true",
+            "about:false",
+            "contact:false",
+            "corrections:false",
+            "outbound_links:9",
+            "opinion_marker:false"
+          ]
+        },
+        "overall": {
+          "score": 0.7021614583333332,
+          "confidence": 0.069575,
+          "method": "mechanical_v1",
+          "basis": [
+            "official_domain_pattern",
+            "distinct_urls:1",
+            "distinct_axes:0",
+            "origin_types:2",
+            "referring_accounts:0",
+            "origin_types:2",
+            "track_record_unavailable"
+          ]
+        }
+      },
+      "profile": {
+        "fetched_at": "2026-09-25T03:21:35.022Z",
+        "homepage_url": "https://europa.eu/",
+        "example_url": "https://digital-strategy.ec.europa.eu/en/policies/ai-office",
+        "homepage_status": 200,
+        "example_status": 200,
+        "homepage_final_url": "https://european-union.europa.eu/select-language?destination=/node/1",
+        "example_final_url": "https://digital-strategy.ec.europa.eu/en/policies/ai-office",
+        "homepage_content_type": "text/html; charset=utf-8",
+        "example_content_type": "text/html; charset=UTF-8",
+        "homepage": {
+          "has_meta_author": false,
+          "has_published_time": false,
+          "has_canonical": true,
+          "has_about_link": false,
+          "has_contact_link": false,
+          "has_corrections_link": false,
+          "outbound_links_count": 0,
+          "opinion_marker": false
+        },
+        "example": {
+          "has_meta_author": false,
+          "has_published_time": true,
+          "has_canonical": true,
+          "has_about_link": true,
+          "has_contact_link": false,
+          "has_corrections_link": false,
+          "outbound_links_count": 9,
+          "opinion_marker": false
+        }
+      }
+    },
+    {
       "domain": "washingtonpost.com",
       "entity": "Washingtonpost",
       "kind": "news",
@@ -1745,7 +1866,7 @@
         ],
         "origin_counts": {
           "ontology_evidence": 3,
-          "reading_queue": 28
+          "reading_queue": 29
         },
         "distinct_referring_accounts": 0,
         "sample_referring_accounts": [],
@@ -1828,7 +1949,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-09-21T12:05:47.117Z",
+        "fetched_at": "2026-09-24T16:27:42.672Z",
         "homepage_url": "https://washingtonpost.com/",
         "example_url": "https://www.washingtonpost.com/world/2026/04/13/us-iran-blockade-strait-hormuz-oil/",
         "homepage_status": null,
@@ -1952,7 +2073,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-09-21T12:05:52.704Z",
+        "fetched_at": "2026-09-24T16:27:45.342Z",
         "homepage_url": "https://bbc.com/",
         "example_url": "https://www.bbc.com/news/articles/cgmdw4vn7y2o?at_medium=RSS&amp;at_campaign=rss",
         "homepage_status": 200,
@@ -2095,7 +2216,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-09-21T12:05:54.166Z",
+        "fetched_at": "2026-09-24T16:27:46.918Z",
         "homepage_url": "https://amnesty.org/",
         "example_url": "https://www.amnesty.org/en/latest/news/2026/06/burkina-serge-oulon/",
         "homepage_status": 200,
@@ -2237,7 +2358,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-09-21T12:05:54.967Z",
+        "fetched_at": "2026-09-24T16:27:47.214Z",
         "homepage_url": "https://pcij.org/",
         "example_url": "https://pcij.org/2026/06/23/tycoons-swoop-in-clean-energy-boom/",
         "homepage_status": 200,
@@ -2402,7 +2523,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-09-21T14:05:25.469Z",
+        "fetched_at": "2026-09-24T18:27:15.480Z",
         "homepage_url": "https://google.com/",
         "example_url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQG8zTjzNOXrSBZwvSTLobfen2T2Mfxyn8MYVxW4sIU6cWottxkV4pJs_p6fwS7LJGs_vuED8LS-hCfYDaWBVPP6g5GilaCYMrJml-ow5K6SCv_H_b1Dl2x1bJE8PTS68J1lar6YIqGro0gdLxt0MIOMv-l1vVmmO0WJQtLSOEieMA6I7dl7eRgRC0BRXQWnC1DBXjH9CBNLq5ag1EbSnkyImyoNmXyv0qV7VQUvoAHc5OC2odagG5YXdhPj4Im_aZZUwd8=",
         "homepage_status": 200,
@@ -2536,7 +2657,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-09-21T14:05:27.236Z",
+        "fetched_at": "2026-09-24T18:27:17.390Z",
         "homepage_url": "https://cbsnews.com/",
         "example_url": "https://www.cbsnews.com/news/us-naval-blockade-iran-ports-2026/",
         "homepage_status": 200,
@@ -2673,7 +2794,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-09-21T14:05:27.325Z",
+        "fetched_at": "2026-09-24T18:27:17.417Z",
         "homepage_url": "https://com.ph/",
         "example_url": "https://x.tv5.com.ph/news/national/read/arrest-warrants-issued-vs-discayas-over-malversation-graft-charges-tied-to-flood-control-projects-malolos-court",
         "homepage_status": null,
@@ -2822,7 +2943,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-09-21T14:05:29.031Z",
+        "fetched_at": "2026-09-24T18:27:18.704Z",
         "homepage_url": "https://gmanetwork.com/",
         "example_url": "https://www.gmanetwork.com/news/topstories/nation/994225/explainer-objections-in-a-trial-and-their-role-in-due-process/story/",
         "homepage_status": 200,
@@ -2962,7 +3083,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-09-21T16:05:18.990Z",
+        "fetched_at": "2026-09-24T20:28:53.559Z",
         "homepage_url": "https://youtube.com/",
         "example_url": "https://www.youtube.com/watch?v=s31Wd_dF5hI",
         "homepage_status": 200,
@@ -3005,7 +3126,7 @@
           "https://apnews.com/hub/iran"
         ],
         "origin_counts": {
-          "reading_queue": 28,
+          "reading_queue": 29,
           "journals": 1
         },
         "distinct_referring_accounts": 0,
@@ -3083,7 +3204,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-09-21T16:05:19.101Z",
+        "fetched_at": "2026-09-24T20:28:53.674Z",
         "homepage_url": "https://apnews.com/",
         "example_url": "https://apnews.com/hub/iran",
         "homepage_status": 403,
@@ -3217,7 +3338,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-09-21T16:05:20.012Z",
+        "fetched_at": "2026-09-24T20:28:55.081Z",
         "homepage_url": "https://hrw.org/",
         "example_url": "https://www.hrw.org/news/2026/06/18/support-builds-to-protect-children-from-crimes-against-humanity",
         "homepage_status": 200,
@@ -3253,9 +3374,9 @@
       "entity": "T Co",
       "kind": "unknown",
       "first_seen_at": "2016-05-05T18:57:30.000Z",
-      "last_seen_at": "2026-09-24T12:46:54.000Z",
+      "last_seen_at": "2026-09-25T04:10:05.000Z",
       "discovery": {
-        "distinct_urls": 23108,
+        "distinct_urls": 23165,
         "example_urls": [
           "https://t.co/pJSE124ec4",
           "https://t.co/Soz8BXPWaa",
@@ -3264,7 +3385,7 @@
           "https://t.co/cYaqYDRp08"
         ],
         "origin_counts": {
-          "feed_buffer": 21048,
+          "feed_buffer": 21120,
           "feed_buffer_reply": 6451,
           "articles": 3
         },
@@ -3307,7 +3428,7 @@
         "breadth": {
           "score": 0.53,
           "basis": [
-            "distinct_urls:23108",
+            "distinct_urls:23165",
             "distinct_axes:0",
             "origin_types:3"
           ]
@@ -3346,7 +3467,7 @@
           "basis": [
             "unknown_domain_pattern",
             "doi_or_identifier_path_seen",
-            "distinct_urls:23108",
+            "distinct_urls:23165",
             "distinct_axes:0",
             "origin_types:3",
             "referring_accounts:3294",
@@ -3356,7 +3477,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-09-21T16:05:21.598Z",
+        "fetched_at": "2026-09-24T20:29:01.579Z",
         "homepage_url": "https://t.co/",
         "example_url": "https://t.co/pJSE124ec4",
         "homepage_status": 200,
@@ -3514,7 +3635,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-09-21T18:16:25.922Z",
+        "fetched_at": "2026-09-24T22:27:13.167Z",
         "homepage_url": "https://rappler.com/",
         "example_url": "https://www.rappler.com/fact-check-no-arrest-warrant-issued-vs-marcoleta",
         "homepage_status": 200,
@@ -3660,7 +3781,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-09-21T18:16:27.194Z",
+        "fetched_at": "2026-09-24T22:27:14.409Z",
         "homepage_url": "https://techcrunch.com/",
         "example_url": "https://techcrunch.com/2026/07/30/judge-says-trump-admin-still-lacks-evidence-for-anthropic-supply-chain-risk-label/",
         "homepage_status": 200,
@@ -3687,6 +3808,141 @@
           "has_contact_link": false,
           "has_corrections_link": false,
           "outbound_links_count": 12,
+          "opinion_marker": false
+        }
+      }
+    },
+    {
+      "domain": "substack.com",
+      "entity": "Substack",
+      "kind": "newsletter_blog",
+      "first_seen_at": "2026-04-18T00:20:00.000Z",
+      "last_seen_at": "2026-09-24T16:27:53.030Z",
+      "discovery": {
+        "distinct_urls": 14,
+        "example_urls": [
+          "https://aniobrien.substack.com/p/white-working-class-girls-sacrificed",
+          "https://epochai.substack.com/p/how-far-behind-nvidia-is-huawei",
+          "https://sethmlederman.substack.com/p/taking-on-the-f-word-fibromyalgia?twclid=245fh2m6fc9w4vl63b2am7zawy",
+          "https://sethmlederman.substack.com/p/what-do-you-call-it-a-common-condition?twclid=2770hq4pywc55ha6fo2sd8z19r",
+          "https://giottodf.substack.com/?utm_source=x&utm_medium=social&utm_campaign=addressable&twclid=2bl9ik67j16lrrzcjtw3tj4hpm"
+        ],
+        "origin_counts": {
+          "ontology_evidence": 3,
+          "reading_queue": 3,
+          "feed_buffer_reply": 7,
+          "feed_buffer": 3,
+          "journals": 16
+        },
+        "distinct_referring_accounts": 3,
+        "sample_referring_accounts": [
+          "giottodf",
+          "nickbrownco",
+          "sethlederman"
+        ],
+        "distinct_axes": [
+          "axis_epistemic_integrity",
+          "axis_media_integrity_v1"
+        ]
+      },
+      "claims": {
+        "total": 0,
+        "supported": 0,
+        "refuted": 0,
+        "contested": 0,
+        "unverified": 0,
+        "resolved_count": 0
+      },
+      "structural_features": {
+        "has_search_paths": false,
+        "has_article_paths": false,
+        "has_doi_paths": false
+      },
+      "ratings": {
+        "provenance": {
+          "score": 0.42,
+          "basis": [
+            "newsletter_blog_pattern"
+          ]
+        },
+        "breadth": {
+          "score": 0.7666666666666666,
+          "basis": [
+            "distinct_urls:14",
+            "distinct_axes:2",
+            "origin_types:5"
+          ]
+        },
+        "corroboration": {
+          "score": 0.675,
+          "basis": [
+            "referring_accounts:3",
+            "origin_types:5"
+          ]
+        },
+        "track_record": {
+          "score": null,
+          "basis": [
+            "no_resolved_claims_observed"
+          ]
+        },
+        "profile": {
+          "score": 0.65,
+          "confidence": 0.85,
+          "basis": [
+            "meta_author:true",
+            "published_time:true",
+            "canonical:true",
+            "about:true",
+            "contact:false",
+            "corrections:false",
+            "outbound_links:5",
+            "opinion_marker:false"
+          ]
+        },
+        "overall": {
+          "score": 0.5197395833333333,
+          "confidence": 0.60425,
+          "method": "mechanical_v1",
+          "basis": [
+            "newsletter_blog_pattern",
+            "distinct_urls:14",
+            "distinct_axes:2",
+            "origin_types:5",
+            "referring_accounts:3",
+            "origin_types:5",
+            "track_record_unavailable"
+          ]
+        }
+      },
+      "profile": {
+        "fetched_at": "2026-09-24T22:27:15.681Z",
+        "homepage_url": "https://substack.com/",
+        "example_url": "https://aniobrien.substack.com/p/white-working-class-girls-sacrificed",
+        "homepage_status": 200,
+        "example_status": 200,
+        "homepage_final_url": "https://substack.com/",
+        "example_final_url": "https://aniobrien.substack.com/p/white-working-class-girls-sacrificed",
+        "homepage_content_type": "text/html; charset=utf-8",
+        "example_content_type": "text/html; charset=utf-8",
+        "homepage": {
+          "has_meta_author": true,
+          "has_published_time": false,
+          "has_canonical": true,
+          "has_about_link": true,
+          "has_contact_link": false,
+          "has_corrections_link": false,
+          "outbound_links_count": 1,
+          "opinion_marker": false
+        },
+        "example": {
+          "has_meta_author": true,
+          "has_published_time": true,
+          "has_canonical": true,
+          "has_about_link": false,
+          "has_contact_link": false,
+          "has_corrections_link": false,
+          "outbound_links_count": 5,
           "opinion_marker": false
         }
       }
@@ -3925,7 +4181,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-09-21T18:16:29.472Z",
+        "fetched_at": "2026-09-24T22:27:17.192Z",
         "homepage_url": "https://arstechnica.com/",
         "example_url": "https://arstechnica.com/security/2026/06/users-cry-foul-after-amd-stripped-memory-crypto-from-its-consumer-cpus/",
         "homepage_status": 405,
@@ -4042,7 +4298,7 @@
             "about:true",
             "contact:true",
             "corrections:false",
-            "outbound_links:22",
+            "outbound_links:24",
             "opinion_marker:false"
           ]
         },
@@ -4062,7 +4318,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-09-21T18:16:33.932Z",
+        "fetched_at": "2026-09-25T03:21:36.827Z",
         "homepage_url": "https://bit.ly/",
         "example_url": "https://bit.ly/4rFUGm4?twclid=2cxu7o43bx4p37y7v84zudvy2q",
         "homepage_status": 200,
@@ -4088,141 +4344,7 @@
           "has_about_link": true,
           "has_contact_link": false,
           "has_corrections_link": false,
-          "outbound_links_count": 22,
-          "opinion_marker": false
-        }
-      }
-    },
-    {
-      "domain": "substack.com",
-      "entity": "Substack",
-      "kind": "newsletter_blog",
-      "first_seen_at": "2026-04-18T00:20:00.000Z",
-      "last_seen_at": "2026-09-21T14:05:56.200Z",
-      "discovery": {
-        "distinct_urls": 13,
-        "example_urls": [
-          "https://aniobrien.substack.com/p/white-working-class-girls-sacrificed",
-          "https://sethmlederman.substack.com/p/taking-on-the-f-word-fibromyalgia?twclid=245fh2m6fc9w4vl63b2am7zawy",
-          "https://sethmlederman.substack.com/p/what-do-you-call-it-a-common-condition?twclid=2770hq4pywc55ha6fo2sd8z19r",
-          "https://giottodf.substack.com/?utm_source=x&utm_medium=social&utm_campaign=addressable&twclid=2bl9ik67j16lrrzcjtw3tj4hpm",
-          "https://nickbrownco.substack.com/p/why-im-reading-the-bible-in-a-year?twclid=24qd8hygz4wd8602do2wncp6gy"
-        ],
-        "origin_counts": {
-          "ontology_evidence": 3,
-          "feed_buffer_reply": 7,
-          "feed_buffer": 3,
-          "journals": 16
-        },
-        "distinct_referring_accounts": 3,
-        "sample_referring_accounts": [
-          "giottodf",
-          "nickbrownco",
-          "sethlederman"
-        ],
-        "distinct_axes": [
-          "axis_epistemic_integrity",
-          "axis_media_integrity_v1"
-        ]
-      },
-      "claims": {
-        "total": 0,
-        "supported": 0,
-        "refuted": 0,
-        "contested": 0,
-        "unverified": 0,
-        "resolved_count": 0
-      },
-      "structural_features": {
-        "has_search_paths": false,
-        "has_article_paths": false,
-        "has_doi_paths": false
-      },
-      "ratings": {
-        "provenance": {
-          "score": 0.42,
-          "basis": [
-            "newsletter_blog_pattern"
-          ]
-        },
-        "breadth": {
-          "score": 0.7066666666666666,
-          "basis": [
-            "distinct_urls:13",
-            "distinct_axes:2",
-            "origin_types:4"
-          ]
-        },
-        "corroboration": {
-          "score": 0.675,
-          "basis": [
-            "referring_accounts:3",
-            "origin_types:4"
-          ]
-        },
-        "track_record": {
-          "score": null,
-          "basis": [
-            "no_resolved_claims_observed"
-          ]
-        },
-        "profile": {
-          "score": 0.65,
-          "confidence": 0.85,
-          "basis": [
-            "meta_author:true",
-            "published_time:true",
-            "canonical:true",
-            "about:true",
-            "contact:false",
-            "corrections:false",
-            "outbound_links:5",
-            "opinion_marker:false"
-          ]
-        },
-        "overall": {
-          "score": 0.5066145833333332,
-          "confidence": 0.56915,
-          "method": "mechanical_v1",
-          "basis": [
-            "newsletter_blog_pattern",
-            "distinct_urls:13",
-            "distinct_axes:2",
-            "origin_types:4",
-            "referring_accounts:3",
-            "origin_types:4",
-            "track_record_unavailable"
-          ]
-        }
-      },
-      "profile": {
-        "fetched_at": "2026-09-21T20:15:47.792Z",
-        "homepage_url": "https://substack.com/",
-        "example_url": "https://aniobrien.substack.com/p/white-working-class-girls-sacrificed",
-        "homepage_status": 200,
-        "example_status": 200,
-        "homepage_final_url": "https://substack.com/",
-        "example_final_url": "https://aniobrien.substack.com/p/white-working-class-girls-sacrificed",
-        "homepage_content_type": "text/html; charset=utf-8",
-        "example_content_type": "text/html; charset=utf-8",
-        "homepage": {
-          "has_meta_author": true,
-          "has_published_time": false,
-          "has_canonical": true,
-          "has_about_link": true,
-          "has_contact_link": false,
-          "has_corrections_link": false,
-          "outbound_links_count": 1,
-          "opinion_marker": false
-        },
-        "example": {
-          "has_meta_author": true,
-          "has_published_time": true,
-          "has_canonical": true,
-          "has_about_link": false,
-          "has_contact_link": false,
-          "has_corrections_link": false,
-          "outbound_links_count": 5,
+          "outbound_links_count": 24,
           "opinion_marker": false
         }
       }
@@ -4329,7 +4451,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-09-21T20:15:49.886Z",
+        "fetched_at": "2026-09-25T03:21:38.662Z",
         "homepage_url": "https://reut.rs/",
         "example_url": "https://reut.rs/42N9gxi",
         "homepage_status": 401,
@@ -4456,7 +4578,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-09-21T20:15:51.825Z",
+        "fetched_at": "2026-09-25T03:21:40.207Z",
         "homepage_url": "https://brobible.com/",
         "example_url": "https://brobible.com/culture/paige-ostroushko-savanah-hernandez-anti-ice-protest-arrest/",
         "homepage_status": 200,
@@ -4583,7 +4705,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-09-21T20:15:52.250Z",
+        "fetched_at": "2026-09-25T05:25:29.650Z",
         "homepage_url": "https://epochtimes.com/",
         "example_url": "https://www.epochtimes.com/",
         "homepage_status": 200,
@@ -4711,7 +4833,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-09-21T22:16:23.182Z",
+        "fetched_at": "2026-09-25T05:25:30.253Z",
         "homepage_url": "https://idf.il/",
         "example_url": "https://www.idf.il/en/articles/2026/04/16/idf-finds-weapons-in-school-in-bint-jbeil-lebanon/",
         "homepage_status": null,
@@ -4868,7 +4990,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-09-21T22:16:28.965Z",
+        "fetched_at": "2026-09-25T05:25:36.893Z",
         "homepage_url": "https://philstar.com/",
         "example_url": "https://www.philstar.com/headlines/2026/06/24/2537506/mike-defensor-face-trafficking-complaint-over-pasig-ktv-bar-raid",
         "homepage_status": 200,
@@ -5004,7 +5126,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-09-21T22:16:31.675Z",
+        "fetched_at": "2026-09-25T05:25:39.880Z",
         "homepage_url": "https://grok.com/",
         "example_url": "https://grok.com/imagine/post/9b92ff60-ec59-45db-8a35-8e1b743e5339",
         "homepage_status": 200,
@@ -5820,9 +5942,9 @@
       "entity": "Starlink",
       "kind": "unknown",
       "first_seen_at": "2026-04-07T03:51:50.000Z",
-      "last_seen_at": "2026-09-24T11:47:45.928Z",
+      "last_seen_at": "2026-09-24T16:32:46.516Z",
       "discovery": {
-        "distinct_urls": 2822,
+        "distinct_urls": 2824,
         "example_urls": [
           "https://www.starlink.com/us/residential?referral=RC-DF-9543787-19448-67&utm_medium=paid&utm_campaign=awr_us_soc_twt_ptg_cau&utm_content=awr_us_soc_twt_ptg_cau_res_gvp_v4s_stc_en-us_sdb-bluesky-uptime&twclid=2cg62b1u0oqrypdim5oir1767e",
           "https://www.starlink.com/us/residential?referral=RC-DF-9543787-19448-67&utm_medium=paid&utm_campaign=awr_us_soc_twt_ptg_cau&utm_content=awr_us_soc_twt_ptg_cau_res_gvp_v4s_stc_en-us_sdb-avail-sat-yourhome&twclid=2216n7j93v9absqn77762mm626",
@@ -5832,7 +5954,7 @@
         ],
         "origin_counts": {
           "feed_buffer_reply": 2679,
-          "feed_buffer": 147
+          "feed_buffer": 149
         },
         "distinct_referring_accounts": 5,
         "sample_referring_accounts": [
@@ -5867,7 +5989,7 @@
         "breadth": {
           "score": 0.47,
           "basis": [
-            "distinct_urls:2822",
+            "distinct_urls:2824",
             "distinct_axes:0",
             "origin_types:2"
           ]
@@ -5905,7 +6027,7 @@
           "method": "mechanical_v1",
           "basis": [
             "unknown_domain_pattern",
-            "distinct_urls:2822",
+            "distinct_urls:2824",
             "distinct_axes:0",
             "origin_types:2",
             "referring_accounts:5",
@@ -5958,7 +6080,7 @@
           "https://www.reuters.com/site-search/?query=Evidence-based%20claims%2C%20transparent%20sourcing%2C%20honest%20uncertainty%2C%20good-faith%20argu%20Truth%20and%20Evidence%20in%20Public%20Discourse"
         ],
         "origin_counts": {
-          "reading_queue": 29
+          "reading_queue": 30
         },
         "distinct_referring_accounts": 1,
         "sample_referring_accounts": [
@@ -42522,6 +42644,85 @@
       }
     },
     {
+      "domain": "alignmentforum.org",
+      "entity": "Alignmentforum",
+      "kind": "unknown",
+      "first_seen_at": "2026-09-20T06:09:13.737Z",
+      "last_seen_at": "2026-09-24T22:27:22.286Z",
+      "discovery": {
+        "distinct_urls": 6,
+        "example_urls": [
+          "https://www.alignmentforum.org/posts/virawHQekJsozwotz/paper-stringological-sequence-prediction-iii",
+          "https://www.alignmentforum.org/posts/x8BvtWxtoajBGHS3g/an-operationalization-of-opaque-serial-depth",
+          "https://www.alignmentforum.org/posts/LcQ9x72eNji2gpS9b/why-i-m-scared-of-rl",
+          "https://www.alignmentforum.org/posts/Zeg2JztbdhguL48uH/workspacebench-evaluating-interpretability-methods-for-the",
+          "https://www.alignmentforum.org/posts/6m29SfjbittooYojj/latent-reasoning-architectures-would-undermine-cot-our"
+        ],
+        "origin_counts": {
+          "reading_queue": 16
+        },
+        "distinct_referring_accounts": 0,
+        "sample_referring_accounts": [],
+        "distinct_axes": []
+      },
+      "claims": {
+        "total": 0,
+        "supported": 0,
+        "refuted": 0,
+        "contested": 0,
+        "unverified": 0,
+        "resolved_count": 0
+      },
+      "structural_features": {
+        "has_search_paths": false,
+        "has_article_paths": false,
+        "has_doi_paths": false
+      },
+      "ratings": {
+        "provenance": {
+          "score": 0.45,
+          "basis": [
+            "unknown_domain_pattern"
+          ]
+        },
+        "breadth": {
+          "score": 0.235,
+          "basis": [
+            "distinct_urls:6",
+            "distinct_axes:0",
+            "origin_types:1"
+          ]
+        },
+        "corroboration": {
+          "score": 0.0875,
+          "basis": [
+            "referring_accounts:0",
+            "origin_types:1"
+          ]
+        },
+        "track_record": {
+          "score": null,
+          "basis": [
+            "no_resolved_claims_observed"
+          ]
+        },
+        "overall": {
+          "score": 0.36898437500000003,
+          "confidence": 0.192225,
+          "method": "mechanical_v1",
+          "basis": [
+            "unknown_domain_pattern",
+            "distinct_urls:6",
+            "distinct_axes:0",
+            "origin_types:1",
+            "referring_accounts:0",
+            "origin_types:1",
+            "track_record_unavailable"
+          ]
+        }
+      }
+    },
+    {
       "domain": "abscbn.news",
       "entity": "Abscbn News",
       "kind": "unknown",
@@ -47078,6 +47279,85 @@
       }
     },
     {
+      "domain": "redwoodresearch.org",
+      "entity": "Redwoodresearch",
+      "kind": "unknown",
+      "first_seen_at": "2026-09-23T09:35:17.266Z",
+      "last_seen_at": "2026-09-23T09:35:17.266Z",
+      "discovery": {
+        "distinct_urls": 5,
+        "example_urls": [
+          "https://blog.redwoodresearch.org/p/are-we-existentially-threatened-by",
+          "https://blog.redwoodresearch.org/p/retrying-vs-resampling-in-ai-control",
+          "https://blog.redwoodresearch.org/p/astra-is-much-better-at-reasoning",
+          "https://blog.redwoodresearch.org/p/latent-reasoning-architectures-would",
+          "https://blog.redwoodresearch.org/p/continual-learning-might-make-your"
+        ],
+        "origin_counts": {
+          "reading_queue": 7
+        },
+        "distinct_referring_accounts": 0,
+        "sample_referring_accounts": [],
+        "distinct_axes": []
+      },
+      "claims": {
+        "total": 0,
+        "supported": 0,
+        "refuted": 0,
+        "contested": 0,
+        "unverified": 0,
+        "resolved_count": 0
+      },
+      "structural_features": {
+        "has_search_paths": false,
+        "has_article_paths": false,
+        "has_doi_paths": false
+      },
+      "ratings": {
+        "provenance": {
+          "score": 0.45,
+          "basis": [
+            "unknown_domain_pattern"
+          ]
+        },
+        "breadth": {
+          "score": 0.20583333333333334,
+          "basis": [
+            "distinct_urls:5",
+            "distinct_axes:0",
+            "origin_types:1"
+          ]
+        },
+        "corroboration": {
+          "score": 0.0875,
+          "basis": [
+            "referring_accounts:0",
+            "origin_types:1"
+          ]
+        },
+        "track_record": {
+          "score": null,
+          "basis": [
+            "no_resolved_claims_observed"
+          ]
+        },
+        "overall": {
+          "score": 0.36260416666666667,
+          "confidence": 0.1636,
+          "method": "mechanical_v1",
+          "basis": [
+            "unknown_domain_pattern",
+            "distinct_urls:5",
+            "distinct_axes:0",
+            "origin_types:1",
+            "referring_accounts:0",
+            "origin_types:1",
+            "track_record_unavailable"
+          ]
+        }
+      }
+    },
+    {
       "domain": "ajc.org",
       "entity": "Ajc",
       "kind": "unknown",
@@ -51519,82 +51799,6 @@
       }
     },
     {
-      "domain": "epoch.ai",
-      "entity": "Epoch Ai",
-      "kind": "unknown",
-      "first_seen_at": "2026-09-24T08:33:16.006Z",
-      "last_seen_at": "2026-09-24T14:27:18.414Z",
-      "discovery": {
-        "distinct_urls": 1,
-        "example_urls": [
-          "https://epoch.ai/data-insights"
-        ],
-        "origin_counts": {
-          "reading_queue": 3,
-          "prefetch": 1
-        },
-        "distinct_referring_accounts": 0,
-        "sample_referring_accounts": [],
-        "distinct_axes": []
-      },
-      "claims": {
-        "total": 0,
-        "supported": 0,
-        "refuted": 0,
-        "contested": 0,
-        "unverified": 0,
-        "resolved_count": 0
-      },
-      "structural_features": {
-        "has_search_paths": false,
-        "has_article_paths": false,
-        "has_doi_paths": false
-      },
-      "ratings": {
-        "provenance": {
-          "score": 0.45,
-          "basis": [
-            "unknown_domain_pattern"
-          ]
-        },
-        "breadth": {
-          "score": 0.14916666666666667,
-          "basis": [
-            "distinct_urls:1",
-            "distinct_axes:0",
-            "origin_types:2"
-          ]
-        },
-        "corroboration": {
-          "score": 0.175,
-          "basis": [
-            "referring_accounts:0",
-            "origin_types:2"
-          ]
-        },
-        "track_record": {
-          "score": null,
-          "basis": [
-            "no_resolved_claims_observed"
-          ]
-        },
-        "overall": {
-          "score": 0.3584114583333334,
-          "confidence": 0.069575,
-          "method": "mechanical_v1",
-          "basis": [
-            "unknown_domain_pattern",
-            "distinct_urls:1",
-            "distinct_axes:0",
-            "origin_types:2",
-            "referring_accounts:0",
-            "origin_types:2",
-            "track_record_unavailable"
-          ]
-        }
-      }
-    },
-    {
       "domain": "rice.edu",
       "entity": "Rice",
       "kind": "unknown",
@@ -52201,162 +52405,6 @@
           "has_corrections_link": false,
           "outbound_links_count": 2,
           "opinion_marker": false
-        }
-      }
-    },
-    {
-      "domain": "alignmentforum.org",
-      "entity": "Alignmentforum",
-      "kind": "unknown",
-      "first_seen_at": "2026-09-20T06:09:13.737Z",
-      "last_seen_at": "2026-09-24T08:33:20.985Z",
-      "discovery": {
-        "distinct_urls": 4,
-        "example_urls": [
-          "https://www.alignmentforum.org/posts/virawHQekJsozwotz/paper-stringological-sequence-prediction-iii",
-          "https://www.alignmentforum.org/posts/x8BvtWxtoajBGHS3g/an-operationalization-of-opaque-serial-depth",
-          "https://www.alignmentforum.org/posts/LcQ9x72eNji2gpS9b/why-i-m-scared-of-rl",
-          "https://www.alignmentforum.org/posts/Zeg2JztbdhguL48uH/workspacebench-evaluating-interpretability-methods-for-the"
-        ],
-        "origin_counts": {
-          "reading_queue": 12
-        },
-        "distinct_referring_accounts": 0,
-        "sample_referring_accounts": [],
-        "distinct_axes": []
-      },
-      "claims": {
-        "total": 0,
-        "supported": 0,
-        "refuted": 0,
-        "contested": 0,
-        "unverified": 0,
-        "resolved_count": 0
-      },
-      "structural_features": {
-        "has_search_paths": false,
-        "has_article_paths": false,
-        "has_doi_paths": false
-      },
-      "ratings": {
-        "provenance": {
-          "score": 0.45,
-          "basis": [
-            "unknown_domain_pattern"
-          ]
-        },
-        "breadth": {
-          "score": 0.17666666666666664,
-          "basis": [
-            "distinct_urls:4",
-            "distinct_axes:0",
-            "origin_types:1"
-          ]
-        },
-        "corroboration": {
-          "score": 0.0875,
-          "basis": [
-            "referring_accounts:0",
-            "origin_types:1"
-          ]
-        },
-        "track_record": {
-          "score": null,
-          "basis": [
-            "no_resolved_claims_observed"
-          ]
-        },
-        "overall": {
-          "score": 0.3562239583333333,
-          "confidence": 0.134975,
-          "method": "mechanical_v1",
-          "basis": [
-            "unknown_domain_pattern",
-            "distinct_urls:4",
-            "distinct_axes:0",
-            "origin_types:1",
-            "referring_accounts:0",
-            "origin_types:1",
-            "track_record_unavailable"
-          ]
-        }
-      }
-    },
-    {
-      "domain": "redwoodresearch.org",
-      "entity": "Redwoodresearch",
-      "kind": "unknown",
-      "first_seen_at": "2026-09-23T09:35:17.266Z",
-      "last_seen_at": "2026-09-23T09:35:17.266Z",
-      "discovery": {
-        "distinct_urls": 4,
-        "example_urls": [
-          "https://blog.redwoodresearch.org/p/are-we-existentially-threatened-by",
-          "https://blog.redwoodresearch.org/p/retrying-vs-resampling-in-ai-control",
-          "https://blog.redwoodresearch.org/p/astra-is-much-better-at-reasoning",
-          "https://blog.redwoodresearch.org/p/latent-reasoning-architectures-would"
-        ],
-        "origin_counts": {
-          "reading_queue": 6
-        },
-        "distinct_referring_accounts": 0,
-        "sample_referring_accounts": [],
-        "distinct_axes": []
-      },
-      "claims": {
-        "total": 0,
-        "supported": 0,
-        "refuted": 0,
-        "contested": 0,
-        "unverified": 0,
-        "resolved_count": 0
-      },
-      "structural_features": {
-        "has_search_paths": false,
-        "has_article_paths": false,
-        "has_doi_paths": false
-      },
-      "ratings": {
-        "provenance": {
-          "score": 0.45,
-          "basis": [
-            "unknown_domain_pattern"
-          ]
-        },
-        "breadth": {
-          "score": 0.17666666666666664,
-          "basis": [
-            "distinct_urls:4",
-            "distinct_axes:0",
-            "origin_types:1"
-          ]
-        },
-        "corroboration": {
-          "score": 0.0875,
-          "basis": [
-            "referring_accounts:0",
-            "origin_types:1"
-          ]
-        },
-        "track_record": {
-          "score": null,
-          "basis": [
-            "no_resolved_claims_observed"
-          ]
-        },
-        "overall": {
-          "score": 0.3562239583333333,
-          "confidence": 0.134975,
-          "method": "mechanical_v1",
-          "basis": [
-            "unknown_domain_pattern",
-            "distinct_urls:4",
-            "distinct_axes:0",
-            "origin_types:1",
-            "referring_accounts:0",
-            "origin_types:1",
-            "track_record_unavailable"
-          ]
         }
       }
     },
@@ -96131,14 +96179,14 @@
       "entity": "Cnbc",
       "kind": "unknown",
       "first_seen_at": "2026-09-24T09:19:50.000Z",
-      "last_seen_at": "2026-09-24T09:19:50.000Z",
+      "last_seen_at": "2026-09-25T02:26:12.000Z",
       "discovery": {
         "distinct_urls": 1,
         "example_urls": [
           "https://www.cnbc.com/advertorial/banks-prepare-for-ai-enabled-customer"
         ],
         "origin_counts": {
-          "feed_buffer": 1
+          "feed_buffer": 2
         },
         "distinct_referring_accounts": 1,
         "sample_referring_accounts": [
@@ -96635,6 +96683,81 @@
         "distinct_urls": 1,
         "example_urls": [
           "https://www.apolloresearch.ai/blog"
+        ],
+        "origin_counts": {
+          "reading_queue": 3
+        },
+        "distinct_referring_accounts": 0,
+        "sample_referring_accounts": [],
+        "distinct_axes": []
+      },
+      "claims": {
+        "total": 0,
+        "supported": 0,
+        "refuted": 0,
+        "contested": 0,
+        "unverified": 0,
+        "resolved_count": 0
+      },
+      "structural_features": {
+        "has_search_paths": false,
+        "has_article_paths": false,
+        "has_doi_paths": false
+      },
+      "ratings": {
+        "provenance": {
+          "score": 0.45,
+          "basis": [
+            "unknown_domain_pattern"
+          ]
+        },
+        "breadth": {
+          "score": 0.08916666666666666,
+          "basis": [
+            "distinct_urls:1",
+            "distinct_axes:0",
+            "origin_types:1"
+          ]
+        },
+        "corroboration": {
+          "score": 0.0875,
+          "basis": [
+            "referring_accounts:0",
+            "origin_types:1"
+          ]
+        },
+        "track_record": {
+          "score": null,
+          "basis": [
+            "no_resolved_claims_observed"
+          ]
+        },
+        "overall": {
+          "score": 0.3370833333333333,
+          "confidence": 0.0491,
+          "method": "mechanical_v1",
+          "basis": [
+            "unknown_domain_pattern",
+            "distinct_urls:1",
+            "distinct_axes:0",
+            "origin_types:1",
+            "referring_accounts:0",
+            "origin_types:1",
+            "track_record_unavailable"
+          ]
+        }
+      }
+    },
+    {
+      "domain": "epoch.ai",
+      "entity": "Epoch Ai",
+      "kind": "unknown",
+      "first_seen_at": "2026-09-24T08:33:16.006Z",
+      "last_seen_at": "2026-09-24T12:27:37.627Z",
+      "discovery": {
+        "distinct_urls": 1,
+        "example_urls": [
+          "https://epoch.ai/data-insights"
         ],
         "origin_counts": {
           "reading_queue": 3
