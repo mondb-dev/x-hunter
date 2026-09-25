@@ -1,8 +1,8 @@
 {
   "schema_version": "1.0",
-  "generated_at": "2026-09-25T05:25:29.076Z",
+  "generated_at": "2026-09-25T14:00:27.537Z",
   "method": "mechanical_registry_v1",
-  "profiled_at": "2026-09-25T05:25:39.880Z",
+  "profiled_at": "2026-09-25T14:00:36.594Z",
   "sources": [
     {
       "domain": "arxiv.org",
@@ -1737,15 +1737,14 @@
       "entity": "Europa",
       "kind": "official",
       "first_seen_at": "2026-09-24T22:27:17.306Z",
-      "last_seen_at": "2026-09-25T05:25:29.073Z",
+      "last_seen_at": "2026-09-25T03:21:45.124Z",
       "discovery": {
         "distinct_urls": 1,
         "example_urls": [
           "https://digital-strategy.ec.europa.eu/en/policies/ai-office"
         ],
         "origin_counts": {
-          "reading_queue": 4,
-          "prefetch": 1
+          "reading_queue": 4
         },
         "distinct_referring_accounts": 0,
         "sample_referring_accounts": [],
@@ -1772,18 +1771,18 @@
           ]
         },
         "breadth": {
-          "score": 0.14916666666666667,
+          "score": 0.08916666666666666,
           "basis": [
             "distinct_urls:1",
             "distinct_axes:0",
-            "origin_types:2"
+            "origin_types:1"
           ]
         },
         "corroboration": {
-          "score": 0.175,
+          "score": 0.0875,
           "basis": [
             "referring_accounts:0",
-            "origin_types:2"
+            "origin_types:1"
           ]
         },
         "track_record": {
@@ -1807,16 +1806,16 @@
           ]
         },
         "overall": {
-          "score": 0.7021614583333332,
-          "confidence": 0.069575,
+          "score": 0.6808333333333333,
+          "confidence": 0.0491,
           "method": "mechanical_v1",
           "basis": [
             "official_domain_pattern",
             "distinct_urls:1",
             "distinct_axes:0",
-            "origin_types:2",
+            "origin_types:1",
             "referring_accounts:0",
-            "origin_types:2",
+            "origin_types:1",
             "track_record_unavailable"
           ]
         }
@@ -3374,9 +3373,9 @@
       "entity": "T Co",
       "kind": "unknown",
       "first_seen_at": "2016-05-05T18:57:30.000Z",
-      "last_seen_at": "2026-09-25T04:10:05.000Z",
+      "last_seen_at": "2026-09-25T13:06:42.000Z",
       "discovery": {
-        "distinct_urls": 23165,
+        "distinct_urls": 23197,
         "example_urls": [
           "https://t.co/pJSE124ec4",
           "https://t.co/Soz8BXPWaa",
@@ -3385,7 +3384,7 @@
           "https://t.co/cYaqYDRp08"
         ],
         "origin_counts": {
-          "feed_buffer": 21120,
+          "feed_buffer": 21159,
           "feed_buffer_reply": 6451,
           "articles": 3
         },
@@ -3428,7 +3427,7 @@
         "breadth": {
           "score": 0.53,
           "basis": [
-            "distinct_urls:23165",
+            "distinct_urls:23197",
             "distinct_axes:0",
             "origin_types:3"
           ]
@@ -3467,7 +3466,7 @@
           "basis": [
             "unknown_domain_pattern",
             "doi_or_identifier_path_seen",
-            "distinct_urls:23165",
+            "distinct_urls:23197",
             "distinct_axes:0",
             "origin_types:3",
             "referring_accounts:3294",
@@ -5262,7 +5261,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-09-21T22:16:34.577Z",
+        "fetched_at": "2026-09-25T07:44:28.669Z",
         "homepage_url": "https://steampowered.com/",
         "example_url": "https://store.steampowered.com/app/1315180?twclid=2cb8mho5n4udnkq1fnm1yi4kkh",
         "homepage_status": 200,
@@ -5398,7 +5397,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-09-22T00:18:34.421Z",
+        "fetched_at": "2026-09-25T07:44:38.928Z",
         "homepage_url": "https://doubleclick.net/",
         "example_url": "https://ad.doubleclick.net/ddm/trackclk/N117602.5126432X/B34540950.438517562;dc_trk_aid=631787244;dc_trk_cid=249093288;dc_dbm_token=$%7BDC_DBM_TOKEN%7D;dc_lat=;dc_rdid=;tag_for_child_directed_treatment=;tfua=;gdpr=$%7BGDPR%7D;gdpr_consent=$%7BGDPR_CONSENT_755%7D;gpp=$%7BGPP_STRING_755%7D;gpp_sid=$%7BGPP_SID%7D;ltd=;dc_tdv=1?twclid=292cdwzoayexun1iu6o4fsk10z",
         "homepage_status": 200,
@@ -5532,7 +5531,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-09-22T00:18:35.954Z",
+        "fetched_at": "2026-09-25T07:44:40.340Z",
         "homepage_url": "https://github.com/",
         "example_url": "https://github.com/BlockRunAI/ClawRouter/?twclid=2bnr8zsvp3b72fbw0yuil7yilw",
         "homepage_status": 200,
@@ -5654,7 +5653,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-09-22T00:18:37.503Z",
+        "fetched_at": "2026-09-25T07:44:41.966Z",
         "homepage_url": "https://wikipedia.org/",
         "example_url": "https://en.wikipedia.org/wiki/Research",
         "homepage_status": 200,
@@ -5780,7 +5779,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-09-22T00:18:42.148Z",
+        "fetched_at": "2026-09-25T09:44:27.200Z",
         "homepage_url": "https://newsguardtech.com/",
         "example_url": "https://www.newsguardtech.com/",
         "homepage_status": 200,
@@ -5906,7 +5905,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-09-22T02:19:23.641Z",
+        "fetched_at": "2026-09-25T09:44:28.172Z",
         "homepage_url": "https://snopes.com/",
         "example_url": "https://snopes.com/fact-check/strait-of-hormuz-oil-shorts-trump/",
         "homepage_status": 200,
@@ -5942,9 +5941,9 @@
       "entity": "Starlink",
       "kind": "unknown",
       "first_seen_at": "2026-04-07T03:51:50.000Z",
-      "last_seen_at": "2026-09-24T16:32:46.516Z",
+      "last_seen_at": "2026-09-25T07:47:31.302Z",
       "discovery": {
-        "distinct_urls": 2824,
+        "distinct_urls": 2825,
         "example_urls": [
           "https://www.starlink.com/us/residential?referral=RC-DF-9543787-19448-67&utm_medium=paid&utm_campaign=awr_us_soc_twt_ptg_cau&utm_content=awr_us_soc_twt_ptg_cau_res_gvp_v4s_stc_en-us_sdb-bluesky-uptime&twclid=2cg62b1u0oqrypdim5oir1767e",
           "https://www.starlink.com/us/residential?referral=RC-DF-9543787-19448-67&utm_medium=paid&utm_campaign=awr_us_soc_twt_ptg_cau&utm_content=awr_us_soc_twt_ptg_cau_res_gvp_v4s_stc_en-us_sdb-avail-sat-yourhome&twclid=2216n7j93v9absqn77762mm626",
@@ -5954,7 +5953,7 @@
         ],
         "origin_counts": {
           "feed_buffer_reply": 2679,
-          "feed_buffer": 149
+          "feed_buffer": 150
         },
         "distinct_referring_accounts": 5,
         "sample_referring_accounts": [
@@ -5989,7 +5988,7 @@
         "breadth": {
           "score": 0.47,
           "basis": [
-            "distinct_urls:2824",
+            "distinct_urls:2825",
             "distinct_axes:0",
             "origin_types:2"
           ]
@@ -6027,7 +6026,7 @@
           "method": "mechanical_v1",
           "basis": [
             "unknown_domain_pattern",
-            "distinct_urls:2824",
+            "distinct_urls:2825",
             "distinct_axes:0",
             "origin_types:2",
             "referring_accounts:5",
@@ -6037,7 +6036,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-09-22T02:19:24.913Z",
+        "fetched_at": "2026-09-25T09:44:28.812Z",
         "homepage_url": "https://starlink.com/",
         "example_url": "https://www.starlink.com/us/residential?referral=RC-DF-9543787-19448-67&utm_medium=paid&utm_campaign=awr_us_soc_twt_ptg_cau&utm_content=awr_us_soc_twt_ptg_cau_res_gvp_v4s_stc_en-us_sdb-bluesky-uptime&twclid=2cg62b1u0oqrypdim5oir1767e",
         "homepage_status": 200,
@@ -6161,7 +6160,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-09-22T02:19:26.366Z",
+        "fetched_at": "2026-09-25T09:44:31.144Z",
         "homepage_url": "https://reuters.com/",
         "example_url": "https://www.reuters.com/site-search/?query=Evidence-based%20claims%2C%20transparent%20sourcing%2C%20honest%20uncertainty%2C%20good-faith%20argu%20Truth%20and%20Evidence%20in%20Public%20Discourse",
         "homepage_status": 401,
@@ -6319,7 +6318,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-09-22T02:19:26.985Z",
+        "fetched_at": "2026-09-25T12:00:28.272Z",
         "homepage_url": "https://inquirer.net/",
         "example_url": "https://newsinfo.inquirer.net/2266316/nbi-on-cayetano-position-that-cant-be-defended-by-facts-is-done-with-insults",
         "homepage_status": 200,
@@ -6419,16 +6418,16 @@
           ]
         },
         "profile": {
-          "score": 0,
+          "score": 0.33999999999999997,
           "confidence": 0.55,
           "basis": [
             "meta_author:false",
             "published_time:false",
-            "canonical:false",
+            "canonical:true",
             "about:false",
-            "contact:false",
+            "contact:true",
             "corrections:false",
-            "outbound_links:0",
+            "outbound_links:15",
             "opinion_marker:false"
           ]
         },
@@ -6449,33 +6448,33 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-09-22T04:57:27.889Z",
+        "fetched_at": "2026-09-25T12:00:30.348Z",
         "homepage_url": "https://huawei.com/",
         "example_url": "https://www.huawei.com/en/media-center/transform/24/06-jason-lee?utm_medium=psm&utm_source=twitter&utm_campaign=Transform",
-        "homepage_status": null,
-        "example_status": null,
-        "homepage_final_url": "https://huawei.com/",
+        "homepage_status": 200,
+        "example_status": 200,
+        "homepage_final_url": "https://www.huawei.com/en/",
         "example_final_url": "https://www.huawei.com/en/media-center/transform/24/06-jason-lee?utm_medium=psm&utm_source=twitter&utm_campaign=Transform",
-        "homepage_content_type": "",
-        "example_content_type": "",
+        "homepage_content_type": "text/html",
+        "example_content_type": "text/html",
         "homepage": {
           "has_meta_author": false,
           "has_published_time": false,
-          "has_canonical": false,
+          "has_canonical": true,
           "has_about_link": false,
-          "has_contact_link": false,
+          "has_contact_link": true,
           "has_corrections_link": false,
-          "outbound_links_count": 0,
+          "outbound_links_count": 13,
           "opinion_marker": false
         },
         "example": {
           "has_meta_author": false,
           "has_published_time": false,
-          "has_canonical": false,
+          "has_canonical": true,
           "has_about_link": false,
-          "has_contact_link": false,
+          "has_contact_link": true,
           "has_corrections_link": false,
-          "outbound_links_count": 0,
+          "outbound_links_count": 15,
           "opinion_marker": false
         }
       }
@@ -6584,7 +6583,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-09-22T04:57:27.891Z",
+        "fetched_at": "2026-09-25T12:00:50.355Z",
         "homepage_url": "https://relaylab.us/",
         "example_url": "https://relaylab.us/?twclid=26u9kccij1307faosstalj2w2",
         "homepage_status": null,
@@ -6716,19 +6715,19 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-09-22T04:57:27.893Z",
+        "fetched_at": "2026-09-25T12:00:52.391Z",
         "homepage_url": "https://youtu.be/",
         "example_url": "https://youtu.be/m7jAReMF2c8?si=AtT5ue3VPnmZq5V6",
-        "homepage_status": null,
-        "example_status": null,
-        "homepage_final_url": "https://youtu.be/",
-        "example_final_url": "https://youtu.be/m7jAReMF2c8?si=AtT5ue3VPnmZq5V6",
-        "homepage_content_type": "",
-        "example_content_type": "",
+        "homepage_status": 200,
+        "example_status": 200,
+        "homepage_final_url": "https://www.youtube.com/?feature=youtu.be",
+        "example_final_url": "https://www.youtube.com/watch?si=AtT5ue3VPnmZq5V6&v=m7jAReMF2c8&feature=youtu.be",
+        "homepage_content_type": "text/html; charset=utf-8",
+        "example_content_type": "text/html; charset=utf-8",
         "homepage": {
           "has_meta_author": false,
           "has_published_time": false,
-          "has_canonical": false,
+          "has_canonical": true,
           "has_about_link": false,
           "has_contact_link": false,
           "has_corrections_link": false,
@@ -6815,12 +6814,12 @@
           ]
         },
         "profile": {
-          "score": 0,
-          "confidence": 0.55,
+          "score": 0.28,
+          "confidence": 0.65,
           "basis": [
-            "meta_author:false",
+            "meta_author:true",
             "published_time:false",
-            "canonical:false",
+            "canonical:true",
             "about:false",
             "contact:false",
             "corrections:false",
@@ -6845,19 +6844,19 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-09-22T04:57:27.895Z",
+        "fetched_at": "2026-09-25T14:00:28.160Z",
         "homepage_url": "https://rockstargames.com/",
         "example_url": "https://www.rockstargames.com/gta-online?utm_source=Twitter&utm_medium=p_social&utm_campaign=506-kch-pre-release-gift-20260702&utm_content=uk-eng&twclid=21k9dspaz1uqc236nsfftz24wo",
-        "homepage_status": null,
-        "example_status": null,
-        "homepage_final_url": "https://rockstargames.com/",
+        "homepage_status": 200,
+        "example_status": 200,
+        "homepage_final_url": "https://www.rockstargames.com/",
         "example_final_url": "https://www.rockstargames.com/gta-online?utm_source=Twitter&utm_medium=p_social&utm_campaign=506-kch-pre-release-gift-20260702&utm_content=uk-eng&twclid=21k9dspaz1uqc236nsfftz24wo",
-        "homepage_content_type": "",
-        "example_content_type": "",
+        "homepage_content_type": "text/html; charset=UTF-8",
+        "example_content_type": "text/html; charset=UTF-8",
         "homepage": {
-          "has_meta_author": false,
+          "has_meta_author": true,
           "has_published_time": false,
-          "has_canonical": false,
+          "has_canonical": true,
           "has_about_link": false,
           "has_contact_link": false,
           "has_corrections_link": false,
@@ -6865,9 +6864,9 @@
           "opinion_marker": false
         },
         "example": {
-          "has_meta_author": false,
+          "has_meta_author": true,
           "has_published_time": false,
-          "has_canonical": false,
+          "has_canonical": true,
           "has_about_link": false,
           "has_contact_link": false,
           "has_corrections_link": false,
@@ -6974,7 +6973,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-09-22T07:03:53.873Z",
+        "fetched_at": "2026-09-25T14:00:30.017Z",
         "homepage_url": "https://spotify.com/",
         "example_url": "https://open.spotify.com/track/1lRDfbkJbPZGLaVpHbGjjK?si=0bafd2d0d3d04734&twclid=25onvjxx2lh8042z4br4k46xqz",
         "homepage_status": 200,
@@ -7103,7 +7102,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-09-22T07:03:56.137Z",
+        "fetched_at": "2026-09-25T14:00:32.352Z",
         "homepage_url": "https://theepochtimes.com/",
         "example_url": "https://www.theepochtimes.com/china/former-chinese-military-doctor-leaks-ccp-plan-to-use-taiwanese-troops-as-organ-bank-5871639?utm_medium=DigitalMkt&utm_source=twitter&utm_campaign=content_FormerChineseMilitary-karen-20250827&utm_content=img-2_FormerChineseMilitary&utm_term=new-pagevisitor&gl=reg&twclid=2387x75uji9nq8gmjpy9cer691",
         "homepage_status": 200,
@@ -7491,7 +7490,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-09-22T07:03:59.111Z",
+        "fetched_at": "2026-09-25T14:00:36.594Z",
         "homepage_url": "https://tr.ee/",
         "example_url": "https://tr.ee/wndhL7?twclid=22lr9koznm9ghbdy0s9178q7j0",
         "homepage_status": 200,
@@ -7507,7 +7506,7 @@
           "has_about_link": true,
           "has_contact_link": true,
           "has_corrections_link": false,
-          "outbound_links_count": 78,
+          "outbound_links_count": 80,
           "opinion_marker": false
         },
         "example": {
@@ -7904,6 +7903,135 @@
           "has_contact_link": true,
           "has_corrections_link": false,
           "outbound_links_count": 5,
+          "opinion_marker": false
+        }
+      }
+    },
+    {
+      "domain": "deepmind.google",
+      "entity": "Deepmind Google",
+      "kind": "unknown",
+      "first_seen_at": "2026-09-20T12:09:35.040Z",
+      "last_seen_at": "2026-09-25T14:00:27.534Z",
+      "discovery": {
+        "distinct_urls": 5,
+        "example_urls": [
+          "https://deepmind.google/blog/finding-the-molecular-switches-behind-new-infectious-diseases/",
+          "https://deepmind.google/about/responsibility-safety/",
+          "https://deepmind.google/blog/introducing-gemini-omni/",
+          "https://deepmind.google/blog/introducing-computer-use-in-gemini-3-5-flash/",
+          "https://deepmind.google/blog/gemini-3-5-frontier-intelligence-with-action/"
+        ],
+        "origin_counts": {
+          "ontology_evidence": 1,
+          "reading_queue": 3,
+          "journals": 4,
+          "prefetch": 1
+        },
+        "distinct_referring_accounts": 0,
+        "sample_referring_accounts": [],
+        "distinct_axes": [
+          "axis_safety_verification_v1"
+        ]
+      },
+      "claims": {
+        "total": 0,
+        "supported": 0,
+        "refuted": 0,
+        "contested": 0,
+        "unverified": 0,
+        "resolved_count": 0
+      },
+      "structural_features": {
+        "has_search_paths": false,
+        "has_article_paths": false,
+        "has_doi_paths": false
+      },
+      "ratings": {
+        "provenance": {
+          "score": 0.45,
+          "basis": [
+            "unknown_domain_pattern"
+          ]
+        },
+        "breadth": {
+          "score": 0.44416666666666665,
+          "basis": [
+            "distinct_urls:5",
+            "distinct_axes:1",
+            "origin_types:4"
+          ]
+        },
+        "corroboration": {
+          "score": 0.35,
+          "basis": [
+            "referring_accounts:0",
+            "origin_types:4"
+          ]
+        },
+        "track_record": {
+          "score": null,
+          "basis": [
+            "no_resolved_claims_observed"
+          ]
+        },
+        "profile": {
+          "score": 0.44,
+          "confidence": 0.75,
+          "basis": [
+            "meta_author:false",
+            "published_time:true",
+            "canonical:false",
+            "about:true",
+            "contact:false",
+            "corrections:false",
+            "outbound_links:14",
+            "opinion_marker:false"
+          ]
+        },
+        "overall": {
+          "score": 0.4393489583333333,
+          "confidence": 0.23727499999999996,
+          "method": "mechanical_v1",
+          "basis": [
+            "unknown_domain_pattern",
+            "distinct_urls:5",
+            "distinct_axes:1",
+            "origin_types:4",
+            "referring_accounts:0",
+            "origin_types:4",
+            "track_record_unavailable"
+          ]
+        }
+      },
+      "profile": {
+        "fetched_at": "2026-09-21T00:07:10.130Z",
+        "homepage_url": "https://deepmind.google/",
+        "example_url": "https://deepmind.google/blog/finding-the-molecular-switches-behind-new-infectious-diseases/",
+        "homepage_status": 200,
+        "example_status": 200,
+        "homepage_final_url": "https://deepmind.google/",
+        "example_final_url": "https://deepmind.google/blog/finding-the-molecular-switches-behind-new-infectious-diseases/",
+        "homepage_content_type": "text/html",
+        "example_content_type": "text/html",
+        "homepage": {
+          "has_meta_author": false,
+          "has_published_time": true,
+          "has_canonical": false,
+          "has_about_link": true,
+          "has_contact_link": false,
+          "has_corrections_link": false,
+          "outbound_links_count": 29,
+          "opinion_marker": false
+        },
+        "example": {
+          "has_meta_author": false,
+          "has_published_time": true,
+          "has_canonical": false,
+          "has_about_link": true,
+          "has_contact_link": false,
+          "has_corrections_link": false,
+          "outbound_links_count": 14,
           "opinion_marker": false
         }
       }
@@ -8802,9 +8930,9 @@
       "entity": "Ptgaming Ph",
       "kind": "unknown",
       "first_seen_at": "2026-07-05T04:59:47.736Z",
-      "last_seen_at": "2026-09-23T13:02:30.060Z",
+      "last_seen_at": "2026-09-25T08:52:32.612Z",
       "discovery": {
-        "distinct_urls": 47,
+        "distinct_urls": 48,
         "example_urls": [
           "https://www.ptgaming.ph/?twclid=21n3lg1hcl64ox73kjyr4lggz9",
           "https://www.ptgaming.ph/?twclid=25vb0w4jbmtupw5yokwy2fjbcq",
@@ -8813,7 +8941,7 @@
           "https://www.ptgaming.ph/?twclid=26sb1wpgds50ggj6udc2c7m358"
         ],
         "origin_counts": {
-          "feed_buffer": 18,
+          "feed_buffer": 19,
           "feed_buffer_reply": 29
         },
         "distinct_referring_accounts": 1,
@@ -8845,7 +8973,7 @@
         "breadth": {
           "score": 0.47,
           "basis": [
-            "distinct_urls:47",
+            "distinct_urls:48",
             "distinct_axes:0",
             "origin_types:2"
           ]
@@ -8883,7 +9011,7 @@
           "method": "mechanical_v1",
           "basis": [
             "unknown_domain_pattern",
-            "distinct_urls:47",
+            "distinct_urls:48",
             "distinct_axes:0",
             "origin_types:2",
             "referring_accounts:1",
@@ -10834,9 +10962,9 @@
       "entity": "Imbue",
       "kind": "unknown",
       "first_seen_at": "2026-07-10T02:02:24.517Z",
-      "last_seen_at": "2026-09-19T12:42:04.874Z",
+      "last_seen_at": "2026-09-25T08:42:34.144Z",
       "discovery": {
-        "distinct_urls": 19,
+        "distinct_urls": 20,
         "example_urls": [
           "https://imbue.com/product/bouncer/redirect.html?utm_source=x&utm_medium=paid_social&utm_campaign=omni&authuser=0&hl=en&twclid=28wps3duhy1q7hzrcdj2h5pxpl",
           "https://imbue.com/product/bouncer/redirect.html?utm_source=x&utm_campaign=omni_redirect_garb&authuser=0&hl=en&twclid=22x2rpdpk6869weht7xv9qxc64",
@@ -10845,7 +10973,7 @@
           "https://imbue.com/product/bouncer/redirect.html?utm_source=x&utm_campaign=omni_redirect_garb&authuser=0&hl=en&twclid=21vnj6c6qh2t3kmuo81kvepqzx"
         ],
         "origin_counts": {
-          "feed_buffer": 15,
+          "feed_buffer": 16,
           "feed_buffer_reply": 4
         },
         "distinct_referring_accounts": 1,
@@ -10877,7 +11005,7 @@
         "breadth": {
           "score": 0.47,
           "basis": [
-            "distinct_urls:19",
+            "distinct_urls:20",
             "distinct_axes:0",
             "origin_types:2"
           ]
@@ -10915,7 +11043,7 @@
           "method": "mechanical_v1",
           "basis": [
             "unknown_domain_pattern",
-            "distinct_urls:19",
+            "distinct_urls:20",
             "distinct_axes:0",
             "origin_types:2",
             "referring_accounts:1",
@@ -26542,132 +26670,6 @@
           "has_contact_link": false,
           "has_corrections_link": false,
           "outbound_links_count": 0,
-          "opinion_marker": false
-        }
-      }
-    },
-    {
-      "domain": "deepmind.google",
-      "entity": "Deepmind Google",
-      "kind": "unknown",
-      "first_seen_at": "2026-09-20T12:09:35.040Z",
-      "last_seen_at": "2026-09-21T00:07:46.299Z",
-      "discovery": {
-        "distinct_urls": 4,
-        "example_urls": [
-          "https://deepmind.google/blog/finding-the-molecular-switches-behind-new-infectious-diseases/",
-          "https://deepmind.google/blog/introducing-gemini-omni/",
-          "https://deepmind.google/blog/introducing-computer-use-in-gemini-3-5-flash/",
-          "https://deepmind.google/blog/gemini-3-5-frontier-intelligence-with-action/"
-        ],
-        "origin_counts": {
-          "ontology_evidence": 1,
-          "journals": 4
-        },
-        "distinct_referring_accounts": 0,
-        "sample_referring_accounts": [],
-        "distinct_axes": [
-          "axis_safety_verification_v1"
-        ]
-      },
-      "claims": {
-        "total": 0,
-        "supported": 0,
-        "refuted": 0,
-        "contested": 0,
-        "unverified": 0,
-        "resolved_count": 0
-      },
-      "structural_features": {
-        "has_search_paths": false,
-        "has_article_paths": false,
-        "has_doi_paths": false
-      },
-      "ratings": {
-        "provenance": {
-          "score": 0.45,
-          "basis": [
-            "unknown_domain_pattern"
-          ]
-        },
-        "breadth": {
-          "score": 0.295,
-          "basis": [
-            "distinct_urls:4",
-            "distinct_axes:1",
-            "origin_types:2"
-          ]
-        },
-        "corroboration": {
-          "score": 0.175,
-          "basis": [
-            "referring_accounts:0",
-            "origin_types:2"
-          ]
-        },
-        "track_record": {
-          "score": null,
-          "basis": [
-            "no_resolved_claims_observed"
-          ]
-        },
-        "profile": {
-          "score": 0.44,
-          "confidence": 0.75,
-          "basis": [
-            "meta_author:false",
-            "published_time:true",
-            "canonical:false",
-            "about:true",
-            "contact:false",
-            "corrections:false",
-            "outbound_links:14",
-            "opinion_marker:false"
-          ]
-        },
-        "overall": {
-          "score": 0.3903125,
-          "confidence": 0.16770000000000002,
-          "method": "mechanical_v1",
-          "basis": [
-            "unknown_domain_pattern",
-            "distinct_urls:4",
-            "distinct_axes:1",
-            "origin_types:2",
-            "referring_accounts:0",
-            "origin_types:2",
-            "track_record_unavailable"
-          ]
-        }
-      },
-      "profile": {
-        "fetched_at": "2026-09-21T00:07:10.130Z",
-        "homepage_url": "https://deepmind.google/",
-        "example_url": "https://deepmind.google/blog/finding-the-molecular-switches-behind-new-infectious-diseases/",
-        "homepage_status": 200,
-        "example_status": 200,
-        "homepage_final_url": "https://deepmind.google/",
-        "example_final_url": "https://deepmind.google/blog/finding-the-molecular-switches-behind-new-infectious-diseases/",
-        "homepage_content_type": "text/html",
-        "example_content_type": "text/html",
-        "homepage": {
-          "has_meta_author": false,
-          "has_published_time": true,
-          "has_canonical": false,
-          "has_about_link": true,
-          "has_contact_link": false,
-          "has_corrections_link": false,
-          "outbound_links_count": 29,
-          "opinion_marker": false
-        },
-        "example": {
-          "has_meta_author": false,
-          "has_published_time": true,
-          "has_canonical": false,
-          "has_about_link": true,
-          "has_contact_link": false,
-          "has_corrections_link": false,
-          "outbound_links_count": 14,
           "opinion_marker": false
         }
       }
@@ -42648,7 +42650,7 @@
       "entity": "Alignmentforum",
       "kind": "unknown",
       "first_seen_at": "2026-09-20T06:09:13.737Z",
-      "last_seen_at": "2026-09-24T22:27:22.286Z",
+      "last_seen_at": "2026-09-25T05:25:45.248Z",
       "discovery": {
         "distinct_urls": 6,
         "example_urls": [
@@ -42659,7 +42661,7 @@
           "https://www.alignmentforum.org/posts/6m29SfjbittooYojj/latent-reasoning-architectures-would-undermine-cot-our"
         ],
         "origin_counts": {
-          "reading_queue": 16
+          "reading_queue": 18
         },
         "distinct_referring_accounts": 0,
         "sample_referring_accounts": [],
@@ -45709,6 +45711,86 @@
       }
     },
     {
+      "domain": "swiftconcurrencyplaybook.com",
+      "entity": "Swiftconcurrencyplaybook",
+      "kind": "unknown",
+      "first_seen_at": "2026-07-13T18:58:45.970Z",
+      "last_seen_at": "2026-09-25T12:28:33.180Z",
+      "discovery": {
+        "distinct_urls": 4,
+        "example_urls": [
+          "https://www.swiftconcurrencyplaybook.com/?utm_source=x&utm_medium=paid.ad&utm_content=playbook_avoid_freezes&ref=x_ad_avoid_freezes&utm_campaign=awareness&ad_id=nslcmbo2cq&twclid=28tlsb9ssetqt4f8reixswlh55",
+          "https://www.swiftconcurrencyplaybook.com/?utm_source=x&utm_medium=paid.ad&utm_content=playbook_avoid_freezes&ref=x_ad_avoid_freezes&utm_campaign=awareness&ad_id=nslcmbo2cq&twclid=259twvn4o5up4gitg6iz03clz9",
+          "https://www.swiftconcurrencyplaybook.com/?utm_source=twitter-ads&utm_medium=paid.ad&utm_content=playbook_task_modifier&utm_campaign=awareness&ref=x_ad_task_modifier&source=twitter-ads&ad_id=mg1tyt7ulu&twclid=27fvrw0gqf2863s13zhw92fnb",
+          "https://www.swiftconcurrencyplaybook.com/?utm_source=x&utm_medium=paid.ad&utm_content=playbook_avoid_freezes&ref=x_ad_avoid_freezes&utm_campaign=awareness&ad_id=nslcmbo2cq&twclid=2bba3fn8bk7glb73m39wu2wryu"
+        ],
+        "origin_counts": {
+          "feed_buffer": 4
+        },
+        "distinct_referring_accounts": 1,
+        "sample_referring_accounts": [
+          "twannl"
+        ],
+        "distinct_axes": []
+      },
+      "claims": {
+        "total": 0,
+        "supported": 0,
+        "refuted": 0,
+        "contested": 0,
+        "unverified": 0,
+        "resolved_count": 0
+      },
+      "structural_features": {
+        "has_search_paths": false,
+        "has_article_paths": false,
+        "has_doi_paths": false
+      },
+      "ratings": {
+        "provenance": {
+          "score": 0.45,
+          "basis": [
+            "unknown_domain_pattern"
+          ]
+        },
+        "breadth": {
+          "score": 0.17666666666666664,
+          "basis": [
+            "distinct_urls:4",
+            "distinct_axes:0",
+            "origin_types:1"
+          ]
+        },
+        "corroboration": {
+          "score": 0.19583333333333333,
+          "basis": [
+            "referring_accounts:1",
+            "origin_types:1"
+          ]
+        },
+        "track_record": {
+          "score": null,
+          "basis": [
+            "no_resolved_claims_observed"
+          ]
+        },
+        "overall": {
+          "score": 0.3663802083333333,
+          "confidence": 0.16722499999999998,
+          "method": "mechanical_v1",
+          "basis": [
+            "unknown_domain_pattern",
+            "distinct_urls:4",
+            "distinct_axes:0",
+            "origin_types:1",
+            "referring_accounts:1",
+            "origin_types:1",
+            "track_record_unavailable"
+          ]
+        }
+      }
+    },
+    {
       "domain": "noomeva.com",
       "entity": "Noomeva",
       "kind": "unknown",
@@ -47283,7 +47365,7 @@
       "entity": "Redwoodresearch",
       "kind": "unknown",
       "first_seen_at": "2026-09-23T09:35:17.266Z",
-      "last_seen_at": "2026-09-23T09:35:17.266Z",
+      "last_seen_at": "2026-09-25T07:44:47.864Z",
       "discovery": {
         "distinct_urls": 5,
         "example_urls": [
@@ -47294,7 +47376,7 @@
           "https://blog.redwoodresearch.org/p/continual-learning-might-make-your"
         ],
         "origin_counts": {
-          "reading_queue": 7
+          "reading_queue": 9
         },
         "distinct_referring_accounts": 0,
         "sample_referring_accounts": [],
@@ -50408,85 +50490,6 @@
           "has_corrections_link": false,
           "outbound_links_count": 16,
           "opinion_marker": false
-        }
-      }
-    },
-    {
-      "domain": "swiftconcurrencyplaybook.com",
-      "entity": "Swiftconcurrencyplaybook",
-      "kind": "unknown",
-      "first_seen_at": "2026-07-13T18:58:45.970Z",
-      "last_seen_at": "2026-09-03T22:33:59.379Z",
-      "discovery": {
-        "distinct_urls": 3,
-        "example_urls": [
-          "https://www.swiftconcurrencyplaybook.com/?utm_source=x&utm_medium=paid.ad&utm_content=playbook_avoid_freezes&ref=x_ad_avoid_freezes&utm_campaign=awareness&ad_id=nslcmbo2cq&twclid=28tlsb9ssetqt4f8reixswlh55",
-          "https://www.swiftconcurrencyplaybook.com/?utm_source=x&utm_medium=paid.ad&utm_content=playbook_avoid_freezes&ref=x_ad_avoid_freezes&utm_campaign=awareness&ad_id=nslcmbo2cq&twclid=259twvn4o5up4gitg6iz03clz9",
-          "https://www.swiftconcurrencyplaybook.com/?utm_source=twitter-ads&utm_medium=paid.ad&utm_content=playbook_task_modifier&utm_campaign=awareness&ref=x_ad_task_modifier&source=twitter-ads&ad_id=mg1tyt7ulu&twclid=27fvrw0gqf2863s13zhw92fnb"
-        ],
-        "origin_counts": {
-          "feed_buffer": 3
-        },
-        "distinct_referring_accounts": 1,
-        "sample_referring_accounts": [
-          "twannl"
-        ],
-        "distinct_axes": []
-      },
-      "claims": {
-        "total": 0,
-        "supported": 0,
-        "refuted": 0,
-        "contested": 0,
-        "unverified": 0,
-        "resolved_count": 0
-      },
-      "structural_features": {
-        "has_search_paths": false,
-        "has_article_paths": false,
-        "has_doi_paths": false
-      },
-      "ratings": {
-        "provenance": {
-          "score": 0.45,
-          "basis": [
-            "unknown_domain_pattern"
-          ]
-        },
-        "breadth": {
-          "score": 0.1475,
-          "basis": [
-            "distinct_urls:3",
-            "distinct_axes:0",
-            "origin_types:1"
-          ]
-        },
-        "corroboration": {
-          "score": 0.19583333333333333,
-          "basis": [
-            "referring_accounts:1",
-            "origin_types:1"
-          ]
-        },
-        "track_record": {
-          "score": null,
-          "basis": [
-            "no_resolved_claims_observed"
-          ]
-        },
-        "overall": {
-          "score": 0.36000000000000004,
-          "confidence": 0.1386,
-          "method": "mechanical_v1",
-          "basis": [
-            "unknown_domain_pattern",
-            "distinct_urls:3",
-            "distinct_axes:0",
-            "origin_types:1",
-            "referring_accounts:1",
-            "origin_types:1",
-            "track_record_unavailable"
-          ]
         }
       }
     },
@@ -96187,6 +96190,83 @@
         ],
         "origin_counts": {
           "feed_buffer": 2
+        },
+        "distinct_referring_accounts": 1,
+        "sample_referring_accounts": [
+          "huawei"
+        ],
+        "distinct_axes": []
+      },
+      "claims": {
+        "total": 0,
+        "supported": 0,
+        "refuted": 0,
+        "contested": 0,
+        "unverified": 0,
+        "resolved_count": 0
+      },
+      "structural_features": {
+        "has_search_paths": false,
+        "has_article_paths": false,
+        "has_doi_paths": false
+      },
+      "ratings": {
+        "provenance": {
+          "score": 0.45,
+          "basis": [
+            "unknown_domain_pattern"
+          ]
+        },
+        "breadth": {
+          "score": 0.08916666666666666,
+          "basis": [
+            "distinct_urls:1",
+            "distinct_axes:0",
+            "origin_types:1"
+          ]
+        },
+        "corroboration": {
+          "score": 0.19583333333333333,
+          "basis": [
+            "referring_accounts:1",
+            "origin_types:1"
+          ]
+        },
+        "track_record": {
+          "score": null,
+          "basis": [
+            "no_resolved_claims_observed"
+          ]
+        },
+        "overall": {
+          "score": 0.3472395833333333,
+          "confidence": 0.08135,
+          "method": "mechanical_v1",
+          "basis": [
+            "unknown_domain_pattern",
+            "distinct_urls:1",
+            "distinct_axes:0",
+            "origin_types:1",
+            "referring_accounts:1",
+            "origin_types:1",
+            "track_record_unavailable"
+          ]
+        }
+      }
+    },
+    {
+      "domain": "aimagazine.com",
+      "entity": "Aimagazine",
+      "kind": "unknown",
+      "first_seen_at": "2026-09-25T07:28:46.000Z",
+      "last_seen_at": "2026-09-25T07:28:46.000Z",
+      "discovery": {
+        "distinct_urls": 1,
+        "example_urls": [
+          "https://aimagazine.com/news/what-is-huaweis-new-ai-infrastructure-strategy"
+        ],
+        "origin_counts": {
+          "feed_buffer": 1
         },
         "distinct_referring_accounts": 1,
         "sample_referring_accounts": [

@@ -1,15 +1,36 @@
 {
   "version": 1,
-  "cycle": 6396,
-  "updated_at": "2026-09-25T05:25:39.975Z",
-  "skipped_reason": "cycle_gate:3",
-  "selected_axis_id": null,
-  "selected_axis_label": null,
-  "bundle": null,
-  "query": null,
-  "candidates": [],
-  "queued_url": null,
-  "queued_source": null,
+  "cycle": 6400,
+  "updated_at": "2026-09-25T14:00:36.679Z",
+  "skipped_reason": null,
+  "selected_axis_id": "axis_alignment_tractability_v1",
+  "selected_axis_label": "Literature synthesis",
+  "bundle": "agenda",
+  "query": "AI control protocol",
+  "candidates": [
+    {
+      "label": "Anthropic alignment blog",
+      "url": "https://alignment.anthropic.com/"
+    },
+    {
+      "label": "Apollo Research",
+      "url": "https://www.apolloresearch.ai/blog"
+    },
+    {
+      "label": "FAR.AI",
+      "url": "https://far.ai/news"
+    },
+    {
+      "label": "CAIS research",
+      "url": "https://www.safe.ai/work/research"
+    },
+    {
+      "label": "arXiv",
+      "url": "https://arxiv.org/search/?query=AI%20control%20protocol&searchtype=all&abstracts=show&order=-announced_date_first&size=50"
+    }
+  ],
+  "queued_url": "https://far.ai/news",
+  "queued_source": "FAR.AI",
   "history": [
     {
       "ts": "2026-09-20T03:16:16.243Z",
@@ -100,6 +121,24 @@
       "source": "EU AI Office",
       "url": "https://digital-strategy.ec.europa.eu/en/policies/ai-office",
       "query": "AI safety institute evaluations"
+    },
+    {
+      "ts": "2026-09-25T07:44:42.048Z",
+      "axis_id": "axis_ai_lab_commitments_v1",
+      "axis_label": "Lab accountability",
+      "bundle": "agenda",
+      "source": "Google DeepMind safety",
+      "url": "https://deepmind.google/about/responsibility-safety/",
+      "query": "system card evaluation"
+    },
+    {
+      "ts": "2026-09-25T14:00:36.685Z",
+      "axis_id": "axis_alignment_tractability_v1",
+      "axis_label": "Literature synthesis",
+      "bundle": "agenda",
+      "source": "FAR.AI",
+      "url": "https://far.ai/news",
+      "query": "AI control protocol"
     }
   ]
 }
