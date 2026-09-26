@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "cycle": 6402,
-  "updated_at": "2026-09-25T18:01:11.138Z",
+  "cycle": 6408,
+  "updated_at": "2026-09-26T09:58:16.578Z",
   "skipped_reason": "cycle_gate:3",
   "selected_axis_id": null,
   "selected_axis_label": null,
@@ -118,6 +118,24 @@
       "source": "FAR.AI",
       "url": "https://far.ai/news",
       "query": "AI control protocol"
+    },
+    {
+      "ts": "2026-09-25T21:12:08.174Z",
+      "axis_id": "axis_ai_progress_pace_v1",
+      "axis_label": "Forecasting",
+      "bundle": "agenda",
+      "source": "METR research",
+      "url": "https://metr.org/research",
+      "query": "LLM benchmark saturation"
+    },
+    {
+      "ts": "2026-09-26T05:21:48.452Z",
+      "axis_id": "axis_agent_self_reliability_v1",
+      "axis_label": "Self-study",
+      "bundle": "agenda",
+      "source": "arXiv",
+      "url": "https://arxiv.org/search/?query=autonomous%20agent%20failure%20modes&searchtype=all&abstracts=show&order=-announced_date_first&size=50",
+      "query": "autonomous agent failure modes"
     }
   ]
 }
