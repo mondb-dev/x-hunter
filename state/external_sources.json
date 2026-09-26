@@ -1,8 +1,8 @@
 {
   "schema_version": "1.0",
-  "generated_at": "2026-09-26T09:58:09.234Z",
+  "generated_at": "2026-09-26T15:23:42.555Z",
   "method": "mechanical_registry_v1",
-  "profiled_at": "2026-09-26T09:58:16.493Z",
+  "profiled_at": "2026-09-26T15:23:49.619Z",
   "sources": [
     {
       "domain": "arxiv.org",
@@ -3375,7 +3375,7 @@
       "first_seen_at": "2016-05-05T18:57:30.000Z",
       "last_seen_at": "2026-09-26T09:27:36.000Z",
       "discovery": {
-        "distinct_urls": 23267,
+        "distinct_urls": 23275,
         "example_urls": [
           "https://t.co/pJSE124ec4",
           "https://t.co/Soz8BXPWaa",
@@ -3384,7 +3384,7 @@
           "https://t.co/cYaqYDRp08"
         ],
         "origin_counts": {
-          "feed_buffer": 21253,
+          "feed_buffer": 21262,
           "feed_buffer_reply": 6451,
           "articles": 3
         },
@@ -3427,7 +3427,7 @@
         "breadth": {
           "score": 0.53,
           "basis": [
-            "distinct_urls:23267",
+            "distinct_urls:23275",
             "distinct_axes:0",
             "origin_types:3"
           ]
@@ -3466,7 +3466,7 @@
           "basis": [
             "unknown_domain_pattern",
             "doi_or_identifier_path_seen",
-            "distinct_urls:23267",
+            "distinct_urls:23275",
             "distinct_axes:0",
             "origin_types:3",
             "referring_accounts:3295",
@@ -3500,139 +3500,6 @@
           "has_published_time": false,
           "has_canonical": true,
           "has_about_link": false,
-          "has_contact_link": false,
-          "has_corrections_link": false,
-          "outbound_links_count": 5,
-          "opinion_marker": false
-        }
-      }
-    },
-    {
-      "domain": "metr.org",
-      "entity": "Metr",
-      "kind": "unknown",
-      "first_seen_at": "2026-09-20T10:08:40.424Z",
-      "last_seen_at": "2026-09-26T09:58:09.218Z",
-      "discovery": {
-        "distinct_urls": 16,
-        "example_urls": [
-          "https://metr.org/blog/2026-03-26-red-teaming-anthropic-agent-monitoring/",
-          "https://metr.org/notes/2026-02-10-simpler-ai-timelines-model/",
-          "https://metr.org/blog/2025-03-19-measuring-ai-ability-to-complete-long-tasks/",
-          "https://metr.org/blog/2026-08-31-security-update/",
-          "https://metr.org/notes/2026-07-08-anthropic-researcher-uplift/"
-        ],
-        "origin_counts": {
-          "ontology_evidence": 3,
-          "reading_queue": 24,
-          "journals": 4,
-          "articles": 1,
-          "prefetch": 1
-        },
-        "distinct_referring_accounts": 0,
-        "sample_referring_accounts": [],
-        "distinct_axes": [
-          "axis_ai_progress_pace_v1",
-          "axis_safety_verification_v1"
-        ]
-      },
-      "claims": {
-        "total": 0,
-        "supported": 0,
-        "refuted": 0,
-        "contested": 0,
-        "unverified": 0,
-        "resolved_count": 0
-      },
-      "structural_features": {
-        "has_search_paths": false,
-        "has_article_paths": true,
-        "has_doi_paths": false
-      },
-      "ratings": {
-        "provenance": {
-          "score": 0.48,
-          "basis": [
-            "unknown_domain_pattern",
-            "article_path_seen"
-          ]
-        },
-        "breadth": {
-          "score": 0.7666666666666666,
-          "basis": [
-            "distinct_urls:16",
-            "distinct_axes:2",
-            "origin_types:5"
-          ]
-        },
-        "corroboration": {
-          "score": 0.35,
-          "basis": [
-            "referring_accounts:0",
-            "origin_types:5"
-          ]
-        },
-        "track_record": {
-          "score": null,
-          "basis": [
-            "no_resolved_claims_observed"
-          ]
-        },
-        "profile": {
-          "score": 0.29000000000000004,
-          "confidence": 0.65,
-          "basis": [
-            "meta_author:false",
-            "published_time:false",
-            "canonical:true",
-            "about:true",
-            "contact:false",
-            "corrections:false",
-            "outbound_links:5",
-            "opinion_marker:false"
-          ]
-        },
-        "overall": {
-          "score": 0.5305208333333333,
-          "confidence": 0.5525,
-          "method": "mechanical_v1",
-          "basis": [
-            "unknown_domain_pattern",
-            "article_path_seen",
-            "distinct_urls:16",
-            "distinct_axes:2",
-            "origin_types:5",
-            "referring_accounts:0",
-            "origin_types:5",
-            "track_record_unavailable"
-          ]
-        }
-      },
-      "profile": {
-        "fetched_at": "2026-09-23T15:34:16.951Z",
-        "homepage_url": "https://metr.org/",
-        "example_url": "https://metr.org/blog/2026-03-26-red-teaming-anthropic-agent-monitoring/",
-        "homepage_status": 200,
-        "example_status": 404,
-        "homepage_final_url": "https://metr.org/",
-        "example_final_url": "https://metr.org/blog/2026-03-26-red-teaming-anthropic-agent-monitoring/",
-        "homepage_content_type": "text/html; charset=UTF-8",
-        "example_content_type": "text/html; charset=utf-8",
-        "homepage": {
-          "has_meta_author": false,
-          "has_published_time": false,
-          "has_canonical": true,
-          "has_about_link": true,
-          "has_contact_link": false,
-          "has_corrections_link": false,
-          "outbound_links_count": 39,
-          "opinion_marker": false
-        },
-        "example": {
-          "has_meta_author": false,
-          "has_published_time": false,
-          "has_canonical": true,
-          "has_about_link": true,
           "has_contact_link": false,
           "has_corrections_link": false,
           "outbound_links_count": 5,
@@ -4072,6 +3939,138 @@
           "has_published_time": true,
           "has_canonical": true,
           "has_about_link": false,
+          "has_contact_link": false,
+          "has_corrections_link": false,
+          "outbound_links_count": 5,
+          "opinion_marker": false
+        }
+      }
+    },
+    {
+      "domain": "metr.org",
+      "entity": "Metr",
+      "kind": "unknown",
+      "first_seen_at": "2026-09-20T10:08:40.424Z",
+      "last_seen_at": "2026-09-25T21:14:08.448Z",
+      "discovery": {
+        "distinct_urls": 16,
+        "example_urls": [
+          "https://metr.org/blog/2026-03-26-red-teaming-anthropic-agent-monitoring/",
+          "https://metr.org/notes/2026-02-10-simpler-ai-timelines-model/",
+          "https://metr.org/blog/2025-03-19-measuring-ai-ability-to-complete-long-tasks/",
+          "https://metr.org/blog/2026-08-31-security-update/",
+          "https://metr.org/notes/2026-07-08-anthropic-researcher-uplift/"
+        ],
+        "origin_counts": {
+          "ontology_evidence": 3,
+          "reading_queue": 24,
+          "journals": 4,
+          "articles": 1
+        },
+        "distinct_referring_accounts": 0,
+        "sample_referring_accounts": [],
+        "distinct_axes": [
+          "axis_ai_progress_pace_v1",
+          "axis_safety_verification_v1"
+        ]
+      },
+      "claims": {
+        "total": 0,
+        "supported": 0,
+        "refuted": 0,
+        "contested": 0,
+        "unverified": 0,
+        "resolved_count": 0
+      },
+      "structural_features": {
+        "has_search_paths": false,
+        "has_article_paths": true,
+        "has_doi_paths": false
+      },
+      "ratings": {
+        "provenance": {
+          "score": 0.48,
+          "basis": [
+            "unknown_domain_pattern",
+            "article_path_seen"
+          ]
+        },
+        "breadth": {
+          "score": 0.7066666666666666,
+          "basis": [
+            "distinct_urls:16",
+            "distinct_axes:2",
+            "origin_types:4"
+          ]
+        },
+        "corroboration": {
+          "score": 0.35,
+          "basis": [
+            "referring_accounts:0",
+            "origin_types:4"
+          ]
+        },
+        "track_record": {
+          "score": null,
+          "basis": [
+            "no_resolved_claims_observed"
+          ]
+        },
+        "profile": {
+          "score": 0.29000000000000004,
+          "confidence": 0.65,
+          "basis": [
+            "meta_author:false",
+            "published_time:false",
+            "canonical:true",
+            "about:true",
+            "contact:false",
+            "corrections:false",
+            "outbound_links:5",
+            "opinion_marker:false"
+          ]
+        },
+        "overall": {
+          "score": 0.5173958333333333,
+          "confidence": 0.5399,
+          "method": "mechanical_v1",
+          "basis": [
+            "unknown_domain_pattern",
+            "article_path_seen",
+            "distinct_urls:16",
+            "distinct_axes:2",
+            "origin_types:4",
+            "referring_accounts:0",
+            "origin_types:4",
+            "track_record_unavailable"
+          ]
+        }
+      },
+      "profile": {
+        "fetched_at": "2026-09-23T15:34:16.951Z",
+        "homepage_url": "https://metr.org/",
+        "example_url": "https://metr.org/blog/2026-03-26-red-teaming-anthropic-agent-monitoring/",
+        "homepage_status": 200,
+        "example_status": 404,
+        "homepage_final_url": "https://metr.org/",
+        "example_final_url": "https://metr.org/blog/2026-03-26-red-teaming-anthropic-agent-monitoring/",
+        "homepage_content_type": "text/html; charset=UTF-8",
+        "example_content_type": "text/html; charset=utf-8",
+        "homepage": {
+          "has_meta_author": false,
+          "has_published_time": false,
+          "has_canonical": true,
+          "has_about_link": true,
+          "has_contact_link": false,
+          "has_corrections_link": false,
+          "outbound_links_count": 39,
+          "opinion_marker": false
+        },
+        "example": {
+          "has_meta_author": false,
+          "has_published_time": false,
+          "has_canonical": true,
+          "has_about_link": true,
           "has_contact_link": false,
           "has_corrections_link": false,
           "outbound_links_count": 5,
@@ -11433,7 +11432,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-09-23T07:33:05.231Z",
+        "fetched_at": "2026-09-26T15:23:43.757Z",
         "homepage_url": "https://parksystems.com/",
         "example_url": "https://www.parksystems.com/en/products/research-afm/small-sample-afm/fx40?utm_source=paid-x&utm_medium=social&utm_campaign=hq-FX40_paper_Autonomous_AI-DrivenAFM_260701-2026-06-15-CM005+&twclid=26i21embi38s4z9rci48kmjdf8",
         "homepage_status": 200,
@@ -11560,7 +11559,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-09-23T07:33:05.564Z",
+        "fetched_at": "2026-09-26T15:23:44.121Z",
         "homepage_url": "https://walrus.xyz/",
         "example_url": "https://memory.walrus.xyz/?utm_source=twitter&utm_medium=paid_social&utm_campaign=walrus_memory&twclid=25m14v5tjdgue38tcgv9nyht3e",
         "homepage_status": 200,
@@ -11687,7 +11686,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-09-23T09:35:04.108Z",
+        "fetched_at": "2026-09-26T15:23:47.714Z",
         "homepage_url": "https://fx-edge.com/",
         "example_url": "https://fx-edge.com/prop-liquidity/?utm_source=twitter&utm_medium=ppc&utm_campaign=prop_liquidity&twclid=2232cmky8wi7upvvrdlud3bfsm",
         "homepage_status": 200,
@@ -11814,7 +11813,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-09-23T09:35:07.074Z",
+        "fetched_at": "2026-09-26T15:23:49.619Z",
         "homepage_url": "https://icmarkets.com/",
         "example_url": "https://www.icmarkets.com/global/en/trade-stocks/?utm_source=twitter&utm_medium=twitter&utm_campaign=tw_en_ph_cv_pr&utm_term=TWITTER_TIMELINE&utm_content=stocks&camp=94092&twclid=2bjzvwwjt6m7l7xogk0tzlhrmm",
         "homepage_status": 200,

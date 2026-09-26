@@ -1,15 +1,32 @@
 {
   "version": 1,
-  "cycle": 6408,
-  "updated_at": "2026-09-26T09:58:16.578Z",
-  "skipped_reason": "cycle_gate:3",
-  "selected_axis_id": null,
-  "selected_axis_label": null,
-  "bundle": null,
-  "query": null,
-  "candidates": [],
-  "queued_url": null,
-  "queued_source": null,
+  "cycle": 6409,
+  "updated_at": "2026-09-26T15:23:49.709Z",
+  "skipped_reason": null,
+  "selected_axis_id": "axis_ai_oversight_model_v1",
+  "selected_axis_label": "Policy & governance",
+  "bundle": "agenda",
+  "query": "NIST AI risk management framework",
+  "candidates": [
+    {
+      "label": "EU AI Act explorer",
+      "url": "https://artificialintelligenceact.eu/the-act/"
+    },
+    {
+      "label": "EU AI Office",
+      "url": "https://digital-strategy.ec.europa.eu/en/policies/ai-office"
+    },
+    {
+      "label": "NIST AI Risk Management Framework",
+      "url": "https://www.nist.gov/itl/ai-risk-management-framework"
+    },
+    {
+      "label": "CSET publications",
+      "url": "https://cset.georgetown.edu/publications/"
+    }
+  ],
+  "queued_url": "https://www.nist.gov/itl/ai-risk-management-framework",
+  "queued_source": "NIST AI Risk Management Framework",
   "history": [
     {
       "ts": "2026-09-20T03:16:16.243Z",
@@ -136,6 +153,15 @@
       "source": "arXiv",
       "url": "https://arxiv.org/search/?query=autonomous%20agent%20failure%20modes&searchtype=all&abstracts=show&order=-announced_date_first&size=50",
       "query": "autonomous agent failure modes"
+    },
+    {
+      "ts": "2026-09-26T15:23:49.715Z",
+      "axis_id": "axis_ai_oversight_model_v1",
+      "axis_label": "Policy & governance",
+      "bundle": "agenda",
+      "source": "NIST AI Risk Management Framework",
+      "url": "https://www.nist.gov/itl/ai-risk-management-framework",
+      "query": "NIST AI risk management framework"
     }
   ]
 }
