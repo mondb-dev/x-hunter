@@ -1,8 +1,8 @@
 {
   "schema_version": "1.0",
-  "generated_at": "2026-09-26T15:23:42.555Z",
+  "generated_at": "2026-09-27T05:07:27.294Z",
   "method": "mechanical_registry_v1",
-  "profiled_at": "2026-09-26T15:23:49.619Z",
+  "profiled_at": "2026-09-27T05:07:39.475Z",
   "sources": [
     {
       "domain": "arxiv.org",
@@ -1853,6 +1853,246 @@
       }
     },
     {
+      "domain": "nist.gov",
+      "entity": "Nist",
+      "kind": "official",
+      "first_seen_at": "2026-09-26T15:23:49.715Z",
+      "last_seen_at": "2026-09-26T15:25:50.043Z",
+      "discovery": {
+        "distinct_urls": 1,
+        "example_urls": [
+          "https://www.nist.gov/itl/ai-risk-management-framework"
+        ],
+        "origin_counts": {
+          "reading_queue": 4
+        },
+        "distinct_referring_accounts": 0,
+        "sample_referring_accounts": [],
+        "distinct_axes": []
+      },
+      "claims": {
+        "total": 0,
+        "supported": 0,
+        "refuted": 0,
+        "contested": 0,
+        "unverified": 0,
+        "resolved_count": 0
+      },
+      "structural_features": {
+        "has_search_paths": false,
+        "has_article_paths": false,
+        "has_doi_paths": false
+      },
+      "ratings": {
+        "provenance": {
+          "score": 0.95,
+          "basis": [
+            "official_domain_pattern"
+          ]
+        },
+        "breadth": {
+          "score": 0.08916666666666666,
+          "basis": [
+            "distinct_urls:1",
+            "distinct_axes:0",
+            "origin_types:1"
+          ]
+        },
+        "corroboration": {
+          "score": 0.0875,
+          "basis": [
+            "referring_accounts:0",
+            "origin_types:1"
+          ]
+        },
+        "track_record": {
+          "score": null,
+          "basis": [
+            "no_resolved_claims_observed"
+          ]
+        },
+        "profile": {
+          "score": 0.5,
+          "confidence": 0.65,
+          "basis": [
+            "meta_author:false",
+            "published_time:true",
+            "canonical:true",
+            "about:false",
+            "contact:true",
+            "corrections:false",
+            "outbound_links:10",
+            "opinion_marker:false"
+          ]
+        },
+        "overall": {
+          "score": 0.6808333333333333,
+          "confidence": 0.0491,
+          "method": "mechanical_v1",
+          "basis": [
+            "official_domain_pattern",
+            "distinct_urls:1",
+            "distinct_axes:0",
+            "origin_types:1",
+            "referring_accounts:0",
+            "origin_types:1",
+            "track_record_unavailable"
+          ]
+        }
+      },
+      "profile": {
+        "fetched_at": "2026-09-26T17:23:52.819Z",
+        "homepage_url": "https://nist.gov/",
+        "example_url": "https://www.nist.gov/itl/ai-risk-management-framework",
+        "homepage_status": 200,
+        "example_status": 200,
+        "homepage_final_url": "https://www.nist.gov/",
+        "example_final_url": "https://www.nist.gov/itl/ai-risk-management-framework",
+        "homepage_content_type": "text/html; charset=UTF-8",
+        "example_content_type": "text/html; charset=UTF-8",
+        "homepage": {
+          "has_meta_author": false,
+          "has_published_time": true,
+          "has_canonical": true,
+          "has_about_link": false,
+          "has_contact_link": true,
+          "has_corrections_link": false,
+          "outbound_links_count": 9,
+          "opinion_marker": false
+        },
+        "example": {
+          "has_meta_author": false,
+          "has_published_time": true,
+          "has_canonical": true,
+          "has_about_link": false,
+          "has_contact_link": true,
+          "has_corrections_link": false,
+          "outbound_links_count": 10,
+          "opinion_marker": false
+        }
+      }
+    },
+    {
+      "domain": "aisi.gov.uk",
+      "entity": "Gov Uk",
+      "kind": "official",
+      "first_seen_at": "2026-09-27T01:07:03.956Z",
+      "last_seen_at": "2026-09-27T01:09:04.221Z",
+      "discovery": {
+        "distinct_urls": 1,
+        "example_urls": [
+          "https://www.aisi.gov.uk/research"
+        ],
+        "origin_counts": {
+          "reading_queue": 4
+        },
+        "distinct_referring_accounts": 0,
+        "sample_referring_accounts": [],
+        "distinct_axes": []
+      },
+      "claims": {
+        "total": 0,
+        "supported": 0,
+        "refuted": 0,
+        "contested": 0,
+        "unverified": 0,
+        "resolved_count": 0
+      },
+      "structural_features": {
+        "has_search_paths": false,
+        "has_article_paths": false,
+        "has_doi_paths": false
+      },
+      "ratings": {
+        "provenance": {
+          "score": 0.95,
+          "basis": [
+            "official_domain_pattern"
+          ]
+        },
+        "breadth": {
+          "score": 0.08916666666666666,
+          "basis": [
+            "distinct_urls:1",
+            "distinct_axes:0",
+            "origin_types:1"
+          ]
+        },
+        "corroboration": {
+          "score": 0.0875,
+          "basis": [
+            "referring_accounts:0",
+            "origin_types:1"
+          ]
+        },
+        "track_record": {
+          "score": null,
+          "basis": [
+            "no_resolved_claims_observed"
+          ]
+        },
+        "profile": {
+          "score": 0.39,
+          "confidence": 0.65,
+          "basis": [
+            "meta_author:false",
+            "published_time:false",
+            "canonical:true",
+            "about:true",
+            "contact:true",
+            "corrections:false",
+            "outbound_links:3",
+            "opinion_marker:false"
+          ]
+        },
+        "overall": {
+          "score": 0.6808333333333333,
+          "confidence": 0.0491,
+          "method": "mechanical_v1",
+          "basis": [
+            "official_domain_pattern",
+            "distinct_urls:1",
+            "distinct_axes:0",
+            "origin_types:1",
+            "referring_accounts:0",
+            "origin_types:1",
+            "track_record_unavailable"
+          ]
+        }
+      },
+      "profile": {
+        "fetched_at": "2026-09-27T03:07:10.251Z",
+        "homepage_url": "https://aisi.gov.uk/",
+        "example_url": "https://www.aisi.gov.uk/research",
+        "homepage_status": 200,
+        "example_status": 200,
+        "homepage_final_url": "https://www.aisi.gov.uk/",
+        "example_final_url": "https://www.aisi.gov.uk/research",
+        "homepage_content_type": "text/html; charset=utf-8",
+        "example_content_type": "text/html; charset=utf-8",
+        "homepage": {
+          "has_meta_author": false,
+          "has_published_time": false,
+          "has_canonical": true,
+          "has_about_link": true,
+          "has_contact_link": true,
+          "has_corrections_link": false,
+          "outbound_links_count": 3,
+          "opinion_marker": false
+        },
+        "example": {
+          "has_meta_author": false,
+          "has_published_time": false,
+          "has_canonical": true,
+          "has_about_link": true,
+          "has_contact_link": true,
+          "has_corrections_link": false,
+          "outbound_links_count": 3,
+          "opinion_marker": false
+        }
+      }
+    },
+    {
       "domain": "washingtonpost.com",
       "entity": "Washingtonpost",
       "kind": "news",
@@ -3373,9 +3613,9 @@
       "entity": "T Co",
       "kind": "unknown",
       "first_seen_at": "2016-05-05T18:57:30.000Z",
-      "last_seen_at": "2026-09-26T09:27:36.000Z",
+      "last_seen_at": "2026-09-27T03:27:19.000Z",
       "discovery": {
-        "distinct_urls": 23275,
+        "distinct_urls": 23318,
         "example_urls": [
           "https://t.co/pJSE124ec4",
           "https://t.co/Soz8BXPWaa",
@@ -3384,11 +3624,11 @@
           "https://t.co/cYaqYDRp08"
         ],
         "origin_counts": {
-          "feed_buffer": 21262,
+          "feed_buffer": 21315,
           "feed_buffer_reply": 6451,
           "articles": 3
         },
-        "distinct_referring_accounts": 3295,
+        "distinct_referring_accounts": 3296,
         "sample_referring_accounts": [
           "0808iveta",
           "09abracadabra",
@@ -3427,7 +3667,7 @@
         "breadth": {
           "score": 0.53,
           "basis": [
-            "distinct_urls:23275",
+            "distinct_urls:23318",
             "distinct_axes:0",
             "origin_types:3"
           ]
@@ -3435,7 +3675,7 @@
         "corroboration": {
           "score": 0.9125,
           "basis": [
-            "referring_accounts:3295",
+            "referring_accounts:3296",
             "origin_types:3"
           ]
         },
@@ -3466,10 +3706,10 @@
           "basis": [
             "unknown_domain_pattern",
             "doi_or_identifier_path_seen",
-            "distinct_urls:23275",
+            "distinct_urls:23318",
             "distinct_axes:0",
             "origin_types:3",
-            "referring_accounts:3295",
+            "referring_accounts:3296",
             "origin_types:3",
             "track_record_unavailable"
           ]
@@ -3500,6 +3740,139 @@
           "has_published_time": false,
           "has_canonical": true,
           "has_about_link": false,
+          "has_contact_link": false,
+          "has_corrections_link": false,
+          "outbound_links_count": 5,
+          "opinion_marker": false
+        }
+      }
+    },
+    {
+      "domain": "metr.org",
+      "entity": "Metr",
+      "kind": "unknown",
+      "first_seen_at": "2026-09-20T10:08:40.424Z",
+      "last_seen_at": "2026-09-27T05:07:27.290Z",
+      "discovery": {
+        "distinct_urls": 16,
+        "example_urls": [
+          "https://metr.org/blog/2026-03-26-red-teaming-anthropic-agent-monitoring/",
+          "https://metr.org/notes/2026-02-10-simpler-ai-timelines-model/",
+          "https://metr.org/blog/2025-03-19-measuring-ai-ability-to-complete-long-tasks/",
+          "https://metr.org/blog/2026-08-31-security-update/",
+          "https://metr.org/notes/2026-07-08-anthropic-researcher-uplift/"
+        ],
+        "origin_counts": {
+          "ontology_evidence": 3,
+          "reading_queue": 24,
+          "journals": 4,
+          "articles": 1,
+          "prefetch": 1
+        },
+        "distinct_referring_accounts": 0,
+        "sample_referring_accounts": [],
+        "distinct_axes": [
+          "axis_ai_progress_pace_v1",
+          "axis_safety_verification_v1"
+        ]
+      },
+      "claims": {
+        "total": 0,
+        "supported": 0,
+        "refuted": 0,
+        "contested": 0,
+        "unverified": 0,
+        "resolved_count": 0
+      },
+      "structural_features": {
+        "has_search_paths": false,
+        "has_article_paths": true,
+        "has_doi_paths": false
+      },
+      "ratings": {
+        "provenance": {
+          "score": 0.48,
+          "basis": [
+            "unknown_domain_pattern",
+            "article_path_seen"
+          ]
+        },
+        "breadth": {
+          "score": 0.7666666666666666,
+          "basis": [
+            "distinct_urls:16",
+            "distinct_axes:2",
+            "origin_types:5"
+          ]
+        },
+        "corroboration": {
+          "score": 0.35,
+          "basis": [
+            "referring_accounts:0",
+            "origin_types:5"
+          ]
+        },
+        "track_record": {
+          "score": null,
+          "basis": [
+            "no_resolved_claims_observed"
+          ]
+        },
+        "profile": {
+          "score": 0.29000000000000004,
+          "confidence": 0.65,
+          "basis": [
+            "meta_author:false",
+            "published_time:false",
+            "canonical:true",
+            "about:true",
+            "contact:false",
+            "corrections:false",
+            "outbound_links:5",
+            "opinion_marker:false"
+          ]
+        },
+        "overall": {
+          "score": 0.5305208333333333,
+          "confidence": 0.5525,
+          "method": "mechanical_v1",
+          "basis": [
+            "unknown_domain_pattern",
+            "article_path_seen",
+            "distinct_urls:16",
+            "distinct_axes:2",
+            "origin_types:5",
+            "referring_accounts:0",
+            "origin_types:5",
+            "track_record_unavailable"
+          ]
+        }
+      },
+      "profile": {
+        "fetched_at": "2026-09-26T17:23:53.373Z",
+        "homepage_url": "https://metr.org/",
+        "example_url": "https://metr.org/blog/2026-03-26-red-teaming-anthropic-agent-monitoring/",
+        "homepage_status": 200,
+        "example_status": 404,
+        "homepage_final_url": "https://metr.org/",
+        "example_final_url": "https://metr.org/blog/2026-03-26-red-teaming-anthropic-agent-monitoring/",
+        "homepage_content_type": "text/html; charset=UTF-8",
+        "example_content_type": "text/html; charset=utf-8",
+        "homepage": {
+          "has_meta_author": false,
+          "has_published_time": false,
+          "has_canonical": true,
+          "has_about_link": true,
+          "has_contact_link": false,
+          "has_corrections_link": false,
+          "outbound_links_count": 39,
+          "opinion_marker": false
+        },
+        "example": {
+          "has_meta_author": false,
+          "has_published_time": false,
+          "has_canonical": true,
+          "has_about_link": true,
           "has_contact_link": false,
           "has_corrections_link": false,
           "outbound_links_count": 5,
@@ -3939,138 +4312,6 @@
           "has_published_time": true,
           "has_canonical": true,
           "has_about_link": false,
-          "has_contact_link": false,
-          "has_corrections_link": false,
-          "outbound_links_count": 5,
-          "opinion_marker": false
-        }
-      }
-    },
-    {
-      "domain": "metr.org",
-      "entity": "Metr",
-      "kind": "unknown",
-      "first_seen_at": "2026-09-20T10:08:40.424Z",
-      "last_seen_at": "2026-09-25T21:14:08.448Z",
-      "discovery": {
-        "distinct_urls": 16,
-        "example_urls": [
-          "https://metr.org/blog/2026-03-26-red-teaming-anthropic-agent-monitoring/",
-          "https://metr.org/notes/2026-02-10-simpler-ai-timelines-model/",
-          "https://metr.org/blog/2025-03-19-measuring-ai-ability-to-complete-long-tasks/",
-          "https://metr.org/blog/2026-08-31-security-update/",
-          "https://metr.org/notes/2026-07-08-anthropic-researcher-uplift/"
-        ],
-        "origin_counts": {
-          "ontology_evidence": 3,
-          "reading_queue": 24,
-          "journals": 4,
-          "articles": 1
-        },
-        "distinct_referring_accounts": 0,
-        "sample_referring_accounts": [],
-        "distinct_axes": [
-          "axis_ai_progress_pace_v1",
-          "axis_safety_verification_v1"
-        ]
-      },
-      "claims": {
-        "total": 0,
-        "supported": 0,
-        "refuted": 0,
-        "contested": 0,
-        "unverified": 0,
-        "resolved_count": 0
-      },
-      "structural_features": {
-        "has_search_paths": false,
-        "has_article_paths": true,
-        "has_doi_paths": false
-      },
-      "ratings": {
-        "provenance": {
-          "score": 0.48,
-          "basis": [
-            "unknown_domain_pattern",
-            "article_path_seen"
-          ]
-        },
-        "breadth": {
-          "score": 0.7066666666666666,
-          "basis": [
-            "distinct_urls:16",
-            "distinct_axes:2",
-            "origin_types:4"
-          ]
-        },
-        "corroboration": {
-          "score": 0.35,
-          "basis": [
-            "referring_accounts:0",
-            "origin_types:4"
-          ]
-        },
-        "track_record": {
-          "score": null,
-          "basis": [
-            "no_resolved_claims_observed"
-          ]
-        },
-        "profile": {
-          "score": 0.29000000000000004,
-          "confidence": 0.65,
-          "basis": [
-            "meta_author:false",
-            "published_time:false",
-            "canonical:true",
-            "about:true",
-            "contact:false",
-            "corrections:false",
-            "outbound_links:5",
-            "opinion_marker:false"
-          ]
-        },
-        "overall": {
-          "score": 0.5173958333333333,
-          "confidence": 0.5399,
-          "method": "mechanical_v1",
-          "basis": [
-            "unknown_domain_pattern",
-            "article_path_seen",
-            "distinct_urls:16",
-            "distinct_axes:2",
-            "origin_types:4",
-            "referring_accounts:0",
-            "origin_types:4",
-            "track_record_unavailable"
-          ]
-        }
-      },
-      "profile": {
-        "fetched_at": "2026-09-23T15:34:16.951Z",
-        "homepage_url": "https://metr.org/",
-        "example_url": "https://metr.org/blog/2026-03-26-red-teaming-anthropic-agent-monitoring/",
-        "homepage_status": 200,
-        "example_status": 404,
-        "homepage_final_url": "https://metr.org/",
-        "example_final_url": "https://metr.org/blog/2026-03-26-red-teaming-anthropic-agent-monitoring/",
-        "homepage_content_type": "text/html; charset=UTF-8",
-        "example_content_type": "text/html; charset=utf-8",
-        "homepage": {
-          "has_meta_author": false,
-          "has_published_time": false,
-          "has_canonical": true,
-          "has_about_link": true,
-          "has_contact_link": false,
-          "has_corrections_link": false,
-          "outbound_links_count": 39,
-          "opinion_marker": false
-        },
-        "example": {
-          "has_meta_author": false,
-          "has_published_time": false,
-          "has_canonical": true,
-          "has_about_link": true,
           "has_contact_link": false,
           "has_corrections_link": false,
           "outbound_links_count": 5,
@@ -5025,9 +5266,9 @@
       "entity": "Grok",
       "kind": "unknown",
       "first_seen_at": "2026-04-03T01:20:27.000Z",
-      "last_seen_at": "2026-09-26T06:46:55.000Z",
+      "last_seen_at": "2026-09-27T02:09:25.000Z",
       "discovery": {
-        "distinct_urls": 773,
+        "distinct_urls": 775,
         "example_urls": [
           "https://grok.com/imagine/post/9b92ff60-ec59-45db-8a35-8e1b743e5339",
           "https://grok.com/imagine/post/42c16172-4296-42be-b3d0-aa45ad7b6b97",
@@ -5037,7 +5278,7 @@
         ],
         "origin_counts": {
           "feed_buffer_reply": 631,
-          "feed_buffer": 192
+          "feed_buffer": 194
         },
         "distinct_referring_accounts": 466,
         "sample_referring_accounts": [
@@ -5077,7 +5318,7 @@
         "breadth": {
           "score": 0.47,
           "basis": [
-            "distinct_urls:773",
+            "distinct_urls:775",
             "distinct_axes:0",
             "origin_types:2"
           ]
@@ -5115,7 +5356,7 @@
           "method": "mechanical_v1",
           "basis": [
             "unknown_domain_pattern",
-            "distinct_urls:773",
+            "distinct_urls:775",
             "distinct_axes:0",
             "origin_types:2",
             "referring_accounts:466",
@@ -7359,7 +7600,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-09-23T17:58:53.048Z",
+        "fetched_at": "2026-09-26T23:06:59.398Z",
         "homepage_url": "https://openai.com/",
         "example_url": "https://openai.com/index/ai-policy-window",
         "homepage_status": 403,
@@ -11940,7 +12181,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-09-23T09:35:11.515Z",
+        "fetched_at": "2026-09-26T17:23:55.683Z",
         "homepage_url": "https://mottandbow.com/",
         "example_url": "https://www.mottandbow.com/collections/mens-denim2-onlyjeansworthbuying?utm_source=twitter&utm_medium=twitter&utm_campaign=%28M%29+Denim+-+USA+-+Prospecting+-+ABO+8+-+2026+VAIO+%5Bcashback%5D&utm_term=%28M%29+Denim+-+USA+-+Broad+1+-+Auto+%5BAll%5D&utm_content=img-md-neeta-buttshot-highquality-D943-V1-B-h27-p2-LP_MDOJ-c%2FNone-irl&twclid=2cc4cnrb0o1hpyal9rg55w07zo",
         "homepage_status": 200,
@@ -12067,7 +12308,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-09-23T11:49:20.787Z",
+        "fetched_at": "2026-09-26T17:23:55.998Z",
         "homepage_url": "https://wencrypto.com/",
         "example_url": "https://wencrypto.com/pricing?twt_id=54613980&twclid=26wi5gtwrb7b2ig70kcqcspr3n",
         "homepage_status": 200,
@@ -12194,7 +12435,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-09-23T11:49:21.171Z",
+        "fetched_at": "2026-09-26T23:07:00.250Z",
         "homepage_url": "https://smart.link/",
         "example_url": "https://smart.link/sdh2x9q4dptrg?twclid=29tfuqwoatuv70nv93xhcyx2vj",
         "homepage_status": 200,
@@ -12321,7 +12562,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-09-23T11:49:24.319Z",
+        "fetched_at": "2026-09-26T23:07:02.549Z",
         "homepage_url": "https://gastechevent.com/",
         "example_url": "https://www.gastechevent.com/visit/visitor-registration/?utm_source=X&utm_medium=cpc&utm_campaign=Gastech%2BVisprom%2BElectrification%2BTraffic%2BP1%2BX%2B2026&twclid=25c7n2tffmzu4y35y7ba8rbphq",
         "homepage_status": 200,
@@ -12448,7 +12689,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-09-23T11:49:26.989Z",
+        "fetched_at": "2026-09-26T23:07:04.181Z",
         "homepage_url": "https://doorzo.com/",
         "example_url": "https://www.doorzo.com/en/landing/newall?utm_source=x_en_testanime_V&utm_medium=banner&utm_campaign=online_download&fbclid=fbclid&twclid=2bzgffsg16g7kpszr2gx684udk",
         "homepage_status": 200,
@@ -12575,7 +12816,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-09-23T15:34:16.987Z",
+        "fetched_at": "2026-09-27T01:07:00.252Z",
         "homepage_url": "https://bitget.com/",
         "example_url": "https://partner.bitget.com/bg/SMTwittercfd?twclid=2dlbmypv93aoxlr6pzrilrub21",
         "homepage_status": null,
@@ -12673,7 +12914,7 @@
           ]
         },
         "profile": {
-          "score": 0.36,
+          "score": 0.26,
           "confidence": 0.65,
           "basis": [
             "meta_author:false",
@@ -12682,7 +12923,7 @@
             "about:true",
             "contact:true",
             "corrections:false",
-            "outbound_links:10",
+            "outbound_links:0",
             "opinion_marker:false"
           ]
         },
@@ -12702,7 +12943,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-09-23T15:34:19.457Z",
+        "fetched_at": "2026-09-27T01:07:01.423Z",
         "homepage_url": "https://oppo.com/",
         "example_url": "https://www.oppo.com/ph/store?utm_source=x&utm_medium=cpm&utm_campaign=OPPO_RENO16_LAUNCH&utm_content=Babymonster&twclid=23rip3pnfc4fzj8wf4kuwjdu8m",
         "homepage_status": 200,
@@ -12726,9 +12967,9 @@
           "has_published_time": false,
           "has_canonical": false,
           "has_about_link": true,
-          "has_contact_link": true,
+          "has_contact_link": false,
           "has_corrections_link": false,
-          "outbound_links_count": 10,
+          "outbound_links_count": 0,
           "opinion_marker": false
         }
       }
@@ -12829,7 +13070,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-09-23T15:34:19.693Z",
+        "fetched_at": "2026-09-27T01:07:01.518Z",
         "homepage_url": "https://combos.fun/",
         "example_url": "https://combos.fun/?utm_source=X&utm_campaign=promote%3Dcar2&twclid=2aswwo64b7owkoq09axl1gyba6",
         "homepage_status": 403,
@@ -12956,7 +13197,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-09-23T17:58:54.466Z",
+        "fetched_at": "2026-09-27T01:07:03.861Z",
         "homepage_url": "https://valvolineglobal.com/",
         "example_url": "https://www.valvolineglobal.com/en/fifa-national-sweeps/?utm_source=X&utm_medium=paidsocial&utm_campaign=WC26_GM_US_AWE&utm_content=wcsimplified&twclid=299i90helnojknptru820mqim9",
         "homepage_status": 200,
@@ -13083,7 +13324,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-09-23T17:58:54.819Z",
+        "fetched_at": "2026-09-27T03:07:10.462Z",
         "homepage_url": "https://trenchers.ai/",
         "example_url": "https://trenchers.ai/?twclid=2di75phbt55c7y0zfq5ihrqinv",
         "homepage_status": 200,
@@ -13210,7 +13451,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-09-23T17:58:56.550Z",
+        "fetched_at": "2026-09-27T03:07:11.705Z",
         "homepage_url": "https://proxy-cheap.com/",
         "example_url": "https://www.proxy-cheap.com/?twclid=241rx3okk7tuov8hduxv4r27su",
         "homepage_status": 200,
@@ -13337,7 +13578,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-09-23T19:58:57.306Z",
+        "fetched_at": "2026-09-27T03:07:13.022Z",
         "homepage_url": "https://interserver.net/",
         "example_url": "https://www.interserver.net/vps/?twclid=29rh8w2who6jt1ovqguffmygqn",
         "homepage_status": 200,
@@ -13464,13 +13705,13 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-09-23T19:59:05.255Z",
+        "fetched_at": "2026-09-27T05:07:27.867Z",
         "homepage_url": "https://shopee.ph/",
         "example_url": "https://shopee.ph/universal-link/product/278394653/22353819981/?deep_and_web=1&smtt=9&utm_campaign=s278394653_ss_ph_twtr_twitterad&utm_content=eoint&utm_medium=seller&utm_source=twitter&twclid=21uy0mdqfu18byi7ighc1a87wq",
         "homepage_status": 200,
         "example_status": 200,
         "homepage_final_url": "https://shopee.ph/",
-        "example_final_url": "https://shopee.ph/product/278394653/22353819981/?smtt=9&twclid=21uy0mdqfu18byi7ighc1a87wq&uls_trackid=56n653sq00kb&utm_campaign=s278394653_ss_ph_twtr_twitterad&utm_content=eoint&utm_medium=seller&utm_source=twitter",
+        "example_final_url": "https://shopee.ph/product/278394653/22353819981/?smtt=9&twclid=21uy0mdqfu18byi7ighc1a87wq&uls_trackid=56o20i1600te&utm_campaign=s278394653_ss_ph_twtr_twitterad&utm_content=eoint&utm_medium=seller&utm_source=twitter",
         "homepage_content_type": "text/html; charset=utf-8",
         "example_content_type": "text/html; charset=utf-8",
         "homepage": {
@@ -13562,12 +13803,12 @@
           ]
         },
         "profile": {
-          "score": 0,
+          "score": 0.1,
           "confidence": 0.55,
           "basis": [
             "meta_author:false",
             "published_time:false",
-            "canonical:false",
+            "canonical:true",
             "about:false",
             "contact:false",
             "corrections:false",
@@ -13592,15 +13833,15 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-09-23T19:59:18.557Z",
+        "fetched_at": "2026-09-27T05:07:29.429Z",
         "homepage_url": "https://metaphysicalarticles.org/",
         "example_url": "https://www.metaphysicalarticles.org/2025/12/ufos-uap-space-people-disclosure.html?twclid=25s2j2s4i47jn3wcdf6ujpfrmp",
         "homepage_status": 200,
-        "example_status": null,
+        "example_status": 200,
         "homepage_final_url": "https://www.metaphysicalarticles.org/",
         "example_final_url": "https://www.metaphysicalarticles.org/2025/12/ufos-uap-space-people-disclosure.html?twclid=25s2j2s4i47jn3wcdf6ujpfrmp",
         "homepage_content_type": "text/html; charset=UTF-8",
-        "example_content_type": "",
+        "example_content_type": "text/html; charset=UTF-8",
         "homepage": {
           "has_meta_author": false,
           "has_published_time": false,
@@ -13614,7 +13855,7 @@
         "example": {
           "has_meta_author": false,
           "has_published_time": false,
-          "has_canonical": false,
+          "has_canonical": true,
           "has_about_link": false,
           "has_contact_link": false,
           "has_corrections_link": false,
@@ -13720,19 +13961,19 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-09-23T19:59:32.681Z",
+        "fetched_at": "2026-09-27T05:07:32.499Z",
         "homepage_url": "https://amazon.com/",
         "example_url": "https://www.amazon.com/The-Boys-Season-5/dp/B0FX3G8F44/ref_=dvm_us_c_soc_THBY_tw_rb?twclid=2e4zyrzur7iapo7e8zxfmiz1fu",
-        "homepage_status": null,
+        "homepage_status": 200,
         "example_status": 200,
-        "homepage_final_url": "https://amazon.com/",
+        "homepage_final_url": "https://www.amazon.com/",
         "example_final_url": "https://www.amazon.com/The-Boys-Season-5/dp/B0FX3G8F44",
-        "homepage_content_type": "",
+        "homepage_content_type": "text/html;charset=UTF-8",
         "example_content_type": "text/html;charset=UTF-8",
         "homepage": {
           "has_meta_author": false,
           "has_published_time": false,
-          "has_canonical": false,
+          "has_canonical": true,
           "has_about_link": false,
           "has_contact_link": false,
           "has_corrections_link": false,
@@ -13849,15 +14090,15 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-09-23T21:57:37.648Z",
+        "fetched_at": "2026-09-27T05:07:39.475Z",
         "homepage_url": "https://onelink.me/",
         "example_url": "https://vix.onelink.me/Z4oU/hyuh928w?twclid=24s36ffdjwv85ew8o2yfteqmxu",
         "homepage_status": 200,
-        "example_status": 200,
+        "example_status": null,
         "homepage_final_url": "https://www.appsflyer.com/products/deep-linking/",
-        "example_final_url": "https://assets.vix.com/geo.html",
+        "example_final_url": "https://vix.onelink.me/Z4oU/hyuh928w?twclid=24s36ffdjwv85ew8o2yfteqmxu",
         "homepage_content_type": "text/html; charset=UTF-8",
-        "example_content_type": "text/html",
+        "example_content_type": "",
         "homepage": {
           "has_meta_author": true,
           "has_published_time": true,
