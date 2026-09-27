@@ -1,15 +1,15 @@
 {
   "schema_version": "1.0",
-  "generated_at": "2026-09-27T17:07:19.086Z",
+  "generated_at": "2026-09-27T23:07:12.249Z",
   "method": "mechanical_registry_v1",
-  "profiled_at": "2026-09-27T17:07:29.424Z",
+  "profiled_at": "2026-09-27T23:07:15.722Z",
   "sources": [
     {
       "domain": "arxiv.org",
       "entity": "Arxiv",
       "kind": "academic",
       "first_seen_at": "2026-09-20T04:08:44.147Z",
-      "last_seen_at": "2026-09-26T05:23:48.691Z",
+      "last_seen_at": "2026-09-27T23:07:12.244Z",
       "discovery": {
         "distinct_urls": 34,
         "example_urls": [
@@ -23,7 +23,8 @@
           "ontology_evidence": 7,
           "reading_queue": 58,
           "journals": 8,
-          "articles": 1
+          "articles": 1,
+          "prefetch": 1
         },
         "distinct_referring_accounts": 0,
         "sample_referring_accounts": [],
@@ -56,18 +57,18 @@
           ]
         },
         "breadth": {
-          "score": 0.7649999999999999,
+          "score": 0.825,
           "basis": [
             "distinct_urls:34",
             "distinct_axes:3",
-            "origin_types:4"
+            "origin_types:5"
           ]
         },
         "corroboration": {
           "score": 0.35,
           "basis": [
             "referring_accounts:0",
-            "origin_types:4"
+            "origin_types:5"
           ]
         },
         "track_record": {
@@ -91,8 +92,8 @@
           ]
         },
         "overall": {
-          "score": 0.7845312500000001,
-          "confidence": 0.64215,
+          "score": 0.7976562500000001,
+          "confidence": 0.6547499999999999,
           "method": "mechanical_v1",
           "basis": [
             "academic_domain_pattern",
@@ -100,9 +101,9 @@
             "doi_or_identifier_path_seen",
             "distinct_urls:34",
             "distinct_axes:3",
-            "origin_types:4",
+            "origin_types:5",
             "referring_accounts:0",
-            "origin_types:4",
+            "origin_types:5",
             "track_record_unavailable"
           ]
         }
@@ -308,7 +309,7 @@
         ],
         "origin_counts": {
           "claim_tracker": 1,
-          "reading_queue": 29
+          "reading_queue": 30
         },
         "distinct_referring_accounts": 0,
         "sample_referring_accounts": [],
@@ -599,7 +600,7 @@
           "https://careers.cbp.gov/s/connect-to-recruiter?campaignid=701SJ00000BV0tR&utm_source=X&utm_medium=paid_social&utm_campaign=MGC_B5SXtXt5J5T&twclid=2f2100ywgvzunnowbnhrpi34g1"
         ],
         "origin_counts": {
-          "reading_queue": 29,
+          "reading_queue": 30,
           "feed_buffer_reply": 7
         },
         "distinct_referring_accounts": 1,
@@ -724,7 +725,7 @@
           "https://www.justice.gov/usao-ri/pr/two-business-executives-plead-guilty-tech-support-fraud-scheme?twclid=2f42440xock41qvr5cwo18o539"
         ],
         "origin_counts": {
-          "reading_queue": 29,
+          "reading_queue": 30,
           "feed_buffer_reply": 2,
           "feed_buffer": 1
         },
@@ -1257,7 +1258,7 @@
         ],
         "origin_counts": {
           "ontology_evidence": 1,
-          "reading_queue": 26
+          "reading_queue": 27
         },
         "distinct_referring_accounts": 0,
         "sample_referring_accounts": [],
@@ -1502,7 +1503,7 @@
           "https://www.house.gov/"
         ],
         "origin_counts": {
-          "reading_queue": 29,
+          "reading_queue": 30,
           "journals": 1
         },
         "distinct_referring_accounts": 0,
@@ -1623,7 +1624,7 @@
           "http://trumprx.gov/"
         ],
         "origin_counts": {
-          "reading_queue": 29,
+          "reading_queue": 30,
           "journals": 1
         },
         "distinct_referring_accounts": 0,
@@ -2105,7 +2106,7 @@
         ],
         "origin_counts": {
           "ontology_evidence": 3,
-          "reading_queue": 29
+          "reading_queue": 30
         },
         "distinct_referring_accounts": 0,
         "sample_referring_accounts": [],
@@ -2188,7 +2189,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-09-24T16:27:42.672Z",
+        "fetched_at": "2026-09-27T19:07:33.659Z",
         "homepage_url": "https://washingtonpost.com/",
         "example_url": "https://www.washingtonpost.com/world/2026/04/13/us-iran-blockade-strait-hormuz-oil/",
         "homepage_status": null,
@@ -2312,7 +2313,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-09-24T16:27:45.342Z",
+        "fetched_at": "2026-09-27T19:07:34.216Z",
         "homepage_url": "https://bbc.com/",
         "example_url": "https://www.bbc.com/news/articles/cgmdw4vn7y2o?at_medium=RSS&amp;at_campaign=rss",
         "homepage_status": 200,
@@ -2455,7 +2456,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-09-24T16:27:46.918Z",
+        "fetched_at": "2026-09-27T19:07:34.995Z",
         "homepage_url": "https://amnesty.org/",
         "example_url": "https://www.amnesty.org/en/latest/news/2026/06/burkina-serge-oulon/",
         "homepage_status": 200,
@@ -2597,7 +2598,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-09-24T16:27:47.214Z",
+        "fetched_at": "2026-09-27T19:07:35.219Z",
         "homepage_url": "https://pcij.org/",
         "example_url": "https://pcij.org/2026/06/23/tycoons-swoop-in-clean-energy-boom/",
         "homepage_status": 200,
@@ -2762,7 +2763,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-09-24T18:27:15.480Z",
+        "fetched_at": "2026-09-27T21:07:10.562Z",
         "homepage_url": "https://google.com/",
         "example_url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQG8zTjzNOXrSBZwvSTLobfen2T2Mfxyn8MYVxW4sIU6cWottxkV4pJs_p6fwS7LJGs_vuED8LS-hCfYDaWBVPP6g5GilaCYMrJml-ow5K6SCv_H_b1Dl2x1bJE8PTS68J1lar6YIqGro0gdLxt0MIOMv-l1vVmmO0WJQtLSOEieMA6I7dl7eRgRC0BRXQWnC1DBXjH9CBNLq5ag1EbSnkyImyoNmXyv0qV7VQUvoAHc5OC2odagG5YXdhPj4Im_aZZUwd8=",
         "homepage_status": 200,
@@ -2896,7 +2897,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-09-24T18:27:17.390Z",
+        "fetched_at": "2026-09-27T21:07:13.674Z",
         "homepage_url": "https://cbsnews.com/",
         "example_url": "https://www.cbsnews.com/news/us-naval-blockade-iran-ports-2026/",
         "homepage_status": 200,
@@ -3033,7 +3034,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-09-24T18:27:17.417Z",
+        "fetched_at": "2026-09-27T21:07:13.705Z",
         "homepage_url": "https://com.ph/",
         "example_url": "https://x.tv5.com.ph/news/national/read/arrest-warrants-issued-vs-discayas-over-malversation-graft-charges-tied-to-flood-control-projects-malolos-court",
         "homepage_status": null,
@@ -3182,7 +3183,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-09-24T18:27:18.704Z",
+        "fetched_at": "2026-09-27T21:07:14.866Z",
         "homepage_url": "https://gmanetwork.com/",
         "example_url": "https://www.gmanetwork.com/news/topstories/nation/994225/explainer-objections-in-a-trial-and-their-role-in-due-process/story/",
         "homepage_status": 200,
@@ -3322,7 +3323,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-09-24T20:28:53.559Z",
+        "fetched_at": "2026-09-27T23:07:12.873Z",
         "homepage_url": "https://youtube.com/",
         "example_url": "https://www.youtube.com/watch?v=s31Wd_dF5hI",
         "homepage_status": 200,
@@ -3365,7 +3366,7 @@
           "https://apnews.com/hub/iran"
         ],
         "origin_counts": {
-          "reading_queue": 29,
+          "reading_queue": 30,
           "journals": 1
         },
         "distinct_referring_accounts": 0,
@@ -3443,7 +3444,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-09-24T20:28:53.674Z",
+        "fetched_at": "2026-09-27T23:07:12.981Z",
         "homepage_url": "https://apnews.com/",
         "example_url": "https://apnews.com/hub/iran",
         "homepage_status": 403,
@@ -3577,7 +3578,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-09-24T20:28:55.081Z",
+        "fetched_at": "2026-09-27T23:07:13.966Z",
         "homepage_url": "https://hrw.org/",
         "example_url": "https://www.hrw.org/news/2026/06/18/support-builds-to-protect-children-from-crimes-against-humanity",
         "homepage_status": 200,
@@ -3613,9 +3614,9 @@
       "entity": "T Co",
       "kind": "unknown",
       "first_seen_at": "2016-05-05T18:57:30.000Z",
-      "last_seen_at": "2026-09-27T15:05:00.000Z",
+      "last_seen_at": "2026-09-27T20:24:04.000Z",
       "discovery": {
-        "distinct_urls": 23337,
+        "distinct_urls": 23350,
         "example_urls": [
           "https://t.co/pJSE124ec4",
           "https://t.co/Soz8BXPWaa",
@@ -3624,7 +3625,7 @@
           "https://t.co/cYaqYDRp08"
         ],
         "origin_counts": {
-          "feed_buffer": 21342,
+          "feed_buffer": 21366,
           "feed_buffer_reply": 6451,
           "articles": 3
         },
@@ -3667,7 +3668,7 @@
         "breadth": {
           "score": 0.53,
           "basis": [
-            "distinct_urls:23337",
+            "distinct_urls:23350",
             "distinct_axes:0",
             "origin_types:3"
           ]
@@ -3706,7 +3707,7 @@
           "basis": [
             "unknown_domain_pattern",
             "doi_or_identifier_path_seen",
-            "distinct_urls:23337",
+            "distinct_urls:23350",
             "distinct_axes:0",
             "origin_types:3",
             "referring_accounts:3296",
@@ -3716,7 +3717,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-09-24T20:29:01.579Z",
+        "fetched_at": "2026-09-27T23:07:15.722Z",
         "homepage_url": "https://t.co/",
         "example_url": "https://t.co/pJSE124ec4",
         "homepage_status": 200,
@@ -6319,7 +6320,7 @@
           "https://www.reuters.com/site-search/?query=Evidence-based%20claims%2C%20transparent%20sourcing%2C%20honest%20uncertainty%2C%20good-faith%20argu%20Truth%20and%20Evidence%20in%20Public%20Discourse"
         ],
         "origin_counts": {
-          "reading_queue": 30
+          "reading_queue": 31
         },
         "distinct_referring_accounts": 1,
         "sample_referring_accounts": [
@@ -97074,14 +97075,14 @@
       "entity": "Epoch Ai",
       "kind": "unknown",
       "first_seen_at": "2026-09-24T08:33:16.006Z",
-      "last_seen_at": "2026-09-24T12:27:37.627Z",
+      "last_seen_at": "2026-09-27T19:09:35.691Z",
       "discovery": {
         "distinct_urls": 1,
         "example_urls": [
           "https://epoch.ai/data-insights"
         ],
         "origin_counts": {
-          "reading_queue": 3
+          "reading_queue": 6
         },
         "distinct_referring_accounts": 0,
         "sample_referring_accounts": [],
