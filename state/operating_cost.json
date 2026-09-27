@@ -1,159 +1,63 @@
 {
-  "generated_at": "2026-09-26T15:42:01.770Z",
+  "generated_at": "2026-09-27T17:30:55.008Z",
   "monthly_usd": {
-    "llm": 23.18,
+    "llm": 14.75,
     "fixed": 101.25,
-    "total": 124.43
+    "total": 116
   },
   "llm_recent": {
     "window_days": 7,
-    "usd": 5.4098,
-    "calls": 835,
-    "daily_avg_usd": 0.7728,
+    "usd": 3.4412,
+    "calls": 546,
+    "daily_avg_usd": 0.4916,
     "by_tag": {
-      "quote": {
-        "calls": 1,
-        "usd": 0.067269
-      },
-      "quote:factcheck": {
-        "calls": 1,
-        "usd": 0.001206
-      },
-      "quote:coherence": {
-        "calls": 1,
-        "usd": 0.00252
-      },
-      "llm": {
-        "calls": 60,
-        "usd": 0.082842
-      },
       "browse": {
-        "calls": 21,
-        "usd": 0.832956
-      },
-      "adversarial_eval": {
-        "calls": 1,
-        "usd": 0.006156
-      },
-      "brain": {
-        "calls": 48,
-        "usd": 0.508656
-      },
-      "x_reply": {
-        "calls": 5,
-        "usd": 0.044351
-      },
-      "x_reply:factcheck": {
-        "calls": 3,
-        "usd": 0.0032389999999999997
-      },
-      "x_reply:coherence": {
-        "calls": 3,
-        "usd": 0.007181999999999999
-      },
-      "linkedin_connect": {
-        "calls": 10,
-        "usd": 0.031596
-      },
-      "tweet": {
-        "calls": 1,
-        "usd": 0.043997
-      },
-      "tweet-retry": {
-        "calls": 1,
-        "usd": 0.044023
-      },
-      "tweet:factcheck": {
-        "calls": 1,
-        "usd": 0.001206
-      },
-      "search_curiosity": {
-        "calls": 3,
-        "usd": 0.018332
+        "calls": 15,
+        "usd": 0.5900779999999999
       },
       "llm:apply_ontology_delta": {
-        "calls": 41,
-        "usd": 0.030258999999999998
-      },
-      "dr-triage": {
-        "calls": 8,
-        "usd": 0.050697000000000006
-      },
-      "dr-classify": {
-        "calls": 5,
-        "usd": 0.00933
-      },
-      "dr-decompose": {
-        "calls": 5,
-        "usd": 0.181155
-      },
-      "dr-review": {
-        "calls": 5,
-        "usd": 0.069603
-      },
-      "dr-leaf": {
-        "calls": 42,
-        "usd": 0.265005
-      },
-      "dr-pick": {
-        "calls": 65,
-        "usd": 0.14179699999999998
-      },
-      "dr-gap": {
-        "calls": 47,
-        "usd": 1.0558210000000001
-      },
-      "dr-node": {
-        "calls": 65,
-        "usd": 0.6193850000000002
-      },
-      "dr-synth-tree": {
-        "calls": 4,
-        "usd": 0.192116
-      },
-      "research_evidence": {
-        "calls": 4,
-        "usd": 0.08229600000000001
-      },
-      "llm:content_relevance": {
-        "calls": 112,
-        "usd": 0.040156
+        "calls": 29,
+        "usd": 0.019228999999999993
       },
       "llm:linkedin_engage": {
-        "calls": 205,
-        "usd": 0.07165500000000001
+        "calls": 162,
+        "usd": 0.05637900000000002
       },
-      "linkedin_comment": {
-        "calls": 1,
-        "usd": 0.009245
+      "brain": {
+        "calls": 37,
+        "usd": 0.4165169999999999
       },
-      "linkedin_comment:factcheck": {
-        "calls": 1,
-        "usd": 0.000437
-      },
-      "linkedin_comment:coherence": {
-        "calls": 1,
-        "usd": 0.002604
-      },
-      "dr-format": {
-        "calls": 3,
-        "usd": 0.009684
-      },
-      "dr-reply": {
-        "calls": 3,
-        "usd": 0.011202
+      "llm:content_relevance": {
+        "calls": 97,
+        "usd": 0.034294000000000005
       },
       "llm:linkedin_connect": {
         "calls": 27,
         "usd": 0.019926
       },
+      "linkedin_connect": {
+        "calls": 9,
+        "usd": 0.029109000000000003
+      },
       "linkedin_plan": {
         "calls": 3,
         "usd": 0.043241999999999996
       },
+      "dr-triage": {
+        "calls": 6,
+        "usd": 0.039441000000000004
+      },
       "dr-plan": {
         "calls": 3,
         "usd": 0.049302
+      },
+      "dr-pick": {
+        "calls": 31,
+        "usd": 0.07332
+      },
+      "dr-gap": {
+        "calls": 26,
+        "usd": 0.5970779999999999
       },
       "linkedin_draft": {
         "calls": 3,
@@ -174,6 +78,46 @@
       "chart:plan": {
         "calls": 3,
         "usd": 0.016644
+      },
+      "dr-classify": {
+        "calls": 3,
+        "usd": 0.005582999999999999
+      },
+      "dr-decompose": {
+        "calls": 3,
+        "usd": 0.09592800000000001
+      },
+      "dr-review": {
+        "calls": 3,
+        "usd": 0.033773
+      },
+      "dr-leaf": {
+        "calls": 21,
+        "usd": 0.13310999999999998
+      },
+      "dr-node": {
+        "calls": 29,
+        "usd": 0.264498
+      },
+      "dr-synth-tree": {
+        "calls": 2,
+        "usd": 0.08024200000000001
+      },
+      "dr-format": {
+        "calls": 2,
+        "usd": 0.006705
+      },
+      "dr-reply": {
+        "calls": 2,
+        "usd": 0.0076950000000000005
+      },
+      "research_evidence": {
+        "calls": 2,
+        "usd": 0.041913000000000006
+      },
+      "search_curiosity": {
+        "calls": 2,
+        "usd": 0.009342
       },
       "article": {
         "calls": 1,
@@ -210,16 +154,28 @@
       "stance_check": {
         "calls": 1,
         "usd": 0.000196
+      },
+      "x_reply": {
+        "calls": 3,
+        "usd": 0.027919
+      },
+      "x_reply:factcheck": {
+        "calls": 2,
+        "usd": 0.0020150000000000003
+      },
+      "x_reply:coherence": {
+        "calls": 2,
+        "usd": 0.005148
       }
     },
     "by_model": {
       "claude": {
-        "calls": 472,
-        "usd": 5.217630000000002
+        "calls": 251,
+        "usd": 3.2764369999999996
       },
       "claude-haiku": {
-        "calls": 362,
-        "usd": 0.145975
+        "calls": 294,
+        "usd": 0.11850600000000003
       },
       "claude-opus": {
         "calls": 1,
@@ -236,7 +192,7 @@
   },
   "storage_wallet": {
     "sol_balance": 0.000020209,
-    "checked_at": "2026-09-26T10:02:31.233Z"
+    "checked_at": "2026-09-27T05:11:53.950Z"
   },
   "funding_goal": {
     "mode": "mac",
