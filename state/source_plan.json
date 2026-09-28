@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "cycle": 6420,
-  "updated_at": "2026-09-27T23:07:15.830Z",
+  "cycle": 6426,
+  "updated_at": "2026-09-28T13:04:07.755Z",
   "skipped_reason": "cycle_gate:3",
   "selected_axis_id": null,
   "selected_axis_label": null,
@@ -172,6 +172,24 @@
       "source": "Epoch AI data insights",
       "url": "https://epoch.ai/data-insights",
       "query": "Epoch AI compute trends"
+    },
+    {
+      "ts": "2026-09-28T01:07:44.010Z",
+      "axis_id": "axis_agent_self_reliability_v1",
+      "axis_label": "Self-study",
+      "bundle": "agenda",
+      "source": "arXiv",
+      "url": "https://arxiv.org/search/?query=LLM%20self-knowledge&searchtype=all&abstracts=show&order=-announced_date_first&size=50",
+      "query": "LLM self-knowledge"
+    },
+    {
+      "ts": "2026-09-28T09:05:24.324Z",
+      "axis_id": "axis_ai_oversight_model_v1",
+      "axis_label": "Policy & governance",
+      "bundle": "agenda",
+      "source": "CSET publications",
+      "url": "https://cset.georgetown.edu/publications/",
+      "query": "frontier AI regulation"
     }
   ]
 }

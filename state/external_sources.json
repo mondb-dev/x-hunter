@@ -1,17 +1,17 @@
 {
   "schema_version": "1.0",
-  "generated_at": "2026-09-27T23:07:12.249Z",
+  "generated_at": "2026-09-28T13:03:42.286Z",
   "method": "mechanical_registry_v1",
-  "profiled_at": "2026-09-27T23:07:15.722Z",
+  "profiled_at": "2026-09-28T13:04:07.668Z",
   "sources": [
     {
       "domain": "arxiv.org",
       "entity": "Arxiv",
       "kind": "academic",
       "first_seen_at": "2026-09-20T04:08:44.147Z",
-      "last_seen_at": "2026-09-27T23:07:12.244Z",
+      "last_seen_at": "2026-09-28T01:09:44.649Z",
       "discovery": {
-        "distinct_urls": 34,
+        "distinct_urls": 35,
         "example_urls": [
           "https://arxiv.org/abs/2305.04388",
           "https://arxiv.org/abs/2609.21899v1",
@@ -21,10 +21,9 @@
         ],
         "origin_counts": {
           "ontology_evidence": 7,
-          "reading_queue": 58,
+          "reading_queue": 61,
           "journals": 8,
-          "articles": 1,
-          "prefetch": 1
+          "articles": 1
         },
         "distinct_referring_accounts": 0,
         "sample_referring_accounts": [],
@@ -57,18 +56,18 @@
           ]
         },
         "breadth": {
-          "score": 0.825,
+          "score": 0.7649999999999999,
           "basis": [
-            "distinct_urls:34",
+            "distinct_urls:35",
             "distinct_axes:3",
-            "origin_types:5"
+            "origin_types:4"
           ]
         },
         "corroboration": {
           "score": 0.35,
           "basis": [
             "referring_accounts:0",
-            "origin_types:5"
+            "origin_types:4"
           ]
         },
         "track_record": {
@@ -92,18 +91,18 @@
           ]
         },
         "overall": {
-          "score": 0.7976562500000001,
-          "confidence": 0.6547499999999999,
+          "score": 0.7845312500000001,
+          "confidence": 0.64215,
           "method": "mechanical_v1",
           "basis": [
             "academic_domain_pattern",
             "search_results_seen",
             "doi_or_identifier_path_seen",
-            "distinct_urls:34",
+            "distinct_urls:35",
             "distinct_axes:3",
-            "origin_types:5",
+            "origin_types:4",
             "referring_accounts:0",
-            "origin_types:5",
+            "origin_types:4",
             "track_record_unavailable"
           ]
         }
@@ -1380,7 +1379,7 @@
           "https://singaporeglobalnetwork.gov.sg/stories/tech/why-i-quit-college-at-22-to-launch-a-biotech-startup-in-singapore/?utm_source=x&utm_medium=social&utm_campaign=sg-paid-ao-traffic&utm_content=armaan-dhanda&twclid=2epj25tilhtb65igot07prztga"
         ],
         "origin_counts": {
-          "reading_queue": 21,
+          "reading_queue": 22,
           "feed_buffer": 1
         },
         "distinct_referring_accounts": 1,
@@ -1745,7 +1744,7 @@
           "https://digital-strategy.ec.europa.eu/en/policies/ai-office"
         ],
         "origin_counts": {
-          "reading_queue": 4
+          "reading_queue": 5
         },
         "distinct_referring_accounts": 0,
         "sample_referring_accounts": [],
@@ -1822,7 +1821,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-09-25T03:21:35.022Z",
+        "fetched_at": "2026-09-28T03:26:01.199Z",
         "homepage_url": "https://europa.eu/",
         "example_url": "https://digital-strategy.ec.europa.eu/en/policies/ai-office",
         "homepage_status": 200,
@@ -3614,9 +3613,9 @@
       "entity": "T Co",
       "kind": "unknown",
       "first_seen_at": "2016-05-05T18:57:30.000Z",
-      "last_seen_at": "2026-09-27T20:24:04.000Z",
+      "last_seen_at": "2026-09-28T12:16:09.000Z",
       "discovery": {
-        "distinct_urls": 23350,
+        "distinct_urls": 23401,
         "example_urls": [
           "https://t.co/pJSE124ec4",
           "https://t.co/Soz8BXPWaa",
@@ -3625,7 +3624,7 @@
           "https://t.co/cYaqYDRp08"
         ],
         "origin_counts": {
-          "feed_buffer": 21366,
+          "feed_buffer": 21429,
           "feed_buffer_reply": 6451,
           "articles": 3
         },
@@ -3668,7 +3667,7 @@
         "breadth": {
           "score": 0.53,
           "basis": [
-            "distinct_urls:23350",
+            "distinct_urls:23401",
             "distinct_axes:0",
             "origin_types:3"
           ]
@@ -3707,7 +3706,7 @@
           "basis": [
             "unknown_domain_pattern",
             "doi_or_identifier_path_seen",
-            "distinct_urls:23350",
+            "distinct_urls:23401",
             "distinct_axes:0",
             "origin_types:3",
             "referring_accounts:3296",
@@ -3875,7 +3874,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-09-24T22:27:13.167Z",
+        "fetched_at": "2026-09-28T01:07:39.505Z",
         "homepage_url": "https://rappler.com/",
         "example_url": "https://www.rappler.com/fact-check-no-arrest-warrant-issued-vs-marcoleta",
         "homepage_status": 200,
@@ -4021,7 +4020,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-09-24T22:27:14.409Z",
+        "fetched_at": "2026-09-28T01:07:40.770Z",
         "homepage_url": "https://techcrunch.com/",
         "example_url": "https://techcrunch.com/2026/07/30/judge-says-trump-admin-still-lacks-evidence-for-anthropic-supply-chain-risk-label/",
         "homepage_status": 200,
@@ -4156,7 +4155,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-09-24T22:27:15.681Z",
+        "fetched_at": "2026-09-28T01:07:42.369Z",
         "homepage_url": "https://substack.com/",
         "example_url": "https://aniobrien.substack.com/p/white-working-class-girls-sacrificed",
         "homepage_status": 200,
@@ -4172,7 +4171,7 @@
           "has_about_link": true,
           "has_contact_link": false,
           "has_corrections_link": false,
-          "outbound_links_count": 1,
+          "outbound_links_count": 2,
           "opinion_marker": false
         },
         "example": {
@@ -4192,9 +4191,9 @@
       "entity": "Metr",
       "kind": "unknown",
       "first_seen_at": "2026-09-20T10:08:40.424Z",
-      "last_seen_at": "2026-09-25T21:14:08.448Z",
+      "last_seen_at": "2026-09-28T09:07:24.617Z",
       "discovery": {
-        "distinct_urls": 16,
+        "distinct_urls": 17,
         "example_urls": [
           "https://metr.org/blog/2026-03-26-red-teaming-anthropic-agent-monitoring/",
           "https://metr.org/notes/2026-02-10-simpler-ai-timelines-model/",
@@ -4204,7 +4203,7 @@
         ],
         "origin_counts": {
           "ontology_evidence": 3,
-          "reading_queue": 24,
+          "reading_queue": 27,
           "journals": 4,
           "articles": 1
         },
@@ -4239,7 +4238,7 @@
         "breadth": {
           "score": 0.7066666666666666,
           "basis": [
-            "distinct_urls:16",
+            "distinct_urls:17",
             "distinct_axes:2",
             "origin_types:4"
           ]
@@ -4273,12 +4272,12 @@
         },
         "overall": {
           "score": 0.5173958333333333,
-          "confidence": 0.5399,
+          "confidence": 0.5624,
           "method": "mechanical_v1",
           "basis": [
             "unknown_domain_pattern",
             "article_path_seen",
-            "distinct_urls:16",
+            "distinct_urls:17",
             "distinct_axes:2",
             "origin_types:4",
             "referring_accounts:0",
@@ -4421,7 +4420,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-09-24T22:27:17.192Z",
+        "fetched_at": "2026-09-28T01:07:43.912Z",
         "homepage_url": "https://arstechnica.com/",
         "example_url": "https://arstechnica.com/security/2026/06/users-cry-foul-after-amd-stripped-memory-crypto-from-its-consumer-cpus/",
         "homepage_status": 405,
@@ -4558,7 +4557,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-09-25T03:21:36.827Z",
+        "fetched_at": "2026-09-28T03:26:03.562Z",
         "homepage_url": "https://bit.ly/",
         "example_url": "https://bit.ly/4rFUGm4?twclid=2cxu7o43bx4p37y7v84zudvy2q",
         "homepage_status": 200,
@@ -4691,7 +4690,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-09-25T03:21:38.662Z",
+        "fetched_at": "2026-09-28T03:26:07.208Z",
         "homepage_url": "https://reut.rs/",
         "example_url": "https://reut.rs/42N9gxi",
         "homepage_status": 401,
@@ -4818,7 +4817,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-09-25T03:21:40.207Z",
+        "fetched_at": "2026-09-28T03:26:08.880Z",
         "homepage_url": "https://brobible.com/",
         "example_url": "https://brobible.com/culture/paige-ostroushko-savanah-hernandez-anti-ice-protest-arrest/",
         "homepage_status": 200,
@@ -4945,7 +4944,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-09-25T05:25:29.650Z",
+        "fetched_at": "2026-09-28T06:12:32.123Z",
         "homepage_url": "https://epochtimes.com/",
         "example_url": "https://www.epochtimes.com/",
         "homepage_status": 200,
@@ -5073,7 +5072,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-09-25T05:25:30.253Z",
+        "fetched_at": "2026-09-28T06:12:33.034Z",
         "homepage_url": "https://idf.il/",
         "example_url": "https://www.idf.il/en/articles/2026/04/16/idf-finds-weapons-in-school-in-bint-jbeil-lebanon/",
         "homepage_status": null,
@@ -5208,7 +5207,7 @@
             "about:false",
             "contact:false",
             "corrections:false",
-            "outbound_links:44",
+            "outbound_links:31",
             "opinion_marker:false"
           ]
         },
@@ -5230,7 +5229,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-09-25T05:25:36.893Z",
+        "fetched_at": "2026-09-28T06:12:37.499Z",
         "homepage_url": "https://philstar.com/",
         "example_url": "https://www.philstar.com/headlines/2026/06/24/2537506/mike-defensor-face-trafficking-complaint-over-pasig-ktv-bar-raid",
         "homepage_status": 200,
@@ -5246,7 +5245,7 @@
           "has_about_link": false,
           "has_contact_link": false,
           "has_corrections_link": false,
-          "outbound_links_count": 72,
+          "outbound_links_count": 71,
           "opinion_marker": false
         },
         "example": {
@@ -5256,7 +5255,7 @@
           "has_about_link": false,
           "has_contact_link": false,
           "has_corrections_link": false,
-          "outbound_links_count": 44,
+          "outbound_links_count": 31,
           "opinion_marker": false
         }
       }
@@ -5366,7 +5365,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-09-25T05:25:39.880Z",
+        "fetched_at": "2026-09-28T06:12:40.164Z",
         "homepage_url": "https://grok.com/",
         "example_url": "https://grok.com/imagine/post/9b92ff60-ec59-45db-8a35-8e1b743e5339",
         "homepage_status": 200,
@@ -5473,13 +5472,13 @@
           ]
         },
         "profile": {
-          "score": 0.36,
-          "confidence": 0.65,
+          "score": 0.22,
+          "confidence": 0.55,
           "basis": [
             "meta_author:false",
             "published_time:false",
             "canonical:true",
-            "about:true",
+            "about:false",
             "contact:false",
             "corrections:false",
             "outbound_links:14",
@@ -5502,23 +5501,23 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-09-25T07:44:28.669Z",
+        "fetched_at": "2026-09-28T09:05:08.123Z",
         "homepage_url": "https://steampowered.com/",
         "example_url": "https://store.steampowered.com/app/1315180?twclid=2cb8mho5n4udnkq1fnm1yi4kkh",
-        "homepage_status": 200,
+        "homepage_status": null,
         "example_status": 200,
-        "homepage_final_url": "https://store.steampowered.com/",
+        "homepage_final_url": "https://steampowered.com/",
         "example_final_url": "https://store.steampowered.com/app/1315180?twclid=2cb8mho5n4udnkq1fnm1yi4kkh",
-        "homepage_content_type": "text/html; charset=UTF-8",
+        "homepage_content_type": "",
         "example_content_type": "text/html; charset=UTF-8",
         "homepage": {
           "has_meta_author": false,
           "has_published_time": false,
-          "has_canonical": true,
-          "has_about_link": true,
+          "has_canonical": false,
+          "has_about_link": false,
           "has_contact_link": false,
           "has_corrections_link": false,
-          "outbound_links_count": 7,
+          "outbound_links_count": 0,
           "opinion_marker": false
         },
         "example": {
@@ -5638,7 +5637,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-09-25T07:44:38.928Z",
+        "fetched_at": "2026-09-28T09:05:19.013Z",
         "homepage_url": "https://doubleclick.net/",
         "example_url": "https://ad.doubleclick.net/ddm/trackclk/N117602.5126432X/B34540950.438517562;dc_trk_aid=631787244;dc_trk_cid=249093288;dc_dbm_token=$%7BDC_DBM_TOKEN%7D;dc_lat=;dc_rdid=;tag_for_child_directed_treatment=;tfua=;gdpr=$%7BGDPR%7D;gdpr_consent=$%7BGDPR_CONSENT_755%7D;gpp=$%7BGPP_STRING_755%7D;gpp_sid=$%7BGPP_SID%7D;ltd=;dc_tdv=1?twclid=292cdwzoayexun1iu6o4fsk10z",
         "homepage_status": 200,
@@ -5772,7 +5771,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-09-25T07:44:40.340Z",
+        "fetched_at": "2026-09-28T09:05:20.868Z",
         "homepage_url": "https://github.com/",
         "example_url": "https://github.com/BlockRunAI/ClawRouter/?twclid=2bnr8zsvp3b72fbw0yuil7yilw",
         "homepage_status": 200,
@@ -5894,7 +5893,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-09-25T07:44:41.966Z",
+        "fetched_at": "2026-09-28T09:05:24.232Z",
         "homepage_url": "https://wikipedia.org/",
         "example_url": "https://en.wikipedia.org/wiki/Research",
         "homepage_status": 200,
@@ -5989,16 +5988,16 @@
           ]
         },
         "profile": {
-          "score": 0.63,
-          "confidence": 0.75,
+          "score": 0,
+          "confidence": 0.55,
           "basis": [
             "meta_author:false",
-            "published_time:true",
-            "canonical:true",
-            "about:true",
-            "contact:true",
+            "published_time:false",
+            "canonical:false",
+            "about:false",
+            "contact:false",
             "corrections:false",
-            "outbound_links:9",
+            "outbound_links:0",
             "opinion_marker:false"
           ]
         },
@@ -6020,33 +6019,33 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-09-25T09:44:27.200Z",
+        "fetched_at": "2026-09-28T11:04:23.566Z",
         "homepage_url": "https://newsguardtech.com/",
         "example_url": "https://www.newsguardtech.com/",
-        "homepage_status": 200,
-        "example_status": 200,
-        "homepage_final_url": "https://www.newsguardtech.com/",
+        "homepage_status": null,
+        "example_status": null,
+        "homepage_final_url": "https://newsguardtech.com/",
         "example_final_url": "https://www.newsguardtech.com/",
-        "homepage_content_type": "text/html; charset=UTF-8",
-        "example_content_type": "text/html; charset=UTF-8",
+        "homepage_content_type": "",
+        "example_content_type": "",
         "homepage": {
           "has_meta_author": false,
-          "has_published_time": true,
-          "has_canonical": true,
-          "has_about_link": true,
-          "has_contact_link": true,
+          "has_published_time": false,
+          "has_canonical": false,
+          "has_about_link": false,
+          "has_contact_link": false,
           "has_corrections_link": false,
-          "outbound_links_count": 9,
+          "outbound_links_count": 0,
           "opinion_marker": false
         },
         "example": {
           "has_meta_author": false,
-          "has_published_time": true,
-          "has_canonical": true,
-          "has_about_link": true,
-          "has_contact_link": true,
+          "has_published_time": false,
+          "has_canonical": false,
+          "has_about_link": false,
+          "has_contact_link": false,
           "has_corrections_link": false,
-          "outbound_links_count": 9,
+          "outbound_links_count": 0,
           "opinion_marker": false
         }
       }
@@ -6146,7 +6145,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-09-25T09:44:28.172Z",
+        "fetched_at": "2026-09-28T11:04:28.503Z",
         "homepage_url": "https://snopes.com/",
         "example_url": "https://snopes.com/fact-check/strait-of-hormuz-oil-shorts-trump/",
         "homepage_status": 200,
@@ -6182,9 +6181,9 @@
       "entity": "Starlink",
       "kind": "unknown",
       "first_seen_at": "2026-04-07T03:51:50.000Z",
-      "last_seen_at": "2026-09-27T16:34:13.841Z",
+      "last_seen_at": "2026-09-28T09:27:29.818Z",
       "discovery": {
-        "distinct_urls": 2829,
+        "distinct_urls": 2830,
         "example_urls": [
           "https://www.starlink.com/us/residential?referral=RC-DF-9543787-19448-67&utm_medium=paid&utm_campaign=awr_us_soc_twt_ptg_cau&utm_content=awr_us_soc_twt_ptg_cau_res_gvp_v4s_stc_en-us_sdb-bluesky-uptime&twclid=2cg62b1u0oqrypdim5oir1767e",
           "https://www.starlink.com/us/residential?referral=RC-DF-9543787-19448-67&utm_medium=paid&utm_campaign=awr_us_soc_twt_ptg_cau&utm_content=awr_us_soc_twt_ptg_cau_res_gvp_v4s_stc_en-us_sdb-avail-sat-yourhome&twclid=2216n7j93v9absqn77762mm626",
@@ -6194,7 +6193,7 @@
         ],
         "origin_counts": {
           "feed_buffer_reply": 2679,
-          "feed_buffer": 154
+          "feed_buffer": 155
         },
         "distinct_referring_accounts": 5,
         "sample_referring_accounts": [
@@ -6229,7 +6228,7 @@
         "breadth": {
           "score": 0.47,
           "basis": [
-            "distinct_urls:2829",
+            "distinct_urls:2830",
             "distinct_axes:0",
             "origin_types:2"
           ]
@@ -6267,7 +6266,7 @@
           "method": "mechanical_v1",
           "basis": [
             "unknown_domain_pattern",
-            "distinct_urls:2829",
+            "distinct_urls:2830",
             "distinct_axes:0",
             "origin_types:2",
             "referring_accounts:5",
@@ -6277,7 +6276,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-09-25T09:44:28.812Z",
+        "fetched_at": "2026-09-28T11:04:29.100Z",
         "homepage_url": "https://starlink.com/",
         "example_url": "https://www.starlink.com/us/residential?referral=RC-DF-9543787-19448-67&utm_medium=paid&utm_campaign=awr_us_soc_twt_ptg_cau&utm_content=awr_us_soc_twt_ptg_cau_res_gvp_v4s_stc_en-us_sdb-bluesky-uptime&twclid=2cg62b1u0oqrypdim5oir1767e",
         "homepage_status": 200,
@@ -6401,7 +6400,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-09-25T09:44:31.144Z",
+        "fetched_at": "2026-09-28T11:04:33.453Z",
         "homepage_url": "https://reuters.com/",
         "example_url": "https://www.reuters.com/site-search/?query=Evidence-based%20claims%2C%20transparent%20sourcing%2C%20honest%20uncertainty%2C%20good-faith%20argu%20Truth%20and%20Evidence%20in%20Public%20Discourse",
         "homepage_status": 401,
@@ -6559,7 +6558,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-09-25T12:00:28.272Z",
+        "fetched_at": "2026-09-28T13:03:43.933Z",
         "homepage_url": "https://inquirer.net/",
         "example_url": "https://newsinfo.inquirer.net/2266316/nbi-on-cayetano-position-that-cant-be-defended-by-facts-is-done-with-insults",
         "homepage_status": 200,
@@ -6689,7 +6688,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-09-25T12:00:30.348Z",
+        "fetched_at": "2026-09-28T13:03:45.902Z",
         "homepage_url": "https://huawei.com/",
         "example_url": "https://www.huawei.com/en/media-center/transform/24/06-jason-lee?utm_medium=psm&utm_source=twitter&utm_campaign=Transform",
         "homepage_status": 200,
@@ -6824,7 +6823,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-09-25T12:00:50.355Z",
+        "fetched_at": "2026-09-28T13:04:05.908Z",
         "homepage_url": "https://relaylab.us/",
         "example_url": "https://relaylab.us/?twclid=26u9kccij1307faosstalj2w2",
         "homepage_status": null,
@@ -6956,7 +6955,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-09-25T12:00:52.391Z",
+        "fetched_at": "2026-09-28T13:04:07.668Z",
         "homepage_url": "https://youtu.be/",
         "example_url": "https://youtu.be/m7jAReMF2c8?si=AtT5ue3VPnmZq5V6",
         "homepage_status": 200,
@@ -13732,6 +13731,134 @@
           "has_contact_link": false,
           "has_corrections_link": false,
           "outbound_links_count": 0,
+          "opinion_marker": false
+        }
+      }
+    },
+    {
+      "domain": "georgetown.edu",
+      "entity": "Georgetown",
+      "kind": "unknown",
+      "first_seen_at": "2026-03-28T00:20:44.800Z",
+      "last_seen_at": "2026-09-28T13:03:42.283Z",
+      "discovery": {
+        "distinct_urls": 7,
+        "example_urls": [
+          "https://cset.georgetown.edu/article/ai-makes-it-easier-than-ever-for-adversaries-to-target-u-s-military-experts-say/",
+          "https://cset.georgetown.edu/article/toner-theres-a-lot-of-upside-to-ai-if-we-do-it-right/",
+          "https://cset.georgetown.edu/publications/",
+          "https://gjia.georgetown.edu/2026/03/26/the-war-against-iran-and-global-risks-tell-me-how-this-ends/",
+          "https://georgetown.edu/2026/03/26/the-war-against-iran-and-global-risks-tell-me-how-this-ends/"
+        ],
+        "origin_counts": {
+          "reading_queue": 7,
+          "journals": 4,
+          "prefetch": 1
+        },
+        "distinct_referring_accounts": 0,
+        "sample_referring_accounts": [],
+        "distinct_axes": []
+      },
+      "claims": {
+        "total": 0,
+        "supported": 0,
+        "refuted": 0,
+        "contested": 0,
+        "unverified": 0,
+        "resolved_count": 0
+      },
+      "structural_features": {
+        "has_search_paths": false,
+        "has_article_paths": true,
+        "has_doi_paths": false
+      },
+      "ratings": {
+        "provenance": {
+          "score": 0.48,
+          "basis": [
+            "unknown_domain_pattern",
+            "article_path_seen"
+          ]
+        },
+        "breadth": {
+          "score": 0.38416666666666666,
+          "basis": [
+            "distinct_urls:7",
+            "distinct_axes:0",
+            "origin_types:3"
+          ]
+        },
+        "corroboration": {
+          "score": 0.26249999999999996,
+          "basis": [
+            "referring_accounts:0",
+            "origin_types:3"
+          ]
+        },
+        "track_record": {
+          "score": null,
+          "basis": [
+            "no_resolved_claims_observed"
+          ]
+        },
+        "profile": {
+          "score": 0.84,
+          "confidence": 0.85,
+          "basis": [
+            "meta_author:true",
+            "published_time:true",
+            "canonical:true",
+            "about:true",
+            "contact:true",
+            "corrections:false",
+            "outbound_links:33",
+            "opinion_marker:false"
+          ]
+        },
+        "overall": {
+          "score": 0.4386458333333333,
+          "confidence": 0.2618,
+          "method": "mechanical_v1",
+          "basis": [
+            "unknown_domain_pattern",
+            "article_path_seen",
+            "distinct_urls:7",
+            "distinct_axes:0",
+            "origin_types:3",
+            "referring_accounts:0",
+            "origin_types:3",
+            "track_record_unavailable"
+          ]
+        }
+      },
+      "profile": {
+        "fetched_at": "2026-08-20T02:47:57.231Z",
+        "homepage_url": "https://georgetown.edu/",
+        "example_url": "https://gjia.georgetown.edu/2026/03/26/the-war-against-iran-and-global-risks-tell-me-how-this-ends/",
+        "homepage_status": 200,
+        "example_status": 200,
+        "homepage_final_url": "https://www.georgetown.edu/",
+        "example_final_url": "https://gjia.georgetown.edu/conflict-security/the-war-against-iran-and-global-risks-tell-me-how-this-ends/",
+        "homepage_content_type": "text/html; charset=UTF-8",
+        "example_content_type": "text/html; charset=UTF-8",
+        "homepage": {
+          "has_meta_author": false,
+          "has_published_time": true,
+          "has_canonical": true,
+          "has_about_link": true,
+          "has_contact_link": true,
+          "has_corrections_link": false,
+          "outbound_links_count": 8,
+          "opinion_marker": false
+        },
+        "example": {
+          "has_meta_author": true,
+          "has_published_time": true,
+          "has_canonical": true,
+          "has_about_link": true,
+          "has_contact_link": true,
+          "has_corrections_link": false,
+          "outbound_links_count": 33,
           "opinion_marker": false
         }
       }
@@ -35026,131 +35153,6 @@
           "has_contact_link": false,
           "has_corrections_link": false,
           "outbound_links_count": 0,
-          "opinion_marker": false
-        }
-      }
-    },
-    {
-      "domain": "georgetown.edu",
-      "entity": "Georgetown",
-      "kind": "unknown",
-      "first_seen_at": "2026-03-28T00:20:44.800Z",
-      "last_seen_at": "2026-09-20T06:09:13.677Z",
-      "discovery": {
-        "distinct_urls": 4,
-        "example_urls": [
-          "https://gjia.georgetown.edu/2026/03/26/the-war-against-iran-and-global-risks-tell-me-how-this-ends/",
-          "https://georgetown.edu/2026/03/26/the-war-against-iran-and-global-risks-tell-me-how-this-ends/",
-          "https://cset.georgetown.edu/article/inside-beijings-chipmaking-offensive-one-year-on/",
-          "https://cset.georgetown.edu/article/the-a-i-s-are-already-out-of-control/"
-        ],
-        "origin_counts": {
-          "journals": 4
-        },
-        "distinct_referring_accounts": 0,
-        "sample_referring_accounts": [],
-        "distinct_axes": []
-      },
-      "claims": {
-        "total": 0,
-        "supported": 0,
-        "refuted": 0,
-        "contested": 0,
-        "unverified": 0,
-        "resolved_count": 0
-      },
-      "structural_features": {
-        "has_search_paths": false,
-        "has_article_paths": true,
-        "has_doi_paths": false
-      },
-      "ratings": {
-        "provenance": {
-          "score": 0.48,
-          "basis": [
-            "unknown_domain_pattern",
-            "article_path_seen"
-          ]
-        },
-        "breadth": {
-          "score": 0.17666666666666664,
-          "basis": [
-            "distinct_urls:4",
-            "distinct_axes:0",
-            "origin_types:1"
-          ]
-        },
-        "corroboration": {
-          "score": 0.0875,
-          "basis": [
-            "referring_accounts:0",
-            "origin_types:1"
-          ]
-        },
-        "track_record": {
-          "score": null,
-          "basis": [
-            "no_resolved_claims_observed"
-          ]
-        },
-        "profile": {
-          "score": 0.84,
-          "confidence": 0.85,
-          "basis": [
-            "meta_author:true",
-            "published_time:true",
-            "canonical:true",
-            "about:true",
-            "contact:true",
-            "corrections:false",
-            "outbound_links:33",
-            "opinion_marker:false"
-          ]
-        },
-        "overall": {
-          "score": 0.3768489583333333,
-          "confidence": 0.134975,
-          "method": "mechanical_v1",
-          "basis": [
-            "unknown_domain_pattern",
-            "article_path_seen",
-            "distinct_urls:4",
-            "distinct_axes:0",
-            "origin_types:1",
-            "referring_accounts:0",
-            "origin_types:1",
-            "track_record_unavailable"
-          ]
-        }
-      },
-      "profile": {
-        "fetched_at": "2026-08-20T02:47:57.231Z",
-        "homepage_url": "https://georgetown.edu/",
-        "example_url": "https://gjia.georgetown.edu/2026/03/26/the-war-against-iran-and-global-risks-tell-me-how-this-ends/",
-        "homepage_status": 200,
-        "example_status": 200,
-        "homepage_final_url": "https://www.georgetown.edu/",
-        "example_final_url": "https://gjia.georgetown.edu/conflict-security/the-war-against-iran-and-global-risks-tell-me-how-this-ends/",
-        "homepage_content_type": "text/html; charset=UTF-8",
-        "example_content_type": "text/html; charset=UTF-8",
-        "homepage": {
-          "has_meta_author": false,
-          "has_published_time": true,
-          "has_canonical": true,
-          "has_about_link": true,
-          "has_contact_link": true,
-          "has_corrections_link": false,
-          "outbound_links_count": 8,
-          "opinion_marker": false
-        },
-        "example": {
-          "has_meta_author": true,
-          "has_published_time": true,
-          "has_canonical": true,
-          "has_about_link": true,
-          "has_contact_link": true,
-          "has_corrections_link": false,
-          "outbound_links_count": 33,
           "opinion_marker": false
         }
       }
