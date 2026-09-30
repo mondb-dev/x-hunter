@@ -1,17 +1,17 @@
 {
   "schema_version": "1.0",
-  "generated_at": "2026-09-29T23:42:42.643Z",
+  "generated_at": "2026-09-30T03:43:27.911Z",
   "method": "mechanical_registry_v1",
-  "profiled_at": "2026-09-29T23:42:46.932Z",
+  "profiled_at": "2026-09-30T03:43:33.163Z",
   "sources": [
     {
       "domain": "arxiv.org",
       "entity": "Arxiv",
       "kind": "academic",
       "first_seen_at": "2026-09-20T04:08:44.147Z",
-      "last_seen_at": "2026-09-29T23:42:42.639Z",
+      "last_seen_at": "2026-09-29T15:56:15.821Z",
       "discovery": {
-        "distinct_urls": 41,
+        "distinct_urls": 42,
         "example_urls": [
           "https://arxiv.org/abs/2305.04388",
           "https://arxiv.org/abs/2609.21899v1",
@@ -21,10 +21,9 @@
         ],
         "origin_counts": {
           "ontology_evidence": 7,
-          "reading_queue": 76,
+          "reading_queue": 77,
           "journals": 8,
-          "articles": 1,
-          "prefetch": 1
+          "articles": 1
         },
         "distinct_referring_accounts": 0,
         "sample_referring_accounts": [],
@@ -57,18 +56,18 @@
           ]
         },
         "breadth": {
-          "score": 0.825,
+          "score": 0.7649999999999999,
           "basis": [
-            "distinct_urls:41",
+            "distinct_urls:42",
             "distinct_axes:3",
-            "origin_types:5"
+            "origin_types:4"
           ]
         },
         "corroboration": {
           "score": 0.35,
           "basis": [
             "referring_accounts:0",
-            "origin_types:5"
+            "origin_types:4"
           ]
         },
         "track_record": {
@@ -92,18 +91,18 @@
           ]
         },
         "overall": {
-          "score": 0.7976562500000001,
-          "confidence": 0.6547499999999999,
+          "score": 0.7845312500000001,
+          "confidence": 0.64215,
           "method": "mechanical_v1",
           "basis": [
             "academic_domain_pattern",
             "search_results_seen",
             "doi_or_identifier_path_seen",
-            "distinct_urls:41",
+            "distinct_urls:42",
             "distinct_axes:3",
-            "origin_types:5",
+            "origin_types:4",
             "referring_accounts:0",
-            "origin_types:5",
+            "origin_types:4",
             "track_record_unavailable"
           ]
         }
@@ -1865,7 +1864,7 @@
           "https://www.nist.gov/itl/ai-risk-management-framework"
         ],
         "origin_counts": {
-          "reading_queue": 4
+          "reading_queue": 5
         },
         "distinct_referring_accounts": 0,
         "sample_referring_accounts": [],
@@ -2062,7 +2061,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-09-27T03:07:10.251Z",
+        "fetched_at": "2026-09-30T03:43:29.178Z",
         "homepage_url": "https://aisi.gov.uk/",
         "example_url": "https://www.aisi.gov.uk/research",
         "homepage_status": 200,
@@ -3614,9 +3613,9 @@
       "entity": "T Co",
       "kind": "unknown",
       "first_seen_at": "2016-05-05T18:57:30.000Z",
-      "last_seen_at": "2026-09-29T22:00:00.000Z",
+      "last_seen_at": "2026-09-30T02:25:07.000Z",
       "discovery": {
-        "distinct_urls": 23493,
+        "distinct_urls": 23515,
         "example_urls": [
           "https://t.co/pJSE124ec4",
           "https://t.co/Soz8BXPWaa",
@@ -3625,7 +3624,7 @@
           "https://t.co/cYaqYDRp08"
         ],
         "origin_counts": {
-          "feed_buffer": 21538,
+          "feed_buffer": 21569,
           "feed_buffer_reply": 6451,
           "articles": 3
         },
@@ -3668,7 +3667,7 @@
         "breadth": {
           "score": 0.53,
           "basis": [
-            "distinct_urls:23493",
+            "distinct_urls:23515",
             "distinct_axes:0",
             "origin_types:3"
           ]
@@ -3707,7 +3706,7 @@
           "basis": [
             "unknown_domain_pattern",
             "doi_or_identifier_path_seen",
-            "distinct_urls:23493",
+            "distinct_urls:23515",
             "distinct_axes:0",
             "origin_types:3",
             "referring_accounts:3296",
@@ -4192,7 +4191,7 @@
       "entity": "Metr",
       "kind": "unknown",
       "first_seen_at": "2026-09-20T10:08:40.424Z",
-      "last_seen_at": "2026-09-28T09:07:24.617Z",
+      "last_seen_at": "2026-09-29T23:42:47.036Z",
       "discovery": {
         "distinct_urls": 17,
         "example_urls": [
@@ -4204,7 +4203,7 @@
         ],
         "origin_counts": {
           "ontology_evidence": 3,
-          "reading_queue": 27,
+          "reading_queue": 28,
           "journals": 4,
           "articles": 1
         },
@@ -8280,9 +8279,9 @@
       "entity": "Bet88 Ph",
       "kind": "unknown",
       "first_seen_at": "2026-07-03T16:00:02.000Z",
-      "last_seen_at": "2026-09-26T05:59:03.028Z",
+      "last_seen_at": "2026-09-30T00:08:14.439Z",
       "discovery": {
-        "distinct_urls": 118,
+        "distinct_urls": 119,
         "example_urls": [
           "https://bet88.ph/en/?type=registration&modal=user&ref=xa027&twclid=27gurqyk8ekpo92oqcm3aeuing",
           "https://bet88.ph/en/?type=registration&modal=user&ref=xa023&twclid=25wrsnnpnc7378nutxmyo1v6kj",
@@ -8292,7 +8291,7 @@
         ],
         "origin_counts": {
           "feed_buffer_reply": 42,
-          "feed_buffer": 76
+          "feed_buffer": 77
         },
         "distinct_referring_accounts": 1,
         "sample_referring_accounts": [
@@ -8323,7 +8322,7 @@
         "breadth": {
           "score": 0.47,
           "basis": [
-            "distinct_urls:118",
+            "distinct_urls:119",
             "distinct_axes:0",
             "origin_types:2"
           ]
@@ -8361,7 +8360,7 @@
           "method": "mechanical_v1",
           "basis": [
             "unknown_domain_pattern",
-            "distinct_urls:118",
+            "distinct_urls:119",
             "distinct_axes:0",
             "origin_types:2",
             "referring_accounts:1",
@@ -11165,7 +11164,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-09-26T07:58:23.328Z",
+        "fetched_at": "2026-09-30T01:42:43.016Z",
         "homepage_url": "https://amro-asia.org/",
         "example_url": "https://amro-asia.org/about-us/who-we-are/?utm_source=X&twclid=2n1gu531399vzt4gm709so7oz",
         "homepage_status": 200,
@@ -11292,7 +11291,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-09-26T09:58:13.439Z",
+        "fetched_at": "2026-09-30T01:42:43.337Z",
         "homepage_url": "https://wsj.com/",
         "example_url": "https://www.wsj.com/video/three-things-to-consider-before-buying-an-electric-vehicle/BF3DA411-C296-4CB8-A22D-BE3A2E943ACB?mod=WSJvidctr_watchnow_pos2%3FUCID%3DWSJ_SMD_TWT_BRA_BND_MBC_NAP_NAP_EVS_NAP&twclid=2227k5fcsvy3eazrqjlp63r0go",
         "homepage_status": 401,
@@ -11419,7 +11418,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-09-26T09:58:14.660Z",
+        "fetched_at": "2026-09-30T01:42:43.835Z",
         "homepage_url": "https://utspaycashback.com/",
         "example_url": "https://www.utspaycashback.com/?twclid=2650deq3k4trsekhk3xdbpt9o7",
         "homepage_status": 200,
@@ -11546,7 +11545,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-09-26T09:58:16.493Z",
+        "fetched_at": "2026-09-30T01:42:45.888Z",
         "homepage_url": "https://aramco.com/",
         "example_url": "https://www.aramco.com/en/what-we-do/energy-innovation/innovation-ecosystem/aramco-fifa-partnership?utm_source=x&utm_medium=cpm&utm_term=en_vid_cpm_inf-ftbl_na_football-fans&utm_content=en_4x5_vid_6s_global_fifa-whatif_na_m3&twclid=2f1bxdfhmr1if32n1ssvcc3xtc",
         "homepage_status": 200,
@@ -11673,7 +11672,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-09-26T15:23:43.757Z",
+        "fetched_at": "2026-09-30T03:43:30.232Z",
         "homepage_url": "https://parksystems.com/",
         "example_url": "https://www.parksystems.com/en/products/research-afm/small-sample-afm/fx40?utm_source=paid-x&utm_medium=social&utm_campaign=hq-FX40_paper_Autonomous_AI-DrivenAFM_260701-2026-06-15-CM005+&twclid=26i21embi38s4z9rci48kmjdf8",
         "homepage_status": 200,
@@ -11800,7 +11799,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-09-26T15:23:44.121Z",
+        "fetched_at": "2026-09-30T03:43:30.589Z",
         "homepage_url": "https://walrus.xyz/",
         "example_url": "https://memory.walrus.xyz/?utm_source=twitter&utm_medium=paid_social&utm_campaign=walrus_memory&twclid=25m14v5tjdgue38tcgv9nyht3e",
         "homepage_status": 200,
@@ -11927,7 +11926,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-09-26T15:23:47.714Z",
+        "fetched_at": "2026-09-30T03:43:33.163Z",
         "homepage_url": "https://fx-edge.com/",
         "example_url": "https://fx-edge.com/prop-liquidity/?utm_source=twitter&utm_medium=ppc&utm_campaign=prop_liquidity&twclid=2232cmky8wi7upvvrdlud3bfsm",
         "homepage_status": 200,
@@ -14761,7 +14760,7 @@
       "entity": "Georgetown",
       "kind": "unknown",
       "first_seen_at": "2026-03-28T00:20:44.800Z",
-      "last_seen_at": "2026-09-28T23:05:38.896Z",
+      "last_seen_at": "2026-09-29T23:44:47.297Z",
       "discovery": {
         "distinct_urls": 9,
         "example_urls": [
@@ -14772,7 +14771,7 @@
           "https://cset.georgetown.edu/article/tracking-ai-chips-what-does-it-cost/"
         ],
         "origin_counts": {
-          "reading_queue": 13,
+          "reading_queue": 15,
           "journals": 4
         },
         "distinct_referring_accounts": 0,
@@ -21972,6 +21971,86 @@
           "has_corrections_link": false,
           "outbound_links_count": 0,
           "opinion_marker": false
+        }
+      }
+    },
+    {
+      "domain": "alignmentforum.org",
+      "entity": "Alignmentforum",
+      "kind": "unknown",
+      "first_seen_at": "2026-09-20T06:09:13.737Z",
+      "last_seen_at": "2026-09-30T03:43:27.908Z",
+      "discovery": {
+        "distinct_urls": 8,
+        "example_urls": [
+          "https://www.alignmentforum.org/posts/virawHQekJsozwotz/paper-stringological-sequence-prediction-iii",
+          "https://www.alignmentforum.org/posts/x8BvtWxtoajBGHS3g/an-operationalization-of-opaque-serial-depth",
+          "https://www.alignmentforum.org/posts/LcQ9x72eNji2gpS9b/why-i-m-scared-of-rl",
+          "https://www.alignmentforum.org/posts/Zeg2JztbdhguL48uH/workspacebench-evaluating-interpretability-methods-for-the",
+          "https://www.alignmentforum.org/posts/6m29SfjbittooYojj/latent-reasoning-architectures-would-undermine-cot-our"
+        ],
+        "origin_counts": {
+          "reading_queue": 22,
+          "prefetch": 1
+        },
+        "distinct_referring_accounts": 0,
+        "sample_referring_accounts": [],
+        "distinct_axes": []
+      },
+      "claims": {
+        "total": 0,
+        "supported": 0,
+        "refuted": 0,
+        "contested": 0,
+        "unverified": 0,
+        "resolved_count": 0
+      },
+      "structural_features": {
+        "has_search_paths": false,
+        "has_article_paths": false,
+        "has_doi_paths": false
+      },
+      "ratings": {
+        "provenance": {
+          "score": 0.45,
+          "basis": [
+            "unknown_domain_pattern"
+          ]
+        },
+        "breadth": {
+          "score": 0.3533333333333333,
+          "basis": [
+            "distinct_urls:8",
+            "distinct_axes:0",
+            "origin_types:2"
+          ]
+        },
+        "corroboration": {
+          "score": 0.175,
+          "basis": [
+            "referring_accounts:0",
+            "origin_types:2"
+          ]
+        },
+        "track_record": {
+          "score": null,
+          "basis": [
+            "no_resolved_claims_observed"
+          ]
+        },
+        "overall": {
+          "score": 0.40307291666666667,
+          "confidence": 0.26995,
+          "method": "mechanical_v1",
+          "basis": [
+            "unknown_domain_pattern",
+            "distinct_urls:8",
+            "distinct_axes:0",
+            "origin_types:2",
+            "referring_accounts:0",
+            "origin_types:2",
+            "track_record_unavailable"
+          ]
         }
       }
     },
@@ -30690,85 +30769,6 @@
           "has_corrections_link": false,
           "outbound_links_count": 22,
           "opinion_marker": false
-        }
-      }
-    },
-    {
-      "domain": "alignmentforum.org",
-      "entity": "Alignmentforum",
-      "kind": "unknown",
-      "first_seen_at": "2026-09-20T06:09:13.737Z",
-      "last_seen_at": "2026-09-25T05:25:45.248Z",
-      "discovery": {
-        "distinct_urls": 8,
-        "example_urls": [
-          "https://www.alignmentforum.org/posts/virawHQekJsozwotz/paper-stringological-sequence-prediction-iii",
-          "https://www.alignmentforum.org/posts/x8BvtWxtoajBGHS3g/an-operationalization-of-opaque-serial-depth",
-          "https://www.alignmentforum.org/posts/LcQ9x72eNji2gpS9b/why-i-m-scared-of-rl",
-          "https://www.alignmentforum.org/posts/Zeg2JztbdhguL48uH/workspacebench-evaluating-interpretability-methods-for-the",
-          "https://www.alignmentforum.org/posts/6m29SfjbittooYojj/latent-reasoning-architectures-would-undermine-cot-our"
-        ],
-        "origin_counts": {
-          "reading_queue": 20
-        },
-        "distinct_referring_accounts": 0,
-        "sample_referring_accounts": [],
-        "distinct_axes": []
-      },
-      "claims": {
-        "total": 0,
-        "supported": 0,
-        "refuted": 0,
-        "contested": 0,
-        "unverified": 0,
-        "resolved_count": 0
-      },
-      "structural_features": {
-        "has_search_paths": false,
-        "has_article_paths": false,
-        "has_doi_paths": false
-      },
-      "ratings": {
-        "provenance": {
-          "score": 0.45,
-          "basis": [
-            "unknown_domain_pattern"
-          ]
-        },
-        "breadth": {
-          "score": 0.29333333333333333,
-          "basis": [
-            "distinct_urls:8",
-            "distinct_axes:0",
-            "origin_types:1"
-          ]
-        },
-        "corroboration": {
-          "score": 0.0875,
-          "basis": [
-            "referring_accounts:0",
-            "origin_types:1"
-          ]
-        },
-        "track_record": {
-          "score": null,
-          "basis": [
-            "no_resolved_claims_observed"
-          ]
-        },
-        "overall": {
-          "score": 0.3817447916666667,
-          "confidence": 0.249475,
-          "method": "mechanical_v1",
-          "basis": [
-            "unknown_domain_pattern",
-            "distinct_urls:8",
-            "distinct_axes:0",
-            "origin_types:1",
-            "referring_accounts:0",
-            "origin_types:1",
-            "track_record_unavailable"
-          ]
         }
       }
     },
