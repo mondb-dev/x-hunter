@@ -1,99 +1,17 @@
 {
-  "generated_at": "2026-09-28T19:21:46.952Z",
+  "generated_at": "2026-09-30T00:14:18.459Z",
   "monthly_usd": {
-    "llm": 1.82,
+    "llm": 0,
     "fixed": 101.25,
-    "total": 103.07
+    "total": 101.25
   },
   "llm_recent": {
     "window_days": 7,
-    "usd": 0.4247,
-    "calls": 84,
-    "daily_avg_usd": 0.0607,
-    "by_tag": {
-      "browse": {
-        "calls": 3,
-        "usd": 0.11856900000000001
-      },
-      "llm:apply_ontology_delta": {
-        "calls": 10,
-        "usd": 0.0065580000000000005
-      },
-      "llm:content_relevance": {
-        "calls": 16,
-        "usd": 0.005581000000000001
-      },
-      "llm:linkedin_connect": {
-        "calls": 10,
-        "usd": 0.007176000000000001
-      },
-      "linkedin_connect": {
-        "calls": 5,
-        "usd": 0.016089
-      },
-      "llm:linkedin_engage": {
-        "calls": 23,
-        "usd": 0.008012
-      },
-      "linkedin_plan": {
-        "calls": 1,
-        "usd": 0.015054
-      },
-      "brain": {
-        "calls": 3,
-        "usd": 0.020197
-      },
-      "dr-triage": {
-        "calls": 1,
-        "usd": 0.005304
-      },
-      "dr-plan": {
-        "calls": 1,
-        "usd": 0.01649
-      },
-      "dr-pick": {
-        "calls": 3,
-        "usd": 0.007533
-      },
-      "dr-gap": {
-        "calls": 2,
-        "usd": 0.064889
-      },
-      "dr-synth": {
-        "calls": 1,
-        "usd": 0.093148
-      },
-      "linkedin_draft": {
-        "calls": 1,
-        "usd": 0.023956
-      },
-      "linkedin_draft:factcheck": {
-        "calls": 1,
-        "usd": 0.003384
-      },
-      "llm:refine": {
-        "calls": 1,
-        "usd": 0.003657
-      },
-      "chart:plan": {
-        "calls": 1,
-        "usd": 0.005814
-      },
-      "search_curiosity": {
-        "calls": 1,
-        "usd": 0.003282
-      }
-    },
-    "by_model": {
-      "claude": {
-        "calls": 34,
-        "usd": 0.40115799999999996
-      },
-      "claude-haiku": {
-        "calls": 50,
-        "usd": 0.023535
-      }
-    }
+    "usd": 0,
+    "calls": 0,
+    "daily_avg_usd": 0,
+    "by_tag": {},
+    "by_model": {}
   },
   "fixed_breakdown": {
     "host": 100,
@@ -104,7 +22,7 @@
   },
   "storage_wallet": {
     "sol_balance": 0.000020209,
-    "checked_at": "2026-09-28T13:08:36.134Z"
+    "checked_at": "2026-09-29T01:08:20.068Z"
   },
   "funding_goal": {
     "mode": "mac",
@@ -115,5 +33,5 @@
     "pct": 0,
     "why": "Sebastian currently runs on borrowed hardware; the goal is his own dedicated Mac (or cloud) so he can run sustainably and independently."
   },
-  "metering": "live"
+  "metering": "no LLM calls metered yet — spend shows $0 until wrappers record calls"
 }
